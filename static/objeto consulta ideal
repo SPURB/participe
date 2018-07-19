@@ -1,0 +1,12 @@
+OBJETO CONSULTA
+{
+	"id": N,
+	"nome": nome str,
+	"ativo": boolean,
+	"dataCadastro": data de início da consulta,
+	"dataFinal": data de encerramento da consulta,
+	"nContribuicoes": numero total de contribuições,
+	"textoIntro": texto introdutório str,
+	"urlConsulta": endereço da consulta,
+	"capa": endereço da imagem de capa,
+}

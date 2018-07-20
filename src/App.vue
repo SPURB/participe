@@ -2,12 +2,12 @@
 <div id="app">
 	<header>
 		<div class="logo">
-			<div><a href="http://gestaourbana.prefeitura.sp.gov.br/"><span>gestão</span><span>urbana</span><span>SP</span></a></div>
-			<img src="../src/assets/img/PMSP_cor_transparente.png">
+			<div><a href="http://gestaourbana.prefeitura.sp.gov.br/" title="Gestão Urbana"><span>gestão</span><span>urbana</span><span>SP</span></a></div>
+			<a href="http://www.capital.sp.gov.br/" title="Prefeitura de São Paulo"><img src="../src/assets/img/PMSP_cor_transparente.png"></a>
 		</div>
 		<div class="busca" @click="ativaBusca" title="Digite o que pesquisa e aperte 'Enter'">
 			<i class="material-icons">search</i>
-			<input ref="busca" type="search" :class="{ focus: buscaClick }" @focusout="desativaBusca">
+			<input ref="busca" type="search" :class="{ focus: buscaClick }" class="inputBusca" @focusout="desativaBusca">
 			<i ref="iconeEnter" class="material-icons">keyboard_return</i>
 		</div>
 	</header>
@@ -15,7 +15,7 @@
 		<template v-for="consulta in consultas.slice().reverse()">
 			<article class="card" :style="{ backgroundImage: 'url(' + consulta.capa + ')' }">
 			<div>
-				<h1 :class="{ consultaAtiva: consulta.ativo }">{{ consulta.nome }}</h1>
+				<h1 :class="{ consultaAtiva: consulta.ativo }" class="nome">{{ consulta.nome }}</h1>
 				<p v-if="consulta.ativo">
 					<i class="material-icons">date_range</i>
 					Consulta iniciada em {{ consulta.dataCadastro }}
@@ -32,8 +32,14 @@
 					<i class="material-icons">access_time</i>
 					XX dias restantes para contribuir
 				</p>
+				<p v-if="consulta.sistematizacao" class="linkSistemat">
+					<a href="#">
+						Sistematização das contribuições
+						<i class="material-icons">launch</i>
+					</a>
+				</p>
 			</div>
-			<p ref="textoIntro">{{ consulta.textoIntro }}</p>
+			<p ref="textoIntro" class="esconde">{{ consulta.textoIntro }}</p>
 			<a :href="consulta.urlConsulta">Acessar consulta</a>
 		</article>
 		</template>
@@ -44,8 +50,10 @@
 </div>
 </template>
 
-<script>	
+<script>
 import consultas from '../static/consultas.json';
+// import listjs from 'list.js';
+
 export default {
 	name: 'Participe',
 	data() {
@@ -55,13 +63,13 @@ export default {
 		}
 	},
 	mounted() {
-		for (let i = 0; i <= consultas.length; i++) {
-			let txtI = this.$refs.textoIntro;
-			let nMaxCaracteres = 280;
-			txtI[i].innerHTML = txtI[i].innerHTML.substring(0, nMaxCaracteres);
-			let limite = txtI[i].innerHTML.toString().lastIndexOf(' ');
-			txtI[i].innerHTML = txtI[i].innerHTML.substring(0, limite) + '...';
-		};
+		// let options = {
+		// 	valueNames: [ 'nome', 'esconde' ],
+		// 	item: '<article></article>',
+		// 	listClass: 'listContainer',
+		// 	searchClass: 'inputBusca'
+		// };
+		// let lista = new List('lista', options);
 	},
 	methods: {
 		ativaBusca() {
@@ -106,17 +114,20 @@ header {
 		justify-content: space-between;
 		min-width: calc(280px - 2rem);
 		font-size: x-large;
-		div a {
+		div > a {
 			color: unset;
 			&:hover { text-decoration: none; };
 			span:first-child { color: #BDBDBD; };
 			span:nth-child(2) { color: inherit; };
 			span:nth-child(3) { color: #EB5757; };
 		};
-		img {
-			margin-left: 2rem;
-			max-height: 40px;
-			min-height: 32px;
+		a {
+			line-height: 100%;
+			img {
+				margin-left: 2rem;
+				max-height: 40px;
+				min-height: 32px;
+			};
 		};
 	};
 	div.busca {
@@ -165,7 +176,7 @@ body {
 
 main {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(160px, 800px));
+	grid-template-columns: repeat(auto-fit, minmax(160px, 720px));
 	grid-gap: 2rem;
 	padding: 2rem;
 
@@ -235,13 +246,31 @@ main {
 				background: transparent;
 				box-shadow: none;
 				margin-bottom: 12px;
+				white-space: nowrap;
 				i { vertical-align: text-top; font-size: larger; margin-right: 8px; };
+				&.linkSistemat {
+					position: absolute;
+					bottom: 20px;
+					a {
+						display: inline;
+						background: transparent;
+						margin: 0;
+						padding: 6px 8px;
+						border-radius: 2px;
+						background: rgba(255, 255, 255, .2);
+						text-transform: none;
+						color: inherit;
+						transition: all ease-in-out .1s;
+						&:hover { text-decoration: none; background: transparent; };
+					};
+					i { margin: 0; };
+				};
 				&:last-child{
 					margin-bottom: 0;
 				};
 			};
 		};
-		p {
+		p.esconde {
 			grid-row: 1 / 2;
 			grid-column: 2 / 3;
 			align-self: end;
@@ -255,6 +284,7 @@ main {
 			box-shadow: inset 0px -4px 4px rgba(0, 0, 0, .12);
 			border-radius: 2px 0 0 0;
 			z-index: 1;
+			max-height: calc(16rem - 8px);
 		};
 		a {
 			grid-row: 2 / 3;
@@ -326,15 +356,19 @@ footer {
 			justify-content: space-between;
 			width: 100%;
 			font-size: large;
+			& > a img {
+				margin-left: 0;
+				max-height: 32px;
+			};
 		};
 		div.busca { display: none; };
 	};
 	main {
 		article.card {
 			grid-template-columns: 1fr;
-			grid-template-rows: auto auto 48px;
+			grid-template-rows: minmax(280px, auto) auto 48px;
 			h1 { padding-top: 2.5rem; };
-			p { grid-row: 2 / 3; grid-column: 1 / 2; border-radius: 0; };
+			p.esconde { grid-row: 2 / 3; grid-column: 1 / 2; border-radius: 0; max-height: calc(8rem - 6px;); };
 			a { grid-row: 3 / 4; grid-column: 1 / 2; };
 		};
 		article.card:first-child {
@@ -367,7 +401,7 @@ footer {
 	};
 };
 
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 	main {
 		display: block;
 		article.card {
@@ -379,9 +413,15 @@ footer {
 			position: relative;
 			div {
 				background-image: linear-gradient(to right, rgba(0,0,0,.8), rgba(0,0,0,.4)); border-radius: 2px 0 0 2px;
+				min-height: 220px;
 			};
 			div h1 { padding-top: 2.5rem; };
-			p { max-height: 160px; background: rgba(255, 255, 255, .92); };
+			p.esconde {
+				background: rgba(255, 255, 255, .92);
+				overflow: hidden;
+				max-height: calc(9.6rem - 6px);
+				border-radius: 0;
+			};
 			a { width: 100%; };
 		};
 		article.card::before {
@@ -413,7 +453,7 @@ footer {
 					box-shadow: none;
 				};
 			};
-			p {
+			p.esconde {
 				position: absolute;
 				right: 0;
 				width: 20%;

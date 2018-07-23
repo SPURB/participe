@@ -1,48 +1,47 @@
 <template>
 <div id="app">
 	<header>
-		<div class="logo">
-			<div><a href="http://gestaourbana.prefeitura.sp.gov.br/" title="Gestão Urbana"><span>gestão</span><span>urbana</span><span>SP</span></a></div>
-			<a href="http://www.capital.sp.gov.br/" title="Prefeitura de São Paulo"><img src="../src/assets/img/PMSP_cor_transparente.png"></a>
-		</div>
-		<div class="busca" @click="ativaBusca" title="Digite o que pesquisa e aperte 'Enter'">
-			<i class="material-icons">search</i>
-			<input ref="busca" type="search" :class="{ focus: buscaClick }" class="inputBusca" @focusout="desativaBusca">
-			<i ref="iconeEnter" class="material-icons">keyboard_return</i>
-		</div>
+		<div><a href="http://gestaourbana.prefeitura.sp.gov.br/" title="Gestão Urbana"><span>gestão</span><span>urbana</span><span>SP</span></a></div>
+		<a href="http://www.capital.sp.gov.br/" title="Prefeitura de São Paulo"><img src="../src/assets/img/PMSP_cor_transparente.png"></a>
 	</header>
-	<main>
-		<template v-for="consulta in consultas.slice().reverse()">
-			<article class="card" :style="{ backgroundImage: 'url(' + consulta.capa + ')' }">
-			<div>
-				<h1 :class="{ consultaAtiva: consulta.ativo }" class="nome">{{ consulta.nome }}</h1>
-				<p v-if="consulta.ativo">
-					<i class="material-icons">date_range</i>
-					Consulta iniciada em {{ consulta.dataCadastro }}
-				</p>
-				<p v-if="!consulta.ativo">
-					<i class="material-icons">date_range</i>
-					{{ consulta.dataCadastro }} – {{ consulta.dataFinal }}
-				</p>
-				<p>
-					<i class="material-icons">chat_bubble</i>
-					{{ consulta.nContribuicoes }} contribuições
-				</p>
-				<p v-if="consulta.ativo">
-					<i class="material-icons">access_time</i>
-					XX dias restantes para contribuir
-				</p>
-				<p v-if="consulta.sistematizacao" class="linkSistemat">
-					<a href="#">
-						Sistematização das contribuições
-						<i class="material-icons">launch</i>
-					</a>
-				</p>
-			</div>
-			<p ref="textoIntro" class="esconde">{{ consulta.textoIntro }}</p>
-			<a :href="consulta.urlConsulta">Acessar consulta</a>
-		</article>
-		</template>
+	<main id="lista">
+		<div class="busca" @click="ativaBusca">
+			<i class="material-icons">search</i>
+			<input class="fuzzy-search" type="search" ref="busca" title="Digite o que pesquisa" value="Pesquisar" @focusout="desativaBusca">
+		</div>
+		<ul class="list">
+			<li v-for="consulta in consultas" class="card" :style="{ backgroundImage: 'url(' + consulta.capa + ')' }">
+				<p class="nome">{{ consulta.nome }}</p>
+				<p class="texto">{{ consulta.textoIntro }}</p>
+				<div>
+					<h1 :class="{ consultaAtiva: consulta.ativo }" class="nome">{{ consulta.nome }}</h1>
+					<p v-if="consulta.ativo" title="Período da consulta">
+						<i class="material-icons">date_range</i>
+						Consulta iniciada em {{ dataDisplay(consulta.dataCadastro) }}
+					</p>
+					<p v-if="!consulta.ativo" title="Período da consulta">
+						<i class="material-icons">date_range</i>
+						{{ dataDisplay(consulta.dataCadastro) }}–{{ dataDisplay(consulta.dataFinal) }}
+					</p>
+					<p title="Número de contribuições">
+						<i class="material-icons">chat_bubble</i>
+						{{ consulta.nContribuicoes }} contribuições
+					</p>
+					<p v-if="consulta.ativo" title="Tempo restante para contribuir">
+						<i class="material-icons">access_time</i>
+						{{ diasRestantes(consulta.dataFinal) }}
+					</p>
+					<p v-if="consulta.sistematizacao" class="linkSistemat">
+						<a href="#">
+							Sistematização das contribuições
+							<i class="material-icons">launch</i>
+						</a>
+					</p>
+				</div>
+				<p ref="textoIntro" class="esconde">{{ consulta.textoIntro }}</p>
+				<a :href="consulta.urlConsulta">Acessar consulta</a>
+			</li>
+		</ul>
 	</main>
 	<footer>
 		Caso surjam dúvidas ou problemas técnicos, envie um e-mail para: <a href="mailto:imprensasmul@prefeitura.sp.gov.br">imprensasmul@prefeitura.sp.gov.br</a>
@@ -58,29 +57,33 @@ export default {
 	name: 'Participe',
 	data() {
 		return {
-			consultas: consultas,
-			buscaClick: false,
+			consultas: consultas.slice().reverse(),
 		}
 	},
 	mounted() {
-		// let options = {
-		// 	valueNames: [ 'nome', 'esconde' ],
-		// 	item: '<article></article>',
-		// 	listClass: 'listContainer',
-		// 	searchClass: 'inputBusca'
-		// };
-		// let lista = new List('lista', options);
+		let listaTeste = new List('lista', {
+			valueNames: [ 'nome', 'texto' ],
+		});
 	},
 	methods: {
 		ativaBusca() {
-			this.buscaClick = true;
-			this.$refs.busca.focus();
-			this.$refs.iconeEnter.style.opacity = '1';
+			this.$refs.busca.value = '';
+			this.$refs.busca.style.color = '#333';
 		},
 		desativaBusca() {
-			this.buscaClick = false;
-			this.$refs.busca.value = '';
-			this.$refs.iconeEnter.style.opacity = '0';
+			this.$refs.busca.value='Pesquisar'
+			this.$refs.busca.style.color = '#BDBDBD';
+		},
+		dataDisplay(data) {
+			return data.substring(8,10) + '/' + data.substring(5,7) + '/' + data.substring(0,4);
+		},
+		diasRestantes(data) {
+			let hoje = new Date();
+			let dataFinal = new Date(data.substring(0,4), data.substring(5,7)-1, data.substring(8,10));
+			let dias = Math.round((dataFinal - hoje)/(1000 * 60 * 60 * 24))+1;
+			if (dias <= 0) {
+				return 'Não é mais possível contribuir';
+			} else { return dias + ' dias restantes para contribuir' };
 		},
 	},
 };
@@ -107,59 +110,19 @@ header {
 	max-height: 120px;
 	box-shadow: 0 2px 2px rgba(0, 0, 0, .12);
 	background: #F8F8F8;
-	div.logo {
-		display: flex;
-		flex-flow: row nowrap;
-		align-items: center;
-		justify-content: space-between;
-		min-width: calc(280px - 2rem);
+	div > a {
+		color: unset;
 		font-size: x-large;
-		div > a {
-			color: unset;
-			&:hover { text-decoration: none; };
-			span:first-child { color: #BDBDBD; };
-			span:nth-child(2) { color: inherit; };
-			span:nth-child(3) { color: #EB5757; };
-		};
-		a {
-			line-height: 100%;
-			img {
-				margin-left: 2rem;
-				max-height: 40px;
-				min-height: 32px;
-			};
-		};
+		&:hover { text-decoration: none; };
+		span:first-child { color: #BDBDBD; };
+		span:nth-child(2) { color: inherit; };
+		span:nth-child(3) { color: #EB5757; };
 	};
-	div.busca {
-		position: relative;
-		i {
-			position: absolute;
-			font-size: 24px;
-			line-height: 40px;
-			color: #BDBDBD;
-			padding: 0 10px;
-			&:nth-of-type(2) {
-				opacity: 0;
-				right: 0;
-				transition: opacity .25s;
-			};
-		};
-		input {
-			float: right;
-			width: 40px;
-			border: 1px solid #DDD;
-			border-radius: 2px;
-			height: 40px;
-			padding: 6px 8px 6px 36px;
-			font-family: inherit;
-			font-size: large;
-			transition: all ease-in-out .25s;
-			caret-color: #EB5757;
-			&.focus {
-				padding-left: 40px;
-				border-color: #EB5757;
-				width: 40vw;
-			};
+	a {
+		line-height: 100%;
+		img {
+			max-height: 40px;
+			min-height: 32px;
 		};
 	};
 };
@@ -175,172 +138,207 @@ body {
 };
 
 main {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(160px, 720px));
-	grid-gap: 2rem;
-	padding: 2rem;
-
-	article.card {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 400px 48px;
-		border-radius: 2px;
-		box-shadow: 0 4px 4px rgba(0, 0, 0, .24);
-		background-position: center center;
-		background-size: cover;
-		transition: transform ease-in-out .1s, box-shadow .1s;
+	div.busca {
 		position: relative;
-		z-index: 0;
-		overflow: hidden;
-		div {
-			grid-row: 1 / 2;
-			grid-column: 1 / 2;
-			display: flex;
-			flex-flow: column wrap;
-			justify-content: center;
-			padding: 16px;
-			box-shadow: inset 0px -4px 4px rgba(0, 0, 0, .12);
+		padding: 2rem 2rem 0 2rem;
+		i {
+			position: absolute;
+			font-size: 24px;
+			line-height: 40px;
+			color: #BDBDBD;
+			padding: 0 10px;
+		};
+		input {
+			width: 100%;
+			border: 1px solid #DDD;
+			border-radius: 2px;
+			height: 40px;
+			padding: 6px 8px 6px 40px;
+			font-family: inherit;
+			font-size: large;
+			transition: all ease-in-out .2s;
+			caret-color: #EB5757;
+			color: #BDBDBD;
+			&:hover {
+				border-color: #BDBDBD;
+			};
+			&:focus {
+				border-color: #EB5757;
+			};
+		};
+
+	};
+	ul {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(160px, 720px));
+		grid-gap: 2rem;
+		padding: 2rem;
+		margin: 0;
+
+		li.card {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 400px 48px;
+			border-radius: 2px;
+			box-shadow: 0 4px 4px rgba(0, 0, 0, .24);
+			background-position: center center;
+			background-size: cover;
+			transition: transform ease-in-out .1s, box-shadow .1s;
 			position: relative;
+			z-index: 0;
 			overflow: hidden;
-			h1 {
-				font-size: xx-large;
-				line-height: 120%;
-				color: #FFF;
-				margin: 0 0 12px 0;
-				width: calc(100% - 32px);
-				&::before {
-					position: absolute;
-					top: 16px;
-					left: 16px;
-					display: block;
-					content: 'Consulta encerrada';
-					font-size: 12px;
-					font-weight: normal;
-					text-transform: uppercase;
-					text-align: center;
-					line-height: 24px;
-					white-space: nowrap;
-					text-overflow: ellipsis;
-					height: 24px;
-					padding: 0 8px;
-					border-radius: 2px;
-					border: 2px solid rgba(255, 255, 255, .24);
-					opacity: .5;
-					background: rgba(0, 0, 0, .8);
-				};
-				&.consultaAtiva::before {
-					opacity: 1;
-					content: 'Em consulta';
-					background: #008015;
-				};
-			};
-			& p {
-				display: block;
-				width: 100%;
-				font-family: inherit;
-				font-size: small;
-				text-shadow: none;
-				padding: 0;
-				margin: 0;
-				color: #FFF;
-				background: transparent;
-				box-shadow: none;
-				margin-bottom: 12px;
-				white-space: nowrap;
-				i { vertical-align: text-top; font-size: larger; margin-right: 8px; };
-				&.linkSistemat {
-					position: absolute;
-					bottom: 20px;
-					a {
-						display: inline;
-						background: transparent;
-						margin: 0;
-						padding: 6px 8px;
+			p.nome, p.texto { display: none; };
+			div {
+				grid-row: 1 / 2;
+				grid-column: 1 / 2;
+				display: flex;
+				flex-flow: column wrap;
+				justify-content: center;
+				padding: 16px;
+				box-shadow: inset 0px -4px 4px rgba(0, 0, 0, .12);
+				position: relative;
+				overflow: hidden;
+				h1 {
+					font-size: xx-large;
+					line-height: 120%;
+					color: #FFF;
+					margin: 0 0 12px 0;
+					width: calc(100% - 32px);
+					&::before {
+						position: absolute;
+						top: 16px;
+						left: 16px;
+						display: block;
+						content: 'Consulta encerrada';
+						font-size: 12px;
+						font-weight: normal;
+						text-transform: uppercase;
+						text-align: center;
+						line-height: 24px;
+						white-space: nowrap;
+						text-overflow: ellipsis;
+						height: 24px;
+						padding: 0 8px;
 						border-radius: 2px;
-						background: rgba(255, 255, 255, .2);
-						text-transform: none;
-						color: inherit;
-						transition: all ease-in-out .1s;
-						&:hover { text-decoration: none; background: transparent; };
+						border: 2px solid rgba(255, 255, 255, .24);
+						opacity: .5;
+						background: rgba(0, 0, 0, .8);
 					};
-					i { margin: 0; };
+					&.consultaAtiva::before {
+						opacity: 1;
+						content: 'Em consulta';
+						background: #008015;
+					};
 				};
-				&:last-child{
-					margin-bottom: 0;
+				& p {
+					display: block;
+					width: 100%;
+					font-family: inherit;
+					font-size: small;
+					text-shadow: none;
+					padding: 0;
+					margin: 0;
+					color: #FFF;
+					background: transparent;
+					box-shadow: none;
+					margin-bottom: 12px;
+					white-space: nowrap;
+					i { vertical-align: text-top; font-size: larger; margin-right: 8px; };
+					&.linkSistemat {
+						position: absolute;
+						bottom: 20px;
+						a {
+							display: inline;
+							background: transparent;
+							margin: 0;
+							padding: 6px 8px;
+							border-radius: 2px;
+							background: rgba(255, 255, 255, .2);
+							text-transform: none;
+							color: inherit;
+							transition: all ease-in-out .1s;
+							&:hover { text-decoration: none; background: transparent; };
+						};
+						i { margin: 0; };
+					};
+					&:last-child{
+						margin-bottom: 0;
+					};
 				};
 			};
+			p.esconde {
+				grid-row: 1 / 2;
+				grid-column: 2 / 3;
+				align-self: end;
+				display: flex;
+				font-family: Georgia, serif;
+				text-shadow: 0 1px 1px rgba(255, 255, 255, .4);
+				padding: 8px 16px;
+				box-sizing: content-box;
+				margin: 0;
+				background: rgba(255, 255, 255, .92);
+				box-shadow: inset 0px -4px 4px rgba(0, 0, 0, .12);
+				border-radius: 2px 0 0 0;
+				z-index: 1;
+				max-height: calc(16rem - 8px);
+				position: relative;
+			};
+			a {
+				grid-row: 2 / 3;
+				grid-column: 1 / span 2;
+				display: flex;
+				align-items: center;
+				padding: 16px;
+				background: #FFF;
+				text-transform: uppercase;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				z-index: 1;
+			};
 		};
-		p.esconde {
-			grid-row: 1 / 2;
-			grid-column: 2 / 3;
-			align-self: end;
-			display: flex;
-			font-family: Georgia, serif;
-			text-shadow: 0 1px 1px rgba(255, 255, 255, .4);
-			padding: 8px 16px;
-			box-sizing: content-box;
-			margin: 0;
-			background: rgba(255, 255, 255, .92);
-			box-shadow: inset 0px -4px 4px rgba(0, 0, 0, .12);
-			border-radius: 2px 0 0 0;
-			z-index: 1;
-			max-height: calc(16rem - 8px);
+		li.card::before {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 100%;		
+			background-image: linear-gradient(275deg, rgba(0,0,0,.2), rgba(0,0,0,.8));
+			transition: all ease-in-out .2s;
+			border-radius: 2px;
+			z-index: 0;
 		};
-		a {
-			grid-row: 2 / 3;
-			grid-column: 1 / span 2;
-			display: flex;
-			align-items: center;
-			padding: 16px;
-			background: #FFF;
-			text-transform: uppercase;
-			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;
-			z-index: 1;
-		};
-	};
-	article.card::before {
-		content: '';
-		position: absolute;
-		display: block;
-		width: 100%;
-		height: 100%;		
-		background-image: linear-gradient(275deg, rgba(0,0,0,.2), rgba(0,0,0,.8));
-		transition: all ease-in-out .2s;
-		border-radius: 2px;
-		z-index: 0;
-	};
-	article.card:first-child {
-		grid-column: 1 / span all;
-		grid-template-columns: repeat(7, 1fr);
-		grid-template-rows: minmax(300px, 60vh) 64px;
-		div {
-			grid-column: 1 / span 5;
-			grid-row: 1 / span all;
-			align-items: center;
-			box-shadow: none;
-			h1 {
-				margin: 0 0 2rem 0;
-				font-size: 64px;
-				line-height: 100%;
-				width: 100%;
+		li.card:first-child {
+			grid-column: 1 / span all;
+			grid-template-columns: repeat(7, 1fr);
+			grid-template-rows: minmax(300px, 60vh) 64px;
+			div {
+				grid-column: 1 / span 5;
+				grid-row: 1 / span all;
+				align-items: center;
+				box-shadow: none;
+				h1 {
+					margin: 0 0 2rem 0;
+					font-size: 64px;
+					line-height: 100%;
+					width: 100%;
+				};
+				p {
+					align-self: flex-start;
+				};
 			};
 			p {
-				align-self: flex-start;
+				grid-column: 6 / 8;
+			};
+			a {
+				grid-column: 6 / 8;
+				justify-content: flex-end;
 			};
 		};
-		p {
-			grid-column: 6 / 8;
+		li.card:hover {
+			box-shadow: 0 8px 8px rgba(0, 0, 0, .24);
+			transform: translateY(-2px);
 		};
-		a {
-			grid-column: 6 / 8;
-			justify-content: flex-end;
-		};
-	};
-	article.card:hover {
-		box-shadow: 0 8px 8px rgba(0, 0, 0, .24);
-		transform: translateY(-2px);
 	};
 };
 
@@ -352,26 +350,26 @@ footer {
 
 @media (max-width: 800px) {
 	header {
-		div.logo {
-			justify-content: space-between;
-			width: 100%;
+		div > a {
 			font-size: large;
-			& > a img {
-				margin-left: 0;
-				max-height: 32px;
-			};
 		};
-		div.busca { display: none; };
+		a img {
+			margin-left: 0;
+			max-height: 32px;
+		};
 	};
-	main {
-		article.card {
+	main div.busca {
+		margin-bottom: 1rem;
+	};
+	main ul {
+		li.card {
 			grid-template-columns: 1fr;
 			grid-template-rows: minmax(280px, auto) auto 48px;
 			h1 { padding-top: 2.5rem; };
 			p.esconde { grid-row: 2 / 3; grid-column: 1 / 2; border-radius: 0; max-height: calc(8rem - 6px;); };
 			a { grid-row: 3 / 4; grid-column: 1 / 2; };
 		};
-		article.card:first-child {
+		li.card:first-child {
 			grid-column: unset;
 			grid-template-columns: 1fr;
 			grid-template-rows: minmax(360px, auto) auto 48px;
@@ -402,9 +400,10 @@ footer {
 };
 
 @media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-	main {
+	main div.busca { margin-bottom: 1rem; };
+	main ul {
 		display: block;
-		article.card {
+		li.card {
 			float: left;
 			min-width: 260px;
 			width: 100%;
@@ -412,8 +411,10 @@ footer {
 			margin: 0 2rem 2rem 0;
 			position: relative;
 			div {
-				background-image: linear-gradient(to right, rgba(0,0,0,.8), rgba(0,0,0,.4)); border-radius: 2px 0 0 2px;
+				background-image: linear-gradient(to right, rgba(0,0,0,.8), rgba(0,0,0,.4)); 
+				border-radius: 2px 0 0 2px;
 				min-height: 220px;
+				margin-top: -26px;
 			};
 			div h1 { padding-top: 2.5rem; };
 			p.esconde {
@@ -424,16 +425,16 @@ footer {
 			};
 			a { width: 100%; };
 		};
-		article.card::before {
+		li.card::before {
 			background-image: none;
 		};
-		article.card:first-child {
-			margin-bottom: 2rem;
+		li.card:first-child {
+			div { margin-top: -26px; };
 			p { font-size: inherit; };
 		}
 	};
-	@media (min-width: 600px) {
-		main article.card:first-child {
+	@media (min-width: 800px) {
+		main ul li.card:first-child {
 			min-width: 100%;
 			height: 540px;
 			position: relative;
@@ -442,6 +443,7 @@ footer {
 				width: calc(80% - 32px);
 				height: 100%;
 				box-shadow: none;
+				margin-top: 0;
 				h1 {
 					width: 100%;
 				};

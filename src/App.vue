@@ -1,90 +1,34 @@
 <template>
 <div id="app">
-	<header>
-		<div><a href="http://gestaourbana.prefeitura.sp.gov.br/" title="Gestão Urbana"><span>gestão</span><span>urbana</span><span>SP</span></a></div>
-		<a href="http://www.capital.sp.gov.br/" title="Prefeitura de São Paulo"><img src="../src/assets/img/PMSP_cor_transparente.png"></a>
-	</header>
-	<main id="lista">
-		<div class="busca" @click="ativaBusca">
-			<i class="material-icons">search</i>
-			<input class="fuzzy-search" type="search" ref="busca" title="Digite o que pesquisa" value="Pesquisar" @focusout="desativaBusca">
-		</div>
-		<ul class="list">
-			<li v-for="consulta in consultas" class="card" :style="{ backgroundImage: 'url(' + consulta.capa + ')' }">
-				<p class="nome">{{ consulta.nome }}</p>
-				<p class="texto">{{ consulta.textoIntro }}</p>
-				<div>
-					<h1 :class="{ consultaAtiva: consulta.ativo }" class="nome">{{ consulta.nome }}</h1>
-					<p v-if="consulta.ativo" title="Período da consulta">
-						<i class="material-icons">date_range</i>
-						Consulta iniciada em {{ dataDisplay(consulta.dataCadastro) }}
-					</p>
-					<p v-if="!consulta.ativo" title="Período da consulta">
-						<i class="material-icons">date_range</i>
-						{{ dataDisplay(consulta.dataCadastro) }}–{{ dataDisplay(consulta.dataFinal) }}
-					</p>
-					<p title="Número de contribuições">
-						<i class="material-icons">chat_bubble</i>
-						{{ consulta.nContribuicoes }} contribuições
-					</p>
-					<p v-if="consulta.ativo" title="Tempo restante para contribuir">
-						<i class="material-icons">access_time</i>
-						{{ diasRestantes(consulta.dataFinal) }}
-					</p>
-					<p v-if="consulta.sistematizacao" class="linkSistemat">
-						<a href="#">
-							Sistematização das contribuições
-							<i class="material-icons">launch</i>
-						</a>
-					</p>
-				</div>
-				<p ref="textoIntro" class="esconde">{{ consulta.textoIntro }}</p>
-				<a :href="consulta.urlConsulta">Acessar consulta</a>
-			</li>
-		</ul>
-	</main>
-	<footer>
-		Caso surjam dúvidas ou problemas técnicos, envie um e-mail para: <a href="mailto:imprensasmul@prefeitura.sp.gov.br">imprensasmul@prefeitura.sp.gov.br</a>
-	</footer>
+	<div :class="{ preto: menuToggle }" class="lightsOff"></div>
+	<Cabecalho></Cabecalho>
+	<MenuLateral></MenuLateral>
+	<Home></Home>
+	<Rodape></Rodape>
 </div>
 </template>
 
 <script>
+import Cabecalho from '@/components/Cabecalho';
+import MenuLateral from '@/components/MenuLateral';
+import Home from '@/components/Home';
+import Rodape from '@/components/Rodape';
 import consultas from '../static/consultas.json';
 // import listjs from 'list.js';
 
 export default {
 	name: 'Participe',
+	components: {
+		Cabecalho,
+		MenuLateral,
+		Home,
+		Rodape,
+	},
 	data() {
 		return {
 			consultas: consultas.slice().reverse(),
+			menuToggle: false,
 		}
-	},
-	mounted() {
-		let listaTeste = new List('lista', {
-			valueNames: [ 'nome', 'texto' ],
-		});
-	},
-	methods: {
-		ativaBusca() {
-			this.$refs.busca.value = '';
-			this.$refs.busca.style.color = '#333';
-		},
-		desativaBusca() {
-			this.$refs.busca.value='Pesquisar'
-			this.$refs.busca.style.color = '#BDBDBD';
-		},
-		dataDisplay(data) {
-			return data.substring(8,10) + '/' + data.substring(5,7) + '/' + data.substring(0,4);
-		},
-		diasRestantes(data) {
-			let hoje = new Date();
-			let dataFinal = new Date(data.substring(0,4), data.substring(5,7)-1, data.substring(8,10));
-			let dias = Math.round((dataFinal - hoje)/(1000 * 60 * 60 * 24))+1;
-			if (dias <= 0) {
-				return 'Não é mais possível contribuir';
-			} else { return dias + ' dias restantes para contribuir' };
-		},
 	},
 };
 </script>
@@ -100,7 +44,20 @@ i {
 	&:hover { cursor: default; };
 };
 
-header {
+div.lightsOff {
+	position: absolute;
+	z-index: 2;
+	background: transparent;
+	transition: all .2s;
+	&.preto {
+		display: block;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, .72);
+	};
+};
+
+/*header {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -110,13 +67,23 @@ header {
 	max-height: 120px;
 	box-shadow: 0 2px 2px rgba(0, 0, 0, .12);
 	background: #F8F8F8;
-	div > a {
-		color: unset;
-		font-size: x-large;
-		&:hover { text-decoration: none; };
-		span:first-child { color: #BDBDBD; };
-		span:nth-child(2) { color: inherit; };
-		span:nth-child(3) { color: #EB5757; };
+	i {
+		color: #BDBDBD; transition: color .1s;
+		&:hover { color: #333; cursor: pointer; };
+	};
+	h1 {
+		margin: 0;
+		padding: 0;
+		font-size: 24px;
+		font-weight: 400;
+		a {
+			color: #BDBDBD;
+			span {
+				color: #EB5757;
+				font-weight: 800;
+			};
+			&:hover { text-decoration: none; };
+		};
 	};
 	a {
 		line-height: 100%;
@@ -125,7 +92,69 @@ header {
 			min-height: 32px;
 		};
 	};
-};
+};*/
+
+/*aside {
+	position: fixed;
+	z-index: 3;
+	background: #FFF;
+	top: 0;
+	left: 0;
+	width: 80vw;
+	max-width: 400px;
+	height: 100vh;
+	overflow-y: scroll;
+	box-shadow: 16px 0 16px rgba(0, 0, 0, .48);
+	transform: translateX(-200%);
+	transition: transform ease-in-out .4s;
+	i:nth-of-type(1) {
+		position: absolute;
+		right: 1rem;
+		top: 1rem;
+		color: #BDBDBD;
+		transition: color .1s;
+		&:hover { color: #333; cursor: pointer; };
+	};
+	ul {
+		margin: 0;
+		padding: 0;
+		li {
+			display: block;
+			padding: .4rem 1rem;
+			a {
+				display: block;
+				color: #666;
+				&.ativo {
+					color: #333;
+					font-weight: bolder;
+				};
+				&:hover {
+					text-decoration: none;
+				};
+			};
+			a.consultaAtiva::after {
+				content: 'Em consulta';
+				font-size: 10px;
+				text-transform: uppercase;
+				color: #FFFFFF;
+				background-color: #008015;
+				padding: 2px 5px;
+				border-radius: 2px;
+				margin-left: 8px;
+				vertical-align: middle;
+			};
+		};
+		li:nth-of-type(2) { margin-top: .4rem; };
+		li:last-child { margin-bottom: .4rem; };
+		li.logo {
+			display: inline-block;
+			padding: 1.2rem 1rem .5rem .8rem;
+		};
+	};
+	&.aberto {
+		transform: translateX(0);
+	};
+};*/
 
 body {
 	font-family: 'Roboto', 'Segoe UI', 'Helvetica', Arial, sans-serif;
@@ -137,10 +166,11 @@ body {
 	a:hover { text-decoration: underline; };
 };
 
-main {
+/*main {
 	div.busca {
 		position: relative;
 		padding: 2rem 2rem 0 2rem;
+		z-index: 0;
 		i {
 			position: absolute;
 			font-size: 24px;
@@ -186,8 +216,7 @@ main {
 			transition: transform ease-in-out .1s, box-shadow .1s;
 			position: relative;
 			z-index: 0;
-			overflow: hidden;
-			p.nome, p.texto { display: none; };
+			p.nome, p.textoIntro { display: none; };
 			div {
 				grid-row: 1 / 2;
 				grid-column: 1 / 2;
@@ -198,41 +227,44 @@ main {
 				box-shadow: inset 0px -4px 4px rgba(0, 0, 0, .12);
 				position: relative;
 				overflow: hidden;
-				h1 {
-					font-size: xx-large;
-					line-height: 120%;
-					color: #FFF;
-					margin: 0 0 12px 0;
-					width: calc(100% - 32px);
-					&::before {
-						position: absolute;
-						top: 16px;
-						left: 16px;
-						display: block;
-						content: 'Consulta encerrada';
-						font-size: 12px;
-						font-weight: normal;
-						text-transform: uppercase;
-						text-align: center;
-						line-height: 24px;
-						white-space: nowrap;
-						text-overflow: ellipsis;
-						height: 24px;
-						padding: 0 8px;
-						border-radius: 2px;
-						border: 2px solid rgba(255, 255, 255, .24);
-						opacity: .5;
-						background: rgba(0, 0, 0, .8);
+				a {
+					h1 {
+						font-size: xx-large;
+						line-height: 120%;
+						color: #FFF;
+						margin: 0 0 12px 0;
+						width: calc(100% - 32px);
+						&::before {
+							position: absolute;
+							top: 16px;
+							left: 16px;
+							display: block;
+							content: 'Consulta encerrada';
+							font-size: 12px;
+							font-weight: normal;
+							text-transform: uppercase;
+							text-align: center;
+							line-height: 24px;
+							white-space: nowrap;
+							text-overflow: ellipsis;
+							height: 24px;
+							padding: 0 8px;
+							border-radius: 2px;
+							border: 2px solid rgba(255, 255, 255, .24);
+							opacity: .5;
+							background: rgba(0, 0, 0, .8);
+						};
+						&.consultaAtiva::before {
+							opacity: 1;
+							content: 'Em consulta';
+							background: #008015;
+						};
 					};
-					&.consultaAtiva::before {
-						opacity: 1;
-						content: 'Em consulta';
-						background: #008015;
-					};
+					&:hover { text-decoration: none; };
 				};
 				& p {
 					display: block;
-					width: 100%;
+					width: auto;
 					font-family: inherit;
 					font-size: small;
 					text-shadow: none;
@@ -273,17 +305,18 @@ main {
 				display: flex;
 				font-family: Georgia, serif;
 				text-shadow: 0 1px 1px rgba(255, 255, 255, .4);
-				padding: 8px 16px;
+				padding: 8px 16px 0px 16px;
 				box-sizing: content-box;
 				margin: 0;
 				background: rgba(255, 255, 255, .92);
 				box-shadow: inset 0px -4px 4px rgba(0, 0, 0, .12);
 				border-radius: 2px 0 0 0;
 				z-index: 1;
-				max-height: calc(16rem - 8px);
+				max-height: 16rem;
 				position: relative;
+				a { color: inherit; overflow-y: hidden; &:hover { text-decoration: none; }; };
 			};
-			a {
+			a.acesso {
 				grid-row: 2 / 3;
 				grid-column: 1 / span 2;
 				display: flex;
@@ -317,11 +350,15 @@ main {
 				grid-row: 1 / span all;
 				align-items: center;
 				box-shadow: none;
-				h1 {
-					margin: 0 0 2rem 0;
-					font-size: 64px;
-					line-height: 100%;
+				a {
+					display: block;
 					width: 100%;
+					h1 {
+						margin: 0 0 2rem 0;
+						font-size: 64px;
+						line-height: 100%;
+						width: 100%;
+					};
 				};
 				p {
 					align-self: flex-start;
@@ -330,7 +367,7 @@ main {
 			p {
 				grid-column: 6 / 8;
 			};
-			a {
+			a.acesso {
 				grid-column: 6 / 8;
 				justify-content: flex-end;
 			};
@@ -340,34 +377,39 @@ main {
 			transform: translateY(-2px);
 		};
 	};
-};
+};*/
 
-footer {
+/*footer {
 	clear: all;
 	background: #eee;
 	padding: 16px 32px;
-};
+};*/
+
+/*@media (max-width: 420px) {
+	header a img { display: none; };
+}*/
 
 @media (max-width: 800px) {
-	header {
-		div > a {
-			font-size: large;
+	/*header {
+		h1 a {
+			font-size: 16px;
+			vertical-align: 4px;
 		};
 		a img {
 			margin-left: 0;
 			max-height: 32px;
 		};
-	};
-	main div.busca {
+	};*/
+	/*main div.busca {
 		margin-bottom: 1rem;
 	};
 	main ul {
 		li.card {
 			grid-template-columns: 1fr;
 			grid-template-rows: minmax(280px, auto) auto 48px;
-			h1 { padding-top: 2.5rem; };
-			p.esconde { grid-row: 2 / 3; grid-column: 1 / 2; border-radius: 0; max-height: calc(8rem - 6px;); };
-			a { grid-row: 3 / 4; grid-column: 1 / 2; };
+			div a h1 { padding-top: 2.5rem; };
+			p.esconde { grid-row: 2 / 3; grid-column: 1 / 2;  border-radius: 0; max-height: calc(8rem - 6px;); };
+			a.acesso { grid-row: 3 / 4; grid-column: 1 / 2; border-radius: 0 0 2px 2px; };
 		};
 		li.card:first-child {
 			grid-column: unset;
@@ -380,7 +422,7 @@ footer {
 				grid-column: unset;
 				grid-row: 1 / 2;
 				flex-flow: column nowrap;
-				h1 {
+				a h1 {
 					font-size: 48px;
 					line-height: 120%;
 					margin: 1rem 0;
@@ -393,16 +435,17 @@ footer {
 					};
 				};
 			};
-			p { grid-column: unset; font-size: initial; };
-			a { grid-column: unset; };
+			p.esconde { grid-column: unset; font-size: initial; };
+			a.acesso { grid-column: unset; };
 		};
-	};
+	};*/
 };
 
-@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+/*@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 	main div.busca { margin-bottom: 1rem; };
 	main ul {
 		display: block;
+		color: transparent;
 		li.card {
 			float: left;
 			min-width: 260px;
@@ -416,42 +459,44 @@ footer {
 				min-height: 220px;
 				margin-top: -26px;
 			};
-			div h1 { padding-top: 2.5rem; };
+			div a h1 { padding-top: 2.5rem; };
 			p.esconde {
 				background: rgba(255, 255, 255, .92);
+				color: #333;
 				overflow: hidden;
 				max-height: calc(9.6rem - 6px);
 				border-radius: 0;
 			};
-			a { width: 100%; };
+			a.acesso { width: 100%; };
 		};
 		li.card::before {
 			background-image: none;
 		};
 		li.card:first-child {
+			margin-bottom: 3rem;
 			div { margin-top: -26px; };
-			p { font-size: inherit; };
+			p.esconde { font-size: inherit; };
 		}
 	};
-	@media (min-width: 800px) {
+	@media (min-width: 600px) {
 		main ul li.card:first-child {
 			min-width: 100%;
 			height: 540px;
 			position: relative;
+			margin-bottom: 2rem;
 			div {
 				float: left;
 				width: calc(80% - 32px);
 				height: 100%;
 				box-shadow: none;
 				margin-top: 0;
-				h1 {
+				a h1 {
 					width: 100%;
 				};
 				p {
 					position: relative;
 					min-height: 0;
 					display: block;
-					width: 100%;
 					box-shadow: none;
 				};
 			};
@@ -460,11 +505,10 @@ footer {
 				right: 0;
 				width: 20%;
 				min-width: 160px;
-				min-height: calc(540px - 70px);
-				max-height: calc(540px - 70px);
+				min-height: calc(540px - 66px);
 				box-shadow: inset 0px -4px 4px rgba(0, 0, 0, .12);
 			};
-			a {
+			a.acesso {
 				position: absolute;
 				bottom: 0;
 				right: 0;
@@ -475,6 +519,6 @@ footer {
 			};
 		};
 	};
-};
+};*/
 
 </style>

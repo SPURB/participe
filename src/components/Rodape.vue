@@ -13,9 +13,10 @@
 </script>
 
 <style lang="scss" scoped>
-	footer {
-		clear: all;
-		background: #eee;
-		padding: 16px 32px;
-	};
+footer {
+	clear: all;
+	background: #F5F5F5;
+	padding: 16px 32px;
+	z-index: 1;
+};
 </style>

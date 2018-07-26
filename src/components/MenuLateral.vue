@@ -27,7 +27,7 @@ import consultas from '../../static/consultas.json';
 		data() {
 			return {
 				consultas: consultas.slice().reverse(),
-				// menuToggle: true, ?????????
+				menuToggle: false
 			}
 		},
 	};

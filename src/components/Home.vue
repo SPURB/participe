@@ -6,12 +6,12 @@
 				<input class="fuzzy-search" type="search" ref="busca" title="Digite o que pesquisa" value="Pesquisar" @focusout="desativaBusca">
 			</div>
 			<ul class="list">
-				<li v-for="consulta in consultas" class="card" :style="{ backgroundImage: 'url(' + consulta.capa + ')' }">
-					<p class="nome">{{ consulta.nome }}</p>
+				<li v-for="consulta in consultas" class="card" :style="{ backgroundImage: 'url(' + consulta.urlCapa + ')' }">
+					<p class="nome">{{ consulta.nomePublico }}</p>
 					<p class="textoIntro">{{ consulta.textoIntro }}</p>
 					<div>
 						<a :href="consulta.urlConsulta">
-							<h1 :class="{ consultaAtiva: consulta.ativo }" class="nome">{{ consulta.nome }}</h1>
+							<h1 :class="{ consultaAtiva: parseAtivo(consulta.ativo) }" class="nome">{{ consulta.nomePublico }}</h1>
 						</a>
 						<p v-if="consulta.ativo" title="Período da consulta">
 							<i class="material-icons">date_range</i>
@@ -45,14 +45,22 @@
 </template>
 
 <script>
-import consultas from '../../static/consultas.json';
-
+import axios from 'axios';
 	export default {
 		name: 'Home',
 		data() {
 			return {
-				consultas: consultas.slice().reverse(),				
+				consultas: undefined
 			}
+		},
+		created(){
+			axios.get('http://apiconsultas.localhost:7080/apiconsultas.php/consultas')
+			.then(response => {
+				this.consultas = response.data.slice().reverse()
+			})
+			.catch(e => {
+				this.errors.push(e)
+			})
 		},
 		mounted() {
 			let listaProjetos = new List('listaProjetos', {
@@ -60,6 +68,9 @@ import consultas from '../../static/consultas.json';
 			});
 		},
 		methods: {
+			parseAtivo(state){
+				return state == '0' ? false : true
+			}, 
 			ativaBusca() {
 				this.$refs.busca.value = '';
 				this.$refs.busca.style.color = '#333';

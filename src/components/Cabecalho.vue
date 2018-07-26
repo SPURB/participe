@@ -9,8 +9,14 @@
 </template>
 
 <script>
+	
 	export default {
 		name: 'Cabecalho',
+		computed:{
+			olar(){
+				return this.$store.state.olar
+			}
+		}
 	};
 </script>
 

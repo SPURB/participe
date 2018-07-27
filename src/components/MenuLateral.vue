@@ -1,7 +1,7 @@
 <template>
 	<div class="MenuLateral">
 		<aside :class="{ aberto: menuToggle }">
-			<i class="material-icons" @click="menuToggle = false">close</i>
+			<i class="material-icons" @click="fechaMenu">close</i>
 			<ul>
 				<li class="logo">
 					<a href="http://gestaourbana.prefeitura.sp.gov.br/">
@@ -26,9 +26,19 @@ import consultas from '../../static/consultas.json';
 		name: 'MenuLateral',
 		data() {
 			return {
-				consultas: consultas.slice().reverse(),
-				menuToggle: true
+				consultas: consultas.slice().reverse()
 			}
+		},
+		computed: {
+			menuToggle() {
+				return this.$store.state.menuToggle
+			}
+		},
+		methods: {
+			fechaMenu() {
+				this.$store.state.menuToggle = false;
+				this.$store.state.luzApaga = false;
+			},
 		},
 	};
 </script>
@@ -83,7 +93,7 @@ aside {
 				content: 'Em consulta';
 				font-size: 10px;
 				text-transform: uppercase;
-				color: #FFFFFF;
+				color: #FFF;
 				background-color: #008015;
 				padding: 2px 5px;
 				border-radius: 2px;

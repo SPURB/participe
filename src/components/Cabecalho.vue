@@ -1,7 +1,7 @@
 <template>
 	<div class="Cabecalho">
 		<header>
-			<i class="material-icons" @click="menuToggle = true">menu</i>
+			<i class="material-icons" @click="abreMenu">menu</i>
 			<h1><a href=""><span>participe</span>.gestaourbanaSP</a></h1>
 			<a href="http://www.capital.sp.gov.br/" title="Prefeitura de São Paulo"><img src="../../src/assets/img/PMSP_cor_transparente.png"></a>
 		</header>
@@ -11,6 +11,12 @@
 <script>
 	export default {
 		name: 'Cabecalho',
+		methods: {
+			abreMenu() {
+				this.$store.state.menuToggle = true;
+				this.$store.state.luzApaga = true;
+			},
+		},
 	};
 </script>
 

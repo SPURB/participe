@@ -1,11 +1,13 @@
 <template>
 <div id="app">
-	<div :class="{ desligado: apagar, ligado: !apagar }" id="interruptor" ref="interruptor"></div>
+	<div :class="{ desligado: interruptor }" id="interruptor" ref="interruptor"></div>
 	<Cabecalho></Cabecalho>
-	<!-- <MenuLateral></MenuLateral> -->
+	<MenuLateral></MenuLateral>
 	<!-- <Home></Home> -->
+	<router-view name="Home"></router-view>
+	<router-view name="Anhembi2"></router-view>
 	<!-- <AdminLogin></AdminLogin> -->
-	<AdminHome></AdminHome>
+	<!-- <AdminHome></AdminHome> -->
 	<Rodape></Rodape>
 </div>
 </template>
@@ -13,7 +15,6 @@
 <script>
 import Cabecalho from '@/components/Cabecalho';
 import MenuLateral from '@/components/MenuLateral';
-import Home from '@/components/Home';
 import AdminLogin from '@/components/AdminLogin';
 import AdminHome from '@/components/AdminHome';
 import Rodape from '@/components/Rodape';
@@ -25,7 +26,6 @@ export default {
 	components: {
 		Cabecalho,
 		MenuLateral,
-		Home,
 		AdminLogin,
 		AdminHome,
 		Rodape,
@@ -33,8 +33,12 @@ export default {
 	data() {
 		return {
 			consultas: consultas.slice().reverse(),
-			apagar: false,
 		}
+	},
+	computed: {
+		interruptor() {
+			return this.$store.state.luzApaga
+		},
 	},
 	mounted() {
 	},

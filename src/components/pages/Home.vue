@@ -1,6 +1,7 @@
 <template>
 	<div class="Home">
-		<main id="listaProjetos">
+		Em desenvolvimento
+<!-- 		<main id="listaProjetos">
 			<div class="busca" @click="ativaBusca">
 				<i class="material-icons">search</i>
 				<input class="fuzzy-search" type="search" ref="busca" title="Digite o que pesquisa" value="Pesquisar" @focusout="desativaBusca">
@@ -40,7 +41,7 @@
 					<a :href="consulta.urlConsulta" class="acesso">Acessar consulta</a>
 				</li>
 			</ul>
-		</main>
+		</main> -->
 	</div>
 </template>
 

@@ -67,7 +67,7 @@ export default {
 			form_organization: null,
 			form_email: null,
 			form_content: null,
-			form_context: null,
+			// form_context: null,
 			abreComentario: false,
 		}
 	},
@@ -114,8 +114,8 @@ export default {
 				'public': '0',
 				'trash': '0',
 				'postid': '1',
-				'commentid': app.commentid,
-				'commentcontext': app.contexto
+				'commentid': app.attr.id,
+				'commentcontext': app.attr.contexto
 			})
 			.then(function (response) {
 				// console.log(response);

@@ -1,8 +1,9 @@
 <template>
 	<div class="Indice">
 		<ul>
-			<li v-for="titulo in titulos" :class="{ sub: titulo.indent, ativo: titulo.ativo }" @click="rolar(titulo.offset)">{{ titulo.nome }}</li>
+			<li v-for="titulo in titulos" :class="{ ativo: titulo.ativo }" :style="{ paddingLeft: titulo.indent + 'rem'}" @click="rolar(titulo.offsetObj)">{{ titulo.nome }}</li>
 		</ul>
+		<button @click="topo"><i class="material-icons">arrow_upward</i></button>
 	</div>
 </template>
 
@@ -13,22 +14,16 @@ export default {
 	mounted() {
 	},
 	updated() {
-		this.titulos.map(function(index){
-			if (window.pageYOffset >= index.offset) {
-				console.log('rrrr');
-				index.ativo = true;
-			};
-		});
 	},
 	methods: {
-		rolar(posY) {
-			window.scroll({
-				top: posY,
+		rolar(obj) {
+			window.scrollBy({
+				top: obj.getBoundingClientRect().y - 30,
 				left: 0,
 				behavior: 'smooth'
 			});
-			console.log(posY);
 		},
+		topo() { window.scrollTo({top: 0, behavior: 'smooth'}) },
 	},
 };
 </script>
@@ -58,7 +53,11 @@ div.Indice {
 			margin-bottom: 4px;
 			padding-left: calc(2rem - 8px);
 			color: #333;
-			transition: all .1s;
+			max-width: 200px;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			transition: opacity .1s, max-width ease-in-out .5s;
 			border-left: 8px solid transparent;
 
 			&:active, &.ativo {
@@ -69,11 +68,37 @@ div.Indice {
 				opacity: .4;
 				text-decoration: none;
 				cursor: pointer;
+				max-width: 1000px;
 			};
 
 			&.sub {
 				padding-left: calc(2.8rem - 8px);
 			};
+		};
+	};
+
+	button {
+		position: fixed;
+		padding: 0;
+		bottom: 2rem;
+		right: 2rem;
+		background: #FFF;
+		border-radius: 100%;
+		border: 1px solid #BDBDBD;
+		box-shadow: 0 4px 4px rgba(0, 0, 0, .12);
+		transition: all .1s;
+		display: none;
+
+		&:active {
+			background: #EB5757;
+			color: #FFF;
+			border-color: #EB5757;
+		};
+
+		i {			
+			line-height: 40px;
+			height: 40px;
+			width: 40px;
 		};
 	};
 
@@ -84,21 +109,27 @@ div.Indice {
 			height: auto;
 			margin: 2rem 0;
 			padding: 0 2rem;
-			font-size: small;
+			font-size: initial;
 			line-height: 1.1;
-			text-transform: uppercase;
 
 			li {
 				display: inline-block;
-				padding: 4px 6px;
+				padding: 4px 6px !important;
 				margin: 0 4px 4px 0;
 				background: #EB5757;
 				border-left-width: 0;
 				border-radius: 2px;
 				color: #FFF;
+				max-width: 100%;
 
-				&.sub { padding-left: 4px; }
+				&:hover {
+					max-width: 100%;
+				};
 			};
+		};
+
+		button {
+			display: inline-block;
 		};
 	};
 };

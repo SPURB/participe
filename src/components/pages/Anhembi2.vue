@@ -18,7 +18,7 @@
 		<p>Esta 2ª consulta pública tem como finalidade apresentar as diretrizes urbanísticas consolidadas, bem como o detalhamento do programa de intervenções e propostas de intervenção que fundamentarão o decreto do PIU Anhembi.</p>
 		<p>Encerrada esta 2ª consulta pública, as sugestões recebidas serão consolidadas, sendo publicada a versão definitiva do PIU, com as justificativas para a incorporação ou não das contribuições recebidas.</p>
 		
-		<!--INFOGRAFICO PROCESSO PIU-->
+		<ProcessoPIU></ProcessoPIU>
 
 		<h2 class="titulo" indent="1">A finalidade do PIU Anhembi</h2>
 		<p>Em 2015 a SPTuris realizou chamamento público (DPR 01/2015) para os interessados em realizar estudos técnicos de modelagem de projeto e estudos de viabilidade para a revitalização, modernização e gestão do complexo do Anhembi, englobando somente a quadra 284, do setor fiscal 073.</p>
@@ -122,7 +122,37 @@
 		<h3 class="titulo" indent="2">Modelos de resultado econômico-financeiro</h3>
 		<p>Assim, havendo os três horizontes estudados de coeficiente de aproveitamento, e dois de valor de cadastro a ser aplicado, resultam-se seis cenários de pagamento de Outorga Onerosa do Direito de Construir (OODC), conforme quadro e gráfico abaixo:</p>
 		
-		<!-- tabela outorga onerosa do direito de consetuir -->
+		<div class="tableWrap">
+			<table class="center">
+				<caption>Outorga Onerosa do Direito de Construir</caption>
+				<thead>
+					<th>CA</th>
+					<th>Valor de Cadastro atual</th>
+					<th>Valor de Cadastro da região</th>
+					<th>Δ%</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>2,0</td>
+						<td>R$ 100.901.259</td>
+						<td>R$ 184.883.024</td>
+						<td>83,2%</td>
+					</tr>
+					<tr>
+						<td>4,0</td>
+						<td>R$ 151.351.888</td>
+						<td>R$ 277.324.537</td>
+						<td>83,2%</td>
+					</tr>
+					<tr>
+						<td>5,7</td>
+						<td>R$ 166.347.932</td>
+						<td>R$ 304.427.327</td>
+						<td>83,0%</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 		
 		<!-- grafico oodc esperada--->
 		
@@ -132,7 +162,7 @@
 
 		<h2 class="titulo" indent="1">Modelo de Gestão Democrática</h2>
 
-		<!-- imagem and diagrama gestao-->
+		<ConselhoGestor></ConselhoGestor>
 
 		<p>Dentre as estratégias do Plano Diretor Estratégico (PDE), tem destaque o fortalecimento da participação popular nas decisões dos rumos da cidade, considerando as diversas instâncias e por meio de diferentes instrumentos de participação e controle social. Tais estratégias garantem a participação de representantes dos diferentes segmentos da população de forma direta ou por intermédio de associações representativas, nos processos de planejamento e gestão da cidade, de realização de investimentos públicos e na elaboração, implementação e avaliação de planos, programas e projetos de desenvolvimento.</p>
 		<p>O PDE definiu, no artigo 136, que os PIU elaborados pelo Poder Público deverão apresentar propostas de transformações urbanísticas, econômicas e ambientais no perímetro onde for aplicado o instrumento, cabendo ao PIU indicar os objetivos prioritários da intervenção, as propostas relativas a aspectos urbanísticos, ambientais, sociais, econômico-financeiros e modelo de gestão democrática que contemple mecanismos de participação e controle social e instrumentos para monitoramento e avaliação das ações.</p>
@@ -140,13 +170,180 @@
 		<p>O Decreto nº 56.901 de 29 de março de 2016 que disciplina a elaboração dos Projetos de Intervenção Urbana assegura a realização de consultas públicas em etapas definidas de sua elaboração, para discussão e aperfeiçoamento das propostas. Da mesma maneira, a Minuta de Decreto de implantação do PIU, colocada em consulta pública, propõe a constituição de Conselho Gestor.</p>
 
 		<h2 class="titulo" indent="1">Minuta do decreto</h2>
+
+		<div class="tableWrap">
+			<table class="center">
+				<caption>QUADRO 1 – Percentuais de destinação de área pública</caption>
+				<thead>
+					<tr>
+						<td rowspan="2"></td>
+						<td colspan="2">Subsetores</td>
+					</tr>
+					<tr>
+						<td>A e D</td>
+						<td>B, C e E</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Percentual mínimo de área verde (%)</td>
+						<td>15</td>
+						<td>10</td>
+					<tr>
+						<td>Percentual mínimo de sistema viário (%)</td>
+						<td>5</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>Percentual mínimo de área institucional (%)</td>
+						<td>NA</td>
+						<td>5</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td>TOTAL (%)</td>
+						<td>20</td>
+						<td>20</td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+
+		<div class="tableWrap">
+			<table>
+				<caption>QUADRO 2 – Parâmetros de parcelamento do solo (dimensões de lote e quadra)</caption>
+				<thead>
+					<tr>
+						<td rowspan="2"></td>
+						<td colspan="2">Subsetores</td>
+					</tr>
+					<tr>
+						<td>A, D e E</td>
+						<td>B e C</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Frente mínima de lote (m)</td>
+						<td>20</td>
+						<td>20</td>
+					</tr>
+					<tr>
+						<td>Área mínima de lote (m²)</td>
+						<td>1.000</td>
+						<td>1.000</td>
+					</tr>
+					<tr>
+						<td>Frente máxima de lote (m)</td>
+						<td>300</td>
+						<td>200</td>
+					</tr>
+					<tr>
+						<td>Área máxima de lote (m²)</td>
+						<td>25.000</td>
+						<td>25.000</td>
+					</tr>
+					<tr>
+						<td>Frente máxima de quadra (m)</td>
+						<td>300</td>
+						<td>200</td>
+					</tr>
+					<tr>
+						<td>Área máxima de quadra (m²)</td>
+						<td>50.000</td>
+						<td>25.000</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="tableWrap">
+			<table class="center">
+				<caption>QUADRO 3 – Parâmetro de Ocupação, exceto cota ambiental</caption>
+				<thead>
+					<tr>
+						<td rowspan="3">ZONA</td>
+						<td colspan="3">Recuos mínimos (m)</td>
+						<td rowspan="3">Cota parte máxima de terreno por unidade (m²)</td>
+					</tr>
+					<tr>
+						<td rowspan="2">Frente (a)</td>
+						<td colspan="2">Fundos e laterais</td>
+					</tr>
+					<tr>
+						<td>Altura da edificação menor ou igual a 10m</td>
+						<td>Altura da edificação superior a 10m</td>
+					</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>ZOE Anhembi</td>
+					<td>5</td>
+					<td>NA</td>
+					<td>3</td>
+					<td>20</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="tableWrap">
+			<table class="center">
+				<caption>QUADRO 4 – Parâmetro de incomodidade por zona</caption>
+				<thead>
+					<tr>
+						<td rowspan="2">ZONA</td>
+						<td colspan="3">Nível Critério de Avaliação (NCA) para ambiente externo dB<sup>(a)</sup><sup>(c)</sup><sup>(d)</sup><sup>(f)</sup></td>
+						<td rowspan="2">Vibração associada</td>
+						<td rowspan="2">Emissão de radiação Faixa de frequência (0Hz à 300GHz)</td>
+						<td rowspan="2">Emissão de odores</td>
+						<td rowspan="2">Emissão de gases, vapores e material particulado <sup>(e)</sup></td>
+					</tr>
+					<tr>
+						<td>Emissão de ruído das 7h às 19h</td>
+						<td>Emissão de ruído das 19h às 22h</td>
+						<td>Emissão de ruído das 22h às 7h</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>ZOE Anhembi</td>
+						<td>60</td>
+						<td>55</td>
+						<td>50</td>
+						<td>(a)</td>
+						<td>(b)</td>
+						<td>(a)</td>
+						<td>(a)</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="notas">
+				<h6>Notas</h6>
+				<ol>
+					<li>Aplicam-se a legislação pertinente e as normas técnicas brasileiras – ABNT em vigor.</li>
+					<li>Aplicam-se a legislação pertinente e as normas técnicas em vigor, sendo que o Executivo poderá estabelecer parâmetros mais restritivos de radiação eletromagnética não ionizante.</li>
+					<li>No caso dos aeroportos aplica-se o nível de ruído conforme norma técnica específica.</li>
+					<li>Poderão incidir parâmetros especiais e mais restritivos nos termos §2º do artigo 113 desta lei.</li>
+					<li>Quando necessário a CETESB recomenda instalar e operar sistema de controle de poluição do ar baseado na melhor tecnologia.</li>
+					<li>Para atividade de local de culto, nos feriados, sábados a partir das 14h e nos domingos, os parâmetros relativos a ruídos referentes ao período das 7h às 19h passam a valer também para os períodos das 6h às 7h e das 19h às 22h, permanecendo inalterados os parâmetros referentes ao período das 7h às 19h e das 22h às 7h.</li>
+				</ol>
+			</div>
+		</div>
+
 		<p>Dentre as estratégias do Plano Diretor Estratégico (PDE), tem destaque o fortalecimento da participação popular nas decisões dos rumos da cidade, considerando as diversas instâncias e por meio de diferentes instrumentos de participação e controle social. Tais estratégias garantem a participação de representantes dos diferentes segmentos da população de forma direta ou por intermédio de associações representativas, nos processos de planejamento e gestão da cidade, de realização de investimentos públicos e na elaboração, implementação e avaliação de planos, programas e projetos de desenvolvimento.</p>
 		<p>O PDE definiu, no artigo 136, que os PIU elaborados pelo Poder Público deverão apresentar propostas de transformações urbanísticas, econômicas e ambientais no perímetro onde for aplicado o instrumento, cabendo ao PIU indicar os objetivos prioritários da intervenção, as propostas relativas a aspectos urbanísticos, ambientais, sociais, econômico-financeiros e modelo de gestão democrática que contemple mecanismos de participação e controle social e instrumentos para monitoramento e avaliação das ações.</p>
+
+		<Comments></Comments>
 	</div>
 </template>
 
 <script>
 import Indice from '@/components/Indice';
+import Comments from '@/components/Comments'
+import ProcessoPIU from '@/components/graf/ProcessoPIU';
+import ConselhoGestor from '@/components/graf/ConselhoGestor';
 
 	export default {
 		name: 'Anhembi2',
@@ -156,28 +353,31 @@ import Indice from '@/components/Indice';
 			}
 		},
 		components: {
-			Indice
+			Indice,
+			Comments,
+			ProcessoPIU,
+			ConselhoGestor
 		},
 		mounted() {
 			this.listaTitulos();
+		},
+		updated() {
 		},
 		methods: {
 			listaTitulos() {
 				let app = this;
 				let titulosBruto = Array.from(this.$refs.conteudoConsulta.getElementsByClassName('titulo'));
 				let titulos = [];
-				titulosBruto.map(function(index) {					
-					let sub = false;
-					if (parseInt(index.attributes.indent.value) > 1) {
-						sub = true;
-					};
+				titulosBruto.map(function(index) {
 
 					let titulo = {
 						nome: index.innerText,
-						indent: sub,
-						offset: index.offsetTop,
+						indent: index.attributes.indent.value,
+						offsetObj: index,
 						ativo: false
 					};
+
+					// console.log(index.innerHTML, index.getBoundingClientRect().top);
 					titulos.push(titulo);
 				});
 				this.titulosLimpo = titulos;
@@ -242,6 +442,15 @@ import Indice from '@/components/Indice';
 
 		h4 + p, h5 + p, h6 + p { margin-top: -1rem; };
 
+		sup {
+			vertical-align: 4px;
+			margin: 0 0 0 2px;
+			font-weight: normal;
+			opacity: .8;
+
+			a { color: inherit; };
+		};
+
 
 		p, ol, ul { font-family: 'Georgia', serif; };
 
@@ -295,6 +504,63 @@ import Indice from '@/components/Indice';
 					padding: 2px 8px;
 					max-width: 400px;
 					font-size: x-small;
+				};
+			};
+		};
+
+		div.tableWrap {			
+			overflow-x: auto;
+			background: #F5F5F5;
+			max-width: 700px;
+			margin: 1rem auto 2rem auto;
+			padding: 2rem;
+			border-radius: 2px;
+
+			table {
+				min-width: 100%;
+				font-size: smaller;
+				border-collapse: collapse;
+				table-layout: fixed;
+			};
+
+			caption {
+				font-weight: 700;
+				margin-bottom: 2rem;
+			};
+
+			thead th, thead tr td {
+				font-size: smaller;
+				font-weight: 700;
+			};
+
+			td, th {
+				padding: 4px 8px;
+				word-wrap: break-word;
+				border: 1px solid #BDBDBD;
+				background: #FFF;
+			};
+
+			tbody tr:nth-child(odd) { background: #FFF; };
+
+			.center { text-align: center; };
+
+			div.notas {
+				h6 { margin: 0; padding: .8rem 0 0 0; font-weight: bold; text-transform: uppercase; };
+
+				ol {
+					list-style-type: lower-alpha;
+					margin: 0;
+					padding: 0;
+					font-size: small;
+					font-family: inherit;
+
+					li {
+						margin: .4rem 0 0 1rem;
+					};
+
+					li:last-child {
+						margin-bottom: 0;
+					};
 				};
 			};
 		};
@@ -358,6 +624,10 @@ import Indice from '@/components/Indice';
 			vertical-align: -2px;
 			margin-left: 4px;
 		};
+	};
+
+	.ai2html {
+		margin: 4rem 0;
 	};
 
 	@media (max-width: 600px) {

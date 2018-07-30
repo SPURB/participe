@@ -1,10 +1,13 @@
 <template>
 <div id="app">
-	<div :class="{ preto: menuToggle }" class="lightsOff"></div>
+	<div :class="{ desligado: interruptor }" id="interruptor" ref="interruptor"></div>
 	<Cabecalho></Cabecalho>
 	<MenuLateral></MenuLateral>
+	<!-- <Home></Home> -->
 	<router-view name="Home"></router-view>
 	<router-view name="Anhembi2"></router-view>
+	<!-- <AdminLogin></AdminLogin> -->
+	<!-- <AdminHome></AdminHome> -->
 	<Rodape></Rodape>
 </div>
 </template>
@@ -12,6 +15,8 @@
 <script>
 import Cabecalho from '@/components/Cabecalho';
 import MenuLateral from '@/components/MenuLateral';
+import AdminLogin from '@/components/AdminLogin';
+import AdminHome from '@/components/AdminHome';
 import Rodape from '@/components/Rodape';
 import consultas from '../static/consultas.json';
 
@@ -20,13 +25,24 @@ export default {
 	components: {
 		Cabecalho,
 		MenuLateral,
+		AdminLogin,
+		AdminHome,
 		Rodape,
 	},
 	data() {
 		return {
 			consultas: consultas.slice().reverse(),
-			menuToggle: false,
 		}
+	},
+	computed: {
+		interruptor() {
+			return this.$store.state.luzApaga
+		},
+	},
+	mounted() {
+	},
+	updated() {		
+		this.$refs.interruptor.style.height = this.$el.clientHeight+'px';
 	},
 };
 </script>
@@ -34,36 +50,41 @@ export default {
 <style lang="scss">
 * { box-sizing: border-box; };
 html { margin: 0; padding: 0; };
-i {
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	&:hover { cursor: default; };
-};
-
-div.lightsOff {
-	position: absolute;
-	z-index: 2;
-	background: transparent;
-	transition: all .2s;
-	&.preto {
-		display: block;
-		width: 100%;
-		height: 100%;
-		background: rgba(0, 0, 0, .72);
-	};
-};
-
-
 body {
 	font-family: 'Roboto', 'Segoe UI', 'Helvetica', Arial, sans-serif;
 	color: #333;
 	font-size: 16px;
 	line-height: 1.6;
 	margin: 0;
+	z-index: 0;
+
 	a { text-decoration: none; color: #EB5757; };
+
 	a:hover { text-decoration: underline; };
+};
+
+i {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	&:hover { cursor: default; };
+};
+
+div#interruptor {
+	position: absolute;
+	transition: all .2s;
+	z-index: 2;
+
+	&.ligado { background: transparent; };
+
+	&.desligado {
+		background: rgba(0, 0, 0, .72);
+		display: block;
+		width: 100%;
+		height: unset;
+	};
 };
 
 </style>

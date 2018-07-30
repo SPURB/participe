@@ -5,9 +5,14 @@ import Vuex from 'vuex';
 import App from './App'
 import { store } from './store/store'
 import router from './router'
+import VeeValidate from 'vee-validate'
+import axios from 'axios'
 
 Vue.config.productionTip = false
 Vue.use(Vuex);
+
+Vue.use(VeeValidate)
+Vue.use(axios)
 
 /* eslint-disable no-new */
 new Vue({

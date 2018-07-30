@@ -1,10 +1,11 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
-Vue.use(Vuex);
+Vue.use(Vuex)
 
 export const store = new Vuex.Store({
 	state: {
-		olar:true
+		menuToggle: false,
+		luzApaga: false,
 	}
 })

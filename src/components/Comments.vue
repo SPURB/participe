@@ -67,7 +67,6 @@ export default {
 			form_organization: null,
 			form_email: null,
 			form_content: null,
-			// form_context: null,
 			abreComentario: false,
 		}
 	},
@@ -106,6 +105,7 @@ export default {
 		send(){
 			const url = 'http://participe.gestaourbana.prefeitura.sp.gov.br/apiconsultas/members/';
 			const app = this;
+			console.log(app.attr)
 			axios.post(url,{
 				'idConsulta':'8',
 				'name': app.returnFormNameObject,
@@ -115,7 +115,7 @@ export default {
 				'trash': '0',
 				'postid': '1',
 				'commentid': app.attr.id,
-				'commentcontext': app.attr.contexto
+				'commentcontext': app.attr.context
 			})
 			.then(function (response) {
 				// console.log(response);
@@ -125,7 +125,6 @@ export default {
 				alert("Obrigado," + name + "! Agradecemos a sua contribuição! Seu comentário ("  + content + ") foi enviado e aguarda aprovação da moderação para ser publicado. Obrigado por sua contribuição.")
 			})
 			.catch(function (error) {
-				// console.log(error)
 				alert("Estamos com um erro de comunicação com o servidor. Tente novamente mais tarde.")
 			});
 		}

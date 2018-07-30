@@ -10,22 +10,22 @@
 					<p class="g-pstyle0">Sistema de monitoramento das ações do PIU Anhembi pela sociedade.</p>
 				</div>
 				<div id="g-ai0-2" class="g-Camada_1 g-aiAbs" style="top:21%;left:0%;width:29.375%;">
-					<p>ONGS</p>
-				</div>
-				<div id="g-ai0-2" class="g-Camada_1 g-aiAbs" style="top:21%;left:0%;width:29.375%;">
 					<p>Órgãos municipais</p>
 				</div>
-				<div id="g-ai0-3" class="g-Camada_1 g-aiAbs" style="top:33%;left:-0.1562%;width:30.3125%;">
+				<div id="g-ai0-2" class="g-Camada_1 g-aiAbs" style="top:34%;left:0%;width:29.375%;">
+					<p>ONGS</p>
+				</div>
+				<div id="g-ai0-3" class="g-Camada_1 g-aiAbs" style="top:45%;left:-0.1562%;width:30.3125%;">
 					<p>Comunidade Acadêmica</p>
 				</div>
-				<div id="g-ai0-4" class="g-Camada_1 g-aiAbs" style="top:45%;left:0%;width:30%;">
+				<div id="g-ai0-4" class="g-Camada_1 g-aiAbs" style="top:57%;left:0%;width:30%;">
 					<p>Conselho Municipal</p>
 					<p>de Habitação</p>
 				</div>
-				<div id="g-ai0-5" class="g-Camada_1 g-aiAbs" style="top:57%;left:-0.1562%;width:30.3125%;">
+				<div id="g-ai0-5" class="g-Camada_1 g-aiAbs" style="top:69%;left:-0.1562%;width:30.3125%;">
 					<p>Moradores e Trabalhadores da Região</p>
 				</div>
-				<div id="g-ai0-6" class="g-Camada_1 g-aiAbs" style="top:68%;left:-0.1562%;width:30.3125%;">
+				<div id="g-ai0-6" class="g-Camada_1 g-aiAbs" style="top:81%;left:-0.1562%;width:30.3125%;">
 					<p>Conselhos </p>
 					<p>Participativos</p>
 					<p>das Prefeituras </p>
@@ -53,7 +53,7 @@
 				<div id="g-ai0-2" class="g-Camada_1 g-aiAbs" style="top:9.918%;left:67.8464%;width:22.1429%;">
 					<p>Comunidade Acadêmica</p>
 				</div>
-				<div id="g-ai0-3" class="g-Camada_1 g-aiAbs" style="top:29.3227%;left:0%;width:15.2857%;">
+				<div id="g-ai0-3" class="g-Camada_1 g-aiAbs" style="top:29.3227%;left:8%;width:15.2857%;">
 					<p class="g-pstyle0">ONGS</p>
 				</div>
 				<div id="g-ai0-4" class="g-Camada_1 g-aiAbs" style="top:29.5383%;left:82.8686%;width:17.1429%;">
@@ -63,7 +63,7 @@
 				<div id="g-ai0-5" class="g-Camada_1 g-aiAbs" style="top:52.6084%;left:48.0336%;margin-left:-100.5px;width:28.7143%;">
 					<p class="g-pstyle1">Sistema de monitoramento das ações do PIU Anhembi pela sociedade.</p>
 				</div>
-				<div id="g-ai0-6" class="g-Camada_1 g-aiAbs" style="top:59.2922%;left:0%;width:13.7143%;">
+				<div id="g-ai0-6" class="g-Camada_1 g-aiAbs" style="top:59.2922%;left:3%;width:13.7143%;">
 					<p>Conselhos </p>
 					<p>Participativos</p>
 					<p>das Prefeituras </p>

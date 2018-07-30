@@ -28,18 +28,9 @@
 		<p>A intenção de atualização e renovação deste território traz a oportunidade de desenvolvimento de projetos associados às atividades expositivas e culturais existentes, incentivando a vocação de feiras, eventos e negócios da região, considerando o Artigo 3º da Lei 16.886/2018, por meio da implantação de novas atividades econômicas, revertendo a subutilização de grande parte das áreas públicas ali existentes.</p>
 		<p>As novas diretrizes da Administração Municipal vão ao encontro da necessidade de diversificação das atividades neste território. A delicada situação financeira da SP Turis, que resulta na dificuldade em investimentos de requalificação das estruturas do Anhembi, gera a oportunidade para um novo desenvolvimento, guiado pelas diretrizes do interesse público constantes neste Projeto de Intervenção Urbana.</p>
 		<p>O Anhembi é hoje um dos principais centros de convenções e exposições da cidade de São Paulo, sendo administrado pela SPTuris, empresa de turismo e eventos controlada pela Prefeitura de São Paulo, que detém quase 96% de suas ações. Considerando sua importância e as dificuldades enfrentadas atualmente, o Anhembi passou a integrar a lista de serviços e ativos do Plano Municipal de Desestatização, a cargo da Secretaria Municipal de Desestatização e Parcerias (SMDP), passíveis de serem geridos pela iniciativa privada, por meio de concessão, Parceria Público-Privada ou mesmo privatização, desonerando assim o poder público.</p>
-		<p>Além de abrigar as principais feiras de negócios e congressos do país, o Anhembi é utilizado para realização de grandes shows nacionais e internacionais, como apresentações esportivas e o Carnaval. Situado em local privilegiado, o complexo fica próximo de aeroportos, hotéis e das principais vias expressas, além de contar com elevado número de vagas de estacionamento.</p>
-		<p>Considerando a importância do complexo e a necessidade de modernização, o Anhembi passou a integrar a lista de serviços e ativos do Plano Municipal de Desestatização, a cargo da Secretaria Municipal de Desestatização e Parcerias (SMDP), passíveis de serem geridos pela iniciativa privada, por meio de concessão, Parceria Público-Privada ou mesmo privatização, desonerando assim o poder público.</p>
 		<p>Para garantir que a receita das desestatizações tenha destino certo e seja de fato utilizada em áreas prioritárias e não no custeio da máquina pública, foi criado o Fundo Municipal de Desenvolvimento Social (FMD) pela Lei nº 16.651, de 16 de maio de 2017. Nele ficarão depositadas as receitas oriundas das concessões e privatizações que, futuramente, serão empregadas nas áreas mais sensíveis da administração, como saúde, educação, habitação, mobilidade urbana, segurança e assistência social.</p>
 		<p>A alienação da participação societária detida pelo Município de São Paulo na SPTuris foi autorizada pela Lei n°16.766 de 20 de dezembro de 2017, sendo que o §4° definiu que os recursos auferidos com a alienação da participação societária referida no “caput” serão destinados exclusivamente ao FMD, com destinação obrigatória de no mínimo 20% dos recursos para investimentos na Zona Norte da cidade de São Paulo, e orientados para as áreas prioritárias, nos termos do art. 6º da Lei nº 16.651, de 16 de maio de 2017.</p>
 		<p>Dando continuidade ao processo, a Lei Municipal n° 16.886 de 2018, que definiu índices e parâmetros de parcelamento, uso e ocupação do solo para a ZOE Anhembi, determinou que o detalhamento das disposições da referida lei, as diretrizes urbanísticas complementares e o programa de intervenções fossem definidas por meio do PIU, a ser aprovado mediante decreto do Executivo.</p>
-		<p>Os objetivos do PIU Anhembi tem como finalidade:</p>
-		<ul>
-			<li>sociabilizar os ganhos da produção da cidade por meio da venda de potencial construtivo;</li>
-			<li>incentivar o desenvolvimento urbano, por meio do adensamento populacional e construtivo compatível com a infraestrutura existente;</li>
-			<li>qualificar a centralidade a norte do Rio Tietê, pautada pela diversidade de usos, promovendo maior equilíbrio entre emprego e moradia;</li>
-			<li>implantar programa de intervenções que qualifique o território em consonância com o desenvolvimento pretendido.</li>
-		</ul>
 		<Comments :attr="{id:2, context:'A finalidade do PIU Anhembi'}"></Comments>
 
 		<h2 class="titulo" indent="1">Caracterização sócioterritorial e ambiental</h2>
@@ -66,7 +57,7 @@
 			<!-- <figcaption>Perímetros de intervenção</figcaption> -->
 		</figure>
 
-		<!--MAPA INTERATIVO COM KML – Perímetro de Abrangência e Perímetro Expandido.-->
+		<Mapa :mapa_attrs="mapa_attrs"></Mapa>
 
 		<p>Conforme expresso no Art. nº 5 da referida lei, os recursos arrecadados com o pagamento de Outorga Onerosa do Direito de Construir dos empreendimentos futuros no Perímetro de Abrangência deverão ser destinados ao financiamento de investimentos tanto no Perímetro de Abrangência quanto no Expandido. Soma-se a isso a determinação da Lei nº 16.766 de 2017 que 20% dos recursos provenientes da alienação da SPTuris deverão também ser aplicados na Zona Norte e destinados para investimentos em saúde, educação, segurança, habitação, transporte, mobilidade urbana e assistência social, conforme já exposto. </p>
 		<p>Com base nessas definições e realizadas simulações de transformação urbana no Perímetro de Abrangência, foi elaborado o Programa de Intervenções e selecionadas as intervenções prioritárias no Perímetro Expandido do PIU Anhembi.</p>
@@ -78,7 +69,7 @@
 		<p>As diretrizes consistem em indicações de conexões viárias transversais, promovendo a ruptura de barreiras formadas por grandes quadras, a distribuição de áreas verdes, recuperando a Área de Preservação Permanente do Rio Tietê, além do alargamento e melhorias de passeios públicos.</p>
 		<p>Além do mais, o PIU prevê a possibilidade de desenvolvimento dos vários subsetores que compõem a ZOE de forma independente, garantindo a flexibilidade na implantação de novos usos.</p>
 
-		<!-- imagens em sequencia	 -->
+		<Galeria :gallery_attrs="gallery_attrs"></Galeria>
 
 		<Comments :attr="{id:4, context:'Diretrizes urbanísticas para o perímetro de abrangência'}"></Comments>
 
@@ -105,14 +96,18 @@
 			<!-- <figcaption>Ambiental</figcaption> -->
 		</figure>
 
-		<figure class="hero">
-			<img src="../../../src/assets/img/ACT_Centralidade_Perspectivas_Carandiru_MidRes.png" alt="">
-			<!-- <figcaption>Ilustração ilustrada. Elaboração: SPUrbanismo/2018.</figcaption> -->
+		<figure>
+			<img src="../../../src/assets/img/ACT_Centralidade_Perspectivas_Carandiru_MidRes.png" alt="Proposta para a implantação do Parque Linear Carandiru">
+			<figcaption>Proposta para a implantação do Parque Linear Carandiru</figcaption>
 		</figure>
 
 		<p>Além do mais, o PIU Anhembi representa uma oportunidade de potencializar o uso de terras públicas subutilizadas que se encontram no Perímetro Expandido, prevendo a implantação de ruas, praças, escolas e parque público de habitação de interesse social.</p>
 
 		<!--MAPA ANH_terrenos públicos-->
+
+		<figure>
+			<img src="../../../src/assets/img/ANH_habitacao.png" alt="Habitação">
+		</figure>
 
 		<Comments :attr="{id:5, context:'Programa de intervenções para o perímetro expandido'}"></Comments>
 
@@ -197,15 +192,9 @@
 		<p>Neste sentido, o PIU Anhembi deverá instituir Conselho Gestor sob a coordenação à Secretaria de Urbanismo e Licenciamento (SMUL), com a participação de órgãos municipais e de entidades representativas da sociedade civil, tendo a competência de instruir e auxiliar a implantação do Programa de Intervenções no Perímetro Expandido, monitorar o desenvolvimento e propor programas e estratégias que possam aprimorar o projeto, enquanto que a São Paulo Urbanismo ficará a cargo de promover a implantação dos projetos no Perímetro Expandido e avaliar a evolução dos processos, podendo contar com a colaboração dos órgãos e entidades municipais para o desempenho de suas funções específicas.</p>
 		<p>O Decreto nº 56.901 de 29 de março de 2016 que disciplina a elaboração dos Projetos de Intervenção Urbana assegura a realização de consultas públicas em etapas definidas de sua elaboração, para discussão e aperfeiçoamento das propostas. Da mesma maneira, a Minuta de Decreto de implantação do PIU, colocada em consulta pública, propõe a constituição de Conselho Gestor.</p>
 
-
-		<!-- <h2 class="titulo" indent="1">Minuta do decreto</h2> -->
-
-
-
-		<p>Dentre as estratégias do Plano Diretor Estratégico (PDE), tem destaque o fortalecimento da participação popular nas decisões dos rumos da cidade, considerando as diversas instâncias e por meio de diferentes instrumentos de participação e controle social. Tais estratégias garantem a participação de representantes dos diferentes segmentos da população de forma direta ou por intermédio de associações representativas, nos processos de planejamento e gestão da cidade, de realização de investimentos públicos e na elaboração, implementação e avaliação de planos, programas e projetos de desenvolvimento.</p>
-		<p>O PDE definiu, no artigo 136, que os PIU elaborados pelo Poder Público deverão apresentar propostas de transformações urbanísticas, econômicas e ambientais no perímetro onde for aplicado o instrumento, cabendo ao PIU indicar os objetivos prioritários da intervenção, as propostas relativas a aspectos urbanísticos, ambientais, sociais, econômico-financeiros e modelo de gestão democrática que contemple mecanismos de participação e controle social e instrumentos para monitoramento e avaliação das ações.</p>
 		<Comments :attr="{id:10, context:'Modelo de Gestão Democrática'}"></Comments>
 
+		<h2 class="titulo" indent="1">Minuta do Decreto</h2>
 
 		<blockquote class="minuta">
 			<p class="caput">Aprova o Projeto de Intervenção Urbana para a Zona de Ocupação Especial do Complexo Anhembi – PIU-Anhembi, e dá outras providências. </p>
@@ -376,13 +365,6 @@
 						<td>5</td>
 					</tr>
 				</tbody>
-				<tfoot>
-					<tr>
-						<td>TOTAL (%)</td>
-						<td>20</td>
-						<td>20</td>
-					</tr>
-				</tfoot>
 			</table>
 		</div>
 
@@ -444,12 +426,12 @@
 						<td rowspan="3">Cota parte máxima de terreno por unidade (m²)</td>
 					</tr>
 					<tr>
-						<td rowspan="2">Frente (a)</td>
+						<td rowspan="2">Frente<sup>(a)</sup></td>
 						<td colspan="2">Fundos e laterais</td>
 					</tr>
 					<tr>
 						<td>Altura da edificação menor ou igual a 10m</td>
-						<td>Altura da edificação superior a 10m</td>
+						<td>Altura da edificação superior a 10m<sup>(b)</sup></td>
 					</tr>
 				</thead>
 				<tbody>
@@ -462,6 +444,13 @@
 				</tr>
 				</tbody>
 			</table>
+			<div class="notas">
+				<h6>Notas</h6>
+				<ol>
+					<li>Será dispensado recuo de frente para lotes que apresentem passeio público com no mínimo 5m.</li>
+					<li>Os recuos laterais e de fundo da edificação superior a 10m serão dispensados conforme disposições estabelecidas nos incisos II e III do artigo 66 da Lei nº 16.402 de 2016.</li>
+				</ol>
+			</div>
 		</div>
 
 		<div class="tableWrap">
@@ -507,6 +496,7 @@
 				</ol>
 			</div>
 		</div>
+
 		<Comments :attr="{id:13, context:'Quadros'}"></Comments>
 
 
@@ -518,20 +508,98 @@ import Indice from '@/components/Indice';
 import Comments from '@/components/Comments'
 import ProcessoPIU from '@/components/graf/ProcessoPIU';
 import ConselhoGestor from '@/components/graf/ConselhoGestor';
+import Galeria from '@/components/Galeria';
+import Mapa from '@/components/Mapa';
 
 	export default {
 		name: 'Anhembi2',
 		data() {
 			return {
 				titulosLimpo: [],
-				comments_atrr: undefined
+				comments_atrr: undefined,
+				gallery_attrs: {
+					width:992,  // largura das imagens
+					height:557, // altura das imagens
+					images:[
+						{
+							url:"./static/img/galeria/ANH_AcaoAbrangencia_01.jpg",
+							state: true,
+							title: '',
+							icon: false,
+							legenda: 'Perímetro de abrangência e principais usos existentes',
+							id: 1
+						},
+						{
+							url:"./static/img/galeria/ANH_AcaoAbrangencia_02.jpg", 
+							state: false,
+							title: '',
+							icon: false,
+							legenda: 'Diretrizes urbanísticas para qualificação do eixoda Av. Olavo Fontoura',
+							id: 2
+						},
+						{
+							url:"./static/img/galeria/ANH_AcaoAbrangencia_03.jpg", 
+							state: false,
+							title: '',
+							icon: false,
+							legenda: 'Diretrizes urbanísticas - Conexões viárias',
+							id: 3
+						},
+						{
+							url:"./static/img/galeria/ANH_AcaoAbrangencia_04.jpg", 
+							state: false,
+							title: '',
+							icon: false,
+							legenda: 'Diretrizes urbanísticas - Conexões especiais',
+							id: 4
+						},
+						{
+							url:"./static/img/galeria/ANH_AcaoAbrangencia_05.jpg", 
+							state: false,
+							title: '',
+							icon: false,
+							legenda: 'Diretrizes urbanísticas - Áreas verdes',
+							id: 5
+						},
+						{
+							url:"./static/img/galeria/ANH_AcaoAbrangencia_06.jpg", 
+							state: false,
+							title: '',
+							icon: false,
+							legenda: 'Diretrizes urbanísticas consolidadas e áreas passíveis de transformação',
+							id: 6
+						}
+					]
+				},
+				mapa_attrs: {
+					center: [ -5193050.487352, -2693402.011056 ],
+					zoom: 13.5,
+					layers:[
+						{
+							title: "Perímetro expandido", 
+							path:'./static/kml/ANH_PerimetroExpandido.kml',
+							stroke_color: 'rgba(237, 192, 192, 1)',
+							fill_color: 'rgba(237, 192, 192, .4)',
+							stroke_width: 1,
+						},
+						{
+							title: "Perímetro de abrangência", 
+							path:'./static/kml/ANH_PerimetroAbrangencia.kml',
+							stroke_color: 'rgba(235, 87, 87, 1)',
+							fill_color: 'rgba(235, 87, 87, .8)',
+							stroke_width: 1,
+						},
+					]
+				}
 			}
 		},
 		components: {
 			Indice,
 			Comments,
 			ProcessoPIU,
-			ConselhoGestor
+			ConselhoGestor,
+			Galeria,
+			Mapa
 		},
 		mounted() {
 			this.listaTitulos();
@@ -556,7 +624,7 @@ import ConselhoGestor from '@/components/graf/ConselhoGestor';
 					titulos.push(titulo);
 				});
 				this.titulosLimpo = titulos;
-			},
+			}
 		},
 	};
 </script>
@@ -653,7 +721,10 @@ import ConselhoGestor from '@/components/graf/ConselhoGestor';
 				border-bottom: 1px solid #F5F5F5;
 			};
 
-			img { max-width: 100%; };
+			img {
+				width: 100%;
+				max-width: 992px;
+			};
 
 			&.coluna {
 				padding: 2rem;
@@ -661,13 +732,10 @@ import ConselhoGestor from '@/components/graf/ConselhoGestor';
 				max-width: 700px;
 				text-align: center;
 
-				img {
-					width: 100%;
-				};
+				img { max-width: 700px; };
 			};
 
 			&.hero {
-				width: 100%;
 				position: relative;
 
 				figcaption {
@@ -680,6 +748,8 @@ import ConselhoGestor from '@/components/graf/ConselhoGestor';
 					max-width: 400px;
 					font-size: x-small;
 				};
+
+				img { min-width: 100%; max-width: unset; };
 			};
 		};
 
@@ -720,7 +790,12 @@ import ConselhoGestor from '@/components/graf/ConselhoGestor';
 			.center { text-align: center; };
 
 			div.notas {
-				h6 { margin: 0; padding: .8rem 0 0 0; font-weight: bold; text-transform: uppercase; };
+				h6 {
+					margin: 0;
+					padding: .8rem 0 .6rem 0;
+					font-weight: bold;
+					text-transform: uppercase;
+				};
 
 				ol {
 					list-style-type: lower-alpha;
@@ -728,9 +803,14 @@ import ConselhoGestor from '@/components/graf/ConselhoGestor';
 					padding: 0;
 					font-size: small;
 					font-family: inherit;
+					columns: 160px;
+					column-gap: 2rem;
 
 					li {
-						margin: .4rem 0 0 1rem;
+						margin: 0 0 1.2rem 1rem;
+						line-height: 1.2rem;
+						break-inside: avoid;
+						page-break-inside: avoid;
 					};
 
 					li:last-child {
@@ -739,6 +819,7 @@ import ConselhoGestor from '@/components/graf/ConselhoGestor';
 				};
 			};
 		};
+
 		blockquote.minuta {
 			padding: 2rem 0;
 			margin: 2rem auto;
@@ -814,6 +895,11 @@ import ConselhoGestor from '@/components/graf/ConselhoGestor';
 			line-height: initial;
 			vertical-align: -2px;
 			margin-left: 4px;
+		};
+
+		*::selection, *::-moz-selection {
+			background: #EB5757;
+			color: #FFF;
 		};
 	};
 

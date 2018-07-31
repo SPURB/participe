@@ -100,14 +100,14 @@ ul.legenda{
 	display: flex;
 	justify-content: center;
 	max-width: 992px;
-	padding: 1rem 0;
+	padding: 1rem 2rem;
 	margin-bottom: 2rem;
 	font-family: inherit;
 	
 	li {
 		display: inline-flex;
 		align-items: center;
-		font-size: smaller;
+		font-size: small;
 		margin: 0;
 		padding: 0;		
 		margin-right: 2rem;
@@ -115,7 +115,7 @@ ul.legenda{
 		div {
 			border-style: solid;
 			height: 1.6rem;
-			width: 1.6rem;
+			min-width: 1.6rem;
 			margin-right: .4rem;
 		};
 
@@ -126,6 +126,10 @@ ul.legenda{
 				opacity: .4;
 				text-decoration: none;
 			};
+		};
+
+		&:last-child {
+			margin-right: 0;
 		};
 	}
 }

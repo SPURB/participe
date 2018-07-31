@@ -1,7 +1,7 @@
 <template>
 	<div class="Anhembi2" ref="conteudoConsulta">
-		
-		<div class="top" style="background: ;">
+
+		<div class="top" style="background-image: url('http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/ACT_Centralidade_Perspectivas_Carandiru_MidRes.jpg');">
 			<div>
 				<div>2ª consulta pública</div>
 				<h1>PIU Anhembi</h1>
@@ -53,7 +53,7 @@
 		<p>No primeiro caso, foram incluídas integralmente as quadras 283 e 284, delimitadas pela Av. Assis Chateaubriand, a Av. Olavo Fontoura, a Praça Campo de Bagatelle, a Av. Santos Dumont, a Rua Marechal Leitão de Carvalho, a Rua Masseinet Sorcinelli e a Rua Prof. Milton Rodrigues. Quanto ao Perímetro Expandido, foi adotada a determinação do §1° do Art. 5º da Lei n°16.866 de 2018, formado pela interseção entre o subsetor Arco Tietê da Macroárea de Estruturação Metropolitana (MEM) e os limites administrativos das Prefeituras Regionais de Santana/Tucuruvi e Casa Verde.</p>
 
 		<figure>
-			<img src="../../../src/assets/img/ANH_Perimetros.png" alt="Perímetros de intervenção">
+			<img src="http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/ANH_Perimetros.jpg" alt="Perímetros de intervenção">
 			<!-- <figcaption>Perímetros de intervenção</figcaption> -->
 		</figure>
 
@@ -85,28 +85,26 @@
 		<p>A rede de mobilidade proposta não se resume na mobilidade motorizada, soma-se a ela, melhoria a mobilidade não motorizada com a proposta de ampliação de passeios e de implantação de ciclovias.</p>
 
 		<figure>
-			<img src="../../../src/assets/img/ANH_mobilidade.png" alt="Mobilidade">
+			<img src="http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/ANH_mobilidade.jpg" alt="Mobilidade">
 			<!-- <figcaption>Mobilidade</figcaption> -->
 		</figure>
 
 		<p>Por sua vez, a qualificação socioambiental será promovida por meio da implantação de sistema de áreas verdes composto por áreas verdes existentes, como o Parque Juventude, e novos parques, como os parques lineares ao longo dos córregos Carandiru e Papaterra Limongi, possibilitando a retomada do contato com os rios da cidade. Essas áreas serão conectadas por bulevares e alamedas, que agregarão valor paisagístico e ambiental, além de contribuírem na mitigação de ilhas de calor e problemas de drenagem.</p>
 
 		<figure>
-			<img src="../../../src/assets/img/ANH_ambiental.png" alt="Ambiental">
+			<img src="http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/ANH_ambiental.jpg" alt="Ambiental">
 			<!-- <figcaption>Ambiental</figcaption> -->
 		</figure>
 
 		<figure>
-			<img src="../../../src/assets/img/ACT_Centralidade_Perspectivas_Carandiru_MidRes.png" alt="Proposta para a implantação do Parque Linear Carandiru">
+			<img src="http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/ACT_Centralidade_Perspectivas_Carandiru_MidRes.jpg" alt="Proposta para a implantação do Parque Linear Carandiru">
 			<figcaption>Proposta para a implantação do Parque Linear Carandiru</figcaption>
 		</figure>
 
 		<p>Além do mais, o PIU Anhembi representa uma oportunidade de potencializar o uso de terras públicas subutilizadas que se encontram no Perímetro Expandido, prevendo a implantação de ruas, praças, escolas e parque público de habitação de interesse social.</p>
 
-		<!--MAPA ANH_terrenos públicos-->
-
 		<figure>
-			<img src="../../../src/assets/img/ANH_habitacao.png" alt="Habitação">
+			<img src="http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/ANH_habitacao.jpg" alt="Habitação">
 		</figure>
 
 		<Comments :attr="{id:5, context:'Programa de intervenções para o perímetro expandido'}"></Comments>
@@ -172,7 +170,7 @@
 			</table>
 		</div>
 
-		<!-- grafico oodc esperada -->
+		<GrafBarras></GrafBarras>
 		
 		<Comments :attr="{id:8, context:'Resultados da modelagem econômico-financeira'}"></Comments>
 
@@ -315,23 +313,23 @@
 		<ul class="pdfBox">
 			<li><a href="http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi-2/MAPA-1_Perimetros.pdf" download>
 				<i class="small material-icons">picture_as_pdf</i>
-				MAPA 1 – Perímetros
-				<span></span>
+				<div>MAPA 1 – Perímetros</div>
+				<span>17,9 Mb</span>
 			</a></li>
 			<li><a href="http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi-2/MAPA-2_Subsetores.pdf" download>
 				<i class="small material-icons">picture_as_pdf</i>
-				MAPA 2 – Subsetores
-				<span></span>
+				<div>MAPA 2 – Subsetores</div>
+				<span>2,74 Mb</span>
 			</a></li>
 			<li><a href="http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi-2/MAPA-3_ProgramaIntervencoes.pdf" download>
 				<i class="small material-icons">picture_as_pdf</i>
-				MAPA 3 – Programa de intervenções
-				<span></span>
+				<div>MAPA 3 – Programa de intervenções</div>
+				<span>14,0 Mb</span>
 			</a></li>
 			<li><a href="http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi-2/MAPA-4_HabitacaoSocial.pdf" download>
 				<i class="small material-icons">picture_as_pdf</i>
-				MAPA 4 – Habitação Social
-				<span></span>
+				<div>MAPA 4 – Habitação Social</div>
+				<span>9,66 Mb</span>
 			</a></li>
 		</ul>
 		<Comments :attr="{id:12, context:'Mapas'}"></Comments>
@@ -369,7 +367,7 @@
 		</div>
 
 		<div class="tableWrap">
-			<table>
+			<table class="center">
 				<caption>QUADRO 2 – Parâmetros de parcelamento do solo (dimensões de lote e quadra)</caption>
 				<thead>
 					<tr>
@@ -497,8 +495,301 @@
 			</div>
 		</div>
 
-		<Comments :attr="{id:13, context:'Quadros'}"></Comments>
+		<div class="tableWrap intervencoes">
+			<div class="intervencoesTitulo">
+				QUADRO 5 – Programa de Intervenções
+				<a href="http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi-2/Quadro_5_Programa_Intervencoes_Expandido.pdf" download="Quadro 5">(baixar como .pdf)</a>
+			</div>
+			<div class="eixo">
+				Eixo temático
+				<span class="tema">REDE HÍDRICA (HD)</span>
+			</div>
+			<div class="diretriz">
+				Diretriz
+				<span class="dir2">ÁREAS DE ABSORÇÃO</span>
+			</div>
+			<table>
+				<tr>
+					<td class="col1">Áreas de absorção <span class="cod">(AB)</span></td>
+					<td class="col2">Áreas de absorção <span class="cod">(a)</span></td>
+					<td><span class="bold">Parque Linear Córrego Carandiru</span> <span class="cod">(HD.AB.a.01)</span> <span class="interv">IB</span></td>
+				</tr>
+			</table>
+			<div class="eixo">
+				Eixo temático
+				<span class="tema">ESPAÇOS PÚBLICOS/ÁREAS VERDES (EP)</span>
+			</div>
+			<div class="diretriz">
+				Diretriz
+				<span class="dir2"> PARQUES</span>
+			</div>
+			<table>
+				<tr>
+					<td rowspan="2" class="col1">Parques <span class="cod">(PQ)</span></td>
+					<td rowspan="2" class="col2">Parques lineares <span class="cod">(a)</span></td>
+					<td><span class="bold">Parque Linear Córrego Carandiru</span> <span class="cod">(EP.PQ.a.01)</span> <span class="interv">IB</span></td>
+				</tr>
+				<tr>
+					<td><span class="bold">Rua José Papaterra Limongi</span> <span class="cod">(EP.PQ.a.02)</span> <span class="interv">IB</span></td>
+				</tr>
+			</table>
+			<div class="diretriz">
+				Diretriz
+				<span class="dir2">PRAÇAS</span> 
+			</div>
+			<table>
+				<tr>
+					<td rowspan="6" class="col1">Praças<span class="cod">(PA)</span></td>
+					<td rowspan="6" class="col2">Requalificação de praça existente <span class="cod">(a)</span></td>
+					<td><span class="bold">Praça Del Amoroso Neto</span> <span class="cod">(EP.PA.a.01)</span> <span class="interv">IC</span></td>
+				</tr>
+				<tr>
+					<td><span class="bold">Praça Margarida de Albuquerque Gimenez</span> <span class="cod">(EP.PA.a.02)</span> <span class="interv">IC</span></td>
+				</tr>
+				<tr>
+					<td><span class="bold">Praça entre a Avenida Gen. Ataliba Leonel e a Rua Mimoso do Sul</span> <span class="cod">(EP.PA.a.03)</span> <span class="interv">IB</span></td>
+				</tr>
+				<tr>
+					<td><span class="bold">Praça Campo de Bagatelle</span> <span class="cod">(EP.PA.a.04)</span> <span class="interv">IB</span></td>
+				</tr>
+				<tr>
+					<td><span class="bold">Av. Olavo Fontoura / Av. Santos Dumont / R. Mal. Leitão de Carvalho</span> <span class="cod">(EP.PA.a.05)</span> <span class="interv">IB</span></td>
+				</tr>
+				<tr>
+					<td><span class="bold">Avenida Cruzeiro do Sul</span> <span class="cod">(EP.PA.a.06)</span> <span class="interv">IC</span></td>
+				</tr>		
+			</table>
+			<div class="diretriz">
+				Diretriz
+				<span class="dir2">EIXOS AMBIENTAIS</span>
+			</div>
+			<table>
+				<tr>
+					<td rowspan="4" class="col1">Bulevares <span class="cod">(BL)</span></td>
+					<td rowspan="4" class="col2">Arborização e mobiliário urbano sobre base viária <span class="cod">(a)</span></td>
+					<td><span class="bold">Avenida Eng. Caetano Álvares</span> <span class="cod">(EP.BL.a.01)</span> <span class="interv">IC</span></td>
+				</tr>
+				<tr>
+					<td><span class="bold">Av Cruzeiro do Sul</span> <span class="cod">(EP.BL.a.02)</span> <span class="interv">IB</span> </td>
+				</tr>
+				<tr>
+					<td><span class="bold">Avenida Morvan Dias de Figueredo / Avenida Assis Chateaubriand</span> <span class="cod">(EP.BL.a.03)</span> <span class="interv">IC</span> </td>
+				</tr>
+				<tr>
+					<td><span class="bold">Avenida Olavo Fontoura</span> <span class="cod">(EP.BL.a.4)</span> <span class="interv">IC</span> </td>
+				</tr>
+				<tr>
+					<td rowspan="9" class="col1">Alamedas <span class="cod">(AL)</span></td>
+					<td rowspan="9" class="col2">Arborização e mobiliário urbano sobre base viária <span class="cod">(a)</span></td>
+					<td><span class="bold">Avenida Alfredo Pujo</span> <span class="cod">(EP.AL.a.01)</span> <span class="interv">IC</span></td>
+				</tr>
+				<tr>
+					<td><span class="bold">Rua Dr. César</span> <span class="cod">(EP.AL.a.02)</span> <span class="interv">IC</span> </td>
+				</tr>
+				<tr>
+					<td><span class="bold">Rua Dr. Olavo Egídio</span> <span class="cod">(EP.AL.a.03)</span> <span class="interv">IC</span></td>
+				</tr>
+				<tr>
+					<td><span class="bold">Rua Duarte de Azevedo</span> <span class="cod">(EP.AL.a.04)</span> <span class="interv">IC</span></td>
+				</tr>
+				<tr>
+					<td><span class="bold">Avenida Inajar de Souza</span> <span class="cod">(EP.AL.a.05)</span> <span class="interv">IC</span> </td>
+				</tr>
+				<tr>
+					<td><span class="bold">Rua Paineira do Campo</span> <span class="cod">(EP.AL.a.06)</span> <span class="interv">IB </span> </td>
+				</tr>
+				<tr>
+					<td><span class="bold">Rua Cerqueira Leite</span> <span class="cod">(EP.AL.a.07)</span> <span class="interv">IB</span> </td>
+				</tr>
+				<tr>
+					<td><span class="bold">Rua Cel. Antonio de Carvalho</span> <span class="cod">(EP.AL.a.08)</span> <span class="interv">IB</span> </td>
+				</tr>
+				<tr>
+					<td><span class="bold">Av Moyses Roysen</span> <span class="cod">(EP.AL.a.09)</span> <span class="interv">IB</span> </td>
+				</tr>
+			</table>
+			<div class="eixo">
+				Eixo temático
+				<span class="tema">MOBILIDADE (MO)</span>
+			</div>
+			<div class="diretriz">
+				Diretriz
+				<span class="dir2">SISTEMA VIÁRIO</span> 
+			</div>
+			<table>
+				<tr>
+					<td rowspan="20" class="col1">Alinhamento Viário <span class="cod">(AV)</span></td>
+					<td rowspan="9" class="col2">Abertura de novo viário (pista simples) <span class="cod">(a)</span></td>	
+					<td><span class="bold">Prolongamento da Rua João Navarro Botelho ‐ CEN‐X</span> <span class="cod">(MO.AV.a.01)</span>  <span class="interv">IB</span></td>			
+				</tr>
+				<tr>
+					<td><span class="bold">Prolongamento da Rua Dr. Soares de Gouvea ‐ CEN‐XI</span> <span class="cod">(MO.AV.a.02)</span> <span class="interv">IB</span> </td>
+				</tr>
+				<tr>
+					<td><span class="bold">Prolongamento norte da Praca Maschiach </span><span class="cod">(MO.AV.a.03)</span> <span class="interv">IB</span> </td>
+				</tr>
+				<tr>
+					<td><span class="bold">Prolongamento norte da Av Moyses Roysen ‐ CEN‐IX </span><span class="cod">(MO.AV.a.04)</span> <span class="interv">IB</span> </td>
+				</tr>
+				<tr>
+					<td><span class="bold">Prolongamento sul trecho 1 da Praca Mashiach </span> <span class="cod">(MO.AV.a.05)</span> <span class="interv">IB</span> </td>
+				</tr>
+				<tr>
+					<td><span class="bold">Prolongamento sul trecho 2 da Praca Maschiach </span> <span class="cod">(MO.AV.a.06)</span> <span class="interv">IB</span> </td>
+				</tr>
+				<tr>
+					<td><span class="bold">Prolongamento da Rua Palmeia</span> <span class="cod">(MO.AV.a.07) </span> <span class="interv">IC</span> </td>
+				</tr>
+				<tr>
+					<td><span class="bold">Prolongamento da Rua Marechal Odylio Denys, estabelecido pela alínea c, inciso II, do Art. 1º da Lei n° 16.541/2016</span> <span class="cod">(MO.AV.a.08)</span> <span class="interv">IB</span> </td>
+				</tr>
+				<tr>
+					<td><span class="bold">Prolongamento da Rua José Papa Terra Limongi</span> <span class="cod">(MO.AV.a.09)</span> <span class="interv">IB</span> </td>
+				</tr>
+				<tr>
+					<td class="col2">Abertura de novo viário (pista dupla) <span class="cod">(b)</span> </td>
+					<td><span class="bold">Prolongamento da Avenida Profª. Ida Kolb</span> <span class="cod">(MO.AV.b.01)</span> <span class="interv">IB</span> </td>
+				</tr>
+				<tr>
+					<td rowspan="6" class="col2">Alargamento de viário existente (pista simples) <span class="cod">(c)</span></td>
+					<td><span class="bold">Alargamento da Rua Papa Terra Limongi</span> <span class="cod">(MO.AV.c.01)</span> <span class="interv">IC</span> </td>
+				</tr>
+				<tr>
+					<td><span class="bold">Praça Mashiach</span> <span class="cod">(MO.AV.c.02)</span> <span class="interv">IC</span> </td>
+				</tr>
+				<tr>
+					<td><span class="bold">Avenida Moyses Roysen ‐ CEN‐IX </span> <span class="cod">(MO.AV.c.03)</span> <span class="interv">IC</span> </td>
+				</tr>
+				<tr>
+					<td><span class="bold">Rua Palmeia</span> <span class="cod">(MO.AV.c.04)</span> <span class="interv">IC</span></td>
+				</tr>
+				<tr>
+					<td><span class="bold">Rua Cel Antonio de Carvalho</span> <span class="cod">(MO.AV.c.05)</span> <span class="interv">IC</span></td>
+				</tr>
+				<tr>
+					<td><span class="bold">Rua Maria Prestes Maia</span> <span class="cod">(MO.AV.c.06)</span> <span class="interv">IC</span></td>
+				</tr>
+				<tr>
+					<td class="col2">Alargamento de viário existente (pista dupla) <span class="cod">(d)</span></td>
+					<td><span class="bold">Alargamento da Rua Darzan e Rua Major Sampaio</span> <span class="cod">(MO.AV.d.01)</span> <span class="interv">IC</span> </td>
+				</tr>
+				<tr>
+					<td class="col2">Requalificação de viário existente (pista simples) <span class="cod">(e)</span></td>
+					<td><span class="bold">Av. Olavo Fontoura (pista sul)</span> <span class="cod">(MO.AV.e.01)</span> <span class="interv">IC</span> </td>
+				</tr>
+				<tr>
+					<td rowspan="2" class="col2">Requalificação de viário existente (pista dupla) <span class="cod">(f)</span></td>
+					<td><span class="bold">Avenida Profª Ida Kolb</span> <span class="cod">(MO.AV.f.01)</span> <span class="interv">IB</span> </td>
+				</tr>
+				<tr>
+					<td><span class="bold">Av. Braz Leme (trecho)</span> <span class="cod">(MO.AV.f.02)</span> <span class="interv">IC</span></td>
+				</tr>
+				<tr>
+					<td rowspan="9" class="col1">Passeios <span class="cod">(PS)</span></td>
+					<td rowspan="9" class="col2">Ampliação e melhoria de passeios existentes <span class="cod">(a)</span> </td>
+					<td> <span class="bold">Avenida Inajar de Souza</span> <span class="cod">(MO.PS.a.01)</span> <span class="interv">IC</span></td>
+				</tr>
+				<td><span class="bold">Avenida Eng. Caetano Álvares</span> <span class="cod">(MO.PS.a.02)</span> <span class="interv">IC</span> </td>
+				<tr>
+					<td><span class="bold">Avenida Alfredo Pujol</span> <span class="cod">(MO.PS.a.03)</span> <span class="interv">IC</span> </td>
+				</tr>
+				<tr>
+					<td><span class="bold">Rua Dr. César</span> <span class="cod">(MO.PS.a.04)</span> <span class="interv">IC</span> </td>
+				</tr>
+				<tr>
+					<td><span class="bold">Rua Dr. Olavo Egídio</span> <span class="cod">(MO.PS.a.05)</span> <span class="interv">IC</span> </td>
+				</tr>
+				<tr>
+					<td><span class="bold">Rua Duarte de Azevedo</span> <span class="cod">(MO.PS.a.06)</span> <span class="interv">IC</span> </td>
+				</tr>
+				<tr>
+					<td><span class="bold">Rua Cel. Antonio de Carvalho</span> <span class="cod">(MO.PS.a.07)</span> <span class="interv">IB</span></td>
+				</tr>
+				<tr>
+					<td><span class="bold">Rua Cerqueira Leite</span> <span class="cod">(MO.PS.a.09)</span> <span class="interv">IB </span></td>
+				</tr>
+				<tr>
+					<td><span class="bold">Avenida Morvan Dias de Figueredo / Avenida Assis Chateaubriand</span> <span class="cod">(MO.PS.a.10)</span> <span class="interv">IC</span></td>
+				</tr>
+			</table>
+			<div class="diretriz">
+				Diretriz
+				<span class="dir2">CICLOVIA</span> 
+			</div>
+			<table>
+				<tr>
+					<td class="col1">Ciclovia <span class="cod">(CI)</span></td>
+					<td class="col2">Ciclovia <span class="cod">(a)</span></td>
+					<td><span class="bold">Avenida General Ataliba Leonel</span> <span class="cod"> (MO.CI.a.01)</span> <span class="interv">IB</span></td>
+				</tr>
+			</table>
+			<div class="eixo">
+				<span class="eixo">Eixo Temático</span><span class="tema">EQUIPAMENTOS PÚBLICOS (EQ)</span>
+			</div>
+			<div class="diretriz">
+				Diretriz
+				<span class="dir2">EQUIPAMENTOS</span> 	
+			</div>
+			<table>
+				<tr>
+					<td rowspan="3" class="col1">Equipamentos <span class="cod">(EQ)</span></td>
+					<td rowspan="3" class="col2">Novos equipamentos <span class="cod">(a)</span></td>
+					<td><span class="bold">Área Pública</span><span class="cod"> (EQ.EQ.a.01)</span> <span class="interv">IB</span></td>
+				</tr>
+				<tr>
+					<td><span class="bold">Área de Abrangência (a)</span> <span class="cod">(EQ.EQ.a.02)</span> <span class="interv">IB</span></td>
+				</tr>
+				<tr>
+					<td> <span class="bold">Área de Abrangência (b)</span> <span class="cod">(EQ.EQ.a.03)</span> <span class="interv">IC</span></td>
+				</tr>
+			</table>
+			<div class="eixo">
+				Eixo temático
+				<span class="tema">HABITAÇÃO<sup>1</sup> (HA)</span>
+			</div>
+			<div class="diretriz">
+				Diretriz
+				<span class="dir2">CONSOLIDAÇÃO</span>
+			</div>
+			<table>
+				<tr>
+					<td rowspan="2" class="col1">Urbanização Unidades existentes <span class="cod">(UB)</span></td>
+					<td class="col2">Intervenção Integrada em Assentamentos Precários <span class="cod">(a)</span> </td>
+					<td><span class="bold">Assentamentos Precários</span> <span class="cod">(HA.UB.a.) </span><span class="interv">IB</span></td>
+				</tr>
+				<tr>
+					<td class="col2">Requalificação e Regularização de Conjuntos Habitacionais <span class="cod">(b)</span> </td>
+					<td><span class="bold">Conjuntos Habitacionais</span> <span class="cod">(HA.UB.b.)</span> <span class="interv">IC</span> </td>
+				</tr>
+			</table>
+			<div class="diretriz">
+				Diretriz
+				<span class="dir2">PROVISÃO</span>
+			</div>
+			<table>
+				<tr>
+					<td rowspan="2" class="col1">Novas Unidades <span class="cod">(UH)</span></td>
+					<td rowspan="2"class="col2">Provisão de moradia <span class="cod">(a)</span></td>
+					<td><span class="bold"> Remoção e reassentamento de famílias atingidas pelo Programa de Intervenções</span> (fase 1) <span class="cod">(HA.UH.a.)</span> <span class="interv">IB</span></td>
+				</tr>
+				<tr>
+					<td> <span class="bold" >Produção para redução de déficit habitacional acumulado</span> (fase 2) <span class="cod">(HA.UH.a.)</span> <span class="interv">IC</span></td>
+				</tr>
+			</table>
+			<div class="legenda">
+				<h6>Legenda</h6>
+				<div><span class="interv">IB</span> Intervenção Básica</div>
+				<div><span class="interv">IC</span> Intervenção Complementar</div>
+			</div>
+			<div class="notas">
+				<h6>Notas</h6>
+				<ol style="list-style-type: decimal; columns: 1;">
+					<li>O Programa Habitacional será pautado nas informações contidas no Mapa 5 anexo ao Decreto.</li>
+				</ol>
+			</div>
+		</div>
 
+		<Comments :attr="{id:13, context:'Quadros'}"></Comments>
 
 	</div>
 </template>
@@ -510,6 +801,7 @@ import ProcessoPIU from '@/components/graf/ProcessoPIU';
 import ConselhoGestor from '@/components/graf/ConselhoGestor';
 import Galeria from '@/components/Galeria';
 import Mapa from '@/components/Mapa';
+import GrafBarras from '@/components/graf/GrafBarras';
 
 	export default {
 		name: 'Anhembi2',
@@ -522,7 +814,7 @@ import Mapa from '@/components/Mapa';
 					height:557, // altura das imagens
 					images:[
 						{
-							url:"./static/img/galeria/ANH_AcaoAbrangencia_01.jpg",
+							url:"http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/galeria/ANH_AcaoAbrangencia_01.jpg",
 							state: true,
 							title: '',
 							icon: false,
@@ -530,7 +822,7 @@ import Mapa from '@/components/Mapa';
 							id: 1
 						},
 						{
-							url:"./static/img/galeria/ANH_AcaoAbrangencia_02.jpg", 
+							url:"http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/galeria/ANH_AcaoAbrangencia_02.jpg", 
 							state: false,
 							title: '',
 							icon: false,
@@ -538,7 +830,7 @@ import Mapa from '@/components/Mapa';
 							id: 2
 						},
 						{
-							url:"./static/img/galeria/ANH_AcaoAbrangencia_03.jpg", 
+							url:"http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/galeria/ANH_AcaoAbrangencia_03.jpg", 
 							state: false,
 							title: '',
 							icon: false,
@@ -546,7 +838,7 @@ import Mapa from '@/components/Mapa';
 							id: 3
 						},
 						{
-							url:"./static/img/galeria/ANH_AcaoAbrangencia_04.jpg", 
+							url:"http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/galeria/ANH_AcaoAbrangencia_04.jpg", 
 							state: false,
 							title: '',
 							icon: false,
@@ -554,7 +846,7 @@ import Mapa from '@/components/Mapa';
 							id: 4
 						},
 						{
-							url:"./static/img/galeria/ANH_AcaoAbrangencia_05.jpg", 
+							url:"http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/galeria/ANH_AcaoAbrangencia_05.jpg", 
 							state: false,
 							title: '',
 							icon: false,
@@ -562,7 +854,7 @@ import Mapa from '@/components/Mapa';
 							id: 5
 						},
 						{
-							url:"./static/img/galeria/ANH_AcaoAbrangencia_06.jpg", 
+							url:"http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/galeria/ANH_AcaoAbrangencia_06.jpg", 
 							state: false,
 							title: '',
 							icon: false,
@@ -599,7 +891,8 @@ import Mapa from '@/components/Mapa';
 			ProcessoPIU,
 			ConselhoGestor,
 			Galeria,
-			Mapa
+			Mapa,
+			GrafBarras
 		},
 		mounted() {
 			this.listaTitulos();
@@ -631,7 +924,6 @@ import Mapa from '@/components/Mapa';
 
 <style lang="scss">
 	div.Anhembi2 {
-		z-index: 0;
 		font-size: 20px;
 		padding-bottom: 4rem;
 
@@ -639,7 +931,6 @@ import Mapa from '@/components/Mapa';
 			padding: 2rem;
 			margin: 0 0 2rem 0;
 			overflow: hidden;
-			background-image: url('../../../src/assets/img/ACT_Centralidade_Perspectivas_Carandiru_MidRes.png');
 			background-position: center center;
 			background-size: cover;
 			width: 100%;
@@ -648,6 +939,7 @@ import Mapa from '@/components/Mapa';
 			flex-flow: column nowrap;
 			align-items: center;
 			justify-content: center;
+			z-index: 2;
 			
 			& > div {
 				padding: 1.2rem;
@@ -818,6 +1110,77 @@ import Mapa from '@/components/Mapa';
 					};
 				};
 			};
+
+			&.intervencoes {
+
+				table {
+					font-size: initial;
+					margin: .4rem 0 .8rem 0;
+					&:last-child { margin-bottom: 0; };
+					tr td span.bold { font-weight: bold; };
+				};
+
+				div.intervencoesTitulo {
+					text-align: center;
+					font-size: smaller;
+					font-weight: 700;
+					margin-bottom: -1.2rem;
+				};
+
+				.col1, .col2 { width: 20%; font-size: smaller; };
+
+				span.cod { color: #BDBDBD; };
+
+				span.interv {
+					display: inline-block;
+					line-height: 1rem;
+					width: 1rem;
+					font-size: x-small;
+					text-align: center;
+					background: #BDBDBD;
+					border-radius: 100%;
+					color: #333;
+					margin: 0 0 0 4px;
+				};
+
+				div.eixo {
+					font-size: initial;
+					color: #BDBDBD;
+					margin: 3.2rem 0 .4rem 0;
+
+					span.tema {
+						font-size: larger;
+						color: #333;
+						display: block;
+						font-weight: bold;	
+					};
+				};
+
+				div.diretriz {
+					font-size: smaller;
+					color: #BDBDBD;
+					display: block;
+					margin: 0;
+
+					span { color: #333; };
+					span.dir2 { font-weight: bolder; color: #333; display: block; };
+				};
+
+				div.legenda {
+					margin: 1rem 0;
+					font-size: small;
+
+					h6 {
+						margin: 0;
+						padding: .8rem 0 .6rem 0;
+						font-weight: bold;
+						text-transform: uppercase;
+						font-size: smaller;
+					};
+
+					span.interv { margin: 0 4px 0 0; };
+				};
+			};
 		};
 
 		blockquote.minuta {
@@ -843,10 +1206,12 @@ import Mapa from '@/components/Mapa';
 			margin: 0 auto;
 			padding: 2rem;
 			background: #F5F5F5;
+			border-radius: 2px;
 			font-family: inherit;
 
 			li {
 				margin: 2rem 0;
+				padding: 0;
 				border-radius: 2px;
 				border: 1px solid #BDBDBD;
 				background: #FFF;

@@ -160,8 +160,8 @@ export default {
 		& > a {
 			position: absolute;
 			top: 50%;
-			background: #FFF;
-			color: inherit;
+			background: #333;
+			color: #FFF;
 			display: flex;
 			justify-content: center;
 			align-items: center;

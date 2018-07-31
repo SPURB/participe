@@ -1,7 +1,6 @@
 <template>
 	<div class="MenuLateral">
 		<aside :class="{ aberto: menuToggle }">
-			<i class="material-icons" @click="fechaMenu">close</i>
 			<ul>
 				<li class="logo">
 					<a href="http://gestaourbana.prefeitura.sp.gov.br/">
@@ -9,7 +8,7 @@
 					</a>
 				</li>
 				<li v-for="consulta in consultas" v-if="consulta.ativo">
-					<a :href="consulta.urlConsulta" class="consultaAtiva">{{ consulta.nome }}</a>
+					<a :href="consulta.urlConsulta" class="consultaAtiva" @click="fechaMenu">{{ consulta.nome }}</a>
 				</li>			
 				<li v-for="consulta in consultas" v-if="!consulta.ativo">
 					<a :href="consulta.urlConsulta">{{ consulta.nome }}</a>

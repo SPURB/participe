@@ -13,8 +13,6 @@ export default {
 	props: [ 'titulos' ],
 	mounted() {
 	},
-	updated() {
-	},
 	methods: {
 		rolar(obj) {
 			window.scrollBy({
@@ -38,11 +36,11 @@ div.Indice {
 		flex-flow: column nowrap;
 		justify-content: center;
 		position: fixed;
-		top: 0;
+		top: 60px;
+		bottom: 0;
 		left: 0;
-		margin: 0 0 0 -2rem;
+		margin-left: -2rem;
 		padding: 0;
-		height: 100vh;
 		list-style-type: none;
 		font-family: inherit;
 		font-size: small;
@@ -107,6 +105,7 @@ div.Indice {
 			display: block;
 			position: relative;
 			height: auto;
+			top: 0;
 			margin: 2rem 0;
 			padding: 0 2rem;
 			font-size: initial;

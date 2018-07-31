@@ -1,13 +1,10 @@
 <template>
 <div id="app">
-	<div :class="{ desligado: interruptor }" id="interruptor" ref="interruptor"></div>
+	<div :class="{ desligado: interruptor }" id="interruptor" ref="interruptor" @click="fechaMenu"></div>
 	<Cabecalho></Cabecalho>
 	<MenuLateral></MenuLateral>
-	<!-- <Home></Home> -->
 	<router-view name="Home"></router-view>
 	<router-view name="Anhembi2"></router-view>
-	<!-- <AdminLogin></AdminLogin> -->
-	<!-- <AdminHome></AdminHome> -->
 	<Rodape></Rodape>
 </div>
 </template>
@@ -44,6 +41,14 @@ export default {
 	},
 	updated() {		
 		this.$refs.interruptor.style.height = this.$el.clientHeight+'px';
+	},
+	methods: {
+		fechaMenu() {
+			if (this.$store.state.menuToggle) {
+				this.$store.state.menuToggle = false;
+				this.$store.state.luzApaga = false;
+			};
+		},
 	},
 };
 </script>

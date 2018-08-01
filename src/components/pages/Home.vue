@@ -45,43 +45,41 @@
 </template>
 
 <script>
-import axios from 'axios';
-
-	export default {
-		name: 'Home',
-		computed:{
-			consultas(){return this.$store.state.consultas }
+export default {
+	name: 'Home',
+	computed:{
+		consultas(){return this.$store.state.consultas }
+	},
+	mounted() {
+		let listaProjetos = new List('listaProjetos', {
+			valueNames: [ 'nome', 'textoIntro' ],
+		});
+	},
+	methods: {
+		parseAtivo(state){
+			return state == '0' ? false : true
+		}, 
+		ativaBusca() {
+			this.$refs.busca.value = '';
+			this.$refs.busca.style.color = '#333';
 		},
-		mounted() {
-			let listaProjetos = new List('listaProjetos', {
-				valueNames: [ 'nome', 'textoIntro' ],
-			});
+		desativaBusca() {
+			this.$refs.busca.value='Pesquisar'
+			this.$refs.busca.style.color = '#BDBDBD';
 		},
-		methods: {
-			parseAtivo(state){
-				return state == '0' ? false : true
-			}, 
-			ativaBusca() {
-				this.$refs.busca.value = '';
-				this.$refs.busca.style.color = '#333';
-			},
-			desativaBusca() {
-				this.$refs.busca.value='Pesquisar'
-				this.$refs.busca.style.color = '#BDBDBD';
-			},
-			dataDisplay(data) {
-				return data.substring(8,10) + '/' + data.substring(5,7) + '/' + data.substring(0,4);
-			},
-			diasRestantes(data) {
-				let hoje = new Date();
-				let dataFinal = new Date(data.substring(0,4), data.substring(5,7)-1, data.substring(8,10));
-				let dias = Math.round((dataFinal - hoje)/(1000 * 60 * 60 * 24))+1;
-				if (dias <= 0) {
-					return 'Não é mais possível contribuir';
-				} else { return dias + ' dias restantes para contribuir' };
-			},
+		dataDisplay(data) {
+			return data.substring(8,10) + '/' + data.substring(5,7) + '/' + data.substring(0,4);
 		},
-	};
+		diasRestantes(data) {
+			let hoje = new Date();
+			let dataFinal = new Date(data.substring(0,4), data.substring(5,7)-1, data.substring(8,10));
+			let dias = Math.round((dataFinal - hoje)/(1000 * 60 * 60 * 24))+1;
+			if (dias <= 0) {
+				return 'Não é mais possível contribuir';
+			} else { return dias + ' dias restantes para contribuir' };
+		},
+	},
+};
 </script>
 
 <style lang="scss" scoped>

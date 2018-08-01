@@ -156,7 +156,6 @@ import Comments from '@/components/Comments'
 				j++
 			})
 			this.paragrafos = pTemp
-
 		},
 		methods: {
 			abreComments(id) {

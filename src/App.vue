@@ -1,45 +1,66 @@
 <template>
 <div id="app">
-	<div :class="{ desligado: apagar, ligado: !apagar }" id="interruptor" ref="interruptor"></div>
+	<div :class="{ desligado: interruptor }" id="interruptor" ref="interruptor" @click="fechaMenu"></div>
 	<Cabecalho></Cabecalho>
-	<!-- <MenuLateral></MenuLateral> -->
-	<!-- <Home></Home> -->
-	<!-- <AdminLogin></AdminLogin> -->
-	<AdminHome></AdminHome>
+	<MenuLateral></MenuLateral>
+	<router-view name="Home"></router-view>
+	<router-view name="AdminHome"></router-view>
+	<router-view name="Anhembi2"></router-view>
 	<Rodape></Rodape>
 </div>
 </template>
 
 <script>
+import axios from 'axios';
 import Cabecalho from '@/components/Cabecalho';
 import MenuLateral from '@/components/MenuLateral';
-import Home from '@/components/Home';
-import AdminLogin from '@/components/AdminLogin';
-import AdminHome from '@/components/AdminHome';
 import Rodape from '@/components/Rodape';
-import consultas from '../static/consultas.json';
-// import listjs from 'list.js';
 
 export default {
 	name: 'Participe',
 	components: {
 		Cabecalho,
 		MenuLateral,
-		Home,
-		AdminLogin,
-		AdminHome,
 		Rodape,
 	},
 	data() {
 		return {
-			consultas: consultas.slice().reverse(),
-			apagar: false,
+			consultas: undefined
 		}
 	},
-	mounted() {
+	computed: {
+		apiPath() {
+			if(location.port == '8080' || location.port == '8082'){
+				return 'http://spurbsp163:7080/apiconsultas/' 
+			}
+			else{
+				return 'http://participe.gestaourbana.prefeitura.sp.gov.br/apiconsultas/' 
+			}
+		},
+
+		interruptor() {
+			return this.$store.state.luzApaga
+		},
 	},
-	updated() {		
-		this.$refs.interruptor.style.height = this.$el.clientHeight+'px';
+	created(){
+		this.getConsultas();
+	},
+	methods: {
+		getConsultas(){
+			axios.get(this.apiPath+'consultas')
+			.then(response => {
+				this.$store.state.consultas = response.data.slice().reverse()
+			})
+			.catch(e => {
+				this.errors.push(e)
+			})
+		},
+		fechaMenu() {
+			if (this.$store.state.menuToggle) {
+				this.$store.state.menuToggle = false;
+				this.$store.state.luzApaga = false;
+			};
+		},
 	},
 };
 </script>

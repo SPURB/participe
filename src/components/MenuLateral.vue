@@ -1,18 +1,17 @@
 <template>
 	<div class="MenuLateral">
 		<aside :class="{ aberto: menuToggle }">
-			<i class="material-icons" @click="menuToggle = false">close</i>
 			<ul>
 				<li class="logo">
 					<a href="http://gestaourbana.prefeitura.sp.gov.br/">
 						<img src="http://gestaourbana.prefeitura.sp.gov.br/wp-content/themes/gestaourbana-1.4/images/logo_gestao_footer.jpg">
 					</a>
 				</li>
-				<li v-for="consulta in consultas" v-if="consulta.ativo">
-					<a :href="consulta.urlConsulta" class="consultaAtiva">{{ consulta.nome }}</a>
+				<li v-for="consulta in consultas" v-if="consulta.ativo == '1'">
+					<a :href="consulta.urlConsulta" class="consultaAtiva" @click="fechaMenu">{{ consulta.nomePublico }}</a>
 				</li>			
-				<li v-for="consulta in consultas" v-if="!consulta.ativo">
-					<a :href="consulta.urlConsulta">{{ consulta.nome }}</a>
+				<li v-for="consulta in consultas" v-if="consulta.ativo == '0'">
+					<a :href="consulta.urlConsulta">{{ consulta.nomePublico }}</a>
 				</li>
 			</ul>
 		</aside>
@@ -20,17 +19,19 @@
 </template>
 
 <script>
-import consultas from '../../static/consultas.json';
-
-	export default {
-		name: 'MenuLateral',
-		data() {
-			return {
-				consultas: consultas.slice().reverse(),
-				menuToggle: true
-			}
+export default {
+	name: 'MenuLateral',
+	computed: {
+		menuToggle() { return this.$store.state.menuToggle },
+		consultas(){ return this.$store.state.consultas }
+	},
+	methods: {
+		fechaMenu() {
+			this.$store.state.menuToggle = false;
+			this.$store.state.luzApaga = false;
 		},
-	};
+	},
+};
 </script>
 
 <style lang="scss" scoped>
@@ -83,7 +84,7 @@ aside {
 				content: 'Em consulta';
 				font-size: 10px;
 				text-transform: uppercase;
-				color: #FFFFFF;
+				color: #FFF;
 				background-color: #008015;
 				padding: 2px 5px;
 				border-radius: 2px;

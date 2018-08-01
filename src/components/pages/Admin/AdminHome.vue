@@ -9,7 +9,7 @@
 				<h2>Consultas</h2>
 				<ul>
 					<li v-for="consulta in consultas">
-						<a href="" :class="{ consultaAtiva: consulta.ativo }">{{ consulta.nome }}</a>
+						<a href="" :class="{ consultaAtiva: parseBol(consulta.ativo) }">{{ consulta.nomePublico }}</a>
 					</li>
 				</ul>
 			</div>
@@ -36,8 +36,8 @@
 					</th>
 				</thead>
 				<tr v-for="consulta in consultas">
-					<td :class="{ consultaAtiva: consulta.ativo }">
-						<a :href="consulta.urlConsulta">{{ consulta.nome }}</a>
+					<td :class="{ consultaAtiva: parseBol(consulta.ativo) }">
+						<a :href="consulta.urlConsulta">{{ consulta.nomePublico }}</a>
 					</td>
 					<td>{{ dataDisplay(consulta.dataCadastro) }}</td>
 					<td>{{ dataDisplay(consulta.dataFinal) }}</td>
@@ -48,21 +48,21 @@
 </template>
 
 <script>
-import consultas from '../../static/consultas.json';
-
-	export default {
-		nome: 'AdminHome',
-		data() {
-			return {
-				consultas: consultas.slice().reverse(),			
-			}
+export default {
+	nome: 'AdminHome',
+	computed:{
+		consultas(){return this.$store.state.consultas}
+	},
+	methods: {
+		dataDisplay(data) {
+			return data.substring(8,10) + '/' + data.substring(5,7) + '/' + data.substring(0,4);
 		},
-		methods: {
-			dataDisplay(data) {
-				return data.substring(8,10) + '/' + data.substring(5,7) + '/' + data.substring(0,4);
-			},
-		},
-	};
+		parseBol(str){
+			console.log(str)
+			str	== '1'? true : false
+		}
+	},
+};
 </script>
 
 <style lang="scss" scoped>

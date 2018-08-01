@@ -72,20 +72,26 @@ aside {
 		margin: 0;
 		padding: 0;
 
-		li {
+		li:not(.logo) {
 			display: block;
-			padding: .4rem 1rem;
+			transition: all ease-out .1s;
 
 			a {
 				display: block;
-				color: #666;
+				color: #777;
+				padding: 1rem;
+				transition: all ease-out .1s;
 
-				&.ativo {
-					color: #333;
+				&.ativo, &:active {
 					font-weight: bolder;
+					color: #333;
+					background: #F5F5F5;
 				};
 
-				&:hover { text-decoration: none; };
+				&:hover {
+					text-decoration: none;
+					color: #333;
+				};
 			};
 
 			a.consultaAtiva::after {
@@ -98,7 +104,10 @@ aside {
 				border-radius: 2px;
 				margin-left: 8px;
 				vertical-align: middle;
+				white-space: nowrap;
 			};
+
+			&:hover { background: #F5F5F5; };
 		};
 
 		li:nth-of-type(2) { margin-top: .4rem; };
@@ -106,8 +115,11 @@ aside {
 		li:last-child { margin-bottom: .4rem; };
 
 		li.logo {
-			display: inline-block;
-			padding: 1.2rem 1rem .5rem .8rem;
+			display: block;
+			padding: 1rem .6rem .6rem .6rem;
+			margin-bottom: -8px;
+
+			a img {	width: min-content; };
 		};
 	};
 

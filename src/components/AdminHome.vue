@@ -48,21 +48,17 @@
 </template>
 
 <script>
-import consultas from '../../static/consultas.json';
-
-	export default {
-		nome: 'AdminHome',
-		data() {
-			return {
-				consultas: consultas.slice().reverse(),			
-			}
+export default {
+	nome: 'AdminHome',
+	computed:{
+		consultas(){return this.$store.state.consultas}
+	},
+	methods: {
+		dataDisplay(data) {
+			return data.substring(8,10) + '/' + data.substring(5,7) + '/' + data.substring(0,4);
 		},
-		methods: {
-			dataDisplay(data) {
-				return data.substring(8,10) + '/' + data.substring(5,7) + '/' + data.substring(0,4);
-			},
-		},
-	};
+	},
+};
 </script>
 
 <style lang="scss" scoped>

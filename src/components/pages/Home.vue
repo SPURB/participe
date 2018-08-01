@@ -49,29 +49,8 @@ import axios from 'axios';
 
 	export default {
 		name: 'Home',
-		data() {
-			return {
-				consultas: undefined
-			}
-		},
 		computed:{
-			apiPath() {
-				if(location.port == '8080' || location.port == '8082'){
-					return 'http://spurbsp163:7080/apiconsultas/' 
-				}
-				else{
-					return 'http://participe.gestaourbana.prefeitura.sp.gov.br/apiconsultas/' 
-				}
-			}
-		},
-		created(){
-			axios.get(this.apiPath+'consultas')
-			.then(response => {
-				this.consultas = response.data.slice().reverse()
-			})
-			.catch(e => {
-				this.errors.push(e)
-			})
+			consultas(){return this.$store.state.consultas }
 		},
 		mounted() {
 			let listaProjetos = new List('listaProjetos', {

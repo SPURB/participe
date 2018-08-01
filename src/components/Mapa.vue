@@ -70,6 +70,8 @@ export default{
 		let app = this
 		this.createMap()
 		this.mapView.setMinZoom(this.mapa_attrs.zoom)
+
+		this.$el.getElementsByTagName('canvas')[0].style.borderRadius = '2px'
 	},
 	methods:{
 		createMap(){
@@ -90,48 +92,51 @@ export default{
 }	
 </script>
 <style lang="scss" scoped>
-
-#map {
+div.Mapa {
 	max-width: 992px;
-	margin: 4rem auto 0 auto;
-};
+	margin: 4rem auto 2rem auto;
 
-ul.legenda{
-	display: flex;
-	justify-content: center;
-	max-width: 992px;
-	padding: 1rem 2rem;
-	margin-bottom: 2rem;
-	font-family: inherit;
-	
-	li {
-		display: inline-flex;
-		align-items: center;
-		font-size: small;
-		margin: 0;
-		padding: 0;		
-		margin-right: 2rem;
+	#map:active {
+		cursor: move;
+	};
 
-		div {
-			border-style: solid;
-			height: 1.6rem;
-			min-width: 1.6rem;
-			margin-right: .4rem;
-		};
+	ul.legenda{
+		display: flex;
+		justify-content: center;
+		max-width: 992px;
+		padding: 1rem 2rem;
+		margin-bottom: 0;
+		font-family: inherit;
+		
+		li {
+			display: inline-flex;
+			align-items: center;
+			font-size: small;
+			margin: 0;
+			padding: 0;		
+			margin-right: 2rem;
 
-		a {
-			color: inherit;
+			div {
+				border-style: solid;
+				height: 1.2rem;
+				min-width: 1.2rem;
+				margin-right: .4rem;
+			};
 
-			&:hover {
-				opacity: .4;
-				text-decoration: none;
+			a {
+				color: inherit;
+
+				&:hover {
+					opacity: .4;
+					text-decoration: none;
+				};
+			};
+
+			&:last-child {
+				margin-right: 0;
 			};
 		};
-
-		&:last-child {
-			margin-right: 0;
-		};
-	}
-}
+	};
+};
 
 </style>

@@ -100,7 +100,7 @@ div.Indice {
 		};
 	};
 
-	@media (max-width: 800px) {
+	@media (max-width: 1200px) {
 		ul {
 			display: block;
 			position: relative;

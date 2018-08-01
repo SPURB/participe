@@ -7,11 +7,11 @@
 						<img src="http://gestaourbana.prefeitura.sp.gov.br/wp-content/themes/gestaourbana-1.4/images/logo_gestao_footer.jpg">
 					</a>
 				</li>
-				<li v-for="consulta in consultas" v-if="consulta.ativo">
-					<a :href="consulta.urlConsulta" class="consultaAtiva" @click="fechaMenu">{{ consulta.nome }}</a>
+				<li v-for="consulta in consultas" v-if="consulta.ativo == '1'">
+					<a :href="consulta.urlConsulta" class="consultaAtiva" @click="fechaMenu">{{ consulta.nomePublico }}</a>
 				</li>			
-				<li v-for="consulta in consultas" v-if="!consulta.ativo">
-					<a :href="consulta.urlConsulta">{{ consulta.nome }}</a>
+				<li v-for="consulta in consultas" v-if="consulta.ativo == '0'">
+					<a :href="consulta.urlConsulta">{{ consulta.nomePublico }}</a>
 				</li>
 			</ul>
 		</aside>
@@ -19,16 +19,11 @@
 </template>
 
 <script>
-import consultas from '../../static/consultas.json';
 
 	export default {
 		name: 'MenuLateral',
-		data() {
-			return {
-				consultas: consultas.slice().reverse()
-			}
-		},
 		computed: {
+			consultas(){ return this.$store.state.consultas },
 			menuToggle() {
 				return this.$store.state.menuToggle
 			}
@@ -72,20 +67,26 @@ aside {
 		margin: 0;
 		padding: 0;
 
-		li {
+		li:not(.logo) {
 			display: block;
-			padding: .4rem 1rem;
+			transition: all ease-out .1s;
 
 			a {
 				display: block;
-				color: #666;
+				color: #777;
+				padding: 1rem;
+				transition: all ease-out .1s;
 
-				&.ativo {
-					color: #333;
+				&.ativo, &:active {
 					font-weight: bolder;
+					color: #333;
+					background: #F5F5F5;
 				};
 
-				&:hover { text-decoration: none; };
+				&:hover {
+					text-decoration: none;
+					color: #333;
+				};
 			};
 
 			a.consultaAtiva::after {
@@ -98,7 +99,10 @@ aside {
 				border-radius: 2px;
 				margin-left: 8px;
 				vertical-align: middle;
+				white-space: nowrap;
 			};
+
+			&:hover { background: #F5F5F5; };
 		};
 
 		li:nth-of-type(2) { margin-top: .4rem; };
@@ -106,8 +110,11 @@ aside {
 		li:last-child { margin-bottom: .4rem; };
 
 		li.logo {
-			display: inline-block;
-			padding: 1.2rem 1rem .5rem .8rem;
+			display: block;
+			padding: 1rem .6rem .6rem .6rem;
+			margin-bottom: -8px;
+
+			a img {	width: min-content; };
 		};
 	};
 

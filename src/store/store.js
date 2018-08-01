@@ -7,5 +7,6 @@ export const store = new Vuex.Store({
 	state: {
 		menuToggle: false,
 		luzApaga: false,
+		consultas:undefined
 	}
 })

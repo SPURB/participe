@@ -80,8 +80,17 @@ export default {
 			else{
 				return this.form_name + ' ' + this.form_surname
 			}
-		}		
+		},
+		apiPath() {
+			if(location.port == '8080' || location.port == '8082'){
+				return 'http://spurbsp163:7080/apiconsultas/' 
+			}
+			else{
+				return 'http://participe.gestaourbana.prefeitura.sp.gov.br/apiconsultas/' 
+			}
+		},		
 	},
+
 	methods:{
 		checkName(){
 			if(!this.fields.name.valid && !this.fields.email.valid && !this.fields.surname.valid){
@@ -106,14 +115,14 @@ export default {
 		send(){
 			const url = 'http://participe.gestaourbana.prefeitura.sp.gov.br/apiconsultas/members/';
 			const app = this;
-			axios.post(url,{
+			axios.post(this.apiPath+'members',{
 				'idConsulta':'8',
 				'name': app.returnFormNameObject,
 				'email': app.form_email, 
 				'content': app.form_content,
 				'public': '0',
 				'trash': '0',
-				'postid': '1',
+				'postid': app.attr.postid,
 				'commentid': app.attr.id,
 				'commentcontext': app.attr.contexto
 			})
@@ -122,7 +131,7 @@ export default {
 				let name = app.form_name;
 				let content = app.form_content;
 
-				alert("Obrigado," + name + "! Agradecemos a sua contribuição! Seu comentário ("  + content + ") foi enviado e aguarda aprovação da moderação para ser publicado. Obrigado por sua contribuição.")
+				alert("Obrigado," + name + "! Agradecemos a sua contribuição! Seu comentário (" + content + ") foi enviado e aguarda aprovação da moderação para ser publicado. Obrigado por sua contribuição.")
 			})
 			.catch(function (error) {
 				// console.log(error)

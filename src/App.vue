@@ -10,34 +10,33 @@
 </template>
 
 <script>
+import axios from 'axios';
 import Cabecalho from '@/components/Cabecalho';
 import MenuLateral from '@/components/MenuLateral';
-import AdminLogin from '@/components/AdminLogin';
-import AdminHome from '@/components/AdminHome';
+// import AdminLogin from '@/components/AdminLogin';
+// import AdminHome from '@/components/AdminHome';
 import Rodape from '@/components/Rodape';
-import consultas from '../static/consultas.json';
-// import listjs from 'list.js';
 
 export default {
 	name: 'Participe',
 	components: {
 		Cabecalho,
 		MenuLateral,
-		AdminLogin,
-		AdminHome,
 		Rodape,
 	},
-	data() {
-		return {
-			consultas: consultas.slice().reverse(),
+	computed: {
+		interruptor() { return this.$store.state.luzApaga },
+		apiPath() {
+			if(location.port == '8080' || location.port == '8082'){
+				return 'http://spurbsp163:7080/apiconsultas/' 
+			}
+			else{
+				return 'http://participe.gestaourbana.prefeitura.sp.gov.br/apiconsultas/' 
+			}
 		}
 	},
-	computed: {
-		interruptor() {
-			return this.$store.state.luzApaga
-		},
-	},
-	mounted() {
+	created(){
+		this.getConsultas();
 	},
 	updated() {		
 		this.$refs.interruptor.style.height = this.$el.clientHeight+'px';
@@ -48,6 +47,15 @@ export default {
 				this.$store.state.menuToggle = false;
 				this.$store.state.luzApaga = false;
 			};
+		},
+		getConsultas(){
+			axios.get(this.apiPath+'consultas')
+			.then(response => {
+				this.$store.state.consultas = response.data.slice().reverse()
+			})
+			.catch(e => {
+				this.errors.push(e)
+			})
 		},
 	},
 };

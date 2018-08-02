@@ -3,13 +3,21 @@
 
 		<div class="top" style="background-image: url('http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/capa.jpg');">
 			<div>
-				<div>2ª consulta pública</div>
+				<div></div>
 				<h1>PIU Anhembi</h1>
-				<div>Projeto de Intervenção Urbana Anhembi</div>
+				<div>2ª consulta pública – Projeto de Intervenção Urbana Anhembi</div>
+				<!-- <div>
+					<i class="material-icons">chat</i> 23 contribuições
+				</div>
+				<div>
+					<i class="material-icons">access_time</i> 13 dias restantes para contribuir
+				</div> -->
 			</div>
+			<div class="setaBaixo" @click="setaBaixo"><i class="material-icons">keyboard_arrow_down</i></div>
 		</div>
 
 		<Indice :titulos="titulosLimpo"></Indice>
+		<Apoio></Apoio>
 
 		<h2 class="titulo" indent="1">Saiba como participar</h2>
 		<Comments :attr="{id:1, context:'Saiba como participar'}"></Comments>
@@ -52,9 +60,18 @@
 		<p>As diretrizes urbanísticas e o programa de intervenções foram definidos para as duas escalas previstas na Lei n° 16.866 de 2018: o Perímetro de Abrangência e o Perímetro Expandido. </p>
 		<p>No primeiro caso, foram incluídas integralmente as quadras 283 e 284, delimitadas pela Av. Assis Chateaubriand, a Av. Olavo Fontoura, a Praça Campo de Bagatelle, a Av. Santos Dumont, a Rua Marechal Leitão de Carvalho, a Rua Masseinet Sorcinelli e a Rua Prof. Milton Rodrigues. Quanto ao Perímetro Expandido, foi adotada a determinação do §1° do Art. 5º da Lei n°16.866 de 2018, formado pela interseção entre o subsetor Arco Tietê da Macroárea de Estruturação Metropolitana (MEM) e os limites administrativos das Prefeituras Regionais de Santana/Tucuruvi e Casa Verde.</p>
 
-		<figure>
-			<img src="http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/ANH_Perimetros.jpg" alt="Perímetros de intervenção">
-			<!-- <figcaption>Perímetros de intervenção</figcaption> -->
+		<figure title="Processo de recorte do Perímetro Expandido" class="borda">
+			<img src="http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/ANH_Perimetros.jpg" alt="Processo de recorte do Perímetro Expandido">
+			<h6>Processo de recorte do Perímetro Expandido</h6>
+			<ul class="legenda caixas">
+				<li><span>1</span>Prefeitura Regional Casa Verde-Cachoeirinha</li>
+				<li><span>2</span>Prefeitura Regional Santana-Tucuruvi</li>
+				<li><span>3</span>Distrito Limão</li>
+				<li><span>4</span>Distrito Casa Verde</li>
+				<li><span>5</span>Distrito Santana</li>
+				<li><span>6</span>Perímetro Expandido do PIU Anhembi</li>
+				<li><span>7</span>Perímetro do Arco Tietê</li>
+			</ul>
 		</figure>
 
 		<Mapa :mapa_attrs="mapa_attrs"></Mapa>
@@ -84,16 +101,68 @@
 		<p>Desta forma, a proposta de melhoria da rede de mobilidade do PIU Anhembi parte dos melhoramentos viários definidos pela Lei n° 16.541 de 2016.  Esses novos melhoramentos deverão integrar-se ao sistema viário existente melhorando a mobilidade da região e conectar-se aos terminais e estações de transporte público.</p>
 		<p>A rede de mobilidade proposta não se resume na mobilidade motorizada, soma-se a ela, melhoria a mobilidade não motorizada com a proposta de ampliação de passeios e de implantação de ciclovias.</p>
 
-		<figure>
-			<img src="http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/ANH_mobilidade.jpg" alt="Mobilidade">
-			<!-- <figcaption>Mobilidade</figcaption> -->
+		<figure title="Síntese das intervenções em mobilidade urbana" class="borda">
+			<img src="http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/ANH_mobilidade.jpg" alt="Síntese das intervenções em mobilidade urbana">
+			<h6>Síntese das intervenções em mobilidade urbana</h6>
+			<ul class="legenda">
+				<li>
+					<div class="linha" style="border-style: dashed; border-color: #ee832c"></div>
+					Ciclovia proposta
+				</li>
+				<li>
+					<div class="linha" style="border-style: dashed; border-color: #444444"></div>
+					Novas conexões viárias
+				</li>
+				<li>
+					<div class="linha" style="border-color: #ffba18;"></div>
+					Melhoria de passeio existente
+				</li>
+				<li>
+					<div class="linha" style="border-color: #db4746;"></div>
+					Corredor de ônibus municipal
+				</li>
+				<li>
+					<div class="linha" style="border-color: #f2903c;"></div>
+					Rede cicloviária existente
+				</li>
+				<li>
+					<div class="linha" style="border-color: #acacac;"></div>
+					Sistema viário estrutural
+				</li>
+			</ul>
 		</figure>
 
 		<p>Por sua vez, a qualificação socioambiental será promovida por meio da implantação de sistema de áreas verdes composto por áreas verdes existentes, como o Parque Juventude, e novos parques, como os parques lineares ao longo dos córregos Carandiru e Papaterra Limongi, possibilitando a retomada do contato com os rios da cidade. Essas áreas serão conectadas por bulevares e alamedas, que agregarão valor paisagístico e ambiental, além de contribuírem na mitigação de ilhas de calor e problemas de drenagem.</p>
 
-		<figure>
-			<img src="http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/ANH_ambiental.jpg" alt="Ambiental">
-			<!-- <figcaption>Ambiental</figcaption> -->
+		<figure title="Síntese das intervenções de qualificação ambiental" class="borda">
+			<img src="http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/ANH_ambiental.jpg" alt="Síntese das intervenções de qualificação ambiental">
+			<h6>Síntese das intervenções de qualificação ambiental</h6>
+			<ul class="legenda">
+				<li>
+					<div class="linha" style="border-style: dashed; border-color: #ee832c"></div>
+					Ciclovia proposta
+				</li>
+				<li>
+					<div style="border-width: 0; border-radius: 100%; background: url('http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/legendaAmbiental1.gif');"></div>
+					Requalificação
+				</li>
+				<li>
+					<div style="border-style: dotted; border-color: #47642e; border-width: 0; border-right-width: 5px; transform: rotate(45deg) translateX(-8px);"></div>
+					Alamedas propostas
+				</li>
+				<li>
+					<div style="border-style: dotted; border-color: #85c444; border-width: 0; border-right-width: 5px; transform: rotate(45deg) translateX(-8px);"></div>
+					Bulevares propostos
+				</li>
+				<li>
+					<div class="linha" style="border-color: #ffba18;"></div>
+					Melhoria de passeio existente
+				</li>
+				<li>
+					<div class="linha" style="border-color: #f2903c;"></div>
+					Rede cicloviária existente
+				</li>
+			</ul>
 		</figure>
 
 		<figure>
@@ -103,40 +172,55 @@
 
 		<p>Além do mais, o PIU Anhembi representa uma oportunidade de potencializar o uso de terras públicas subutilizadas que se encontram no Perímetro Expandido, prevendo a implantação de ruas, praças, escolas e parque público de habitação de interesse social.</p>
 
-		<figure>
+		<figure title="Síntese das intervenções de habitação de interesse social" class="borda">
 			<img src="http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/ANH_habitacao.jpg" alt="Habitação">
+			<h6>Síntese das intervenções de habitação de interesse social</h6>
+			<ul class="legenda">
+				<li>
+					<div style="border-width: 0; border-radius: 100%; background: url('http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/legendaHabitacao1.gif');"></div>
+					Áreas públicas
+				</li>
+				<li>
+					<div style="border-width: 0; background: #d7ab60;"></div>
+					Intervenção integrada em áreas precárias
+				</li>
+				<li>
+					<div style="border-width: 0; background: #fe7401;"></div>
+					Requalificação e regularização de conjuntos habitacionais
+				</li>
+				<li>
+					<div style="border-width: 0; background: #c20001;"></div>
+					Remoção e reassentamento de famílias atingidas pelo Programa de Intervenções
+				</li>
+			</ul>
 		</figure>
 
 		<Comments :attr="{id:5, context:'Programa de intervenções para o perímetro expandido'}"></Comments>
 
 		<h2 class="titulo" indent="1">Modelagem econômica da intervenção proposta</h2>
-		<p>Como mencionado no capítulo anterior, a estruturação econômico-financeira do PIU Anhembi considera que a implantação do programa de intervenções deverá acontecer em territórios do entorno da ZOE do Anhembi, com recursos financeiros obtidos a partir da contrapartida financeira em outorga onerosa a ser paga pelos empreendimentos que serão edificados ao longo do tempo nas glebas já discriminadas. Neste sentido, como se verá a seguir, foram definidas algumas premissas e delineados cenários possíveis projetando a arrecadação e seu prazo.</p>
-		<p>A alienação dos terrenos do Anhembi parte da premissa de que o adquirente privado poderá gerar melhor eficiência econômica no uso das glebas, uma vez que estas se encontram em local de intenso fluxo de pessoas, o que poderia ser melhor aproveitado tanto por usos residenciais quanto não residenciais.</p>
-		<p>Há que se observar, ainda, que haverá aporte ao Fundo Municipal de Desenvolvimento Social (“fundo de desestatização”), referente à venda da empresa municipal SPTuris (o que incluirá os bens imóveis), bem como pagamento da Cota de Solidariedade, exigível em caso de empreendimentos a serem construídos com área superior a 20.000m². Entretanto, ambos montantes não são considerados neste estudo, uma vez que não refletirão diretamente em melhoramentos urbanísticos no entorno do Anhembi, mas que terão seus investimentos convertidos para equipamentos sociais conforme políticas setoriais.  </p>
-		<p>Espera-se, portanto, que a outorga onerosa do direito de construir (OODC) resultante do processo possa ser revertida em melhorias urbanas para o entorno, sendo necessária então a mensuração de seus valores possíveis a ser arrecadados pelo FUNDURB.</p>
+		<p>Como mencionado no capítulo anterior o financiamento das intervenções do PIU Anhembi considera que a implantação do programa de intervenções deverá acontecer em territórios do entorno da ZOE do Anhembi, com recursos financeiros obtidos a partir da contrapartida financeira em outorga onerosa a ser paga pelos empreendimentos que poderão ser edificados ao longo do tempo nas glebas já discriminadas. Neste sentido, foram feitas estimativas de projeção da arrecadação e implantação das intervenções do PIU no horizonte de 15 a 20 anos.</p>
+		<p>A alienação da participação societária da Prefeitura na SP Turis, proprietária dos terrenos do Anhembi, gera a possibilidade de transformação deste território, com a perspectiva de adensamento, uma vez que este se encontra em local de intenso fluxo de pessoas, o que poderia ser melhor aproveitado tanto por usos residenciais quanto não residenciais.</p>
+		<p>Considera-se, portanto, que a outorga onerosa do direito de construir (OODC) resultante do processo descrito acima possa ser revertida em melhorias urbanas para o entorno, sendo necessária então a mensuração de seus valores possíveis a serem arrecadados pelo FUNDURB.</p>
 
 		<Comments :attr="{id:6, context:'Modelagem econômica da intervenção proposta'}"></Comments>
 		
 		<h3 class="titulo" indent="2">Premissas consideradas para a modelagem</h3>
-		<p>Para a realização dos estudos, foram definidas premissas com valor único, resultantes das possibilidades de transformação dos terrenos da ZOE Anhembi, além de premissas variáveis, que possibilitaram o estudo de cenários distintos para o potencial construtivo disponível.</p>
+		<p>Para a realização dos estudos, foram definidas premissas com valor único, resultantes das possibilidades de transformação dos terrenos da ZOE Anhembi, além de premissas variáveis, que possibilitaram o estudo de cenários distintos para a estimativa de arrecadação de outorga onerosa.</p>
 		<h4>Premissas com um único valor (estáticas)</h4>
-		<p>Dado que as quadras em questão são as 283 e 284 do setor 073, sabe-se que as áreas do projeto somam 413.498 m². Da área total de terrenos, a partir dos estudos realizados pela área técnica de projetos, estima-se uma destinação de áreas públicas para o município da ordem de 40% devido à necessidade de adequação das quadras (com exceção das Glebas C e D onde se calcula 32,3%), ainda que a legislação vigente obrigue a no mínimo 20%.</p>
-		<p>Para efeito de cálculo, foi considerado ainda que as construções atuais serão removidas, tendo seu potencial construtivo substituído pelos novos empreendimentos.</p>
-		<p>Os estudos também consideraram que metade do empreendimento construído terá uso residencial, com cada unidade habitacional possuindo em média 80m² vendáveis (sendo que a área vendável é 15% maior que a área construída computável).</p>
+		<p>Da área total de terrenos, a partir dos estudos realizados pela área técnica de projetos, estima-se uma destinação de áreas públicas, no caso de parcelamento do solo, considerando o mínimo estabelecido pela legislação vigente de 20% e as demandas de conexões viárias, áreas verdes e institucionais descritas anteriormente. Tais estimativas permitem uma projeção de áreas passíveis de ocupação, sobre as quais será calculada a utilização de potencial construtivo adicional.</p>
 		<h4>Premissas geradoras de cenários (variáveis)</h4>
 		<p>Para a estimativa do coeficiente de aproveitamento que será utilizado, foram prospectados três possíveis cenários:</p>
 		<ol style="list-style-type: lower-roman;">
 			<li>todos os lotes utilizando CA 2;</li>
 			<li>todos utilizando CA 4, ou;</li>
-			<li>CA médio total de 5,7, sendo este o maior aproveitamento possível mantendo-se a restrição de gabarito: quadra 283 (Sambódromo) com CA 5 e quadra 284 com CA 6.</li>
+			<li>CA médio total de 5,7, considerando a restrição de gabarito existente (COMAR).</li>
 		</ol>
 		<p>A fórmula de cálculo da OODC a ser utilizada é a mesma definida pela lei 16.050/2014 (PDE), portanto, para o obtenção do Valor de Cadastro foi estabelecida a média dos valores das faces de cada quadra (R$ 833,00 e R$ 966,86/m² para as quadras 283 e 284, respectivamente), o que resultou em um montante de arrecadação projetado no período de 15 a 20 anos.</p>
-		<p>Considerando que o prazo de realização será longo, e as benfeitorias realizadas tenderão a provocar natural valorização na região, em outro cenário se supôs para ambas as quadras do Anhembi a média, ponderada pela área, dos valores das faces de quadras fiscais nas proximidades, de R$ 1.697,74/m². Este fato pode representar a valorização esperada no tempo e estar em condição realista frente à infraestrutura da região.		</p>
 		
 		<Comments :attr="{id:7, context:'Premissas consideradas para a modelagem'}"></Comments>
 
 		<h3 class="titulo" indent="2">Resultados da modelagem econômico-financeira</h3>
-		<p>Assim, havendo os três horizontes estudados de coeficiente de aproveitamento, e dois de valor de cadastro a ser aplicado, resultam-se seis cenários de pagamento de Outorga Onerosa do Direito de Construir (OODC), conforme quadro e gráfico abaixo:</p>
+		<p>Assim, havendo os três horizontes estudados de coeficiente de aproveitamento, resultam-se três cenários de arrecadação de Outorga Onerosa do Direito de Construir (OODC), conforme quadro abaixo:</p>
 		
 		<div class="tableWrap">
 			<table class="center">
@@ -144,40 +228,29 @@
 				<thead>
 					<th>CA</th>
 					<th>Valor de Cadastro atual</th>
-					<th>Valor de Cadastro da região</th>
-					<th>Δ%</th>
 				</thead>
 				<tbody>
 					<tr>
 						<td>2,0</td>
 						<td>R$ 100.901.259</td>
-						<td>R$ 184.883.024</td>
-						<td>83,2%</td>
 					</tr>
 					<tr>
 						<td>4,0</td>
 						<td>R$ 151.351.888</td>
-						<td>R$ 277.324.537</td>
-						<td>83,2%</td>
 					</tr>
 					<tr>
 						<td>5,7</td>
 						<td>R$ 166.347.932</td>
-						<td>R$ 304.427.327</td>
-						<td>83,0%</td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
-
-		<GrafBarras></GrafBarras>
 		
 		<Comments :attr="{id:8, context:'Resultados da modelagem econômico-financeira'}"></Comments>
 
 		<h3 class="titulo" indent="2">Conclusões</h3>
-		<p>Com este estudo, fica evidenciada, primeiramente, a importância de se considerar, para efeito de modelagem, o incremento do valor de cadastro vigente para algum que abranja as qualidades da região, ou seja, equiparado ao das quadras vizinhas, visto que tal alteração resultaria num aumento de arrecadação projetada de OODC em torno de 83%, o que ainda faria jus a realidade de valores praticados na região.</p>
 		<p>Dado que o coeficiente de aproveitamento a ser utilizado pelos futuros empreendimentos é a variável com maior imprevisibilidade, uma vez que responderá à demanda específica da região e da percepção desta pelo empreendedor, pode-se considerar os três cenários para se formar ideia de um mais (i) pessimista (CA 2,0), um (ii) intermediário e de acordo com o já definido para os eixos (CA 4,0), e ainda outro mais (iii) otimista e embasado no potencial de acessibilidade da região (CA 5,7), para se prever a arrecadação.</p>
-		<p>Por fim, visto que a iniciativa de se empreender no Anhembi após a privatização, será exclusiva dos adquirentes, é relevante que do programa de intervenções conste um rol de obras, melhoramentos urbanísticos e equipamentos públicos os quais terão sua implantação definida no tempo, na medida em que a arrecadação das contrapartidas financeiras forem ingressando no fundo responsável pelo financiamento destas. A previsão de cenários de menores ou maiores recursos se faz necessária, conforme consta do Quadro 5, quando menciona-se intervenções “básicas” ou “complementares”.</p>
+		<p>Por fim, é relevante que do programa de intervenções conste um rol de obras, melhoramentos urbanísticos e equipamentos públicos os quais terão sua implantação definida no tempo, na medida em que a arrecadação das contrapartidas financeiras forem ingressando no fundo responsável pelo financiamento destas. A previsão de cenários de menores ou maiores recursos se faz necessária, conforme consta do Quadro 5, quando menciona-se intervenções “básicas” ou “complementares”.</p>
 
 		<Comments :attr="{id:9, context:'Conclusões'}"></Comments>
 
@@ -690,7 +763,7 @@ import ConselhoGestor from '@/components/graf/ConselhoGestor';
 import Galeria from '@/components/Galeria';
 import Mapa from '@/components/Mapa';
 import Minuta from '@/components/Minuta';
-import GrafBarras from '@/components/graf/GrafBarras';
+import Apoio from '@/components/Apoio'
 
 	export default {
 		name: 'Anhembi2',
@@ -781,8 +854,8 @@ import GrafBarras from '@/components/graf/GrafBarras';
 			ConselhoGestor,
 			Galeria,
 			Mapa,
-			GrafBarras,
-			Minuta
+			Minuta,
+			Apoio
 		},
 		mounted() {
 			this.listaTitulos();
@@ -806,7 +879,10 @@ import GrafBarras from '@/components/graf/GrafBarras';
 					titulos.push(titulo);
 				});
 				this.titulosLimpo = titulos;
-			}
+			},
+			setaBaixo() {
+				window.scrollTo({ top: Math.round(window.innerHeight), behavior: 'smooth'})
+			},
 		},
 	};
 </script>
@@ -828,32 +904,80 @@ import GrafBarras from '@/components/graf/GrafBarras';
 			background-position: center center;
 			background-size: cover;
 			width: 100%;
-			min-height: 80vh;
+			height: calc(100vh - 60px);
+			position: relative;
 			display: flex;
 			flex-flow: column nowrap;
 			align-items: center;
 			justify-content: center;
+			box-shadow: inset 0 4px 4px rgba(0, 0, 0, .12);
 			z-index: 2;
 			
-			& > div {
+			& > div:first-child {
 				padding: 1.2rem;
 				background: #FFF;
 				outline: 8px solid rgba(0, 0, 0, .24);
 				-moz-outline-radius: 2px;
 
 				& > div {
-					margin: 0;
+					margin: 0 0 8px 0;
 					text-align: center;
-					font-size: medium;
-					color: #BDBDBD;
+					font-size: small;
+					color: #777;
 					font-weight: 400;
+					
+					&:last-child { margin-bottom: 0; };
+
+					i {
+						font-size: initial;
+						vertical-align: middle;
+					};
 				};
 
 				& > h1 {
-					font-size: 10vmin;
+					font-size: calc(16px + 8vmin);
 					line-height: calc(6vmin + 32px);
 					margin: 1rem;
 					text-align: center;
+				};
+			};
+
+			.bottons {
+				font-size: small;
+				margin-top: .2rem;
+				background: #FFF;
+			};
+
+			.setaBaixo {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				display: flex;
+				align-items: flex-end;
+				justify-content: center;
+				width: 100%;
+				height: 25vh;
+				background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .8));
+				transform: translateY(0);
+				z-index: -1;
+				transition: all .4s;
+
+				i {
+					font-size: calc(24px + 16vmin);
+					line-height: .8;
+					color: #FFF;
+					text-shadow: 0 2px 2px rgba(0, 0, 0, .24);
+					transition: all .1s;
+				};
+
+				&:hover {
+					cursor: pointer;
+					transform: translateY(32px);
+
+					i {
+						transform: translateY(-24px);
+						cursor: pointer;
+					};
 				};
 			};
 		};
@@ -894,7 +1018,15 @@ import GrafBarras from '@/components/graf/GrafBarras';
 
 		figure {
 			text-align: center;
-			margin: 2rem 0;
+			margin: 2rem auto;
+			max-width: 992px;
+
+			&.borda {
+				padding-bottom: .4rem;
+				border: 1px solid #BDBDBD;
+				border-radius: 2px;
+				overflow: hidden;
+			};
 
 			figcaption {
 				padding-bottom: .4rem;
@@ -939,13 +1071,23 @@ import GrafBarras from '@/components/graf/GrafBarras';
 			};
 		};
 
-		figure + ul.legenda {
+		h6 {
+			/*border:1px solid red;*/
+			margin: 0;
+			max-width: 100%;
+			color: #333;
+			font-size: smaller;
+			font-weight: 700;
+		};
+
+		figure ul.legenda {
 			display: flex;
+			flex-flow: row wrap;
 			justify-content: center;
 			max-width: 992px;
 			padding: 1rem 2rem;
 			margin-bottom: 0;
-			margin-top: -2.4rem;
+			margin-top: 0;
 			font-family: inherit;
 			
 			li {
@@ -958,9 +1100,16 @@ import GrafBarras from '@/components/graf/GrafBarras';
 
 				div {
 					border-style: solid;
+					border-width: 2px;
 					height: 1.2rem;
 					min-width: 1.2rem;
 					margin-right: .4rem;
+
+					&.linha {
+						max-height: 0px;
+						overflow-y: hidden;
+						border-width: 1px;
+					};
 				};
 
 				a {
@@ -974,6 +1123,20 @@ import GrafBarras from '@/components/graf/GrafBarras';
 
 				&:last-child {
 					margin-right: 0;
+				};
+			};
+
+			&.caixas {
+				display: block;
+				padding: .4rem 1rem;
+				columns: 320px;
+				column-gap: 2rem;
+
+				li {
+					display: block;
+					text-align: left;
+
+					span { font-weight: 700; margin-right: .6rem; };
 				};
 			};
 		};

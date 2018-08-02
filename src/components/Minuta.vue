@@ -202,12 +202,13 @@ div.Minuta {
 			i {
 				display: block;
 				position: absolute;
-				margin-top: 6px;
+				margin-top: 8px;
+				margin-left: 6px;
 				transform: scale(1);
-				font-size: 24px;
-				line-height: calc(2rem - 8px);
-				height: calc(2rem - 8px);
-				width: calc(2rem - 8px);
+				font-size: 20px;
+				line-height: calc(2rem - 12px);
+				height: calc(2rem - 12px);
+				width: calc(2rem - 12px);
 				text-align: center;
 				color: #BDBDBD;
 				background: #FFF;
@@ -219,28 +220,30 @@ div.Minuta {
 					background: #EF5757;
 					color: #FFF;
 					cursor: pointer;
-					font-size: 80%;
-					transform: scale(1.6);
+					font-size: 64%;
 					opacity: 1;
 
 					&::after {
 						background: #333;
 						letter-spacing: 0;
-						font-size: 6px;
+						transition: transform ease-out .1s;
 					};
 				};
+
+				&.ativo::after { transform: scale(0); };
 
 				&:active { background: #AD3D3D; };
 
 				&::after {
 					content: attr(numcomments);
 					position: absolute;
-					margin-left: -10px;
-					margin-top: -6px;
+					margin-left: -8px;
+					margin-top: -4px;
+					/*display: inline-block;*/
 					display: none;
-					line-height: 16px;
-					height: 16px;
-					width: 16px;
+					line-height: 12px;
+					height: 12px;
+					width: 12px;
 					text-align: center;
 					letter-spacing: -.032rem;
 					border-radius: 100%;

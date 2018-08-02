@@ -109,7 +109,6 @@ export default {
 	max-width: 992px;
 	border: 1px solid #BDBDBD;
 	border-radius: 2px;
-	background: #FFF;
 	position: relative;
 	overflow: hidden;
 

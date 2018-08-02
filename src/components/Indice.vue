@@ -110,6 +110,7 @@ div.Indice {
 			padding: 0 2rem;
 			font-size: initial;
 			line-height: 1.1;
+			max-width: unset;
 
 			li {
 				display: inline-block;

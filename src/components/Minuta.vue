@@ -115,7 +115,7 @@
 			<p>Parágrafo único. Caberá à empresa SP-Urbanismo, em função da gestão e acompanhamento da implantação do PIU-Anhembi, remuneração correspondente a 4% (quatro por cento) do valor da outorga onerosa de potencial construtivo adicional arrecadado na implantação deste projeto de intervenção urbana</p>
 			<p>Art. 17. Este decreto entrará em vigor na data de sua publicação.</p>
 
-			<article v-for="paragrafo in paragrafos" :id="'article_'+paragrafo.id">
+			<!-- <article v-for="paragrafo in paragrafos" :id="'article_'+paragrafo.id">
 				<i 
 					class="material-icons" 
 					title="Comentar esse parágrafo" 
@@ -126,7 +126,7 @@
 				<div class="areaComment" :id="paragrafo.id">
 					<Comments :attr="{id: 11, context:'Minuta', postId: parseInt((paragrafo.id).slice(1)) + 999 }"></Comments>
 				</div>
-			</article>
+			</article> -->
 		</blockquote>
 	</div>
 </template>
@@ -145,38 +145,38 @@ import Comments from '@/components/Comments'
 			Comments
 		},
 		mounted() {
-			let pTemp = []
-			let j = 1
-			Array.from(this.$el.getElementsByTagName('p')).slice(1).map(function(index) {
-				index.style.display = 'none'
-				pTemp.push({
-					id: 'p'+j.toString(),
-					txt: index.innerText
-				})
-				j++
-			})
-			this.paragrafos = pTemp
+			// let pTemp = []
+			// let j = 1
+			// Array.from(this.$el.getElementsByTagName('p')).slice(1).map(function(index) {
+			// 	index.style.display = 'none'
+			// 	pTemp.push({
+			// 		id: 'p'+j.toString(),
+			// 		txt: index.innerText
+			// 	})
+			// 	j++
+			// })
+			// this.paragrafos = pTemp
 		},
 		methods: {
-			abreComments(id) {
-				if (document.getElementById(id).offsetHeight <= 0) {
-					document.getElementById(id).style.maxHeight = '1000px'
-					document.getElementById('iconeComment_'+id).innerText = 'close'
-					document.getElementById('iconeComment_'+id).className = 'material-icons ativo'
-				} else {
-					document.getElementById('iconeComment_'+id).innerText = 'chat'
-					document.getElementById('iconeComment_'+id).className = 'material-icons'
-					document.getElementById(id).style.maxHeight = '0'
-				}
-			},
-			geraNumero(id) {
-				let numComments = Math.round(Math.random() * 10)
-				let retorno = undefined
-				if (numComments >= 1000) {
-					retorno = '1K+'
-				} else { retorno = numComments }
-				return retorno
-			},
+			// abreComments(id) {
+			// 	if (document.getElementById(id).offsetHeight <= 0) {
+			// 		document.getElementById(id).style.maxHeight = '1000px'
+			// 		document.getElementById('iconeComment_'+id).innerText = 'close'
+			// 		document.getElementById('iconeComment_'+id).className = 'material-icons ativo'
+			// 	} else {
+			// 		document.getElementById('iconeComment_'+id).innerText = 'chat'
+			// 		document.getElementById('iconeComment_'+id).className = 'material-icons'
+			// 		document.getElementById(id).style.maxHeight = '0'
+			// 	}
+			// },
+			// geraNumero(id) {
+			// 	let numComments = Math.round(Math.random() * 10)
+			// 	let retorno = undefined
+			// 	if (numComments >= 1000) {
+			// 		retorno = '1K+'
+			// 	} else { retorno = numComments }
+			// 	return retorno
+			// },
 		},
 	}
 </script>
@@ -184,6 +184,7 @@ import Comments from '@/components/Comments'
 <style lang="scss" scoped>
 div.Minuta {
 	blockquote.minuta {
+		/*padding: 0;*/
 		padding: 0;
 		margin: 2rem auto;
 		max-width: 700px;
@@ -202,12 +203,13 @@ div.Minuta {
 			i {
 				display: block;
 				position: absolute;
-				margin-top: 6px;
+				margin-top: 8px;
+				margin-left: 6px;
 				transform: scale(1);
-				font-size: 24px;
-				line-height: calc(2rem - 8px);
-				height: calc(2rem - 8px);
-				width: calc(2rem - 8px);
+				font-size: 20px;
+				line-height: calc(2rem - 12px);
+				height: calc(2rem - 12px);
+				width: calc(2rem - 12px);
 				text-align: center;
 				color: #BDBDBD;
 				background: #FFF;
@@ -219,28 +221,30 @@ div.Minuta {
 					background: #EF5757;
 					color: #FFF;
 					cursor: pointer;
-					font-size: 80%;
-					transform: scale(1.6);
+					font-size: 64%;
 					opacity: 1;
 
 					&::after {
 						background: #333;
 						letter-spacing: 0;
-						font-size: 6px;
+						transition: transform ease-out .1s;
 					};
 				};
+
+				&.ativo::after { transform: scale(0); };
 
 				&:active { background: #AD3D3D; };
 
 				&::after {
 					content: attr(numcomments);
 					position: absolute;
-					margin-left: -10px;
-					margin-top: -6px;
+					margin-left: -8px;
+					margin-top: -4px;
+					/*display: inline-block;*/
 					display: none;
-					line-height: 16px;
-					height: 16px;
-					width: 16px;
+					line-height: 12px;
+					height: 12px;
+					width: 12px;
 					text-align: center;
 					letter-spacing: -.032rem;
 					border-radius: 100%;

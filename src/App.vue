@@ -89,10 +89,10 @@ i {
 
 div#interruptor {
 	position: absolute;
-	transition: all .2s;
-	z-index: 2;
+	transition: all ease-in-out .2s;
+	z-index: 4;
 
-	&.ligado { background: transparent; };
+	&.ligado { background: rgba(0, 0, 0, 0); };
 
 	&.desligado {
 		background: rgba(0, 0, 0, .72);

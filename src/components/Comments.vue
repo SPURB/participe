@@ -122,9 +122,9 @@ export default {
 				'content': app.form_content,
 				'public': '0',
 				'trash': '0',
-				'postid': app.attr.postid,
+				'postid': '1',
 				'commentid': app.attr.id,
-				'commentcontext': app.attr.contexto
+				'commentcontext': app.attr.context
 			})
 			.then(function (response) {
 				// console.log(response);
@@ -155,6 +155,7 @@ div.Comments {
 	max-height: calc(4rem + 40px);
 	overflow: hidden;
 	transition: all ease-in-out .4s;
+	position: relative;
 
 	& > div {
 		margin-bottom: 2rem;

@@ -70,8 +70,6 @@ export default{
 		let app = this
 		this.createMap()
 		this.mapView.setMinZoom(this.mapa_attrs.zoom)
-
-		this.$el.getElementsByTagName('canvas')[0].style.borderRadius = '2px'
 	},
 	methods:{
 		createMap(){
@@ -95,17 +93,22 @@ export default{
 div.Mapa {
 	max-width: 992px;
 	margin: 4rem auto 2rem auto;
+	border: 1px solid #BDBDBD;
+	border-radius: 2px;
+	overflow: hidden;
 
 	#map:active {
 		cursor: move;
 	};
 
-	ul.legenda{
+	ul.legenda {
 		display: flex;
+		flex-flow: row wrap;
 		justify-content: center;
 		max-width: 992px;
-		padding: 1rem 2rem;
+		padding: 1rem 2rem 0 1rem;
 		margin-bottom: 0;
+		margin-top: 0;
 		font-family: inherit;
 		
 		li {
@@ -113,14 +116,21 @@ div.Mapa {
 			align-items: center;
 			font-size: small;
 			margin: 0;
-			padding: 0;		
+			padding: 0 0 .8rem 0;		
 			margin-right: 2rem;
 
 			div {
 				border-style: solid;
+				border-width: 2px;
 				height: 1.2rem;
 				min-width: 1.2rem;
 				margin-right: .4rem;
+
+				&.linha {
+					max-height: 0px;
+					overflow-y: hidden;
+					border-width: 1px;
+				};
 			};
 
 			a {

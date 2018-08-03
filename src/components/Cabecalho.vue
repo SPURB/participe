@@ -32,7 +32,6 @@ header {
 	max-height: 120px;
 	box-shadow: 0 2px 2px rgba(0, 0, 0, .12);
 	background: #F5F5F5;
-	z-index: 3;
 
 	i { color: #BDBDBD; transition: color .1s;
 

@@ -63,14 +63,14 @@
 		<figure title="Processo de recorte do Perímetro Expandido" class="borda">
 			<img src="http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/ANH_Perimetros.jpg" alt="Processo de recorte do Perímetro Expandido">
 			<h6>Processo de recorte do Perímetro Expandido</h6>
-			<ul class="legenda caixas">
-				<li><span>1</span>Prefeitura Regional Casa Verde-Cachoeirinha</li>
-				<li><span>2</span>Prefeitura Regional Santana-Tucuruvi</li>
-				<li><span>3</span>Distrito Limão</li>
-				<li><span>4</span>Distrito Casa Verde</li>
-				<li><span>5</span>Distrito Santana</li>
-				<li><span>6</span>Perímetro Expandido do PIU Anhembi</li>
-				<li><span>7</span>Perímetro do Arco Tietê</li>
+			<ul class="legenda">
+				<li><div style="border-color: #534e3d; background: #f2e271; border-width: 2px; font-weight: bolder;">1</div> Prefeitura Regional Casa Verde-Cachoeirinha</li>
+				<li><div style="border-color: #534e3d; background: #f2e271; border-width: 2px; font-weight: bolder;">2</div> Prefeitura Regional Santana-Tucuruvi</li>
+				<li><div style="border-color: #cdbd4c; background: #f2e271;">3</div> Distrito Limão</li>
+				<li><div style="border-color: #cdbd4c; background: #f2e271;">4</div> Distrito Casa Verde</li>
+				<li><div style="border-color: #cdbd4c; background: #f2e271;">5</div> Distrito Santana</li>
+				<li><div style="border-color: #FFF; background: #e1ac3c; border-style: dashed; outline:1px solid #e1ac3c; color: #FFF;">6</div> Perímetro Expandido do PIU Anhembi</li>
+				<li><div style="border-color: #c57979; background: #c57979; color: #FFF;">7</div> Perímetro do Arco Tietê</li>
 			</ul>
 		</figure>
 
@@ -942,12 +942,6 @@ import Apoio from '@/components/Apoio'
 				};
 			};
 
-			.bottons {
-				font-size: small;
-				margin-top: .2rem;
-				background: #FFF;
-			};
-
 			.setaBaixo {
 				position: absolute;
 				bottom: 0;
@@ -1020,6 +1014,7 @@ import Apoio from '@/components/Apoio'
 			text-align: center;
 			margin: 2rem auto;
 			max-width: 992px;
+			background: #FFF;
 
 			&.borda {
 				padding-bottom: .4rem;
@@ -1085,7 +1080,7 @@ import Apoio from '@/components/Apoio'
 			flex-flow: row wrap;
 			justify-content: center;
 			max-width: 992px;
-			padding: 1rem 2rem;
+			padding: 1rem 2rem 0 1rem;
 			margin-bottom: 0;
 			margin-top: 0;
 			font-family: inherit;
@@ -1095,19 +1090,21 @@ import Apoio from '@/components/Apoio'
 				align-items: center;
 				font-size: small;
 				margin: 0;
-				padding: 0;		
+				padding: 0 0 .8rem 0;
 				margin-right: 2rem;
 
 				div {
 					border-style: solid;
-					border-width: 2px;
+					border-width: 1px;
 					height: 1.2rem;
 					min-width: 1.2rem;
 					margin-right: .4rem;
+					line-height: calc(1.2rem - 2px);
+					text-align: center;
 
 					&.linha {
 						max-height: 0px;
-						overflow-y: hidden;
+						overflow: hidden;
 						border-width: 1px;
 					};
 				};
@@ -1126,17 +1123,18 @@ import Apoio from '@/components/Apoio'
 				};
 			};
 
-			&.caixas {
-				display: block;
-				padding: .4rem 1rem;
-				columns: 320px;
-				column-gap: 2rem;
-
-				li {
+			@media (max-width: 600px) {
+				li { 
 					display: block;
+					width: 100%;
+					margin: 0 0 1rem 0;
+					padding: 0;
 					text-align: left;
 
-					span { font-weight: 700; margin-right: .6rem; };
+					div { 
+						display: inline-block;
+						vertical-align: middle;
+					}; 
 				};
 			};
 		};

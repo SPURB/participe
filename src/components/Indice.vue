@@ -85,7 +85,8 @@ div.Indice {
 		border: 1px solid #BDBDBD;
 		box-shadow: 0 4px 4px rgba(0, 0, 0, .12);
 		transition: all .1s;
-		display: none;
+		display: block;
+		font-family: inherit;
 
 		&:active {
 			background: #EB5757;
@@ -93,10 +94,33 @@ div.Indice {
 			border-color: #EB5757;
 		};
 
+		&:hover {
+			cursor: pointer;
+
+			&::before { opacity: 1; };
+		};
+
 		i {			
 			line-height: 40px;
 			height: 40px;
 			width: 40px;
+		};
+
+		&::before {
+			content: 'Voltar ao topo';
+			position: absolute;
+			margin: 4px 0 0 -108px;
+			line-height: 32px;
+			padding: 0 8px;
+			border-radius: 10px;
+			opacity: 0;
+			transition: all ease-in .1s;
+			font-size: 14px;
+			color: #333;
+		};		
+
+		@media (max-width: 1200px) {
+			&::before { display: none; };
 		};
 	};
 
@@ -115,8 +139,9 @@ div.Indice {
 			li {
 				display: inline-block;
 				padding: 4px 6px !important;
-				margin: 0 4px 4px 0;
+				margin: 0 6px 4px 0;
 				background: #EB5757;
+				border: 1px solid #EB5757;
 				border-left-width: 0;
 				border-radius: 2px;
 				color: #FFF;
@@ -126,10 +151,18 @@ div.Indice {
 					max-width: 100%;
 				};
 			};
-		};
 
-		button {
-			display: inline-block;
+			&::before {
+				content: 'Índice';
+				display: inline-block;
+				padding: 4px 6px !important;
+				vertical-align: top;
+				margin: 0 6px 4px 0;
+				border: 1px solid #EB5757;
+				border-radius: 2px;
+				color: #EB5757;
+				max-width: 100%;				
+			};
 		};
 	};
 };

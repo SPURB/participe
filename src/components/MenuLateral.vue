@@ -41,7 +41,7 @@
 
 aside {
 	position: fixed;
-	z-index: 5;
+	z-index: 4;
 	background: #FFF;
 	top: 0;
 	left: 0;

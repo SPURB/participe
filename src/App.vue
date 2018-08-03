@@ -1,6 +1,6 @@
 <template>
-<div id="app">
-	<div :class="{ desligado: interruptor }" id="interruptor" ref="interruptor" @click="fechaMenu"></div>
+<div id="app" @keyup.esc="fechaTudo">
+	<div :class="{ desligado: interruptor }" id="interruptor" ref="interruptor" @click="fechaTudo"></div>
 	<Cabecalho></Cabecalho>
 	<MenuLateral></MenuLateral>
 	<router-view name="Home"></router-view>
@@ -42,9 +42,10 @@ export default {
 		this.$refs.interruptor.style.height = this.$el.clientHeight+'px';
 	},
 	methods: {
-		fechaMenu() {
-			if (this.$store.state.menuToggle) {
+		fechaTudo() {
+			if (this.$store.state.menuToggle || this.$store.state.apoioToggle) {
 				this.$store.state.menuToggle = false;
+				this.$store.state.apoioToggle = false;
 				this.$store.state.luzApaga = false;
 			};
 		},
@@ -90,7 +91,7 @@ i {
 div#interruptor {
 	position: absolute;
 	transition: all ease-in-out .2s;
-	z-index: 4;
+	z-index: 3;
 
 	&.ligado { background: rgba(0, 0, 0, 0); };
 

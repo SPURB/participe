@@ -96,6 +96,7 @@ div.Mapa {
 	border: 1px solid #BDBDBD;
 	border-radius: 2px;
 	overflow: hidden;
+	z-index: 1;
 
 	#map:active {
 		cursor: move;
@@ -116,19 +117,21 @@ div.Mapa {
 			align-items: center;
 			font-size: small;
 			margin: 0;
-			padding: 0 0 .8rem 0;		
+			padding: 0 0 .8rem 0;
 			margin-right: 2rem;
 
 			div {
 				border-style: solid;
-				border-width: 2px;
+				border-width: 1px;
 				height: 1.2rem;
 				min-width: 1.2rem;
 				margin-right: .4rem;
+				line-height: calc(1.2rem - 2px);
+				text-align: center;
 
 				&.linha {
 					max-height: 0px;
-					overflow-y: hidden;
+					overflow: hidden;
 					border-width: 1px;
 				};
 			};
@@ -144,6 +147,21 @@ div.Mapa {
 
 			&:last-child {
 				margin-right: 0;
+			};
+		};
+
+		@media (max-width: 600px) {
+			li { 
+				display: block;
+				width: 100%;
+				margin: 0 0 1rem 0;
+				padding: 0;
+				text-align: left;
+
+				div { 
+					display: inline-block;
+					vertical-align: middle;
+				}; 
 			};
 		};
 	};

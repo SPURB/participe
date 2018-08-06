@@ -1,6 +1,12 @@
 <template>
 	<div class="Galeria">
 		<div class="gall" :style="{maxWidth: gallery_attrs.width + 'px'}">
+			<a 
+				class="pagination-previous" 
+				:disabled="isFirst"
+				@click="previous" 
+				title="Anterior"
+				><i class="material-icons">chevron_left</i></a>
 			<template v-for="image in gallery_attrs.images">
 				<figure class="item" v-show="image.state">
 					<h3 v-if="image.icon">
@@ -12,6 +18,12 @@
 					<p class="legenda" v-if="image.legenda"> {{ image.legenda }} </p>
 				</figure>
 			</template>
+			<a 
+				class="pagination-next" 
+				:disabled="isLast"
+				@click="next" 
+				title="Próximo"
+				><i class="material-icons">chevron_right</i></a>
 		</div>
 		<nav 
 			class="pagination" 
@@ -19,12 +31,7 @@
 			aria-label="pagination"
 			:style="{maxWidth: gallery_attrs.width + 'px'}"
 			>
-			<a 
-				class="pagination-previous" 
-				:disabled="isFirst"
-				@click="previous" 
-				title="Anterior"
-				><i class="material-icons">chevron_left</i></a>
+			
 			<ul>
 				<template v-for="(image, index) in gallery_attrs.images">
 					<li>
@@ -39,12 +46,6 @@
 					</li>
 				</template>
 			</ul>
-			<a 
-				class="pagination-next" 
-				:disabled="isLast"
-				@click="next" 
-				title="Próximo"
-				><i class="material-icons">chevron_right</i></a>
 		</nav>
 	</div>
 </template>
@@ -109,18 +110,57 @@ export default {
 	max-width: 992px;
 	border: 1px solid #BDBDBD;
 	border-radius: 2px;
-	position: relative;
 	overflow: hidden;
+	z-index: 1;
 
 	div.gall {
 		background: #F5F5F5;
 		display: flex;
 		position: relative;
 
+		& > a {
+			position: absolute;
+			display: inline-flex;
+			align-items: center;
+			top: 0;
+			bottom: 0;
+			width: 50%;
+			color: #FFF;
+			opacity: 0;
+			transition: all ease-in .1s;
+
+			i { font-size: calc(24px + 2vmin); };
+
+			&:hover {
+				text-decoration: none;
+				cursor: pointer;
+				opacity: 1 !important;
+
+				i { cursor: pointer; };
+			};
+
+			&:nth-of-type(1) {
+				left: 0;
+				background-image: linear-gradient(to left, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, .48));
+				justify-content: start;
+				z-index: 1;
+				&:hover { transform: translateX(-8px); };
+			};
+
+			&:nth-of-type(2) {
+				right: 0;
+				background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, .48));
+				justify-content: end;
+				z-index: 1;
+				&:hover { transform: translateX(8px); };
+			};
+		};
+
 		figure.item {
 			align-self: flex-start;
 			margin: 0;
 			padding: 0;
+			z-index: 0;
 
 			img {
 				max-width: max-content;
@@ -139,12 +179,12 @@ export default {
 			font-family: inherit;
 			font-size: smaller;
 			background: #FFF;
+			z-index: 3;
 		};
 
 		div.placeholder {
 			/*background-color: grey;*/ /* DESCOMENTAR QUANDO LOADING ESTIVER COM EVENT LISTENER*/
-			/*height: 100%;*/
-			z-index: 10;
+			height: 100%;
 			position: absolute;
 		};
 	};
@@ -152,58 +192,20 @@ export default {
 	nav {
 		margin: 0 auto;
 		width: 100%;
-		background: #F5F5F5;
-		padding: 1rem 0;
 		display: flex;
-
-		& > a {
-			position: absolute;
-			top: 50%;
-			background: #333;
-			color: #FFF;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: 2rem;
-			height: 2rem;
-			border-radius: 100%;
-			box-shadow: 0 4px 4px rgba(0, 0, 0, .12);
-			transition: all .1s;
-
-			&:hover {
-				text-decoration: none;
-				cursor: pointer;
-				box-shadow: 0 8px 8px rgba(0, 0, 0, .24);
-
-				i {
-					cursor: pointer;
-				};
-			};
-
-			&:active {
-				background: #EB5757;
-
-				i { color: #FFF; };
-			};
-
-			&:nth-of-type(1) {
-				left: 1rem;
-			};
-
-			&:nth-of-type(2) {
-				right: 1rem;
-			};
-		};
 
 		ul {
 			margin: 0;
+			padding: 1rem 0;
 			min-width: 100%;
+			background: #F5F5F5;
 			list-style-type: none;
 			display: flex;
 			flex-flow: row wrap;
 			justify-content: center;
 			align-items: center;
 			font-family: inherit;
+			z-index: 2;
 
 			li {
 				padding: 0;				
@@ -251,6 +253,10 @@ export default {
 				};
 			};
 		};
-	}
-}
+	};
+
+	&:hover div.gall a {
+		opacity: .4;
+	};
+};
 </style>

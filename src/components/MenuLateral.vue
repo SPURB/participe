@@ -41,7 +41,6 @@
 
 aside {
 	position: fixed;
-	z-index: 4;
 	background: #FFF;
 	top: 0;
 	left: 0;
@@ -52,6 +51,7 @@ aside {
 	box-shadow: 8px 0 8px rgba(0, 0, 0, .48);
 	transform: translateX(-200%);
 	transition: transform ease-in-out .4s;
+	z-index: 5;
 
 	i:nth-of-type(1) {
 		position: absolute;

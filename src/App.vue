@@ -72,7 +72,6 @@ body {
 	font-size: 16px;
 	line-height: 1.6;
 	margin: 0;
-	z-index: 0;
 
 	a { text-decoration: none; color: #EB5757; };
 
@@ -91,7 +90,7 @@ i {
 div#interruptor {
 	position: absolute;
 	transition: all ease-in-out .2s;
-	z-index: 3;
+	z-index: 4;
 
 	&.ligado { background: rgba(0, 0, 0, 0); };
 

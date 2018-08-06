@@ -184,7 +184,7 @@ import Comments from '@/components/Comments'
 <style lang="scss" scoped>
 div.Minuta {
 	blockquote.minuta {
-		/*padding: 0;*/
+		padding: 0;
 		padding: 0;
 		margin: 2rem auto;
 		max-width: 700px;

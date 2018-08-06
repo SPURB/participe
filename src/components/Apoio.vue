@@ -179,11 +179,11 @@ div.Apoio {
 		min-width: 280px;
 		margin: 0;
 		background: #F5F5F5;
-		z-index: 4;
 		transform: translateX(100%);
 		transition: transform ease-in .2s;
+		z-index: 5;
 
-		&.aberto { transform: translateX(0); };
+		&.aberto { transform: translateX(0); box-shadow: -8px 0 8px rgba(0, 0, 0, .48); };
 
 		ul.tabs {
 			list-style-type: none;
@@ -214,17 +214,17 @@ div.Apoio {
 					opacity: 1;
 					background-color: #EB5757;
 					color: #FFF;
+					z-index: 1;
 				};
 
 				& > input:checked ~ div.conteudoTab {
 					opacity: 1;
-					z-index: 5;
+					z-index: 2;
 				};
 			};
 
 			div.conteudoTab {
 				opacity: 0;
-				z-index: 4;
 				position: absolute;
 				left: 0;
 				padding: 1.6rem 2rem;
@@ -248,7 +248,7 @@ div.Apoio {
 
 				p { padding: 0; }
 
-				& > *:last-child { margin-bottom: 2rem; };
+				& > *:last-child { margin-bottom: 4rem; };
 			};
 		};
 	};
@@ -268,6 +268,7 @@ div.Apoio {
 		transition: all ease-in .1s;
 		display: block;
 		font-family: inherit;
+		z-index: 0;
 
 		i {
 			line-height: 40px;
@@ -309,6 +310,10 @@ div.Apoio {
 	};
 
 	@media (max-width: 1200px) {
+		aside ul.tabs {
+			li label { padding: 8px 12px; };
+			div.conteudoTab { max-height: 100%; };
+		};
 		button::before { display: none; };
 	};
 };

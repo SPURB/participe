@@ -8,6 +8,6 @@ export const store = new Vuex.Store({
 		menuToggle: false,
 		apoioToggle: false,
 		luzApaga: false,
-		consultas:undefined
+		consultas: undefined
 	}
 })

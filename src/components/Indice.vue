@@ -21,7 +21,7 @@ export default {
 				behavior: 'smooth'
 			});
 		},
-		topo() { window.scrollTo({top: 0, behavior: 'smooth'}) },
+		topo() { window.scrollTo({top: window.innerHeight, behavior: 'smooth'}) },
 	},
 };
 </script>
@@ -29,7 +29,7 @@ export default {
 <style lang="scss">
 
 div.Indice {
-	z-index: 1;
+	z-index: 0;
 
 	ul {
 		display: flex;
@@ -55,11 +55,12 @@ div.Indice {
 			overflow: hidden;
 			white-space: nowrap;
 			text-overflow: ellipsis;
-			transition: opacity .1s, max-width ease-in-out .5s;
+			transition: opacity .1s, max-width ease-in-out .5s, border-left-color ease-in-out .5s, font-weight .1s;
 			border-left: 8px solid transparent;
 
 			&:active, &.ativo {
 				border-left-color: #333;
+				font-weight: 700;
 			};
 
 			&:hover {

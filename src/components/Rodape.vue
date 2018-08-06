@@ -13,10 +13,13 @@
 </script>
 
 <style lang="scss" scoped>
-footer {
-	clear: all;
-	background: #F5F5F5;
-	padding: 16px 32px;
-	z-index: 2;
+div.Rodape {
+	z-index: 3;
+	
+	footer {
+		clear: all;
+		background: #F5F5F5;
+		padding: 16px 32px;
+	};
 };
 </style>

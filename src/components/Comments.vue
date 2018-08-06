@@ -156,6 +156,7 @@ div.Comments {
 	overflow: hidden;
 	transition: all ease-in-out .4s;
 	position: relative;
+	z-index: 0;
 
 	& > div {
 		margin-bottom: 2rem;

@@ -23,8 +23,6 @@
 <style lang="scss" scoped>
 
 div.Cabecalho {
-	z-index: 3;
-
 	header {
 		display: flex;
 		flex-direction: row;
@@ -34,6 +32,9 @@ div.Cabecalho {
 		height: 60px;
 		max-height: 120px;
 		background: #F5F5F5;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, .24);
+		position: relative;
+		z-index: 3;
 
 		i { color: #BDBDBD; transition: color .1s;
 

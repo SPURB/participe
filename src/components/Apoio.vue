@@ -3,7 +3,7 @@
 		<aside :class="{ aberto: apoioToggle }">
 			<ul class="tabs">
 				<li>
-					<input type="radio" name="tabs" id="decreto" checked>
+					<input type="radio" name="tabs" id="decreto">
 					<label for="decreto">Decreto</label>
 					<div class="conteudoTab">
 						<h1>Decreto Nº 56901 de 29 de março de 2016</h1>
@@ -166,7 +166,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 div.Apoio {
 	aside {
 		position: fixed;
@@ -191,7 +191,7 @@ div.Apoio {
 			margin: 0;
 			font-family: inherit;
 
-			li {
+			& > li {
 				float: left;
 				margin: 0;
 				padding: 0;
@@ -247,8 +247,6 @@ div.Apoio {
 				};
 
 				p { padding: 0; }
-
-				& > *:last-child { margin-bottom: 4rem; };
 			};
 		};
 	};

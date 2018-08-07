@@ -6,12 +6,12 @@
 				<div></div>
 				<h1>PIU Anhembi</h1>
 				<div>2ª consulta pública – Projeto de Intervenção Urbana Anhembi</div>
-				<!-- <div>
+				<div>
 					<i class="material-icons">chat</i> 23 contribuições
 				</div>
 				<div>
 					<i class="material-icons">access_time</i> 13 dias restantes para contribuir
-				</div> -->
+				</div>
 			</div>
 			<div class="setaBaixo" @click="setaBaixo"><i class="material-icons">keyboard_arrow_down</i></div>
 		</div>
@@ -776,6 +776,8 @@
 			<Comments :attr="{id:13, context:'Quadros'}"></Comments>
 		</section>
 
+		<div class="commentCtx" id="commentCtx" ref="commentCtx" title="Comentar"><a href=""><i class="material-icons">chat</i></a></div>
+
 	</div>
 </template>
 
@@ -884,27 +886,18 @@ import Apoio from '@/components/Apoio'
 		mounted() {
 			this.listaTitulos();
 
-			let app = this;
-			let sectionCollection = Array.from(this.$el.getElementsByTagName('section'));
-			let sections = [];
-			for (var i = 0; i <= sectionCollection.length; i++) {
-				let secao = {
-					id: i,
-					sectionTag: sectionCollection[i]
+			document.addEventListener("mouseup", function(event) {
+				if (window.getSelection() != false) {
+					document.getElementById('commentCtx').style.transform = 'scale(1)';
+					document.getElementById('commentCtx').style.left = event.clientX - document.getElementById('commentCtx').offsetWidth/2 + 'px';
+					document.getElementById('commentCtx').style.top = event.clientY + window.scrollY - document.getElementById('commentCtx').offsetHeight/4 + 'px';
+				} else {
+					document.getElementById('commentCtx').style.transform = 'scale(0)';
 				};
-				sections.push(secao);
-			};			
-			window.addEventListener('scroll', function() {
-				sections.map(function(index) {
-					var sct = index.sectionTag;
-					if (window.scrollY >= sct.offsetTop - (window.innerHeight)/2 && window.scrollY < (sct.offsetTop + sct.offsetHeight) - (window.innerHeight)/4) {
-						let j = index.id;
-						app.titulosLimpo[j].ativo = true
-					} else { app.titulosLimpo[index.id].ativo = false };
-				});
-			});
+			}, false);
 		},
 		updated() {
+			this.alteraIndice();
 		},
 		methods: {
 			listaTitulos() {
@@ -930,6 +923,20 @@ import Apoio from '@/components/Apoio'
 			setaBaixo() {
 				window.scrollTo({ top: Math.round(window.innerHeight), behavior: 'smooth'})
 			},
+			alteraIndice() {
+				let app = this;
+				let sectionCollection = Array.from(this.$el.getElementsByTagName('section'));		
+				window.addEventListener('scroll', function() {
+					sectionCollection.map(function(index, i) {
+						if (window.scrollY >= index.offsetTop - (window.innerHeight)/2 && window.scrollY < (index.offsetTop + index.offsetHeight) - (window.innerHeight)/4) {
+							app.titulosLimpo[i].ativo = true
+						} else { app.titulosLimpo[i].ativo = false };
+					});
+				}, {
+					capture: true,
+					passive: true
+				});
+			},
 		},
 	};
 </script>
@@ -945,7 +952,8 @@ import Apoio from '@/components/Apoio'
 		padding-bottom: 4rem;
 		z-index: 0;
 
-		div.top {			
+		div.top {
+			/*visibility: hidden;*/
 			padding: 2rem;
 			margin: 0 0 2rem 0;
 			overflow: hidden;
@@ -1120,7 +1128,6 @@ import Apoio from '@/components/Apoio'
 		};
 
 		h6 {
-			/*border:1px solid red;*/
 			margin: 0;
 			max-width: 100%;
 			color: #333;
@@ -1395,6 +1402,32 @@ import Apoio from '@/components/Apoio'
 		margin: 4rem 0;
 	};
 
+	div.commentCtx {
+		position: absolute;
+		transform: scale(0);
+		max-width: 2.4rem;
+		max-height: 2.4rem;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		background: #333;
+		color: #FFF;
+		border-radius: 100%;
+		box-shadow: 0 4px 4px rgba(0, 0, 0, .24);
+		transition: all .1s;
+
+		a { color: inherit;
+			i { line-height: 2.4rem; };
+		};
+
+		&:hover {
+			box-shadow: 0 8px 8px rgba(0, 0, 0, .24);
+			transform: scale(1.2) !important;
+			cursor: pointer;
+			a i { cursor: pointer; };
+		};
+	};
+
 	@media (max-width: 600px) {
 		div.Anhembi2 {
 			font-size: 16px;
@@ -1402,6 +1435,42 @@ import Apoio from '@/components/Apoio'
 			div.titulo {
 				& > div h1 { font-size: 40px; };
 			};
+		};
+	};
+
+	@media print {
+		.Cabecalho { display: none; };
+		.Rodape { display: none; };
+		.Indice { display: none; };
+		.Apoio { display: none; };
+		.Comments { display: none; };
+
+		div.Anhembi2 {
+			font-size: 11pt;
+
+			& > div.top {
+				background: transparent;
+				padding: 0;
+				margin: 0;
+				display: block;
+				outline: 0;
+				height: min-content;
+
+				& > h1 { font-size: 4rem; };
+				& > div.setaBaixo { display: none; };
+			};
+
+			p, figure, div.tableWrap {
+				break-inside: avoid-page;
+				page-break-inside: avoid;
+			};
+
+			ul.pdfBox { display: none; };
+		};
+
+		.ai2html {
+			break-inside: avoid-page;
+			page-break-inside: avoid;
 		};
 	};
 </style>

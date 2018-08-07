@@ -128,6 +128,7 @@ export default {
 			color: #FFF;
 			opacity: 0;
 			transition: all ease-in .1s;
+			z-index: 1;
 
 			i { font-size: calc(24px + 2vmin); };
 
@@ -141,17 +142,17 @@ export default {
 
 			&:nth-of-type(1) {
 				left: 0;
-				background-image: linear-gradient(to left, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, .48));
-				justify-content: start;
-				z-index: 1;
+				background: linear-gradient(to left, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, .56));
+				background: radial-gradient(circle at left center, rgba(0, 0, 0, .72), rgba(0, 0, 0, 0) 20%);
+				justify-content: flex-start;
 				&:hover { transform: translateX(-8px); };
 			};
 
 			&:nth-of-type(2) {
 				right: 0;
-				background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, .48));
-				justify-content: end;
-				z-index: 1;
+				background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, .56));
+				background: radial-gradient(circle at right center, rgba(0, 0, 0, .72), rgba(0, 0, 0, 0) 20%);
+				justify-content: flex-end;
 				&:hover { transform: translateX(8px); };
 			};
 		};
@@ -162,9 +163,7 @@ export default {
 			padding: 0;
 			z-index: 0;
 
-			img {
-				max-width: max-content;
-			};
+			img { max-width: max-content; };
 		};
 
 		p.legenda {

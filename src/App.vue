@@ -65,7 +65,6 @@ export default {
 <style lang="scss">
 * { box-sizing: border-box; };
 html { margin: 0; padding: 0; };
-
 body {
 	font-family: 'Roboto', 'Segoe UI', 'Helvetica', Arial, sans-serif;
 	color: #333;

@@ -67,7 +67,6 @@ export default {
 			form_organization: null,
 			form_email: null,
 			form_content: null,
-			// form_context: null,
 			abreComentario: false,
 		}
 	},
@@ -134,7 +133,6 @@ export default {
 				alert("Obrigado," + name + "! Agradecemos a sua contribuição! Seu comentário (" + content + ") foi enviado e aguarda aprovação da moderação para ser publicado. Obrigado por sua contribuição.")
 			})
 			.catch(function (error) {
-				// console.log(error)
 				alert("Estamos com um erro de comunicação com o servidor. Tente novamente mais tarde.")
 			});
 		}

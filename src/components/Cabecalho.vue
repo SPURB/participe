@@ -3,13 +3,12 @@
 		<header>
 			<i class="material-icons" @click="abreMenu">menu</i>
 			<h1><a href=""><span>participe</span>.gestaourbanaSP</a></h1>
-			<a href="http://www.capital.sp.gov.br/" title="Prefeitura de São Paulo"><img src="../../src/assets/img/PMSP_cor_transparente.png"></a>
+			<a href="http://www.capital.sp.gov.br/" title="Prefeitura de São Paulo"><img src="http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/img/PMSP_cor_transparente.png"></a>
 		</header>
 	</div>
 </template>
 
 <script>
-	
 	export default {
 		name: 'Cabecalho',
 		methods: {

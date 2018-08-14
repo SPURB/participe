@@ -67,6 +67,7 @@ export default {
 			form_organization: null,
 			form_email: null,
 			form_content: null,
+			// form_context: null,
 			abreComentario: false,
 		}
 	},
@@ -81,13 +82,14 @@ export default {
 			}
 		},
 		apiPath() {
-			if(location.port == '8080' || location.port == '8082'){
-				return 'http://spurbsp163:7080/apiconsultas/' 
-			}
-			else{
-				return 'http://participe.gestaourbana.prefeitura.sp.gov.br/apiconsultas/' 
-			}
-		},		
+			return this.$store.getters.apiPath 
+			// if(location.port == '8080' || location.port == '8082'){
+			// 	return 'http://spurbsp163:7080/apiconsultas/' 
+			// }
+			// else{
+			// 	return 'http://participe.gestaourbana.prefeitura.sp.gov.br/apiconsultas/' 
+			// }
+		},
 	},
 
 	methods:{
@@ -112,7 +114,6 @@ export default {
 			}
 		},
 		send(){
-			const url = 'http://participe.gestaourbana.prefeitura.sp.gov.br/apiconsultas/members/';
 			const app = this;
 			axios.post(this.apiPath+'members',{
 				'idConsulta':'8',
@@ -133,6 +134,7 @@ export default {
 				alert("Obrigado," + name + "! Agradecemos a sua contribuição! Seu comentário (" + content + ") foi enviado e aguarda aprovação da moderação para ser publicado. Obrigado por sua contribuição.")
 			})
 			.catch(function (error) {
+				// console.log(error)
 				alert("Estamos com um erro de comunicação com o servidor. Tente novamente mais tarde.")
 			});
 		}

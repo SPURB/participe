@@ -5,7 +5,7 @@
 
 			<!-- Artboard: conselhogestor -->
 			<div id="g-conselhogestor-anhembi-320-conselhogestor" class="g-artboard" data-aspect-ratio="0.294" data-min-width="320">
-				<img id="g-conselhogestor-anhembi-320-conselhogestor-img" class="g-aiImg" src="../../../src/assets/img/conselhogestor-anhembi-320-conselhogestor.png"/>
+				<img id="g-conselhogestor-anhembi-320-conselhogestor-img" class="g-aiImg" src="http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/img/conselhogestor-anhembi-320-conselhogestor.png"/>
 				<div id="g-ai0-1" class="g-Camada_1 g-aiAbs" style="top:10%;left:49.8438%;margin-left:-151px;width:94.375%;">
 					<p class="g-pstyle0">Sistema de monitoramento das ações do PIU Anhembi pela sociedade.</p>
 				</div>
@@ -46,7 +46,7 @@
 
 			<!-- Artboard: Prancheta_3 -->
 			<div id="g-conselhogestor-anhembi-700-Prancheta_3" class="g-artboard" data-aspect-ratio="1.509" data-min-width="700">
-				<img id="g-conselhogestor-anhembi-700-Prancheta_3-img" class="g-aiImg" src="../../../src/assets/img/conselhogestor-anhembi-700-Prancheta_3.png"/>
+				<img id="g-conselhogestor-anhembi-700-Prancheta_3-img" class="g-aiImg" src="http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/img/conselhogestor-anhembi-700-Prancheta_3.png"/>
 				<div id="g-ai0-1" class="g-Camada_1 g-aiAbs" style="top:9.2711%;left:14.6885%;width:16%;">
 					<p>Órgãos municipais</p>
 				</div>

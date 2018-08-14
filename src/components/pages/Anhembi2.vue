@@ -2,16 +2,16 @@
 	<div class="Anhembi2" ref="conteudoConsulta">
 
 		<div class="top" style="background-image: url('http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/capa.jpg'); background-color: #fdf8f2;">
-			<div>
-				<div></div>
-				<h1>PIU Anhembi</h1>
+			<div v-show="estaConsulta.nomePublico">
+				<h1>{{ estaConsulta.nomePublico }}</h1>
 				<div>2ª consulta pública – Projeto de Intervenção Urbana Anhembi</div>
 				<div>
-					<i class="material-icons">chat</i> 23 contribuições
+					<a href="#contribuicoes" @click="scrollToallComments"><i class="material-icons">chat</i> {{estaConsulta.nContribuicoes}} contribuições</a>
 				</div>
-				<div>
+				<div id="statusConsulta" :class="consultaState()"></div>
+				<!--<div>
 					<i class="material-icons">access_time</i> 13 dias restantes para contribuir
-				</div>
+				</div> -->
 			</div>
 			<div class="setaBaixo" @click="setaBaixo"><i class="material-icons">keyboard_arrow_down</i></div>
 		</div>
@@ -776,14 +776,20 @@
 			<Comments :attr="{id:13, context:'Quadros'}"></Comments>
 		</section>
 
-		<div class="commentCtx" id="commentCtx" ref="commentCtx" title="Comentar"><a href=""><i class="material-icons">chat</i></a></div>
+		<section ref="allComments">
+			<h2 v-show="commentsLoaded" class="titulo" indent="1">Contribuições</h2>
+			<CommentsLoader :attr="estaConsulta"></CommentsLoader>
+			<Comments  v-if="commentsLoaded" :attr="{id:14, context:'Comentarios'}"></Comments>
+		</section>
 
+		<div class="commentCtx" id="commentCtx" ref="commentCtx" title="Comentar"><a href=""><i class="material-icons">chat</i></a></div>
 	</div>
 </template>
 
 <script>
 import Indice from '@/components/Indice';
 import Comments from '@/components/Comments';
+import CommentsLoader from '@/components/CommentsLoader';
 import ProcessoPIU from '@/components/graf/ProcessoPIU';
 import ConselhoGestor from '@/components/graf/ConselhoGestor';
 import Galeria from '@/components/Galeria';
@@ -870,12 +876,16 @@ import Apoio from '@/components/Apoio'
 							stroke_width: 1,
 						},
 					]
-				}
+				},
+				consultas: false,
+				estaConsulta: false
 			}
 		},
+		computed: { commentsLoaded() { return this.$store.state.commentsLoaded } },
 		components: {
 			Indice,
 			Comments,
+			CommentsLoader,
 			ProcessoPIU,
 			ConselhoGestor,
 			Galeria,
@@ -883,23 +893,39 @@ import Apoio from '@/components/Apoio'
 			Minuta,
 			Apoio
 		},
+		created() {
+			this.$store.dispatch("fetchConsultas", { self: this });
+			this.consultas = this.$store.state.consultas;
+		},
 		mounted() {
 			this.listaTitulos();
-
-			document.addEventListener("mouseup", function(event) {
-				if (window.getSelection() != false) {
-					document.getElementById('commentCtx').style.transform = 'scale(1)';
-					document.getElementById('commentCtx').style.left = event.clientX - document.getElementById('commentCtx').offsetWidth/2 + 'px';
-					document.getElementById('commentCtx').style.top = event.clientY + window.scrollY - document.getElementById('commentCtx').offsetHeight/4 + 'px';
-				} else {
-					document.getElementById('commentCtx').style.transform = 'scale(0)';
-				};
-			}, false);
+			// document.addEventListener("mouseup", function(event) {
+			// 	if (window.getSelection() != false) {
+			// 		document.getElementById('commentCtx').style.transform = 'scale(1)';
+			// 		document.getElementById('commentCtx').style.left = event.clientX - document.getElementById('commentCtx').offsetWidth/2 + 'px';
+			// 		document.getElementById('commentCtx').style.top = event.clientY + window.scrollY - document.getElementById('commentCtx').offsetHeight/4 + 'px';
+			// 	} else {
+			// 		document.getElementById('commentCtx').style.transform = 'scale(0)';
+			// 	};
+			// }, false);
 		},
 		updated() {
 			this.alteraIndice();
 		},
 		methods: {
+			scrollToallComments(){
+				let appRef = this.$refs.allComments;
+				window.scrollBy({
+					top: appRef.getBoundingClientRect().y - 30,
+					left: 0,
+					behavior: 'smooth'
+				});
+			},
+			filterConsultas(){
+				this.consultas = this.$store.state.consultas;
+				this.estaConsulta = this.consultas.filter(esta => esta.id == this.$route.meta.id )[0];
+			},
+			consultaState(){ return (this.estaConsulta.ativo == '1' ? "aberta" : "fechada") },
 			listaTitulos() {
 				let app = this;
 				let titulosBruto = Array.from(this.$refs.conteudoConsulta.getElementsByClassName('titulo'));
@@ -942,6 +968,8 @@ import Apoio from '@/components/Apoio'
 </script>
 
 <style lang="scss">
+// @import '../../variables';
+
 	*::selection, *::-moz-selection {
 		background: #EB5757;
 		color: #FFF;
@@ -989,6 +1017,26 @@ import Apoio from '@/components/Apoio'
 					};
 				};
 
+				div#statusConsulta {
+					font-size: 10px;
+					text-transform: uppercase;
+					color: #fff;
+					font-weight: 500;
+					border-radius: 2px;
+					white-space: nowrap;
+					margin: 0 .5rem;
+				}
+				div#statusConsulta::after{
+					padding:.35rem .5rem;
+				}
+				div#statusConsulta.aberta::after{
+					content: "Em consulta";
+					background-color: #008015;
+				}
+				div#statusConsulta.fechada::after{
+					content: "Consulta Encerrada";
+					background-color: #EB5757;
+				}
 				& > h1 {
 					font-size: calc(16px + 8vmin);
 					line-height: calc(6vmin + 32px);

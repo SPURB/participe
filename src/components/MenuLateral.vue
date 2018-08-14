@@ -26,7 +26,7 @@
 			consultas(){ return this.$store.state.consultas },
 			menuToggle() {
 				return this.$store.state.menuToggle
-			}
+			},
 		},
 		methods: {
 			fechaMenu() {

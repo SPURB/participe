@@ -5,7 +5,7 @@
 
 			<!-- Artboard: processo -->
 			<div id="g-processo-anhembi-320-processo" class="g-artboard" data-aspect-ratio="0.206" data-min-width="320">
-				<img id="g-processo-anhembi-320-processo-img" class="g-aiImg" src="../../../src/assets/img/processo-anhembi-320-processo.png"/>
+				<img id="g-processo-anhembi-320-processo-img" class="g-aiImg" src="http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/img/processo-anhembi-320-processo.png"/>
 				<div id="g-ai0-1" class="g-Camada_1 g-aiAbs" style="top:1.2878%;left:63.1271%;margin-left:-110px;width:68.75%;">
 					<p class="g-pstyle0">LPUOS LEI N&ordm; 16.402 de 2016</p>
 				</div>
@@ -95,7 +95,7 @@
 
 			<!-- Artboard: Prancheta_7 -->
 			<div id="g-processo-anhembi-700-Prancheta_7" class="g-artboard" data-aspect-ratio="0.439" data-min-width="700">
-				<img id="g-processo-anhembi-700-Prancheta_7-img" class="g-aiImg" src="../../../src/assets/img/processo-anhembi-700-Prancheta_7.png"/>
+				<img id="g-processo-anhembi-700-Prancheta_7-img" class="g-aiImg" src="http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/img/processo-anhembi-700-Prancheta_7.png"/>
 				<div id="g-ai0-1" class="g-Camada_1 g-aiAbs" style="top:0.8777%;left:56.1989%;margin-left:-297px;width:84.8571%;">
 					<p class="g-pstyle0">LPUOS LEI N&ordm; 16.402 de 2016</p>
 				</div>

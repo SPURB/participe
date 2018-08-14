@@ -66,7 +66,7 @@
 						<p>Publicado na Secretaria do Governo Municipal, em 29 de março de 2016.</p>
 					</div>
 				</li>
-				<li>
+<!-- 			<li>
 					<input type="radio" name="tabs" id="quadros">
 					<label for="quadros">Quadros</label>
 					<div class="conteudoTab">
@@ -129,7 +129,7 @@
 							</ul>
 						</figure>
 					</div>
-				</li>
+				</li> -->
 			</ul>
 		</aside>
 		<button @click="abreApoio" :class="{ aberto: apoioToggle }">
@@ -224,7 +224,7 @@ div.Apoio {
 			};
 
 			div.conteudoTab {
-				opacity: 0;
+				// opacity: 0;
 				position: absolute;
 				left: 0;
 				padding: 1.6rem 2rem;

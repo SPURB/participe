@@ -24,23 +24,11 @@ export default {
 		MenuLateral,
 		Rodape,
 	},
-	computed: {
-		interruptor() { return this.$store.state.luzApaga },
-		apiPath() {
-			if(location.port == '8080' || location.port == '8082'){
-				return 'http://spurbsp163:7080/apiconsultas/' 
-			}
-			else{
-				return 'http://participe.gestaourbana.prefeitura.sp.gov.br/apiconsultas/' 
-			}
-		}
+	computed: { 
+		interruptor() { return this.$store.state.luzApaga }, 
 	},
-	created(){
-		this.getConsultas();
-	},
-	updated() {		
-		this.$refs.interruptor.style.height = this.$el.clientHeight+'px';
-	},
+	created() {  this.$store.dispatch("fetchConsultas", { self: this }) },
+	updated() {  this.$refs.interruptor.style.height = this.$el.clientHeight+'px'; },
 	methods: {
 		fechaTudo() {
 			if (this.$store.state.menuToggle || this.$store.state.apoioToggle) {
@@ -48,25 +36,19 @@ export default {
 				this.$store.state.apoioToggle = false;
 				this.$store.state.luzApaga = false;
 			};
-		},
-		getConsultas(){
-			axios.get(this.apiPath+'consultas')
-			.then(response => {
-				this.$store.state.consultas = response.data.slice().reverse()
-			})
-			.catch(e => {
-				this.errors.push(e)
-			})
-		},
+		}
 	},
 };
 </script>
 
 <style lang="scss">
+@import 'variables';
+
 * { box-sizing: border-box; };
 html { margin: 0; padding: 0; };
+
 body {
-	font-family: 'Roboto', 'Segoe UI', 'Helvetica', Arial, sans-serif;
+	font-family: $font-stack;
 	color: #333;
 	font-size: 16px;
 	line-height: 1.6;

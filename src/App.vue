@@ -5,6 +5,8 @@
 	<MenuLateral></MenuLateral>
 	<router-view name="Home"></router-view>
 	<router-view name="Anhembi2"></router-view>
+	<router-view name="AdminLogin"></router-view>
+	<router-view name="Admin"></router-view>
 	<Rodape></Rodape>
 </div>
 </template>
@@ -13,8 +15,6 @@
 import axios from 'axios';
 import Cabecalho from '@/components/Cabecalho';
 import MenuLateral from '@/components/MenuLateral';
-// import AdminLogin from '@/components/AdminLogin';
-// import AdminHome from '@/components/AdminHome';
 import Rodape from '@/components/Rodape';
 
 export default {
@@ -22,13 +22,13 @@ export default {
 	components: {
 		Cabecalho,
 		MenuLateral,
-		Rodape,
+		Rodape
 	},
 	computed: { 
 		interruptor() { return this.$store.state.luzApaga }, 
 	},
-	created() {  this.$store.dispatch("fetchConsultas", { self: this }) },
-	updated() {  this.$refs.interruptor.style.height = this.$el.clientHeight+'px'; },
+	created() { this.$store.dispatch("fetchConsultas", { self: this }) },
+	updated() { this.$refs.interruptor.style.height = this.$el.clientHeight+'px'; },
 	methods: {
 		fechaTudo() {
 			if (this.$store.state.menuToggle || this.$store.state.apoioToggle) {

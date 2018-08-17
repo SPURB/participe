@@ -5,48 +5,48 @@
 			<h2 @click="abreId = !abreId">Identificação <i class="material-icons">keyboard_arrow_down</i></h2>
 			<form>
 				<fieldset>
-					<legend>Nome <span>(obrigatório)</span></legend>
-					<input type="text" id="input_nomePublico" required disabled>
+					<legend>Nome <span><i class="material-icons editBtn" title="Editar campo" @click="editar(['input_nomePublico'], $event)">edit</i></span></legend>
+					<input type="text" id="input_nomePublico" name="input_nomePublico">
 				</fieldset>
 				<fieldset>
-					<legend>Status <span>(obrigatório)</span></legend>
-					<input type="radio" id="input_status_aberta" name="input_status" required value="1" checked>
+					<legend>Status <span><i class="material-icons editBtn" title="Editar campo" @click="editar(['input_status'], $event)">edit</i></span></legend>
+					<input type="radio" id="input_status_aberta" name="input_status" value="1" checked>
 					<label for="input_status_aberta" class="status">Consulta aberta</label>
-					<input type="radio" id="input_status_encerrada" name="input_status" value="0" required>
+					<input type="radio" id="input_status_encerrada" name="input_status" value="0">
 					<label for="input_status_encerrada" class="status">Consulta encerrada</label>
 				</fieldset>
 				<fieldset>
-					<legend>Período da consulta <span>(obrigatório)</span></legend>
+					<legend>Período da consulta <span><i class="material-icons editBtn" title="Editar campo" @click="editar(['input_dataCadastro', 'input_dataFinal'], $event)">edit</i></span></legend>
 					<div>
 						<label for="input_dataCadastro">Início</label>
-						<input type="date" id="input_dataCadastro" required disabled>
+						<input type="date" id="input_dataCadastro" name="input_dataCadastro">
 					</div>
 					<div>
 						<label for="input_dataFinal">Final</label>
-						<input type="date" id="input_dataFinal" required>
+						<input type="date" id="input_dataFinal" name="input_dataFinal">
 					</div>
 				</fieldset>
 				<fieldset>
-					<legend>Texto introdutório <span>(obrigatório)</span></legend>
-					<textarea id="input_textoIntro" required placeholder="Até 480 caracteres" maxlength="480"></textarea>
+					<legend>Texto introdutório <span><i class="material-icons editBtn" title="Editar campo" @click="editar(['input_textoIntro'], $event)">edit</i></span></legend>
+					<textarea id="input_textoIntro" maxlength="480" name="input_textoIntro"></textarea>
 				</fieldset>
 				<fieldset>
 					<legend>Hiperlinks</legend>
 					<div>
-						<label for="input_urlConsulta">URL da consulta</label>
-						<input type="url" id="input_urlConsulta" required placeholder="Obrigatório">
+						<label for="input_urlConsulta">URL da consulta <i class="material-icons editBtn" title="Editar campo" @click="editar(['input_urlConsulta'], $event)">edit</i></label>
+						<input type="url" id="input_urlConsulta" name="input_urlConsulta">
 					</div>
 					<div>
-						<label for="input_urlCapa">URL da imagem de capa</label>
-						<input type="url" id="input_urlCapa" required placeholder="Obrigatório">
+						<label for="input_urlCapa">URL da imagem de capa <i class="material-icons editBtn" title="Editar campo" @click="editar(['input_urlCapa'], $event)">edit</i></label>
+						<input type="url" id="input_urlCapa" name="input_urlCapa">
 					</div>
 					<div>
-						<label for="input_urlDevolutiva">URL da devolutiva</label>
-						<input type="url" id="input_urlDevolutiva" required placeholder="Não obrigatório">
+						<label for="input_urlDevolutiva">URL da devolutiva <i class="material-icons editBtn" title="Editar campo" @click="editar(['input_urlDevolutiva'], $event)">edit</i></label>
+						<input type="url" id="input_urlDevolutiva" name="input_urlDevolutiva">
 					</div>
 				</fieldset>
-				<button class="limpar"><i class="material-icons">clear</i>Cancelar</button>
-				<button type="submit" class="enviar"><i class="material-icons">check_circle</i> Salvar alterações</button>
+				<button class="limpar"><i class="material-icons" ref="limpar">clear</i>Cancelar</button>
+				<button type="submit" class="enviar" ref="salvar"><i class="material-icons">check_circle</i> Salvar alterações</button>
 			</form>
 		</section>
 		<section class="hidden" :class="{ show: abreMod }">
@@ -85,6 +85,26 @@ export default {
 			abreId: false,
 			abreMod: false,
 		}
+	},
+	methods: {
+		editar(arr, event) {
+			let app = this
+			arr.map(function(index) {
+				Array.from(app.$el.querySelectorAll('*[name='+index+']')).map(function(index) {
+					index.disabled = false
+					index.focus()
+				})
+			})
+			event.target.classList.add('desbloqueado')
+		},
+	},
+	mounted() {
+		Array.from(this.$el.querySelectorAll('*[name^=input_]')).map(function (index){
+			index.disabled = true
+			index.addEventListener('change', function() {
+				
+			})
+		})
 	},
 };
 </script>
@@ -173,6 +193,9 @@ div.AdminPagConsulta {
 				font-weight: 700;
 				color: #FFF;
 			};
+			input[type=radio]:disabled + label.status {
+				opacity: .4;
+			};
 
 			div {
 				background: #F5F5F5;
@@ -191,6 +214,23 @@ div.AdminPagConsulta {
 					vertical-align: middle;
 					padding-right: 8px;
 				};
+			};
+		};
+
+		i.editBtn {
+			position: relative;
+			border-radius: 100%;
+			padding: 4px;
+			font-size: 16px;
+			color: #FFF;
+			background: #333;
+			vertical-align: top;
+			margin: 0 0 0 4px;
+			cursor: pointer;
+			transition: all ease-in .1s;
+
+			&:hover, &.desbloqueado {
+				background: #EB5757;
 			};
 		};
 	};

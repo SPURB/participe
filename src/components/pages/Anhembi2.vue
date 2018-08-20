@@ -21,7 +21,7 @@
 
 		<section>
 			<h2 class="titulo" indent="1">Saiba como participar</h2>
-			<Comments :attr="{id:1, context:'Saiba como participar'}"></Comments>
+			<Comments :attr="{id:1, context:'Saiba como participar'}" v-if="estaConsulta.ativo == 1"></Comments>
 
 			<p>A partir de 27 de julho este espaço está disponível para receber seus comentários, pedidos de esclarecimentos e quaisquer contribuições para o Projeto de Intervenção Urbana Anhembi, desenvolvido pela São Paulo Urbanismo em cumprimento ao Decreto Municipal n° 56.901 de 2016, que define o procedimento de elaboração dos PIU.</p>
 			<p>O PIU Anhembi parte dos índices e parâmetros de parcelamento, uso e ocupação do solo e disposições especificas estabelecidas na Lei Municipal n° 16.886 de 2018 para o perímetro da Zona de Ocupação Especial do Anhembi (ZOE Anhembi), composta pelos setores Sambódromo e Centro de Convenções e Exposições descritos nos incisos I e II, do Art. 2° da referida lei, propriedades hoje da São Paulo Turismo S.A. (SPTuris).</p>
@@ -42,7 +42,7 @@
 			<p>Para garantir que a receita das desestatizações tenha destino certo e seja de fato utilizada em áreas prioritárias e não no custeio da máquina pública, foi criado o Fundo Municipal de Desenvolvimento Social (FMD) pela Lei nº 16.651, de 16 de maio de 2017. Nele ficarão depositadas as receitas oriundas das concessões e privatizações que, futuramente, serão empregadas nas áreas mais sensíveis da administração, como saúde, educação, habitação, mobilidade urbana, segurança e assistência social.</p>
 			<p>A alienação da participação societária detida pelo Município de São Paulo na SPTuris foi autorizada pela Lei n°16.766 de 20 de dezembro de 2017, sendo que o §4° definiu que os recursos auferidos com a alienação da participação societária referida no “caput” serão destinados exclusivamente ao FMD, com destinação obrigatória de no mínimo 20% dos recursos para investimentos na Zona Norte da cidade de São Paulo, e orientados para as áreas prioritárias, nos termos do art. 6º da Lei nº 16.651, de 16 de maio de 2017.</p>
 			<p>Dando continuidade ao processo, a Lei Municipal n° 16.886 de 2018, que definiu índices e parâmetros de parcelamento, uso e ocupação do solo para a ZOE Anhembi, determinou que o detalhamento das disposições da referida lei, as diretrizes urbanísticas complementares e o programa de intervenções fossem definidas por meio do PIU, a ser aprovado mediante decreto do Executivo.</p>
-			<Comments :attr="{id:2, context:'A finalidade do PIU Anhembi'}"></Comments>
+			<Comments :attr="{id:2, context:'A finalidade do PIU Anhembi'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section>
@@ -85,7 +85,7 @@
 
 			<p>Conforme expresso no Art. nº 5 da referida lei, os recursos arrecadados com o pagamento de Outorga Onerosa do Direito de Construir dos empreendimentos futuros no Perímetro de Abrangência deverão ser destinados ao financiamento de investimentos tanto no Perímetro de Abrangência quanto no Expandido. Soma-se a isso a determinação da Lei nº 16.766 de 2017 que 20% dos recursos provenientes da alienação da SPTuris deverão também ser aplicados na Zona Norte e destinados para investimentos em saúde, educação, segurança, habitação, transporte, mobilidade urbana e assistência social, conforme já exposto. </p>
 			<p>Com base nessas definições e realizadas simulações de transformação urbana no Perímetro de Abrangência, foi elaborado o Programa de Intervenções e selecionadas as intervenções prioritárias no Perímetro Expandido do PIU Anhembi.</p>
-			<Comments :attr="{id:3, context:'Caracterização sócioterritorial e ambiental'}"></Comments>
+			<Comments :attr="{id:3, context:'Caracterização sócioterritorial e ambiental'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section>
@@ -97,7 +97,7 @@
 
 			<Galeria :gallery_attrs="gallery_attrs"></Galeria>
 
-			<Comments :attr="{id:4, context:'Diretrizes urbanísticas para o perímetro de abrangência'}"></Comments>
+			<Comments :attr="{id:4, context:'Diretrizes urbanísticas para o perímetro de abrangência'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section>
@@ -206,7 +206,7 @@
 				</ul>
 			</figure>
 
-			<Comments :attr="{id:5, context:'Programa de intervenções para o perímetro expandido'}"></Comments>
+			<Comments :attr="{id:5, context:'Programa de intervenções para o perímetro expandido'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section>
@@ -215,7 +215,7 @@
 			<p>A alienação da participação societária da Prefeitura na SP Turis, proprietária dos terrenos do Anhembi, gera a possibilidade de transformação deste território, com a perspectiva de adensamento, uma vez que este se encontra em local de intenso fluxo de pessoas, o que poderia ser melhor aproveitado tanto por usos residenciais quanto não residenciais.</p>
 			<p>Considera-se, portanto, que a outorga onerosa do direito de construir (OODC) resultante do processo descrito acima possa ser revertida em melhorias urbanas para o entorno, sendo necessária então a mensuração de seus valores possíveis a serem arrecadados pelo FUNDURB.</p>
 
-			<Comments :attr="{id:6, context:'Modelagem econômica da intervenção proposta'}"></Comments>
+			<Comments :attr="{id:6, context:'Modelagem econômica da intervenção proposta'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 		
 		<section>
@@ -232,7 +232,7 @@
 			</ol>
 			<p>A fórmula de cálculo da OODC a ser utilizada é a mesma definida pela lei 16.050/2014 (PDE), portanto, para o obtenção do Valor de Cadastro foi estabelecida a média dos valores das faces de cada quadra (R$ 833,00 e R$ 966,86/m² para as quadras 283 e 284, respectivamente), o que resultou em um montante de arrecadação projetado no período de 15 a 20 anos.</p>
 			
-			<Comments :attr="{id:7, context:'Premissas consideradas para a modelagem'}"></Comments>
+			<Comments :attr="{id:7, context:'Premissas consideradas para a modelagem'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section>
@@ -263,7 +263,7 @@
 				</table>
 			</div>
 			
-			<Comments :attr="{id:8, context:'Resultados da modelagem econômico-financeira'}"></Comments>
+			<Comments :attr="{id:8, context:'Resultados da modelagem econômico-financeira'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section>
@@ -271,7 +271,7 @@
 			<p>Dado que o coeficiente de aproveitamento a ser utilizado pelos futuros empreendimentos é a variável com maior imprevisibilidade, uma vez que responderá à demanda específica da região e da percepção desta pelo empreendedor, pode-se considerar os três cenários para se formar ideia de um mais (i) pessimista (CA 2,0), um (ii) intermediário e de acordo com o já definido para os eixos (CA 4,0), e ainda outro mais (iii) otimista e embasado no potencial de acessibilidade da região (CA 5,7), para se prever a arrecadação.</p>
 			<p>Por fim, é relevante que do programa de intervenções conste um rol de obras, melhoramentos urbanísticos e equipamentos públicos os quais terão sua implantação definida no tempo, na medida em que a arrecadação das contrapartidas financeiras forem ingressando no fundo responsável pelo financiamento destas. A previsão de cenários de menores ou maiores recursos se faz necessária, conforme consta do Quadro 5, quando menciona-se intervenções “básicas” ou “complementares”.</p>
 
-			<Comments :attr="{id:9, context:'Conclusões'}"></Comments>
+			<Comments :attr="{id:9, context:'Conclusões'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section>
@@ -284,7 +284,7 @@
 			<p>Neste sentido, o PIU Anhembi deverá instituir Conselho Gestor sob a coordenação à Secretaria de Urbanismo e Licenciamento (SMUL), com a participação de órgãos municipais e de entidades representativas da sociedade civil, tendo a competência de instruir e auxiliar a implantação do Programa de Intervenções no Perímetro Expandido, monitorar o desenvolvimento e propor programas e estratégias que possam aprimorar o projeto, enquanto que a São Paulo Urbanismo ficará a cargo de promover a implantação dos projetos no Perímetro Expandido e avaliar a evolução dos processos, podendo contar com a colaboração dos órgãos e entidades municipais para o desempenho de suas funções específicas.</p>
 			<p>O Decreto nº 56.901 de 29 de março de 2016 que disciplina a elaboração dos Projetos de Intervenção Urbana assegura a realização de consultas públicas em etapas definidas de sua elaboração, para discussão e aperfeiçoamento das propostas. Da mesma maneira, a Minuta de Decreto de implantação do PIU, colocada em consulta pública, propõe a constituição de Conselho Gestor.</p>
 
-			<Comments :attr="{id:10, context:'Modelo de Gestão Democrática'}"></Comments>
+			<Comments :attr="{id:10, context:'Modelo de Gestão Democrática'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section>
@@ -292,7 +292,7 @@
 
 			<Minuta></Minuta>
 
-			<Comments :attr="{id:11, context:'Minuta'}"></Comments>
+			<Comments :attr="{id:11, context:'Minuta'}" v-if="estaConsulta.ativo == 1"></Comments>
 
 			<ul class="pdfBox">
 				<li><a href="http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi-2/MAPA-1_Perimetros.pdf" download>
@@ -316,7 +316,7 @@
 					<span>9,66 Mb</span>
 				</a></li>
 			</ul>
-			<Comments :attr="{id:12, context:'Mapas'}"></Comments>
+			<Comments :attr="{id:12, context:'Mapas'}" v-if="estaConsulta.ativo == 1"></Comments>
 		
 			<div class="tableWrap">
 				<table class="center">
@@ -773,13 +773,13 @@
 				</div>
 			</div>
 
-			<Comments :attr="{id:13, context:'Quadros'}"></Comments>
+			<Comments :attr="{id:13, context:'Quadros'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section ref="allComments">
 			<h2 v-show="commentsLoaded" class="titulo" indent="1">Contribuições</h2>
 			<CommentsLoader :attr="estaConsulta"></CommentsLoader>
-			<Comments  v-if="commentsLoaded" :attr="{id:14, context:'Comentarios'}"></Comments>
+			<Comments v-if="commentsLoaded && estaConsulta.ativo == 1" :attr="{id:14, context:'Comentarios'}"></Comments>
 		</section>
 
 		<div class="commentCtx" id="commentCtx" ref="commentCtx" title="Comentar"><a href=""><i class="material-icons">chat</i></a></div>

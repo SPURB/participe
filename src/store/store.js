@@ -25,7 +25,10 @@ export const store = new Vuex.Store({
 	},
 	mutations:{
 		FETCH_CONSULTAS(state, consultas) {
-			state.consultas = consultas
+			state.consultas = consultas.sort(function(a,b) {
+				if (a.ativo < b.ativo) { return 1 }
+				if (a.ativo > b.ativo) { return -1 }
+			})
 		}
 	}, 
 	actions: {
@@ -39,6 +42,3 @@ export const store = new Vuex.Store({
 		}
 	}
 })
-
-
-

@@ -6,7 +6,7 @@
 				<input class="fuzzy-search" type="search" ref="busca" title="Digite o que pesquisa" value="Pesquisar" @focusout="desativaBusca">
 			</div> -->
 			<ul class="list">
-				<li v-for="consulta in consultas" class="card" :style="{ backgroundImage: 'url(' + consulta.urlCapa + ')' }">
+				<li v-for="consulta in consultas" class="card" :style="[{ backgroundImage: 'url(' + consulta.urlCapa + ')'}]">
 					<p class="nome">{{ consulta.nomePublico }}</p>
 					<p class="textoIntro">{{ consulta.textoIntro }}</p>
 					<div>
@@ -58,7 +58,10 @@ export default {
 	methods: {
 		parseAtivo(state){
 			return state == '0' ? false : true
-		}, 
+		},
+		ordenaCards() {
+			console.log('teste')
+		},
 		ativaBusca() {
 			this.$refs.busca.value = '';
 			this.$refs.busca.style.color = '#333';
@@ -135,6 +138,7 @@ export default {
 				transition: transform ease-in-out .1s, box-shadow .1s;
 				position: relative;
 				z-index: 0;
+				
 				p.nome, p.textoIntro { display: none; };
 				div {
 					grid-row: 1 / 2;

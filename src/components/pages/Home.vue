@@ -147,7 +147,6 @@ export default {
 					flex-flow: column wrap;
 					justify-content: center;
 					padding: 16px;
-					box-shadow: inset 0px -4px 4px rgba(0, 0, 0, .12);
 					position: relative;
 					overflow: hidden;
 					a {

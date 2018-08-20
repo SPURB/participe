@@ -1,14 +1,16 @@
 <template>
 	<div class="AdminSide">
 		<div class="titulo">
-			<router-link to="/admin"><a href=""><i class="material-icons" @click="">home</i></a></router-link>
-			<span>título muda c/ rota</span>
+			<router-link to="/admin"><i class="material-icons" @click="">home</i></router-link>
+			<span>título da rota</span>
 		</div>
 		<div class="lista">
 			<h2>Consultas</h2>
 			<ul>
 				<li v-for="consulta in consultas">
-					<a href="" :class="{ consultaAtiva: consulta.ativo == 1 }">{{ consulta.nomePublico }}</a>
+					<router-link :to="{ name: 'pageConsulta', params: { title: consulta.nomePublico }}" :class="{ consultaAtiva: consulta.ativo == 1 }">
+						{{ consulta.nomePublico }}
+					</router-link>
 				</li>
 			</ul>
 		</div>

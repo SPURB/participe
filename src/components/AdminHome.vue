@@ -22,7 +22,7 @@
 			</thead>
 			<tr v-for="consulta in consultas">
 				<td :class="{ consultaAtiva: consulta.ativo == 1 }">
-					<a href="">{{ consulta.nomePublico }}</a>
+					<router-link :to="{ name: 'pageConsulta', params: { title: consulta.nomePublico }}" :class="{ consultaAtiva: consulta.ativo == 1 }">{{ consulta.nomePublico }}</router-link>
 				</td>
 				<td>{{ dataDisplay(consulta.dataCadastro) }}</td>
 				<td v-if="consulta.dataFinal">{{ dataDisplay(consulta.dataFinal) }}</td>

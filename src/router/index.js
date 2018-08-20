@@ -27,20 +27,19 @@ export default new Router({
 				id: 8
 			}
 		},
-		// {
-		// 	path: '/login',
-		// 	name: 'AdminLogin',
-		// 	components: { AdminLogin }
-		// },
-		// {
-		// 	path: '/admin',
-		// 	name: 'Admin',
-		// 	components: { Admin },
-		// 	children: [
-		// 		{ path: '', component: AdminHome },
-		// 		{ path: 'novaconsulta', component: AdminNovaConsulta },
-		// 		{ path: ':consulta', component: AdminPagConsulta }
-		// 	]
-		// }
+		{
+			path: '/login',
+			name: 'AdminLogin',
+			components: { AdminLogin }
+		},
+		{
+			path: '/admin',
+			components: { Admin },
+			children: [
+				{ path: '', name: 'Admin', component: AdminHome },
+				{ path: 'novaconsulta', name: 'Nova consulta', component: AdminNovaConsulta },
+				{ path: ':consulta', name: 'pageConsulta', component: AdminPagConsulta }
+			]
+		}
 	]
 })

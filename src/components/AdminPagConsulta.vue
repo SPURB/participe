@@ -1,7 +1,7 @@
 <template>
 	<div class="AdminPagConsulta">
-		<h1>{{ $route.params.consulta }}</h1>
-		<section class="hidden" :class="{ show: abreId }">
+		<h1>{{ $route.params.title }}</h1>
+		<section class="hidden" :class="{ show: abreId }" id="identificacao">
 			<h2 @click="abreId = !abreId">Identificação <i class="material-icons">keyboard_arrow_down</i></h2>
 			<form>
 				<fieldset>
@@ -45,33 +45,77 @@
 						<input type="url" id="input_urlDevolutiva" name="input_urlDevolutiva">
 					</div>
 				</fieldset>
-				<button class="limpar"><i class="material-icons" ref="limpar">clear</i>Cancelar</button>
-				<button type="submit" class="enviar" ref="salvar"><i class="material-icons">check_circle</i> Salvar alterações</button>
 			</form>
+			<button class="limpar" ref="limpar"><i class="material-icons">clear</i>Cancelar</button>
+			<button type="submit" class="enviar" ref="salvar"><i class="material-icons">check_circle</i> Salvar alterações</button>
 		</section>
-		<section class="hidden" :class="{ show: abreMod }">
+		<section class="hidden" :class="{ show: abreMod }" id="moderacao">
 			<h2 @click="abreMod = !abreMod">Moderação <i class="material-icons">keyboard_arrow_down</i></h2>
 			<div class="comentBlock analise">
-				<h3>Pendentes</h3>
+				<h3>Pendentes <span>3</span></h3>
 				<div class="comentario">
-					<i class="material-icons">reply</i> Apresentação
-					<div>Queria uma estrutura metálica leve que pudesse nascer e descer feito árvore... E que pudesse ser montada no solo pra evitar a construção provisória de um vasto emaranhado de andaimes, possivelmente mais caro do que a própria estrutura de cobertura.</div>
+					<div class="comentCtx"><i class="material-icons">reply</i> Apresentação</div>
+					<div class="coment">
+						<p>Queria uma estrutura metálica leve que pudesse nascer e descer feito árvore... E que pudesse ser montada no solo pra evitar a construção provisória de um vasto emaranhado de andaimes, possivelmente mais caro do que a própria estrutura de cobertura.</p>
+					</div>
 					<div class="comentInfo">
-						<span>Nome do autor</span> <span>autor@email.com</span>
-						<span>23 de fevereiro de 2018 às 09h33</span>
+						<div class="autor">
+							<span>Nome do autor</span> <span>autor@email.com</span>
+						</div>
+						<div class="horario">
+							<span>23 de fevereiro de 2018 às 09h33</span>
+						</div>
 					</div>
 					<div class="btns">
-						<button>Reprovar <i class="material-icons">delete</i></button>
-						<button>Aprovar <i class="material-icons">check</i></button>
-						<button>Moderar novamente <i class="material-icons">cached</i></button>
+						<button class="reprovar">Reprovar <i class="material-icons">delete</i></button>
+						<button class="aprovar">Aprovar <i class="material-icons">check_circle</i></button>
+						<!-- <button class="novamente">Moderar novamente <i class="material-icons">cached</i></button> -->
 					</div>
 				</div>
 			</div>
 			<div class="comentBlock aprovados">
 				<h3>Aprovados</h3>
+				<div class="comentario">
+					<div class="comentCtx"><i class="material-icons">reply</i> Apresentação</div>
+					<div class="coment">
+						<p>Queria uma estrutura metálica leve que pudesse nascer e descer feito árvore... E que pudesse ser montada no solo pra evitar a construção provisória de um vasto emaranhado de andaimes, possivelmente mais caro do que a própria estrutura de cobertura.</p>
+					</div>
+					<div class="comentInfo">
+						<div class="autor">
+							<span>Nome do autor</span> <span>autor@email.com</span>
+						</div>
+						<div class="horario">
+							<span>23 de fevereiro de 2018 às 09h33</span>
+						</div>
+					</div>
+					<div class="btns">
+						<!-- <button class="reprovar">Reprovar <i class="material-icons">delete</i></button> -->
+						<!-- <button class="aprovar">Aprovar <i class="material-icons">check_circle</i></button> -->
+						<button class="novamente">Moderar novamente <i class="material-icons">cached</i></button>
+					</div>
+				</div>
 			</div>
 			<div class="comentBlock reprovados">
 				<h3>Reprovados</h3>
+				<div class="comentario">
+					<div class="comentCtx"><i class="material-icons">reply</i> Apresentação</div>
+					<div class="coment">
+						<p>Queria uma estrutura metálica leve que pudesse nascer e descer feito árvore... E que pudesse ser montada no solo pra evitar a construção provisória de um vasto emaranhado de andaimes, possivelmente mais caro do que a própria estrutura de cobertura.</p>
+					</div>
+					<div class="comentInfo">
+						<div class="autor">
+							<span>Nome do autor</span> <span>autor@email.com</span>
+						</div>
+						<div class="horario">
+							<span>23 de fevereiro de 2018 às 09h33</span>
+						</div>
+					</div>
+					<div class="btns">
+						<!-- <button class="reprovar">Reprovar <i class="material-icons">delete</i></button> -->
+						<!-- <button class="aprovar">Aprovar <i class="material-icons">check_circle</i></button> -->
+						<button class="novamente">Moderar novamente <i class="material-icons">cached</i></button>
+					</div>
+				</div>
 			</div>
 		</section>
 	</div>
@@ -99,10 +143,12 @@ export default {
 		},
 	},
 	mounted() {
+		let app = this
 		Array.from(this.$el.querySelectorAll('*[name^=input_]')).map(function (index){
 			index.disabled = true
 			index.addEventListener('change', function() {
-				
+				app.$refs.limpar.style.display = 'inline-flex'
+				app.$refs.salvar.style.display = 'inline-flex'
 			})
 		})
 	},
@@ -132,7 +178,8 @@ div.AdminPagConsulta {
 		};
 
 		h2 {
-			background: #F5F5F5;
+			background: #BDBDBD;
+			color: #FFF;
 			line-height: 64px;
 			max-height: 64px;
 			padding: 0 12px;
@@ -150,113 +197,215 @@ div.AdminPagConsulta {
 		};
 	};
 
-	form {
-		fieldset {
-			padding: 0;
-			margin: 0 0 2rem 0;
-			border: 0;
+	section#identificacao {
+		form {
+			fieldset {
+				padding: 0;
+				margin: 0 0 2rem 0;
+				border: 0;
 
-			legend {
-				font-weight: 600;
-				padding: 0 0 4px 0;
+				legend {
+					font-weight: 600;
+					padding: 0 0 4px 0;
 
-				span {
+					span {
+						color: #BDBDBD;
+						font-weight: initial;
+					};
+				};
+
+				input, textarea {
+					font-family: inherit;
+					font-size: inherit;
+					color: inherit;
+					padding: 8px 10px;
+					border: 1px solid #BDBDBD;
+					border-radius: 2px;
+				};
+
+				legend + input, textarea { width: 100%; };
+				textarea { resize: none; height: 80px; }
+
+				input[type=radio] { display: none; };
+				input[type=radio] + label.status {
+					display: inline-block;
+					padding: 8px 10px;
+					border-radius: 2px;
+					background: #F5F5F5;
 					color: #BDBDBD;
-					font-weight: initial;
+					cursor: pointer;
+					transition: all ease-in .1s;
+				};
+				input[type=radio]:checked + label.status {
+					background: #333;
+					font-weight: 700;
+					color: #FFF;
+				};
+				input[type=radio]:disabled + label.status {
+					opacity: .4;
+				};
+
+				div {
+					background: #F5F5F5;
+					padding: 8px 8px 8px 16px;
+					margin: 0 0 8px 0;
+					width: max-content;
+					border-radius: 2px;
+
+					input[type=url], input[type=date] {
+						display: inline-block;
+						min-width: 240px;
+					};
+
+					label:not(.status) {
+						display: inline-block;
+						vertical-align: middle;
+						padding-right: 8px;
+					};
 				};
 			};
 
-			input, textarea {
-				font-family: inherit;
-				font-size: inherit;
-				color: inherit;
-				padding: 8px 10px;
-				border: 1px solid #BDBDBD;
-				border-radius: 2px;
-			};
-
-			legend + input, textarea { width: 100%; };
-			textarea { resize: none; height: 80px; }
-
-			input[type=radio] { display: none; };
-			input[type=radio] + label.status {
-				display: inline-block;
-				padding: 8px 10px;
-				border-radius: 2px;
-				background: #F5F5F5;
-				color: #BDBDBD;
+			i.editBtn {
+				position: relative;
+				border-radius: 100%;
+				padding: 4px;
+				font-size: 16px;
+				color: #FFF;
+				background: #333;
+				vertical-align: top;
+				margin: 0 0 0 4px;
 				cursor: pointer;
 				transition: all ease-in .1s;
-			};
-			input[type=radio]:checked + label.status {
-				background: #333;
-				font-weight: 700;
-				color: #FFF;
-			};
-			input[type=radio]:disabled + label.status {
-				opacity: .4;
-			};
 
-			div {
-				background: #F5F5F5;
-				padding: 8px 8px 8px 16px;
-				margin: 0 0 8px 0;
-				width: max-content;
-				border-radius: 2px;
-
-				input[type=url], input[type=date] {
-					display: inline-block;
-					min-width: 240px;
-				};
-
-				label:not(.status) {
-					display: inline-block;
-					vertical-align: middle;
-					padding-right: 8px;
+				&:hover, &.desbloqueado {
+					background: #EB5757;
 				};
 			};
 		};
 
-		i.editBtn {
-			position: relative;
-			border-radius: 100%;
-			padding: 4px;
-			font-size: 16px;
-			color: #FFF;
-			background: #333;
-			vertical-align: top;
-			margin: 0 0 0 4px;
+		button {
+			font-family: inherit;
+			font-size: larger;
+			color: inherit;
+			flex-flow: column nowrap;
+			padding: 10px 16px;
+			margin-right: 2rem;
+			border: 0;
+			border-radius: 2px;
 			cursor: pointer;
-			transition: all ease-in .1s;
+			border: 4px solid rgba(255, 255, 255, .2);
+			color: #FFF;
+			display: none;
 
-			&:hover, &.desbloqueado {
-				background: #EB5757;
-			};
+			i { margin-bottom: 8px; };
+			&.limpar { background: #EB5757; };
+			&.enviar { background: #008015; };
 		};
 	};
 
-	button {
-		font-family: inherit;
-		font-size: larger;
-		color: inherit;
-		display: inline-flex;
-		flex-flow: column nowrap;
-		padding: 10px 16px;
-		margin-right: 2rem;
-		border: 0;
-		border-radius: 2px;
-		cursor: pointer;
-		border: 4px solid rgba(255, 255, 255, .2);
-		color: #FFF;
+	section#moderacao {
+		div.comentBlock {
+			padding-bottom: 1rem;
 
-		i { margin-bottom: 8px; };
-		&.limpar { background: #EB5757; };
-		&.enviar { background: #008015; };
-	};
+			h3 {
+				margin: 1rem 0 0 0;
+				position: relative;
 
-	div.comentBlock {
-		h3 {
-			margin: 0;
+				span {
+					position: absolute;
+					background: #EB5757;
+					border-radius: 100%;
+					font-size: 11px;
+					line-height: 11px;
+					padding: 2px;
+					display: inline-block;
+					width: 15px;
+					color: #FFF;
+					text-align: center;
+					top: 0;
+					margin-left: -4px;
+				};
+			};
+
+			div.comentario {
+				background: #F5F5F5;
+				padding: 1rem 1rem 1rem calc(1rem - 8px);
+				margin: .5rem 0 0 0;
+				border-radius: 2px;
+				border-left-width: 8px;
+				border-left-style: solid;
+
+				div.comentCtx {
+					color: #777;
+					max-width: 100%;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+
+					i {
+						transform: rotate(180deg);
+						vertical-align: top;
+					};
+				};
+
+				div.coment {
+					font-family: 'Georgia', serif;
+					font-size: large;
+					margin: 1rem 0;
+
+					p { margin: 1rem 0; };
+					p:first-child { margin-top: 0; };
+					p:last-child { margin-bottom: 0; };
+				};
+
+				div.comentInfo {
+					color: #777;
+					font-size: small;
+
+					div.autor {
+						span:first-child {
+							font-weight: 700;
+							color: #333;
+						};
+					};
+				};
+
+				div.btns {
+					text-align: right;
+
+					button {
+						margin: 0 .2rem;
+						font-family: inherit;
+						color: inherit;
+						text-transform: uppercase;
+						background: transparent;
+						border: 0;
+						cursor: pointer;
+
+						&:first-child { margin-left: 0; };
+						&:last-child { margin-right: 0; };
+
+						i {
+							vertical-align: top;
+							font-size: larger;
+						};
+
+						&.reprovar { color: #EB5757; };
+						&.aprovar { color: #008015; };
+						&.novamente { color: #333; };
+					};
+				};
+			};
+
+			&.analise {
+				div.comentario { border-left-color: transparent; }
+			};
+			&.aprovados {
+				div.comentario { border-left-color: #008015; }
+			};
+			&.reprovados {
+				div.comentario { border-left-color: #EB5757; }
+			};
 		};
 	};
 };

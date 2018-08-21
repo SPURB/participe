@@ -37,7 +37,7 @@ export default new Router({
 			components: { Admin },
 			children: [
 				{ path: '', name: 'Admin', component: AdminHome },
-				{ path: 'novaconsulta', name: 'Nova consulta', component: AdminNovaConsulta },
+				{ path: 'novaconsulta', name: 'novaConsulta', component: AdminNovaConsulta },
 				{ path: ':consulta', name: 'pageConsulta', component: AdminPagConsulta }
 			]
 		}

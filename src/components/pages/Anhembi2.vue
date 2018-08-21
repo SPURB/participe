@@ -1487,6 +1487,12 @@ import Apoio from '@/components/Apoio'
 	};
 
 	@media print {
+
+		@page {
+			size: A4 portrait;
+			margin: 30mm 30mm 30mm 30mm;
+		}
+
 		.Cabecalho { display: none; };
 		.Rodape { display: none; };
 		.Indice { display: none; };
@@ -1494,21 +1500,49 @@ import Apoio from '@/components/Apoio'
 		.Comments { display: none; };
 
 		div.Anhembi2 {
-			font-size: 11pt;
-
-			& > div.top {
-				background: transparent;
-				padding: 0;
-				margin: 0;
+			div.top {
+				background: none !important;
 				display: block;
-				outline: 0;
 				height: min-content;
+				margin: 0;
+				padding: 0;
 
-				& > h1 { font-size: 4rem; };
-				& > div.setaBaixo { display: none; };
+				& > div:first-child {
+					margin: 0;
+					padding: 0;
+					outline: none;
+
+					h1, div { text-align: left; };
+
+					h1 { font-size: 32pt; margin: 0; };
+
+					div { font-size: 12pt; };
+
+					div#statusConsulta { display: none; };
+				};
+
+				& > .setaBaixo { display: none; };
 			};
 
-			p, figure, div.tableWrap {
+			font-size: 11pt;
+
+			h1, h2, h3 {
+				break-after: avoid-page;
+				page-break-after: avoid;
+				padding: 0;
+				margin: 3rem 0 1rem 0;
+			};
+
+			p, ol, ul, figure, div.Minuta blockquote.minuta, div.tableWrap, .Commentsloader {
+				padding: 0;
+				margin: 0 0 1rem 0;
+				max-width: unset;
+				width: 100%;
+			};
+
+			p { padding-right: 40mm; };
+
+			figure, .tableWrap, .Galeria {
 				break-inside: avoid-page;
 				page-break-inside: avoid;
 			};
@@ -1519,6 +1553,7 @@ import Apoio from '@/components/Apoio'
 		.ai2html {
 			break-inside: avoid-page;
 			page-break-inside: avoid;
+			max-height: 100%;
 		};
-	};
+	}
 </style>

@@ -8,7 +8,7 @@
 			<h2>Consultas</h2>
 			<ul>
 				<li v-for="consulta in consultas">
-					<router-link :to="{ name: 'pageConsulta', params: { title: consulta.nomePublico }}" :class="{ consultaAtiva: consulta.ativo == 1 }">
+					<router-link :to="{ path: consulta.nome, name: 'pageConsulta', params: { title: consulta.nomePublico, id: consulta.id }}" :class="{ consultaAtiva: consulta.ativo == 1 }">
 						{{ consulta.nomePublico }}
 					</router-link>
 				</li>

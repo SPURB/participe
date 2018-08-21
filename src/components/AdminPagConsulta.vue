@@ -6,7 +6,7 @@
 			<form>
 				<fieldset>
 					<legend>Nome <span><i class="material-icons editBtn" title="Editar campo" @click="editar(['input_nomePublico'], $event)">edit</i></span></legend>
-					<input type="text" id="input_nomePublico" name="input_nomePublico">
+					<input type="text" id="input_nomePublico" name="input_nomePublico" :value="estaConsulta.nomePublico">
 				</fieldset>
 				<fieldset>
 					<legend>Status <span><i class="material-icons editBtn" title="Editar campo" @click="editar(['input_status'], $event)">edit</i></span></legend>
@@ -19,30 +19,30 @@
 					<legend>Período da consulta <span><i class="material-icons editBtn" title="Editar campo" @click="editar(['input_dataCadastro', 'input_dataFinal'], $event)">edit</i></span></legend>
 					<div>
 						<label for="input_dataCadastro">Início</label>
-						<input type="date" id="input_dataCadastro" name="input_dataCadastro">
+						<input type="date" id="input_dataCadastro" name="input_dataCadastro" :value="estaConsulta.dataCadastro">
 					</div>
 					<div>
 						<label for="input_dataFinal">Final</label>
-						<input type="date" id="input_dataFinal" name="input_dataFinal">
+						<input type="date" id="input_dataFinal" name="input_dataFinal" :value="estaConsulta.dataFinal">
 					</div>
 				</fieldset>
 				<fieldset>
 					<legend>Texto introdutório <span><i class="material-icons editBtn" title="Editar campo" @click="editar(['input_textoIntro'], $event)">edit</i></span></legend>
-					<textarea id="input_textoIntro" maxlength="480" name="input_textoIntro"></textarea>
+					<textarea id="input_textoIntro" maxlength="480" name="input_textoIntro" :value="estaConsulta.textoIntro"></textarea>
 				</fieldset>
 				<fieldset>
 					<legend>Hiperlinks</legend>
 					<div>
 						<label for="input_urlConsulta">URL da consulta <i class="material-icons editBtn" title="Editar campo" @click="editar(['input_urlConsulta'], $event)">edit</i></label>
-						<input type="url" id="input_urlConsulta" name="input_urlConsulta">
+						<input type="url" id="input_urlConsulta" name="input_urlConsulta" :value="estaConsulta.urlConsulta">
 					</div>
 					<div>
 						<label for="input_urlCapa">URL da imagem de capa <i class="material-icons editBtn" title="Editar campo" @click="editar(['input_urlCapa'], $event)">edit</i></label>
-						<input type="url" id="input_urlCapa" name="input_urlCapa">
+						<input type="url" id="input_urlCapa" name="input_urlCapa" :value="estaConsulta.urlCapa">
 					</div>
 					<div>
 						<label for="input_urlDevolutiva">URL da devolutiva <i class="material-icons editBtn" title="Editar campo" @click="editar(['input_urlDevolutiva'], $event)">edit</i></label>
-						<input type="url" id="input_urlDevolutiva" name="input_urlDevolutiva">
+						<input type="url" id="input_urlDevolutiva" name="input_urlDevolutiva" :value="estaConsulta.urlDevolutiva">
 					</div>
 				</fieldset>
 			</form>
@@ -130,6 +130,30 @@ export default {
 			abreMod: false,
 		}
 	},
+	computed:{
+		consultas(){return this.$store.state.consultas},
+		estaConsulta: function() {
+			let app = this
+			let estaConsulta = {}
+			app.consultas.map(function(index) {
+				if (app.$route.params.id == index.id) {
+					estaConsulta = {
+						id: index.id,
+						nome: index.nome,
+						nomePublico: index.nomePublico,
+						dataCadastro: index.dataCadastro,
+						dataFinal: index.dataFinal,
+						textoIntro: index.textoIntro,
+						urlConsulta: index.urlConsulta,
+						urlCapa: index.urlCapa,
+						urlDevolutiva: index.urlDevolutiva,
+						nContribuicoes: index.nContribuicoes
+					}
+				}
+			})
+			return estaConsulta
+		}
+	},
 	methods: {
 		editar(arr, event) {
 			let app = this
@@ -143,6 +167,7 @@ export default {
 		},
 	},
 	mounted() {
+		console.log(this.estaConsulta)
 		let app = this
 		Array.from(this.$el.querySelectorAll('*[name^=input_]')).map(function (index){
 			index.disabled = true
@@ -221,10 +246,11 @@ div.AdminPagConsulta {
 					padding: 8px 10px;
 					border: 1px solid #BDBDBD;
 					border-radius: 2px;
+					line-height: 160%;
 				};
 
 				legend + input, textarea { width: 100%; };
-				textarea { resize: none; height: 80px; }
+				textarea { resize: none; }
 
 				input[type=radio] { display: none; };
 				input[type=radio] + label.status {

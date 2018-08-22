@@ -51,79 +51,78 @@
 		</section>
 		<section class="hidden" :class="{ show: abreMod }" id="moderacao">
 			<h2 @click="abreMod = !abreMod">Moderação <i class="material-icons">keyboard_arrow_down</i></h2>
-			<div class="comentBlock analise">
-				<h3>Pendentes <span>3</span></h3>
-				<div class="comentario">
-					<div class="comentCtx"><i class="material-icons">reply</i> Apresentação</div>
+			<h3>Pendentes <span>{{ commentsPendentes.feed.length }}</span></h3>
+				<div class="comentario pendente" v-for="comment in commentsPendentes.feed">
+					<div class="comentCtx"><i class="material-icons">reply</i> {{ comment.commentcontext }}</div>
 					<div class="coment">
-						<p>Queria uma estrutura metálica leve que pudesse nascer e descer feito árvore... E que pudesse ser montada no solo pra evitar a construção provisória de um vasto emaranhado de andaimes, possivelmente mais caro do que a própria estrutura de cobertura.</p>
+						{{ comment.content }}
+						<button @click="abreComment($event)">Ver mais</button>
 					</div>
 					<div class="comentInfo">
 						<div class="autor">
-							<span>Nome do autor</span> <span>autor@email.com</span>
+							<span>{{ comment.name }}</span> <span>{{ comment.email }}</span>
 						</div>
 						<div class="horario">
-							<span>23 de fevereiro de 2018 às 09h33</span>
+							<span>{{ comment.commentdate }}</span>
 						</div>
 					</div>
 					<div class="btns">
 						<button class="reprovar">Reprovar <i class="material-icons">delete</i></button>
 						<button class="aprovar">Aprovar <i class="material-icons">check_circle</i></button>
-						<!-- <button class="novamente">Moderar novamente <i class="material-icons">cached</i></button> -->
 					</div>
 				</div>
-			</div>
-			<div class="comentBlock aprovados">
-				<h3>Aprovados</h3>
-				<div class="comentario">
-					<div class="comentCtx"><i class="material-icons">reply</i> Apresentação</div>
+			<h3>Aprovados<span>{{ commentsAprovados.feed.length }}</span></h3>
+				<div class="comentario aprovado" v-for="comment in commentsAprovados.feed">
+					<div class="comentCtx"><i class="material-icons">reply</i> {{ comment.commentcontext }}</div>
 					<div class="coment">
-						<p>Queria uma estrutura metálica leve que pudesse nascer e descer feito árvore... E que pudesse ser montada no solo pra evitar a construção provisória de um vasto emaranhado de andaimes, possivelmente mais caro do que a própria estrutura de cobertura.</p>
+						{{ comment.content }}
+						<button @click="abreComment($event)">Ver mais</button>
 					</div>
 					<div class="comentInfo">
 						<div class="autor">
-							<span>Nome do autor</span> <span>autor@email.com</span>
+							<span>{{ comment.name }}</span> <span>{{ comment.email }}</span>
 						</div>
 						<div class="horario">
-							<span>23 de fevereiro de 2018 às 09h33</span>
+							<span>{{ comment.commentdate }}</span>
 						</div>
 					</div>
 					<div class="btns">
-						<!-- <button class="reprovar">Reprovar <i class="material-icons">delete</i></button> -->
-						<!-- <button class="aprovar">Aprovar <i class="material-icons">check_circle</i></button> -->
-						<button class="novamente">Moderar novamente <i class="material-icons">cached</i></button>
+						<button class="reprovar">Reprovar <i class="material-icons">delete</i></button>
+						<button class="aprovar">Aprovar <i class="material-icons">check_circle</i></button>
 					</div>
 				</div>
-			</div>
-			<div class="comentBlock reprovados">
-				<h3>Reprovados</h3>
-				<div class="comentario">
-					<div class="comentCtx"><i class="material-icons">reply</i> Apresentação</div>
+			<h3>Reprovados <span>{{ commentsReprovados.feed.length }}</span></h3>
+				<div class="comentario reprovado" v-for="comment in commentsReprovados.feed">
+					<div class="comentCtx"><i class="material-icons">reply</i> {{ comment.commentcontext }}</div>
 					<div class="coment">
-						<p>Queria uma estrutura metálica leve que pudesse nascer e descer feito árvore... E que pudesse ser montada no solo pra evitar a construção provisória de um vasto emaranhado de andaimes, possivelmente mais caro do que a própria estrutura de cobertura.</p>
+						{{ comment.content }}
+						<button @click="abreComment($event)">Ver mais</button>
 					</div>
 					<div class="comentInfo">
 						<div class="autor">
-							<span>Nome do autor</span> <span>autor@email.com</span>
+							<span>{{ comment.name }}</span> <span>{{ comment.email }}</span>
 						</div>
 						<div class="horario">
-							<span>23 de fevereiro de 2018 às 09h33</span>
+							<span>{{ comment.commentdate }}</span>
 						</div>
 					</div>
 					<div class="btns">
-						<!-- <button class="reprovar">Reprovar <i class="material-icons">delete</i></button> -->
-						<!-- <button class="aprovar">Aprovar <i class="material-icons">check_circle</i></button> -->
 						<button class="novamente">Moderar novamente <i class="material-icons">cached</i></button>
 					</div>
 				</div>
-			</div>
 		</section>
 	</div>
 </template>
 
 <script>
+import CommentUn from '@/components/CommentUn'
+import axios from 'axios';
+
 export default {
 	nome: 'AdminPagConsulta',
+	components: { 
+		CommentUn
+	},
 	data() {
 		return {
 			abreId: false,
@@ -131,6 +130,7 @@ export default {
 		}
 	},
 	computed:{
+		apiPath(){ return this.$store.getters.apiPath},
 		consultas(){return this.$store.state.consultas},
 		estaConsulta: function() {
 			let app = this
@@ -152,7 +152,73 @@ export default {
 				}
 			})
 			return estaConsulta
-		}
+		},
+		commentsPendentes() {
+			let app = this
+			let feed = []
+			axios.post(app.apiPath + 'members/search/',{
+				"idConsulta":"="+app.estaConsulta.id.toString(),
+				"public":"=0",
+				"trash":"=0"}
+				// ,{
+				// 	responseEncoding: 'utf8',
+				// 	'Content-Type': 'application/json',
+				// }
+			)
+			.then(function(response) {
+				response.data.map(function(index) {
+					feed.push(index)
+				})
+			})
+			.catch(function (error){
+				console.log(error)
+			})
+			return { feed }
+		},
+		commentsAprovados() {
+			let app = this
+			let feed = []
+			axios.post(app.apiPath + 'members/search/',{
+				"idConsulta":"="+app.estaConsulta.id.toString(),
+				"public":"=1",
+				"trash":"=0"}
+				// ,{
+				// 	responseEncoding: 'utf8',
+				// 	'Content-Type': 'application/json',
+				// }
+			)
+			.then(function(response) {
+				response.data.map(function(index) {
+					feed.push(index)
+				})
+			})
+			.catch(function (error){
+				console.log(error)
+			})
+			return { feed }
+		},
+		commentsReprovados() {
+			let app = this
+			let feed = []
+			axios.post(app.apiPath + 'members/search/',{
+				"idConsulta":"="+app.estaConsulta.id.toString(),
+				"public":"=0",
+				"trash":"=1"}
+				// ,{
+				// 	responseEncoding: 'utf8',
+				// 	'Content-Type': 'application/json',
+				// }
+			)
+			.then(function(response) {
+				response.data.map(function(index) {
+					feed.push(index)
+				})
+			})
+			.catch(function (error){
+				console.log(error)
+			})
+			return { feed }
+		},
 	},
 	methods: {
 		editar(arr, event) {
@@ -165,9 +231,13 @@ export default {
 			})
 			event.target.classList.add('desbloqueado')
 		},
+		abreComment(event) {
+			event.target.parentNode.style.maxHeight = '10000px'
+			event.target.style.display = 'none'
+		}
 	},
 	mounted() {
-		console.log(this.estaConsulta)
+		// console.log(this.estaConsulta) // atencion
 		let app = this
 		Array.from(this.$el.querySelectorAll('*[name^=input_]')).map(function (index){
 			index.disabled = true
@@ -189,15 +259,16 @@ div.AdminPagConsulta {
 
 	section {
 		margin: 0 0 2rem 0;
-		transition: all ease-in-out .8s;
 
 		&.hidden {			
 			max-height: 64px;
 			overflow: hidden;
+			transition: all ease-in-out .2s;
 		};
 
 		&.show {
-			max-height: 400vh;
+			max-height: 1000000px;
+			transition: all ease-in-out .4s;
 
 			h2 i { transform: rotate(180deg); };
 		};
@@ -330,108 +401,128 @@ div.AdminPagConsulta {
 	};
 
 	section#moderacao {
-		div.comentBlock {
-			padding-bottom: 1rem;
+		padding-bottom: 1rem;
 
-			h3 {
-				margin: 1rem 0 0 0;
-				position: relative;
+		h3 {
+			margin: 1rem 0 0 0;
+			background: #333;
+			color: #FFF;
+			display: block;
+			width: min-content;
+			padding: 2px 8px;
+			border-radius: 2px;
+			position: relative;
 
-				span {
-					position: absolute;
-					background: #EB5757;
-					border-radius: 100%;
-					font-size: 11px;
-					line-height: 11px;
-					padding: 2px;
-					display: inline-block;
-					width: 15px;
-					color: #FFF;
-					text-align: center;
-					top: 0;
-					margin-left: -4px;
+			span {
+				position: absolute;
+				background: #EB5757;
+				border-radius: 100%;
+				font-size: 12px;
+				line-height: 16px;
+				padding: 2px;
+				display: inline-block;
+				width: 20px;
+				top: -4px;
+				color: #FFF;
+				text-align: center;
+				box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
+			};
+		};
+
+		div.comentario {
+			background: #F5F5F5;
+			padding: 1rem;
+			margin: 1rem 0 2rem 0;
+			border-radius: 2px;
+			border-left-width: 8px;
+			border-left-style: solid;
+			max-width: 720px;
+
+			&.pendente { border-left-color: #BDBDBD; };
+			&.aprovado { border-left-color: #008015; };
+			&.reprovado { border-left-color: #EB5757; };
+
+			div.comentCtx {
+				color: #777;
+				max-width: 100%;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+
+				i {
+					transform: rotate(180deg);
+					vertical-align: top;
 				};
 			};
 
-			div.comentario {
-				background: #F5F5F5;
-				padding: 1rem 1rem 1rem calc(1rem - 8px);
-				margin: .5rem 0 0 0;
-				border-radius: 2px;
-				border-left-width: 8px;
-				border-left-style: solid;
+			div.coment {
+				font-family: 'Georgia', serif;
+				font-size: large;
+				margin: 1rem 0;
+				max-height: 4.8rem;
+				display: inline-block;
+				overflow: hidden;
+				position: relative;
+				transition: all ease-in .4s;
 
-				div.comentCtx {
-					color: #777;
-					max-width: 100%;
-					white-space: nowrap;
-					overflow: hidden;
-					text-overflow: ellipsis;
+				button {
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					font-family: "Roboto", "Segoe UI", "Helvetica", Arial, sans-serif;
+					font-weight: 300;
+					background: #333;
+					border: 0;
+					border-radius: 2px;
+					color: #FFF;
+					padding: 4px 8px;
+					cursor: pointer;
+					opacity: 0;
+					transition: all ease-in .1s;
+				};
+			};
+
+			div.comentInfo {
+				color: #777;
+				font-size: small;
+
+				div.autor {
+					span:first-child {
+						font-weight: 700;
+						color: #333;
+					};
+				};
+			};
+
+			div.btns {
+				text-align: right;
+
+				button {
+					margin: 0 .2rem;
+					font-family: inherit;
+					color: inherit;
+					text-transform: uppercase;
+					background: transparent;
+					border: 0;
+					cursor: pointer;
+
+					&:first-child { margin-left: 0; };
+					&:last-child { margin-right: 0; };
 
 					i {
-						transform: rotate(180deg);
 						vertical-align: top;
+						font-size: larger;
 					};
-				};
 
-				div.coment {
-					font-family: 'Georgia', serif;
-					font-size: large;
-					margin: 1rem 0;
-
-					p { margin: 1rem 0; };
-					p:first-child { margin-top: 0; };
-					p:last-child { margin-bottom: 0; };
-				};
-
-				div.comentInfo {
-					color: #777;
-					font-size: small;
-
-					div.autor {
-						span:first-child {
-							font-weight: 700;
-							color: #333;
-						};
-					};
-				};
-
-				div.btns {
-					text-align: right;
-
-					button {
-						margin: 0 .2rem;
-						font-family: inherit;
-						color: inherit;
-						text-transform: uppercase;
-						background: transparent;
-						border: 0;
-						cursor: pointer;
-
-						&:first-child { margin-left: 0; };
-						&:last-child { margin-right: 0; };
-
-						i {
-							vertical-align: top;
-							font-size: larger;
-						};
-
-						&.reprovar { color: #EB5757; };
-						&.aprovar { color: #008015; };
-						&.novamente { color: #333; };
-					};
+					&.reprovar { color: #EB5757; };
+					&.aprovar { color: #008015; };
+					&.novamente { color: #333; };
 				};
 			};
+		};
 
-			&.analise {
-				div.comentario { border-left-color: transparent; }
-			};
-			&.aprovados {
-				div.comentario { border-left-color: #008015; }
-			};
-			&.reprovados {
-				div.comentario { border-left-color: #EB5757; }
-			};
+		div.comentario:hover {
+			div.coment button { opacity: 1; };
 		};
 	};
 };

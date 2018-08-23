@@ -53,7 +53,10 @@
 			<h2 @click="abreMod = !abreMod">Moderação <i class="material-icons">keyboard_arrow_down</i></h2>
 			<h3>Pendentes <span>{{ commentsPendentes.feed.length }}</span></h3>
 				<div class="comentario pendente" v-for="comment in commentsPendentes.feed">
-					<div class="comentCtx"><i class="material-icons">reply</i> {{ comment.commentcontext }}</div>
+					<div class="comentCtx" @click="abreContexto($event)">
+						<i class="material-icons">reply</i>
+						<p>{{ comment.commentcontext }}</p>
+					</div>
 					<div class="coment">
 						{{ comment.content }}
 						<button @click="abreComment($event)">Ver mais</button>
@@ -73,7 +76,10 @@
 				</div>
 			<h3>Aprovados<span>{{ commentsAprovados.feed.length }}</span></h3>
 				<div class="comentario aprovado" v-for="comment in commentsAprovados.feed">
-					<div class="comentCtx"><i class="material-icons">reply</i> {{ comment.commentcontext }}</div>
+					<div class="comentCtx" @click="abreContexto($event)">
+						<i class="material-icons">reply</i>
+						<div>{{ comment.commentcontext }}</div>
+					</div>
 					<div class="coment">
 						{{ comment.content }}
 						<button @click="abreComment($event)">Ver mais</button>
@@ -87,13 +93,15 @@
 						</div>
 					</div>
 					<div class="btns">
-						<button class="reprovar">Reprovar <i class="material-icons">delete</i></button>
-						<button class="aprovar">Aprovar <i class="material-icons">check_circle</i></button>
+						<button class="novamente">Moderar novamente <i class="material-icons">cached</i></button>
 					</div>
 				</div>
 			<h3>Reprovados <span>{{ commentsReprovados.feed.length }}</span></h3>
 				<div class="comentario reprovado" v-for="comment in commentsReprovados.feed">
-					<div class="comentCtx"><i class="material-icons">reply</i> {{ comment.commentcontext }}</div>
+					<div class="comentCtx" @click="abreContexto($event)">
+						<i class="material-icons">reply</i>
+						<p>{{ comment.commentcontext }}</p>
+					</div>
 					<div class="coment">
 						{{ comment.content }}
 						<button @click="abreComment($event)">Ver mais</button>
@@ -234,7 +242,11 @@ export default {
 		abreComment(event) {
 			event.target.parentNode.style.maxHeight = '10000px'
 			event.target.style.display = 'none'
-		}
+		},
+		abreContexto(event) {
+			event.target.style.whiteSpace = 'normal'
+			event.target.style.cursor = 'default'
+		},
 	},
 	mounted() {
 		// console.log(this.estaConsulta) // atencion
@@ -444,14 +456,21 @@ div.AdminPagConsulta {
 
 			div.comentCtx {
 				color: #777;
-				max-width: 100%;
-				white-space: nowrap;
-				overflow: hidden;
-				text-overflow: ellipsis;
+				display: flex;
+				flex-flow: row nowrap;
+
+				p {
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					margin: 0;
+					position: relative;
+					cursor: pointer;
+				};
 
 				i {
-					transform: rotate(180deg);
 					vertical-align: top;
+					padding-right: 1rem
 				};
 			};
 

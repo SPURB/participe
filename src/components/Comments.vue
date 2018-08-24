@@ -116,7 +116,7 @@ export default {
 		send(){
 			const app = this;
 			axios.post(this.apiPath+'members',{
-				'idConsulta':'8',
+				'idConsulta': app.$route.meta.id,
 				'name': app.returnFormNameObject,
 				'email': app.form_email, 
 				'content': app.form_content,

@@ -37,7 +37,7 @@ export default {
 		loadThisComments(){
 			let app = this;
 			axios.post(this.apiPath + 'members/search/',{
-				"idConsulta":"=8",
+				"idConsulta":"="+app.$route.meta.id,
 				"public":"=1"}
 				// ,{
 					// responseEncoding: 'utf8',

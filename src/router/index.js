@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 const Home = () => import('@/components/pages/Home')
 const Anhembi2 = () => import('@/components/pages/Anhembi2')
+const ArcoPinheiros = () => import('@/components/pages/ArcoPinheiros')
 const Admin = () => import('@/components/Admin')
 const AdminLogin = () => import('@/components/AdminLogin')
 const AdminHome = () => import('@/components/AdminHome')
@@ -26,6 +27,11 @@ export default new Router({
 			meta: {
 				id: 8
 			}
+		},
+		{
+			path: '/arcopinheiros',
+			name: 'ArcoPinheiros',
+			components: { ArcoPinheiros }
 		},
 		{
 			path: '/login',

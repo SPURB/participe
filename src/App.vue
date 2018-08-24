@@ -5,6 +5,7 @@
 	<MenuLateral></MenuLateral>
 	<router-view name="Home"></router-view>
 	<router-view name="Anhembi2"></router-view>
+	<router-view name="ArcoPinheiros"></router-view>
 	<router-view name="AdminLogin"></router-view>
 	<router-view name="Admin"></router-view>
 	<Rodape></Rodape>

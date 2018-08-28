@@ -90,48 +90,81 @@ export default{
 }	
 </script>
 <style lang="scss" scoped>
-
-#map {
+div.Mapa {
 	max-width: 992px;
-	margin: 4rem auto 0 auto;
-};
+	margin: 4rem auto 2rem auto;
+	border: 1px solid #BDBDBD;
+	border-radius: 2px;
+	overflow: hidden;
+	z-index: 1;
 
-ul.legenda{
-	display: flex;
-	justify-content: center;
-	max-width: 992px;
-	padding: 1rem 2rem;
-	margin-bottom: 2rem;
-	font-family: inherit;
-	
-	li {
-		display: inline-flex;
-		align-items: center;
-		font-size: small;
-		margin: 0;
-		padding: 0;		
-		margin-right: 2rem;
+	#map:active {
+		cursor: move;
+	};
 
-		div {
-			border-style: solid;
-			height: 1.6rem;
-			min-width: 1.6rem;
-			margin-right: .4rem;
-		};
+	ul.legenda {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		max-width: 992px;
+		padding: 1rem 2rem 0 1rem;
+		margin-bottom: 0;
+		margin-top: 0;
+		font-family: inherit;
+		
+		li {
+			display: inline-flex;
+			align-items: center;
+			font-size: small;
+			margin: 0;
+			padding: 0 0 .8rem 0;
+			margin-right: 2rem;
 
-		a {
-			color: inherit;
+			div {
+				border-style: solid;
+				border-width: 1px;
+				height: 1.2rem;
+				min-width: 1.2rem;
+				margin-right: .4rem;
+				line-height: calc(1.2rem - 2px);
+				text-align: center;
 
-			&:hover {
-				opacity: .4;
-				text-decoration: none;
+				&.linha {
+					max-height: 0px;
+					overflow: hidden;
+					border-width: 1px;
+				};
+			};
+
+			a {
+				color: inherit;
+
+				&:hover {
+					opacity: .4;
+					text-decoration: none;
+				};
+			};
+
+			&:last-child {
+				margin-right: 0;
 			};
 		};
 
-		&:last-child {
-			margin-right: 0;
+		@media (max-width: 600px) {
+			li { 
+				display: block;
+				width: 100%;
+				margin: 0 0 1rem 0;
+				padding: 0;
+				text-align: left;
+
+				div { 
+					display: inline-block;
+					vertical-align: middle;
+				}; 
+			};
 		};
-	}
-}
+	};
+};
 
 </style>

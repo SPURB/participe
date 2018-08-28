@@ -126,7 +126,6 @@ div.GrafBarras {
 				padding: 4px;
 				margin: 0;
 				word-break: break-all;
-				z-index: 2;
 				color: #FFF;
 				border: 4px solid transparent;
 				overflow: hidden;

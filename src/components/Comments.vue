@@ -80,8 +80,18 @@ export default {
 			else{
 				return this.form_name + ' ' + this.form_surname
 			}
-		}		
+		},
+		apiPath() {
+			return this.$store.getters.apiPath 
+			// if(location.port == '8080' || location.port == '8082'){
+			// 	return 'http://spurbsp163:7080/apiconsultas/' 
+			// }
+			// else{
+			// 	return 'http://participe.gestaourbana.prefeitura.sp.gov.br/apiconsultas/' 
+			// }
+		},
 	},
+
 	methods:{
 		checkName(){
 			if(!this.fields.name.valid && !this.fields.email.valid && !this.fields.surname.valid){
@@ -104,10 +114,9 @@ export default {
 			}
 		},
 		send(){
-			const url = 'http://participe.gestaourbana.prefeitura.sp.gov.br/apiconsultas/members/';
 			const app = this;
-			axios.post(url,{
-				'idConsulta':'8',
+			axios.post(this.apiPath+'members',{
+				'idConsulta': app.$route.meta.id,
 				'name': app.returnFormNameObject,
 				'email': app.form_email, 
 				'content': app.form_content,
@@ -115,14 +124,14 @@ export default {
 				'trash': '0',
 				'postid': '1',
 				'commentid': app.attr.id,
-				'commentcontext': app.attr.contexto
+				'commentcontext': app.attr.context
 			})
 			.then(function (response) {
 				// console.log(response);
 				let name = app.form_name;
 				let content = app.form_content;
 
-				alert("Obrigado," + name + "! Agradecemos a sua contribuição! Seu comentário ("  + content + ") foi enviado e aguarda aprovação da moderação para ser publicado. Obrigado por sua contribuição.")
+				alert("Obrigado," + name + "! Agradecemos a sua contribuição! Seu comentário (" + content + ") foi enviado e aguarda aprovação da moderação para ser publicado. Obrigado por sua contribuição.")
 			})
 			.catch(function (error) {
 				// console.log(error)
@@ -146,6 +155,8 @@ div.Comments {
 	max-height: calc(4rem + 40px);
 	overflow: hidden;
 	transition: all ease-in-out .4s;
+	position: relative;
+	z-index: 0;
 
 	& > div {
 		margin-bottom: 2rem;

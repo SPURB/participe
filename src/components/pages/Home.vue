@@ -1,12 +1,12 @@
 <template>
 	<div class="Home">
 		<main id="listaProjetos">
-			<div class="busca" @click="ativaBusca">
+			<!-- <div class="busca" @click="ativaBusca">
 				<i class="material-icons">search</i>
 				<input class="fuzzy-search" type="search" ref="busca" title="Digite o que pesquisa" value="Pesquisar" @focusout="desativaBusca">
-			</div>
+			</div> -->
 			<ul class="list">
-				<li v-for="consulta in consultas" class="card" :style="{ backgroundImage: 'url(' + consulta.urlCapa + ')' }">
+				<li v-for="consulta in consultas" class="card" :style="[{ backgroundImage: 'url(' + consulta.urlCapa + ')'}]">
 					<p class="nome">{{ consulta.nomePublico }}</p>
 					<p class="textoIntro">{{ consulta.textoIntro }}</p>
 					<div>
@@ -25,13 +25,13 @@
 							<i class="material-icons">chat_bubble</i>
 							{{ consulta.nContribuicoes }} contribuições
 						</p>
-						<p v-if="consulta.ativo" title="Tempo restante para contribuir">
+							<!--<p v-if="consulta.ativo" title="Tempo restante para contribuir">
 							<i class="material-icons">access_time</i>
 							{{ diasRestantes(consulta.dataFinal) }}
-						</p>
-						<p v-if="consulta.sistematizacao" class="linkSistemat">
+						</p>-->
+						<p v-if="consulta.urlDevolutiva" class="linkSistemat">
 							<a href="#">
-								Sistematização das contribuições
+								{{ consulta.urlDevolutiva }}
 								<i class="material-icons">launch</i>
 							</a>
 						</p>
@@ -47,19 +47,21 @@
 <script>
 export default {
 	name: 'Home',
-	computed: { 
+	computed:{
 		consultas(){return this.$store.state.consultas }
 	},
 	mounted() {
-		let listaProjetos = new List('listaProjetos', {
-			valueNames: [ 'nome', 'textoIntro' ],
-		});
+		// let listaProjetos = new List('listaProjetos', {
+		// 	valueNames: [ 'nome', 'textoIntro' ],
+		// });
 	},
-
 	methods: {
 		parseAtivo(state){
 			return state == '0' ? false : true
-		}, 
+		},
+		ordenaCards() {
+			console.log('teste')
+		},
 		ativaBusca() {
 			this.$refs.busca.value = '';
 			this.$refs.busca.style.color = '#333';
@@ -72,12 +74,14 @@ export default {
 			return data.substring(8,10) + '/' + data.substring(5,7) + '/' + data.substring(0,4);
 		},
 		diasRestantes(data) {
-			let hoje = new Date();
-			let dataFinal = new Date(data.substring(0,4), data.substring(5,7)-1, data.substring(8,10));
-			let dias = Math.round((dataFinal - hoje)/(1000 * 60 * 60 * 24))+1;
-			if (dias <= 0) {
-				return 'Não é mais possível contribuir';
-			} else { return dias + ' dias restantes para contribuir' };
+			// if(data != null || data != '' ){
+				let hoje = new Date();
+				let dataFinal = new Date(data.substring(0,4), data.substring(5,7)-1, data.substring(8,10));
+				let dias = Math.round((dataFinal - hoje)/(1000 * 60 * 60 * 24))+1;
+				if (dias <= 0) {
+					return 'Não é mais possível contribuir';
+				} else { return dias + ' dias restantes para contribuir' };
+			// }
 		},
 	},
 };
@@ -134,6 +138,7 @@ export default {
 				transition: transform ease-in-out .1s, box-shadow .1s;
 				position: relative;
 				z-index: 0;
+				
 				p.nome, p.textoIntro { display: none; };
 				div {
 					grid-row: 1 / 2;
@@ -142,7 +147,6 @@ export default {
 					flex-flow: column wrap;
 					justify-content: center;
 					padding: 16px;
-					box-shadow: inset 0px -4px 4px rgba(0, 0, 0, .12);
 					position: relative;
 					overflow: hidden;
 					a {

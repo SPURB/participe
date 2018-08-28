@@ -19,26 +19,28 @@
 </template>
 
 <script>
-export default {
-	name: 'MenuLateral',
-	computed: {
-		menuToggle() { return this.$store.state.menuToggle },
-		consultas(){ return this.$store.state.consultas }
-	},
-	methods: {
-		fechaMenu() {
-			this.$store.state.menuToggle = false;
-			this.$store.state.luzApaga = false;
+
+	export default {
+		name: 'MenuLateral',
+		computed: {
+			consultas(){ return this.$store.state.consultas },
+			menuToggle() {
+				return this.$store.state.menuToggle
+			},
 		},
-	},
-};
+		methods: {
+			fechaMenu() {
+				this.$store.state.menuToggle = false;
+				this.$store.state.luzApaga = false;
+			},
+		},
+	};
 </script>
 
 <style lang="scss" scoped>
 
 aside {
 	position: fixed;
-	z-index: 3;
 	background: #FFF;
 	top: 0;
 	left: 0;
@@ -49,6 +51,7 @@ aside {
 	box-shadow: 8px 0 8px rgba(0, 0, 0, .48);
 	transform: translateX(-200%);
 	transition: transform ease-in-out .4s;
+	z-index: 5;
 
 	i:nth-of-type(1) {
 		position: absolute;
@@ -64,20 +67,26 @@ aside {
 		margin: 0;
 		padding: 0;
 
-		li {
+		li:not(.logo) {
 			display: block;
-			padding: .4rem 1rem;
+			transition: all ease-out .1s;
 
 			a {
 				display: block;
-				color: #666;
+				color: #777;
+				padding: 1rem;
+				transition: all ease-out .1s;
 
-				&.ativo {
-					color: #333;
+				&.ativo, &:active {
 					font-weight: bolder;
+					color: #333;
+					background: #F5F5F5;
 				};
 
-				&:hover { text-decoration: none; };
+				&:hover {
+					text-decoration: none;
+					color: #333;
+				};
 			};
 
 			a.consultaAtiva::after {
@@ -90,7 +99,10 @@ aside {
 				border-radius: 2px;
 				margin-left: 8px;
 				vertical-align: middle;
+				white-space: nowrap;
 			};
+
+			&:hover { background: #F5F5F5; };
 		};
 
 		li:nth-of-type(2) { margin-top: .4rem; };
@@ -98,8 +110,11 @@ aside {
 		li:last-child { margin-bottom: .4rem; };
 
 		li.logo {
-			display: inline-block;
-			padding: 1.2rem 1rem .5rem .8rem;
+			display: block;
+			padding: 1rem .6rem .6rem .6rem;
+			margin-bottom: -8px;
+
+			a img {	width: min-content; };
 		};
 	};
 

@@ -11,7 +11,8 @@ export const store = new Vuex.Store({
 		luzApaga: false,
 		consultas: undefined,
 		errors: undefined,
-		commentsLoaded: false
+		commentsLoaded: false,
+		isAdmin: false
 	},
 	getters:{
 		apiPath() {

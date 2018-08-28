@@ -5,7 +5,9 @@ import Vuex from 'vuex'
 import App from './App'
 import router from './router'
 import { store } from './store/store'
-import VeeValidate from 'vee-validate'
+import VeeValidate, { Validator } from 'vee-validate';
+import pt_br from 'vee-validate/dist/locale/pt_BR';
+
 import axios from 'axios'
 
 Vue.config.productionTip = false
@@ -13,6 +15,8 @@ Vue.config.productionTip = false
 Vue.use(Vuex)
 Vue.use(VeeValidate)
 Vue.use(axios)
+
+Validator.localize('pt_br', pt_br);
 
 /* eslint-disable no-new */
 new Vue({

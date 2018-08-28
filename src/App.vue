@@ -7,7 +7,7 @@
 	<router-view name="Anhembi2"></router-view>
 	<router-view name="Wifi"></router-view>
 	<router-view name="AdminLogin"></router-view>
-	<router-view name="Admin"></router-view>
+	<router-view name="Admin" v-if="isAdmin"></router-view>
 	<Rodape></Rodape>
 </div>
 </template>
@@ -27,6 +27,7 @@ export default {
 	},
 	computed: { 
 		interruptor() { return this.$store.state.luzApaga }, 
+		isAdmin(){ return this.$store.state.isAdmin }
 	},
 	created() { this.$store.dispatch("fetchConsultas", { self: this }) },
 	updated() { this.$refs.interruptor.style.height = this.$el.clientHeight+'px'; },

@@ -1,7 +1,8 @@
 <template>
 	<div class="Diagnostico">
 		<div class="limiteSp">
-			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Mapa_sp.svg/400px-Mapa_sp.svg.png" alt="Localização do perímetro do PIU Arco Pinheiros no município de São Paulo.">
+			<img src="../../static/img/limiteSp.png" alt="Localização do perímetro do PIU Arco Pinheiros no município de São Paulo.">
+			<div class="limitePerimetro"></div>
 		</div>
 		<div class="menu">
 			<ul>
@@ -23,12 +24,15 @@
 		</div>
 		<div class="main">
 			<div class="limiteSp_mob">
-				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Mapa_sp.svg/400px-Mapa_sp.svg.png" alt="Localização do perímetro do PIU Arco Pinheiros no município de São Paulo.">
+				<img src="../../static/img/limiteSp.png" alt="Localização do perímetro do PIU Arco Pinheiros no município de São Paulo.">
+				<div class="limitePerimetro"></div>
 			</div>
-			<img src="../../static/img/base-temp.png">
+			<img src="../../static/img/base-temp.png"> <!--tirar, usar mapas de bg, aqui fica a base-->
 		</div>
 		<div class="dados">
-			46.600 habitantes
+			<div id="dados_populacao">
+				<div
+			</div>
 		</div>
 		<div class="legenda_mob">
 			<ul>
@@ -71,13 +75,23 @@ div.Diagnostico {
 		grid-column: 1/2;
 		grid-row: 1/2;
 		order: 1;
+		position: relative;
 
 		img {
 			max-width: 100%;
 			box-sizing: border-box;
 			border: 1px solid #BDBDBD;
 			background: #FFF;
-			padding: 1rem;
+			padding: 0;
+		}
+
+		div.limitePerimetro {
+			position: absolute;
+			top: 41.5%;
+			left: 20.5%;
+			right: 62.2%;
+			bottom: 41%;
+			border: 1px solid #333;
 		}
 	}
 
@@ -130,6 +144,7 @@ div.Diagnostico {
 
 		img {
 			max-width: 100%;
+			height: 100%;
 		}
 
 		div.limiteSp_mob { display: none; }
@@ -141,6 +156,7 @@ div.Diagnostico {
 		grid-column: 2/3;
 		grid-row: 1/3;
 		z-index: 1;
+		border: 1px solid red;
 	}
 
 	div.texto {
@@ -189,7 +205,16 @@ div.Diagnostico {
 					box-sizing: border-box;
 					border: 1px solid #BDBDBD;
 					background: #FFF;
-					padding: 4px;
+					position: relative;
+				}
+
+				div.limitePerimetro {
+					position: absolute;
+					top: 37.5%;
+					left: 20.5%;
+					right: 62.2%;
+					bottom: 45%;
+					border: 1px solid #333;
 				}
 			}
 		}

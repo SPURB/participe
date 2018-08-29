@@ -6,31 +6,48 @@
 		</div>
 		<div class="menu">
 			<ul>
-				<li>População</li>
-				<li>Usos do solo</li>
-				<li>Trabalho</li>
-				<li>Mobilidade</li>
-				<li>Áreas verdes</li>
+				<li @click="alteraSecao('populacao', $event)" :class="{ ativo: !escPopulacao }">População</li>
+				<li @click="alteraSecao('usosdosolo', $event)":class="{ ativo: !escUsos }">Usos do solo</li>
+				<li @click="alteraSecao('trabalho', $event)":class="{ ativo: !escTrabalho }">Trabalho</li>
+				<li @click="alteraSecao('mobilidade', $event)":class="{ ativo: !escMobilidade }">Mobilidade</li>
+				<li @click="alteraSecao('areasverdes', $event)":class="{ ativo: !escAreasVerdes }">Áreas verdes</li>
 			</ul>			
-			<div class="legenda">
+			<div class="legenda">				
 				<ul>
-					<li>Legenda-placeholder1</li>
-					<li>Legenda-placeholder2</li>
-					<li>Legenda-placeholder3</li>
-					<li>Legenda-placeholder4</li>
-					<li>Legenda-placeholder5</li>
+					<li><span style="border: 2px solid #211915"></span>Perímetro do Arco Pinheiros</li>
+					<li><span style="background: url('')"></span>Ferrovia</li>
+					<li><span style="background: #84b1bd"></span>Hidrografia</li>
+					<li><span style="height: 1px; border: 1px solid #4c4c4c"></span>Via Estrutural de Nível 1</li>
+				</ul>
+				<ul v-show="escPopulacao == false">
+					<li class="titulo">Densidade demográfica (hab/ha)</li>
+					<li><span style="background: #fffbea"></span>Até 50</li>
+					<li><span style="background: #ffebba"></span>25–50</li>
+					<li><span style="background: #ffde95"></span>50–100</li>
+					<li><span style="background: #ffd170"></span>100–150</li>
+					<li><span style="background: #ffc34a"></span>150–200</li>
+					<li><span style="background: #ffb625"></span>200–300</li>
+					<li><span style="background: #ff9000"></span>Acima de 300</li>
+				</ul>
+				<ul v-show="escAreasVerdes == false">
+					<li class="titulo">Áreas verdes existentes</li>
+					<li><span style="background: #3d5d38"></span>Reserva de Mata Atlântica</li>
+					<li><span style="background: #6e813f"></span>Áreas verdes tombadas e outras</li>
+					<li><span style="background: #8ca350"></span>Parques</li>
+					<li><span style="background: #ccdda3"></span>Praças e canteiros</li>
 				</ul>
 			</div>
 		</div>
 		<div class="main">
+			<img src="../../static/img/diagnostico_mapas/base.png">
+			<div id="mapas" ref="mapas"></div>
 			<div class="limiteSp_mob">
 				<img src="../../static/img/limiteSp.png" alt="Localização do perímetro do PIU Arco Pinheiros no município de São Paulo.">
 				<div class="limitePerimetro"></div>
 			</div>
-			<img src="../../static/img/base-temp.png"> <!--tirar, usar mapas de bg, aqui fica a base-->
 		</div>
 		<div class="dados">
-			<div id="dadosPopulacao">
+			<div id="dados_populacao" :class="{ escondido: escPopulacao }">
 				<div>
 					<h6>População</h6>
 					<span>46.600</span> habitantes<sup>1</sup>
@@ -49,7 +66,7 @@
 					<li>Estimativa a partir de dados do MDC/IBGE 2010</li>
 				</ol>
 			</div>
-			<!-- <div id="dadosTrabalho">
+			<div id="dados_trabalho" :class="{ escondido: escTrabalho }">
 				<div>
 					<div>Total de empregos formais no setor do comércio, serviços, indústria de transformação e construção civil</div>
 					<div>90.100</div>
@@ -63,8 +80,8 @@
 				<ol class="fonte">
 					<li>Estimativa a partir de dados do INFOCIDADE/RAIS 2014 e dados do IBGE 2010</li>
 				</ol>
-			</div> -->
-			<!-- <div id="dadosMobilidade">
+			</div>
+			<div id="dados_mobilidade"  :class="{ escondido: escMobilidade }">
 				<div class="esq">
 					<div>
 						<h6>
@@ -108,8 +125,8 @@
 				<ol class="fonte">
 					<li>Estimativa a partir de dados da Pesquisa Origem-Destino 2007 Metrô</li>
 				</ol>
-			</div> -->
-			<!-- <div id="dadosAreasVerdes">
+			</div>
+			<div id="dados_areasverdes"  :class="{ escondido: escAreasVerdes }">
 				<div>
 					<div>Relação áreas verdes/população</div>
 					<div>53</div>
@@ -118,7 +135,7 @@
 				<ol class="fonte">
 					<li>Estimativa a partir de dados do MDC</li>
 				</ol>
-			</div> -->
+			</div>
 		</div>
 		<div class="legenda_mob">
 			<ul>
@@ -140,6 +157,64 @@
 <script>
 export default {
 	name: 'Diagnostico',
+	data() {
+		return {
+			escPopulacao: true,
+			escUsos: true,
+			escTrabalho: true,
+			escMobilidade: true,
+			escAreasVerdes: true
+		}
+	},
+	methods: {
+		alteraSecao(secao, evento) {
+			let path = ''
+			switch (secao) {
+				case 'populacao':
+					this.escPopulacao = false
+					this.escUsos = true
+					this.escTrabalho = true
+					this.escMobilidade = true
+					this.escAreasVerdes = true
+					path = 'densidade'
+					break;
+				case 'usosdosolo':
+					this.escPopulacao = true
+					this.escUsos = false
+					this.escTrabalho = true
+					this.escMobilidade = true
+					this.escAreasVerdes = true
+					path = 'usosdosolo'
+					break;
+				case 'trabalho':
+					this.escPopulacao = true
+					this.escUsos = true
+					this.escTrabalho = false
+					this.escMobilidade = true
+					this.escAreasVerdes = true
+					path = 'usosdosolo'
+					break;
+				case 'mobilidade':
+					this.escPopulacao = true
+					this.escUsos = true
+					this.escTrabalho = true
+					this.escMobilidade = false
+					this.escAreasVerdes = true
+					path = 'usosdosolo'
+					break;
+				case 'areasverdes':
+					this.escPopulacao = true
+					this.escUsos = true
+					this.escTrabalho = true
+					this.escMobilidade = true
+					this.escAreasVerdes = false
+					path = secao
+					break;
+			}
+			let caminho = 'url(../../static/img/diagnostico_mapas/' + path + '.png)'
+			this.$refs.mapas.style.backgroundImage = caminho
+		}
+	},
 }
 </script>
 
@@ -202,9 +277,11 @@ div.Diagnostico {
 				cursor: pointer;
 				min-height: 2.4rem;
 				line-height: 120%;
+				box-shadow: inset 0 8px 4px rgba(255, 255, 255, .12);
+				transition: all ease-in-out .1s;
 				&:last-child { margin-bottom: 0; };
 
-				&:hover { background: #EB5757; };
+				&:hover, &.ativo { background: #EB5757; };
 			}
 		}
 
@@ -213,12 +290,36 @@ div.Diagnostico {
 			background: #FFF;
 			padding: 1rem;
 			border: 1px solid #BDBDBD;
+			font-size: small;
 
 			ul {
 				margin: 0;
 				padding: 0;
 
-				li { list-style: none; margin: 0; }
+				li {
+					list-style: none;
+					margin: 0;
+					display: flex;
+					align-items: center;
+					margin: 0 0 8px 0;
+					&:last-child { margin-bottom: 0; };
+
+					span {
+						height: 16px;
+						width: 16px;
+						margin: 0 8px 0 0;
+					}
+
+					&.titulo {
+						font-weight: 700;
+					}
+				}
+
+				&:first-child {
+					border-bottom: 1px solid #BDBDBD;
+					padding: 0 0 12px 0;
+					margin: 0 0 12px 0;
+				}
 			}
 		}
 	}
@@ -227,9 +328,22 @@ div.Diagnostico {
 		grid-column: 2/3;
 		grid-row: 1/3;
 		order: 2;
+		position: relative;
 
 		img {
-			max-width: 100%;
+			width: 100%;
+			height: 100%;
+		}
+
+		div#mapas {
+			background-clip: border-box;
+			background-origin: border-box;
+			background-size: 100% 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
 		}
 
 		div.limiteSp_mob { display: none; }
@@ -243,16 +357,32 @@ div.Diagnostico {
 		z-index: 1;
 		position: relative;
 		overflow: hidden;
-		/*border: 1px solid #BDBDBD;*/
 
 		& > div {
-			position: relative;		
+			position: absolute;
+			top: 0;
+			left: 0;
 			max-height: 100%;
 			height: 100%;
-			max-height: 100%;
+			width: 100%;
+
+			& > img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: -1;
+			}
+
+			& > div, & > ol.fonte {
+				transition: all ease-in .2s;
+			}
+
+			& > ol.fonte { transition-delay: .1s; }
 		}
 
-		div#dadosPopulacao {
+		div#dados_populacao {
 			border: 1px solid transparent;
 
 			& > div {
@@ -282,12 +412,25 @@ div.Diagnostico {
 					& > span { font-weight: 700; background: #EB5757; color: #FFF; padding: 0 2px; border-radius: 2px; }
 				}
 			}
+
+			& > div:nth-child(2) { transition-delay: .1s; }
+			& > div:nth-child(3) { transition-delay: .2s; }
+
+			&.escondido {
+				& > div {
+					transform: translateX(-150%);
+				}
+				ol.fonte {
+					transform: translateY(150%);
+				}
+			}
 		}
 
-		div#dadosTrabalho {
+		div#dados_trabalho {
 			display: flex;
 			flex-flow: column nowrap;
 			align-items: end;
+
 			& > div {
 				width: 200px;
 				margin-top: 8px;
@@ -315,9 +458,20 @@ div.Diagnostico {
 					margin: 8px 0 0 0;
 				}
 			}
+
+			& > div:nth-child(2) { transition-delay: .1s; }
+
+			&.escondido {
+				& > div {
+					transform: translateX(150%);
+				}
+				ol.fonte {
+					transform: translateY(150%);
+				}
+			}
 		}
 
-		div#dadosMobilidade {
+		div#dados_mobilidade {
 			padding: 8px;
 
 			div.esq {
@@ -371,6 +525,7 @@ div.Diagnostico {
 				top: 8px;
 				max-width: min-content;
 				border-radius: 2px;
+				transition-delay: .1s;
 
 				& > div:first-child {
 					background: #777;
@@ -422,9 +577,21 @@ div.Diagnostico {
 					li[motivo=outros]::before { background: #F5F5F5; }
 				}
 			}
+
+			&.escondido {
+				div.esq {
+					transform: translateX(-150%);
+				}
+				div.pizza {
+					transform: translateX(150%);
+				}
+				ol.fonte {
+					transform: translateY(150%);
+				}
+			}
 		}
 
-		div#dadosAreasVerdes {
+		div#dados_areasverdes {
 			padding: 8px;
 			& > div {
 				background: rgba(100, 130, 55, .8);
@@ -441,6 +608,15 @@ div.Diagnostico {
 
 				& > div:nth-child(1), & > div:nth-child(3) { font-size: small; }
 				& > div:nth-child(2) { font-size: xx-large; line-height: 100%; font-weight: 700; text-shadow: 2px 2px rgba(0, 0, 0, .48); }
+			}
+
+			&.escondido {
+				& > div {
+					transform: translateX(-150%);
+				}
+				ol.fonte {
+					transform: translateY(150%);
+				}
 			}
 		}
 
@@ -542,7 +718,18 @@ div.Diagnostico {
 			grid-row: unset;
 			order: 4;
 
-			div#dadosPopulacao {
+			& > div {
+				position: relative;
+				height: unset;
+				&.escondido {
+					* {
+						transform: none !important;
+						display: none !important;
+					}
+				}
+			}
+
+			div#dados_populacao {
 				& > div {
 					width: 100%;
 					margin: 8px 0;
@@ -552,14 +739,14 @@ div.Diagnostico {
 				}
 			}
 
-			div#dadosTrabalho {
+			div#dados_trabalho {
 				flex-flow: row wrap;
 				justify-content: space-between;
 				align-items: flex-start;
 				& > div { width: calc(50% - 4px); margin: 0;}
 			}
 
-			div#dadosMobilidade {
+			div#dados_mobilidade {
 				padding: 0;
 				width: 100%;
 				div.esq {
@@ -573,12 +760,11 @@ div.Diagnostico {
 					position: relative;
 					right: 0;
 					min-width: 100%;
-					div:nth-child(2) { display: inline-block; width: 50%; text-align: center; }
-					ul { display: inline-block; vertical-align: 30px; width: 49%; }
+					text-align: center;
 				}
 			}
 
-			div#dadosAreasVerdes {
+			div#dados_areasverdes {
 				display: flex;
 				align-items: center;
 				flex-flow: column;

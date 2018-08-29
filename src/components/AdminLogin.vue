@@ -5,7 +5,7 @@
 				<label for="adminId">Email</label>
 				<input 
 					id="adminId"
-					v-model="input.email"
+					v-model="email"
 					v-validate="'required|email'"
 					type="email" 
 					name="email"
@@ -16,20 +16,22 @@
 				<label for="adminSenha">Password</label>
 				<input 
 					id="adminSenha" 
-					v-model="input.pass"
-					v-validate="'required|min:8'" 
+					v-model="pass"
+					v-validate="{
+						required:true,
+						min:5
+					}" 
 					type="password" 
 					name="password"
 					/>
 					<span class="error_msg" v-show="fields.password && fields.password.invalid">{{ errors.first('password') }}</span>
 			</div>
-			<button 
+
+			<a 
 				:class="{ ativado: inputEmail.valid && inputPassword.valid  }" 
 				@click="checaUsuario"
 				:disabled="inputEmail.invalid || inputPassword.invalid" 
-				>Entrar</button>
-			<!-- <button @click="checaUsuario" href="#">teste</button> -->
-
+				>Entrar</a>
 		</form>
 	</div>
 </template>
@@ -42,35 +44,56 @@ export default {
 	name: 'AdminLogin',
 	data() {
 		return {
-			input:{
-				email: undefined,
-				pass: undefined
-			}
+			email: undefined,
+			pass: undefined
 		}
 	},
 	computed: {
-	    ...mapFields({ // https://baianat.github.io/vee-validate/guide/flags.html
-	      inputEmail: 'email',
-	      inputPassword: 'password'
-	    }),
-	    reqPath(){
-	    	return this.$store.getters.apiPath + 'users' 
-	    }
+		...mapFields({ // https://baianat.github.io/vee-validate/guide/flags.html
+		  inputEmail: 'email',
+		  inputPassword: 'password'
+		}),
+		passNoSpaces(){ return this.pass.replace(/\s/g, '')},
+		apiLogin(){ return this.$store.getters.apiLogin }
 	},
 	methods: {
-		checaUsuario(){ // TODO: ajustar bug de path na API
- 			console.log(this.input.email + ' '+ this.input.pass + ' '+ this.reqPath)
-			const app = this;
-			axios.post(this.reqPath,{
-				'email': app.input.email,
-				'pass': app.input.pass
+		checaUsuario(){
+			let app = this // para escopo de post do axios
+			let memForm = this.toFormData({
+				email: this.email,
+				pass: this.passNoSpaces
 			})
+			axios.post(this.apiLogin, memForm)
 			.then(function(response){
-				console.log(response)
+				console.log(response.data)
+				let status = response.data.status
+				let responseObject
+
+				if(status){
+					app.$store.commit('adminStatus', true)
+					app.$store.commit('addAdminInfo', {
+						firstname: response.data.firstname,
+						message:  response.data.message,
+						role: response.data.role
+					})
+				}
+				else{
+					app.$store.commit('adminStatus', false)
+					app.$store.commit('addAdminInfo', response.data)
+				}
 			})
-			.catch(function(error){
+			.catch(function (error){
+				app.$store.commit('adminStatus', false)
 				console.log(error)
 			})
+		},
+
+		toFormData(obj) {
+			var form_data = new FormData()
+			for(var key in obj){
+				form_data.append(key, obj[key])
+			}
+			return form_data
 		}
 	}
 }
@@ -115,7 +138,8 @@ div.AdminLogin {
 		}
 		};
 
-		button {
+		a {
+			pointer-events: none;
 			float: right;
 			font-size: inherit;
 			font-family: inherit;
@@ -124,30 +148,32 @@ div.AdminLogin {
 			padding: 6px 10px;
 			text-transform: uppercase;
 			transition: all ease-in-out .1s;
+			opacity: .2;
 
-			// &:disabled{
+			&:disabled{
 			color: #777;
 			background: transparent;
-			opacity: .2;
 			-webkit-user-select: none;
 			-moz-user-select: none;
 			-ms-user-select: none;
 			user-select: none;
-
-			// }
-
+			}
 
 			&.ativado {
+				pointer-events: unset;
 				opacity: 1;
-
+				background-color: rgba(255, 77, 77, .85);
+				color:white;
 				&:hover {
-					background: rgba(0, 0, 0, .06);
+					background: rgba(255, 77, 77, 1);
 					cursor: pointer;
+					text-decoration: none;
+
 				};
 			};
 
 			&:active {
-				background: rgba(0, 0, 0, .12);
+				background: rgba(255, 77, 77, .5);
 			};
 		};
 	};

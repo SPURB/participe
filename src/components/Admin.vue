@@ -22,7 +22,8 @@ export default {
 		}
 	},
 	computed:{
-		consultas(){return this.$store.state.consultas}
+		consultas(){return this.$store.state.consultas},
+		adminInfo (){ this.$store.state.adminInfo}
 	},
 	methods: {
 		dataDisplay(data) {

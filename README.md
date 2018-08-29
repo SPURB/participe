@@ -10,12 +10,15 @@
 		"base": "http://localhost/consultas-publicas-backend/",
 		"login": "http://localhost/consultas-publicas-login-backend/"
 	},
+	"homologacao":{
+		"base": "http://seu.host.de.homolocao/consultas-publicas-backend",
+		"login": "http://seu.host.de.homologacao/consultas-publicas-login-backend/"
+	},
 	"prod":{
-		"base": "api.seuhost/consultas-publicas-backend",
-		"login": "api.seuhost/consultas-publicas-login-backend/"
+		"base": "http://api.seuhost.de.producao/consultas-publicas-backend",
+		"login": "http://api.seuhost.de.producao/consultas-publicas-login-backend/"
 	}
 }
-
 ```
 Este repositório utiliza os serviços de backend:
 * [https://github.com/SPURB/consultas-publicas-backend](https://github.com/SPURB/consultas-publicas-backend)

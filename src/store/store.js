@@ -14,6 +14,7 @@ export const store = new Vuex.Store({
 		errors: undefined,
 		commentsLoaded: false,
 		isAdmin: false,
+		infoAdmin: undefined
 	},
 	getters:{
 		enviroment(){
@@ -51,6 +52,12 @@ export const store = new Vuex.Store({
 				if (a.ativo < b.ativo) { return 1 }
 				if (a.ativo > b.ativo) { return -1 }
 			})
+		},
+		adminStatus(state, status){
+			state.isAdmin = status
+		},
+		addAdminInfo(state, info){
+			state.infoAdmin = info
 		}
 	}, 
 	actions: {

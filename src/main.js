@@ -20,9 +20,9 @@ Validator.localize('pt_br', pt_br);
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  router,
-  store,
-  components: { App },
-  template: '<App/>'
+	el: '#app',
+	router,
+	store,
+	components: { App },
+	template: '<App/>'
 })

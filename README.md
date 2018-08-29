@@ -1,8 +1,27 @@
-# participe-home
+# Participe
 
-> Página inicial do Participe
+> [http://participe.gestaourbana.prefeitura.sp.gov.br](http://participe.gestaourbana.prefeitura.sp.gov.br)
 
-## Build Setup
+## Configure as url's das API's
+``` json
+// apiconfig.json
+{
+	"local":{
+		"base": "http://localhost/consultas-publicas-backend/",
+		"login": "http://localhost/consultas-publicas-login-backend/"
+	},
+	"prod":{
+		"base": "api.seuhost/consultas-publicas-backend",
+		"login": "api.seuhost/consultas-publicas-login-backend/"
+	}
+}
+
+```
+Este repositório utiliza os serviços de backend:
+* [https://github.com/SPURB/consultas-publicas-backend](https://github.com/SPURB/consultas-publicas-backend)
+* [https://github.com/SPURB/consultas-publicas-login-backend](https://github.com/SPURB/consultas-publicas-login-backend)
+
+## Setup
 
 ``` bash
 # install dependencies

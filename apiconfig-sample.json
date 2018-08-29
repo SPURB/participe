@@ -1,0 +1,10 @@
+{
+	"local":{
+		"base": "http://localhost/consultas-publicas-backend/",
+		"login": "http://localhost/consultas-publicas-login-backend/"
+	},
+	"prod":{
+		"base": "api.seuhost/consultas-publicas-backend",
+		"login": "api.seuhost/consultas-publicas-login-backend/"
+	}
+}

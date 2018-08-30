@@ -1,5 +1,5 @@
 <template>
-	<div class="AdminLogin">
+	<div class="Login">
 		<form id="Login">
 			<div class="usuario">
 				<label for="adminId">Email</label>
@@ -30,6 +30,7 @@
 			<a 
 				:class="{ ativado: inputEmail.valid && inputPassword.valid  }" 
 				@click="checaUsuario"
+				@keyup.enter="checaUsuario"
 				:disabled="inputEmail.invalid || inputPassword.invalid" 
 				>Entrar</a>
 		</form>
@@ -41,7 +42,7 @@ import axios from 'axios'
 import { mapFields } from 'vee-validate'
 
 export default {
-	name: 'AdminLogin',
+	name: 'Login',
 	data() {
 		return {
 			email: undefined,
@@ -54,7 +55,7 @@ export default {
 		  inputPassword: 'password'
 		}),
 		passNoSpaces(){ return this.pass.replace(/\s/g, '')},
-		apiLogin(){ return this.$store.getters.apiLogin }
+		apiLogin(){ return this.$store.getters.apiLogin },
 	},
 	methods: {
 		checaUsuario(){
@@ -65,21 +66,25 @@ export default {
 			})
 			axios.post(this.apiLogin, memForm)
 			.then(function(response){
-				console.log(response.data)
+				// console.log(response.data)
 				let status = response.data.status
 				let responseObject
 
-				if(status){
+				if(status){ //admin válido
 					app.$store.commit('adminStatus', true)
 					app.$store.commit('addAdminInfo', {
 						firstname: response.data.firstname,
 						message:  response.data.message,
 						role: response.data.role
 					})
+					app.goToAdmin(app.$store.state.isAdmin)
 				}
-				else{
+				else{ //admin inválido
 					app.$store.commit('adminStatus', false)
 					app.$store.commit('addAdminInfo', response.data)
+					alert(response.data.message)
+					app.email = '',
+					app.pass = ''
 				}
 			})
 			.catch(function (error){
@@ -87,7 +92,7 @@ export default {
 				console.log(error)
 			})
 		},
-
+		goToAdmin(isAdmin){isAdmin ? this.$router.push('/admin') : console.log('não é admin') },
 		toFormData(obj) {
 			var form_data = new FormData()
 			for(var key in obj){
@@ -101,7 +106,7 @@ export default {
 
 <style lang="scss" scoped>
 
-div.AdminLogin {
+div.Login {
 	margin: 0 auto;
 	padding: 8rem 2rem 12rem 2rem;
 	height: calc(100vh - 118px);

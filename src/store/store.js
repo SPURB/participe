@@ -13,7 +13,7 @@ export const store = new Vuex.Store({
 		consultas: undefined,
 		errors: undefined,
 		commentsLoaded: false,
-		isAdmin: false,
+		isAdmin: true,
 		infoAdmin: undefined
 	},
 	getters:{

@@ -1,6 +1,6 @@
 <template>
 	<div class="AdminPagConsulta">
-		<h1>{{ $route.params.title }}</h1>
+		<h1>{{ estaSubRota.title }}</h1>
 		<section class="hidden" :class="{ show: abreId }" id="identificacao">
 			<h2 @click="abreId = !abreId">Identificação <i class="material-icons">keyboard_arrow_down</i></h2>
 			<form>
@@ -51,8 +51,8 @@
 		</section>
 		<section class="hidden" :class="{ show: abreMod }" id="moderacao">
 			<h2 @click="abreMod = !abreMod">Moderação <i class="material-icons">keyboard_arrow_down</i></h2>
-			<h3>Pendentes <span>{{ commentsPendentes.feed.length }}</span></h3>
-				<div class="comentario pendente" v-for="comment in commentsPendentes.feed">
+			<h3>Pendentes <span>{{ commentsPendentes.length }}</span></h3>
+				<div class="comentario pendente" v-for="comment in commentsPendentes">
 					<div class="comentCtx" @click="abreContexto($event)">
 						<i class="material-icons">reply</i>
 						<p>{{ comment.commentcontext }}</p>
@@ -74,8 +74,8 @@
 						<button class="aprovar">Aprovar <i class="material-icons">check_circle</i></button>
 					</div>
 				</div>
-			<h3>Aprovados<span>{{ commentsAprovados.feed.length }}</span></h3>
-				<div class="comentario aprovado" v-for="comment in commentsAprovados.feed">
+			<h3>Aprovados<span>{{ commentsAprovados.length }}</span></h3>
+				<div class="comentario aprovado" v-for="comment in commentsAprovados">
 					<div class="comentCtx" @click="abreContexto($event)">
 						<i class="material-icons">reply</i>
 						<div>{{ comment.commentcontext }}</div>
@@ -96,8 +96,8 @@
 						<button class="novamente">Moderar novamente <i class="material-icons">cached</i></button>
 					</div>
 				</div>
-			<h3>Reprovados <span>{{ commentsReprovados.feed.length }}</span></h3>
-				<div class="comentario reprovado" v-for="comment in commentsReprovados.feed">
+			<h3>Reprovados <span>{{ commentsReprovados.length }}</span></h3>
+				<div class="comentario reprovado" v-for="comment in commentsReprovados">
 					<div class="comentCtx" @click="abreContexto($event)">
 						<i class="material-icons">reply</i>
 						<p>{{ comment.commentcontext }}</p>
@@ -135,15 +135,19 @@ export default {
 		return {
 			abreId: false,
 			abreMod: false,
+			commentsPendentes: [],
+			commentsAprovados: [],
+			commentsReprovados: []
 		}
 	},
 	computed:{
-		apiPath(){ return this.$store.getters.apiPath},
-		consultas(){return this.$store.state.consultas},
+		apiPath(){ return this.$store.getters.apiPath },
+		consultas(){ return this.$store.state.consultas },
+		estaSubRota(){ return this.$route.params },
 		estaConsulta: function() {
 			let app = this
 			let estaConsulta = {}
-			app.consultas.map(function(index) {
+			app.consultas.filter(function(index) {
 				if (app.$route.params.id == index.id) {
 					estaConsulta = {
 						id: index.id,
@@ -160,72 +164,6 @@ export default {
 				}
 			})
 			return estaConsulta
-		},
-		commentsPendentes() {
-			let app = this
-			let feed = []
-			axios.post(app.apiPath + 'members/search/',{
-				"idConsulta":"="+app.estaConsulta.id.toString(),
-				"public":"=0",
-				"trash":"=0"}
-				// ,{
-				// 	responseEncoding: 'utf8',
-				// 	'Content-Type': 'application/json',
-				// }
-			)
-			.then(function(response) {
-				response.data.map(function(index) {
-					feed.push(index)
-				})
-			})
-			.catch(function (error){
-				console.log(error)
-			})
-			return { feed }
-		},
-		commentsAprovados() {
-			let app = this
-			let feed = []
-			axios.post(app.apiPath + 'members/search/',{
-				"idConsulta":"="+app.estaConsulta.id.toString(),
-				"public":"=1",
-				"trash":"=0"}
-				// ,{
-				// 	responseEncoding: 'utf8',
-				// 	'Content-Type': 'application/json',
-				// }
-			)
-			.then(function(response) {
-				response.data.map(function(index) {
-					feed.push(index)
-				})
-			})
-			.catch(function (error){
-				console.log(error)
-			})
-			return { feed }
-		},
-		commentsReprovados() {
-			let app = this
-			let feed = []
-			axios.post(app.apiPath + 'members/search/',{
-				"idConsulta":"="+app.estaConsulta.id.toString(),
-				"public":"=0",
-				"trash":"=1"}
-				// ,{
-				// 	responseEncoding: 'utf8',
-				// 	'Content-Type': 'application/json',
-				// }
-			)
-			.then(function(response) {
-				response.data.map(function(index) {
-					feed.push(index)
-				})
-			})
-			.catch(function (error){
-				console.log(error)
-			})
-			return { feed }
 		},
 	},
 	methods: {
@@ -247,9 +185,43 @@ export default {
 			event.target.style.whiteSpace = 'normal'
 			event.target.style.cursor = 'default'
 		},
+		carregaComments(idConsulta){
+			const app = this
+			let pendentes = []
+			let aprovados = []
+			let reprovados = []
+
+			axios.post(app.apiPath + 'members/search/',{
+				"idConsulta":"="+idConsulta
+			})
+			.then(function(response) {
+				response.data.map(function(index) {
+					if(index.public == "1"){
+						aprovados.push(index)
+					}
+					else if(index.trash == "1"){
+						reprovados.push(index)
+					}
+					else{
+						pendentes.push(index)
+					}
+				})
+			})
+			.catch(function (error){
+				console.log(error)
+			})
+			this.commentsAprovados = aprovados
+			this.commentsReprovados = reprovados
+			this.commentsPendentes = pendentes
+		},
+		resetComments(){
+			this.commentsPendentes = []
+			this.commentsAprovados = []
+			this.commentsReprovados = []
+		}
 	},
 	mounted() {
-		// console.log(this.estaConsulta) // atencion
+		this.carregaComments(this.$route.params.id);
 		let app = this
 		Array.from(this.$el.querySelectorAll('*[name^=input_]')).map(function (index){
 			index.disabled = true
@@ -259,6 +231,12 @@ export default {
 			})
 		})
 	},
+	watch: {
+		$route (to, from) {
+			this.resetComments();
+			this.carregaComments(to.params.id);
+		}
+	}
 };
 </script>
 

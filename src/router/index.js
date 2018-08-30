@@ -1,13 +1,18 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 const Home = () => import('@/components/pages/Home')
+
+// Consultas
 const Anhembi2 = () => import('@/components/pages/Anhembi2')
+
+// Admin
+const Login = () => import('@/components/pages/Login')
 const Admin = () => import('@/components/Admin')
-const AdminLogin = () => import('@/components/AdminLogin')
 const AdminHome = () => import('@/components/AdminHome')
 const AdminNovaConsulta = () => import('@/components/AdminNovaConsulta')
 const AdminSide = () => import('@/components/AdminSide')
 const AdminPagConsulta = () => import ('@/components/AdminPagConsulta')
+
 
 Vue.use(Router)
 
@@ -29,8 +34,8 @@ export default new Router({
 		},
 		{
 			path: '/login',
-			name: 'AdminLogin',
-			components: { AdminLogin }
+			name: 'Login',
+			components: { Login }
 		},
 		{
 			path: '/admin',
@@ -38,7 +43,7 @@ export default new Router({
 			children: [
 				{ path: '', name: 'Admin', component: AdminHome },
 				{ path: 'novaconsulta', name: 'novaConsulta', component: AdminNovaConsulta },
-				{ path: ':consulta', name: 'pageConsulta', component: AdminPagConsulta }
+				{ path: '/admin/:id', name: 'pageConsulta', component: AdminPagConsulta }
 			]
 		}
 	]

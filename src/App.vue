@@ -6,8 +6,8 @@
 	<router-view name="Home"></router-view>
 	<router-view name="Anhembi2"></router-view>
 	<router-view name="Wifi"></router-view>
-	<router-view name="AdminLogin"></router-view>
-	<router-view name="Admin" v-if="isAdmin"></router-view>
+	<router-view name="Login"></router-view>
+	<router-view name="Admin"></router-view>
 	<Rodape></Rodape>
 </div>
 </template>

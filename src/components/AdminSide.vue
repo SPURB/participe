@@ -2,13 +2,22 @@
 	<div class="AdminSide">
 		<div class="titulo">
 			<router-link to="/admin"><i class="material-icons" @click="">home</i></router-link>
-			<span>título da rota</span>
+			<span>{{ nomeDestaRota }}</span>
 		</div>
 		<div class="lista">
 			<h2>Consultas</h2>
 			<ul>
 				<li v-for="consulta in consultas">
-					<router-link :to="{ path: consulta.nome, name: 'pageConsulta', params: { title: consulta.nomePublico, id: consulta.id }}" :class="{ consultaAtiva: consulta.ativo == 1 }">
+					<router-link 
+						:to="{ 
+							path: '/consulta', 
+							name: 'pageConsulta', 
+							params: { 
+									title: consulta.nomePublico, 
+									id: consulta.id 
+								}
+							}"
+							:class="{ consultaAtiva: consulta.ativo == 1 }">
 						{{ consulta.nomePublico }}
 					</router-link>
 				</li>
@@ -22,7 +31,11 @@
 	export default {
 		name: 'AdminSide',
 		computed:{
-			consultas(){return this.$store.state.consultas}
+			consultas(){return this.$store.state.consultas},
+			nomeDestaRota(){ 
+				const routName = this.$route.name
+				return routName == 'Admin' ? routName : this.$route.params.title
+			},
 		},
 	};
 </script>

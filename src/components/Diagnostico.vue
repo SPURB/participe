@@ -1,21 +1,22 @@
 <template>
-	<div class="Diagnostico">
+	<div class="Diagnostico" lang="pt-BR">
 		<div class="limiteSp">
 			<img src="../../static/img/limiteSp.png" alt="Localização do perímetro do PIU Arco Pinheiros no município de São Paulo.">
 			<div class="limitePerimetro"></div>
 		</div>
 		<div class="menu">
 			<ul>
-				<li @click="alteraSecao('populacao', $event)" :class="{ ativo: !escPopulacao }">População</li>
-				<li @click="alteraSecao('usosdosolo', $event)":class="{ ativo: !escUsos }">Usos do solo</li>
-				<li @click="alteraSecao('trabalho', $event)":class="{ ativo: !escTrabalho }">Trabalho</li>
-				<li @click="alteraSecao('mobilidade', $event)":class="{ ativo: !escMobilidade }">Mobilidade</li>
-				<li @click="alteraSecao('areasverdes', $event)":class="{ ativo: !escAreasVerdes }">Áreas verdes</li>
+				<li @click="alteraSecao('populacao', $event)" :class="{ ativo: !escPopulacao }" refe="dados_populacao">População</li>
+				<li @click="alteraSecao('usosdosolo', $event)":class="{ ativo: !escUsos }" refe="dados_usosdosolo">Usos do solo</li>
+				<li @click="alteraSecao('trabalho', $event)":class="{ ativo: !escTrabalho }" refe="dados_trabalho">Trabalho</li>
+				<li @click="alteraSecao('mobilidade', $event)":class="{ ativo: !escMobilidade }" refe="dados_mobilidade">Mobilidade</li>
+				<li @click="alteraSecao('areasverdes', $event)":class="{ ativo: !escAreasVerdes }" refe="dados_areasverdes">Áreas verdes</li>
 			</ul>			
 			<div class="legenda">				
 				<ul>
+					<li class="titulo">Legenda</li>
 					<li><span style="border: 2px solid #211915"></span>Perímetro do Arco Pinheiros</li>
-					<li><span style="background: url('')"></span>Ferrovia</li>
+					<li><span style="background: url('../../static/img/legenda_ferrovias.png') no-repeat center center;"></span>Ferrovia</li>
 					<li><span style="background: #84b1bd"></span>Hidrografia</li>
 					<li><span style="height: 1px; border: 1px solid #4c4c4c"></span>Via Estrutural de Nível 1</li>
 				</ul>
@@ -29,6 +30,21 @@
 					<li><span style="background: #ffb625"></span>200–300</li>
 					<li><span style="background: #ff9000"></span>Acima de 300</li>
 				</ul>
+				<ul v-show="escUsos == false || escTrabalho == false || escMobilidade == false">
+					<li class="titulo">Uso do solo por lote</li>
+					<li><span style="background: #a0c0ff"></span> Res. vert. baixo padrão</li>
+					<li><span style="background: #0080ff"></span> Res. vert. médio/alto padrão</li>
+					<li><span style="background: #ffffd0"></span> Res. horiz. baixo padrão</li>
+					<li><span style="background: #ffff00"></span> Res. horiz. médio/alto padrão</li>
+					<li><span style="background: #ff9933"></span> Residencial + comércio/serviços</li>
+					<li><span style="background: #ff3333"></span>Comércio e serviços</li>
+					<li><span style="background: #e32de3"></span> Indústria e armazéns</li>
+					<li><span style="background: #c485eb"></span> Usos especiais</li>
+					<li><span style="background: #872de1"></span> Equipamentos</li>
+					<li><span style="background: #9f5000"></span> Terrenos vagos</li>
+					<li><span style="background: #c09000"></span> Outros</li>
+					<li><span style="background: #f0f0f0"></span> Sem informação</li>
+				</ul>
 				<ul v-show="escAreasVerdes == false">
 					<li class="titulo">Áreas verdes existentes</li>
 					<li><span style="background: #3d5d38"></span>Reserva de Mata Atlântica</li>
@@ -36,6 +52,8 @@
 					<li><span style="background: #8ca350"></span>Parques</li>
 					<li><span style="background: #ccdda3"></span>Praças e canteiros</li>
 				</ul>
+				<div class="fonte">Base <strong>MDC, 2004</strong><br />
+				Elaboração <strong>SPUrbanismo</strong></div>
 			</div>
 		</div>
 		<div class="main">
@@ -66,6 +84,38 @@
 					<li>Estimativa a partir de dados do MDC/IBGE 2010</li>
 				</ol>
 			</div>
+			<div id="dados_usosdosolo" :class="{ escondido: escUsos }">
+				<div>
+					<h6>Usos predominantes do solo<sup>1</sup></h6>
+					<div class="bar">
+						<div style="width: 61%; background: #EB5757;"></div>
+						<div style="width: 6%; background: #BDBDBD;"></div>
+						<div style="width: 3%; background: #333;"></div>
+						<div style="width: 30%; background: #777;"></div>
+					</div>
+					<ul>
+						<li>
+							<span style="background: #EB5757;"></span>
+							<strong>Usos não residenciais</strong> (comércio, serviços, indústrias, armazéns, equipamentos, usos especiais) <span>61%</span>
+						</li>
+						<li>
+							<span style="background: #BDBDBD;"></span>
+							<strong>Usos residenciais cadastrados</strong> (residencial vertical de baixo, médio e alto padrão; residencial horizontal de baixo, médio e alto padrão; uso misto) <span>6%</span>
+						</li>
+						<li>
+							<span style="background: #333;"></span>
+							<strong>Favelas e núcleos</strong> <span>3%</span>
+						</li>
+						<li>
+							<span style="background: #777;"></span>
+							<strong>Outros</strong> (terrenos vagos, terrenos sem informação, vias, praças, canteiros, rios, córregos) <span>30%</span>
+						</li>
+					</ul>
+				</div>
+				<ol class="fonte">
+					<li>Estimativa a partir de dados TPCL 2010 e Google Earth</li>
+				</ol>
+			</div>
 			<div id="dados_trabalho" :class="{ escondido: escTrabalho }">
 				<div>
 					<div>Total de empregos formais no setor do comércio, serviços, indústria de transformação e construção civil</div>
@@ -81,19 +131,19 @@
 					<li>Estimativa a partir de dados do INFOCIDADE/RAIS 2014 e dados do IBGE 2010</li>
 				</ol>
 			</div>
-			<div id="dados_mobilidade"  :class="{ escondido: escMobilidade }">
+			<div id="dados_mobilidade" :class="{ escondido: escMobilidade }">
 				<div class="esq">
 					<div>
 						<h6>
 							<i class="material-icons">call_made</i>
-							Viagens geradas no perímetro do Arco Pinheiros com destino fora de seus limites
+							Viagens geradas
 						</h6>
 						<div><span>50 mil</span> viagens diárias<sup>1</sup></div>
 					</div>
 					<div>
 						<h6>
 							<i class="material-icons">call_received</i>
-							Viagens atraídas ao perímetro do ACP com origem em outros pontos da RMSP
+							Viagens atraídas
 						</h6>
 						<div><span>185 mil</span> viagens diárias<sup>1</sup></div>
 					</div>
@@ -122,11 +172,14 @@
 						<li motivo="outros">Outros</li>
 					</ul>
 				</div>
+				<div class="barras">
+					<GrafBarras></GrafBarras>
+				</div>
 				<ol class="fonte">
 					<li>Estimativa a partir de dados da Pesquisa Origem-Destino 2007 Metrô</li>
 				</ol>
 			</div>
-			<div id="dados_areasverdes"  :class="{ escondido: escAreasVerdes }">
+			<div id="dados_areasverdes" :class="{ escondido: escAreasVerdes }">
 				<div>
 					<div>Relação áreas verdes/população</div>
 					<div>53</div>
@@ -137,13 +190,45 @@
 				</ol>
 			</div>
 		</div>
-		<div class="legenda_mob">
+		<div class="legenda_mob">			
 			<ul>
-				<li>Legenda-placeholder1</li>
-				<li>Legenda-placeholder2</li>
-				<li>Legenda-placeholder3</li>
-				<li>Legenda-placeholder4</li>
-				<li>Legenda-placeholder5</li>
+				<li class="titulo">Legenda</li>
+				<li><span style="border: 2px solid #211915"></span>Perímetro do Arco Pinheiros</li>
+				<li><span style="background: url('')"></span>Ferrovia</li>
+				<li><span style="background: #84b1bd"></span>Hidrografia</li>
+				<li><span style="height: 1px; border: 1px solid #4c4c4c"></span>Via Estrutural de Nível 1</li>
+			</ul>
+			<ul v-show="escPopulacao == false">
+				<li class="titulo">Densidade demográfica (hab/ha)</li>
+				<li><span style="background: #fffbea"></span>Até 50</li>
+				<li><span style="background: #ffebba"></span>25–50</li>
+				<li><span style="background: #ffde95"></span>50–100</li>
+				<li><span style="background: #ffd170"></span>100–150</li>
+				<li><span style="background: #ffc34a"></span>150–200</li>
+				<li><span style="background: #ffb625"></span>200–300</li>
+				<li><span style="background: #ff9000"></span>Acima de 300</li>
+			</ul>
+			<ul v-show="escUsos == false || escTrabalho == false || escMobilidade == false">
+				<li class="titulo">Uso do solo por lote</li>
+				<li><span style="background: #a0c0ff"></span> Res. vert. baixo padrão</li>
+				<li><span style="background: #0080ff"></span> Res. vert. médio/alto padrão</li>
+				<li><span style="background: #ffffd0"></span> Res. horiz. baixo padrão</li>
+				<li><span style="background: #ffff00"></span> Res. horiz. médio/alto padrão</li>
+				<li><span style="background: #ff9933"></span> Residencial + comércio/serviços</li>
+				<li><span style="background: #ff3333"></span>Comércio e serviços</li>
+				<li><span style="background: #e32de3"></span> Indústria e armazéns</li>
+				<li><span style="background: #c485eb"></span> Usos especiais</li>
+				<li><span style="background: #872de1"></span> Equipamentos</li>
+				<li><span style="background: #9f5000"></span> Terrenos vagos</li>
+				<li><span style="background: #c09000"></span> Outros</li>
+				<li><span style="background: #f0f0f0"></span> Sem informação</li>
+			</ul>
+			<ul v-show="escAreasVerdes == false">
+				<li class="titulo">Áreas verdes existentes</li>
+				<li><span style="background: #3d5d38"></span>Reserva de Mata Atlântica</li>
+				<li><span style="background: #6e813f"></span>Áreas verdes tombadas e outras</li>
+				<li><span style="background: #8ca350"></span>Parques</li>
+				<li><span style="background: #ccdda3"></span>Praças e canteiros</li>
 			</ul>
 		</div>
 		<div class="texto">
@@ -155,8 +240,13 @@
 </template>
 
 <script>
+import GrafBarras from '@/components/graf/GrafBarras';
+
 export default {
 	name: 'Diagnostico',
+	components: {
+		GrafBarras
+	},
 	data() {
 		return {
 			escPopulacao: true,
@@ -283,44 +373,56 @@ div.Diagnostico {
 
 				&:hover, &.ativo { background: #EB5757; };
 			}
-		}
+		}		
+	}
 
-		div.legenda {
-			margin: 1rem 0 0 0;
-			background: #FFF;
-			padding: 1rem;
-			border: 1px solid #BDBDBD;
-			font-size: small;
+	div.menu div.legenda, div.legenda_mob {
+		margin: 1rem 0 0 0;
+		background: #FFF;
+		padding: 1rem;
+		border: 1px solid #BDBDBD;
+		font-size: small;
+		overflow-wrap: break-word;
+		word-wrap: break-word;
+		hyphens: auto;
 
-			ul {
+		ul {
+			margin: 0;
+			padding: 0;
+
+			li {
+				list-style: none;
 				margin: 0;
-				padding: 0;
+				display: flex;
+				align-items: center;
+				margin: 0 0 8px 0;
+				&:last-child { margin-bottom: 0; };
 
-				li {
-					list-style: none;
-					margin: 0;
-					display: flex;
-					align-items: center;
-					margin: 0 0 8px 0;
-					&:last-child { margin-bottom: 0; };
-
-					span {
-						height: 16px;
-						width: 16px;
-						margin: 0 8px 0 0;
-					}
-
-					&.titulo {
-						font-weight: 700;
-					}
+				span {
+					height: 16px;
+					min-width: 16px;
+					margin: 0 8px 0 0;					
+					border: 1px solid rgba(0, 0, 0, .08);
 				}
 
-				&:first-child {
-					border-bottom: 1px solid #BDBDBD;
-					padding: 0 0 12px 0;
-					margin: 0 0 12px 0;
+				&.titulo {
+					font-weight: 700;
 				}
 			}
+
+			&:first-child {
+				border-bottom: 1px solid #BDBDBD;
+				padding: 0 0 12px 0;
+				margin: 0 0 12px 0;
+			}
+
+			&:not(:first-child) { max-height: 200px; overflow-y: auto; }
+		}
+
+		div.fonte {
+			padding-top: 12px;
+			margin-top: 12px;
+			border-top: 1px solid #BDBDBD;
 		}
 	}
 
@@ -377,6 +479,7 @@ div.Diagnostico {
 
 			& > div, & > ol.fonte {
 				transition: all ease-in .2s;
+				box-shadow: 0 2px 2px rgba(0, 0, 0, .24);
 			}
 
 			& > ol.fonte { transition-delay: .1s; }
@@ -426,6 +529,75 @@ div.Diagnostico {
 			}
 		}
 
+		div#dados_usosdosolo {
+			& > div {
+				background: rgba(255, 255, 255, .8);
+				border-radius: 2px;
+				max-width: 280px;
+				margin: 8px;
+				float: right;
+
+				h6 {
+					margin: 0;
+					padding: 8px 12px;
+					font-size: large;
+					background: #333;
+					color: #FFF;
+					border-radius: 2px 2px 0 0;
+				}
+
+				& > div {
+					display: flex;
+					flex-direction: row;
+					margin: 16px 16px 8px 16px;
+
+					& > div {
+						height: 40px;
+						border: 1px solid rgba(0, 0, 0, .08);
+					}
+				}
+
+				ul {
+					list-style: none;
+					font-size: small;
+					margin: 0;
+					padding: 8px;
+
+					li {
+						margin: 0 0 8px 0;
+						&:last-child { margin-bottom: 0; }
+
+						span:first-child {
+							display: inline-block;
+							min-width: 16px;
+							height: 16px;
+							vertical-align: text-top;
+							margin-right: 4px;							
+							border: 1px solid rgba(0, 0, 0, .08);
+						}
+
+						span:last-child {
+							font-weight: 700;
+							background: #777;
+							padding: 0 2px;
+							border-radius: 2px;
+							color: #FFF;
+							white-space: nowrap;
+						}
+					}
+				}
+			}
+
+			&.escondido {
+				& > div {
+					transform: translateX(150%);
+				}
+				ol.fonte {
+					transform: translateY(150%);
+				}
+			}
+		}
+
 		div#dados_trabalho {
 			display: flex;
 			flex-flow: column nowrap;
@@ -449,6 +621,7 @@ div.Diagnostico {
 					line-height: 120%;
 					padding: 4px 8px;
 					text-align: left;
+					border-radius: 2px 2px 0 0;
 				}
 
 				div:nth-child(2) {
@@ -475,15 +648,16 @@ div.Diagnostico {
 			padding: 8px;
 
 			div.esq {
-				display: inline-flex;
-				flex-direction: column;
-				justify-content: space-between;
-				height: 100%;
+				width: max-content;
+				box-shadow: none;
 
 				& > div {
+					display: inline-block;
 					background: rgba(255, 255, 255, .8);
-					width: 160px;
+					width: 120px;
 					border-radius: 2px;
+					margin: 0 8px 0 0;
+					box-shadow: 0 2px 2px rgba(0, 0, 0, .24);
 
 					h6 {
 						background: #777;
@@ -493,12 +667,12 @@ div.Diagnostico {
 						margin: 0;
 						padding: 8px 12px;
 						display: flex;
+						align-items: center;
 						border-radius: 2px 2px 0 0;
 
 						i {
-							font-size: x-large;
+							font-size: large;
 							padding-right: 12px;
-							align-self: center;
 							color: #333;
 						}
 					}
@@ -509,7 +683,7 @@ div.Diagnostico {
 						padding: 16px 12px 12px 12px;
 
 						span {							
-							font-size: xx-large;
+							font-size: large;
 							display: block;
 							font-weight: 700;
 							line-height: 80%;
@@ -526,6 +700,7 @@ div.Diagnostico {
 				max-width: min-content;
 				border-radius: 2px;
 				transition-delay: .1s;
+				box-shadow: 0 2px 2px rgba(0, 0, 0, .24);
 
 				& > div:first-child {
 					background: #777;
@@ -543,19 +718,19 @@ div.Diagnostico {
 
 					svg {
 						path {
-							/*stroke: rgba(255, 255, 255, .8);*/
-							stroke-width: 0.8;
+							stroke: rgba(0, 0, 0, .08);
+							stroke-width: 1;
 						}
 						text {
 							fill: #FFF;
-							text-shadow: 1px 1px 2px rgba(0, 0, 0, .72);
+							text-shadow: 0 0 2px rgba(0, 0, 0, .72);
 							font-size: x-small;
 						}
 					}
 				}
 
 				& > ul {
-					margin: 0;
+					margin: 0 auto;
 					padding: 0 12px 8px 12px;
 					list-style: none;
 					font-size: small;
@@ -567,7 +742,7 @@ div.Diagnostico {
 						height: .8rem;
 						margin-right: 8px;
 						vertical-align: -1px;
-						box-shadow: 1px 1px 2px rgba(0, 0, 0, .64);
+						border: 1px solid rgba(0, 0, 0, .08);
 					};
 
 					li[motivo=servicos]::before { background: #EB5757; }
@@ -578,12 +753,26 @@ div.Diagnostico {
 				}
 			}
 
+			& > div.barras {
+				box-shadow: 0 2px 2px rgba(0, 0, 0, .24);
+				width: max-content;
+				background: rgba(255, 255, 255, .8);
+				padding: 12px;
+				max-width: 280px;
+				position: absolute;
+				bottom: 8px;
+				border-radius: 2px;
+			}
+
 			&.escondido {
 				div.esq {
-					transform: translateX(-150%);
+					transform: translateY(-150%);
 				}
 				div.pizza {
 					transform: translateX(150%);
+				}
+				div.barras {
+					transform: translateX(-150%);
 				}
 				ol.fonte {
 					transform: translateY(150%);
@@ -592,7 +781,6 @@ div.Diagnostico {
 		}
 
 		div#dados_areasverdes {
-			padding: 8px;
 			& > div {
 				background: rgba(100, 130, 55, .8);
 				display: flex;
@@ -604,6 +792,7 @@ div.Diagnostico {
 				text-align: center;
 				padding: 20px;
 				color: #FFF;
+				margin: 8px;
 				border: 4px solid rgba(0, 0, 0, .48);
 
 				& > div:nth-child(1), & > div:nth-child(3) { font-size: small; }
@@ -648,7 +837,7 @@ div.Diagnostico {
 		}
 	}
 
-	@media (max-width: 600px) {
+	@media (max-width: 750px) {
 		grid-template-columns: 1fr;
 		grid-template-rows: unset;
 		position: relative;
@@ -699,17 +888,23 @@ div.Diagnostico {
 		}
 
 		div.legenda_mob {
-			display: block;
+			display: flex;
+			flex-flow: row wrap;
+			align-items: flex-start;
+			column-gap: 12px;
 			order: 3;
 			margin: 0;
 			background: #FFF;
 			padding: 1rem;
 			border: 1px solid #BDBDBD;
+			justify-content: space-evenly;
 
 			ul {
 				list-style: none;
 				margin: 0;
 				padding: 0;
+				&:first-child { border-bottom: none; padding-right: 12px; }
+				&:not(:first-child) { max-height: 200px; overflow-y: auto; }
 			}
 		}
 
@@ -717,15 +912,16 @@ div.Diagnostico {
 			grid-column: 1/2;
 			grid-row: unset;
 			order: 4;
+			padding: 12px;
+			background: #BDBDBD;
+			border-radius: 2px;
 
 			& > div {
 				position: relative;
 				height: unset;
 				&.escondido {
-					* {
-						transform: none !important;
-						display: none !important;
-					}
+					transform: none !important;
+					display: none !important;
 				}
 			}
 
@@ -736,6 +932,14 @@ div.Diagnostico {
 
 					&:first-child { margin-top: 0; }
 					&:last-child { margin-bottom: 0; }
+				}
+			}
+
+			div#dados_usosdosolo {
+				& > div {
+					margin: 0;
+					min-width: 100%;
+					float: none;
 				}
 			}
 
@@ -759,24 +963,26 @@ div.Diagnostico {
 				div.pizza {
 					position: relative;
 					right: 0;
+					top: 0;
 					min-width: 100%;
 					text-align: center;
+					ul {
+						text-align: left;
+						width: max-content;
+					}
 				}
 			}
 
-			div#dados_areasverdes {
-				display: flex;
-				align-items: center;
-				flex-flow: column;
-				padding: 16px 12px 8px 12px;
-				background: #BDBDBD;
-				border-radius: 2px;
+			div#dados_areasverdes div {
+				margin: 0 auto;
 			}
 
 			ol.fonte {
 				position: relative;
-				margin-top: calc(1rem + 8px);
+				margin: 12px 0 0 0;
+				width: 100%;
 				left: 0;
+				bottom: 0;
 			}
 		}
 

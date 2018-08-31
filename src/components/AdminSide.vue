@@ -2,7 +2,7 @@
 	<div class="AdminSide">
 		<div class="titulo">
 			<router-link to="/admin"><i class="material-icons" @click="">home</i></router-link>
-			<span>{{ nomeDestaRota }}</span>
+			<span>{{ contextoNav }}</span>
 		</div>
 		<div class="lista">
 			<h2>Consultas</h2>
@@ -23,20 +23,30 @@
 				</li>
 			</ul>
 		</div>
-		<router-link to="/admin/novaconsulta"><button class="novaConsulta">Criar consulta</button></router-link>
+		<router-link :to="'/admin/novaconsulta'"><button class="novaConsulta">Criar consulta</button></router-link>
 	</div>
 </template>
 
 <script>
 	export default {
 		name: 'AdminSide',
-		computed:{
-			consultas(){return this.$store.state.consultas},
-			nomeDestaRota(){ 
-				const routName = this.$route.name
-				return routName == 'Admin' ? routName : this.$route.params.title
-			},
+		data(){
+			return {
+				contextoNav: 'Admin'
+			}
 		},
+		computed:{
+			consultas(){ return this.$store.state.consultas },
+		},
+		watch:{
+			$route(to){
+				switch (to.name){
+					case 'pageConsulta' : this.contextoNav = to.params.title; break;
+					case 'novaConsulta' : this.contextoNav = 'Nova Consulta'; break;
+					default : this.contextoNav = 'Admin'; break
+				}
+			}
+		}
 	};
 </script>
 

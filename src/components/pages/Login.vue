@@ -30,7 +30,6 @@
 			<a 
 				:class="{ ativado: inputEmail.valid && inputPassword.valid  }" 
 				@click="checaUsuario"
-				@keyup.enter="checaUsuario"
 				:disabled="inputEmail.invalid || inputPassword.invalid" 
 				>Entrar</a>
 		</form>
@@ -51,8 +50,8 @@ export default {
 	},
 	computed: {
 		...mapFields({ // https://baianat.github.io/vee-validate/guide/flags.html
-		  inputEmail: 'email',
-		  inputPassword: 'password'
+			inputEmail: 'email',
+			inputPassword: 'password'
 		}),
 		passNoSpaces(){ return this.pass.replace(/\s/g, '')},
 		apiLogin(){ return this.$store.getters.apiLogin },

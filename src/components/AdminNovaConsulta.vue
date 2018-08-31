@@ -2,66 +2,193 @@
 	<div class="AdminNovaConsulta">
 		<h1>Nova Consulta</h1>
 		<form>
+
 			<fieldset>
 				<legend>Nome <span>(obrigatório)</span></legend>
-				<input type="text" id="input_nomePublico" required>
+				<input 
+					name="nome"
+					type="text" 
+					v-validate="{
+						required: true,
+					}"
+					id="input_nomePublico" 
+					required 
+					v-model="nome_publico" >
 			</fieldset>
 			<fieldset>
 				<legend>Status <span>(obrigatório)</span></legend>
-				<input type="radio" id="input_status_aberta" name="input_status" required checked>
+				<input 
+					type="radio" 
+					id="input_status_aberta" 
+					name="input_status" 
+					required 
+					checked 
+					value="1" 
+					v-model="ativo">
 				<label for="input_status_aberta" class="status">Consulta aberta</label>
-				<input type="radio" id="input_status_encerrada" name="input_status" required>
-				<label for="input_status_encerrada" class="status">Consulta encerrada</label>
+				<input 
+					type="radio" 
+					id="input_status_encerrada" 
+					name="input_status" 
+					required 
+					value="0" 
+					v-model="ativo">
+				<label for="input_status_encerrada" class="status">Consulta fechada</label>
 			</fieldset>
 			<fieldset>
 				<legend>Período da consulta <span>(obrigatório)</span></legend>
 				<div>
 					<label for="input_dataCadastro">Início</label>
-					<input type="date" id="input_dataCadastro" required :value="periodoPadrao(1)" :max="periodoPadrao(-1)">
+					<input 
+						type="date" 
+						id="input_dataCadastro" 
+						required 
+						v-model="data_cadastro"
+					>
 				</div>
 				<div>
 					<label for="input_dataFinal">Final</label>
-					<input type="date" id="input_dataFinal" required :value="periodoPadrao(-1)" :min="periodoPadrao(1)">
+					<input 
+						type="date" 
+						id="input_dataFinal" 
+						required 
+						v-model="data_final"
+					>
 				</div>
 			</fieldset>
 			<fieldset>
 				<legend>Texto introdutório <span>(obrigatório)</span></legend>
-				<textarea id="input_textoIntro" required placeholder="Até 480 caracteres" maxlength="480"></textarea>
+				<textarea 
+					name="texto_intro"
+					type="text"
+					id="input_textoIntro" 
+					v-validate="{
+						required: true,
+						max: 480
+					}"
+					required 
+					placeholder="Até 480 caracteres" 
+					maxlength="480" 
+					v-model="texto_intro"></textarea>
 			</fieldset>
 			<fieldset>
-				<legend>Hiperlinks</legend>
+				<legend>Hiperlinks <span>(obrigatório)</span></legend>
 				<div>
 					<label for="input_urlConsulta">URL da consulta</label>
-					<input type="url" id="input_urlConsulta" required placeholder="Obrigatório">
+					<input 
+						name="URL da consulta"
+						type="url" 
+						v-validate="'required|url'"
+						id="input_urlConsulta" 
+						placeholder="Obrigatório" 
+						v-model="url_consulta">
 				</div>
 				<div>
 					<label for="input_urlCapa">URL da imagem de capa</label>
-					<input type="url" id="input_urlCapa" required placeholder="Obrigatório">
+					<input 
+						name="URL da imagem de capa"
+						type="url" 
+						v-validate="'required|url'"
+						id="input_urlCapa" 
+						placeholder="Obrigatório" 
+						v-model="url_capa">
 				</div>
 				<div>
 					<label for="input_urlDevolutiva">URL da devolutiva</label>
-					<input type="url" id="input_urlDevolutiva" required placeholder="Não obrigatório">
+					<input 
+						name="URL da devolutiva"
+						type="url" 
+						v-validate="'url'"
+						id="input_urlDevolutiva" 
+						placeholder="Não obrigatório" 
+						v-model="url_devolutiva">
 				</div>
 			</fieldset>
-			<button class="limpar"><i class="material-icons">clear</i>Cancelar</button>
-			<button type="submit" class="enviar"><i class="material-icons">add_circle</i> Criar consulta</button>
+			<a class="acao limpar" @click="clearInputs"><i class="material-icons">clear</i>Cancelar</a>
+			<a  @click="criarConsulta" class="acao enviar"><i class="material-icons">add_circle</i> Criar consulta</a>
 		</form>
 	</div>
 </template>
 
 <script>
+import { mapFields } from 'vee-validate'
+
 export default {
 	nome: 'AdminNovaConsulta',
-	methods: {
-		periodoPadrao(par) {
+	data(){
+		return{
+			nome_db: '',
+			ativo: '0', //status
+			data_cadastro: '',
+			data_final: '',
+			texto_intro: '',
+			nome_publico: '',
+			url_consulta: '',
+			url_capa: '',
+			url_devolutiva: ''
+		}
+	},
+	computed:{
+		apiPath(){ return this.$store.getters.apiPath },
+		periodoPadrao() {
 			let hoje = new Date() // objeto Date "Date 2018-08-16T14:27:38.500Z"
 			let hojeFull = hoje.toISOString().substring(0, hoje.toISOString().indexOf('T')) // "2018-08-16T14:27:38.500Z" -> "2018-08-16"
 			let dataFinal = new Date(hoje.setDate(hoje.getDate() + 20)) // soma vinte dias e cria um novo objeto Date
 			let dataFinalFull = dataFinal.toISOString().substring(0, dataFinal.toISOString().indexOf('T')) // "2018-08-16T14:27:38.500Z" -> "2018-08-16"
-			if (par == 1) { return hojeFull }
-			else if (par == -1) { return dataFinalFull }
+			return {
+				hoje: hojeFull, //  1
+				fim: dataFinalFull  // -1
+			}
 		},
+		...mapFields({ // https://baianat.github.io/vee-validate/guide/flags.html
+			url: 'url',
+			text: ''
+		}),
 	},
+	methods:{
+		clearInputs(){
+			this.nome_db ='',
+			this.ativo = '0',
+			this.data_cadastro = '',
+			this.data_final = '',
+			this.texto_intro = '',
+			this.nome_publico = '',
+			this.url_consulta ='',
+			this.url_capa = '',
+			this.url_devolutiva = ''
+		},
+		criarConsulta(){
+			const sendObj = {
+				"nome": this.nome_db,
+				"ativo": "="+this.ativo,
+				"data_cadastro": this.data_cadastro,
+				"data_final": this.data_final,
+				"texto_intro": this.texto_intro,
+				"nome_publico": this.nome_publico,
+				"url_consulta": this.url_consulta,
+				"url_capa": this.url_capa,
+				"url_devolutiva": this.url_devolutiva
+			}
+			console.log(sendObj)
+		}
+	},
+	watch:{
+		nome_publico(noSlug){
+			this.nome_db = noSlug
+				.toLowerCase()
+				.replace(/\s/g, '_')
+				.replace(/[àáâãäå]/g,"a")
+				.replace(/[èéêë]/g,"e")
+				.replace(/[ìíîï]/g,"i")
+				.replace(/[òóôõö]/g,"o")
+				.replace(/[ùúûü]/g,"u")
+				.replace(/[æ]/g,"ae")
+				.replace(/[ýÿ]/g,"y")
+				.replace(/[ñ]/g,"n")
+				.replace(/[ç]/g,"c")
+				.replace(/[^a-z0-9]/gi,'_')
+		}
+	}
 };
 </script>
 
@@ -138,7 +265,7 @@ div.AdminNovaConsulta {
 		};
 	};
 
-	button {
+	a.acao {
 		font-family: inherit;
 		font-size: larger;
 		color: inherit;

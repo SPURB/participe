@@ -47,7 +47,7 @@ export const store = new Vuex.Store({
 			if (store.getters.enviroment == 'local' || store.getters.enviroment == 'homologacao'){
 				return 'http://participe.comunicacao.smul.pmsp/'
 			} else {
-				return 'http://participe.gestaourbana.prefeitura.sp.gov.br'
+				return 'http://participe.gestaourbana.prefeitura.sp.gov.br/'
 			}
 		}
 	},

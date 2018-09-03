@@ -10,7 +10,6 @@
 </template>
 
 <script>
-// import comentarios_placeholder from '../../static/placeholder.json';
 
 import axios from 'axios';
 export default {
@@ -37,7 +36,7 @@ export default {
 		loadThisComments(){
 			let app = this;
 			axios.post(this.apiPath + 'members/search/',{
-				"idConsulta":"=8",
+				"idConsulta":"="+app.$route.meta.id,
 				"public":"=1"}
 				// ,{
 					// responseEncoding: 'utf8',

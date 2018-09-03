@@ -3,12 +3,12 @@ import Router from 'vue-router'
 const Home = () => import('@/components/pages/Home')
 const Anhembi2 = () => import('@/components/pages/Anhembi2')
 const ArcoPinheiros = () => import('@/components/pages/ArcoPinheiros')
-const Admin = () => import('@/components/Admin')
-const AdminLogin = () => import('@/components/AdminLogin')
-const AdminHome = () => import('@/components/AdminHome')
-const AdminNovaConsulta = () => import('@/components/AdminNovaConsulta')
-const AdminSide = () => import('@/components/AdminSide')
-const AdminPagConsulta = () => import ('@/components/AdminPagConsulta')
+// const Admin = () => import('@/components/Admin')
+// const AdminLogin = () => import('@/components/AdminLogin')
+// const AdminHome = () => import('@/components/AdminHome')
+// const AdminNovaConsulta = () => import('@/components/AdminNovaConsulta')
+// const AdminSide = () => import('@/components/AdminSide')
+// const AdminPagConsulta = () => import ('@/components/AdminPagConsulta')
 
 Vue.use(Router)
 
@@ -29,23 +29,26 @@ export default new Router({
 			}
 		},
 		{
-			path: '/arcopinheiros',
+			path: '/arco-pinheiros',
 			name: 'ArcoPinheiros',
-			components: { ArcoPinheiros }
+			components: { ArcoPinheiros },
+			meta: {
+				id: 9
+			}
 		},
-		{
-			path: '/login',
-			name: 'AdminLogin',
-			components: { AdminLogin }
-		},
-		{
-			path: '/admin',
-			components: { Admin },
-			children: [
-				{ path: '', name: 'Admin', component: AdminHome },
-				{ path: 'novaconsulta', name: 'novaConsulta', component: AdminNovaConsulta },
-				{ path: ':consulta', name: 'pageConsulta', component: AdminPagConsulta }
-			]
-		}
+		// {
+		// 	path: '/login',
+		// 	name: 'AdminLogin',
+		// 	components: { AdminLogin }
+		// },
+		// {
+		// 	path: '/admin',
+		// 	components: { Admin },
+		// 	children: [
+		// 		{ path: '', name: 'Admin', component: AdminHome },
+		// 		{ path: 'novaconsulta', name: 'novaConsulta', component: AdminNovaConsulta },
+		// 		{ path: ':consulta', name: 'pageConsulta', component: AdminPagConsulta }
+		// 	]
+		// }
 	]
 })

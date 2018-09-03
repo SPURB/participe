@@ -1,6 +1,6 @@
 <template>
 	<div class="GrafBarras">
-		<div class="grafTitulo">Principais modais<sup>1</sup></div>
+		<div class="grafTitulo">Modo principal das viagens<sup>1</sup></div>
 		<div id="eixoY" ref="eixoY">
 			<div><span>50%</span></div>
 			<div><span>40%</span></div>
@@ -10,36 +10,36 @@
 		</div>
 		<div id="eixoX" ref="eixoX">
 			<div legenda="1">
-				<div class="barra" valor="66" title=""></div>
-				<div class="barra" valor="83" title=""></div>			
+				<div class="barra" valor="66" title="6,6%"></div>
+				<div class="barra" valor="83" title="8,3%"></div>			
 			</div>
 			<div legenda="2">
-				<div class="barra" valor="107" title=""></div>
-				<div class="barra" valor="19" title=""></div>
+				<div class="barra" valor="107" title="10,7%"></div>
+				<div class="barra" valor="19" title="1,9%"></div>
 			</div>
 			<div legenda="3">
-				<div class="barra" valor="28" title=""></div>
-				<div class="barra" valor="244" title=""></div>				
+				<div class="barra" valor="28" title="2,8%"></div>
+				<div class="barra" valor="244" title="24,4%"></div>				
 			</div>
 			<div legenda="4">
-				<div class="barra" valor="9" title=""></div>
-				<div class="barra" valor="7" title=""></div>
+				<div class="barra" valor="9" title="0,9%"></div>
+				<div class="barra" valor="7" title="0,7%"></div>
 			</div>
 			<div legenda="5">
-				<div class="barra" valor="8" title=""></div>
-				<div class="barra" valor="32" title=""></div>
+				<div class="barra" valor="8" title="0,8%"></div>
+				<div class="barra" valor="32" title="3,2%"></div>
 			</div>
 			<div legenda="6">
-				<div class="barra" valor="454" title=""></div>
-				<div class="barra" valor="301" title=""></div>
+				<div class="barra" valor="454" title="45,4%"></div>
+				<div class="barra" valor="301" title="30,1%"></div>
 			</div>
 			<div legenda="7">
-				<div class="barra" valor="1" title=""></div>
-				<div class="barra" valor="6" title=""></div>
+				<div class="barra" valor="1" title="0,1%"></div>
+				<div class="barra" valor="6" title="0,6%"></div>
 			</div>
 			<div legenda="8">
-				<div class="barra" valor="75" title=""></div>
-				<div class="barra" valor="308" title=""></div>
+				<div class="barra" valor="75" title="7,5%"></div>
+				<div class="barra" valor="308" title="30,8%"></div>
 			</div>
 		</div>
 		<ul class="legenda">
@@ -52,7 +52,7 @@
 			<li><span>3</span>Ônibus</li>
 			<li><span>4</span>Ônibus fretado</li>
 			<li><span>5</span>Escolar</li>
-			<li><span>6</span>Individuais (auto, moto, taxi, outros)</li>
+			<li><span>6</span>Individuais (auto, moto, táxi, outros)</li>
 			<li><span>7</span>Bibcicleta</li>
 			<li><span>8</span>A pé</li>
 		</ul>
@@ -93,7 +93,8 @@ div.GrafBarras {
 
 		div {
 			font-size: xx-small;
-			min-height: 24px;
+			height: 20px;
+			color: #BDBDBD;
 			border-top: 1px dotted #BDBDDB;
 
 			&:last-child { border-bottom: 1px dotted #BDBDDB; };
@@ -141,12 +142,13 @@ div.GrafBarras {
 				border: 4px solid transparent;
 				overflow: hidden;
 				transition: all ease-in-out .1s;
+				border-color: rgba(0, 0, 0, .12);
 
 				&:nth-of-type(1) { background: #EB5757; border: 1px solid rgba(0, 0, 0, .08); };
 				&:nth-of-type(2) { background: #777; border: 1px solid rgba(0, 0, 0, .08); };
 
 				&:hover {
-					border-color: rgba(0, 0, 0, .12);
+					opacity: .4;
 				};
 			};
 		};
@@ -155,6 +157,7 @@ div.GrafBarras {
 	ul.legenda {
 		display: flex;
 		flex-flow: row wrap;
+		column-gap: 12px;
 		list-style-type: none;
 		margin: 40px 0 0 0;
 		padding: 0;

@@ -39,7 +39,6 @@ div.Indice {
 		top: 60px;
 		bottom: 0;
 		left: 0;
-		margin-left: -2rem;
 		padding: 0;
 		list-style-type: none;
 		font-family: inherit;

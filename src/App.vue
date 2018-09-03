@@ -25,7 +25,7 @@ export default {
 		MenuLateral,
 		Rodape
 	},
-	computed: { 
+	computed: {
 		interruptor() { return this.$store.state.luzApaga }, 
 		isAdmin(){ return this.$store.state.isAdmin }
 	},

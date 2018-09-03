@@ -111,6 +111,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 import { mapFields } from 'vee-validate'
 
 export default {
@@ -159,18 +160,29 @@ export default {
 		},
 		criarConsulta(){
 			const sendObj = {
-				"nome": this.nome_db,
-				"ativo": "="+this.ativo,
-				"data_cadastro": this.data_cadastro,
-				"data_final": this.data_final,
-				"texto_intro": this.texto_intro,
-				"nome_publico": this.nome_publico,
-				"url_consulta": this.url_consulta,
-				"url_capa": this.url_capa,
-				"url_devolutiva": this.url_devolutiva
+				"nome": 'teste_nome',// this.nome_db,
+				"ativo": '=0',//"="+this.ativo,
+				"data_cadastro": "2018-09-03",//this.data_cadastro,
+				"data_final": "2018-09-23",//this.data_final,
+				"texto_intro": "teste_texto_intro", //this.texto_intro,
+				"nome_publico": "teste_nome_publico",//this.nome_publico,
+				"url_consulta": "https://google.com", //this.url_consulta,
+				"url_capa": "https://google.com", //this.url_capa,
+				"url_devolutiva": "https://google.com" //this.url_devolutiva
 			}
 			console.log(sendObj)
-		}
+
+			const app = this;
+			axios.post(this.apiPath+'consultas',sendObj)
+			.then(function (response) {
+				console.log(response);
+				alert("Sucesso")
+			})
+			.catch(function (error) {
+				alert("Estamos com um erro de comunicação com o servidor. Tente novamente mais tarde.")
+			});
+
+		},
 	},
 	watch:{
 		nome_publico(noSlug){

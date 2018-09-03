@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-const Home = () => import('@/components/pages/Home')
 
-// Consultas
+// Pages
+const Home = () => import('@/components/pages/Home')
 const Anhembi2 = () => import('@/components/pages/Anhembi2')
+const Login = () => import('@/components/pages/Login')
 
 // Admin
-const Login = () => import('@/components/pages/Login')
 const Admin = () => import('@/components/Admin')
 const AdminHome = () => import('@/components/AdminHome')
 const AdminNovaConsulta = () => import('@/components/AdminNovaConsulta')

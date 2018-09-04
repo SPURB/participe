@@ -1,7 +1,7 @@
 <template>
 	<div class="Diagnostico" lang="pt-BR">
 		<div class="limiteSp">
-			<img src="../../static/img/limiteSp.png" alt="Localização do perímetro do PIU Arco Pinheiros no município de São Paulo.">
+			<img src="http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/limiteSp.png" alt="Localização do perímetro do PIU Arco Pinheiros no município de São Paulo.">
 			<div class="limitePerimetro"></div>
 		</div>
 		<div class="menu">
@@ -16,7 +16,7 @@
 				<ul>
 					<li class="tituloDiag">Legenda</li>
 					<li><span style="border: 2px solid #211915"></span>Perímetro do Arco Pinheiros</li>
-					<li><span style="background: url('../../static/img/legenda_ferrovias.png') no-repeat center center;"></span>Ferrovia</li>
+					<li><span style="background: url('http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/legenda_ferrovias.png') no-repeat center center;"></span>Ferrovia</li>
 					<li><span style="background: #84b1bd"></span>Hidrografia</li>
 					<li><span style="height: 1px; border: 1px solid #4c4c4c"></span>Via Estrutural de Nível 1</li>
 				</ul>
@@ -57,10 +57,10 @@
 			</div>
 		</div>
 		<div class="main">
-			<img src="../../static/img/diagnostico_mapas/base.png">
+			<img src="http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/diagnostico_mapas/base.png">
 			<div id="mapas" ref="mapas"></div>
 			<div class="limiteSp_mob">
-				<img src="../../static/img/limiteSp.png" alt="Localização do perímetro do PIU Arco Pinheiros no município de São Paulo.">
+				<img src="http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/limiteSp.png" alt="Localização do perímetro do PIU Arco Pinheiros no município de São Paulo.">
 				<div class="limitePerimetro"></div>
 			</div>
 		</div>
@@ -199,7 +199,7 @@
 			<ul>
 				<li class="tituloDiag">Legenda</li>
 				<li><span style="border: 2px solid #211915"></span>Perímetro do Arco Pinheiros</li>
-				<li><span style="background: url('../../static/img/legenda_ferrovias.png') no-repeat center center;"></span>Ferrovia</li>
+				<li><span style="background: url('http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/legenda_ferrovias.png') no-repeat center center;"></span>Ferrovia</li>
 				<li><span style="background: #84b1bd"></span>Hidrografia</li>
 				<li><span style="height: 1px; border: 1px solid #4c4c4c"></span>Via Estrutural de Nível 1</li>
 			</ul>
@@ -308,7 +308,7 @@ export default {
 					path = secao
 					break;
 			}
-			let caminho = 'url(../../static/img/diagnostico_mapas/' + path + '.png)'
+			let caminho = 'url(http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/diagnostico_mapas/' + path + '.png)'
 			this.$refs.mapas.style.backgroundImage = caminho
 		}
 	},

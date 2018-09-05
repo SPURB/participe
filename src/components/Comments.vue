@@ -1,6 +1,22 @@
 <template>
 	<div class="Comments" :class="{ aberto: abreComentario }">
+
+		<!-- <a @click="setModal('success')">sucesso</a>
+		<a @click="setModal('error')">error</a> -->
+
+		<Modal v-if="modalState.error">
+			<h3 slot="header" class="modal-error">Erro!</h3>
+			<p slot="body">Estamos com um erro de comunicação com o servidor. Tente novamente mais tarde.</p>
+		</Modal>
+
+		<Modal v-if="modalState.success">
+			<h3 slot="header" class="modal-success">Obrigado!</h3>
+			<div slot="body"><p>Agradecemos a sua contribuição!</br>
+			Seu comentário foi enviado e aguarda aprovação da moderação para ser publicado.</p></div>
+		</Modal>
+
 		<div @click="abreComentario = !abreComentario"><i class="material-icons">chat</i> Comente aqui</div>
+
 		<form>
 			<fieldset>
 				<label for="nome">Nome</label>
@@ -56,10 +72,14 @@
 
 <script>
 import axios from 'axios'
+import Modal from '@/components/Modal.vue'
 
 export default {
 	name: 'Comments',
 	props:['attr'],
+	components:{
+		Modal
+	},
 	data(){
 		return{
 			form_name: null,
@@ -71,6 +91,7 @@ export default {
 			abreComentario: false,
 		}
 	},
+
 	computed:{
 		currentRoute(){ return this.$route.name },
 		returnFormNameObject(){
@@ -81,18 +102,14 @@ export default {
 				return this.form_name + ' ' + this.form_surname
 			}
 		},
-		apiPath() {
-			return this.$store.getters.apiPath 
-			// if(location.port == '8080' || location.port == '8082'){
-			// 	return 'http://spurbsp163:7080/apiconsultas/' 
-			// }
-			// else{
-			// 	return 'http://participe.gestaourbana.prefeitura.sp.gov.br/apiconsultas/' 
-			// }
-		},
+		apiPath() { return this.$store.getters.apiPath },
+		modalState(){ return this.$store.state.modalState }
 	},
 
 	methods:{
+		setModal(typeOfmodal){ 
+			this.$store.commit('COMMENT_MODAL_STATUS', typeOfmodal)
+		},
 		checkName(){
 			if(!this.fields.name.valid && !this.fields.email.valid && !this.fields.surname.valid){
 				alert('Preencha corretamente os campos Nome e Email')
@@ -114,7 +131,7 @@ export default {
 			}
 		},
 		send(){
-			const app = this;
+			let app = this;
 			axios.post(this.apiPath+'members',{
 				'idConsulta':app.$route.meta.id,
 				'name': app.returnFormNameObject,
@@ -130,13 +147,19 @@ export default {
 				// console.log(response);
 				let name = app.form_name;
 				let content = app.form_content;
-
-				alert("Obrigado," + name + "! Agradecemos a sua contribuição! Seu comentário (" + content + ") foi enviado e aguarda aprovação da moderação para ser publicado. Obrigado por sua contribuição.")
+				app.setModal('success')
 			})
 			.catch(function (error) {
-				// console.log(error)
-				alert("Estamos com um erro de comunicação com o servidor. Tente novamente mais tarde.")
+				app.setModal('error')
 			});
+		},
+		resetForm(){
+			this.form_name = null
+			this.form_surname = null
+			this.form_organization = null
+			this.form_email = null
+			this.form_content = null
+			this.abreComentario = false
 		}
 	}
 };
@@ -145,7 +168,6 @@ export default {
 
 
 <style lang="scss" scoped>
-
 div.Comments {
 	margin: 2rem auto 4rem auto;
 	max-width: 700px;

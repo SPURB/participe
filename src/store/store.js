@@ -12,7 +12,11 @@ export const store = new Vuex.Store({
 		luzApaga: false,
 		consultas: undefined,
 		errors: undefined,
-		commentsLoaded: false
+		commentsLoaded: false,
+		modalState: {
+			error: false,
+			success: false
+		}
 	},
 	getters:{
 		enviroment(){
@@ -57,6 +61,15 @@ export const store = new Vuex.Store({
 				if (a.ativo < b.ativo) { return 1 }
 				if (a.ativo > b.ativo) { return -1 }
 			})
+		},
+		COMMENT_MODAL_STATUS(state, typeOfmodal){
+			switch(typeOfmodal){
+				case 'error': state.modalState.error = !state.modalState.error; break
+				case 'success': state.modalState.success = !state.modalState.success; break
+				default:
+					state.modalState.error = false
+					state.modalState.success = false
+			}
 		}
 	}, 
 	actions: {

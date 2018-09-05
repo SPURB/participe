@@ -45,6 +45,7 @@
 </template>
 
 <script>
+// import { List } from listjs
 export default {
 	name: 'Home',
 	computed:{

@@ -2,6 +2,7 @@
 	<div class="Anhembi2" ref="conteudoConsulta">
 
 		<div class="top" style="background-image: url('http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/capa.jpg'); background-color: #fdf8f2;">
+			
 			<div v-show="estaConsulta.nomePublico">
 				<h1>{{ estaConsulta.nomePublico }}</h1>
 				<div>2ª consulta pública – Projeto de Intervenção Urbana Anhembi</div>

@@ -1,7 +1,6 @@
 <template>
 	<div class="ArcoPinheiros" ref="conteudoConsulta">
-		<div class="top"></div>
-
+		<PageTop background_image_src="arquivos/capas/arco-pinheiros_dt.jpg" ></PageTop>
 		<Indice :titulos="titulosLimpo"></Indice>
 		<Apoio>
 			<h1>Decreto Nº 56901 de 29 de março de 2016</h1>
@@ -80,6 +79,9 @@
 				<img src="http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/Diagrama_proposto.jpg" alt="Diagrama proposto – Arco Pinheiros">
 				<figcaption>Diagrama proposto – Arco Pinheiros</figcaption>
 			</figure>
+
+			<Mapa :mapa_attrs="mapa_attrs"></Mapa>
+
 		</section>
 
 		<section>
@@ -236,12 +238,13 @@
 </template>
 
 <script>
+const Mapa = () => import('@/components/Mapa')
+import PageTop from '@/components/PageTop'
 import Diagnostico from '@/components/Diagnostico'
 import Indice from '@/components/Indice';
 import Comments from '@/components/Comments';
 import CommentsLoader from '@/components/CommentsLoader';
 // import Galeria from '@/components/Galeria';
-import Mapa from '@/components/Mapa';
 import Minuta from '@/components/Minuta';
 import Apoio from '@/components/Apoio';
 import ProcessoPIU from '@/components/graf/ProcessoPIU';
@@ -256,13 +259,26 @@ export default {
 			titulosLimpo: [],
 			comments_atrr: undefined,
 			// gallery_attrs: {},
-			mapa_attrs: {},
+			mapa_attrs: {
+				center: [ -5202550.487352, -2698002.011056 ],
+				zoom: 13,
+				layers:[
+					{
+						title: "Perímetro de abrangência Arco Pinheiros", 
+						path: this.$store.getters.basePath + 'arquivos/arco-pinheiros/perimetro_ACP.kml',
+						stroke_color: 'rgba(255, 135, 0, 1)',
+						fill_color: 'rgba(255, 255, 255, .1)',
+						stroke_width: 2,
+					},
+				]
+			},
 			consultas: false,
 			estaConsulta: false
 		}
 	},
 	computed: { commentsLoaded() { return this.$store.state.commentsLoaded } },
 	components: {
+		PageTop,
 		Diagnostico,
 		Indice,
 		Comments,
@@ -353,103 +369,6 @@ div.ArcoPinheiros {
 	padding-bottom: 4rem;
 	z-index: 0;
 
-	div.top {
-		/*visibility: hidden;*/
-		padding: 2rem;
-		margin: 0 0 2rem 0;
-		overflow: hidden;
-		background-position: center center;
-		background-size: cover;
-		width: 100%;
-		height: calc(100vh - 60px);
-		position: relative;
-		display: flex;
-		flex-flow: column nowrap;
-		align-items: center;
-		justify-content: center;
-		z-index: 1;
-		
-		& > div:first-child {
-			padding: 1.2rem;
-			background: #FFF;
-			outline: 8px solid rgba(0, 0, 0, .24);
-			-moz-outline-radius: 2px;
-
-			& > div {
-				margin: 0 0 8px 0;
-				text-align: center;
-				font-size: small;
-				color: #777;
-				font-weight: 400;
-				
-				&:last-child { margin-bottom: 0; };
-
-				i {
-					font-size: initial;
-					vertical-align: middle;
-				};
-			};
-
-			div#statusConsulta {
-				font-size: 10px;
-				text-transform: uppercase;
-				color: #fff;
-				font-weight: 500;
-				border-radius: 2px;
-				white-space: nowrap;
-				margin: 0 .5rem;
-			}
-			div#statusConsulta::after{
-				padding:.35rem .5rem;
-			}
-			div#statusConsulta.aberta::after{
-				content: "Em consulta";
-				background-color: #008015;
-			}
-			div#statusConsulta.fechada::after{
-				content: "Consulta Encerrada";
-				background-color: #EB5757;
-			}
-			& > h1 {
-				font-size: calc(16px + 8vmin);
-				line-height: calc(6vmin + 32px);
-				margin: 1rem;
-				text-align: center;
-			};
-		};
-
-		.setaBaixo {
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			display: flex;
-			align-items: flex-end;
-			justify-content: center;
-			width: 100%;
-			height: 25vh;
-			background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .8));
-			transform: translateY(0);
-			transition: all .4s;
-
-			i {
-				font-size: calc(24px + 16vmin);
-				line-height: .8;
-				color: #FFF;
-				text-shadow: 0 2px 2px rgba(0, 0, 0, .24);
-				transition: all .1s;
-			};
-
-			&:hover {
-				cursor: pointer;
-				transform: translateY(32px);
-
-				i {
-					transform: translateY(-24px);
-					cursor: pointer;
-				};
-			};
-		};
-	};
 
 	h2, h3, h4, h5, h6, p, ul, ol {
 		margin: 0 auto 1rem auto;

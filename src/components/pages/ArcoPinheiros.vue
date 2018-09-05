@@ -1,6 +1,6 @@
 <template>
 	<div class="ArcoPinheiros" ref="conteudoConsulta">
-		<PageTop background_image_src="arquivos/capas/arco-pinheiros_dt.jpg" ></PageTop>
+		<PageTop background_image_src="arquivos/capas/arco-pinheiros_dt.jpg" :esta_consulta="estaConsulta"></PageTop>
 		<Indice :titulos="titulosLimpo"></Indice>
 		<Apoio>
 			<h1>Decreto Nº 56901 de 29 de março de 2016</h1>
@@ -72,11 +72,11 @@
 		<section>
 			<h2 class="titulo" indent="1">Motivação</h2>
 			<figure title="Diagrama – Arco Pinheiros" class="coluna">
-				<img src="http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/Diagrama_atual.jpg" alt="Diagrama – Arco Pinheiros">
+				<img :src="imgSrc('arquivos/arco-pinheiros/Diagrama_atual.jpg')" alt="Diagrama – Arco Pinheiros">
 				<figcaption>Diagrama – Arco Pinheiros</figcaption>
 			</figure>
 			<figure title="Diagrama proposto – Arco Pinheiros" class="coluna">
-				<img src="http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/Diagrama_proposto.jpg" alt="Diagrama proposto – Arco Pinheiros">
+				<img :src="imgSrc('arquivos/arco-pinheiros/Diagrama_proposto.jpg')" alt="Diagrama proposto – Arco Pinheiros">
 				<figcaption>Diagrama proposto – Arco Pinheiros</figcaption>
 			</figure>
 
@@ -105,15 +105,15 @@
 		<section>
 			<h3 class="titulo" indent="2">Diretrizes e viabilidade da transformação</h3>
 			<figure title="Setores de adensamento construtivo e populacional" class="borda">
-				<img src="http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/ACP-diretrizes-1.png" alt="Setores de adensamento construtivo e populacional">
+				<img :src="imgSrc('arquivos/arco-pinheiros/ACP-diretrizes-1.png')" alt="Setores de adensamento construtivo e populacional">
 				<h6>Setores de adensamento construtivo e populacional</h6>
 				<ul class="legenda">
 					<li><div style="border: 2px solid black"></div> Perímetro Arco Pinheiros</li>
-					<li><div style="background: url('http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/legenda_ferrovias.png');"></div> Ferrovia</li>
+					<li><div :style="backgroundImg('arquivos/arco-pinheiros/legenda_ferrovias.png')"></div>Ferrovia</li>
 					<li><div style="background: #6fb3be;"></div> Hidrografia</li>
-					<li><div style="background: url('http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/icone_onibus.png'); border: 0;"></div> Terminal de ônibus</li>
-					<li><div style="background: url('http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/icone_metro.png'); border: 0;"></div> Estação do Metrô</li>
-					<li><div style="background: url('http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/icone_cptm.png'); border: 0;"></div> Estação da CPTM</li>
+					<li><div style="border: 0;"><img :src="imgSrc('arquivos/arco-pinheiros/icone_onibus.png')" alt=""></div>Terminal de ônibus</li>
+					<li><div style="border: 0;"><img :src="imgSrc('arquivos/arco-pinheiros/icone_metro.png')" alt=""></div>Estação do Metrô</li>
+					<li><div style="border: 0;"><img :src="imgSrc('arquivos/arco-pinheiros/icone_cptm.png')" alt=""></div>Estação da CPTM</li>
 					<li><div style="background: rgba(255, 0, 0, .2); border: 2px solid rgba(255, 0, 0, .6); color: red; font-weight: bold;">1</div>Quadras centrais do Jaguaré</li>
 					<li><div style="background: rgba(255, 0, 0, .2); border: 2px solid rgba(255, 0, 0, .6); color: red; font-weight: bold;">2</div>Nova frente da USP / Av. Escola Politécnica</li>
 					<li><div style="background: rgba(255, 0, 0, .2); border: 2px solid rgba(255, 0, 0, .6); color: red; font-weight: bold;">3</div>Nova frente do Rio Pinheiros</li>
@@ -125,38 +125,38 @@
 				<div class="fontes">Mapa <strong>MDC, 2004</strong> | Elaboração <strong>SPUrbanismo</strong></div>
 			</figure>
 			<figure title="Diretrizes habitacionais" class="borda">
-				<img src="http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/ACP-diretrizes-2.png" alt="Diretrizes habitacionais">
+				<img :src="imgSrc('arquivos/arco-pinheiros/ACP-diretrizes-2.png')" alt="Diretrizes habitacionais">
 				<h6>Diretrizes habitacionais</h6>
 				<ul class="legenda">
 					<li><div style="border: 2px solid black"></div> Perímetro Arco Pinheiros</li>
-					<li><div style="background: url('http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/legenda_ferrovias.png');"></div> Ferrovia</li>
+					<li><div :style="backgroundImg('arquivos/arco-pinheiros/legenda_ferrovias.png')"></div>Ferrovia</li>
 					<li><div style="background: #6fb3be;"></div> Hidrografia</li>
-					<li><div style="background: url('http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/icone_onibus.png'); border: 0;"></div> Terminal de ônibus</li>
-					<li><div style="background: url('http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/icone_metro.png'); border: 0;"></div> Estação do Metrô</li>
-					<li><div style="background: url('http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/icone_cptm.png'); border: 0;"></div> Estação da CPTM</li>
-					<li><div style="border: 0;"><img src="http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/icone_habitacao_1.png" alt=""></div> Urbanização e regularização fundiária de assentamentos precários</li>
-					<li><div style="border: 0;"><img src="http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/icone_habitacao_2.png" alt=""></div> Provisão de novas moradias</li>
-					<li><div style="border: 0;"><img src="http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/icone_habitacao_3.png" alt=""></div> Áreas potenciais de cota de solidariedade</li>
+					<li><div style="border: 0;"><img :src="imgSrc('arquivos/arco-pinheiros/icone_onibus.png')" alt=""></div>Terminal de ônibus</li>
+					<li><div style="border: 0;"><img :src="imgSrc('arquivos/arco-pinheiros/icone_metro.png')" alt=""></div>Estação do Metrô</li>
+					<li><div style="border: 0;"><img :src="imgSrc('arquivos/arco-pinheiros/icone_cptm.png')" alt=""></div>Estação da CPTM</li>
+					<li><div style="border: 0;"><img :src="imgSrc('arquivos/arco-pinheiros/icone_habitacao_1.png')" alt=""></div> Urbanização e regularização fundiária de assentamentos precários</li>
+					<li><div style="border: 0;"><img :src="imgSrc('arquivos/arco-pinheiros/icone_habitacao_2.png')" alt=""></div> Provisão de novas moradias</li>
+					<li><div style="border: 0;"><img :src="imgSrc('arquivos/arco-pinheiros/icone_habitacao_3.png')" alt=""></div> Áreas potenciais de cota de solidariedade</li>
 				</ul>
 				<div class="fontes">Mapa <strong>MDC, 2004</strong> | Elaboração <strong>SPUrbanismo</strong></div>
 			</figure>
 			<figure title="Diretrizes de mobilidade e transporte" class="borda">
-				<img src="http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/ACP-diretrizes-3.png" alt="Diretrizes de mobilidade e transporte">
+				<img :src="imgSrc('arquivos/arco-pinheiros/ACP-diretrizes-3.png')" alt="Diretrizes de mobilidade e transporte">
 				<h6>Diretrizes de mobilidade e transporte</h6>
 				<ul class="legenda">
-					<li><div style="border: 2px solid black"></div>Perímetro Arco Pinheiros</li>
-					<li><div style="background: url('http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/legenda_ferrovias.png');"></div>Ferrovia</li>
+					<li><div style="border: 2px solid black"></div> Perímetro Arco Pinheiros</li>
+					<li><div :style="backgroundImg('arquivos/arco-pinheiros/legenda_ferrovias.png')"></div>Ferrovia</li>
 					<li><div style="background: #6fb3be;"></div> Hidrografia</li>
-					<li><div style="background: url('http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/icone_onibus.png'); border: 0;"></div>Terminal de ônibus</li>
-					<li><div style="background: url('http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/icone_metro.png'); border: 0;"></div>Estação do Metrô</li>
-					<li><div style="background: url('http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/icone_cptm.png'); border: 0;"></div>Estação da CPTM</li>
+					<li><div style="border: 0;"><img :src="imgSrc('arquivos/arco-pinheiros/icone_onibus.png')" alt=""></div>Terminal de ônibus</li>
+					<li><div style="border: 0;"><img :src="imgSrc('arquivos/arco-pinheiros/icone_metro.png')" alt=""></div>Estação do Metrô</li>
+					<li><div style="border: 0;"><img :src="imgSrc('arquivos/arco-pinheiros/icone_cptm.png')" alt=""></div>Estação da CPTM</li>
 					<li><div class="linha" style="border-width: 2px; border-color: #5c4b8f"></div>Corredores de ônibus existentes</li>
 					<li><div class="linha" style="border-style: dotted; border-width: 2px; border-color: #5c4b8f;"></div>Corredores de ônibus municipais planejados - 1ª e 2ª fases</li>
 					<li><div class="linha" style="border-style: dashed; border-width: 2px; border-color: #5c4b8f;"></div>Corredores de ônibus metropolitanos planejados</li>
 					<li><div class="linha" style="border-width: 2px; border-color: #3d1970; box-shadow: -2px 2px 2px rgba(0, 0, 0, .4)"></div> Pontes necessárias</li>
 					<li><div style="border-style: dotted; border-width: 2px; border-color: #5c4b8f; border-radius: 100%; filter: drop-shadow(0 0 2px rgba(0, 0, 0, .8));"></div>Melhorias de passeios necessárias</li>
-					<li><div style="border: 0; filter: drop-shadow(0 0 2px rgba(0, 0, 0, .8));"><img src="http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/icone_mobilidade_6.png" alt=""></div>Transposições necessárias</li>
-					<li><div style="border: 0;"><img src="http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/icone_mobilidade_7.png" alt=""></div>Conexões cicloviárias necessárias</li>
+					<li><div style="border: 0; filter: drop-shadow(0 0 2px rgba(0, 0, 0, .8));"><img :src="imgSrc('arquivos/arco-pinheiros/icone_mobilidade_6.png')" alt=""></div>Transposições necessárias</li>
+					<li><div style="border: 0;"><img :src="imgSrc('arquivos/arco-pinheiros/icone_mobilidade_7.png')" alt=""></div>Conexões cicloviárias necessárias</li>
 					<li><div style="background: #875656; border-radius: 100%;"></div>Bicicletário ou paraciclo necessário</li>
 					<li><div style="background: #d73134; border-radius: 100%; transform: scale(.75)"></div>Bicicletário existente</li>
 					<li><div class="linha" style="border-color: #d73134;"></div> Rede cicloviária existente</li>
@@ -164,34 +164,27 @@
 				<div class="fontes">Mapa <strong>MDC, 2004</strong> | Elaboração <strong>SPUrbanismo</strong></div>
 			</figure>
 			<figure title="Diretrizes ambientais e de equipamentos" class="borda">
-				<img src="http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/ACP-diretrizes-4.png" alt="Diretrizes ambientais e de equipamentos">
+				<img :src="imgSrc('arquivos/arco-pinheiros/ACP-diretrizes-4.png')" alt="Diretrizes ambientais e de equipamentos">
 				<h6>Diretrizes ambientais e de equipamentos</h6>
 				<ul class="legenda">
-					<li><div style="border: 2px solid black"></div>Perímetro Arco Pinheiros</li>
-					<li><div style="background: url('http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/legenda_ferrovias.png');"></div>Ferrovia</li>
+					<li><div style="border: 2px solid black"></div> Perímetro Arco Pinheiros</li>
+					<li><div :style="backgroundImg('arquivos/arco-pinheiros/legenda_ferrovias.png')"></div>Ferrovia</li>
 					<li><div style="background: #6fb3be;"></div> Hidrografia</li>
-					<li><div style="background: url('http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/icone_onibus.png'); border: 0;"></div>Terminal de ônibus</li>
-					<li><div style="background: url('http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/icone_metro.png'); border: 0;"></div>Estação do Metrô</li>
-					<li><div style="background: url('http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/icone_cptm.png'); border: 0;"></div>Estação da CPTM</li>
-					<li><div style="background-image: url('http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/icone_ambiental_1.png'); background-repeat: repeat !important; border-radius: 100%;"></div>Áreas verdes existentes</li>
+					<li><div style="border: 0;"><img :src="imgSrc('arquivos/arco-pinheiros/icone_onibus.png')" alt=""></div>Terminal de ônibus</li>
+					<li><div style="border: 0;"><img :src="imgSrc('arquivos/arco-pinheiros/icone_metro.png')" alt=""></div>Estação do Metrô</li>
+					<li><div style="border: 0;"><img :src="imgSrc('arquivos/arco-pinheiros/icone_cptm.png')" alt=""></div>Estação da CPTM</li>
+					<li><div :style="backgroundImg('arquivos/arco-pinheiros/icone_ambiental_1.png')" style="background-repeat: repeat !important; border-radius: 100%;"></div>Áreas verdes existentes</li>
 					<li><div class="linha" style="border-color: #368d42; border-width: 4px; opacity: .7;"></div>Áreas verdes propostas</li>
 					<li><div class="linha" style="border-style: dashed; border-color: #368d42; border-width: 2px;"></div>Eixos ambientais propostos</li>
-					<li><div style="background-image: url('http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/icone_ambiental_10.png'); background-repeat: repeat !important; border-radius: 100%;"></div>Áreas prioritárias à implantação de programas para incentivo ao aumento das áreas verdes</li>
-					<li><div style="border: 0;"><img src="http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/icone_ambiental_11.png" alt="" style="vertical-align: 0px !important;"></div>Retenção de águas pluviais dentro dos lotes</li>
-					<li><div style="background-image: url('http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/icone_ambiental_12.png'); background-repeat: repeat !important; border-radius: 100%;"></div>Retenção de águas pluviais em espaços públicos</li>
+					<li><div :style="backgroundImg('arquivos/arco-pinheiros/icone_ambiental_10.png')" style="background-repeat: repeat !important; border-radius: 100%;"></div>Áreas prioritárias à implantação de programas para incentivo ao aumento das áreas verdes</li>
+					<li><div style="border: 0;"><img :src="imgSrc('arquivos/arco-pinheiros/icone_ambiental_11.png')" alt="" style="vertical-align: 0px !important;"></div>Retenção de águas pluviais dentro dos lotes</li>
+					<li><div :style="backgroundImg('arquivos/arco-pinheiros/icone_ambiental_12.png')" style="background-repeat: repeat !important; border-radius: 100%;"></div>Retenção de águas pluviais em espaços públicos</li>
 					<li><div class="linha" style="border-color: #334fc4; border-width: 4px;"></div>Parques lineares</li>
 				</ul>
 				<div>
-					<h6 style="font-size: small; margin: 1rem 0 -12px 0;">Temperatura aparente da superfície (alvo) de registro – 03/09/1999 às 09:57h</h6>
-					<span style="font-size: small;">Obs. Segundo a aplicação do modelo de regressão quadrática de Maleret et al. (1985)</span>
-					<ul style="display: inline-flex; flex-flow: row wrap; color: white; list-style: none; font-family: inherit; font-size: small; padding: 0;">
-						<li style="background-color: #154c9a; margin: 0; padding: 4px 8px;">23,5–24</li>
-						<li style="background-color: #325ea8; margin: 0; padding: 4px 8px;">24,5</li>
-						<li style="background-color: #3b82c3; margin: 0; padding: 4px 8px;">25</li>
-						<li style="background-color: #32bbec; margin: 0; padding: 4px 8px;">25,5</li>
-						<li style="background-color: #62c5e0; margin: 0; padding: 4px 8px;">26</li>
-						<li style="background-color: #6bc2be; margin: 0; padding: 4px 8px;">26,5</li>
-						<li style="background-color: #7bc293; margin: 0; padding: 4px 8px;">27</li>
+					<h6 style="font-size: small; margin: 1rem 0 0 0;">Temperatura aparente da superfície (alvo) de registro – 03/09/1999 às 09:57h</h6>
+					<div style="font-size: small; line-height: 120%; margin: .4rem 0;">Obs. Segundo a aplicação do modelo de regressão quadrática de Maleret et al. (1985)</div>
+					<ul style="display: inline-flex; flex-flow: row wrap; color: white; list-style: none; font-family: inherit; font-size: small; padding: 0; margin: 0 1rem;">
 						<li style="background-color: #97c667; margin: 0; padding: 4px 8px;">27,5</li>
 						<li style="background-color: #b8cf26; margin: 0; padding: 4px 8px;">28</li>
 						<li style="background-color: #dddc14; margin: 0; padding: 4px 8px;">28,5</li>
@@ -203,6 +196,43 @@
 					</ul>
 				</div>
 				<div class="fontes">Mapa <strong>MDC, 2004</strong> | Elaboração <strong>SPUrbanismo</strong></div>
+			</figure>
+			<figure title="Bens tombados" class="borda">
+				<img :src="imgSrc('arquivos/arco-pinheiros/ACP-diretrizes-5.png')" alt="Bens tombados">
+				<h6>Bens tombados</h6>
+				<ul class="legenda">
+					<li><div style="border: 2px solid black"></div> Perímetro Arco Pinheiros</li>
+					<li><div :style="backgroundImg('arquivos/arco-pinheiros/legenda_ferrovias.png')"></div>Ferrovia</li>
+					<li><div style="background: #6fb3be;"></div> Hidrografia</li>
+					<li><div style="border: 0;"><img :src="imgSrc('arquivos/arco-pinheiros/icone_onibus.png')" alt=""></div>Terminal de ônibus</li>
+					<li><div style="border: 0;"><img :src="imgSrc('arquivos/arco-pinheiros/icone_metro.png')" alt=""></div>Estação do Metrô</li>
+					<li><div style="border: 0;"><img :src="imgSrc('arquivos/arco-pinheiros/icone_cptm.png')" alt=""></div>Estação da CPTM</li>
+					<li><div style="background: #e39897; font-weight: bold;">1</div>Mirante do Jaguaré</li>
+					<li><div style="background: #e39897; font-weight: bold;">2</div>Conjunto do Casarão Henrique Dumont Vilares</li>
+					<li><div style="background: #e39897; font-weight: bold;">3</div>Antiga Cooperativa Agrícola de Cotia</li>
+					<li><div style="background: #e39897; font-weight: bold;">4</div>Faculdade de Arquitetura e Urbanismo da USP</li>
+					<li><div style="background: #e39897; font-weight: bold;">5</div>Instituto Butantan</li>
+					<li><div style="border: 0;"><img :src="imgSrc('arquivos/arco-pinheiros/icone_tombados_9.png')" alt=""></div>Vistas a partir do Mirante do Jaguaré</li>
+					<li><div style="border: 0;"><img :src="imgSrc('arquivos/arco-pinheiros/icone_tombados_10.png')" alt=""></div>Acessos à USP e Instituto Butantan</li>
+				</ul>
+				<div style="font-size: small; display: flex; flex-direction: column; align-items: center; margin: .4rem 0;">
+					<h3 style="margin: 1rem 0 .4rem 0;">Vistas do território a partir do Mirante do Jaguaré</h3>
+					<div style="display: flex; flex-flow: row nowrap; width: calc(100% - 16px); overflow-x: auto; padding: 0 0 8px 0; justify-content: center;">
+						<div style="background: #F5F5F5; border-radius: 2px; display: inline-flex; flex-direction: column; padding: 8px; max-width: 280px; margin-right: 8px;">
+							<img :src="imgSrc('arquivos/arco-pinheiros/tombados_v1.png')" style="width: unset; max-width: max-content;">
+							<div style="padding-top: 8px;"><strong>Vista 1 (v.1):</strong> vista do Rio Pinheiros com Pico do Jaraguá ao fundo</div>
+						</div>
+						<div style="background: #F5F5F5; border-radius: 2px; display: inline-flex; flex-direction: column; padding: 8px; max-width: 280px; margin-right: 8px;">
+							<img :src="imgSrc('arquivos/arco-pinheiros/tombados_v2.png')" style="width: unset; max-width: max-content;">
+							<div style="padding-top: 8px;"><strong>Vista 2 (v.2):</strong> vista do CEAGESP</div>
+						</div>
+						<div style="background: #F5F5F5; border-radius: 2px; display: inline-flex; flex-direction: column; padding: 8px; max-width: 280px;">
+							<img :src="imgSrc('arquivos/arco-pinheiros/tombados_v3.png')" style="width: unset; max-width: max-content;">
+							<div style="padding-top: 8px;"><strong>Vista 3 (v.3):</strong> vista do Rio Pinheiros e Raia Olímpica da USP</div>
+						</div>
+					</div>
+				</div>
+				<div class="fontes">Mapa <strong>MDC, 2004</strong> | Elaboração <strong>SPUrbanismo</strong> | Fotos (vistas) <strong>http://identidadesp.com.br/jaguare/</strong> (acesso em 10/07/2018)</div>
 			</figure>
 		</section>
 
@@ -273,10 +303,12 @@ export default {
 				]
 			},
 			consultas: false,
-			estaConsulta: false
+			estaConsulta: {}
 		}
 	},
-	computed: { commentsLoaded() { return this.$store.state.commentsLoaded } },
+	computed: {
+		commentsLoaded() { return this.$store.state.commentsLoaded },
+	},
 	components: {
 		PageTop,
 		Diagnostico,
@@ -313,13 +345,18 @@ export default {
 		},
 		filterConsultas(){
 			this.consultas = this.$store.state.consultas;
-			this.estaConsulta = this.consultas.filter(esta => esta.id == this.$route.meta.id )[0];
+			this.estaConsulta = this.consultas.filter(esta => esta.id_consulta == this.$route.meta.id )[0];
+			// let app = this
+			// this.consultas.map(function(index) {
+			// 	if (parseInt(index.id_consulta) == parseInt(app.$route.meta.id)) {
+			// 		app.estaConsulta = index
+			// 	}
+			// })
 		},
 		consultaState(){ return (this.estaConsulta.ativo == '1' ? "aberta" : "fechada") },
 		listaTitulos() {
 			let app = this;
 			let titulosBruto = Array.from(this.$refs.conteudoConsulta.getElementsByClassName('titulo'));
-			console.log(titulosBruto)
 			let titulos = [];
 			let id = 0;
 			titulosBruto.map(function(index) {
@@ -354,6 +391,14 @@ export default {
 				passive: true
 			});
 		},
+		imgSrc(caminho) {
+			let url = this.$store.getters.basePath + caminho
+			return url.toString()
+		},
+		backgroundImg(caminho) {
+			let url = this.$store.getters.basePath + caminho
+			return 'background-image: url(' + url + ');'
+		}
 	},
 };
 </script>
@@ -442,7 +487,8 @@ div.ArcoPinheiros {
 		};
 
 		&.coluna {
-			padding: 2rem;
+			padding: 0 2rem;
+			margin: 1rem auto 2rem auto;
 			max-width: 700px;
 			text-align: center;
 
@@ -468,10 +514,10 @@ div.ArcoPinheiros {
 	};
 
 	@media (max-width: 992px) {
-		figure:not(.coluna) figcaption {
-			padding-left: 2rem;
-			padding-right: 2rem;
-		};
+		figure {
+			margin-left: 2rem;
+			margin-right: 2rem;
+		}
 	};
 
 	h6 {
@@ -509,12 +555,14 @@ div.ArcoPinheiros {
 				border: 1px solid rgba(0, 0, 0, .08);
 				height: 1.2rem;
 				min-width: 1.2rem;
+				max-width: 1.2rem;
+				overflow: hidden;
 				margin-right: .4rem;
 				line-height: calc(1.2rem - 2px);
 				text-align: center;
 				background-position: center center !important;
 				background-repeat: no-repeat !important;
-				img { vertical-align: text-bottom; width: min-content; }
+				img { vertical-align: middle; width: min-content; max-width: 100%; max-height: 100%; }
 
 				&.linha {
 					max-height: 0px;

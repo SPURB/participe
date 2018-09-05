@@ -69,7 +69,7 @@ export default{
 					source: new BingMaps({
 						imagerySet: 'AerialWithLabels', 
 						culture: 'pt-BR',
-						key: chavesExternas.openlayers
+						key: chavesExternas.bingMaps
 					})
 				})
 			]
@@ -160,18 +160,15 @@ div.Mapa {
 		flex-flow: row wrap;
 		justify-content: center;
 		max-width: 992px;
-		padding: 1rem 2rem 0 1rem;
-		margin-bottom: 0;
-		margin-top: 0;
+		padding: 1rem;
+		margin: 0;
 		font-family: inherit;
 		
 		li {
 			display: inline-flex;
 			align-items: center;
 			font-size: small;
-			margin: 0;
-			padding: 0 0 .8rem 0;
-			margin-right: 2rem;
+			margin: 0 2rem 0 0;
 
 			div {
 				border-style: solid;

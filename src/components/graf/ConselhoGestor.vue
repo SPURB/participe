@@ -1,5 +1,5 @@
 <template>
-	<div class="ConselhoGestor">
+	<div class="ConselhoGestor ai2html">
 		<div id="g-Infografico_conselhogestor_arco_pinheiros-box" class="ai2html ai2html-box-v5">
 			<!-- Artboard: conselhogestor_acp -->
 			<div id="g-Infografico_conselhogestor_arco_pinheiros-conselhogestor_acp" class="g-artboard" data-aspect-ratio="1.389" data-min-width="700">

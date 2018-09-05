@@ -1,7 +1,7 @@
 <template>
 	<div class="Diagnostico" lang="pt-BR">
 		<div class="limiteSp">
-			<img src="http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/limiteSp.png" alt="Localização do perímetro do PIU Arco Pinheiros no município de São Paulo.">
+			<img :src="imgSrc('arquivos/arco-pinheiros/limiteSp.png')" alt="Localização do perímetro do PIU Arco Pinheiros no município de São Paulo.">
 			<div class="limitePerimetro"></div>
 		</div>
 		<div class="menu">
@@ -16,7 +16,7 @@
 				<ul>
 					<li class="tituloDiag">Legenda</li>
 					<li><span style="border: 2px solid #211915"></span>Perímetro do Arco Pinheiros</li>
-					<li><span style="background: url('http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/legenda_ferrovias.png') no-repeat center center;"></span>Ferrovia</li>
+					<li><span :style="backgroundImg('arquivos/arco-pinheiros/legenda_ferrovias.png')" style="background-repeat: no-repeat; background-position: center center;"></span>Ferrovia</li>
 					<li><span style="background: #84b1bd"></span>Hidrografia</li>
 					<li><span style="height: 1px; border: 1px solid #4c4c4c"></span>Via Estrutural de Nível 1</li>
 				</ul>
@@ -57,10 +57,10 @@
 			</div>
 		</div>
 		<div class="main">
-			<img src="http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/diagnostico_mapas/base.png">
+			<img :src="imgSrc('arquivos/arco-pinheiros/diagnostico_mapas/base.png')">
 			<div id="mapas" ref="mapas"></div>
 			<div class="limiteSp_mob">
-				<img src="http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/limiteSp.png" alt="Localização do perímetro do PIU Arco Pinheiros no município de São Paulo.">
+				<img :src="imgSrc('arquivos/arco-pinheiros/limiteSp.png')" alt="Localização do perímetro do PIU Arco Pinheiros no município de São Paulo.">
 				<div class="limitePerimetro"></div>
 			</div>
 		</div>
@@ -89,8 +89,8 @@
 					<h6>Usos predominantes do solo<sup>1</sup></h6>
 					<div class="bar">
 						<div style="width: 61%; background: #EB5757;"></div>
-						<div style="width: 6%; background: #BDBDBD;"></div>
-						<div style="width: 3%; background: #333;"></div>
+						<div style="width: 6%; background: #f3e826;"></div>
+						<div style="width: 3%; background: #f28d14;"></div>
 						<div style="width: 30%; background: #777;"></div>
 					</div>
 					<ul>
@@ -99,11 +99,11 @@
 							<strong>Usos não residenciais</strong> (comércio, serviços, indústrias, armazéns, equipamentos, usos especiais) <span>61%</span>
 						</li>
 						<li>
-							<span style="background: #BDBDBD;"></span>
+							<span style="background: #f3e826;"></span>
 							<strong>Usos residenciais cadastrados</strong> (residencial vertical de baixo, médio e alto padrão; residencial horizontal de baixo, médio e alto padrão; uso misto) <span>6%</span>
 						</li>
 						<li>
-							<span style="background: #333;"></span>
+							<span style="background: #f28d14;"></span>
 							<strong>Favelas e núcleos</strong> <span>3%</span>
 						</li>
 						<li>
@@ -172,9 +172,9 @@
 					<ul>
 						<li motivo="servicos">Trabalho (serviços)</li>
 						<li motivo="educacao">Educação</li>
-						<li motivo="comercio">Trabalho (comércio)</li>
-						<li motivo="industria">Trabalho (indústria)</li>
 						<li motivo="outros">Outros</li>
+						<li motivo="industria">Trabalho (indústria)</li>
+						<li motivo="comercio">Trabalho (comércio)</li>
 					</ul>
 				</div>
 				<div class="barras">
@@ -310,6 +310,14 @@ export default {
 			}
 			let caminho = 'url(http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/diagnostico_mapas/' + path + '.png)'
 			this.$refs.mapas.style.backgroundImage = caminho
+		},
+		imgSrc(caminho) {
+			let url = this.$store.getters.basePath + caminho
+			return url.toString()
+		},
+		backgroundImg(caminho) {
+			let url = this.$store.getters.basePath + caminho
+			return 'background-image: url(' + url + ');'
 		}
 	},
 }

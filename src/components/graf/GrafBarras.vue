@@ -18,7 +18,7 @@
 				<div class="barra" valor="19" title="1,9%"></div>
 			</div>
 			<div legenda="3">
-				<div class="barra" valor="28" title="2,8%"></div>
+				<div class="barra" valor="280" title="28%"></div>
 				<div class="barra" valor="244" title="24,4%"></div>				
 			</div>
 			<div legenda="4">
@@ -144,7 +144,7 @@ div.GrafBarras {
 				transition: all ease-in-out .1s;
 				border-color: rgba(0, 0, 0, .12);
 
-				&:nth-of-type(1) { background: #EB5757; border: 1px solid rgba(0, 0, 0, .08); };
+				&:nth-of-type(1) { background: #333; border: 1px solid rgba(0, 0, 0, .08); };
 				&:nth-of-type(2) { background: #777; border: 1px solid rgba(0, 0, 0, .08); };
 
 				&:hover {
@@ -178,7 +178,7 @@ div.GrafBarras {
 				margin-right: 8px;
 			};
 
-			&:nth-of-type(1)::before { background: #EB5757; border: 1px solid rgba(0, 0, 0, .08); };
+			&:nth-of-type(1)::before { background: #333; border: 1px solid rgba(0, 0, 0, .08); };
 			&:nth-of-type(2)::before { background: #777; border: 1px solid rgba(0, 0, 0, .08); };
 		};
 	};

@@ -1,5 +1,19 @@
 <template>
-	<div class="PageTop" :style="style"></div>
+	<div class="PageTop" :style="style">
+		<!-- <div>
+			<h1>PIU Arco Pinheiros</h1>
+			<div>Consulta pública – Projeto de Intervenção Urbana Arco Pinheiros</div>
+		</div> -->
+		<div v-show="esta_consulta.nomePublico">
+			<h1>{{ esta_consulta.nomePublico }}</h1>
+			<div>2ª consulta pública – Projeto de Intervenção Urbana Anhembi</div>
+			<!-- <div>
+				<a href="#contribuicoes" @click="scrollToallComments"><i class="material-icons">chat</i> {{estaConsulta.nContribuicoes}} contribuições</a>
+			</div>
+			<div id="statusConsulta" :class="consultaState()"></div> -->
+		</div>
+		<div class="setaBaixo" @click="setaBaixo"><i class="material-icons">keyboard_arrow_down</i></div>
+	</div>
 </template>
 <script>
 export default{
@@ -8,18 +22,26 @@ export default{
 		background_image_src:{
 			required: true,
 			type: String
+		},
+		esta_consulta: {
+			required: true,
+			type: Object
 		}
 	},
 	computed:{
 		style() {
-			return "background-image: url(" + this.$store.getters.basePath + this.background_image_src + "); background-color: #fdf8f2;"
+			return "background-image: url(" + this.$store.getters.basePath + this.background_image_src + "); background-color: #ed8934;"
+		}
+	},
+	methods: {		
+		setaBaixo() {
+			window.scrollTo({ top: Math.round(window.innerHeight), behavior: 'smooth'})
 		}
 	}
 }
 </script>
 <style lang="scss">
 	div.PageTop {
-		/*visibility: hidden;*/
 		padding: 2rem;
 		margin: 0 0 2rem 0;
 		overflow: hidden;

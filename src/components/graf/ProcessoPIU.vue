@@ -1,5 +1,5 @@
 <template>
-	<div class="ProcessoPIU">
+	<div class="ProcessoPIU ai2html">
 		<div id="g-Infografico_processo_piu_arco_pinheiros-box" class="ai2html ai2html-box-v5">
 			<!-- Artboard: acp_processo -->
 			<div id="g-Infografico_processo_piu_arco_pinheiros-acp_processo" class="g-artboard">

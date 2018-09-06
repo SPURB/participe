@@ -3,7 +3,7 @@
 		<div id="g-Infografico_conselhogestor_arco_pinheiros-box" class="ai2html ai2html-box-v5">
 			<!-- Artboard: conselhogestor_acp -->
 			<div id="g-Infografico_conselhogestor_arco_pinheiros-conselhogestor_acp" class="g-artboard" data-aspect-ratio="1.389" data-min-width="700">
-				<img id="g-Infografico_conselhogestor_arco_pinheiros-conselhogestor_acp-img" class="g-aiImg" src="http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/ACP-CG.png"/>
+				<img id="g-Infografico_conselhogestor_arco_pinheiros-conselhogestor_acp-img" class="g-aiImg" :src="imgSrc('arquivos/arco-pinheiros/ACP-CG.png')"/>
 				<div id="g-ai0-1" class="g-Camada_1 g-aiAbs g-aiPointText" style="top:8.9558%;margin-top:-9.1px;right:67.7402%;width:128px;">
 					<p class="g-pstyle0">Órgãos municipais</p>
 				</div>
@@ -39,7 +39,7 @@
 		<div id="g-Infografico_conselhogestor_arco_pinheiros-320-box" class="ai2html ai2html-box-v5">
 			<!-- Artboard: Prancheta_1 -->
 			<div id="g-Infografico_conselhogestor_arco_pinheiros-320-Prancheta_1" class="g-artboard" data-aspect-ratio="0.251" data-min-width="320">
-				<img id="g-Infografico_conselhogestor_arco_pinheiros-320-Prancheta_1-img" class="g-aiImg" src="http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/ACP-CG_320.png"/>
+				<img id="g-Infografico_conselhogestor_arco_pinheiros-320-Prancheta_1-img" class="g-aiImg" :src="imgSrc('arquivos/arco-pinheiros/ACP-CG_320.png')"/>
 				<div id="g-ai0-1" class="g-Camada_1 g-aiAbs" style="top:14.8077%;left:50.1419%;margin-left:-154.5px;width:96.5625%;">
 					<p class="g-pstyle0">Sistema de monitoramento das ações do PIU Arco Pinheiros pela sociedade.</p>
 				</div>
@@ -78,6 +78,12 @@
 <script>
 	export default {
 		name: 'ConselhoGestor',
+		methods: {
+			imgSrc(caminho) {
+				let url = this.$store.getters.basePath + caminho
+				return url.toString()
+			}
+		}
 	};
 </script>
 

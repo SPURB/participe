@@ -47,6 +47,10 @@ export default {
 
 * { box-sizing: border-box; };
 html { margin: 0; padding: 0; };
+*::selection, *::-moz-selection {
+	background: #EB5757;
+	color: #FFF;
+}
 
 body {
 	font-family: $font-stack;

@@ -3,7 +3,7 @@
 		<div id="g-ACP_escala_2_limitesadm_700px-box" class="ai2html ai2html-box-v5">
 			<!-- Artboard: Prancheta_1 -->
 			<div id="g-ACP_escala_2_limitesadm_700px-Prancheta_1" class="g-artboard" data-aspect-ratio="1.296" data-min-width="700">
-				<img id="g-ACP_escala_2_limitesadm_700px-Prancheta_1-img" class="g-aiImg" src="http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/ACP-LimitesAdm_base.jpg"/>
+				<img id="g-ACP_escala_2_limitesadm_700px-Prancheta_1-img" class="g-aiImg" :src="imgSrc('arquivos/arco-pinheiros/ACP-LimitesAdm_base.jpg')"/>
 				<div id="g-ai0-1" class="g-distritos g-aiAbs" style="top:15.5556%;right:52.9594%;width:17%;">
 					<p class="g-pstyle0">Jaguara</p>
 				</div>
@@ -55,7 +55,13 @@
 
 <script>
 export default {
-	name: 'LimitesAdm'
+	name: 'LimitesAdm',
+	methods: {
+		imgSrc(caminho) {
+			let url = this.$store.getters.basePath + caminho
+			return url.toString()
+		}
+	}
 };
 </script>
 

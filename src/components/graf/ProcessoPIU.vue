@@ -3,7 +3,7 @@
 		<div id="g-Infografico_processo_piu_arco_pinheiros-box" class="ai2html ai2html-box-v5">
 			<!-- Artboard: acp_processo -->
 			<div id="g-Infografico_processo_piu_arco_pinheiros-acp_processo" class="g-artboard">
-				<img id="g-Infografico_processo_piu_arco_pinheiros-acp_processo-img" class="g-aiImg" src="http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/ACP-PROCESSO.png"/>
+				<img id="g-Infografico_processo_piu_arco_pinheiros-acp_processo-img" class="g-aiImg" :src="imgSrc('arquivos/arco-pinheiros/ACP-PROCESSO.png')"/>
 				<div id="g-ai0-1" class="g-Camada_1 g-aiAbs" style="top:0.8135%;left:56.1088%;margin-left:-307.5px;width:87.8571%;">
 					<p class="g-pstyle0">PDE LEI n&ordm; 16.050/2014</p>
 					<p>&nbsp;</p>
@@ -70,7 +70,7 @@
 		<div id="g-Infografico_processo_piu_arco_pinheiros-320-box" class="ai2html ai2html-box-v5">
 			<!-- Artboard: Prancheta_1 -->
 			<div id="g-Infografico_processo_piu_arco_pinheiros-320-Prancheta_1" class="g-artboard" data-aspect-ratio="0.234" data-min-width="320">
-				<img id="g-Infografico_processo_piu_arco_pinheiros-320-Prancheta_1-img" class="g-aiImg" src="http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/ACP-PROCESSO_320.png"/>
+				<img id="g-Infografico_processo_piu_arco_pinheiros-320-Prancheta_1-img" class="g-aiImg" :src="imgSrc('arquivos/arco-pinheiros/ACP-PROCESSO_320.png')"/>
 				<div id="g-ai0-1" class="g-Camada_1 g-aiAbs" style="top:0.6576%;left:61.1246%;margin-left:-110px;width:68.75%;">
 					<p class="g-pstyle0">PDE LEI n&ordm; 16.050/2014</p>
 					<p class="g-pstyle1">Demarca o Arco Pinheiros dentro </p>
@@ -137,6 +137,12 @@
 <script>
 	export default {
 		name: 'ProcessoPIU',
+		methods: {
+			imgSrc(caminho) {
+				let url = this.$store.getters.basePath + caminho
+				return url.toString()
+			}
+		}
 	};
 </script>
 

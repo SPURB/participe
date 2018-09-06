@@ -5,14 +5,17 @@
 			<div class="limitePerimetro"></div>
 		</div>
 		<div class="menu">
-			<ul>
-				<li @click="alteraSecao('populacao', $event)" :class="{ ativo: !escPopulacao }" refe="dados_populacao">População</li>
-				<li @click="alteraSecao('usosdosolo', $event)":class="{ ativo: !escUsos }" refe="dados_usosdosolo">Usos do solo</li>
-				<li @click="alteraSecao('trabalho', $event)":class="{ ativo: !escTrabalho }" refe="dados_trabalho">Trabalho</li>
-				<li @click="alteraSecao('mobilidade', $event)":class="{ ativo: !escMobilidade }" refe="dados_mobilidade">Mobilidade</li>
-				<li @click="alteraSecao('areasverdes', $event)":class="{ ativo: !escAreasVerdes }" refe="dados_areasverdes">Áreas verdes</li>
-			</ul>			
-			<div class="legenda">				
+			<div>
+				<div class="menu_visor"><span ref="menu_visor">Selecione...</span> <i class="material-icons">keyboard_arrow_down</i></div>
+				<ul>
+					<li @click="alteraSecao('populacao', $event)" :class="{ ativo: !escPopulacao }">População</li>
+					<li @click="alteraSecao('usosdosolo', $event)" :class="{ ativo: !escUsos }">Usos do solo</li>
+					<li @click="alteraSecao('trabalho', $event)" :class="{ ativo: !escTrabalho }">Trabalho</li>
+					<li @click="alteraSecao('mobilidade', $event)" :class="{ ativo: !escMobilidade }">Mobilidade</li>
+					<li @click="alteraSecao('areasverdes', $event)" :class="{ ativo: !escAreasVerdes }">Áreas verdes</li>
+				</ul>
+			</div>
+			<div class="legenda">
 				<ul>
 					<li class="tituloDiag">Legenda</li>
 					<li><span style="border: 2px solid #211915"></span>Perímetro do Arco Pinheiros</li>
@@ -191,11 +194,11 @@
 					<div>m²/habitante<sup>1</sup></div>
 				</div>
 				<ol class="fonte">
-					<li>Estimativa a partir de dados do MDC</li>
+					<li>Estimativa a partir de dados do MDC e Google Earth</li>
 				</ol>
 			</div>
 		</div>
-		<div class="legenda_mob">			
+		<div class="legenda_mob">
 			<ul>
 				<li class="tituloDiag">Legenda</li>
 				<li><span style="border: 2px solid #211915"></span>Perímetro do Arco Pinheiros</li>
@@ -239,9 +242,31 @@
 			Elaboração <strong>SPUrbanismo</strong></div>
 		</div>
 		<div class="texto">
-			<p>
-				Consequat reprehenderit aute sint dolor reprehenderit magna pariatur proident amet sint sint sint consequat excepteur sit do labore ut sit cillum consequat. Consequat reprehenderit aute sint dolor reprehenderit magna pariatur proident amet sint sint sint consequat excepteur sit do labore ut sit cillum consequat. Consequat reprehenderit aute sint dolor reprehenderit magna pariatur proident amet sint sint sint consequat excepteur sit do labore ut sit cillum consequat.
-			</p>
+			<div v-show="escPopulacao && escUsos && escTrabalho && escMobilidade && escAreasVerdes">
+				<p>Utilize os botões para selecionar uma das temáticas do diagnóstico realizado.</p>
+			</div>
+			<div v-show="escPopulacao == false">
+				<p>Apesar da baixa densidade demográfica no perímetro do Arco Pinheiros, característica da Macroárea de Estruturação Metropolitana, fruto dos processos históricos de ocupação da orla fluvial e ferroviária no Município de São Paulo, o mapa de densidade demográfica (IBGE: Censo Demográfico, 2010) aponta pequenos bolsões com densidade acima de 300 habitantes por hectare e, sobretudo, acima de 500 habitantes por hectare, localizados nos territórios caracterizados como assentamentos precários pela SEHAB.</p>
+			</div>
+			<div v-show="escUsos == false">
+				<p>O Mapa do Uso do Solo de 2010 (TPCL) aponta para a presença concentrada do uso industrial e de armazéns a sudoeste da Av. Dr. Gastão Vidigal até as divisas do território do ACP com as áreas de residências horizontais do Jaguaré e do Butantã. Demonstra também um grande eixo comercial ao longo da Av. Dr. Gastão Vidigal (apenas em seu lado norte) e uma área de grandes terrenos vagos na confluência dos rios Pinheiros e Tietê, região do Cebolão.</p>
+				<p>Essas concentrações reveladas pelo mapa de Uso do Solo do TPCL definem, com efeito, grandes áreas com certa homogeneidade no território do ACP. Mas, quando observadas de perto e com detalhes, essas áreas revelam atividades diversificadas e porções ociosas significativas, características que devem ser consideradas para a definição mais precisa de estratégias de transformação do território.</p>
+			</div>
+			<div v-show="escTrabalho == false">
+				<p>As características territoriais do Arco Pinheiros estão estreitamente ligadas à presença das grandes conexões com a macrometrópole: a norte, destaca-se a chegada das rodovias Bandeirantes e Anhanguera e a oeste, a Rodovia Presidente Castelo Branco, cuja entrada no município é marcada pelo Complexo Viário Heróis de 1932, o Cebolão. Ao se aproximarem de São Paulo, essas rodovias conformam um grande complexo de fluxo intenso e expresso, carregando pessoas e cargas industriais e agrícolas advindas de todo interior. Essa condição gerou e gera, seguidamente, efeitos positivos e negativos nesse território. </p>
+			</div>
+			<div v-show="escMobilidade == false">
+				<p>O Arco Pinheiros caracteriza-se como região atratora (e não geradora) de viagens. Essa característica decorre, a exemplo do que acontece no restante da MEM, da baixa densidade populacional associada à presença de grandes áreas de uso não residencial.</p>
+				<p>Chamam à atenção nos percentuais de modos de viagens, a participação elevada do automóvel  nos deslocamentos (quase 50% acima da média do município) e, dentre os modos coletivos de transporte, a elevada participação do trem (quase 6 vezes a média do município).</p>
+				<p>Além disso, o baixo percentual de viagens não motorizadas (a pé e de bicicleta) em relação ao percentual municipal evidencia a monofuncionalidade dos usos no território e problemas de acessibilidade.</p>
+			</div>
+			<div v-show="escAreasVerdes == false">
+				<p>Ainda que os índices de áreas verdes por habitante no perímetro do Arco Pinheiros ultrapassem os recomendados pela OMS, a influência da baixa densidade demográfica nos índices e a concentração de áreas verdes em algumas áreas específicas do território fazem com que estes números não se reflitam necessariamente em qualidade espacial.</p>
+			</div>
+			<a :href="imgSrc('arquivos/arco-pinheiros/Diagnostico_Consulta-publica_2018_09_06.pdf')" download="PIU Arco Pinheiros - Diagnóstico para Consulta pública (2018-09-06)">
+				<i class="material-icons">picture_as_pdf</i>
+				Faça o donwload do diagnóstico completo (25,5 Mb)
+			</a>
 		</div>
 	</div>
 </template>
@@ -310,6 +335,7 @@ export default {
 			}
 			let caminho = 'url(http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/diagnostico_mapas/' + path + '.png)'
 			this.$refs.mapas.style.backgroundImage = caminho
+			this.$refs.menu_visor.innerText = evento.target.innerText
 		},
 		imgSrc(caminho) {
 			let url = this.$store.getters.basePath + caminho
@@ -349,15 +375,15 @@ div.Diagnostico {
 			box-sizing: border-box;
 			border: 1px solid #BDBDBD;
 			background: #FFF;
-			padding: 0;
+			padding: 2rem;
 		}
 
 		div.limitePerimetro {
 			position: absolute;
-			top: 41.5%;
+			top: 27.5%;
 			left: 20.5%;
-			right: 62.2%;
-			bottom: 41%;
+			right: 63.2%;
+			bottom: 63%;
 			border: 1px solid #333;
 		}
 	}
@@ -367,7 +393,11 @@ div.Diagnostico {
 		grid-row: 2/4;
 		order: 3;
 
-		& > ul {
+		div.menu_visor {
+			display: none;
+		}
+
+		& > div:not(.legenda) > ul {
 			margin: 0;
 			padding: 0;
 			list-style: none;
@@ -622,12 +652,13 @@ div.Diagnostico {
 			z-index: 2;
 			display: flex;
 			flex-flow: column nowrap;
-			align-items: end;
+			align-items: flex-end;
 
 			& > div {
 				width: 200px;
 				margin-top: 8px;
 				margin-right: 8px;
+				margin-left: 8px;
 				background: rgba(255, 255, 255, .8);
 				border-radius: 0 0 2px 2px;
 				font-size: small;
@@ -858,9 +889,29 @@ div.Diagnostico {
 		grid-column: 2/3;
 		grid-row: 3/4;
 		order: 4;
+		font-size: 20px;
 
 		p {
 			margin: 0;
+			font-family: 'Georgia', serif;
+		}
+
+		a {
+			display: inline-flex;
+			align-items: center;
+			background: #BDBDBD;
+			color: #FFF;
+			padding: 8px 12px;
+			border-radius: 2px;
+			font-size: smaller;
+			transition: all ease-in-out .2s;
+			margin-top: 1rem;
+			border: 4px solid rgba(0, 0, 0, .08);
+			i { margin-right: 12px; }
+			&:hover {
+				background: #EB5757;
+				text-decoration: none;
+			}
 		}
 	}
 
@@ -878,6 +929,40 @@ div.Diagnostico {
 		div.menu {
 			grid-row: unset;
 			order: 1;
+
+			div {
+				cursor: pointer;
+
+				div.menu_visor {
+					display: block;
+					font-size: larger;
+					font-weight: bolder;
+					background: #EB5757;
+					color: #FFF;
+					padding: 8px 12px;
+					border-radius: 2px 2px 0 0;
+					box-shadow: inset 0 8px 4px rgba(255, 255, 255, 0.12);
+					i { vertical-align: text-top; }
+				}
+
+				ul {
+					position: absolute;
+					max-height: 0;
+					overflow: hidden;
+					width: calc(100% - 4rem);
+					z-index: 2;
+					transition: all ease-in-out .4s;
+
+					li {
+						margin-bottom: 0 !important;
+						border-radius: 0 !important;
+					}
+				}
+
+				&:hover {
+					ul { max-height: 1000px }
+				}
+			}
 
 			div.legenda { display: none; }
 		}
@@ -901,14 +986,15 @@ div.Diagnostico {
 					border: 1px solid #BDBDBD;
 					background: #FFF;
 					position: relative;
+					padding: 8px;
 				}
 
 				div.limitePerimetro {
 					position: absolute;
-					top: 37.5%;
-					left: 20.5%;
-					right: 62.2%;
-					bottom: 45%;
+					top: 25.5%;
+					left: 17.5%;
+					right: 63.2%;
+					bottom: 64%;
 					border: 1px solid #333;
 				}
 			}
@@ -1028,6 +1114,7 @@ div.Diagnostico {
 			grid-row: unset;
 			grid-column: 1/2;
 			order: 5;
+			font-size: initial;
 		}
 	}
 }

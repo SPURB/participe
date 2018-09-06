@@ -3,7 +3,7 @@
 		<div id="g-ACP_infografico_700px-box" class="ai2html ai2html-box-v5">
 			<!-- Artboard: Prancheta_1 -->
 			<div id="g-ACP_infografico_700px-Prancheta_1" class="g-artboard" data-aspect-ratio="1.296" data-min-width="700">
-				<img id="g-ACP_infografico_700px-Prancheta_1-img" class="g-aiImg" src="http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/ACP-ProjetosColocalizados_base.jpg"/>
+				<img id="g-ACP_infografico_700px-Prancheta_1-img" class="g-aiImg" :src="imgSrc('arquivos/arco-pinheiros/ACP-ProjetosColocalizados_base.jpg')"/>
 				<div id="g-ai0-1" class="g-infografico_texto g-aiAbs" style="top:22.037%;left:39.2433%;margin-left:-157px;width:44.8571%;">
 					<p class="g-pstyle0">ACP </p>
 					<p class="g-pstyle1">Área Total de <span class="g-cstyle0">1.467 ha</span></p>
@@ -35,7 +35,13 @@
 
 <script>
 export default {
-	name: 'ProjetosColocalizados'
+	name: 'ProjetosColocalizados',
+	methods: {
+		imgSrc(caminho) {
+			let url = this.$store.getters.basePath + caminho
+			return url.toString()
+		}
+	}
 };
 </script>
 

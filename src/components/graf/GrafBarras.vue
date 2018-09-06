@@ -30,14 +30,18 @@
 				<div class="barra" valor="32" title="3,2%"></div>
 			</div>
 			<div legenda="6">
-				<div class="barra" valor="454" title="45,4%"></div>
-				<div class="barra" valor="301" title="30,1%"></div>
+				<div class="barra" valor="414" title="41,4%"></div>
+				<div class="barra" valor="280" title="28%"></div>
 			</div>
 			<div legenda="7">
+				<div class="barra" valor="40" title="4%"></div>
+				<div class="barra" valor="21" title="2,1%"></div>
+			</div>
+			<div legenda="8">
 				<div class="barra" valor="1" title="0,1%"></div>
 				<div class="barra" valor="6" title="0,6%"></div>
 			</div>
-			<div legenda="8">
+			<div legenda="9">
 				<div class="barra" valor="75" title="7,5%"></div>
 				<div class="barra" valor="308" title="30,8%"></div>
 			</div>
@@ -52,9 +56,10 @@
 			<li><span>3</span>Ônibus</li>
 			<li><span>4</span>Ônibus fretado</li>
 			<li><span>5</span>Escolar</li>
-			<li><span>6</span>Individuais (auto, moto, táxi, outros)</li>
-			<li><span>7</span>Bibcicleta</li>
-			<li><span>8</span>A pé</li>
+			<li><span>6</span>Individual: automível</li>
+			<li><span>7</span>Individual: moto, táxi, outros</li>
+			<li><span>8</span>Bibcicleta</li>
+			<li><span>9</span>A pé</li>
 		</ul>
 	</div>
 </template>
@@ -139,13 +144,13 @@ div.GrafBarras {
 				margin: 0;
 				word-break: break-all;
 				color: #FFF;
-				border: 4px solid transparent;
+				/*border: 4px solid transparent;*/
 				overflow: hidden;
 				transition: all ease-in-out .1s;
 				border-color: rgba(0, 0, 0, .12);
 
-				&:nth-of-type(1) { background: #333; border: 1px solid rgba(0, 0, 0, .08); };
-				&:nth-of-type(2) { background: #777; border: 1px solid rgba(0, 0, 0, .08); };
+				&:nth-of-type(1) { background: #333; };
+				&:nth-of-type(2) { background: #777; };
 
 				&:hover {
 					opacity: .4;

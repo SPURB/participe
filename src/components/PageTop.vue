@@ -9,8 +9,8 @@
 			<div>2ª consulta pública – Projeto de Intervenção Urbana Anhembi</div>
 			<!-- <div>
 				<a href="#contribuicoes" @click="scrollToallComments"><i class="material-icons">chat</i> {{estaConsulta.nContribuicoes}} contribuições</a>
-			</div>
-			<div id="statusConsulta" :class="consultaState()"></div> -->
+			</div> -->
+			<div id="statusConsulta" :class="consultaState(esta_consulta.ativo)"></div>
 		</div>
 		<div class="setaBaixo" @click="setaBaixo"><i class="material-icons">keyboard_arrow_down</i></div>
 	</div>
@@ -36,6 +36,13 @@ export default{
 	methods: {		
 		setaBaixo() {
 			window.scrollTo({ top: Math.round(window.innerHeight), behavior: 'smooth'})
+		},
+		consultaState(par) {
+			if (par == 1) {
+				return 'aberta'
+			} else {
+				return 'fechada'
+			}
 		}
 	}
 }
@@ -63,7 +70,7 @@ export default{
 			-moz-outline-radius: 2px;
 
 			& > div {
-				margin: 0 0 8px 0;
+				margin: 0 0 16px 0;
 				text-align: center;
 				font-size: small;
 				color: #777;
@@ -78,16 +85,15 @@ export default{
 			};
 
 			div#statusConsulta {
-				font-size: 10px;
 				text-transform: uppercase;
 				color: #fff;
-				font-weight: 500;
-				border-radius: 2px;
 				white-space: nowrap;
-				margin: 0 .5rem;
 			}
 			div#statusConsulta::after{
-				padding:.35rem .5rem;
+				display: inline-block;
+				padding: 4px 8px;
+				border-radius: 2px;
+				border: 2px solid rgba(255, 255, 255, .24);
 			}
 			div#statusConsulta.aberta::after{
 				content: "Em consulta";
@@ -95,7 +101,8 @@ export default{
 			}
 			div#statusConsulta.fechada::after{
 				content: "Consulta Encerrada";
-				background-color: #EB5757;
+				background-color: rgba(0, 0, 0, .8);
+				opacity: .5;
 			}
 			& > h1 {
 				font-size: calc(16px + 8vmin);

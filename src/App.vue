@@ -8,6 +8,17 @@
 	<router-view name="ArcoPinheiros"></router-view>
 	<router-view name="AdminLogin"></router-view>
 	<router-view name="Admin"></router-view>
+
+	<Modal v-if="modalState.error">
+		<h3 slot="header" class="modal-error">Erro!</h3>
+		<p slot="body">Estamos com um erro de comunicação com o servidor. Tente novamente mais tarde.</p>
+	</Modal>
+	<Modal v-if="modalState.success">
+		<h3 slot="header" class="modal-success">Obrigado!</h3>
+		<div slot="body"><p>Agradecemos a sua contribuição!</br>
+		Seu comentário foi enviado e aguarda aprovação da moderação para ser publicado.</p></div>
+	</Modal>
+
 	<Rodape></Rodape>
 </div>
 </template>
@@ -17,20 +28,26 @@ import axios from 'axios';
 import Cabecalho from '@/components/Cabecalho';
 import MenuLateral from '@/components/MenuLateral';
 import Rodape from '@/components/Rodape';
+import Modal from '@/components/Modal.vue'
 
 export default {
 	name: 'Participe',
 	components: {
 		Cabecalho,
 		MenuLateral,
-		Rodape
+		Rodape,
+		Modal
 	},
 	computed: { 
 		interruptor() { return this.$store.state.luzApaga }, 
+		modalState(){ return this.$store.state.modalState }
 	},
 	created() { this.$store.dispatch("fetchConsultas", { self: this }) },
 	updated() { this.$refs.interruptor.style.height = this.$el.clientHeight+'px'; },
 	methods: {
+		setModal(typeOfmodal){ 
+			this.$store.commit('COMMENT_MODAL_STATUS', typeOfmodal)
+		},
 		fechaTudo() {
 			if (this.$store.state.menuToggle || this.$store.state.apoioToggle) {
 				this.$store.state.menuToggle = false;

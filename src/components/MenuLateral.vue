@@ -8,10 +8,10 @@
 					</a>
 				</li>
 				<li v-for="consulta in consultas" v-if="consulta.ativo == '1'">
-					<a :href="consulta.urlConsulta" class="consultaAtiva" @click="fechaMenu">{{ consulta.nomePublico }}</a>
+					<a :href="setUrlByType(consulta.urlConsulta)" class="consultaAtiva" @click="fechaMenu">{{ consulta.nomePublico }}</a>
 				</li>			
 				<li v-for="consulta in consultas" v-if="consulta.ativo == '0'">
-					<a :href="consulta.urlConsulta">{{ consulta.nomePublico }}</a>
+					<a :href="setUrlByType(consulta.urlConsulta)">{{ consulta.nomePublico }}</a>
 				</li>
 			</ul>
 		</aside>
@@ -19,9 +19,17 @@
 </template>
 
 <script>
+/*
+
+são métodos neste mixin:
+setUrlByType(urlOrSlug) 
+
+*/
+import { consultasMutations } from '../mixins/consultasMutations' 
 
 	export default {
 		name: 'MenuLateral',
+		mixins: [ consultasMutations ],
 		computed: {
 			consultas(){ return this.$store.state.consultas },
 			menuToggle() {

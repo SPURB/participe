@@ -1,20 +1,6 @@
 <template>
 	<div class="Comments" :class="{ aberto: abreComentario }">
 
-		<!-- <a @click="setModal('success')">sucesso</a>
-		<a @click="setModal('error')">error</a> -->
-
-		<Modal v-if="modalState.error">
-			<h3 slot="header" class="modal-error">Erro!</h3>
-			<p slot="body">Estamos com um erro de comunicação com o servidor. Tente novamente mais tarde.</p>
-		</Modal>
-
-		<Modal v-if="modalState.success">
-			<h3 slot="header" class="modal-success">Obrigado!</h3>
-			<div slot="body"><p>Agradecemos a sua contribuição!</br>
-			Seu comentário foi enviado e aguarda aprovação da moderação para ser publicado.</p></div>
-		</Modal>
-
 		<div @click="abreComentario = !abreComentario"><i class="material-icons">chat</i> Comente aqui</div>
 
 		<form>
@@ -72,14 +58,10 @@
 
 <script>
 import axios from 'axios'
-import Modal from '@/components/Modal.vue'
 
 export default {
 	name: 'Comments',
 	props:['attr'],
-	components:{
-		Modal
-	},
 	data(){
 		return{
 			form_name: null,
@@ -103,7 +85,6 @@ export default {
 			}
 		},
 		apiPath() { return this.$store.getters.apiPath },
-		modalState(){ return this.$store.state.modalState }
 	},
 
 	methods:{

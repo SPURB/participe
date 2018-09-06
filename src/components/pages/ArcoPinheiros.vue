@@ -78,7 +78,6 @@
 			<p>Neste sentido, através desta consulta pública são apresentados o diagnóstico socioterritorial e o programa de interesse público, para comentários os quais subsidiarão o desenvolvimento dos estudos do PIU Arco Pinheiros e permitirão entender a expectativa dos munícipes em relação ao futuro desta região da cidade.</p>
 			<p>O PIU Arco Pinheiros deverá resultar em projeto de lei a ser encaminhado à Câmara Municipal, tratando dos instrumentos de política urbana e de gestão ambiental, nos termos do PDE, para promoção do ordenamento e reestruturação urbana deste território.</p>
 			<ProcessoPIU></ProcessoPIU>
-			<Comments :attr="{id:1, context:'Saiba como participar'}" v-if="estaConsulta.ativo == 1"></Comments> <!-- id do comentário, 1 seria o primeiro. Id da consulta é definida na rota -->
 		</section>
 
 		<section>
@@ -117,7 +116,7 @@
 			</figure>
 
 			<Mapa :mapa_attrs="mapa_attrs"></Mapa>
-
+			<Comments :attr="{id:1, context:'Motivação'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section>
@@ -138,6 +137,7 @@
 			</figure>
 
 			<Diagnostico></Diagnostico>
+			<Comments :attr="{id:2, context:'Diagnóstico'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section>
@@ -152,6 +152,7 @@
 				<li>Ampliação da oferta de equipamentos urbanos e sociais dando suporte à demanda atual e futura;</li>
 				<li>Qualificação do ambiente urbano, por meio da preservação e valorização dos recursos naturais e da proteção e recuperação do patrimônio histórico, artístico, cultural, urbanístico, arqueológico e paisagístico existente.</li>
 			</ul>
+			<Comments :attr="{id:3, context:'Programa de Interesse Público'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section>
@@ -453,6 +454,7 @@
 
 			<p>A promoção da integração, valorização e preservação do patrimônio cultural existente ao território do Arco Pinheiros realiza-se pela inclusão dos bens tombados inseridos no perímetro e entorno nos planos e projetos, localizando-os, caracterizando-os e estabelecendo diretrizes para os espaços públicos, de modo que tenham sua importância reconhecida e sejam diagnosticados possíveis problemas, despertando a atenção dos diferentes agentes, públicos e privados, à importância do bem e à necessidade de promoção de demais ações de preservação como a proteção física por meio do restauro, readequação, requalificação, conservação e/ou manutenção e utilização adequada e de ações de garantia pleno acesso.</p>
 			<p>A preservação do patrimônio cultural existente, portanto, não se restringe à proteção legal (tombamento) e proteção física (restauro, readequação, conservação e/ou manutenção e utilização adequada) dos bens de importância reconhecida. Também contempla sua valorização por meio da integração ao território, permitindo o pleno acesso e consequente consolidação.</p>
+			<Comments :attr="{id:4, context:'Diretrizes e viabilidade da transformação'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section>
@@ -474,6 +476,7 @@
 			<p>O Setor 7 – Av. Dr. Gastão Vidigal – abrange uma área de 464mil m², com uma área de lotes de 346mil m². Hoje, esta avenida conta com uma faixa exclusiva de ônibus e há previsão para implantação de um corredor de ônibus pelo Plano Diretor Estratégico. Seus lotes lindeiros abrigam inúmeras concessionárias de automóveis, representando alto grau de transformabilidade desse território. Alguns condomínios residenciais verticais estão implantados no setor, como resultado da expansão do mercado imobiliário da Vila Leopoldina. O Coeficiente de Aproveitamento predefinido em 4 vezes a área do terreno depende da implantação do corredor de ônibus, conforme estabelece o zoneamento ao definir uma área de ZEMP nesse setor. Assim como no Setor 4, vizinho a oeste, este setor deve abrigar aproximadamente 70% de usos residenciais em sua área computável. O adensamento populacional previsto para a área, portanto, é de 8mil pessoas em 30 anos, que, somados à população atual, de aproximadamente 4mil habitantes, atingem uma densidade de aproximadamente 260 hab/ha.</p>
 			<h4>8. Números gerais do Arco Pinheiros</h4>
 			<p>Soma-se ao adensamento interno aos setores predefinidos (50mil pessoas previstas para os setores 1 ao 7) o adensamento do restante do perímetro do Arco Pinheiros, cuja previsão é de aproximadamente 20mil pessoas nos 30 anos de horizonte do projeto. Dessa forma, a população adicional prevista para o perímetro é de aproximadamente 70mil pessoas neste mesmo horizonte. Considerando a população atual de 46mil habitantes, a previsão é que o perímetro possuirá aproximadamente 116mil pessoas, atingindo uma densidade de 80 hab/ha para todo o perímetro. As diretrizes ambientais, de mobilidade, de habitação e da base produtiva deverão garantir a qualidade do processo de transformação.</p>
+			<Comments :attr="{id:5, context:'Adensamento Populacional e Construtivo'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 		<section>
 			<h3 class="titulo" indent="2">Impacto esperado da intervenção</h3>
@@ -487,6 +490,7 @@
 			<p>A melhoria da acessibilidade obtida através da adequação dos passeios públicos no entorno das estações de transporte coletivo de alta capacidade, ao longo dos corredores de média capacidade, a integração com outros modos de transporte público e o incentivo ao transporte não motorizado, contribuirão para mitigar os impactos decorrentes do aumento da densidade demográfica promovendo incremento da ação do mercado imobiliário e melhoria da qualidade de vida da população;</p>
 			<p>O monitoramento e controle das intervenções próximas a bens imóveis representativos (tombado, não tombado em processo de tombamento) e implantado Programa de Prospecção Arqueológica Intensivo nos compartimentos ambientais de maior potencial arqueológico inseridos no perímetro do ACP.</p>
 			<p>De toda forma, a adoção de programas de monitoramento e de mitigação de impactos já faz parte da prática administrativa municipal na implantação de obras e projetos.</p>
+			<Comments :attr="{id:6, context:'Impacto esperado da intervenção'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 		<section>
 			<h3 class="titulo" indent="2">Modelo de gestão democrática</h3>
@@ -497,6 +501,7 @@
 			<p>Em acordo com o PDE, é importante também fortalecer a participação descentralizada, sobretudo das prefeituras regionais, instituições atuantes e conselhos já estabelecidos, de forma a promover a articulação multissetorial no território, bem como os órgãos específicos e temáticos, em especial os conselhos gestores de ZEIS, a fim de coordenar e potencializar a transformação do território de maneira inclusiva, democrática, sócio-ambientalmente sustentável, promovendo o direito à moradia digna e à cidade.</p>
 			<p>A composição do Conselho gestor deverá prever representação paritária entre sociedade civil e demais representantes do setor público, equilibrando os interesses imobiliários e sociais. Criado o Conselho Gestor, caberá à coordenação à Secretaria de Urbanismo e Licenciamento – SMUL, com a participação de órgãos municipais e de entidades representativas da sociedade civil, tendo a competência de instruir e auxiliar a implantação do Programa de Intervenções, monitorar o desenvolvimento e propor programas e estratégias que possam aprimorar o projeto, enquanto que a SP-Urbanismo ficará a cargo de promover a implantação do Programa de Intervenções do PIU-ACP, avaliar a evolução dos processos e poderá contar com a colaboração dos órgãos e entidades municipais para o desempenho de suas funções específicas.</p>
 			<ConselhoGestor></ConselhoGestor>
+			<Comments :attr="{id:7, context:'Modelo de gestão democrática'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section>

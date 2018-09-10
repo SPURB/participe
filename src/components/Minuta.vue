@@ -12,7 +12,7 @@ export default {
 			paragrafos: []
 		}
 	}
-}
+};
 </script>
 <style lang="scss" scoped>
 div.Minuta {

@@ -10,5 +10,8 @@
 	"prod":{
 		"base": "http://api.seuhost/consultas-publicas-backend",
 		"login": "http://api.seuhost/consultas-publicas-login-backend/"
+	},
+	"chavesExternas":{
+		"bingMaps": "chave-api-bing-maps"
 	}
 }

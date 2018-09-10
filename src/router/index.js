@@ -4,6 +4,7 @@ import Router from 'vue-router'
 // Pages
 const Home = () => import('@/components/pages/Home')
 const Anhembi2 = () => import('@/components/pages/Anhembi2')
+const ArcoPinheiros = () => import('@/components/pages/ArcoPinheiros')
 const Login = () => import('@/components/pages/Login')
 
 // Admin
@@ -30,6 +31,14 @@ export default new Router({
 			components: { Anhembi2 },
 			meta: {
 				id: 8
+			}
+		},
+		{
+			path: '/arco-pinheiros',
+			name: 'ArcoPinheiros',
+			components: { ArcoPinheiros },
+			meta: {
+				id: 9
 			}
 		},
 		{

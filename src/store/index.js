@@ -1,4 +1,6 @@
 import Vue from 'vue'
+import Es6Promise from 'es6-promise'
+Es6Promise.polyfill()
 import Vuex from 'vuex'
 import axios from 'axios';
 import { local, homologacao, prod } from '../../apiconfig.json'
@@ -13,7 +15,11 @@ export const store = new Vuex.Store({
 		consultas: undefined,
 		errors: undefined,
 		commentsLoaded: false,
-		isAdmin: true,
+		modalState: {
+			error: false,
+			success: false
+		},
+		isAdmin: false,
 		infoAdmin: undefined
 	},
 	getters:{
@@ -44,6 +50,13 @@ export const store = new Vuex.Store({
 				case 'homologacao': return homologacao.login; break
 				default: return producao.login 
 			}
+		},
+		basePath(){
+			if (store.getters.enviroment == 'local' || store.getters.enviroment == 'homologacao'){
+				return 'http://participe.comunicacao.smul.pmsp/'
+			} else {
+				return 'http://participe.gestaourbana.prefeitura.sp.gov.br/'
+			}
 		}
 	},
 	mutations:{
@@ -52,6 +65,15 @@ export const store = new Vuex.Store({
 				if (a.ativo < b.ativo) { return 1 }
 				if (a.ativo > b.ativo) { return -1 }
 			})
+		},
+		COMMENT_MODAL_STATUS(state, typeOfmodal){
+			switch(typeOfmodal){
+				case 'error': state.modalState.error = !state.modalState.error; break
+				case 'success': state.modalState.success = !state.modalState.success; break
+				default:
+					state.modalState.error = false
+					state.modalState.success = false
+			}
 		},
 		adminStatus(state, status){
 			state.isAdmin = status

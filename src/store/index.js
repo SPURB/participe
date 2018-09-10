@@ -1,4 +1,6 @@
 import Vue from 'vue'
+import Es6Promise from 'es6-promise'
+Es6Promise.polyfill()
 import Vuex from 'vuex'
 import axios from 'axios';
 import { local, homologacao, prod } from '../../apiconfig.json';

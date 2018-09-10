@@ -2,7 +2,7 @@
   "name": "participe",
   "version": "1.0.0",
   "description": "Ferramentas de participação social da Secretaria Municipal de Urbanismo e Licenciamento – SMUL - e São Paulo Urbanismo",
-  "author": "davimh <hosogiri.davi@gmail.com>",
+  "author": "SPUrbanismo <desenvolvimento@spurbanismo.sp.gov.br>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "es6-promise": "^4.2.4",
     "ol": "^5.2.0",
     "vee-validate": "^2.1.0-beta.6",
     "vue": "^2.5.2",

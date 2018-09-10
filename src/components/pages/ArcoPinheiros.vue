@@ -95,7 +95,7 @@
 			<p>Nesta mesma margem do rio, fazendo limite com a ferrovia, localiza-se a Zona Predominantemente Industrial (ZPI) do Jaguaré, onde se concentram indústrias em plena atividade, garantindo diversos empregos.</p>
 			<p>Na margem oposta do Rio Pinheiros encontra-se a área da CEAGESP, ocupada pela maior rede pública de silos e armazéns gerais do Estado de São Paulo, uso este já incompatível com o desenvolvimento da cidade, sobretudo devido à complexa logística necessária ao desenvolvimento da atividade.</p>
 			<p>Neste sentido, pode-se dizer que mais de 50% do território do Arco Pinheiros está distribuído em 4 “porções” isoladas, desconectadas e monofuncionais. Estas características não estão alinhadas ao modelo de cidade desejado: a cidade compacta, conectada, sustentável e inclusiva, onde seja possível aproximar o emprego da moradia, através do adensamento planejado, orientado pelo transporte público de alta e média capacidade, onde se promova a recuperação e o resgate de seus recursos naturais, e por fim, onde se promovam novas centralidades com diversidades de usos, serviços e espaços públicos seguros e ativos que favoreçam a interação social.</p>
-			<p>A presença de um campus universitário de grande importância como a USP, de uma zona industrial voltada a indústrias de alta tecnologia, um parque tecnológico incipiente, empresas de criação e a possibilidade de um futuro polo de pesquisa na gleba Ceagesp corroboram para que o território do Arco Pinheiros transforme-se em  um território de inovação, voltado à educação, pesquisa, criação, tecnologia e outros usos associados ao desenvolvimento de novas centralidades de âmbito local.</p>
+			<p>A presença de um campus universitário de grande importância como a USP, de uma zona industrial voltada a indústrias de alta tecnologia, um parque tecnológico incipiente, empresas de criação e a possibilidade de um futuro polo de pesquisa na gleba CEAGESP corroboram para que o território do Arco Pinheiros transforme-se em  um território de inovação, voltado à educação, pesquisa, criação, tecnologia e outros usos associados ao desenvolvimento de novas centralidades de âmbito local.</p>
 			<p>Desta forma, o grande desafio do PIU do Arco Pinheiros é promover o processo de transformação urbana capaz de contribuir para integrar, articular e reforçar as potencialidades presentes nas diferentes porções do seu território, de modo a assegurar o uso mais coerente e inteligente da cidade, de sua infraestrutura e de seus recursos, perseguindo as estratégias definidas pelo Plano Diretor Estratégico – PDE:</p>
 			<ul style="list-style-type: upper-roman;">
 				<li>Socializar os ganhos da produção da cidade;</li>
@@ -121,7 +121,7 @@
 
 		<section>
 			<h2 class="titulo" indent="1">Diagnóstico</h2>
-			<h4>Perímetro de Estudo</h4>
+			<h3>Perímetro de Estudo</h3>
 			<p>O ACP abrange áreas de 2 Subprefeituras – Lapa e Butantã – e 5 Distritos – Butantã, Jaguaré, Vila Leopoldina e pequenas porções dos territórios dos Distritos de Jaguara e Rio Pequeno.</p>
 
 			<figure>
@@ -175,9 +175,9 @@
 					<li><div style="background: rgba(255, 0, 0, .2); border: 2px solid rgba(255, 0, 0, .6); color: red; font-weight: bold;">1</div>Quadras centrais do Jaguaré</li>
 					<li><div style="background: rgba(255, 0, 0, .2); border: 2px solid rgba(255, 0, 0, .6); color: red; font-weight: bold;">2</div>Nova frente da USP / Av. Escola Politécnica</li>
 					<li><div style="background: rgba(255, 0, 0, .2); border: 2px solid rgba(255, 0, 0, .6); color: red; font-weight: bold;">3</div>Nova frente do Rio Pinheiros</li>
-					<li><div style="background: rgba(255, 0, 0, .2); border: 2px solid rgba(255, 0, 0, .6); color: red; font-weight: bold;">4</div>CEAGESP</li>
+					<li><div style="background: rgba(255, 0, 0, .2); border: 2px solid rgba(255, 0, 0, .6); color: red; font-weight: bold;">4</div>Setor Mofarrej</li>
 					<li><div style="background: rgba(255, 0, 0, .2); border: 2px solid rgba(255, 0, 0, .6); color: red; font-weight: bold;">5</div>PIU Vila Leopoldina - Villa Lobos</li>
-					<li><div style="background: rgba(255, 0, 0, .2); border: 2px solid rgba(255, 0, 0, .6); color: red; font-weight: bold;">6</div>Setor Mofarrej</li>
+					<li><div style="background: rgba(255, 0, 0, .2); border: 2px solid rgba(255, 0, 0, .6); color: red; font-weight: bold;">6</div>CEAGESP</li>
 					<li><div style="background: rgba(255, 0, 0, .2); border: 2px solid rgba(255, 0, 0, .6); color: red; font-weight: bold;">7</div>Setor Av. Dr. Gastão Vidigal</li>
 				</ul>
 				<div class="fontes">Mapa <strong>MDC, 2004</strong> | Elaboração <strong>SPUrbanismo</strong></div>
@@ -190,32 +190,33 @@
 			<p>Além disso, o adensamento dessa área deve considerar, no caso da transferência do entreposto, a possibilidade de utilização do pavilhão da CEAGESP de forma articulada ao projeto, implantando uma centralidade comercial, institucional ou de eventos associada a um sistema de espaços públicos.</p>
 			<p>É importante, para o reequilíbrio das dinâmicas metropolitanas, que haja um adensamento predominantemente populacional na margem norte do Rio Pinheiros e de postos de trabalho no Jaguaré, o que deverá colaborar para a redução gradativa da necessidade de travessia das pontes.</p>
 			<p>Essa estratégia de reequilíbrio só pode ter sucesso se o uso predominante pretendido vier acompanhado de outros usos. Dessa forma, em uma escala menor de definição de usos, no interior da área do Jaguaré, foi predefinido (i) um setor com capacidade de adensamento populacional, junto à Av. Jaguaré; outro (ii) oferecendo grande oportunidade para receber usos institucionais e empresas de inovação, nas bordas da USP; e (iii) um terceiro junto à frente do Rio Pinheiros, que poderá receber usos não residenciais nos moldes dos empreendimentos lançados na outra margem. Já no lado norte do rio, as (iv) ruas entre a Av. Mofarrej e a CEAGESP, bem como o (v) perímetro do PIU Vila Leopoldina/Villa Lobos, apresentam-se como grandes eixos ambientais e de verticalização que ligam a Av. Dr. Gastão Vidigal às estações do trem e ao rio, eixos separados pelo setor do entreposto (vi) CEAGESP. Por fim, (vii) a Av. Gastão Vidigal, devido à proximidade do transporte público e à presença de diversas áreas de ZEIS, apresenta-se como um importante território de adensamento capaz de absorver em seu processo de transformação parte da demanda por moradia de interesse social. O principal objetivo dos setores é dar origem a novos bairros dinâmicos economicamente, ambientalmente qualificados e socialmente mais equilibrados.</p>
-			<h5>1.2. Setor: Quadras centrais do Jaguaré <br>
-			<strong>Diretriz: Implantar uma nova centralidade com uso misto junto à Av. Jaguaré</strong></h5>
+
+			<h5>1.2. Setor: Quadras centrais do Jaguaré<br>
+			<div class="sub">Diretriz: Implantar uma nova centralidade com uso misto junto à Av. Jaguaré</div></h5>
 			<p>Cumprindo a importante função de exercer o papel de uma nova centralidade, as quadras centrais do Jaguaré estão voltadas para o futuro corredor de ônibus da avenida de mesmo nome, que também se conecta com a Estação Villa Lobos-Jaguaré do trem. Trata-se de um setor estratégico para receber uma intensificação de usos residenciais, comerciais e de serviços, trazendo dinâmica para esse antigo bairro industrial. Neste setor, devido à presença de lotes subutilizados, de grandes dimensões, representando aproximadamente dois terços de seus terrenos, deve ser incentivada uma transformação com destinações espacialmente predefinidas. A estratégia do ACP é pensar esses parcelamentos em conjunto, de modo que as destinações obrigatórias componham uma rede de espaços públicos e equipamentos articulados e que os usos abrigados pelos edifícios tenham complementaridade e equilíbrio.</p>
 			<p>Essas possibilidades também promoverão a qualificação da Av. Jaguaré, resgatando o grande eixo central do antigo bairro industrial planejado por Henrique Dumont Villares na década de 1930. Ainda na direção desse resgate, o setor oferece a oportunidade de qualificação dos galpões tombados da antiga Cooperativa Agrícola de Cotia, por meio da promoção de novos usos em seus interiores, associados aos espaços livres do setor.</p>
 			<h5>1.3. Setor: Nova frente da USP/Av. Escola Politécnica<br>
-			<strong>Diretriz: Implantar uma nova frente urbana nas quadras lindeiras à Av. Politécnica, que abrigue usos associados à pesquisa e inovação e à moradia estudantil.</strong></h5>
+			<div class="sub">Diretriz: Implantar uma nova frente urbana nas quadras lindeiras à Av. Politécnica, que abrigue usos associados à pesquisa e inovação e à moradia estudantil</div></h5>
 			<p>Este setor é composto pelas quadras lindeiras à Av. Politécnica, onde se encontra o Portão 2 da Cidade Universitária. Conforme as orientações do PDE e devido à presença de instituições de ensino, pesquisa e desenvolvimento públicas e privadas importantes, a potencialidade em abrigar novas empresas de tecnologia é grande. Trata-se da constituição de um bairro que realiza a transição da Cidade Universitária para a cidade, uma nova camada externa à universidade, capaz promover sua abertura. A Av. Escola Politécnica, por exemplo, poderá contemplar novas fachadas ativas, tornando-se o eixo que relaciona a universidade com a cidade.</p>
 			<p>Nesse setor, devem ser estudados índices moderados de adensamentos, de modo a realizar uma transição morfológica harmoniosa entre a centralidade proposta para o futuro corredor de ônibus da Av. Jaguaré e a USP.</p>
 			<h5>1.4. Setor: Nova Frente do Rio Pinheiros<br>
-			<strong>Diretriz: Implantar uma nova frente urbana para o Rio Pinheiros, abrigando, predominantemente, usos não residenciais e contemplando a recuperação da APP e sua dinamização como espaço livre de uso público.</strong></h5>
+			<div class="sub">Diretriz: Implantar uma nova frente urbana para o Rio Pinheiros, abrigando, predominantemente, usos não residenciais e contemplando a recuperação da APP e sua dinamização como espaço livre de uso público</div></h5>
 			<p>As quadras do Jaguaré que se voltam ao Rio Pinheiros possuem alto potencial de adensamento. Esse perímetro se encontra hoje quase todo murado, fazendo uma frente de aproximadamente 600m de extensão completamente fechada para o Rio Pinheiros. Para reverter essa situação, o projeto procura resgatar a APP do rio, por meio da utilização da frente dos lotes do setor como espaços livres públicos integrados com a rede ambiental proposta. Acredita-se que o uso não residencial é oportuno neste território, em diálogo com a outra margem do rio, onde já existem edifícios corporativos de baixo gabarito.</p>
-			<h5>1.5. Setor: CEAGESP<br>
-			<strong>Diretriz: Promover um desenvolvimento com uso misto na gleba da CEAGESP, em caso de seu parcelamento, e incentivar a utilização de seu pavilhão central para novos usos dinâmicos, associados aos espaços livres da gleba e do PIU ACP.</strong></h5>
+			<h5>1.5. Setor: Mofarrej<br>
+			<div class="sub">Diretriz: Promover um vetor de adensamento construtivo e populacional conectando a Av. Dr. Gastão Vidigal Marginal Pinheiros</div></h5>
+			<p>As ruas Merguenthaler, Xavier Krauss e a Nassib Mofarrej são vias de ligação entre a Av. Dr. Gastão Vidigal e a Estação CEASA do trem, constituindo um grande conjunto de quadras próximas à infraestrutura de transportes com porções ociosas em seu território.  É preciso, contudo, melhorar e qualificar estas vias através da implantação de alamedas, de forma a melhorar a acessibilidade às estações e cumprir importantes funções ambientais. Com essas melhorias, poderão ser aplicados a este setor os parâmetros urbanísticos de adensamento de maior intensidade, diversidade de usos e fachada ativa.</p>
+			<h5>1.6. Setor: PIU Vila Leopoldina – Villa Lobos<br>
+			<div class="sub">Diretriz: Acompanhar o desenvolvimento do PIU VL-VL garantindo sua integração com as diretrizes do PIU ACP</div></h5>
+			<p>O PIU Vila Leopoldina encontra-se hoje em estado avançado de negociação com a Prefeitura de São Paulo. Existem questões importantes a serem garantidas em seu desenvolvimento e detalhamento para se obter uma integração com as estratégias do PIU ACP. Deve-se garantir que as habitações de interesse social sejam implantadas em consonância com as diretrizes do PIU ACP, que o eixo verde central do projeto seja efetivamente público, associado a fachadas ativas, e o uso misto no empreendimento, sem que se torne um condomínio fechado ou monofuncional.</p>
+			<p>A constituição de um eixo de verticalização transversal ao sistema de transporte e ao Rio Pinheiros está alinhada com outras áreas de projeto ao longo do Setor Orla Ferroviária e Fluvial da MEM (notadamente o Arco Tietê e a OUCAB), contribuindo o ordenamento e construção da paisagem urbana.</p>
+			<h5>1.7. Setor: CEAGESP<br>
+			<div class="sub">Diretriz: Promover um desenvolvimento com uso misto na gleba da CEAGESP, em caso de seu parcelamento, e incentivar a utilização de seu pavilhão central para novos usos dinâmicos, associados aos espaços livres da gleba e do PIU ACP</div></h5>
 			<p>Os cenários de desenvolvimento da CEAGESP dependem de diferentes esferas do poder público e vão da permanência total da atual atividade até sua transformação integral, podendo haver inúmeras formas de se transformar esse território.</p>
 			<p>Na hipótese da transformação integral, o parcelamento da gleba deverá atentar para a implantação de arruamento integrado ao sistema viário existente no seu entorno, contribuindo para o rompimento da barreira representada por esta grande gleba, melhorando a acessibilidade local e promovendo novos espaços públicos que façam a ligação entre a Av. Dr. Gastão Vidigal e a Marg. Pinheiros.</p>
 			<p>Neste sentido, algumas diretrizes para parcelamento foram estudadas pela SPUrbanismo em sua Nota Técnica referente ao entreposto, publicada em Outubro de 2016.</p>
-			<p>Destaca-se a relevância do pavilhão central que ostenta atributos de relevo para atividade de mercado de gêneros alimentícios e afins, inclusive associada a outros usos que promovam dinâmica urbana e apoio aos outros usos prospectados para a gleba, a exemplo da criação de um território de inovação.</p>
-			<h5>1.6. Setor: PIU Villa Leopoldina – Villa Lobos<br>
-			<strong>Diretriz: Acompanhar o desenvolvimento do PIU VL-VL garantindo sua integração com as diretrizes do PIU ACP.</strong></h5>
-			<p>O PIU Vila Leopoldina encontra-se hoje em estado avançado de negociação com a Prefeitura de São Paulo. Existem questões importantes a serem garantidas em seu desenvolvimento e detalhamento para se obter uma integração com as estratégias do PIU ACP. Deve-se garantir que as habitações de interesse social sejam implantadas em consonância com as diretrizes do PIU ACP, que o eixo verde central do projeto seja efetivamente público, associado a fachadas ativas, e o uso misto no empreendimento, sem que se torne um condomínio fechado ou monofuncional.</p>
-			<p>A constituição de um eixo de verticalização transversal ao sistema de transporte e ao Rio Pinheiros está alinhada com outras áreas de projeto ao longo do Setor Orla Ferroviária e Fluvial da MEM (notadamente o Arco Tietê e a OUCAB), contribuindo o ordenamento e construção da paisagem urbana.</p>
-			<h5>1.7. Setor: Mofarrej <br>
-			<strong>Diretriz: Promover um vetor de adensamento construtivo e populacional conectando a Av. Dr. Gastão Vidigal  Marginal Pinheiros.</strong></h5>
-			<p>As ruas Merguenthaler, Xavier Krauss e a Nassib Mofarrej são vias de ligação entre a Av. Dr. Gastão Vidigal e a Estação CEASA do trem, constituindo um grande conjunto de quadras próximas à infraestrutura de transportes com porções ociosas em seu território.  É preciso, contudo, melhorar e qualificar estas vias através da implantação de alamedas, de forma a melhorar a acessibilidade às estações e cumprir importantes funções ambientais. Com essas melhorias, poderão ser aplicados a este setor os parâmetros urbanísticos de adensamento de maior intensidade, diversidade de usos e fachada ativa.</p>
+			<p>Destaca-se a relevância do pavilhão central que ostenta atributos de relevo para atividade de mercado de gêneros alimentícios e afins, inclusive associada a outros usos que promovam dinâmica urbana e apoio aos outros usos prospectados para a gleba, a exemplo da criação de um território de inovação.</p>			
 			<h5>1.8. Setor: Av. Dr. Gastão Vidigal <br>
-			<strong>Diretriz: Garantir que o desenvolvimento imobiliário da Av. Dr. Gastão Vidigal,  dependente da implantação do futuro corredor, contemple a transformação das diversas áreas de ZEIS-3 que se encontram no setor.</strong></h5>
+			<div class="sub">Diretriz: Garantir que o desenvolvimento imobiliário da Av. Dr. Gastão Vidigal,  dependente da implantação do futuro corredor, contemple a transformação das diversas áreas de ZEIS-3 que se encontram no setor</div></h5>
 			<p>O setor da Av. Dr. Gastão Vidigal é hoje uma Zona de Estruturação Metropolitana Prevista - ZEMP, cuja liberação para seus lotes de índices de maior adensamento depende da implementação de um futuro corredor de ônibus. A especificidade deste setor é a presença de diversas áreas de ZEIS – 3, o que poderá facilitar a implantação de novos conjuntos habitacionais de interesse social na área, promovendo um adensamento de maior equilíbrio social.</p>
 			<h4>2. Assegurar a oferta de atendimento habitacional à população vulnerável</h4>
 			<p>Tendo em vista as necessidades habitacionais de interesse social levantadas no Diagnóstico Socioterritorial, apresentamos as diretrizes para o enfrentamento das questões habitacionais no âmbito do PIU Arco Pinheiros, observadas as diretrizes expostas no Plano Diretor Estratégico – PDE (Lei Municipal nº 16.050/2014), no Plano Municipal de Habitação – PMH (Projeto de Lei nº 619/2016) e nos Planos Regionais das Prefeituras Regionais (Decreto Municipal nº 57.537/2016).</p>
@@ -283,7 +284,7 @@
 			<h5>2.10. Garantir condições adequadas de habitabilidade para as unidades consolidadas nos Planos de Urbanização e Regularização Fundiária de assentamentos precários e para os conjuntos habitacionais existentes por meio de ações de melhorias habitacionais e assistência técnica, jurídica e social (Lei federal nº 11.888/2008).</h5>
 			<p>A melhoria habitacional tem como objetivo oferecer recursos e assessoria técnica especializada (seja ela por promoção pública, por escritórios públicos ou sem fins lucrativos de assessoria técnica, por agentes privados ligados ao setor de reformas ou por meio de subsídio à compra de materiais de construção) prevê sanar a precariedade edilícia dessas moradias, sobretudo as situações insalubres que dizem respeito a iluminação e ventilação, revertendo necessidades de remoções a custos menores do que a produção de uma unidade nova.</p>
 			<p>Também existe demanda de requalificação de alguns conjuntos habitacionais entregues  anteriormente. Assim, é fundamental prever recursos para a requalificação arquitetônica e urbanística, acompanhada de trabalho técnico social.</p>
-			<h4>3.	Ampliar e qualificar a rede de mobilidade associada a um sistema ambiental que conecte as estações e terminais de transporte publico, moradias, equipamentos, parques e áreas verdes </h4>
+			<h4>3. Ampliar e qualificar a rede de mobilidade associada a um sistema ambiental que conecte as estações e terminais de transporte publico, moradias, equipamentos, parques e áreas verdes</h4>
 			<p>Apesar do território do Arco Pinheiros estar diretamente conectado à região metropolitana através das marginais, bem como pela ferrovia (implantada no sentido leste-oeste), a dificuldade de acesso tanto internamente como externamente é um dos pontos vulneráveis da região.  Neste sentido pode-se dizer que o perímetro carece de conexões no nível local, entre seus diferentes setores, e com demais regiões do município.</p>
 			<p>Em relação ao transporte de alta e media capacidade, verifica-se a ausência de linhas de metrô que atendam ao perímetro. Apenas a estação Butantã (linha 4) atende parcialmente o território, pois localiza- se aproximadamente a 1km da entrada principal da Cidade Universitária, situada no extremo leste do perímetro do ACP. Além disto, as estações da CPTM presentes no território encontram-se desconectadas do tecido urbano resultando em difícil acesso.</p>
 			<p>O PIU ACP baseado no princípio do Desenvolvimento Orientado pelo Transporte Sustentável – DOTS, isto é, adensamento construtivo e demográfico junto aos meios de transporte público de média e alta capacidade propõe a melhoria da mobilidade nos diferentes modos de transporte: transporte público, motorizado e da acessibilidade a pé.</p>
@@ -299,8 +300,8 @@
 					<li><div style="border: 0;"><img :src="imgSrc('arquivos/arco-pinheiros/icone_metro.png')" alt=""></div>Estação do Metrô</li>
 					<li><div style="border: 0;"><img :src="imgSrc('arquivos/arco-pinheiros/icone_cptm.png')" alt=""></div>Estação da CPTM</li>
 					<li><div class="linha" style="border-width: 2px; border-color: #5c4b8f"></div>Corredores de ônibus existentes</li>
-					<li><div class="linha" style="border-style: dotted; border-width: 2px; border-color: #5c4b8f;"></div>Corredores de ônibus municipais planejados - 1ª e 2ª fases</li>
-					<li><div class="linha" style="border-style: dashed; border-width: 2px; border-color: #5c4b8f;"></div>Corredores de ônibus metropolitanos planejados</li>
+					<li><div style="border: 0;"><img :src="imgSrc('arquivos/arco-pinheiros/icone_mobilidade_2.png')" alt=""></div>Corredores de ônibus municipais planejados - 1ª e 2ª fases</li>
+					<li><div style="border: 0;"><img :src="imgSrc('arquivos/arco-pinheiros/icone_mobilidade_3.png')" alt=""></div>Corredores de ônibus metropolitanos planejados</li>
 					<li><div class="linha" style="border-width: 2px; border-color: #3d1970; box-shadow: -2px 2px 2px rgba(0, 0, 0, .4)"></div> Pontes necessárias</li>
 					<li><div style="border-style: dotted; border-width: 2px; border-color: #5c4b8f; border-radius: 100%; filter: drop-shadow(0 0 2px rgba(0, 0, 0, .8));"></div>Melhorias de passeios necessárias</li>
 					<li><div style="border: 0; filter: drop-shadow(0 0 2px rgba(0, 0, 0, .8));"><img :src="imgSrc('arquivos/arco-pinheiros/icone_mobilidade_6.png')" alt=""></div>Transposições necessárias</li>
@@ -315,7 +316,7 @@
 			<p>As diretrizes de mobilidade e transporte desdobram-se nos seguintes propostas:</p>
 			<h5>3.1. Melhorar as condições de acesso às estações de transporte público coletivo de alta capacidade.</h5>
 			<p>Ampliar e melhorar os acessos, travessias e passeios públicos no entorno das estações de transporte público coletivo de alta capacidade (estações ferroviárias) e incentivar a integração multimodal das estações ferroviárias existentes com outros modos de transporte público e/ou com outros modos de transporte não motorizado.</p>
-			<p>As soluções deverão ser planejadas de acordo com as especificidades do entorno de cada estação. Na Estação Villa Lobos – Jaguaré deverá ser estudada a implantação de passarela ou a integração de pedestres com a ponte existente. Na Estação Ceasa, deverá ser estudada a implantação de passarela e a reabertura da Rua Hayden (na hipótese de transformação urbanística da gleba Ceagesp). A concretização dessa diretriz passa pela ampliação da rede cicloviária em direção às Estações Imperatriz Leopoldina, Domingos de Moraes e Ceasa, e pela implantação de bicicletários ou paraciclos junto às estações Domingos de Moraes, Imperatriz Leopoldina e Presidente Altino. Passa também pela previsão de áreas para embarque e desembarque de passageiros de outros modos de transporte público coletivo (ônibus) e outros modos de transporte público individual (taxi / carro por aplicativo), por meio da requalificação das vias existentes no entorno das estações.</p>
+			<p>As soluções deverão ser planejadas de acordo com as especificidades do entorno de cada estação. Na Estação Villa Lobos – Jaguaré deverá ser estudada a implantação de passarela ou a integração de pedestres com a ponte existente. Na Estação Ceasa, deverá ser estudada a implantação de passarela e a reabertura da Rua Hayden (na hipótese de transformação urbanística da gleba CEAGESP). A concretização dessa diretriz passa pela ampliação da rede cicloviária em direção às Estações Imperatriz Leopoldina, Domingos de Moraes e Ceasa, e pela implantação de bicicletários ou paraciclos junto às estações Domingos de Moraes, Imperatriz Leopoldina e Presidente Altino. Passa também pela previsão de áreas para embarque e desembarque de passageiros de outros modos de transporte público coletivo (ônibus) e outros modos de transporte público individual (taxi / carro por aplicativo), por meio da requalificação das vias existentes no entorno das estações.</p>
 			<h5>3.2. Definir regramento urbanístico para o sistema viário compatível com os planos de implantação de corredores de transporte público coletivo de média capacidade, bem como para o plano de intervenção no sistema viário proposto. </h5>
 			<p>Revisar leis de alinhamento viário atualmente em vigor e propor novos alinhamentos viários compatíveis com os programas e planos de implantação de corredores de média capacidade.</p>
 			<p>Programa de Corredores Metropolitanos (EMTU, 2010) e Plano Municipal de Mobilidade Urbana de São Paulo – PlanMob (SMT, 2015), este último em vigor pelo Decreto 56.834/2016, estabelecem uma rede de corredores de transporte de média capacidade que abrangem a cidade e a região metropolitana. No Arco Pinheiros, é proposto um corredor metropolitano no eixo da Av. Corifeu de Azevedo Marques e Av. Vital Brasil; além de corredores municipais no eixo da Av. Escola Politécnica, Av. Jaguaré e Av. Queiroz Filho; no eixo da Av. Dr. Gastão Vidigal e nas vias marginais Tietê e Pinheiros.</p>
@@ -325,7 +326,7 @@
 			<p>De maneira análoga às vias que receberão infraestrutura de transporte público, deverão ser analisadas as leis de alinhamento viário em vigor nas vias colocalizadas às propostas do PIU e do PDE (Mapa 8), e eventualmente feitas propostas de revisão, bem como a proposta de novos alinhamentos, de modo que sejam adequadas às novas demandas por estruturas urbanas e permitam a implantação das infraestruturas previstas. </p>
 			<h5>3.3. Estudar a viabilidade e a inserção urbana das obras de engenharia viária planejadas.</h5>
 			<p>Analisar as propostas já realizadas para a implantação de nova travessia sobre o Rio Pinheiros e avaliar a alternativa de melhor compatibilidade com o plano urbanístico.</p>
-			<p>Uma série de novas transposições foram propostas sobre o Rio Pinheiros na região do ACP. As mais recentes são: ligação entre a Av. Escola Politécnica e a Av. Queirós Filho (Plano Regional da Lapa, 2004), ligação entre a Av. Escola Politécnica e a Marginal Pinheiros (projeto de Operação Urbana Vila Leopoldina, 2005), ligação entre a Av. Alexandre Mackenzie e a R. Hayden (projeto de Operação Urbana Vila Leopoldina, 2005 e nota técnica Ceagesp, 2016), ligação entre a Av. Alexandre Mackenzie e a R. Xavier Kraus (Plano Regional da Lapa, 2016), ligação entre a Av. José Maria da Silva e a R. Aroaba (nota técnica Ceagesp, 2016). Deverá ser analisada a viabilidade de cada uma delas, bem como o detalhamento de proposta de porte e inserção urbana da alternativa escolhida.</p>
+			<p>Uma série de novas transposições foram propostas sobre o Rio Pinheiros na região do ACP. As mais recentes são: ligação entre a Av. Escola Politécnica e a Av. Queirós Filho (Plano Regional da Lapa, 2004), ligação entre a Av. Escola Politécnica e a Marginal Pinheiros (projeto de Operação Urbana Vila Leopoldina, 2005), ligação entre a Av. Alexandre Mackenzie e a R. Hayden (projeto de Operação Urbana Vila Leopoldina, 2005 e nota técnica CEAGESP, 2016), ligação entre a Av. Alexandre Mackenzie e a R. Xavier Kraus (Plano Regional da Lapa, 2016), ligação entre a Av. José Maria da Silva e a R. Aroaba (nota técnica CEAGESP, 2016). Deverá ser analisada a viabilidade de cada uma delas, bem como o detalhamento de proposta de porte e inserção urbana da alternativa escolhida.</p>
 			<h5>3.4. Ampliar e complementar o sistema cicloviário.</h5>
 			<p>Ampliar a rede de ciclovias, ciclofaixas, ciclorrotas e ciclopassarelas, visando principalmente: i) a complementação de trechos atualmente desconectados, ii) a transposição barreiras urbanas e iii) facilitar o acesso à rede de transporte público coletivo de alta capacidade e aos equipamentos públicos existentes e propostos. Além disto, fazer gestão junto aos órgãos responsáveis pela rede de transporte e pelos equipamentos públicos para implantação de bicicletários ou paraciclos, adequados à demanda de cada ponto.</p>
 			<p>Estudar o complemento da rede cicloviária no bairro Vila Ribeiro de Barros, até a ciclovia existente na Ponte dos Remédios e até o Parque Orlando Villas-Bôas. Estudar a transposição do Rio Pinheiros junto às estações Villa Lobos – Jaguaré, Ceasa e Cidade Universitária e a transposição da ferrovia na região da Estação Imperatriz Leopoldina e/ou do Vd. Miguel Mofarrej e/ou outro ponto ao longo da Av. Mofarrej. Estudar a conexão da rede cicloviária com as estações Imperatriz Leopoldina, Domingos de Moraes e Ceasa e com o CEU Jaguaré.</p>
@@ -334,7 +335,7 @@
 			<p>Além das melhorias dos passeios públicos no entorno das estações ferroviárias e dos equipamentos públicos existentes e propostos, promover a transposição de barreiras físicas que dificultam a locomoção dos pedestres, por meio de i) requalificação de pontes e viadutos existentes, ii) projeto de novas pontes e viadutos com soluções integradas para a circulação de pedestres, iii) implantação de passarelas articuladas a equipamentos ou estações de transporte.</p>
 			<p>Estudar melhorias para o caminhamento dos pedestres nas pontes Cidade Universitária e Jaguaré e no Viaduto Miguel Mofarrej. Incorporar soluções adequadas para circulação de pedestres nas propostas para nova ponte sobre o Rio Pinheiros. Estudar passarelas ou ciclopassarelas junto às estações Villa Lobos – Jaguaré, Ceasa e Imperatriz Leopoldina.</p>
 			<h5>3.6. Melhorar as condições de circulação de carga</h5>
-			<p>A circulação de cargas no Arco Pinheiros apresenta alta concentração em algumas vias e várias medidas de restrição. Deverão ser estudados os cenários de circulação de carga considerando as hipóteses de transformação urbanística da ZOE da Ceagesp e da ZDE do Jaguaré, de acordo com os parâmetros urbanísticos deste PIU.</p>
+			<p>A circulação de cargas no Arco Pinheiros apresenta alta concentração em algumas vias e várias medidas de restrição. Deverão ser estudados os cenários de circulação de carga considerando as hipóteses de transformação urbanística da ZOE da CEAGESP e da ZDE do Jaguaré, de acordo com os parâmetros urbanísticos deste PIU.</p>
 			<h4>4. Qualificar os espaços públicos e promover o equilíbrio ambiental e da oferta de equipamentos</h4>
 			<p>Ainda que os índices de áreas verdes por habitantes no perímetro do Arco Pinheiros ultrapassem os recomendados pela OMS, a influência da baixa densidade demográfica nos índices e a concentração de áreas verdes no território fazem com que estes números não se reflitam necessariamente em qualidade espacial.  Assim, são detectados pontos com elevação da temperatura além de espaços públicos pouco convidativos ao lazer e ao deslocamento não motorizado.</p>
 			<p>Neste sentido, as diretrizes devem orientar o projeto promovendo ordenamento e reestruturação das áreas subutilizadas, com potencial de transformação, que necessitem de mudança no padrão de uso, recuperação econômica e social, promovendo um processo de transformação da forma mais equilibrada possível, inclusive sob o aspecto ambiental.</p>
@@ -406,7 +407,7 @@
 			<p>Para novas ofertas, a definição do perfil do equipamento deverá ser construída em conjunto com as secretarias competentes, considerando a demanda atual identificada no diagnóstico e a demanda futura.</p>
 			<p>Em relação aos equipamentos de esporte, cultura e lazer, O ACP está situado numa região privilegiada da cidade, sob o ponto de vista cultural, devido à presença da Cidade Universitária da Universidade São Paulo uma das mais importantes do país. Por outro lado, o acesso a esses equipamentos é condicionado às regras de acesso ao campus. Além disto, há considerações em relação à distribuição dos equipamentos pelo território: além da concentração dentro do campus da USP, não há bibliotecas nos distritos Jaguara e Rio Pequeno e nem cinemas e teatros no distrito Rio Pequeno.</p>
 			<p>Nos distritos do ACP identificam-se áreas verdes com distâncias entre si superiores a 1km e concentradas em extensas áreas. O projeto do ACP deverá introduzir novas áreas verdes nos espaços entre as praças e parques existentes, reduzindo as distâncias para acesso aos mesmos, constituindo um sistema integrados por corredores verdes.</p>
-			<h5>4.6.Promover a recuperação das Áreas de Preservação Permanente (APP).</h5>
+			<h5>4.6. Promover a recuperação das Áreas de Preservação Permanente (APP).</h5>
 			<p>Com a diretriz de recuperação das APPs objetiva-se aumentar a oferta de espaços públicos e reaproximar a população do Rio Pinheiros e Córregos Jaguaré, Pirajuçara e Continental.</p>
 			<p>A recuperação das APPs dos rios e córregos do ACP pode demandar, dependendo da especificidade do curso d’água e afluentes, a descontaminação das águas, o destamponamento, a recuperação da permeabilidade natural do solo nas margens, a recomposição vegetal e a instalação de equipamentos de lazer e mobilidade. Considerando suas especificidades e representatividade, a confluência dos rios Tietê e Pinheiros, onde se localiza o Complexo Viário Heróis de 1932 (Cebolão) difere-se dos demais trechos no contexto da recuperação ambiental. Se, por um lado, neste trecho o sistema ambiental é fragmentado pela sobreposição com usos extensivos de infraestrutura existentes, por outro, a existência de áreas públicas residuais, a baixa densidade construtiva, e a vinculação institucional da propriedade dos imóveis (EMAE e CTEEP, por exemplo) configuram um potencial para recuperação inclusive além dos limites da APP.</p>
 			<h4>5. Promover a integração do patrimônio cultural existente ao território como meio de valorização e preservação</h4>
@@ -467,8 +468,8 @@
 			<p> O Setor 3 – Nova frente do Rio Pinheiros – conta com aproximadamente 190mil m² da área de lote. É oportuna a transformação deste setor contemplando uma nova frente para o rio, e a constituição de espaços livres a ele relacionados. Foi predefinido um Coeficiente de Aproveitamento preliminar de 2,5 vezes, tendo em vista a tipologia que vem sendo observada na outra margem do rio e o incentivo à sua replicação adaptada a uma nova frente fluvial.	O uso residencial foi definido em 20%, um mínimo de usos habitacionais para garantir uso misto e dinâmica ao território. Calcula-se, portanto, um adensamento de mil pessoas para o setor, de modo que resulte em uma densidade de 39 habitantes por hectare.
 			<h4>4. Setor Mofarrej</h4>
 			<p>O Setor 4 – Setor Mofarrej – possui uma área bruta de 490mil m², e uma área de lotes de 395mil m². O Coeficiente de Aproveitamento preliminar, para porções deste setor, foi definido em 4 vezes a área do terreno, tendo em vista que parte de seu perímetro situa-se na área de influência do trem, já definida como ZEM pelo zoneamento atual, e na área de influência do futuro corredor da Av. Dr. Gastão Vidigal, resultando em quase 400mil m² de empreendimentos. Para este setor, deseja-se um adensamento residencial intenso nestas porções, predefinido em 70% de sua área construída computável e resultando em uma adição de 10mil pessoas em 30 anos. Se levarmos em conta a população atual, de aproximadamente 1.800 pessoas, o setor passará de uma densidade de 38 hab/ha para 250 hab/ha. Dessa maneira, o setor constituí-se como uma das áreas de maior adensamento do plano, em consonância com as estratégias de adensamento transversal aos rios Pinheiros e Tietê e nas proximidades do transporte, estratégia já utilizada nos demais territórios da Orla Ferroviária e Fluvial da MEM (Arco Tietê, Operação Urbana Consorciada Água Branca e Arco Jurubatuba).</p>
-			<p>O PIU deverá conciliar as estratégias de adensamento com as características da economia local,  prevendo diretrizes que adiram a morfologia do setor à dos demais em especial da Ceagesp.</p>
-			<h4>5. Projeto de Intervenção Urbana Vila Leopoldina - Villa lobos (PIU VL VL)</h4>
+			<p>O PIU deverá conciliar as estratégias de adensamento com as características da economia local,  prevendo diretrizes que adiram a morfologia do setor à dos demais em especial da CEAGESP.</p>
+			<h4>5. Projeto de Intervenção Urbana Vila Leopoldina - Villa Lobos (PIU VL VL)</h4>
 			<p>O Setor 5 – PIU Vila Leopoldina-Villa Lobos – conta com uma área bruta de 334mil m² e com 264mil m² de lotes. O processo de desenvolvimento do PIU VL-VL contempla um Coeficiente de Aproveitamento médio de 4 vezes a área dos terrenos e uma previsão de adensamento de 9.600 moradores ao final de seu processo de transformação. Somados à população atual, de 1.250 habitantes, o setor contará, dentro de 30 anos, com quase 11mil pessoas, resultando em uma densidade de 325 hab/ha.</p>
 			<h4>6. CEAGESP</h4>
 			<p>O Setor 6 – CEAGESP – possui uma área bruta de 667mil m², contando com 635mil m² de área de lotes. Muito embora sua destinação esteja ainda indefinida, adotou-se um índice médio de 30% de usos residenciais. Assim, prevê-se um adensamento de 13mil pessoas, aproximadamente, podendo variar este número para mais, caso se torne um bairro residencial, ou para menos, caso se transforme em uma universidade, campus universitário ou até mesmo um parque tecnológico, que são algumas das propostas preliminares em estudo. Com esta população futura, atingir-se-ia uma densidade de aproximadamente 206 hab/ha em um território onde hoje não há moradores.</p>
@@ -680,6 +681,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 *::selection, *::-moz-selection {
 	background: #EB5757;
 	color: #FFF;
@@ -689,6 +691,7 @@ div.ArcoPinheiros {
 	font-size: 20px;
 	padding-bottom: 4rem;
 	z-index: 0;
+	/*@media (max-width: 600px) { font-size: 16px; }*/
 
 
 	h2, h3, h4, h5, h6, p, ul, ol {
@@ -697,12 +700,25 @@ div.ArcoPinheiros {
 		max-width: 700px;
 	};
 
-	h4, h5, h6 { color: #777; font-weight: 400; };
+	h5 {
+		font-size: large;
+		div.sub { font-weight: lighter; color: #777; }
+	}
 
-	p ~ h1, p ~ h2, p ~ h3 { margin-top: 4rem; };
-	p ~ h4, p ~ h5, p ~ h6 { margin-top: 2rem; };
+	h4 {
+		font-size: inherit;
+	}
 
-	h4 + p, h5 + p, h6 + p { margin-top: -1rem; };
+	h3 {
+		font-size: x-large;
+	}
+
+	h2 {
+		font-size: xx-large;
+	}
+
+	p ~ h1, p ~ h2, p ~ h3 { margin-top: 4rem; margin-bottom: 2rem; };
+	p ~ h4, p ~ h5, p ~ h6 { margin-top: 4rem; margin-bottom: 1rem; }
 
 	sup {
 		vertical-align: 4px;
@@ -712,7 +728,6 @@ div.ArcoPinheiros {
 
 		a { color: inherit; };
 	};
-
 
 	p, ol, ul { font-family: 'Georgia', serif; };
 
@@ -794,6 +809,11 @@ div.ArcoPinheiros {
 		figure {
 			margin-left: 2rem;
 			margin-right: 2rem;
+			width: calc(100% - 4rem);
+
+			&.coluna {
+				padding: 0;
+			}
 		}
 	};
 

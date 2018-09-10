@@ -44,9 +44,9 @@
 					<li><span style="background: #e32de3"></span> Indústria e armazéns</li>
 					<li><span style="background: #c485eb"></span> Usos especiais</li>
 					<li><span style="background: #872de1"></span> Equipamentos</li>
-					<li><span style="background: #9f5000"></span> Terrenos vagos</li>
-					<li><span style="background: #c09000"></span> Outros</li>
-					<li><span style="background: #f0f0f0"></span> Sem informação</li>
+					<li><span :style="backgroundImg('arquivos/arco-pinheiros/legenda_favelas.png')" style="background-repeat: no-repeat; background-position: center center; border: 2px solid #431700"></span>Favelas</li>
+					<li><span :style="backgroundImg('arquivos/arco-pinheiros/legenda_nucleos.png')" style="background-repeat: no-repeat; background-position: center center; border: 2px solid #9c3836"></span>Núcleos</li>
+					<li><span style="background: #dbdbdb"></span> Outros</li>
 				</ul>
 				<ul v-show="escAreasVerdes == false">
 					<li class="tituloDiag">Áreas verdes existentes</li>
@@ -103,7 +103,7 @@
 						</li>
 						<li>
 							<span style="background: #f3e826;"></span>
-							<strong>Usos residenciais cadastrados</strong> (residencial vertical de baixo, médio e alto padrão; residencial horizontal de baixo, médio e alto padrão; uso misto) <span>6%</span>
+							<strong>Usos residenciais</strong> (residencial vertical de baixo, médio e alto padrão; residencial horizontal de baixo, médio e alto padrão; uso misto) <span>6%</span>
 						</li>
 						<li>
 							<span style="background: #f28d14;"></span>
@@ -154,30 +154,29 @@
 				<div class="pizza">
 					<div>Motivos que mais atraem viagens ao perímetro do ACP</div>
 					<div>
-						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="160px"
-							 height="160px" viewBox="0 0 160 160" enable-background="new 0 0 160 160" xml:space="preserve">
+						<svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+							 width="160px" height="160px" viewBox="0 0 160 160" enable-background="new 0 0 160 160" xml:space="preserve">
 							<g>
-								<path fill="#333333" d="M80.258,80L7.965,46.19C21.37,17.359,48.539,0,80.258,0V80z"/>
-								<path fill="#F5F5F5" d="M80.258,80L8.564,115.069C-2.25,92.831-2.461,68.615,7.965,46.19L80.258,80z"/>
-								<path fill="#BDBDBD" d="M80.258,80l-46.885,64.722c-11.405-8.312-18.629-16.944-24.809-29.652L80.258,80z"/>
-								<path fill="#777777" d="M80.258,80l5.564,79.805c-19.337,1.356-36.768-3.657-52.449-15.083L80.258,80z"/>
-								<path fill="#EB5757" d="M80.258,80V0c44.054,0,79.767,35.817,79.767,80c0,42.416-32.013,76.847-74.202,79.805L80.258,80z"/>
+								<path fill="#333333" d="M80.45,79.989L8.034,46.185C21.462,17.357,48.678,0,80.45,0V79.989z"/>
+								<path fill="#777777" d="M80.45,79.989L8.634,115.055C-2.198,92.819-2.41,68.606,8.034,46.185L80.45,79.989z"/>
+								<path fill="#BDBDBD" d="M80.45,79.989l-46.966,64.712c-11.424-8.309-18.659-16.941-24.851-29.646L80.45,79.989z"/>
+								<path fill="#D5D5D5" d="M80.45,79.989l5.574,79.794c-19.37,1.357-36.831-3.656-52.54-15.082L80.45,79.989z"/>
+								<path fill="#EB5757" d="M80.45,79.989V0c44.129,0,79.902,35.813,79.902,79.989c0,42.41-32.067,76.837-74.328,79.794
+									L80.45,79.989z"/>
 							</g>
-							<g>
-								<text transform="matrix(0.5304 0.8477 -0.8477 0.5304 40.7344 23.4268)">18%</text>
-								<text transform="matrix(1 0 0 1 129.5625 84)">49%</text>
-								<text transform="matrix(0.2774 -0.9607 0.9607 0.2774 64.0918 148.2031)">11%</text>
-								<text transform="matrix(0.7676 -0.6409 0.6409 0.7676 28.9502 127.6855)">8%</text>
-								<text transform="matrix(1 0 0 1 10.0098 84)">14%</text>
-							</g>
+							<text transform="matrix(0.5484 0.8362 -0.8362 0.5484 38.3604 23.6611)"><tspan x="0" y="0" fill="#FFFFFF">18%</tspan></text>
+							<text transform="matrix(1 0 0 1 9.3667 83.9282)"><tspan x="0" y="0" fill="#FFFFFF">14%</tspan></text>
+							<text transform="matrix(1 0 0 1 128.8691 83.9282)"><tspan x="0" y="0" fill="#FFFFFF">49%</tspan></text>
+							<text transform="matrix(0.7723 -0.6353 0.6353 0.7723 27.7515 128.3735)"><tspan x="0" y="0" fill="#FFFFFF">8%</tspan></text>
+							<text transform="matrix(0.2784 -0.9605 0.9605 0.2784 64.3413 149.5308)"><tspan x="0" y="0" fill="#FFFFFF">11%</tspan></text>
 						</svg>
 					</div>
 					<ul>
 						<li motivo="servicos">Trabalho (serviços)</li>
 						<li motivo="educacao">Educação</li>
-						<li motivo="outros">Outros</li>
-						<li motivo="industria">Trabalho (indústria)</li>
 						<li motivo="comercio">Trabalho (comércio)</li>
+						<li motivo="industria">Trabalho (indústria)</li>
+						<li motivo="outros">Outros</li>
 					</ul>
 				</div>
 				<div class="barras">
@@ -200,46 +199,46 @@
 		</div>
 		<div class="legenda_mob">
 			<ul>
-				<li class="tituloDiag">Legenda</li>
-				<li><span style="border: 2px solid #211915"></span>Perímetro do Arco Pinheiros</li>
-				<li><span style="background: url('http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/legenda_ferrovias.png') no-repeat center center;"></span>Ferrovia</li>
-				<li><span style="background: #84b1bd"></span>Hidrografia</li>
-				<li><span style="height: 1px; border: 1px solid #4c4c4c"></span>Via Estrutural de Nível 1</li>
-			</ul>
-			<ul v-show="escPopulacao == false">
-				<li class="tituloDiag">Densidade demográfica (hab/ha)</li>
-				<li><span style="background: #fffbea"></span>Até 50</li>
-				<li><span style="background: #ffebba"></span>25–50</li>
-				<li><span style="background: #ffde95"></span>50–100</li>
-				<li><span style="background: #ffd170"></span>100–150</li>
-				<li><span style="background: #ffc34a"></span>150–200</li>
-				<li><span style="background: #ffb625"></span>200–300</li>
-				<li><span style="background: #ff9000"></span>Acima de 300</li>
-			</ul>
-			<ul v-show="escUsos == false || escTrabalho == false || escMobilidade == false">
-				<li class="tituloDiag">Uso do solo por lote</li>
-				<li><span style="background: #a0c0ff"></span> Res. vert. baixo padrão</li>
-				<li><span style="background: #0080ff"></span> Res. vert. médio/alto padrão</li>
-				<li><span style="background: #ffffd0"></span> Res. horiz. baixo padrão</li>
-				<li><span style="background: #ffff00"></span> Res. horiz. médio/alto padrão</li>
-				<li><span style="background: #ff9933"></span> Residencial + comércio/serviços</li>
-				<li><span style="background: #ff3333"></span>Comércio e serviços</li>
-				<li><span style="background: #e32de3"></span> Indústria e armazéns</li>
-				<li><span style="background: #c485eb"></span> Usos especiais</li>
-				<li><span style="background: #872de1"></span> Equipamentos</li>
-				<li><span style="background: #9f5000"></span> Terrenos vagos</li>
-				<li><span style="background: #c09000"></span> Outros</li>
-				<li><span style="background: #f0f0f0"></span> Sem informação</li>
-			</ul>
-			<ul v-show="escAreasVerdes == false">
-				<li class="tituloDiag">Áreas verdes existentes</li>
-				<li><span style="background: #3d5d38"></span>Reserva de Mata Atlântica</li>
-				<li><span style="background: #6e813f"></span>Áreas verdes tombadas e outras</li>
-				<li><span style="background: #8ca350"></span>Parques</li>
-				<li><span style="background: #ccdda3"></span>Praças e canteiros</li>
-			</ul>
-			<div class="fonte">Base <strong>MDC, 2004</strong><br />
-			Elaboração <strong>SPUrbanismo</strong></div>
+					<li class="tituloDiag">Legenda</li>
+					<li><span style="border: 2px solid #211915"></span>Perímetro do Arco Pinheiros</li>
+					<li><span :style="backgroundImg('arquivos/arco-pinheiros/legenda_ferrovias.png')" style="background-repeat: no-repeat; background-position: center center;"></span>Ferrovia</li>
+					<li><span style="background: #84b1bd"></span>Hidrografia</li>
+					<li><span style="height: 1px; border: 1px solid #4c4c4c"></span>Via Estrutural de Nível 1</li>
+				</ul>
+				<ul v-show="escPopulacao == false">
+					<li class="tituloDiag">Densidade demográfica (hab/ha)</li>
+					<li><span style="background: #fffbea"></span>Até 50</li>
+					<li><span style="background: #ffebba"></span>25–50</li>
+					<li><span style="background: #ffde95"></span>50–100</li>
+					<li><span style="background: #ffd170"></span>100–150</li>
+					<li><span style="background: #ffc34a"></span>150–200</li>
+					<li><span style="background: #ffb625"></span>200–300</li>
+					<li><span style="background: #ff9000"></span>Acima de 300</li>
+				</ul>
+				<ul v-show="escUsos == false || escTrabalho == false || escMobilidade == false">
+					<li class="tituloDiag">Uso do solo por lote</li>
+					<li><span style="background: #a0c0ff"></span> Res. vert. baixo padrão</li>
+					<li><span style="background: #0080ff"></span> Res. vert. médio/alto padrão</li>
+					<li><span style="background: #ffffd0"></span> Res. horiz. baixo padrão</li>
+					<li><span style="background: #ffff00"></span> Res. horiz. médio/alto padrão</li>
+					<li><span style="background: #ff9933"></span> Residencial + comércio/serviços</li>
+					<li><span style="background: #ff3333"></span>Comércio e serviços</li>
+					<li><span style="background: #e32de3"></span> Indústria e armazéns</li>
+					<li><span style="background: #c485eb"></span> Usos especiais</li>
+					<li><span style="background: #872de1"></span> Equipamentos</li>
+					<li><span :style="backgroundImg('arquivos/arco-pinheiros/legenda_favelas.png')" style="background-repeat: no-repeat; background-position: center center; border: 2px solid #431700"></span>Favelas</li>
+					<li><span :style="backgroundImg('arquivos/arco-pinheiros/legenda_nucleos.png')" style="background-repeat: no-repeat; background-position: center center; border: 2px solid #9c3836"></span>Núcleos</li>
+					<li><span style="background: #dbdbdb"></span> Outros</li>
+				</ul>
+				<ul v-show="escAreasVerdes == false">
+					<li class="tituloDiag">Áreas verdes existentes</li>
+					<li><span style="background: #3d5d38"></span>Reserva de Mata Atlântica</li>
+					<li><span style="background: #6e813f"></span>Áreas verdes tombadas e outras</li>
+					<li><span style="background: #8ca350"></span>Parques</li>
+					<li><span style="background: #ccdda3"></span>Praças e canteiros</li>
+				</ul>
+				<div class="fonte">Base <strong>MDC, 2004</strong><br />
+				Elaboração <strong>SPUrbanismo</strong></div>
 		</div>
 		<div class="texto">
 			<div v-show="escPopulacao && escUsos && escTrabalho && escMobilidade && escAreasVerdes">
@@ -796,15 +795,15 @@ div.Diagnostico {
 						width: .8rem;
 						height: .8rem;
 						margin-right: 8px;
-						vertical-align: -1px;
+						vertical-align: -2px;
 						border: 1px solid rgba(0, 0, 0, .08);
 					};
 
 					li[motivo=servicos]::before { background: #EB5757; }
 					li[motivo=educacao]::before { background: #333; }
-					li[motivo=comercio]::before { background: #F5F5F5; }
+					li[motivo=comercio]::before { background: #777; }
 					li[motivo=industria]::before { background: #BDBDBD; }
-					li[motivo=outros]::before { background: #777; }
+					li[motivo=outros]::before { background: #D5D5D5; }
 				}
 			}
 

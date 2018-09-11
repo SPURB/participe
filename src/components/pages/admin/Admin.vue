@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import AdminSide from '@/components/AdminSide';
+import AdminSide from '@/components/pages/admin/AdminSide';
 
 export default {
 	nome: 'Admin',

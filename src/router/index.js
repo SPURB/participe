@@ -8,11 +8,11 @@ const ArcoPinheiros = () => import('@/components/pages/ArcoPinheiros')
 const Login = () => import('@/components/pages/Login')
 
 // Admin
-const Admin = () => import('@/components/Admin')
-const AdminHome = () => import('@/components/AdminHome')
-const AdminNovaConsulta = () => import('@/components/AdminNovaConsulta')
-const AdminSide = () => import('@/components/AdminSide')
-const AdminPagConsulta = () => import ('@/components/AdminPagConsulta')
+const Admin = () => import('@/components/pages/admin/Admin')
+const AdminHome = () => import('@/components/pages/admin/AdminHome')
+const AdminNovaConsulta = () => import('@/components/pages/admin/AdminNovaConsulta')
+const AdminSide = () => import('@/components/pages/admin/AdminSide')
+const AdminPagConsulta = () => import ('@/components/pages/admin/AdminPagConsulta')
 
 
 Vue.use(Router)
@@ -50,9 +50,22 @@ export default new Router({
 			path: '/admin',
 			components: { Admin },
 			children: [
-				{ path: '', name: 'Admin', component: AdminHome },
-				{ path: 'novaconsulta', name: 'novaConsulta',  title:'Nova Consulta', component: AdminNovaConsulta },
-				{ path: ':id', name: 'pageConsulta', component: AdminPagConsulta }
+				{ 
+					path: '', 
+					name: 'Admin', 
+					component: AdminHome 
+				},
+				{ 
+					path: 'novaconsulta', 
+					name: 'novaConsulta',  
+					title:'Nova Consulta', 
+					component: AdminNovaConsulta 
+				},
+				{ 
+					path:':id', 
+					name: 'pageConsulta', 
+					component: AdminPagConsulta 
+				}
 			]
 		}
 	]

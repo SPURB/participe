@@ -1,56 +1,127 @@
 <template>
 	<div class="AdminPagConsulta">
-		<h1>{{ estaSubRota.title }}</h1>
+		<h1>{{ estaSubRota.title }} | id: {{estaSubRota.id}} </h1>
 		<section class="hidden" :class="{ show: abreId }" id="identificacao">
 			<h2 @click="abreId = !abreId">Identificação <i class="material-icons">keyboard_arrow_down</i></h2>
 			<form>
 				<fieldset>
-					<legend>Nome <span><i class="material-icons editBtn" title="Editar campo" @click="editar(['input_nomePublico'], $event)">edit</i></span></legend>
-					<input type="text" id="input_nomePublico" name="input_nomePublico" :value="estaConsulta.nomePublico">
+					<legend>Nome <span><i 
+						class="material-icons editBtn" 
+						title="Editar campo" 
+						@click="editar(['input_nomePublico'], $event)">edit</i></span>
+					</legend>
+					<input 
+						name="input_nomePublico" 
+						type="text"
+						id="input_nomePublico"
+						v-model="nome_publico"
+						>
+						<!-- :value="estaConsulta.nomePublico" -->
 				</fieldset>
+
 				<fieldset>
-					<legend>Status <span><i class="material-icons editBtn" title="Editar campo" @click="editar(['input_status'], $event)">edit</i></span></legend>
-					<input type="radio" id="input_status_aberta" name="input_status" value="1" checked>
-					<label for="input_status_aberta" class="status">Consulta aberta</label>
-					<input type="radio" id="input_status_encerrada" name="input_status" value="0">
+					<legend>Status <span><i 
+						class="material-icons editBtn" 
+						title="Editar campo" 
+						@click="editar(['input_status'], $event)">edit</i></span>
+					</legend>
+					<input 
+						type="radio" 
+						id="input_status_aberta" 
+						name="input_status" 
+						value="1"
+						:checked = "ativo == '1'"
+						v-model="ativo"
+					>
+					<label 
+						for="input_status_aberta" 
+						class="status">Consulta aberta</label>
+					<input 
+						type="radio" 
+						id="input_status_encerrada" 
+						name="input_status" 
+						value="0"
+						:checked = "ativo == '0'"
+						v-model="ativo"
+					>
 					<label for="input_status_encerrada" class="status">Consulta encerrada</label>
 				</fieldset>
+
 				<fieldset>
-					<legend>Período da consulta <span><i class="material-icons editBtn" title="Editar campo" @click="editar(['input_dataCadastro', 'input_dataFinal'], $event)">edit</i></span></legend>
+					<legend>Período da consulta <span><i 
+						class="material-icons editBtn" 
+						title="Editar campo" 
+						@click="editar(['input_dataCadastro', 'input_dataFinal'], $event)">edit</i></span></legend>
 					<div>
 						<label for="input_dataCadastro">Início</label>
-						<input type="date" id="input_dataCadastro" name="input_dataCadastro" :value="estaConsulta.dataCadastro">
+						<input 
+							type="date" 
+							id="input_dataCadastro" 
+							name="input_dataCadastro" 
+							v-model="data_cadastro"
+						>
 					</div>
 					<div>
 						<label for="input_dataFinal">Final</label>
-						<input type="date" id="input_dataFinal" name="input_dataFinal" :value="estaConsulta.dataFinal">
+						<input 
+							type="date"
+							id="input_dataFinal" 
+							name="input_dataFinal" 
+							v-model="data_final"
+						>
 					</div>
 				</fieldset>
+
 				<fieldset>
 					<legend>Texto introdutório <span><i class="material-icons editBtn" title="Editar campo" @click="editar(['input_textoIntro'], $event)">edit</i></span></legend>
-					<textarea id="input_textoIntro" maxlength="480" name="input_textoIntro" :value="estaConsulta.textoIntro"></textarea>
+					<textarea 
+						id="input_textoIntro" 
+						maxlength="480" 
+						name="input_textoIntro" 
+						v-model="texto_intro"
+					></textarea>
 				</fieldset>
+
 				<fieldset>
 					<legend>Hiperlinks</legend>
 					<div>
 						<label for="input_urlConsulta">URL da consulta <i class="material-icons editBtn" title="Editar campo" @click="editar(['input_urlConsulta'], $event)">edit</i></label>
-						<input type="url" id="input_urlConsulta" name="input_urlConsulta" :value="estaConsulta.urlConsulta">
+						<input 
+							type="url" 
+							id="input_urlConsulta" 
+							name="input_urlConsulta" 
+							v-model="url_consulta"
+						>
 					</div>
 					<div>
 						<label for="input_urlCapa">URL da imagem de capa <i class="material-icons editBtn" title="Editar campo" @click="editar(['input_urlCapa'], $event)">edit</i></label>
-						<input type="url" id="input_urlCapa" name="input_urlCapa" :value="estaConsulta.urlCapa">
+						<input 
+							type="url" 
+							id="input_urlCapa" 
+							name="input_urlCapa" 
+							v-model="url_capa"
+							>
 					</div>
 					<div>
 						<label for="input_urlDevolutiva">URL da devolutiva <i class="material-icons editBtn" title="Editar campo" @click="editar(['input_urlDevolutiva'], $event)">edit</i></label>
-						<input type="url" id="input_urlDevolutiva" name="input_urlDevolutiva" :value="estaConsulta.urlDevolutiva">
+						<input 
+							type="url" 
+							id="input_urlDevolutiva" 
+							name="input_urlDevolutiva" 
+							v-model="url_devolutiva"
+							>
 					</div>
 				</fieldset>
 			</form>
-			<button class="limpar" ref="limpar"><i class="material-icons">clear</i>Cancelar</button>
-			<button type="submit" class="enviar" ref="salvar"><i class="material-icons">check_circle</i> Salvar alterações</button>
+			<!-- <button class="limpar" ref="limpar"><i class="material-icons">clear</i>Cancelar</button>
+			<button type="submit" class="enviar" ref="salvar"><i class="material-icons">check_circle</i> Salvar alterações</button> -->
+			<a class="acao limpar" @click="cancelarAcao" ref="limpar"><i class="material-icons">clear</i>Cancelar</a>
+			<a class="acao enviar" @click="atualizarConsulta" ref="salvar"><i class="material-icons">add_circle</i> Atualizar consulta</a>
 		</section>
 		<section class="hidden" :class="{ show: abreMod }" id="moderacao">
 			<h2 @click="abreMod = !abreMod">Moderação <i class="material-icons">keyboard_arrow_down</i></h2>
+
+			<p v-show="fetchingContent">carregando...</p>
 			<h3>Pendentes <span>{{ commentsPendentes.length }}</span></h3>
 				<div class="comentario pendente" v-for="comment in commentsPendentes">
 					<div class="comentCtx" @click="abreContexto($event)">
@@ -123,16 +194,19 @@
 </template>
 
 <script>
-import CommentUn from '@/components/CommentUn'
+// import CommentUn from '@/components/CommentUn'
 import axios from 'axios';
+import { adminCommon } from '@/mixins/adminCommon' 
 
 export default {
 	nome: 'AdminPagConsulta',
-	components: { 
-		CommentUn
-	},
+	// components: { 
+	// 	CommentUn
+	// },
+	mixins:[ adminCommon ],
 	data() {
 		return {
+			fetchingContent: false, 
 			abreId: false,
 			abreMod: false,
 			commentsPendentes: [],
@@ -141,41 +215,42 @@ export default {
 		}
 	},
 	computed:{
-		apiPath(){ return this.$store.getters.apiPath },
 		consultas(){ return this.$store.state.consultas },
 		estaSubRota(){ return this.$route.params },
 		estaConsulta: function() {
 			let app = this
 			let estaConsulta = {}
 			app.consultas.filter(function(index) {
-				if (app.$route.params.id == index.id) {
-					estaConsulta = {
-						id: index.id,
-						nome: index.nome,
-						nomePublico: index.nomePublico,
-						dataCadastro: index.dataCadastro,
-						dataFinal: index.dataFinal,
-						textoIntro: index.textoIntro,
-						urlConsulta: index.urlConsulta,
-						urlCapa: index.urlCapa,
-						urlDevolutiva: index.urlDevolutiva,
-						nContribuicoes: index.nContribuicoes
-					}
+				if (app.$route.params.id == index.id_consulta) {
+					estaConsulta = index
 				}
 			})
 			return estaConsulta
 		},
 	},
 	methods: {
-		editar(arr, event) {
-			let app = this
-			arr.map(function(index) {
-				Array.from(app.$el.querySelectorAll('*[name='+index+']')).map(function(index) {
-					index.disabled = false
-					index.focus()
-				})
+		atualizarConsulta(){
+			// TODO: enviar apenas formulários alterados
+			const sendObj = {
+				"ativo":"="+this.ativo, 
+				"dataCadastro": this.data_cadastro,
+				"dataFinal": this.data_final,
+				"textoIntro": this.texto_intro,
+				"nomePublico":this.texto_intro,
+				"urlConsulta":this.url_consulta,
+				"urlCapa":this.url_capa,
+				"urlDevolutiva":this.url_devolutiva
+			}
+			// console.log(sendObj)
+			const app = this
+			axios.put(app.apiPath + 'consultas' +'/'+app.estaConsulta.nome, sendObj)
+			.then(function(response){
+				console.log(response)
 			})
-			event.target.classList.add('desbloqueado')
+			.catch(function(error){
+				alert('erro')
+			})
+
 		},
 		abreComment(event) {
 			event.target.parentNode.style.maxHeight = '10000px'
@@ -186,6 +261,7 @@ export default {
 			event.target.style.cursor = 'default'
 		},
 		carregaComments(idConsulta){
+			this.fetchingContent = true
 			const app = this
 			let pendentes = []
 			let aprovados = []
@@ -196,6 +272,7 @@ export default {
 			})
 			.then(function(response) {
 				response.data.map(function(index) {
+					app.fetchingContent = false
 					if(index.public == "1"){
 						aprovados.push(index)
 					}
@@ -208,6 +285,7 @@ export default {
 				})
 			})
 			.catch(function (error){
+				app.fetchingContent = false
 				console.log(error)
 			})
 			this.commentsAprovados = aprovados
@@ -218,10 +296,21 @@ export default {
 			this.commentsPendentes = []
 			this.commentsAprovados = []
 			this.commentsReprovados = []
+		},
+		editar(arr, event) {
+			let app = this
+			arr.map(function(index) {
+				Array.from(app.$el.querySelectorAll('*[name='+index+']')).map(function(index) {
+					index.disabled = false
+					index.focus()
+				})
+			})
+			event.target.classList.add('desbloqueado')
 		}
 	},
 	mounted() {
-		this.carregaComments(this.$route.params.id);
+		this.updateForm()
+		this.carregaComments(this.$route.params.id)
 		let app = this
 		Array.from(this.$el.querySelectorAll('*[name^=input_]')).map(function (index){
 			index.disabled = true
@@ -235,7 +324,9 @@ export default {
 		$route (to, from) {
 			this.resetComments();
 			this.carregaComments(to.params.id);
-		}
+			this.updateForm()
+
+		}, 
 	}
 };
 </script>
@@ -370,7 +461,7 @@ div.AdminPagConsulta {
 			};
 		};
 
-		button {
+		a.acao {
 			font-family: inherit;
 			font-size: larger;
 			color: inherit;

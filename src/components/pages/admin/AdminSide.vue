@@ -14,7 +14,7 @@
 							name: 'pageConsulta', 
 							params: { 
 									title: consulta.nomePublico, 
-									id: consulta.id 
+									id: consulta.id_consulta 
 								}
 							}"
 							:class="{ consultaAtiva: consulta.ativo == 1 }">
@@ -40,6 +40,7 @@
 		},
 		watch:{
 			$route(to){
+				// console.log(to)
 				switch (to.name){
 					case 'pageConsulta' : this.contextoNav = to.params.title; break;
 					case 'novaConsulta' : this.contextoNav = 'Nova Consulta'; break;

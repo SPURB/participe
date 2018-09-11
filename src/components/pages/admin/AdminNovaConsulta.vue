@@ -77,8 +77,8 @@
 					<label for="input_urlConsulta">URL da consulta</label>
 					<input 
 						name="URL da consulta"
-						type="url" 
-						v-validate="'required|url'"
+						type="text" 
+						v-validate="'required|text'"
 						id="input_urlConsulta" 
 						placeholder="Obrigatório" 
 						v-model="url_consulta">
@@ -87,7 +87,7 @@
 					<label for="input_urlCapa">URL da imagem de capa</label>
 					<input 
 						name="URL da imagem de capa"
-						type="url" 
+						type="text" 
 						v-validate="'required|url'"
 						id="input_urlCapa" 
 						placeholder="Obrigatório" 
@@ -97,14 +97,14 @@
 					<label for="input_urlDevolutiva">URL da devolutiva</label>
 					<input 
 						name="URL da devolutiva"
-						type="url" 
-						v-validate="'url'"
+						type="text" 
+						v-validate="'text'"
 						id="input_urlDevolutiva" 
 						placeholder="Não obrigatório" 
 						v-model="url_devolutiva">
 				</div>
 			</fieldset>
-			<a class="acao limpar" @click="clearInputs"><i class="material-icons">clear</i>Cancelar</a>
+			<a class="acao limpar" @click="cancelarAcao"><i class="material-icons">clear</i>Cancelar</a>
 			<a  @click="criarConsulta" class="acao enviar"><i class="material-icons">add_circle</i> Criar consulta</a>
 		</form>
 	</div>
@@ -113,24 +113,12 @@
 <script>
 import axios from 'axios'
 import { mapFields } from 'vee-validate'
+import { adminCommon } from '@/mixins/adminCommon' 
 
 export default {
+	mixins:[ adminCommon ],
 	nome: 'AdminNovaConsulta',
-	data(){
-		return{
-			nome_db: '',
-			ativo: '0', //status
-			data_cadastro: '',
-			data_final: '',
-			texto_intro: '',
-			nome_publico: '',
-			url_consulta: '',
-			url_capa: '',
-			url_devolutiva: ''
-		}
-	},
 	computed:{
-		apiPath(){ return this.$store.getters.apiPath },
 		periodoPadrao() {
 			let hoje = new Date() // objeto Date "Date 2018-08-16T14:27:38.500Z"
 			let hojeFull = hoje.toISOString().substring(0, hoje.toISOString().indexOf('T')) // "2018-08-16T14:27:38.500Z" -> "2018-08-16"
@@ -147,36 +135,28 @@ export default {
 		}),
 	},
 	methods:{
-		clearInputs(){
-			this.nome_db ='',
-			this.ativo = '0',
-			this.data_cadastro = '',
-			this.data_final = '',
-			this.texto_intro = '',
-			this.nome_publico = '',
-			this.url_consulta ='',
-			this.url_capa = '',
-			this.url_devolutiva = ''
-		},
 		criarConsulta(){
 			const sendObj = {
-				"nome": 'teste_nome',// this.nome_db,
-				"ativo": '=0',//"="+this.ativo,
-				"data_cadastro": "2018-09-03",//this.data_cadastro,
-				"data_final": "2018-09-23",//this.data_final,
-				"texto_intro": "teste_texto_intro", //this.texto_intro,
-				"nome_publico": "teste_nome_publico",//this.nome_publico,
-				"url_consulta": "https://google.com", //this.url_consulta,
-				"url_capa": "https://google.com", //this.url_capa,
-				"url_devolutiva": "https://google.com" //this.url_devolutiva
+				"nome":this.nome_db,
+				"ativo":"="+this.ativo, 
+				"dataCadastro": this.data_cadastro,
+				"dataFinal": this.data_final,
+				"textoIntro": this.texto_intro,
+				"nomePublico":this.texto_intro,
+				"urlConsulta":this.url_consulta,
+				"urlCapa":this.url_capa,
+				"urlDevolutiva":this.url_devolutiva
 			}
-			console.log(sendObj)
+			// console.log(sendObj)
 
 			const app = this;
 			axios.post(this.apiPath+'consultas',sendObj)
 			.then(function (response) {
-				console.log(response);
-				alert("Sucesso")
+				// console.log(response);
+				alert("Sucesso d~.~b")
+				app.$store.dispatch("fetchConsultas", { self: this })
+				app.clearInputs()
+				app.$router.push('/admin') 
 			})
 			.catch(function (error) {
 				alert("Estamos com um erro de comunicação com o servidor. Tente novamente mais tarde.")

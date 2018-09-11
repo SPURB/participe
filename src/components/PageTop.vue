@@ -6,7 +6,7 @@
 		</div> -->
 		<div v-show="esta_consulta.nomePublico">
 			<h1>{{ esta_consulta.nomePublico }}</h1>
-			<div>1ª consulta pública – Projeto de Intervenção Arco Pinheiros</div>
+			<div>1ª consulta pública – Projeto de Intervenção Urbana Arco Pinheiros</div>
 			<!-- <div>
 				<a href="#contribuicoes" @click="scrollToallComments"><i class="material-icons">chat</i> {{estaConsulta.nContribuicoes}} contribuições</a>
 			</div> -->

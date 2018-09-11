@@ -914,12 +914,13 @@ div.Diagnostico {
 		}
 	}
 
-	@media (max-width: 750px) {
+
+	@media (max-width: 750px), (-ms-high-contrast: none), (-ms-high-contrast: active) {
 		grid-template-columns: 1fr;
 		grid-template-rows: unset;
 		position: relative;
 		box-sizing: border-box;
-		max-width: 100%;
+		max-width: 700px;
 
 		div.limiteSp {
 			display: none;
@@ -1115,6 +1116,11 @@ div.Diagnostico {
 			order: 5;
 			font-size: initial;
 		}
+	}
+
+	@media (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		div.menu, div.main, div.legenda_mob, div.dados { margin-bottom: 1rem; }
+		ol.fonte { padding: 8px 12px 8px 28px !important; }
 	}
 }
 </style>

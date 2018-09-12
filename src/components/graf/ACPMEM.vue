@@ -1,7 +1,7 @@
 <template>
 	<div class="ACPMEM">
 		<div id="g-ACP_MEM_700px-Prancheta_1" class="g-artboard" data-aspect-ratio="1.176" data-min-width="700">
-			<img id="g-ACP_MEM_700px-Prancheta_1-img" class="g-aiImg" :src="imgSrc('/arquivos/arco-pinheiros/ACP-MEM_base.png')"/>
+			<img id="g-ACP_MEM_700px-Prancheta_1-img" class="g-aiImg" :src="imgSrc('arquivos/arco-pinheiros/ACP-MEM_base.png')"/>
 			<div id="g-ai0-1" class="g-TEXTOS g-aiAbs" style="top:21.6807%;left:74.9286%;margin-left:-56.5px;width:16.1429%;">
 				<p class="g-pstyle0">GUARULHOS</p>
 			</div>

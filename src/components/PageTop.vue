@@ -1,15 +1,12 @@
 <template>
 	<div class="PageTop" :style="style">
-		<!-- <div>
-			<h1>PIU Arco Pinheiros</h1>
-			<div>Consulta pública – Projeto de Intervenção Urbana Arco Pinheiros</div>
-		</div> -->
 		<div v-show="esta_consulta.nomePublico">
 			<h1>{{ esta_consulta.nomePublico }}</h1>
 			<div>1ª consulta pública – Projeto de Intervenção Urbana Arco Pinheiros</div>
-			<!-- <div>
-				<a href="#contribuicoes" @click="scrollToallComments"><i class="material-icons">chat</i> {{estaConsulta.nContribuicoes}} contribuições</a>
-			</div> -->
+			<div>
+				<!-- <a href="#contribuicoes" @click="scrollToallComments"><i class="material-icons">chat</i> {{ esta_consulta.nContribuicoes }} contribuições</a> -->
+				<i class="material-icons">chat</i> {{ esta_consulta.nContribuicoes }} contribuições
+			</div>
 			<div id="statusConsulta" :class="consultaState(esta_consulta.ativo)"></div>
 		</div>
 		<div class="setaBaixo" @click="setaBaixo"><i class="material-icons">keyboard_arrow_down</i></div>
@@ -43,6 +40,14 @@ export default{
 			} else {
 				return 'fechada'
 			}
+		},
+		scrollToallComments(){
+			let appRef = this.$refs.allComments;
+			window.scrollBy({
+				top: appRef.getBoundingClientRect().y - 30,
+				left: 0,
+				behavior: 'smooth'
+			});
 		}
 	}
 }

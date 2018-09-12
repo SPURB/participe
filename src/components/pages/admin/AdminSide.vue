@@ -23,7 +23,7 @@
 				</li>
 			</ul>
 		</div>
-		<router-link :to="'/admin/novaconsulta'"><button class="novaConsulta">Criar consulta</button></router-link>
+		<router-link :to="'/admin/novaconsulta'" v-if="isDev"><button class="novaConsulta">Criar consulta</button></router-link>
 	</div>
 </template>
 
@@ -37,6 +37,7 @@
 		},
 		computed:{
 			consultas(){ return this.$store.state.consultas },
+			isDev (){  return this.$store.state.infoAdmin.role.dev ? true : false },
 		},
 		watch:{
 			$route(to){

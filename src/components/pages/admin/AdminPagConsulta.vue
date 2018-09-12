@@ -118,10 +118,15 @@
 			<a class="acao limpar" @click="cancelarAcao" ref="limpar"><i class="material-icons">clear</i>Cancelar</a>
 			<a class="acao enviar" @click="atualizarConsulta" ref="salvar"><i class="material-icons">add_circle</i> Atualizar consulta</a>
 		</section>
-		<section class="hidden" :class="{ show: abreMod }" id="moderacao">
+
+		<section 
+			class="hidden" 
+			:class="{ show: abreMod }" 
+			id="moderacao">
 			<h2 @click="abreMod = !abreMod">Moderação <i class="material-icons">keyboard_arrow_down</i></h2>
 
 			<p v-show="fetchingContent">carregando...</p>
+
 			<h3>Pendentes <span>{{ commentsPendentes.length }}</span></h3>
 				<div class="comentario pendente" v-for="comment in commentsPendentes">
 					<div class="comentCtx" @click="abreContexto($event)">
@@ -141,8 +146,15 @@
 						</div>
 					</div>
 					<div class="btns">
-						<button class="reprovar">Reprovar <i class="material-icons">delete</i></button>
-						<button class="aprovar">Aprovar <i class="material-icons">check_circle</i></button>
+						<button 
+							@click="moderar('reprovar',comment.memid)"
+							class="reprovar">Reprovar <i class="material-icons">delete</i>
+						</button>
+						
+						<button  
+							@click="moderar('aprovar', comment.memid)"
+							class="aprovar">Aprovar <i class="material-icons">check_circle</i>
+						</button>
 					</div>
 				</div>
 			<h3>Aprovados<span>{{ commentsAprovados.length }}</span></h3>
@@ -164,7 +176,9 @@
 						</div>
 					</div>
 					<div class="btns">
-						<button class="novamente">Moderar novamente <i class="material-icons">cached</i></button>
+						<button 
+							@click="moderar('moderar', comment.memid)"
+							class="novamente">Moderar novamente <i class="material-icons">cached</i></button>
 					</div>
 				</div>
 			<h3>Reprovados <span>{{ commentsReprovados.length }}</span></h3>
@@ -186,7 +200,9 @@
 						</div>
 					</div>
 					<div class="btns">
-						<button class="novamente">Moderar novamente <i class="material-icons">cached</i></button>
+						<button 
+							@click="moderar('moderar', comment.memid)"
+							class="novamente">Moderar novamente <i class="material-icons">cached</i></button>
 					</div>
 				</div>
 		</section>
@@ -229,28 +245,85 @@ export default {
 		},
 	},
 	methods: {
-		atualizarConsulta(){
-			// TODO: enviar apenas formulários alterados
-			const sendObj = {
-				"ativo":"="+this.ativo, 
-				"dataCadastro": this.data_cadastro,
-				"dataFinal": this.data_final,
-				"textoIntro": this.texto_intro,
-				"nomePublico":this.texto_intro,
-				"urlConsulta":this.url_consulta,
-				"urlCapa":this.url_capa,
-				"urlDevolutiva":this.url_devolutiva
-			}
-			// console.log(sendObj)
+		moderar(type, memberId){
 			const app = this
-			axios.put(app.apiPath + 'consultas' +'/'+app.estaConsulta.nome, sendObj)
+			let toChange = undefined
+
+			switch(type){
+				case 'reprovar': toChange = {"trash":"1"}; break
+				case 'aprovar' : toChange = {"public":"1"}; break
+				case 'moderar' : toChange = {"trash":"0","public":"0"}; break
+			}
+
+			axios.put(app.apiPath + 'members/' + memberId, toChange)
 			.then(function(response){
-				console.log(response)
+
+				if(type === 'reprovar'){
+					// console.log('reprovar')
+					app.commentsPendentes.map(function(index){
+						if(index.memid === memberId){
+							app.commentsReprovados.push(index)
+						}
+					})
+					app.commentsPendentes = app.commentsPendentes.filter(index => index.memid !== memberId );
+				}
+				if(type === 'aprovar'){
+					// console.log('aprovar')
+					app.commentsPendentes.map(function(index){
+						if(index.memid === memberId){
+							app.commentsAprovados.push(index)
+						}
+					})
+					app.commentsPendentes = app.commentsPendentes.filter(index => index.memid !== memberId );
+				}
+				if(type === 'moderar') {
+					// console.log('moderar')
+					app.commentsAprovados.map(function(index){
+						if(index.memid === memberId){
+							app.commentsPendentes.push(index)
+						}
+					})
+					app.commentsReprovados.map(function(index){
+						if(index.memid === memberId){
+							app.commentsPendentes.push(index)
+						}
+					})
+					app.commentsAprovados = app.commentsAprovados.filter(index => index.memid !== memberId ); 
+					app.commentsReprovados = app.commentsReprovados.filter(index => index.memid !== memberId );
+				}
+
 			})
 			.catch(function(error){
 				alert('erro')
 			})
 
+		},
+
+		atualizarConsulta(){
+			// TODO: enviar apenas formulários alterados
+			const sendObj = {
+				"ativo": this.ativo, 
+				"dataCadastro": this.data_cadastro,
+				"dataFinal": this.data_final,
+				"textoIntro": this.texto_intro,
+				"nomePublico":this.nome_publico,
+				"urlConsulta":this.url_consulta,
+				"urlCapa": this.url_capa,
+				"urlDevolutiva": this.url_devolutiva
+			}
+			// console.log(sendObj)
+			const app = this
+			axios.put(app.apiPath + 'consultas/'+app.estaConsulta.id_consulta, sendObj)
+			.then(function(response){
+				// console.log(response)
+				alert("Sucesso d~.~b")
+				app.$store.dispatch("fetchConsultas", { self: this })
+				app.clearInputs()
+				app.$router.push('/admin') 
+			})
+			.catch(function(error){
+				alert("Estamos com um erro de comunicação com o servidor. Tente novamente mais tarde.")
+			})
 		},
 		abreComment(event) {
 			event.target.parentNode.style.maxHeight = '10000px'
@@ -272,7 +345,9 @@ export default {
 			})
 			.then(function(response) {
 				response.data.map(function(index) {
+
 					app.fetchingContent = false
+
 					if(index.public == "1"){
 						aprovados.push(index)
 					}
@@ -325,7 +400,6 @@ export default {
 			this.resetComments();
 			this.carregaComments(to.params.id);
 			this.updateForm()
-
 		}, 
 	}
 };

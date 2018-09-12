@@ -19,7 +19,7 @@ export const adminCommon = {
 	methods:{
 		cancelarAcao(){
 			this.clearInputs()
-			this.$router.push('/admin') 
+			this.$router.push('/admin')
 		},
 		clearInputs(){
 			this.nome_db ='',
@@ -41,6 +41,7 @@ export const adminCommon = {
 			this.url_consulta = this.estaConsulta.urlConsulta
 			this.url_capa = this.estaConsulta.urlCapa
 			this.url_devolutiva = this.estaConsulta.urlDevolutiva
-		}
+		},
+
 	}
 }

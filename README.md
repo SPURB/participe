@@ -18,6 +18,9 @@
 		"base": "http://api.seuhost.de.producao/consultas-publicas-backend",
 		"login": "http://api.seuhost.de.producao/consultas-publicas-login-backend/"
 	}
+	"chavesExternas":{
+		"bingMaps": "chave-api-bing-maps"
+	}
 }
 ```
 Este repositório utiliza os serviços de backend:

@@ -56,9 +56,9 @@
 			<li><span>3</span>Ônibus</li>
 			<li><span>4</span>Ônibus fretado</li>
 			<li><span>5</span>Escolar</li>
-			<li><span>6</span>Individual: automível</li>
+			<li><span>6</span>Individual: automóvel</li>
 			<li><span>7</span>Individual: moto, táxi, outros</li>
-			<li><span>8</span>Bibcicleta</li>
+			<li><span>8</span>Bicicleta</li>
 			<li><span>9</span>A pé</li>
 		</ul>
 	</div>

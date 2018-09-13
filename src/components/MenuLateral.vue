@@ -3,8 +3,8 @@
 		<aside :class="{ aberto: menuToggle }">
 			<ul>
 				<li class="logo">
-					<a href="http://gestaourbana.prefeitura.sp.gov.br/">
-						<img src="http://gestaourbana.prefeitura.sp.gov.br/wp-content/themes/gestaourbana-1.4/images/logo_gestao_footer.jpg">
+					<a href="https://gestaourbana.prefeitura.sp.gov.br/">
+						<img :src="logoGestaoUrbana">
 					</a>
 				</li>
 				<li v-for="consulta in consultas" v-if="consulta.ativo == '1'">
@@ -32,9 +32,8 @@ import { consultasMutations } from '../mixins/consultasMutations'
 		mixins: [ consultasMutations ],
 		computed: {
 			consultas(){ return this.$store.state.consultas },
-			menuToggle() {
-				return this.$store.state.menuToggle
-			},
+			menuToggle() { return this.$store.state.menuToggle },
+			logoGestaoUrbana(){ return this.$store.getters.basePath + 'arquivos/img/logo_gestao_footer.jpg' }
 		},
 		methods: {
 			fechaMenu() {

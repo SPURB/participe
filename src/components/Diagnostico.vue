@@ -278,6 +278,9 @@ export default {
 	components: {
 		GrafBarras
 	},
+	computed: {
+		basePath(){ return this.$store.getters.basePath } 
+	},
 	data() {
 		return {
 			escPopulacao: true,
@@ -332,7 +335,7 @@ export default {
 					path = secao
 					break;
 			}
-			let caminho = 'url(http://participe.comunicacao.smul.pmsp/arquivos/arco-pinheiros/diagnostico_mapas/' + path + '.png)'
+			let caminho = 'url('+ this.basePath + 'arquivos/arco-pinheiros/diagnostico_mapas/' + path + '.png)'
 			this.$refs.mapas.style.backgroundImage = caminho
 			this.$refs.menu_visor.innerText = evento.target.innerText
 		},

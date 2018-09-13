@@ -1,9 +1,4 @@
 export const commentsMutations =  {
-	// data(){
-	// 	return{
-	// 		olar:'olar'
-	// 	}
-	// },
 	methods: {
 		decodeComments(comments){
 			for(var key in comments) {

@@ -18,7 +18,7 @@
 		"base": "http://api.seuhost.de.producao/consultas-publicas-backend",
 		"login": "http://api.seuhost.de.producao/consultas-publicas-login-backend/"
 	}
-	"chavesExternas":{
+	"chavesExternas": {
 		"bingMaps": "chave-api-bing-maps"
 	}
 }

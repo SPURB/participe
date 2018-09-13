@@ -11,12 +11,9 @@
 					<p class="nome">{{ decodeURI(consulta.nomePublico) }}</p>
 					<p class="textoIntro">{{ decodeURI(consulta.textoIntro) }}</p>
 
-			<!-- // decodeURIComponent(escape(string)) -->
-
 					<div>
 						<a :href="setUrlByType(consulta.urlConsulta)">
-						<!-- <a :href="consulta.urlConsulta"> -->
-							<h1 :class="{ consultaAtiva: parseAtivo(consulta.ativo) }" class="nome">{{ decodeURI(consulta.nomePublico) }}</h1>
+							<h1 :class="{ consultaAtiva: parseAtivo(consulta.ativo) }" class="nome">{{ consulta.nomePublico }}</h1>
 						</a>
 						<p v-if="consulta.ativo" title="Período da consulta">
 							<i class="material-icons">date_range</i>

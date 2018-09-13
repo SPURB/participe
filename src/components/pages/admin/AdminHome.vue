@@ -1,10 +1,10 @@
 <template>
 	<div class="AdminHome">
 		<h1>Consultas</h1>
-		<div class="busca">
+		<!-- <div class="busca">
 			<i class="material-icons">search</i>
 			<input type="search">
-		</div>
+		</div> -->
 		<table>
 			<thead>
 				<th align="left">
@@ -22,7 +22,18 @@
 			</thead>
 			<tr v-for="consulta in consultas">
 				<td :class="{ consultaAtiva: consulta.ativo == 1 }">
-					<router-link :to="{ name: 'pageConsulta', params: { title: consulta.nomePublico, id: consulta.id }}" :class="{ consultaAtiva: consulta.ativo == 1 }">{{ consulta.nomePublico }}</router-link>
+					<router-link 
+						:to="{ 
+							path: '/consulta', 
+							name: 'pageConsulta', 
+							params: { 
+									title: consulta.nomePublico, 
+									id: consulta.id_consulta 
+								}
+						}"
+						:class="{ 
+							consultaAtiva: consulta.ativo == 1 
+						}">{{ consulta.nomePublico }}</router-link>
 				</td>
 				<td>{{ dataDisplay(consulta.dataCadastro) }}</td>
 				<td v-if="consulta.dataFinal">{{ dataDisplay(consulta.dataFinal) }}</td>

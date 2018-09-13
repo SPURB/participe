@@ -2,28 +2,53 @@
 	<div class="AdminSide">
 		<div class="titulo">
 			<router-link to="/admin"><i class="material-icons" @click="">home</i></router-link>
-			<span>título da rota</span>
+			<span>{{ contextoNav }}</span>
 		</div>
 		<div class="lista">
 			<h2>Consultas</h2>
 			<ul>
 				<li v-for="consulta in consultas">
-					<router-link :to="{ path: consulta.nome, name: 'pageConsulta', params: { title: consulta.nomePublico, id: consulta.id }}" :class="{ consultaAtiva: consulta.ativo == 1 }">
+					<router-link 
+						:to="{ 
+							path: '/consulta', 
+							name: 'pageConsulta', 
+							params: { 
+									title: consulta.nomePublico, 
+									id: consulta.id_consulta 
+								}
+							}"
+							:class="{ consultaAtiva: consulta.ativo == 1 }">
 						{{ consulta.nomePublico }}
 					</router-link>
 				</li>
 			</ul>
 		</div>
-		<router-link to="/admin/novaconsulta"><button class="novaConsulta">Criar consulta</button></router-link>
+		<router-link :to="'/admin/novaconsulta'" v-if="isDev"><button class="novaConsulta">Criar consulta</button></router-link>
 	</div>
 </template>
 
 <script>
 	export default {
 		name: 'AdminSide',
-		computed:{
-			consultas(){return this.$store.state.consultas}
+		data(){
+			return {
+				contextoNav: 'Admin'
+			}
 		},
+		computed:{
+			consultas(){ return this.$store.state.consultas },
+			isDev (){  return this.$store.state.infoAdmin.role.dev ? true : false },
+		},
+		watch:{
+			$route(to){
+				// console.log(to)
+				switch (to.name){
+					case 'pageConsulta' : this.contextoNav = to.params.title; break;
+					case 'novaConsulta' : this.contextoNav = 'Nova Consulta'; break;
+					default : this.contextoNav = 'Admin'; break
+				}
+			}
+		}
 	};
 </script>
 

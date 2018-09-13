@@ -1,5 +1,5 @@
 <template>
-	<div class="Admin">
+	<div class="Admin"  v-if="isAdmin">
 		<nav>
 			<AdminSide></AdminSide>
 		</nav>
@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import AdminSide from '@/components/AdminSide';
+import AdminSide from '@/components/pages/admin/AdminSide';
 
 export default {
 	nome: 'Admin',
@@ -22,14 +22,15 @@ export default {
 		}
 	},
 	computed:{
-		consultas(){return this.$store.state.consultas}
+		infoAdmin (){ return this.$store.state.infoAdmin},
+		isAdmin(){ return this.$store.state.isAdmin}
 	},
 	methods: {
 		dataDisplay(data) {
 			return data.substring(8,10) + '/' + data.substring(5,7) + '/' + data.substring(0,4);
 		},
 	},
-};
+}
 </script>
 
 <style lang="scss" scoped>

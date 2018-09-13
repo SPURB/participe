@@ -6,7 +6,7 @@
 	<router-view name="Home"></router-view>
 	<router-view name="Anhembi2"></router-view>
 	<router-view name="ArcoPinheiros"></router-view>
-	<router-view name="AdminLogin"></router-view>
+	<router-view name="Login"></router-view>
 	<router-view name="Admin"></router-view>
 
 	<Modal v-if="modalState.error">
@@ -38,12 +38,13 @@ export default {
 		Rodape,
 		Modal
 	},
-	computed: { 
+	computed: {
 		interruptor() { return this.$store.state.luzApaga }, 
+		isAdmin(){ return this.$store.state.isAdmin },
 		modalState(){ return this.$store.state.modalState }
 	},
-	created() { this.$store.dispatch("fetchConsultas", { self: this }) },
-	updated() { this.$refs.interruptor.style.height = this.$el.clientHeight+'px'; },
+		created() { this.$store.dispatch("fetchConsultas", { self: this }) },
+		updated() { this.$refs.interruptor.style.height = this.$el.clientHeight+'px'; },
 	methods: {
 		setModal(typeOfmodal){ 
 			this.$store.commit('COMMENT_MODAL_STATUS', typeOfmodal)
@@ -64,10 +65,6 @@ export default {
 
 * { box-sizing: border-box; };
 html { margin: 0; padding: 0; };
-*::selection, *::-moz-selection {
-	background: #EB5757;
-	color: #FFF;
-}
 
 body {
 	font-family: $font-stack;

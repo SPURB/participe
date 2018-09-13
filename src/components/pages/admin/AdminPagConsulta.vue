@@ -213,13 +213,14 @@
 // import CommentUn from '@/components/CommentUn'
 import axios from 'axios';
 import { adminCommon } from '@/mixins/adminCommon' 
+import { commentsMutations } from '@/mixins/commentsMutations' 
 
 export default {
 	nome: 'AdminPagConsulta',
 	// components: { 
 	// 	CommentUn
 	// },
-	mixins:[ adminCommon ],
+	mixins:[ adminCommon, commentsMutations ],
 	data() {
 		return {
 			fetchingContent: false, 
@@ -257,7 +258,6 @@ export default {
 
 			axios.put(app.apiPath + 'members/' + memberId, toChange)
 			.then(function(response){
-
 				if(type === 'reprovar'){
 					// console.log('reprovar')
 					app.commentsPendentes.map(function(index){
@@ -344,9 +344,11 @@ export default {
 				"idConsulta":"="+idConsulta
 			})
 			.then(function(response) {
-				response.data.map(function(index) {
+				let allcomments = response.data
 
-					app.fetchingContent = false
+				app.decodeComments(allcomments)
+
+				allcomments.map(function(index) {
 
 					if(index.public == "1"){
 						aprovados.push(index)
@@ -358,14 +360,19 @@ export default {
 						pendentes.push(index)
 					}
 				})
+
+				app.fetchingContent = false
+
 			})
 			.catch(function (error){
 				app.fetchingContent = false
 				console.log(error)
 			})
+
 			this.commentsAprovados = aprovados
 			this.commentsReprovados = reprovados
 			this.commentsPendentes = pendentes
+
 		},
 		resetComments(){
 			this.commentsPendentes = []

@@ -10,38 +10,32 @@
 </template>
 
 <script>
-
 import axios from 'axios';
+import { commentsMutations } from '@/mixins/commentsMutations' 
+
 export default {
 	name: 'CommentsLoader',
+	mixins:[ commentsMutations ],
 	data () {
 		return {
 			comments: false,
 		}
 	},
-	props:[
-		'attr'
-	],
+	props:['attr'],
 	computed:{ apiPath(){ return this.$store.getters.apiPath} }, 
-	mounted(){
-		this.loadThisComments()
-	},
+	mounted(){ this.loadThisComments() },
 	watch: {
 		comments(){
-			this.comments ? this.$store.state.commentsLoaded = true : this.$store.state.commentsLoaded = false
+			this.comments ? this.$store.state.commentsLoaded = true : this.$store.state.commentsLoaded = false;
+			this.decodeComments(this.comments)
 		}
 	},
-
 	methods:{
 		loadThisComments(){
 			let app = this;
 			axios.post(this.apiPath + 'members/search/',{
 				"idConsulta":"="+app.$route.meta.id,
 				"public":"=1"}
-				// ,{
-					// responseEncoding: 'utf8',
-					// 'Content-Type': 'application/json',
-				// } 
 			)
 			.then(function(response) {
 				app.comments = response.data

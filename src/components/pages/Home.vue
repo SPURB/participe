@@ -8,12 +8,15 @@
 			<ul class="list">
 				<!-- <li v-for="consulta in consultas" class="card" :style="[{ backgroundImage: 'url(' + consulta.urlCapa + ')'}]"> -->
 				<li v-for="consulta in consultas" class="card" :style="backgroundImagePath(consulta.urlCapa)">
-					<p class="nome">{{ consulta.nomePublico }}</p>
-					<p class="textoIntro">{{ consulta.textoIntro }}</p>
+					<p class="nome">{{ decodeURI(consulta.nomePublico) }}</p>
+					<p class="textoIntro">{{ decodeURI(consulta.textoIntro) }}</p>
+
+			<!-- // decodeURIComponent(escape(string)) -->
+
 					<div>
 						<a :href="setUrlByType(consulta.urlConsulta)">
 						<!-- <a :href="consulta.urlConsulta"> -->
-							<h1 :class="{ consultaAtiva: parseAtivo(consulta.ativo) }" class="nome">{{ consulta.nomePublico }}</h1>
+							<h1 :class="{ consultaAtiva: parseAtivo(consulta.ativo) }" class="nome">{{ decodeURI(consulta.nomePublico) }}</h1>
 						</a>
 						<p v-if="consulta.ativo" title="Período da consulta">
 							<i class="material-icons">date_range</i>
@@ -59,17 +62,19 @@ import { consultasMutations } from '../../mixins/consultasMutations'
 export default {
 	name: 'Home',
 	mixins: [ consultasMutations ],
+	data(){
+		return {
+			parsed_consultas: undefined
+		}
+	},
 	computed:{
 		consultas(){ return this.$store.state.consultas },
-		basePathImgSrc(){ return this.$store.getters.basePath + 'arquivos/capas/'}
+		basePathImgSrc(){ return this.$store.getters.basePath + 'arquivos/capas/'},
 	},
 	methods: {
 		backgroundImagePath(image){ return "background-image:url(" + this.basePathImgSrc  + image + ")" },
 		parseAtivo(state){
 			return state == '0' ? false : true
-		},
-		ordenaCards() {
-			console.log('teste')
 		},
 		ativaBusca() {
 			this.$refs.busca.value = '';

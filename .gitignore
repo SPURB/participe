@@ -9,6 +9,9 @@ yarn-error.log*
 selenium-debug.log
 static/placeholder.json
 
+# Configuração de api (apiPath)
+apiconfig.json
+
 # Editor directories and files
 .idea
 .vscode

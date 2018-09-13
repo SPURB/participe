@@ -6,11 +6,13 @@
 				<input class="fuzzy-search" type="search" ref="busca" title="Digite o que pesquisa" value="Pesquisar" @focusout="desativaBusca">
 			</div> -->
 			<ul class="list">
-				<li v-for="consulta in consultas" class="card" :style="[{ backgroundImage: 'url(' + consulta.urlCapa + ')'}]">
+				<!-- <li v-for="consulta in consultas" class="card" :style="[{ backgroundImage: 'url(' + consulta.urlCapa + ')'}]"> -->
+				<li v-for="consulta in consultas" class="card" :style="backgroundImagePath(consulta.urlCapa)">
 					<p class="nome">{{ consulta.nomePublico }}</p>
 					<p class="textoIntro">{{ consulta.textoIntro }}</p>
 					<div>
-						<a :href="consulta.urlConsulta">
+						<a :href="setUrlByType(consulta.urlConsulta)">
+						<!-- <a :href="consulta.urlConsulta"> -->
 							<h1 :class="{ consultaAtiva: parseAtivo(consulta.ativo) }" class="nome">{{ consulta.nomePublico }}</h1>
 						</a>
 						<p v-if="consulta.ativo" title="Período da consulta">
@@ -37,7 +39,7 @@
 						</p>
 					</div>
 					<p ref="textoIntro" class="esconde textoIntro"><a :href="consulta.urlConsulta">{{ consulta.textoIntro }}</a></p>
-					<a :href="consulta.urlConsulta" class="acesso">Acessar consulta</a>
+					<a :href="setUrlByType(consulta.urlConsulta)" class="acesso">Acessar consulta</a>
 				</li>
 			</ul>
 		</main>
@@ -45,17 +47,24 @@
 </template>
 
 <script>
+/*
+
+são métodos neste mixin:
+setUrlByType(urlOrSlug) 
+
+*/
+import { consultasMutations } from '../../mixins/consultasMutations' 
+// import { List } from listjs
+
 export default {
 	name: 'Home',
+	mixins: [ consultasMutations ],
 	computed:{
-		consultas(){return this.$store.state.consultas }
-	},
-	mounted() {
-		// let listaProjetos = new List('listaProjetos', {
-		// 	valueNames: [ 'nome', 'textoIntro' ],
-		// });
+		consultas(){ return this.$store.state.consultas },
+		basePathImgSrc(){ return this.$store.getters.basePath + 'arquivos/capas/'}
 	},
 	methods: {
+		backgroundImagePath(image){ return "background-image:url(" + this.basePathImgSrc  + image + ")" },
 		parseAtivo(state){
 			return state == '0' ? false : true
 		},

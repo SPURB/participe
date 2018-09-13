@@ -1,5 +1,5 @@
 <template>
-	<div class="Mapa">
+	<div class="Mapa" ref="mapa">
 		<div id="map"></div>
 		<ul class="legenda">
 			<template v-for="layer in mapa_attrs.layers">
@@ -19,38 +19,75 @@
 </template>
 
 <script>
+import { Map, View } 	from 'ol'
+import TileLayer 		from 'ol/layer/Tile';
+import VectorLayer 		from 'ol/layer/Vector';
+import Style 			from 'ol/style/Style';
+import Stroke 			from 'ol/style/Stroke';
+import Fill 			from 'ol/style/Fill';
+import KML 				from 'ol/format/KML';
+import BingMaps 		from 'ol/source/BingMaps';
+import VectorSource 	from 'ol/source/Vector';
+// import {defaults as defaultControls, Attribution } from 'ol/control.js';
+// import ScaleLine 		from 'ol/control/ScaleLine';
+
+import { chavesExternas } from '../../apiconfig.json';
+
 export default{
 	name:'Mapa',
-	data(){
-		return {
+	props:{
+		'mapa_attrs': {
+			center: [
+				{ // centróide do kml (eixo y)
+					type: Number,
+					required: true
+				},
+				{ // centróide do kml (eixo y)
+					type: Number,
+					required: true
+				}			
+			],
+			zoom: {
+				type: Number,
+				default: 10
+			},
+			layers: [
+				{
+					fill_color: String,
+					path: String,
+					stroke_color: String,
+					stroke_width: Number,
+					title: String
+				}
+			]
 		}
 	},
 	computed:{
 		mapLayers(){
 			let output_layers = [
-				new ol.layer.Tile({
-					source: new ol.source.BingMaps({
+				new TileLayer({
+					source: new BingMaps({
 						imagerySet: 'AerialWithLabels', 
 						culture: 'pt-BR',
-						key: 'efIeX8pQ5PTC2IcEjuVT~s7zLBU5z6I20qWhPhkAy3w~AlgB9eABTaOsOC8LVDJEQhyb4ik0B0mWBpIfDgrVwNYVqgfnxOsXFN3_8XKZlP1d'
+						key: chavesExternas.bingMaps
 					})
 				})
 			]
 			this.mapa_attrs.layers.map(function(index) {
-				let kml_layer = new ol.layer.Vector({
-					style: new ol.style.Style({
-						stroke: new ol.style.Stroke({
+				let kml_layer = new VectorLayer({
+					style: new Style({
+						stroke: new Stroke({
 							color: index.stroke_color,
 							width: index.stroke_width
 						}),
-						fill: new ol.style.Fill({
+						fill: new Fill({
 							color: index.fill_color,
 						})
 					}),
-					source: new ol.source.Vector({
+					source: new VectorSource({
 						url: index.path,
-						format: new ol.format.KML({
-							extractStyles: false,
+						format: new KML({
+							extractStyles: false
 						})
 					})
 				})
@@ -59,37 +96,52 @@ export default{
 			return output_layers
 		},
 		mapView(){
-			return new ol.View({
+			return new View({
 				center: this.mapa_attrs.center,
 				zoom: this.mapa_attrs.zoom
 			})
-		}
+		},
 	},
-	props:[ 'mapa_attrs' ], 
 	mounted(){
-		let app = this
 		this.createMap()
-		this.mapView.setMinZoom(this.mapa_attrs.zoom)
+
 	},
 	methods:{
 		createMap(){
-			new ol.Map({
+			let map = new Map({
 				layers: this.mapLayers,
 				target: 'map',
 				view: this.mapView,
-				controls: ol.control.defaults({
-					attributionOptions: {
-						collapsible: true
-					}
-					}).extend([
-						new ol.control.ScaleLine()
-					])
+				// controls: defaultControls({
+				// 	attributionOptions: {
+				// 		collapsible: true,
+				// 		collapsed: true
+				// 		label:'some Label'
+				// 	}
+				// })
+				// .extend([
+				// 	new ScaleLine(),
+				// ])
 			})
-		},
+			if(this.$refs.mapa.clientHeight < 500){
+				this.mapView.setZoom(12);
+			}
+			else{
+				this.mapView.setMinZoom(this.mapa_attrs.zoom);
+			}
+		}
 	}
 }	
 </script>
+<style type="text/css">
+#map .ol-overlaycontainer-stopevent {
+	display: none;
+}
+</style>
+
 <style lang="scss" scoped>
+@import "../../node_modules/ol/ol.css";
+	
 div.Mapa {
 	max-width: 992px;
 	margin: 4rem auto 2rem auto;
@@ -102,23 +154,21 @@ div.Mapa {
 		cursor: move;
 	};
 
+
 	ul.legenda {
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: center;
 		max-width: 992px;
-		padding: 1rem 2rem 0 1rem;
-		margin-bottom: 0;
-		margin-top: 0;
+		padding: 1rem;
+		margin: 0;
 		font-family: inherit;
 		
 		li {
 			display: inline-flex;
 			align-items: center;
 			font-size: small;
-			margin: 0;
-			padding: 0 0 .8rem 0;
-			margin-right: 2rem;
+			margin: 0 2rem 0 0;
 
 			div {
 				border-style: solid;

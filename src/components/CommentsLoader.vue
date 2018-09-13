@@ -10,7 +10,6 @@
 </template>
 
 <script>
-// import comentarios_placeholder from '../../static/placeholder.json';
 
 import axios from 'axios';
 export default {

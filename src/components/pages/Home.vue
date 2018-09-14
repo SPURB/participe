@@ -23,7 +23,7 @@
 							<i class="material-icons">date_range</i>
 							{{ dataDisplay(consulta.dataCadastro) }}–{{ dataDisplay(consulta.dataFinal) }}
 						</p>
-						<p title="Número de contribuições">
+						<p title="Número de contribuições" v-if="checaContribuicoes(consulta.nContribuicoes)">
 							<i class="material-icons">chat_bubble</i>
 							{{ consulta.nContribuicoes }} contribuições
 						</p>
@@ -59,20 +59,14 @@ import { consultasMutations } from '../../mixins/consultasMutations'
 export default {
 	name: 'Home',
 	mixins: [ consultasMutations ],
-	data(){
-		return {
-			parsed_consultas: undefined
-		}
-	},
 	computed:{
 		consultas(){ return this.$store.state.consultas },
 		basePathImgSrc(){ return this.$store.getters.basePath + 'arquivos/capas/'},
 	},
 	methods: {
+		checaContribuicoes(n){ return parseInt(n) > 0 ? true : false },
 		backgroundImagePath(image){ return "background-image:url(" + this.basePathImgSrc  + image + ")" },
-		parseAtivo(state){
-			return state == '0' ? false : true
-		},
+		parseAtivo(state){ return state == '0' ? false : true },
 		ativaBusca() {
 			this.$refs.busca.value = '';
 			this.$refs.busca.style.color = '#333';

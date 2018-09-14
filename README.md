@@ -1,8 +1,8 @@
 # Participe
 
-> [http://participe.gestaourbana.prefeitura.sp.gov.br](http://participe.gestaourbana.prefeitura.sp.gov.br)
+Frontend do [https://participe.gestaourbana.prefeitura.sp.gov.br](https://participe.gestaourbana.prefeitura.sp.gov.br). Ferramenta de participação social da Secretaria Municipal de Urbanismo e Licenciamento – SMUL - e São Paulo Urbanismo.
 
-## Configure as url's das API's
+## Configure as url's e chaves das API's
 ``` json
 // apiconfig.json
 {
@@ -11,15 +11,15 @@
 		"login": "http://localhost/consultas-publicas-login-backend/"
 	},
 	"homologacao":{
-		"base": "http://seu.host.de.homolocao/consultas-publicas-backend",
+		"base": "http://seu.host.de.homolocao/consultas-publicas-backend/",
 		"login": "http://seu.host.de.homologacao/consultas-publicas-login-backend/"
 	},
 	"prod":{
-		"base": "http://api.seuhost.de.producao/consultas-publicas-backend",
+		"base": "http://api.seuhost.de.producao/consultas-publicas-backend/",
 		"login": "http://api.seuhost.de.producao/consultas-publicas-login-backend/"
 	}
-	"chavesExternas": {
-		"bingMaps": "chave-api-bing-maps"
+	"chavesExternas":{
+		"bingMaps": "chave-api-bing-maps" 
 	}
 }
 ```
@@ -30,26 +30,26 @@ Este repositório utiliza os serviços de backend:
 ## Setup
 
 ``` bash
-# install dependencies
+# instala dependências
 npm install
 
-# serve with hot reload at localhost:8080
+# serve com 'hot reload' em localhost:8080
 npm run dev
 
-# build for production with minification
+# constrói para produção com minificação dos recursos
 npm run build
 
-# build for production and view the bundle analyzer report
+# constrói para produção e produz visualização de relatório para análise de pacotes
 npm run build --report
 
-# run unit tests
+# inicia testes unitários
 npm run unit
 
-# run e2e tests
+# inicia testes e2e
 npm run e2e
 
-# run all tests
+# inicia todoso os testes
 npm test
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+Para ver explicações detalhadas de como as coisas funcionam ver [guia](http://vuejs-templates.github.io/webpack/) e [documentação do vue-loader](http://vuejs.github.io/vue-loader).

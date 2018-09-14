@@ -3,7 +3,7 @@ import Es6Promise from 'es6-promise'
 Es6Promise.polyfill()
 import Vuex from 'vuex'
 import axios from 'axios';
-import { local, homologacao, prod } from '../../apiconfig.json'
+import { local, homologacao, producao } from '../../apiconfig.json'
 
 Vue.use(Vuex)
 
@@ -55,13 +55,16 @@ export const store = new Vuex.Store({
 			if (store.getters.enviroment == 'local' || store.getters.enviroment == 'homologacao'){
 				return 'http://participe.comunicacao.smul.pmsp/'
 			} else {
-				return 'http://participe.gestaourbana.prefeitura.sp.gov.br/'
+				return 'https://participe.gestaourbana.prefeitura.sp.gov.br/'
 			}
 		}
 	},
 	mutations:{
 		FETCH_CONSULTAS(state, consultas) {
 			state.consultas = consultas.sort(function(a,b) {
+				return new Date(b.dataCadastro) - new Date(a.dataCadastro);
+			})
+			.sort( function(a,b) {
 				if (a.ativo < b.ativo) { return 1 }
 				if (a.ativo > b.ativo) { return -1 }
 			})

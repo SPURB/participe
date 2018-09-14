@@ -142,7 +142,7 @@ export default {
 				"dataCadastro": this.data_cadastro,
 				"dataFinal": this.data_final,
 				"textoIntro": this.texto_intro,
-				"nomePublico":this.texto_intro,
+				"nomePublico":this.nome_publico,
 				"urlConsulta":this.url_consulta,
 				"urlCapa":this.url_capa,
 				"urlDevolutiva":this.url_devolutiva

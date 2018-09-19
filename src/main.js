@@ -7,10 +7,11 @@ import { store } from './store'
 import VeeValidate, { Validator } from 'vee-validate';
 import pt_br from 'vee-validate/dist/locale/pt_BR';
 import axios from 'axios'
+import VueAxios from 'vue-axios'
 
 Vue.config.productionTip = false
 Vue.use(VeeValidate)
-Vue.use(axios)
+Vue.use(VueAxios, axios)
 Validator.localize('pt_br', pt_br);
 
 /* eslint-disable no-new */

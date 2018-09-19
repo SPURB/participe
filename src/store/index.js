@@ -102,7 +102,8 @@ export const store = new Vuex.Store({
 					commit("FETCH_CONSULTAS_DECODE", store.state.consultas)
 					self.filterConsultas(); 
 				})
-				.catch(e => { state.errors.push(e) }) 
+				// .catch(e => { store.state.errors.push(e) }) 
+				.catch(e => { console.log(e) })
 		}
 	}
 })

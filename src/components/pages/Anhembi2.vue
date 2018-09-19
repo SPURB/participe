@@ -1,7 +1,7 @@
 <template>
 	<div class="Anhembi2" ref="conteudoConsulta">
 
-		<div class="top" style="background-image: url('http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/capa.jpg'); background-color: #fdf8f2;">
+		<div class="top" style="background-image: url('https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/capa.jpg'); background-color: #fdf8f2;">
 			
 			<div v-show="estaConsulta.nomePublico">
 				<h1>{{ estaConsulta.nomePublico }}</h1>
@@ -85,7 +85,7 @@
 
 			<p>A partir de 27 de julho este espaço está disponível para receber seus comentários, pedidos de esclarecimentos e quaisquer contribuições para o Projeto de Intervenção Urbana Anhembi, desenvolvido pela São Paulo Urbanismo em cumprimento ao Decreto Municipal n° 56.901 de 2016, que define o procedimento de elaboração dos PIU.</p>
 			<p>O PIU Anhembi parte dos índices e parâmetros de parcelamento, uso e ocupação do solo e disposições especificas estabelecidas na Lei Municipal n° 16.886 de 2018 para o perímetro da Zona de Ocupação Especial do Anhembi (ZOE Anhembi), composta pelos setores Sambódromo e Centro de Convenções e Exposições descritos nos incisos I e II, do Art. 2° da referida lei, propriedades hoje da São Paulo Turismo S.A. (SPTuris).</p>
-			<p>Entre os dias 15 de Junho e 10 de Julho de 2018, a São Paulo Urbanismo disponibilizou a 1ª Consulta Pública do PIU, que reuniu informações e dados sobre a ZOE Anhembi e seu entorno, tendo como base o diagnóstico socioterritorial e o respectivo programa de interesse público do PIU. O relatório da 1ª Consulta Pública com as contribuições recebidas e a respectiva análise da Prefeitura Municipal de São Paulo pode ser acessado <a href="http://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/2018/02/ANH_ConsultaPublica1_Devolutiva_R01_A.pdf" download>aqui</a>.</p>
+			<p>Entre os dias 15 de Junho e 10 de Julho de 2018, a São Paulo Urbanismo disponibilizou a 1ª Consulta Pública do PIU, que reuniu informações e dados sobre a ZOE Anhembi e seu entorno, tendo como base o diagnóstico socioterritorial e o respectivo programa de interesse público do PIU. O relatório da 1ª Consulta Pública com as contribuições recebidas e a respectiva análise da Prefeitura Municipal de São Paulo pode ser acessado <a href="https://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/2018/02/ANH_ConsultaPublica1_Devolutiva_R01_A.pdf" download>aqui</a>.</p>
 			<p>Esta 2ª consulta pública tem como finalidade apresentar as diretrizes urbanísticas consolidadas, bem como o detalhamento do programa de intervenções e propostas de intervenção que fundamentarão o decreto do PIU Anhembi.</p>
 			<p>Encerrada esta 2ª consulta pública, as sugestões recebidas serão consolidadas, sendo publicada a versão definitiva do PIU, com as justificativas para a incorporação ou não das contribuições recebidas.</p>
 
@@ -109,12 +109,12 @@
 			<h2 class="titulo" indent="1">Caracterização sócioterritorial e ambiental</h2>
 			<p>Para elaboração das diretrizes urbanísticas e posterior consolidação das propostas, foi realizado um estudo de caracterização do Perímetro Expandido e do Perímetro de Abrangência do PIU, possibilitando a identificação de carências e potencialidades do território. O resultado das análises pode ser acessado nos cadernos disponíveis para download:</p>
 			<ul class="pdfBox">
-				<li><a href="http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi-2/1-Analise-Territorial.pdf" download>
+				<li><a href="https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi-2/1-Analise-Territorial.pdf" download>
 					<i class="small material-icons">picture_as_pdf</i>
 					<div>Análise Territorial</div>
 					<span>18,5 Mb</span>
 				</a></li>
-				<li><a href="http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi-2/2-Analise-Ambiental.pdf" download>
+				<li><a href="https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi-2/2-Analise-Ambiental.pdf" download>
 					<i class="small material-icons">picture_as_pdf</i>
 					<div>Análise Ambiental</div>
 					<span>16,1 Mb</span>
@@ -128,7 +128,7 @@
 			<p>No primeiro caso, foram incluídas integralmente as quadras 283 e 284, delimitadas pela Av. Assis Chateaubriand, a Av. Olavo Fontoura, a Praça Campo de Bagatelle, a Av. Santos Dumont, a Rua Marechal Leitão de Carvalho, a Rua Masseinet Sorcinelli e a Rua Prof. Milton Rodrigues. Quanto ao Perímetro Expandido, foi adotada a determinação do §1° do Art. 5º da Lei n°16.866 de 2018, formado pela interseção entre o subsetor Arco Tietê da Macroárea de Estruturação Metropolitana (MEM) e os limites administrativos das Prefeituras Regionais de Santana/Tucuruvi e Casa Verde.</p>
 
 			<figure title="Processo de recorte do Perímetro Expandido" class="borda">
-				<img src="http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/ANH_Perimetros.jpg" alt="Processo de recorte do Perímetro Expandido">
+				<img src="https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/ANH_Perimetros.jpg" alt="Processo de recorte do Perímetro Expandido">
 				<h6>Processo de recorte do Perímetro Expandido</h6>
 				<ul class="legenda">
 					<li><div style="border-color: #534e3d; background: #f2e271; border-width: 2px; font-weight: bolder;">1</div> Prefeitura Regional Casa Verde-Cachoeirinha</li>
@@ -173,7 +173,7 @@
 			<p>A rede de mobilidade proposta não se resume na mobilidade motorizada, soma-se a ela, melhoria a mobilidade não motorizada com a proposta de ampliação de passeios e de implantação de ciclovias.</p>
 
 			<figure title="Síntese das intervenções em mobilidade urbana" class="borda">
-				<img src="http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/ANH_mobilidade.jpg" alt="Síntese das intervenções em mobilidade urbana">
+				<img src="https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/ANH_mobilidade.jpg" alt="Síntese das intervenções em mobilidade urbana">
 				<h6>Síntese das intervenções em mobilidade urbana</h6>
 				<ul class="legenda">
 					<li>
@@ -206,7 +206,7 @@
 			<p>Por sua vez, a qualificação socioambiental será promovida por meio da implantação de sistema de áreas verdes composto por áreas verdes existentes, como o Parque Juventude, e novos parques, como os parques lineares ao longo dos córregos Carandiru e Papaterra Limongi, possibilitando a retomada do contato com os rios da cidade. Essas áreas serão conectadas por bulevares e alamedas, que agregarão valor paisagístico e ambiental, além de contribuírem na mitigação de ilhas de calor e problemas de drenagem.</p>
 
 			<figure title="Síntese das intervenções de qualificação ambiental" class="borda">
-				<img src="http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/ANH_ambiental.jpg" alt="Síntese das intervenções de qualificação ambiental">
+				<img src="https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/ANH_ambiental.jpg" alt="Síntese das intervenções de qualificação ambiental">
 				<h6>Síntese das intervenções de qualificação ambiental</h6>
 				<ul class="legenda">
 					<li>
@@ -214,7 +214,7 @@
 						Ciclovia proposta
 					</li>
 					<li>
-						<div style="border-width: 0; border-radius: 100%; background: url('http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/legendaAmbiental1.gif');"></div>
+						<div style="border-width: 0; border-radius: 100%; background: url('https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/legendaAmbiental1.gif');"></div>
 						Requalificação
 					</li>
 					<li>
@@ -237,18 +237,18 @@
 			</figure>
 
 			<figure>
-				<img src="http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/ACT_Centralidade_Perspectivas_Carandiru_MidRes.jpg" alt="Proposta para a implantação do Parque Linear Carandiru">
+				<img src="https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/ACT_Centralidade_Perspectivas_Carandiru_MidRes.jpg" alt="Proposta para a implantação do Parque Linear Carandiru">
 				<figcaption>Proposta para a implantação do Parque Linear Carandiru</figcaption>
 			</figure>
 
 			<p>Além do mais, o PIU Anhembi representa uma oportunidade de potencializar o uso de terras públicas subutilizadas que se encontram no Perímetro Expandido, prevendo a implantação de ruas, praças, escolas e parque público de habitação de interesse social.</p>
 
 			<figure title="Síntese das intervenções de habitação de interesse social" class="borda">
-				<img src="http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/ANH_habitacao.jpg" alt="Habitação">
+				<img src="https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/ANH_habitacao.jpg" alt="Habitação">
 				<h6>Síntese das intervenções de habitação de interesse social</h6>
 				<ul class="legenda">
 					<li>
-						<div style="border-width: 0; border-radius: 100%; background: url('http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/legendaHabitacao1.gif');"></div>
+						<div style="border-width: 0; border-radius: 100%; background: url('https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/legendaHabitacao1.gif');"></div>
 						Áreas públicas
 					</li>
 					<li>
@@ -470,22 +470,22 @@
 			<Comments :attr="{id:11, context:'Minuta'}" v-if="estaConsulta.ativo == 1"></Comments>
 
 			<ul class="pdfBox">
-				<li><a href="http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi-2/MAPA-1_Perimetros.pdf" download>
+				<li><a href="https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi-2/MAPA-1_Perimetros.pdf" download>
 					<i class="small material-icons">picture_as_pdf</i>
 					<div>MAPA 1 – Perímetros</div>
 					<span>17,9 Mb</span>
 				</a></li>
-				<li><a href="http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi-2/MAPA-2_Subsetores.pdf" download>
+				<li><a href="https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi-2/MAPA-2_Subsetores.pdf" download>
 					<i class="small material-icons">picture_as_pdf</i>
 					<div>MAPA 2 – Subsetores</div>
 					<span>2,74 Mb</span>
 				</a></li>
-				<li><a href="http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi-2/MAPA-3_ProgramaIntervencoes.pdf" download>
+				<li><a href="https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi-2/MAPA-3_ProgramaIntervencoes.pdf" download>
 					<i class="small material-icons">picture_as_pdf</i>
 					<div>MAPA 3 – Programa de intervenções</div>
 					<span>14,0 Mb</span>
 				</a></li>
-				<li><a href="http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi-2/MAPA-4_HabitacaoSocial.pdf" download>
+				<li><a href="https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi-2/MAPA-4_HabitacaoSocial.pdf" download>
 					<i class="small material-icons">picture_as_pdf</i>
 					<div>MAPA 4 – Habitação Social</div>
 					<span>9,66 Mb</span>
@@ -657,7 +657,7 @@
 			<div class="tableWrap intervencoes">
 				<div class="intervencoesTitulo">
 					QUADRO 5 – Programa de Intervenções
-					<a href="http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi-2/Quadro_5_Programa_Intervencoes_Expandido.pdf" download="Quadro 5">(baixar como .pdf)</a>
+					<a href="https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi-2/Quadro_5_Programa_Intervencoes_Expandido.pdf" download="Quadro 5">(baixar como .pdf)</a>
 				</div>
 				<div class="eixo">
 					Eixo temático
@@ -983,7 +983,7 @@ import Apoio from '@/components/Apoio'
 					height:557, // altura das imagens
 					images:[
 						{
-							url:"http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/galeria/ANH_AcaoAbrangencia_01.jpg",
+							url:"https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/galeria/ANH_AcaoAbrangencia_01.jpg",
 							state: true,
 							title: '',
 							icon: false,
@@ -991,7 +991,7 @@ import Apoio from '@/components/Apoio'
 							id: 1
 						},
 						{
-							url:"http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/galeria/ANH_AcaoAbrangencia_02.jpg", 
+							url:"https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/galeria/ANH_AcaoAbrangencia_02.jpg", 
 							state: false,
 							title: '',
 							icon: false,
@@ -999,7 +999,7 @@ import Apoio from '@/components/Apoio'
 							id: 2
 						},
 						{
-							url:"http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/galeria/ANH_AcaoAbrangencia_03.jpg", 
+							url:"https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/galeria/ANH_AcaoAbrangencia_03.jpg", 
 							state: false,
 							title: '',
 							icon: false,
@@ -1007,7 +1007,7 @@ import Apoio from '@/components/Apoio'
 							id: 3
 						},
 						{
-							url:"http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/galeria/ANH_AcaoAbrangencia_04.jpg", 
+							url:"https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/galeria/ANH_AcaoAbrangencia_04.jpg", 
 							state: false,
 							title: '',
 							icon: false,
@@ -1015,7 +1015,7 @@ import Apoio from '@/components/Apoio'
 							id: 4
 						},
 						{
-							url:"http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/galeria/ANH_AcaoAbrangencia_05.jpg", 
+							url:"https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/galeria/ANH_AcaoAbrangencia_05.jpg", 
 							state: false,
 							title: '',
 							icon: false,
@@ -1023,7 +1023,7 @@ import Apoio from '@/components/Apoio'
 							id: 5
 						},
 						{
-							url:"http://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/galeria/ANH_AcaoAbrangencia_06.jpg", 
+							url:"https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/galeria/ANH_AcaoAbrangencia_06.jpg", 
 							state: false,
 							title: '',
 							icon: false,
@@ -1053,7 +1053,7 @@ import Apoio from '@/components/Apoio'
 					]
 				},
 				consultas: false,
-				estaConsulta: false
+				estaConsulta: {}
 			}
 		},
 		computed: { commentsLoaded() { return this.$store.state.commentsLoaded } },
@@ -1098,7 +1098,7 @@ import Apoio from '@/components/Apoio'
 			},
 			filterConsultas(){
 				this.consultas = this.$store.state.consultas;
-				this.estaConsulta = this.consultas.filter(esta => esta.id == this.$route.meta.id )[0];
+				this.estaConsulta = this.consultas.filter(esta => esta.id_consulta == this.$route.meta.id )[0];
 			},
 			consultaState(){ return (this.estaConsulta.ativo == '1' ? "aberta" : "fechada") },
 			listaTitulos() {

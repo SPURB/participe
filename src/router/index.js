@@ -42,6 +42,10 @@ export default new Router({
 			}
 		},
 		{
+			path: '/arco--pinheiros',
+			redirect: '/arco-pinheiros'
+		},
+		{
 			path: '/login',
 			name: 'Login',
 			components: { Login }

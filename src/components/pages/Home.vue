@@ -6,7 +6,6 @@
 				<input class="fuzzy-search" type="search" ref="busca" title="Digite o que pesquisa" value="Pesquisar" @focusout="desativaBusca">
 			</div> -->
 			<ul class="list">
-				<!-- <li v-for="consulta in consultas" class="card" :style="[{ backgroundImage: 'url(' + consulta.urlCapa + ')'}]"> -->
 				<li v-for="consulta in consultas" class="card" :style="backgroundImagePath(consulta.urlCapa)">
 					<p class="nome">{{ decodeURI(consulta.nomePublico) }}</p>
 					<p class="textoIntro">{{ decodeURI(consulta.textoIntro) }}</p>
@@ -32,9 +31,8 @@
 							{{ diasRestantes(consulta.dataFinal) }}
 						</p>-->
 						<p v-if="consulta.urlDevolutiva" class="linkSistemat">
-							<a href="#">
-								{{ consulta.urlDevolutiva }}
-								<i class="material-icons">launch</i>
+							<a :href="consulta.urlDevolutiva" target="_blank">
+								<i class="material-icons">launch</i> Acessar devolutiva
 							</a>
 						</p>
 					</div>

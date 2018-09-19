@@ -740,6 +740,8 @@ div.ArcoPinheiros {
 		};
 	};
 
+	section + section { margin-top: 6rem; }
+
 	figure {
 		text-align: center;
 		margin: 2rem auto;
@@ -1127,12 +1129,10 @@ div.ArcoPinheiros {
 	};
 
 	@media (max-width: 600px) {
-		div.Anhembi2 {
-			font-size: 16px;
+		font-size: 16px;
 
-			div.titulo {
-				& > div h1 { font-size: 40px; };
-			};
+		div.titulo {
+			& > div h1 { font-size: 40px; };
 		};
 	};
 

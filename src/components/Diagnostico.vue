@@ -6,13 +6,13 @@
 		</div>
 		<div class="menu">
 			<div>
-				<div class="menu_visor"><span ref="menu_visor">Selecione...</span> <i class="material-icons">keyboard_arrow_down</i></div>
-				<ul>
-					<li @click="alteraSecao('populacao', $event)" :class="{ ativo: !escPopulacao }">População</li>
-					<li @click="alteraSecao('usosdosolo', $event)" :class="{ ativo: !escUsos }">Usos do solo</li>
-					<li @click="alteraSecao('trabalho', $event)" :class="{ ativo: !escTrabalho }">Trabalho</li>
-					<li @click="alteraSecao('mobilidade', $event)" :class="{ ativo: !escMobilidade }">Mobilidade</li>
-					<li @click="alteraSecao('areasverdes', $event)" :class="{ ativo: !escAreasVerdes }">Áreas verdes</li>
+				<div class="menu_visor" @click="isMenuVisorAberto =! isMenuVisorAberto"><span ref="menu_visor">Selecione...</span> <i class="material-icons">keyboard_arrow_down</i></div>
+				<ul :class="{ aberto: isMenuVisorAberto }">
+					<li @click="isMenuVisorAberto =! isMenuVisorAberto, alteraSecao('populacao', $event)" :class="{ ativo: !escPopulacao }">População</li>
+					<li @click="isMenuVisorAberto =! isMenuVisorAberto, alteraSecao('usosdosolo', $event)" :class="{ ativo: !escUsos }">Usos do solo</li>
+					<li @click="isMenuVisorAberto =! isMenuVisorAberto, alteraSecao('trabalho', $event)" :class="{ ativo: !escTrabalho }">Trabalho</li>
+					<li @click="isMenuVisorAberto =! isMenuVisorAberto, alteraSecao('mobilidade', $event)" :class="{ ativo: !escMobilidade }">Mobilidade</li>
+					<li @click="isMenuVisorAberto =! isMenuVisorAberto, alteraSecao('areasverdes', $event)" :class="{ ativo: !escAreasVerdes }">Áreas verdes</li>
 				</ul>
 			</div>
 			<div class="legenda">
@@ -287,7 +287,8 @@ export default {
 			escUsos: true,
 			escTrabalho: true,
 			escMobilidade: true,
-			escAreasVerdes: true
+			escAreasVerdes: true,
+			isMenuVisorAberto: false
 		}
 	},
 	methods: {
@@ -960,10 +961,8 @@ div.Diagnostico {
 						margin-bottom: 0 !important;
 						border-radius: 0 !important;
 					}
-				}
 
-				&:hover {
-					ul { max-height: 1000px }
+					&.aberto { max-height: 1000px; }
 				}
 			}
 

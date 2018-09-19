@@ -1,10 +1,10 @@
 <template>
 	<div class="Commentsloader">
 		<div v-if="comments" v-for="comment in comments" class="comment">
-			<h5 class="name">{{  comment.name }} em <span>{{ filterDate(comment.commentdate) }} </span> disse:</h5>
-			<p class="content"> {{comment.content}} 
-			<span class="topico">Capítulo comentado: {{ comment.commentcontext }}.</span>
-			</p>
+			<div class="name"><i class="material-icons">person_outline</i>{{ comment.name }}</div>
+			<div class="comment_info"><i class="material-icons">schedule</i>{{ filterDate(comment.commentdate) }}</div>
+			<div class="comment_info"><i class="material-icons">subject</i>Comentou em "{{ comment.commentcontext }}"</div>
+			<p class="content">{{comment.content}}</p>
 		</div>
 	</div>
 </template>
@@ -45,7 +45,10 @@ export default {
 			})
 		},
 		filterDate(dataString){
-			return dataString.slice(0,10)
+			let d = dataString.slice(8,10)
+			let m = dataString.slice(5,7)
+			let a = dataString.slice(0,4)
+			return d+'/'+m+'/'+a
 		}
 	}
 }
@@ -56,25 +59,32 @@ export default {
 
 .Commentsloader {
 	max-width: 700px;
-	margin: 2rem auto 4rem auto;
+	margin: 2rem auto;
+	padding: 0 2rem;
 	div.comment{
-		margin: 1.2em 0;
-		padding-top: 1em;
-		border-top: 1px #DCDCD9 solid;
-		h5.name{ 
-			// padding: 0;
-			color: $font-default-grey; 
-			font-weight: 700
+		background: #F5F5F5;
+		padding: 1rem 1.2rem 0.8rem 1.2rem;
+		margin: 0 0 1rem 0;
+		border-radius: 2px;
+		box-shadow: 0 2px 2px rgba(0, 0, 0, .12);
+		div.name {
+			font-size: small;
+			font-weight: bold;
+		}
+		div.comment_info {
+			font-size: small;
+			color: #BDBDBD;
 		}
 		p.content {
-			// padding: 0;
-			font-family: $font-stack;
-			font-size: .9em;
-			line-height: 1.63em
-			// line-height: 1.8em;
+			font-family: "Georgia", serif;
+			margin: 0.8rem 0 0 0;
+			font-size: smaller;
+			@media (max-width: 600px) { font-size: initial; }
 		}
-		span{
-			font-size: 13px
+		* > i {
+			font-size: inherit;
+			vertical-align: -2px;
+			margin: 0 8px 0 0;
 		}
 	}
 }

@@ -87,6 +87,7 @@ div.Indice {
 		transition: all .1s;
 		display: block;
 		font-family: inherit;
+		z-index: 1;
 
 		&:active {
 			background: #EB5757;

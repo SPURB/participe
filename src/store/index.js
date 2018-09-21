@@ -99,8 +99,11 @@ export const store = new Vuex.Store({
 			axios.get(store.getters.apiPath + 'consultas')
 				.then(response => { 
 					commit("FETCH_CONSULTAS", response.data.slice().reverse());
-					commit("FETCH_CONSULTAS_DECODE", store.state.consultas)
-					self.filterConsultas(); 
+					commit("FETCH_CONSULTAS_DECODE", store.state.consultas);
+					if (self.estaConsulta != undefined){
+						console.log(self);
+						self.filterConsultas();
+					}
 				})
 				// .catch(e => { store.state.errors.push(e) }) 
 				.catch(e => { console.log(e) })

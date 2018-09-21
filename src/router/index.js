@@ -5,6 +5,8 @@ import Router from 'vue-router'
 const Home = () => import('@/components/pages/Home')
 const Anhembi2 = () => import('@/components/pages/Anhembi2')
 const ArcoPinheiros = () => import('@/components/pages/ArcoPinheiros')
+const WifiLivreSP = () => import('@/components/pages/WifiLivreSP')
+// Login
 const Login = () => import('@/components/pages/Login')
 
 // Admin
@@ -45,6 +47,25 @@ export default new Router({
 			path: '/arco--pinheiros',
 			redirect: '/arco-pinheiros'
 		},
+		{
+			path: '/wifi-livre-sp',
+			name: 'WifiLivreSP',
+			components: { WifiLivreSP },
+			meta: {
+				id: 34
+			}
+		},
+		// Modelo para novas consultas
+		/*
+		{
+			path: '/nome-da-consulta',
+			name: 'NomeDaConsulta',
+			components: { NomeDaConsulta },
+			meta: {
+				id: #
+			}
+		},
+		*/
 		{
 			path: '/login',
 			name: 'Login',

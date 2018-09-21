@@ -2,7 +2,7 @@
 	<div class="PageTop" :style="style">
 		<div v-show="esta_consulta.nomePublico">
 			<h1>{{ esta_consulta.nomePublico }}</h1>
-			<div>1ª consulta pública – Projeto de Intervenção Urbana Arco Pinheiros</div>
+			<slot name="subtitulo"></slot>
 			<div>
 				<!-- <a href="#contribuicoes" @click="scrollToallComments"><i class="material-icons">chat</i> {{ esta_consulta.nContribuicoes }} contribuições</a> -->
 				<i class="material-icons">chat</i> {{ esta_consulta.nContribuicoes }} contribuições
@@ -66,7 +66,7 @@ export default{
 		flex-flow: column nowrap;
 		align-items: center;
 		justify-content: center;
-		z-index: 1;
+		z-index: 2;
 		
 		& > div:first-child {
 			padding: 1.2rem;

@@ -348,7 +348,7 @@ h4 {
 	background: #EB5757;
 	color: #FFF;
 }
-section {
+div.WifiLivreSP section {
 	max-width: 700px;
 	margin: 0 auto;
 	padding: 0 1em;
@@ -360,7 +360,7 @@ hr {
 img {
 	max-width: 100%;
 }
-p {
+div.WifiLivreSP p {
 	overflow: auto;
 	text-align: justify;
 }

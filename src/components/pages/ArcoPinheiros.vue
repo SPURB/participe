@@ -378,7 +378,7 @@
 				</ul>
 				<div style="font-size: small; display: flex; flex-direction: column; align-items: center; margin: .4rem 0;">
 					<h6 style="margin: 1rem 0 .4rem 0; font-size: inherit;">Vistas do território a partir do Mirante do Jaguaré</h6>
-					<div style="display: flex; flex-flow: row nowrap; width: calc(100% - 16px); overflow-x: auto; padding: 0 0 8px 0; justify-content: center;">
+					<div style="display: flex; flex-flow: row nowrap; width: calc(100% - 16px); overflow-x: auto; padding: 0 0 8px 0; justify-content: center;" id="benstombados_int">
 						<div style="background: #F5F5F5; border-radius: 2px; display: inline-flex; flex-direction: column; padding: 8px; max-width: 280px; margin-right: 8px;">
 							<img :src="imgSrc('arquivos/arco-pinheiros/tombados_v1.png')" style="width: unset; max-width: max-content;">
 							<div style="padding-top: 8px;"><strong>Vista 1 (v.1):</strong> vista do Rio Pinheiros com Pico do Jaraguá ao fundo</div>
@@ -631,6 +631,8 @@ export default {
 }
 
 div.ArcoPinheiros {
+	@media (max-width: 480px) { #benstombados_int { justify-content: flex-start !important; } } /* componente mapa - legenda / outras infos? */
+
 	font-size: 20px;
 	padding-bottom: 4rem;
 	z-index: 0;

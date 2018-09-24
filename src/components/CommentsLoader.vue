@@ -70,10 +70,12 @@ export default {
 		div.name {
 			font-size: small;
 			font-weight: bold;
+			display: flex;
 		}
 		div.comment_info {
 			font-size: small;
 			color: #BDBDBD;
+			display: flex;
 		}
 		p.content {
 			font-family: "Georgia", serif;
@@ -85,6 +87,7 @@ export default {
 			font-size: inherit;
 			vertical-align: -2px;
 			margin: 0 8px 0 0;
+			padding-top: 4px;
 		}
 	}
 }

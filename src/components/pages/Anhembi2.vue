@@ -1083,7 +1083,7 @@ import Apoio from '@/components/Apoio'
 	};
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 // @import '../../variables';
 
 	*::selection, *::-moz-selection {

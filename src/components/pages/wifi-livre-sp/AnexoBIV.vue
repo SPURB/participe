@@ -1,6 +1,6 @@
 <template>
 	<div class="AnexoBIV">
-<center><h4>III.A - TERMO DE USO</h4></center>
+<center><h4>IV.A - TERMO DE USO</h4></center>
 <p>O presente documento tem por objetivo disciplinar o acesso ao WiFi Livre SP e regulamentar suas condições de uso conforme condições abaixo mencionadas (“Termo de Uso”).</p>
 <h4>1. ACEITAÇÃO DO TERMO DE USO</h4>
 <p>1.1. A aceitação deste Termo de Uso é indispensável à utilização do Wi-Fi livre e gratuito da cidade de São Paulo fornecido pela <mark>Interessada (razão social da Interessada)</mark>, doravante denominada Provedor, no âmbito do Programa WiFi Livre SP da Prefeitura de São Paulo.</p>
@@ -56,7 +56,8 @@
 <p>11.6. Este Termo de Uso é regido pelas leis vigentes na República Federativa do Brasil. Para dirimir eventuais conflitos, as partes elegem o Foro Central da Comarca de São Paulo – SP, e excluem qualquer outro, por mais privilegiado que seja.</p>
 <p>11.7. A plena aceitação deste Termo de Uso é requisito obrigatório para utilização do serviço. Caso o Usuário não concorde com as condições aqui previstas, não deverá se utilizar deste.</p>
 <br /> 
-<center><h4>III.B - POLÍTICA DE PRIVACIDADE</h4></center>
+<slot></slot>
+<center><h4>IV.B - POLÍTICA DE PRIVACIDADE</h4></center>
 <p>O presente documento tem por objetivo informar sobre a coleta, armazenamento e uso de dados coletados na prestação do serviço de Wi-Fi gratuito no âmbito do Programa WiFi Livre SP e dispõe sobre a finalidade da coleta e armazenamento de dados ("Política de Privacidade").</p>
 <h4>1. ACEITAÇÃO DA POLÍTICA DE PRIVACIDADE</h4>
 <p>1.1. A aceitação desta Política de Privacidade é absolutamente indispensável à utilização do Wi-Fi livre e gratuito da cidade de São Paulo fornecido pela <mark>Interessada (razão social da Interessada)</mark>, doravante denominada Provedor, no âmbito do Programa WiFi Livre SP da Prefeitura de São Paulo.</p>

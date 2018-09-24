@@ -14,6 +14,7 @@
 <p>1.3.2. A Interessada também poderá indicar outras localidades pertencentes à Prefeitura de São Paulo que não constem no Anexo II – Lista de localidades para a prestação do serviço de Wi-Fi.</p>
 <p>1.3.2.1. As localidades indicadas na proposta da Interessada que não estejam relacionadas no Anexo II – Lista de localidades sujeitar-se-ão à aprovação da Coordenadoria de Convergência Digital da Secretaria Municipal de Inovação e Tecnologia (SMIT/CCD). </p>
 <p>1.3.2.2. A prestação do serviço nas localidades relacionadas no Anexo II – Lista de localidades não poderá ser condicionada à prestação de serviço nas localidades mencionadas no item 1.3.2.</p>
+<slot name="1. DO OBJETO"></slot>
 
 <h4>2. DOS PROCEDIMENTOS DE CONEXÃO, CADASTRO E TERMOS DE USO DO SERVIÇO</h4>
 <p>2.1. O procedimento de conexão do usuário à rede de Wi-Fi será ordenado da seguinte forma:</p>
@@ -35,6 +36,7 @@
 <p>2.4.1. A pesquisa citada no item anterior será desenvolvida pela SMIT/CCD e será encaminhada para a Interessada em tempo hábil para a sua implantação.</p>
 <p>2.4.2. A pesquisa deverá ser realizada em todas as localidades onde o serviço for prestado e deverá ficar disponível pelo período de 20 (vinte) dias a cada trimestre.</p>
 <p>2.4.3. A pesquisa deverá ser apresentada ao usuário no momento da conexão e será de preenchimento facultativo, devendo estar clara ao usuário a opção de conectar-se sem preencher.</p>
+<slot name="2. DOS PROCEDIMENTOS DE CONEXÃO, CADASTRO E TERMOS DE USO DO SERVIÇO"></slot>
 
 <h4>3. DA SEGURANÇA, PRIVACIDADE E NEUTRALIDADE DA REDE</h4>
 <p>3.1. É responsabilidade da Interessada atentar-se para as garantias, direitos e deveres do uso da internet no Brasil, notadamente os previstos na Lei Federal n° 12.965/2014 (Marco Civil da Internet), a Lei Federal nº 13.709/2018 (lei de proteção de dados pessoais) e outras legislações vigentes relativas ao tema.</p>
@@ -53,6 +55,7 @@
 <p>3.6. O tratamento dos dados em desacordo com o item 3.4 e demais cláusulas deste Termo de Referência implica infração grave, além de sujeitar a Interessada e seus prepostos às cominações administrativas, civis e criminais aplicáveis.</p>
 <p>3.7. Em caso de contratação de terceiros para o tratamento de dados, a Interessada deverá incluir nos contratos a observância dos itens 3 e 4 deste Termo de Referência e enviar cópia dos respectivos contratos à SMIT/CCD.</p>
 <p>3.8. A Interessada poderá utilizar, integral ou parcialmente, os modelos de Termos de Uso e de Política de Privacidade sugeridos no Anexo IV – Política de Privacidade e Termos de Uso ou, ainda, utilizar modelos próprios, desde que sejam respeitadas todas as cláusulas deste Termo de Referência.</p>
+<slot name="3. DA SEGURANÇA, PRIVACIDADE E NEUTRALIDADE DA REDE"></slot>
 
 <h4>4. DO ARMAZENAMENTO E DISPONIBILIZAÇÃO DE INFORMAÇÕES PARA A PMSP</h4>
 <p>4.1. Deverão ser armazenados, durante todo período contratual, os dados de registros de conexão e medições básicas da rede.</p>
@@ -70,6 +73,7 @@ d)	Tempo de conexão médio por acesso.</p>
 <p>4.3. Caso solicitado pela SMIT/CCD ou por quaisquer entes por ela autorizados, a Interessada deverá implementar e disponibilizar uma Interface de Programação de Aplicação (API), mais especificamente uma Web API RESTful, para download das informações contidas no banco de dados usado pela Interessada. A API deve utilizar o protocolo HTTPS e método GET disponibilizar o download dos dados.</p>
 <p>4.3.1. O acesso à API da Interessada será feito via HTTPS com autenticação do usuário a partir de dispositivos habilitados.</p>
 <p>4.3.2. Os métodos da API serão especificados pela SMIT/CCD e deverão ser configurados pela Interessada em até 30 (trinta) dias após o pedido.</p>
+<slot name="4. DO ARMAZENAMENTO E DISPONIBILIZAÇÃO DE INFORMAÇÕES PARA A PMSP"></slot>
 
 <h4>5. DA PLACA E POSTE DE IDENTIFICAÇÃO DO PROGRAMA E DOS ANÚNCIOS PUBLICITÁRIOS DIGITAIS</h4>
 <p>5.1. A Interessada poderá explorar publicitariamente e realizar a ativação de marcas nas placas e postes destinados ao Wi-Fi, respeitados os limites legais, especialmente ao estabelecido pela Lei Municipal n° 14.223/2006, a Lei Cidade Limpa, e as diretrizes municipais que incluem a homologação das placas de comunicação do Programa WiFi Livre SP pela SMIT/CCD com apoio, quando necessário dos órgãos competentes na matéria – Comissão de Proteção à Paisagem Urbana (CPPU) e Conselho Municipal de Preservação do Patrimônio Histórico, Cultural e Ambiental da Cidade de São Paulo (CONPRESP), por meio da utilização da logomarca da Interessada na placa de identificação do programa, conforme deliberação prévia da CPPU e modelo do Anexo III – Poste e placa de identificação do Wi-Fi.</p>
@@ -101,7 +105,7 @@ d)	Tempo de conexão médio por acesso.</p>
 <p>5.6. Caso seja de interesse da Interessada, poderá ser ofertada porcentagem fixa ou parte ociosa do tempo de anúncio digital para a PMSP para a veiculação de campanhas de interesse social ou de cunho institucional, de acordo com as seguintes limitações:</p>
 <p>5.6.1. A data deverá ser reservada pela PMSP junto à Interessada com, no mínimo, 15 (quinze) dias de antecedência da data estipulada para veiculação de do anúncio, salvo casos de emergência pública.</p>
 <p>5.6.2. O conteúdo digital, a ser definido pela PMSP, deverá ser disponibilizado à Interessada em até 7 (sete) dias antes da data estipulada para sua veiculação.</p>
-
+<slot name="5"></slot>
 
 <h4>6. DA INFRAESTRUTURA E EQUIPAMENTOS PARA WIFI</h4>
 <p>6.1. No âmbito deste Termo, denomina-se infraestrutura para Wi-Fi todos os equipamentos ativos e passivos de rede, infraestrutura e insumos necessários ao bom funcionamento do sistema, tais como:</p>
@@ -115,6 +119,7 @@ d)	Tempo de conexão médio por acesso.</p>
 <p>6.4. A instalação do Wi-Fi nas localidades da proposta da Interessada deverá seguir estritamente o modelo descrito no Anexo III – Poste e placa de identificação do Wi-Fi, de modo a garantir prazo de implantação, salvo no caso de autorização prévia da SMIT/CCD.</p>
 <p>6.4.1. As localidades mencionadas no item anterior poderão receber mobiliário urbano a posteriori, em caso de interesse por parte da Interessada.</p>
 <p>6.5. A estrutura e equipamentos a serem instalados nas localidades objeto da contratação deverão ocupar o menor espaço possível no solo.</p>
+<slot name="6"></slot>
 
 <h4>7. DA ESPECIFAÇÃO E CONFIGURAÇÃO DOS EQUIPAMENTOS</h4>
 <p>7.1. Deverão ser previstos todos os equipamentos ativos e passivos de rede, infraestrutura e insumos necessários ao bom funcionamento do sistema, tais como, mas não exclusivamente: postes, fios, cabos, conectores, amplificadores, racks, pontos de conexão (access points), no-breaks (UPS), wireless controllers, watch dogs, software e suprimentos complementares de energia elétrica, conforme o caso.</p>
@@ -138,6 +143,7 @@ d)	Suportar airtime fairness, para otimizar a priorização de tráfego entre di
 <br />
 e)	Impedir que os usuários tenham acesso a equipamentos de outros usuários conectados à rede (client isolation).
 </p>
+<slot name="7"></slot>
 
 <h4>8. DA INSTALAÇÃO DO SERVIÇO</h4>
 <p>8.1. A instalação do serviço nas localidades definidas no instrumento firmado entre as partes deverá seguir cronograma e plano de instalação para cada localidade individualmente, identificando os respectivos prazos para a realização do serviço.</p>
@@ -191,6 +197,7 @@ i)	Relação de equipamentos e demais materiais utilizados para instalação dos
 <p>8.13.2. Após a primeira visita de fiscalização, a SMIT/CCD deverá emitir um parecer de conformidade e enviá-lo à Interessada em até 60 (sessenta) dias.</p>
 <p>8.13.3. Caso seja identificada qualquer inconformidade, a partir da notificação da SMIT/CCD, a Interessada terá até 20 (vinte) dias úteis para efetuar as correções, salvo se identificada situação que enseje atendimento urgente, por colocar em risco a segurança de pessoas ou coisas, cuja solução deverá ser adotada de forma imediata. O não cumprimento deste item poderá ensejar aplicação de penalidades.</p>
 <p>8.14. A Interessada será a única responsável pela realização dos serviços descritos neste Termo de Referência e no instrumento firmado entre as partes, bem como por quaisquer danos causados à Administração Pública e a terceiros em decorrência da contratação, contando necessariamente com responsáveis técnicos devidamente inscritos na entidade profissional competente, na conformidade do quanto disposto no art. 18 do Decreto Municipal n. 52.062/2010 e demais legislações pertinentes.</p>
+<slot name="8"></slot>
 
 <h4>9. DA FISCALIZAÇÃO TÉCNICA E AVALIAÇÃO DO SERVIÇO</h4>
 <p>9.1. A fiscalização técnica do serviço ficará a cargo da Prefeitura de São Paulo, por meio da SMIT/CCD, diretamente ou com auxílio de terceiros contratados por esta para este fim.</p>
@@ -252,6 +259,7 @@ c)	Movimentações, inclusão ou remoção de equipamentos.
 d)	Cronograma de vistorias e relatórios gerados.
 </p>
 <p>9.5.5. A qualquer tempo, a SMIT/CCD poderá solicitar relatórios adicionais, desde que compatíveis com este Termo de Referência.</p>
+<slot name="9"></slot>
 
 <h4>10. DOS NÍVEIS DE SERVIÇO</h4>
 <p>10.1. A gestão dos níveis de serviço será realizada para que seja assegurado o atendimento aos padrões exigidos neste edital.</p>
@@ -292,6 +300,7 @@ d)	0,7 quando for identificada a presença superior a 71% dos usuários estimado
 <p>10.6.2.3. Caso o índice de desempenho de internet “IS”, medido de acordo com o item 10.6.2.2, seja superior a 1 (um), serão aplicadas as penalidades previstas no item 14 deste Termo de Referência.</p>
 <p>10.7. O início das medições se dará após o exaurimento dos prazos segundo as condições previstas no item 8 deste Termo de Referência, ou seja, quando o serviço estiver em operação.</p>
 <p>10.8. A medição dos níveis de serviço estabelecidos se dará, por localidade operada, concomitantemente com sua prestação e a avaliação será consolidada mensalmente, sendo que nas unidades abaixo dos padrões estabelecidos, a Interessada estará sujeita às penalidades previstas no item 14 deste Termo de Referência, sem prejuízo de outras penalidades previstas no instrumento firmado entre as partes.</p>
+<slot name="10"></slot>
 
 <h4>11. DO SUPORTE E TREINAMENTO</h4>
 <p>11.1. A Interessada deverá ministrar capacitação na ferramenta de fiscalização remota da rede para pessoas indicadas pela SMIT/CCD, com carga horária não inferior a 4 (quatro) horas conforme cronograma definido entre as partes, dentro do município de São Paulo ou em outras localidades, desde que em comum acordo e com os custos arcados pela Interessada.</p>
@@ -300,6 +309,7 @@ d)	0,7 quando for identificada a presença superior a 71% dos usuários estimado
 <p>11.3.1. A Interessada deverá atender os chamados para manutenção/suporte dentro dos níveis de serviços constantes nos itens 10 e 12.</p>
 <p>11.4. A Interessada deverá nomear gerente ou responsável pelo sistema, para fins de comunicação com a SMIT/CCD.</p>
 <p>11.5. A Interessada é responsável por todas as providências técnicas, estruturais e regulatórias necessárias à qualidade do sinal e demais condições de entrega dos serviços aos usuários, de modo a atingir todos os níveis de serviço, especificados no item 10.</p>
+<slot name="11"></slot>
 
 <h4>12. DA MANUTENÇÃO E RESPOSTA A INCIDENTES</h4>
 <p>12.1. A Interessada é responsável por efetuar as manutenções preventivas e corretivas nos equipamentos sempre que necessário, observando os níveis de serviço.</p>
@@ -337,6 +347,8 @@ f)	Manutenção de componentes complementares e de acabamento.
 <p>12.12. A Interessada deverá, preferencialmente, utilizar o sistema de gestão de chamados disponibilizado pela SMIT/CCD, ou permitir acesso ao sistema de gestão de chamados próprio, disponibilizando mensalmente, em forma de relatório, todos os incidentes registrados com data e hora de abertura, atendimento e fechamento do chamado, detalhando as ações tomadas e suas consequências, encaminhando à SMIT/CCD em meio eletrônico em formato CSV (comma-separated values).</p>
 <p>12.13. As indisponibilidades causadas por manutenções corretivas e preventivas impactam os prazos do SLA.</p>
 <p>12.14. Os chamados fora do SLA serão passíveis de aplicação de penalidade de aplicação de penalidade, conforme item 14.</p>
+<slot name="12"></slot>
+
 <h4>13. PROCESSOS DE GESTÃO E GERENCIAMENTO DE SERVIÇOS</h4>
 <p>13.1. O gerenciamento do ambiente deverá seguir processos e procedimentos definidos entre a SMIT/CCD e a Interessada respeitando os requerimentos específicos de negócio, buscando integridade e transparência na governança. O uso das metodologias, práticas e procedimentos de gestão deverão traduzir-se em um serviço controlado, previsível, estruturado e alinhado às melhores práticas do mercado, além de integrar pessoas, processos, tecnologia e informação.</p>
 <p>13.1.1. Recomenda-se que a Interessada disponha de profissionais certificados no uso de metodologias, práticas e procedimentos de gestão de TI, tais como: ITIL e PMI.</p>
@@ -381,6 +393,7 @@ h)	Resolver problemas.
 i)	Encerrar problemas/erros conhecidos.
 </p>
 <p>13.3.1. O protocolo de manutenção preventiva e corretiva deverá ser elaborado pela Interessada e submetido à SMIT/CCD para conhecimento, com 10 (dez) dias de antecedência do início da operação da primeira localidade. Esse deverá ser diligentemente seguido pela Interessada.</p>
+<slot name="13"></slot>
 
 <h4>14. PENALIDADES</h4>
 <p>14.1. Pela execução do serviço em desacordo com o este Termo de Referência e com as normas legais, a SMIT/CCD poderá, garantida a prévia defesa, aplicar à Interessada as seguintes sanções:</p>
@@ -564,7 +577,8 @@ i)	Encerrar problemas/erros conhecidos.
 		</tr>
 	</table>
 	<p>Onde <strong><i>“L”</i></strong> é o número de localidades contempladas pela proposta da Interessada.</p>
-	</div>
+	<slot name="14"></slot>
+	</div>	
 </template>
 
 <script>

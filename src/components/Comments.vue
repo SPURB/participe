@@ -128,6 +128,7 @@ export default {
 				// console.log(response);
 				let name = app.form_name;
 				let content = app.form_content;
+				console.log(app.attr.id);
 				app.setModal('success')
 			})
 			.catch(function (error) {

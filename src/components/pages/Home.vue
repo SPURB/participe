@@ -36,7 +36,7 @@
 							</a>
 						</p>
 					</div>
-					<p ref="textoIntro" class="esconde textoIntro"><a :href="consulta.urlConsulta">{{ consulta.textoIntro }}</a></p>
+					<p ref="textoIntro" class="esconde textoIntro"><a :href="setUrlByType(consulta.urlConsulta)">{{ consulta.textoIntro }}</a></p>
 					<a :href="setUrlByType(consulta.urlConsulta)" class="acesso">Acessar consulta</a>
 				</li>
 			</ul>

@@ -101,7 +101,7 @@ export const store = new Vuex.Store({
 					commit("FETCH_CONSULTAS", response.data.slice().reverse());
 					commit("FETCH_CONSULTAS_DECODE", store.state.consultas);
 					if (self.estaConsulta != undefined){
-						console.log(self);
+						// console.log(self);
 						self.filterConsultas();
 					}
 				})

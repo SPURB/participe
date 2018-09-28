@@ -7,6 +7,7 @@
 	<router-view name="Anhembi2"></router-view>
 	<router-view name="ArcoPinheiros"></router-view>
 	<router-view name="WifiLivreSP"></router-view>
+	<router-view name="DigilabLivreSP"></router-view>
 	<router-view name="Login"></router-view>
 	<router-view name="Admin"></router-view>
 

@@ -6,6 +6,7 @@ const Home = () => import('@/components/pages/Home')
 const Anhembi2 = () => import('@/components/pages/Anhembi2')
 const ArcoPinheiros = () => import('@/components/pages/ArcoPinheiros')
 const WifiLivreSP = () => import('@/components/pages/WifiLivreSP')
+const DigilabLivreSP = () => import('@/components/pages/DigilabLivreSP')
 // Login
 const Login = () => import('@/components/pages/Login')
 
@@ -53,6 +54,14 @@ export default new Router({
 			components: { WifiLivreSP },
 			meta: {
 				id: 34
+			}
+		},
+		{
+			path: '/digilab-livre-sp',
+			name: 'DigilabLivreSP',
+			components: { DigilabLivreSP },
+			meta: {
+				id: 35
 			}
 		},
 		// Modelo para novas consultas

@@ -23,23 +23,24 @@
 		</Apoio>
 
 		<section>
-			<h2 class="titulo" indent="1">EDITAL DE CREDENCIAMENTO Nº 01/2018</h2>
+			<h2 class="titulo" indent="1">EDITAL DE CREDENCIAMENTO</h2>
 			<AnexoA></AnexoA>
-			<Comments :attr="{id:1, context:'EDITAL DE CREDENCIAMENTO Nº 01/2018'}" v-if="estaConsulta.ativo == 1"></Comments>
+			<Comments :attr="{id:1, context:'EDITAL DE CREDENCIAMENTO'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<hr />
 
 		<section>
-			<h2 class="titulo" indent="1">MINUTA DE CONTRATO</h2>
+			<!-- <h2 class="titulo" indent="1">MINUTA DE CONTRATO</h2> -->
+			<h2 class="titulo" indent="1">ANEXO A - MINUTA DE CONTRATO</h2>
 			<AnexoB></AnexoB>
 			<Comments :attr="{id:2, context:'MINUTA DE CONTRATO'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<hr />
-
 		<section>
-			<h2 class="titulo" indent="1">ANEXO I – TERMO DE REFERÊNCIA</h2>
+			<!-- <h2 class="titulo" indent="1">ANEXO I – TERMO DE REFERÊNCIA</h2> -->
+			<h2 class="titulo" indent="1">ANEXO B I - TERMO DE REFERÊNCIA</h2>			
 			<AnexoBI>				
 				<template slot="formula_01">
 					<figure title="Fórmula do índice de latência" class="coluna">
@@ -117,7 +118,8 @@
 		<hr />
 
 		<section>
-			<h2 class="titulo" indent="1">ANEXO II - LOCALIDADES OBRIGATÓRIAS</h2>
+			<!-- <h2 class="titulo" indent="1">ANEXO II - LOCALIDADES OBRIGATÓRIAS</h2> -->
+			<h2 class="titulo" indent="1">ANEXO B II - LISTA DE LOCALIDADES</h2>
 			<object :data="fileSrc('Anexo B II - Lista de localidades.pdf')" type="application/pdf" width="100%" height="600px">
 			  <p>Seu navegador não suporta a exibição na página. <a :href="fileSrc('Anexo B II - Lista de localidades.pdf')">Clique aqui para baixar.</a></p>
 			</object>
@@ -127,7 +129,8 @@
 		<hr />
 
 		<section>
-			<h2 class="titulo" indent="1">ANEXO III – POSTE E PLACA DE IDENTIFICAÇÃO PARA WIFI</h2>
+			<!-- <h2 class="titulo" indent="1">ANEXO III – POSTE E PLACA DE IDENTIFICAÇÃO PARA WIFI</h2> -->
+			<h2 class="titulo" indent="1">ANEXO B III - POSTES E PLACAS</h2>
 			<AnexoBIII>
 				<template slot="figura1">
 					<figure title="Figura 1 – Modelo de placa de identificação" class="coluna">
@@ -152,7 +155,8 @@
 		</section>
 
 		<section>
-			<h2 class="titulo" indent="1">ANEXO IV – TERMO DE USO E POLÍTICA DE PRIVACIDADE</h2>
+			<!-- <h2 class="titulo" indent="1">ANEXO IV – TERMO DE USO E POLÍTICA DE PRIVACIDADE</h2> -->
+			<h2 class="titulo" indent="1">ANEXO B IV - TERMO DE USO E POLÍTICA DE PRIVACIDADE</h2>
 			<AnexoBIV>
 				<Comments :attr="{id:21, context:'ANEXO IV – TERMO DE USO'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</AnexoBIV>
@@ -160,11 +164,12 @@
 		</section>
 
 		<section>
-			<h2 class="titulo" indent="1">ANEXO V – MANUAL DE IDENTIDADE VISUAL</h2>
+			<!-- <h2 class="titulo" indent="1">ANEXO V – MANUAL DE IDENTIDADE VISUAL</h2> -->
+			<h2 class="titulo" indent="1">ANEXO B V - MANUAL DE IDENTIDADE VISUAL</h2>
 			<object :data="fileSrc('Anexo B V - Manual de identidade visual.pdf')" type="application/pdf" width="100%" height="600px">
 			  <p>Seu navegador não suporta a exibição na página. <a :href="fileSrc('Anexo B V - Manual de identidade visual.pdf')">Clique aqui para baixar.</a></p>
 			</object>
-			<Comments :attr="{id:22, context:'ANEXO IV – TERMO DE USO E POLÍTICA DE PRIVACIDADE'}" v-if="estaConsulta.ativo == 1"></Comments>
+			<Comments :attr="{id:22, context:'ANEXO B V - MANUAL DE IDENTIDADE VISUAL'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section ref="allComments">
@@ -200,9 +205,16 @@ export default {
 			consultas: false,
 			estaConsulta: {},
 			anexos: [
-			'Anexo A - Edital de Credenciamento n 01_2018 - Expansao do WiFi (V.Final).pdf',
-			'Anexo B - Minuta do Termo de Contrato.pdf',
-			'Anexo B I - Termo de Referência FINAL - 2018-09-13.pdf',
+			// 'Anexo A - Edital de Credenciamento n 01_2018 - Expansao do WiFi (V.Final).pdf',
+			// 'Anexo B - Minuta do Termo de Contrato.pdf',
+			// 'Anexo B I - Termo de Referência FINAL - 2018-09-13.pdf',
+			// 'Anexo B II - Lista de localidades.pdf',
+			// 'Anexo B III - Postes e placas.pdf',
+			// 'Anexo B IV - Política de Privacidade.pdf',
+			// 'Anexo B V - Manual de identidade visual.pdf'
+			'Edital de Credenciamento n 01_2018.pdf',
+			'Anexo A - Minuta do Termo de Contrato.pdf',
+			'Anexo B I - Termo de Referência.pdf',
 			'Anexo B II - Lista de localidades.pdf',
 			'Anexo B III - Postes e placas.pdf',
 			'Anexo B IV - Política de Privacidade.pdf',
@@ -215,11 +227,9 @@ export default {
 	},
 	components: {
 		PageTop,
-		// Diagnostico,
 		Indice,
 		Comments,
 		CommentsLoader,
-		// Mapa,
 		Apoio,
 		AnexoA,
 		AnexoB,
@@ -249,12 +259,6 @@ export default {
 		filterConsultas(){
 			this.consultas = this.$store.state.consultas;
 			this.estaConsulta = this.consultas.filter(esta => esta.id_consulta == this.$route.meta.id )[0];
-			// let app = this
-			// this.consultas.map(function(index) {
-			// 	if (parseInt(index.id_consulta) == parseInt(app.$route.meta.id)) {
-			// 		app.estaConsulta = index
-			// 	}
-			// })
 		},
 		consultaState(){ return (this.estaConsulta.ativo == '1' ? "aberta" : "fechada") },
 		listaTitulos() {

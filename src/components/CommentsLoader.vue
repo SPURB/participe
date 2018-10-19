@@ -10,47 +10,47 @@
 </template>
 
 <script>
-import axios from 'axios';
-import { commentsMutations } from '@/mixins/commentsMutations' 
+import axios from 'axios'
+import { commentsMutations } from '@/mixins/commentsMutations'
 
 export default {
-	name: 'CommentsLoader',
-	mixins:[ commentsMutations ],
-	data () {
-		return {
-			comments: false,
-		}
-	},
-	props:['attr'],
-	computed:{ apiPath(){ return this.$store.getters.apiPath} }, 
-	mounted(){ this.loadThisComments() },
-	watch: {
-		comments(){
-			this.comments ? this.$store.state.commentsLoaded = true : this.$store.state.commentsLoaded = false;
-			this.decodeComments(this.comments)
-		}
-	},
-	methods:{
-		loadThisComments(){
-			let app = this;
-			axios.post(this.apiPath + 'members/search/',{
-				"idConsulta":"="+app.$route.meta.id,
-				"public":"=1"}
-			)
-			.then(function(response) {
-				app.comments = response.data
-			})
-			.catch(function (error){
-				console.log(error)
-			})
-		},
-		filterDate(dataString){
-			let d = dataString.slice(8,10)
-			let m = dataString.slice(5,7)
-			let a = dataString.slice(0,4)
-			return d+'/'+m+'/'+a
-		}
-	}
+  name: 'CommentsLoader',
+  mixins: [ commentsMutations ],
+  data () {
+    return {
+      comments: false
+    }
+  },
+  props: ['attr'],
+  computed: { apiPath () { return this.$store.getters.apiPath } },
+  mounted () { this.loadThisComments() },
+  watch: {
+    comments () {
+      this.comments ? this.$store.state.commentsLoaded = true : this.$store.state.commentsLoaded = false
+      this.decodeComments(this.comments)
+    }
+  },
+  methods: {
+    loadThisComments () {
+      let app = this
+      axios.post(this.apiPath + 'members/search/', {
+        'idConsulta': '=' + app.$route.meta.id,
+        'public': '=1' }
+      )
+        .then(function (response) {
+          app.comments = response.data
+        })
+        .catch(function (error) {
+          console.log(error)
+        })
+    },
+    filterDate (dataString) {
+      let d = dataString.slice(8, 10)
+      let m = dataString.slice(5, 7)
+      let a = dataString.slice(0, 4)
+      return d + '/' + m + '/' + a
+    }
+  }
 }
 </script>
 

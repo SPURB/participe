@@ -21,9 +21,9 @@
 </template>
 
 <script>
-	export default {
-		name: 'CommentUn',
-	}
+export default {
+  name: 'CommentUn'
+}
 </script>
 
 <style lang="scss" scoped>

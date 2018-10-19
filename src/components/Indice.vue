@@ -9,21 +9,21 @@
 
 <script>
 export default {
-	name: 'Indice',
-	props: [ 'titulos' ],
-	mounted() {
-	},
-	methods: {
-		rolar(obj) {
-			window.scrollBy({
-				top: obj.getBoundingClientRect().y - 30,
-				left: 0,
-				behavior: 'smooth'
-			});
-		},
-		topo() { window.scrollTo({top: window.innerHeight, behavior: 'smooth'}) },
-	},
-};
+  name: 'Indice',
+  props: [ 'titulos' ],
+  mounted () {
+  },
+  methods: {
+    rolar (obj) {
+      window.scrollBy({
+        top: obj.getBoundingClientRect().y - 30,
+        left: 0,
+        behavior: 'smooth'
+      })
+    },
+    topo () { window.scrollTo({ top: window.innerHeight, behavior: 'smooth' }) }
+  }
+}
 </script>
 
 <style lang="scss">
@@ -101,7 +101,7 @@ div.Indice {
 			&::before { opacity: 1; };
 		};
 
-		i {			
+		i {
 			line-height: 40px;
 			height: 40px;
 			width: 40px;
@@ -118,7 +118,7 @@ div.Indice {
 			transition: all ease-in .1s;
 			font-size: 14px;
 			color: #333;
-		};		
+		};
 
 		@media (max-width: 1200px) {
 			&::before { display: none; };
@@ -162,7 +162,7 @@ div.Indice {
 				border: 1px solid #EB5757;
 				border-radius: 2px;
 				color: #EB5757;
-				max-width: 100%;				
+				max-width: 100%;
 			};
 		};
 	};

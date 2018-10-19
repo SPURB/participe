@@ -35,14 +35,14 @@
 
 <script>
 export default {
-	name: 'ProjetosColocalizados',
-	methods: {
-		imgSrc(caminho) {
-			let url = this.$store.getters.basePath + caminho
-			return url.toString()
-		}
-	}
-};
+  name: 'ProjetosColocalizados',
+  methods: {
+    imgSrc (caminho) {
+      let url = this.$store.getters.basePath + caminho
+      return url.toString()
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

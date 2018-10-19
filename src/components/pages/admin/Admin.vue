@@ -10,26 +10,26 @@
 </template>
 
 <script>
-import AdminSide from '@/components/pages/admin/AdminSide';
+import AdminSide from '@/components/pages/admin/AdminSide'
 
 export default {
-	nome: 'Admin',
-	components: {
-		AdminSide
-	},
-	data() {
-		return {
-		}
-	},
-	computed:{
-		infoAdmin (){ return this.$store.state.infoAdmin},
-		isAdmin(){ return this.$store.state.isAdmin}
-	},
-	methods: {
-		dataDisplay(data) {
-			return data.substring(8,10) + '/' + data.substring(5,7) + '/' + data.substring(0,4);
-		},
-	},
+  nome: 'Admin',
+  components: {
+    AdminSide
+  },
+  data () {
+    return {
+    }
+  },
+  computed: {
+    infoAdmin () { return this.$store.state.infoAdmin },
+    isAdmin () { return this.$store.state.isAdmin }
+  },
+  methods: {
+    dataDisplay (data) {
+      return data.substring(8, 10) + '/' + data.substring(5, 7) + '/' + data.substring(0, 4)
+    }
+  }
 }
 </script>
 

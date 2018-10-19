@@ -55,7 +55,7 @@
 <p>11.5. Sem prejuízo, este Termo de Uso poderá ser modificado ou atualizado a qualquer tempo. Contudo, só será considerado válido e eficaz após novo consentimento expresso do Usuário, que terá acesso prévio ao texto alterado.</p>
 <p>11.6. Este Termo de Uso é regido pelas leis vigentes na República Federativa do Brasil. Para dirimir eventuais conflitos, as partes elegem o Foro Central da Comarca de São Paulo – SP, e excluem qualquer outro, por mais privilegiado que seja.</p>
 <p>11.7. A plena aceitação deste Termo de Uso é requisito obrigatório para utilização do serviço. Caso o Usuário não concorde com as condições aqui previstas, não deverá se utilizar deste.</p>
-<br /> 
+<br />
 <slot></slot>
 <center><h4>IV.B - POLÍTICA DE PRIVACIDADE</h4></center>
 <p>O presente documento tem por objetivo informar sobre a coleta, armazenamento e uso de dados coletados na prestação do serviço de Wi-Fi gratuito no âmbito do Programa WiFi Livre SP e dispõe sobre a finalidade da coleta e armazenamento de dados ("Política de Privacidade").</p>
@@ -100,7 +100,7 @@
 </template>
 
 <script>
-	export default {
-		name: 'AnexoBIV'
-	};
+export default {
+  name: 'AnexoBIV'
+}
 </script>

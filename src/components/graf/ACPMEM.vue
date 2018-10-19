@@ -43,14 +43,14 @@
 
 <script>
 export default {
-	name: 'ACPMEM',
-	methods: {
-		imgSrc(caminho) {
-			let url = this.$store.getters.basePath + caminho
-			return url.toString()
-		}
-	}
-};
+  name: 'ACPMEM',
+  methods: {
+    imgSrc (caminho) {
+      let url = this.$store.getters.basePath + caminho
+      return url.toString()
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

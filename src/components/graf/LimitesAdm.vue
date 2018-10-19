@@ -55,14 +55,14 @@
 
 <script>
 export default {
-	name: 'LimitesAdm',
-	methods: {
-		imgSrc(caminho) {
-			let url = this.$store.getters.basePath + caminho
-			return url.toString()
-		}
-	}
-};
+  name: 'LimitesAdm',
+  methods: {
+    imgSrc (caminho) {
+      let url = this.$store.getters.basePath + caminho
+      return url.toString()
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

@@ -215,7 +215,7 @@ i)	Relação de equipamentos e demais materiais utilizados para instalação dos
 <p>9.4. A solução de monitoramento da rede deverá permitir a formulação de relatórios de todos os itens disponíveis da solução pela vigência do instrumento firmado entre as partes.</p>
 <p>9.5. A Interessada deverá disponibilizar acesso de maneira online aos relatórios descritos abaixo, além de fornecer relatórios digitais até o 5º dia útil do mês subsequente ao mês aferido, estando a Interessada sujeito às penalidades em caso de atraso dos mesmos, sendo:</p>
 <p>9.5.1. Relatório estatístico, em formato de planilha, mensal, contendo as seguintes informações:
-	<br />	
+	<br />
 a)	Tabela com registro da quantidade de conexões por localidade.
 <br />
 b)	Números mínimo, médio e máximo de conexões simultâneas por localidade.
@@ -295,7 +295,7 @@ d)	0,7 quando for identificada a presença superior a 71% dos usuários estimado
 <p>10.6.2.1. A SMIT/CCD poderá utilizar de ferramentas similares para a medição, ao seu critério, desde que sejam homologadas pelo NIC.br.</p>
 <p>10.6.2.2. O índice de velocidade por usuário “IS”, utilizará a medição de velocidade de internet por sessão “Vmed” considerando a média das coletas realizadas no mês e o menor valor entre <i>download</i> e <i>upload</i> na medição:
 			<br />
-			<slot name="formula_02"></slot>			
+			<slot name="formula_02"></slot>
 		</p>
 <p>10.6.2.3. Caso o índice de desempenho de internet “IS”, medido de acordo com o item 10.6.2.2, seja superior a 1 (um), serão aplicadas as penalidades previstas no item 14 deste Termo de Referência.</p>
 <p>10.7. O início das medições se dará após o exaurimento dos prazos segundo as condições previstas no item 8 deste Termo de Referência, ou seja, quando o serviço estiver em operação.</p>
@@ -578,11 +578,11 @@ i)	Encerrar problemas/erros conhecidos.
 	</table>
 	<p>Onde <strong><i>“L”</i></strong> é o número de localidades contempladas pela proposta da Interessada.</p>
 	<slot name="14"></slot>
-	</div>	
+	</div>
 </template>
 
 <script>
-	export default {
-		name: 'AnexoBI'
-	};
+export default {
+  name: 'AnexoBI'
+}
 </script>

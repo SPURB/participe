@@ -11,7 +11,7 @@
 			<p>A estratégia de ordenamento territorial proposta pelo Plano Diretor Estratégico do Município de São Paulo – PDE, Lei nº 16.050/2014, observando os princípios, diretrizes e objetivos da Política Urbana e as dimensões social, ambiental, imobiliária, econômica e cultural, estrutura-se a partir da divisão do território em áreas homogêneas: as Macroáreas.</p>
 			<p>A Macroárea de Estruturação Metropolitana – MEM, devido ao seu potencial de transformação, tem papel estratégico na reestruturação do Município e é neste contexto que se insere o Arco Pinheiros – ACP, subsetor da Orla Ferroviária e Fluvial.</p>
 			<p>Os estudos introdutórios para o Arco Pinheiros, ora apresentados pela Prefeitura Municipal, por meio da Secretaria Municipal de Urbanismo e Licenciamento – SMUL complementam os estudos já elaborados para os demais subsetores da Orla ferroviária e Fluvial, propostos pelo PDE.</p>
-			
+
 			<figure>
 				<ACPMEM></ACPMEM>
 				<figcaption>Subsetor Arco Pinheiros do Setor Orla Ferroviária e Fluvial</figcaption>
@@ -157,7 +157,7 @@
 			<p>Os cenários de desenvolvimento da CEAGESP dependem de diferentes esferas do poder público e vão da permanência total da atual atividade até sua transformação integral, podendo haver inúmeras formas de se transformar esse território.</p>
 			<p>Na hipótese da transformação integral, o parcelamento da gleba deverá atentar para a implantação de arruamento integrado ao sistema viário existente no seu entorno, contribuindo para o rompimento da barreira representada por esta grande gleba, melhorando a acessibilidade local e promovendo novos espaços públicos que façam a ligação entre a Av. Dr. Gastão Vidigal e a Marg. Pinheiros.</p>
 			<p>Neste sentido, algumas diretrizes para parcelamento foram estudadas pela SPUrbanismo em sua Nota Técnica referente ao entreposto, publicada em Outubro de 2016.</p>
-			<p>Destaca-se a relevância do pavilhão central que ostenta atributos de relevo para atividade de mercado de gêneros alimentícios e afins, inclusive associada a outros usos que promovam dinâmica urbana e apoio aos outros usos prospectados para a gleba, a exemplo da criação de um território de inovação.</p>			
+			<p>Destaca-se a relevância do pavilhão central que ostenta atributos de relevo para atividade de mercado de gêneros alimentícios e afins, inclusive associada a outros usos que promovam dinâmica urbana e apoio aos outros usos prospectados para a gleba, a exemplo da criação de um território de inovação.</p>
 			<h5>1.8. Setor: Av. Dr. Gastão Vidigal<br>
 			<div class="sub">Diretriz: Garantir que o desenvolvimento imobiliário da Av. Dr. Gastão Vidigal,  dependente da implantação do futuro corredor, contemple a transformação das diversas áreas de ZEIS-3 que se encontram no setor</div></h5>
 			<p>O setor da Av. Dr. Gastão Vidigal é hoje uma Zona de Estruturação Metropolitana Prevista - ZEMP, cuja liberação para seus lotes de índices de maior adensamento depende da implementação de um futuro corredor de ônibus. A especificidade deste setor é a presença de diversas áreas de ZEIS – 3, o que poderá facilitar a implantação de novos conjuntos habitacionais de interesse social na área, promovendo um adensamento de maior equilíbrio social.</p>
@@ -322,13 +322,13 @@
 			<h5>4.1. Implantar rede ambiental, conectando áreas verdes urbanas, equipamentos relevantes e diferentes modais de transporte, por meio de eixos ambientais.</h5>
 			<p>A implantação de rede ambiental realiza-se pelo planejamento das soluções de mitigação dos problemas ambientais (como a proposição de arborização para sombreamento) de maneira articulada com os diferentes modais da rede de circulação e seus equipamentos (estações de metrô e trem, pontos de ônibus, etc.), de modo a conectar parques, praças, demais áreas verdes urbanas e equipamentos relevantes (saúde, educação, esporte, etc.), existentes e projetados, por meio de eixos ambientais, qualificadores do espaço e referenciais na paisagem (alamedas e bulevares), incentivando a utilização do espaço público para o lazer e deslocamento não motorizado e disponibilizando caminhos ecológicos para a fauna.</p>
 			<p>Os bulevares e alamedas são vias arborizadas e equipadas e sua implantação de maneira planejada visa à criação de percursos sombreados, acessíveis e iluminados, como meio de proporcionar maior segurança e conforto ao percurso de pedestres e ciclistas, além de orientar os principais deslocamentos.</p>
-			
+
 			<figure class="coluna">
 				<img :src="imgSrc('arquivos/arco-pinheiros/alamedas-e-bulevares_2.png')">
 			</figure>
 			<figure class="coluna">
 				<img :src="imgSrc('arquivos/arco-pinheiros/alamedas-e-bulevares_1.png')">
-				<figcaption>Representação dos eixos ambientais - bulevares e alamedas, respectivamente</figcaption>	
+				<figcaption>Representação dos eixos ambientais - bulevares e alamedas, respectivamente</figcaption>
 			</figure>
 
 			<h5>4.2. Aumentar a cobertura vegetal em áreas impermeabilizadas.</h5>
@@ -490,137 +490,136 @@
 </template>
 
 <script>
-const Mapa = () => import('@/components/Mapa')
 import PageTop from '@/components/PageTop'
 import Diagnostico from '@/components/Diagnostico'
-import Indice from '@/components/Indice';
-import Comments from '@/components/Comments';
-import CommentsLoader from '@/components/CommentsLoader';
-import Apoio from '@/components/Apoio';
-import ProcessoPIU from '@/components/graf/ProcessoPIU';
-import ConselhoGestor from '@/components/graf/ConselhoGestor';
-import LimitesAdm from '@/components/graf/LimitesAdm';
-import ProjetosColocalizados from '@/components/graf/ProjetosColocalizados';
-import ACPMEM from '@/components/graf/ACPMEM';
+import Indice from '@/components/Indice'
+import Comments from '@/components/Comments'
+import CommentsLoader from '@/components/CommentsLoader'
+import Apoio from '@/components/Apoio'
+import ProcessoPIU from '@/components/graf/ProcessoPIU'
+import ConselhoGestor from '@/components/graf/ConselhoGestor'
+import LimitesAdm from '@/components/graf/LimitesAdm'
+import ProjetosColocalizados from '@/components/graf/ProjetosColocalizados'
+import ACPMEM from '@/components/graf/ACPMEM'
+const Mapa = () => import('@/components/Mapa')
 
 export default {
-	name: 'ArcoPinheiros',
-	data() {
-		return {
-			titulosLimpo: [],
-			comments_atrr: undefined,
-			// gallery_attrs: {},
-			mapa_attrs: {
-				center: [ -5202550.487352, -2698002.011056 ],
-				zoom: 13,
-				layers:[
-					{
-						title: "Perímetro de abrangência Arco Pinheiros", 
-						path: this.$store.getters.basePath + 'arquivos/arco-pinheiros/perimetro_ACP.kml',
-						stroke_color: 'rgba(255, 135, 0, 1)',
-						fill_color: 'rgba(255, 255, 255, .1)',
-						stroke_width: 2,
-					},
-				]
-			},
-			consultas: false,
-			estaConsulta: {}
-		}
-	},
-	computed: {
-		commentsLoaded() { return this.$store.state.commentsLoaded },
-	},
-	components: {
-		PageTop,
-		Diagnostico,
-		Indice,
-		Comments,
-		CommentsLoader,
-		Mapa,
-		Apoio,
-		ProcessoPIU,
-		ConselhoGestor,
-		LimitesAdm,
-		ProjetosColocalizados,
-		ACPMEM
-	},
-	created() {
-		this.$store.dispatch("fetchConsultas", { self: this });
-		this.consultas = this.$store.state.consultas;
-	},
-	mounted() {
-		this.listaTitulos();
-	},
-	updated() {
-		this.alteraIndice();
-	},
-	methods: {
-		scrollToallComments(){
-			let appRef = this.$refs.allComments;
-			window.scrollBy({
-				top: appRef.getBoundingClientRect().y - 30,
-				left: 0,
-				behavior: 'smooth'
-			});
-		},
-		filterConsultas(){
-			this.consultas = this.$store.state.consultas;
-			this.estaConsulta = this.consultas.filter(esta => esta.id_consulta == this.$route.meta.id )[0];
-			// let app = this
-			// this.consultas.map(function(index) {
-			// 	if (parseInt(index.id_consulta) == parseInt(app.$route.meta.id)) {
-			// 		app.estaConsulta = index
-			// 	}
-			// })
-		},
-		consultaState(){ return (this.estaConsulta.ativo == '1' ? "aberta" : "fechada") },
-		listaTitulos() {
-			let app = this;
-			let titulosBruto = Array.from(this.$refs.conteudoConsulta.getElementsByClassName('titulo'));
-			let titulos = [];
-			let id = 0;
-			titulosBruto.map(function(index) {
+  name: 'ArcoPinheiros',
+  data () {
+    return {
+      titulosLimpo: [],
+      comments_atrr: undefined,
+      // gallery_attrs: {},
+      mapa_attrs: {
+        center: [ -5202550.487352, -2698002.011056 ],
+        zoom: 13,
+        layers: [
+          {
+            title: 'Perímetro de abrangência Arco Pinheiros',
+            path: this.$store.getters.basePath + 'arquivos/arco-pinheiros/perimetro_ACP.kml',
+            stroke_color: 'rgba(255, 135, 0, 1)',
+            fill_color: 'rgba(255, 255, 255, .1)',
+            stroke_width: 2
+          }
+        ]
+      },
+      consultas: false,
+      estaConsulta: {}
+    }
+  },
+  computed: {
+    commentsLoaded () { return this.$store.state.commentsLoaded }
+  },
+  components: {
+    PageTop,
+    Diagnostico,
+    Indice,
+    Comments,
+    CommentsLoader,
+    Mapa,
+    Apoio,
+    ProcessoPIU,
+    ConselhoGestor,
+    LimitesAdm,
+    ProjetosColocalizados,
+    ACPMEM
+  },
+  created () {
+    this.$store.dispatch('fetchConsultas', { self: this })
+    this.consultas = this.$store.state.consultas
+  },
+  mounted () {
+    this.listaTitulos()
+  },
+  updated () {
+    this.alteraIndice()
+  },
+  methods: {
+    scrollToallComments () {
+      let appRef = this.$refs.allComments
+      window.scrollBy({
+        top: appRef.getBoundingClientRect().y - 30,
+        left: 0,
+        behavior: 'smooth'
+      })
+    },
+    filterConsultas () {
+      this.consultas = this.$store.state.consultas
+      this.estaConsulta = this.consultas.filter(esta => esta.id_consulta == this.$route.meta.id)[0]
+      // let app = this
+      // this.consultas.map(function(index) {
+      // 	if (parseInt(index.id_consulta) == parseInt(app.$route.meta.id)) {
+      // 		app.estaConsulta = index
+      // 	}
+      // })
+    },
+    consultaState () { return (this.estaConsulta.ativo == '1' ? 'aberta' : 'fechada') },
+    listaTitulos () {
+      let app = this
+      let titulosBruto = Array.from(this.$refs.conteudoConsulta.getElementsByClassName('titulo'))
+      let titulos = []
+      let id = 0
+      titulosBruto.map(function (index) {
+        let titulo = {
+          id: id,
+          nome: index.innerText,
+          indent: index.attributes.indent.value,
+          offsetObj: index,
+          ativo: false
+        }
 
-				let titulo = {
-					id: id,
-					nome: index.innerText,
-					indent: index.attributes.indent.value,
-					offsetObj: index,
-					ativo: false
-				};
-
-				id++;
-				titulos.push(titulo);
-			});
-			this.titulosLimpo = titulos;
-		},
-		setaBaixo() {
-			window.scrollTo({ top: Math.round(window.innerHeight), behavior: 'smooth'})
-		},
-		alteraIndice() {
-			let app = this;
-			let sectionCollection = Array.from(this.$el.getElementsByTagName('section'));		
-			window.addEventListener('scroll', function() {
-				sectionCollection.map(function(index, i) {
-					if (window.scrollY >= index.offsetTop - (window.innerHeight)/2 && window.scrollY < (index.offsetTop + index.offsetHeight) - (window.innerHeight)/4) {
-						app.titulosLimpo[i].ativo = true
-					} else { app.titulosLimpo[i].ativo = false };
-				});
-			}, {
-				capture: true,
-				passive: true
-			});
-		},
-		imgSrc(caminho) {
-			let url = this.$store.getters.basePath + caminho
-			return url.toString()
-		},
-		backgroundImg(caminho) {
-			let url = this.$store.getters.basePath + caminho
-			return 'background-image: url(' + url + ');'
-		}
-	},
-};
+        id++
+        titulos.push(titulo)
+      })
+      this.titulosLimpo = titulos
+    },
+    setaBaixo () {
+      window.scrollTo({ top: Math.round(window.innerHeight), behavior: 'smooth' })
+    },
+    alteraIndice () {
+      let app = this
+      let sectionCollection = Array.from(this.$el.getElementsByTagName('section'))
+      window.addEventListener('scroll', function () {
+        sectionCollection.map(function (index, i) {
+          if (window.scrollY >= index.offsetTop - (window.innerHeight) / 2 && window.scrollY < (index.offsetTop + index.offsetHeight) - (window.innerHeight) / 4) {
+            app.titulosLimpo[i].ativo = true
+          } else { app.titulosLimpo[i].ativo = false };
+        })
+      }, {
+        capture: true,
+        passive: true
+      })
+    },
+    imgSrc (caminho) {
+      let url = this.$store.getters.basePath + caminho
+      return url.toString()
+    },
+    backgroundImg (caminho) {
+      let url = this.$store.getters.basePath + caminho
+      return 'background-image: url(' + url + ');'
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -637,7 +636,6 @@ div.ArcoPinheiros {
 	padding-bottom: 4rem;
 	z-index: 0;
 	/*@media (max-width: 600px) { font-size: 16px; }*/
-
 
 	h2, h3, h4, h5, h6, p, ul, ol {
 		margin: 0 auto 1rem auto;
@@ -782,11 +780,11 @@ div.ArcoPinheiros {
 		margin-top: 0;
 		font-family: inherit;
 
-		@media (max-width: 600px) {			
+		@media (max-width: 600px) {
 			max-height: 160px;
 			overflow-y: auto;
 		}
-		
+
 		li {
 			display: inline-flex;
 			align-items: center;
@@ -830,22 +828,22 @@ div.ArcoPinheiros {
 		};
 
 		@media (max-width: 600px) {
-			li { 
+			li {
 				display: block;
 				width: 100%;
 				margin: 0 0 1rem 0;
 				padding: 0;
 				text-align: left;
 
-				div { 
+				div {
 					display: inline-block;
 					vertical-align: middle;
-				}; 
+				};
 			};
 		};
 	};
 
-	div.tableWrap {			
+	div.tableWrap {
 		overflow-x: auto;
 		background: #F5F5F5;
 		max-width: 700px;
@@ -950,7 +948,7 @@ div.ArcoPinheiros {
 					font-size: larger;
 					color: #333;
 					display: block;
-					font-weight: bold;	
+					font-weight: bold;
 				};
 			};
 
@@ -1000,14 +998,14 @@ div.ArcoPinheiros {
 			transition: all .1s;
 
 			a {
-				display: flex;					
+				display: flex;
 				flex-direction: row;
 				align-items: center;
 				padding: 1rem;
 				color: inherit;
 
-				i { 
-					margin-right: 1rem; 
+				i {
+					margin-right: 1rem;
 					align-self:center
 				};
 
@@ -1150,6 +1148,6 @@ div.ArcoPinheiros {
 			page-break-inside: avoid;
 			max-height: 100%;
 		};
-	}	
+	}
 }
 </style>

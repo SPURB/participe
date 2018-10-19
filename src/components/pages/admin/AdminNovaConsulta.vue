@@ -5,33 +5,33 @@
 
 			<fieldset>
 				<legend>Nome <span>(obrigatório)</span></legend>
-				<input 
+				<input
 					name="nome"
-					type="text" 
+					type="text"
 					v-validate="{
 						required: true,
 					}"
-					id="input_nomePublico" 
-					required 
+					id="input_nomePublico"
+					required
 					v-model="nome_publico" >
 			</fieldset>
 			<fieldset>
 				<legend>Status <span>(obrigatório)</span></legend>
-				<input 
-					type="radio" 
-					id="input_status_aberta" 
-					name="input_status" 
-					required 
-					checked 
-					value="1" 
+				<input
+					type="radio"
+					id="input_status_aberta"
+					name="input_status"
+					required
+					checked
+					value="1"
 					v-model="ativo">
 				<label for="input_status_aberta" class="status">Consulta aberta</label>
-				<input 
-					type="radio" 
-					id="input_status_encerrada" 
-					name="input_status" 
-					required 
-					value="0" 
+				<input
+					type="radio"
+					id="input_status_encerrada"
+					name="input_status"
+					required
+					value="0"
 					v-model="ativo">
 				<label for="input_status_encerrada" class="status">Consulta fechada</label>
 			</fieldset>
@@ -39,68 +39,68 @@
 				<legend>Período da consulta <span>(obrigatório)</span></legend>
 				<div>
 					<label for="input_dataCadastro">Início</label>
-					<input 
-						type="date" 
-						id="input_dataCadastro" 
-						required 
+					<input
+						type="date"
+						id="input_dataCadastro"
+						required
 						v-model="data_cadastro"
 					>
 				</div>
 				<div>
 					<label for="input_dataFinal">Final</label>
-					<input 
-						type="date" 
-						id="input_dataFinal" 
-						required 
+					<input
+						type="date"
+						id="input_dataFinal"
+						required
 						v-model="data_final"
 					>
 				</div>
 			</fieldset>
 			<fieldset>
 				<legend>Texto introdutório <span>(obrigatório)</span></legend>
-				<textarea 
+				<textarea
 					name="texto_intro"
 					type="text"
-					id="input_textoIntro" 
+					id="input_textoIntro"
 					v-validate="{
 						required: true,
 						max: 480
 					}"
-					required 
-					placeholder="Até 480 caracteres" 
-					maxlength="480" 
+					required
+					placeholder="Até 480 caracteres"
+					maxlength="480"
 					v-model="texto_intro"></textarea>
 			</fieldset>
 			<fieldset>
 				<legend>Hiperlinks <span>(obrigatório)</span></legend>
 				<div>
 					<label for="input_urlConsulta">URL da consulta</label>
-					<input 
+					<input
 						name="URL da consulta"
-						type="text" 
+						type="text"
 						v-validate="'required|text'"
-						id="input_urlConsulta" 
-						placeholder="Obrigatório" 
+						id="input_urlConsulta"
+						placeholder="Obrigatório"
 						v-model="url_consulta">
 				</div>
 				<div>
 					<label for="input_urlCapa">URL da imagem de capa</label>
-					<input 
+					<input
 						name="URL da imagem de capa"
-						type="text" 
+						type="text"
 						v-validate="'required|url'"
-						id="input_urlCapa" 
-						placeholder="Obrigatório" 
+						id="input_urlCapa"
+						placeholder="Obrigatório"
 						v-model="url_capa">
 				</div>
 				<div>
 					<label for="input_urlDevolutiva">URL da devolutiva</label>
-					<input 
+					<input
 						name="URL da devolutiva"
-						type="text" 
+						type="text"
 						v-validate="'text'"
-						id="input_urlDevolutiva" 
-						placeholder="Não obrigatório" 
+						id="input_urlDevolutiva"
+						placeholder="Não obrigatório"
 						v-model="url_devolutiva">
 				</div>
 			</fieldset>
@@ -113,75 +113,74 @@
 <script>
 import axios from 'axios'
 import { mapFields } from 'vee-validate'
-import { adminCommon } from '@/mixins/adminCommon' 
+import { adminCommon } from '@/mixins/adminCommon'
 
 export default {
-	mixins:[ adminCommon ],
-	nome: 'AdminNovaConsulta',
-	computed:{
-		periodoPadrao() {
-			let hoje = new Date() // objeto Date "Date 2018-08-16T14:27:38.500Z"
-			let hojeFull = hoje.toISOString().substring(0, hoje.toISOString().indexOf('T')) // "2018-08-16T14:27:38.500Z" -> "2018-08-16"
-			let dataFinal = new Date(hoje.setDate(hoje.getDate() + 20)) // soma vinte dias e cria um novo objeto Date
-			let dataFinalFull = dataFinal.toISOString().substring(0, dataFinal.toISOString().indexOf('T')) // "2018-08-16T14:27:38.500Z" -> "2018-08-16"
-			return {
-				hoje: hojeFull, //  1
-				fim: dataFinalFull  // -1
-			}
-		},
-		...mapFields({ // https://baianat.github.io/vee-validate/guide/flags.html
-			url: 'url',
-			text: ''
-		}),
-	},
-	methods:{
-		criarConsulta(){
-			const sendObj = {
-				"nome":this.nome_db,
-				"ativo":"="+this.ativo, 
-				"dataCadastro": this.data_cadastro,
-				"dataFinal": this.data_final,
-				"textoIntro": this.texto_intro,
-				"nomePublico":this.nome_publico,
-				"urlConsulta":this.url_consulta,
-				"urlCapa":this.url_capa,
-				"urlDevolutiva":this.url_devolutiva
-			}
-			// console.log(sendObj)
+  mixins: [ adminCommon ],
+  nome: 'AdminNovaConsulta',
+  computed: {
+    periodoPadrao () {
+      let hoje = new Date() // objeto Date "Date 2018-08-16T14:27:38.500Z"
+      let hojeFull = hoje.toISOString().substring(0, hoje.toISOString().indexOf('T')) // "2018-08-16T14:27:38.500Z" -> "2018-08-16"
+      let dataFinal = new Date(hoje.setDate(hoje.getDate() + 20)) // soma vinte dias e cria um novo objeto Date
+      let dataFinalFull = dataFinal.toISOString().substring(0, dataFinal.toISOString().indexOf('T')) // "2018-08-16T14:27:38.500Z" -> "2018-08-16"
+      return {
+        hoje: hojeFull, //  1
+        fim: dataFinalFull // -1
+      }
+    },
+    ...mapFields({ // https://baianat.github.io/vee-validate/guide/flags.html
+      url: 'url',
+      text: ''
+    })
+  },
+  methods: {
+    criarConsulta () {
+      const sendObj = {
+        'nome': this.nome_db,
+        'ativo': '=' + this.ativo,
+        'dataCadastro': this.data_cadastro,
+        'dataFinal': this.data_final,
+        'textoIntro': this.texto_intro,
+        'nomePublico': this.nome_publico,
+        'urlConsulta': this.url_consulta,
+        'urlCapa': this.url_capa,
+        'urlDevolutiva': this.url_devolutiva
+      }
+      // console.log(sendObj)
 
-			const app = this;
-			axios.post(this.apiPath+'consultas',sendObj)
-			.then(function (response) {
-				// console.log(response);
-				alert("Sucesso d~.~b")
-				app.$store.dispatch("fetchConsultas", { self: this })
-				app.clearInputs()
-				app.$router.push('/admin') 
-			})
-			.catch(function (error) {
-				alert("Estamos com um erro de comunicação com o servidor. Tente novamente mais tarde.")
-			});
-
-		},
-	},
-	watch:{
-		nome_publico(noSlug){
-			this.nome_db = noSlug
-				.toLowerCase()
-				.replace(/\s/g, '_')
-				.replace(/[àáâãäå]/g,"a")
-				.replace(/[èéêë]/g,"e")
-				.replace(/[ìíîï]/g,"i")
-				.replace(/[òóôõö]/g,"o")
-				.replace(/[ùúûü]/g,"u")
-				.replace(/[æ]/g,"ae")
-				.replace(/[ýÿ]/g,"y")
-				.replace(/[ñ]/g,"n")
-				.replace(/[ç]/g,"c")
-				.replace(/[^a-z0-9]/gi,'_')
-		}
-	}
-};
+      const app = this
+      axios.post(this.apiPath + 'consultas', sendObj)
+        .then(function (response) {
+          // console.log(response);
+          alert('Sucesso d~.~b')
+          app.$store.dispatch('fetchConsultas', { self: this })
+          app.clearInputs()
+          app.$router.push('/admin')
+        })
+        .catch(function (error) {
+          alert('Estamos com um erro de comunicação com o servidor. Tente novamente mais tarde.')
+        })
+    }
+  },
+  watch: {
+    nome_publico (noSlug) {
+      this.nome_db = noSlug
+        .toLowerCase()
+        .replace(/\s/g, '_')
+        .replace(/[àáâãäå]/g, 'a')
+        .replace(/[èéêë]/g, 'e')
+        .replace(/[ìíîï]/g, 'i')
+        .replace(/[òóôõö]/g, 'o')
+        .replace(/[ùúûü]/g, 'u')
+        .replace(/[æ]/g, 'ae')
+        .replace(/[ýÿ]/g, 'y')
+        .replace(/[ñ]/g, 'n')
+        .replace(/[ç]/g, 'c')
+        .replace(/[^a-z0-9]/gi, '_')
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

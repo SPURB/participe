@@ -2,7 +2,7 @@
 	<div class="Anhembi2" ref="conteudoConsulta">
 
 		<div class="top" style="background-image: url('https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/capa.jpg'); background-color: #fdf8f2;">
-			
+
 			<div v-show="estaConsulta.nomePublico">
 				<h1>{{ estaConsulta.nomePublico }}</h1>
 				<div>2ª consulta pública – Projeto de Intervenção Urbana Anhembi</div>
@@ -218,7 +218,7 @@
 
 			<Comments :attr="{id:6, context:'Modelagem econômica da intervenção proposta'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
-		
+
 		<section>
 			<h3 class="titulo" indent="2">Premissas consideradas para a modelagem</h3>
 			<p>Para a realização dos estudos, foram definidas premissas com valor único, resultantes das possibilidades de transformação dos terrenos da ZOE Anhembi, além de premissas variáveis, que possibilitaram o estudo de cenários distintos para a estimativa de arrecadação de outorga onerosa.</p>
@@ -232,14 +232,14 @@
 				<li>CA médio total de 5,7, considerando a restrição de gabarito existente (COMAR).</li>
 			</ol>
 			<p>A fórmula de cálculo da OODC a ser utilizada é a mesma definida pela lei 16.050/2014 (PDE), portanto, para o obtenção do Valor de Cadastro foi estabelecida a média dos valores das faces de cada quadra (R$ 833,00 e R$ 966,86/m² para as quadras 283 e 284, respectivamente), o que resultou em um montante de arrecadação projetado no período de 15 a 20 anos.</p>
-			
+
 			<Comments :attr="{id:7, context:'Premissas consideradas para a modelagem'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section>
 			<h3 class="titulo" indent="2">Resultados da modelagem econômico-financeira</h3>
 			<p>Assim, havendo os três horizontes estudados de coeficiente de aproveitamento, resultam-se três cenários de arrecadação de Outorga Onerosa do Direito de Construir (OODC), conforme quadro abaixo:</p>
-			
+
 			<div class="tableWrap">
 				<table class="center">
 					<caption>Outorga Onerosa do Direito de Construir</caption>
@@ -263,7 +263,7 @@
 					</tbody>
 				</table>
 			</div>
-			
+
 			<Comments :attr="{id:8, context:'Resultados da modelagem econômico-financeira'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
@@ -276,7 +276,7 @@
 		</section>
 
 		<section>
-			<h2 class="titulo" indent="1">Modelo de Gestão Democrática</h2>	
+			<h2 class="titulo" indent="1">Modelo de Gestão Democrática</h2>
 
 			<ConselhoGestor></ConselhoGestor>
 
@@ -433,7 +433,7 @@
 				</a></li>
 			</ul>
 			<Comments :attr="{id:12, context:'Mapas'}" v-if="estaConsulta.ativo == 1"></Comments>
-		
+
 			<div class="tableWrap">
 				<table class="center">
 					<caption>QUADRO 1 – Percentuais de destinação de área pública</caption>
@@ -635,7 +635,7 @@
 				</table>
 				<div class="diretriz">
 					Diretriz
-					<span class="dir2">PRAÇAS</span> 
+					<span class="dir2">PRAÇAS</span>
 				</div>
 				<table>
 					<tr>
@@ -657,7 +657,7 @@
 					</tr>
 					<tr>
 						<td><span class="bold">Avenida Cruzeiro do Sul</span> <span class="cod">(EP.PA.a.06)</span> <span class="interv">IC</span></td>
-					</tr>		
+					</tr>
 				</table>
 				<div class="diretriz">
 					Diretriz
@@ -714,13 +714,13 @@
 				</div>
 				<div class="diretriz">
 					Diretriz
-					<span class="dir2">SISTEMA VIÁRIO</span> 
+					<span class="dir2">SISTEMA VIÁRIO</span>
 				</div>
 				<table>
 					<tr>
 						<td rowspan="20" class="col1">Alinhamento Viário <span class="cod">(AV)</span></td>
-						<td rowspan="9" class="col2">Abertura de novo viário (pista simples) <span class="cod">(a)</span></td>	
-						<td><span class="bold">Prolongamento da Rua João Navarro Botelho ‐ CEN‐X</span> <span class="cod">(MO.AV.a.01)</span>  <span class="interv">IB</span></td>			
+						<td rowspan="9" class="col2">Abertura de novo viário (pista simples) <span class="cod">(a)</span></td>
+						<td><span class="bold">Prolongamento da Rua João Navarro Botelho ‐ CEN‐X</span> <span class="cod">(MO.AV.a.01)</span>  <span class="interv">IB</span></td>
 					</tr>
 					<tr>
 						<td><span class="bold">Prolongamento da Rua Dr. Soares de Gouvea ‐ CEN‐XI</span> <span class="cod">(MO.AV.a.02)</span> <span class="interv">IB</span> </td>
@@ -814,7 +814,7 @@
 				</table>
 				<div class="diretriz">
 					Diretriz
-					<span class="dir2">CICLOVIA</span> 
+					<span class="dir2">CICLOVIA</span>
 				</div>
 				<table>
 					<tr>
@@ -828,7 +828,7 @@
 				</div>
 				<div class="diretriz">
 					Diretriz
-					<span class="dir2">EQUIPAMENTOS</span> 	
+					<span class="dir2">EQUIPAMENTOS</span>
 				</div>
 				<table>
 					<tr>
@@ -903,184 +903,183 @@
 </template>
 
 <script>
-import Indice from '@/components/Indice';
-import Comments from '@/components/Comments';
-import CommentsLoader from '@/components/CommentsLoader';
-import ProcessoPIU from '@/components/graf/ProcessoPIU';
-import ConselhoGestor from '@/components/graf/ConselhoGestor';
-import Galeria from '@/components/Galeria';
-import Mapa from '@/components/Mapa';
-import Minuta from '@/components/Minuta';
+import Indice from '@/components/Indice'
+import Comments from '@/components/Comments'
+import CommentsLoader from '@/components/CommentsLoader'
+import ProcessoPIU from '@/components/graf/ProcessoPIU'
+import ConselhoGestor from '@/components/graf/ConselhoGestor'
+import Galeria from '@/components/Galeria'
+import Mapa from '@/components/Mapa'
+import Minuta from '@/components/Minuta'
 import Apoio from '@/components/Apoio'
 
-	export default {
-		name: 'Anhembi2',
-		data() {
-			return {
-				titulosLimpo: [],
-				comments_atrr: undefined,
-				gallery_attrs: {
-					width:992,  // largura das imagens
-					height:557, // altura das imagens
-					images:[
-						{
-							url:"https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/galeria/ANH_AcaoAbrangencia_01.jpg",
-							state: true,
-							title: '',
-							icon: false,
-							legenda: 'Perímetro de abrangência e principais usos existentes',
-							id: 1
-						},
-						{
-							url:"https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/galeria/ANH_AcaoAbrangencia_02.jpg", 
-							state: false,
-							title: '',
-							icon: false,
-							legenda: 'Diretrizes urbanísticas para qualificação do eixoda Av. Olavo Fontoura',
-							id: 2
-						},
-						{
-							url:"https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/galeria/ANH_AcaoAbrangencia_03.jpg", 
-							state: false,
-							title: '',
-							icon: false,
-							legenda: 'Diretrizes urbanísticas - Conexões viárias',
-							id: 3
-						},
-						{
-							url:"https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/galeria/ANH_AcaoAbrangencia_04.jpg", 
-							state: false,
-							title: '',
-							icon: false,
-							legenda: 'Diretrizes urbanísticas - Conexões especiais',
-							id: 4
-						},
-						{
-							url:"https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/galeria/ANH_AcaoAbrangencia_05.jpg", 
-							state: false,
-							title: '',
-							icon: false,
-							legenda: 'Diretrizes urbanísticas - Áreas verdes',
-							id: 5
-						},
-						{
-							url:"https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/galeria/ANH_AcaoAbrangencia_06.jpg", 
-							state: false,
-							title: '',
-							icon: false,
-							legenda: 'Diretrizes urbanísticas consolidadas e áreas passíveis de transformação',
-							id: 6
-						}
-					]
-				},
-				mapa_attrs: {
-					center: [ -5193050.487352, -2693402.011056 ],
-					zoom: 13.5,
-					layers:[
-						{
-							title: "Perímetro expandido", 
-							path:'./static/kml/ANH_PerimetroExpandido.kml',
-							stroke_color: 'rgba(237, 192, 192, 1)',
-							fill_color: 'rgba(237, 192, 192, .4)',
-							stroke_width: 1,
-						},
-						{
-							title: "Perímetro de abrangência", 
-							path:'./static/kml/ANH_PerimetroAbrangencia.kml',
-							stroke_color: 'rgba(235, 87, 87, 1)',
-							fill_color: 'rgba(235, 87, 87, .8)',
-							stroke_width: 1,
-						},
-					]
-				},
-				consultas: false,
-				estaConsulta: {}
-			}
-		},
-		computed: { commentsLoaded() { return this.$store.state.commentsLoaded } },
-		components: {
-			Indice,
-			Comments,
-			CommentsLoader,
-			ProcessoPIU,
-			ConselhoGestor,
-			Galeria,
-			Mapa,
-			Minuta,
-			Apoio
-		},
-		created() {
-			this.$store.dispatch("fetchConsultas", { self: this });
-			this.consultas = this.$store.state.consultas;
-		},
-		mounted() {
-			this.listaTitulos();
-			// document.addEventListener("mouseup", function(event) {
-			// 	if (window.getSelection() != false) {
-			// 		document.getElementById('commentCtx').style.transform = 'scale(1)';
-			// 		document.getElementById('commentCtx').style.left = event.clientX - document.getElementById('commentCtx').offsetWidth/2 + 'px';
-			// 		document.getElementById('commentCtx').style.top = event.clientY + window.scrollY - document.getElementById('commentCtx').offsetHeight/4 + 'px';
-			// 	} else {
-			// 		document.getElementById('commentCtx').style.transform = 'scale(0)';
-			// 	};
-			// }, false);
-		},
-		updated() {
-			this.alteraIndice();
-		},
-		methods: {
-			scrollToallComments(){
-				let appRef = this.$refs.allComments;
-				window.scrollBy({
-					top: appRef.getBoundingClientRect().y - 30,
-					left: 0,
-					behavior: 'smooth'
-				});
-			},
-			filterConsultas(){
-				this.consultas = this.$store.state.consultas;
-				this.estaConsulta = this.consultas.filter(esta => esta.id_consulta == this.$route.meta.id )[0];
-			},
-			consultaState(){ return (this.estaConsulta.ativo == '1' ? "aberta" : "fechada") },
-			listaTitulos() {
-				let app = this;
-				let titulosBruto = Array.from(this.$refs.conteudoConsulta.getElementsByClassName('titulo'));
-				let titulos = [];
-				let id = 0;
-				titulosBruto.map(function(index) {
+export default {
+  name: 'Anhembi2',
+  data () {
+    return {
+      titulosLimpo: [],
+      comments_atrr: undefined,
+      gallery_attrs: {
+        width: 992, // largura das imagens
+        height: 557, // altura das imagens
+        images: [
+          {
+            url: 'https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/galeria/ANH_AcaoAbrangencia_01.jpg',
+            state: true,
+            title: '',
+            icon: false,
+            legenda: 'Perímetro de abrangência e principais usos existentes',
+            id: 1
+          },
+          {
+            url: 'https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/galeria/ANH_AcaoAbrangencia_02.jpg',
+            state: false,
+            title: '',
+            icon: false,
+            legenda: 'Diretrizes urbanísticas para qualificação do eixoda Av. Olavo Fontoura',
+            id: 2
+          },
+          {
+            url: 'https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/galeria/ANH_AcaoAbrangencia_03.jpg',
+            state: false,
+            title: '',
+            icon: false,
+            legenda: 'Diretrizes urbanísticas - Conexões viárias',
+            id: 3
+          },
+          {
+            url: 'https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/galeria/ANH_AcaoAbrangencia_04.jpg',
+            state: false,
+            title: '',
+            icon: false,
+            legenda: 'Diretrizes urbanísticas - Conexões especiais',
+            id: 4
+          },
+          {
+            url: 'https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/galeria/ANH_AcaoAbrangencia_05.jpg',
+            state: false,
+            title: '',
+            icon: false,
+            legenda: 'Diretrizes urbanísticas - Áreas verdes',
+            id: 5
+          },
+          {
+            url: 'https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/galeria/ANH_AcaoAbrangencia_06.jpg',
+            state: false,
+            title: '',
+            icon: false,
+            legenda: 'Diretrizes urbanísticas consolidadas e áreas passíveis de transformação',
+            id: 6
+          }
+        ]
+      },
+      mapa_attrs: {
+        center: [ -5193050.487352, -2693402.011056 ],
+        zoom: 13.5,
+        layers: [
+          {
+            title: 'Perímetro expandido',
+            path: './static/kml/ANH_PerimetroExpandido.kml',
+            stroke_color: 'rgba(237, 192, 192, 1)',
+            fill_color: 'rgba(237, 192, 192, .4)',
+            stroke_width: 1
+          },
+          {
+            title: 'Perímetro de abrangência',
+            path: './static/kml/ANH_PerimetroAbrangencia.kml',
+            stroke_color: 'rgba(235, 87, 87, 1)',
+            fill_color: 'rgba(235, 87, 87, .8)',
+            stroke_width: 1
+          }
+        ]
+      },
+      consultas: false,
+      estaConsulta: {}
+    }
+  },
+  computed: { commentsLoaded () { return this.$store.state.commentsLoaded } },
+  components: {
+    Indice,
+    Comments,
+    CommentsLoader,
+    ProcessoPIU,
+    ConselhoGestor,
+    Galeria,
+    Mapa,
+    Minuta,
+    Apoio
+  },
+  created () {
+    this.$store.dispatch('fetchConsultas', { self: this })
+    this.consultas = this.$store.state.consultas
+  },
+  mounted () {
+    this.listaTitulos()
+    // document.addEventListener("mouseup", function(event) {
+    // 	if (window.getSelection() != false) {
+    // 		document.getElementById('commentCtx').style.transform = 'scale(1)';
+    // 		document.getElementById('commentCtx').style.left = event.clientX - document.getElementById('commentCtx').offsetWidth/2 + 'px';
+    // 		document.getElementById('commentCtx').style.top = event.clientY + window.scrollY - document.getElementById('commentCtx').offsetHeight/4 + 'px';
+    // 	} else {
+    // 		document.getElementById('commentCtx').style.transform = 'scale(0)';
+    // 	};
+    // }, false);
+  },
+  updated () {
+    this.alteraIndice()
+  },
+  methods: {
+    scrollToallComments () {
+      let appRef = this.$refs.allComments
+      window.scrollBy({
+        top: appRef.getBoundingClientRect().y - 30,
+        left: 0,
+        behavior: 'smooth'
+      })
+    },
+    filterConsultas () {
+      this.consultas = this.$store.state.consultas
+      this.estaConsulta = this.consultas.filter(esta => esta.id_consulta == this.$route.meta.id)[0]
+    },
+    consultaState () { return (this.estaConsulta.ativo == '1' ? 'aberta' : 'fechada') },
+    listaTitulos () {
+      let app = this
+      let titulosBruto = Array.from(this.$refs.conteudoConsulta.getElementsByClassName('titulo'))
+      let titulos = []
+      let id = 0
+      titulosBruto.map(function (index) {
+        let titulo = {
+          id: id,
+          nome: index.innerText,
+          indent: index.attributes.indent.value,
+          offsetObj: index,
+          ativo: false
+        }
 
-					let titulo = {
-						id: id,
-						nome: index.innerText,
-						indent: index.attributes.indent.value,
-						offsetObj: index,
-						ativo: false
-					};
-
-					id++;
-					titulos.push(titulo);
-				});
-				this.titulosLimpo = titulos;
-			},
-			setaBaixo() {
-				window.scrollTo({ top: Math.round(window.innerHeight), behavior: 'smooth'})
-			},
-			alteraIndice() {
-				let app = this;
-				let sectionCollection = Array.from(this.$el.getElementsByTagName('section'));		
-				window.addEventListener('scroll', function() {
-					sectionCollection.map(function(index, i) {
-						if (window.scrollY >= index.offsetTop - (window.innerHeight)/2 && window.scrollY < (index.offsetTop + index.offsetHeight) - (window.innerHeight)/4) {
-							app.titulosLimpo[i].ativo = true
-						} else { app.titulosLimpo[i].ativo = false };
-					});
-				}, {
-					capture: true,
-					passive: true
-				});
-			},
-		},
-	};
+        id++
+        titulos.push(titulo)
+      })
+      this.titulosLimpo = titulos
+    },
+    setaBaixo () {
+      window.scrollTo({ top: Math.round(window.innerHeight), behavior: 'smooth' })
+    },
+    alteraIndice () {
+      let app = this
+      let sectionCollection = Array.from(this.$el.getElementsByTagName('section'))
+      window.addEventListener('scroll', function () {
+        sectionCollection.map(function (index, i) {
+          if (window.scrollY >= index.offsetTop - (window.innerHeight) / 2 && window.scrollY < (index.offsetTop + index.offsetHeight) - (window.innerHeight) / 4) {
+            app.titulosLimpo[i].ativo = true
+          } else { app.titulosLimpo[i].ativo = false };
+        })
+      }, {
+        capture: true,
+        passive: true
+      })
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -1111,7 +1110,7 @@ import Apoio from '@/components/Apoio'
 			align-items: center;
 			justify-content: center;
 			z-index: 1;
-			
+
 			& > div:first-child {
 				padding: 1.2rem;
 				background: #FFF;
@@ -1124,7 +1123,7 @@ import Apoio from '@/components/Apoio'
 					font-size: small;
 					color: #777;
 					font-weight: 400;
-					
+
 					&:last-child { margin-bottom: 0; };
 
 					i {
@@ -1215,7 +1214,6 @@ import Apoio from '@/components/Apoio'
 
 			a { color: inherit; };
 		};
-
 
 		p, ol, ul { font-family: 'Georgia', serif; };
 
@@ -1308,7 +1306,7 @@ import Apoio from '@/components/Apoio'
 			margin-bottom: 0;
 			margin-top: 0;
 			font-family: inherit;
-			
+
 			li {
 				display: inline-flex;
 				align-items: center;
@@ -1348,22 +1346,22 @@ import Apoio from '@/components/Apoio'
 			};
 
 			@media (max-width: 600px) {
-				li { 
+				li {
 					display: block;
 					width: 100%;
 					margin: 0 0 1rem 0;
 					padding: 0;
 					text-align: left;
 
-					div { 
+					div {
 						display: inline-block;
 						vertical-align: middle;
-					}; 
+					};
 				};
 			};
 		};
 
-		div.tableWrap {			
+		div.tableWrap {
 			overflow-x: auto;
 			background: #F5F5F5;
 			max-width: 700px;
@@ -1468,7 +1466,7 @@ import Apoio from '@/components/Apoio'
 						font-size: larger;
 						color: #333;
 						display: block;
-						font-weight: bold;	
+						font-weight: bold;
 					};
 				};
 
@@ -1518,14 +1516,14 @@ import Apoio from '@/components/Apoio'
 				transition: all .1s;
 
 				a {
-					display: flex;					
+					display: flex;
 					flex-direction: row;
 					align-items: center;
 					padding: 1rem;
 					color: inherit;
 
-					i { 
-						margin-right: 1rem; 
+					i {
+						margin-right: 1rem;
 						align-self:center
 					};
 

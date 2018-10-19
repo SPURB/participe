@@ -271,84 +271,84 @@
 </template>
 
 <script>
-import GrafBarras from '@/components/graf/GrafBarras';
+import GrafBarras from '@/components/graf/GrafBarras'
 
 export default {
-	name: 'Diagnostico',
-	components: {
-		GrafBarras
-	},
-	computed: {
-		basePath(){ return this.$store.getters.basePath } 
-	},
-	data() {
-		return {
-			escPopulacao: true,
-			escUsos: true,
-			escTrabalho: true,
-			escMobilidade: true,
-			escAreasVerdes: true,
-			isMenuVisorAberto: false
-		}
-	},
-	methods: {
-		alteraSecao(secao, evento) {
-			let path = ''
-			switch (secao) {
-				case 'populacao':
-					this.escPopulacao = false
-					this.escUsos = true
-					this.escTrabalho = true
-					this.escMobilidade = true
-					this.escAreasVerdes = true
-					path = 'densidade'
-					break;
-				case 'usosdosolo':
-					this.escPopulacao = true
-					this.escUsos = false
-					this.escTrabalho = true
-					this.escMobilidade = true
-					this.escAreasVerdes = true
-					path = 'usosdosolo'
-					break;
-				case 'trabalho':
-					this.escPopulacao = true
-					this.escUsos = true
-					this.escTrabalho = false
-					this.escMobilidade = true
-					this.escAreasVerdes = true
-					path = 'usosdosolo'
-					break;
-				case 'mobilidade':
-					this.escPopulacao = true
-					this.escUsos = true
-					this.escTrabalho = true
-					this.escMobilidade = false
-					this.escAreasVerdes = true
-					path = 'usosdosolo'
-					break;
-				case 'areasverdes':
-					this.escPopulacao = true
-					this.escUsos = true
-					this.escTrabalho = true
-					this.escMobilidade = true
-					this.escAreasVerdes = false
-					path = secao
-					break;
-			}
-			let caminho = 'url('+ this.basePath + 'arquivos/arco-pinheiros/diagnostico_mapas/' + path + '.png)'
-			this.$refs.mapas.style.backgroundImage = caminho
-			this.$refs.menu_visor.innerText = evento.target.innerText
-		},
-		imgSrc(caminho) {
-			let url = this.$store.getters.basePath + caminho
-			return url.toString()
-		},
-		backgroundImg(caminho) {
-			let url = this.$store.getters.basePath + caminho
-			return 'background-image: url(' + url + ');'
-		}
-	},
+  name: 'Diagnostico',
+  components: {
+    GrafBarras
+  },
+  computed: {
+    basePath () { return this.$store.getters.basePath }
+  },
+  data () {
+    return {
+      escPopulacao: true,
+      escUsos: true,
+      escTrabalho: true,
+      escMobilidade: true,
+      escAreasVerdes: true,
+      isMenuVisorAberto: false
+    }
+  },
+  methods: {
+    alteraSecao (secao, evento) {
+      let path = ''
+      switch (secao) {
+        case 'populacao':
+          this.escPopulacao = false
+          this.escUsos = true
+          this.escTrabalho = true
+          this.escMobilidade = true
+          this.escAreasVerdes = true
+          path = 'densidade'
+          break
+        case 'usosdosolo':
+          this.escPopulacao = true
+          this.escUsos = false
+          this.escTrabalho = true
+          this.escMobilidade = true
+          this.escAreasVerdes = true
+          path = 'usosdosolo'
+          break
+        case 'trabalho':
+          this.escPopulacao = true
+          this.escUsos = true
+          this.escTrabalho = false
+          this.escMobilidade = true
+          this.escAreasVerdes = true
+          path = 'usosdosolo'
+          break
+        case 'mobilidade':
+          this.escPopulacao = true
+          this.escUsos = true
+          this.escTrabalho = true
+          this.escMobilidade = false
+          this.escAreasVerdes = true
+          path = 'usosdosolo'
+          break
+        case 'areasverdes':
+          this.escPopulacao = true
+          this.escUsos = true
+          this.escTrabalho = true
+          this.escMobilidade = true
+          this.escAreasVerdes = false
+          path = secao
+          break
+      }
+      let caminho = 'url(' + this.basePath + 'arquivos/arco-pinheiros/diagnostico_mapas/' + path + '.png)'
+      this.$refs.mapas.style.backgroundImage = caminho
+      this.$refs.menu_visor.innerText = evento.target.innerText
+    },
+    imgSrc (caminho) {
+      let url = this.$store.getters.basePath + caminho
+      return url.toString()
+    },
+    backgroundImg (caminho) {
+      let url = this.$store.getters.basePath + caminho
+      return 'background-image: url(' + url + ');'
+    }
+  }
 }
 </script>
 
@@ -422,7 +422,7 @@ div.Diagnostico {
 
 				&:hover, &.ativo { background: #EB5757; };
 			}
-		}		
+		}
 	}
 
 	div.menu div.legenda, div.legenda_mob {
@@ -450,7 +450,7 @@ div.Diagnostico {
 				span {
 					height: 16px;
 					min-width: 16px;
-					margin: 0 8px 0 0;					
+					margin: 0 8px 0 0;
 					border: 1px solid rgba(0, 0, 0, .08);
 				}
 
@@ -624,7 +624,7 @@ div.Diagnostico {
 							min-width: 16px;
 							height: 16px;
 							vertical-align: text-top;
-							margin-right: 4px;							
+							margin-right: 4px;
 							border: 1px solid rgba(0, 0, 0, .08);
 						}
 
@@ -739,7 +739,7 @@ div.Diagnostico {
 						font-size: small;
 						padding: 16px 12px 12px 12px;
 
-						span {							
+						span {
 							font-size: large;
 							display: block;
 							font-weight: 700;
@@ -917,7 +917,6 @@ div.Diagnostico {
 			}
 		}
 	}
-
 
 	@media (max-width: 750px), (-ms-high-contrast: none), (-ms-high-contrast: active) {
 		grid-template-columns: 1fr;

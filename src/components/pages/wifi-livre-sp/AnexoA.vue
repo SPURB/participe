@@ -2,11 +2,11 @@
 	<div class="AnexoA">
 		<p>PROCESSO ELETRÔNICO: 6023.2018/0000712-6</p>
 		<p>OBJETO: Credenciamento de pessoas jurídicas interessadas em oferecer, nesta capital, sem ônus ao município ou ao usuário, conexão pública à Internet, por meio de sinal “wi-fi”, pelo prazo de até sessenta meses.</p>
-		
+
 		<h4>PREÂMBULO</h4>
 		<p>O Município de São Paulo, por meio de sua Secretaria Municipal de Inovação e Tecnologia, situada na rua Libero Badaró, 425, 27º andar, Centro, São Paulo, Capital, CEP 01010-001, torna público, para conhecimento de quantos possam se interessar, que credenciará pessoas jurídicas interessadas em oferecer, nesta capital, sem ônus ao município ou ao usuário, conexão à Internet, por meio de sinal “wi-fi”, pelo prazo de até sessenta meses.</p>
 		<p>Este edital e seus anexos constarão do site <a href="http://e-negocioscidadesp.prefeitura.sp.gov.br" target="_blank">http://e-negocioscidadesp.prefeitura.sp.gov.br</a> e <a href="https://gestaourbana.prefeitura.sp.gov.br" target="_blank">https://gestaourbana.prefeitura.sp.gov.br</a>.</p>
-		
+
 		<h4>1 - OBJETO</h4>
 		<p>1.1 Constitui objeto deste edital credenciamento de pessoas jurídicas interessadas em fornecer conexão à Internet, por meio de “wi-Fi”, gratuitamente aos usuários conforme Termo de Referência e demais anexos.</p>
 		<p>1.2 Incluem-se no âmbito de responsabilidades das pessoas jurídicas interessadas a aquisição, instalação e manutenção da infraestrutura e dos insumos necessários ao bom funcionamento do sistema, tais como:</p>
@@ -69,7 +69,7 @@
 		<p>2.15.1 A data deverá ser reservada pela PMSP junto à Interessada com, no mínimo, 15 (quinze) dias de antecedência da data estipulada para veiculação de do anúncio, salvo casos de emergência pública.</p>
 		<p>2.15.2 O conteúdo digital, a ser definido pela PMSP, deverá ser disponibilizado à Interessada em até 7 (sete) dias antes da data estipulada para sua veiculação.</p>
 		<p>2.16 Deverão ser observadas as demais especificações e condições de prestação de serviço constantes do Termo de Referência, parte integrante deste edital.</p>
-	
+
 		<h4>3 - HABILITAÇÃO</h4>
 		<p>3.1 Os interessados deverão protocolar diretamente na Secretaria Municipal de Inovação e Tecnologia, situada na Rua Libero Badaró, nº 425, 27º andar, nos dias úteis, das 09h00 às 18h00, em envelope identificado, lacrado e endereçado ao Presidente da Comissão, ofício dirigido ao Secretário Municipal de Inovação e Tecnologia, em papel timbrado da Interessada, contendo “e-mail” e telefones de contato, subscrito por responsável legal, juntamente com os documentos de qualificação exigidos neste edital, quais sejam:.</p>
 		<p>3.1.1 Prova de Inscrição no Cadastro Nacional de Pessoas Jurídicas (CNPJ): <a href="http://www.receita.fazenda.gov.br/PessoaJuridica/CNPJ/cnpjreva/Cnpjreva_Solicitacao.asp" target="_blank">http://www.receita.fazenda.gov.br/PessoaJuridica/CNPJ/cnpjreva/Cnpjreva_Solicitacao.asp</a></p>
@@ -87,27 +87,27 @@
 		<p>3.1.11 Plano de Trabalho discriminando os serviços e localidades atendidas.</p>
 		<p>3.2 A apresentação do pedido de credenciamento implicará em plena aceitação, por parte da pessoa jurídica interessada das condições estabelecidas neste Edital e em seus anexos.</p>
 		<p>3.3 A proposta terá validade de 60 dias corridos, contados a partir da data de sua apresentação.</p>
-		
+
 	<h4>4 - ANÁLISE DA DOCUMENTAÇÃO</h4>
 		<p>4.1 A Comissão de Credenciamento verificará, no prazo de 10 (dez) dias úteis, se os documentos apresentados cumprem os requisitos de habilitação jurídica, regularidade fiscal e trabalhista, qualificação econômico-financeira e qualificação técnica, declarando o proponente habilitado.</p>
 		<p>4.2 A Comissão de Credenciamento submeterá seu relatório ao Chefe de Gabinete de SMIT que decidirá sobre a homologação do credenciamento, mediante despacho publicado no Diário Oficial da cidade de São Paulo.</p>
 		<p>4.3 Serão declaradas inabilitadas as interessadas que não cumpram com os requisitos de habilitação exigidos neste Edital.</p>
 		<p>4.4 O prazo de validade do credenciamento das interessadas será de até 01 (um) ano, a contar da data de publicação no Diário Oficial da Cidade, podendo ser prorrogado.</p>
-		
+
 	<h4>5 - RECURSOS</h4>
 			<p>5.1 O prazo de recurso relativo a cada julgamento de credenciamento será de 5 (cinco) dias úteis a partir da data da divulgação da decisão, endereçado ao Secretário Municipal de Inovação e Tecnologia.</p>
 		<p>5.2 O recurso será interposto mediante protocolo na Secretaria Municipal de Inovação e Tecnologia, em dias úteis, das 09h00 às 18h00, na Rua Libero Badaró, nº 425, 27º andar, Centro, Capital.</p>
 		<p>5.3 A requerente deverá argumentar e comprovar, de forma clara e objetiva, as razões que a levam ao pedido.</p>
 		<p>5.4 Não serão conhecidos os recursos interpostos após os respectivos prazos legais, bem como os que forem enviados por fax ou outro meio não permitido expressamente.</p>
 		<p>5.5 O recurso interposto contra a decisão da Comissão de Credenciamento não terá efeito suspensivo.</p>
-		
+
 	<h4>6 – DA CONVOCAÇÃO DO CREDENCIADO PARA ASSINATURA DO CONTRATO E GARANTIA PARA CONTRATAR</h4>
 		<p>6.1 As obrigações decorrentes deste credenciamento consubstanciar-se-ão no contrato, a ser firmado entre as partes, conforme minuta do Anexo A deste Edital.</p>
 		<p>6.2 O prazo para a assinatura do termo de contrato será de 05 (cinco) dias úteis, contados a partir da data da convocação da interessada pelo Diário Oficial da Cidade.</p>
 		<p>6.2.1 O prazo para formalização do ajuste poderá ser prorrogado uma vez, por igual período, desde que solicitado por escrito, durante seu transcurso e ocorra motivo justificado e aceito pela Administração.</p>
 		<p>6.3 No ato de assinatura o signatário deverá comprovar sua qualidade, indicando preposto responsável pela interlocução com SMIT.</p>
 		<p>6.4 A Interessada poderá subcontratar, no todo ou em parte, o objeto do Contrato, a terceiros, desde que precedido de autorização;</p>
-		
+
 	<h4>7 - PRAZO PARA INÍCIO DA PRESTAÇÃO DOS SERVIÇOS E CONDIÇÕES</h4>
 		<p>7.1 Os serviços deverão ser iniciados conforme previsto na Ordem de Início, e deverão ser seguidas as orientações da unidade responsável pela fiscalização do ajuste.</p>
 		<p>7.2 O serviço deverá ser prestado de acordo com o ofertado na proposta, no local e horário discriminados no Anexo B II deste Edital, correndo por conta da contratada todas as despesas decorrentes da execução do objeto contratual.</p>
@@ -119,10 +119,10 @@
 		<p>7.9 O CREDENCIADO pode solicitar o descredenciamento mediante aviso escrito, com antecedência mínima de 90 (noventa) dias.</p>
 		<p>7.10 O não-cumprimento das disposições mencionadas neste Edital poderá acarretar o descredenciamento do credenciado, garantindo o contraditório e a ampla defesa e sem prejuízo de outras sanções legais cabíveis.</p>
 		<p>7.10.11 Fica facultada a defesa prévia do credenciado, a ser apresentada no prazo de 5 (cinco) dias úteis, contados da notificação de descredenciamento.</p>
-		
+
 	<h4>8 - DAS OBRIGAÇÕES E SANÇÕES DAS PARTES</h4>
 		<p>8.1 As obrigações e sanções são aquelas previstas nas cláusulas sexta e sétima da Minuta de Contrato, Anexo A deste Edital.</p>
-		
+
 	<h4>9 - ACESSO ÀS INFORMAÇÕES E IMPUGNAÇÕES</h4>
 		<p>9.1 Qualquer pessoa poderá solicitar esclarecimentos ou informações relativos a este credenciamento, que serão prestados mediante solicitação dirigida à Secretaria Municipal de Inovação e Tecnologia, por meio do endereço eletrônico consultawifi@prefeitura.sp.gov.br.</p>
 		<p>9.2 Qualquer pessoa, física ou jurídica, poderá formular impugnações contra o presente edital de credenciamento, mediante petição dirigida ao(à) Chefe de Gabinete desta Secretaria Municipal de Inovação e Tecnologia, protocolando presencialmente na Secretaria de Inovação e Tecnologia, localizada Rua Libero Badaró, 425 - 27º andar - Centro - SP, ou via e-mail, consultawifi@prefeitura.sp.gov.br.</p>
@@ -130,7 +130,7 @@
 		<p>a) do documento de identidade e do Cadastro de Pessoas Físicas (CPF), se o impugnante for pessoa física;</p>
 		<p>b) do Cadastro Nacional de Pessoas Jurídicas (CNPJ), em se tratando de pessoa jurídica, acompanhado do respectivo ato constitutivo ou de procuração, que comprove que o signatário/remetente da impugnação efetivamente representa a impugnante.</p>
 		<p>9.3 A decisão sobre a impugnação será publicada no Diário Oficial da Cidade (DOC).</p>
-		
+
 	<h4>10 - DISPOSIÇÕES GERAIS</h4>
 		<p>10.1 O presente chamamento público terá duração de 06 (seis) meses, a contar da data de publicação no Diário Oficial da Cidade, podendo ser prorrogado.</p>
 		<p>10.2 A participação do Interessado no Credenciamento implica a aceitação das condições constantes deste Edital e dos anexos que o integram.</p>
@@ -152,9 +152,9 @@
 </template>
 
 <script>
-	export default {
-		name: 'AnexoA'
-	};
+export default {
+  name: 'AnexoA'
+}
 </script>
 
 <style lang="scss" scoped>

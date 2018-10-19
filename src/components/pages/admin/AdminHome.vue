@@ -22,17 +22,17 @@
 			</thead>
 			<tr v-for="consulta in consultas">
 				<td :class="{ consultaAtiva: consulta.ativo == 1 }">
-					<router-link 
-						:to="{ 
-							path: '/consulta', 
-							name: 'pageConsulta', 
-							params: { 
-									title: consulta.nomePublico, 
-									id: consulta.id_consulta 
+					<router-link
+						:to="{
+							path: '/consulta',
+							name: 'pageConsulta',
+							params: {
+									title: consulta.nomePublico,
+									id: consulta.id_consulta
 								}
 						}"
-						:class="{ 
-							consultaAtiva: consulta.ativo == 1 
+						:class="{
+							consultaAtiva: consulta.ativo == 1
 						}">{{ consulta.nomePublico }}</router-link>
 				</td>
 				<td>{{ dataDisplay(consulta.dataCadastro) }}</td>
@@ -44,16 +44,16 @@
 
 <script>
 export default {
-	nome: 'AdminHome',
-	computed:{
-		consultas(){return this.$store.state.consultas}
-	},
-	methods: {
-		dataDisplay(data) {
-			return data.substring(8,10) + '/' + data.substring(5,7) + '/' + data.substring(0,4);
-		},
-	},
-};
+  nome: 'AdminHome',
+  computed: {
+    consultas () { return this.$store.state.consultas }
+  },
+  methods: {
+    dataDisplay (data) {
+      return data.substring(8, 10) + '/' + data.substring(5, 7) + '/' + data.substring(0, 4)
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -95,7 +95,7 @@ div.AdminHome {
 			height: 60px;
 			line-height: 24px;
 			border-bottom: 1px solid #DDD;
-			& > *:first-child { padding-left: 16px; };				
+			& > *:first-child { padding-left: 16px; };
 			& > *:last-child { padding-right: 16px; };
 		};
 

@@ -12,7 +12,7 @@
 				<input type="radio" name="tabs" id="item1">
 				<label for="item1">Anexos</label>
 				<div class="conteudoTab">
-					<ul style="list-style-type: square; color: #DDD;">						
+					<ul style="list-style-type: square; color: #DDD;">
 					    <li v-for="anexo in anexos">
 					    	<a :href="fileSrc(anexo)">{{ anexo }}</a>
 					    </li>
@@ -31,12 +31,12 @@
 
 			<h3>Histórico:</h3>
 			<p>
-				Os Telecentros surgiram em 2001 como o primeiro programa de inclusão digital da cidade de São Paulo. O programa promove a democratização de acesso à internet, capacitando usuários das comunidades locais, em especial aquelas com maior vulnerabilidade social. Em 14 janeiro de 2008 foi legitimado pela Lei Municipal nº 14.668 que definiu as diretrizes da Política Municipal de Inclusão Digital do Município de São Paulo, estabelecendo os objetivo estratégico o exercício da cidadania. Atualmente, a Capital possui 132 Telecentros dispostos nas regiões das 32 Subprefeituras Regionais. 
+				Os Telecentros surgiram em 2001 como o primeiro programa de inclusão digital da cidade de São Paulo. O programa promove a democratização de acesso à internet, capacitando usuários das comunidades locais, em especial aquelas com maior vulnerabilidade social. Em 14 janeiro de 2008 foi legitimado pela Lei Municipal nº 14.668 que definiu as diretrizes da Política Municipal de Inclusão Digital do Município de São Paulo, estabelecendo os objetivo estratégico o exercício da cidadania. Atualmente, a Capital possui 132 Telecentros dispostos nas regiões das 32 Subprefeituras Regionais.
 			</p>
 			<p>
 				A evolução tecnológica, porém, rompeu as barreiras do tempo, fazendo com que o programa não tenha avançado na mesma velocidade do comportamento de seus usuários. A quantidade de ferramentas digitais foi ampliada exponencialmente, surgiram novas formas de produção, consumo, aprendizagem e relacionamento que estão moldando a sociedade na era da informação. Diante disso, verificamos que a essência do programa precisa ser superada por meio de iniciativas que ampliem e potencializem a utilização destes equipamentos públicos e os propósitos do programa.
 			</p>
-			
+
 			<h3>Proposta de Mudança</h3>
 			<p>
 				A Coordenadoria de Convergência Digital da secretaria municipal de Inovação e Tecnologia, responsável pela gestão dos Telecentros, em parceria com a Agência de Desenvolvimento Econômico (ADE SAMPA), sob comando da secretaria de Desenvolvimento Econômico, entende que se faz necessária a ressignificação do programa para que ele, de fato, cumpra seu papel de inclusão digital e social.
@@ -52,11 +52,6 @@
 			</p>
 
 			<h3>DIGILAB LIVRE SP</h3>
-
-
-
-
-
 
 			<p>
 				Em meio a um cenário de avanços que impactarão o futuro dos negócios e da educação, sob a certeza de que grande parte das habilidades requeridas para trabalhos estratégicos em diversas indústrias ainda não são parte do currículo escolar e que crianças ingressando na educação básica hoje, quando adultas, terão empregos que ainda não existem, nasce o conceito do DIGILAB LIVRE SP.
@@ -157,7 +152,7 @@
 			</p>
 			<Comments :attr="{id:5, context:'Regras - 3. Regras de uso, acesso e agendamento'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
-		
+
 		<section>
 			<h3 class="titulo" indent="2">4. Horário de Funcionamento</h3>
 			<p>
@@ -165,7 +160,7 @@
 			</p>
 			<Comments :attr="{id:6, context:'Regras - 4. Horário de Funcionamento'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
-		
+
 		<section>
 			<h3 class="titulo" indent="2">5. Atividades Oferecidas</h3>
 			<p>
@@ -191,7 +186,7 @@
 			</p>
 			<Comments :attr="{id:7, context:'Regras - 5. Atividades Oferecidas'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
-		
+
 		<section>
 			<h3 class="titulo" indent="2">6. Regras de utilização por equipamento</h3>
 			<p>
@@ -256,24 +251,24 @@
 			<p>
 				Deve-se ter ao menos um banco (com três lugares) de espera em área interna, coberta, para uso livre dos visitantes do espaço, enquanto aguardam a disponibilidade do serviço. Também podem ser usados durante aulas, oficinas e outros eventos, dentro do espaço, sob supervisão dos AID’s. A prioridade de uso é sempre por ordem de chegada, asseguradas as prioridades legais às pessoas com deficiência, aos idosos, às gestantes, às lactantes e às pessoas acompanhadas por crianças de colo.
 			</p>
-			
+
 			<h4>6.8. Bebedouro</h4>
 			<p>Deve-se ter ao menos um bebedouro com água filtrada para uso de todos.</p>
-			
+
 			<h4>6.9. Tablets</h4>
 			<p>
 				Deve-se ter ao menos dois tablets (um para cada AID), conforme especificações técnicas descritas no documento de EQUIPAMENTOS BÁSICOS PADRÃO, para uso administrativo e exclusivo dos AID’s. Esse equipamento deve servir como ferramenta de trabalho dos AID’s, com o o qual farão a gestão do espaço, acompanhamento de reservas, registros e cadastros dos usuários na Plataforma de Convergência Digital, abertura de chamados via Help Desk, comunicação com outras áreas, etc.
 				<br />
 				O uso correto, guarda e cuidado desse equipamento é de responsabilidade dos AID´s.
 			</p>
-			
+
 			<h4>6.10. Câmera Fotográfica</h4>
 			<p>
 				Deve-se ter ao menos uma câmera fotográfica por unidade, para uso livre, mediante reserva prévia por meio da Plataforma de Convergência Digital, conforme disponibilidade, considerando sessões de uma hora, contadas pelo sistema da plataforma e supervisionadas pelos AID’s, que poderão ser renovadas por sessões de igual valor conforme disponibilidade, dentro do horário de funcionamento do espaço, definido pela CCD.
 				<br />
 				O uso deste equipamento é restrito ao espaço do DIGILAB LIVRE SP e deve ser sempre supervisionado pelos AID´s.
 			</p>
-			
+
 			<h4>6.11. Impressoras</h4>
 			<p>
 				Deve-se ter ao menos uma impressora multifuncional (impressora, copiadora, scanner) por unidade, conforme especificações técnicas descritas no documento de EQUIPAMENTOS BÁSICOS PADRÃO, para uso livre e gratuito, conforme disponibilidade, mediante reserva prévia por meio da Plataforma de Convergência Digital, sob supervisão dos AID´s. Cada usuário poderá imprimir a quantidade máxima de cinco páginas por dia, ficando sob a responsabilidade dos AID´s a supervisão e correta utilização do equipamento.
@@ -297,7 +292,7 @@
 			informativos durante o expediente normal do DIGILAB, tendo seu conteúdo controlado
 			pelos AID´s e autorizados pela Coordenadoria de Convergência Digital.
 			</p>
-			
+
 			<h4>6.15. Kit de som</h4>
 			<p>
 				Deve-se ter um KIT SOM por unidade, composto por microfone e caixa de som amplificada, conforme especificações técnicas descritas no documento de EQUIPAMENTOS BÁSICOS PADRÃO, para uso livre, em atividades culturais, conforme disponibilidade, mediante reserva prévia por meio da Plataforma de Convergência Digital, sob supervisão dos AID´s. O uso deve se dar dentro do espaço de domínio da CCD, ou em local adequado e previamente autorizado pela CCD. Sempre sob a supervisão dos AID´s. O correto uso e operação do equipamento é de responsabilidade dos AID´s, bem como a guarda em local seguro e adequado.
@@ -312,7 +307,7 @@
 			<p>
 				Uso administrativo, para possibilitar o oferecimento dos serviços prestados pelo DIGILAB LIVRE SP. A operação é restrita aos Supervisores Técnicos Regionais.
 			</p>
-			
+
 			<h4>6.18. Wifi Livre SP</h4>
 			<p>
 				Deve-se ter um ponto de WiFi (access point) por unidade, conforme especificações mínimas previstas pela equipe técnica da CCD.
@@ -328,7 +323,7 @@
 			</p>
 			<Comments :attr="{id:8, context:'Regras - 6. Regras de utilização por equipamento'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
-		
+
 		<section>
 			<h3 class="titulo" indent="2">7. Regras comportamentais, de conduta e postura</h3>
 			<p>
@@ -348,7 +343,7 @@
 			</p>
 			<Comments :attr="{id:9, context:'Regras - 7. Regras comportamentais, de conduta e postura'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
-		
+
 		<section>
 			<h3 class="titulo" indent="2">8. Orientações para boa convivência dentro dos espaços</h3>
 			<p>
@@ -376,7 +371,7 @@
 			</p>
 			<Comments :attr="{id:10, context:'Regras - 8. Orientações para boa convivência dentro dos espaços'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
-		
+
 		<section>
 			<h3 class="titulo" indent="2">9. Canais de comunicação e Ouvidoria</h3>
 			<p>
@@ -413,7 +408,7 @@
 			</p>
 			<Comments :attr="{id:11, context:'Regras - 9. Canais de comunicação e Ouvidoria'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
-		
+
 		<section>
 			<h3 class="titulo" indent="2">10. Medidas Administrativas</h3>
 			<p>
@@ -424,7 +419,7 @@
 		<hr />
 		<section>
 			<h2 class="titulo" indent="1">Trilhas do Conhecimento</h2>
-		</section>		
+		</section>
 		<section>
 			<h3 class="titulo" indent="2">1. Trilhas do Conhecimento</h3>
 			<figure :title="imagens.img1" class="coluna">
@@ -445,7 +440,7 @@
 			<p>
 				São experiências de aprendizagem planejadas para tornar o processo de absorção de conhecimento mais efetivo e adequado aos diferentes perfis de profissionais.
 			</p>
-			
+
 			<h4>1.1 Características</h4>
 			<p>
 				Diferente das grades de treinamento, que têm ordem de obrigatoriedade e geralmente estão vinculadas a um desempenho específico, a sistemática das trilhas de aprendizagem propõe conciliar as necessidades da organização com as aspirações de seus membros.
@@ -539,7 +534,7 @@
 			<p>
 				Com o intuito de possibilitar aos cidadãos que passam a caminhar nas trilhas de conhecimento diversas oportunidades de aprendizado, sugerimos diferentes métodos de aprendizagem, que estão balizados, em suma, pela imagem acima e categorizados nos parágrafos abaixo.
 			</p>
-			
+
 			<h4>3.1 Treinamentos Presenciais</h4>
 			<p>
 				São as oficinas, workshops, cursos e demais treinamentos presenciais, de conteúdo técnico ou não, com grade curricular especificada e com carga-horária definida, que acontecem de forma presencial em uma ou mais unidades do DIGILAB LIVRE SP. A educação maker incentiva alunos e alunas a criarem projetos e “colocarem a mão na massa”. A cultura do “do it yourself” (faça você mesmo) e “do it together” (façamos juntos) possibilita um maior desenvolvimento da criatividade e autonomia das pessoas, dando a elas o protagonismo na descoberta do conhecimento.
@@ -802,124 +797,122 @@
 </template>
 
 <script>
-import PageTop from '@/components/PageTop';
-import Indice from '@/components/Indice';
-import Comments from '@/components/Comments';
-import CommentsLoader from '@/components/CommentsLoader';
-import Apoio from '@/components/Apoio';
+import PageTop from '@/components/PageTop'
+import Indice from '@/components/Indice'
+import Comments from '@/components/Comments'
+import CommentsLoader from '@/components/CommentsLoader'
+import Apoio from '@/components/Apoio'
 
 export default {
-	name: 'DigilabLivreSP',
-	data() {
-		return {
-			titulosLimpo: [],
-			comments_atrr: undefined,
-			consultas: false,
-			estaConsulta: {},
-			imagens: {
-				img1: "Trilhas do Conhecimento",
-				img2: "Objetivos",
-				img3: "Competências Socioemocionais",
-				img4: "Estruturação",
-				img5: "Caminhos",
-				img6: "Competências Técnicas",
-				img7: "Sugestões de Aplicação",
-				img8: "Sugestões de Aplicação - Legenda"
-			}
-		}
-	},
-	computed: {
-		commentsLoaded() { return this.$store.state.commentsLoaded }
-	},
-	components: {
-		PageTop,
-		Indice,
-		Comments,
-		CommentsLoader
-	},
-	created() {
-		this.$store.dispatch("fetchConsultas", { self: this });
-		this.consultas = this.$store.state.consultas;
-	},
-	mounted() {
-		this.listaTitulos();
-	},
-	updated() {
-		this.alteraIndice();
-	},
-	methods: {
-		scrollToallComments(){
-			let appRef = this.$refs.allComments;
-			window.scrollBy({
-				top: appRef.getBoundingClientRect().y - 30,
-				left: 0,
-				behavior: 'smooth'
-			});
-		},
-		scrollMeTo(refName) {
-			let element = this.$refs[refName];
-			let top = element.offsetTop;
-			window.scrollTo({top: top, behavior: 'smooth'});
-		},
-		filterConsultas(){
-			this.consultas = this.$store.state.consultas;
-			this.estaConsulta = this.consultas.filter(esta => esta.id_consulta == this.$route.meta.id )[0];
-		},
-		consultaState(){ return (this.estaConsulta.ativo == '1' ? "aberta" : "fechada") },
-		listaTitulos() {
-			let app = this;
-			let titulosBruto = Array.from(this.$refs.conteudoConsulta.getElementsByClassName('titulo'));
-			let titulos = [];
-			let id = 0;
-			titulosBruto.map(function(index) {
+  name: 'DigilabLivreSP',
+  data () {
+    return {
+      titulosLimpo: [],
+      comments_atrr: undefined,
+      consultas: false,
+      estaConsulta: {},
+      imagens: {
+        img1: 'Trilhas do Conhecimento',
+        img2: 'Objetivos',
+        img3: 'Competências Socioemocionais',
+        img4: 'Estruturação',
+        img5: 'Caminhos',
+        img6: 'Competências Técnicas',
+        img7: 'Sugestões de Aplicação',
+        img8: 'Sugestões de Aplicação - Legenda'
+      }
+    }
+  },
+  computed: {
+    commentsLoaded () { return this.$store.state.commentsLoaded }
+  },
+  components: {
+    PageTop,
+    Indice,
+    Comments,
+    CommentsLoader
+  },
+  created () {
+    this.$store.dispatch('fetchConsultas', { self: this })
+    this.consultas = this.$store.state.consultas
+  },
+  mounted () {
+    this.listaTitulos()
+  },
+  updated () {
+    this.alteraIndice()
+  },
+  methods: {
+    scrollToallComments () {
+      let appRef = this.$refs.allComments
+      window.scrollBy({
+        top: appRef.getBoundingClientRect().y - 30,
+        left: 0,
+        behavior: 'smooth'
+      })
+    },
+    scrollMeTo (refName) {
+      let element = this.$refs[refName]
+      let top = element.offsetTop
+      window.scrollTo({ top: top, behavior: 'smooth' })
+    },
+    filterConsultas () {
+      this.consultas = this.$store.state.consultas
+      this.estaConsulta = this.consultas.filter(esta => esta.id_consulta == this.$route.meta.id)[0]
+    },
+    consultaState () { return (this.estaConsulta.ativo == '1' ? 'aberta' : 'fechada') },
+    listaTitulos () {
+      let app = this
+      let titulosBruto = Array.from(this.$refs.conteudoConsulta.getElementsByClassName('titulo'))
+      let titulos = []
+      let id = 0
+      titulosBruto.map(function (index) {
+        let titulo = {
+          id: id,
+          nome: index.innerText,
+          indent: index.attributes.indent.value,
+          offsetObj: index,
+          ativo: false
+        }
 
-				let titulo = {
-					id: id,
-					nome: index.innerText,
-					indent: index.attributes.indent.value,
-					offsetObj: index,
-					ativo: false
-				};
-
-				id++;
-				titulos.push(titulo);
-			});
-			this.titulosLimpo = titulos;
-		},
-		setaBaixo() {
-			window.scrollTo({ top: Math.round(window.innerHeight), behavior: 'smooth'})
-		},
-		alteraIndice() {
-			let app = this;
-			let sectionCollection = Array.from(this.$el.getElementsByTagName('section'));		
-			window.addEventListener('scroll', function() {
-				sectionCollection.map(function(index, i) {
-					if (window.scrollY >= index.offsetTop - (window.innerHeight)/2 && window.scrollY < (index.offsetTop + index.offsetHeight) - (window.innerHeight)/4) {
-						if(app.titulosLimpo[i])
-							app.titulosLimpo[i].ativo = true;
-					} else if(app.titulosLimpo[i]) { 
-						app.titulosLimpo[i].ativo = false;
-					};
-				});
-			}, {
-				capture: true,
-				passive: true
-			});
-		},
-		imgSrc(caminho) {
-			let url = this.$store.getters.basePath + caminho;
-			return url.toString()
-		},
-		fileSrc(fileName) {
-			let url = this.$store.getters.basePath + "arquivos/digilab-livre-sp/" + fileName;
-			return url.toString()
-		},		
-		backgroundImg(caminho) {
-			let url = this.$store.getters.basePath + caminho;
-			return 'background-image: url(' + url + ');'
-		}
-	}
-};
+        id++
+        titulos.push(titulo)
+      })
+      this.titulosLimpo = titulos
+    },
+    setaBaixo () {
+      window.scrollTo({ top: Math.round(window.innerHeight), behavior: 'smooth' })
+    },
+    alteraIndice () {
+      let app = this
+      let sectionCollection = Array.from(this.$el.getElementsByTagName('section'))
+      window.addEventListener('scroll', function () {
+        sectionCollection.map(function (index, i) {
+          if (window.scrollY >= index.offsetTop - (window.innerHeight) / 2 && window.scrollY < (index.offsetTop + index.offsetHeight) - (window.innerHeight) / 4) {
+            if (app.titulosLimpo[i]) { app.titulosLimpo[i].ativo = true }
+          } else if (app.titulosLimpo[i]) {
+            app.titulosLimpo[i].ativo = false
+          };
+        })
+      }, {
+        capture: true,
+        passive: true
+      })
+    },
+    imgSrc (caminho) {
+      let url = this.$store.getters.basePath + caminho
+      return url.toString()
+    },
+    fileSrc (fileName) {
+      let url = this.$store.getters.basePath + 'arquivos/digilab-livre-sp/' + fileName
+      return url.toString()
+    },
+    backgroundImg (caminho) {
+      let url = this.$store.getters.basePath + caminho
+      return 'background-image: url(' + url + ');'
+    }
+  }
+}
 </script>
 
 <style lang="scss">
@@ -943,7 +936,7 @@ export default {
 	}
 	table.headed-table {
 		border-collapse: collapse;
-		text-align: center;	
+		text-align: center;
 		table, th, td {
 			border: 1px solid black;
 			padding: 3px;

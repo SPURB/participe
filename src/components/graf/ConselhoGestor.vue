@@ -76,15 +76,15 @@
 </template>
 
 <script>
-	export default {
-		name: 'ConselhoGestor',
-		methods: {
-			imgSrc(caminho) {
-				let url = this.$store.getters.basePath + caminho
-				return url.toString()
-			}
-		}
-	};
+export default {
+  name: 'ConselhoGestor',
+  methods: {
+    imgSrc (caminho) {
+      let url = this.$store.getters.basePath + caminho
+      return url.toString()
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

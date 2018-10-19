@@ -5,13 +5,13 @@
 			<h2 @click="abreId = !abreId">Identificação <i class="material-icons">keyboard_arrow_down</i></h2>
 			<form>
 				<fieldset>
-					<legend>Nome <span><i 
-						class="material-icons editBtn" 
-						title="Editar campo" 
+					<legend>Nome <span><i
+						class="material-icons editBtn"
+						title="Editar campo"
 						@click="editar(['input_nomePublico'], $event)">edit</i></span>
 					</legend>
-					<input 
-						name="input_nomePublico" 
+					<input
+						name="input_nomePublico"
 						type="text"
 						id="input_nomePublico"
 						v-model="nome_publico"
@@ -20,26 +20,26 @@
 				</fieldset>
 
 				<fieldset>
-					<legend>Status <span><i 
-						class="material-icons editBtn" 
-						title="Editar campo" 
+					<legend>Status <span><i
+						class="material-icons editBtn"
+						title="Editar campo"
 						@click="editar(['input_status'], $event)">edit</i></span>
 					</legend>
-					<input 
-						type="radio" 
-						id="input_status_aberta" 
-						name="input_status" 
+					<input
+						type="radio"
+						id="input_status_aberta"
+						name="input_status"
 						value="1"
 						:checked = "ativo == '1'"
 						v-model="ativo"
 					>
-					<label 
-						for="input_status_aberta" 
+					<label
+						for="input_status_aberta"
 						class="status">Consulta aberta</label>
-					<input 
-						type="radio" 
-						id="input_status_encerrada" 
-						name="input_status" 
+					<input
+						type="radio"
+						id="input_status_encerrada"
+						name="input_status"
 						value="0"
 						:checked = "ativo == '0'"
 						v-model="ativo"
@@ -48,25 +48,25 @@
 				</fieldset>
 
 				<fieldset>
-					<legend>Período da consulta <span><i 
-						class="material-icons editBtn" 
-						title="Editar campo" 
+					<legend>Período da consulta <span><i
+						class="material-icons editBtn"
+						title="Editar campo"
 						@click="editar(['input_dataCadastro', 'input_dataFinal'], $event)">edit</i></span></legend>
 					<div>
 						<label for="input_dataCadastro">Início</label>
-						<input 
-							type="date" 
-							id="input_dataCadastro" 
-							name="input_dataCadastro" 
+						<input
+							type="date"
+							id="input_dataCadastro"
+							name="input_dataCadastro"
 							v-model="data_cadastro"
 						>
 					</div>
 					<div>
 						<label for="input_dataFinal">Final</label>
-						<input 
+						<input
 							type="date"
-							id="input_dataFinal" 
-							name="input_dataFinal" 
+							id="input_dataFinal"
+							name="input_dataFinal"
 							v-model="data_final"
 						>
 					</div>
@@ -74,10 +74,10 @@
 
 				<fieldset>
 					<legend>Texto introdutório <span><i class="material-icons editBtn" title="Editar campo" @click="editar(['input_textoIntro'], $event)">edit</i></span></legend>
-					<textarea 
-						id="input_textoIntro" 
-						maxlength="480" 
-						name="input_textoIntro" 
+					<textarea
+						id="input_textoIntro"
+						maxlength="480"
+						name="input_textoIntro"
 						v-model="texto_intro"
 					></textarea>
 				</fieldset>
@@ -86,28 +86,28 @@
 					<legend>Hiperlinks</legend>
 					<div>
 						<label for="input_urlConsulta">URL da consulta <i class="material-icons editBtn" title="Editar campo" @click="editar(['input_urlConsulta'], $event)">edit</i></label>
-						<input 
-							type="url" 
-							id="input_urlConsulta" 
-							name="input_urlConsulta" 
+						<input
+							type="url"
+							id="input_urlConsulta"
+							name="input_urlConsulta"
 							v-model="url_consulta"
 						>
 					</div>
 					<div>
 						<label for="input_urlCapa">URL da imagem de capa <i class="material-icons editBtn" title="Editar campo" @click="editar(['input_urlCapa'], $event)">edit</i></label>
-						<input 
-							type="url" 
-							id="input_urlCapa" 
-							name="input_urlCapa" 
+						<input
+							type="url"
+							id="input_urlCapa"
+							name="input_urlCapa"
 							v-model="url_capa"
 							>
 					</div>
 					<div>
 						<label for="input_urlDevolutiva">URL da devolutiva <i class="material-icons editBtn" title="Editar campo" @click="editar(['input_urlDevolutiva'], $event)">edit</i></label>
-						<input 
-							type="url" 
-							id="input_urlDevolutiva" 
-							name="input_urlDevolutiva" 
+						<input
+							type="url"
+							id="input_urlDevolutiva"
+							name="input_urlDevolutiva"
 							v-model="url_devolutiva"
 							>
 					</div>
@@ -119,9 +119,9 @@
 			<a class="acao enviar" @click="atualizarConsulta" ref="salvar"><i class="material-icons">add_circle</i> Atualizar consulta</a>
 		</section>
 
-		<section 
-			class="hidden" 
-			:class="{ show: abreMod }" 
+		<section
+			class="hidden"
+			:class="{ show: abreMod }"
 			id="moderacao">
 			<h2 @click="abreMod = !abreMod">Moderação <i class="material-icons">keyboard_arrow_down</i></h2>
 
@@ -146,12 +146,12 @@
 						</div>
 					</div>
 					<div class="btns">
-						<button 
+						<button
 							@click="moderar('reprovar',comment.memid)"
 							class="reprovar">Reprovar <i class="material-icons">delete</i>
 						</button>
-						
-						<button  
+
+						<button
 							@click="moderar('aprovar', comment.memid)"
 							class="aprovar">Aprovar <i class="material-icons">check_circle</i>
 						</button>
@@ -176,7 +176,7 @@
 						</div>
 					</div>
 					<div class="btns">
-						<button 
+						<button
 							@click="moderar('moderar', comment.memid)"
 							class="novamente">Moderar novamente <i class="material-icons">cached</i></button>
 					</div>
@@ -200,7 +200,7 @@
 						</div>
 					</div>
 					<div class="btns">
-						<button 
+						<button
 							@click="moderar('moderar', comment.memid)"
 							class="novamente">Moderar novamente <i class="material-icons">cached</i></button>
 					</div>
@@ -211,205 +211,198 @@
 
 <script>
 // import CommentUn from '@/components/CommentUn'
-import axios from 'axios';
-import { adminCommon } from '@/mixins/adminCommon' 
-import { commentsMutations } from '@/mixins/commentsMutations' 
+import axios from 'axios'
+import { adminCommon } from '@/mixins/adminCommon'
+import { commentsMutations } from '@/mixins/commentsMutations'
 
 export default {
-	nome: 'AdminPagConsulta',
-	// components: { 
-	// 	CommentUn
-	// },
-	mixins:[ adminCommon, commentsMutations ],
-	data() {
-		return {
-			fetchingContent: false, 
-			abreId: false,
-			abreMod: false,
-			commentsPendentes: [],
-			commentsAprovados: [],
-			commentsReprovados: []
-		}
-	},
-	computed:{
-		consultas(){ return this.$store.state.consultas },
-		estaSubRota(){ return this.$route.params },
-		estaConsulta: function() {
-			let app = this
-			let estaConsulta = {}
-			app.consultas.filter(function(index) {
-				if (app.$route.params.id == index.id_consulta) {
-					estaConsulta = index
-				}
-			})
-			return estaConsulta
-		},
-	},
-	methods: {
-		moderar(type, memberId){
-			const app = this
-			let toChange = undefined
+  nome: 'AdminPagConsulta',
+  // components: {
+  // 	CommentUn
+  // },
+  mixins: [ adminCommon, commentsMutations ],
+  data () {
+    return {
+      fetchingContent: false,
+      abreId: false,
+      abreMod: false,
+      commentsPendentes: [],
+      commentsAprovados: [],
+      commentsReprovados: []
+    }
+  },
+  computed: {
+    consultas () { return this.$store.state.consultas },
+    estaSubRota () { return this.$route.params },
+    estaConsulta: function () {
+      let app = this
+      let estaConsulta = {}
+      app.consultas.filter(function (index) {
+        if (app.$route.params.id == index.id_consulta) {
+          estaConsulta = index
+        }
+      })
+      return estaConsulta
+    }
+  },
+  methods: {
+    moderar (type, memberId) {
+      const app = this
+      let toChange
 
-			switch(type){
-				case 'reprovar': toChange = {"trash":"1"}; break
-				case 'aprovar' : toChange = {"public":"1"}; break
-				case 'moderar' : toChange = {"trash":"0","public":"0"}; break
-			}
+      switch (type) {
+        case 'reprovar': toChange = { 'trash': '1' }; break
+        case 'aprovar' : toChange = { 'public': '1' }; break
+        case 'moderar' : toChange = { 'trash': '0', 'public': '0' }; break
+      }
 
-			axios.put(app.apiPath + 'members/' + memberId, toChange)
-			.then(function(response){
-				if(type === 'reprovar'){
-					// console.log('reprovar')
-					app.commentsPendentes.map(function(index){
-						if(index.memid === memberId){
-							app.commentsReprovados.push(index)
-						}
-					})
-					app.commentsPendentes = app.commentsPendentes.filter(index => index.memid !== memberId );
-				}
-				if(type === 'aprovar'){
-					// console.log('aprovar')
-					app.commentsPendentes.map(function(index){
-						if(index.memid === memberId){
-							app.commentsAprovados.push(index)
-						}
-					})
-					app.commentsPendentes = app.commentsPendentes.filter(index => index.memid !== memberId );
-				}
-				if(type === 'moderar') {
-					// console.log('moderar')
-					app.commentsAprovados.map(function(index){
-						if(index.memid === memberId){
-							app.commentsPendentes.push(index)
-						}
-					})
-					app.commentsReprovados.map(function(index){
-						if(index.memid === memberId){
-							app.commentsPendentes.push(index)
-						}
-					})
-					app.commentsAprovados = app.commentsAprovados.filter(index => index.memid !== memberId ); 
-					app.commentsReprovados = app.commentsReprovados.filter(index => index.memid !== memberId );
-				}
+      axios.put(app.apiPath + 'members/' + memberId, toChange)
+        .then(function (response) {
+          if (type === 'reprovar') {
+            // console.log('reprovar')
+            app.commentsPendentes.map(function (index) {
+              if (index.memid === memberId) {
+                app.commentsReprovados.push(index)
+              }
+            })
+            app.commentsPendentes = app.commentsPendentes.filter(index => index.memid !== memberId)
+          }
+          if (type === 'aprovar') {
+            // console.log('aprovar')
+            app.commentsPendentes.map(function (index) {
+              if (index.memid === memberId) {
+                app.commentsAprovados.push(index)
+              }
+            })
+            app.commentsPendentes = app.commentsPendentes.filter(index => index.memid !== memberId)
+          }
+          if (type === 'moderar') {
+            // console.log('moderar')
+            app.commentsAprovados.map(function (index) {
+              if (index.memid === memberId) {
+                app.commentsPendentes.push(index)
+              }
+            })
+            app.commentsReprovados.map(function (index) {
+              if (index.memid === memberId) {
+                app.commentsPendentes.push(index)
+              }
+            })
+            app.commentsAprovados = app.commentsAprovados.filter(index => index.memid !== memberId)
+            app.commentsReprovados = app.commentsReprovados.filter(index => index.memid !== memberId)
+          }
+        })
+        .catch(function (error) {
+          alert('erro')
+        })
+    },
 
-			})
-			.catch(function(error){
-				alert('erro')
-			})
+    atualizarConsulta () {
+      // TODO: enviar apenas formulários alterados
+      const sendObj = {
+        'ativo': this.ativo,
+        'dataCadastro': this.data_cadastro,
+        'dataFinal': this.data_final,
+        'textoIntro': this.texto_intro,
+        'nomePublico': this.nome_publico,
+        'urlConsulta': this.url_consulta,
+        'urlCapa': this.url_capa,
+        'urlDevolutiva': this.url_devolutiva
+      }
+      // console.log(sendObj)
+      const app = this
+      axios.put(app.apiPath + 'consultas/' + app.estaConsulta.id_consulta, sendObj)
+        .then(function (response) {
+          // console.log(response)
+          alert('Sucesso d~.~b')
+          app.$store.dispatch('fetchConsultas', { self: this })
+          app.clearInputs()
+          app.$router.push('/admin')
+        })
+        .catch(function (error) {
+          alert('Estamos com um erro de comunicação com o servidor. Tente novamente mais tarde.')
+        })
+    },
+    abreComment (event) {
+      event.target.parentNode.style.maxHeight = '10000px'
+      event.target.style.display = 'none'
+    },
+    abreContexto (event) {
+      event.target.style.whiteSpace = 'normal'
+      event.target.style.cursor = 'default'
+    },
+    carregaComments (idConsulta) {
+      this.fetchingContent = true
+      const app = this
+      let pendentes = []
+      let aprovados = []
+      let reprovados = []
 
-		},
+      axios.post(app.apiPath + 'members/search/', {
+        'idConsulta': '=' + idConsulta
+      })
+        .then(function (response) {
+          let allcomments = response.data
 
-		atualizarConsulta(){
-			// TODO: enviar apenas formulários alterados
-			const sendObj = {
-				"ativo": this.ativo, 
-				"dataCadastro": this.data_cadastro,
-				"dataFinal": this.data_final,
-				"textoIntro": this.texto_intro,
-				"nomePublico":this.nome_publico,
-				"urlConsulta":this.url_consulta,
-				"urlCapa": this.url_capa,
-				"urlDevolutiva": this.url_devolutiva
-			}
-			// console.log(sendObj)
-			const app = this
-			axios.put(app.apiPath + 'consultas/'+app.estaConsulta.id_consulta, sendObj)
-			.then(function(response){
-				// console.log(response)
-				alert("Sucesso d~.~b")
-				app.$store.dispatch("fetchConsultas", { self: this })
-				app.clearInputs()
-				app.$router.push('/admin') 
-			})
-			.catch(function(error){
-				alert("Estamos com um erro de comunicação com o servidor. Tente novamente mais tarde.")
-			})
-		},
-		abreComment(event) {
-			event.target.parentNode.style.maxHeight = '10000px'
-			event.target.style.display = 'none'
-		},
-		abreContexto(event) {
-			event.target.style.whiteSpace = 'normal'
-			event.target.style.cursor = 'default'
-		},
-		carregaComments(idConsulta){
-			this.fetchingContent = true
-			const app = this
-			let pendentes = []
-			let aprovados = []
-			let reprovados = []
+          app.decodeComments(allcomments)
 
-			axios.post(app.apiPath + 'members/search/',{
-				"idConsulta":"="+idConsulta
-			})
-			.then(function(response) {
-				let allcomments = response.data
+          allcomments.map(function (index) {
+            if (index.public == '1') {
+              aprovados.push(index)
+            } else if (index.trash == '1') {
+              reprovados.push(index)
+            } else {
+              pendentes.push(index)
+            }
+          })
 
-				app.decodeComments(allcomments)
+          app.fetchingContent = false
+        })
+        .catch(function (error) {
+          app.fetchingContent = false
+          console.log(error)
+        })
 
-				allcomments.map(function(index) {
-
-					if(index.public == "1"){
-						aprovados.push(index)
-					}
-					else if(index.trash == "1"){
-						reprovados.push(index)
-					}
-					else{
-						pendentes.push(index)
-					}
-				})
-
-				app.fetchingContent = false
-
-			})
-			.catch(function (error){
-				app.fetchingContent = false
-				console.log(error)
-			})
-
-			this.commentsAprovados = aprovados
-			this.commentsReprovados = reprovados
-			this.commentsPendentes = pendentes
-
-		},
-		resetComments(){
-			this.commentsPendentes = []
-			this.commentsAprovados = []
-			this.commentsReprovados = []
-		},
-		editar(arr, event) {
-			let app = this
-			arr.map(function(index) {
-				Array.from(app.$el.querySelectorAll('*[name='+index+']')).map(function(index) {
-					index.disabled = false
-					index.focus()
-				})
-			})
-			event.target.classList.add('desbloqueado')
-		}
-	},
-	mounted() {
-		this.updateForm()
-		this.carregaComments(this.$route.params.id)
-		let app = this
-		Array.from(this.$el.querySelectorAll('*[name^=input_]')).map(function (index){
-			index.disabled = true
-			index.addEventListener('change', function() {
-				app.$refs.limpar.style.display = 'inline-flex'
-				app.$refs.salvar.style.display = 'inline-flex'
-			})
-		})
-	},
-	watch: {
-		$route (to, from) {
-			this.resetComments();
-			this.carregaComments(to.params.id);
-			this.updateForm()
-		}, 
-	}
-};
+      this.commentsAprovados = aprovados
+      this.commentsReprovados = reprovados
+      this.commentsPendentes = pendentes
+    },
+    resetComments () {
+      this.commentsPendentes = []
+      this.commentsAprovados = []
+      this.commentsReprovados = []
+    },
+    editar (arr, event) {
+      let app = this
+      arr.map(function (index) {
+        Array.from(app.$el.querySelectorAll('*[name=' + index + ']')).map(function (index) {
+          index.disabled = false
+          index.focus()
+        })
+      })
+      event.target.classList.add('desbloqueado')
+    }
+  },
+  mounted () {
+    this.updateForm()
+    this.carregaComments(this.$route.params.id)
+    let app = this
+    Array.from(this.$el.querySelectorAll('*[name^=input_]')).map(function (index) {
+      index.disabled = true
+      index.addEventListener('change', function () {
+        app.$refs.limpar.style.display = 'inline-flex'
+        app.$refs.salvar.style.display = 'inline-flex'
+      })
+    })
+  },
+  watch: {
+    $route (to, from) {
+      this.resetComments()
+      this.carregaComments(to.params.id)
+      this.updateForm()
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -422,7 +415,7 @@ div.AdminPagConsulta {
 	section {
 		margin: 0 0 2rem 0;
 
-		&.hidden {			
+		&.hidden {
 			max-height: 64px;
 			overflow: hidden;
 			transition: all ease-in-out .2s;

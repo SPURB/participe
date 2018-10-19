@@ -12,13 +12,13 @@
 			<h2>Consultas</h2>
 			<ul>
 				<li v-for="consulta in consultas">
-					<router-link 
-						:to="{ 
-							path: '/consulta', 
-							name: 'pageConsulta', 
-							params: { 
-									title: consulta.nomePublico, 
-									id: consulta.id_consulta 
+					<router-link
+						:to="{
+							path: '/consulta',
+							name: 'pageConsulta',
+							params: {
+									title: consulta.nomePublico,
+									id: consulta.id_consulta
 								}
 							}"
 							:class="{ consultaAtiva: consulta.ativo == 1 }">
@@ -32,44 +32,44 @@
 </template>
 
 <script>
-	export default {
-		name: 'AdminSide',
-		data(){
-			return {
-				contextoNav: 'Admin'
-			}
-		},
-		computed:{
-			consultas(){ 
-				let adminRole = this.$store.state.infoAdmin.role;				
-				let listaConsultas = [];
-				// Lista somente consultas permitidas ao usuário
-				if (adminRole.total){
-					listaConsultas = this.$store.state.consultas;
-				}
-				else {
-					// Lista somente consultas permitidas ao usuário
-					this.$store.state.consultas.forEach(function(consulta){
-						if(adminRole.projects.includes(consulta.nome)){
-							console.log(consulta.nome);
-							listaConsultas.push(consulta);
-						}
-					});
-				}
-				this.$store.state.consultas = listaConsultas;
-				return listaConsultas },
-			isDev (){  return this.$store.state.infoAdmin.role.dev ? true : false },
-		},
-		watch:{
-			$route(to){
-				switch (to.name){
-					case 'pageConsulta' : this.contextoNav = to.params.title; break;
-					case 'novaConsulta' : this.contextoNav = 'Nova Consulta'; break;
-					default : this.contextoNav = 'Admin'; break
-				}
-			}
-		}
-	};
+export default {
+  name: 'AdminSide',
+  data () {
+    return {
+      contextoNav: 'Admin'
+    }
+  },
+  computed: {
+    consultas () {
+      let adminRole = this.$store.state.infoAdmin.role
+      let listaConsultas = []
+      // Lista somente consultas permitidas ao usuário
+      if (adminRole.total) {
+        listaConsultas = this.$store.state.consultas
+      } else {
+        // Lista somente consultas permitidas ao usuário
+        this.$store.state.consultas.forEach(function (consulta) {
+          if (adminRole.projects.includes(consulta.nome)) {
+            console.log(consulta.nome)
+            listaConsultas.push(consulta)
+          }
+        })
+      }
+      this.$store.state.consultas = listaConsultas
+      return listaConsultas
+    },
+    isDev () { return !!this.$store.state.infoAdmin.role.dev }
+  },
+  watch: {
+    $route (to) {
+      switch (to.name) {
+        case 'pageConsulta' : this.contextoNav = to.params.title; break
+        case 'novaConsulta' : this.contextoNav = 'Nova Consulta'; break
+        default : this.contextoNav = 'Admin'; break
+      }
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -184,6 +184,6 @@ div.AdminSide {
 	padding: 2px 4px;
 	border-radius: 2px;
 	vertical-align: 2px;
-	margin-left: 4px;
-};
+	margin-left: 4px
+}
 </style>

@@ -36,7 +36,7 @@
 </template>
 
 <script>
-	export default {
-		name: 'AnexoBIII'
-	};
+export default {
+  name: 'AnexoBIII'
+}
 </script>

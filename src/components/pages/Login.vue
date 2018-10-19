@@ -3,34 +3,34 @@
 		<form id="Login">
 			<div class="usuario">
 				<label for="adminId">Email</label>
-				<input 
+				<input
 					id="adminId"
 					v-model="email"
 					v-validate="'required|email'"
-					type="email" 
+					type="email"
 					name="email"
 					/>
 					<span class="error_msg" v-show="fields.email && fields.email.invalid">{{ errors.first('email') }}</span>
 			</div>
 			<div class="senha">
 				<label for="adminSenha">Password</label>
-				<input 
-					id="adminSenha" 
+				<input
+					id="adminSenha"
 					v-model="pass"
 					v-validate="{
 						required:true,
 						min:5
-					}" 
-					type="password" 
+					}"
+					type="password"
 					name="password"
 					/>
 					<span class="error_msg" v-show="fields.password && fields.password.invalid">{{ errors.first('password') }}</span>
 			</div>
 
-			<a 
-				:class="{ ativado: inputEmail.valid && inputPassword.valid  }" 
+			<a
+				:class="{ ativado: inputEmail.valid && inputPassword.valid  }"
 				@click="checaUsuario"
-				:disabled="inputEmail.invalid || inputPassword.invalid" 
+				:disabled="inputEmail.invalid || inputPassword.invalid"
 				>Entrar</a>
 		</form>
 	</div>
@@ -41,65 +41,64 @@ import axios from 'axios'
 import { mapFields } from 'vee-validate'
 
 export default {
-	name: 'Login',
-	data() {
-		return {
-			email: undefined,
-			pass: undefined
-		}
-	},
-	computed: {
-		...mapFields({ // https://baianat.github.io/vee-validate/guide/flags.html
-			inputEmail: 'email',
-			inputPassword: 'password'
-		}),
-		passNoSpaces(){ return this.pass.replace(/\s/g, '')},
-		apiLogin(){ return this.$store.getters.apiLogin },
-	},
-	methods: {
-		checaUsuario(){
-			let app = this // para escopo de post do axios
-			let memForm = this.toFormData({
-				email: this.email,
-				pass: this.passNoSpaces
-			})
-			axios.post(this.apiLogin, memForm)
-			.then(function(response){
-				// console.log(response.data)
-				let status = response.data.status
-				let responseObject
+  name: 'Login',
+  data () {
+    return {
+      email: undefined,
+      pass: undefined
+    }
+  },
+  computed: {
+    ...mapFields({ // https://baianat.github.io/vee-validate/guide/flags.html
+      inputEmail: 'email',
+      inputPassword: 'password'
+    }),
+    passNoSpaces () { return this.pass.replace(/\s/g, '') },
+    apiLogin () { return this.$store.getters.apiLogin }
+  },
+  methods: {
+    checaUsuario () {
+      let app = this // para escopo de post do axios
+      let memForm = this.toFormData({
+        email: this.email,
+        pass: this.passNoSpaces
+      })
+      axios.post(this.apiLogin, memForm)
+        .then(function (response) {
+          // console.log(response.data)
+          let status = response.data.status
+          let responseObject
 
-				if(status){ //admin válido
-					app.$store.commit('adminStatus', true)
-					app.$store.commit('addAdminInfo', {
-						firstname: response.data.firstname,
-						message:  response.data.message,
-						role: response.data.role
-					})
-					app.goToAdmin(app.$store.state.isAdmin)
-				}
-				else{ //admin inválido
-					app.$store.commit('adminStatus', false)
-					app.$store.commit('addAdminInfo', response.data)
-					alert(response.data.message)
-					app.email = '',
-					app.pass = ''
-				}
-			})
-			.catch(function (error){
-				app.$store.commit('adminStatus', false)
-				console.log(error)
-			})
-		},
-		goToAdmin(isAdmin){isAdmin ? this.$router.push('/admin') : console.log('não é admin') },
-		toFormData(obj) {
-			var form_data = new FormData()
-			for(var key in obj){
-				form_data.append(key, obj[key])
-			}
-			return form_data
-		}
-	}
+          if (status) { // admin válido
+            app.$store.commit('adminStatus', true)
+            app.$store.commit('addAdminInfo', {
+              firstname: response.data.firstname,
+              message: response.data.message,
+              role: response.data.role
+            })
+            app.goToAdmin(app.$store.state.isAdmin)
+          } else { // admin inválido
+            app.$store.commit('adminStatus', false)
+            app.$store.commit('addAdminInfo', response.data)
+            alert(response.data.message)
+            app.email = '',
+            app.pass = ''
+          }
+        })
+        .catch(function (error) {
+          app.$store.commit('adminStatus', false)
+          console.log(error)
+        })
+    },
+    goToAdmin (isAdmin) { isAdmin ? this.$router.push('/admin') : console.log('não é admin') },
+    toFormData (obj) {
+      var form_data = new FormData()
+      for (var key in obj) {
+        form_data.append(key, obj[key])
+      }
+      return form_data
+    }
+  }
 }
 </script>
 

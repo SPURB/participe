@@ -48,46 +48,46 @@
 /*
 
 são métodos neste mixin:
-setUrlByType(urlOrSlug) 
+setUrlByType(urlOrSlug)
 
 */
-import { consultasMutations } from '../../mixins/consultasMutations' 
+import { consultasMutations } from '../../mixins/consultasMutations'
 // import { List } from listjs
 
 export default {
-	name: 'Home',
-	mixins: [ consultasMutations ],
-	computed:{
-		consultas(){ return this.$store.state.consultas },
-		basePathImgSrc(){ return this.$store.getters.basePath + 'arquivos/capas/'},
-	},
-	methods: {
-		checaContribuicoes(n){ return parseInt(n) > 0 ? true : false },
-		backgroundImagePath(image){ return "background-image:url(" + this.basePathImgSrc  + image + ")" },
-		parseAtivo(state){ return state == '0' ? false : true },
-		ativaBusca() {
-			this.$refs.busca.value = '';
-			this.$refs.busca.style.color = '#333';
-		},
-		desativaBusca() {
-			this.$refs.busca.value='Pesquisar'
-			this.$refs.busca.style.color = '#BDBDBD';
-		},
-		dataDisplay(data) {
-			return data.substring(8,10) + '/' + data.substring(5,7) + '/' + data.substring(0,4);
-		},
-		diasRestantes(data) {
-			// if(data != null || data != '' ){
-				let hoje = new Date();
-				let dataFinal = new Date(data.substring(0,4), data.substring(5,7)-1, data.substring(8,10));
-				let dias = Math.round((dataFinal - hoje)/(1000 * 60 * 60 * 24))+1;
-				if (dias <= 0) {
-					return 'Não é mais possível contribuir';
-				} else { return dias + ' dias restantes para contribuir' };
-			// }
-		},
-	},
-};
+  name: 'Home',
+  mixins: [ consultasMutations ],
+  computed: {
+    consultas () { return this.$store.state.consultas },
+    basePathImgSrc () { return this.$store.getters.basePath + 'arquivos/capas/' }
+  },
+  methods: {
+    checaContribuicoes (n) { return parseInt(n) > 0 },
+    backgroundImagePath (image) { return 'background-image:url(' + this.basePathImgSrc + image + ')' },
+    parseAtivo (state) { return state != '0' },
+    ativaBusca () {
+      this.$refs.busca.value = ''
+      this.$refs.busca.style.color = '#333'
+    },
+    desativaBusca () {
+      this.$refs.busca.value = 'Pesquisar'
+      this.$refs.busca.style.color = '#BDBDBD'
+    },
+    dataDisplay (data) {
+      return data.substring(8, 10) + '/' + data.substring(5, 7) + '/' + data.substring(0, 4)
+    },
+    diasRestantes (data) {
+      // if(data != null || data != '' ){
+      let hoje = new Date()
+      let dataFinal = new Date(data.substring(0, 4), data.substring(5, 7) - 1, data.substring(8, 10))
+      let dias = Math.round((dataFinal - hoje) / (1000 * 60 * 60 * 24)) + 1
+      if (dias <= 0) {
+        return 'Não é mais possível contribuir'
+      } else { return dias + ' dias restantes para contribuir' };
+      // }
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -141,7 +141,7 @@ export default {
 				transition: transform ease-in-out .1s, box-shadow .1s;
 				position: relative;
 				z-index: 0;
-				
+
 				p.nome, p.textoIntro { display: none; };
 				div {
 					grid-row: 1 / 2;
@@ -260,7 +260,7 @@ export default {
 				position: absolute;
 				display: block;
 				width: 100%;
-				height: 100%;		
+				height: 100%;
 				background-image: linear-gradient(275deg, rgba(0,0,0,.2), rgba(0,0,0,.8));
 				transition: all ease-in-out .2s;
 				border-radius: 2px;
@@ -359,7 +359,7 @@ export default {
 				margin: 0 2rem 2rem 0;
 				position: relative;
 				div {
-					background-image: linear-gradient(to right, rgba(0,0,0,.8), rgba(0,0,0,.4)); 
+					background-image: linear-gradient(to right, rgba(0,0,0,.8), rgba(0,0,0,.4));
 					border-radius: 2px 0 0 2px;
 					min-height: 220px;
 					margin-top: -26px;

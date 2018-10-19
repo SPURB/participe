@@ -3,7 +3,7 @@
 		<p style="margin: 1em; margin-left: calc(50% - 1em); width: 50%; text-align: justify;">EDITAL DE CHAMADA PÚBLICA DE CREDENCIAMENTO DE EMPRESAS PARA O FORNECIMENTO GRATUITO AOS CIDADÃOS, DE CONEXÃO À INTERNET, POR MEIO DE WIFI, POSSIBILITANDO O LIVRE ACESSO A INFORMAÇÕES, SERVIÇOS E ENTRETENIMENTO N° 01/2018-CPCS-SMIT-G</p>
 		<br />
 		<h4>
-			TERMO DE CONTRATO Nº XX/SMIT/2018. 
+			TERMO DE CONTRATO Nº XX/SMIT/2018.
 			<br />
 			PROCESSO ADMINISTRATIVO ELETRÔNICO n° 6023.2018/0000712-6.
 		</h4>
@@ -82,7 +82,7 @@
 		<h4>
 			CLÁUSULA QUINTA
 			<br />
-			Do Recebimento do Objeto do Contrato	
+			Do Recebimento do Objeto do Contrato
 		</h4>
 		<p>5.1. O objeto deste Contrato será recebido pela Contratante, consoante o disposto no artigo 73, inciso II, alíneas “a” e “b” da Lei Federal nº 8.666/93 e demais normas pertinentes. </p>
 		<p>5.1.1. No ato da entrega, do serviço será recebido pela Unidade Requisitante, quando serão instalados e testados para verificação do atendimento às condições do ajuste e do Edital que o precedeu e da conformidade com as especificações técnicas constantes dos Anexos B do edital. </p>
@@ -163,7 +163,7 @@
 </template>
 
 <script>
-	export default {
-		name: 'AnexoB'
-	};
+export default {
+  name: 'AnexoB'
+}
 </script>

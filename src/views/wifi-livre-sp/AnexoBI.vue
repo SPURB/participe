@@ -500,22 +500,22 @@ i)	Encerrar problemas/erros conhecidos.
 			<td>Pontos</td>
 		</tr>
 		<tr>
-			<td>< 96,00%</td><td>1</td>
+			<td>96,00%</td><td>1</td>
 		</tr>
 		<tr>
-			<td>< 86,80%</td><td>2</td>
+			<td>86,80%</td><td>2</td>
 		</tr>
 		<tr>
-			<td>< 77,60%</td><td>3</td>
+			<td>77,60%</td><td>3</td>
 		</tr>
 		<tr>
-			<td>< 68,40%</td><td>4</td>
+			<td>68,40%</td><td>4</td>
 		</tr>
 		<tr>
-			<td>< 59,20%</td><td>5</td>
+			<td>59,20%</td><td>5</td>
 		</tr>
 		<tr>
-			<td>< 50,00%</td><td>10</td>
+			<td>50,00%</td><td>10</td>
 		</tr>
 	</table>
 	<br />
@@ -583,6 +583,6 @@ i)	Encerrar problemas/erros conhecidos.
 
 <script>
 export default {
-  name: 'AnexoBI'
+	name: 'AnexoBI'
 }
 </script>

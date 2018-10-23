@@ -79,29 +79,29 @@
 
 <script>
 export default {
-  name: 'Indice',
-  data () {
-    return {
-      aberto: false
-    }
-  },
-  computed: {
-    apoioToggle () {
-      return this.$store.state.apoioToggle
-    }
-  },
-  mounted () {},
-  methods: {
-    abreApoio () {
-      if (this.$store.state.apoioToggle) {
-        this.$store.state.apoioToggle = false
-        this.$store.state.luzApaga = false
-      } else {
-        this.$store.state.apoioToggle = true
-        this.$store.state.luzApaga = true
-      };
-    }
-  }
+	name: 'Indice',
+	data () {
+		return {
+			aberto: false
+		}
+	},
+	computed: {
+		apoioToggle () {
+			return this.$store.state.apoioToggle
+		}
+	},
+	mounted () {},
+	methods: {
+		abreApoio () {
+			if (this.$store.state.apoioToggle) {
+				this.$store.state.apoioToggle = false
+				this.$store.state.luzApaga = false
+			} else {
+				this.$store.state.apoioToggle = true
+				this.$store.state.luzApaga = true
+			};
+		}
+	}
 }
 </script>
 

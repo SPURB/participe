@@ -77,13 +77,13 @@
 
 <script>
 export default {
-  name: 'ConselhoGestor',
-  methods: {
-    imgSrc (caminho) {
-      let url = this.$store.getters.basePath + caminho
-      return url.toString()
-    }
-  }
+	name: 'ConselhoGestor',
+	methods: {
+		imgSrc (caminho) {
+			let url = this.$store.getters.basePath + caminho
+			return url.toString()
+		}
+	}
 }
 </script>
 

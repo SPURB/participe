@@ -34,101 +34,101 @@ import VectorSource 	from 'ol/source/Vector'
 import { chavesExternas } from '../../apiconfig.json'
 
 export default{
-  name: 'Mapa',
-  props: {
-    'mapa_attrs': {
-      center: [
-        { // centróide do kml (eixo y)
-          type: Number,
-          required: true
-        },
-        { // centróide do kml (eixo y)
-          type: Number,
-          required: true
-        }
-      ],
-      zoom: {
-        type: Number,
-        default: 10
-      },
-      layers: [
-        {
-          fill_color: String,
-          path: String,
-          stroke_color: String,
-          stroke_width: Number,
-          title: String
-        }
-      ]
-    }
-  },
-  computed: {
-    mapLayers () {
-      let output_layers = [
-        new TileLayer({
-          source: new BingMaps({
-            imagerySet: 'AerialWithLabels',
-            culture: 'pt-BR',
-            key: chavesExternas.bingMaps
-          })
-        })
-      ]
-      this.mapa_attrs.layers.map(function (index) {
-        let kml_layer = new VectorLayer({
-          style: new Style({
-            stroke: new Stroke({
-              color: index.stroke_color,
-              width: index.stroke_width
-            }),
-            fill: new Fill({
-              color: index.fill_color
-            })
-          }),
-          source: new VectorSource({
-            url: index.path,
-            format: new KML({
-              extractStyles: false
-            })
-          })
-        })
-        output_layers.push(kml_layer)
-      })
-      return output_layers
-    },
-    mapView () {
-      return new View({
-        center: this.mapa_attrs.center,
-        zoom: this.mapa_attrs.zoom
-      })
-    }
-  },
-  mounted () {
-    this.createMap()
-  },
-  methods: {
-    createMap () {
-      let map = new Map({
-        layers: this.mapLayers,
-        target: 'map',
-        view: this.mapView
-        // controls: defaultControls({
-        // 	attributionOptions: {
-        // 		collapsible: true,
-        // 		collapsed: true
-        // 		label:'some Label'
-        // 	}
-        // })
-        // .extend([
-        // 	new ScaleLine(),
-        // ])
-      })
-      if (this.$refs.mapa.clientHeight < 500) {
-        this.mapView.setZoom(12)
-      } else {
-        this.mapView.setMinZoom(this.mapa_attrs.zoom)
-      }
-    }
-  }
+	name: 'Mapa',
+	props: {
+		'mapa_attrs': {
+			center: [
+				{ // centróide do kml (eixo y)
+					type: Number,
+					required: true
+				},
+				{ // centróide do kml (eixo y)
+					type: Number,
+					required: true
+				}
+			],
+			zoom: {
+				type: Number,
+				default: 10
+			},
+			layers: [
+				{
+					fill_color: String,
+					path: String,
+					stroke_color: String,
+					stroke_width: Number,
+					title: String
+				}
+			]
+		}
+	},
+	computed: {
+		mapLayers () {
+			let output_layers = [
+				new TileLayer({
+					source: new BingMaps({
+						imagerySet: 'AerialWithLabels',
+						culture: 'pt-BR',
+						key: chavesExternas.bingMaps
+					})
+				})
+			]
+			this.mapa_attrs.layers.map(function (index) {
+				let kml_layer = new VectorLayer({
+					style: new Style({
+						stroke: new Stroke({
+							color: index.stroke_color,
+							width: index.stroke_width
+						}),
+						fill: new Fill({
+							color: index.fill_color
+						})
+					}),
+					source: new VectorSource({
+						url: index.path,
+						format: new KML({
+							extractStyles: false
+						})
+					})
+				})
+				output_layers.push(kml_layer)
+			})
+			return output_layers
+		},
+		mapView () {
+			return new View({
+				center: this.mapa_attrs.center,
+				zoom: this.mapa_attrs.zoom
+			})
+		}
+	},
+	mounted () {
+		this.createMap()
+	},
+	methods: {
+		createMap () {
+			let map = new Map({
+				layers: this.mapLayers,
+				target: 'map',
+				view: this.mapView
+				// controls: defaultControls({
+				// 	attributionOptions: {
+				// 		collapsible: true,
+				// 		collapsed: true
+				// 		label:'some Label'
+				// 	}
+				// })
+				// .extend([
+				// 	new ScaleLine(),
+				// ])
+			})
+			if (this.$refs.mapa.clientHeight < 500) {
+				this.mapView.setZoom(12)
+			} else {
+				this.mapView.setMinZoom(this.mapa_attrs.zoom)
+			}
+		}
+	}
 }
 </script>
 <style type="text/css">

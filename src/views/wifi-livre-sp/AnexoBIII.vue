@@ -37,6 +37,6 @@
 
 <script>
 export default {
-  name: 'AnexoBIII'
+	name: 'AnexoBIII'
 }
 </script>

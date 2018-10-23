@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  name: 'CommentUn'
+	name: 'CommentUn'
 }
 </script>
 

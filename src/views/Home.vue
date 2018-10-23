@@ -43,7 +43,6 @@
 		</main>
 	</div>
 </template>
-
 <script>
 /*
 
@@ -51,42 +50,40 @@ são métodos neste mixin:
 setUrlByType(urlOrSlug)
 
 */
-import { consultasMutations } from '../../mixins/consultasMutations'
-// import { List } from listjs
+import { consultasMutations } from '@/mixins/consultasMutations'
 
 export default {
-  name: 'Home',
-  mixins: [ consultasMutations ],
-  computed: {
-    consultas () { return this.$store.state.consultas },
-    basePathImgSrc () { return this.$store.getters.basePath + 'arquivos/capas/' }
-  },
-  methods: {
-    checaContribuicoes (n) { return parseInt(n) > 0 },
-    backgroundImagePath (image) { return 'background-image:url(' + this.basePathImgSrc + image + ')' },
-    parseAtivo (state) { return state != '0' },
-    ativaBusca () {
-      this.$refs.busca.value = ''
-      this.$refs.busca.style.color = '#333'
-    },
-    desativaBusca () {
-      this.$refs.busca.value = 'Pesquisar'
-      this.$refs.busca.style.color = '#BDBDBD'
-    },
-    dataDisplay (data) {
-      return data.substring(8, 10) + '/' + data.substring(5, 7) + '/' + data.substring(0, 4)
-    },
-    diasRestantes (data) {
-      // if(data != null || data != '' ){
-      let hoje = new Date()
-      let dataFinal = new Date(data.substring(0, 4), data.substring(5, 7) - 1, data.substring(8, 10))
-      let dias = Math.round((dataFinal - hoje) / (1000 * 60 * 60 * 24)) + 1
-      if (dias <= 0) {
-        return 'Não é mais possível contribuir'
-      } else { return dias + ' dias restantes para contribuir' };
-      // }
-    }
-  }
+	name: 'Home',
+	mixins: [ consultasMutations ],
+	computed: {
+		consultas () { return this.$store.state.consultas },
+		basePathImgSrc () { return this.$store.getters.basePath + 'arquivos/capas/' }
+	},
+	methods: {
+		checaContribuicoes (n) { return parseInt(n) > 0 },
+		backgroundImagePath (image) { return 'background-image:url(' + this.basePathImgSrc + image + ')' },
+		parseAtivo (state) { return state !== '0' },
+		ativaBusca () {
+			this.$refs.busca.value = ''
+			this.$refs.busca.style.color = '#333'
+		},
+		desativaBusca () {
+			this.$refs.busca.value = 'Pesquisar'
+			this.$refs.busca.style.color = '#BDBDBD'
+		},
+		dataDisplay (data) {
+			return data.substring(8, 10) + '/' + data.substring(5, 7) + '/' + data.substring(0, 4)
+		},
+		diasRestantes (data) {
+			// if(data != null || data != '' ){
+			let hoje = new Date()
+			let dataFinal = new Date(data.substring(0, 4), data.substring(5, 7) - 1, data.substring(8, 10))
+			let dias = Math.round((dataFinal - hoje) / (1000 * 60 * 60 * 24)) + 1
+			if (dias <= 0) {
+				return 'Não é mais possível contribuir'
+			} else { return dias + ' dias restantes para contribuir' }
+		}
+	}
 }
 </script>
 

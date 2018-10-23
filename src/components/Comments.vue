@@ -60,84 +60,83 @@
 import axios from 'axios'
 
 export default {
-  name: 'Comments',
-  props: ['attr'],
-  data () {
-    return {
-      form_name: null,
-      form_surname: null,
-      form_organization: null,
-      form_email: null,
-      form_content: null,
-      // form_context: null,
-      abreComentario: false
-    }
-  },
+	name: 'Comments',
+	props: ['attr'],
+	data () {
+		return {
+			form_name: null,
+			form_surname: null,
+			form_organization: null,
+			form_email: null,
+			form_content: null,
+			// form_context: null,
+			abreComentario: false
+		}
+	},
 
-  computed: {
-    currentRoute () { return this.$route.name },
-    returnFormNameObject () {
-      if (this.form_organization != null) {
-        return this.form_name + ' ' + this.form_surname + ' (' + this.form_organization + ')'
-      } else {
-        return this.form_name + ' ' + this.form_surname
-      }
-    },
-    apiPath () { return this.$store.getters.apiPath }
-  },
+	computed: {
+		currentRoute () { return this.$route.name },
+		returnFormNameObject () {
+			if (this.form_organization != null) {
+				return this.form_name + ' ' + this.form_surname + ' (' + this.form_organization + ')'
+			} else {
+				return this.form_name + ' ' + this.form_surname
+			}
+		},
+		apiPath () { return this.$store.getters.apiPath }
+	},
 
-  methods: {
-    setModal (typeOfmodal) {
-      this.$store.commit('COMMENT_MODAL_STATUS', typeOfmodal)
-    },
-    checkName () {
-      if (!this.fields.name.valid && !this.fields.email.valid && !this.fields.surname.valid) {
-        alert('Preencha corretamente os campos Nome e Email')
-      } else if (!this.fields.name.valid) {
-        alert('Inclua um nome')
-      } else if (!this.fields.surname.valid) {
-        alert('Inclua um sobrenome')
-      } else if (!this.fields.email.valid) {
-        alert('Corrija email')
-      } else if (!this.fields.content.valid) {
-        alert('Inclua um comentário')
-      } else {
-        this.send()
-      }
-    },
-    send () {
-      let app = this
-      axios.post(this.apiPath + 'members', {
-        'idConsulta': app.$route.meta.id,
-        'name': app.returnFormNameObject,
-        'email': app.form_email,
-        'content': app.form_content,
-        'public': '0',
-        'trash': '0',
-        'postid': '1',
-        'commentid': app.attr.id,
-        'commentcontext': app.attr.context
-      })
-        .then(function (response) {
-          // console.log(response);
-          let name = app.form_name
-          let content = app.form_content
-          console.log(app.attr.id)
-          app.setModal('success')
-        })
-        .catch(function (error) {
-          app.setModal('error')
-        })
-    },
-    resetForm () {
-      this.form_name = null
-      this.form_surname = null
-      this.form_organization = null
-      this.form_email = null
-      this.form_content = null
-      this.abreComentario = false
-    }
-  }
+	methods: {
+		setModal (typeOfmodal) {
+			this.$store.commit('COMMENT_MODAL_STATUS', typeOfmodal)
+		},
+		checkName () {
+			if (!this.fields.name.valid && !this.fields.email.valid && !this.fields.surname.valid) {
+				alert('Preencha corretamente os campos Nome e Email')
+			} else if (!this.fields.name.valid) {
+				alert('Inclua um nome')
+			} else if (!this.fields.surname.valid) {
+				alert('Inclua um sobrenome')
+			} else if (!this.fields.email.valid) {
+				alert('Corrija email')
+			} else if (!this.fields.content.valid) {
+				alert('Inclua um comentário')
+			} else {
+				this.send()
+			}
+		},
+		send () {
+			let app = this
+			axios.post(this.apiPath + 'members', {
+				'idConsulta': app.$route.meta.id,
+				'name': app.returnFormNameObject,
+				'email': app.form_email,
+				'content': app.form_content,
+				'public': '0',
+				'trash': '0',
+				'postid': '1',
+				'commentid': app.attr.id,
+				'commentcontext': app.attr.context
+			})
+				.then(function (response) {
+					let name = app.form_name
+					let content = app.form_content
+					console.log(app.attr.id)
+					app.setModal('success')
+				})
+				.catch(function (error) {
+					app.setModal('error')
+				})
+		},
+		resetForm () {
+			this.form_name = null
+			this.form_surname = null
+			this.form_organization = null
+			this.form_email = null
+			this.form_content = null
+			this.abreComentario = false
+		}
+	}
 }
 
 </script>

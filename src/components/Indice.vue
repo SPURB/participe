@@ -9,20 +9,20 @@
 
 <script>
 export default {
-  name: 'Indice',
-  props: [ 'titulos' ],
-  mounted () {
-  },
-  methods: {
-    rolar (obj) {
-      window.scrollBy({
-        top: obj.getBoundingClientRect().y - 30,
-        left: 0,
-        behavior: 'smooth'
-      })
-    },
-    topo () { window.scrollTo({ top: window.innerHeight, behavior: 'smooth' }) }
-  }
+	name: 'Indice',
+	props: [ 'titulos' ],
+	mounted () {
+	},
+	methods: {
+		rolar (obj) {
+			window.scrollBy({
+				top: obj.getBoundingClientRect().y - 30,
+				left: 0,
+				behavior: 'smooth'
+			})
+		},
+		topo () { window.scrollTo({ top: window.innerHeight, behavior: 'smooth' }) }
+	}
 }
 </script>
 

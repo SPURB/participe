@@ -14,42 +14,42 @@
 </template>
 <script>
 export default{
-  name: 'PageTop',
-  props: {
-    background_image_src: {
-      required: true,
-      type: String
-    },
-    esta_consulta: {
-		  required: true,
-		  type: Object
-    }
-  },
-  computed: {
-    style () {
-      return 'background-image: url(' + this.$store.getters.basePath + this.background_image_src + '); background-color: #ed8934;'
-    }
-  },
-  methods: {
-    setaBaixo () {
-      window.scrollTo({ top: Math.round(window.innerHeight), behavior: 'smooth' })
-    },
-    consultaState (par) {
-      if (par == 1) {
-        return 'aberta'
-      } else {
-        return 'fechada'
-      }
-    },
-    scrollToallComments () {
-      let appRef = this.$refs.allComments
-      window.scrollBy({
-        top: appRef.getBoundingClientRect().y - 30,
-        left: 0,
-        behavior: 'smooth'
-      })
-    }
-  }
+	name: 'PageTop',
+	props: {
+		background_image_src: {
+			required: true,
+			type: String
+		},
+		esta_consulta: {
+			required: true,
+			type: Object
+		}
+	},
+	computed: {
+		style () {
+			return 'background-image: url(' + this.$store.getters.basePath + this.background_image_src + '); background-color: #ed8934;'
+		}
+	},
+	methods: {
+		setaBaixo () {
+			window.scrollTo({ top: Math.round(window.innerHeight), behavior: 'smooth' })
+		},
+		consultaState (par) {
+			if (par === 1 || par === '1') {
+				return 'aberta'
+			} else {
+				return 'fechada'
+			}
+		},
+		scrollToallComments () {
+			let appRef = this.$refs.allComments
+			window.scrollBy({
+				top: appRef.getBoundingClientRect().y - 30,
+				left: 0,
+				behavior: 'smooth'
+			})
+		}
+	}
 }
 </script>
 <style lang="scss">

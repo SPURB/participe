@@ -28,19 +28,19 @@ setUrlByType(urlOrSlug)
 import { consultasMutations } from '../mixins/consultasMutations'
 
 export default {
-  name: 'MenuLateral',
-  mixins: [ consultasMutations ],
-  computed: {
-    consultas () { return this.$store.state.consultas },
-    menuToggle () { return this.$store.state.menuToggle },
-    logoGestaoUrbana () { return this.$store.getters.basePath + 'arquivos/img/logo_gestao_footer.jpg' }
-  },
-  methods: {
-    fechaMenu () {
-      this.$store.state.menuToggle = false
-      this.$store.state.luzApaga = false
-    }
-  }
+	name: 'MenuLateral',
+	mixins: [ consultasMutations ],
+	computed: {
+		consultas () { return this.$store.state.consultas },
+		menuToggle () { return this.$store.state.menuToggle },
+		logoGestaoUrbana () { return this.$store.getters.basePath + 'arquivos/img/logo_gestao_footer.jpg' }
+	},
+	methods: {
+		fechaMenu () {
+			this.$store.state.menuToggle = false
+			this.$store.state.luzApaga = false
+		}
+	}
 }
 </script>
 

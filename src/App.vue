@@ -18,7 +18,7 @@
   </Modal>
   <Modal v-if="modalState.success">
     <h3 slot="header" class="modal-success">Obrigado!</h3>
-    <div slot="body"><p>Agradecemos a sua contribuição!</br>
+    <div slot="body"><p>Agradecemos a sua contribuição!<br>
     Seu comentário foi enviado e aguarda aprovação da moderação para ser publicado.</p></div>
   </Modal>
 
@@ -27,39 +27,38 @@
 </template>
 
 <script>
-import axios from 'axios'
 import Cabecalho from '@/components/Cabecalho'
 import MenuLateral from '@/components/MenuLateral'
 import Rodape from '@/components/Rodape'
 import Modal from '@/components/Modal.vue'
 
 export default {
-  name: 'Participe',
-  components: {
-    Cabecalho,
-    MenuLateral,
-    Rodape,
-    Modal
-  },
-  computed: {
-    interruptor () { return this.$store.state.luzApaga },
-    isAdmin () { return this.$store.state.isAdmin },
-    modalState () { return this.$store.state.modalState }
-  },
-  created () { this.$store.dispatch('fetchConsultas', { self: this }) },
-  updated () { this.$refs.interruptor.style.height = this.$el.clientHeight + 'px' },
-  methods: {
-    setModal (typeOfmodal) {
-      this.$store.commit('COMMENT_MODAL_STATUS', typeOfmodal)
-    },
-    fechaTudo () {
-      if (this.$store.state.menuToggle || this.$store.state.apoioToggle) {
-        this.$store.state.menuToggle = false
-        this.$store.state.apoioToggle = false
-        this.$store.state.luzApaga = false
-      };
-    }
-  }
+	name: 'Participe',
+	components: {
+		Cabecalho,
+		MenuLateral,
+		Rodape,
+		Modal
+	},
+	computed: {
+		interruptor () { return this.$store.state.luzApaga },
+		isAdmin () { return this.$store.state.isAdmin },
+		modalState () { return this.$store.state.modalState }
+	},
+	created () { this.$store.dispatch('fetchConsultas', { self: this }) },
+	updated () { this.$refs.interruptor.style.height = this.$el.clientHeight + 'px' },
+	methods: {
+		setModal (typeOfmodal) {
+			this.$store.commit('COMMENT_MODAL_STATUS', typeOfmodal)
+		},
+		fechaTudo () {
+			if (this.$store.state.menuToggle || this.$store.state.apoioToggle) {
+				this.$store.state.menuToggle = false
+				this.$store.state.apoioToggle = false
+				this.$store.state.luzApaga = false
+			};
+		}
+	}
 }
 </script>
 

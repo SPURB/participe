@@ -110,7 +110,7 @@
 		Das Penalidades
 		</h4>
 		<p>7.1 São aplicáveis as sanções previstas no Termo de Referência anexo, além do que consta no capítulo IV da Lei Federal nº 8.666/93 e demais normas pertinentes, devendo ser observados os procedimentos contidos no Capítulo X, do Decreto Municipal nº 44.279/03.</p>
-		 <p>7.2 As penalidades só deixarão de ser aplicadas nas seguintes hipóteses:</p>
+		<p>7.2 As penalidades só deixarão de ser aplicadas nas seguintes hipóteses:</p>
 		<p>7.2.1 Comprovação, anexada aos autos, da ocorrência de força maior impeditiva do cumprimento da obrigação e/ou,</p>
 		<p>7.2.2 Manifestação da unidade requisitante, informando que o ocorrido derivou de fatos imputáveis à Administração.</p>
 		<p>7.3 Das decisões de aplicação de penalidades, caberá recurso nos termos do artigo 109 da Lei Federal nº 8.666/93, observados os prazos nele fixados, que deverá ser dirigido à Secretaria Municipal de Inovação e Tecnologia, e protocolizado nos dias úteis, das 09:00 às 18:00 horas, na Rua Libero Badaró, 425, 34º andar, São Paulo – SP, com a Comissão Especial de Seleção, após o recolhimento em agência bancária dos emolumentos devidos.</p>
@@ -164,6 +164,6 @@
 
 <script>
 export default {
-  name: 'AnexoB'
+	name: 'AnexoB'
 }
 </script>

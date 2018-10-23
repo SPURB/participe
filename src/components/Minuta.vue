@@ -6,12 +6,12 @@
 
 <script>
 export default {
-  name: 'Minuta',
-  data () {
-    return {
-      paragrafos: []
-    }
-  }
+	name: 'Minuta',
+	data () {
+		return {
+			paragrafos: []
+		}
+	}
 }
 </script>
 <style lang="scss" scoped>

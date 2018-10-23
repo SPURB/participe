@@ -13,9 +13,9 @@
 				<label for="item1">Anexos</label>
 				<div class="conteudoTab">
 					<ul style="list-style-type: square; color: #DDD;">
-					    <li v-for="anexo in anexos">
-					    	<a :href="fileSrc(anexo)">{{ anexo }}</a>
-					    </li>
+						<li v-for="anexo in anexos">
+							<a :href="fileSrc(anexo)">{{ anexo }}</a>
+						</li>
 					</ul>
 				</div>
 			</li>
@@ -621,7 +621,7 @@
 					<li>
 						Multidisciplinariedade
 						<ul>
-					    	<li>
+							<li>
 								Usando a definição do Dicionário Aurélio, “multidisciplinar é um sistema de ensino que engloba experiências em várias disciplinas, em busca de metas a atingir, dentro de um programa específico” (2016, p.164).
 							</li>
 							<li>
@@ -632,12 +632,12 @@
 					<li>
 						Transdisciplinaridade
 						<ul>
-						    <li>
-						    	Usando a definição do Dicionário Aurélio, “transdisciplinaridade é um enfoque pluralista do conhecimento que tem como objetivo, através da articulação entre as inúmeras faces de compreensão do mundo, alcançar a unificação do saber. Assim, unem-se as mais variadas disciplinas para que se torne possível um exercício mais amplo da cognição humana” (2016, p. 201).
-						    </li>
-						    <li>
-						    	Na prática, as várias disciplinas aqui descritas se referem à convergência que as três grandes macro áreas de conhecimento do DIGILAB LIVRE SP (informática básica, programação e empreendedorismo) têm na prática, de forma complementar entre si.
-						    </li>
+							<li>
+								Usando a definição do Dicionário Aurélio, “transdisciplinaridade é um enfoque pluralista do conhecimento que tem como objetivo, através da articulação entre as inúmeras faces de compreensão do mundo, alcançar a unificação do saber. Assim, unem-se as mais variadas disciplinas para que se torne possível um exercício mais amplo da cognição humana” (2016, p. 201).
+							</li>
+							<li>
+								Na prática, as várias disciplinas aqui descritas se referem à convergência que as três grandes macro áreas de conhecimento do DIGILAB LIVRE SP (informática básica, programação e empreendedorismo) têm na prática, de forma complementar entre si.
+							</li>
 						</ul>
 					</li>
 				</ol>
@@ -694,13 +694,13 @@
 
 			<h4>5.3. Programação</h4>
 			<ul>
-			    <li>
-			    	Objetivo geral: entender a lógica de raciocínio para resolver problemas utilizando programação.
-			    </li>
-			    <li>
-			    	Objetivo específico: capacitar o indivíduo para desenvolver sites, jogos e aplicativos com diversas linguagens de programação.
-			    </li>
-			    <li>Carga-horária:​ 180 horas.</li>
+				<li>
+					Objetivo geral: entender a lógica de raciocínio para resolver problemas utilizando programação.
+				</li>
+				<li>
+					Objetivo específico: capacitar o indivíduo para desenvolver sites, jogos e aplicativos com diversas linguagens de programação.
+				</li>
+				<li>Carga-horária:​ 180 horas.</li>
 				<li>
 					Conteúdo:
 					<ol type="1">
@@ -801,117 +801,35 @@ import PageTop from '@/components/PageTop'
 import Indice from '@/components/Indice'
 import Comments from '@/components/Comments'
 import CommentsLoader from '@/components/CommentsLoader'
-import Apoio from '@/components/Apoio'
+import { consultasCommons } from '@/mixins/consultasCommons'
 
 export default {
-  name: 'DigilabLivreSP',
-  data () {
-    return {
-      titulosLimpo: [],
-      comments_atrr: undefined,
-      consultas: false,
-      estaConsulta: {},
-      imagens: {
-        img1: 'Trilhas do Conhecimento',
-        img2: 'Objetivos',
-        img3: 'Competências Socioemocionais',
-        img4: 'Estruturação',
-        img5: 'Caminhos',
-        img6: 'Competências Técnicas',
-        img7: 'Sugestões de Aplicação',
-        img8: 'Sugestões de Aplicação - Legenda'
-      }
-    }
-  },
-  computed: {
-    commentsLoaded () { return this.$store.state.commentsLoaded }
-  },
-  components: {
-    PageTop,
-    Indice,
-    Comments,
-    CommentsLoader
-  },
-  created () {
-    this.$store.dispatch('fetchConsultas', { self: this })
-    this.consultas = this.$store.state.consultas
-  },
-  mounted () {
-    this.listaTitulos()
-  },
-  updated () {
-    this.alteraIndice()
-  },
-  methods: {
-    scrollToallComments () {
-      let appRef = this.$refs.allComments
-      window.scrollBy({
-        top: appRef.getBoundingClientRect().y - 30,
-        left: 0,
-        behavior: 'smooth'
-      })
-    },
-    scrollMeTo (refName) {
-      let element = this.$refs[refName]
-      let top = element.offsetTop
-      window.scrollTo({ top: top, behavior: 'smooth' })
-    },
-    filterConsultas () {
-      this.consultas = this.$store.state.consultas
-      this.estaConsulta = this.consultas.filter(esta => esta.id_consulta == this.$route.meta.id)[0]
-    },
-    consultaState () { return (this.estaConsulta.ativo == '1' ? 'aberta' : 'fechada') },
-    listaTitulos () {
-      let app = this
-      let titulosBruto = Array.from(this.$refs.conteudoConsulta.getElementsByClassName('titulo'))
-      let titulos = []
-      let id = 0
-      titulosBruto.map(function (index) {
-        let titulo = {
-          id: id,
-          nome: index.innerText,
-          indent: index.attributes.indent.value,
-          offsetObj: index,
-          ativo: false
-        }
-
-        id++
-        titulos.push(titulo)
-      })
-      this.titulosLimpo = titulos
-    },
-    setaBaixo () {
-      window.scrollTo({ top: Math.round(window.innerHeight), behavior: 'smooth' })
-    },
-    alteraIndice () {
-      let app = this
-      let sectionCollection = Array.from(this.$el.getElementsByTagName('section'))
-      window.addEventListener('scroll', function () {
-        sectionCollection.map(function (index, i) {
-          if (window.scrollY >= index.offsetTop - (window.innerHeight) / 2 && window.scrollY < (index.offsetTop + index.offsetHeight) - (window.innerHeight) / 4) {
-            if (app.titulosLimpo[i]) { app.titulosLimpo[i].ativo = true }
-          } else if (app.titulosLimpo[i]) {
-            app.titulosLimpo[i].ativo = false
-          };
-        })
-      }, {
-        capture: true,
-        passive: true
-      })
-    },
-    imgSrc (caminho) {
-      let url = this.$store.getters.basePath + caminho
-      return url.toString()
-    },
-    fileSrc (fileName) {
-      let url = this.$store.getters.basePath + 'arquivos/digilab-livre-sp/' + fileName
-      return url.toString()
-    },
-    backgroundImg (caminho) {
-      let url = this.$store.getters.basePath + caminho
-      return 'background-image: url(' + url + ');'
-    }
-  }
+	name: 'DigilabLivreSP',
+	data () {
+		return {
+			titulosLimpo: [],
+			comments_atrr: undefined,
+			consultas: false,
+			estaConsulta: {},
+			imagens: {
+				img1: 'Trilhas do Conhecimento',
+				img2: 'Objetivos',
+				img3: 'Competências Socioemocionais',
+				img4: 'Estruturação',
+				img5: 'Caminhos',
+				img6: 'Competências Técnicas',
+				img7: 'Sugestões de Aplicação',
+				img8: 'Sugestões de Aplicação - Legenda'
+			}
+		}
+	},
+	components: {
+		PageTop,
+		Indice,
+		Comments,
+		CommentsLoader
+	},
+	mixins: [ consultasCommons ]
 }
 </script>
 
@@ -987,15 +905,15 @@ export default {
 	}
 	ol.subtipificado {
 		font-style: italic;
-	    font-weight: bold;
-	    color: #555;
-	    ul {
-	    	font-weight: initial;
-		    font-style: initial;
-		    list-style-type: disc;
-		    color: initial;
-		    margin-bottom: 1em;
-	    }
+		font-weight: bold;
+		color: #555;
+		ul {
+			font-weight: initial;
+			font-style: initial;
+			list-style-type: disc;
+			color: initial;
+			margin-bottom: 1em;
+		}
 	}
 }
 </style>

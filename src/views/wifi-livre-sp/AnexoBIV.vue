@@ -101,6 +101,6 @@
 
 <script>
 export default {
-  name: 'AnexoBIV'
+	name: 'AnexoBIV'
 }
 </script>

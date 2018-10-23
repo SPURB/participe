@@ -136,13 +136,13 @@
 
 <script>
 export default {
-  name: 'ProcessoPIU',
-  methods: {
-    imgSrc (caminho) {
-      let url = this.$store.getters.basePath + caminho
-      return url.toString()
-    }
-  }
+	name: 'ProcessoPIU',
+	methods: {
+		imgSrc (caminho) {
+			let url = this.$store.getters.basePath + caminho
+			return url.toString()
+		}
+	}
 }
 </script>
 

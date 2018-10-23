@@ -66,16 +66,16 @@
 
 <script>
 export default {
-  name: 'GrafBarras',
-  mounted () {
-    let total = 500
-    let alturaGrafico = this.$refs.eixoY.offsetHeight
-    this.$refs.eixoX.style.marginLeft = this.$refs.eixoY.getElementsByTagName('span')[0].offsetWidth + 'px'
-    this.$refs.eixoX.style.height = alturaGrafico + 'px'
-    Array.from(this.$el.getElementsByClassName('barra')).map(function (index) {
-      index.style.height = (index.attributes.valor.value / total) * alturaGrafico + 'px'
-    })
-  }
+	name: 'GrafBarras',
+	mounted () {
+		let total = 500
+		let alturaGrafico = this.$refs.eixoY.offsetHeight
+		this.$refs.eixoX.style.marginLeft = this.$refs.eixoY.getElementsByTagName('span')[0].offsetWidth + 'px'
+		this.$refs.eixoX.style.height = alturaGrafico + 'px'
+		Array.from(this.$el.getElementsByClassName('barra')).map(function (index) {
+			index.style.height = (index.attributes.valor.value / total) * alturaGrafico + 'px'
+		})
+	}
 }
 </script>
 

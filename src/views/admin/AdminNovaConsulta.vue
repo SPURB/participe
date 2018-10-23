@@ -116,70 +116,70 @@ import { mapFields } from 'vee-validate'
 import { adminCommon } from '@/mixins/adminCommon'
 
 export default {
-  mixins: [ adminCommon ],
-  nome: 'AdminNovaConsulta',
-  computed: {
-    periodoPadrao () {
-      let hoje = new Date() // objeto Date "Date 2018-08-16T14:27:38.500Z"
-      let hojeFull = hoje.toISOString().substring(0, hoje.toISOString().indexOf('T')) // "2018-08-16T14:27:38.500Z" -> "2018-08-16"
-      let dataFinal = new Date(hoje.setDate(hoje.getDate() + 20)) // soma vinte dias e cria um novo objeto Date
-      let dataFinalFull = dataFinal.toISOString().substring(0, dataFinal.toISOString().indexOf('T')) // "2018-08-16T14:27:38.500Z" -> "2018-08-16"
-      return {
-        hoje: hojeFull, //  1
-        fim: dataFinalFull // -1
-      }
-    },
-    ...mapFields({ // https://baianat.github.io/vee-validate/guide/flags.html
-      url: 'url',
-      text: ''
-    })
-  },
-  methods: {
-    criarConsulta () {
-      const sendObj = {
-        'nome': this.nome_db,
-        'ativo': '=' + this.ativo,
-        'dataCadastro': this.data_cadastro,
-        'dataFinal': this.data_final,
-        'textoIntro': this.texto_intro,
-        'nomePublico': this.nome_publico,
-        'urlConsulta': this.url_consulta,
-        'urlCapa': this.url_capa,
-        'urlDevolutiva': this.url_devolutiva
-      }
-      // console.log(sendObj)
+	mixins: [ adminCommon ],
+	nome: 'AdminNovaConsulta',
+	computed: {
+		periodoPadrao () {
+			let hoje = new Date() // objeto Date "Date 2018-08-16T14:27:38.500Z"
+			let hojeFull = hoje.toISOString().substring(0, hoje.toISOString().indexOf('T')) // "2018-08-16T14:27:38.500Z" -> "2018-08-16"
+			let dataFinal = new Date(hoje.setDate(hoje.getDate() + 20)) // soma vinte dias e cria um novo objeto Date
+			let dataFinalFull = dataFinal.toISOString().substring(0, dataFinal.toISOString().indexOf('T')) // "2018-08-16T14:27:38.500Z" -> "2018-08-16"
+			return {
+				hoje: hojeFull, //  1
+				fim: dataFinalFull // -1
+			}
+		},
+		...mapFields({ // https://baianat.github.io/vee-validate/guide/flags.html
+			url: 'url',
+			text: ''
+		})
+	},
+	methods: {
+		criarConsulta () {
+			const sendObj = {
+				'nome': this.nome_db,
+				'ativo': '=' + this.ativo,
+				'dataCadastro': this.data_cadastro,
+				'dataFinal': this.data_final,
+				'textoIntro': this.texto_intro,
+				'nomePublico': this.nome_publico,
+				'urlConsulta': this.url_consulta,
+				'urlCapa': this.url_capa,
+				'urlDevolutiva': this.url_devolutiva
+			}
+			// console.log(sendObj)
 
-      const app = this
-      axios.post(this.apiPath + 'consultas', sendObj)
-        .then(function (response) {
-          // console.log(response);
-          alert('Sucesso d~.~b')
-          app.$store.dispatch('fetchConsultas', { self: this })
-          app.clearInputs()
-          app.$router.push('/admin')
-        })
-        .catch(function (error) {
-          alert('Estamos com um erro de comunicação com o servidor. Tente novamente mais tarde.')
-        })
-    }
-  },
-  watch: {
-    nome_publico (noSlug) {
-      this.nome_db = noSlug
-        .toLowerCase()
-        .replace(/\s/g, '_')
-        .replace(/[àáâãäå]/g, 'a')
-        .replace(/[èéêë]/g, 'e')
-        .replace(/[ìíîï]/g, 'i')
-        .replace(/[òóôõö]/g, 'o')
-        .replace(/[ùúûü]/g, 'u')
-        .replace(/[æ]/g, 'ae')
-        .replace(/[ýÿ]/g, 'y')
-        .replace(/[ñ]/g, 'n')
-        .replace(/[ç]/g, 'c')
-        .replace(/[^a-z0-9]/gi, '_')
-    }
-  }
+			const app = this
+			axios.post(this.apiPath + 'consultas', sendObj)
+				.then(function (response) {
+					// console.log(response);
+					alert('Sucesso d~.~b')
+					app.$store.dispatch('fetchConsultas', { self: this })
+					app.clearInputs()
+					app.$router.push('/admin')
+				})
+				.catch(function (error) {
+					alert('Estamos com um erro de comunicação com o servidor. Tente novamente mais tarde.')
+				})
+		}
+	},
+	watch: {
+		nome_publico (noSlug) {
+			this.nome_db = noSlug
+				.toLowerCase()
+				.replace(/\s/g, '_')
+				.replace(/[àáâãäå]/g, 'a')
+				.replace(/[èéêë]/g, 'e')
+				.replace(/[ìíîï]/g, 'i')
+				.replace(/[òóôõö]/g, 'o')
+				.replace(/[ùúûü]/g, 'u')
+				.replace(/[æ]/g, 'ae')
+				.replace(/[ýÿ]/g, 'y')
+				.replace(/[ñ]/g, 'n')
+				.replace(/[ç]/g, 'c')
+				.replace(/[^a-z0-9]/gi, '_')
+		}
+	}
 }
 </script>
 

@@ -10,16 +10,16 @@
 
 <script>
 export default {
-  name: 'Cabecalho',
-  computed: {
-    logoPrefeitura () { return this.$store.getters.basePath + 'arquivos/img/PMSP_cor_transparente.png' }
-  },
-  methods: {
-    abreMenu () {
-      this.$store.state.menuToggle = true
-      this.$store.state.luzApaga = true
-    }
-  }
+	name: 'Cabecalho',
+	computed: {
+		logoPrefeitura () { return this.$store.getters.basePath + 'arquivos/img/PMSP_cor_transparente.png' }
+	},
+	methods: {
+		abreMenu () {
+			this.$store.state.menuToggle = true
+			this.$store.state.luzApaga = true
+		}
+	}
 }
 </script>
 

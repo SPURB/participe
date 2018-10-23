@@ -24,11 +24,11 @@
 <script>
 
 export default{
-  name: 'Modal',
-  computed: {
-    modalState () { return this.$store.state.modalState }
-  },
-  methods: { setModal () { this.$store.commit('COMMENT_MODAL_STATUS', 'reset') } }
+	name: 'Modal',
+	computed: {
+		modalState () { return this.$store.state.modalState }
+	},
+	methods: { setModal () { this.$store.commit('COMMENT_MODAL_STATUS', 'reset') } }
 }
 </script>
 

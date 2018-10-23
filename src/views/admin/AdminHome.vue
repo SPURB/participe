@@ -44,15 +44,15 @@
 
 <script>
 export default {
-  nome: 'AdminHome',
-  computed: {
-    consultas () { return this.$store.state.consultas }
-  },
-  methods: {
-    dataDisplay (data) {
-      return data.substring(8, 10) + '/' + data.substring(5, 7) + '/' + data.substring(0, 4)
-    }
-  }
+	nome: 'AdminHome',
+	computed: {
+		consultas () { return this.$store.state.consultas }
+	},
+	methods: {
+		dataDisplay (data) {
+			return data.substring(8, 10) + '/' + data.substring(5, 7) + '/' + data.substring(0, 4)
+		}
+	}
 }
 </script>
 

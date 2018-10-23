@@ -13,9 +13,9 @@
 				<label for="item1">Anexos</label>
 				<div class="conteudoTab">
 					<ul style="list-style-type: square; color: #DDD;">
-					    <li v-for="anexo in anexos">
-					    	<a :href="fileSrc(anexo)">{{ anexo }}</a>
-					    </li>
+						<li v-for="anexo in anexos">
+							<a :href="fileSrc(anexo)">{{ anexo }}</a>
+						</li>
 					</ul>
 				</div>
 			</li>
@@ -121,7 +121,7 @@
 			<!-- <h2 class="titulo" indent="1">ANEXO II - LOCALIDADES OBRIGATÓRIAS</h2> -->
 			<h2 class="titulo" indent="1">ANEXO B II - LISTA DE LOCALIDADES</h2>
 			<object :data="fileSrc('Anexo B II - Lista de localidades.pdf')" type="application/pdf" width="100%" height="600px">
-			  <p>Seu navegador não suporta a exibição na página. <a :href="fileSrc('Anexo B II - Lista de localidades.pdf')">Clique aqui para baixar.</a></p>
+			<p>Seu navegador não suporta a exibição na página. <a :href="fileSrc('Anexo B II - Lista de localidades.pdf')">Clique aqui para baixar.</a></p>
 			</object>
 			<Comments :attr="{id:18, context:'ANEXO II - LOCALIDADES OBRIGATÓRIAS'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
@@ -167,7 +167,7 @@
 			<!-- <h2 class="titulo" indent="1">ANEXO V – MANUAL DE IDENTIDADE VISUAL</h2> -->
 			<h2 class="titulo" indent="1">ANEXO B V - MANUAL DE IDENTIDADE VISUAL</h2>
 			<object :data="fileSrc('Anexo B V - Manual de identidade visual.pdf')" type="application/pdf" width="100%" height="600px">
-			  <p>Seu navegador não suporta a exibição na página. <a :href="fileSrc('Anexo B V - Manual de identidade visual.pdf')">Clique aqui para baixar.</a></p>
+			<p>Seu navegador não suporta a exibição na página. <a :href="fileSrc('Anexo B V - Manual de identidade visual.pdf')">Clique aqui para baixar.</a></p>
 			</object>
 			<Comments :attr="{id:22, context:'ANEXO B V - MANUAL DE IDENTIDADE VISUAL'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
@@ -182,134 +182,63 @@
 </template>
 
 <script>
-import AnexoA from '@/components/pages/wifi-livre-sp/AnexoA'
-import AnexoB from '@/components/pages/wifi-livre-sp/AnexoB'
-import AnexoBI from '@/components/pages/wifi-livre-sp/AnexoBI'
-import AnexoBIII from '@/components/pages/wifi-livre-sp/AnexoBIII'
-import AnexoBIV from '@/components/pages/wifi-livre-sp/AnexoBIV'
-
+import AnexoA from '@/views/wifi-livre-sp/AnexoA'
+import AnexoB from '@/views/wifi-livre-sp/AnexoB'
+import AnexoBI from '@/views/wifi-livre-sp/AnexoBI'
+import AnexoBIII from '@/views/wifi-livre-sp/AnexoBIII'
+import AnexoBIV from '@/views/wifi-livre-sp/AnexoBIV'
 import PageTop from '@/components/PageTop'
-// const Mapa = () => import('@/components/Mapa');
-// import Diagnostico from '@/components/Diagnostico';
 import Indice from '@/components/Indice'
 import Comments from '@/components/Comments'
 import CommentsLoader from '@/components/CommentsLoader'
 import Apoio from '@/components/Apoio'
+import { consultasCommons } from '@/mixins/consultasCommons'
 
 export default {
-  name: 'WifiLivreSP',
-  data () {
-    return {
-      titulosLimpo: [],
-      comments_atrr: undefined,
-      consultas: false,
-      estaConsulta: {},
-      anexos: [
-        // 'Anexo A - Edital de Credenciamento n 01_2018 - Expansao do WiFi (V.Final).pdf',
-        // 'Anexo B - Minuta do Termo de Contrato.pdf',
-        // 'Anexo B I - Termo de Referência FINAL - 2018-09-13.pdf',
-        // 'Anexo B II - Lista de localidades.pdf',
-        // 'Anexo B III - Postes e placas.pdf',
-        // 'Anexo B IV - Política de Privacidade.pdf',
-        // 'Anexo B V - Manual de identidade visual.pdf'
-        'Edital de Credenciamento n 01_2018.pdf',
-        'Anexo A - Minuta do Termo de Contrato.pdf',
-        'Anexo B I - Termo de Referência.pdf',
-        'Anexo B II - Lista de localidades.pdf',
-        'Anexo B III - Postes e placas.pdf',
-        'Anexo B IV - Política de Privacidade.pdf',
-        'Anexo B V - Manual de identidade visual.pdf'
-      ]
-    }
-  },
-  computed: {
-    commentsLoaded () { return this.$store.state.commentsLoaded }
-  },
-  components: {
-    PageTop,
-    Indice,
-    Comments,
-    CommentsLoader,
-    Apoio,
-    AnexoA,
-    AnexoB,
-    AnexoBI,
-    AnexoBIII,
-    AnexoBIV
-  },
-  created () {
-    this.$store.dispatch('fetchConsultas', { self: this })
-    this.consultas = this.$store.state.consultas
-  },
-  mounted () {
-    this.listaTitulos()
-  },
-  updated () {
-    this.alteraIndice()
-  },
-  methods: {
-    scrollToallComments () {
-      let appRef = this.$refs.allComments
-      window.scrollBy({
-        top: appRef.getBoundingClientRect().y - 30,
-        left: 0,
-        behavior: 'smooth'
-      })
-    },
-    filterConsultas () {
-      this.consultas = this.$store.state.consultas
-      this.estaConsulta = this.consultas.filter(esta => esta.id_consulta == this.$route.meta.id)[0]
-    },
-    consultaState () { return (this.estaConsulta.ativo == '1' ? 'aberta' : 'fechada') },
-    listaTitulos () {
-      let app = this
-      let titulosBruto = Array.from(this.$refs.conteudoConsulta.getElementsByClassName('titulo'))
-      let titulos = []
-      let id = 0
-      titulosBruto.map(function (index) {
-        let titulo = {
-          id: id,
-          nome: index.innerText,
-          indent: index.attributes.indent.value,
-          offsetObj: index,
-          ativo: false
-        }
-
-        id++
-        titulos.push(titulo)
-      })
-      this.titulosLimpo = titulos
-    },
-    setaBaixo () {
-      window.scrollTo({ top: Math.round(window.innerHeight), behavior: 'smooth' })
-    },
-    alteraIndice () {
-      let app = this
-      let sectionCollection = Array.from(this.$el.getElementsByTagName('section'))
-      window.addEventListener('scroll', function () {
-        sectionCollection.map(function (index, i) {
-          if (window.scrollY >= index.offsetTop - (window.innerHeight) / 2 && window.scrollY < (index.offsetTop + index.offsetHeight) - (window.innerHeight) / 4) {
-            app.titulosLimpo[i].ativo = true
-          } else { app.titulosLimpo[i].ativo = false };
-        })
-      }, {
-        capture: true,
-        passive: true
-      })
-    },
-    imgSrc (caminho) {
-      let url = this.$store.getters.basePath + caminho
-      return url.toString()
-    },
-    fileSrc (fileName) {
-      let url = this.$store.getters.basePath + 'arquivos/wifi-livre-sp/' + fileName
-      return url.toString()
-    },
-    backgroundImg (caminho) {
-      let url = this.$store.getters.basePath + caminho
-      return 'background-image: url(' + url + ');'
-    }
-  }
+	name: 'WifiLivreSP',
+	data () {
+		return {
+			titulosLimpo: [],
+			comments_atrr: undefined,
+			consultas: false,
+			estaConsulta: {},
+			anexos: [
+				// 'Anexo A - Edital de Credenciamento n 01_2018 - Expansao do WiFi (V.Final).pdf',
+				// 'Anexo B - Minuta do Termo de Contrato.pdf',
+				// 'Anexo B I - Termo de Referência FINAL - 2018-09-13.pdf',
+				// 'Anexo B II - Lista de localidades.pdf',
+				// 'Anexo B III - Postes e placas.pdf',
+				// 'Anexo B IV - Política de Privacidade.pdf',
+				// 'Anexo B V - Manual de identidade visual.pdf'
+				'Edital de Credenciamento n 01_2018.pdf',
+				'Anexo A - Minuta do Termo de Contrato.pdf',
+				'Anexo B I - Termo de Referência.pdf',
+				'Anexo B II - Lista de localidades.pdf',
+				'Anexo B III - Postes e placas.pdf',
+				'Anexo B IV - Política de Privacidade.pdf',
+				'Anexo B V - Manual de identidade visual.pdf'
+			]
+		}
+	},
+	components: {
+		PageTop,
+		Indice,
+		Comments,
+		CommentsLoader,
+		Apoio,
+		AnexoA,
+		AnexoB,
+		AnexoBI,
+		AnexoBIII,
+		AnexoBIV
+	},
+	mixins: [ consultasCommons ],
+	methods: {
+		fileSrc (fileName) {
+			let url = this.$store.getters.basePath + 'arquivos/wifi-livre-sp/' + fileName
+			return url.toString()
+		}
+	}
 }
 </script>
 

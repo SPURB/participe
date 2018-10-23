@@ -216,192 +216,192 @@ import { adminCommon } from '@/mixins/adminCommon'
 import { commentsMutations } from '@/mixins/commentsMutations'
 
 export default {
-  nome: 'AdminPagConsulta',
-  // components: {
-  // 	CommentUn
-  // },
-  mixins: [ adminCommon, commentsMutations ],
-  data () {
-    return {
-      fetchingContent: false,
-      abreId: false,
-      abreMod: false,
-      commentsPendentes: [],
-      commentsAprovados: [],
-      commentsReprovados: []
-    }
-  },
-  computed: {
-    consultas () { return this.$store.state.consultas },
-    estaSubRota () { return this.$route.params },
-    estaConsulta: function () {
-      let app = this
-      let estaConsulta = {}
-      app.consultas.filter(function (index) {
-        if (app.$route.params.id == index.id_consulta) {
-          estaConsulta = index
-        }
-      })
-      return estaConsulta
-    }
-  },
-  methods: {
-    moderar (type, memberId) {
-      const app = this
-      let toChange
+	nome: 'AdminPagConsulta',
+	// components: {
+	// 	CommentUn
+	// },
+	mixins: [ adminCommon, commentsMutations ],
+	data () {
+		return {
+			fetchingContent: false,
+			abreId: false,
+			abreMod: false,
+			commentsPendentes: [],
+			commentsAprovados: [],
+			commentsReprovados: []
+		}
+	},
+	computed: {
+		consultas () { return this.$store.state.consultas },
+		estaSubRota () { return this.$route.params },
+		estaConsulta: function () {
+			let app = this
+			let estaConsulta = {}
+			app.consultas.filter(function (index) {
+				if (app.$route.params.id === index.id_consulta) {
+					estaConsulta = index
+				}
+			})
+			return estaConsulta
+		}
+	},
+	methods: {
+		moderar (type, memberId) {
+			const app = this
+			let toChange
 
-      switch (type) {
-        case 'reprovar': toChange = { 'trash': '1' }; break
-        case 'aprovar' : toChange = { 'public': '1' }; break
-        case 'moderar' : toChange = { 'trash': '0', 'public': '0' }; break
-      }
+			switch (type) {
+			case 'reprovar': toChange = { 'trash': '1' }; break
+			case 'aprovar' : toChange = { 'public': '1' }; break
+			case 'moderar' : toChange = { 'trash': '0', 'public': '0' }; break
+			}
 
-      axios.put(app.apiPath + 'members/' + memberId, toChange)
-        .then(function (response) {
-          if (type === 'reprovar') {
-            // console.log('reprovar')
-            app.commentsPendentes.map(function (index) {
-              if (index.memid === memberId) {
-                app.commentsReprovados.push(index)
-              }
-            })
-            app.commentsPendentes = app.commentsPendentes.filter(index => index.memid !== memberId)
-          }
-          if (type === 'aprovar') {
-            // console.log('aprovar')
-            app.commentsPendentes.map(function (index) {
-              if (index.memid === memberId) {
-                app.commentsAprovados.push(index)
-              }
-            })
-            app.commentsPendentes = app.commentsPendentes.filter(index => index.memid !== memberId)
-          }
-          if (type === 'moderar') {
-            // console.log('moderar')
-            app.commentsAprovados.map(function (index) {
-              if (index.memid === memberId) {
-                app.commentsPendentes.push(index)
-              }
-            })
-            app.commentsReprovados.map(function (index) {
-              if (index.memid === memberId) {
-                app.commentsPendentes.push(index)
-              }
-            })
-            app.commentsAprovados = app.commentsAprovados.filter(index => index.memid !== memberId)
-            app.commentsReprovados = app.commentsReprovados.filter(index => index.memid !== memberId)
-          }
-        })
-        .catch(function (error) {
-          alert('erro')
-        })
-    },
+			axios.put(app.apiPath + 'members/' + memberId, toChange)
+				.then(function (response) {
+					if (type === 'reprovar') {
+						// console.log('reprovar')
+						app.commentsPendentes.map(function (index) {
+							if (index.memid === memberId) {
+								app.commentsReprovados.push(index)
+							}
+						})
+						app.commentsPendentes = app.commentsPendentes.filter(index => index.memid !== memberId)
+					}
+					if (type === 'aprovar') {
+						// console.log('aprovar')
+						app.commentsPendentes.map(function (index) {
+							if (index.memid === memberId) {
+								app.commentsAprovados.push(index)
+							}
+						})
+						app.commentsPendentes = app.commentsPendentes.filter(index => index.memid !== memberId)
+					}
+					if (type === 'moderar') {
+						// console.log('moderar')
+						app.commentsAprovados.map(function (index) {
+							if (index.memid === memberId) {
+								app.commentsPendentes.push(index)
+							}
+						})
+						app.commentsReprovados.map(function (index) {
+							if (index.memid === memberId) {
+								app.commentsPendentes.push(index)
+							}
+						})
+						app.commentsAprovados = app.commentsAprovados.filter(index => index.memid !== memberId)
+						app.commentsReprovados = app.commentsReprovados.filter(index => index.memid !== memberId)
+					}
+				})
+				.catch(function (error) {
+					alert('erro')
+				})
+		},
 
-    atualizarConsulta () {
-      // TODO: enviar apenas formulários alterados
-      const sendObj = {
-        'ativo': this.ativo,
-        'dataCadastro': this.data_cadastro,
-        'dataFinal': this.data_final,
-        'textoIntro': this.texto_intro,
-        'nomePublico': this.nome_publico,
-        'urlConsulta': this.url_consulta,
-        'urlCapa': this.url_capa,
-        'urlDevolutiva': this.url_devolutiva
-      }
-      // console.log(sendObj)
-      const app = this
-      axios.put(app.apiPath + 'consultas/' + app.estaConsulta.id_consulta, sendObj)
-        .then(function (response) {
-          // console.log(response)
-          alert('Sucesso d~.~b')
-          app.$store.dispatch('fetchConsultas', { self: this })
-          app.clearInputs()
-          app.$router.push('/admin')
-        })
-        .catch(function (error) {
-          alert('Estamos com um erro de comunicação com o servidor. Tente novamente mais tarde.')
-        })
-    },
-    abreComment (event) {
-      event.target.parentNode.style.maxHeight = '10000px'
-      event.target.style.display = 'none'
-    },
-    abreContexto (event) {
-      event.target.style.whiteSpace = 'normal'
-      event.target.style.cursor = 'default'
-    },
-    carregaComments (idConsulta) {
-      this.fetchingContent = true
-      const app = this
-      let pendentes = []
-      let aprovados = []
-      let reprovados = []
+		atualizarConsulta () {
+			// TODO: enviar apenas formulários alterados
+			const sendObj = {
+				'ativo': this.ativo,
+				'dataCadastro': this.data_cadastro,
+				'dataFinal': this.data_final,
+				'textoIntro': this.texto_intro,
+				'nomePublico': this.nome_publico,
+				'urlConsulta': this.url_consulta,
+				'urlCapa': this.url_capa,
+				'urlDevolutiva': this.url_devolutiva
+			}
+			// console.log(sendObj)
+			const app = this
+			axios.put(app.apiPath + 'consultas/' + app.estaConsulta.id_consulta, sendObj)
+				.then(function (response) {
+					// console.log(response)
+					alert('Sucesso d~.~b')
+					app.$store.dispatch('fetchConsultas', { self: this })
+					app.clearInputs()
+					app.$router.push('/admin')
+				})
+				.catch(function (error) {
+					alert('Estamos com um erro de comunicação com o servidor. Tente novamente mais tarde.')
+				})
+		},
+		abreComment (event) {
+			event.target.parentNode.style.maxHeight = '10000px'
+			event.target.style.display = 'none'
+		},
+		abreContexto (event) {
+			event.target.style.whiteSpace = 'normal'
+			event.target.style.cursor = 'default'
+		},
+		carregaComments (idConsulta) {
+			this.fetchingContent = true
+			const app = this
+			let pendentes = []
+			let aprovados = []
+			let reprovados = []
 
-      axios.post(app.apiPath + 'members/search/', {
-        'idConsulta': '=' + idConsulta
-      })
-        .then(function (response) {
-          let allcomments = response.data
+			axios.post(app.apiPath + 'members/search/', {
+				'idConsulta': '=' + idConsulta
+			})
+				.then(function (response) {
+					let allcomments = response.data
 
-          app.decodeComments(allcomments)
+					app.decodeComments(allcomments)
 
-          allcomments.map(function (index) {
-            if (index.public == '1') {
-              aprovados.push(index)
-            } else if (index.trash == '1') {
-              reprovados.push(index)
-            } else {
-              pendentes.push(index)
-            }
-          })
+					allcomments.map(function (index) {
+						if (index.public === '1') {
+							aprovados.push(index)
+						} else if (index.trash === '1') {
+							reprovados.push(index)
+						} else {
+							pendentes.push(index)
+						}
+					})
 
-          app.fetchingContent = false
-        })
-        .catch(function (error) {
-          app.fetchingContent = false
-          console.log(error)
-        })
+					app.fetchingContent = false
+				})
+				.catch(function (error) {
+					app.fetchingContent = false
+					console.log(error)
+				})
 
-      this.commentsAprovados = aprovados
-      this.commentsReprovados = reprovados
-      this.commentsPendentes = pendentes
-    },
-    resetComments () {
-      this.commentsPendentes = []
-      this.commentsAprovados = []
-      this.commentsReprovados = []
-    },
-    editar (arr, event) {
-      let app = this
-      arr.map(function (index) {
-        Array.from(app.$el.querySelectorAll('*[name=' + index + ']')).map(function (index) {
-          index.disabled = false
-          index.focus()
-        })
-      })
-      event.target.classList.add('desbloqueado')
-    }
-  },
-  mounted () {
-    this.updateForm()
-    this.carregaComments(this.$route.params.id)
-    let app = this
-    Array.from(this.$el.querySelectorAll('*[name^=input_]')).map(function (index) {
-      index.disabled = true
-      index.addEventListener('change', function () {
-        app.$refs.limpar.style.display = 'inline-flex'
-        app.$refs.salvar.style.display = 'inline-flex'
-      })
-    })
-  },
-  watch: {
-    $route (to, from) {
-      this.resetComments()
-      this.carregaComments(to.params.id)
-      this.updateForm()
-    }
-  }
+			this.commentsAprovados = aprovados
+			this.commentsReprovados = reprovados
+			this.commentsPendentes = pendentes
+		},
+		resetComments () {
+			this.commentsPendentes = []
+			this.commentsAprovados = []
+			this.commentsReprovados = []
+		},
+		editar (arr, event) {
+			let app = this
+			arr.map(function (index) {
+				Array.from(app.$el.querySelectorAll('*[name=' + index + ']')).map(function (index) {
+					index.disabled = false
+					index.focus()
+				})
+			})
+			event.target.classList.add('desbloqueado')
+		}
+	},
+	mounted () {
+		this.updateForm()
+		this.carregaComments(this.$route.params.id)
+		let app = this
+		Array.from(this.$el.querySelectorAll('*[name^=input_]')).map(function (index) {
+			index.disabled = true
+			index.addEventListener('change', function () {
+				app.$refs.limpar.style.display = 'inline-flex'
+				app.$refs.salvar.style.display = 'inline-flex'
+			})
+		})
+	},
+	watch: {
+		$route (to, from) {
+			this.resetComments()
+			this.carregaComments(to.params.id)
+			this.updateForm()
+		}
+	}
 }
 </script>
 

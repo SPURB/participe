@@ -51,53 +51,53 @@
 </template>
 <script>
 export default {
-  name: 'Galeria',
-  data () {
-    return {
-      loading: true
-    }
-  },
-  props: ['gallery_attrs'],
-  computed: {
-    isFirst () { return this.gallery_attrs.images[0].state },
-    isLast () { return this.gallery_attrs.images[this.gallery_attrs.images.length - 1].state }
-  },
-  methods: {
-    numberClicked (number) {
-      let app = this
-      app.gallery_attrs.images.map(function (index, elem) {
-        if (index.state == true) { app.gallery_attrs.images[elem].state = false } else if (elem == number) { app.gallery_attrs.images[elem].state = true }
-      })
-    },
-    next () {
-      if (!this.isLast) {
-        let nextIndex
-        this.gallery_attrs.images.map(function (index, elem) {
-          if (index.state == true) {
-            index.state = false
-            nextIndex = elem + 1
-          }
-        })
-        this.gallery_attrs.images[nextIndex].state = true
-      } else {
-        // console.log('last image')
-      }
-    },
-    previous () {
-      if (!this.isFirst) {
-        let previousIndex
-        this.gallery_attrs.images.map(function (index, elem) {
-          if (index.state == true) {
-            index.state = false
-            previousIndex = elem - 1
-          }
-        })
-        this.gallery_attrs.images[previousIndex].state = true
-      } else {
-        console.log('first image')
-      }
-    }
-  }
+	name: 'Galeria',
+	data () {
+		return {
+			loading: true
+		}
+	},
+	props: ['gallery_attrs'],
+	computed: {
+		isFirst () { return this.gallery_attrs.images[0].state },
+		isLast () { return this.gallery_attrs.images[this.gallery_attrs.images.length - 1].state }
+	},
+	methods: {
+		numberClicked (number) {
+			let app = this
+			app.gallery_attrs.images.map(function (index, elem) {
+				if (index.state == true) { app.gallery_attrs.images[elem].state = false } else if (elem == number) { app.gallery_attrs.images[elem].state = true }
+			})
+		},
+		next () {
+			if (!this.isLast) {
+				let nextIndex
+				this.gallery_attrs.images.map(function (index, elem) {
+					if (index.state == true) {
+						index.state = false
+						nextIndex = elem + 1
+					}
+				})
+				this.gallery_attrs.images[nextIndex].state = true
+			} else {
+				// console.log('last image')
+			}
+		},
+		previous () {
+			if (!this.isFirst) {
+				let previousIndex
+				this.gallery_attrs.images.map(function (index, elem) {
+					if (index.state == true) {
+						index.state = false
+						previousIndex = elem - 1
+					}
+				})
+				this.gallery_attrs.images[previousIndex].state = true
+			} else {
+				console.log('first image')
+			}
+		}
+	}
 }
 </script>
 

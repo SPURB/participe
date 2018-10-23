@@ -147,13 +147,12 @@
 				XXXXXXX
 			</center>
 		</p>
-	</p>
 </div>
 </template>
 
 <script>
 export default {
-  name: 'AnexoA'
+	name: 'AnexoA'
 }
 </script>
 

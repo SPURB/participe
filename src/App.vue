@@ -1,36 +1,35 @@
 <template>
 <div id="app" @keyup.esc="fechaTudo">
-	<div :class="{ desligado: interruptor }" id="interruptor" ref="interruptor" @click="fechaTudo"></div>
-	<Cabecalho></Cabecalho>
-	<MenuLateral></MenuLateral>
-	<router-view name="Home"></router-view>
-	<router-view name="Anhembi2"></router-view>
-	<router-view name="ArcoPinheiros"></router-view>
-	<router-view name="WifiLivreSP"></router-view>
-	<router-view name="DigilabLivreSP"></router-view>
-	<router-view name="Login"></router-view>
-	<router-view name="Admin"></router-view>
+  <div :class="{ desligado: interruptor }" id="interruptor" ref="interruptor" @click="fechaTudo"></div>
+  <Cabecalho></Cabecalho>
+  <MenuLateral></MenuLateral>
+  <router-view name="Home"></router-view>
+  <router-view name="Anhembi2"></router-view>
+  <router-view name="ArcoPinheiros"></router-view>
+  <router-view name="WifiLivreSP"></router-view>
+  <router-view name="DigilabLivreSP"></router-view>
+  <router-view name="Login"></router-view>
+  <router-view name="Admin"></router-view>
 
-	<Modal v-if="modalState.error">
-		<h3 slot="header" class="modal-error">Erro!</h3>
-		<!-- <p slot="body">Estamos com um erro de comunicação com o servidor. Tente novamente mais tarde.</p> -->
-		<p slot="body">Não foi possível enviar a contribuição. Isso pode ocorrer se você já realizou uma contribuição com o mesmo conteúdo ou se ocorrer alguma falha de conexão com o servidor.</p>
-	</Modal>
-	<Modal v-if="modalState.success">
-		<h3 slot="header" class="modal-success">Obrigado!</h3>
-		<div slot="body"><p>Agradecemos a sua contribuição!</br>
-		Seu comentário foi enviado e aguarda aprovação da moderação para ser publicado.</p></div>
-	</Modal>
+  <Modal v-if="modalState.error">
+    <h3 slot="header" class="modal-error">Erro!</h3>
+    <!-- <p slot="body">Estamos com um erro de comunicação com o servidor. Tente novamente mais tarde.</p> -->
+    <p slot="body">Não foi possível enviar a contribuição. Isso pode ocorrer se você já realizou uma contribuição com o mesmo conteúdo ou se ocorrer alguma falha de conexão com o servidor.</p>
+  </Modal>
+  <Modal v-if="modalState.success">
+    <h3 slot="header" class="modal-success">Obrigado!</h3>
+    <div slot="body"><p>Agradecemos a sua contribuição!<br>
+    Seu comentário foi enviado e aguarda aprovação da moderação para ser publicado.</p></div>
+  </Modal>
 
-	<Rodape></Rodape>
+  <Rodape></Rodape>
 </div>
 </template>
 
 <script>
-import axios from 'axios';
-import Cabecalho from '@/components/Cabecalho';
-import MenuLateral from '@/components/MenuLateral';
-import Rodape from '@/components/Rodape';
+import Cabecalho from '@/components/Cabecalho'
+import MenuLateral from '@/components/MenuLateral'
+import Rodape from '@/components/Rodape'
 import Modal from '@/components/Modal.vue'
 
 export default {
@@ -42,25 +41,25 @@ export default {
 		Modal
 	},
 	computed: {
-		interruptor() { return this.$store.state.luzApaga }, 
-		isAdmin(){ return this.$store.state.isAdmin },
-		modalState(){ return this.$store.state.modalState }
+		interruptor () { return this.$store.state.luzApaga },
+		isAdmin () { return this.$store.state.isAdmin },
+		modalState () { return this.$store.state.modalState }
 	},
-		created() { this.$store.dispatch("fetchConsultas", { self: this }) },
-		updated() { this.$refs.interruptor.style.height = this.$el.clientHeight+'px'; },
+	created () { this.$store.dispatch('fetchConsultas', { self: this }) },
+	updated () { this.$refs.interruptor.style.height = this.$el.clientHeight + 'px' },
 	methods: {
-		setModal(typeOfmodal){ 
+		setModal (typeOfmodal) {
 			this.$store.commit('COMMENT_MODAL_STATUS', typeOfmodal)
 		},
-		fechaTudo() {
+		fechaTudo () {
 			if (this.$store.state.menuToggle || this.$store.state.apoioToggle) {
-				this.$store.state.menuToggle = false;
-				this.$store.state.apoioToggle = false;
-				this.$store.state.luzApaga = false;
+				this.$store.state.menuToggle = false
+				this.$store.state.apoioToggle = false
+				this.$store.state.luzApaga = false
 			};
 		}
-	},
-};
+	}
+}
 </script>
 
 <style lang="scss">
@@ -70,39 +69,39 @@ export default {
 html { margin: 0; padding: 0; };
 
 body {
-	font-family: $font-stack;
-	color: #333;
-	font-size: 16px;
-	line-height: 1.6;
-	margin: 0;
+  font-family: $font-stack;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
 
-	a { text-decoration: none; color: #EB5757; };
+  a { text-decoration: none; color: #EB5757; };
 
-	a:hover { text-decoration: underline; };
+  a:hover { text-decoration: underline; };
 };
 
 i {
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 
-	&:hover { cursor: default; };
+  &:hover { cursor: default; };
 };
 
 div#interruptor {
-	position: absolute;
-	transition: all ease-in-out .2s;
-	z-index: 4;
+  position: absolute;
+  transition: all ease-in-out .2s;
+  z-index: 4;
 
-	&.ligado { background: rgba(0, 0, 0, 0); };
+  &.ligado { background: rgba(0, 0, 0, 0); };
 
-	&.desligado {
-		background: rgba(0, 0, 0, .72);
-		display: block;
-		width: 100%;
-		height: unset;
-	};
+  &.desligado {
+    background: rgba(0, 0, 0, .72);
+    display: block;
+    width: 100%;
+    height: unset;
+  };
 };
 
 </style>

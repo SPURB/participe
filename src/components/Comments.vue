@@ -7,36 +7,36 @@
 			<fieldset>
 				<label for="nome">Nome</label>
 				<input
-					id="nome" 
-					type="text" 
-					name="name" 
-					v-validate="'required: true'" 
-					:class="{ inputErro: errors.has('name') }" 
-					v-model='form_name' 
+					id="nome"
+					type="text"
+					name="name"
+					v-validate="'required: true'"
+					:class="{ inputErro: errors.has('name') }"
+					v-model='form_name'
 				>
 				<label for="sobrenome">Sobrenome</label>
 				<input
-					id="sobrenome" 
-					type="text" 
-					name="surname" 
-					v-validate="'required: true'" 
-					:class="{ inputErro: errors.has('surname') }" 
-					v-model='form_surname' 
+					id="sobrenome"
+					type="text"
+					name="surname"
+					v-validate="'required: true'"
+					:class="{ inputErro: errors.has('surname') }"
+					v-model='form_surname'
 				>
 				<label for="organizacao">Organização (opcional)</label>
 				<input
-					id="organizacao" 
-					type="text" 
-					name="organization" 
-					v-validate="'required: false'" 
+					id="organizacao"
+					type="text"
+					name="organization"
+					v-validate="'required: false'"
 					v-model='form_organization'
 				>
 				<label for="email">E-mail</label>
 				<input
 					id="email"
-					name="email" 
-					v-validate="'required|email'" 
-					:class="{ inputErro: errors.has('email') }" 
+					name="email"
+					v-validate="'required|email'"
+					:class="{ inputErro: errors.has('email') }"
 					type="email"
 					v-model='form_email'
 				>
@@ -44,9 +44,9 @@
 			<fieldset>
 				<label for="comentario">Comente aqui</label>
 				<textarea
-					id="comentario" 
-					name="content" 
-					v-validate="'required: true'" 
+					id="comentario"
+					name="content"
+					v-validate="'required: true'"
 					:class="{ inputErro: errors.has('content') }"
 					v-model='form_content'
 				></textarea>
@@ -61,62 +61,56 @@ import axios from 'axios'
 
 export default {
 	name: 'Comments',
-	props:['attr'],
-	data(){
-		return{
+	props: ['attr'],
+	data () {
+		return {
 			form_name: null,
 			form_surname: null,
 			form_organization: null,
 			form_email: null,
 			form_content: null,
 			// form_context: null,
-			abreComentario: false,
+			abreComentario: false
 		}
 	},
 
-	computed:{
-		currentRoute(){ return this.$route.name },
-		returnFormNameObject(){
-			if (this.form_organization != null){
+	computed: {
+		currentRoute () { return this.$route.name },
+		returnFormNameObject () {
+			if (this.form_organization != null) {
 				return this.form_name + ' ' + this.form_surname + ' (' + this.form_organization + ')'
-			} 
-			else{
+			} else {
 				return this.form_name + ' ' + this.form_surname
 			}
 		},
-		apiPath() { return this.$store.getters.apiPath },
+		apiPath () { return this.$store.getters.apiPath }
 	},
 
-	methods:{
-		setModal(typeOfmodal){ 
+	methods: {
+		setModal (typeOfmodal) {
 			this.$store.commit('COMMENT_MODAL_STATUS', typeOfmodal)
 		},
-		checkName(){
-			if(!this.fields.name.valid && !this.fields.email.valid && !this.fields.surname.valid){
+		checkName () {
+			if (!this.fields.name.valid && !this.fields.email.valid && !this.fields.surname.valid) {
 				alert('Preencha corretamente os campos Nome e Email')
-			}
-			else if (!this.fields.name.valid) {
+			} else if (!this.fields.name.valid) {
 				alert('Inclua um nome')
-			}
-			else if (!this.fields.surname.valid) {
+			} else if (!this.fields.surname.valid) {
 				alert('Inclua um sobrenome')
-			}
-			else if(!this.fields.email.valid){
+			} else if (!this.fields.email.valid) {
 				alert('Corrija email')
-			}
-			else if(!this.fields.content.valid){
-				alert("Inclua um comentário")
-			}
-			else{
-				this.send();
+			} else if (!this.fields.content.valid) {
+				alert('Inclua um comentário')
+			} else {
+				this.send()
 			}
 		},
-		send(){
-			let app = this;
-			axios.post(this.apiPath+'members',{
-				'idConsulta':app.$route.meta.id,
+		send () {
+			let app = this
+			axios.post(this.apiPath + 'members', {
+				'idConsulta': app.$route.meta.id,
 				'name': app.returnFormNameObject,
-				'email': app.form_email, 
+				'email': app.form_email,
 				'content': app.form_content,
 				'public': '0',
 				'trash': '0',
@@ -124,18 +118,17 @@ export default {
 				'commentid': app.attr.id,
 				'commentcontext': app.attr.context
 			})
-			.then(function (response) {
-				// console.log(response);
-				let name = app.form_name;
-				let content = app.form_content;
-				console.log(app.attr.id);
-				app.setModal('success')
-			})
-			.catch(function (error) {
-				app.setModal('error')
-			});
+				.then(function (response) {
+					let name = app.form_name
+					let content = app.form_content
+					console.log(app.attr.id)
+					app.setModal('success')
+				})
+				.catch(function (error) {
+					app.setModal('error')
+				})
 		},
-		resetForm(){
+		resetForm () {
 			this.form_name = null
 			this.form_surname = null
 			this.form_organization = null
@@ -144,10 +137,9 @@ export default {
 			this.abreComentario = false
 		}
 	}
-};
+}
 
 </script>
-
 
 <style lang="scss" scoped>
 div.Comments {

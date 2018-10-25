@@ -5,10 +5,10 @@
 			<template v-for="layer in mapa_attrs.layers">
 				<li>
 					<div :style="{
-						backgroundColor:layer.fill_color, 
+						backgroundColor:layer.fill_color,
 						borderColor: layer.stroke_color,
 						borderWidth: layer.stroke_width + 'px',
-				}"></div> 
+				}"></div>
 				<a
 					:href="layer.path"
 					:download="layer.title + '.kml'"
@@ -20,22 +20,22 @@
 
 <script>
 import { Map, View } 	from 'ol'
-import TileLayer 		from 'ol/layer/Tile';
-import VectorLayer 		from 'ol/layer/Vector';
-import Style 			from 'ol/style/Style';
-import Stroke 			from 'ol/style/Stroke';
-import Fill 			from 'ol/style/Fill';
-import KML 				from 'ol/format/KML';
-import BingMaps 		from 'ol/source/BingMaps';
-import VectorSource 	from 'ol/source/Vector';
+import TileLayer 		from 'ol/layer/Tile'
+import VectorLayer 		from 'ol/layer/Vector'
+import Style 			from 'ol/style/Style'
+import Stroke 			from 'ol/style/Stroke'
+import Fill 			from 'ol/style/Fill'
+import KML 				from 'ol/format/KML'
+import BingMaps 		from 'ol/source/BingMaps'
+import VectorSource 	from 'ol/source/Vector'
 // import {defaults as defaultControls, Attribution } from 'ol/control.js';
 // import ScaleLine 		from 'ol/control/ScaleLine';
 
-import { chavesExternas } from '../../apiconfig.json';
+import { chavesExternas } from '../../apiconfig.json'
 
 export default{
-	name:'Mapa',
-	props:{
+	name: 'Mapa',
+	props: {
 		'mapa_attrs': {
 			center: [
 				{ // centróide do kml (eixo y)
@@ -45,7 +45,7 @@ export default{
 				{ // centróide do kml (eixo y)
 					type: Number,
 					required: true
-				}			
+				}
 			],
 			zoom: {
 				type: Number,
@@ -62,18 +62,18 @@ export default{
 			]
 		}
 	},
-	computed:{
-		mapLayers(){
+	computed: {
+		mapLayers () {
 			let output_layers = [
 				new TileLayer({
 					source: new BingMaps({
-						imagerySet: 'AerialWithLabels', 
+						imagerySet: 'AerialWithLabels',
 						culture: 'pt-BR',
 						key: chavesExternas.bingMaps
 					})
 				})
 			]
-			this.mapa_attrs.layers.map(function(index) {
+			this.mapa_attrs.layers.map(function (index) {
 				let kml_layer = new VectorLayer({
 					style: new Style({
 						stroke: new Stroke({
@@ -81,7 +81,7 @@ export default{
 							width: index.stroke_width
 						}),
 						fill: new Fill({
-							color: index.fill_color,
+							color: index.fill_color
 						})
 					}),
 					source: new VectorSource({
@@ -95,23 +95,22 @@ export default{
 			})
 			return output_layers
 		},
-		mapView(){
+		mapView () {
 			return new View({
 				center: this.mapa_attrs.center,
 				zoom: this.mapa_attrs.zoom
 			})
-		},
+		}
 	},
-	mounted(){
+	mounted () {
 		this.createMap()
-
 	},
-	methods:{
-		createMap(){
+	methods: {
+		createMap () {
 			let map = new Map({
 				layers: this.mapLayers,
 				target: 'map',
-				view: this.mapView,
+				view: this.mapView
 				// controls: defaultControls({
 				// 	attributionOptions: {
 				// 		collapsible: true,
@@ -123,15 +122,14 @@ export default{
 				// 	new ScaleLine(),
 				// ])
 			})
-			if(this.$refs.mapa.clientHeight < 500){
-				this.mapView.setZoom(12);
-			}
-			else{
-				this.mapView.setMinZoom(this.mapa_attrs.zoom);
+			if (this.$refs.mapa.clientHeight < 500) {
+				this.mapView.setZoom(12)
+			} else {
+				this.mapView.setMinZoom(this.mapa_attrs.zoom)
 			}
 		}
 	}
-}	
+}
 </script>
 <style type="text/css">
 #map .ol-overlaycontainer-stopevent {
@@ -141,7 +139,7 @@ export default{
 
 <style lang="scss" scoped>
 @import "../../node_modules/ol/ol.css";
-	
+
 div.Mapa {
 	max-width: 992px;
 	margin: 4rem auto 2rem auto;
@@ -154,7 +152,6 @@ div.Mapa {
 		cursor: move;
 	};
 
-
 	ul.legenda {
 		display: flex;
 		flex-flow: row wrap;
@@ -163,7 +160,7 @@ div.Mapa {
 		padding: 1rem;
 		margin: 0;
 		font-family: inherit;
-		
+
 		li {
 			display: inline-flex;
 			align-items: center;
@@ -201,17 +198,17 @@ div.Mapa {
 		};
 
 		@media (max-width: 600px) {
-			li { 
+			li {
 				display: block;
 				width: 100%;
 				margin: 0 0 1rem 0;
 				padding: 0;
 				text-align: left;
 
-				div { 
+				div {
 					display: inline-block;
 					vertical-align: middle;
-				}; 
+				};
 			};
 		};
 	};

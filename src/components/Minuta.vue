@@ -7,12 +7,12 @@
 <script>
 export default {
 	name: 'Minuta',
-	data() {
+	data () {
 		return {
 			paragrafos: []
 		}
 	}
-};
+}
 </script>
 <style lang="scss" scoped>
 div.Minuta {

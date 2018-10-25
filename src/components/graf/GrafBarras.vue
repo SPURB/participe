@@ -11,7 +11,7 @@
 		<div id="eixoX" ref="eixoX">
 			<div legenda="1">
 				<div class="barra" valor="66" title="6,6%"></div>
-				<div class="barra" valor="83" title="8,3%"></div>			
+				<div class="barra" valor="83" title="8,3%"></div>
 			</div>
 			<div legenda="2">
 				<div class="barra" valor="107" title="10,7%"></div>
@@ -19,7 +19,7 @@
 			</div>
 			<div legenda="3">
 				<div class="barra" valor="280" title="28%"></div>
-				<div class="barra" valor="244" title="24,4%"></div>				
+				<div class="barra" valor="244" title="24,4%"></div>
 			</div>
 			<div legenda="4">
 				<div class="barra" valor="9" title="0,9%"></div>
@@ -65,18 +65,18 @@
 </template>
 
 <script>
-	export default {
-		name: 'GrafBarras',
-		mounted() {
-			let total = 500;
-			let alturaGrafico = this.$refs.eixoY.offsetHeight;
-			this.$refs.eixoX.style.marginLeft = this.$refs.eixoY.getElementsByTagName('span')[0].offsetWidth + 'px';
-			this.$refs.eixoX.style.height = alturaGrafico + 'px';
-			Array.from(this.$el.getElementsByClassName('barra')).map(function(index) {
-				index.style.height = (index.attributes.valor.value/total) * alturaGrafico + 'px';
-			});
-		},
-	};
+export default {
+	name: 'GrafBarras',
+	mounted () {
+		let total = 500
+		let alturaGrafico = this.$refs.eixoY.offsetHeight
+		this.$refs.eixoX.style.marginLeft = this.$refs.eixoY.getElementsByTagName('span')[0].offsetWidth + 'px'
+		this.$refs.eixoX.style.height = alturaGrafico + 'px'
+		Array.from(this.$el.getElementsByClassName('barra')).map(function (index) {
+			index.style.height = (index.attributes.valor.value / total) * alturaGrafico + 'px'
+		})
+	}
+}
 </script>
 
 <style lang="scss" scoped>

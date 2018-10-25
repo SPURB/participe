@@ -65,8 +65,8 @@
 								<p>FERNANDO DE MELLO FRANCO, Secretário Municipal de Desenvolvimento Urbano</p>
 								<p>FRANCISCO MACENA DA SILVA, Secretário do Governo Municipal</p>
 								<p>Publicado na Secretaria do Governo Municipal, em 29 de março de 2016.</p>
-						</div>					
-					</li>		
+						</div>
+					</li>
 				</slot>
 				<slot name="item2"></slot>
 			</ul>
@@ -80,29 +80,29 @@
 <script>
 export default {
 	name: 'Indice',
-	data() {
+	data () {
 		return {
-			aberto: false,
+			aberto: false
 		}
 	},
 	computed: {
-		apoioToggle() {
+		apoioToggle () {
 			return this.$store.state.apoioToggle
 		}
 	},
-	mounted() {},
-	methods: {		
-		abreApoio() {
+	mounted () {},
+	methods: {
+		abreApoio () {
 			if (this.$store.state.apoioToggle) {
-				this.$store.state.apoioToggle = false;
-				this.$store.state.luzApaga = false;
+				this.$store.state.apoioToggle = false
+				this.$store.state.luzApaga = false
 			} else {
-				this.$store.state.apoioToggle = true;
-				this.$store.state.luzApaga = true;
+				this.$store.state.apoioToggle = true
+				this.$store.state.luzApaga = true
 			};
-		},
-	},
-};
+		}
+	}
+}
 </script>
 
 <style lang="scss">

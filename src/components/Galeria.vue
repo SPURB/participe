@@ -1,10 +1,10 @@
 <template>
 	<div class="Galeria">
 		<div class="gall" :style="{maxWidth: gallery_attrs.width + 'px'}">
-			<a 
-				class="pagination-previous" 
+			<a
+				class="pagination-previous"
 				:disabled="isFirst"
-				@click="previous" 
+				@click="previous"
 				title="Anterior"
 				><i class="material-icons">chevron_left</i></a>
 			<template v-for="image in gallery_attrs.images">
@@ -18,31 +18,31 @@
 					<p class="legenda" v-if="image.legenda"> {{ image.legenda }} </p>
 				</figure>
 			</template>
-			<a 
-				class="pagination-next" 
+			<a
+				class="pagination-next"
 				:disabled="isLast"
-				@click="next" 
+				@click="next"
 				title="Próximo"
 				><i class="material-icons">chevron_right</i></a>
 		</div>
-		<nav 
-			class="pagination" 
-			role="navigation" 
+		<nav
+			class="pagination"
+			role="navigation"
 			aria-label="pagination"
 			:style="{maxWidth: gallery_attrs.width + 'px'}"
 			>
-			
+
 			<ul>
 				<template v-for="(image, index) in gallery_attrs.images">
 					<li>
-						<a 
+						<a
 							@click="numberClicked(index)"
 							v-if="!image.state"
 							>{{ index + 1 }}</a>
-						<a 
-							class="ativo" 
-							v-if="image.state" 
-							>{{ index + 1 }}</a> 
+						<a
+							class="ativo"
+							v-if="image.state"
+							>{{ index + 1 }}</a>
 					</li>
 				</template>
 			</ul>
@@ -52,51 +52,48 @@
 <script>
 export default {
 	name: 'Galeria',
-	data(){
+	data () {
 		return {
 			loading: true
 		}
 	},
-	props:['gallery_attrs'],
-	computed:{
-		isFirst(){ return this.gallery_attrs.images[0].state },
-		isLast(){ return this.gallery_attrs.images[this.gallery_attrs.images.length - 1].state }
+	props: ['gallery_attrs'],
+	computed: {
+		isFirst () { return this.gallery_attrs.images[0].state },
+		isLast () { return this.gallery_attrs.images[this.gallery_attrs.images.length - 1].state }
 	},
-	methods:{
-		numberClicked(number){
-			let app = this;
-			app.gallery_attrs.images.map(function(index, elem) {
-				if(index.state == true ){ app.gallery_attrs.images[elem].state = false}
-				else if(elem == number){ app.gallery_attrs.images[elem].state = true }
+	methods: {
+		numberClicked (number) {
+			let app = this
+			app.gallery_attrs.images.map(function (index, elem) {
+				if (index.state == true) { app.gallery_attrs.images[elem].state = false } else if (elem == number) { app.gallery_attrs.images[elem].state = true }
 			})
 		},
-		next(){
-			if(!this.isLast){
-				let nextIndex = undefined
-				this.gallery_attrs.images.map(function(index, elem) {
-					if(index.state == true){
+		next () {
+			if (!this.isLast) {
+				let nextIndex
+				this.gallery_attrs.images.map(function (index, elem) {
+					if (index.state == true) {
 						index.state = false
 						nextIndex = elem + 1
 					}
 				})
 				this.gallery_attrs.images[nextIndex].state = true
-			}
-			else{
+			} else {
 				// console.log('last image')
 			}
 		},
-		previous(){
+		previous () {
 			if (!this.isFirst) {
-				let previousIndex = undefined
-				this.gallery_attrs.images.map(function(index, elem) {
+				let previousIndex
+				this.gallery_attrs.images.map(function (index, elem) {
 					if (index.state == true) {
 						index.state = false
 						previousIndex = elem - 1
 					}
 				})
 				this.gallery_attrs.images[previousIndex].state = true
-			}
-			else {
+			} else {
 				console.log('first image')
 			}
 		}
@@ -207,7 +204,7 @@ export default {
 			z-index: 2;
 
 			li {
-				padding: 0;				
+				padding: 0;
 				margin: 4px;
 
 				&:first-child { margin-left: 0; };

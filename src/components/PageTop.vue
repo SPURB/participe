@@ -14,9 +14,9 @@
 </template>
 <script>
 export default{
-	name:"PageTop",
-	props:{ 
-		background_image_src:{
+	name: 'PageTop',
+	props: {
+		background_image_src: {
 			required: true,
 			type: String
 		},
@@ -25,29 +25,29 @@ export default{
 			type: Object
 		}
 	},
-	computed:{
-		style() {
-			return "background-image: url(" + this.$store.getters.basePath + this.background_image_src + "); background-color: #ed8934;"
+	computed: {
+		style () {
+			return 'background-image: url(' + this.$store.getters.basePath + this.background_image_src + '); background-color: #ed8934;'
 		}
 	},
-	methods: {		
-		setaBaixo() {
-			window.scrollTo({ top: Math.round(window.innerHeight), behavior: 'smooth'})
+	methods: {
+		setaBaixo () {
+			window.scrollTo({ top: Math.round(window.innerHeight), behavior: 'smooth' })
 		},
-		consultaState(par) {
-			if (par == 1) {
+		consultaState (par) {
+			if (par === 1 || par === '1') {
 				return 'aberta'
 			} else {
 				return 'fechada'
 			}
 		},
-		scrollToallComments(){
-			let appRef = this.$refs.allComments;
+		scrollToallComments () {
+			let appRef = this.$refs.allComments
 			window.scrollBy({
 				top: appRef.getBoundingClientRect().y - 30,
 				left: 0,
 				behavior: 'smooth'
-			});
+			})
 		}
 	}
 }
@@ -67,7 +67,7 @@ export default{
 		align-items: center;
 		justify-content: center;
 		z-index: 2;
-		
+
 		& > div:first-child {
 			padding: 1.2rem;
 			background: #FFF;
@@ -80,7 +80,7 @@ export default{
 				font-size: small;
 				color: #777;
 				font-weight: 400;
-				
+
 				&:last-child { margin-bottom: 0; };
 
 				i {
@@ -149,5 +149,4 @@ export default{
 			};
 		};
 	};
-	
 </style>

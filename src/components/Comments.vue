@@ -1,7 +1,7 @@
 <template>
 	<div class="Comments" :class="{ aberto: abreComentario }">
 
-		<div @click="abreComentario = !abreComentario"><i class="material-icons">chat</i> Comente aqui</div>
+		<div @click="abreComentario = !abreComentario"><i class="icon-comentario icon"><span>chat</span></i>Comente aqui</div>
 
 		<form>
 			<fieldset>
@@ -160,14 +160,17 @@ div.Comments {
 		transition: all ease-in-out .1s;
 
 		i {
-			line-height: 40px;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			vertical-align: -8px;
 			width: 40px;
-			vertical-align: -4px;
-			text-align: center;
+			height: 40px;
+			font-size: 1.1em;
 			background: #333;
 			border-radius: 100%;
 			color: #FFF;
-			margin: 0 16px 0 0;
+			margin: 0px 20px 0 0;
 			box-shadow: 0 2px 2px rgba(0, 0, 0, .24);
 		};
 

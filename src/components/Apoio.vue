@@ -72,7 +72,7 @@
 			</ul>
 		</aside>
 		<button @click="abreApoio" :class="{ aberto: apoioToggle }">
-			<i class="material-icons">chevron_left</i>
+			<i class="icon-abrir_esquerda icon"><span>abrir_apoio</span></i>
 		</button>
 		</div>
 </template>
@@ -197,7 +197,7 @@ div.Apoio {
 		top: unset;
 		bottom: 6rem;
 		right: 2rem;
-		max-width: 42px;
+		width: 42px;
 		max-height: 42px;
 		background: #FFF;
 		border-radius: 100%;
@@ -209,9 +209,11 @@ div.Apoio {
 		z-index: 1;
 
 		i {
-			line-height: 40px;
-			height: 40px;
-			width: 40px;
+			line-height: 41px;
+			height: 1rem;
+			width: 1rem;
+			font-weight: normal;
+			font-size: 22px;
 		};
 
 		&:active {

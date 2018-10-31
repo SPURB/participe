@@ -2,13 +2,13 @@
 	<div class="AdminPagConsulta">
 		<h1>{{ estaSubRota.title }} | id: {{estaSubRota.id}} </h1>
 		<section class="hidden" :class="{ show: abreId }" id="identificacao">
-			<h2 @click="abreId = !abreId">Identificação <i class="material-icons">keyboard_arrow_down</i></h2>
+			<h2 @click="abreId = !abreId">Identificação <i class="icon-expandir icon "><span>keyboard_arrow_down</span></i></h2>
 			<form>
 				<fieldset>
 					<legend>Nome <span><i
-						class="material-icons editBtn"
+						class="icon-editar icon editBtn"
 						title="Editar campo"
-						@click="editar(['input_nomePublico'], $event)">edit</i></span>
+						@click="editar(['input_nomePublico'], $event)"><span>edit</span></i></span>
 					</legend>
 					<input
 						name="input_nomePublico"
@@ -21,9 +21,9 @@
 
 				<fieldset>
 					<legend>Status <span><i
-						class="material-icons editBtn"
+						class="icon-editar icon editBtn"
 						title="Editar campo"
-						@click="editar(['input_status'], $event)">edit</i></span>
+						@click="editar(['input_status'], $event)"><span>edit</span></i></span>
 					</legend>
 					<input
 						type="radio"
@@ -49,9 +49,9 @@
 
 				<fieldset>
 					<legend>Período da consulta <span><i
-						class="material-icons editBtn"
+						class="icon-editar icon editBtn"
 						title="Editar campo"
-						@click="editar(['input_dataCadastro', 'input_dataFinal'], $event)">edit</i></span></legend>
+						@click="editar(['input_dataCadastro', 'input_dataFinal'], $event)"><span>edit</span></i></span></legend>
 					<div>
 						<label for="input_dataCadastro">Início</label>
 						<input
@@ -73,7 +73,7 @@
 				</fieldset>
 
 				<fieldset>
-					<legend>Texto introdutório <span><i class="material-icons editBtn" title="Editar campo" @click="editar(['input_textoIntro'], $event)">edit</i></span></legend>
+					<legend>Texto introdutório <span><i class="icon-editar icon editBtn" title="Editar campo" @click="editar(['input_textoIntro'], $event)"><span>edit</span></i></span></legend>
 					<textarea
 						id="input_textoIntro"
 						maxlength="480"
@@ -85,7 +85,7 @@
 				<fieldset>
 					<legend>Hiperlinks</legend>
 					<div>
-						<label for="input_urlConsulta">URL da consulta <i class="material-icons editBtn" title="Editar campo" @click="editar(['input_urlConsulta'], $event)">edit</i></label>
+						<label for="input_urlConsulta">URL da consulta <i class="icon-editar icon editBtn" title="Editar campo" @click="editar(['input_urlConsulta'], $event)"><span>edit</span></i></label>
 						<input
 							type="url"
 							id="input_urlConsulta"
@@ -94,7 +94,7 @@
 						>
 					</div>
 					<div>
-						<label for="input_urlCapa">URL da imagem de capa <i class="material-icons editBtn" title="Editar campo" @click="editar(['input_urlCapa'], $event)">edit</i></label>
+						<label for="input_urlCapa">URL da imagem de capa <i class="icon-editar icon editBtn" title="Editar campo" @click="editar(['input_urlCapa'], $event)"><span>edit</span></i></label>
 						<input
 							type="url"
 							id="input_urlCapa"
@@ -103,7 +103,7 @@
 							>
 					</div>
 					<div>
-						<label for="input_urlDevolutiva">URL da devolutiva <i class="material-icons editBtn" title="Editar campo" @click="editar(['input_urlDevolutiva'], $event)">edit</i></label>
+						<label for="input_urlDevolutiva">URL da devolutiva <i class="icon-editar icon editBtn" title="Editar campo" @click="editar(['input_urlDevolutiva'], $event)"><span>edit</span></i></label>
 						<input
 							type="url"
 							id="input_urlDevolutiva"
@@ -115,22 +115,22 @@
 			</form>
 			<!-- <button class="limpar" ref="limpar"><i class="material-icons">clear</i>Cancelar</button>
 			<button type="submit" class="enviar" ref="salvar"><i class="material-icons">check_circle</i> Salvar alterações</button> -->
-			<a class="acao limpar" @click="cancelarAcao" ref="limpar"><i class="material-icons">clear</i>Cancelar</a>
-			<a class="acao enviar" @click="atualizarConsulta" ref="salvar"><i class="material-icons">add_circle</i> Atualizar consulta</a>
+			<a class="acao limpar" @click="cancelarAcao" ref="limpar"><i class="icon-incorreto icon"><span>clear</span></i>Cancelar</a>
+			<a class="acao enviar" @click="atualizarConsulta" ref="salvar"><i class="icon-adicionar icon"><span>add_circle</span></i> Atualizar consulta</a>
 		</section>
 
 		<section
 			class="hidden"
 			:class="{ show: abreMod }"
 			id="moderacao">
-			<h2 @click="abreMod = !abreMod">Moderação <i class="material-icons">keyboard_arrow_down</i></h2>
+			<h2 @click="abreMod = !abreMod">Moderação <i class="icon-expandir icon"><span>keyboard_arrow_down</span></i></h2>
 
 			<p v-show="fetchingContent">carregando...</p>
 
 			<h3>Pendentes <span>{{ commentsPendentes.length }}</span></h3>
 				<div class="comentario pendente" v-for="comment in commentsPendentes">
 					<div class="comentCtx" @click="abreContexto($event)">
-						<i class="material-icons">reply</i>
+						<i class="icon-responder icon"><span>reply</span></i>
 						<p>{{ comment.commentcontext }}</p>
 					</div>
 					<div class="coment">
@@ -148,19 +148,19 @@
 					<div class="btns">
 						<button
 							@click="moderar('reprovar',comment.memid)"
-							class="reprovar">Reprovar <i class="material-icons">delete</i>
+							class="reprovar">Reprovar <i class="icon-rejeitar icon"><span>delete</span></i>
 						</button>
 
 						<button
 							@click="moderar('aprovar', comment.memid)"
-							class="aprovar">Aprovar <i class="material-icons">check_circle</i>
+							class="aprovar">Aprovar <i class="icon-aceitar icon"><span>check_circle</span></i>
 						</button>
 					</div>
 				</div>
 			<h3>Aprovados<span>{{ commentsAprovados.length }}</span></h3>
 				<div class="comentario aprovado" v-for="comment in commentsAprovados">
 					<div class="comentCtx" @click="abreContexto($event)">
-						<i class="material-icons">reply</i>
+						<i class="icon-responder icon"><span>reply</span></i>
 						<div>{{ comment.commentcontext }}</div>
 					</div>
 					<div class="coment">
@@ -178,13 +178,13 @@
 					<div class="btns">
 						<button
 							@click="moderar('moderar', comment.memid)"
-							class="novamente">Moderar novamente <i class="material-icons">cached</i></button>
+							class="novamente">Moderar novamente <i class="icon-novamente icon"><span>cached</span></i></button>
 					</div>
 				</div>
 			<h3>Reprovados <span>{{ commentsReprovados.length }}</span></h3>
 				<div class="comentario reprovado" v-for="comment in commentsReprovados">
 					<div class="comentCtx" @click="abreContexto($event)">
-						<i class="material-icons">reply</i>
+						<i class="icon-responder icon"><span>reply</span></i>
 						<p>{{ comment.commentcontext }}</p>
 					</div>
 					<div class="coment">
@@ -202,7 +202,7 @@
 					<div class="btns">
 						<button
 							@click="moderar('moderar', comment.memid)"
-							class="novamente">Moderar novamente <i class="material-icons">cached</i></button>
+							class="novamente">Moderar novamente <i class="icon-novamente icon"><span>cached</span></i></button>
 					</div>
 				</div>
 		</section>
@@ -437,17 +437,20 @@ div.AdminPagConsulta {
 			border-radius: 2px;
 			margin: 0 0 1rem 0;
 			transition: all ease-in .2s;
-
 			&:hover {
 				background: #333;
 				color: #FFF;
 				cursor: pointer;
 			};
-
-			i { vertical-align: middle; transition: transform .1s; };
+			i {
+				display: inline-flex;
+				vertical-align: middle;
+				align-items: center;
+				justify-content: center;
+				transition: transform .1s;
+			};
 		};
 	};
-
 	section#identificacao {
 		form {
 			fieldset {
@@ -460,11 +463,12 @@ div.AdminPagConsulta {
 					padding: 0 0 4px 0;
 
 					span {
-						color: #BDBDBD;
+						display: inline-flex;
+						color: #333;
 						font-weight: initial;
-					};
+						font-size: 1.5em;
+						};
 				};
-
 				input, textarea {
 					font-family: inherit;
 					font-size: inherit;
@@ -474,10 +478,8 @@ div.AdminPagConsulta {
 					border-radius: 2px;
 					line-height: 160%;
 				};
-
 				legend + input, textarea { width: 100%; };
 				textarea { resize: none; }
-
 				input[type=radio] { display: none; };
 				input[type=radio] + label.status {
 					display: inline-block;
@@ -496,19 +498,16 @@ div.AdminPagConsulta {
 				input[type=radio]:disabled + label.status {
 					opacity: .4;
 				};
-
 				div {
 					background: #F5F5F5;
 					padding: 8px 8px 8px 16px;
 					margin: 0 0 8px 0;
 					width: max-content;
 					border-radius: 2px;
-
 					input[type=url], input[type=date] {
 						display: inline-block;
 						min-width: 240px;
 					};
-
 					label:not(.status) {
 						display: inline-block;
 						vertical-align: middle;
@@ -516,11 +515,13 @@ div.AdminPagConsulta {
 					};
 				};
 			};
-
 			i.editBtn {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
 				position: relative;
 				border-radius: 100%;
-				padding: 4px;
+				padding: 1px;
 				font-size: 16px;
 				color: #FFF;
 				background: #333;
@@ -528,13 +529,11 @@ div.AdminPagConsulta {
 				margin: 0 0 0 4px;
 				cursor: pointer;
 				transition: all ease-in .1s;
-
 				&:hover, &.desbloqueado {
 					background: #EB5757;
 				};
 			};
 		};
-
 		a.acao {
 			font-family: inherit;
 			font-size: larger;
@@ -548,13 +547,11 @@ div.AdminPagConsulta {
 			border: 4px solid rgba(255, 255, 255, .2);
 			color: #FFF;
 			display: none;
-
 			i { margin-bottom: 8px; };
 			&.limpar { background: #EB5757; };
 			&.enviar { background: #008015; };
 		};
 	};
-
 	section#moderacao {
 		padding-bottom: 1rem;
 
@@ -672,7 +669,9 @@ div.AdminPagConsulta {
 					&:last-child { margin-right: 0; };
 
 					i {
-						vertical-align: top;
+						display: inline-flex;
+						align-items: center;
+						vertical-align: middle;
 						font-size: larger;
 					};
 

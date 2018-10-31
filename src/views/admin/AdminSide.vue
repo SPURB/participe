@@ -1,7 +1,7 @@
 <template>
 	<div class="AdminSide">
 		<div class="titulo">
-			<router-link to="/admin"><i class="material-icons">home</i></router-link>
+			<router-link to="/admin"><i class="icon-home icon"><span>home</span></i></router-link>
 			<span>{{ contextoNav }}</span>
 		</div>
 		<div>
@@ -86,7 +86,9 @@ div.AdminSide {
 		color: #777;
 		margin-bottom: 2rem;
 		height: 2.4rem;
-
+		a:hover{
+			text-decoration: none
+		}
 		a i {
 			margin-right: 8px;
 			font-size: larger;
@@ -111,7 +113,6 @@ div.AdminSide {
 			width: 100%;
 		};
 	};
-
 	div.lista {
 		h2 {
 			font-size: inherit;

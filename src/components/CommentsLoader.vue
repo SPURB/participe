@@ -1,9 +1,9 @@
 <template>
 	<div class="Commentsloader">
 		<div v-if="comments" v-for="comment in comments" class="comment">
-			<div class="name"><i class="material-icons">person_outline</i>{{ comment.name }}</div>
-			<div class="comment_info"><i class="material-icons">schedule</i>{{ filterDate(comment.commentdate) }}</div>
-			<div class="comment_info"><i class="material-icons">subject</i>Comentou em "{{ comment.commentcontext }}"</div>
+			<div class="name"><i class="icon-pessoa-outline icon"><span>person_outline</span></i>{{ comment.name }}</div>
+			<div class="comment_info"><i class="icon-tempo icon"><span>schedule</span></i>{{ filterDate(comment.commentdate) }}</div>
+			<div class="comment_info"><i class="icon-assunto icon"><span>subject</span></i>Comentou em "{{ comment.commentcontext }}"</div>
 			<p class="content">{{comment.content}}</p>
 		</div>
 	</div>

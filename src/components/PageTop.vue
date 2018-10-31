@@ -5,11 +5,11 @@
 			<slot name="subtitulo"></slot>
 			<div>
 				<!-- <a href="#contribuicoes" @click="scrollToallComments"><i class="material-icons">chat</i> {{ esta_consulta.nContribuicoes }} contribuições</a> -->
-				<i class="material-icons">chat</i> {{ esta_consulta.nContribuicoes }} contribuições
+				<i class="icon-comentario icon"><span>chat</span></i> {{ esta_consulta.nContribuicoes }} contribuições
 			</div>
 			<div id="statusConsulta" :class="consultaState(esta_consulta.ativo)"></div>
 		</div>
-		<div class="setaBaixo" @click="setaBaixo"><i class="material-icons">keyboard_arrow_down</i></div>
+		<div class="setaBaixo" @click="setaBaixo"><i class="icon-expandir icon"><span>keyboard_arrow_down</span></i></div>
 	</div>
 </template>
 <script>

@@ -3,7 +3,7 @@
 		<ul>
 			<li v-for="titulo in titulos" :class="{ ativo: titulo.ativo }" :style="{ paddingLeft: titulo.indent + 'rem'}" @click="rolar(titulo.offsetObj)">{{ titulo.nome }}</li>
 		</ul>
-		<button @click="topo"><i class="material-icons">arrow_upward</i></button>
+		<button @click="topo"><i class="icon-seta_cima icon"><span>arrow_upward</span></i></button>
 	</div>
 </template>
 
@@ -88,7 +88,8 @@ div.Indice {
 		display: block;
 		font-family: inherit;
 		z-index: 1;
-
+		width: 42px;
+		height: 42px;
 		&:active {
 			background: #EB5757;
 			color: #FFF;
@@ -103,8 +104,9 @@ div.Indice {
 
 		i {
 			line-height: 40px;
-			height: 40px;
-			width: 40px;
+			font-size: 22px;
+			height: 50px;
+			width: 42px;
 		};
 
 		&::before {

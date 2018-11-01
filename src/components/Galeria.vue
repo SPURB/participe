@@ -6,7 +6,7 @@
 				:disabled="isFirst"
 				@click="previous"
 				title="Anterior"
-				><i class="material-icons">chevron_left</i></a>
+				><i class="icon-abrir_esquerda icon"><span>chevron_left</span></i></a>
 			<template v-for="image in gallery_attrs.images">
 				<figure class="item" v-show="image.state">
 					<h3 v-if="image.icon">
@@ -23,7 +23,7 @@
 				:disabled="isLast"
 				@click="next"
 				title="Próximo"
-				><i class="material-icons">chevron_right</i></a>
+				><i class="icon-abrir_direita icon"><span>chevron_right</span></i></a>
 		</div>
 		<nav
 			class="pagination"

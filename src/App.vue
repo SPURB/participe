@@ -63,6 +63,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import 'assets/icones/participe.css';
+@import 'assets/icones/participe.custom.scss';
 @import 'variables';
 
 * { box-sizing: border-box; };
@@ -85,7 +87,7 @@ i {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-
+  i::after { visibility: hidden; }
   &:hover { cursor: default; };
 };
 

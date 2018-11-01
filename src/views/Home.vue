@@ -15,15 +15,15 @@
 							<h1 :class="{ consultaAtiva: parseAtivo(consulta.ativo) }" class="nome">{{ consulta.nomePublico }}</h1>
 						</a>
 						<p v-if="consulta.ativo" title="Período da consulta">
-							<i class="material-icons">date_range</i>
+							<i class="icon-data icon"><span>date_range</span></i>
 							Consulta iniciada em {{ dataDisplay(consulta.dataCadastro) }}
 						</p>
 						<p v-if="!consulta.ativo" title="Período da consulta">
-							<i class="material-icons">date_range</i>
+							<i class="icon-data icon"><span>date_range</span></i>
 							{{ dataDisplay(consulta.dataCadastro) }}–{{ dataDisplay(consulta.dataFinal) }}
 						</p>
 						<p title="Número de contribuições" v-if="checaContribuicoes(consulta.nContribuicoes)">
-							<i class="material-icons">chat_bubble</i>
+							<i class="icon-contribuicao icon"><span>contribuicao</span></i>
 							{{ consulta.nContribuicoes }} contribuições
 						</p>
 							<!--<p v-if="consulta.ativo" title="Tempo restante para contribuir">
@@ -32,7 +32,7 @@
 						</p>-->
 						<p v-if="consulta.urlDevolutiva" class="linkSistemat">
 							<a :href="consulta.urlDevolutiva" target="_blank">
-								<i class="material-icons">launch</i> Acessar devolutiva
+								<i class="icon-acessar_url icon" style="font-size: 0.7rem;"><span>launch</span></i> Acessar devolutiva
 							</a>
 						</p>
 					</div>
@@ -86,7 +86,6 @@ export default {
 	}
 }
 </script>
-
 <style lang="scss" scoped>
 	main {
 		div.busca {
@@ -99,6 +98,9 @@ export default {
 				line-height: 40px;
 				color: #BDBDBD;
 				padding: 0 10px;
+			};
+			i:after{
+				visibility:hidden;
 			};
 			input {
 				width: 100%;
@@ -198,6 +200,9 @@ export default {
 						margin-bottom: 12px;
 						white-space: nowrap;
 						i { vertical-align: text-top; font-size: larger; margin-right: 8px; };
+						i:after{
+							visibility: hidden;
+						}
 						&.linkSistemat {
 							position: absolute;
 							bottom: 20px;
@@ -213,8 +218,11 @@ export default {
 								transition: all ease-in-out .1s;
 								&:hover { text-decoration: none; background: transparent; };
 							};
-							i { margin: 0; };
-						};
+							i {
+								margin: 0;
+								display: inline-flex;
+								align-items: center; }
+							};
 						&:last-child{
 							margin-bottom: 0;
 						};

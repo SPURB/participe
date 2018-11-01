@@ -138,14 +138,14 @@
 				<div class="esq">
 					<div>
 						<h6>
-							<i class="material-icons">call_made</i>
+							<i class="icon-diagonal_para_cima icon"><span>call_made</span></i>
 							Viagens geradas
 						</h6>
 						<div><span>46 mil</span> viagens diárias<sup>1</sup></div>
 					</div>
 					<div>
 						<h6>
-							<i class="material-icons">call_received</i>
+							<i class="icon-diagonal_para_baixo icon"><span>call_received</span></i>
 							Viagens atraídas
 						</h6>
 						<div><span>168 mil</span> viagens diárias<sup>1</sup></div>
@@ -273,7 +273,7 @@
 				<p>Ainda que os índices de áreas verdes por habitante no perímetro do Arco Pinheiros ultrapassem os recomendados pela OMS, a influência da baixa densidade demográfica nos índices e a concentração de áreas verdes em algumas áreas específicas do território fazem com que estes números não se reflitam necessariamente em qualidade espacial.</p>
 			</div>
 			<a :href="imgSrc('arquivos/arco-pinheiros/Diagnostico_Consulta-publica_2018_09_06.pdf')" download="PIU Arco Pinheiros - Diagnóstico para Consulta pública (2018-09-06)">
-				<i class="material-icons">picture_as_pdf</i>
+				<i class="icon-pdf icon"><span>picture_as_pdf</span></i>
 				Faça o donwload do diagnóstico completo (25,5 Mb)
 			</a>
 		</div>

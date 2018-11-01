@@ -294,7 +294,7 @@ img {
 }
 div.WifiLivreSP p {
 	overflow: auto;
-	text-align: justify;
+	text-align: left;
 }
 #app div.WifiLivreSP div.Apoio button::before {
 	content: "Ver downloads";

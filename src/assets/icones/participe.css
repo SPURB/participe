@@ -1,0 +1,144 @@
+@font-face {
+	font-family: "participe";
+	src: url("participe.eot?9dd1b002027f5766a556e981a3b12ec6?#iefix") format("embedded-opentype"),
+url("participe.woff2?9dd1b002027f5766a556e981a3b12ec6") format("woff2"),
+url("participe.woff?9dd1b002027f5766a556e981a3b12ec6") format("woff");
+}
+
+.icon {
+	line-height: 1;
+}
+
+.icon:before {
+	font-family: participe !important;
+	font-style: normal;
+	font-weight: normal !important;
+	vertical-align: top;
+}
+
+.icon-abrir_direita:before {
+	content: "\f101";
+}
+.icon-abrir_esquerda:before {
+	content: "\f102";
+}
+.icon-aceitar:before {
+	content: "\f103";
+}
+.icon-acessar_url:before {
+	content: "\f104";
+}
+.icon-adicionar:before {
+	content: "\f105";
+}
+.icon-agrupar:before {
+	content: "\f106";
+}
+.icon-anexos:before {
+	content: "\f107";
+}
+.icon-apresentacao:before {
+	content: "\f108";
+}
+.icon-assunto:before {
+	content: "\f109";
+}
+.icon-buscar:before {
+	content: "\f10a";
+}
+.icon-calendario_vazio:before {
+	content: "\f10b";
+}
+.icon-comentario:before {
+	content: "\f10c";
+}
+.icon-contribuicao:before {
+	content: "\f10d";
+}
+.icon-correto:before {
+	content: "\f10e";
+}
+.icon-data:before {
+	content: "\f10f";
+}
+.icon-desagrupar:before {
+	content: "\f110";
+}
+.icon-diagonal_para_baixo:before {
+	content: "\f111";
+}
+.icon-diagonal_para_cima:before {
+	content: "\f112";
+}
+.icon-dialogo:before {
+	content: "\f113";
+}
+.icon-download:before {
+	content: "\f114";
+}
+.icon-editar:before {
+	content: "\f115";
+}
+.icon-expandir:before {
+	content: "\f116";
+}
+.icon-home:before {
+	content: "\f117";
+}
+.icon-incorreto:before {
+	content: "\f118";
+}
+.icon-lista:before {
+	content: "\f119";
+}
+.icon-listagem:before {
+	content: "\f11a";
+}
+.icon-mais:before {
+	content: "\f11b";
+}
+.icon-material:before {
+	content: "\f11c";
+}
+.icon-menu:before {
+	content: "\f11d";
+}
+.icon-novamente:before {
+	content: "\f11e";
+}
+.icon-oficio:before {
+	content: "\f11f";
+}
+.icon-pdf:before {
+	content: "\f120";
+}
+.icon-pessoa-outline:before {
+	content: "\f121";
+}
+.icon-recolher:before {
+	content: "\f122";
+}
+.icon-rejeitar:before {
+	content: "\f123";
+}
+.icon-remover:before {
+	content: "\f124";
+}
+.icon-responder:before {
+	content: "\f125";
+}
+.icon-seta_baixo:before {
+	content: "\f126";
+}
+.icon-seta_cima:before {
+	content: "\f127";
+}
+.icon-seta_direita:before {
+	content: "\f128";
+}
+.icon-seta_esquerda:before {
+	content: "\f129";
+}
+.icon-tempo:before {
+	content: "\f12a";
+}

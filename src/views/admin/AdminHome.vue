@@ -9,15 +9,15 @@
 			<thead>
 				<th align="left">
 					Nome
-					<i class="material-icons">keyboard_arrow_down</i>
+					<i class="icon-expandir icon"><span>keyboard_arrow_down</span></i>
 				</th>
 				<th align="left">
 					Início
-					<i class="material-icons">keyboard_arrow_down</i>
+					<i class="icon-expandir icon"><span>keyboard_arrow_down</span></i>
 				</th>
 				<th align="left">
 					Término
-					<i class="material-icons">keyboard_arrow_down</i>
+					<i class="icon-expandir icon"><span>keyboard_arrow_down</span></i>
 				</th>
 			</thead>
 			<tr v-for="consulta in consultas">

@@ -38,12 +38,12 @@
 			<p>Para elaboração das diretrizes urbanísticas e posterior consolidação das propostas, foi realizado um estudo de caracterização do Perímetro Expandido e do Perímetro de Abrangência do PIU, possibilitando a identificação de carências e potencialidades do território. O resultado das análises pode ser acessado nos cadernos disponíveis para download:</p>
 			<ul class="pdfBox">
 				<li><a href="https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi-2/1-Analise-Territorial.pdf" download>
-					<i class="small material-icons">picture_as_pdf</i>
+					<i class="icon-pdf icon"><span>picture_as_pdf</span></i>
 					<div>Análise Territorial</div>
 					<span>18,5 Mb</span>
 				</a></li>
 				<li><a href="https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi-2/2-Analise-Ambiental.pdf" download>
-					<i class="small material-icons">picture_as_pdf</i>
+					<i class="icon-pdf icon"><span>picture_as_pdf</span></i>
 					<div>Análise Ambiental</div>
 					<span>16,1 Mb</span>
 				</a></li>
@@ -399,22 +399,22 @@
 
 			<ul class="pdfBox">
 				<li><a href="https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi-2/MAPA-1_Perimetros.pdf" download>
-					<i class="small material-icons">picture_as_pdf</i>
+					<i class="icon-pdf icon"><span>picture_as_pdf</span></i>
 					<div>MAPA 1 – Perímetros</div>
 					<span>17,9 Mb</span>
 				</a></li>
 				<li><a href="https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi-2/MAPA-2_Subsetores.pdf" download>
-					<i class="small material-icons">picture_as_pdf</i>
+					<i class="icon-pdf icon"><span>picture_as_pdf</span></i>
 					<div>MAPA 2 – Subsetores</div>
 					<span>2,74 Mb</span>
 				</a></li>
 				<li><a href="https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi-2/MAPA-3_ProgramaIntervencoes.pdf" download>
-					<i class="small material-icons">picture_as_pdf</i>
+					<i class="icon-pdf icon"><span>picture_as_pdf</span></i>
 					<div>MAPA 3 – Programa de intervenções</div>
 					<span>14,0 Mb</span>
 				</a></li>
 				<li><a href="https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi-2/MAPA-4_HabitacaoSocial.pdf" download>
-					<i class="small material-icons">picture_as_pdf</i>
+					<i class="icon-pdf icon"><span>picture_as_pdf</span></i>
 					<div>MAPA 4 – Habitação Social</div>
 					<span>9,66 Mb</span>
 				</a></li>
@@ -1446,13 +1446,10 @@ export default {
 						margin-right: 1rem;
 						align-self:center
 					};
-
 					div {
 						width: 100%;
 					};
-
 					span {
-						display: block;
 						font-size: .75em;
 						margin-left: 1rem;
 						white-space: nowrap;

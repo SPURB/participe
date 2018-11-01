@@ -177,7 +177,7 @@
 				O usuário poderá ter o apoio de Agentes de Inclusão Digital (AID’s) capacitados para dar orientação quanto ao uso de softwares, ferramentas digitais e internet, indicação de soluções digitais e encaminhamentos para capacitação profissional por meio de cursos, formalização de microempreendedor individual (MEI) e eventos voltados ao empreendedorismo.
 			</p>
 			<p>
-				As atribuições e responsabilidades dos Agentes de Inclusão Digital, dos Supervisores Técnicos Regionais e da Coordenadoria de Convergência Digital podem ser verificadas no documento anexo, neste link: <a href="https://docs.google.com/document/d/1zH-k5lUpcyLK4b0DAHBK750nmCtZbo1V5XICfunB_xk/edit?usp=sharing" target="_blank">https://docs.google.com/document/d/1zH-k5lUpcyLK4b0DAHBK750nmCtZbo1V5XICfunB_xk/edit?usp=sharing</a>
+				As atribuições e responsabilidades dos Agentes de Inclusão Digital, dos Supervisores Técnicos Regionais e da Coordenadoria de Convergência Digital podem ser verificadas no documento anexo, neste link: <a href="https://docs.google.com/document/d/1zH-k5lUpcyLK4b0DAHBK750nmCtZbo1V5XICfunB_xk/edit?usp=sharing" target="_blank" alt="documento">https://docs.google.com/document/d/1zH-k5lUpcyLK4b0DAHBK750nmCtZbo1V5XICfunB_xk/edit?usp=sharing</a>
 			</p>
 
 			<h4>5.3. Articulação de rede de contatos (hub de networking e troca de informação)</h4>
@@ -889,7 +889,7 @@ export default {
 	}
 	p {
 		overflow: auto;
-		text-align: justify;
+		text-align: left;
 	}
 	a {
 		cursor: pointer;

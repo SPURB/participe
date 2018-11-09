@@ -50,227 +50,7 @@
 					</figure>
 				</template>
 				<template slot="t6">
-					<table class="headed-table">
-					  <tr>
-					    <th>Ordem</th>
-					    <th>Via</th>
-					    <th>Número de acidentes fatais por atropelamento</th>
-					    <th>Número de mortos por atropelamento</th>
-					    <th>Número de acidentes fatais envolvendo veículos</th>
-					    <th>Número de mortos em acidentes envolvendo veículos</th>
-					    <th>Número total de acidentes fatais</th>
-					    <th>Número total de mortos</th>
-					  </tr>
-					  <tr>
-					    <td>1</td>
-					    <td>Marginal Tietê</td>
-					    <td>5</td>
-					    <td>7</td>
-					    <td>13</td>
-					    <td>13</td>
-					    <td>18</td>
-					    <td>20</td>
-					  </tr>
-					  <tr>
-					    <td>2</td>
-					    <td>Av. Senador Teotônio Vilela</td>
-					    <td>8</td>
-					    <td>9</td>
-					    <td>9</td>
-					    <td>10</td>
-					    <td>17</td>
-					    <td>19</td>
-					  </tr>
-					  <tr>
-					    <td>3</td>
-					    <td>Marginal Pinheiros</td>
-					    <td>2</td>
-					    <td>2</td>
-					    <td>12</td>
-					    <td>12</td>
-					    <td>14</td>
-					    <td>14</td>
-					  </tr>
-					  <tr>
-					    <td>4</td>
-					    <td>Est. de Itapecerica</td>
-					    <td>4</td>
-					    <td>4</td>
-					    <td>8</td>
-					    <td>9</td>
-					    <td>12</td>
-					    <td>13</td>
-					  </tr>
-					  <tr>
-					    <td>5</td>
-					    <td>Av. Dona Belmira Marin</td>
-					    <td>3</td>
-					    <td>3</td>
-					    <td>6</td>
-					    <td>6</td>
-					    <td>9</td>
-					    <td>9</td>
-					  </tr>
-					  <tr>
-					    <td>6</td>
-					    <td>Av. Jacu-Pêssego / Nova Trabalhadores</td>
-					    <td>6</td>
-					    <td>6</td>
-					    <td>2</td>
-					    <td>3</td>
-					    <td>8</td>
-					    <td>9</td>
-					  </tr>
-					  <tr>
-					    <td>7</td>
-					    <td>Av. Sapopemba</td>
-					    <td>5</td>
-					    <td>5</td>
-					    <td>3</td>
-					    <td>3</td>
-					    <td>8</td>
-					    <td>8</td>
-					  </tr>
-					  <tr>
-					    <td>8</td>
-					    <td>Av. Marechal Tito</td>
-					    <td>6</td>
-					    <td>6</td>
-					    <td>2</td>
-					    <td>2</td>
-					    <td>8</td>
-					    <td>8</td>
-					  </tr>
-					  <tr>
-					    <td>9</td>
-					    <td>Est. M’Boi Mirim</td>
-					    <td>3</td>
-					    <td>3</td>
-					    <td>4</td>
-					    <td>4</td>
-					    <td>7</td>
-					    <td>7</td>
-					  </tr>
-					  <tr>
-					    <td>10</td>
-					    <td>Av. do Estado</td>
-					    <td>3</td>
-					    <td>3</td>
-					    <td>4</td>
-					    <td>4</td>
-					    <td>7</td>
-					    <td>7</td>
-					  </tr>
-					  <tr>
-					    <td>11</td>
-					    <td>Av. Aricanduva</td>
-					    <td>2</td>
-					    <td>2</td>
-					    <td>5</td>
-					    <td>5</td>
-					    <td>7</td>
-					    <td>7</td>
-					  </tr>
-					  <tr>
-					    <td>12</td>
-					    <td>Avenida José Pinheiro Borges</td>
-					    <td>2</td>
-					    <td>2</td>
-					    <td>4</td>
-					    <td>4</td>
-					    <td>6</td>
-					    <td>6</td>
-					  </tr>
-					  <tr>
-					    <td>13</td>
-					    <td>Avenida Pires do Rio</td>
-					    <td>2</td>
-					    <td>2</td>
-					    <td>4</td>
-					    <td>5</td>
-					    <td>6</td>
-					    <td>7</td>
-					  </tr>
-					  <tr>
-					    <td>14</td>
-					    <td>Estrada da Baronesa</td>
-					    <td>1</td>
-					    <td>1</td>
-					    <td>5</td>
-					    <td>5</td>
-					    <td>6</td>
-					    <td>6</td>
-					  </tr>
-					  <tr>
-					    <td>15</td>
-					    <td>Avenida Raimundo Pereira de Magalhães</td>
-					    <td>0</td>
-					    <td>0</td>
-					    <td>5</td>
-					    <td>7</td>
-					    <td>5</td>
-					    <td>7</td>
-					  </tr>
-					  <tr>
-					    <td>16</td>
-					    <td>Avenida Salim Farah Maluf</td>
-					    <td>2</td>
-					    <td>2</td>
-					    <td>3</td>
-					    <td>4</td>
-					    <td>5</td>
-					    <td>6</td>
-					  </tr>
-					  <tr>
-					    <td>17</td>
-					    <td>Avenida Ragueb Chohfi</td>
-					    <td>1</td>
-					    <td>1</td>
-					    <td>4</td>
-					    <td>4</td>
-					    <td>5</td>
-					    <td>5</td>
-					  </tr>
-					  <tr>
-					    <td>18</td>
-					    <td>Avenida Professor Francisco Morato</td>
-					    <td>0</td>
-					    <td>0</td>
-					    <td>5</td>
-					    <td>5</td>
-					    <td>5</td>
-					    <td>5</td>
-					  </tr>
-					  <tr>
-					    <td>19</td>
-					    <td>Avenida Corifeu de Azevedo Marques</td>
-					    <td>2</td>
-					    <td>2</td>
-					    <td>3</td>
-					    <td>3</td>
-					    <td>5</td>
-					    <td>5</td>
-					  </tr>
-					  <tr>
-					    <td>20</td>
-					    <td>Rua Doutor Assis Ribeiro</td>
-					    <td>2</td>
-					    <td>2</td>
-					    <td>3</td>
-					    <td>3</td>
-					    <td>5</td>
-					    <td>5</td>
-					  </tr>
-					  <tr>
-					    <td colspan="2">Total</td>
-					    <td>59</td>
-					    <td>62</td>
-					    <td>104</td>
-					    <td>110</td>
-					    <td>163</td>
-					    <td>173</td>
-					  </tr>
-					</table>
+					<table class="headed-table"><tr><th>Ordem</th><th>Via</th><th>Número de acidentes fatais por atropelamento</th><th>Número demortos por atropelamento</th><th>Número de acidentes fatais envolvendo veículos</th><th>Número de mortos em acidentesenvolvendo veículos</th><th>Número total de acidentes fatais</th><th>Número total de mortos</th></tr><tr><td>1</td><td>Marginal Tietê</td><td>5</td><td>7</td><td>13</td><td>13</td><td>18</td><td>20</td></tr><tr><td>2</td><td>Av. Senador Teotônio Vilela</td><td>8</td><td>9</td><td>9</td><td>10</td><td>17</td><td>19</td></tr><tr><td>3</td><td>Marginal Pinheiros</td><td>2</td><td>2</td><td>12</td><td>12</td><td>14</td><td>14</td></tr><tr><td>4</td><td>Est. de Itapecerica</td><td>4</td><td>4</td><td>8</td><td>9</td><td>12</td><td>13</td></tr><tr><td>5</td><td>Av. Dona Belmira Marin</td><td>3</td><td>3</td><td>6</td><td>6</td><td>9</td><td>9</td></tr><tr><td>6</td><td>Av. Jacu-Pêssego / NovaTrabalhadores</td><td>6</td><td>6</td><td>2</td><td>3</td><td>8</td><td>9</td></tr><tr><td>7</td><td>Av. Sapopemba</td><td>5</td><td>5</td><td>3</td><td>3</td><td>8</td><td>8</td></tr><tr><td>8</td><td>Av. Marechal Tito</td><td>6</td><td>6</td><td>2</td><td>2</td><td>8</td><td>8</td></tr><tr><td>9</td><td>Est. M’Boi Mirim</td><td>3</td><td>3</td><td>4</td><td>4</td><td>7</td><td>7</td></tr><tr><td>10</td><td>Av. do Estado</td><td>3</td><td>3</td><td>4</td><td>4</td><td>7</td><td>7</td></tr><tr><td>11</td><td>Av. Aricanduva</td><td>2</td><td>2</td><td>5</td><td>5</td><td>7</td><td>7</td></tr><tr><td>12</td><td>Avenida José PinheiroBorges</td><td>2</td><td>2</td><td>4</td><td>4</td><td>6</td><td>6</td></tr><tr><td>13</td><td>Avenida Pires do Rio</td><td>2</td><td>2</td><td>4</td><td>5</td><td>6</td><td>7</td></tr><tr><td>14</td><td>Estrada da Baronesa</td><td>1</td><td>1</td><td>5</td><td>5</td><td>6</td><td>6</td></tr><tr><td>15</td><td>Avenida Raimundo Pereira deMagalhães</td><td>0</td><td>0</td><td>5</td><td>7</td><td>5</td><td>7</td></tr><tr><td>16</td><td>Avenida Salim FarahMaluf</td><td>2</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr><tr><td>17</td><td>Avenida Ragueb Chohfi</td><td>1</td><td>1</td><td>4</td><td>4</td><td>5</td><td>5</td></tr><tr><td>18</td><td>Avenida Professor FranciscoMorato</td><td>0</td><td>0</td><td>5</td><td>5</td><td>5</td><td>5</td></tr><tr><td>19</td><td>Avenida Corifeu deAzevedo Marques</td><td>2</td><td>2</td><td>3</td><td>3</td><td>5</td><td>5</td></tr><tr><td>20</td><td>Rua Doutor AssisRibeiro</td><td>2</td><td>2</td><td>3</td><td>3</td><td>5</td><td>5</td></tr><tr><td colspan="2">Total</td><td>59</td><td>62</td><td>104</td><td>110</td><td>163</td><td>173</td></tr></table>
 					<figcaption>Tabela 6 - Vias com maior número de acidentes fatais, de acordo com Relatório Anual de Acidentes da CET de 2017.</figcaption>
 				</template>
 			</Cap2A>
@@ -300,6 +80,12 @@
 						<figcaption>{{imagem.figureTitle}}</figcaption>
 					</figure>
 				</template>
+				<template slot='tabela9'>
+					<figure style="width: 100%; margin: auto;">
+						<table class="simple-table"><tr><th colspan="5">Programa: Ações e s Serviços de Saúde</th></tr><tr><td>Ação Orçamentária</td><td>2018</td><td>2019</td><td>2020</td><td>2021</td></tr><tr><td>1518 - Implantação de Serviço de Atendimento Médico de Urgência (SAMU)</td><td>R$ 1.000</td><td>R$ 0</td><td>R$ 0</td><td>R$ 0</td></tr><tr><td>2514 - Manutenção e Operação de Serviço de Atendimento Médico de Urgência(SAMU)</td><td>R$ 87.359.581</td><td>R$ 83.330.576</td><td>R$ 72.556.533</td><td>R$ 75.946.087</td></tr><tr><td colspan="5"><strong><center>Programa: Direitos da pessoa com deficiência</center></strong></td></tr><tr><td>1169 - Reforma e Acessibilidade em Passeios Públicos</td><td>R$ 38.760.181</td><td>R$ 47.510.740</td><td>R$ 52.252.009</td><td>R$ 73.254.566</td></tr><tr><td>4705 - Transporte de Pessoas com Deficiência ou Mobilidade Reduzida - ATENDE</td><td>R$ 87.028.975</td><td>R$ 101.637.384</td><td>R$ 106.211.537</td><td>R$ 110.991.057</td></tr><tr><td colspan="5"><strong><center>Programa: Melhoria da mobilidade urbana universal</center></strong></td></tr><tr><td>1095 - Construção de Terminais de Ônibus</td><td>R$ 97.300.370</td><td>R$ 76.288.544</td><td>R$ 303.845.101</td><td>R$ 248.124.476</td></tr><tr><td>1096 - Acessibilidade, Ampliação, Reforma e Requalificação de Terminais de Ônibus</td><td>R$ 5.246.785</td><td>R$ 4.397.701</td><td>R$ 24.533.100</td><td>R$ 13.350.534</td></tr><tr><td>1097 - Construção de Ciclovias, Ciclofaixas e Ciclorrotas</td><td>R$ 2.000</td><td>R$ 2.000</td><td>R$ 2.000</td><td>R$ 2.000</td></tr><tr><td>1098 - Ampliação, Reforma e Requalificação de Ciclovias, Ciclofaixas e Ciclorrotas</td><td>R$ 8.992.681</td><td>R$ 10.334.104</td><td>R$ 9.450.880</td><td>R$ 1.000</td></tr><tr><td>1099 - Construção de Corredores de Ônibus</td><td>R$ 505.547.297</td><td>R$ 216.341.186</td><td>R$ 384.672.059</td><td>R$ 299.426.660</td></tr><tr><td>1100 - Ampliação, Reforma e Requalificação de Corredores de Ônibus</td><td>R$ 41.116.074</td><td>R$ 26.475.159</td><td>R$ 2.073.000</td><td>R$ 2.802.000</td></tr><tr><td>1240 - Modernização Semafórica</td><td>R$ 2.000</td><td>R$ 2.000</td><td>R$ 2.000</td><td>R$ 2.000</td></tr><tr><td>2096 - Manutenção e Operação de Terminais de Ônibus</td><td>R$ 2.000</td><td>R$ 3.000</td><td>R$ 3.000</td><td>R$ 3.000</td></tr><tr><td>2098 - Manutenção de Ciclovias, Ciclofaixas e Ciclorrotas</td><td>R$ 61.000</td><td>R$ 61.166</td><td>R$ 63.192</td><td>R$ 64.385</td></tr><tr><td>2099 - Manutenção de Corredores de Ônibus</td><td>R$ 2.000</td><td>R$ 3.000</td><td>R$ 3.000</td><td>R$ 3.000</td></tr><tr><td>3012 - Projetos de Transporte e Mobilidade Oriundos de Recursos de Desestatizações e Parcerias</td><td>R$ 6.000</td><td>R$ 6.000</td><td>R$ 6.000</td><td>R$ 6.000</td></tr><tr><td>3380 - Construção de Pontes, Viadutos e Alças</td><td>R$ 3.000</td><td>R$ 3.000</td><td>R$ 3.000</td><td>R$ 3.000</td></tr><tr><td>3704 - Ações paramodernização do sistema de transportes</td><td>R$ 13.700.000</td><td>R$ 13.920.000</td><td>R$ 14.450.000</td><td>R$ 15.000.000</td></tr><tr><td>3742 - Participação no Sistema de Transporte sobre Trilhos</td><td>R$ 2.000</td><td>R$ 2.000</td><td>R$ 2.000</td><td>R$ 2.000</td></tr><tr><td>3743 - Modernização do Controle e Fiscalização de Tráfego</td><td>R$ 1.000</td><td>R$ 1.000</td><td>R$ 1.000</td><td>R$ 1.000</td></tr><tr><td>3745 - Aumento de Capital da SPTrans</td><td>R$ 14.095.811</td><td>R$ 15.595.811</td><td>R$ 15.595.811</td><td>R$ 15.595.811</td></tr><tr><td>3746 - Aumento de Capital da CET</td><td>R$ 1.000</td><td>R$ 1.000</td><td>R$ 1.000</td><td>R$ 1.000</td></tr><tr><td>4656 - Manutenção e Operação do Policiamento de Trânsito</td><td>R$ 44.144.500</td><td>R$ 44.144.500</td><td>R$ 44.144.500</td><td>R$ 44.144.500</td></tr><tr><td>4657 - Ações de Educação de Trânsito</td><td>R$ 35.000.000</td><td>R$ 1.000</td><td>R$ 1.000</td><td>R$ 1.000</td></tr><tr><td>4658 - Manutenção e Operação da Sinalização do Sistema Viário</td><td>R$ 70.068.481</td><td>R$ 73.004.955</td><td>R$ 60.506.449</td><td>R$ 46.234.078</td></tr><tr><td>4700 - Manutenção e operação do sistema municipal de transporte coletivo</td><td>R$ 375.005.646</td><td>R$ 375.005.646</td><td>R$ 375.005.646</td><td>R$ 375.005.646</td></tr><tr><td>4701 - Compensações tarifárias do sistema de ônibus</td><td>R$ 2.342.987.676</td><td>R$ 2.327.984.033</td><td>R$ 2.333.941.543</td><td>R$ 2.340.227.415</td></tr><tr><td>4702 - Serviços de Engenharia de Tráfego</td><td>R$ 718.430.642</td><td>R$ 700.738.509</td><td>R$ 695.075.664</td><td>R$ 750.292.808</td></tr><tr><td>4703 - Manutenção e Operação do Controle e Fiscalização de Tráfego</td><td>R$ 139.200.000</td><td>R$ 139.200.000</td><td>R$ 139.200.000</td><td>R$ 139.200.000</td></tr><tr><td>5100 - Intervenções no Sistema Viário</td><td>R$ 224.128.391</td><td>R$ 216.769.580</td><td>R$ 211.984.533</td><td>R$ 99.436.588</td></tr><tr><td>6841 - Manutenção e Operação Semafórica</td><td>R$ 33.402.558</td><td>R$ 33.316.571</td><td>R$ 32.670.344</td><td>R$ 35.791.775</td></tr><tr><td>9201 - Intervenções na Área de Mobilidade Urbana</td><td>R$ 184.057.683</td><td>R$ 24.949.317</td><td>R$ 3.000</td><td>R$ 3.000</td></tr></table>
+						<figcaption>Tabela 9 - Ações orçamentárias Plano Plurianual 2018-2021</figcaption>
+					</figure>
+				</template>
 			</Cap2CEixoI>
 			<Comments :attr="{id:commentId(), context:'Eixo I - Articulação Institucional e Gestão'}"></Comments>
 		</section>
@@ -312,6 +98,15 @@
 		 				<figcaption>{{imagem.figureTitle}}</figcaption>
 		 			</figure>
 		 		</template>
+		 		<template slot='tabela14'>
+		 			<figure>
+		 				<table class="headed-table"><tr><th>Acidentes na Av. Brigadeiro Luís Antônio</th><th>Antes da remoção (24/02/15 a 31/01/16)</th><th>Após a remoção (24/02/16 a 31/01/17)</th><th>Variação percentual (antes x depois)</th></tr><tr><td>Acidentes com feridos</td><td>12</td><td>4</td><td>-66,6%</td></tr><tr><td>Atropelamentos</td><td>16</td><td>2</td><td>-87,5%</td></tr><tr><td>Feridos</td><td>29</td><td>6</td><td>-79,3%</td></tr><tr><td>Mortos</td><td>2</td><td>0</td><td>-100%</td></tr></table>
+	 					<figcaption>Tabela 14 - número de acidentes, de vítimas e de atropelamentos na Av. Brigadeiro Luís Antônio antes e após remoção do contrafluxo.</figcaption>
+	 				</figure>
+		 		</template>
+		 		<!-- <template v-for="c in commentSlots" :slot='c'>
+		 			<Comments :attr="{id:commentId(), context:c}"></Comments>
+		 		</template> -->
 		 	</Cap2CEixoII>
 		 	<Comments :attr="{id:commentId(), context:'Eixo II - Planejamento Urbano, Desenho de Ruas e Engenharia'}"></Comments>
 		</section>
@@ -322,6 +117,24 @@
 		 			<figure>
 		 				<img :src="fileSrc(imagem.slotName+'.jpg')" :alt="imagem.figureTitle">
 		 				<figcaption>{{imagem.figureTitle}}</figcaption>
+		 			</figure>
+		 		</template>
+		 		<template slot='tabela15'>
+		 			<figure>
+		 				<table class="simple-table"><tr><td>Efetuar Transporte em modalidade não autorizada</td><td>127</td><td>23,60%</td></tr><tr><td>Veículo Clandestino / carro frio</td><td>99</td><td>18,40%</td></tr><tr><td>Direção Perigosa</td><td>75</td><td>13,90%</td></tr><tr><td>Superlotação pingentes</td><td>57</td><td>10,60%</td></tr><tr><td>Atitude desrespeitosa</td><td>47</td><td>8,70%</td></tr><tr><td>Rádio alto volume / buzina sonora</td><td>32</td><td>5,90%</td></tr><tr><td>Demais</td><td>101</td><td>18,77%</td></tr><tr><td>TOTAL</td><td>538</td><td> </td></tr></table>
+		 				<figcaption>Tabela 15 - Reclamações recebidas pelo DTP (2017) na modalidade Transporte Escolar</figcaption>
+		 			</figure>
+		 		</template>
+		 		<template slot='tabela16'>
+		 			<figure>
+		 				<table style="border-collapse:collapse;border-spacing:0" class="tg"><tr><th style="font-family:Arial, sans-serif;font-size:14px;font-weight:bold;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#c0c0c0;text-align:center;vertical-align:top">Faixa horária</th><th style="font-family:Arial, sans-serif;font-size:14px;font-weight:bold;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#c0c0c0;text-align:center;vertical-align:top">Número de acidentes fatais entre<br>  2015 e 2017</th><th style="font-family:Arial, sans-serif;font-size:14px;font-weight:bold;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#c0c0c0;text-align:center;vertical-align:top">Percentual em relação ao total<br>  de acidentes fatais</th></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">0h-1h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f56b00;text-align:center;vertical-align:top">12</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f56b00;text-align:center;vertical-align:top">5,41%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">1h-2h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffce93;text-align:center;vertical-align:top">5</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffce93;text-align:center;vertical-align:top">2,25%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">2h-3h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffce93;text-align:center;vertical-align:top">5</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffce93;text-align:center;vertical-align:top">2,25%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">3h-4h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffc702;text-align:center;vertical-align:top">7</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffc702;text-align:center;vertical-align:top">3,15%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">4h-5h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#fffc9e;text-align:center;vertical-align:top">4</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#fffc9e;text-align:center;vertical-align:top">1,80%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">5h-6h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#fffc9e;text-align:center;vertical-align:top">4</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#fffc9e;text-align:center;vertical-align:top">1,80%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">6h-7h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffc702;text-align:center;vertical-align:top">8</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffc702;text-align:center;vertical-align:top">3,60%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">7h-8h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffc702;text-align:center;vertical-align:top">8</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffc702;text-align:center;vertical-align:top">3,60%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">8h-9h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f8a102;text-align:center;vertical-align:top">10</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f8a102;text-align:center;vertical-align:top">4,50%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">9h-10h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f56b00;text-align:center;vertical-align:top">12</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f56b00;text-align:center;vertical-align:top">5,41%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">10h-11h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ce6301;text-align:center;vertical-align:top">14</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ce6301;text-align:center;vertical-align:top">6,31%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">11h-12h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffc702;text-align:center;vertical-align:top">8</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffc702;text-align:center;vertical-align:top">3,60%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">12h-13h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f8a102;text-align:center;vertical-align:top">11</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f8a102;text-align:center;vertical-align:top">4,95%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">13h-14h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f8a102;text-align:center;vertical-align:top">10</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f8a102;text-align:center;vertical-align:top">4,50%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">14h-15h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ce6301;text-align:center;vertical-align:top">15</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ce6301;text-align:center;vertical-align:top">6,76%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">15h-16h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ce6301;text-align:center;vertical-align:top">14</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ce6301;text-align:center;vertical-align:top">6,31%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">16h-17h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ce6301;text-align:center;vertical-align:top">15</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ce6301;text-align:center;vertical-align:top">6,76%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">17h-18h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffc702;text-align:center;vertical-align:top">7</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffc702;text-align:center;vertical-align:top">3,15%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">18h-19h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f56b00;text-align:center;vertical-align:top">12</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f56b00;text-align:center;vertical-align:top">5,41%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">19h-20h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f8a102;text-align:center;vertical-align:top">9</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f8a102;text-align:center;vertical-align:top">4,05%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">20h-21h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f8a102;text-align:center;vertical-align:top">9</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f8a102;text-align:center;vertical-align:top">4,05%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">21h-22h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffc702;text-align:center;vertical-align:top">8</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffc702;text-align:center;vertical-align:top">3,60%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">22h-23h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffce93;text-align:center;vertical-align:top">6</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffce93;text-align:center;vertical-align:top">2,70%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">23h-0h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f8a102;text-align:center;vertical-align:top">9</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f8a102;text-align:center;vertical-align:top">4,05%</td></tr></table>
+		 				<figcaption>Tabela 16: ocorrências fatais com envolvimento de caminhões por faixa horária (2015-2017). Fonte: CET</figcaption>
+		 			</figure>
+		 		</template>
+		 		<template slot='tabela17'>
+		 			<figure>
+		 				<table class="simple-table"><tr><th>Atitude desrespeitosa</th><th>434</th><th>19,7%</th></tr><tr><td>Desrespeitar regulamento do ponto</td><td>316</td><td>14,4%</td></tr><tr><td>Não disponibilizar meio de pagamento eletrônico</td><td>242</td><td>11%</td></tr><tr><td>Angariar usuários a menos de 100 metros do ponto</td><td>203</td><td>9,2%</td></tr><tr><td>Direção Perigosa</td><td>184</td><td>8,4%</td></tr><tr><td>Recusa de passageiro</td><td>154</td><td>7%</td></tr><tr><td>Cobrança indevida</td><td>153</td><td>7%</td></tr><tr><td>Desrespeito ao público (agressão verbal)</td><td>85</td><td>3,9%</td></tr><tr><td>Demais</td><td>101</td><td>18,77%</td></tr><tr><td>TOTAL</td><td>2.198</td><td> </td></tr></table>
+		 				<figcaption>Tabela 17 - Reclamações recebidas pelo DTP (2017) na modalidade Taxi</figcaption>
 		 			</figure>
 		 		</template>
 		 	</Cap2CEixoIII>
@@ -336,7 +149,13 @@
 		 				<figcaption>{{imagem.figureTitle}}</figcaption>
 		 			</figure>
 		 		</template>
-		 	</Cap2CEixoIV>
+		 		<template slot='tabela20'>
+		 			<figure>
+		 				<table class="headed-table"><tr><th>Classe das Vias</th><th>Característica Funcional</th><th>Característica Operacional</th><th>Característica Física</th></tr><tr><td>VTR – Via de Trânsito Rápido (Aprox. 58 km no total)</td><td>Vias ou trecho de vias sem cruzamento em nível.</td><td>Estruturar o viário principal servindo de conexão entre Rodovias, e as Regiões Norte e Sul e Leste e Oeste.</td><td>Vias com pelo menos uma pista por sentido.</td></tr><tr><td>Via Arterial (Aprox. 1350 km no total)</td><td>Caracterizada por interseções em nível.</td><td>Estrutura o viário principal servindo de conexão entre Rodovias e as Regiões Norte, Sul, Leste e Oeste, e geralmente controlada por semáforo.</td><td>Com acessibilidade aos lotes lindeiros e às vias secundárias e locais, possibilitando o trânsito entre as regiões da cidade.</td></tr><tr><td>Via Coletora (Aprox. 5200 km no total)</td><td>Coletar e distribuir o trânsito.</td><td>Necessidade de entrar ou sair das vias de trânsito rápido ou arteriais, possibilitando o trânsito dentro das regiões da cidade.</td><td>Pista simples.</td></tr><tr><td>Via Local (Aprox. 10.400 km no total)</td><td>Função predominante de proporcionar o acesso aos imóveis lindeiros.</td><td>Destinada apenas ao acesso local ou a áreas restritas.</td><td>Pista simples.</td></tr></table>
+		 				<figcaption>Tabela 20: Classificação de vias, conforme as características urbanas.</figcaption>
+		 			</figure>
+		 		</template>
+		 	</Cap2CEixoIV>		 	
 		 	<Comments :attr="{id:commentId(), context:'Eixo IV – Legislação, Fiscalização e Velocidades'}"></Comments>
 		</section>
 		<section>
@@ -353,14 +172,7 @@
 		</section>
 		<section>
 		 	<h4 indent="3" class="titulo">Eixo VI – Atendimento e Cuidado Pós Acidente</h4>
-		 	<Cap2CEixoVI>
-		 		<template v-for="imagem in imagens" :slot="imagem.slotName">
-		 			<figure>
-		 				<img :src="fileSrc(imagem.slotName+'.jpg')" :alt="imagem.figureTitle">
-		 				<figcaption>{{imagem.figureTitle}}</figcaption>
-		 			</figure>
-		 		</template>
-		 	</Cap2CEixoVI>
+		 	<Cap2CEixoVI></Cap2CEixoVI>
 		 	<Comments :attr="{id:commentId(), context:'Eixo VI – Atendimento e Cuidado Pós Acidente'}"></Comments>
 		</section>
 		<section>
@@ -370,6 +182,18 @@
 		 			<figure>
 		 				<img :src="fileSrc(imagem.slotName+'.jpg')" :alt="imagem.figureTitle">
 		 				<figcaption>{{imagem.figureTitle}}</figcaption>
+		 			</figure>
+		 		</template>
+		 		<template slot='tabela23'>
+		 			<figure>
+		 				<table class="headed-table"><tr><th>ATIVIDADES</th><th>MÓDULOS</th><th>CARGA HORÁRIA</th></tr><tr><td rowspan="16">INTEGRAÇÃO</td><td>CONHECENDO A CET</td><td>08H00</td></tr><tr><td>O FATOR HUMANO NAS ORGANIZAÇÕES</td><td>08H00</td></tr><tr><td>VISITA TÉCNICA</td><td>08H00</td></tr><tr><td>POSTURA E CONDUTA PROFISSIONAL</td><td>08H00</td></tr><tr><td>CONHECENDO A ATIVIDADE</td><td>08H00</td></tr><tr><td>CONHECIMENTOS OPERACIONAIS</td><td>16H00</td></tr><tr><td>VISTORIA DE VIATURA</td><td>08H00</td></tr><tr><td>GESTOS E APITOS</td><td>08H00</td></tr><tr><td>FISCALIZAÇÃO DE OBRAS</td><td>08H00</td></tr><tr><td>BOLETIM DE ATIVIDADE DE CAMPO</td><td>12H00</td></tr><tr><td>SISTEMA DE COMUNICAÇÃO</td><td>04H00</td></tr><tr><td>SAÚDE E SEGURANÇA NO TRABALHO</td><td>08H00</td></tr><tr><td>ATENDIMENTO À OCORRÊNCIA COM VÍTIMA</td><td>16H00</td></tr><tr><td>NOÇÕES DE SINALIZAÇÃO VIÁRIA</td><td>06h00</td></tr><tr><td>DIREÇÃO DEFENSIVA</td><td>18H00</td></tr><tr><td>FORMAÇÃO DE AGENTE DE FISCALIZAÇÃO (CLASSE A)</td><td>36h00</td></tr><tr><td rowspan="2">QUALIFICAÇÃO grupo específico</td><td>TÉCNICAS DE PILOTAGEM COM SEGURANÇA</td><td>24H00</td></tr><tr><td>PEDALAR COM SEGURANÇA</td><td>06H00</td></tr><tr><td colspan="2">CARGA HORÁRIA TOTAL</td><td>210h00</td></tr></table>
+		 				<figcaption>Tabela 23 - Grade de disciplinas do curso de formação do Agente de Trânsito I</figcaption>
+		 			</figure>
+		 		</template>
+		 		<template slot='tabela24'>
+		 			<figure>
+		 				<table class="headed-table"><tr><th>ATIVIDADES</th><th>MÓDULOS</th><th>CARGA HORÁRIA</th></tr><tr><td rowspan="6">CAPACITAÇÃO</td><td>CONHECIMENTOS OPERACIONAIS/REMOÇÃO</td><td>18H00</td></tr><tr><td>CONCEITOS DE SINALIZAÇÃO H/V E PM</td><td>12H00</td></tr><tr><td>NOÇÕES DE SINALIZAÇÃO SEMAFÓRICA</td><td>12H00</td></tr><tr><td>FISCALIZAÇÃO (CLASSE B)</td><td>24H00</td></tr><tr><td>REMOÇÃO VISTORIA E CUSTÓDIA - RVC</td><td>06H00</td></tr><tr><td>ATENDIMENTO À OCORRÊNCIAS COM PRODUTOS PERIGOSOS E SUPERDIMENSIONADA</td><td>24H00</td></tr><tr><td>QUALIFICAÇÃO grupo específico</td><td>OPERAÇÃO DE EQUIPAMENTO GUINCHO LEVE</td><td>12H00</td></tr><tr><td colspan="2">TOTAL CARGA HORÁRIA</td><td>108h00</td></tr></table>
+		 				<figcaption>Tabela 24 - Grade de disciplinas do curso realizado para promoção de Agente de Trânsito I para Agente de Trânsito II</figcaption>
 		 			</figure>
 		 		</template>
 		 	</Cap2CEixoVII>
@@ -439,6 +263,12 @@
 		 			<figure>
 		 				<img :src="fileSrc(imagem.slotName+'.jpg')" :alt="imagem.figureTitle">
 		 				<figcaption>{{imagem.figureTitle}}</figcaption>
+		 			</figure>
+		 		</template>
+		 		<template slot='tabela25'>
+		 			<figure>
+		 				<table class="simple-table"><tr><th></th><th>Tempo extra verde para pedestre (s)</th><th>Verde (s)</th><th>Vermelho piscante (s)</th></tr><tr><td>Critérios antigos</td><td>0</td><td>De acordo com a largura da via</td><td>5 (média)</td></tr><tr><td>Critérios padrão</td><td>0</td><td>5</td><td>Garantia de 1,2 metros por segundo (máximo)</td></tr><tr><td>Critérios que estão sendo utilizados para os corredores</td><td>2</td><td>8</td><td>Garantia de 1,2 metros por segundo (máximo)</td></tr></table>
+		 				<figcaption>Tabela 25 – critérios de definição de tempos semafóricos aos pedestres.</figcaption>
 		 			</figure>
 		 		</template>
 		 	</Cap3EixoII>
@@ -573,6 +403,7 @@ export default {
 			consultas: false,
 			estaConsulta: {},
 			anexos: ['Vida_Segura_29-10-2018_PDF.pdf'],
+			// commentSlots: ['7.	Dispositivos de Segurança','8.	Ações de Segurança'],
 			imagens: [
 				{ 
 					slotName: "g1", 
@@ -820,7 +651,7 @@ export default {
 				}
 				,{
 					slotName: "f14a", 
-					figureTitle: "Figura 14a - Comparação entre iluminação pública padrão e iluminação pública voltada para pedestres. Fonte: New York City Department of Transportation, 2013)."
+					figureTitle: "Figura 14 - Comparação entre iluminação pública padrão e iluminação pública voltada para pedestres. Fonte: New York City Department of Transportation, 2013)."
 				}
 				,{
 					slotName: "f14b", 
@@ -950,7 +781,7 @@ export default {
 		Cap3EixoVI,
 		Cap3EixoVII,
 		Cap3EixoVIII,
-		Bibliografia		
+		Bibliografia
 	},
 	mixins: [ consultasCommons ],
 	methods: {
@@ -958,11 +789,12 @@ export default {
 			let url = this.$store.getters.basePath + 'arquivos/vida-segura/' + fileName
 			return url.toString()
 		},
-		commentId(isFirst) {
-			if (isFirst)
-				this.$store.commentsCount = 0;
-			this.$store.commentsCount++;			
-			return this.$store.commentsCount;
+		commentId (isFirst) {
+			if (isFirst) {
+				this.$store.commentsCount = 0
+			}
+			this.$store.commentsCount++
+			return this.$store.commentsCount
 		}
 	}
 }
@@ -1004,6 +836,9 @@ export default {
 	}
 	h4 {
 		margin: 2em auto auto;
+	}
+	h5 {
+		margin: 1em auto 0.2em;
 	}
 	*::selection, *::-moz-selection {
 		background: #EB5757;

@@ -594,6 +594,10 @@ export default {
 					figureTitle: "Figura 5 - Av. Mal. Tito, trecho em São Miguel Paulista (Crédito: SPUrbanismo)"
 				}
 				,{ 
+					slotName: "f6", 
+					figureTitle: "Figura 6 - Corte esquemático da Av. Mal. Tito (Elaboração: BIGRS)"
+				}
+				,{ 
 					slotName: "t10", 
 					figureTitle: "Tabela 10 - Quadro 2B da LPUOS/2016 - parâmetros de parcelamento do solo (sistema viário)."
 				}

@@ -117,6 +117,11 @@ export default{
 			};
 		};
 
+		#app div.VidaSegura>div.PageTop>div:first-child>h1 {
+		    font-size: 4.5em;
+		    line-height: 1em;
+		}
+
 		.setaBaixo {
 			position: absolute;
 			bottom: 0;

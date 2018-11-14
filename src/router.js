@@ -7,6 +7,7 @@ const Anhembi2 = () => import('@/views/Anhembi2')
 const ArcoPinheiros = () => import('@/views/ArcoPinheiros')
 const WifiLivreSP = () => import('@/views/WifiLivreSP')
 const DigilabLivreSP = () => import('@/views/DigilabLivreSP')
+const VidaSegura = () => import('@/views/VidaSegura')
 
 // Admin
 const Login = () => import('@/views/Login')
@@ -58,6 +59,14 @@ export default new Router({
 			components: { DigilabLivreSP },
 			meta: {
 				id: 35
+			}
+		},
+		{
+			path: '/vida-segura',
+			name: 'VidaSegura',
+			components: { VidaSegura },
+			meta: {
+				id: 36
 			}
 		},
 		// Modelo para novas consultas

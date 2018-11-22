@@ -7,6 +7,10 @@ Es6Promise.polyfill()
 
 Vue.use(Vuex)
 
+axios.create({
+	timeout: 1
+})
+
 const store = new Vuex.Store({
 	state: {
 		menuToggle: false,
@@ -20,15 +24,16 @@ const store = new Vuex.Store({
 			success: false
 		},
 		isAdmin: false,
-		infoAdmin: undefined
+		infoAdmin: undefined,
+		fetching: true
 	},
 	getters: {
 		enviroment () {
 			if (
 				location.port === '8082' ||
-        location.port === '8081' ||
-        location.port === '8080' ||
-        location.port === '7080') {
+				location.port === '8081' ||
+				location.port === '8080' ||
+				location.port === '7080') {
 				return 'local'
 			}
 			if (location.host === 'participe.comunicacao.smul.pmsp') {
@@ -52,12 +57,10 @@ const store = new Vuex.Store({
 			}
 		},
 		basePath () {
-			if (
-				store.getters.enviroment === 'local' ||
-          store.getters.enviroment === 'homologacao') {
-				return 'http://participe.comunicacao.smul.pmsp/'
-			} else {
-				return 'https://participe.gestaourbana.prefeitura.sp.gov.br/'
+			switch (store.getters.enviroment) {
+			case 'local': return 'http://spurbsp163:7080/participe/'
+			case 'homologacao': return 'http://participe.comunicacao.smul.pmsp/'
+			case 'producao': return 'https://participe.gestaourbana.prefeitura.sp.gov.br/'
 			}
 		}
 	},
@@ -89,6 +92,12 @@ const store = new Vuex.Store({
 				state.modalState.success = false
 			}
 		},
+		FETCHING_STATE (state, fetchState) {
+			state.fetching = fetchState
+		},
+		FETCHING_ERROR (state, errorState) {
+			state.errors = errorState
+		},
 		adminStatus (state, status) {
 			state.isAdmin = status
 		},
@@ -102,12 +111,17 @@ const store = new Vuex.Store({
 				.then(response => {
 					commit('FETCH_CONSULTAS', response.data.slice().reverse())
 					commit('FETCH_CONSULTAS_DECODE', store.state.consultas)
+					commit('FETCHING_STATE', true)
 					if (self.estaConsulta !== undefined) {
 						self.filterConsultas()
 					}
 				})
 			// .catch(e => { store.state.errors.push(e) })
-				.catch(e => { console.log(e) })
+				.catch(e => {
+					console.log(e)
+					commit('FETCHING_ERROR', true)
+					commit('FETCHING_STATE', false)
+				})
 		}
 	}
 })

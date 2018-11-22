@@ -81,6 +81,5 @@ div.Cabecalho {
 			a img { margin-left: 0; max-height: 32px; };
 		};
 	};
-	
 }
 </style>

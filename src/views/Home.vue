@@ -1,11 +1,12 @@
 <template>
 	<div class="Home">
+		<Preloader></Preloader>
 		<main id="listaProjetos">
 			<!-- <div class="busca" @click="ativaBusca">
 				<i class="material-icons">search</i>
 				<input class="fuzzy-search" type="search" ref="busca" title="Digite o que pesquisa" value="Pesquisar" @focusout="desativaBusca">
 			</div> -->
-			<ul class="list">
+			<ul class="list" :class="{ load: !fetching }">
 				<li v-for="consulta in consultas" class="card" :style="backgroundImagePath(consulta.urlCapa)">
 					<p class="nome">{{ decodeURI(consulta.nomePublico) }}</p>
 					<p class="textoIntro">{{ decodeURI(consulta.textoIntro) }}</p>
@@ -51,13 +52,16 @@ setUrlByType(urlOrSlug)
 
 */
 import { consultasMutations } from '@/mixins/consultasMutations'
+import Preloader from '@/components/Preloader'
 
 export default {
 	name: 'Home',
+	components: { Preloader },
 	mixins: [ consultasMutations ],
 	computed: {
 		consultas () { return this.$store.state.consultas },
-		basePathImgSrc () { return this.$store.getters.basePath + 'arquivos/capas/' }
+		basePathImgSrc () { return this.$store.getters.basePath + 'arquivos/capas/' },
+		fetching () { return this.$store.state.fetching }
 	},
 	methods: {
 		checaContribuicoes (n) { return parseInt(n) > 0 },
@@ -128,6 +132,14 @@ export default {
 			grid-gap: 2rem;
 			padding: 2rem;
 			margin: 0;
+			
+			&.load {
+				animation: surge ease-out .64s;
+				@keyframes surge {
+					from { opacity: 0; }
+					to { opacity: 1; }
+				}
+			}
 
 			li.card {
 				display: grid;

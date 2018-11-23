@@ -33,12 +33,13 @@ div.Preloader {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100vw;
+	width: 100%;
 	height: 100vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-flow: column nowrap;
+	animation: opacity ease-in .2s;
 
 	@supports not (display: flex) {
 		text-align: center;
@@ -46,9 +47,6 @@ div.Preloader {
 	}
 
 	svg {
-		opacity: 1;
-		animation: all ease-in .2s;
-
 		path.balao {
 			stroke: transparent;
 			stroke-dasharray: 415;
@@ -82,12 +80,11 @@ div.Preloader {
 		color: #777;
 		user-select: none;
 		-moz-user-select: none;
+		transition: opacity ease-in .2s;
 		&.surge { opacity: 1; }
 	}
 
-	&.fim {
-		svg { opacity: 0; }
-	}
+	&.fim { opacity: 0; }
 
 	&.erro {
 		animation: erro ease-out .8s;
@@ -106,9 +103,7 @@ div.Preloader {
 			animation: none;
 		}
 
-		&:hover {
-			opacity: 1;
-		}
+		&:hover { opacity: 1; }
 	}
 }
 </style>

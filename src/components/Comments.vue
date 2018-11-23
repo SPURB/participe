@@ -1,12 +1,13 @@
 <template>
 	<div class="Comments" :class="{ aberto: abreComentario }">
 
-		<div @click="abreComentario = !abreComentario"><i class="icon-comentario icon"><span>chat</span></i>Comente aqui</div>
+		<div @click="abreComentario = !abreComentario" :class="{ sucesso: sucesso }"><i class="icon-comentario icon"><span>chat</span></i></div>
 
 		<form>
 			<fieldset>
 				<label for="nome">Nome</label>
-				<input
+				<input 
+					value=""
 					id="nome"
 					type="text"
 					name="name"
@@ -15,7 +16,8 @@
 					v-model='form_name'
 				>
 				<label for="sobrenome">Sobrenome</label>
-				<input
+				<input 
+					value=""
 					id="sobrenome"
 					type="text"
 					name="surname"
@@ -24,7 +26,8 @@
 					v-model='form_surname'
 				>
 				<label for="organizacao">Organização (opcional)</label>
-				<input
+				<input 
+					value=""
 					id="organizacao"
 					type="text"
 					name="organization"
@@ -32,7 +35,8 @@
 					v-model='form_organization'
 				>
 				<label for="email">E-mail</label>
-				<input
+				<input 
+					value=""
 					id="email"
 					name="email"
 					v-validate="'required|email'"
@@ -43,15 +47,24 @@
 			</fieldset>
 			<fieldset>
 				<label for="comentario">Comente aqui</label>
-				<textarea
+				<textarea 
+					value=""
 					id="comentario"
 					name="content"
 					v-validate="'required: true'"
 					:class="{ inputErro: errors.has('content') }"
 					v-model='form_content'
 				></textarea>
-				<a @click="checkName">Comentar</a>
 			</fieldset>
+			<div class="action">
+				<svg v-if="enviandoComment" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="60 0 40 40">
+					<path fill="#E3E3E3" d="M60 4v24a4 4 0 0 0 4 4h28l8 8V4a4 4 0 0 0-4-4H64a4 4 0 0 0-4 4z"/>
+					<circle class="bolinha1" cx="70.5" cy="14.9" r="3.4"/>
+					<circle class="bolinha2" cx="80" cy="14.9" r="3.4"/>
+					<path class="bolinha3" d="M92.9 15a3.4 3.4 0 1 1-3.4-3.5c1.8 0 3.4 1.5 3.4 3.4z"/>
+				</svg>
+				<a @click="checkName" :class="{ enviando: enviandoComment, erro: erro }"></a>
+			</div>
 		</form>
 	</div>
 </template>
@@ -70,7 +83,10 @@ export default {
 			form_email: null,
 			form_content: null,
 			// form_context: null,
-			abreComentario: false
+			abreComentario: false,
+			enviandoComment: false,
+			sucesso: false,
+			erro: false
 		}
 	},
 
@@ -86,6 +102,10 @@ export default {
 		apiPath () { return this.$store.getters.apiPath }
 	},
 
+	created() {
+		let app = this
+	},
+
 	methods: {
 		setModal (typeOfmodal) {
 			this.$store.commit('COMMENT_MODAL_STATUS', typeOfmodal)
@@ -94,19 +114,21 @@ export default {
 			if (!this.fields.name.valid && !this.fields.email.valid && !this.fields.surname.valid) {
 				alert('Preencha corretamente os campos Nome e Email')
 			} else if (!this.fields.name.valid) {
-				alert('Inclua um nome')
+				alert('Inclua seu nome')
 			} else if (!this.fields.surname.valid) {
-				alert('Inclua um sobrenome')
+				alert('Inclua seu sobrenome')
 			} else if (!this.fields.email.valid) {
-				alert('Corrija email')
+				alert('Corrija seu e-mail')
 			} else if (!this.fields.content.valid) {
-				alert('Inclua um comentário')
+				alert('Inclua seu comentário')
 			} else {
 				this.send()
+				this.enviandoComment = true
 			}
 		},
 		send () {
 			let app = this
+			app.erro = false
 			axios.post(this.apiPath + 'members', {
 				'idConsulta': app.$route.meta.id,
 				'name': app.returnFormNameObject,
@@ -122,10 +144,15 @@ export default {
 					let name = app.form_name
 					let content = app.form_content
 					console.log(app.attr.id)
-					app.setModal('success')
+					// app.setModal('success')
+					app.abreComentario = false
+					app.sucesso = !app.sucesso
+					app.enviandoComment = false
+					app.resetForm()
 				})
 				.catch(function (error) {
-					app.setModal('error')
+					// app.setModal('error')
+					app.erro = true
 				})
 		},
 		resetForm () {
@@ -135,6 +162,12 @@ export default {
 			this.form_email = null
 			this.form_content = null
 			this.abreComentario = false
+		},
+		x () {
+			this.$refs.y.classList.toggle('enviando')
+			// this.$refs.z.classList.toggle('sucesso')
+			this.g = !this.g
+			// this.abreComentario =! this.abreComentario
 		}
 	}
 }
@@ -157,7 +190,9 @@ div.Comments {
 	& > div {
 		margin-bottom: 2rem;
 		padding: 2rem;
-		transition: all ease-in-out .1s;
+		transition: all ease-in-out .4s;
+
+		&::after { content: 'Comente aqui'; }
 
 		i {
 			display: inline-flex;
@@ -179,6 +214,18 @@ div.Comments {
 			color: #FFF;
 			cursor: pointer;
 		};
+
+		&.sucesso {
+			background: #008015;
+			color: #FFF;
+
+			i {
+				background: #FFF;
+				color: #008015;
+			}
+
+			&::after { content: 'Comentário enviado'; }
+		}
 	};
 
 	form {
@@ -188,7 +235,7 @@ div.Comments {
 		fieldset {
 			margin: 0;
 			padding: 0;
-				border: 0;
+			border: 0;
 
 			label {
 				display: block;
@@ -220,9 +267,7 @@ div.Comments {
 					color: #FFF;
 				};
 
-				&.inputAcerto {
-					color: #008015;
-				};
+				&.inputAcerto { color: #008015; };
 			};
 
 			textarea {
@@ -230,19 +275,98 @@ div.Comments {
 				line-height: 160%;
 				padding: 4px 8px;
 			};
+		};
+
+		div.action {
+			margin-top: 1rem;
+			height: 42px;
+			position: relative;
+			text-align: right;
+
+			svg {
+				position: absolute;
+				right: 0;
+				top: 0;
+				animation: surge ease-in .48s;
+
+				@keyframes surge {
+					from { opacity: 0 }
+					to { opacity: 1 }
+				}
+
+				.bolinha1, .bolinha2, .bolinha3 { fill: #FFFFFF; }
+
+				@keyframes pulando {
+					0% {
+						transform: translateY(4px);
+					}
+					50% {
+						transform: translateY(2px);
+						opacity: 0.95;
+					}
+					75% {
+						transform: translateY(-4px);
+						opacity: 0.95;
+					}
+					100% {
+						transform: translateY(-6px);
+						opacity: 1;
+					}
+				}
+
+				.bolinha1 {
+					animation: pulando 0.6s 0.45s infinite;
+					transition: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+				}
+
+				.bolinha2 {
+					animation: pulando 0.6s 0.55s infinite;
+					transition: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+				}
+
+				.bolinha3 {
+					animation: pulando 0.6s 0.66s infinite;
+					transition: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+				}
+			}
 
 			a {
+				display: inline-block;
 				color: inherit;
-				margin: 1rem 0 0 0;
-				float: right;
 				font-family: inherit;
 				font-size: smaller;
 				text-transform: uppercase;
-				padding: 12px 16px;
+				max-width: 100%;
+				overflow: hidden;
+				width: 100%;
+				text-align: center;
+				line-height: 40px;
 				border-radius: 2px;
 				border: 1px solid #BDBDBD;
 				background: #FFF;
 				box-shadow: 0 2px 2px rgba(0, 0, 0, .24);
+				transition: all ease-out .36s;
+				position: relative;
+				white-space: nowrap;
+
+				&::after { content: 'Comentar'; }
+
+				&.enviando {
+					max-width: 0;
+					border-color: transparent;
+					box-shadow: none;
+					background: transparent;
+				}
+
+				&.erro {
+					background: #EB5757;
+					color: #FFF;
+					border-color: transparent;
+
+					&::after { content: 'Tentar novamente'; }
+				}
+
+				&.erro.enviando { background: transparent; }
 
 				&:hover { text-decoration: none; cursor: pointer; };
 

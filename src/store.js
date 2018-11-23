@@ -7,10 +7,6 @@ Es6Promise.polyfill()
 
 Vue.use(Vuex)
 
-axios.create({
-	timeout: 1
-})
-
 const store = new Vuex.Store({
 	state: {
 		menuToggle: false,
@@ -73,6 +69,7 @@ const store = new Vuex.Store({
 					if (a.ativo < b.ativo) { return 1 }
 					if (a.ativo > b.ativo) { return -1 }
 				})
+			commit('FETCHING_STATE', false)
 		},
 		FETCH_CONSULTAS_DECODE (state, consultas) {
 			for (var key in consultas) {

@@ -7,11 +7,25 @@
 				<input class="fuzzy-search" type="search" ref="busca" title="Digite o que pesquisa" value="Pesquisar" @focusout="desativaBusca">
 			</div> -->
 			<ul class="list" :class="{ load: !fetching }">
-				<li v-for="consulta in consultas" class="card" :style="backgroundImagePath(consulta.urlCapa)" @click="redirect(setUrlByType(consulta.urlConsulta))">
+				<li v-for="consulta in consultas" class="card" @click="redirect(setUrlByType(consulta.urlConsulta))" :style="backgroundImagePath(consulta.urlCapa)">
+					<div class="bgImg">
+						<!-- <img srcset="
+							../../public/img/barcelona_2000w.jpeg 2000w,
+							../../public/img/barcelona_1600w.jpg 1600w,
+							../../public/img/barcelona_800w.jpg 1100w,
+							../../public/img/barcelona_400w.jpg 400w"
+							sizes="
+							(max-width: 400px) 400w,
+							(max-width: 1100px) 800w,
+							(max-width: 1600px) 1600w,
+							(min-width: 1601px) 2000w"
+						> -->
+					</div>
+						
 					<p class="nome">{{ decodeURI(consulta.nomePublico) }}</p>
 					<p class="textoIntro">{{ decodeURI(consulta.textoIntro) }}</p>
 
-					<div>
+					<div class="cont">
 						<a>
 							<h1 :class="{ consultaAtiva: parseAtivo(consulta.ativo) }" class="nome">{{ consulta.nomePublico }}</h1>
 						</a>
@@ -27,7 +41,7 @@
 							<i class="icon-contribuicao icon"><span>contribuicao</span></i>
 							{{ consulta.nContribuicoes }} contribuições
 						</p>
-							<!--<p v-if="consulta.ativo" title="Tempo restante para contribuir">
+						<!--<p v-if="consulta.ativo" title="Tempo restante para contribuir">
 							<i class="material-icons">access_time</i>
 							{{ diasRestantes(consulta.dataFinal) }}
 						</p>-->
@@ -37,6 +51,7 @@
 							</a>
 						</p>
 					</div>
+
 					<p ref="textoIntro" class="esconde textoIntro">{{ consulta.textoIntro }}</p>
 					<a class="acesso">Acessar consulta</a>
 				</li>
@@ -66,6 +81,7 @@ export default {
 	methods: {
 		checaContribuicoes (n) { return parseInt(n) > 0 },
 		backgroundImagePath (image) { return 'background-image:url(' + this.basePathImgSrc + image + ')' },
+		imgPath (image) { return this.basePathImgSrc + image },
 		parseAtivo (state) { return state !== '0' },
 		ativaBusca () {
 			this.$refs.busca.value = ''
@@ -127,9 +143,10 @@ export default {
 			};
 
 		};
+
 		ul {
 			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(160px, 720px));
+			grid-template-columns: repeat(auto-fill, minmax(160px, 720px));
 			grid-gap: 2rem;
 			padding: 2rem;
 			margin: 0;
@@ -148,16 +165,39 @@ export default {
 				grid-template-rows: 400px 48px;
 				border-radius: 2px;
 				box-shadow: 0 4px 4px rgba(0, 0, 0, .24);
-				background-position: center center;
-				background-size: cover;
 				transition: transform ease-in-out .1s, box-shadow .1s;
 				position: relative;
 				cursor: pointer;
 				z-index: 0;
 
+				div.bgImg {
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					background-position: center center;
+					background-size: cover;
+					z-index: -1;
+					border-radius: inherit;
+					overflow: hidden;
+					display: inline-flex;
+					justify-content: center;
+					align-items: center;
+					/*background-image: url('https://via.placeholder.com/800x400');*/
+					/*background-image: image-set(
+						url('https://via.placeholder.com/400x200') 1x,
+						url('https://via.placeholder.com/800x400') 2x,
+						url('https://via.placeholder.com/1200x600') 3x
+					);*/
+					img {
+						object-fit: cover;
+						min-width: 100%;
+						min-height: 100%;
+					}
+				}
+
 				p.nome, p.textoIntro { display: none; };
 
-				div {
+				div.cont {
 					grid-row: 1 / 2;
 					grid-column: 1 / 2;
 					display: flex;
@@ -252,7 +292,7 @@ export default {
 				};
 
 				p.esconde {
-					grid-row: 1 / 2;
+					grid-row: span all;
 					grid-column: 2 / 3;
 					align-self: end;
 					display: flex;
@@ -265,8 +305,9 @@ export default {
 					box-shadow: inset 0px -4px 4px rgba(0, 0, 0, .12);
 					border-radius: 2px 0 0 0;
 					z-index: 1;
-					max-height: 16rem;
 					position: relative;
+					overflow-wrap: break-word;
+					hyphens: auto;
 
 					a { color: inherit; overflow-y: hidden; &:hover { text-decoration: none; }; };
 				};
@@ -301,9 +342,9 @@ export default {
 			li.card:first-child {
 				grid-column: 1 / span all;
 				grid-template-columns: repeat(7, 1fr);
-				grid-template-rows: minmax(300px, 60vh) 64px;
+				grid-template-rows: minmax(300px, 72vh) 64px;
 
-				div {
+				div.cont {
 					grid-column: 1 / span 5;
 					grid-row: 1 / span all;
 					align-items: center;
@@ -352,6 +393,7 @@ export default {
 			li.card {
 				grid-template-columns: 1fr;
 				grid-template-rows: minmax(280px, auto) auto 48px;
+				overflow-y: hidden;
 
 				div a h1 { padding-top: 2.5rem; };
 				p.esconde { grid-row: 2 / 3; grid-column: 1 / 2;  border-radius: 0; max-height: calc(8rem - 6px;); };
@@ -367,7 +409,7 @@ export default {
 
 				&:hover { transform: scale(1.06) translateY(-4px); };
 
-				div {
+				div.cont {
 					grid-column: unset;
 					grid-row: 1 / 2;
 					flex-flow: column nowrap;
@@ -407,7 +449,7 @@ export default {
 				margin: 0 2rem 2rem 0;
 				position: relative;
 
-				div {
+				div.cont {
 					background-image: linear-gradient(to right, rgba(0,0,0,.8), rgba(0,0,0,.4));
 					border-radius: 2px 0 0 2px;
 					min-height: 220px;
@@ -444,7 +486,7 @@ export default {
 				position: relative;
 				margin-bottom: 2rem;
 
-				div {
+				div.cont {
 					float: left;
 					width: calc(80% - 32px);
 					height: 100%;

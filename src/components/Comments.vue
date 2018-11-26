@@ -6,7 +6,7 @@
 		<form>
 			<fieldset>
 				<label for="nome">Nome</label>
-				<input 
+				<input
 					value=""
 					id="nome"
 					type="text"
@@ -16,7 +16,7 @@
 					v-model='form_name'
 				>
 				<label for="sobrenome">Sobrenome</label>
-				<input 
+				<input
 					value=""
 					id="sobrenome"
 					type="text"
@@ -26,7 +26,7 @@
 					v-model='form_surname'
 				>
 				<label for="organizacao">Organização (opcional)</label>
-				<input 
+				<input
 					value=""
 					id="organizacao"
 					type="text"
@@ -35,7 +35,7 @@
 					v-model='form_organization'
 				>
 				<label for="email">E-mail</label>
-				<input 
+				<input
 					value=""
 					id="email"
 					name="email"
@@ -47,7 +47,7 @@
 			</fieldset>
 			<fieldset>
 				<label for="comentario">Comente aqui</label>
-				<textarea 
+				<textarea
 					value=""
 					id="comentario"
 					name="content"
@@ -102,10 +102,6 @@ export default {
 		apiPath () { return this.$store.getters.apiPath }
 	},
 
-	created() {
-		let app = this
-	},
-
 	methods: {
 		setModal (typeOfmodal) {
 			this.$store.commit('COMMENT_MODAL_STATUS', typeOfmodal)
@@ -146,13 +142,14 @@ export default {
 					console.log(app.attr.id)
 					// app.setModal('success')
 					app.abreComentario = false
-					app.sucesso = !app.sucesso
+					app.sucesso = true
 					app.enviandoComment = false
 					app.resetForm()
 				})
 				.catch(function (error) {
 					// app.setModal('error')
 					app.erro = true
+					console.log(error)
 				})
 		},
 		resetForm () {

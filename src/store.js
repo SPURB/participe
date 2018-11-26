@@ -61,6 +61,18 @@ const store = new Vuex.Store({
 		}
 	},
 	mutations: {
+		FETCHING_STATE (state, fetchState) {
+			state.fetching = fetchState
+		},
+		FETCHING_ERROR (state, errorState) {
+			state.errors = errorState
+		},
+		adminStatus (state, status) {
+			state.isAdmin = status
+		},
+		addAdminInfo (state, info) {
+			state.infoAdmin = info
+		},
 		FETCH_CONSULTAS (state, consultas) {
 			state.consultas = consultas.sort(function (a, b) {
 				return new Date(b.dataCadastro) - new Date(a.dataCadastro)
@@ -88,18 +100,6 @@ const store = new Vuex.Store({
 				state.modalState.error = false
 				state.modalState.success = false
 			}
-		},
-		FETCHING_STATE (state, fetchState) {
-			state.fetching = fetchState
-		},
-		FETCHING_ERROR (state, errorState) {
-			state.errors = errorState
-		},
-		adminStatus (state, status) {
-			state.isAdmin = status
-		},
-		addAdminInfo (state, info) {
-			state.infoAdmin = info
 		}
 	},
 	actions: {
@@ -116,8 +116,13 @@ const store = new Vuex.Store({
 			// .catch(e => { store.state.errors.push(e) })
 				.catch(e => {
 					console.log(e)
-					commit('FETCHING_ERROR', true)
-					commit('FETCHING_STATE', false)
+					if (e.lineNumber > 399) {
+						commit('FETCHING_ERROR', true)
+						commit('FETCHING_STATE', false)
+					} else {
+						commit('FETCHING_ERROR', false)
+						commit('FETCHING_STATE', false)
+					}
 				})
 		}
 	}

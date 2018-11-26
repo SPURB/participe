@@ -19,6 +19,7 @@ export default {
 			if (this.fetchError) {
 				this.$store.dispatch('fetchConsultas', { self: this })
 				this.$store.commit('FETCHING_ERROR', false)
+				this.$store.commit('FETCHING_STATE', true)
 			} else {
 				return false
 			}

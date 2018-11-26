@@ -1,5 +1,5 @@
 <template>
-	<div class="Rodape" :class="{ load: fetching }">
+	<div class="Rodape" :class="{ load: fetching || error }">
 		<footer>
 			Caso surjam dúvidas ou problemas técnicos, envie um e-mail para: <a href="mailto:imprensasmul@prefeitura.sp.gov.br">imprensasmul@prefeitura.sp.gov.br</a>.
 		</footer>
@@ -10,7 +10,8 @@
 export default {
 	name: 'Rodape',
 	computed: {
-		fetching () { return this.$store.state.fetching }
+		fetching () { return this.$store.state.fetching },
+		error () { return this.$store.state.errors }
 	}
 }
 </script>

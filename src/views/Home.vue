@@ -7,21 +7,11 @@
 				<input class="fuzzy-search" type="search" ref="busca" title="Digite o que pesquisa" value="Pesquisar" @focusout="desativaBusca">
 			</div> -->
 			<ul class="list" :class="{ load: !fetching }">
-				<li v-for="consulta in consultas" class="card" @click="redirect(setUrlByType(consulta.urlConsulta))" :style="backgroundImagePath(consulta.urlCapa)">
+				<li v-for="consulta in consultas" class="card" @click="redirect(setUrlByType(consulta.urlConsulta))">
 					<div class="bgImg">
-						<!-- <img srcset="
-							../../public/img/barcelona_2000w.jpeg 2000w,
-							../../public/img/barcelona_1600w.jpg 1600w,
-							../../public/img/barcelona_800w.jpg 1100w,
-							../../public/img/barcelona_400w.jpg 400w"
-							sizes="
-							(max-width: 400px) 400w,
-							(max-width: 1100px) 800w,
-							(max-width: 1600px) 1600w,
-							(min-width: 1601px) 2000w"
-						> -->
+						<img :srcset="imgset(consulta.urlCapa)">
 					</div>
-						
+
 					<p class="nome">{{ decodeURI(consulta.nomePublico) }}</p>
 					<p class="textoIntro">{{ decodeURI(consulta.textoIntro) }}</p>
 
@@ -80,8 +70,11 @@ export default {
 	},
 	methods: {
 		checaContribuicoes (n) { return parseInt(n) > 0 },
-		backgroundImagePath (image) { return 'background-image:url(' + this.basePathImgSrc + image + ')' },
-		imgPath (image) { return this.basePathImgSrc + image },
+		imgset (nomeStr) {
+			let nome = nomeStr.slice(0, nomeStr.lastIndexOf('.'))
+			let ext = nomeStr.slice(nomeStr.lastIndexOf('.') + 1, nomeStr.lenght)
+			console.log(nome + '_480w.' + ext)
+		},
 		parseAtivo (state) { return state !== '0' },
 		ativaBusca () {
 			this.$refs.busca.value = ''
@@ -149,7 +142,7 @@ export default {
 			grid-template-columns: repeat(auto-fill, minmax(160px, 720px));
 			grid-gap: 2rem;
 			padding: 2rem;
-			margin: 0;
+			margin: 0 auto;
 
 			&.load {
 				animation: surge ease-out .64s;
@@ -174,20 +167,12 @@ export default {
 					position: absolute;
 					width: 100%;
 					height: 100%;
-					background-position: center center;
-					background-size: cover;
 					z-index: -1;
 					border-radius: inherit;
 					overflow: hidden;
-					display: inline-flex;
+					display: flex;
 					justify-content: center;
 					align-items: center;
-					/*background-image: url('https://via.placeholder.com/800x400');*/
-					/*background-image: image-set(
-						url('https://via.placeholder.com/400x200') 1x,
-						url('https://via.placeholder.com/800x400') 2x,
-						url('https://via.placeholder.com/1200x600') 3x
-					);*/
 					img {
 						object-fit: cover;
 						min-width: 100%;
@@ -261,7 +246,7 @@ export default {
 						white-space: nowrap;
 
 						i { vertical-align: text-top; font-size: larger; margin-right: 8px; };
-						i:after{ visibility: hidden; }
+						i:after { visibility: hidden; }
 
 						&.linkSistemat {
 							position: absolute;
@@ -333,7 +318,7 @@ export default {
 				display: block;
 				width: 100%;
 				height: 100%;
-				background-image: linear-gradient(275deg, rgba(0,0,0,.2), rgba(0,0,0,.8));
+				background-image: linear-gradient(0deg, rgba(0,0,0,.2), rgba(0,0,0,.8));
 				transition: all ease-in-out .2s;
 				border-radius: 2px;
 				z-index: 0;
@@ -524,4 +509,8 @@ export default {
 			};
 		};
 	};
+
+	@media screen and (min-width: 2000px) {
+		main ul { max-width: 2000px; }
+	}
 </style>

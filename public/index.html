@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 	<head>
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113737634-8"></script>
 		<script>
@@ -11,15 +11,60 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<title>Participe | Gestão Urbana</title>
-		<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
-		
-		
+		<style type="text/css">
+			div#carregando {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				user-select: none;
+				-moz-user-select: none;
+				overflow: hidden;
+			}
+			div#carregando span {
+				display: inline-block;
+				width: 8px;
+				height: 8px;
+				border-radius: 4px;
+				background: #333;
+				margin: 0;
+				padding: 0;
+				animation: load ease-in-out .6s infinite alternate;
+				transform-origin: center center;
+				transition: linear .2s;
+			}
+			div#carregando.some span {
+				opacity: 0;
+			}
+			@keyframes load {
+				0% {
+					transform: translateX(-20vw);
+				}
+				25% {
+					padding-left: 4vw;
+					background: #EB5757;
+				}
+				75% {
+					padding-right: 4vw;
+					background: #EB5757;
+				}
+				100% {
+					transform: translateX(20vw);
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<noscript>
-			<strong>Nos desculpe mas este site não funciona apropriadamente sem javascript. Por favor habilite para continuar.
-		</strong>
+			<strong>Nos desculpe mas este site não funciona apropriadamente sem javascript. Por favor habilite para continuar.</strong>
 		</noscript>
+		<div id="carregando">
+			<span></span>
+		</div>
 		<div id="app"></div>
 		<!-- built files will be auto injected -->
 	</body>

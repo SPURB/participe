@@ -47,6 +47,7 @@ export default {
 		modalState () { return this.$store.state.modalState }
 	},
 	created () { this.$store.dispatch('fetchConsultas', { self: this }) },
+	mounted () { document.getElementById('carregando').classList.add('some') },
 	updated () { this.$refs.interruptor.style.height = this.$el.clientHeight + 'px' },
 	methods: {
 		setModal (typeOfmodal) {

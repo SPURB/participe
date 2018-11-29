@@ -9,7 +9,14 @@
 			<ul class="list" :class="{ load: !fetching }">
 				<li v-for="consulta in consultas" class="card" @click="redirect(setUrlByType(consulta.urlConsulta))">
 					<div class="bgImg">
-						<img :srcset="imgset(consulta.urlCapa)">
+						<img :srcset="imgset(consulta.urlCapa)"
+							sizes="
+								(max-width: 480px) 480w,
+								(max-width: 700px) 700w,
+								(max-width: 1000px) 1000w,
+								(max-width: 1300px) 1300w,
+								(max-width: 1900px) 1900w"
+						>
 					</div>
 
 					<p class="nome">{{ decodeURI(consulta.nomePublico) }}</p>
@@ -71,9 +78,16 @@ export default {
 	methods: {
 		checaContribuicoes (n) { return parseInt(n) > 0 },
 		imgset (nomeStr) {
-			let nome = nomeStr.slice(0, nomeStr.lastIndexOf('.'))
+			let nome = this.basePathImgSrc + 'testes/' + nomeStr.slice(0, nomeStr.lastIndexOf('.'))
+			// let nome = '../../public/img/testes/' + nomeStr.slice(0, nomeStr.lastIndexOf('.'))
 			let ext = nomeStr.slice(nomeStr.lastIndexOf('.') + 1, nomeStr.lenght)
-			console.log(nome + '_480w.' + ext)
+			let declare =
+				nome + '_1900w.' + ext + ' 1900w, ' +
+				nome + '_1300w.' + ext + ' 1300w, ' +
+				nome + '_1000w.' + ext + ' 1000w, ' +
+				nome + '_700w.' + ext + ' 700w, ' +
+				nome + '_480w.' + ext + ' 640w'
+			return declare.toString()
 		},
 		parseAtivo (state) { return state !== '0' },
 		ativaBusca () {
@@ -188,7 +202,7 @@ export default {
 					display: flex;
 					flex-flow: column wrap;
 					justify-content: center;
-					padding: 16px;
+					padding: 2rem;
 					position: relative;
 					overflow: hidden;
 
@@ -202,9 +216,10 @@ export default {
 
 							&::before {
 								position: absolute;
-								top: 16px;
-								left: 16px;
-								display: block;
+								top: 0;
+								left: 0;
+								display: inline-block;
+								margin: 2rem;
 								content: 'Consulta encerrada';
 								font-size: 12px;
 								font-weight: normal;
@@ -249,8 +264,6 @@ export default {
 						i:after { visibility: hidden; }
 
 						&.linkSistemat {
-							position: absolute;
-							bottom: 20px;
 
 							a {
 								display: inline;
@@ -282,12 +295,10 @@ export default {
 					align-self: end;
 					display: flex;
 					font-family: Georgia, serif;
-					text-shadow: 0 1px 1px rgba(255, 255, 255, .4);
 					padding: 8px 16px 0px 16px;
 					box-sizing: content-box;
 					margin: 0;
-					background: rgba(255, 255, 255, .92);
-					box-shadow: inset 0px -4px 4px rgba(0, 0, 0, .12);
+					background: rgba(255, 255, 255, .88);
 					border-radius: 2px 0 0 0;
 					z-index: 1;
 					position: relative;
@@ -377,44 +388,54 @@ export default {
 		main ul {
 			li.card {
 				grid-template-columns: 1fr;
-				grid-template-rows: minmax(280px, auto) auto 48px;
+				grid-template-rows: minmax(140px, auto) auto 48px;
 				overflow-y: hidden;
 
-				div a h1 { padding-top: 2.5rem; };
-				p.esconde { grid-row: 2 / 3; grid-column: 1 / 2;  border-radius: 0; max-height: calc(8rem - 6px;); };
+				div.cont {
+					padding: 12px;
+					a h1 {
+						padding-top: 2.5rem;
+						margin-bottom: 2rem;
+						font-size: x-large;
+						&::before {
+							margin: 12px;
+							font-size: xx-small;
+						}
+					};
+				}
+
+				p.esconde { grid-row: 2 / 3; grid-column: 1 / 2;  border-radius: 0; max-height: calc(8rem + 4px); font-size: smaller; };
 				a.acesso { grid-row: 3 / 4; grid-column: 1 / 2; border-radius: 0 0 2px 2px; };
 			};
 
 			li.card:first-child {
 				grid-column: unset;
 				grid-template-columns: 1fr;
-				grid-template-rows: minmax(360px, auto) auto 48px;
-				transform: scale(1.06);
+				grid-template-rows: minmax(60px, auto) auto 48px;
+				transform: scale(1.04);
 				margin-bottom: 1rem;
-
-				&:hover { transform: scale(1.06) translateY(-4px); };
 
 				div.cont {
 					grid-column: unset;
 					grid-row: 1 / 2;
 					flex-flow: column nowrap;
+					justify-content: flex-end;
 
 					a h1 {
-						font-size: 48px;
+						font-size: x-large;
 						line-height: 120%;
-						margin: 1rem 0;
+						margin: 2rem 0 0 0;
 						text-align: center;
 					};
 
 					p {
-						font-size: small;
 						&:nth-of-type(1) {
-							margin-top: 2rem;
+							margin-top: 3rem;
 						};
 					};
 				};
 
-				p.esconde { grid-column: unset; font-size: initial; };
+				p.esconde { grid-column: unset; max-height: unset; };
 				a.acesso { grid-column: unset; };
 			};
 		};

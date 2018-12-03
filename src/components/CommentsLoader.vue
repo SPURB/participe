@@ -85,9 +85,8 @@ export default {
 		}
 		* > i {
 			font-size: inherit;
-			vertical-align: -2px;
 			margin: 0 8px 0 0;
-			padding-top: 4px;
+			padding-top: 2px;
 		}
 	}
 }

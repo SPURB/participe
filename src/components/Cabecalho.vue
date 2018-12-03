@@ -40,9 +40,15 @@ div.Cabecalho {
 		position: relative;
 		z-index: 3;
 
-		i { color: #BDBDBD; transition: color .1s;
+		i {
+			color: #BDBDBD;
+			transition: color .1s;
+			width: 100%;
 
-			&:hover { color: #333; cursor: pointer; };
+			&:hover {
+				color: #333;
+				cursor: pointer;
+			};
 		};
 
 		h1 {
@@ -51,7 +57,9 @@ div.Cabecalho {
 			font-size: 24px;
 			font-weight: 400;
 
-			a { color: #BDBDBD;
+			a {
+				color: #BDBDBD;
+				width: 100%;
 
 				span { color: #EB5757; font-weight: 800; };
 
@@ -59,7 +67,10 @@ div.Cabecalho {
 			};
 		};
 
-		a { line-height: 100%;
+		a {
+			line-height: 100%;
+			width: 100%;
+			text-align: right;
 
 			img {
 				max-height: 40px;

@@ -57,7 +57,7 @@
 
 			<figure title="Processo de recorte do Perímetro Expandido" class="borda">
 				<img src="https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/ANH_Perimetros.jpg" alt="Processo de recorte do Perímetro Expandido">
-				<h6>Processo de recorte do Perímetro Expandido</h6>
+				<h1>Processo de recorte do Perímetro Expandido</h1>
 				<ul class="legenda">
 					<li><div style="border-color: #534e3d; background: #f2e271; border-width: 2px; font-weight: bolder;">1</div> Prefeitura Regional Casa Verde-Cachoeirinha</li>
 					<li><div style="border-color: #534e3d; background: #f2e271; border-width: 2px; font-weight: bolder;">2</div> Prefeitura Regional Santana-Tucuruvi</li>
@@ -227,7 +227,7 @@
 			<h3 class="titulo" indent="2">Resultados da modelagem econômico-financeira</h3>
 			<p>Assim, havendo os três horizontes estudados de coeficiente de aproveitamento, resultam-se três cenários de arrecadação de Outorga Onerosa do Direito de Construir (OODC), conforme quadro abaixo:</p>
 
-			<div class="tableWrap">
+			<div class="tablewrap">
 				<table class="center">
 					<caption>Outorga Onerosa do Direito de Construir</caption>
 					<thead>
@@ -421,7 +421,7 @@
 			</ul>
 			<Comments :attr="{id:12, context:'Mapas'}" v-if="estaConsulta.ativo == 1"></Comments>
 
-			<div class="tableWrap">
+			<div class="tablewrap">
 				<table class="center">
 					<caption>QUADRO 1 – Percentuais de destinação de área pública</caption>
 					<thead>
@@ -453,7 +453,7 @@
 				</table>
 			</div>
 
-			<div class="tableWrap">
+			<div class="tablewrap">
 				<table class="center">
 					<caption>QUADRO 2 – Parâmetros de parcelamento do solo (dimensões de lote e quadra)</caption>
 					<thead>
@@ -501,7 +501,7 @@
 				</table>
 			</div>
 
-			<div class="tableWrap">
+			<div class="tablewrap">
 				<table class="center">
 					<caption>QUADRO 3 – Parâmetro de Ocupação, exceto cota ambiental</caption>
 					<thead>
@@ -530,7 +530,7 @@
 					</tbody>
 				</table>
 				<div class="notas">
-					<h6>Notas</h6>
+					<h1>Notas</h1>
 					<ol>
 						<li>Será dispensado recuo de frente para lotes que apresentem passeio público com no mínimo 5m.</li>
 						<li>Os recuos laterais e de fundo da edificação superior a 10m serão dispensados conforme disposições estabelecidas nos incisos II e III do artigo 66 da Lei nº 16.402 de 2016.</li>
@@ -538,7 +538,7 @@
 				</div>
 			</div>
 
-			<div class="tableWrap">
+			<div class="tablewrap">
 				<table class="center">
 					<caption>QUADRO 4 – Parâmetro de incomodidade por zona</caption>
 					<thead>
@@ -570,7 +570,7 @@
 					</tbody>
 				</table>
 				<div class="notas">
-					<h6>Notas</h6>
+					<h1>Notas</h1>
 					<ol>
 						<li>Aplicam-se a legislação pertinente e as normas técnicas brasileiras – ABNT em vigor.</li>
 						<li>Aplicam-se a legislação pertinente e as normas técnicas em vigor, sendo que o Executivo poderá estabelecer parâmetros mais restritivos de radiação eletromagnética não ionizante.</li>
@@ -582,7 +582,7 @@
 				</div>
 			</div>
 
-			<div class="tableWrap intervencoes">
+			<div class="tablewrap intervencoes">
 				<div class="intervencoesTitulo">
 					QUADRO 5 – Programa de Intervenções
 					<a href="https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi-2/Quadro_5_Programa_Intervencoes_Expandido.pdf" download="Quadro 5">(baixar como .pdf)</a>
@@ -869,7 +869,7 @@
 					<div><span class="interv">IC</span> Intervenção Complementar</div>
 				</div>
 				<div class="notas">
-					<h6>Notas</h6>
+					<h1>Notas</h1>
 					<ol style="list-style-type: decimal; columns: 1;">
 						<li>O Programa Habitacional será pautado nas informações contidas no Mapa 5 anexo ao Decreto.</li>
 					</ol>
@@ -1003,17 +1003,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// @import '../../variables';
-
-	*::selection, *::-moz-selection {
-		background: #EB5757;
-		color: #FFF;
-	};
+@import '../variables';
+@import '../consulta';
 
 	div.Anhembi2 {
-		font-size: 20px;
-		padding-bottom: 4rem;
-		z-index: 0;
 
 		div.top {
 			/*visibility: hidden;*/
@@ -1113,307 +1106,74 @@ export default {
 			};
 		};
 
-		h2, h3, h4, h5, h6, p, ul, ol {
-			margin: 0 auto 1rem auto;
-			padding: 0 2rem;
-			max-width: 700px;
-		};
-
-		h4, h5, h6 { color: #777; font-weight: 400; };
-
-		p ~ h1, p ~ h2, p ~ h3 { margin-top: 4rem; };
-		p ~ h4, p ~ h5, p ~ h6 { margin-top: 2rem; };
-
-		h4 + p, h5 + p, h6 + p { margin-top: -1rem; };
-
-		sup {
-			vertical-align: 4px;
-			margin: 0 0 0 2px;
-			font-weight: normal;
-			opacity: .8;
-
-			a { color: inherit; };
-		};
-
-		p, ol, ul { font-family: 'Georgia', serif; };
-
-		ol, ul {
-			list-style-type: square;
-
-			li {
-				margin: 0 0 1rem 2rem;
-				padding-left: 8px;
-			};
-		};
-
-		figure {
-			text-align: center;
-			margin: 2rem auto;
-			max-width: 992px;
-			background: #FFF;
-
-			&.borda {
-				padding-bottom: .4rem;
-				border: 1px solid #BDBDBD;
-				border-radius: 2px;
-				overflow: hidden;
-			};
-
-			figcaption {
-				padding-bottom: .4rem;
-				margin: 0 auto;
-				max-width: calc(700px - 4rem);
-				font-size: small;
-				font-weight: 300;
-				text-align: left;
-				color: #777;
-				border-bottom: 1px solid #F5F5F5;
-			};
-
-			img {
-				width: 100%;
-				max-width: 992px;
-			};
-
-			&.coluna {
-				padding: 2rem;
-				margin: 0 auto;
-				max-width: 700px;
-				text-align: center;
-
-				img { max-width: 700px; };
-			};
-
-			&.hero {
-				position: relative;
-
-				figcaption {
-					position: absolute;
-					bottom: 1.6rem;
-					right: 1rem;
-					background: #FFF;
-					border-radius: 2px;
-					padding: 2px 8px;
-					max-width: 400px;
-					font-size: x-small;
-				};
-
-				img { min-width: 100%; max-width: unset; };
-			};
-		};
-
-		@media (max-width: 992px) {
-			figure:not(.coluna) figcaption {
-				padding-left: 2rem;
-				padding-right: 2rem;
-			};
-		};
-
-		h6 {
-			margin: 0;
-			max-width: 100%;
-			color: #333;
-			font-size: smaller;
-			font-weight: 700;
-		};
-
-		figure ul.legenda {
-			display: flex;
-			flex-flow: row wrap;
-			justify-content: center;
-			max-width: 992px;
-			padding: 1rem 2rem 0 1rem;
-			margin-bottom: 0;
-			margin-top: 0;
-			font-family: inherit;
-
-			li {
-				display: inline-flex;
-				align-items: center;
-				font-size: small;
-				margin: 0;
-				padding: 0 0 .8rem 0;
-				margin-right: 2rem;
-
-				div {
-					border-style: solid;
-					border-width: 1px;
-					height: 1.2rem;
-					min-width: 1.2rem;
-					margin-right: .4rem;
-					line-height: calc(1.2rem - 2px);
-					text-align: center;
-
-					&.linha {
-						max-height: 0px;
-						overflow: hidden;
-						border-width: 1px;
-					};
-				};
-
-				a {
-					color: inherit;
-
-					&:hover {
-						opacity: .4;
-						text-decoration: none;
-					};
-				};
-
-				&:last-child {
-					margin-right: 0;
-				};
-			};
-
-			@media (max-width: 600px) {
-				li {
-					display: block;
-					width: 100%;
-					margin: 0 0 1rem 0;
-					padding: 0;
-					text-align: left;
-
-					div {
-						display: inline-block;
-						vertical-align: middle;
-					};
-				};
-			};
-		};
-
-		div.tableWrap {
-			overflow-x: auto;
-			background: #F5F5F5;
-			max-width: 700px;
-			margin: 1rem auto 2rem auto;
-			padding: 2rem;
-			border-radius: 2px;
+		div.tablewrap.intervencoes {
 
 			table {
-				min-width: 100%;
-				font-size: smaller;
-				border-collapse: collapse;
-				table-layout: fixed;
+				font-size: initial;
+				margin: .4rem 0 .8rem 0;
+				&:last-child { margin-bottom: 0; };
+				tr td span.bold { font-weight: bold; };
 			};
 
-			caption {
-				font-weight: 700;
-				margin-bottom: 2rem;
-			};
-
-			thead th, thead tr td {
+			div.intervencoesTitulo {
+				text-align: center;
 				font-size: smaller;
 				font-weight: 700;
+				margin-bottom: -1.2rem;
 			};
 
-			td, th {
-				padding: 4px 8px;
-				word-wrap: break-word;
-				border: 1px solid #BDBDBD;
-				background: #FFF;
+			.col1, .col2 { width: 20%; font-size: smaller; };
+
+			span.cod { color: #BDBDBD; };
+
+			span.interv {
+				display: inline-block;
+				line-height: 1rem;
+				width: 1rem;
+				font-size: x-small;
+				text-align: center;
+				background: #BDBDBD;
+				border-radius: 100%;
+				color: #333;
+				margin: 0 0 0 4px;
 			};
 
-			tbody tr:nth-child(odd) { background: #FFF; };
+			div.eixo {
+				font-size: initial;
+				color: #BDBDBD;
+				margin: 3.2rem 0 .4rem 0;
 
-			.center { text-align: center; };
+				span.tema {
+					font-size: larger;
+					color: #333;
+					display: block;
+					font-weight: bold;
+				};
+			};
 
-			div.notas {
+			div.diretriz {
+				font-size: smaller;
+				color: #BDBDBD;
+				display: block;
+				margin: 0;
+
+				span { color: #333; };
+				span.dir2 { font-weight: bolder; color: #333; display: block; };
+			};
+
+			div.legenda {
+				margin: 1rem 0;
+				font-size: small;
+
 				h6 {
 					margin: 0;
 					padding: .8rem 0 .6rem 0;
 					font-weight: bold;
 					text-transform: uppercase;
-				};
-
-				ol {
-					list-style-type: lower-alpha;
-					margin: 0;
-					padding: 0;
-					font-size: small;
-					font-family: inherit;
-					columns: 160px;
-					column-gap: 2rem;
-
-					li {
-						margin: 0 0 1.2rem 1rem;
-						line-height: 1.2rem;
-						break-inside: avoid;
-						page-break-inside: avoid;
-					};
-
-					li:last-child { margin-bottom: 0; };
-				};
-			};
-
-			&.intervencoes {
-
-				table {
-					font-size: initial;
-					margin: .4rem 0 .8rem 0;
-					&:last-child { margin-bottom: 0; };
-					tr td span.bold { font-weight: bold; };
-				};
-
-				div.intervencoesTitulo {
-					text-align: center;
 					font-size: smaller;
-					font-weight: 700;
-					margin-bottom: -1.2rem;
 				};
 
-				.col1, .col2 { width: 20%; font-size: smaller; };
-
-				span.cod { color: #BDBDBD; };
-
-				span.interv {
-					display: inline-block;
-					line-height: 1rem;
-					width: 1rem;
-					font-size: x-small;
-					text-align: center;
-					background: #BDBDBD;
-					border-radius: 100%;
-					color: #333;
-					margin: 0 0 0 4px;
-				};
-
-				div.eixo {
-					font-size: initial;
-					color: #BDBDBD;
-					margin: 3.2rem 0 .4rem 0;
-
-					span.tema {
-						font-size: larger;
-						color: #333;
-						display: block;
-						font-weight: bold;
-					};
-				};
-
-				div.diretriz {
-					font-size: smaller;
-					color: #BDBDBD;
-					display: block;
-					margin: 0;
-
-					span { color: #333; };
-					span.dir2 { font-weight: bolder; color: #333; display: block; };
-				};
-
-				div.legenda {
-					margin: 1rem 0;
-					font-size: small;
-
-					h6 {
-						margin: 0;
-						padding: .8rem 0 .6rem 0;
-						font-weight: bold;
-						text-transform: uppercase;
-						font-size: smaller;
-					};
-
-					span.interv { margin: 0 4px 0 0; };
-				};
+				span.interv { margin: 0 4px 0 0; };
 			};
 		};
 
@@ -1540,7 +1300,7 @@ export default {
 				margin: 3rem 0 1rem 0;
 			};
 
-			p, ol, ul, figure, div.Minuta blockquote.minuta, div.tableWrap, .Commentsloader {
+			p, ol, ul, figure, div.Minuta blockquote.minuta, div.tablewrap, .Commentsloader {
 				padding: 0;
 				margin: 0 0 1rem 0;
 				max-width: unset;
@@ -1549,7 +1309,7 @@ export default {
 
 			p { padding-right: 40mm; };
 
-			figure, .tableWrap, .Galeria {
+			figure, .tablewrap, .Galeria {
 				break-inside: avoid-page;
 				page-break-inside: avoid;
 			};

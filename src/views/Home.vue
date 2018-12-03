@@ -115,6 +115,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+div.Home {
 	main {
 		div.busca {
 			position: relative;
@@ -187,12 +188,18 @@ export default {
 					display: flex;
 					justify-content: center;
 					align-items: center;
+
 					img {
 						object-fit: cover;
 						min-width: 100%;
 						min-height: 100%;
 					}
 				}
+
+				&:nth-child(2n+1) { background-image: -moz-radial-gradient(left bottom, circle farthest-side, #777, #EB5757); }
+				&:nth-child(3n+2) { background-image: -moz-radial-gradient(left top, circle farthest-side, #FFF, #333); }
+				&:nth-child(5n+3) { background-image: -moz-radial-gradient(right bottom, circle farthest-side, #FFF, #EB5757); }
+				&:nth-child(7n+5) { background-image: -moz-radial-gradient(left top, circle farthest-side, #777, #333); }
 
 				p.nome, p.textoIntro { display: none; };
 
@@ -304,6 +311,7 @@ export default {
 					position: relative;
 					overflow-wrap: break-word;
 					hyphens: auto;
+					max-height: 100%;
 
 					a { color: inherit; overflow-y: hidden; &:hover { text-decoration: none; }; };
 				};
@@ -411,7 +419,7 @@ export default {
 			li.card:first-child {
 				grid-column: unset;
 				grid-template-columns: 1fr;
-				grid-template-rows: minmax(60px, auto) auto 48px;
+				grid-template-rows: minmax(280px, auto) auto 48px;
 				transform: scale(1.04);
 				margin-bottom: 1rem;
 
@@ -422,7 +430,7 @@ export default {
 					justify-content: flex-end;
 
 					a h1 {
-						font-size: x-large;
+						font-size: xx-large;
 						line-height: 120%;
 						margin: 2rem 0 0 0;
 						text-align: center;
@@ -534,4 +542,5 @@ export default {
 	@media screen and (min-width: 2000px) {
 		main ul { max-width: 2000px; }
 	}
+}
 </style>

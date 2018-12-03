@@ -106,9 +106,9 @@
 			<p>As diretrizes de uso do solo se iniciam com uma diretriz geral que define <em>setores de adensamento construtivo e populacional</em> para o Arco Pinheiros, com base na proximidade da rede de transporte, na presença de projetos colocalizados, no grau de ociosidade dos usos atuais e na função estratégica dos locais perante a unidade de projeto.</p>
 			<p>Após a definição dos novos setores de adensamento, pela diretriz geral, apresentam-se as diretrizes de uso do solo específicas para cada setor, garantindo a eles diversidade social e econômica.</p>
 
-			<figure title="Setores de adensamento construtivo e populacional" class="borda">
+			<figure title="Setores de adensamento construtivo e populacional" class="borda mapa">
 				<img :src="imgSrc('arquivos/arco-pinheiros/ACP-diretrizes-1.png')" alt="Setores de adensamento construtivo e populacional">
-				<h6>Setores de adensamento construtivo e populacional</h6>
+				<h1>Setores de adensamento construtivo e populacional</h1>
 				<ul class="legenda">
 					<li><div style="border: 2px solid black"></div> Perímetro Arco Pinheiros</li>
 					<li><div :style="backgroundImg('arquivos/arco-pinheiros/legenda_ferrovias.png')"></div>Ferrovia</li>
@@ -165,9 +165,9 @@
 			<h4>2. Assegurar a oferta de atendimento habitacional à população vulnerável</h4>
 			<p>Tendo em vista as necessidades habitacionais de interesse social levantadas no Diagnóstico Socioterritorial, apresentamos as diretrizes para o enfrentamento das questões habitacionais no âmbito do PIU Arco Pinheiros, observadas as diretrizes expostas no Plano Diretor Estratégico – PDE (Lei Municipal nº 16.050/2014), no Plano Municipal de Habitação – PMH (Projeto de Lei nº 619/2016) e nos Planos Regionais das Prefeituras Regionais (Decreto Municipal nº 57.537/2016).</p>
 
-			<figure title="Diretrizes habitacionais" class="borda">
+			<figure title="Diretrizes habitacionais" class="borda mapa">
 				<img :src="imgSrc('arquivos/arco-pinheiros/ACP-diretrizes-2.png')" alt="Diretrizes habitacionais">
-				<h6>Diretrizes habitacionais</h6>
+				<h1>Diretrizes habitacionais</h1>
 				<ul class="legenda">
 					<li><div style="border: 2px solid black"></div> Perímetro Arco Pinheiros</li>
 					<li><div :style="backgroundImg('arquivos/arco-pinheiros/legenda_ferrovias.png')"></div>Ferrovia</li>
@@ -233,9 +233,9 @@
 			<p>Em relação ao transporte de alta e media capacidade, verifica-se a ausência de linhas de metrô que atendam ao perímetro. Apenas a estação Butantã (linha 4) atende parcialmente o território, pois localiza- se aproximadamente a 1km da entrada principal da Cidade Universitária, situada no extremo leste do perímetro do ACP. Além disto, as estações da CPTM presentes no território encontram-se desconectadas do tecido urbano resultando em difícil acesso.</p>
 			<p>O PIU ACP baseado no princípio do Desenvolvimento Orientado pelo Transporte Sustentável – DOTS, isto é, adensamento construtivo e demográfico junto aos meios de transporte público de média e alta capacidade propõe a melhoria da mobilidade nos diferentes modos de transporte: transporte público, não motorizado e da acessibilidade a pé.</p>
 
-			<figure title="Diretrizes de mobilidade e transporte" class="borda">
+			<figure title="Diretrizes de mobilidade e transporte" class="borda mapa">
 				<img :src="imgSrc('arquivos/arco-pinheiros/ACP-diretrizes-3.png')" alt="Diretrizes de mobilidade e transporte">
-				<h6>Diretrizes de mobilidade e transporte</h6>
+				<h1>Diretrizes de mobilidade e transporte</h1>
 				<ul class="legenda">
 					<li><div style="border: 2px solid black"></div> Perímetro Arco Pinheiros</li>
 					<li><div :style="backgroundImg('arquivos/arco-pinheiros/legenda_ferrovias.png')"></div>Ferrovia</li>
@@ -285,9 +285,9 @@
 			<p>Neste sentido, as diretrizes devem orientar o projeto promovendo ordenamento e reestruturação das áreas subutilizadas, com potencial de transformação, que necessitem de mudança no padrão de uso, recuperação econômica e social, promovendo um processo de transformação da forma mais equilibrada possível, inclusive sob o aspecto ambiental.</p>
 			<p>A diretriz de qualificação dos espaços públicos e promoção do equilíbrio ambiental e da oferta de equipamentos se desdobra em temas específicos: conectividade, temperatura, drenagem, saneamento ambiental e equipamentos públicos.</p>
 
-			<figure title="Diretrizes ambientais e de equipamentos" class="borda">
+			<figure title="Diretrizes ambientais e de equipamentos" class="borda mapa">
 				<img :src="imgSrc('arquivos/arco-pinheiros/ACP-diretrizes-4.png')" alt="Diretrizes ambientais e de equipamentos">
-				<h6>Diretrizes ambientais e de equipamentos</h6>
+				<h1>Diretrizes ambientais e de equipamentos</h1>
 				<ul class="legenda">
 					<li><div style="border: 2px solid black"></div> Perímetro Arco Pinheiros</li>
 					<li><div :style="backgroundImg('arquivos/arco-pinheiros/legenda_ferrovias.png')"></div>Ferrovia</li>
@@ -359,9 +359,9 @@
 			<p>A diretriz de integração, valorização e preservação dos bens tombados do perímetro do Arco Pinheiros e entorno tem como perspectiva a melhoria da inserção do bem no território por meio da melhoria ao seu acesso e a manutenção das características que lhe conferiram o reconhecimento para o tombamento.</p>
 			<p>A preservação do patrimônio cultural é necessária à renovação sem destruição da memória que, junto com a cultura, são direitos de cidadania. O passado está integrado ao presente e expressa capacidades humanas, como as de planejar, construir e transformar e expressa formas de conceber e representar o mundo e a sociedade. O tombamento de bens resulta no seu reconhecimento e proteção legal, impedindo que sejam destruídos ou descaracterizados, portanto, é fundamental à sua preservação. Além disto, espera-se a constante valorização, ampliando o fluxo de interações e propiciando a atuação conjunta entre comunidade e administração pública.</p>
 
-			<figure title="Bens tombados" class="borda">
+			<figure title="Bens tombados" class="borda mapa">
 				<img :src="imgSrc('arquivos/arco-pinheiros/ACP-diretrizes-5.png')" alt="Bens tombados">
-				<h6>Bens tombados</h6>
+				<h1>Bens tombados</h1>
 				<ul class="legenda">
 					<li><div style="border: 2px solid black"></div>Perímetro Arco Pinheiros</li>
 					<li><div :style="backgroundImg('arquivos/arco-pinheiros/legenda_ferrovias.png')"></div>Ferrovia</li>
@@ -549,359 +549,79 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-*::selection, *::-moz-selection {
-	background: #EB5757;
-	color: #FFF;
-}
+@import '../variables';
+@import '../consulta';
 
 div.ArcoPinheiros {
 	@media (max-width: 480px) { #benstombados_int { justify-content: flex-start !important; } } /* componente mapa - legenda / outras infos? */
-
-	font-size: 20px;
-	padding-bottom: 4rem;
-	z-index: 0;
-	/*@media (max-width: 600px) { font-size: 16px; }*/
-
-	h2, h3, h4, h5, h6, p, ul, ol {
-		margin: 0 auto 1rem auto;
-		padding: 0 2rem;
-		max-width: 700px;
-	};
-
-	h5 {
-		font-size: large;
-		div.sub { font-weight: lighter; color: #777; }
-	}
-
-	h4 {
-		font-size: inherit;
-	}
-
-	h3 {
-		font-size: x-large;
-	}
-
-	h2 {
-		font-size: xx-large;
-	}
-
-	p ~ h1, p ~ h2, p ~ h3 { margin-top: 4rem; margin-bottom: 2rem; };
-	p ~ h4, p ~ h5, p ~ h6 { margin-top: 4rem; margin-bottom: 1rem; }
-
-	sup {
-		vertical-align: 4px;
-		margin: 0 0 0 2px;
-		font-weight: normal;
-		opacity: .8;
-
-		a { color: inherit; };
-	};
-
-	p, ol, ul { font-family: 'Georgia', serif; };
-
-	ol, ul {
-		list-style-type: square;
-
-		li {
-			margin: 0 0 1rem 2rem;
-			padding-left: 8px;
-		};
-	};
-
-	section + section { margin-top: 6rem; }
-
-	figure {
-		text-align: center;
-		margin: 2rem auto;
-		max-width: 992px;
-		width: max-content;
-		background: #FFF;
-
-		&.borda {
-			padding-bottom: .4rem;
-			border: 1px solid #BDBDBD;
-			border-radius: 2px;
-			overflow: hidden;
-		};
-
-		figcaption {
-			padding: .4rem 0;
-			margin: 0 auto;
-			max-width: 700px;
-			font-size: small;
-			font-weight: 300;
-			text-align: left;
-			color: #777;
-			border-bottom: 1px solid #F5F5F5;
-		};
-
-		div.fontes {
-			font-size: x-small;
-			text-align: left;
-			padding: 0 .8rem;
-			color: #777;
-			margin: .4rem 0 0 0;
-		};
-
-		img {
-			width: 100%;
-			max-width: 992px;
-		};
-
-		&.coluna {
-			padding: 0 2rem;
-			margin: 1rem auto 2rem auto;
-			max-width: 700px;
-			text-align: center;
-
-			img { max-width: 700px; };
-		};
-
-		&.hero {
-			position: relative;
-
-			figcaption {
-				position: absolute;
-				bottom: 1.6rem;
-				right: 1rem;
-				background: #FFF;
-				border-radius: 2px;
-				padding: 2px 8px;
-				max-width: 400px;
-				font-size: x-small;
-			};
-
-			img { min-width: 100%; max-width: unset; };
-		};
-	};
-
-	@media (max-width: 992px) {
-		figure {
-			margin-left: 2rem;
-			margin-right: 2rem;
-			width: calc(100% - 4rem);
-
-			&.coluna {
-				padding: 0;
-			}
-		}
-	};
-
-	h6 {
-		margin: 0;
-		max-width: 100%;
-		color: #333;
-		font-size: smaller;
-		font-weight: 700;
-	};
-
-	figure ul.legenda {
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: center;
-		max-width: 992px;
-		padding: 1rem 2rem 0 1rem;
-		margin-bottom: 0;
-		margin-top: 0;
-		font-family: inherit;
-
-		@media (max-width: 600px) {
-			max-height: 160px;
-			overflow-y: auto;
-		}
-
-		li {
-			display: inline-flex;
-			align-items: center;
-			font-size: small;
-			margin: 0;
-			padding: 0 0 .8rem 0;
-			margin-right: 2rem;
-
-			div {
-				border: 1px solid rgba(0, 0, 0, .08);
-				height: 1.2rem;
-				min-width: 1.2rem;
-				max-width: 1.2rem;
-				overflow: hidden;
-				margin-right: .4rem;
-				line-height: calc(1.2rem - 2px);
-				text-align: center;
-				background-position: center center !important;
-				background-repeat: no-repeat !important;
-				img { vertical-align: middle; width: min-content; max-width: 100%; max-height: 100%; }
-
-				&.linha {
-					max-height: 0px;
-					overflow: hidden;
-					border-width: 1px;
-				};
-			};
-
-			a {
-				color: inherit;
-
-				&:hover {
-					opacity: .4;
-					text-decoration: none;
-				};
-			};
-
-			&:last-child {
-				margin-right: 0;
-			};
-		};
-
-		@media (max-width: 600px) {
-			li {
-				display: block;
-				width: 100%;
-				margin: 0 0 1rem 0;
-				padding: 0;
-				text-align: left;
-
-				div {
-					display: inline-block;
-					vertical-align: middle;
-				};
-			};
-		};
-	};
-
-	div.tableWrap {
-		overflow-x: auto;
-		background: #F5F5F5;
-		max-width: 700px;
-		margin: 1rem auto 2rem auto;
-		padding: 2rem;
-		border-radius: 2px;
+	table.intervencoes {
 
 		table {
-			min-width: 100%;
-			font-size: smaller;
-			border-collapse: collapse;
-			table-layout: fixed;
+			font-size: initial;
+			margin: .4rem 0 .8rem 0;
+			&:last-child { margin-bottom: 0; };
+			tr td span.bold { font-weight: bold; };
 		};
 
-		caption {
-			font-weight: 700;
-			margin-bottom: 2rem;
-		};
-
-		thead th, thead tr td {
+		div.intervencoesTitulo {
+			text-align: center;
 			font-size: smaller;
 			font-weight: 700;
+			margin-bottom: -1.2rem;
 		};
 
-		td, th {
-			padding: 4px 8px;
-			word-wrap: break-word;
-			border: 1px solid #BDBDBD;
-			background: #FFF;
+		.col1, .col2 { width: 20%; font-size: smaller; };
+
+		span.cod { color: #BDBDBD; };
+
+		span.interv {
+			display: inline-block;
+			line-height: 1rem;
+			width: 1rem;
+			font-size: x-small;
+			text-align: center;
+			background: #BDBDBD;
+			border-radius: 100%;
+			color: #333;
+			margin: 0 0 0 4px;
 		};
 
-		tbody tr:nth-child(odd) { background: #FFF; };
+		div.eixo {
+			font-size: initial;
+			color: #BDBDBD;
+			margin: 3.2rem 0 .4rem 0;
 
-		.center { text-align: center; };
+			span.tema {
+				font-size: larger;
+				color: #333;
+				display: block;
+				font-weight: bold;
+			};
+		};
 
-		div.notas {
+		div.diretriz {
+			font-size: smaller;
+			color: #BDBDBD;
+			display: block;
+			margin: 0;
+
+			span { color: #333; };
+			span.dir2 { font-weight: bolder; color: #333; display: block; };
+		};
+
+		div.legenda {
+			margin: 1rem 0;
+			font-size: small;
+
 			h6 {
 				margin: 0;
 				padding: .8rem 0 .6rem 0;
 				font-weight: bold;
 				text-transform: uppercase;
-			};
-
-			ol {
-				list-style-type: lower-alpha;
-				margin: 0;
-				padding: 0;
-				font-size: small;
-				font-family: inherit;
-				columns: 160px;
-				column-gap: 2rem;
-
-				li {
-					margin: 0 0 1.2rem 1rem;
-					line-height: 1.2rem;
-					break-inside: avoid;
-					page-break-inside: avoid;
-				};
-
-				li:last-child { margin-bottom: 0; };
-			};
-		};
-
-		&.intervencoes {
-
-			table {
-				font-size: initial;
-				margin: .4rem 0 .8rem 0;
-				&:last-child { margin-bottom: 0; };
-				tr td span.bold { font-weight: bold; };
-			};
-
-			div.intervencoesTitulo {
-				text-align: center;
 				font-size: smaller;
-				font-weight: 700;
-				margin-bottom: -1.2rem;
 			};
 
-			.col1, .col2 { width: 20%; font-size: smaller; };
-
-			span.cod { color: #BDBDBD; };
-
-			span.interv {
-				display: inline-block;
-				line-height: 1rem;
-				width: 1rem;
-				font-size: x-small;
-				text-align: center;
-				background: #BDBDBD;
-				border-radius: 100%;
-				color: #333;
-				margin: 0 0 0 4px;
-			};
-
-			div.eixo {
-				font-size: initial;
-				color: #BDBDBD;
-				margin: 3.2rem 0 .4rem 0;
-
-				span.tema {
-					font-size: larger;
-					color: #333;
-					display: block;
-					font-weight: bold;
-				};
-			};
-
-			div.diretriz {
-				font-size: smaller;
-				color: #BDBDBD;
-				display: block;
-				margin: 0;
-
-				span { color: #333; };
-				span.dir2 { font-weight: bolder; color: #333; display: block; };
-			};
-
-			div.legenda {
-				margin: 1rem 0;
-				font-size: small;
-
-				h6 {
-					margin: 0;
-					padding: .8rem 0 .6rem 0;
-					font-weight: bold;
-					text-transform: uppercase;
-					font-size: smaller;
-				};
-
-				span.interv { margin: 0 4px 0 0; };
-			};
+			span.interv { margin: 0 4px 0 0; };
 		};
 	};
 

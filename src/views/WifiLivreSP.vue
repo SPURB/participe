@@ -243,6 +243,7 @@ export default {
 </script>
 
 <style lang="scss">
+
 div.PageTop > div:first-child {
 	max-width: 700px;
 }

@@ -6,7 +6,7 @@
 		</div>
 		<div class="menu">
 			<div>
-				<div class="menu_visor" @click="isMenuVisorAberto =! isMenuVisorAberto"><span ref="menu_visor">Selecione...</span> <i class="material-icons">keyboard_arrow_down</i></div>
+				<div class="menu_visor" @click="isMenuVisorAberto =! isMenuVisorAberto"><span ref="menu_visor">Selecione...</span> <i>&#x25BC;</i></div>
 				<ul :class="{ aberto: isMenuVisorAberto }">
 					<li @click="isMenuVisorAberto =! isMenuVisorAberto, alteraSecao('populacao', $event)" :class="{ ativo: !escPopulacao }">População</li>
 					<li @click="isMenuVisorAberto =! isMenuVisorAberto, alteraSecao('usosdosolo', $event)" :class="{ ativo: !escUsos }">Usos do solo</li>

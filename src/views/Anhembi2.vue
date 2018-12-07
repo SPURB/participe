@@ -1201,6 +1201,7 @@ export default {
 					align-items: center;
 					padding: 1rem;
 					color: inherit;
+					border-bottom: 0;
 
 					i {
 						margin-right: 1rem;
@@ -1216,7 +1217,7 @@ export default {
 						color: #BDBDBD;
 					};
 
-					&:hover { text-decoration: none; };
+					&:hover { text-decoration: none; background-color: transparent; };
 				};
 
 				&:hover { border-color: #EB5757; box-shadow: 0 4px 4px rgba(0, 0, 0, .12); };
@@ -1224,16 +1225,6 @@ export default {
 				&:first-child { margin-top: 0; };
 				&:last-child { margin-bottom: 0; };
 			};
-		};
-
-		a[target=_blank]::after {
-			content: 'open_in_new';
-			font-family: 'Material Icons';
-			display: inline-block;
-			font-size: initial;
-			line-height: initial;
-			vertical-align: -2px;
-			margin-left: 4px;
 		};
 	};
 

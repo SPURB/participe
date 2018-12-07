@@ -243,8 +243,10 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../variables';
+@import '../consulta';
 
-div.PageTop > div:first-child {
+/*div.PageTop > div:first-child {
 	max-width: 700px;
 }
 table {
@@ -296,7 +298,7 @@ img {
 div.WifiLivreSP p {
 	overflow: auto;
 	text-align: left;
-}
+}*/
 #app div.WifiLivreSP div.Apoio button::before {
 	content: "Ver downloads";
 }

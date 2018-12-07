@@ -805,7 +805,10 @@ export default {
 </script>
 
 <style lang="scss">
-	figure {
+@import '../variables';
+@import '../consulta';
+
+	/*figure {
 		text-align: center;
 	}
 	div.PageTop > div:first-child {
@@ -871,6 +874,6 @@ export default {
 		font-size: smaller;
 		font-style: italic;
 		padding-left: 20%;
-	}
+	}*/
 
 </style>

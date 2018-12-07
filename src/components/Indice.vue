@@ -26,7 +26,8 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+@import '../variables';
 
 div.Indice {
 	z-index: 0;
@@ -41,13 +42,10 @@ div.Indice {
 		left: 0;
 		padding: 0;
 		list-style-type: none;
-		font-family: inherit;
-		font-size: small;
 
 		li {
 			display: block;
-			margin-top: 0;
-			margin-bottom: 4px;
+			margin: 0 0 4px 0;
 			padding-left: calc(2rem - 8px);
 			color: #333;
 			max-width: 200px;
@@ -56,6 +54,8 @@ div.Indice {
 			text-overflow: ellipsis;
 			transition: opacity .1s, max-width ease-in-out .5s, border-left-color ease-in-out .5s, font-weight .1s;
 			border-left: 8px solid transparent;
+			font-family: $grotesca;
+			font-size: small;
 
 			&:active, &.ativo {
 				border-left-color: #333;
@@ -82,7 +82,7 @@ div.Indice {
 		right: 2rem;
 		background: #FFF;
 		border-radius: 100%;
-		border: 1px solid #BDBDBD;
+		border: 1px solid $cinza-2;
 		box-shadow: 0 4px 4px rgba(0, 0, 0, .12);
 		transition: all .1s;
 		display: block;
@@ -91,9 +91,9 @@ div.Indice {
 		width: 42px;
 		height: 42px;
 		&:active {
-			background: #EB5757;
+			background: $vermelho;
 			color: #FFF;
-			border-color: #EB5757;
+			border-color: $vermelho;
 		};
 
 		&:hover {
@@ -143,12 +143,13 @@ div.Indice {
 				display: inline-block;
 				padding: 4px 6px !important;
 				margin: 0 6px 4px 0;
-				background: #EB5757;
-				border: 1px solid #EB5757;
+				background: $vermelho;
+				border: 1px solid $vermelho;
 				border-left-width: 0;
 				border-radius: 2px;
 				color: #FFF;
 				max-width: 100%;
+				font-size: small;
 
 				&:hover {
 					max-width: 100%;
@@ -157,16 +158,24 @@ div.Indice {
 
 			&::before {
 				content: 'Índice';
+				font-size: small;
 				display: inline-block;
 				padding: 4px 6px !important;
 				vertical-align: top;
 				margin: 0 6px 4px 0;
-				border: 1px solid #EB5757;
+				border: 1px solid $vermelho;
 				border-radius: 2px;
-				color: #EB5757;
+				color: $vermelho;
 				max-width: 100%;
 			};
 		};
 	};
+
+	@media (max-width: 600px) {
+		ul {
+			margin: -1rem 0;
+			padding: 0 1rem;
+		}
+	}
 };
 </style>

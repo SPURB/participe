@@ -15,16 +15,18 @@ body {
 section + section { margin-top: 8rem; }
 
 a {
-	color: $azul;
-	border-bottom: 1px solid transparent;
-	padding-bottom: 2px;
-	transition: border-bottom ease-in .12s;
+	color: $vermelho;
+	border-bottom: 2px solid $vermelho-tr;
+	padding: 2px 0;
 	&:hover {
-		text-decoration: none;
-		border-bottom-color: $azul-tr;
+		text-decoration: none !important;
+		background-color: $vermelho-tr;
+		border-bottom-color: transparent;
+		cursor: pointer;
 	}
 	&:active {
-		color: $azul-tr;
+		color: $vermelho-tr;
+		background-color: $vermelho-tr;
 		border-bottom-color: transparent;
 	}
 }
@@ -43,6 +45,16 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, table {
 	max-width: 700px;
 }
 
+hr {
+	margin: 6rem auto;
+	max-width: calc(700px - 4rem);
+	border: 4px solid $cinza-2;
+	@media (max-width: 600px) {
+		width: 100%;
+		margin: 0 1rem;
+	}
+}
+
 h1, h2, h3, h4, h5, h6 {
 	font-family: $grotesca;
 	margin-top: 4rem;
@@ -51,7 +63,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-	font-size: 180%;
+	font-size: 200%;
 	&.subtitulo { font-size: 140%; }
 }
 h3 {
@@ -78,10 +90,16 @@ h6 {
 }
 
 sup {
-	vertical-align: 4px;
+	vertical-align: 60%;
 	margin: 0 0 0 2px;
 	font-weight: normal;
 	color: $cinza-1;
+	font-family: $grotesca;
+	font-size: 11px;
+	a {
+		color: $azul;
+		cursor: pointer;
+	}
 }
 
 mark {
@@ -94,8 +112,68 @@ mark {
 u {
 	text-decoration: none;
 	border-bottom: 1px solid $cinza-2;
-	text-shadow: 0 0 1px #FFF;
 	padding-bottom: 1px;
+}
+
+ul { list-style-type: square; }
+ol.numeros { list-style-type: decimal; }
+ol.romanos { list-style-type: upper-roman; }
+ol.maiusculas { list-style-type: upper-alpha; }
+ol.minusculas { list-style-type: lower-alpha; }
+
+ul.links, ol.links {
+	display: block;
+	list-style-type: none;
+	margin: 2rem auto;
+	padding: 2rem;
+	background: $cinza-3;
+	border-radius: 2px;
+
+	& > * { font-family: $grotesca; }
+
+	li {
+		margin: 2rem 0;
+		padding: 0;
+		border-radius: 2px;
+		background: #FFF;
+		box-shadow: 0 2px 2px rgba(0, 0, 0, .12);
+		transition: all .1s;
+
+		a {
+			display: flex;
+			flex-flow: row-nowrap;
+			align-items: center;
+			padding: 1rem;
+			color: $preto;
+
+			i {
+				margin-right: 1rem;
+				align-self: center;
+			};
+
+			div { width: 100%; };
+
+			span {
+				display: block;
+				font-size: small;
+				margin-left: 1rem;
+				white-space: nowrap;
+				color: $sombra-3;
+			};
+		};
+
+		&:hover {
+			background-color: #EB5757;
+
+			a {
+				border-bottom-color: transparent;
+				color: #FFF;
+			}
+		}
+
+		&:first-child { margin-top: 0; };
+		&:last-child { margin-bottom: 0; };
+	};
 }
 
 ul li, ol li {
@@ -105,11 +183,24 @@ ul li, ol li {
 	font-size: $sizedesk;
 }
 
-ul { list-style-type: square; }
-ol.numeros { list-style-type: decimal; }
-ol.romanos { list-style-type: upper-roman; }
-ol.maiusculas { list-style-type: upper-alpha; }
-ol.minusculas { list-style-type: lower-alpha; }
+table {
+	max-width: 700px;
+	width: 100%;
+	margin: 2rem auto;
+	padding: 2rem 0;
+	position: relative;
+	border-collapse: collapse;
+
+	& > * { color: $preto; }
+
+	th, td {
+		border: 1px solid $cinza-2 !important;
+		padding: 4px 8px !important;
+		hyphens: auto;
+	}
+
+	tr:nth-child(odd) { background-color: $cinza-3; }
+}
 
 div.tablewrap {
 	overflow-x: auto;
@@ -135,7 +226,7 @@ div.tablewrap {
 		margin-bottom: 2rem;
 	};
 
-	thead th, thead tr td {
+	thead th, thead tr td, tr th {
 		font-weight: 700;
 	};
 
@@ -178,17 +269,20 @@ div.tablewrap {
 
 figure {
 	text-align: center;
-	margin: 2rem auto;
+	margin: 4rem auto;
 	max-width: 992px;
-	width: max-content;
-	width: -moz-max-content;
+	width: min-content;
+	width: -moz-min-content;
 	background: #FFF;
 
+	* { font-family: $grotesca !important; }
+
 	img {
-		width: 100%;
+		margin: 0 0 -8px 0;
 		max-width: 992px;
-		margin: 0;
-		margin-bottom: -8px;
+		@media (max-width: 992px) {
+			max-width: 100%;			
+		}
 	};
 
 	figcaption {
@@ -199,90 +293,55 @@ figure {
 		text-align: left;
 		color: $cinza-1;
 		border-bottom: 1px solid $cinza-3;
-		font-family: $grotesca;
 	};
 
-	h1 {
-		font-size: smaller;
+	h1, h2, h3, h4, h5, h6 {
+		font-size: initial;
 		margin: 1rem 0;
-		font-family: $grotesca;
 		max-width: unset;
 	}
 
-	&.borda {
+	&.borda, &.mapa {
 		border: 1px solid $cinza-2;
 		border-radius: 2px;
 		overflow: hidden;
-	};
+		padding: 0 0 1rem 0;
 
-	&.coluna {
-		padding: 0 2rem;
-		max-width: 700px;
-		text-align: center;
-
-		img { max-width: 700px; };
-	};
-
-	&.hero {
-		position: relative;
-
-		figcaption {
-			position: absolute;
-			bottom: 40px;
-			right: 40px;
-			background: #FFF;
-			border-radius: 2px;
-			padding: 2px 8px;
-			max-width: 400px;
-			font-size: x-small;
-		};
-
-		img { 
-			min-width: 100%;
-			max-width: unset; 
-		};
-	};
-
-	div.fontes {
-		font-size: x-small;
-		text-align: left;
-		padding: 1rem;
-		color: $cinza-1;
-	};
-
-	&.mapa {
 		ul.legenda {
 			display: flex;
 			flex-flow: row wrap;
 			justify-content: center;
-			max-width: 992px;
-			padding: 1rem 0;
+			max-width: unset;
 			margin: 0;
 			font-family: inherit;
 
 			li {
-				font-family: $grotesca;
 				display: inline-flex;
 				align-items: center;
 				font-size: small;
 				border: 1px solid $cinza-3;
-				margin: .4rem;
-				padding: .4rem .6rem;
+				border-radius: 2px;
+				margin: 4px;
+				padding: 4px 6px;
 
 				div {
 					border: 1px solid $sombra-4;
 					height: 16px;
 					min-width: 16px;
 					max-width: 16px;
-					margin-right: .4rem;
+					margin-right: 4px;
 					overflow: hidden;
 					line-height: 14px;
 					text-align: center;
 					background-position: center center !important;
 					background-repeat: no-repeat !important;
+					user-select: none;
+					-moz-user-select: none;
 					
 					img {
 						vertical-align: top;
+						width: 100%;
+						height: 100%;
 					}
 
 					&.linha {
@@ -294,10 +353,12 @@ figure {
 
 				a {
 					color: inherit;
+					border-bottom-width: 0;
 
 					&:hover {
 						opacity: .4;
 						text-decoration: none;
+						background-color: transparent;
 					};
 				};
 
@@ -325,13 +386,47 @@ figure {
 				};
 			}
 		};
+	};
+
+	&.coluna {
+		padding: 0 2rem !important;
+		text-align: center;
+		max-width: 700px;
+		width: 100%;
+
+		img {
+			max-width: 100%;
+		};
+
+		@media (max-width: 992px) {
+			margin: 4rem auto;
+			// padding: 0 2rem !important;
+		}
+
+		@media (max-width: 600px) {
+			margin: 4rem auto;
+			padding: 0 1rem !important;
+		}
+	};
+
+	&.ai2html {
+		margin: 4rem auto;
+		& > * { overflow-x: auto; }
 	}
+
+	div.fontes {
+		font-size: x-small;
+		text-align: left;
+		padding: 0 1rem;
+		margin: 1rem 0 0 0;
+		color: $cinza-1;
+		span { font-weight: bold; }
+	};
 };
 
 @media (max-width: 992px) {
 	figure {
-		margin-left: 1rem;
-		margin-right: 1rem;
+		margin: 2rem auto !important;
 		width: calc(100% - 2rem);
 
 		&.coluna {
@@ -348,4 +443,8 @@ figure {
 	h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, table {
 		padding: 0 1rem;
 	}
-}
+};
+
+.ai2html {
+	margin: 4rem 0;
+};

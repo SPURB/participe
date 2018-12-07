@@ -45,7 +45,7 @@
 				Para a compreensão das premissas deste novo conceito foram utilizadas técnicas e metodologias baseadas em design thinking, design de serviço e urbanismo tático com foco no usuário, ou seja, a população. Entre visitas técnicas, benchmarkings, pesquisa de satisfação, oficinas de cocriação, jornadas de usuário e prototipação, entendeu-se que o projeto de ressignificação do programa Telecentros deve ter como objetivo:
 			</p>
 			<p>
-				“Promover o desenvolvimento humano, econômico e social, por meio de laboratórios<a @click="scrollMeTo('fn1')" ref="ref1"><sup>1</sup></a> digitais que tenham por finalidade a inclusão social do cidadão”
+				“Promover o desenvolvimento humano, econômico e social, por meio de laboratórios<sup><a @click="scrollMeTo('fn1')" ref="ref1">1</a></sup> digitais que tenham por finalidade a inclusão social do cidadão”
 			</p>
 			<p>
 				É com base nestas propostas que  nasce o projeto piloto que irá testar a efetividade desse estudo: o DIGILAB LIVRE SP
@@ -833,9 +833,12 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+@import '../variables';
+@import '../consulta';
+
 #app div.DigilabLivreSP {
-	div.PageTop > div:first-child {
+	/*div.PageTop > div:first-child {
 		max-width: 700px;
 	}
 	div.PageTop h1 {
@@ -914,6 +917,6 @@ export default {
 			color: initial;
 			margin-bottom: 1em;
 		}
-	}
+	}*/
 }
 </style>

@@ -86,7 +86,8 @@ export default {
 		* > i {
 			font-size: inherit;
 			margin: 0 8px 0 0;
-			padding-top: 2px;
+			padding-top: 3px;
+			line-height: 1rem;
 		}
 	}
 }

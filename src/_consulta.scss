@@ -96,9 +96,22 @@ sup {
 	color: $cinza-1;
 	font-family: $grotesca;
 	font-size: 11px;
-	a {
-		color: $azul;
-		cursor: pointer;
+}
+
+a.ref {
+	font-family: $grotesca;
+	display: inline-block;
+	vertical-align: top;
+	font-size: small;
+	border-bottom: none;
+	margin-left: 2px;
+	&:hover {
+		background-color: transparent;
+		color: $preto;
+	}
+	&:active {
+		background-color: transparent;
+		color: $vermelho-tr;
 	}
 }
 
@@ -121,7 +134,7 @@ ol.romanos { list-style-type: upper-roman; }
 ol.maiusculas { list-style-type: upper-alpha; }
 ol.minusculas { list-style-type: lower-alpha; }
 
-ul.links, ol.links {
+ul.links, ol.links, ul.pdfBox {
 	display: block;
 	list-style-type: none;
 	margin: 2rem auto;
@@ -183,6 +196,44 @@ ul li, ol li {
 	font-size: $sizedesk;
 }
 
+li ol, li ul, p ol, p ul { margin: 1rem 0; padding: 0; }
+
+blockquote {
+	background-color: $cinza-3;
+	padding: 1.6rem 0;
+	border-left: 4px solid $cinza-2;
+	border-radius: 0 2px 2px 0;
+	box-shadow: 0 2px 2px $sombra-4;
+
+	&.leg {
+		background-color: transparent;
+		border: 1px solid $sombra-4;
+		border-radius: 2px;
+		margin: 4rem auto;
+
+		p {
+			text-indent: 2rem;
+			max-width: unset;
+			&:last-child { margin-bottom: 0; }
+		}
+
+		p.caput {
+			font-family: $grotesca;
+			font-size: small;
+			color: $cinza-1;
+			margin: 0 0 1rem 0;
+			text-indent: 0;
+			max-width: 400px;
+		}
+
+		@media (max-width: 600px) {
+			margin: 2rem auto;
+			padding: .8rem 0;
+			max-width: calc(100% - 2rem);
+		}
+	}
+}
+
 table {
 	max-width: 700px;
 	width: 100%;
@@ -193,13 +244,69 @@ table {
 
 	& > * { color: $preto; }
 
+	caption {
+		border-top: 1px solid $cinza-2;
+		font-size: initial;
+		font-weight: bold;
+		padding: 8px 0;
+	}
+
 	th, td {
 		border: 1px solid $cinza-2 !important;
 		padding: 4px 8px !important;
-		hyphens: auto;
+		font-size: smaller;
 	}
 
-	tr:nth-child(odd) { background-color: $cinza-3; }
+	th { background-color: $sombra-4; }
+
+	&.listrada {
+		tr:nth-child(odd) td { background-color: $cinza-3; }
+	}
+
+	&.linha {
+		th, td {
+			border: 0px !important;
+			border-bottom: 1px solid $cinza-2 !important;
+			text-align: center;
+		}
+		th { background-color: transparent; }
+		tr:nth-child(even) { background-color: $cinza-3; }
+	}
+
+	@media (max-width: 600px) {
+		display: inline-block;
+		margin: 1rem auto;
+		th, tr {
+			display: block;
+			margin: 8px 0;
+			border: 1px solid $cinza-2;
+			border-radius: 2px;
+			padding: 4px 8px;
+
+			&:nth-child(even) { background-color: $cinza-3; }
+
+			&:first-child { display: none; }
+
+			& > td {
+				display: block;
+				border: none !important;
+				padding: 4px 0 4px 40% !important;
+				text-align: left;
+				position: relative;
+
+				&:not(:first-child) { border-top: 1px solid $cinza-2 !important; } 
+
+				&::before {
+					content: attr(data-coluna);
+					position: absolute;
+					left: 0;
+					text-align: left;
+					font-weight: bold;
+					color: $cinza-2;
+				}
+			}
+		}
+	}
 }
 
 div.tablewrap {
@@ -213,16 +320,14 @@ div.tablewrap {
 
 	table {
 		min-width: 100%;
-		font-size: smaller;
 		border-collapse: collapse;
-		table-layout: fixed;
 		margin: 0;
 		&.center { text-align: center; }
 	};
 
 	caption {
-		font-weight: 700;
-		font-size: larger;
+		border-top: none !important;
+		padding: 0;
 		margin-bottom: 2rem;
 	};
 
@@ -239,29 +344,31 @@ div.tablewrap {
 		min-width: 80px;
 	};
 
-	div.notas {
+	& > div {
 		h1 {
-			font-size: x-small;
-			margin: 0;
-			padding: 2rem 0 0 0;
+			font-size: small;
+			margin: 2rem 0 1rem 0;
+			padding: 0;
 			font-weight: bold;
 			text-transform: uppercase;
 		};
 
-		ol {
-			list-style-type: lower-alpha;
-			margin: 0;
-			padding: 0;
-			columns: 160px;
-			column-gap: 2rem;
+		&.notas {
+			ol {
+				list-style-type: lower-alpha;
+				margin: 0;
+				padding: 0;
+				columns: 160px;
+				column-gap: 2rem;
 
-			li {
-				margin: 0 0 1.2rem 1rem;
-				font-size: small;
-				font-family: $grotesca;
-				break-inside: avoid;
-				page-break-inside: avoid;
-				&:last-child { margin-bottom: 0; }
+				li {
+					margin: 0 0 1.2rem 1rem;
+					font-size: small;
+					font-family: $grotesca;
+					break-inside: avoid;
+					page-break-inside: avoid;
+					&:last-child { margin-bottom: 0; }
+				};
 			};
 		};
 	};

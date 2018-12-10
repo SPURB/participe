@@ -136,7 +136,7 @@ export default{
 			transition: all .4s;
 
 			i {
-				font-size: calc(24px + 16vmin);
+				font-size: calc(24px + 4vmin);
 				line-height: .8;
 				color: #FFF;
 				text-shadow: 0 2px 2px rgba(0, 0, 0, .24);

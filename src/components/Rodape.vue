@@ -17,6 +17,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../variables';
+
 div.Rodape {
 	&.load {
 		position: absolute;
@@ -25,8 +27,11 @@ div.Rodape {
 	}
 	footer {
 		clear: all;
-		background: #F5F5F5;
+		background: $cinza-3;
 		padding: 16px 32px;
 	}
+	a { border-bottom: none !important; }
+	a:hover { background-color: transparent; }
+	a:active { background-color: transparent; }
 }
 </style>

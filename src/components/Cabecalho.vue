@@ -25,6 +25,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../variables';
 
 div.Cabecalho {
 	header {
@@ -35,15 +36,15 @@ div.Cabecalho {
 		padding: 0 2rem;
 		height: 60px;
 		max-height: 120px;
-		background: #F5F5F5;
+		background: $cinza-3;
 		box-shadow: 0 4px 8px rgba(0, 0, 0, .24);
 		position: relative;
 		z-index: 3;
 
 		i {
-			color: #BDBDBD;
+			color: $cinza-2;
 			transition: color .1s;
-			width: 100%;
+			width: 0;
 
 			&:hover {
 				color: #333;
@@ -58,10 +59,13 @@ div.Cabecalho {
 			font-weight: 400;
 
 			a {
-				color: #BDBDBD;
+				color: $cinza-2;
 				width: 100%;
+				padding: 0;
+				border-bottom: none;
+				&:hover, &:active { background: unset; }
 
-				span { color: #EB5757; font-weight: 800; };
+				span { color: $vermelho; font-weight: 800; };
 
 				&:hover { text-decoration: none; };
 			};
@@ -69,8 +73,14 @@ div.Cabecalho {
 
 		a {
 			line-height: 100%;
-			width: 100%;
+			width: 0;
 			text-align: right;
+			border-bottom: none;
+			text-align: right;
+			display: inline-flex;
+			justify-content: flex-end;
+			padding: 0 !important;
+			&:hover, &:active { background: unset; }
 
 			img {
 				max-height: 40px;

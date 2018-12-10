@@ -627,7 +627,7 @@ div.ArcoPinheiros {
 		};
 	};
 
-	/*ul.pdfBox {
+	ul.pdfBox {
 		display: block;
 		list-style-type: none;
 		margin: 2rem auto;
@@ -677,7 +677,7 @@ div.ArcoPinheiros {
 			&:first-child { margin-top: 0; };
 			&:last-child { margin-bottom: 0; };
 		};
-	};*/
+	};
 
 	div.commentCtx {
 		position: absolute;

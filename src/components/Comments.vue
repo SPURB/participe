@@ -172,10 +172,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../variables';
+
 div.Comments {
 	margin: 2rem auto 4rem auto;
 	max-width: 700px;
-	background: #F5F5F5;
+	background: $cinza-3;
 	border-radius: 2px;
 	font-weight: 700;
 	max-height: calc(4rem + 40px);
@@ -199,7 +201,7 @@ div.Comments {
 			width: 40px;
 			height: 40px;
 			font-size: 1.1em;
-			background: #333;
+			background: $preto;
 			border-radius: 100%;
 			color: #FFF;
 			margin: 0px 20px 0 0;
@@ -213,12 +215,12 @@ div.Comments {
 		};
 
 		&.sucesso {
-			background: #008015;
+			background: $verde;
 			color: #FFF;
 
 			i {
 				background: #FFF;
-				color: #008015;
+				color: $verde;
 			}
 
 			&::after { content: 'Comentário enviado'; }
@@ -249,22 +251,22 @@ div.Comments {
 				font-size: large;
 				height: 40px;
 				line-height: 40px;
-				border: 1px solid #BDBDBD;
+				border: 1px solid $cinza-2;
 				border-radius: 2px;
 				padding: 8px;
-				caret-color: #EB5757;
+				caret-color: $vermelho;
 				box-shadow: inset 0 2px 2px rgba(0, 0, 0, .08);
 				margin-bottom: .8rem;
 				transition: all ease-in .1s;
 
-				&:focus { border-color: #EB5757; };
+				&:focus { border-color: $vermelho; };
 
 				&.inputErro {
-					background: #EB5757;
+					background: $vermelho;
 					color: #FFF;
 				};
 
-				&.inputAcerto { color: #008015; };
+				&.inputAcerto { color: $verde; };
 			};
 
 			textarea {
@@ -291,7 +293,7 @@ div.Comments {
 					to { opacity: 1 }
 				}
 
-				.bolinha1, .bolinha2, .bolinha3 { fill: #FFFFFF; }
+				.bolinha1, .bolinha2, .bolinha3 { fill: #FFF; }
 
 				@keyframes pulando {
 					0% {
@@ -339,7 +341,7 @@ div.Comments {
 				text-align: center;
 				line-height: 40px;
 				border-radius: 2px;
-				border: 1px solid #BDBDBD;
+				border: 1px solid $cinza-2;
 				background: #FFF;
 				box-shadow: 0 2px 2px rgba(0, 0, 0, .24);
 				transition: all ease-out .36s;
@@ -356,7 +358,7 @@ div.Comments {
 				}
 
 				&.erro {
-					background: #EB5757;
+					background: $vermelho;
 					color: #FFF;
 					border-color: transparent;
 
@@ -367,7 +369,7 @@ div.Comments {
 
 				&:hover { text-decoration: none; cursor: pointer; };
 
-				&:focus { border-color: #EB5757; };
+				&:focus { border-color: $vermelho; };
 			};
 		};
 	};

@@ -414,82 +414,82 @@ i)	Encerrar problemas/erros conhecidos.
 	<h4>TABELA 1</h4>
 	<table class="headed-table">
 		<tr>
-			<td>ITEM</td>
-			<td>DESCRIÇÃO</td>
-			<td>INCIDÊNCIA</td>
-			<td>PONTOS</td>
+			<td data-coluna="Item">ITEM</td>
+			<td data-coluna="Descrição">DESCRIÇÃO</td>
+			<td data-coluna="Indicência">INCIDÊNCIA</td>
+			<td data-coluna="Pontos">PONTOS</td>
 		</tr>
 		<tr>
-			<td>1</td>
-			<td>Baixa disponibilidade do serviço por localidade (item 10.5).</td>
-			<td>Por ocorrência</td>
-			<td>Consultar TABELA 2a</td>
+			<td data-coluna="Item">1</td>
+			<td data-coluna="Descrição">Baixa disponibilidade do serviço por localidade (item 10.5).</td>
+			<td data-coluna="Indicência">Por ocorrência</td>
+			<td data-coluna="Pontos">Consultar TABELA 2a</td>
 		</tr>
 		<tr>
-			<td>2</td>
-			<td>Baixo índice de desempenho de internet (“IS”) por localidade (item 10.6.2.2).</td>
-			<td>Por ocorrência</td>
-			<td>Consultar TABELA 2b</td>
+			<td data-coluna="Item">2</td>
+			<td data-coluna="Descrição">Baixo índice de desempenho de internet (“IS”) por localidade (item 10.6.2.2).</td>
+			<td data-coluna="Indicência">Por ocorrência</td>
+			<td data-coluna="Pontos">Consultar TABELA 2b</td>
 		</tr>
 		<tr>
-			<td>3</td>
-			<td>Alta latência média por localidade, na medição mensal (item 10.6.1).</td>
-			<td>Por ocorrência</td>
-			<td>Consultar TABELA 2c</td>
+			<td data-coluna="Item">3</td>
+			<td data-coluna="Descrição">Alta latência média por localidade, na medição mensal (item 10.6.1).</td>
+			<td data-coluna="Indicência">Por ocorrência</td>
+			<td data-coluna="Pontos">Consultar TABELA 2c</td>
 		</tr>
 		<tr>
-			<td>4</td>
-			<td>Não garantir a conexão do número mínimo de usuários indicado na localidade (item 1.2.5).</td>
-			<td>Por ocorrência</td>
-			<td>10</td>
+			<td data-coluna="Item">4</td>
+			<td data-coluna="Descrição">Não garantir a conexão do número mínimo de usuários indicado na localidade (item 1.2.5).</td>
+			<td data-coluna="Indicência">Por ocorrência</td>
+			<td data-coluna="Pontos">10</td>
 		</tr>
 		<tr>
-			<td>5</td>
-			<td>Não seguir o SLA de resolução de incidentes e em até 12 (doze) horas corridas (item 12.11).</td>
-			<td>Por ocorrência</td>
-			<td>5</td>
+			<td data-coluna="Item">5</td>
+			<td data-coluna="Descrição">Não seguir o SLA de resolução de incidentes e em até 12 (doze) horas corridas (item 12.11).</td>
+			<td data-coluna="Indicência">Por ocorrência</td>
+			<td data-coluna="Pontos">5</td>
 		</tr>
 		<tr>
-			<td>6</td>
-			<td>Ultrapassar 5 (cinco) chamados abertos em uma mesma localidade num mesmo mês (item 12.11.6).</td>
-			<td>Por localidade</td>
-			<td>5</td>
+			<td data-coluna="Item">6</td>
+			<td data-coluna="Descrição">Ultrapassar 5 (cinco) chamados abertos em uma mesma localidade num mesmo mês (item 12.11.6).</td>
+			<td data-coluna="Indicência">Por localidade</td>
+			<td data-coluna="Pontos">5</td>
 		</tr>
 		<tr>
-			<td>7</td>
-			<td>Não encaminhar os relatórios digitais descritos no item 9 até o 5º dia útil do mês subsequente ao mês aferido.</td>
-			<td>Por dia de atraso</td>
-			<td>5</td>
+			<td data-coluna="Item">7</td>
+			<td data-coluna="Descrição">Não encaminhar os relatórios digitais descritos no item 9 até o 5º dia útil do mês subsequente ao mês aferido.</td>
+			<td data-coluna="Indicência">Por dia de atraso</td>
+			<td data-coluna="Pontos">5</td>
 		</tr>
 		<tr>
-			<td>8</td>
-			<td>Atraso no cronograma de instalação, para além do tempo limite estabelecido neste Termo de Referência (item 8.5).</td>
-			<td>Por dia de atraso</td>
-			<td>Até 10º dia: 10 pontos;<br />a partir do 11º dia: 20 pontos</td>
+			<td data-coluna="Item">8</td>
+			<td data-coluna="Descrição">Atraso no cronograma de instalação, para além do tempo limite estabelecido neste Termo de Referência (item 8.5).</td>
+			<td data-coluna="Indicência">Por dia de atraso</td>
+			<td data-coluna="Pontos">Até 10º dia: 10 pontos;<br />a partir do 11º dia: 20 pontos</td>
 		</tr>
 		<tr>
-			<td>9</td>
-			<td>Não fornecer mensalmente todas as informações citadas no item 4.1.2 deste Termo de Referência para a PMSP.</td>
-			<td>Por mês por localidade</td>
-			<td>5</td>
+			<td data-coluna="Item">9</td>
+			<td data-coluna="Descrição">Não fornecer mensalmente todas as informações citadas no item 4.1.2 deste Termo de Referência para a PMSP.</td>
+			<td data-coluna="Indicência">Por mês por localidade</td>
+			<td data-coluna="Pontos">5</td>
 		</tr>
 		<tr>
-			<td>10</td>
-			<td>Não correção de inconformidade notificada identificada na etapa de instalação (item 8.12.3).</td>
-			<td>Por dia de atraso</td>
-			<td>Até 10º dia: 10 pontos;<br />a partir do 11º dia: 20 pontos</td>
+			<td data-coluna="Item">10</td>
+			<td data-coluna="Descrição">Não correção de inconformidade notificada identificada na etapa de instalação (item 8.12.3).</td>
+			<td data-coluna="Indicência">Por dia de atraso</td>
+			<td data-coluna="Pontos">Até 10º dia: 10 pontos;<br />a partir do 11º dia: 20 pontos</td>
 		</tr>
 		<tr>
-			<td>11</td>
-			<td>Indisponibilidade total ou parcial da solução de monitoramento da rede (item 9.2), impossibilitando a visualização total ou parcial das medições em tempo real das localidades pela SMIT/CCD.</td>
-			<td>Por dia de indisponibilidade</td>
-			<td>20</td>
+			<td data-coluna="Item">11</td>
+			<td data-coluna="Descrição">Indisponibilidade total ou parcial da solução de monitoramento da rede (item 9.2), impossibilitando a visualização total ou parcial das medições em tempo real das localidades pela SMIT/CCD.</td>
+			<td data-coluna="Indicência">Por dia de indisponibilidade</td>
+			<td data-coluna="Pontos">20</td>
 		</tr>
 		<tr>
-			<td>12</td>
-			<td>Não cumprimento das demais cláusulas deste Termo de Referência.</td>
-			<td>Por ocorrência</td>
-			<td>50</td>
+			<td data-coluna="Item">12</td>
+			<td data-coluna="Descrição">Não cumprimento das demais cláusulas deste Termo de Referência.</td>
+			<td data-coluna="Indicência">Por ocorrência</td>
+			<td data-coluna="Pontos">50</td>
 		</tr>
 	</table>
 	<br />

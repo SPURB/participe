@@ -84,12 +84,12 @@ body {
 	a:hover { text-decoration: underline; };
 };
 
-i {
+i[class] {
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-	i::after { visibility: hidden; }
+	&::after { visibility: hidden; }
 	&:hover { cursor: default; };
 };
 

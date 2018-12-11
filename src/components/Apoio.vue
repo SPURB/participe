@@ -105,7 +105,9 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+@import '../variables';
+
 div.Apoio {
 	aside {
 		position: fixed;
@@ -117,7 +119,7 @@ div.Apoio {
 		height: 100vh;
 		min-width: 280px;
 		margin: 0;
-		background: #F5F5F5;
+		background: $cinza-3;
 		transform: translateX(100%);
 		transition: transform ease-in .2s;
 		z-index: 5;
@@ -128,12 +130,12 @@ div.Apoio {
 			list-style-type: none;
 			padding: 0;
 			margin: 0;
-			font-family: inherit;
 
 			& > li {
 				float: left;
 				margin: 0;
 				padding: 0;
+				font-family: $grotesca;
 
 				& > input { display: none; };
 
@@ -151,7 +153,7 @@ div.Apoio {
 
 				& > input:checked + label {
 					opacity: 1;
-					background-color: #EB5757;
+					background-color: $vermelho;
 					color: #FFF;
 					z-index: 1;
 				};
@@ -163,7 +165,7 @@ div.Apoio {
 			};
 
 			div.conteudoTab {
-				// opacity: 0;
+				/*opacity: 0;*/
 				position: absolute;
 				left: 0;
 				padding: 1.6rem 2rem;
@@ -183,7 +185,7 @@ div.Apoio {
 				p.caput {
 					font-size: smaller;
 					margin: 0 0 2rem 0;
-					color: #777;
+					color: $cinza-1;
 				};
 
 				p { padding: 0; }
@@ -201,8 +203,8 @@ div.Apoio {
 		max-height: 42px;
 		background: #FFF;
 		border-radius: 100%;
-		border: 1px solid #BDBDBD;
-		box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12);
+		border: 1px solid $cinza-2;
+		box-shadow: 0 4px 4px $sombra-4;
 		transition: all ease-in .1s;
 		display: block;
 		font-family: inherit;
@@ -217,11 +219,11 @@ div.Apoio {
 		};
 
 		&:active {
-			background: #EB5757;
+			background: $vermelho;
 			color: #FFF;
-			border-color: #EB5757;
+			border-color: $vermelho;
 
-			&::before { color: #333; };
+			&::before { color: $preto; };
 		};
 
 		&:hover {
@@ -240,7 +242,7 @@ div.Apoio {
 			opacity: 0;
 			transition: all ease-in .1s;
 			font-size: 14px;
-			color: #333;
+			color: $preto;
 		};
 	};
 

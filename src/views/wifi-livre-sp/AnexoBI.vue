@@ -90,16 +90,16 @@ d)	Tempo de conexão médio por acesso.</p>
 			<td>Tempo mínimo da seção de navegação</td>
 		</tr>
 		<tr>
-			<td>5 segundos</td>
-			<td>15 minutos</td>
+			<td data-coluna="Tempo mínimo de exibição do anúncio">5 segundos</td>
+			<td data-coluna="Tempo mínimo da seção de navegação">15 minutos</td>
 		</tr>
 		<tr>
-			<td>10 segundos</td>
-			<td>30 minutos</td>
+			<td data-coluna="Tempo mínimo de exibição do anúncio">10 segundos</td>
+			<td data-coluna="Tempo mínimo da seção de navegação">30 minutos</td>
 		</tr>
 		<tr>
-			<td>15 segundos</td>
-			<td>45 minutos</td>
+			<td data-coluna="Tempo mínimo de exibição do anúncio">15 segundos</td>
+			<td data-coluna="Tempo mínimo da seção de navegação">45 minutos</td>
 		</tr>
 	</table>
 <p>5.6. Caso seja de interesse da Interessada, poderá ser ofertada porcentagem fixa ou parte ociosa do tempo de anúncio digital para a PMSP para a veiculação de campanhas de interesse social ou de cunho institucional, de acordo com as seguintes limitações:</p>
@@ -500,83 +500,99 @@ i)	Encerrar problemas/erros conhecidos.
 			<td>Pontos</td>
 		</tr>
 		<tr>
-			<td>96,00%</td><td>1</td>
+			<td data-coluna="% de disponibilidade">96,00%</td>
+			<td data-coluna="Pontos">1</td>
 		</tr>
 		<tr>
-			<td>86,80%</td><td>2</td>
+			<td data-coluna="% de disponibilidade">86,80%</td>
+			<td data-coluna="Pontos">2</td>
 		</tr>
 		<tr>
-			<td>77,60%</td><td>3</td>
+			<td data-coluna="% de disponibilidade">77,60%</td>
+			<td data-coluna="Pontos">3</td>
 		</tr>
 		<tr>
-			<td>68,40%</td><td>4</td>
+			<td data-coluna="% de disponibilidade">68,40%</td>
+			<td data-coluna="Pontos">4</td>
 		</tr>
 		<tr>
-			<td>59,20%</td><td>5</td>
+			<td data-coluna="% de disponibilidade">59,20%</td>
+			<td data-coluna="Pontos">5</td>
 		</tr>
 		<tr>
-			<td>50,00%</td><td>10</td>
+			<td data-coluna="% de disponibilidade">50,00%</td>
+			<td data-coluna="Pontos">10</td>
 		</tr>
 	</table>
 	<br />
 	<h4>TABELA 2b</h4>
 	<table class="headed-table">
 		<tr>
-			<td>IS</td><td>Pontos</td>
+			<td>IS</td>
+			<td>Pontos</td>
 		</tr>
 		<tr>
-			<td>> 1,00	</td><td>1</td>
+			<td data-coluna="IS">> 1,00</td>
+			<td data-coluna="Pontos">1</td>
 		</tr>
 		<tr>
-			<td>> 1,33	</td><td>2</td>
+			<td data-coluna="IS">> 1,33</td>
+			<td data-coluna="Pontos">2</td>
 		</tr>
 		<tr>
-			<td>> 2,00	</td><td>10</td>
+			<td data-coluna="IS">> 2,00</td>
+			<td data-coluna="Pontos">10</td>
 		</tr>
 	</table>
 	<br />
 	<h4>TABELA 2c</h4>
 	<table class="headed-table">
 		<tr>
-			<td>IL</td><td>Pontos</td>
+			<td>IL</td>
+			<td>Pontos</td>
 		</tr>
 		<tr>
-			<td>> 1,00</td><td>1</td>
+			<td data-coluna="IL">> 1,00</td>
+			<td data-coluna="Pontos">1</td>
 		</tr>
 		<tr>
-			<td>> 2,00</td><td>2</td>
+			<td data-coluna="IL">> 2,00</td>
+			<td data-coluna="Pontos">2</td>
 		</tr>
 	</table>
 	<br />
 	<h4>TABELA 3</h4>
 	<table class="headed-table">
 		<tr>
-			<td>QUANDO APLICAR</td><td>PENALIDADE</td>
+			<td>QUANDO APLICAR</td>
+			<td>PENALIDADE</td>
 		</tr>
 		<tr>
-			<td>Pontuação ≥ 10 × <i>L</i></td><td>1ª advertência</td>
+			<td data-coluna="QUANDO APLICAR"><span>Pontuação ≥ 10 × <em>L</em></span></td>
+			<td data-coluna="PENALIDADE">1ª advertência</td>
 		</tr>
 		<tr>
-			<td>Pontuação ≥ 10 × <i>L</i> (1ª reincidência)</td><td>2ª advertência</td>
+			<td data-coluna="QUANDO APLICAR"><span>Pontuação ≥ 10 × <em>L</em> (1ª reincidência)</span></td>
+			<td data-coluna="PENALIDADE">2ª advertência</td>
 		</tr>
 		<tr>
-			<td>Pontuação ≥ 10 × <i>L</i> <br />(2ª reincidência)</td>
-			<td>3ª advertência e exigência de apresentação de <strong>Plano de Melhoria</strong></td>
+			<td data-coluna="QUANDO APLICAR"><span>Pontuação ≥ 10 × <em>L</em> (2ª reincidência)</span></td>
+			<td data-coluna="PENALIDADE"><span>3ª advertência e exigência de apresentação de <strong>Plano de Melhoria</strong></span></td>
 		</tr>
 		<tr>
-			<td>Pontuação ≥ 20 × <i>L</i> <br />ou, no prazo de 3 (três) meses, não cumprir diligentemente o Plano de Melhoria exigido na 3ª advertência</td>
-			<td>Suspensão temporária de participação em chamamento público e impedimento de celebrar parceria com órgãos e entidades da esfera de governo da administração Pública sancionadora, no prazo de 1 (um) ano.</td>
+			<td data-coluna="QUANDO APLICAR"><span>Pontuação ≥ 20 × <em>L</em> ou, no prazo de 3 (três) meses, não cumprir diligentemente o Plano de Melhoria exigido na 3ª advertência</span></td>
+			<td data-coluna="PENALIDADE">Suspensão temporária de participação em chamamento público e impedimento de celebrar parceria com órgãos e entidades da esfera de governo da administração Pública sancionadora, no prazo de 1 (um) ano.</td>
 		</tr>
 		<tr>
-			<td>Pontuação ≥ 20 × <i>L</i> <br /> (1ª reincidência) ou, no prazo de 6 (seis) meses, não cumprir diligentemente o Plano de Melhoria exigido na 3ª advertência</td>
-			<td>Suspensão temporária de participação em chamamento público e impedimento de celebrar parceria com órgãos e entidades da esfera de governo da administração Pública sancionadora, no prazo de 2 (dois) anos.</td>
+			<td data-coluna="QUANDO APLICAR"><span>Pontuação ≥ 20 × <em>L</em> (1ª reincidência) ou, no prazo de 6 (seis) meses, não cumprir diligentemente o Plano de Melhoria exigido na 3ª advertência</span></td>
+			<td data-coluna="PENALIDADE">Suspensão temporária de participação em chamamento público e impedimento de celebrar parceria com órgãos e entidades da esfera de governo da administração Pública sancionadora, no prazo de 2 (dois) anos.</td>
 		</tr>
 		<tr>
-			<td>Pontuação ≥ 20 × <i>L</i> <br /> (2ª reincidência) ou, no prazo de 1 (um) ano, não cumprir diligentemente o Plano de Melhoria exigido na 3ª advertência</td>
-			<td>Rescisão do instrumento firmado entre as partes e aplicação de declaração de inidoneidade para participar de licitação ou celebrar parcerias com órgãos e entidades de todas as esferas de governo, enquanto perdurarem os motivos determinantes da punição por prazo de 2 (dois) anos.</td>
+			<td data-coluna="QUANDO APLICAR"><span>Pontuação ≥ 20 × <em>L</em> (2ª reincidência) ou, no prazo de 1 (um) ano, não cumprir diligentemente o Plano de Melhoria exigido na 3ª advertência</span></td>
+			<td data-coluna="PENALIDADE">Rescisão do instrumento firmado entre as partes e aplicação de declaração de inidoneidade para participar de licitação ou celebrar parcerias com órgãos e entidades de todas as esferas de governo, enquanto perdurarem os motivos determinantes da punição por prazo de 2 (dois) anos.</td>
 		</tr>
 	</table>
-	<p>Onde <strong><i>“L”</i></strong> é o número de localidades contempladas pela proposta da Interessada.</p>
+	<p>Onde <strong><em>L</em></strong> é o número de localidades contempladas pela proposta da Interessada.</p>
 	<slot name="14"></slot>
 	</div>
 </template>

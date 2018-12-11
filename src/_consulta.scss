@@ -288,21 +288,21 @@ table {
 			&:first-child { display: none; }
 
 			& > td {
-				display: block;
+				display: flex;
 				border: none !important;
-				padding: 4px 0 4px 40% !important;
-				text-align: left;
+				padding: 4px 0 !important;
 				position: relative;
 
 				&:not(:first-child) { border-top: 1px solid $cinza-2 !important; } 
 
 				&::before {
 					content: attr(data-coluna);
-					position: absolute;
-					left: 0;
-					text-align: left;
+					display: inline-block;
 					font-weight: bold;
 					color: $cinza-2;
+					min-width: 40%;
+					max-width: 40%;
+					vertical-align: top;
 				}
 			}
 		}

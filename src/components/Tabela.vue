@@ -11,7 +11,7 @@
 				<tr v-for="linha in dados.linhas">
 					<template v-for="celula in linha">
 						<td :data-coluna="dados.colunas[col(celula, linha)].titulo">
-							{{ celula[0].data }}<sup v-if="celula[1]">{{ celula[1].ref }}</sup>
+							<span>{{ celula[0].data }}<sup v-if="celula[1]">{{ celula[1].ref }}</sup></span>
 						</td>
 					</template>
 				</tr>
@@ -24,7 +24,7 @@
 			</ol>
 		</div>
 		<div class="fonte" v-if="dados.fonte">
-			Fonte: {{ dados.fonte }}
+			Fonte <b>{{ dados.fonte }}</b>
 		</div>
 	</div>
 </template>
@@ -90,7 +90,6 @@ export default {
 	background: $vermelho;
 	color: #FFF;
 }
-
 
 div.Tabela {
 	max-width: 700px;
@@ -214,7 +213,6 @@ div.Tabela {
 		margin: 1rem 0 0 0;
 		font-size: x-small;
 		color: $cinza-1;
-		text-align: right;
 	}
 }
 </style>

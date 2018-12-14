@@ -7,7 +7,7 @@
 			</div>
 			<div class="ai2htmlWrap"><slot name="ai2html"></slot></div>
 			<figcaption v-if="dados.caption">
-				{{ dados.caption }} 
+				{{ dados.caption }}
 				<span class="captionFonte"> (Fonte: {{ dados. fonte }})</span>
 			</figcaption>
 			<div class="legenda">
@@ -100,7 +100,7 @@ div.Imagem {
 				display: none;
 			}
 			&:hover a { opacity: 1; };
-		}		
+		}
 		div.ai2htmlWrap, div.legenda, div.fonte { display: none; }
 	}
 	figure.mapa {
@@ -183,6 +183,7 @@ div.Imagem {
 		padding: 0;
 		background-color: $preto;
 		height: 100vh;
+		min-width: 100%;
 		display: flex;
 		flex-flow: column nowrap;
 		align-items: center;
@@ -191,6 +192,7 @@ div.Imagem {
 			width: initial;
 			max-height: 80vh;
 			box-shadow: 0 8px 8px $sombra-2;
+			background-color: $cinza-3;
 		}
 		div.legenda { display: none; }
 		figcaption, div.fonte {
@@ -239,9 +241,22 @@ div.Imagem {
 		position: relative;
 		margin: 2rem 0;
 		padding: 0;
-		min-width: 100%;
-		@media (max-width: 600px) { div.imgWrap a { display: inline-block; } }
-		div.imgWrap img { width: 100%; }
+		width: 100%;
+		max-height: 100vh;
+		overflow: hidden;
+		background-color: #FFF;
+		max-width: 100%;
+		div.imgWrap {
+			img {
+				max-width: 100%;
+				height: 100vh;
+				width: auto;
+				@supports (object-fit: cover) {
+					width: 100%;
+					object-fit: cover;
+				}
+			}
+		}
 		figcaption {
 			position: absolute;
 			bottom: 20px;
@@ -261,6 +276,20 @@ div.Imagem {
 		}
 		div.legenda { display: none; }
 		div.fonte { display: none; }
+		@media (max-width: 600px) {
+			background-color: $preto;
+			div.imgWrap {
+				img { object-fit: contain; }
+				a {
+					display: inline-block;
+				}
+			}
+			figcaption {
+				bottom: 12px;
+				left: 12px;
+				right: 12px;
+			}
+		}
 	}
 	figure.coluna {
 		padding: 0 2rem;
@@ -285,11 +314,13 @@ div.Imagem {
 		div.fonte { display: none; }
 	}
 	figure.default {
+		width: 700px;
+		width: -webkit-min-content;
 		width: -moz-min-content;
 		width: min-content;
 		max-width: 100%;
 		div.imgWrap img {
-			width: initial;
+			width: auto;
 			max-width: calc(700px - 4rem);
 		}
 		figcaption {

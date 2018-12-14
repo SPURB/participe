@@ -73,7 +73,10 @@ div.Cabecalho {
 
 		a {
 			line-height: 100%;
-			width: 0;
+			width: auto;
+			@supports (display: flex) {
+				width: 0;
+			}
 			text-align: right;
 			border-bottom: none;
 			text-align: right;

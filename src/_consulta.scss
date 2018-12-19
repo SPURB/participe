@@ -12,16 +12,13 @@ body {
 	color: #FFF;
 }
 
-section + section { margin-top: 8rem; }
-
 a {
 	color: $vermelho;
-	border-bottom: 2px solid $vermelho-tr;
+	border-bottom: 2px solid transparent;
 	padding: 2px 0;
 	&:hover {
 		text-decoration: none !important;
-		background-color: $vermelho-tr;
-		border-bottom-color: transparent;
+		border-bottom-color: $vermelho-tr;
 		cursor: pointer;
 	}
 	&:active {
@@ -46,7 +43,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, table {
 }
 
 hr {
-	margin: 6rem auto;
+	margin: 4rem auto;
 	max-width: calc(700px - 4rem);
 	border: 4px solid $cinza-2;
 	@media (max-width: 600px) {
@@ -64,6 +61,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h2 {
 	font-size: 200%;
+	margin-top: 8rem;
 	&.subtitulo { font-size: 140%; }
 }
 h3 {
@@ -88,6 +86,8 @@ h6 {
 	color: $cinza-1;
 	margin-top: -1rem;
 }
+
+section:first-of-type h2 { margin-top: 4rem; }
 
 sup {
 	vertical-align: 60%;
@@ -129,7 +129,7 @@ u {
 }
 
 ul { list-style-type: square; }
-ol.numeros { list-style-type: decimal; }
+ol.decimais { list-style-type: decimal; }
 ol.romanos { list-style-type: upper-roman; }
 ol.maiusculas { list-style-type: upper-alpha; }
 ol.minusculas { list-style-type: lower-alpha; }
@@ -200,30 +200,79 @@ li ol, li ul, p ol, p ul { margin: 1rem 0; padding: 0; }
 
 blockquote {
 	background-color: $cinza-3;
-	padding: 1.6rem 0;
-	border-left: 4px solid $cinza-2;
-	border-radius: 0 2px 2px 0;
+	padding: 2rem;
+	border-radius: 2px;
 	box-shadow: 0 2px 2px $sombra-4;
+	max-width: calc(700px - 4rem);
+	position: relative;
+	margin: 2rem auto;
+
+	&::before {
+		content: '“';
+		display: inline-block;
+		position: absolute;
+		top: -8px;
+		left: calc(2rem - 4px);
+		font-family: $serifada;
+		font-size: 200%;
+		line-height: 10px;
+		padding-top: 18px;
+		width: 28px;
+		text-align: center;
+		border-radius: 20px;
+		background-color: $cinza-1;
+		color: #FFF;
+	}
+
+	@media (max-width: 600px) {
+		max-width: calc(100% - 2rem);
+		padding: 1.6rem 1rem 1rem 1rem !important;
+		&::before { left: calc(1rem - 4px); }
+	}
+
+	p { padding: 0 }
+
+	p.fonte {
+		font-family: $grotesca;
+		font-size: small;
+		color: $cinza-1;
+		margin: 1rem 0 0 0;
+	}
 
 	&.leg {
-		background-color: transparent;
+		background-color: #FFF;
 		border: 1px solid $sombra-4;
 		border-radius: 2px;
 		margin: 4rem auto;
 
+		&::before { display: none; }
+
 		p {
 			text-indent: 2rem;
+			margin: 0;
 			max-width: unset;
 			&:last-child { margin-bottom: 0; }
+		}
+
+		p.numero {
+			margin: 0 0 2rem 0;
+			font-weight: bold;
+			text-indent: 0;
+			font-family: $grotesca;
 		}
 
 		p.caput {
 			font-family: $grotesca;
 			font-size: small;
 			color: $cinza-1;
-			margin: 0 0 1rem 0;
+			margin: 0 0 2rem 0;
 			text-indent: 0;
 			max-width: 400px;
+		}
+
+		p.fonte {
+			margin: 2rem 0 0 0;
+			text-indent: 0;
 		}
 
 		@media (max-width: 600px) {

@@ -78,7 +78,7 @@ export default {
 	methods: {
 		checaContribuicoes (n) { return parseInt(n) > 0 },
 		imgset (nomeStr) {
-			let nome = this.basePathImgSrc + 'testes/' + nomeStr.slice(0, nomeStr.lastIndexOf('.'))
+			let nome = this.basePathImgSrc + nomeStr.slice(0, nomeStr.lastIndexOf('.'))
 			// let nome = '../../public/img/testes/' + nomeStr.slice(0, nomeStr.lastIndexOf('.'))
 			let ext = nomeStr.slice(nomeStr.lastIndexOf('.') + 1, nomeStr.lenght)
 			let declare =

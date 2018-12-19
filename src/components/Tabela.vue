@@ -11,18 +11,13 @@
 				<tr v-for="linha in dados.linhas">
 					<template v-for="celula in linha">
 						<td :data-coluna="dados.colunas[col(celula, linha)].titulo">
-							<span>{{ celula[0].data }}<sup v-if="celula[1]">{{ celula[1].ref }}</sup></span>
+							<span>{{ celula[0].data }}<sup v-if="celula[1]">{{ numeroRef(celula) }}</sup></span>
 						</td>
 					</template>
 				</tr>
 			</tbody>
 		</table>
-		<div class="notas" v-if="dados.notas">
-			<h1>Notas</h1>
-			<ol>
-				<li v-for="nota in dados.notas">{{ nota.nota }}</li>
-			</ol>
-		</div>
+		<div class="notas"></div>
 		<div class="fonte" v-if="dados.fonte">
 			Fonte <b>{{ dados.fonte }}</b>
 		</div>
@@ -77,8 +72,37 @@ export default {
 			tabelaListrada: Boolean
 		}
 	},
+	updated () {
+		// this.montaNotas()
+		let notasCounter = 1
+	},
 	methods: {
-		col (elem, group) { return group.indexOf(elem) }
+		col (elem, group) { return group.indexOf(elem) },
+		numeroRef (celula) {
+			let app = this
+			// console.log(celula[1].ref)
+			// console.log(celula)
+		},
+		montaNotas () {
+			let app = this
+			let i = 1
+			let notas = []
+			let dados = app.$props
+			this.dados.linhas.map(function(linha) {
+				linha.map(function(celula) {
+					celula.map(function(conteudo) {
+						if (conteudo.ref) {
+							notas.push({
+								'num': i,
+								'nota': conteudo.ref
+							})
+							i++
+						}
+					})
+				})
+			})
+			// console.log(notas)
+		}
 	}
 }
 </script>

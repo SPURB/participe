@@ -47,7 +47,7 @@ div.Indice {
 			display: block;
 			margin: 0 0 4px 0;
 			padding-left: calc(2rem - 8px);
-			color: #333;
+			color: $preto;
 			max-width: 200px;
 			overflow: hidden;
 			white-space: nowrap;
@@ -58,7 +58,7 @@ div.Indice {
 			font-size: small;
 
 			&:active, &.ativo {
-				border-left-color: #333;
+				border-left-color: $preto;
 				font-weight: 700;
 			};
 
@@ -83,7 +83,7 @@ div.Indice {
 		background: #FFF;
 		border-radius: 100%;
 		border: 1px solid $cinza-2;
-		box-shadow: 0 4px 4px rgba(0, 0, 0, .12);
+		box-shadow: 0 4px 4px $sombra-4;
 		transition: all .1s;
 		display: block;
 		font-family: inherit;
@@ -119,7 +119,7 @@ div.Indice {
 			opacity: 0;
 			transition: all ease-in .1s;
 			font-size: 14px;
-			color: #333;
+			color: $preto;
 		};
 
 		@media (max-width: 1200px) {

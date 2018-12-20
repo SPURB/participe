@@ -24,7 +24,7 @@
 			<h2 class="titulo" indent="1">A finalidade do PIU Anhembi</h2>
 			<p>Em 2015 a SPTuris realizou chamamento público (DPR 01/2015) para os interessados em realizar estudos técnicos de modelagem de projeto e estudos de viabilidade para a revitalização, modernização e gestão do complexo do Anhembi, englobando somente a quadra 284, do setor fiscal 073.</p>
 			<p>O chamamento já considerava que o complexo apresenta necessidade de atualização e reformulação, visto que desde a sua inauguração, na década de 1970, não recebeu reformas estruturais significativas, resultando em processo de obsolescência da infraestrutura e precariedade de suas instalações. A atualização, portanto, visava tanto manter a liderança em exposições e convenções na cidade, quanto atender as demandas do atual mercado de eventos, equiparando o Anhembi com modernos equipamentos internacionais em termos de conforto ao usuário, flexibilidade, modularidade e tecnologia.</p>
-			<p>A intenção de atualização e renovação deste território traz a oportunidade de desenvolvimento de projetos associados às atividades expositivas e culturais existentes, incentivando a vocação de feiras, eventos e negócios da região, considerando o mark da Lei 16.886/2018, por meio da implantação de novas atividades econômicas, revertendo a subutilização de grande parte das áreas públicas ali existentes.</p>
+			<p>A intenção de atualização e renovação deste território traz a oportunidade de desenvolvimento de projetos associados às atividades expositivas e culturais existentes, incentivando a vocação de feiras, eventos e negócios da região, considerando o Artigo 3º da Lei 16.886/2018, por meio da implantação de novas atividades econômicas, revertendo a subutilização de grande parte das áreas públicas ali existentes.</p>
 
 			<!-- <blockquote>
 				<p>O chamamento já considerava que o complexo apresenta necessidade de atualização e reformulação, visto que desde a sua inauguração, na década de 1970, não recebeu reformas estruturais significativas, resultando em processo de obsolescência da infraestrutura e precariedade de suas instalações. A atualização, portanto, visava tanto manter a liderança em exposições e convenções na cidade, quanto atender as demandas do atual mercado de eventos, equiparando o Anhembi com modernos equipamentos internacionais em termos de conforto ao usuário, flexibilidade, modularidade e tecnologia.</p>
@@ -1008,16 +1008,16 @@ export default {
 				],
 				linhas: [
 					[
-						[ { data: '1' } ],
-						[ { data: 'Baixa disponibilidade do serviço por localidade (item 10.5).' }, { ref: 'Primeira nota' } ],
-						[ { data: 'Por ocorrência' }, { ref: 'Segunda nota' } ],
-						[ { data: 'Consultar TABELA 2a' } ]
+						[ { data: '1' }, { ref: 'Aplicam-se a legislação pertinente e as normas técnicas brasileiras – ABNT em vigor.' } ],
+						[ { data: 'Baixa disponibilidade do serviço por localidade (item 10.5).' }, { ref: 'Aplicam-se a legislação pertinente e as normas técnicas em vigor, sendo que o Executivo poderá estabelecer parâmetros mais restritivos de radiação eletromagnética não ionizante.' } ],
+						[ { data: 'Por ocorrência' }, { ref: 'No caso dos aeroportos aplica-se o nível de ruído conforme norma técnica específica.' } ],
+						[ { data: 'Consultar TABELA 2a' }, { ref: 'Poderão incidir parâmetros especiais e mais restritivos nos termos §2º do artigo 113 desta lei.' } ]
 					],
 					[
-						[ { data: '2' } ],
+						[ { data: '2' }, { ref: 'Aplicam-se a legislação pertinente e as normas técnicas brasileiras – ABNT em vigor.' } ],
 						[ { data: 'Baixo índice de desempenho de internet (“IS”) por localidade (item 10.6.2.2).' } ],
-						[ { data: 'Por ocorrência' }, { ref: 'Segunda nota' } ],
-						[ { data: 'Consultar TABELA 2b' }, { ref: 'Terceira nota' } ]
+						[ { data: 'Por ocorrência' }, { ref: 'Quando necessário a CETESB recomenda instalar e operar sistema de controle de poluição do ar baseado na melhor tecnologia.' } ],
+						[ { data: 'Consultar TABELA 2b' }, { ref: 'Para atividade de local de culto, nos feriados, sábados a partir das 14h e nos domingos, os parâmetros relativos a ruídos referentes ao período das 7h às 19h passam a valer também para os períodos das 6h às 7h e das 19h às 22h, permanecendo inalterados os parâmetros referentes ao período das 7h às 19h e das 22h às 7h.' } ]
 					]
 				],
 				fonte: 'SPUrbanismo, 2018',

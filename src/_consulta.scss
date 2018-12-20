@@ -604,3 +604,26 @@ figure {
 .ai2html {
 	margin: 4rem 0;
 };
+
+// ARRUMAR DEPOIS
+div.VidaSegura {
+	* {
+		figure > table + figcaption, table + figcaption {
+			max-width: calc(700px - 4rem);
+			padding: 0 0 8px 0;
+			@media (max-width: 600px) {
+				max-width: calc(100% - 2rem);
+			}
+			margin: -1rem auto 2rem auto;
+			font-size: small;
+			color: $preto;
+			border-bottom: 1px solid $cinza-2;
+		}
+	}
+	section u, section strong {
+		display: block;
+		max-width: 700px;
+		padding: 0 2rem;
+		margin: 0 auto;
+	}
+}

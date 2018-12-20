@@ -11,13 +11,20 @@
 				<tr v-for="linha in dados.linhas">
 					<template v-for="celula in linha">
 						<td :data-coluna="dados.colunas[col(celula, linha)].titulo">
-							<span>{{ celula[0].data }}<sup v-if="celula[1]">{{ numeroRef(celula) }}</sup></span>
+							<span>{{ celula[0].data }}<sup class="nota" v-if="celula[1]">{{ numeraNotas(celula[1].ref) }}</sup></span>
 						</td>
 					</template>
 				</tr>
 			</tbody>
 		</table>
-		<div class="notas"></div>
+		<div class="notas">
+			<h1>Notas</h1>
+			<ul>
+				<li v-for="nota in notas">
+					<span>{{ nota.num }}.</span> {{ nota.nota }}
+				</li>
+			</ul>
+		</div>
 		<div class="fonte" v-if="dados.fonte">
 			Fonte <b>{{ dados.fonte }}</b>
 		</div>
@@ -27,6 +34,11 @@
 <script>
 export default {
 	name: 'Tabela',
+	data () {
+		return {
+			notas: []
+		}
+	},
 	computed: {},
 	props: {
 		dados: {
@@ -72,36 +84,43 @@ export default {
 			tabelaListrada: Boolean
 		}
 	},
-	updated () {
-		// this.montaNotas()
-		let notasCounter = 1
+	created () {
+		this.montaNotas()
 	},
 	methods: {
 		col (elem, group) { return group.indexOf(elem) },
-		numeroRef (celula) {
-			let app = this
-			// console.log(celula[1].ref)
-			// console.log(celula)
-		},
 		montaNotas () {
 			let app = this
+			let notasB = []
 			let i = 1
-			let notas = []
 			let dados = app.$props
-			this.dados.linhas.map(function(linha) {
+			this.dados.linhas.map(function (linha) {
 				linha.map(function(celula) {
-					celula.map(function(conteudo) {
+					celula.map(function (conteudo) {
 						if (conteudo.ref) {
-							notas.push({
-								'num': i,
-								'nota': conteudo.ref
-							})
-							i++
+							notasB.push(conteudo.ref)
 						}
 					})
 				})
 			})
-			// console.log(notas)
+			let notasC = Array.from(new Set(notasB))
+			notasC.map(function (index) {
+				app.notas.push({
+					num: i,
+					nota: index
+				})
+				i++
+			})
+		},
+		numeraNotas (conteudo) {
+			let app = this
+			let n
+			app.notas.map(function (index) {
+				if (conteudo == index.nota) {
+					n = index.num
+				}
+			})
+			return n
 		}
 	}
 }
@@ -144,9 +163,11 @@ div.Tabela {
 			padding: 4px 8px !important;
 			font-size: smaller;
 			color: $preto;
+			position: relative;
 
-			sup {
-				color: $sombra-2;
+			sup.nota {
+				color: $cinza-1;
+				font-weight: bold;
 				margin: 0 0 0 2px;
 				vertical-align: 4px;
 			}
@@ -181,12 +202,13 @@ div.Tabela {
 
 			tbody tr {
 				display: block;
-				margin: 4px 0;
+				margin: 12px 0 0 0;
 				border: 1px solid $cinza-2;
 				border-radius: 2px;
 				padding: 4px 8px;
-				width: calc(100vw - 2rem);
+				width: 100%;
 				background-color: #FFF;
+				&:first-child { margin-top: 0; }
 
 				& > td {
 					display: flex;
@@ -216,20 +238,25 @@ div.Tabela {
 			font-size: inherit;
 			margin: 0;
 		}
-		ol {
-			list-style-type: lower-alpha;
+		ul {
+			list-style-type: none;
 			margin: .4rem 0 0 0;
 			padding: 0;
 			columns: 160px;
 			column-gap: 2rem;
 
 			li {
-				margin: 0 0 8px 1rem;
+				margin: 0 0 8px 0;
 				font-size: small;
 				font-family: $grotesca;
 				break-inside: avoid;
 				page-break-inside: avoid;
 				&:last-child { margin-bottom: 0; }
+
+				span {
+					color: $cinza-1;
+					font-weight: bold;
+				}
 			};
 		};
 	}

@@ -9,6 +9,7 @@
 	<router-view name="WifiLivreSP"></router-view>
 	<router-view name="DigilabLivreSP"></router-view>
 	<router-view name="VidaSegura"></router-view>
+	<router-view name="VilaLeopoldina2"></router-view>
 	<router-view name="Login"></router-view>
 	<router-view name="Admin"></router-view>
 

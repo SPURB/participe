@@ -1,13 +1,12 @@
 <template>
 	<div class="PageTop" :style="style">
-		<div v-show="esta_consulta.nomePublico">
-			<h1>{{ esta_consulta.nomePublico }}</h1>
+		<div>
+			<h1><slot name="titulo"></slot></h1>
 			<slot name="subtitulo"></slot>
-			<div>
-				<!-- <a href="#contribuicoes" @click="scrollToallComments"><i class="material-icons">chat</i> {{ esta_consulta.nContribuicoes }} contribuições</a> -->
+			<div v-show="esta_consulta.nContribuicoes">
 				<i class="icon-comentario icon"><span>chat</span></i> {{ esta_consulta.nContribuicoes }} contribuições
 			</div>
-			<div id="statusConsulta" :class="consultaState(esta_consulta.ativo)"></div>
+			<div v-show="esta_consulta.ativo" id="statusConsulta" :class="consultaState(esta_consulta.ativo)"></div>
 		</div>
 		<div class="setaBaixo" @click="setaBaixo"><i class="icon-expandir icon"><span>keyboard_arrow_down</span></i></div>
 	</div>
@@ -28,7 +27,8 @@ export default{
 	computed: {
 		style () {
 			return 'background-image: url(' + this.$store.getters.basePath + this.background_image_src + '); background-color: #ed8934;'
-		}
+		},
+		rota () { return this.$route.name }
 	},
 	methods: {
 		setaBaixo () {

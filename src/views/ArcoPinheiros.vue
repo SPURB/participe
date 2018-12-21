@@ -1,6 +1,7 @@
 <template>
 	<div class="ArcoPinheiros" ref="conteudoConsulta">
 		<PageTop background_image_src="arquivos/capas/arco-pinheiros_dt.jpg" :esta_consulta="estaConsulta">
+			<template slot="titulo"><div>PIU Arco Pinheiros</div></template>
 			<template slot="subtitulo"><div>1ª consulta pública – Projeto de Intervenção Urbana Arco Pinheiros</div></template>
 		</PageTop>
 

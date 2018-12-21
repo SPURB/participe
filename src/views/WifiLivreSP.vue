@@ -1,6 +1,7 @@
 <template>
 	<div class="WifiLivreSP" ref="conteudoConsulta">
 		<PageTop background_image_src="arquivos/capas/wifi-livre-sp_dt.jpg" :esta_consulta="estaConsulta">
+			<template slot="titulo"><div>WiFi Livre SP</div></template>
 			<template slot="subtitulo">
 				<div>{{ estaConsulta.textoIntro }}</div>
 			</template>
@@ -13,8 +14,8 @@
 				<label for="item1">Anexos</label>
 				<div class="conteudoTab">
 					<ul style="list-style-type: square; color: #DDD;">
-						<li v-for="anexo in anexos">
-							<a :href="fileSrc(anexo)">{{ anexo }}</a>
+						<li v-for="(anexo, index) in anexos">
+							<a :href="fileSrc(anexo)" :key="index">{{ anexo }}</a>
 						</li>
 					</ul>
 				</div>

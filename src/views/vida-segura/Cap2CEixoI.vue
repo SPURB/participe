@@ -20,14 +20,14 @@
 		<h5>b.	Estruturas estaduais:</h5>
 
 		<h6>i.	Comando de Policiamento de Trânsito da Polícia Militar de São Paulo (CPTran): </h6>
-			
+
 		<p>Nos termos da Lei Estadual nº 616/1974, a Polícia Militar do Estado de São Paulo  destina-se à manutenção da ordem pública na área do Estado. A ela compete executar, com exclusividade, o policiamento ostensivo fardado, a fim de assegurar o cumprimento da lei, a manutenção da ordem e o exercício dos poderes constituídos. Dentre suas atividades, encontram-se o policiamento no trânsito e o policiamento nas estradas estaduais e municipais. Pelo Decreto Estadual nº 62.103/2016, o Comando de Policiamento de Trânsito (CPTran) é responsável pelas missões de polícia de trânsito urbano na capital, bem como pela fixação e difusão de doutrina nas questões afetas às atividades de polícia de trânsito urbano.</p>
 
 		<h6>ii.	Corpo de Bombeiros da Polícia Militar de São Paulo:</h6>
 
 		<p>O Corpo de Bombeiros do Estado de São Paulo pertence à estrutura da Polícia Militar, sendo o órgão responsável pelo planejamento, comando, execução, coordenação, fiscalização e controle de todas as atividades de prevenção, extinção de incêndios e de buscas e salvamentos.</p>
 
-		<h6>iii.	Departamento de Estradas de Rodagem do Estado de São Paulo (DER):</h6>  
+		<h6>iii.	Departamento de Estradas de Rodagem do Estado de São Paulo (DER):</h6>
 
 		<p>O DER é responsável principalmente pela organização e revisão periódica do plano geral de viação rodoviária do Estado; bem como por todos os serviços técnicos e administrativos concernentes a especificações, estudos, projetos, orçamentos, locação, construção, reconstrução, conservação, melhoramentos e fiscalização técnica das estradas de rodagem do Estado, inclusive pontes e demais obras de artes que delas forem partes integrantes. No município de São Paulo, o DER é responsável pela gestão da Rodovia Raposo Tavares.</p>
 
@@ -44,15 +44,15 @@
 		<p>A STM, criada pela Lei Estadual nº 7.450 de 1991, é responsável pela execução da política estadual de transportes urbanos de passageiros para as regiões metropolitanas, o que inclui a Região Metropolitana da Cidade de São Paulo (RMSP), abrangendo os sistemas metroviário, ferroviário, de ônibus e trólebus, e demais divisões modais de interesse metropolitano.</p>
 
 		<h6>vii.	Empresa Metropolitana de Transportes Urbanos de São Paulo (EMTU)</h6>
-			
+
 		<p>A EMTU, vinculada à STM, fiscaliza e regulamenta o transporte metropolitano de baixa e média capacidades (transporte sobre pneus) em todas as Regiões Metropolitanas do Estado, o que inclui a RMSP, com seus 39 municípios. Em 2017, a EMTU transportou, apenas na RMSP, mais de 500 milhões de passageiros em uma frota de aproximadamente 4.500 veículos.</p>
 
 		<h6>viii.	Companhia do Metropolitano de São Paulo (METRÔ)</h6>
-		
+
 		<p>O METRÔ é responsável por contratar, coordenar e superintender os estudos e projetos e promover as medidas necessárias para a implantação de um sistema de transporte rápido de passageiros na cidade de São Paulo. De acordo com dados de abril de 2018, a rede metroviária de São Paulo conta com quase 90 km de extensão de rede e 79 estações, transportando mais de 1 bilhão de passageiros por ano, sendo que novas linhas e estações estão previstas para os próximos anos.</p>
 
 		<h6>ix.	Companhia Paulista de Trens Metropolitanos (CPTM)</h6>
-			
+
 		<p>A CPTM teve sua criação autorizada na Lei Estadual nº 7.861/1992, sob a forma de sociedade de economia mista, com o fim especial de explorar os serviços de transporte de passageiros sobre trilhos ou guiados nas entidades regionais do Estado de São Paulo, compreendendo as regiões metropolitanas, aglomerações urbanas e microrregiões. A CPTM transporta mais de 800 milhões de passageiros ao ano, possui extensão de rede ferroviária de 273 km e 94 estações, sendo que recentemente passou a ofertar transporte inclusive para o Aeroporto Internacional de São Paulo, em Guarulhos.</p>
 
 		<h6>x.	Desenvolvimento Rodoviário (DERSA)</h6>
@@ -82,7 +82,7 @@
 		<p>A CET teve sua criação autorizada pela Lei Municipal nº 8.394/1976 como sociedade de economia mista vinculada à SMT. A companhia tem por objetivo planejar e implantar, nas vias e logradouros do município, a operação do sistema viário, com o objetivo de assegurar a segurança, garantindo também a fluidez do trânsito e do tráfego.</p>
 
 		<h6>vi.	São Paulo Transporte (SPTrans)</h6>
-			
+
 		<p>A SPTrans, criada em 1995 após o processo de privatização da Companhia Municipal de Transportes Coletivos (CMTC), é uma sociedade de economia mista vinculada à SMT. Suas funções primordiais são elaborar estudos para o planejamento e o aperfeiçoamento dos serviços compreendidos no Sistema de Transporte Coletivo Urbano de Passageiros de São Paulo (STCUP); gerenciar e fiscalizar a execução dos serviços prestados pelas empresas contratadas, concessionárias ou permissionárias, relativos ao STCUP; e promover as licitações, bem como assinar contratos, outorgar permissões e autorizações referentes aos serviços do STCUP, exercendo seu controle e fiscalização.</p>
 		<h6>vii.	Coordenadoria de Vigilância em Saúde (COVISA)</h6>
 
@@ -94,7 +94,7 @@
 		<p>O SAMU, também pertencente à Secretaria Municipal de Saúde, tem como atribuições executar a atenção médico pré-hospitalar de urgência e estabelecer protocolos para o funcionamento das bases descentralizadas regionais.</p>
 
 		<h6>ix.	Secretaria Municipal de Urbanismo e Licenciamento (SMUL)</h6>
-			
+
 		<p>A Secretaria Municipal de Urbanismo e Licenciamento (SMUL) foi organizada pelo Decreto Municipal nº 57.576/2017, mediante a  fusão das Secretarias de Desenvolvimento Urbano e de Licenciamento, tendo sido recentemente consolidada pela Lei municipal nº 16.974/2018. A SMUL tem por finalidade coordenar e conduzir ações governamentais voltadas ao planejamento e desenvolvimento urbano, formular e executar a política de licenciamento, bem como controlar o parcelamento urbano, uso e ocupação do solo e executar  atividades compatíveis e correlatas com a sua área de atuação.</p>
 
 		<h6>x.	São Paulo Urbanismo (SP Urbanismo)</h6>
@@ -102,15 +102,15 @@
 		<p>A criação da SP Urbanismo foi autorizada pela Lei Municipal nº 15.056/2009. A empresa pública tem como objetivo fundamental dar suporte e desenvolver as ações governamentais voltadas ao planejamento urbano e à promoção do desenvolvimento urbano do município, o que inclui a concepção, a estruturação e o acompanhamento da implementação de programas de intervenção físico-territoriais de desenvolvimento urbano; a proposição de normas e diretrizes para implementação de programas de reordenamento da paisagem urbana; a gestão das operações urbanas e o acompanhamento dos projetos básicos e executivos das obras e intervenções.</p>
 
 		<h6>xi.	Secretaria Municipal de Infraestrutura Urbana e Obras (SIURB)  </h6>
-		
+
 		<p>A SIURB tem por atribuições a fiscalização dos contratos para execução de projetos viários, sistemas de drenagem, pavimentação, geotecnia e geometria das vias; fiscalizar os contratos de obras de construção e recuperação da infraestrutura da cidade; projetar, programar, executar e fiscalizar a construção de edifícios públicos; examinar o planejamento de obras e serviços que venham a se desenvolver nas vias e logradouros públicos e executar obras de recuperação estrutural e construção de pontes e viadutos.</p>
 
 		<h6>xii.	São Paulo Obras (SP Obras)</h6>
-		
+
 		<p>A SP Obras é uma empresa pública, cuja autorização para criação foi dada pela Lei Municipal nº 15.056/2009. Tem por objetivo executar programas, projetos e obras com recursos advindos do orçamento municipal, dos financiamentos públicos e das operações urbanas. A SP Obras elabora também licitações para outros órgãos da Administração Municipal e executa obras definidas pela SIURB nas áreas de abrangência das Operações Urbanas. Por fim, destaca-se sua atribuição de gestão da concessão de mobiliário urbano, o que inclui a instalação de abrigos em pontos de ônibus e indicativos de parada de ônibus.</p>
 
 		<h6>xiii.	Secretaria Municipal de Segurança Urbana (SMSU) e Guarda Civil Metropolitana (GCM)</h6>
-						
+
 		<p>Por meio da Lei Municipal nº 13.396/2002, criou-se a SMSU, que tem como uma de suas atribuições estabelecer, em conjunto com a SMT, mediante convênio firmado com os órgãos de segurança estaduais, as diretrizes, o gerenciamento e as prioridades de policiamento, controle e fiscalização do trânsito, além de ser responsável também por planejar, fixar diretrizes, coordenar e executar a fiscalização e o policiamento de trânsito de competência do município. A GCM, subordinada à SMSU, é o principal órgão de execução da política municipal de segurança urbana.</p>
 
 		<h6>xiv.	Secretaria Municipal da Pessoa com Deficiência (SMPED)</h6>
@@ -123,9 +123,9 @@
 
 		<h6>xvi.	Secretaria Municipal de Educação (SME)</h6>
 
-			<p>A Secretaria Municipal de Educação (SME) tem por finalidade formular, coordenar, 
-				implementar e avaliar políticas e estratégias educacionais para o Sistema Municipal de Ensino; 
-				promover articulações com os conselhos e fundos relacionados e estabelecer normas e 
+			<p>A Secretaria Municipal de Educação (SME) tem por finalidade formular, coordenar,
+				implementar e avaliar políticas e estratégias educacionais para o Sistema Municipal de Ensino;
+				promover articulações com os conselhos e fundos relacionados e estabelecer normas e
 				diretrizes para a Rede Municipal de Ensino.</p>
 		<h4>2.	Comitê Permanente de Segurança Viária do Município de São Paulo (CPSV)</h4>
 
@@ -221,8 +221,6 @@
 		<p>O segundo é o Fundo de Desenvolvimento Urbano (FUNDURB), previsto no Plano Diretor Estratégico (PDE) do município e regulamento pelo Decreto 57.547/2016. Seus recursos devem ser aplicados em programas e projetos urbanísticos e ambientais integrantes ou decorrentes do PDE e tendo como referência o previsto no Programa de Metas do município. A lei cria seis prioridades na utilização dos recursos, sendo uma delas  os sistemas de transporte coletivo público, cicloviário e de circulação de pedestres. No mínimo 30% dos recursos do fundo devem ser aplicados nestes sistemas. Quanto às receitas, são três as principais: (i) as decorrentes de outorga onerosa e transferência de potencial construtivo; (ii) a contribuição de melhoria decorrente de obras públicas e (iii) as provenientes de concessão urbanística.</p>
 		<p>Por fim, o Fundo Especial de Meio Ambiente e Desenvolvimento Sustentável (FEMA) foi criado pela Lei Municipal nº 13.155/2001 com nova disciplina pela Lei  Municipal nº 14.887/2009, vinculado à Secretaria Municipal do Verde e do Meio Ambiente (SVMA). É regulamentado pelos Decretos 52.153/2001 e 52.388/2001. Seus principais recursos provêm de multas impostas por infrações à legislação ambiental, de Termos de Compromisso Ambiental (TCA), de Termos de Ajustamento de Conduta (TAC) e de receitas advindas de créditos de carbono. Já entre a destinação dos valores, encontra-se o apoio ao desenvolvimento de planos, programas e projetos de manutenção, melhoria e/ou recuperação da qualidade ambiental. Deste modo, o FEMA pode ser utilizado à infraestrutura cicloviária, com vistas à diminuição do uso de veículos automotores e da consequente redução de emissão de poluentes atmosféricos.</p>
 		<p>Para além dos fundos, existem outras fontes de recurso para as ações de segurança viária, com destaque às parcerias e doações pela iniciativa privada, em especial nas datas relacionadas ao tema, como durante o mês de maio, no Maio Amarelo, e na Semana da Mobilidade, em setembro. Também é possível destacar os valores oriundos de Operações Urbanas Consorciadas advindos da compra pelos particulares do direito de construir acima do coeficiente básico de construção de um lote. Vale ressaltar que esses recursos são atrelados ao território e aos projetos urbanos e melhoramentos viários propostos pela própria operação. Para melhoria da segurança viária, os investimentos devem ser prioritariamente voltados à infraestrutura de suporte à mobilidade ativa e transporte coletivo.</p>
-
-
 
 	</div>
 </template>

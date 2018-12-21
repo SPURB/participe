@@ -1,6 +1,7 @@
 <template>
 	<div class="VidaSegura" ref="conteudoConsulta">
 		<PageTop background_image_src="./arquivos/capas/vida-segura.jpg" :esta_consulta="estaConsulta">
+			<template slot="titulo"><div>Vida Segura, o Plano de Segurança Viária do Município de São Paulo</div></template>
 			<template slot="subtitulo">
 				<div>{{ estaConsulta.textoIntro }}</div>
 			</template>
@@ -13,8 +14,8 @@
 				<label for="item1">Anexos</label>
 				<div class="conteudoTab">
 					<ul style="list-style-type: square; color: #DDD;">
-						<li v-for="anexo in anexos">
-							<a :href="fileSrc(anexo)">{{ anexo }}</a>
+						<li v-for="(anexo, index) in anexos">
+							<a :href="fileSrc(anexo)" :key="index" >{{ anexo }}</a>
 						</li>
 					</ul>
 				</div>
@@ -45,7 +46,6 @@
 				<template v-for="imagem in imagens" :slot="imagem.slotName">
 					<figure>
 						<img :src="fileSrc(imagem.slotName+'.jpg')" :alt="imagem.figureTitle">
-						<!-- <img :src="'https://via.placeholder.com/603x484'" :alt="imagem.figureTitle"> -->
 						<figcaption>{{imagem.figureTitle}}</figcaption>
 					</figure>
 				</template>
@@ -69,7 +69,7 @@
 			<Comments :attr="{id:commentId(), context:'Capítulo 2B - Diagnóstico da cultura e comportamento em relação à segurança viária no Município de São Paulo'}"></Comments>
 		</section>
 		<section>
-			<h3 indent="2" class="titulo">Capítulo 2C - Diagnóstico por eixo</h3>			
+			<h3 indent="2" class="titulo">Capítulo 2C - Diagnóstico por eixo</h3>
 		</section>
 		<section>
 			<h4 indent="3" class="titulo">Eixo I - Articulação Institucional e Gestão</h4>
@@ -90,134 +90,134 @@
 			<Comments :attr="{id:commentId(), context:'Eixo I - Articulação Institucional e Gestão'}"></Comments>
 		</section>
 		<section>
-		 	<h4 indent="3" class="titulo">Eixo II - Planejamento Urbano, Desenho de Ruas e Engenharia</h4>
-		 	<Cap2CEixoII>
-		 		<template v-for="imagem in imagens" :slot="imagem.slotName">
-		 			<figure>
-		 				<img :src="fileSrc(imagem.slotName+'.jpg')" :alt="imagem.figureTitle">
-		 				<figcaption>{{imagem.figureTitle}}</figcaption>
-		 			</figure>
-		 		</template>
-		 		<template slot='tabela14'>
-		 			<figure>
-		 				<table class="headed-table"><tr><th>Acidentes na Av. Brigadeiro Luís Antônio</th><th>Antes da remoção (24/02/15 a 31/01/16)</th><th>Após a remoção (24/02/16 a 31/01/17)</th><th>Variação percentual (antes x depois)</th></tr><tr><td>Acidentes com feridos</td><td>12</td><td>4</td><td>-66,6%</td></tr><tr><td>Atropelamentos</td><td>16</td><td>2</td><td>-87,5%</td></tr><tr><td>Feridos</td><td>29</td><td>6</td><td>-79,3%</td></tr><tr><td>Mortos</td><td>2</td><td>0</td><td>-100%</td></tr></table>
-	 					<figcaption>Tabela 14 - número de acidentes, de vítimas e de atropelamentos na Av. Brigadeiro Luís Antônio antes e após remoção do contrafluxo.</figcaption>
-	 				</figure>
-		 		</template>
-		 		<!-- <template v-for="c in commentSlots" :slot='c'>
-		 			<Comments :attr="{id:commentId(), context:c}"></Comments>
-		 		</template> -->
-		 	</Cap2CEixoII>
-		 	<Comments :attr="{id:commentId(), context:'Eixo II - Planejamento Urbano, Desenho de Ruas e Engenharia'}"></Comments>
+			<h4 indent="3" class="titulo">Eixo II - Planejamento Urbano, Desenho de Ruas e Engenharia</h4>
+			<Cap2CEixoII>
+				<template v-for="imagem in imagens" :slot="imagem.slotName">
+					<figure>
+						<img :src="fileSrc(imagem.slotName+'.jpg')" :alt="imagem.figureTitle">
+						<figcaption>{{imagem.figureTitle}}</figcaption>
+					</figure>
+				</template>
+				<template slot='tabela14'>
+					<figure>
+						<table class="headed-table"><tr><th>Acidentes na Av. Brigadeiro Luís Antônio</th><th>Antes da remoção (24/02/15 a 31/01/16)</th><th>Após a remoção (24/02/16 a 31/01/17)</th><th>Variação percentual (antes x depois)</th></tr><tr><td>Acidentes com feridos</td><td>12</td><td>4</td><td>-66,6%</td></tr><tr><td>Atropelamentos</td><td>16</td><td>2</td><td>-87,5%</td></tr><tr><td>Feridos</td><td>29</td><td>6</td><td>-79,3%</td></tr><tr><td>Mortos</td><td>2</td><td>0</td><td>-100%</td></tr></table>
+						<figcaption>Tabela 14 - número de acidentes, de vítimas e de atropelamentos na Av. Brigadeiro Luís Antônio antes e após remoção do contrafluxo.</figcaption>
+					</figure>
+				</template>
+				<!-- <template v-for="c in commentSlots" :slot='c'>
+					<Comments :attr="{id:commentId(), context:c}"></Comments>
+				</template> -->
+			</Cap2CEixoII>
+			<Comments :attr="{id:commentId(), context:'Eixo II - Planejamento Urbano, Desenho de Ruas e Engenharia'}"></Comments>
 		</section>
 		<section>
-		 	<h4 indent="3" class="titulo">Eixo III - Melhoria das Opções de Mobilidade e Sustentabilidade</h4>
-		 	<Cap2CEixoIII>
-		 		<template v-for="imagem in imagens" :slot="imagem.slotName">
-		 			<figure>
-		 				<img :src="fileSrc(imagem.slotName+'.jpg')" :alt="imagem.figureTitle">
-		 				<figcaption>{{imagem.figureTitle}}</figcaption>
-		 			</figure>
-		 		</template>
-		 		<template slot='tabela15'>
-		 			<figure>
-		 				<table class="simple-table"><tr><td>Efetuar Transporte em modalidade não autorizada</td><td>127</td><td>23,60%</td></tr><tr><td>Veículo Clandestino / carro frio</td><td>99</td><td>18,40%</td></tr><tr><td>Direção Perigosa</td><td>75</td><td>13,90%</td></tr><tr><td>Superlotação pingentes</td><td>57</td><td>10,60%</td></tr><tr><td>Atitude desrespeitosa</td><td>47</td><td>8,70%</td></tr><tr><td>Rádio alto volume / buzina sonora</td><td>32</td><td>5,90%</td></tr><tr><td>Demais</td><td>101</td><td>18,77%</td></tr><tr><td>TOTAL</td><td>538</td><td> </td></tr></table>
-		 				<figcaption>Tabela 15 - Reclamações recebidas pelo DTP (2017) na modalidade Transporte Escolar</figcaption>
-		 			</figure>
-		 		</template>
-		 		<template slot='tabela16'>
-		 			<figure>
-		 				<table style="border-collapse:collapse;border-spacing:0" class="tg"><tr><th style="font-family:Arial, sans-serif;font-size:14px;font-weight:bold;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#c0c0c0;text-align:center;vertical-align:top">Faixa horária</th><th style="font-family:Arial, sans-serif;font-size:14px;font-weight:bold;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#c0c0c0;text-align:center;vertical-align:top">Número de acidentes fatais entre<br>  2015 e 2017</th><th style="font-family:Arial, sans-serif;font-size:14px;font-weight:bold;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#c0c0c0;text-align:center;vertical-align:top">Percentual em relação ao total<br>  de acidentes fatais</th></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">0h-1h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f56b00;text-align:center;vertical-align:top">12</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f56b00;text-align:center;vertical-align:top">5,41%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">1h-2h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffce93;text-align:center;vertical-align:top">5</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffce93;text-align:center;vertical-align:top">2,25%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">2h-3h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffce93;text-align:center;vertical-align:top">5</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffce93;text-align:center;vertical-align:top">2,25%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">3h-4h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffc702;text-align:center;vertical-align:top">7</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffc702;text-align:center;vertical-align:top">3,15%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">4h-5h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#fffc9e;text-align:center;vertical-align:top">4</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#fffc9e;text-align:center;vertical-align:top">1,80%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">5h-6h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#fffc9e;text-align:center;vertical-align:top">4</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#fffc9e;text-align:center;vertical-align:top">1,80%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">6h-7h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffc702;text-align:center;vertical-align:top">8</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffc702;text-align:center;vertical-align:top">3,60%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">7h-8h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffc702;text-align:center;vertical-align:top">8</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffc702;text-align:center;vertical-align:top">3,60%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">8h-9h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f8a102;text-align:center;vertical-align:top">10</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f8a102;text-align:center;vertical-align:top">4,50%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">9h-10h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f56b00;text-align:center;vertical-align:top">12</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f56b00;text-align:center;vertical-align:top">5,41%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">10h-11h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ce6301;text-align:center;vertical-align:top">14</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ce6301;text-align:center;vertical-align:top">6,31%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">11h-12h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffc702;text-align:center;vertical-align:top">8</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffc702;text-align:center;vertical-align:top">3,60%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">12h-13h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f8a102;text-align:center;vertical-align:top">11</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f8a102;text-align:center;vertical-align:top">4,95%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">13h-14h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f8a102;text-align:center;vertical-align:top">10</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f8a102;text-align:center;vertical-align:top">4,50%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">14h-15h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ce6301;text-align:center;vertical-align:top">15</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ce6301;text-align:center;vertical-align:top">6,76%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">15h-16h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ce6301;text-align:center;vertical-align:top">14</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ce6301;text-align:center;vertical-align:top">6,31%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">16h-17h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ce6301;text-align:center;vertical-align:top">15</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ce6301;text-align:center;vertical-align:top">6,76%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">17h-18h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffc702;text-align:center;vertical-align:top">7</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffc702;text-align:center;vertical-align:top">3,15%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">18h-19h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f56b00;text-align:center;vertical-align:top">12</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f56b00;text-align:center;vertical-align:top">5,41%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">19h-20h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f8a102;text-align:center;vertical-align:top">9</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f8a102;text-align:center;vertical-align:top">4,05%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">20h-21h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f8a102;text-align:center;vertical-align:top">9</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f8a102;text-align:center;vertical-align:top">4,05%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">21h-22h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffc702;text-align:center;vertical-align:top">8</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffc702;text-align:center;vertical-align:top">3,60%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">22h-23h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffce93;text-align:center;vertical-align:top">6</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffce93;text-align:center;vertical-align:top">2,70%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">23h-0h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f8a102;text-align:center;vertical-align:top">9</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f8a102;text-align:center;vertical-align:top">4,05%</td></tr></table>
-		 				<figcaption>Tabela 16: ocorrências fatais com envolvimento de caminhões por faixa horária (2015-2017). Fonte: CET</figcaption>
-		 			</figure>
-		 		</template>
-		 		<template slot='tabela17'>
-		 			<figure>
-		 				<table class="simple-table"><tr><th>Atitude desrespeitosa</th><th>434</th><th>19,7%</th></tr><tr><td>Desrespeitar regulamento do ponto</td><td>316</td><td>14,4%</td></tr><tr><td>Não disponibilizar meio de pagamento eletrônico</td><td>242</td><td>11%</td></tr><tr><td>Angariar usuários a menos de 100 metros do ponto</td><td>203</td><td>9,2%</td></tr><tr><td>Direção Perigosa</td><td>184</td><td>8,4%</td></tr><tr><td>Recusa de passageiro</td><td>154</td><td>7%</td></tr><tr><td>Cobrança indevida</td><td>153</td><td>7%</td></tr><tr><td>Desrespeito ao público (agressão verbal)</td><td>85</td><td>3,9%</td></tr><tr><td>Demais</td><td>101</td><td>18,77%</td></tr><tr><td>TOTAL</td><td>2.198</td><td> </td></tr></table>
-		 				<figcaption>Tabela 17 - Reclamações recebidas pelo DTP (2017) na modalidade Taxi</figcaption>
-		 			</figure>
-		 		</template>
-		 	</Cap2CEixoIII>
-		 	<Comments :attr="{id:commentId(), context:'Eixo III - Melhoria das Opções de Mobilidade e Sustentabilidade'}"></Comments>
+			<h4 indent="3" class="titulo">Eixo III - Melhoria das Opções de Mobilidade e Sustentabilidade</h4>
+			<Cap2CEixoIII>
+				<template v-for="imagem in imagens" :slot="imagem.slotName">
+					<figure>
+						<img :src="fileSrc(imagem.slotName+'.jpg')" :alt="imagem.figureTitle">
+						<figcaption>{{imagem.figureTitle}}</figcaption>
+					</figure>
+				</template>
+				<template slot='tabela15'>
+					<figure>
+						<table class="simple-table"><tr><td>Efetuar Transporte em modalidade não autorizada</td><td>127</td><td>23,60%</td></tr><tr><td>Veículo Clandestino / carro frio</td><td>99</td><td>18,40%</td></tr><tr><td>Direção Perigosa</td><td>75</td><td>13,90%</td></tr><tr><td>Superlotação pingentes</td><td>57</td><td>10,60%</td></tr><tr><td>Atitude desrespeitosa</td><td>47</td><td>8,70%</td></tr><tr><td>Rádio alto volume / buzina sonora</td><td>32</td><td>5,90%</td></tr><tr><td>Demais</td><td>101</td><td>18,77%</td></tr><tr><td>TOTAL</td><td>538</td><td> </td></tr></table>
+						<figcaption>Tabela 15 - Reclamações recebidas pelo DTP (2017) na modalidade Transporte Escolar</figcaption>
+					</figure>
+				</template>
+				<template slot='tabela16'>
+					<figure>
+						<table style="border-collapse:collapse;border-spacing:0" class="tg"><tr><th style="font-family:Arial, sans-serif;font-size:14px;font-weight:bold;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#c0c0c0;text-align:center;vertical-align:top">Faixa horária</th><th style="font-family:Arial, sans-serif;font-size:14px;font-weight:bold;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#c0c0c0;text-align:center;vertical-align:top">Número de acidentes fatais entre<br>  2015 e 2017</th><th style="font-family:Arial, sans-serif;font-size:14px;font-weight:bold;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#c0c0c0;text-align:center;vertical-align:top">Percentual em relação ao total<br>  de acidentes fatais</th></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">0h-1h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f56b00;text-align:center;vertical-align:top">12</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f56b00;text-align:center;vertical-align:top">5,41%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">1h-2h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffce93;text-align:center;vertical-align:top">5</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffce93;text-align:center;vertical-align:top">2,25%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">2h-3h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffce93;text-align:center;vertical-align:top">5</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffce93;text-align:center;vertical-align:top">2,25%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">3h-4h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffc702;text-align:center;vertical-align:top">7</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffc702;text-align:center;vertical-align:top">3,15%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">4h-5h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#fffc9e;text-align:center;vertical-align:top">4</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#fffc9e;text-align:center;vertical-align:top">1,80%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">5h-6h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#fffc9e;text-align:center;vertical-align:top">4</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#fffc9e;text-align:center;vertical-align:top">1,80%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">6h-7h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffc702;text-align:center;vertical-align:top">8</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffc702;text-align:center;vertical-align:top">3,60%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">7h-8h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffc702;text-align:center;vertical-align:top">8</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffc702;text-align:center;vertical-align:top">3,60%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">8h-9h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f8a102;text-align:center;vertical-align:top">10</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f8a102;text-align:center;vertical-align:top">4,50%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">9h-10h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f56b00;text-align:center;vertical-align:top">12</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f56b00;text-align:center;vertical-align:top">5,41%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">10h-11h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ce6301;text-align:center;vertical-align:top">14</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ce6301;text-align:center;vertical-align:top">6,31%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">11h-12h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffc702;text-align:center;vertical-align:top">8</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffc702;text-align:center;vertical-align:top">3,60%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">12h-13h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f8a102;text-align:center;vertical-align:top">11</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f8a102;text-align:center;vertical-align:top">4,95%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">13h-14h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f8a102;text-align:center;vertical-align:top">10</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f8a102;text-align:center;vertical-align:top">4,50%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">14h-15h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ce6301;text-align:center;vertical-align:top">15</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ce6301;text-align:center;vertical-align:top">6,76%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">15h-16h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ce6301;text-align:center;vertical-align:top">14</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ce6301;text-align:center;vertical-align:top">6,31%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">16h-17h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ce6301;text-align:center;vertical-align:top">15</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ce6301;text-align:center;vertical-align:top">6,76%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">17h-18h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffc702;text-align:center;vertical-align:top">7</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffc702;text-align:center;vertical-align:top">3,15%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">18h-19h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f56b00;text-align:center;vertical-align:top">12</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f56b00;text-align:center;vertical-align:top">5,41%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">19h-20h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f8a102;text-align:center;vertical-align:top">9</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f8a102;text-align:center;vertical-align:top">4,05%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">20h-21h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f8a102;text-align:center;vertical-align:top">9</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f8a102;text-align:center;vertical-align:top">4,05%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">21h-22h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffc702;text-align:center;vertical-align:top">8</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffc702;text-align:center;vertical-align:top">3,60%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">22h-23h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffce93;text-align:center;vertical-align:top">6</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#ffce93;text-align:center;vertical-align:top">2,70%</td></tr><tr><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;font-weight:bold;background-color:#ffffff;text-align:center;vertical-align:top">23h-0h</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f8a102;text-align:center;vertical-align:top">9</td><td style="font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;background-color:#f8a102;text-align:center;vertical-align:top">4,05%</td></tr></table>
+						<figcaption>Tabela 16: ocorrências fatais com envolvimento de caminhões por faixa horária (2015-2017). Fonte: CET</figcaption>
+					</figure>
+				</template>
+				<template slot='tabela17'>
+					<figure>
+						<table class="simple-table"><tr><th>Atitude desrespeitosa</th><th>434</th><th>19,7%</th></tr><tr><td>Desrespeitar regulamento do ponto</td><td>316</td><td>14,4%</td></tr><tr><td>Não disponibilizar meio de pagamento eletrônico</td><td>242</td><td>11%</td></tr><tr><td>Angariar usuários a menos de 100 metros do ponto</td><td>203</td><td>9,2%</td></tr><tr><td>Direção Perigosa</td><td>184</td><td>8,4%</td></tr><tr><td>Recusa de passageiro</td><td>154</td><td>7%</td></tr><tr><td>Cobrança indevida</td><td>153</td><td>7%</td></tr><tr><td>Desrespeito ao público (agressão verbal)</td><td>85</td><td>3,9%</td></tr><tr><td>Demais</td><td>101</td><td>18,77%</td></tr><tr><td>TOTAL</td><td>2.198</td><td> </td></tr></table>
+						<figcaption>Tabela 17 - Reclamações recebidas pelo DTP (2017) na modalidade Taxi</figcaption>
+					</figure>
+				</template>
+			</Cap2CEixoIII>
+			<Comments :attr="{id:commentId(), context:'Eixo III - Melhoria das Opções de Mobilidade e Sustentabilidade'}"></Comments>
 		</section>
 		<section>
-		 	<h4 indent="3" class="titulo">Eixo IV – Legislação, Fiscalização e Velocidades</h4>
-		 	<Cap2CEixoIV>
-		 		<template v-for="imagem in imagens" :slot="imagem.slotName">
-		 			<figure>
-		 				<img :src="fileSrc(imagem.slotName+'.jpg')" :alt="imagem.figureTitle">
-		 				<figcaption>{{imagem.figureTitle}}</figcaption>
-		 			</figure>
-		 		</template>
-		 		<template slot='tabela20'>
-		 			<figure>
-		 				<table class="headed-table"><tr><th>Classe das Vias</th><th>Característica Funcional</th><th>Característica Operacional</th><th>Característica Física</th></tr><tr><td>VTR – Via de Trânsito Rápido (Aprox. 58 km no total)</td><td>Vias ou trecho de vias sem cruzamento em nível.</td><td>Estruturar o viário principal servindo de conexão entre Rodovias, e as Regiões Norte e Sul e Leste e Oeste.</td><td>Vias com pelo menos uma pista por sentido.</td></tr><tr><td>Via Arterial (Aprox. 1350 km no total)</td><td>Caracterizada por interseções em nível.</td><td>Estrutura o viário principal servindo de conexão entre Rodovias e as Regiões Norte, Sul, Leste e Oeste, e geralmente controlada por semáforo.</td><td>Com acessibilidade aos lotes lindeiros e às vias secundárias e locais, possibilitando o trânsito entre as regiões da cidade.</td></tr><tr><td>Via Coletora (Aprox. 5200 km no total)</td><td>Coletar e distribuir o trânsito.</td><td>Necessidade de entrar ou sair das vias de trânsito rápido ou arteriais, possibilitando o trânsito dentro das regiões da cidade.</td><td>Pista simples.</td></tr><tr><td>Via Local (Aprox. 10.400 km no total)</td><td>Função predominante de proporcionar o acesso aos imóveis lindeiros.</td><td>Destinada apenas ao acesso local ou a áreas restritas.</td><td>Pista simples.</td></tr></table>
-		 				<figcaption>Tabela 20: Classificação de vias, conforme as características urbanas.</figcaption>
-		 			</figure>
-		 		</template>
-		 	</Cap2CEixoIV>		 	
-		 	<Comments :attr="{id:commentId(), context:'Eixo IV – Legislação, Fiscalização e Velocidades'}"></Comments>
+			<h4 indent="3" class="titulo">Eixo IV – Legislação, Fiscalização e Velocidades</h4>
+			<Cap2CEixoIV>
+				<template v-for="imagem in imagens" :slot="imagem.slotName">
+					<figure>
+						<img :src="fileSrc(imagem.slotName+'.jpg')" :alt="imagem.figureTitle">
+						<figcaption>{{imagem.figureTitle}}</figcaption>
+					</figure>
+				</template>
+				<template slot='tabela20'>
+					<figure>
+						<table class="headed-table"><tr><th>Classe das Vias</th><th>Característica Funcional</th><th>Característica Operacional</th><th>Característica Física</th></tr><tr><td>VTR – Via de Trânsito Rápido (Aprox. 58 km no total)</td><td>Vias ou trecho de vias sem cruzamento em nível.</td><td>Estruturar o viário principal servindo de conexão entre Rodovias, e as Regiões Norte e Sul e Leste e Oeste.</td><td>Vias com pelo menos uma pista por sentido.</td></tr><tr><td>Via Arterial (Aprox. 1350 km no total)</td><td>Caracterizada por interseções em nível.</td><td>Estrutura o viário principal servindo de conexão entre Rodovias e as Regiões Norte, Sul, Leste e Oeste, e geralmente controlada por semáforo.</td><td>Com acessibilidade aos lotes lindeiros e às vias secundárias e locais, possibilitando o trânsito entre as regiões da cidade.</td></tr><tr><td>Via Coletora (Aprox. 5200 km no total)</td><td>Coletar e distribuir o trânsito.</td><td>Necessidade de entrar ou sair das vias de trânsito rápido ou arteriais, possibilitando o trânsito dentro das regiões da cidade.</td><td>Pista simples.</td></tr><tr><td>Via Local (Aprox. 10.400 km no total)</td><td>Função predominante de proporcionar o acesso aos imóveis lindeiros.</td><td>Destinada apenas ao acesso local ou a áreas restritas.</td><td>Pista simples.</td></tr></table>
+						<figcaption>Tabela 20: Classificação de vias, conforme as características urbanas.</figcaption>
+					</figure>
+				</template>
+			</Cap2CEixoIV>
+			<Comments :attr="{id:commentId(), context:'Eixo IV – Legislação, Fiscalização e Velocidades'}"></Comments>
 		</section>
 		<section>
-		 	<h4 indent="3" class="titulo">Eixo V - Normas e Tecnologias de Veículos</h4>
-		 	<Cap2CEixoV>
-		 		<template v-for="imagem in imagens" :slot="imagem.slotName">
-		 			<figure>
-		 				<img :src="fileSrc(imagem.slotName+'.jpg')" :alt="imagem.figureTitle">
-		 				<figcaption>{{imagem.figureTitle}}</figcaption>
-		 			</figure>
-		 		</template>
-		 	</Cap2CEixoV>
-		 	<Comments :attr="{id:commentId(), context:'Eixo V - Normas e Tecnologias de Veículos'}"></Comments>
+			<h4 indent="3" class="titulo">Eixo V - Normas e Tecnologias de Veículos</h4>
+			<Cap2CEixoV>
+				<template v-for="imagem in imagens" :slot="imagem.slotName">
+					<figure>
+						<img :src="fileSrc(imagem.slotName+'.jpg')" :alt="imagem.figureTitle">
+						<figcaption>{{imagem.figureTitle}}</figcaption>
+					</figure>
+				</template>
+			</Cap2CEixoV>
+			<Comments :attr="{id:commentId(), context:'Eixo V - Normas e Tecnologias de Veículos'}"></Comments>
 		</section>
 		<section>
-		 	<h4 indent="3" class="titulo">Eixo VI – Atendimento e Cuidado Pós Acidente</h4>
-		 	<Cap2CEixoVI></Cap2CEixoVI>
-		 	<Comments :attr="{id:commentId(), context:'Eixo VI – Atendimento e Cuidado Pós Acidente'}"></Comments>
+			<h4 indent="3" class="titulo">Eixo VI – Atendimento e Cuidado Pós Acidente</h4>
+			<Cap2CEixoVI></Cap2CEixoVI>
+			<Comments :attr="{id:commentId(), context:'Eixo VI – Atendimento e Cuidado Pós Acidente'}"></Comments>
 		</section>
 		<section>
-		 	<h4 indent="3" class="titulo">Eixo VII - Comunicação, educação e capacitação</h4>
-		 	<Cap2CEixoVII>
-		 		<template v-for="imagem in imagens" :slot="imagem.slotName">
-		 			<figure>
-		 				<img :src="fileSrc(imagem.slotName+'.jpg')" :alt="imagem.figureTitle">
-		 				<figcaption>{{imagem.figureTitle}}</figcaption>
-		 			</figure>
-		 		</template>
-		 		<template slot='tabela23'>
-		 			<figure>
-		 				<table class="headed-table"><tr><th>ATIVIDADES</th><th>MÓDULOS</th><th>CARGA HORÁRIA</th></tr><tr><td rowspan="16">INTEGRAÇÃO</td><td>CONHECENDO A CET</td><td>08H00</td></tr><tr><td>O FATOR HUMANO NAS ORGANIZAÇÕES</td><td>08H00</td></tr><tr><td>VISITA TÉCNICA</td><td>08H00</td></tr><tr><td>POSTURA E CONDUTA PROFISSIONAL</td><td>08H00</td></tr><tr><td>CONHECENDO A ATIVIDADE</td><td>08H00</td></tr><tr><td>CONHECIMENTOS OPERACIONAIS</td><td>16H00</td></tr><tr><td>VISTORIA DE VIATURA</td><td>08H00</td></tr><tr><td>GESTOS E APITOS</td><td>08H00</td></tr><tr><td>FISCALIZAÇÃO DE OBRAS</td><td>08H00</td></tr><tr><td>BOLETIM DE ATIVIDADE DE CAMPO</td><td>12H00</td></tr><tr><td>SISTEMA DE COMUNICAÇÃO</td><td>04H00</td></tr><tr><td>SAÚDE E SEGURANÇA NO TRABALHO</td><td>08H00</td></tr><tr><td>ATENDIMENTO À OCORRÊNCIA COM VÍTIMA</td><td>16H00</td></tr><tr><td>NOÇÕES DE SINALIZAÇÃO VIÁRIA</td><td>06h00</td></tr><tr><td>DIREÇÃO DEFENSIVA</td><td>18H00</td></tr><tr><td>FORMAÇÃO DE AGENTE DE FISCALIZAÇÃO (CLASSE A)</td><td>36h00</td></tr><tr><td rowspan="2">QUALIFICAÇÃO grupo específico</td><td>TÉCNICAS DE PILOTAGEM COM SEGURANÇA</td><td>24H00</td></tr><tr><td>PEDALAR COM SEGURANÇA</td><td>06H00</td></tr><tr><td colspan="2">CARGA HORÁRIA TOTAL</td><td>210h00</td></tr></table>
-		 				<figcaption>Tabela 23 - Grade de disciplinas do curso de formação do Agente de Trânsito I</figcaption>
-		 			</figure>
-		 		</template>
-		 		<template slot='tabela24'>
-		 			<figure>
-		 				<table class="headed-table"><tr><th>ATIVIDADES</th><th>MÓDULOS</th><th>CARGA HORÁRIA</th></tr><tr><td rowspan="6">CAPACITAÇÃO</td><td>CONHECIMENTOS OPERACIONAIS/REMOÇÃO</td><td>18H00</td></tr><tr><td>CONCEITOS DE SINALIZAÇÃO H/V E PM</td><td>12H00</td></tr><tr><td>NOÇÕES DE SINALIZAÇÃO SEMAFÓRICA</td><td>12H00</td></tr><tr><td>FISCALIZAÇÃO (CLASSE B)</td><td>24H00</td></tr><tr><td>REMOÇÃO VISTORIA E CUSTÓDIA - RVC</td><td>06H00</td></tr><tr><td>ATENDIMENTO À OCORRÊNCIAS COM PRODUTOS PERIGOSOS E SUPERDIMENSIONADA</td><td>24H00</td></tr><tr><td>QUALIFICAÇÃO grupo específico</td><td>OPERAÇÃO DE EQUIPAMENTO GUINCHO LEVE</td><td>12H00</td></tr><tr><td colspan="2">TOTAL CARGA HORÁRIA</td><td>108h00</td></tr></table>
-		 				<figcaption>Tabela 24 - Grade de disciplinas do curso realizado para promoção de Agente de Trânsito I para Agente de Trânsito II</figcaption>
-		 			</figure>
-		 		</template>
-		 	</Cap2CEixoVII>
-		 	<Comments :attr="{id:commentId(), context:'Eixo VII - Comunicação, educação e capacitação'}"></Comments>
+			<h4 indent="3" class="titulo">Eixo VII - Comunicação, educação e capacitação</h4>
+			<Cap2CEixoVII>
+				<template v-for="imagem in imagens" :slot="imagem.slotName">
+					<figure>
+						<img :src="fileSrc(imagem.slotName+'.jpg')" :alt="imagem.figureTitle">
+						<figcaption>{{imagem.figureTitle}}</figcaption>
+					</figure>
+				</template>
+				<template slot='tabela23'>
+					<figure>
+						<table class="headed-table"><tr><th>ATIVIDADES</th><th>MÓDULOS</th><th>CARGA HORÁRIA</th></tr><tr><td rowspan="16">INTEGRAÇÃO</td><td>CONHECENDO A CET</td><td>08H00</td></tr><tr><td>O FATOR HUMANO NAS ORGANIZAÇÕES</td><td>08H00</td></tr><tr><td>VISITA TÉCNICA</td><td>08H00</td></tr><tr><td>POSTURA E CONDUTA PROFISSIONAL</td><td>08H00</td></tr><tr><td>CONHECENDO A ATIVIDADE</td><td>08H00</td></tr><tr><td>CONHECIMENTOS OPERACIONAIS</td><td>16H00</td></tr><tr><td>VISTORIA DE VIATURA</td><td>08H00</td></tr><tr><td>GESTOS E APITOS</td><td>08H00</td></tr><tr><td>FISCALIZAÇÃO DE OBRAS</td><td>08H00</td></tr><tr><td>BOLETIM DE ATIVIDADE DE CAMPO</td><td>12H00</td></tr><tr><td>SISTEMA DE COMUNICAÇÃO</td><td>04H00</td></tr><tr><td>SAÚDE E SEGURANÇA NO TRABALHO</td><td>08H00</td></tr><tr><td>ATENDIMENTO À OCORRÊNCIA COM VÍTIMA</td><td>16H00</td></tr><tr><td>NOÇÕES DE SINALIZAÇÃO VIÁRIA</td><td>06h00</td></tr><tr><td>DIREÇÃO DEFENSIVA</td><td>18H00</td></tr><tr><td>FORMAÇÃO DE AGENTE DE FISCALIZAÇÃO (CLASSE A)</td><td>36h00</td></tr><tr><td rowspan="2">QUALIFICAÇÃO grupo específico</td><td>TÉCNICAS DE PILOTAGEM COM SEGURANÇA</td><td>24H00</td></tr><tr><td>PEDALAR COM SEGURANÇA</td><td>06H00</td></tr><tr><td colspan="2">CARGA HORÁRIA TOTAL</td><td>210h00</td></tr></table>
+						<figcaption>Tabela 23 - Grade de disciplinas do curso de formação do Agente de Trânsito I</figcaption>
+					</figure>
+				</template>
+				<template slot='tabela24'>
+					<figure>
+						<table class="headed-table"><tr><th>ATIVIDADES</th><th>MÓDULOS</th><th>CARGA HORÁRIA</th></tr><tr><td rowspan="6">CAPACITAÇÃO</td><td>CONHECIMENTOS OPERACIONAIS/REMOÇÃO</td><td>18H00</td></tr><tr><td>CONCEITOS DE SINALIZAÇÃO H/V E PM</td><td>12H00</td></tr><tr><td>NOÇÕES DE SINALIZAÇÃO SEMAFÓRICA</td><td>12H00</td></tr><tr><td>FISCALIZAÇÃO (CLASSE B)</td><td>24H00</td></tr><tr><td>REMOÇÃO VISTORIA E CUSTÓDIA - RVC</td><td>06H00</td></tr><tr><td>ATENDIMENTO À OCORRÊNCIAS COM PRODUTOS PERIGOSOS E SUPERDIMENSIONADA</td><td>24H00</td></tr><tr><td>QUALIFICAÇÃO grupo específico</td><td>OPERAÇÃO DE EQUIPAMENTO GUINCHO LEVE</td><td>12H00</td></tr><tr><td colspan="2">TOTAL CARGA HORÁRIA</td><td>108h00</td></tr></table>
+						<figcaption>Tabela 24 - Grade de disciplinas do curso realizado para promoção de Agente de Trânsito I para Agente de Trânsito II</figcaption>
+					</figure>
+				</template>
+			</Cap2CEixoVII>
+			<Comments :attr="{id:commentId(), context:'Eixo VII - Comunicação, educação e capacitação'}"></Comments>
 		</section>
 		<section>
-		 	<h4 indent="3" class="titulo">Eixo XI - Dados</h4>
-		 	<Cap2CEixoXI>
-		 		<template v-for="imagem in imagens" :slot="imagem.slotName">
-		 			<figure>
-		 				<img :src="fileSrc(imagem.slotName+'.jpg')" :alt="imagem.figureTitle">
-		 				<figcaption>{{imagem.figureTitle}}</figcaption>
-		 			</figure>
-		 		</template>
-		 	</Cap2CEixoXI>
-		 	<Comments :attr="{id:commentId(), context:'Eixo XI - Dados'}"></Comments>
+			<h4 indent="3" class="titulo">Eixo XI - Dados</h4>
+			<Cap2CEixoXI>
+				<template v-for="imagem in imagens" :slot="imagem.slotName">
+					<figure>
+						<img :src="fileSrc(imagem.slotName+'.jpg')" :alt="imagem.figureTitle">
+						<figcaption>{{imagem.figureTitle}}</figcaption>
+					</figure>
+				</template>
+			</Cap2CEixoXI>
+			<Comments :attr="{id:commentId(), context:'Eixo XI - Dados'}"></Comments>
 		</section>
 		<section>
-		 	<h2 indent="1" class="titulo">Capítulo 3 - Plano de Ação</h2>
-		 </section>
-		 <section>
-		 	<h3 indent="2" class="titulo">1. Introdução</h3>
-		 	<Cap31></Cap31>
-		 	<Comments :attr="{id:commentId(), context:'1. Introdução'}"></Comments>
+			<h2 indent="1" class="titulo">Capítulo 3 - Plano de Ação</h2>
+		</section>
+		<section>
+			<h3 indent="2" class="titulo">1. Introdução</h3>
+			<Cap31></Cap31>
+			<Comments :attr="{id:commentId(), context:'1. Introdução'}"></Comments>
 		</section>
 		<section>
 			<h3 indent="2" class="titulo">2. Visão</h3>
@@ -225,131 +225,131 @@
 			<Comments :attr="{id:commentId(), context:'2. Visão'}"></Comments>
 		</section>
 		<section>
-		 	<h3 indent="2" class="titulo">3. Objetivos</h3>
-		 	<Cap33>
-		 		<template v-for="imagem in imagens" :slot="imagem.slotName">
-		 			<figure>
-		 				<img :src="fileSrc(imagem.slotName+'.jpg')" :alt="imagem.figureTitle">
-		 				<figcaption>{{imagem.figureTitle}}</figcaption>
-		 			</figure>
-		 		</template>
-		 	</Cap33>
-		 	<Comments :attr="{id:commentId(), context:'3. Objetivos'}"></Comments>
+			<h3 indent="2" class="titulo">3. Objetivos</h3>
+			<Cap33>
+				<template v-for="imagem in imagens" :slot="imagem.slotName">
+					<figure>
+						<img :src="fileSrc(imagem.slotName+'.jpg')" :alt="imagem.figureTitle">
+						<figcaption>{{imagem.figureTitle}}</figcaption>
+					</figure>
+				</template>
+			</Cap33>
+			<Comments :attr="{id:commentId(), context:'3. Objetivos'}"></Comments>
 		</section>
 		<section>
-		 	<h3 indent="2" class="titulo">4. Metas Globais</h3>
-		 	<Cap34></Cap34>
-		 	<Comments :attr="{id:commentId(), context:'4. Metas Globais'}"></Comments>
+			<h3 indent="2" class="titulo">4. Metas Globais</h3>
+			<Cap34></Cap34>
+			<Comments :attr="{id:commentId(), context:'4. Metas Globais'}"></Comments>
 		</section>
 		<section>
-		 	<h3 indent="2" class="titulo">5. Plano de Ação por eixo de atuação</h3>
+			<h3 indent="2" class="titulo">5. Plano de Ação por eixo de atuação</h3>
 		</section>
 		<section>
-		 	<h4 indent="3" class="titulo">Eixo I - Articulação institucional e Gestão</h4>
-		 	<Cap3EixoI>
-		 		<template v-for="imagem in imagens" :slot="imagem.slotName">
-		 			<figure>
-		 				<img :src="fileSrc(imagem.slotName+'.jpg')" :alt="imagem.figureTitle">
-		 				<figcaption>{{imagem.figureTitle}}</figcaption>
-		 			</figure>
-		 		</template>
-		 	</Cap3EixoI>
-		 	<Comments :attr="{id:commentId(), context:'Eixo I - Articulação institucional e Gestão'}"></Comments>
+			<h4 indent="3" class="titulo">Eixo I - Articulação institucional e Gestão</h4>
+			<Cap3EixoI>
+				<template v-for="imagem in imagens" :slot="imagem.slotName">
+					<figure>
+						<img :src="fileSrc(imagem.slotName+'.jpg')" :alt="imagem.figureTitle">
+						<figcaption>{{imagem.figureTitle}}</figcaption>
+					</figure>
+				</template>
+			</Cap3EixoI>
+			<Comments :attr="{id:commentId(), context:'Eixo I - Articulação institucional e Gestão'}"></Comments>
 		</section>
 		<section>
-		 	<h4 indent="3" class="titulo">Eixo II - Planejamento urbano, desenho das ruas e engenharia</h4>
-		 	<Cap3EixoII>
-		 		<template v-for="imagem in imagens" :slot="imagem.slotName">
-		 			<figure>
-		 				<img :src="fileSrc(imagem.slotName+'.jpg')" :alt="imagem.figureTitle">
-		 				<figcaption>{{imagem.figureTitle}}</figcaption>
-		 			</figure>
-		 		</template>
-		 		<template slot='tabela25'>
-		 			<figure>
-		 				<table class="simple-table"><tr><th></th><th>Tempo extra verde para pedestre (s)</th><th>Verde (s)</th><th>Vermelho piscante (s)</th></tr><tr><td>Critérios antigos</td><td>0</td><td>De acordo com a largura da via</td><td>5 (média)</td></tr><tr><td>Critérios padrão</td><td>0</td><td>5</td><td>Garantia de 1,2 metros por segundo (máximo)</td></tr><tr><td>Critérios que estão sendo utilizados para os corredores</td><td>2</td><td>8</td><td>Garantia de 1,2 metros por segundo (máximo)</td></tr></table>
-		 				<figcaption>Tabela 25 – critérios de definição de tempos semafóricos aos pedestres.</figcaption>
-		 			</figure>
-		 		</template>
-		 	</Cap3EixoII>
-		 	<Comments :attr="{id:commentId(), context:'Eixo II - Planejamento urbano, desenho das ruas e engenharia'}"></Comments>
+			<h4 indent="3" class="titulo">Eixo II - Planejamento urbano, desenho das ruas e engenharia</h4>
+			<Cap3EixoII>
+				<template v-for="imagem in imagens" :slot="imagem.slotName">
+					<figure>
+						<img :src="fileSrc(imagem.slotName+'.jpg')" :alt="imagem.figureTitle">
+						<figcaption>{{imagem.figureTitle}}</figcaption>
+					</figure>
+				</template>
+				<template slot='tabela25'>
+					<figure>
+						<table class="simple-table"><tr><th></th><th>Tempo extra verde para pedestre (s)</th><th>Verde (s)</th><th>Vermelho piscante (s)</th></tr><tr><td>Critérios antigos</td><td>0</td><td>De acordo com a largura da via</td><td>5 (média)</td></tr><tr><td>Critérios padrão</td><td>0</td><td>5</td><td>Garantia de 1,2 metros por segundo (máximo)</td></tr><tr><td>Critérios que estão sendo utilizados para os corredores</td><td>2</td><td>8</td><td>Garantia de 1,2 metros por segundo (máximo)</td></tr></table>
+						<figcaption>Tabela 25 – critérios de definição de tempos semafóricos aos pedestres.</figcaption>
+					</figure>
+				</template>
+			</Cap3EixoII>
+			<Comments :attr="{id:commentId(), context:'Eixo II - Planejamento urbano, desenho das ruas e engenharia'}"></Comments>
 		</section>
 		<section>
-		 	<h4 indent="3" class="titulo">Eixo III - Melhoria das opções de mobilidade e sustentabilidade</h4>
-		 	<Cap3EixoIII>
-		 		<template v-for="imagem in imagens" :slot="imagem.slotName">
-		 			<figure>
-		 				<img :src="fileSrc(imagem.slotName+'.jpg')" :alt="imagem.figureTitle">
-		 				<figcaption>{{imagem.figureTitle}}</figcaption>
-		 			</figure>
-		 		</template>
-		 	</Cap3EixoIII>
-		 	<Comments :attr="{id:commentId(), context:'Eixo III - Melhoria das opções de mobilidade e sustentabilidade'}"></Comments>
+			<h4 indent="3" class="titulo">Eixo III - Melhoria das opções de mobilidade e sustentabilidade</h4>
+			<Cap3EixoIII>
+				<template v-for="imagem in imagens" :slot="imagem.slotName">
+					<figure>
+						<img :src="fileSrc(imagem.slotName+'.jpg')" :alt="imagem.figureTitle">
+						<figcaption>{{imagem.figureTitle}}</figcaption>
+					</figure>
+				</template>
+			</Cap3EixoIII>
+			<Comments :attr="{id:commentId(), context:'Eixo III - Melhoria das opções de mobilidade e sustentabilidade'}"></Comments>
 		</section>
 		<section>
-		 	<h4 indent="3" class="titulo">Eixo IV - Legislação, Fiscalização e Velocidades</h4>
-		 	<Cap3EixoIV>
-		 		<template v-for="imagem in imagens" :slot="imagem.slotName">
-		 			<figure>
-		 				<img :src="fileSrc(imagem.slotName+'.jpg')" :alt="imagem.figureTitle">
-		 				<figcaption>{{imagem.figureTitle}}</figcaption>
-		 			</figure>
-		 		</template>
-		 	</Cap3EixoIV>
-		 	<Comments :attr="{id:commentId(), context:'Eixo IV - Legislação, Fiscalização e Velocidades'}"></Comments>
+			<h4 indent="3" class="titulo">Eixo IV - Legislação, Fiscalização e Velocidades</h4>
+			<Cap3EixoIV>
+				<template v-for="imagem in imagens" :slot="imagem.slotName">
+					<figure>
+						<img :src="fileSrc(imagem.slotName+'.jpg')" :alt="imagem.figureTitle">
+						<figcaption>{{imagem.figureTitle}}</figcaption>
+					</figure>
+				</template>
+			</Cap3EixoIV>
+			<Comments :attr="{id:commentId(), context:'Eixo IV - Legislação, Fiscalização e Velocidades'}"></Comments>
 		</section>
 		<section>
-		 	<h4 indent="3" class="titulo">Eixo V - Normas e tecnologia de veículos</h4>
-		 	<Cap3EixoV>
-		 		<template v-for="imagem in imagens" :slot="imagem.slotName">
-		 			<figure>
-		 				<img :src="fileSrc(imagem.slotName+'.jpg')" :alt="imagem.figureTitle">
-		 				<figcaption>{{imagem.figureTitle}}</figcaption>
-		 			</figure>
-		 		</template>
-		 	</Cap3EixoV>
-		 	<Comments :attr="{id:commentId(), context:'Eixo V - Normas e tecnologia de veículos'}"></Comments>
+			<h4 indent="3" class="titulo">Eixo V - Normas e tecnologia de veículos</h4>
+			<Cap3EixoV>
+				<template v-for="imagem in imagens" :slot="imagem.slotName">
+					<figure>
+						<img :src="fileSrc(imagem.slotName+'.jpg')" :alt="imagem.figureTitle">
+						<figcaption>{{imagem.figureTitle}}</figcaption>
+					</figure>
+				</template>
+			</Cap3EixoV>
+			<Comments :attr="{id:commentId(), context:'Eixo V - Normas e tecnologia de veículos'}"></Comments>
 		</section>
 		<section>
-		 	<h4 indent="3" class="titulo">Eixo VI - Atendimento e cuidado pós acidente</h4>
-		 	<Cap3EixoVI>
-		 		<template v-for="imagem in imagens" :slot="imagem.slotName">
-		 			<figure>
-		 				<img :src="fileSrc(imagem.slotName+'.jpg')" :alt="imagem.figureTitle">
-		 				<figcaption>{{imagem.figureTitle}}</figcaption>
-		 			</figure>
-		 		</template>
-		 	</Cap3EixoVI>
-		 	<Comments :attr="{id:commentId(), context:'Eixo VI - Atendimento e cuidado pós acidente'}"></Comments>
+			<h4 indent="3" class="titulo">Eixo VI - Atendimento e cuidado pós acidente</h4>
+			<Cap3EixoVI>
+				<template v-for="imagem in imagens" :slot="imagem.slotName">
+					<figure>
+						<img :src="fileSrc(imagem.slotName+'.jpg')" :alt="imagem.figureTitle">
+						<figcaption>{{imagem.figureTitle}}</figcaption>
+					</figure>
+				</template>
+			</Cap3EixoVI>
+			<Comments :attr="{id:commentId(), context:'Eixo VI - Atendimento e cuidado pós acidente'}"></Comments>
 		</section>
 		<section>
-		 	<h4 indent="3" class="titulo">Eixo VII- Comunicação, educação e capacitação</h4>
-		 	<Cap3EixoVII>
-		 		<template v-for="imagem in imagens" :slot="imagem.slotName">
-		 			<figure>
-		 				<img :src="fileSrc(imagem.slotName+'.jpg')" :alt="imagem.figureTitle">
-		 				<figcaption>{{imagem.figureTitle}}</figcaption>
-		 			</figure>
-		 		</template>
-		 	</Cap3EixoVII>
-		 	<Comments :attr="{id:commentId(), context:'Eixo VII- Comunicação, educação e capacitação'}"></Comments>
+			<h4 indent="3" class="titulo">Eixo VII- Comunicação, educação e capacitação</h4>
+			<Cap3EixoVII>
+				<template v-for="imagem in imagens" :slot="imagem.slotName">
+					<figure>
+						<img :src="fileSrc(imagem.slotName+'.jpg')" :alt="imagem.figureTitle">
+						<figcaption>{{imagem.figureTitle}}</figcaption>
+					</figure>
+				</template>
+			</Cap3EixoVII>
+			<Comments :attr="{id:commentId(), context:'Eixo VII- Comunicação, educação e capacitação'}"></Comments>
 		</section>
 		<section>
-		 	<h4 indent="3" class="titulo">Eixo VIII - Dados</h4>
-		 	<Cap3EixoVIII>
-		 		<template v-for="imagem in imagens" :slot="imagem.slotName">
-		 			<figure>
-		 				<img :src="fileSrc(imagem.slotName+'.jpg')" :alt="imagem.figureTitle">
-		 				<figcaption>{{imagem.figureTitle}}</figcaption>
-		 			</figure>
-		 		</template>
-		 	</Cap3EixoVIII>
-		 	<Comments :attr="{id:commentId(), context:'Eixo VIII - Dados'}"></Comments>
+			<h4 indent="3" class="titulo">Eixo VIII - Dados</h4>
+			<Cap3EixoVIII>
+				<template v-for="imagem in imagens" :slot="imagem.slotName">
+					<figure>
+						<img :src="fileSrc(imagem.slotName+'.jpg')" :alt="imagem.figureTitle">
+						<figcaption>{{imagem.figureTitle}}</figcaption>
+					</figure>
+				</template>
+			</Cap3EixoVIII>
+			<Comments :attr="{id:commentId(), context:'Eixo VIII - Dados'}"></Comments>
 		</section>
 		<section>
-		 	<h3 indent="2" class="titulo">Bibliografia</h3>
-		 	<Bibliografia></Bibliografia>
-		 	<Comments :attr="{id:commentId(), context:'Bibliografia'}"></Comments>
+			<h3 indent="2" class="titulo">Bibliografia</h3>
+			<Bibliografia></Bibliografia>
+			<Comments :attr="{id:commentId(), context:'Bibliografia'}"></Comments>
 		</section>
 
 		<hr />
@@ -405,353 +405,353 @@ export default {
 			anexos: ['Vida_Segura_29-10-2018_PDF.pdf'],
 			// commentSlots: ['7.	Dispositivos de Segurança','8.	Ações de Segurança'],
 			imagens: [
-				{ 
-					slotName: "g1", 
-					figureTitle: "Gráfico 1 - Evolução da frota veicular (2008 - 2017). Fonte: DETRAN/SP"
-				}
-				,{ 
-					slotName: "g2", 
-					figureTitle: "Gráfico 2 - Óbitos por causas externas (2016). Fonte: SIM/PRO-AIM - CEINFO - SMS - SP"
-				}
-				,{ 
-					slotName: "g3", 
-					figureTitle: "Gráfico 3 - Anos Potenciais de Vida Perdidos (APVP)  (2016). Fonte: SIM/PRO-AIM - CEINFO - SMS - SP"
-				}
-				,{ 
-					slotName: "g4", 
-					figureTitle: "Gráfico 4 - Evolução anual dos acidentes fatais por tipo. Fonte: CET."
-				}
-				,{ 
-					slotName: "g5", 
-					figureTitle: "Gráfico 5 - Evolução Anual dos óbitos por tipo de usuário. Fonte: CET"
-				}
-				,{ 
-					slotName: "g6", 
-					figureTitle: "Gráfico 6 - Evolução do índice “óbitos/100 mil habitantes. Fonte: CET"
-				}
-				,{ 
-					slotName: "g7", 
-					figureTitle: "Gráfico 7 - Óbitos por tipo de usuário (2017). Fonte: CET"
-				}
-				,{ 
-					slotName: "g8", 
-					figureTitle: "Gráfico 8 - Total de vítimas por tipo de usuário (2017). Fonte: CET"
-				}
-				,{ 
-					slotName: "g9", 
-					figureTitle: "Gráfico 9 - Número anual de acidentes fatais por dia da semana (2017). Fonte: CET"
-				}
-				,{ 
-					slotName: "t1", 
-					figureTitle: "Tabela 1 - Total de acidentes de trânsito fatais por dia da semana e período do dia. Fonte: CET"
-				}
-				,{ 
-					slotName: "g10", 
-					figureTitle: "Gráfico 10 - Relação entre número de viagens realizadas em um dia típico com destino sendo São Paulo e número de vítimas fatais por faixa horária. Fonte: CET-SP e Pesquisa de mobilidade (2012). Elaboração: WRI Brasil"
-				}
-				,{ 
-					slotName: "g11", 
-					figureTitle: "Gráfico 11 - índice de vítimas fatais por 10.000 viagens realizadas por hora do dia. Fonte: CET-SP e Pesquisa de mobilidade (2012). Elaboração: WRI Brasil"
-				}
-				,{ 
-					slotName: "g12", 
-					figureTitle: "Gráfico 12 - Relação entre o acidente por faixa horária do total de vítimas (feridas e fatais) e de vítimas fatais entre os anos de 2013 e 2017. Fonte: CET-SP. Elaboração: WRI Brasil"
-				}
-				,{ 
-					slotName: "g13", 
-					figureTitle: "Gráfico 13 - Variação no número de vítimas fatais por modal de transporte em São Paulo entre os anos de 2013 e 2017.  Fonte: CET-SP."
-				}
-				,{ 
-					slotName: "g14", 
-					figureTitle: "Gráfico 14 - Risco relativo de se tornar uma vítima usando diferentes modos de transporte, sendo 1 o modal mais seguro. Fonte: CET-SP/Pesquisa de mobilidade (2012). Elaboração: WRI Brasil"
-				}
-				,{ 
-					slotName: "g15", 
-					figureTitle: "Gráfico 15: participação dos veículos no trânsito (2013-2017) nos horários de pico manhã/tarde dos dias úteis. Fonte: DSVP-CET-SP."
-				}
-				,{ 
-					slotName: "g16", 
-					figureTitle: "Gráfico 16 - Distribuição de veículos envolvidos em acidentes fatais (2017). Fonte: CET"
-				}
-				,{ 
-					slotName: "g17", 
-					figureTitle: "Gráfico 17 - distribuição dos veículos envolvidos em atropelamentos fatais (2013-2017). Fonte: CET."
-				}
-				,{ 
-					slotName: "g18", 
-					figureTitle: "Gráfico 18 - Óbitos por faixa etária (2017). Fonte: CET"
-				}
-				,{ 
-					slotName: "g19", 
-					figureTitle: "Gráfico 19 - Vítimas fatais e feridas por faixa etária para o ano de 2017. Fonte: CET-SP. Elaboração: WRI Brasil"
-				}
-				,{ 
-					slotName: "t2", 
-					figureTitle: "Tabela 2 - Variação percentual das vítimas fatais por faixa etária (2013 - 2017). Fonte: CET. Elaboração: WRI Brasil"
-				}
-				,{ 
-					slotName: "t3", 
-					figureTitle: "Tabela 3 - Variação percentual das vítimas feridas por faixa etária (2013 - 2017). Fonte: CET. Elaboração: WRI Brasil"
-				}
-				,{ 
-					slotName: "g20", 
-					figureTitle: "Gráfico 20  - Variação do número de vítimas fatais e da população por grupo de idade entre os anos de 2013 e 2017. Fonte: CET-SP e SEADE-SP. Elaboração: WRI Brasil"
-				}
-				,{ 
-					slotName: "t4", 
-					figureTitle: "Tabela 4 - Relação entre o índice de fatalidade (mortos em acidentes de trânsito/100.000 habitantes) entre os anos de 2013 e 2017. Fonte: CET-SP e SEADE-SP. Elaboração: WRI Brasil"
-				}
-				,{ 
-					slotName: "g21", 
-					figureTitle: "Gráfico 21 - Vítimas fatais e feridas por faixa etárias e por modal de transporte para o ano de 2017. Fonte: CET-SP. Elaboração: WRI Brasil"
-				}
-				,{ 
-					slotName: "g22", 
-					figureTitle: "Gráfico 22: proporção de viagens (2012 e vítimas fatais (2017) por idade para o modo à pé. Fonte: CET. Elaboração: WRI Brasil"
-				}
-				,{ 
-					slotName: "g23", 
-					figureTitle: "Gráfico 23: proporção de viagens (2012 e vítimas fatais (2017) por idade para o modo automóvel. Fonte: CET. Elaboração: WRI Brasil"
-				}
-				,{ 
-					slotName: "g24", 
-					figureTitle: "Gráfico 24: proporção de viagens (2012 e vítimas fatais (2017) por idade para o modo bicicleta. Fonte: CET. Elaboração: WRI Brasil "
-				}
-				,{ 
-					slotName: "g25", 
-					figureTitle: "Gráfico 25: proporção de viagens (2012 e vítimas fatais (2017) por idade para o modo motocicleta. Fonte: CET. Elaboração: WRI Brasil"
-				}
-				,{ 
-					slotName: "m1", 
-					figureTitle: "Mapa 1 - Distribuição espacial com pontos críticos de acidentes com jovens vítimas fatais e menores de idade (2013-2017) e densidade de escolas para o município de São Paulo. Fonte: CET-SP/GEOSAMPA. Elaboração: WRI Brasil"
-				}
-				,{ 
-					slotName: "g26", 
-					figureTitle: "Gráfico 26 - Proporção de viagens e vítimas fatais por meio de transporte de acordo com o gênero para o ano de 2017. Fonte: CET-SP e Pesquisa de mobilidade (2012). Elaboração: WRI Brasil"
-				}
-				,{ 
-					slotName: "t5", 
-					figureTitle: "Tabela 5 - Acidentes em cruzamentos e meio de quadra. Fonte: CET"
-				}
-				,{ 
-					slotName: "t7", 
-					figureTitle: "Tabela 7 - Vias com maior valor de Unidade Padrão de Severidade por Km (2017). Fonte: CET"
-				}
-				,{ 
-					slotName: "m2", 
-					figureTitle: "Mapa 2 - Distribuição espacial de acidentes fatais envolvendo pedestres (2013-2017). Fonte: CET-SP. Elaboração: WRI Brasil"
-				}
-				,{ 
-					slotName: "m3", 
-					figureTitle: "Mapa 3 - Distribuição espacial de acidentes com vítimas feridas e fatais envolvendo pedestres e ônibus (2013-2017). Fonte: CET-SP. Elaboração: WRI Brasil"
-				}
-				,{ 
-					slotName: "m4", 
-					figureTitle: "Mapa 4 – Distribuição espacial de acidentes com vítimas feridas e fatais envolvendo ciclistas (2013-2017). Fonte: CET-SP. Elaboração: WRI Brasil"
-				}
-				,{ 
-					slotName: "m5", 
-					figureTitle: "Mapa 5 - Distribuição espacial de vítimas usuárias de bicicleta no ano de 2017 e mapa da rede cicloviária. Fonte: CET-SP. Elaboração: WRI Brasil"
-				}
-				,{ 
-					slotName: "m6", 
-					figureTitle: "Mapa 6 - Distribuição espacial de acidentes com vítimas feridas e fatais envolvendo motociclistas (2013-2017). Fonte: CET-SP. Elaboração: WRI Brasil"
-				}
-				,{ 
-					slotName: "m7", 
-					figureTitle: "Mapa 7 - Distribuição espacial de acidentes com vítimas fatais envolvendo motociclistas (2013-2017). Fonte: CET-SP. Elaboração: WRI Brasil"
-				}
-				,{ 
-					slotName: "t8", 
-					figureTitle: "Tabela 8 - Prevalência de veículos trafegando acima da velocidade. Fonte: JH-IIRU e USP (2018)."
-				}
-				,{ 
-					slotName: "m8", 
-					figureTitle: "Mapa 8 - distribuição de responsabilidade pelas calçadas no município de São Paulo (proprietários x Prefeitura). Fonte: SPUrbanismo (2018)."
-				}
-				,{ 
-					slotName: "m9", 
-					figureTitle: "Mapa 9 - Plano Emergencial de Calçadas Ilustrado. Fonte: SP Urbanismo"
-				}
-				,{ 
-					slotName: "f1", 
-					figureTitle: "Figura 1 - Áreas de Influência - Eixos de Estruturação da Transformação Urbana"
-				}
-				,{ 
-					slotName: "f2", 
-					figureTitle: "Figura 2 - Instrumentos urbanísticos do PDE . Fonte: PMSP, 2014."
-				}
-				,{ 
-					slotName: "f3", 
-					figureTitle: "Figura 3: Fachada Ativa Fonte: PMSP, 2016"
-				}
-				,{ 
-					slotName: "f4", 
-					figureTitle: "Figura 4: Fruição Pública Fonte: PMSP, 2016."
-				}
-				,{ 
-					slotName: "f5", 
-					figureTitle: "Figura 5 - Av. Mal. Tito, trecho em São Miguel Paulista (Crédito: SPUrbanismo)"
-				}
-				,{ 
-					slotName: "f6", 
-					figureTitle: "Figura 6 - Corte esquemático da Av. Mal. Tito (Elaboração: BIGRS)"
-				}
-				,{ 
-					slotName: "t10", 
-					figureTitle: "Tabela 10 - Quadro 2B da LPUOS/2016 - parâmetros de parcelamento do solo (sistema viário)."
-				}
-				,{ 
-					slotName: "t11", 
-					figureTitle: "Tabela 11 - características geométricas das vias pelos critérios técnicos da SIURB - Instrução de Projeto 003/2004 - Quadro 3.1"
-				}
-				,{ 
-					slotName: "f7", 
-					figureTitle: "Figura 7 - exemplos de calçadas na cidade de São Paulo. Rua Ministro Gastão Mesquita, em Perdizes, e Rua Acutiranha, no Morumbi. Calçada construída pelo proprietário apresenta obstáculo de diferentes escalas para a acessibilidade. Fonte: Google Street View"
-				}
-				,{ 
-					slotName: "f8", 
-					figureTitle: "Figura 8 - Exemplos de calçadas na cidade de São Paulo. Crédito: BIGRS"
-				}
-				,{ 
-					slotName: "t12", 
-					figureTitle: "Tabela 12 - Quadro 2B da LPUOS. Parâmetros de parcelamento do solo (sistema viário)"
-				}
-				,{ 
-					slotName: "t13", 
-					figureTitle: "Tabela 13: Quadro 3.2 da IP-003/2004 SIURB - curvas de concordância das ruas - padronização dos raios"
-				}
-				,{ 
-					slotName: "t14", 
-					figureTitle: "Tabela 14 - Código de Obras e Edificações Ilustrado (Lei nº 16.642, de 9 de maio de 2017. Decreto nº 57.776, de 7 de julho de 2017)"
-				}
-				,{ 
-					slotName: "f9", 
-					figureTitle: "Figura 9 - Calçada recém-construída (2016) na Av. Sumaré, em Perdizes, inclinada em toda a sua largura para acesso de veículos às vagas de estacionamento, prejudicando a circulação de pedestres"
-				}
-				,{
-					slotName: "f10", 
-					figureTitle: "Figura 10 - Calçada com diferentes declividades transversais e degraus conformados por rampas de acesso a garagens na Rua Caetés, em Perdizes."
-				}
-				,{
-					slotName: "f11", 
-					figureTitle: "Figura 11 - Travessia em calçada (Av. Bgd. Faria Lima X R. Cláudio Soares). Obstáculos sobre a área de espera e passagem da travessia; rampa de acessibilidade na mesma área de poste."
-				}
-				,{
-					slotName: "f12a", 
-					figureTitle: "Figura 12a - Placas de sinalização obstruindo passagem de pedestres em esquinas de calçadas estreitas nos cruzamentos (i) da Av. Francisco Morato com R. Min Heitor Bastos Tigre"
-				}
-				,{
-					slotName: "f12b", 
-					figureTitle: "Figura 12b - Placas de sinalização obstruindo passagem de pedestres em esquinas de calçadas estreitas nos cruzamentos (ii) Estr. do Campo Limpo com R. Campina Grande"
-				}
-				,{
-					slotName: "f13a", 
-					figureTitle: "Figura 13a - Mobiliário urbano no Largo da Batata (créditos: Diogo Lemos/WRI Brasil)"
-				}
-				,{
-					slotName: "f13b", 
-					figureTitle: "Figura 13b - Mobiliário urbano no Largo da Batata (créditos: Diogo Lemos/WRI Brasil)"
-				}
-				,{
-					slotName: "f14a", 
-					figureTitle: "Figura 14 - Comparação entre iluminação pública padrão e iluminação pública voltada para pedestres. Fonte: New York City Department of Transportation, 2013)."
-				}
-				,{
-					slotName: "f14b", 
-					figureTitle: "Luminária pública acoplada a poste de luz da Eletropaulo e voltada para o leito carroçável, na Rua Oscar Freire."
-				}
-				,{
-					slotName: "f14c", 
-					figureTitle: "Luminária pública voltada para a calçada, em trecho reformado da Rua Oscar Freire, cuja fiação foi enterrada no projeto de transformação urbana."
-				}
-				,{
-					slotName: "f15", 
-					figureTitle: "Figura 15 -  exemplo de ciclovia"
-				}
-				,{
-					slotName: "f16", 
-					figureTitle: "Figura 16 -  exemplo de ciclofaixa"
-				}
-				,{
-					slotName: "f17", 
-					figureTitle: "Figura 17: exemplo de ciclorrota"
-				}
-				,{
-					slotName: "g27", 
-					figureTitle: "Gráfico 27 - Avaliação das ciclovias. Fonte: Torres Freire et. al, 2018."
-				}
-				,{
-					slotName: "f17b", 
-					figureTitle: "Figura 17b – Distância recomendada entre a travessia de pedestres e o estacionamento. FONTE: DNIT -Publicação IPR - 740 MANUAL DE PROJETO GEOMÉTRICO DE TRAVESSIAS URBANAS"
-				}
-				,{
-					slotName: "f18", 
-					figureTitle: "Figura 18 - Rua Oscar Freire. Diversas extensões de calçada foram implementadas (créditos: Foto: Google Street View - Esquema: WRI Brasil)"
-				}
-				,{
-					slotName: "f19", 
-					figureTitle: "Figura 19 - exemplo de travessia elevada."
-				}
-				,{
-					slotName: "f20", 
-					figureTitle: "Figura 20 - esquema da Av. Brigadeiro Luís Antônio antes (à esquerda) e após (à direita) a remoção do contrafluxo."
-				}
-				,{
-					slotName: "f21", 
-					figureTitle: "Figura 21: Situação atual da Praça Getúlio Vargas em São Miguel Paulista, acima (crédito: Google Street View). Abaixo, fotomontagem do projeto (crédito: 23 Sul Arquitetura / BIGRS)."
-				}
-				,{
-					slotName: "g28", 
-					figureTitle: "Gráfico 28 - Potencial Pedalável. Fonte:  Impacto Social do Uso da Bicicleta em São Paulo - CEBRAP 2018"
-				}
-				,{
-					slotName: "g29", 
-					figureTitle: "Gráfico 29: tipologia das ocorrências fatais envolvendo caminhões (2017). Fonte: CET"
-				}
-				,{
-					slotName: "t18", 
-					figureTitle: "Tabela 18  - Dez países mais populosos e melhores práticas de legislação. Fonte: OMS, 2015, p. 38."
-				}
-				,{
-					slotName: "t19", 
-					figureTitle: "Tabela 19 - Risco de atropelamento a 60, 50 e 30km/h. Fonte: "
-				}
-				,{
-					slotName: "f22", 
-					figureTitle: "Figura 22 - Exemplo de autuação efetuada por velocidade média (Sistema Safety Tutor / Autostrade per I’Itália)."
-				}
-				,{
-					slotName: "g30", 
-					figureTitle: "Gráfico 30 -: Efeito do Sistema de Controle de Trecho  na velocidade média dos veículos no túnel Kaisermuhlen. (Fonte: Vienna Municipal Department)"
-				}
-				,{
-					slotName: "g31", 
-					figureTitle: "Gráfico 31: autuações por sub_unidade autuadora. Fonte: CET."
-				}
-				,{
-					slotName: "g32", 
-					figureTitle: "Gráfico 32 - evolução das autuações realizadas por agentes. Fonte: CET"
-				}
-				,{
-					slotName: "g33", 
-					figureTitle: "Gráfico 33 - evolução das autuações realizadas por equipamentos de fiscalização. Fonte: CET"
-				}
-				,{
-					slotName: "t21", 
-					figureTitle: "Tabela 21 - principais autuações lavradas (2017) no município de São Paulo. Fonte: CET"
-				}
-				,{
-					slotName: "t22", 
-					figureTitle: "Tabela 22 - principais autuações lavradas por agentes de trânsito da CET (2017). Fonte: CET"
-				}
-				,{
-					slotName: "f23", 
-					figureTitle: "Figura 23 - Fluxo de análise e tabulação INFOSIGA. Fonte: INFOSIGA-SP	"
-				}
-				,{
-					slotName: "f24", 
-					figureTitle: "Figura 24 - nova calçada implantada na Rua Pedro de Toledo - Vila Mariana"
+				{
+					slotName: 'g1',
+					figureTitle: 'Gráfico 1 - Evolução da frota veicular (2008 - 2017). Fonte: DETRAN/SP'
+				},
+				{
+					slotName: 'g2',
+					figureTitle: 'Gráfico 2 - Óbitos por causas externas (2016). Fonte: SIM/PRO-AIM - CEINFO - SMS - SP'
+				},
+				{
+					slotName: 'g3',
+					figureTitle: 'Gráfico 3 - Anos Potenciais de Vida Perdidos (APVP)  (2016). Fonte: SIM/PRO-AIM - CEINFO - SMS - SP'
+				},
+				{
+					slotName: 'g4',
+					figureTitle: 'Gráfico 4 - Evolução anual dos acidentes fatais por tipo. Fonte: CET.'
+				},
+				{
+					slotName: 'g5',
+					figureTitle: 'Gráfico 5 - Evolução Anual dos óbitos por tipo de usuário. Fonte: CET'
+				},
+				{
+					slotName: 'g6',
+					figureTitle: 'Gráfico 6 - Evolução do índice “óbitos/100 mil habitantes. Fonte: CET'
+				},
+				{
+					slotName: 'g7',
+					figureTitle: 'Gráfico 7 - Óbitos por tipo de usuário (2017). Fonte: CET'
+				},
+				{
+					slotName: 'g8',
+					figureTitle: 'Gráfico 8 - Total de vítimas por tipo de usuário (2017). Fonte: CET'
+				},
+				{
+					slotName: 'g9',
+					figureTitle: 'Gráfico 9 - Número anual de acidentes fatais por dia da semana (2017). Fonte: CET'
+				},
+				{
+					slotName: 't1',
+					figureTitle: 'Tabela 1 - Total de acidentes de trânsito fatais por dia da semana e período do dia. Fonte: CET'
+				},
+				{
+					slotName: 'g10',
+					figureTitle: 'Gráfico 10 - Relação entre número de viagens realizadas em um dia típico com destino sendo São Paulo e número de vítimas fatais por faixa horária. Fonte: CET-SP e Pesquisa de mobilidade (2012). Elaboração: WRI Brasil'
+				},
+				{
+					slotName: 'g11',
+					figureTitle: 'Gráfico 11 - índice de vítimas fatais por 10.000 viagens realizadas por hora do dia. Fonte: CET-SP e Pesquisa de mobilidade (2012). Elaboração: WRI Brasil'
+				},
+				{
+					slotName: 'g12',
+					figureTitle: 'Gráfico 12 - Relação entre o acidente por faixa horária do total de vítimas (feridas e fatais) e de vítimas fatais entre os anos de 2013 e 2017. Fonte: CET-SP. Elaboração: WRI Brasil'
+				},
+				{
+					slotName: 'g13',
+					figureTitle: 'Gráfico 13 - Variação no número de vítimas fatais por modal de transporte em São Paulo entre os anos de 2013 e 2017.  Fonte: CET-SP.'
+				},
+				{
+					slotName: 'g14',
+					figureTitle: 'Gráfico 14 - Risco relativo de se tornar uma vítima usando diferentes modos de transporte, sendo 1 o modal mais seguro. Fonte: CET-SP/Pesquisa de mobilidade (2012). Elaboração: WRI Brasil'
+				},
+				{
+					slotName: 'g15',
+					figureTitle: 'Gráfico 15: participação dos veículos no trânsito (2013-2017) nos horários de pico manhã/tarde dos dias úteis. Fonte: DSVP-CET-SP.'
+				},
+				{
+					slotName: 'g16',
+					figureTitle: 'Gráfico 16 - Distribuição de veículos envolvidos em acidentes fatais (2017). Fonte: CET'
+				},
+				{
+					slotName: 'g17',
+					figureTitle: 'Gráfico 17 - distribuição dos veículos envolvidos em atropelamentos fatais (2013-2017). Fonte: CET.'
+				},
+				{
+					slotName: 'g18',
+					figureTitle: 'Gráfico 18 - Óbitos por faixa etária (2017). Fonte: CET'
+				},
+				{
+					slotName: 'g19',
+					figureTitle: 'Gráfico 19 - Vítimas fatais e feridas por faixa etária para o ano de 2017. Fonte: CET-SP. Elaboração: WRI Brasil'
+				},
+				{
+					slotName: 't2',
+					figureTitle: 'Tabela 2 - Variação percentual das vítimas fatais por faixa etária (2013 - 2017). Fonte: CET. Elaboração: WRI Brasil'
+				},
+				{
+					slotName: 't3',
+					figureTitle: 'Tabela 3 - Variação percentual das vítimas feridas por faixa etária (2013 - 2017). Fonte: CET. Elaboração: WRI Brasil'
+				},
+				{
+					slotName: 'g20',
+					figureTitle: 'Gráfico 20  - Variação do número de vítimas fatais e da população por grupo de idade entre os anos de 2013 e 2017. Fonte: CET-SP e SEADE-SP. Elaboração: WRI Brasil'
+				},
+				{
+					slotName: 't4',
+					figureTitle: 'Tabela 4 - Relação entre o índice de fatalidade (mortos em acidentes de trânsito/100.000 habitantes) entre os anos de 2013 e 2017. Fonte: CET-SP e SEADE-SP. Elaboração: WRI Brasil'
+				},
+				{
+					slotName: 'g21',
+					figureTitle: 'Gráfico 21 - Vítimas fatais e feridas por faixa etárias e por modal de transporte para o ano de 2017. Fonte: CET-SP. Elaboração: WRI Brasil'
+				},
+				{
+					slotName: 'g22',
+					figureTitle: 'Gráfico 22: proporção de viagens (2012 e vítimas fatais (2017) por idade para o modo à pé. Fonte: CET. Elaboração: WRI Brasil'
+				},
+				{
+					slotName: 'g23',
+					figureTitle: 'Gráfico 23: proporção de viagens (2012 e vítimas fatais (2017) por idade para o modo automóvel. Fonte: CET. Elaboração: WRI Brasil'
+				},
+				{
+					slotName: 'g24',
+					figureTitle: 'Gráfico 24: proporção de viagens (2012 e vítimas fatais (2017) por idade para o modo bicicleta. Fonte: CET. Elaboração: WRI Brasil '
+				},
+				{
+					slotName: 'g25',
+					figureTitle: 'Gráfico 25: proporção de viagens (2012 e vítimas fatais (2017) por idade para o modo motocicleta. Fonte: CET. Elaboração: WRI Brasil'
+				},
+				{
+					slotName: 'm1',
+					figureTitle: 'Mapa 1 - Distribuição espacial com pontos críticos de acidentes com jovens vítimas fatais e menores de idade (2013-2017) e densidade de escolas para o município de São Paulo. Fonte: CET-SP/GEOSAMPA. Elaboração: WRI Brasil'
+				},
+				{
+					slotName: 'g26',
+					figureTitle: 'Gráfico 26 - Proporção de viagens e vítimas fatais por meio de transporte de acordo com o gênero para o ano de 2017. Fonte: CET-SP e Pesquisa de mobilidade (2012). Elaboração: WRI Brasil'
+				},
+				{
+					slotName: 't5',
+					figureTitle: 'Tabela 5 - Acidentes em cruzamentos e meio de quadra. Fonte: CET'
+				},
+				{
+					slotName: 't7',
+					figureTitle: 'Tabela 7 - Vias com maior valor de Unidade Padrão de Severidade por Km (2017). Fonte: CET'
+				},
+				{
+					slotName: 'm2',
+					figureTitle: 'Mapa 2 - Distribuição espacial de acidentes fatais envolvendo pedestres (2013-2017). Fonte: CET-SP. Elaboração: WRI Brasil'
+				},
+				{
+					slotName: 'm3',
+					figureTitle: 'Mapa 3 - Distribuição espacial de acidentes com vítimas feridas e fatais envolvendo pedestres e ônibus (2013-2017). Fonte: CET-SP. Elaboração: WRI Brasil'
+				},
+				{
+					slotName: 'm4',
+					figureTitle: 'Mapa 4 – Distribuição espacial de acidentes com vítimas feridas e fatais envolvendo ciclistas (2013-2017). Fonte: CET-SP. Elaboração: WRI Brasil'
+				},
+				{
+					slotName: 'm5',
+					figureTitle: 'Mapa 5 - Distribuição espacial de vítimas usuárias de bicicleta no ano de 2017 e mapa da rede cicloviária. Fonte: CET-SP. Elaboração: WRI Brasil'
+				},
+				{
+					slotName: 'm6',
+					figureTitle: 'Mapa 6 - Distribuição espacial de acidentes com vítimas feridas e fatais envolvendo motociclistas (2013-2017). Fonte: CET-SP. Elaboração: WRI Brasil'
+				},
+				{
+					slotName: 'm7',
+					figureTitle: 'Mapa 7 - Distribuição espacial de acidentes com vítimas fatais envolvendo motociclistas (2013-2017). Fonte: CET-SP. Elaboração: WRI Brasil'
+				},
+				{
+					slotName: 't8',
+					figureTitle: 'Tabela 8 - Prevalência de veículos trafegando acima da velocidade. Fonte: JH-IIRU e USP (2018).'
+				},
+				{
+					slotName: 'm8',
+					figureTitle: 'Mapa 8 - distribuição de responsabilidade pelas calçadas no município de São Paulo (proprietários x Prefeitura). Fonte: SPUrbanismo (2018).'
+				},
+				{
+					slotName: 'm9',
+					figureTitle: 'Mapa 9 - Plano Emergencial de Calçadas Ilustrado. Fonte: SP Urbanismo'
+				},
+				{
+					slotName: 'f1',
+					figureTitle: 'Figura 1 - Áreas de Influência - Eixos de Estruturação da Transformação Urbana'
+				},
+				{
+					slotName: 'f2',
+					figureTitle: 'Figura 2 - Instrumentos urbanísticos do PDE . Fonte: PMSP, 2014.'
+				},
+				{
+					slotName: 'f3',
+					figureTitle: 'Figura 3: Fachada Ativa Fonte: PMSP, 2016'
+				},
+				{
+					slotName: 'f4',
+					figureTitle: 'Figura 4: Fruição Pública Fonte: PMSP, 2016.'
+				},
+				{
+					slotName: 'f5',
+					figureTitle: 'Figura 5 - Av. Mal. Tito, trecho em São Miguel Paulista (Crédito: SPUrbanismo)'
+				},
+				{
+					slotName: 'f6',
+					figureTitle: 'Figura 6 - Corte esquemático da Av. Mal. Tito (Elaboração: BIGRS)'
+				},
+				{
+					slotName: 't10',
+					figureTitle: 'Tabela 10 - Quadro 2B da LPUOS/2016 - parâmetros de parcelamento do solo (sistema viário).'
+				},
+				{
+					slotName: 't11',
+					figureTitle: 'Tabela 11 - características geométricas das vias pelos critérios técnicos da SIURB - Instrução de Projeto 003/2004 - Quadro 3.1'
+				},
+				{
+					slotName: 'f7',
+					figureTitle: 'Figura 7 - exemplos de calçadas na cidade de São Paulo. Rua Ministro Gastão Mesquita, em Perdizes, e Rua Acutiranha, no Morumbi. Calçada construída pelo proprietário apresenta obstáculo de diferentes escalas para a acessibilidade. Fonte: Google Street View'
+				},
+				{
+					slotName: 'f8',
+					figureTitle: 'Figura 8 - Exemplos de calçadas na cidade de São Paulo. Crédito: BIGRS'
+				},
+				{
+					slotName: 't12',
+					figureTitle: 'Tabela 12 - Quadro 2B da LPUOS. Parâmetros de parcelamento do solo (sistema viário)'
+				},
+				{
+					slotName: 't13',
+					figureTitle: 'Tabela 13: Quadro 3.2 da IP-003/2004 SIURB - curvas de concordância das ruas - padronização dos raios'
+				},
+				{
+					slotName: 't14',
+					figureTitle: 'Tabela 14 - Código de Obras e Edificações Ilustrado (Lei nº 16.642, de 9 de maio de 2017. Decreto nº 57.776, de 7 de julho de 2017)'
+				},
+				{
+					slotName: 'f9',
+					figureTitle: 'Figura 9 - Calçada recém-construída (2016) na Av. Sumaré, em Perdizes, inclinada em toda a sua largura para acesso de veículos às vagas de estacionamento, prejudicando a circulação de pedestres'
+				},
+				{
+					slotName: 'f10',
+					figureTitle: 'Figura 10 - Calçada com diferentes declividades transversais e degraus conformados por rampas de acesso a garagens na Rua Caetés, em Perdizes.'
+				},
+				{
+					slotName: 'f11',
+					figureTitle: 'Figura 11 - Travessia em calçada (Av. Bgd. Faria Lima X R. Cláudio Soares). Obstáculos sobre a área de espera e passagem da travessia; rampa de acessibilidade na mesma área de poste.'
+				},
+				{
+					slotName: 'f12a',
+					figureTitle: 'Figura 12a - Placas de sinalização obstruindo passagem de pedestres em esquinas de calçadas estreitas nos cruzamentos (i) da Av. Francisco Morato com R. Min Heitor Bastos Tigre'
+				},
+				{
+					slotName: 'f12b',
+					figureTitle: 'Figura 12b - Placas de sinalização obstruindo passagem de pedestres em esquinas de calçadas estreitas nos cruzamentos (ii) Estr. do Campo Limpo com R. Campina Grande'
+				},
+				{
+					slotName: 'f13a',
+					figureTitle: 'Figura 13a - Mobiliário urbano no Largo da Batata (créditos: Diogo Lemos/WRI Brasil)'
+				},
+				{
+					slotName: 'f13b',
+					figureTitle: 'Figura 13b - Mobiliário urbano no Largo da Batata (créditos: Diogo Lemos/WRI Brasil)'
+				},
+				{
+					slotName: 'f14a',
+					figureTitle: 'Figura 14 - Comparação entre iluminação pública padrão e iluminação pública voltada para pedestres. Fonte: New York City Department of Transportation, 2013).'
+				},
+				{
+					slotName: 'f14b',
+					figureTitle: 'Luminária pública acoplada a poste de luz da Eletropaulo e voltada para o leito carroçável, na Rua Oscar Freire.'
+				},
+				{
+					slotName: 'f14c',
+					figureTitle: 'Luminária pública voltada para a calçada, em trecho reformado da Rua Oscar Freire, cuja fiação foi enterrada no projeto de transformação urbana.'
+				},
+				{
+					slotName: 'f15',
+					figureTitle: 'Figura 15 -  exemplo de ciclovia'
+				},
+				{
+					slotName: 'f16',
+					figureTitle: 'Figura 16 -  exemplo de ciclofaixa'
+				},
+				{
+					slotName: 'f17',
+					figureTitle: 'Figura 17: exemplo de ciclorrota'
+				},
+				{
+					slotName: 'g27',
+					figureTitle: 'Gráfico 27 - Avaliação das ciclovias. Fonte: Torres Freire et. al, 2018.'
+				},
+				{
+					slotName: 'f17b',
+					figureTitle: 'Figura 17b – Distância recomendada entre a travessia de pedestres e o estacionamento. FONTE: DNIT -Publicação IPR - 740 MANUAL DE PROJETO GEOMÉTRICO DE TRAVESSIAS URBANAS'
+				},
+				{
+					slotName: 'f18',
+					figureTitle: 'Figura 18 - Rua Oscar Freire. Diversas extensões de calçada foram implementadas (créditos: Foto: Google Street View - Esquema: WRI Brasil)'
+				},
+				{
+					slotName: 'f19',
+					figureTitle: 'Figura 19 - exemplo de travessia elevada.'
+				},
+				{
+					slotName: 'f20',
+					figureTitle: 'Figura 20 - esquema da Av. Brigadeiro Luís Antônio antes (à esquerda) e após (à direita) a remoção do contrafluxo.'
+				},
+				{
+					slotName: 'f21',
+					figureTitle: 'Figura 21: Situação atual da Praça Getúlio Vargas em São Miguel Paulista, acima (crédito: Google Street View). Abaixo, fotomontagem do projeto (crédito: 23 Sul Arquitetura / BIGRS).'
+				},
+				{
+					slotName: 'g28',
+					figureTitle: 'Gráfico 28 - Potencial Pedalável. Fonte:  Impacto Social do Uso da Bicicleta em São Paulo - CEBRAP 2018'
+				},
+				{
+					slotName: 'g29',
+					figureTitle: 'Gráfico 29: tipologia das ocorrências fatais envolvendo caminhões (2017). Fonte: CET'
+				},
+				{
+					slotName: 't18',
+					figureTitle: 'Tabela 18  - Dez países mais populosos e melhores práticas de legislação. Fonte: OMS, 2015, p. 38.'
+				},
+				{
+					slotName: 't19',
+					figureTitle: 'Tabela 19 - Risco de atropelamento a 60, 50 e 30km/h. Fonte: '
+				},
+				{
+					slotName: 'f22',
+					figureTitle: 'Figura 22 - Exemplo de autuação efetuada por velocidade média (Sistema Safety Tutor / Autostrade per I’Itália).'
+				},
+				{
+					slotName: 'g30',
+					figureTitle: 'Gráfico 30 -: Efeito do Sistema de Controle de Trecho  na velocidade média dos veículos no túnel Kaisermuhlen. (Fonte: Vienna Municipal Department)'
+				},
+				{
+					slotName: 'g31',
+					figureTitle: 'Gráfico 31: autuações por sub_unidade autuadora. Fonte: CET.'
+				},
+				{
+					slotName: 'g32',
+					figureTitle: 'Gráfico 32 - evolução das autuações realizadas por agentes. Fonte: CET'
+				},
+				{
+					slotName: 'g33',
+					figureTitle: 'Gráfico 33 - evolução das autuações realizadas por equipamentos de fiscalização. Fonte: CET'
+				},
+				{
+					slotName: 't21',
+					figureTitle: 'Tabela 21 - principais autuações lavradas (2017) no município de São Paulo. Fonte: CET'
+				},
+				{
+					slotName: 't22',
+					figureTitle: 'Tabela 22 - principais autuações lavradas por agentes de trânsito da CET (2017). Fonte: CET'
+				},
+				{
+					slotName: 'f23',
+					figureTitle: 'Figura 23 - Fluxo de análise e tabulação INFOSIGA. Fonte: INFOSIGA-SP	'
+				},
+				{
+					slotName: 'f24',
+					figureTitle: 'Figura 24 - nova calçada implantada na Rua Pedro de Toledo - Vila Mariana'
 				}
 			],
 			commentsCount: 0

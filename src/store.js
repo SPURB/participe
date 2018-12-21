@@ -81,7 +81,7 @@ const store = new Vuex.Store({
 					if (a.ativo < b.ativo) { return 1 }
 					if (a.ativo > b.ativo) { return -1 }
 				})
-			commit('FETCHING_STATE', false)
+			// commit('FETCHING_STATE', false)
 		},
 		FETCH_CONSULTAS_DECODE (state, consultas) {
 			for (var key in consultas) {
@@ -113,17 +113,18 @@ const store = new Vuex.Store({
 						self.filterConsultas()
 					}
 				})
-			// .catch(e => { store.state.errors.push(e) })
 				.catch(e => {
-					console.log(e)
-					if (e.lineNumber > 399) {
-						commit('FETCHING_ERROR', true)
-						commit('FETCHING_STATE', false)
-					} else {
-						commit('FETCHING_ERROR', false)
-						commit('FETCHING_STATE', false)
-					}
+					// console.log(e)
+					commit('FETCHING_ERROR', true)
+					// if (e.lineNumber > 399) {
+					// 	commit('FETCHING_ERROR', true)
+					// 	// commit('FETCHING_STATE', false)
+					// } else {
+					// 	commit('FETCHING_ERROR', false)
+					// 	commit('FETCHING_STATE', false)
+					// }
 				})
+				.then(() => commit('FETCHING_STATE', false))
 		}
 	}
 })

@@ -95,7 +95,7 @@ export default {
 			let i = 1
 			let dados = app.$props
 			this.dados.linhas.map(function (linha) {
-				linha.map(function(celula) {
+				linha.map(function (celula) {
 					celula.map(function (conteudo) {
 						if (conteudo.ref) {
 							notasB.push(conteudo.ref)

@@ -119,12 +119,12 @@ export default {
 				alert('Inclua seu comentário')
 			} else {
 				this.send()
-				this.enviandoComment = true
 			}
 		},
 		send () {
 			let app = this
 			app.erro = false
+			app.enviandoComment = true
 			axios.post(this.apiPath + 'members', {
 				'idConsulta': app.$route.meta.id,
 				'name': app.returnFormNameObject,
@@ -143,13 +143,15 @@ export default {
 					// app.setModal('success')
 					app.abreComentario = false
 					app.sucesso = true
-					app.enviandoComment = false
 					app.resetForm()
 				})
 				.catch(function (error) {
 					// app.setModal('error')
 					app.erro = true
 					console.log(error)
+				})
+				.then(function () {
+					app.enviandoComment = false
 				})
 		},
 		resetForm () {
@@ -159,13 +161,13 @@ export default {
 			this.form_email = null
 			this.form_content = null
 			this.abreComentario = false
-		},
-		x () {
-			this.$refs.y.classList.toggle('enviando')
-			// this.$refs.z.classList.toggle('sucesso')
-			this.g = !this.g
-			// this.abreComentario =! this.abreComentario
 		}
+		// x () {
+		// 	this.$refs.y.classList.toggle('enviando')
+		// 	// this.$refs.z.classList.toggle('sucesso')
+		// 	this.g = !this.g
+		// 	// this.abreComentario =! this.abreComentario
+		// }
 	}
 }
 
@@ -205,11 +207,11 @@ div.Comments {
 			border-radius: 100%;
 			color: #FFF;
 			margin: 0px 20px 0 0;
-			box-shadow: 0 2px 2px rgba(0, 0, 0, .24);
+			box-shadow: 0 2px 2px $sombra-3;
 		};
 
 		&:hover {
-			background: #BDBDBD;
+			background: $cinza-2;
 			color: #FFF;
 			cursor: pointer;
 		};

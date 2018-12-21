@@ -53,6 +53,8 @@ export default{
 }
 </script>
 <style lang="scss">
+@import '../variables';
+
 	div.PageTop {
 		padding: 2rem;
 		margin: 0 0 2rem 0;
@@ -71,14 +73,14 @@ export default{
 		& > div:first-child {
 			padding: 1.2rem;
 			background: #FFF;
-			outline: 8px solid rgba(0, 0, 0, .24);
+			outline: 8px solid $sombra-3;
 			-moz-outline-radius: 2px;
 
 			& > div {
 				margin: 0 0 16px 0;
 				text-align: center;
 				font-size: small;
-				color: #777;
+				color: $cinza-1;
 				font-weight: 400;
 
 				&:last-child { margin-bottom: 0; };
@@ -102,11 +104,11 @@ export default{
 			}
 			div#statusConsulta.aberta::after{
 				content: "Em consulta";
-				background-color: #008015;
+				background-color: $verde;
 			}
 			div#statusConsulta.fechada::after{
 				content: "Consulta Encerrada";
-				background-color: rgba(0, 0, 0, .8);
+				background-color: $sombra-1;
 				opacity: .5;
 			}
 			& > h1 {
@@ -130,8 +132,8 @@ export default{
 			align-items: flex-end;
 			justify-content: center;
 			width: 100%;
-			height: 25vh;
-			background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .8));
+			height: 15vh;
+			background: linear-gradient(to bottom, rgba(0, 0, 0, 0), $sombra-1);
 			transform: translateY(0);
 			transition: all .4s;
 
@@ -139,7 +141,7 @@ export default{
 				font-size: calc(24px + 4vmin);
 				line-height: .8;
 				color: #FFF;
-				text-shadow: 0 2px 2px rgba(0, 0, 0, .24);
+				text-shadow: 0 2px 2px $sombra-3;
 				transition: all .1s;
 			};
 

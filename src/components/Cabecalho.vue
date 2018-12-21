@@ -37,7 +37,7 @@ div.Cabecalho {
 		height: 60px;
 		max-height: 120px;
 		background: $cinza-3;
-		box-shadow: 0 4px 8px rgba(0, 0, 0, .24);
+		box-shadow: 0 4px 8px $sombra-3;
 		position: relative;
 		z-index: 3;
 
@@ -47,7 +47,7 @@ div.Cabecalho {
 			width: 0;
 
 			&:hover {
-				color: #333;
+				color: $preto;
 				cursor: pointer;
 			};
 		};

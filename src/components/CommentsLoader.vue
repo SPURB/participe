@@ -66,7 +66,7 @@ export default {
 		padding: 1rem 1.2rem 0.8rem 1.2rem;
 		margin: 0 0 1rem 0;
 		border-radius: 2px;
-		box-shadow: 0 2px 2px rgba(0, 0, 0, .12);
+		box-shadow: 0 2px 2px $sombra-4;
 		div.name {
 			font-size: small;
 			font-weight: bold;
@@ -74,11 +74,11 @@ export default {
 		}
 		div.comment_info {
 			font-size: small;
-			color: #BDBDBD;
+			color: $cinza-2;
 			display: flex;
 		}
 		p.content {
-			font-family: "Georgia", serif;
+			font-family: $serifada;
 			margin: 0.8rem 0 0 0;
 			font-size: smaller;
 			@media (max-width: 600px) { font-size: initial; }

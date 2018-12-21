@@ -66,10 +66,10 @@ aside {
 		position: absolute;
 		right: 1rem;
 		top: 1rem;
-		color: #BDBDBD;
+		color: $cinza-2;
 		transition: color .1s;
 
-		&:hover { color: #333; cursor: pointer; };
+		&:hover { color: $preto; cursor: pointer; };
 	};
 
 	ul {

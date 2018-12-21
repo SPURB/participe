@@ -29,6 +29,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../variables';
+
 div.Preloader {
 	z-index: -1;
 	position: absolute;
@@ -56,19 +58,19 @@ div.Preloader {
 
 			@keyframes contorno {
 				0% {
-					stroke: #777;
+					stroke: $cinza-1;
 					stroke-dashoffset: -415;
 					fill-opacity: 0;
 					stroke-opacity: 0%;
 				}
 				50% {
-					stroke: #777;
+					stroke: $cinza-1;
 					stroke-dashoffset: 0;
 					fill-opacity: 1;
 					stroke-opacity: 100%;
 				}
 				100% {
-					stroke: #777;
+					stroke: $cinza-1;
 					stroke-dashoffset: 415;
 					fill-opacity: 0;
 				}
@@ -78,7 +80,7 @@ div.Preloader {
 
 	p.erro {
 		opacity: 0;
-		color: #777;
+		color: $cinza-1;
 		user-select: none;
 		-moz-user-select: none;
 		transition: opacity ease-in .2s;
@@ -95,12 +97,12 @@ div.Preloader {
 
 		@keyframes erro {
 			0% { background: transparent; }
-			1% { background: #EB5757; }
+			1% { background: $vermelho; }
 			100% { background: transparent; }
 		}
 
 		svg path.balao {
-			stroke: #777;
+			stroke: $cinza-1;
 			animation: none;
 		}
 

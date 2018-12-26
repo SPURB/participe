@@ -89,71 +89,38 @@
 				<h3 class="titulo" indent="2">Seção IV<span>: Dos Objetivos Específicos, Diretrizes e Estratégias de Transformação Urbanística</span></h3>
 				<h3 class="subtitulo">Dos Objetivos Específicos, Diretrizes e Estratégias de Transformação Urbanística</h3>
 				<CommentsContext :id="9" :context="'Secao IV - Art. 4º'"><p><b>Art. 4º</b> O PIU-VL considera os objetivos a serem alcançados no Setor Orla Ferroviária e Fluvial da Macroárea de Estruturação Metropolitana - MEM, nos termos do art. 12, § 1º da Lei n. 16.050/2014 – PDE, e tem como objetivos específicos:</p></CommentsContext>
-
 				<CommentsContext :id="10" :context="'Secao IV - Art. 4º - I'"><p><b>I</b> - Viabilizar a provisão de Habitação de Interesse Social - HIS com reassentamento integral para os moradores da Favela do Nove, da Favela da Linha e das ocupações de áreas condominiais do Conjunto Habitacional Cingapura Madeirite, promovendo a permanência desses moradores próximos de onde já residem;</p></CommentsContext>
-
 				<CommentsContext :id="11" :context="'Secao IV - Art. 4º - II'"><p><b>II</b> - Desenvolver Empreendimentos de Habitação de Interesse Social - EHIS com uso misto, promovendo-se a ocupação do espaço térreo com usos de interesse coletivo, como equipamentos públicos, comércio e serviços;</p></CommentsContext>
-
 				<CommentsContext :id="12" :context="'Secao IV - Art. 4º - III'"><p><b>III</b> - Priorizar a implantação de moradias de interesse social, com qualificação do espaço urbano correspondente, promovendo sua inserção urbanística adequada e atendimento das necessidades básicas da população moradora, nos moldes do Programa de Intervenções da AIU-VL;</p></CommentsContext>
-
 				<CommentsContext :id="13" :context="'Secao IV - Art. 4º - IV'"><p><b>IV</b> - Construir edificações destinadas a equipamentos públicos municipais, especialmente aqueles ligados às redes de saúde, educação, esporte, cultura e lazer, assistência social e desenvolvimento econômico, de forma a garantir a presença do Poder Público municipal junto dos EHIS;</p></CommentsContext>
-
 				<CommentsContext :id="14" :context="'Secao IV - Art. 4º - V'"><p><b>V</b> - Promover a melhoria das condições de habitabilidade do conjunto habitacional Cingapura Madeirite e a restituição dos espaços públicos do ramal ferroviário e das Ruas Japiaçu e Prof. Ariovaldo Silva, mediante ações e intervenções necessárias a tanto;</p></CommentsContext>
-
 				<CommentsContext :id="15" :context="'Secao IV - Art. 4º - VI'"><p><b>VI</b> - Requalificar áreas subutilizadas dos imóveis antigamente dedicados à ocupação industrial, com densidades compatíveis com as diretrizes de desenvolvimento da MEM e usos mistos;</p></CommentsContext>
-
 				<CommentsContext :id="16" :context="'Secao IV - Art. 4º - VII'"><p><b>VII</b> - Promover o desenvolvimento urbano proporcionando a ocupação urbana plural, com alta densidade construtiva e habitacional, diminuindo a demanda por viagens e por transporte, com o estímulo à produção de habitação para distintos segmentos, combinada com usos não residenciais de interesse público e que promovam a urbanidade; </p></CommentsContext>
-
 				<CommentsContext :id="17" :context="'Secao IV - Art. 4º - VIII'"><p><b>VIII</b> - Viabilizar o parcelamento do solo nos termos definidos nesta Lei, com o mais adequado aproveitamento para abertura de novas ruas, destinação de áreas verdes e instalação de equipamentos institucionais;</p></CommentsContext>
-
 				<CommentsContext :id="18" :context="'Secao IV - Art. 4º - IX'"><p><b>IX</b> – Possibilitar a utilização do Potencial Construtivo Adicional aplicável ao território do Perímetro de Adesão como referência de aproveitamento dos lotes resultantes de seu processo de transformação;</p></CommentsContext>
-
 				<CommentsContext :id="19" :context="'Secao IV - Art. 4º - X'"><p><b>X</b> - Identificar as áreas contaminadas existentes e avaliar as medidas necessárias para sua reintegração às dinâmicas urbanas locais, bem como as estratégias para utilização no atendimento das demais diretrizes estabelecidas nesta Lei;</p></CommentsContext>
-
 				<CommentsContext :id="20" :context="'Secao IV - Art. 4º - XI'"><p><b>XI</b> – Melhorar e organizar a rede de espaços públicos e a infraestrutura urbana, em especial a de drenagem, ampliando a oferta de áreas verdes e de lazer e sua conectividade com as redes de transportes e de equipamentos públicos;</p></CommentsContext>
-
 				<CommentsContext :id="21" :context="'Secao IV - Art. 4º - XI'"><p><b>XII</b> - Proporcionar a valorização urbanística do parque fluvial do Rio Pinheiros, em desenvolvimento ao longo das suas margens, especialmente em função da sua conexão com a Av. Dr. Gastão Vidigal;</p></CommentsContext>
-
 				<CommentsContext :id="22" :context="'Secao IV - Art. 4º - XIII'"><p><b>XIII</b> - Implantar arborização viária e aumentar as áreas verdes permeáveis com fins de mitigação das ilhas de calor; </p></CommentsContext>
-
 				<CommentsContext :id="23" :context="'Secao IV - Art. 4º - XIV'"><p><b>XIV</b> - Desenvolver ações de assistência e desenvolvimento social para atender a população em situação de rua e de dependentes químicos e buscar a sua inclusão no processo de desenvolvimento urbano proposto;</p></CommentsContext>
-
 				<CommentsContext :id="24" :context="'Secao IV - Art. 4º - XV'"><p><b>XV</b> - Desenvolver parcerias de educação profissional entre os agentes econômicos da região, principalmente os da economia criativa, garantindo formação técnica, reciclagem e formalização profissional da população vulnerável;</p></CommentsContext>
-
 				<CommentsContext :id="25" :context="'Secao IV - Art. 4º - XVI'"><p><b>XVI</b> – Implantar infraestrutura para melhoria de segurança ao pedestre;</p></CommentsContext>
-
 				<CommentsContext :id="26" :context="'Secao IV - Art. 4º - XVII'"><p><b>XVII</b> – Implantar a rede cicloviária no Perímetro de Adesão AIU-VL, para futura conexão ao sistema de transporte, aos parques e equipamentos públicos.</p></CommentsContext>
-
 				<CommentsContext :id="27" :context="'Secao IV - Art. 5º'"><p><b>Art. 5º</b> O PIU-VL tem como diretrizes: </p></CommentsContext>
-
 				<CommentsContext :id="28" :context="'Secao IV - Art. 5º - I'"><p><b>I</b> – A promoção de transformações estruturais orientadas para o maior aproveitamento da terra urbana, com o aumento nas densidades construtiva e demográfica;</p></CommentsContext>
-
 				<CommentsContext :id="29" :context="'Secao IV - Art. 5º - II'"><p><b>II</b> – A recuperação da qualidade dos sistemas ambientais existentes;</p></CommentsContext>
-
 				<CommentsContext :id="30" :context="'Secao IV - Art. 5º - III'"><p><b>III</b> – A manutenção da população moradora constante do cadastramento conduzido pela Secretaria Municipal de Habitação – SEHAB, identificada no Anexo 5, no perímetro do PIU-VL, com oferta adequada de serviços, equipamentos e infraestruturas urbanas;</p></CommentsContext>
-
 				<CommentsContext :id="31" :context="'Secao IV - Art. 5º - IV'"><p><b>IV</b> - O estabelecimento de regulação urbanística que possibilite converter parte da valorização imobiliária decorrente de investimentos privados autorizados e orientados por esta Lei em melhorias e benefícios de interesse público;</p></CommentsContext>
-
 				<CommentsContext :id="32" :context="'Secao IV - Art. 5º - V'"><p><b>V</b> - Redefinição dos parâmetros de uso e ocupação do solo de forma associada ao processo de qualificação dos espaços públicos e da paisagem, apoiada na implantação de infraestrutura urbana;</p></CommentsContext>
-
 				<CommentsContext :id="33" :context="'Secao IV - Art. 5º - VI'"><p><b>VI</b> – Desenvolvimento de EHIS integrados ao tecido urbano e social vizinhos, promovendo-se a diversidade de usos e multifuncionalidade;</p></CommentsContext>
-
 				<CommentsContext :id="34" :context="'Secao IV - Art. 5º - VII'"><p><b>VII</b> - Possibilitar a mudança de usos predominantemente industriais para usos compatíveis ao zoneamento atual, sem necessidade de demolição das edificações existentes. </p></CommentsContext>
-
 				<CommentsContext :id="35" :context="'Secao IV - Art. 6º'"><p><b>Art. 6º</b> A implantação do PIU-VL observará, no mínimo, as seguintes estratégias de transformação urbanística:</p></CommentsContext>
-
 				<CommentsContext :id="36" :context="'Secao IV - Art. 6º - I'"><p><b>I</b> - Destinação dos recursos obtidos como contrapartida à alienação do Potencial Construtivo Adicional para a implantação do Programa de Intervenções da AIU-VL, ou sua redistribuição a conta específica de implantação do Projeto de Intervenção Urbana do Arco Pinheiros – PIU Arco Pinheiros;</p></CommentsContext>
-
 				<CommentsContext :id="37" :context="'Secao IV - Art. 6º - II'"><p><b>II</b> - Celebração de Termos de Cooperação entre o Poder Público e os adquirentes do Potencial Construtivo Adicional mediante Hasta Pública por intermédio da Opção de Venda prevista nesta Lei, de modo a fixar as condições de implantação do Programa de Intervenções da AIU-VL referidas em cada Etapa deste;</p></CommentsContext>
-
 				<CommentsContext :id="38" :context="'Secao IV - Art. 6º - III'"><p><b>III</b> – Possibilidade de reunificação de matrículas imobiliárias, de parcelamento e  reparcelamento do solo nos terrenos destinados a Projeto Específico de Parcelamento de Solo, assinalados no Anexo 1, com abertura de novos espaços públicos, destinação de áreas verdes e instalação de equipamentos institucionais nos termos do Anexo 4;</p></CommentsContext>
-
 				<CommentsContext :id="39" :context="'Secao IV - Art. 6º - IV'"><p><b>IV</b> – Produção de Empreendimentos de Habitação de Interesse Social - EHIS para atendimento da demanda por moradia popular do PIU-VL, associada à implantação de equipamentos e serviços públicos nesses empreendimentos;</p></CommentsContext>
-
 				<CommentsContext :id="40" :context="'Secao IV - Art. 6º - V'"><p><b>V</b> – Promoção de ações de desenvolvimento social para a população em situação de vulnerabilidade social, especialmente da população em situação de rua e de dependentes químicos;</p></CommentsContext>
-
 				<CommentsContext :id="41" :context="'Secao IV - Art. 6º - VI'"><p><b>VI</b> – Estabelecimento do estoque de Potencial Construtivo Adicional da AIU-VL a partir da análise global das possibilidades de adensamento construtivo do território, em valores proporcionais à infraestrutura urbana e metropolitana, nos termos do Anexo 5;</p></CommentsContext>
-
 				<CommentsContext :id="42" :context="'Secao IV - Art. 6º - VII'"><p><b>VII</b> – Disponibilização, por parte do Poder Público, dos terrenos necessários à implantação dos EHIS e equipamentos públicos previstos no Programa de Intervenções da AIU-VL.</p></CommentsContext>
 			</section>
 		</section>
@@ -219,48 +186,28 @@
 			<section>
 				<h3 class="titulo" indent="2">Seção I<span>: DA ALIENAÇÃO DE POTENCIAL CONSTRUTIVO ADICIONAL</span></h3>
 				<h3 class="subtitulo">DA ALIENAÇÃO DE POTENCIAL CONSTRUTIVO ADICIONAL</h3>
-
 				<CommentsContext :id="76" :context="'Cap IV - Art.15'"><p><b>Art. 15.</b> Fica o Poder Público autorizado a alienar o Potencial Construtivo Adicional do Perímetro de Adesão da AIU-VL, na conformidade dos critérios e condições estabelecidos nesta Lei.</p></CommentsContext>
-
 				<CommentsContext :id="77" :context="'Cap IV - Parágrafo único.'"><p><b>Parágrafo único.</b> Para fins de implantação do PIU-VL, e nos termos do art. 145, §3º e do art. 147 do PDE, o estoque de Potencial Construtivo Adicional do Perímetro de Adesão da AIU-VL totaliza 680.000 m² (seiscentos e oitenta mil metros quadrados) considerando-se, para a obtenção destes valores, todo o território do Perímetro de Adesão, conforme Anexo 1.</p></CommentsContext>
-
 				<CommentsContext :id="78" :context="'Cap IV - Art.16'"><p><b>Art. 16.</b> A comercialização do Potencial Construtivo Adicional do Perímetro de Adesão da AIU-VL será realizada, alternativamente:</p></CommentsContext>
-
 				<CommentsContext :id="79" :context="'Cap IV - Art.16'"><p><b>I.</b> por intermédio de leilão, nos termos especificados nesta Lei;</p></CommentsContext>
-
 				<CommentsContext :id="80" :context="'Cap IV - Art.16'"><p><b>II.</b> mediante alienação ordinária, nos moldes dos arts. 117 e 145, § 5º do PDE, com as alterações trazidas nesta Lei.</p></CommentsContext>
-
 				<CommentsContext :id="81" :context="'Cap IV - Art.16'"><p><b>§ 1º.</b> A contrapartida obtida pela alienação do Potencial Construtivo Adicional da AIU-VL será utilizada para a implantação Etapas I e II do seu Programa de Intervenções, previstas nos Anexos 6 e 7, sendo disponibilizados eventuais excedentes financeiros ao FUNDURB, na hipótese de total implantação dos elementos do apontado programa;</p></CommentsContext>
-
 				<CommentsContext :id="82" :context="'Cap IV - Art.16'"><p><b>§ 2º.</b> Eventuais correções nos valores devidos como contrapartida previstos no parágrafo anterior, bem como inclusões de elementos indispensáveis e urgentes no Programa de Intervenções previstos nesta Lei deverá considerar o modelo econômico previsto em seu Anexo 5.</p></CommentsContext>
-
 				<CommentsContext :id="83" :context="'Cap IV - Art.17'"><p><b>Art. 17.</b> O cumprimento da cota de solidariedade para os empreendimentos desenvolvidos no Perímetro de Adesão da AIU-VL ocorrerá nos termos previstos nos artigos 111 e 112 do PDE, sendo os recursos financeiros eventualmente arrecadados destinados ao Fundo de Desenvolvimento Urbano – FUNDURB, nos termos do § 2º, inc. III, do mesmo artigo.</p></CommentsContext>
-
 				<CommentsContext :id="84" :context="'Cap IV - Art.18'"><p><b>Art. 18.</b> O Potencial Construtivo Adicional do estoque da AIU-VL será utilizável no licenciamento de edificações a razão de 1 m² (um metro quadrado) de área construída computável a cada 1 m² (um metro quadrado) de potencial construtivo adicional utilizado.</p></CommentsContext>
 				<section>
 					<h4 class="titulo" indent="3">Subseção I<span>: Do Termo de Cooperação</span></h4>
 					<h4 class="subtitulo">Do Termo de Cooperação</h4>
-
 					<CommentsContext :id="85" :context="'Cap IV - Art.19'"><p><b>Art. 19.</b> A disciplina da contraprestação pela aquisição do Potencial Construtivo Adicional mediante leilão constará de minuta do Termo de Cooperação, anexa ao instrumento convocatório, e que terá como conteúdo mínimo:</p></CommentsContext>
-
 					<CommentsContext :id="86" :context="'Cap IV - Art.19'"><p><b>I</b> - descrição dos elementos do Programa de Intervenções sujeitos a implantação diretamente pelos adquirentes na respectiva etapa;</p></CommentsContext>
-
 					<CommentsContext :id="87" :context="'Cap IV - Art.19'"><p><b>II</b> - identificação das obrigações do Poder Público e dos particulares adquirentes;</p></CommentsContext>
-
 					<CommentsContext :id="88" :context="'Cap IV - Art.19'"><p><b>III</b> - garantias de cumprimento do Termo de Cooperação a serem prestadas pelo Poder Público e pelo particular;</p></CommentsContext>
-
 					<CommentsContext :id="89" :context="'Cap IV - Art.19'"><p><b>IV</b> - matriz de riscos;</p></CommentsContext>
-
 					<CommentsContext :id="90" :context="'Cap IV - Art.19'"><p><b>V</b> - hipóteses e consequências das alterações do Termo de Cooperação, do seu término antecipado e da eventual prorrogação;</p></CommentsContext>
-
 					<CommentsContext :id="91" :context="'Cap IV - Art.19'"><p><b>VI</b> - modo de resolução de controvérsias, por meio dos instrumentos previstos pela Lei Municipal nº 16.873 de 22 de fevereiro de 2018, ou outra que vier a sucedê-la.</p></CommentsContext>
-
 					<CommentsContext :id="92" :context="'Cap IV - Art.19'"><p><b>VII</b> - cronograma de realização da etapa do Programa de Intervenções, e as consequências para eventuais atrasos;</p></CommentsContext>
-
 					<CommentsContext :id="93" :context="'Cap IV - Art.19'"><p><b>§ 1º.</b> O Termo de Cooperação deverá prever a observância de, no mínimo, as especificações técnicas das obras e dos serviços assumidos pelas partes e previstas nos Anexos 6 e 7 desta Lei.</p></CommentsContext>
-
 					<CommentsContext :id="94" :context="'Cap IV - Art.19'"><p><b>§ 2º.</b> O instrumento convocatório do leilão, incluindo a minuta do Termo de Cooperação e demais anexos, preverá a forma da implantação de elementos do Programa de Intervenções constantes na respectiva etapa diretamente pelos particulares adquirentes, bem como os prazos referentes a tais obrigações, e será  submetido à prévia consulta pública por prazo não inferior a 30 (trinta) dias;</p></CommentsContext>
-
 					<CommentsContext :id="95" :context="'Cap IV - Art.19'"><p><b>§ 3º.</b> O Termo de Cooperação referente à alienação de Potencial Construtivo Adicional na Primeira Hasta Pública, nos termos do artigo 20 e seguintes desta Lei, deverá conter cláusula de Opção de Venda do Estoque Remanescente de Potencial Construtivo Adicional nas condições expressas pelo artigo 28 da presente Lei. </p></CommentsContext>
 				</section>
 
@@ -436,35 +383,35 @@
 				<h3 class="titulo" indent="2">Anexos do Projeto de Lei</h3>
 				<ul class="links">
 					<li>
-						<a href="">
+						<a :href="arquivosLeopoldina('AIU_VL_PL_Anexo1_Mapa1.pdf')" download target="_blank">
 							<i class="icon-pdf icon"><span>pdf</span></i>
 							<div>Anexo 1: Mapa 1</div>
 							<span>972 Kb</span>
 						</a>
 					</li>
 					<li>
-						<a href="">
+						<a :href="arquivosLeopoldina('AIU_VL_PL_Anexo2_Mapa2.pdf')"  download target="_blank">
 							<i class="icon-pdf icon"><span>pdf</span></i>
 							<div>Anexo 2: Mapa 2</div>
 							<span>36 Kb</span>
 						</a>
 					</li>
 					<li>
-						<a href="">
+						<a :href="arquivosLeopoldina('AIU_VL_PL_Anexo3.pdf')"  download target="_blank">
 							<i class="icon-pdf icon"><span>pdf</span></i>
 							<div>Anexo 3: Quadro de Parâmetros urbanísticos da AIU-VL</div>
 							<span>62 Kb</span>
 						</a>
 					</li>
 					<li>
-						<a href="">
+						<a :href="arquivosLeopoldina('AIU_VL_PL_Anexo4.pdf')"  download target="_blank">
 							<i class="icon-pdf icon"><span>pdf</span></i>
 							<div>Anexo 4: Quadro de Percentuais mínimos de destinação de área pública</div>
 							<span>65 Kb</span>
 						</a>
 					</li>
 					<li>
-						<a href="">
+						<a :href="arquivosLeopoldina('AIU_VL_PL_Anexo6.pdf')"  download target="_blank">
 							<i class="icon-pdf icon"><span>pdf</span></i>
 							<div>Anexo 6: Programa de Intervenções</div>
 							<span>67 Kb</span>
@@ -479,59 +426,59 @@
 				<h3 class="titulo" indent="2">Caderno do Projeto</h3>
 				<ul class="links">
 					<li>
-						<a href="">
+						<a :href="arquivosLeopoldina('PIU_VLVL_CAP_01_INTRODUCAO.pdf')"  download target="_blank">
 							<i class="icon-pdf icon"><span>pdf</span></i>
 							<div>Capítulo 1: Introdução</div>
 							<span>1,04 Mb</span>
 						</a>
 					</li>
 					<li>
-						<a href="">
+						<a :href="arquivosLeopoldina('PIU_VLVL_CAP_02_DIAGNOSTICO_SOCIO-TERRITORIAL.pdf')"  download target="_blank">
 							<i class="icon-pdf icon"><span>pdf</span></i>
 							<div>Capítulo 2: Diagnóstico Sócio-territorial</div>
 							<span>68,7 Mb</span>
 						</a>
 					</li>
 					<li>
-						<a href="">
+						<a :href="arquivosLeopoldina('PIU_VLVL_CAP_03_PROGRAMA_INTERESSE_PUBLICO.pdf')"  download target="_blank">
 							<i class="icon-pdf icon"><span>pdf</span></i>
 							<div>Capítulo 3: Programa de Interesse Público</div>
 							<span>167 Kb</span>
 						</a>
 					</li>
 					<li>
-						<a href="">
+						<a :href="arquivosLeopoldina('PIU_VLVL_CAP_04_PROPOSTA_ORDENAMENTO_URBANISTICO.pdf')"  download target="_blank">
 							<i class="icon-pdf icon"><span>pdf</span></i>
 							<div>Capítulo 4: Proposta de Ordenamento Urbanístico</div>
 							<span>107 Mb</span>
 						</a>
 					</li>
 					<li>
-						<a href="">
+						<a :href="arquivosLeopoldina('PIU_VLVL_CAP_05_MODELAGEM_ECONOMICA.pdf')"  download target="_blank">
 							<i class="icon-pdf icon"><span>pdf</span></i>
 							<div>Capítulo 5: Modelagem Econômica da Intervenção</div>
 							<span>619 Kb</span>
 						</a>
 					</li>
 					<li>
-						<a href="">
+						<a :href="arquivosLeopoldina('PIU_VLVL_CAP_06_MODELO_GESTAO.pdf')"  download target="_blank">
 							<i class="icon-pdf icon"><span>pdf</span></i>
 							<div>Capítulo 6: Modelo de Gestão</div>
 							<span>154 Kb</span>
 						</a>
 					</li>
 					<li>
-						<a href="">
+						<a :href="arquivosLeopoldina('PIU_VLVL_CAP_07_MODELO_JURIDICO.pdf')"  download target="_blank">
 							<i class="icon-pdf icon"><span>pdf</span></i>
 							<div>Capítulo 7: Modelo Jurídico</div>
 							<span>226 Kb</span>
 						</a>
 					</li>
 					<li>
-						<a href="">
+						<a :href="arquivosLeopoldina('PIU_VLVL_CADERNO_COMPLETO.rar')"  download target="_blank">
 							<i class="icon-pdf icon"><span>pdf</span></i>
 							<div>Caderno Completo</div>
-							<span>83,5 Mb</span>
+							<span>183,5 Mb</span>
 						</a>
 					</li>
 				</ul>
@@ -588,7 +535,12 @@ export default {
 		CommentsLoader,
 		Apoio
 	},
-	mixins: [ consultasCommons ]
+	mixins: [ consultasCommons ],
+	methods: {
+		arquivosLeopoldina (nomeArquivo) {
+			return this.$store.getters.basePath + 'arquivos/piu-vila-leopoldina-2/' + nomeArquivo
+		}
+	}
 }
 </script>
 

@@ -4,7 +4,10 @@ export const consultasCommons = {
 		this.$store.dispatch('fetchConsultas', { self: this })
 		this.consultas = this.$store.state.consultas
 	},
-	mounted () { this.listaTitulos() },
+	mounted () {
+		this.listaTitulos()
+		this.$store.commit('SET_ROUTE_ID', this.$route.meta.id)
+	},
 	updated () { this.alteraIndice() },
 	methods: {
 		scrollToallComments () {

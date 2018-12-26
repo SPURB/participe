@@ -48,12 +48,12 @@
 			<fieldset>
 				<label for="id">Comentar sobre</label>
 				<select @change="alteraContexto($event)"
-					id="id" 
-					name="id" 
-					v-validate="'required: true'" 
+					id="id"
+					name="id"
+					v-validate="'required: true'"
 					v-model="form_id"
 				>
-					<option v-for="option in options" :value="option.id">{{ option.context }}</option>
+					<option v-for="(option, index) in options" :value="option.id" :key="index">{{ option.context }}</option>
 				</select>
 			</fieldset>
 			<fieldset>
@@ -149,9 +149,9 @@ export default {
 				'commentcontext': app.form_context
 			})
 				.then(function (response) {
-					let name = app.form_name
-					let content = app.form_content
-					console.log(app.attr.id)
+					// let name = app.form_name
+					// let content = app.form_content
+					// console.log(app.attr.id)
 					// app.setModal('success')
 					app.abreComentario = false
 					app.sucesso = true
@@ -177,12 +177,6 @@ export default {
 		alteraContexto (evt) {
 			this.form_context = 'Anexos - Caderno do Projeto (' + evt.target.options[evt.target.selectedIndex].text + ')'
 		}
-		// x () {
-		// 	this.$refs.y.classList.toggle('enviando')
-		// 	// this.$refs.z.classList.toggle('sucesso')
-		// 	this.g = !this.g
-		// 	// this.abreComentario =! this.abreComentario
-		// }
 	}
 }
 

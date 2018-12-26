@@ -21,7 +21,8 @@ const store = new Vuex.Store({
 		},
 		isAdmin: false,
 		infoAdmin: undefined,
-		fetching: true
+		fetching: true,
+		routeId: undefined
 	},
 	getters: {
 		enviroment () {
@@ -58,9 +59,15 @@ const store = new Vuex.Store({
 			case 'homologacao': return 'http://participe.comunicacao.smul.pmsp/'
 			case 'producao': return 'https://participe.gestaourbana.prefeitura.sp.gov.br/'
 			}
+		},
+		consultasClicada (state) {
+			if (state.consultas !== undefined) {
+				return state.consultas.find(consulta => parseInt(consulta.id_consulta) === state.routeId)
+			} else { return 'not Clicked' }
 		}
 	},
 	mutations: {
+		SET_ROUTE_ID (state, routeId) { state.routeId = routeId },
 		FETCHING_STATE (state, fetchState) {
 			state.fetching = fetchState
 		},

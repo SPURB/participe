@@ -7,7 +7,7 @@
 				<input class="fuzzy-search" type="search" ref="busca" title="Digite o que pesquisa" value="Pesquisar" @focusout="desativaBusca">
 			</div> -->
 			<ul class="list" :class="{ load: !fetching }">
-				<li v-for="consulta in consultas" class="card" @click="redirect(setUrlByType(consulta.urlConsulta))">
+				<li v-for="(consulta, index) in consultas" class="card" @click="redirect(setUrlByType(consulta.urlConsulta))" :key="index">
 					<div class="bgImg">
 						<img :srcset="imgset(consulta.urlCapa)"
 							sizes="
@@ -38,10 +38,9 @@
 							<i class="icon-contribuicao icon"><span>contribuicao</span></i>
 							{{ consulta.nContribuicoes }} contribuições
 						</p>
-						<!--<p v-if="consulta.ativo" title="Tempo restante para contribuir">
-							<i class="material-icons">access_time</i>
+						<!-- <p v-if="consulta.ativo" title="Tempo restante para contribuir">
 							{{ diasRestantes(consulta.dataFinal) }}
-						</p>-->
+						</p> -->
 						<p v-if="consulta.urlDevolutiva" class="linkSistemat">
 							<a :href="consulta.urlDevolutiva" target="_blank">
 								<i class="icon-acessar_url icon" style="font-size: 0.7rem;"><span>launch</span></i> Acessar devolutiva
@@ -101,15 +100,15 @@ export default {
 		dataDisplay (data) {
 			return data.substring(8, 10) + '/' + data.substring(5, 7) + '/' + data.substring(0, 4)
 		},
-		diasRestantes (data) {
-			// if(data != null || data != '' ){
-			let hoje = new Date()
-			let dataFinal = new Date(data.substring(0, 4), data.substring(5, 7) - 1, data.substring(8, 10))
-			let dias = Math.round((dataFinal - hoje) / (1000 * 60 * 60 * 24)) + 1
-			if (dias <= 0) {
-				return 'Não é mais possível contribuir'
-			} else { return dias + ' dias restantes para contribuir' }
-		},
+		// diasRestantes (data) {
+		// 	// if(data != null || data != '' ){
+		// 	let hoje = new Date()
+		// 	let dataFinal = new Date(data.substring(0, 4), data.substring(5, 7) - 1, data.substring(8, 10))
+		// 	let dias = Math.round((dataFinal - hoje) / (1000 * 60 * 60 * 24)) + 1
+		// 	if (dias <= 0) {
+		// 		return 'Não é mais possível contribuir'
+		// 	} else { return dias + ' dias restantes para contribuir' }
+		// },
 		redirect (dest) { location.assign(dest) }
 	}
 }

@@ -1,11 +1,17 @@
 <template>
 	<div class="comentavel" :class="{ aberto: abreComentario }">
 		<div @click="abreComentario = !abreComentario" :class="{ sucesso: sucesso }">
-			<i class="icon-comentario icon"><span>chat</span></i>
+			<div class="icon-counter">
+				<i class="icon-comentario icon"><span>chat</span></i>
+				<!-- filtrar numero (será refatorar CommentsLoader e vuex)-->
+				<!-- <span class="counter-comentario">89</span> -->
+			</div>
+			<div class="content-comentario">
 				<slot></slot>
+			</div>
 		</div>
 		<transition name="form_display">
-			<form v-if="abreComentario">
+			<form v-if="toggleFormOrMessage">
 				<h3 class="form_title">Comente aqui</h3>
 				<fieldset>
 					<label for="nome">Nome</label>
@@ -59,7 +65,7 @@
 					></textarea>
 				</fieldset>
 				<div class="action">
-					<svg v-if="enviandoComment" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="60 0 40 40">
+					<svg v-if="enviandoComment" width="40" height="40" viewBox="60 0 40 40">
 						<path fill="#E3E3E3" d="M60 4v24a4 4 0 0 0 4 4h28l8 8V4a4 4 0 0 0-4-4H64a4 4 0 0 0-4 4z"/>
 						<circle class="bolinha1" cx="70.5" cy="14.9" r="3.4"/>
 						<circle class="bolinha2" cx="80" cy="14.9" r="3.4"/>
@@ -68,6 +74,7 @@
 					<a @click="checkName" :class="{ enviando: enviandoComment, erro: erro }"></a>
 				</div>
 			</form>
+			<p class="consulta-encerrada" v-if="!consultaAtiva">Desculpe, mas o período de participação já foi encerrado.</p>
 		</transition>
 	</div>
 </template>
@@ -117,7 +124,17 @@ export default {
 				return this.form_name + ' ' + this.form_surname
 			}
 		},
-		apiPath () { return this.$store.getters.apiPath }
+		apiPath () { return this.$store.getters.apiPath },
+		consultaAtiva () {
+			if (this.$store.getters.consultasClicada !== undefined) {
+				if (parseInt(this.$store.getters.consultasClicada.ativo) === 1) {
+					return true
+				}
+			} else { return false }
+		},
+		toggleFormOrMessage () {
+			return (this.abreComentario && this.consultaAtiva)
+		}
 	},
 
 	methods: {
@@ -155,8 +172,8 @@ export default {
 				'commentcontext': app.context
 			})
 				.then(function (response) {
-					let name = app.form_name
-					let content = app.form_content
+					// let name = app.form_name
+					// let content = app.form_content
 					// console.log(app.id)
 					// app.setModal('success')
 					app.abreComentario = false
@@ -197,46 +214,70 @@ export default {
 	position: relative;
 	z-index: 0;
 
-	&:hover, &.aberto {
+	.consulta-encerrada{
+		display: none;
+		background-color:$vermelho;
+		padding: 1em;
+		color: #FFF
+	}
+
+	&:hover,
+	&.aberto {
 		background: $cinza-3;
 	}
 	&.aberto {
 		padding: 1em 0;
 		margin: 1em auto;
+		.consulta-encerrada{
+			display: block
+		}
 	}
 
 	& > div {
-		i.icon-comentario {
-			position: absolute;
-			top: 3px;
-			z-index: 100;
-			display: inline-flex;
-			align-items: center;
-			justify-content: center;
-			vertical-align: -8px;
-			width: 30px;
-			height: 30px;
-			font-size: 1.1em;
-			color: $cinza-2;
-			transition: color ease-in-out .2s;
-		};
-		&:hover i.icon-comentario { color: $preto }
+		display: grid;
+		grid-gap: 10px;
+		grid-template-columns: 30px 1fr;
+
+		.icon-counter{
+			display: flex;
+			flex-direction: column;
+			.counter-comentario,
+			.icon-comentario {
+				color: $cinza-2;
+				text-align: center;
+				transition: color ease-in-out .2s;
+			}
+			.icon-comentario{
+				margin-top: .5rem;
+			}
+		}
 		&:hover {
 			cursor: pointer;
+			.counter-comentario,
+			.icon-comentario {
+				color: $preto
+			}
 		};
 
 		&.sucesso {
-			background: $verde;
-			color: #FFF;
-
-			i {
-				background: #FFF;
-				color: $verde;
+			margin-bottom: 1em;
+			&::after {
+				content: 'Comentário enviado';
+				line-height: 1.3;
+				background-color: $verde;
+				padding: .7em;
+				color: #fff;
+				grid-column: 1 / 3;
+				grid-row: 2
 			}
-
-			&::after { content: 'Comentário enviado'; }
 		}
-	};
+	}
+
+	& div.content-comentario{
+		p, ol, ul {
+			padding-left: 0
+		}
+	}
 
 	form {
 		background: $cinza-3;
@@ -387,15 +428,11 @@ export default {
 			};
 		};
 	};
-	// &.aberto { max-height: 1000px; };
 	@media (max-width: 600px) {
-		font-size: 20px;
-		div {
-			padding-left: 1rem;
-			padding-right: 1rem;
-			i.icon-comentario {
-				margin-left: -1rem;
-			}
+
+		.content-comentario {
+			padding-left:0;
+			margin-left: 0
 		}
 	}
 };

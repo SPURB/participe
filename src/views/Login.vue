@@ -56,6 +56,9 @@ export default {
 		passNoSpaces () { return this.pass.replace(/\s/g, '') },
 		apiLogin () { return this.$store.getters.apiLogin }
 	},
+	mounted () {
+		document.getElementById('carregando').remove()
+	},
 	methods: {
 		checaUsuario () {
 			let app = this // para escopo de post do axios

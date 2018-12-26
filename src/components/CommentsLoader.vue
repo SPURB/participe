@@ -1,6 +1,6 @@
 <template>
 	<div class="Commentsloader">
-		<div v-if="comments" v-for="comment in comments" class="comment">
+		<div v-if="comments" v-for="(comment, index) in comments" class="comment" :key="index">
 			<div class="name"><i class="icon-pessoa-outline icon"><span>person_outline</span></i>{{ comment.name }}</div>
 			<div class="comment_info"><i class="icon-tempo icon"><span>schedule</span></i>{{ filterDate(comment.commentdate) }}</div>
 			<div class="comment_info"><i class="icon-assunto icon"><span>subject</span></i>Comentou em "{{ comment.commentcontext }}"</div>

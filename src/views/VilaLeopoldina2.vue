@@ -1,7 +1,7 @@
 <template>
 	<div class="VilaLeopoldina2" ref="conteudoConsulta">
-		<PageTop background_image_src="arquivos/capas/capa_vl-1900x1073.png" :esta_consulta="estaConsulta">
-			<template slot="titulo"><div>PIU Vila Leopoldina</div></template>
+		<PageTop background_image_src="arquivos/capas/capa_vl_1900w.png" :esta_consulta="estaConsulta" :social="social_assets">
+			<template slot="titulo"><div>PIU Vila Leopoldina-Villa Lobos</div></template>
 			<template slot="subtitulo"><div>Projeto de Lei do PIU Vila Leopoldina</div></template>
 		</PageTop>
 
@@ -428,6 +428,7 @@
 			<CommentsContext :id="216" :context="'Cap VI - Art. 49'"><p><b>Art. 49.</b> Ficam aprovados os melhoramentos viários dispostos no Anexo 2 da presente Lei.</p></CommentsContext>
 			<CommentsContext :id="217" :context="'Cap VI - Art. 50'"><p><b>Art. 50.</b> Esta Lei entrará em vigor na data de sua publicação.</p></CommentsContext>
 		</section>
+
 		<section>
 			<h2 class="titulo" indent="1">Anexos</h2>
 
@@ -470,6 +471,8 @@
 						</a>
 					</li>
 				</ul>
+
+				<Comments v-if="estaConsulta.ativo == 1" :attr="{id:218, context:'Anexos - Anexos do Projeto de Lei'}"></Comments>
 			</section>
 
 			<section>
@@ -532,6 +535,14 @@
 						</a>
 					</li>
 				</ul>
+
+				<CommentsOption v-if="estaConsulta.ativo == 1" :options="[
+					{ id: 219, context: 'Capítulo 4: Proposta de Ordenamento Urbanístico' },
+					{ id: 220, context: 'Capítulo 5: Modelagem Econômica da Intervenção' },
+					{ id: 221, context: 'Capítulo 6: Modelo de Gestão' },
+					{ id: 222, context: 'Capítulo 7: Modelo Jurídico' }
+				]">
+				</CommentsOption>
 			</section>
 		</section>
 
@@ -548,6 +559,7 @@ import PageTop from '@/components/PageTop'
 import Indice from '@/components/Indice'
 import Comments from '@/components/Comments'
 import CommentsContext from '@/components/CommentsContext'
+import CommentsOption from '@/components/CommentsOption'
 import CommentsLoader from '@/components/CommentsLoader'
 import Apoio from '@/components/Apoio'
 import { consultasCommons } from '@/mixins/consultasCommons'
@@ -559,7 +571,12 @@ export default {
 			titulosLimpo: [],
 			comments_atrr: undefined,
 			consultas: false,
-			estaConsulta: {}
+			estaConsulta: {},
+			social_assets: {
+				whatsapp: 'https://wa.me/?text=Contribua%20para%20a%20Consulta%20Pública%20do%20PIU%20Vila%20Leopoldina-Villa%20Lobos!',
+				facebook: 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br%2F%23%2Fvila-leopoldina-projeto-de-lei&amp;src=sdkpreparse',
+				twitter: 'https://twitter.com/intent/tweet?text=Contribua%20para%20a%20Consulta%20Pública%20do%20PIU%20Vila%20Leopoldina-Villa%20Lobos!%20https://participe.gestaourbana.prefeitura.sp.gov.br/#/vila-leopoldina-projeto-de-lei'
+			}
 		}
 	},
 	components: {
@@ -567,6 +584,7 @@ export default {
 		Indice,
 		Comments,
 		CommentsContext,
+		CommentsOption,
 		CommentsLoader,
 		Apoio
 	},

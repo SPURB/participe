@@ -5,8 +5,8 @@
 		<p>A rede estrutural de transporte coletivo é o sistema de infraestrutura que propicia a implantação dos Eixos de Estruturação da Transformação Urbana. Ao longo destes eixos, o PDE propõe uma transformação do uso do solo, com adensamento populacional e construtivo articulado a uma qualificação urbanística dos espaços públicos.</p>
 		<p>As áreas de influência dos Eixos de Estruturação da Transformação Urbana são determinadas de acordo com o meio de transporte coletivo de média e alta capacidade. Pertence à área de influência dos Eixos de Estruturação da Transformação Urbana:</p>
 		<ul>
-		    <li>(i) toda quadra integralmente contida num raio de 400 metros ou cortada por um raio de 400 metros e integralmente contida num raio de 600 metros de uma estação de trem, metrô, veículos leves sobre trilho (VLT) ou veículos leves sobre pneus (VLP) em via elevada; ou</li>
-		    <li>(ii) toda quadra inteiramente contida entre linhas paralelas ao eixo das vias de corredor de ônibus municipal e intermunicipal ou VLP em via não elevada, distanciadas de 150 metros do eixo, ou as quadras cortadas por estas linhas paralelas e inteiramente contidas entre linhas paralelas ao eixo dessas vias distanciadas de 300 metros do eixo.</li>
+			<li>(i) toda quadra integralmente contida num raio de 400 metros ou cortada por um raio de 400 metros e integralmente contida num raio de 600 metros de uma estação de trem, metrô, veículos leves sobre trilho (VLT) ou veículos leves sobre pneus (VLP) em via elevada; ou</li>
+			<li>(ii) toda quadra inteiramente contida entre linhas paralelas ao eixo das vias de corredor de ônibus municipal e intermunicipal ou VLP em via não elevada, distanciadas de 150 metros do eixo, ou as quadras cortadas por estas linhas paralelas e inteiramente contidas entre linhas paralelas ao eixo dessas vias distanciadas de 300 metros do eixo.</li>
 		</ul>
 		<slot name='f1'></slot>
 		<p>Nas áreas de influência dos Eixos de Estruturação da Transformação Urbana são definidos parâmetros urbanísticos que permitem um maior adensamento construtivo. Enquanto em um terreno no miolo de um bairro o proprietário só pode construir até duas vezes a área do seu lote, o proprietário de um terreno localizado nos eixos pode construir até quatro vezes o tamanho do seu terreno. Os terrenos localizados em eixo devem respeitar a cota parte máxima, um dispositivo legal que limita a área das unidades habitacionais, garantindo que os terrenos nos eixos sejam aproveitados de forma a assegurar o adensamento populacional pretendido. Para os terrenos em eixo existem também incentivos urbanísticos como a utilização de fachada ativa nos empreendimentos não residenciais ou de uso misto, implantação de empreendimento de uso misto e a fruição pública de parcela do lote.</p>
@@ -56,9 +56,9 @@
 		<h5>4.	Polo Gerador de Tráfego (PGT)</h5>
 		<p>As características que definem um Polo Gerador de Tráfego (PGT) constam do art. 2º, Inciso I, da Lei Municipal nº 15.150, de 6 de maio de 2010 e do Art. 109 da LPUOS. Com exceção de dois incisos a mais presentes na LPUOS, as caracterizações são idênticas. Os critérios para enquadramento de uma edificação em PGT são:</p>
 		<ul>
-		    <li>Número de vagas de estacionamento: edificações residenciais (≥ 500), não residenciais localizados nas Áreas Especiais de Tráfego (AET) (≥ 120); não residenciais nas demais áreas do município (≥ 280);</li>
-		    <li>Área construída computável: serviços socioculturais e de lazer (> 2.500 m²); locais destinados à prática de exercícios físicos ou esporte (> 2.500 m²); serviços de saúde (≥ 7.500 m²) e serviços de educação (> 2.500 m² destinadas a salas de aula).</li>
-		    <li>Lotação das edificações: locais de reunião ou eventos (≥ 500 pessoas); atividades e serviços públicos de caráter especial (≥ 500 pessoas) e locais de culto (≥ 500 pessoas na área interna à edificação destinada ao culto).</li>		    
+			<li>Número de vagas de estacionamento: edificações residenciais (≥ 500), não residenciais localizados nas Áreas Especiais de Tráfego (AET) (≥ 120); não residenciais nas demais áreas do município (≥ 280);</li>
+			<li>Área construída computável: serviços socioculturais e de lazer (> 2.500 m²); locais destinados à prática de exercícios físicos ou esporte (> 2.500 m²); serviços de saúde (≥ 7.500 m²) e serviços de educação (> 2.500 m² destinadas a salas de aula).</li>
+			<li>Lotação das edificações: locais de reunião ou eventos (≥ 500 pessoas); atividades e serviços públicos de caráter especial (≥ 500 pessoas) e locais de culto (≥ 500 pessoas na área interna à edificação destinada ao culto).</li>
 		</ul>
 		<p>Uma vez caracterizado como PGT, o empreendimento será objeto de análise da CET. A Lei Municipal nº 15.150/2010 determina que o órgão, em sua análise, examine o impacto do PGT sobre a operação do Sistema Viário e de Transportes e estabeleça</p>
 		<p class="quotation">
@@ -164,7 +164,7 @@
 		<slot name='f8'></slot>
 		<p>As calçadas na Av. Marechal Tito, no trecho de São Miguel Paulista, têm em média 1,40 m e se localizam em uma das centralidades mais pujantes do extremo leste da cidade, o que implica em grande número de pedestres, que circulam localmente a pé e se deslocam entre a estação de trem e os pontos de ônibus. O trecho é atualmente objeto de intervenções voltadas à melhoria da segurança viária.</p>
 		<p>Esse contexto histórico afeta sobremaneira as condições de acessibilidade das vias, fundamental para que pessoas com diferentes características, habilidades e condições de mobilidade possam vivenciar a cidade.</p>
-	 	<p>Para que seja acessível a todos, para além dos elementos já citados acima, como a faixa livre com largura mínima 1,20 m, requer-se a existência de rebaixamentos de calçada ou travessia elevada, sinalização semafórica e sinalização tátil e visual direcional a ser instalada no sentido do deslocamento das pessoas, quando da ausência ou descontinuidade da linha-guia identificável, na forma prevista na NBR 9050:2015 e NBR 16.537/16. </p>
+		<p>Para que seja acessível a todos, para além dos elementos já citados acima, como a faixa livre com largura mínima 1,20 m, requer-se a existência de rebaixamentos de calçada ou travessia elevada, sinalização semafórica e sinalização tátil e visual direcional a ser instalada no sentido do deslocamento das pessoas, quando da ausência ou descontinuidade da linha-guia identificável, na forma prevista na NBR 9050:2015 e NBR 16.537/16. </p>
 		<p>Além dos aspectos técnicos e sociais, a necessidade de execução de calçadas acessíveis possui grande amparo na legislação vigente. No âmbito federal, a  Lei nº 13.146/2015 (Lei Brasileira de Inclusão) impõem  que a concepção e implantação de projetos que tratem do meio físico, de transporte e de equipamentos e instalações abertos ao público atenda aos princípios do desenho universal. Os projetos devem ter  como referência as normas de acessibilidade e a garantia de igualdade de oportunidades da pessoa com deficiência, por meio da identificação e eliminação de obstáculos e barreiras ao seu acesso, observando o direito ao transporte e à mobilidade da pessoa com deficiência ou com mobilidade reduzida.</p>
 		<u>ii.	largura da calçada</u>
 		<p>Segundo a Lei de Parcelamento, Uso e Ocupação do Solo a largura das calçadas é definida quando do parcelamento do solo. Em novos parcelamentos, a LPUOS prevê larguras mínimas</p>
@@ -173,10 +173,10 @@
 		<u>iii.	Raio de curvatura das esquinas</u>
 		<p>Os raios de curvatura das esquinas têm relação direta com a velocidade com que motoristas realizam conversões, com as distâncias a serem percorridas por pedestres nas travessias, com a largura das calçadas nesses trechos e com a visibilidade dos pedestres pelos motoristas (e vice-versa). Boas práticas de segurança viária demonstram que os raios devem ser desenhados de acordo com</p>
 		<ul>
-		    <li>(i) a existência do movimento de conversão de veículos;</li>
-		    <li>(ii) a velocidade desejada para que os veículos a realizem;</li>
-		    <li>(iii) o número de faixas de rolamento que podem ser ocupadas para realizar a conversão e</li>
-		    <li>(iv) o tamanho dos veículos que realizarão a conversão.</li>
+			<li>(i) a existência do movimento de conversão de veículos;</li>
+			<li>(ii) a velocidade desejada para que os veículos a realizem;</li>
+			<li>(iii) o número de faixas de rolamento que podem ser ocupadas para realizar a conversão e</li>
+			<li>(iv) o tamanho dos veículos que realizarão a conversão.</li>
 		</ul>
 		<p>Em São Paulo, os  raios de curvatura das esquinas são definidos pelo Quadro 3.2 da IP-003/2004, cujos parâmetros variam de acordo com o ângulo de concordância das vias e a partir da indicação de valores mínimos. Tendo a segurança dos usuários mais vulneráveis como prioridade, verifica-se a necessidade de revisão dos parâmetros da IP. Por exemplo, para um ângulo reto de concordância, é definido que o raio deve ter no mínimo 9,50 m, enquanto que parâmetros mais seguros traçam raios tão curtos quanto 0,5 m quando não houver conversão de veículos na esquina em questão.</p>
 		<slot name='t13'></slot>
@@ -273,7 +273,7 @@
 		<p>O Manual Brasileiro de Sinalização de Trânsito (MBST) – Volume VIII – Sinalização Cicloviária – CONTRAN – DENATRAN está em fase de elaboração </p>
 		<p> As primeiras reuniões do Grupo de Trabalho da Câmara Temática de Engenharia de Tráfego, da Sinalização e da Via do DENATRAN ocorreram em julho de 2015, utilizando o MSU – Espaço Cicloviário da CET/SP como modelo, a fim de elaborar o manual nacional de sinalização cicloviária e padronizar as ciclovias, ciclofaixas e ciclorrotas no Brasil. Representantes de vários estados trouxeram suas experiências e expertises na implantação de estruturas cicloviárias, somando e aprimorando os conceitos e a experiência de São Paulo.</p>
 		<p>Até o momento foram realizadas 34 reuniões do Grupo de Trabalho que finalizou a elaboração do MBST – Sinalização Cicloviária e o encaminhou à Câmara Temática de Engenharia de Tráfego, da Sinalização e da Via para revisão e comentários. Após esta revisão novas reuniões do Grupo de Trabalho poderão ocorrer para discutir assuntos definidos pela CTE e assim até que se disponibilize o MBST – Sinalização Cicloviária para consulta pública. Esta consulta também poderá produzir novas revisões até a publicação da resolução que aprovará o Volume VIII – Sinalização Cicloviária do Manual Brasileiro de Sinalização de Trânsito.</p>
-		
+
 		<h6>g.	Faixa de estacionamento e extensão de calçada</h6>
 		<p>O Departamento Nacional de Infraestrutura de Transporte (DNIT) recomenda que haja distância mínima entre a travessia de pedestres e as vagas de estacionamento, conforme o trecho de seu Manual de Projeto Geométrico de Travessias Urbanas (Publicação IPR-740, de 2010) destacado a seguir:</p>
 		<p class="quotation">

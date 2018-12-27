@@ -1,6 +1,6 @@
 <template>
 	<div class="Commentsloader">
-		<div v-if="comments" v-for="comment in comments" class="comment">
+		<div v-if="comments" v-for="(comment, index) in comments" class="comment" :key="index">
 			<div class="name"><i class="icon-pessoa-outline icon"><span>person_outline</span></i>{{ comment.name }}</div>
 			<div class="comment_info"><i class="icon-tempo icon"><span>schedule</span></i>{{ filterDate(comment.commentdate) }}</div>
 			<div class="comment_info"><i class="icon-assunto icon"><span>subject</span></i>Comentou em "{{ comment.commentcontext }}"</div>
@@ -66,7 +66,7 @@ export default {
 		padding: 1rem 1.2rem 0.8rem 1.2rem;
 		margin: 0 0 1rem 0;
 		border-radius: 2px;
-		box-shadow: 0 2px 2px rgba(0, 0, 0, .12);
+		box-shadow: 0 2px 2px $sombra-4;
 		div.name {
 			font-size: small;
 			font-weight: bold;
@@ -74,20 +74,20 @@ export default {
 		}
 		div.comment_info {
 			font-size: small;
-			color: #BDBDBD;
+			color: $cinza-2;
 			display: flex;
 		}
 		p.content {
-			font-family: "Georgia", serif;
+			font-family: $serifada;
 			margin: 0.8rem 0 0 0;
 			font-size: smaller;
 			@media (max-width: 600px) { font-size: initial; }
 		}
 		* > i {
 			font-size: inherit;
-			vertical-align: -2px;
 			margin: 0 8px 0 0;
-			padding-top: 4px;
+			padding-top: 3px;
+			line-height: 1rem;
 		}
 	}
 }

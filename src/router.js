@@ -8,6 +8,7 @@ const ArcoPinheiros = () => import('@/views/ArcoPinheiros')
 const WifiLivreSP = () => import('@/views/WifiLivreSP')
 const DigilabLivreSP = () => import('@/views/DigilabLivreSP')
 const VidaSegura = () => import('@/views/VidaSegura')
+const VilaLeopoldina2 = () => import('@/views/VilaLeopoldina2')
 
 // Admin
 const Login = () => import('@/views/Login')
@@ -67,6 +68,14 @@ export default new Router({
 			components: { VidaSegura },
 			meta: {
 				id: 36
+			}
+		},
+		{
+			path: '/vila-leopoldina-projeto-de-lei',
+			name: 'VilaLeopoldina2',
+			components: { VilaLeopoldina2 },
+			meta: {
+				id: 37
 			}
 		},
 		// Modelo para novas consultas

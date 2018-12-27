@@ -119,7 +119,7 @@
 <p>10.	Fortalecimento dos CONSEGs como canal multiplicador de informações</p>
 <p>Conforme descrito no diagnóstico, os Conselhos Comunitários de Segurança são um importante canal de interlocução entre poder público e população local. Entende-se que o espaço deve ser melhor explorado para tratar do tema da segurança viária, dotando as populações locais de mais informações sobre o panorama da segurança viária em sua região.</p>
 <p>Adicionalmente aos CONSEGs, outro canal a ser explorado para divulgação de informações relativas à segurança viária são das chamadas vizinhanças solidárias, grupos digitais dos bairros com a presença das lideranças locais e da polícia militar.</p>
-	
+
 <h6>v.	Capacitação</h6>
 <p>1.	Programa de Capacitação interna</p>
 <p>Propõe-se a criação de programa específico de capacitação voltada aos servidores públicos da PMSP e outros órgãos, e ao mesmo tempo aberto ao público, para tratar dos novos conceitos de mobilidade urbana, incluindo visão zero e sistemas seguros. Sugere-se o oferecimento dos cursos continuamente em estruturas existentes de formação de pessoal voltados a servidores públicos, tais como a Escola Municipal de Administração Pública.</p>

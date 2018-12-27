@@ -1,6 +1,7 @@
 <template>
 	<div class="DigilabLivreSP" ref="conteudoConsulta">
 		<PageTop background_image_src="arquivos/capas/digilab-livre-sp_dt.jpg" :esta_consulta="estaConsulta">
+			<template slot="titulo"><div>Projeto Piloto DIGILAB LIVRE SP</div></template>
 			<template slot="subtitulo">
 				<div>{{ estaConsulta.textoIntro }}</div>
 			</template>
@@ -45,7 +46,7 @@
 				Para a compreensão das premissas deste novo conceito foram utilizadas técnicas e metodologias baseadas em design thinking, design de serviço e urbanismo tático com foco no usuário, ou seja, a população. Entre visitas técnicas, benchmarkings, pesquisa de satisfação, oficinas de cocriação, jornadas de usuário e prototipação, entendeu-se que o projeto de ressignificação do programa Telecentros deve ter como objetivo:
 			</p>
 			<p>
-				“Promover o desenvolvimento humano, econômico e social, por meio de laboratórios<a @click="scrollMeTo('fn1')" ref="ref1"><sup>1</sup></a> digitais que tenham por finalidade a inclusão social do cidadão”
+				“Promover o desenvolvimento humano, econômico e social, por meio de laboratórios<sup><a @click="scrollMeTo('fn1')" ref="ref1">1</a></sup> digitais que tenham por finalidade a inclusão social do cidadão”
 			</p>
 			<p>
 				É com base nestas propostas que  nasce o projeto piloto que irá testar a efetividade desse estudo: o DIGILAB LIVRE SP
@@ -833,87 +834,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
-#app div.DigilabLivreSP {
-	div.PageTop > div:first-child {
-		max-width: 700px;
-	}
-	div.PageTop h1 {
-		font-size: calc(16px + 6vmin);
-	}
-	table {
-		margin: auto;
-		min-width: 400px;
-	}
-	table.simple-table {
-		border-collapse: collapse;
-		table, th, td {
-			border: 1px solid black;
-			padding: 3px;
-		}
-	}
-	table.headed-table {
-		border-collapse: collapse;
-		text-align: center;
-		table, th, td {
-			border: 1px solid black;
-			padding: 3px;
-		}
-		tr:first-child {
-			background-color: #CCC;
-			font-weight: bold;
-		}
-	}
-
-	h2.titulo, h3.titulo {
-		margin: 2em auto auto;
-	}
-	h4 {
-		margin: 2em auto auto;
-	}
-	*::selection, *::-moz-selection {
-		background: #EB5757;
-		color: #FFF;
-	}
-	section {
-		max-width: 700px;
-		margin: 0 auto;
-		padding: 0 1em;
-	}
-	hr {
-		max-width: 700px;
-		margin: 3em auto;
-	}
-	img {
-		max-width: 100%;
-	}
-	p {
-		overflow: auto;
-		text-align: left;
-	}
-	a {
-		cursor: pointer;
-	}
-	.footnote {
-		font-size: small;
-	}
-	div.Apoio button::before {
-		content: "Ver downloads";
-	}
-	#ifrSlides {
-		max-height: calc(100vw * 0.565);
-	}
-	ol.subtipificado {
-		font-style: italic;
-		font-weight: bold;
-		color: #555;
-		ul {
-			font-weight: initial;
-			font-style: initial;
-			list-style-type: disc;
-			color: initial;
-			margin-bottom: 1em;
-		}
-	}
-}
+<style lang="scss" scoped>
+@import '../variables';
+@import '../consulta';
 </style>

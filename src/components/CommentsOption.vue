@@ -46,6 +46,17 @@
 				>
 			</fieldset>
 			<fieldset>
+				<label for="id">Comentar sobre</label>
+				<select @change="alteraContexto($event)"
+					id="id"
+					name="id"
+					v-validate="'required: true'"
+					v-model="form_id"
+				>
+					<option v-for="(option, index) in options" :value="option.id" :key="index">{{ option.context }}</option>
+				</select>
+			</fieldset>
+			<fieldset>
 				<label for="comentario">Comente aqui</label>
 				<textarea
 					value=""
@@ -73,8 +84,8 @@
 import axios from 'axios'
 
 export default {
-	name: 'Comments',
-	props: ['attr'],
+	name: 'CommentsOption',
+	props: ['options'],
 	data () {
 		return {
 			form_name: null,
@@ -82,7 +93,8 @@ export default {
 			form_organization: null,
 			form_email: null,
 			form_content: null,
-			// form_context: null,
+			form_context: null,
+			form_id: null,
 			abreComentario: false,
 			enviandoComment: false,
 			sucesso: false,
@@ -133,13 +145,13 @@ export default {
 				'public': '0',
 				'trash': '0',
 				'postid': '1',
-				'commentid': app.attr.id,
-				'commentcontext': app.attr.context
+				'commentid': app.form_id,
+				'commentcontext': app.form_context
 			})
 				.then(function (response) {
-					let name = app.form_name
-					let content = app.form_content
-					console.log(app.attr.id)
+					// let name = app.form_name
+					// let content = app.form_content
+					// console.log(app.attr.id)
 					// app.setModal('success')
 					app.abreComentario = false
 					app.sucesso = true
@@ -161,13 +173,10 @@ export default {
 			this.form_email = null
 			this.form_content = null
 			this.abreComentario = false
+		},
+		alteraContexto (evt) {
+			this.form_context = 'Anexos - Caderno do Projeto (' + evt.target.options[evt.target.selectedIndex].text + ')'
 		}
-		// x () {
-		// 	this.$refs.y.classList.toggle('enviando')
-		// 	// this.$refs.z.classList.toggle('sucesso')
-		// 	this.g = !this.g
-		// 	// this.abreComentario =! this.abreComentario
-		// }
 	}
 }
 
@@ -246,7 +255,7 @@ div.Comments {
 				line-height: 30px;
 			};
 
-			input, textarea {
+			input, textarea, select {
 				display: block;
 				width: 100%;
 				font-family: inherit;

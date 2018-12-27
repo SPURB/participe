@@ -59,14 +59,14 @@
 <p>Outra ação voltada a áreas escolares são os Territórios Educadores, programa voltado para  crianças da  primeira infância, de 0 a 6 anos, com ênfase em crianças de 0 a 3 anos. </p>
 <p>Crianças nesta fase evolutiva sofrem influência do ambiente onde vivem e da interação com pais e cuidadores. Nesta fase da vida, o cérebro da criança produz mais de um trilhão de conexões neuronais, ou sinapses, quando estimuladas através dos sentidos, (conexões cognitivas). A Relação do desenvolvimento cognitivo está diretamente relacionada ao status sócio econômico, crianças oriundas de famílias com menor renda têm menor superfície cortical nas áreas do cérebro responsáveis pela memória, habilidades físico espaciais, linguagem e funções executivas, motivos pelos quais áreas mais pobres da cidade necessitam maior atenção. </p>
 <p>A proposta consiste na estruturação de um programa que possa influenciar positivamente no desenvolvimento de crianças nesta faixa etária. Um conjunto de intervenções capazes de induzir e proporcionar estímulos necessários no adequado desenvolvimento das crianças, definindo áreas e rotas no entorno de creches e escolas de primeira infância e promovendo a requalificação de espaços urbanos. Criar estímulos ao longo dos deslocamentos diários, utilizando-se de espaços seguros para o deslocamento e permanência das crianças, criando Trilhas Educadoras, rotas que promovam a interação da criança com estações lúdicas ao longo dos percursos.</p>
- 
+
 <h6>vi.	Requalificação de calçadas</h6>
 <p>Para além da expansão da responsabilidade da PMSP sobre as calçadas, Institui-se como diretriz de atuação da PMSP, reiterando as diretrizes do PlanMob, a requalificação continuada das calçadas sob responsabilidade do município. A Prefeitura manterá uma reserva de recursos anuais para execução das calçadas definidas no PEC de forma a ampliar gradativamente o número de calçadas padronizadas e acessíveis na cidade de São Paulo.</p>
 <p>Conforme apontado no diagnóstico, as calçadas seguirão o novo padrão estipulado pela CPC e novo decreto de calçadas. A comissão estabeleceu um padrão para as calçadas já executado na Rua Pedro de Toledo e que será modelo para outras regiões da cidade, como Freguesia do Ó, Itaquera, Centro, Campo Limpo e Lapa, que serão executados até 2019. </p>
 <slot name='f24'></slot>
 <p>O novo padrão estipula que as calçadas do município sejam ser organizadas em 3 faixas: </p>
 <ul>
-	<li>Faixa Livre: 
+	<li>Faixa Livre:
 		<ul>
 			<li>destinada exclusivamente à livre circulação de pedestres. </li>
 			<li>deve possuir superfície regular,  firme e que não cause trepidação em dispositivos de rodas; </li>
@@ -82,7 +82,7 @@
 			<li>destina-se a comportar rebaixamento de guia para acesso de veículos, árvores, mobiliário, postes de sinalização pública, semafórica, iluminação, eletricidade, etc.; </li>
 		</ul>
 	</li>
-	<li>Faixa de Acesso:	
+	<li>Faixa de Acesso:
 		<ul>
 			<li>possível apenas em calçadas com largura superior a 2,0m; </li>
 			<li>localizada entre a faixa livre e o alinhamento do imóvel;</li>

@@ -1,71 +1,81 @@
 <template>
-	<div class="Comments" :class="{ aberto: abreComentario }">
-
-		<div @click="abreComentario = !abreComentario" :class="{ sucesso: sucesso }"><i class="icon-comentario icon"><span>chat</span></i></div>
-
-		<form>
-			<fieldset>
-				<label for="nome">Nome</label>
-				<input
-					value=""
-					id="nome"
-					type="text"
-					name="name"
-					v-validate="'required: true'"
-					:class="{ inputErro: errors.has('name') }"
-					v-model='form_name'
-				>
-				<label for="sobrenome">Sobrenome</label>
-				<input
-					value=""
-					id="sobrenome"
-					type="text"
-					name="surname"
-					v-validate="'required: true'"
-					:class="{ inputErro: errors.has('surname') }"
-					v-model='form_surname'
-				>
-				<label for="organizacao">Organização (opcional)</label>
-				<input
-					value=""
-					id="organizacao"
-					type="text"
-					name="organization"
-					v-validate="'required: false'"
-					v-model='form_organization'
-				>
-				<label for="email">E-mail</label>
-				<input
-					value=""
-					id="email"
-					name="email"
-					v-validate="'required|email'"
-					:class="{ inputErro: errors.has('email') }"
-					type="email"
-					v-model='form_email'
-				>
-			</fieldset>
-			<fieldset>
-				<label for="comentario">Comente aqui</label>
-				<textarea
-					value=""
-					id="comentario"
-					name="content"
-					v-validate="'required: true'"
-					:class="{ inputErro: errors.has('content') }"
-					v-model='form_content'
-				></textarea>
-			</fieldset>
-			<div class="action">
-				<svg v-if="enviandoComment" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="60 0 40 40">
-					<path fill="#E3E3E3" d="M60 4v24a4 4 0 0 0 4 4h28l8 8V4a4 4 0 0 0-4-4H64a4 4 0 0 0-4 4z"/>
-					<circle class="bolinha1" cx="70.5" cy="14.9" r="3.4"/>
-					<circle class="bolinha2" cx="80" cy="14.9" r="3.4"/>
-					<path class="bolinha3" d="M92.9 15a3.4 3.4 0 1 1-3.4-3.5c1.8 0 3.4 1.5 3.4 3.4z"/>
-				</svg>
-				<a @click="checkName" :class="{ enviando: enviandoComment, erro: erro }"></a>
+	<div class="comentavel" :class="{ aberto: abreComentario }">
+		<div @click="abreComentario = !abreComentario" :class="{ sucesso: sucesso }">
+			<div class="icon-counter">
+				<i class="icon-comentario icon"><span>chat</span></i>
+				<!-- filtrar numero (será refatorar CommentsLoader e vuex)-->
+				<!-- <span class="counter-comentario">89</span> -->
 			</div>
-		</form>
+			<div class="content-comentario">
+				<slot></slot>
+			</div>
+		</div>
+		<transition name="form_display">
+			<form v-if="toggleFormOrMessage">
+				<h3 class="form_title">Comente aqui</h3>
+				<fieldset>
+					<label for="nome">Nome</label>
+					<input
+						id="nome"
+						type="text"
+						name="name"
+						v-validate="'required: true'"
+						:class="{ inputErro: errors.has('name') }"
+						v-model='form_name'
+					>
+					<label for="sobrenome">Sobrenome</label>
+					<input
+						value=""
+						id="sobrenome"
+						type="text"
+						name="surname"
+						v-validate="'required: true'"
+						:class="{ inputErro: errors.has('surname') }"
+						v-model='form_surname'
+					>
+					<label for="organizacao">Organização (opcional)</label>
+					<input
+						value=""
+						id="organizacao"
+						type="text"
+						name="organization"
+						v-validate="'required: false'"
+						v-model='form_organization'
+					>
+					<label for="email">E-mail</label>
+					<input
+						value=""
+						id="email"
+						name="email"
+						v-validate="'required|email'"
+						:class="{ inputErro: errors.has('email') }"
+						type="email"
+						v-model='form_email'
+					>
+				</fieldset>
+				<fieldset>
+					<label for="comentario">Comente aqui</label>
+					<textarea
+						value=""
+						id="comentario"
+						name="content"
+						v-validate="'required: true'"
+						:class="{ inputErro: errors.has('content') }"
+						v-model='form_content'
+					></textarea>
+				</fieldset>
+				<div class="action">
+					<svg v-if="enviandoComment" width="40" height="40" viewBox="60 0 40 40">
+						<path fill="#E3E3E3" d="M60 4v24a4 4 0 0 0 4 4h28l8 8V4a4 4 0 0 0-4-4H64a4 4 0 0 0-4 4z"/>
+						<circle class="bolinha1" cx="70.5" cy="14.9" r="3.4"/>
+						<circle class="bolinha2" cx="80" cy="14.9" r="3.4"/>
+						<path class="bolinha3" d="M92.9 15a3.4 3.4 0 1 1-3.4-3.5c1.8 0 3.4 1.5 3.4 3.4z"/>
+					</svg>
+					<a @click="checkName" :class="{ enviando: enviandoComment, erro: erro }"></a>
+				</div>
+			</form>
+			<p class="consulta-encerrada" v-if="!consultaAtiva">Desculpe, mas o período de participação já foi encerrado.</p>
+		</transition>
 	</div>
 </template>
 
@@ -73,8 +83,23 @@
 import axios from 'axios'
 
 export default {
-	name: 'Comments',
-	props: ['attr'],
+	name: 'CommentsContext',
+	props: {
+		id: {
+			required: true,
+			type: Number
+		},
+		context: {
+			required: false,
+			type: String,
+			default: 'participe.gestaourbana'
+		},
+		postid: {
+			required: false,
+			type: Number,
+			default: 1
+		}
+	},
 	data () {
 		return {
 			form_name: null,
@@ -99,7 +124,17 @@ export default {
 				return this.form_name + ' ' + this.form_surname
 			}
 		},
-		apiPath () { return this.$store.getters.apiPath }
+		apiPath () { return this.$store.getters.apiPath },
+		consultaAtiva () {
+			if (this.$store.getters.consultasClicada !== undefined) {
+				if (parseInt(this.$store.getters.consultasClicada.ativo) === 1) {
+					return true
+				}
+			} else { return false }
+		},
+		toggleFormOrMessage () {
+			return (this.abreComentario && this.consultaAtiva)
+		}
 	},
 
 	methods: {
@@ -132,14 +167,14 @@ export default {
 				'content': app.form_content,
 				'public': '0',
 				'trash': '0',
-				'postid': '1',
-				'commentid': app.attr.id,
-				'commentcontext': app.attr.context
+				'postid': app.postid,
+				'commentid': app.id,
+				'commentcontext': app.context
 			})
 				.then(function (response) {
-					let name = app.form_name
-					let content = app.form_content
-					console.log(app.attr.id)
+					// let name = app.form_name
+					// let content = app.form_content
+					// console.log(app.id)
 					// app.setModal('success')
 					app.abreComentario = false
 					app.sucesso = true
@@ -162,12 +197,6 @@ export default {
 			this.form_content = null
 			this.abreComentario = false
 		}
-		// x () {
-		// 	this.$refs.y.classList.toggle('enviando')
-		// 	// this.$refs.z.classList.toggle('sucesso')
-		// 	this.g = !this.g
-		// 	// this.abreComentario =! this.abreComentario
-		// }
 	}
 }
 
@@ -176,62 +205,94 @@ export default {
 <style lang="scss" scoped>
 @import '../variables';
 
-div.Comments {
-	margin: 2rem auto 4rem auto;
+.comentavel {
+	margin:  0 auto;
 	max-width: 700px;
-	background: $cinza-3;
 	border-radius: 2px;
-	font-weight: 700;
-	max-height: calc(4rem + 40px);
 	overflow: hidden;
-	transition: all ease-in-out .4s;
+	transition: all ease-in-out .2s;
 	position: relative;
 	z-index: 0;
 
+	.consulta-encerrada{
+		display: none;
+		background-color:$vermelho;
+		padding: 1em;
+		color: #FFF
+	}
+
+	&:hover,
+	&.aberto {
+		background: $cinza-3;
+	}
+	&.aberto {
+		padding: 1em 0;
+		margin: 1em auto;
+		.consulta-encerrada{
+			display: block
+		}
+	}
+
 	& > div {
-		margin-bottom: 2rem;
-		padding: 2rem;
-		transition: all ease-in-out .4s;
+		display: grid;
+		grid-gap: 10px;
+		grid-template-columns: 30px 1fr;
 
-		&::after { content: 'Comente aqui'; }
-
-		i {
-			display: inline-flex;
-			align-items: center;
-			justify-content: center;
-			vertical-align: -8px;
-			width: 40px;
-			height: 40px;
-			font-size: 1.1em;
-			background: $preto;
-			border-radius: 100%;
-			color: #FFF;
-			margin: 0px 20px 0 0;
-			box-shadow: 0 2px 2px $sombra-3;
-		};
-
+		.icon-counter{
+			display: flex;
+			flex-direction: column;
+			.counter-comentario,
+			.icon-comentario {
+				color: $cinza-2;
+				text-align: center;
+				transition: color ease-in-out .2s;
+			}
+			.icon-comentario{
+				margin-top: .5rem;
+			}
+		}
 		&:hover {
-			background: $cinza-2;
-			color: #FFF;
 			cursor: pointer;
+			.counter-comentario,
+			.icon-comentario {
+				color: $preto
+			}
 		};
 
 		&.sucesso {
-			background: $verde;
-			color: #FFF;
-
-			i {
-				background: #FFF;
-				color: $verde;
+			margin-bottom: 1em;
+			&::after {
+				content: 'Comentário enviado';
+				line-height: 1.3;
+				background-color: $verde;
+				padding: .7em;
+				color: #fff;
+				grid-column: 1 / 3;
+				grid-row: 2
 			}
-
-			&::after { content: 'Comentário enviado'; }
 		}
-	};
+	}
+
+	& div.content-comentario{
+		p, ol, ul {
+			padding-left: 0
+		}
+	}
 
 	form {
+		background: $cinza-3;
 		display: block;
 		padding: 0 2rem 2rem 2rem;
+		height: 100%;
+		&.form_display-enter,
+		&.form_display-leave-to{
+			height: 0;
+		}
+
+		.form_title{
+			border-top: solid 1px $cinza-1;
+			padding-top: 1em
+		}
 
 		fieldset {
 			margin: 0;
@@ -314,7 +375,6 @@ div.Comments {
 						opacity: 1;
 					}
 				}
-
 				.bolinha1 {
 					animation: pulando 0.6s 0.45s infinite;
 					transition: cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -330,7 +390,6 @@ div.Comments {
 					transition: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 				}
 			}
-
 			a {
 				display: inline-block;
 				color: inherit;
@@ -349,16 +408,13 @@ div.Comments {
 				transition: all ease-out .36s;
 				position: relative;
 				white-space: nowrap;
-
 				&::after { content: 'Comentar'; }
-
 				&.enviando {
 					max-width: 0;
 					border-color: transparent;
 					box-shadow: none;
 					background: transparent;
 				}
-
 				&.erro {
 					background: $vermelho;
 					color: #FFF;
@@ -366,18 +422,18 @@ div.Comments {
 
 					&::after { content: 'Tentar novamente'; }
 				}
-
 				&.erro.enviando { background: transparent; }
-
 				&:hover { text-decoration: none; cursor: pointer; };
-
 				&:focus { border-color: $vermelho; };
 			};
 		};
 	};
+	@media (max-width: 600px) {
 
-	&.aberto { max-height: 1000px; };
-
-	@media (max-width: 600px) { font-size: 20px; }
+		.content-comentario {
+			padding-left:0;
+			margin-left: 0
+		}
+	}
 };
 </style>

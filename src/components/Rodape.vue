@@ -1,24 +1,37 @@
 <template>
-  <div class="Rodape">
-    <footer>
-      Caso surjam dúvidas ou problemas técnicos, envie um e-mail para: <a href="mailto:imprensasmul@prefeitura.sp.gov.br">imprensasmul@prefeitura.sp.gov.br</a>.
-    </footer>
-  </div>
+	<div class="Rodape" :class="{ load: fetching || error }">
+		<footer>
+			Caso surjam dúvidas ou problemas técnicos, envie um e-mail para: <a href="mailto:imprensasmul@prefeitura.sp.gov.br">imprensasmul@prefeitura.sp.gov.br</a>.
+		</footer>
+	</div>
 </template>
 
 <script>
 export default {
-	name: 'Rodape'
+	name: 'Rodape',
+	computed: {
+		fetching () { return this.$store.state.fetching },
+		error () { return this.$store.state.errors }
+	}
 }
 </script>
 
 <style lang="scss" scoped>
+@import '../variables';
+
 div.Rodape {
-  z-index: 3
-  footer {
-    clear: all;
-    background: #F5F5F5;
-    padding: 16px 32px;
-  }
+	&.load {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+	footer {
+		clear: all;
+		background: $cinza-3;
+		padding: 16px 32px;
+	}
+	a { border-bottom: none !important; }
+	a:hover { background-color: transparent; }
+	a:active { background-color: transparent; }
 }
 </style>

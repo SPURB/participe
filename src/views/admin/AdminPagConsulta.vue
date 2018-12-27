@@ -128,7 +128,7 @@
 			<p v-show="fetchingContent">carregando...</p>
 
 			<h3>Pendentes <span>{{ commentsPendentes.length }}</span></h3>
-				<div class="comentario pendente" v-for="comment in commentsPendentes">
+				<div class="comentario pendente" v-for="(comment, index) in commentsPendentes" :key="index">
 					<div class="comentCtx" @click="abreContexto($event)">
 						<i class="icon-responder icon"><span>reply</span></i>
 						<p>{{ comment.commentcontext }}</p>
@@ -139,7 +139,7 @@
 					</div>
 					<div class="comentInfo">
 						<div class="autor">
-							<span>{{ comment.name }}</span> <span>{{ comment.email }}</span>
+							<span>{{ comment.name }} </span> <span>{{ comment.email }}</span>
 						</div>
 						<div class="horario">
 							<span>{{ comment.commentdate }}</span>
@@ -158,7 +158,7 @@
 					</div>
 				</div>
 			<h3>Aprovados<span>{{ commentsAprovados.length }}</span></h3>
-				<div class="comentario aprovado" v-for="comment in commentsAprovados">
+				<div class="comentario aprovado" v-for="(comment, index) in commentsAprovados" :key="index">
 					<div class="comentCtx" @click="abreContexto($event)">
 						<i class="icon-responder icon"><span>reply</span></i>
 						<div>{{ comment.commentcontext }}</div>
@@ -182,7 +182,7 @@
 					</div>
 				</div>
 			<h3>Reprovados <span>{{ commentsReprovados.length }}</span></h3>
-				<div class="comentario reprovado" v-for="comment in commentsReprovados">
+				<div class="comentario reprovado" v-for="(comment, index) in commentsReprovados" :key="index">
 					<div class="comentCtx" @click="abreContexto($event)">
 						<i class="icon-responder icon"><span>reply</span></i>
 						<p>{{ comment.commentcontext }}</p>

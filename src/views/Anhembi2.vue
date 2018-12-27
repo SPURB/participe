@@ -38,7 +38,7 @@
 				</template>
 			</Imagem> -->
 
-			<Tabela :dados="tabela_dados"></Tabela>
+			<!-- <Tabela :dados="tabela_dados"></Tabela> -->
 
 			<p>As novas diretrizes da Administração Municipal vão ao encontro da necessidade de diversificação das atividades neste território. A delicada situação financeira da SP Turis, que resulta na dificuldade em investimentos de requalificação das estruturas do Anhembi, gera a oportunidade para um novo desenvolvimento, guiado pelas diretrizes do interesse público constantes neste Projeto de Intervenção Urbana.</p>
 			<p>O Anhembi é hoje um dos principais centros de convenções e exposições da cidade de São Paulo, sendo administrado pela SPTuris, empresa de turismo e eventos controlada pela Prefeitura de São Paulo, que detém quase 96% de suas ações. Considerando sua importância e as dificuldades enfrentadas atualmente, o Anhembi passou a integrar a lista de serviços e ativos do Plano Municipal de Desestatização, a cargo da Secretaria Municipal de Desestatização e Parcerias (SMDP), passíveis de serem geridos pela iniciativa privada, por meio de concessão, Parceria Público-Privada ou mesmo privatização, desonerando assim o poder público.</p>

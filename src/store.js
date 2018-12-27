@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import Es6Promise from 'es6-promise'
 import axios from 'axios'
-import { local, homologacao, producao } from '../apiconfig.json'
 Es6Promise.polyfill()
 
 Vue.use(Vuex)
@@ -25,41 +24,9 @@ const store = new Vuex.Store({
 		routeId: undefined
 	},
 	getters: {
-		enviroment () {
-			if (
-				location.port === '8082' ||
-				location.port === '8081' ||
-				location.port === '8080' ||
-				location.port === '7080') {
-				return 'local'
-			}
-			if (location.host === 'participe.comunicacao.smul.pmsp') {
-				return 'homologacao'
-			} else {
-				return 'production'
-			}
-		},
-		apiPath () {
-			switch (store.getters.enviroment) {
-			case 'local': return local.base
-			case 'homologacao': return homologacao.base
-			default: return producao.base
-			}
-		},
-		apiLogin () {
-			switch (store.getters.enviroment) {
-			case 'local': return local.login
-			case 'homologacao': return homologacao.login
-			default: return producao.login
-			}
-		},
-		basePath () {
-			switch (store.getters.enviroment) {
-			case 'local': return 'http://spurbsp163:7080/participe/'
-			case 'homologacao': return 'http://participe.comunicacao.smul.pmsp/'
-			case 'producao': return 'https://participe.gestaourbana.prefeitura.sp.gov.br/'
-			}
-		},
+		apiPath () { return process.env.VUE_APP_API_URL },
+		apiLogin () { return process.env.VUE_APP_API_LOGIN_URL },
+		basePath () { return process.env.VUE_APP_ASSETS_BASE_URL },
 		consultasClicada (state) {
 			if (state.consultas !== undefined) {
 				return state.consultas.find(consulta => parseInt(consulta.id_consulta) === state.routeId)
@@ -68,18 +35,10 @@ const store = new Vuex.Store({
 	},
 	mutations: {
 		SET_ROUTE_ID (state, routeId) { state.routeId = routeId },
-		FETCHING_STATE (state, fetchState) {
-			state.fetching = fetchState
-		},
-		FETCHING_ERROR (state, errorState) {
-			state.errors = errorState
-		},
-		adminStatus (state, status) {
-			state.isAdmin = status
-		},
-		addAdminInfo (state, info) {
-			state.infoAdmin = info
-		},
+		FETCHING_STATE (state, fetchState) { state.fetching = fetchState },
+		FETCHING_ERROR (state, errorState) { state.errors = errorState },
+		adminStatus (state, status) { state.isAdmin = status },
+		addAdminInfo (state, info) { state.infoAdmin = info },
 		FETCH_CONSULTAS (state, consultas) {
 			state.consultas = consultas.sort(function (a, b) {
 				return new Date(b.dataCadastro) - new Date(a.dataCadastro)
@@ -88,7 +47,6 @@ const store = new Vuex.Store({
 					if (a.ativo < b.ativo) { return 1 }
 					if (a.ativo > b.ativo) { return -1 }
 				})
-			// commit('FETCHING_STATE', false)
 		},
 		FETCH_CONSULTAS_DECODE (state, consultas) {
 			for (var key in consultas) {
@@ -121,15 +79,7 @@ const store = new Vuex.Store({
 					}
 				})
 				.catch(e => {
-					// console.log(e)
 					commit('FETCHING_ERROR', true)
-					// if (e.lineNumber > 399) {
-					// 	commit('FETCHING_ERROR', true)
-					// 	// commit('FETCHING_STATE', false)
-					// } else {
-					// 	commit('FETCHING_ERROR', false)
-					// 	commit('FETCHING_STATE', false)
-					// }
 				})
 				.then(() => commit('FETCHING_STATE', false))
 		}

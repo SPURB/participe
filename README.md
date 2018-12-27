@@ -2,57 +2,52 @@
 
 Frontend do [https://participe.gestaourbana.prefeitura.sp.gov.br](https://participe.gestaourbana.prefeitura.sp.gov.br). Ferramenta de participação social da Secretaria Municipal de Urbanismo e Licenciamento – SMUL - e São Paulo Urbanismo.
 
-## Configure as url's e chaves das API's
-``` json
-// apiconfig.json
-{
-	"local":{
-		"base": "http://localhost/consultas-publicas-backend/",
-		"login": "http://localhost/consultas-publicas-login-backend/"
-	},
-	"homologacao":{
-		"base": "http://seu.host.de.homolocao/consultas-publicas-backend/",
-		"login": "http://seu.host.de.homologacao/consultas-publicas-login-backend/"
-	},
-	"prod":{
-		"base": "http://api.seuhost.de.producao/consultas-publicas-backend/",
-		"login": "http://api.seuhost.de.producao/consultas-publicas-login-backend/"
-	},
-	"chavesExternas":{
-		"bingMaps": "chave-api-bing-maps" 
-	}
-}
-```
+## Setup do backend
+Clone e faça o setup dos repositórios:
+* [Consultas-publicas-backend](https://github.com/SPURB/consultas-publicas-backend)
+* [Consultas-publicas-login-backend](https://github.com/SPURB/consultas-publicas-login-backend)
 
-## Setup
+## Altere o arquivo `.env`
+```
+VUE_APP_API_URL=http://localhost/consultas-publicas-backend
+VUE_APP_API_LOGIN_URL=http://localhost/consultas-publicas-backend-login
+VUE_APP_ASSETS_BASE_URL=http://localhost/consultas-external-assets
+VUE_APP_BING_MAPS_KEY=your_bing_maps_key
+```
+> Caso utilize um componente com mapa (exemplo: `src/components/Mapa.vue`) será necessário [criar uma chave no bing maps](https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key) e definir o valor de `VUE_APP_BING_MAPS_KEY`.
+
+## Setup deste repositório
+1. Instale as dependências
 ```
 npm install
 ```
 
-### Serve com 'hot reload' em localhost:8080
+2. Inicia servidor para desenvolvimento em localhost:808*
 ```
 npm run serve
 ```
 
-### Constrói para produção com minificação dos recursos
+3. Cria arquivos para produção com minificação
 ```
 npm run build
 ```
+Explicações detalhadas deste template no [guia](http://vuejs-templates.github.io/webpack/) e [documentação do vue-loader](http://vuejs.github.io/vue-loader).
+___
 
-### Executa eslint
-```
-npm run lint
-npm run lint --fix
-```
+## Outras opções
+Verificar erros com eslint `npm run lint`
 
-### Inicia testes unitários
-```
-npm run test:unit
-```
+Corrigir automaticamente os erros `npm run lint --fix`
 
-### Inicia testes end-to-end
-```
-npm run test:e2e
-```
+Iniciar testes unitários: `npm run test:unit`
 
-Para ver explicações detalhadas de como as coisas funcionam ver [guia](http://vuejs-templates.github.io/webpack/) e [documentação do vue-loader](http://vuejs.github.io/vue-loader).
+Iniciar testes end-to-end: `npm run test:e2e`
+
+## Padrões de interface
+Antes de desenvolver uma nova consulta veja a documentação dos [padrões de interface](https://github.com/SPURB/participe/wiki) disponibilizados no wiki deste repositório.
+
+## Issues
+Toda contribuição é bem vinda. Crie uma [issue](https://github.com/SPURB/participe/issues).
+
+## Licença 
+[GPL-v3](https://github.com/SPURB/participe/blob/master/LICENSE)

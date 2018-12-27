@@ -13,8 +13,6 @@ Vue.use(VeeValidate)
 Vue.use(VueAxios, axios)
 Validator.localize('pt_br', ptbr)
 
-Vue.config.productionTip = false
-
 new Vue({
 	router,
 	store,

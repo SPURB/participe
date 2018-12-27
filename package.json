@@ -2,7 +2,7 @@
   "name": "participe",
   "version": "2.0.0",
   "description": "Ferramenta de participação social da Secretaria Municipal de Urbanismo e Licenciamento – SMUL - e São Paulo Urbanismo",
-  "author": "SPUrbanismo <desenvolvimento@spurbanismo.sp.gov.br>",
+  "author": "SP Urbanismo <desenvolvimento@spurbanismo.sp.gov.br>",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",

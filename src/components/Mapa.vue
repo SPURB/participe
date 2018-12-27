@@ -31,7 +31,7 @@ import VectorSource 	from 'ol/source/Vector'
 // import {defaults as defaultControls, Attribution } from 'ol/control.js';
 // import ScaleLine 		from 'ol/control/ScaleLine';
 
-import { chavesExternas } from '../../apiconfig.json'
+// import { chavesExternas } from '../../apiconfig.json'
 
 export default{
 	name: 'Mapa',
@@ -69,7 +69,7 @@ export default{
 					source: new BingMaps({
 						imagerySet: 'AerialWithLabels',
 						culture: 'pt-BR',
-						key: chavesExternas.bingMaps
+						key: process.env.VUE_APP_BING_MAPS_KEY
 					})
 				})
 			]

@@ -411,19 +411,27 @@
 						</a>
 					</li>
 					<li>
+						<a @click="scrollToRef('cadernoProjeto')">
+							<i class="icon-pdf icon"><span>pdf</span></i>
+							<div>Anexo 5: Caderno Técnico* **</div>
+						</a>
+					</li>
+					<li>
 						<a :href="arquivosLeopoldina('AIU_VL_PL_Anexo6.pdf')"  download target="_blank">
 							<i class="icon-pdf icon"><span>pdf</span></i>
 							<div>Anexo 6: Programa de Intervenções</div>
 							<span>67 Kb</span>
 						</a>
 					</li>
-				</ul>
+					<span class="rodape">* O conteúdo do <strong>Anexo 5</strong> está listado abaixo nos pdf's referentes ao <strong>Caderno do Técnico.</strong></span><br>
 
+					<span class="rodape">** Composto, no mínimo, pelo <strong>Modelo Econômico de suporte à avaliação do Potencial Construtivo Adicional da AIU-VL</strong>, <strong>Projeto Urbanístico Referencial e Diretrizes Gerais para o Projeto Específico de Parcelamento do Solo</strong> e <strong>Cadastro para atendimento habitacional de responsabilidade da SEHAB.</strong></span>
+				</ul>
 				<Comments v-if="estaConsulta.ativo == 1" :attr="{id:218, context:'Anexos - Anexos do Projeto de Lei'}"></Comments>
 			</section>
 
-			<section>
-				<h3 class="titulo" indent="2">Caderno do Projeto</h3>
+			<section ref="cadernoProjeto">
+				<h3 class="titulo" indent="2">Caderno Técnico</h3>
 				<ul class="links">
 					<li>
 						<a :href="arquivosLeopoldina('PIU_VLVL_CAP_01_INTRODUCAO.pdf')"  download target="_blank">

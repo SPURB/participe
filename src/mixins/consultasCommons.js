@@ -10,13 +10,28 @@ export const consultasCommons = {
 	},
 	updated () { this.alteraIndice() },
 	methods: {
+		scrollToRef (element) {
+			let documentEl = this.$refs[element]
+			try {
+				documentEl.scrollIntoView({
+					behavior: 'smooth'
+				})
+			} catch (error) {
+				console.error('scrollIntoView não suportado para este browser')
+				console.log(error)
+			}
+		},
 		scrollToallComments () {
 			let appRef = this.$refs.allComments
-			window.scrollBy({
-				top: appRef.getBoundingClientRect().y - 30,
-				left: 0,
-				behavior: 'smooth'
-			})
+			try {
+				window.scrollBy({
+					top: appRef.getBoundingClientRect().y - 30,
+					left: 0,
+					behavior: 'smooth'
+				})
+			} catch (error) {
+				console.log(error)
+			}
 		},
 		filterConsultas () {
 			this.consultas = this.$store.state.consultas

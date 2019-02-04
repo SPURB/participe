@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import Es6Promise from 'es6-promise'
-import axios from 'axios'
+// import axios from 'axios'
+import apiGet from '@/utils/apiGet'
+
 Es6Promise.polyfill()
 
 Vue.use(Vuex)
@@ -69,7 +71,7 @@ const store = new Vuex.Store({
 	},
 	actions: {
 		fetchConsultas ({ commit }, { self }) {
-			axios.get(store.getters.apiPath + 'consultas')
+			apiGet.get(store.getters.apiPath + 'consultas')
 				.then(response => {
 					commit('FETCH_CONSULTAS', response.data.slice().reverse())
 					commit('FETCH_CONSULTAS_DECODE', store.state.consultas)

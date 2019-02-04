@@ -153,7 +153,7 @@ div.Home {
 
 		ul {
 			display: grid;
-			grid-template-columns: repeat(auto-fill, minmax(160px, 720px));
+			grid-template-columns: repeat(auto-fill, minmax(320px, 720px));
 			grid-gap: 2rem;
 			padding: 2rem;
 			margin: 0 auto;
@@ -390,9 +390,10 @@ div.Home {
 	@media (max-width: 800px) {
 		main div.busca {
 			margin-bottom: 1rem;
-		};
+		}
 
-		main ul {
+		main#listaProjetos ul {
+			grid-template-columns: repeat(auto-fill, minmax(160px, 720px)) !important;
 			li.card {
 				grid-template-columns: 1fr;
 				grid-template-rows: minmax(140px, auto) auto 48px;

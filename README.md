@@ -46,6 +46,7 @@ Iniciar testes end-to-end: `npm run test:e2e`
 ## Padrões de interface
 Antes de desenvolver uma nova consulta veja a documentação dos [padrões de interface](https://github.com/SPURB/participe/wiki) disponibilizados no wiki deste repositório.
 
+
 ## Issues
 Toda contribuição é bem vinda. Crie uma [issue](https://github.com/SPURB/participe/issues).
 

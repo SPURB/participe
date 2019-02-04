@@ -1,29 +1,31 @@
 <template>
-	<div class="Preloader" :class="{ fim: !fetching, erro: fetchError }" @click="reload()">
-		<svg xmlns="http://www.w3.org/2000/svg" width="170" height="170">
+	<div class="Preloader"  v-if="consultas===undefined && !fetching" :class="{ fim: !fetching, erro: errors }">
+		<svg width="170" height="170">
 			<path id="temp" fill="none" class="balao" stroke-width="6" stroke-miterlimit="10" d="M139.233 39.767v66.359c0 6.079-4.979 11.058-11.059 11.058H50.756l-22.119 22.119V39.767c0-6.08 4.974-11.06 11.059-11.06h88.479c6.08.001 11.058 4.98 11.058 11.06z"/>
 		</svg>
-		<p class="erro" :class="{ surge: fetchError }">Falha no carregamento. Clique para tentar novamente.</p>
+		<p class="erro" :class="{ surge: errors }">Falha no carregamento. <a @click="reloadNoCache">Clique</a> para tentar novamente.</p>
 	</div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
 	name: 'Preloader',
-	computed: {
-		fetching () { return this.$store.state.fetching },
-		fetchError () { return this.$store.state.errors }
-	},
+	computed: mapState([
+		'fetching',
+		'errors',
+		'consultas'
+	]),
 	methods: {
-		reload () {
-			if (this.fetchError) {
-				this.$store.dispatch('fetchConsultas', { self: this })
-				this.$store.commit('FETCHING_ERROR', false)
-				this.$store.commit('FETCHING_STATE', true)
-			} else {
-				return false
-			}
-		}
+		// reload () {
+		// 	if (this.fetchError) {
+		// 		this.$store.dispatch('fetchConsultas', { self: this })
+		// 	} else {
+		// 		return false
+		// 	}
+		// },
+		reloadNoCache () { location.reload(true) }
 	}
 }
 </script>
@@ -37,12 +39,16 @@ div.Preloader {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100vh;
+	height: 80vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-flow: column nowrap;
 	animation: opacity ease-in .2s;
+
+	&.erro.fim {
+		z-index: unset;
+	}
 
 	@supports not (display: flex) {
 		text-align: center;

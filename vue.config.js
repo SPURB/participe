@@ -1,4 +1,3 @@
 module.exports = {
-	// options...
-	// lintOnSave: false
+	lintOnSave: true
 }

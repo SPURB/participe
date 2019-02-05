@@ -1,5 +1,5 @@
 <template>
-	<div class="Rodape" :class="{ loading: fetching, error: error }" v-if="!fetching && error && consultas===undefinded">
+	<div class="Rodape" :class="{ loading: fetching, error: error }" v-if="!fetching && error && !consultas">
 		<footer>
 			<p>Caso surjam dúvidas ou problemas técnicos, envie um e-mail para: <a href="mailto:imprensasmul@prefeitura.sp.gov.br">imprensasmul@prefeitura.sp.gov.br</a>.</p>
 		</footer>
@@ -11,7 +11,7 @@ export default {
 	computed: {
 		fetching () { return this.$store.state.fetching },
 		error () { return this.$store.state.errors },
-		consultas () { return this.$store.state.consultas }
+		consultas () { return typeof (this.$store.state.consultas) === 'object' }
 	}
 }
 </script>

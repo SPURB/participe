@@ -2,20 +2,21 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 // Pages
-const Home = () => import('@/views/Home')
-const Anhembi2 = () => import('@/views/Anhembi2')
-const ArcoPinheiros = () => import('@/views/ArcoPinheiros')
-const WifiLivreSP = () => import('@/views/WifiLivreSP')
-const DigilabLivreSP = () => import('@/views/DigilabLivreSP')
-const VidaSegura = () => import('@/views/VidaSegura')
-const VilaLeopoldina2 = () => import('@/views/VilaLeopoldina2')
+const Home = () => import(/* webpackChunkName: "home" */'@/views/Home')
+const Anhembi2 = () => import(/* webpackChunkName: "anhembi2" */ '@/views/Anhembi2')
+const ArcoPinheiros = () => import(/* webpackChunkName: "arcopinheiros" */ '@/views/ArcoPinheiros')
+const WifiLivreSP = () => import(/* webpackChunkName: "wifilivresp" */ '@/views/WifiLivreSP')
+const DigilabLivreSP = () => import(/* webpackChunkName: "digilablivresp" */ '@/views/DigilabLivreSP')
+const VidaSegura = () => import(/* webpackChunkName: "vidasegura" */ '@/views/VidaSegura')
+const VilaLeopoldina2 = () => import(/* webpackChunkName: "vilaleopoldina2" */ '@/views/VilaLeopoldina2')
+const PortalPrefeitura = () => import(/* webpackChunkName: "portalprefeitura" */ '@/views/PortalPrefeitura')
 
 // Admin
-const Login = () => import('@/views/Login')
-const Admin = () => import('@/views/admin/Admin')
-const AdminHome = () => import('@/views/admin/AdminHome')
-const AdminNovaConsulta = () => import('@/views/admin/AdminNovaConsulta')
-const AdminPagConsulta = () => import('@/views/admin/AdminPagConsulta')
+const Login = () => import(/* webpackChunkName: "login" */ '@/views/Login')
+const Admin = () => import(/* webpackChunkName: "admin" */ '@/views/admin/Admin')
+const AdminHome = () => import(/* webpackChunkName: "adminhome" */ '@/views/admin/AdminHome')
+const AdminNovaConsulta = () => import(/* webpackChunkName: "adminnovaconsulta" */ '@/views/admin/AdminNovaConsulta')
+const AdminPagConsulta = () => import(/* webpackChunkName: "adminpagconsulta" */ '@/views/admin/AdminPagConsulta')
 
 Vue.use(Router)
 
@@ -78,8 +79,17 @@ export default new Router({
 				id: 37
 			}
 		},
-		// Modelo para novas consultas
+		{
+			path: '/portal-prefeitura',
+			name: 'PortalPrefeitura',
+			components: { PortalPrefeitura },
+			meta: {
+				id: 38
+			}
+		},
 		/*
+	 * Modelo para novas consultas
+	/*
     {
       path: '/nome-da-consulta',
       name: 'NomeDaConsulta',

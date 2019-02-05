@@ -9,9 +9,11 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 
 Vue.config.productionTip = false
-Vue.use(VeeValidate)
-Vue.use(VueAxios, axios)
+
+Vue.use(VeeValidate, { inject: false }) // para não injetar em todos os componentes
 Validator.localize('pt_br', ptbr)
+
+Vue.use(VueAxios, axios)
 
 new Vue({
 	router,

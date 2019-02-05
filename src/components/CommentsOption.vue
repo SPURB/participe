@@ -84,6 +84,9 @@
 import axios from 'axios'
 
 export default {
+	$_veeValidate: {
+		validator: 'new' // give me my own validator scope.
+	},
 	name: 'CommentsOption',
 	props: ['options'],
 	data () {

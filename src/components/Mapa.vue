@@ -2,8 +2,8 @@
 	<div class="Mapa" ref="mapa">
 		<div id="map"></div>
 		<ul class="legenda">
-			<template v-for="layer in mapa_attrs.layers">
-				<li>
+			<template v-for="(index, layer) in mapa_attrs.layers">
+				<li :key="index">
 					<div :style="{
 						backgroundColor:layer.fill_color,
 						borderColor: layer.stroke_color,

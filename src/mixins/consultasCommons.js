@@ -5,7 +5,7 @@ export const consultasCommons = {
 		this.consultas = this.$store.state.consultas
 	},
 	mounted () {
-		this.listaTitulos()
+		this.titulosLimpo = this.listaTitulos()
 		this.$store.commit('SET_ROUTE_ID', this.$route.meta.id)
 	},
 	updated () { this.alteraIndice() },
@@ -45,22 +45,17 @@ export const consultasCommons = {
 		},
 		consultaState () { return (this.estaConsulta.ativo === '1' ? 'aberta' : 'fechada') },
 		listaTitulos () {
-			let titulosBruto = Array.from(this.$refs.conteudoConsulta.getElementsByClassName('titulo'))
-			let titulos = []
-			let id = 0
-			titulosBruto.map(function (index) {
-				let titulo = {
-					id: id,
-					nome: index.innerText,
-					indent: index.attributes.indent.value,
-					offsetObj: index,
+			const titulosBruto = Array.from(this.$refs.conteudoConsulta.getElementsByClassName('titulo'))
+			const titulosLimpo = titulosBruto.map((item, index) => {
+				return {
+					id: index,
+					nome: item.innerText,
+					indent: item.attributes.indent.value,
+					offsetObj: item,
 					ativo: false
 				}
-
-				id++
-				titulos.push(titulo)
 			})
-			this.titulosLimpo = titulos
+			return titulosLimpo
 		},
 		setaBaixo () {
 			window.scrollTo({ top: Math.round(window.innerHeight), behavior: 'smooth' })

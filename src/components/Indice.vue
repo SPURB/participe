@@ -1,7 +1,11 @@
 <template>
 	<div class="Indice">
 		<ul>
-			<li v-for="titulo in titulos" :class="{ ativo: titulo.ativo }" :style="{ paddingLeft: titulo.indent + 'rem'}" @click="rolar(titulo.offsetObj)">{{ titulo.nome }}</li>
+			<li
+				v-for="(titulo, index) in titulos" :key="index"
+				:class="{ ativo: titulo.ativo }"
+				:style="{ paddingLeft: titulo.indent + 'rem'}"
+				@click="rolar(titulo.offsetObj)">{{ titulo.nome }}</li>
 		</ul>
 		<button @click="topo"><i class="icon-seta_cima icon"><span>arrow_upward</span></i></button>
 	</div>
@@ -10,8 +14,11 @@
 <script>
 export default {
 	name: 'Indice',
-	props: [ 'titulos' ],
-	mounted () {
+	props: {
+		titulos: {
+			type: Array,
+			required: true
+		}
 	},
 	methods: {
 		rolar (obj) {

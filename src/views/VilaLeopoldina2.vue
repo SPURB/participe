@@ -528,8 +528,8 @@ export default {
 			consultas: false,
 			estaConsulta: {},
 			social_assets: {
-				whatsapp: 'https://wa.me/?text=Contribua%20para%20a%20Consulta%20Pública%20do%20PIU%20Vila%20Leopoldina-Villa%20Lobos!',
-				facebook: 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br%2F%23%2Fvila-leopoldina-projeto-de-lei&amp;src=sdkpreparse',
+				whatsapp: 'https://api.whatsapp.com/send?text=Contribua%20para%20a%20Consulta%20Pública%20do%20PIU%20Vila%20Leopoldina-Villa%20Lobos!%20-%20https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br/#/vila-leopoldina-projeto-de-lei',
+				facebook: 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br%2F%23%2Fvila-leopoldina-projeto-de-lei',
 				twitter: 'https://twitter.com/intent/tweet?text=Contribua%20para%20a%20Consulta%20Pública%20do%20PIU%20Vila%20Leopoldina-Villa%20Lobos!%20https://participe.gestaourbana.prefeitura.sp.gov.br/#/vila-leopoldina-projeto-de-lei'
 			}
 		}

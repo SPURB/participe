@@ -413,7 +413,7 @@
 					<li>
 						<a @click="scrollToRef('cadernoProjeto')">
 							<i class="icon-pdf icon"><span>pdf</span></i>
-							<div>Anexo 5: Caderno Técnico* **</div>
+							<div>Anexo 5: Caderno Técnico*</div>
 						</a>
 					</li>
 					<li>
@@ -423,9 +423,9 @@
 							<span>67 Kb</span>
 						</a>
 					</li>
-					<span class="rodape">* O conteúdo do <strong>Anexo 5</strong> está listado abaixo nos pdf's referentes ao <strong>Caderno do Técnico.</strong></span><br>
+					<span class="rodape">* O <strong>Anexo 5</strong> será um extrato do Caderno Técnico Completo do PIU, cujo conteúdo está disponível para consulta no <strong>Caderno do Técnico.</strong>, sem prejuízo, portanto, para a análise do PL. Este anexo será composto, no mínimo, pelo <strong>Modelo Econômico de suporte à avaliação do Potencial Construtivo Adicional da AIU-VL, Projeto Urbanístico Referencial e Diretrizes Gerais para o Projeto Específico de Parcelamento do Solo e Cadastro para atendimento habitacional de responsabilidade da SEHAB.</strong></span><br><br>
+					<span class="rodape">** O <strong>Anexo 7</strong> trará as Especificações Técnicas Gerais e Padrões de Qualidade das Habitações de Interesse Social – HIS, equipamentos e instalações públicas e serviços de gerenciamento social necessários para garantir que o projeto atenda a população beneficiada em conformidade com os parâmetros estabelecidos pela SEHAB nos demais projetos. Tais especificações serão definidas quando da consolidação do projeto pelo Executivo Municipal, já que se tratam de parâmetros vigentes e já praticados.</strong></span>
 
-					<span class="rodape">** Composto, no mínimo, pelo <strong>Modelo Econômico de suporte à avaliação do Potencial Construtivo Adicional da AIU-VL</strong>, <strong>Projeto Urbanístico Referencial e Diretrizes Gerais para o Projeto Específico de Parcelamento do Solo</strong> e <strong>Cadastro para atendimento habitacional de responsabilidade da SEHAB.</strong></span>
 				</ul>
 				<Comments v-if="estaConsulta.ativo == 1" :attr="{id:218, context:'Anexos - Anexos do Projeto de Lei'}"></Comments>
 			</section>

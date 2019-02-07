@@ -1,8 +1,6 @@
 <template>
 	<div class="Comments" :class="{ aberto: abreComentario }">
-
 		<div @click="abreComentario = !abreComentario" :class="{ sucesso: sucesso }"><i class="icon-comentario icon"><span>chat</span></i></div>
-
 		<form>
 			<fieldset>
 				<label for="nome">Nome</label>
@@ -81,7 +79,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+import api from '@/utils/api'
 
 export default {
 	$_veeValidate: {
@@ -140,7 +138,7 @@ export default {
 			let app = this
 			app.erro = false
 			app.enviandoComment = true
-			axios.post(this.apiPath + 'members', {
+			api.post(this.apiPath + 'members', {
 				'idConsulta': app.$route.meta.id,
 				'name': app.returnFormNameObject,
 				'email': app.form_email,

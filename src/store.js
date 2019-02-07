@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import Es6Promise from 'es6-promise'
-// import axios from 'axios'
 import api from '@/utils/api'
 
 Es6Promise.polyfill()

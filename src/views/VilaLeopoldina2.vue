@@ -8,6 +8,8 @@
 		<Indice :titulos="titulosLimpo"></Indice>
 		<Apoio></Apoio>
 
+		<p id="print"><a :href="arquivosLeopoldina('PIU_VLVL_impressao.pdf')" title="Baixar versão para impressão" download><i class="icon-imprimir icon"><span>Imprimir</span></i> Baixar versão para impressão</a></p>
+
 		<section>
 			<h2 class="titulo" indent="1">Apresentação</h2>
 			<p>A presente Consulta Pública, promovida pela Prefeitura do Município de São Paulo por intermédio da Secretaria Municipal de Urbanismo e Licenciamento (SMUL) e da São Paulo Urbanismo (SP-URBANISMO), tem como objeto dar publicidade ao Projeto de Intervenção Urbana (PIU) Vila Leopoldina-Villa Lobos apresentando o <strong>conteúdo final do PIU e de seu Projeto de Lei</strong>, com vistas a colher contribuições da sociedade civil ao aperfeiçoamento e consolidação do projeto antes de seu encaminhamento ao Legislativo Municipal. A consulta tem por base a legislação em vigor e os instrumentos urbanísticos que permitem ações específicas no território da cidade.</p>
@@ -557,6 +559,54 @@ export default {
 @import '../consulta';
 
 div.VilaLeopoldina2 {
+	p#print a {
+		display: inline-block;
+		font-family: $grotesca;
+		color: $cinza-2;
+		font-size: small;
+		font-weight: 700;
+		text-transform: uppercase;
+		border-radius: 2px;
+		border-bottom: none;
+		transition: all ease-in .2s;
+		user-select: none;
+		-ms-user-select: none;
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		& > * { transition: all ease-in .2s; }
+		i {
+			display: inline-block;
+			margin-right: 4px;
+			background-color: $cinza-2;
+			color: #FFF;
+			text-align: center;
+			line-height: 2rem;
+			width: 2rem;
+			border-radius: 1rem;
+		}
+		&:hover {
+			color: $preto;
+			i {
+				background-color: $preto;
+			}
+		}
+		&:active { background-color: transparent; };
+
+		@media (max-width: 600px) {
+			margin: 2rem 0 0 0;
+			i {
+				background-color: transparent;
+				color: $cinza-2;
+				line-height: initial;
+				width: unset;
+				vertical-align: middle;
+			}
+			&:hover {
+				color: $vermelho;
+				i { background-color: transparent; color: $vermelho;}
+			}
+		}
+	}
 	section#intro {
 		& > h2 { text-align: center; }
 		& > p:last-child {

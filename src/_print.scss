@@ -1,49 +1,47 @@
 @media print {
 	@page {
 		size: A4 portrait;
-		margin: 30mm 30mm 30mm 30mm;
+		margin: 30mm 30mm 30mm 30mm
 	}
 
-	.Cabecalho { display: none !important; };
-	.Rodape { display: none !important; };
-	.Indice { display: none; };
-	.Apoio { display: none; };
-	.Comments { display: none; };
+	.Cabecalho { display: none !important };
+	.Rodape { display: none !important };
+	.Indice { display: none };
+	.Apoio { display: none };
+	.Comments { display: none };
 
 	div.Anhembi2 {
 		font-size: 11pt;
 
-		.PageTop {
-			max-height: 200px;
-		}
+		.PageTop { max-height: 200px }
 
 		h1, h2, h3 {
 			break-after: avoid-page;
 			page-break-after: avoid;
 			padding: 0;
-			margin: 3rem 0 1rem 0;
+			margin: 3rem 0 1rem 0
 		};
 
 		p, ol, ul, figure, div.Minuta blockquote.minuta, div.tablewrap, .Commentsloader {
 			padding: 0;
 			margin: 0 0 1rem 0;
 			max-width: unset;
-			width: 100%;
+			width: 100% 
 		};
 
 		p { padding-right: 40mm; };
 
 		figure, .tablewrap, .Galeria {
 			break-inside: avoid-page;
-			page-break-inside: avoid;
+			page-break-inside: avoid
 		};
 
-		ul.pdfBox { display: none; };
+		ul.pdfBox { display: none };
 	};
 
 	.ai2html {
 		break-inside: avoid-page;
 		page-break-inside: avoid;
-		max-height: 100%;
-	};
+		max-height: 100%
+	}
 }

@@ -210,16 +210,12 @@
 </template>
 
 <script>
-// import CommentUn from '@/components/CommentUn'
 import axios from 'axios'
 import { adminCommon } from '@/mixins/adminCommon'
 import { commentsMutations } from '@/mixins/commentsMutations'
 
 export default {
 	nome: 'AdminPagConsulta',
-	// components: {
-	// 	CommentUn
-	// },
 	mixins: [ adminCommon, commentsMutations ],
 	data () {
 		return {

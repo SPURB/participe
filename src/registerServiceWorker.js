@@ -1,5 +1,4 @@
 /* eslint-disable no-console */
-
 import { register } from 'register-service-worker'
 
 if (process.env.NODE_ENV === 'production') {
@@ -20,7 +19,7 @@ if (process.env.NODE_ENV === 'production') {
 			console.log('Não há conexão. O app está rodando em modo offline')
 		},
 		error (error) {
-			console.error('Erro durante o servço de registro do service worker', error)
+			console.error('Erro durante o serviço de registro do service worker', error)
 		}
 	})
 }

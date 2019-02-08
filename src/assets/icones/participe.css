@@ -1,8 +1,8 @@
 @font-face {
 	font-family: "participe";
-	src: url("participe.eot?9dd1b002027f5766a556e981a3b12ec6?#iefix") format("embedded-opentype"),
-url("participe.woff2?9dd1b002027f5766a556e981a3b12ec6") format("woff2"),
-url("participe.woff?9dd1b002027f5766a556e981a3b12ec6") format("woff");
+	src: url("participe.eot?9c2161f98f4e69732458dae335befc2b?#iefix") format("embedded-opentype"),
+url("participe.woff2?9c2161f98f4e69732458dae335befc2b") format("woff2"),
+url("participe.woff?9c2161f98f4e69732458dae335befc2b") format("woff");
 }
 
 .icon {
@@ -85,60 +85,63 @@ url("participe.woff?9dd1b002027f5766a556e981a3b12ec6") format("woff");
 .icon-home:before {
 	content: "\f117";
 }
-.icon-incorreto:before {
+.icon-imprimir:before {
 	content: "\f118";
 }
-.icon-lista:before {
+.icon-incorreto:before {
 	content: "\f119";
 }
-.icon-listagem:before {
+.icon-lista:before {
 	content: "\f11a";
 }
-.icon-mais:before {
+.icon-listagem:before {
 	content: "\f11b";
 }
-.icon-material:before {
+.icon-mais:before {
 	content: "\f11c";
 }
-.icon-menu:before {
+.icon-material:before {
 	content: "\f11d";
 }
-.icon-novamente:before {
+.icon-menu:before {
 	content: "\f11e";
 }
-.icon-oficio:before {
+.icon-novamente:before {
 	content: "\f11f";
 }
-.icon-pdf:before {
+.icon-oficio:before {
 	content: "\f120";
 }
-.icon-pessoa-outline:before {
+.icon-pdf:before {
 	content: "\f121";
 }
-.icon-recolher:before {
+.icon-pessoa-outline:before {
 	content: "\f122";
 }
-.icon-rejeitar:before {
+.icon-recolher:before {
 	content: "\f123";
 }
-.icon-remover:before {
+.icon-rejeitar:before {
 	content: "\f124";
 }
-.icon-responder:before {
+.icon-remover:before {
 	content: "\f125";
 }
-.icon-seta_baixo:before {
+.icon-responder:before {
 	content: "\f126";
 }
-.icon-seta_cima:before {
+.icon-seta_baixo:before {
 	content: "\f127";
 }
-.icon-seta_direita:before {
+.icon-seta_cima:before {
 	content: "\f128";
 }
-.icon-seta_esquerda:before {
+.icon-seta_direita:before {
 	content: "\f129";
 }
-.icon-tempo:before {
+.icon-seta_esquerda:before {
 	content: "\f12a";
+}
+.icon-tempo:before {
+	content: "\f12b";
 }

@@ -80,9 +80,12 @@
 </template>
 
 <script>
-import axios from 'axios'
+import api from '@/utils/api'
 
 export default {
+	$_veeValidate: {
+		validator: 'new' // give me my own validator scope.
+	},
 	name: 'CommentsContext',
 	props: {
 		id: {
@@ -160,7 +163,7 @@ export default {
 			let app = this
 			app.erro = false
 			app.enviandoComment = true
-			axios.post(this.apiPath + 'members', {
+			api.post(this.apiPath + 'members', {
 				'idConsulta': app.$route.meta.id,
 				'name': app.returnFormNameObject,
 				'email': app.form_email,

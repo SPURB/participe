@@ -8,6 +8,8 @@
 		<Indice :titulos="titulosLimpo"></Indice>
 		<Apoio></Apoio>
 
+		<p id="print"><a :href="arquivosLeopoldina('PIU_VLVL_impressao.pdf')" title="Baixar versão para impressão" download><i class="icon-imprimir icon"><span>Imprimir</span></i> Baixar versão para impressão</a></p>
+
 		<section>
 			<h2 class="titulo" indent="1">Apresentação</h2>
 			<p>A presente Consulta Pública, promovida pela Prefeitura do Município de São Paulo por intermédio da Secretaria Municipal de Urbanismo e Licenciamento (SMUL) e da São Paulo Urbanismo (SP-URBANISMO), tem como objeto dar publicidade ao Projeto de Intervenção Urbana (PIU) Vila Leopoldina-Villa Lobos apresentando o <strong>conteúdo final do PIU e de seu Projeto de Lei</strong>, com vistas a colher contribuições da sociedade civil ao aperfeiçoamento e consolidação do projeto antes de seu encaminhamento ao Legislativo Municipal. A consulta tem por base a legislação em vigor e os instrumentos urbanísticos que permitem ações específicas no território da cidade.</p>
@@ -413,7 +415,7 @@
 					<li>
 						<a @click="scrollToRef('cadernoProjeto')">
 							<i class="icon-pdf icon"><span>pdf</span></i>
-							<div>Anexo 5: Caderno Técnico* **</div>
+							<div>Anexo 5: Caderno Técnico*</div>
 						</a>
 					</li>
 					<li>
@@ -423,9 +425,9 @@
 							<span>67 Kb</span>
 						</a>
 					</li>
-					<span class="rodape">* O conteúdo do <strong>Anexo 5</strong> está listado abaixo nos pdf's referentes ao <strong>Caderno do Técnico.</strong></span><br>
+					<span class="rodape">* O <strong>Anexo 5</strong> será um extrato do Caderno Técnico Completo do PIU, cujo conteúdo está disponível para consulta no <strong>Caderno do Técnico.</strong>, sem prejuízo, portanto, para a análise do PL. Este anexo será composto, no mínimo, pelo <strong>Modelo Econômico de suporte à avaliação do Potencial Construtivo Adicional da AIU-VL, Projeto Urbanístico Referencial e Diretrizes Gerais para o Projeto Específico de Parcelamento do Solo e Cadastro para atendimento habitacional de responsabilidade da SEHAB.</strong></span><br><br>
+					<span class="rodape">** O <strong>Anexo 7</strong> trará as Especificações Técnicas Gerais e Padrões de Qualidade das Habitações de Interesse Social – HIS, equipamentos e instalações públicas e serviços de gerenciamento social necessários para garantir que o projeto atenda a população beneficiada em conformidade com os parâmetros estabelecidos pela SEHAB nos demais projetos. Tais especificações serão definidas quando da consolidação do projeto pelo Executivo Municipal, já que se tratam de parâmetros vigentes e já praticados.</strong></span>
 
-					<span class="rodape">** Composto, no mínimo, pelo <strong>Modelo Econômico de suporte à avaliação do Potencial Construtivo Adicional da AIU-VL</strong>, <strong>Projeto Urbanístico Referencial e Diretrizes Gerais para o Projeto Específico de Parcelamento do Solo</strong> e <strong>Cadastro para atendimento habitacional de responsabilidade da SEHAB.</strong></span>
 				</ul>
 				<Comments v-if="estaConsulta.ativo == 1" :attr="{id:218, context:'Anexos - Anexos do Projeto de Lei'}"></Comments>
 			</section>
@@ -528,8 +530,8 @@ export default {
 			consultas: false,
 			estaConsulta: {},
 			social_assets: {
-				whatsapp: 'https://wa.me/?text=Contribua%20para%20a%20Consulta%20Pública%20do%20PIU%20Vila%20Leopoldina-Villa%20Lobos!',
-				facebook: 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br%2F%23%2Fvila-leopoldina-projeto-de-lei&amp;src=sdkpreparse',
+				whatsapp: 'https://api.whatsapp.com/send?text=Contribua%20para%20a%20Consulta%20Pública%20do%20PIU%20Vila%20Leopoldina-Villa%20Lobos!%20-%20https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br/#/vila-leopoldina-projeto-de-lei',
+				facebook: 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br%2F%23%2Fvila-leopoldina-projeto-de-lei',
 				twitter: 'https://twitter.com/intent/tweet?text=Contribua%20para%20a%20Consulta%20Pública%20do%20PIU%20Vila%20Leopoldina-Villa%20Lobos!%20https://participe.gestaourbana.prefeitura.sp.gov.br/#/vila-leopoldina-projeto-de-lei'
 			}
 		}
@@ -557,6 +559,54 @@ export default {
 @import '../consulta';
 
 div.VilaLeopoldina2 {
+	p#print a {
+		display: inline-block;
+		font-family: $grotesca;
+		color: $cinza-2;
+		font-size: small;
+		font-weight: 700;
+		text-transform: uppercase;
+		border-radius: 2px;
+		border-bottom: none;
+		transition: all ease-in .2s;
+		user-select: none;
+		-ms-user-select: none;
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		& > * { transition: all ease-in .2s; }
+		i {
+			display: inline-block;
+			margin-right: 4px;
+			background-color: $cinza-2;
+			color: #FFF;
+			text-align: center;
+			line-height: 2rem;
+			width: 2rem;
+			border-radius: 1rem;
+		}
+		&:hover {
+			color: $preto;
+			i {
+				background-color: $preto;
+			}
+		}
+		&:active { background-color: transparent; };
+
+		@media (max-width: 600px) {
+			margin: 2rem 0 0 0;
+			i {
+				background-color: transparent;
+				color: $cinza-2;
+				line-height: initial;
+				width: unset;
+				vertical-align: middle;
+			}
+			&:hover {
+				color: $vermelho;
+				i { background-color: transparent; color: $vermelho;}
+			}
+		}
+	}
 	section#intro {
 		& > h2 { text-align: center; }
 		& > p:last-child {

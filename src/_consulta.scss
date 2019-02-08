@@ -33,7 +33,7 @@ p {
 	font-size: $sizedesk;
 	line-height: 1.6;
 	color: $preto;
-	text-rendering: optimizeLegibility;	
+	text-rendering: optimizeLegibility
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, table {
@@ -162,9 +162,9 @@ ul.links, ol.links, ul.pdfBox {
 			i {
 				margin-right: 1rem;
 				align-self: center;
-			};
+			}
 
-			div { width: 100%; };
+			div { width: 100%; }
 
 			span {
 				display: block;
@@ -172,8 +172,8 @@ ul.links, ol.links, ul.pdfBox {
 				margin-left: 1rem;
 				white-space: nowrap;
 				color: $sombra-3;
-			};
-		};
+			}
+		}
 
 		&:hover {
 			background-color: #EB5757;
@@ -184,9 +184,9 @@ ul.links, ol.links, ul.pdfBox {
 			}
 		}
 
-		&:first-child { margin-top: 0; };
-		&:last-child { margin-bottom: 0; };
-	};
+		&:first-child { margin-top: 0; }
+		&:last-child { margin-bottom: 0; }
+	}
 }
 
 ul li, ol li {
@@ -226,7 +226,7 @@ blockquote {
 
 	@media (max-width: 600px) {
 		max-width: calc(100% - 2rem);
-		padding: 1.6rem 1rem 1rem 1rem !important;
+		padding: 1.6rem 1rem 1rem !important;
 		&::before { left: calc(1rem - 4px); }
 	}
 
@@ -236,7 +236,7 @@ blockquote {
 		font-family: $grotesca;
 		font-size: small;
 		color: $cinza-1;
-		margin: 1rem 0 0 0;
+		margin: 1rem 0 0
 	}
 
 	&.leg {
@@ -255,7 +255,7 @@ blockquote {
 		}
 
 		p.numero {
-			margin: 0 0 2rem 0;
+			margin: 0 0 2rem;
 			font-weight: bold;
 			text-indent: 0;
 			font-family: $grotesca;
@@ -265,13 +265,13 @@ blockquote {
 			font-family: $grotesca;
 			font-size: small;
 			color: $cinza-1;
-			margin: 0 0 2rem 0;
+			margin: 0 0 2rem;
 			text-indent: 0;
 			max-width: 400px;
 		}
 
 		p.fonte {
-			margin: 2rem 0 0 0;
+			margin: 2rem 0 0;
 			text-indent: 0;
 		}
 
@@ -314,7 +314,7 @@ table {
 
 	&.linha {
 		th, td {
-			border: 0px !important;
+			border: 0 !important;
 			border-bottom: 1px solid $cinza-2 !important;
 			text-align: center;
 		}
@@ -342,7 +342,7 @@ table {
 	// 			padding: 4px 0 !important;
 	// 			position: relative;
 
-	// 			&:not(:first-child) { border-top: 1px solid $cinza-2 !important; } 
+	// 			&:not(:first-child) { border-top: 1px solid $cinza-2 !important; }
 
 	// 			&::before {
 	// 				content: attr(data-coluna);
@@ -372,31 +372,31 @@ div.tablewrap {
 		border-collapse: collapse;
 		margin: 0;
 		&.center { text-align: center; }
-	};
+	}
 
 	caption {
 		border-top: none !important;
 		padding: 0;
 		margin-bottom: 2rem;
-	};
+	}
 
 	thead th, thead tr td, tr th {
 		font-weight: 700;
-	};
+	}
 
 	td, th {
 		padding: 4px 8px;
-		word-wrap: break-word; 
+		word-wrap: break-word;
 		hyphens: auto;
 		border: 1px solid $cinza-2;
 		background: #FFF;
 		min-width: 80px;
-	};
+	}
 
 	& > div {
 		h1 {
 			font-size: small;
-			margin: 2rem 0 1rem 0;
+			margin: 2rem 0 1rem;
 			padding: 0;
 			font-weight: bold;
 			text-transform: uppercase;
@@ -417,11 +417,11 @@ div.tablewrap {
 					break-inside: avoid;
 					page-break-inside: avoid;
 					&:last-child { margin-bottom: 0; }
-				};
-			};
-		};
-	};
-};
+				}
+			}
+		}
+	}
+}
 
 figure {
 	text-align: center;
@@ -437,7 +437,7 @@ figure {
 		margin: 0 0 -8px 0;
 		max-width: 992px;
 		@media (max-width: 992px) {
-			max-width: 100%;			
+			max-width: 100%;
 		}
 	};
 
@@ -449,7 +449,7 @@ figure {
 		text-align: left;
 		color: $cinza-1;
 		border-bottom: 1px solid $cinza-3;
-	};
+	}
 
 	h1, h2, h3, h4, h5, h6 {
 		font-size: initial;
@@ -461,7 +461,7 @@ figure {
 		border: 1px solid $cinza-2;
 		border-radius: 2px;
 		overflow: hidden;
-		padding: 0 0 1rem 0;
+		padding: 0 0 1rem;
 
 		ul.legenda {
 			display: flex;
@@ -501,11 +501,11 @@ figure {
 					}
 
 					&.linha {
-						max-height: 0px;
+						max-height: 0;
 						overflow: hidden;
 						border-width: 1px;
-					};
-				};
+					}
+				}
 
 				a {
 					color: inherit;
@@ -515,13 +515,13 @@ figure {
 						opacity: .4;
 						text-decoration: none;
 						background-color: transparent;
-					};
-				};
+					}
+				}
 
 				&:last-child {
 					margin-right: 0;
-				};
-			};
+				}
+			}
 
 			@media (max-width: 600px) {
 				max-height: 160px;
@@ -538,11 +538,11 @@ figure {
 					div {
 						display: inline-block;
 						vertical-align: -4px;
-					};
-				};
+					}
+				}
 			}
-		};
-	};
+		}
+	}
 
 	&.coluna {
 		padding: 0 2rem !important;
@@ -552,7 +552,7 @@ figure {
 
 		img {
 			max-width: 100%;
-		};
+		}
 
 		@media (max-width: 992px) {
 			margin: 4rem auto;
@@ -563,7 +563,7 @@ figure {
 			margin: 4rem auto;
 			padding: 0 1rem !important;
 		}
-	};
+	}
 
 	&.ai2html {
 		margin: 4rem auto;
@@ -574,11 +574,11 @@ figure {
 		font-size: x-small;
 		text-align: left;
 		padding: 0 1rem;
-		margin: 1rem 0 0 0;
+		margin: 1rem 0 0;
 		color: $cinza-1;
 		span { font-weight: bold; }
-	};
-};
+	}
+}
 
 @media (max-width: 992px) {
 	figure {
@@ -589,7 +589,7 @@ figure {
 			padding: 0;
 		}
 	}
-};
+}
 
 
 @media (max-width: 600px) {
@@ -603,14 +603,14 @@ figure {
 
 .ai2html {
 	margin: 4rem 0;
-};
+}
 
 // ARRUMAR DEPOIS
 div.VidaSegura {
 	* {
 		figure > table + figcaption, table + figcaption {
 			max-width: calc(700px - 4rem);
-			padding: 0 0 8px 0;
+			padding: 0 0 8px;
 			@media (max-width: 600px) {
 				max-width: calc(100% - 2rem);
 			}

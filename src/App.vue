@@ -110,4 +110,13 @@ div#interruptor {
 	};
 };
 
+@media print {
+	body {
+		margin: 2rem;
+	}
+	div#interruptor {
+		display: none;
+	}
+}
+
 </style>

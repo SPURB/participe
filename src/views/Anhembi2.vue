@@ -1325,50 +1325,49 @@ export default {
 		};
 	};
 
-	@media print {
+	// @media print {
+	// 	@page {
+	// 		size: A4 portrait;
+	// 		margin: 30mm 30mm 30mm 30mm;
+	// 	}
 
-		@page {
-			size: A4 portrait;
-			margin: 30mm 30mm 30mm 30mm;
-		}
+	// 	.Cabecalho { display: none; };
+	// 	.Rodape { display: none; };
+	// 	.Indice { display: none; };
+	// 	.Apoio { display: none; };
+	// 	.Comments { display: none; };
 
-		.Cabecalho { display: none; };
-		.Rodape { display: none; };
-		.Indice { display: none; };
-		.Apoio { display: none; };
-		.Comments { display: none; };
+	// 	div.Anhembi2 {
+	// 		font-size: 11pt;
 
-		div.Anhembi2 {
-			font-size: 11pt;
+	// 		h1, h2, h3 {
+	// 			break-after: avoid-page;
+	// 			page-break-after: avoid;
+	// 			padding: 0;
+	// 			margin: 3rem 0 1rem 0;
+	// 		};
 
-			h1, h2, h3 {
-				break-after: avoid-page;
-				page-break-after: avoid;
-				padding: 0;
-				margin: 3rem 0 1rem 0;
-			};
+	// 		p, ol, ul, figure, div.Minuta blockquote.minuta, div.tablewrap, .Commentsloader {
+	// 			padding: 0;
+	// 			margin: 0 0 1rem 0;
+	// 			max-width: unset;
+	// 			width: 100%;
+	// 		};
 
-			p, ol, ul, figure, div.Minuta blockquote.minuta, div.tablewrap, .Commentsloader {
-				padding: 0;
-				margin: 0 0 1rem 0;
-				max-width: unset;
-				width: 100%;
-			};
+	// 		p { padding-right: 40mm; };
 
-			p { padding-right: 40mm; };
+	// 		figure, .tablewrap, .Galeria {
+	// 			break-inside: avoid-page;
+	// 			page-break-inside: avoid;
+	// 		};
 
-			figure, .tablewrap, .Galeria {
-				break-inside: avoid-page;
-				page-break-inside: avoid;
-			};
+	// 		ul.pdfBox { display: none; };
+	// 	};
 
-			ul.pdfBox { display: none; };
-		};
-
-		.ai2html {
-			break-inside: avoid-page;
-			page-break-inside: avoid;
-			max-height: 100%;
-		};
-	}
+	// 	.ai2html {
+	// 		break-inside: avoid-page;
+	// 		page-break-inside: avoid;
+	// 		max-height: 100%;
+	// 	};
+	// }
 </style>

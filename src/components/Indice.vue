@@ -184,5 +184,9 @@ div.Indice {
 			padding: 0 1rem;
 		}
 	}
+
+	@media print {
+		display: none;
+	}
 };
 </style>

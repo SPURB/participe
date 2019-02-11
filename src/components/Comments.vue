@@ -380,5 +380,9 @@ div.Comments {
 	&.aberto { max-height: 1000px; };
 
 	@media (max-width: 600px) { font-size: 20px; }
+
+	@media print {
+		display: none;
+	}
 };
 </style>

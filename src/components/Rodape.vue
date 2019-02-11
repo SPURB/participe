@@ -33,5 +33,9 @@ div.Rodape {
 		width: 100%;
 		position: absolute
 	}
+	
+	@media print {
+		display: none;
+	}
 }
 </style>

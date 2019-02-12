@@ -27,12 +27,12 @@
 			<p>O chamamento já considerava que o complexo apresenta necessidade de atualização e reformulação, visto que desde a sua inauguração, na década de 1970, não recebeu reformas estruturais significativas, resultando em processo de obsolescência da infraestrutura e precariedade de suas instalações. A atualização, portanto, visava tanto manter a liderança em exposições e convenções na cidade, quanto atender as demandas do atual mercado de eventos, equiparando o Anhembi com modernos equipamentos internacionais em termos de conforto ao usuário, flexibilidade, modularidade e tecnologia.</p>
 			<p>A intenção de atualização e renovação deste território traz a oportunidade de desenvolvimento de projetos associados às atividades expositivas e culturais existentes, incentivando a vocação de feiras, eventos e negócios da região, considerando o Artigo 3º da Lei 16.886/2018, por meio da implantação de novas atividades econômicas, revertendo a subutilização de grande parte das áreas públicas ali existentes.</p>
 
-			<!-- <blockquote>
+			<blockquote>
 				<p>O chamamento já considerava que o complexo apresenta necessidade de atualização e reformulação, visto que desde a sua inauguração, na década de 1970, não recebeu reformas estruturais significativas, resultando em processo de obsolescência da infraestrutura e precariedade de suas instalações. A atualização, portanto, visava tanto manter a liderança em exposições e convenções na cidade, quanto atender as demandas do atual mercado de eventos, equiparando o Anhembi com modernos equipamentos internacionais em termos de conforto ao usuário, flexibilidade, modularidade e tecnologia.</p>
 				<p class="fonte">SPUrbanismo, 2018</p>
 			</blockquote>
 
-			<Imagem :dados="img01">
+			<!-- <Imagem :dados="img01">
 				<template slot="ai2html">
 					<ProcessoPIU></ProcessoPIU>
 				</template>
@@ -71,7 +71,7 @@
 			<p>No primeiro caso, foram incluídas integralmente as quadras 283 e 284, delimitadas pela Av. Assis Chateaubriand, a Av. Olavo Fontoura, a Praça Campo de Bagatelle, a Av. Santos Dumont, a Rua Marechal Leitão de Carvalho, a Rua Masseinet Sorcinelli e a Rua Prof. Milton Rodrigues. Quanto ao Perímetro Expandido, foi adotada a determinação do §1° do Art. 5º da Lei n°16.866 de 2018, formado pela interseção entre o subsetor Arco Tietê da Macroárea de Estruturação Metropolitana (MEM) e os limites administrativos das Prefeituras Regionais de Santana/Tucuruvi e Casa Verde.</p>
 
 			<figure title="Processo de recorte do Perímetro Expandido" class="borda">
-				<img src="https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/ANH_Perimetros.jpg" alt="Processo de recorte do Perímetro Expandido">
+				<img src="https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/piu-anhembi/img/ANH_Perimetros.jpg" alt="Processo de recorte do Perímetro Expandido" scaleFactor="0.5">
 				<h1>Processo de recorte do Perímetro Expandido</h1>
 				<ul class="legenda">
 					<li><div style="border-color: #534e3d; background: #f2e271; border-width: 2px; font-weight: bolder;">1</div> Prefeitura Regional Casa Verde-Cachoeirinha</li>
@@ -1025,7 +1025,7 @@ export default {
 				tabelaListrada: false
 			},
 			img01: {
-				tipo: 'default',
+				tipo: 'mapa',
 				titulo: 'Proposta para a implantação do Parque Linear Carandiru',
 				url: 'https://participe.gestaourbana.prefeitura.sp.gov.br/arquivos/arco-pinheiros/alamedas-e-bulevares_1.png',
 				caption: 'Proposta para a implantação do Parque Linear Carandiru',
@@ -1062,312 +1062,267 @@ export default {
 <style lang="scss" scoped>
 @import '../variables';
 @import '../consulta';
+@import '../oldstylestoprint';
 
-	div.Anhembi2 {
+	// div.Anhembi2 {
 
-		div.top {
-			/*visibility: hidden;*/
-			padding: 2rem;
-			margin: 0 0 2rem 0;
-			overflow: hidden;
-			background-position: center center;
-			background-size: cover;
-			width: 100%;
-			height: calc(100vh - 60px);
-			position: relative;
-			display: flex;
-			flex-flow: column nowrap;
-			align-items: center;
-			justify-content: center;
-			z-index: 1;
+	// 	div.top {
+	// 		/*visibility: hidden;*/
+	// 		padding: 2rem;
+	// 		margin: 0 0 2rem 0;
+	// 		overflow: hidden;
+	// 		background-position: center center;
+	// 		background-size: cover;
+	// 		width: 100%;
+	// 		height: calc(100vh - 60px);
+	// 		position: relative;
+	// 		display: flex;
+	// 		flex-flow: column nowrap;
+	// 		align-items: center;
+	// 		justify-content: center;
+	// 		z-index: 1;
 
-			& > div:first-child {
-				padding: 1.2rem;
-				background: #FFF;
-				outline: 8px solid rgba(0, 0, 0, .24);
-				-moz-outline-radius: 2px;
+	// 		& > div:first-child {
+	// 			padding: 1.2rem;
+	// 			background: #FFF;
+	// 			outline: 8px solid rgba(0, 0, 0, .24);
+	// 			-moz-outline-radius: 2px;
 
-				& > div {
-					margin: 0 0 8px 0;
-					text-align: center;
-					font-size: small;
-					color: #777;
-					font-weight: 400;
+	// 			& > div {
+	// 				margin: 0 0 8px 0;
+	// 				text-align: center;
+	// 				font-size: small;
+	// 				color: #777;
+	// 				font-weight: 400;
 
-					&:last-child { margin-bottom: 0; };
+	// 				&:last-child { margin-bottom: 0; };
 
-					i {
-						font-size: initial;
-						vertical-align: middle;
-					};
-				};
+	// 				i {
+	// 					font-size: initial;
+	// 					vertical-align: middle;
+	// 				};
+	// 			};
 
-				div#statusConsulta {
-					font-size: 10px;
-					text-transform: uppercase;
-					color: #fff;
-					font-weight: 500;
-					border-radius: 2px;
-					white-space: nowrap;
-					margin: 0 .5rem;
-				}
-				div#statusConsulta::after{
-					padding:.35rem .5rem;
-				}
-				div#statusConsulta.aberta::after{
-					content: "Em consulta";
-					background-color: #008015;
-				}
-				div#statusConsulta.fechada::after{
-					content: "Consulta Encerrada";
-					background-color: #EB5757;
-				}
-				& > h1 {
-					font-size: calc(16px + 8vmin);
-					line-height: calc(6vmin + 32px);
-					margin: 1rem;
-					text-align: center;
-				};
-			};
-
-			.setaBaixo {
-				position: absolute;
-				bottom: 0;
-				left: 0;
-				display: flex;
-				align-items: flex-end;
-				justify-content: center;
-				width: 100%;
-				height: 25vh;
-				background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .8));
-				transform: translateY(0);
-				transition: all .4s;
-
-				i {
-					font-size: calc(24px + 16vmin);
-					line-height: .8;
-					color: #FFF;
-					text-shadow: 0 2px 2px rgba(0, 0, 0, .24);
-					transition: all .1s;
-				};
-
-				&:hover {
-					cursor: pointer;
-					transform: translateY(32px);
-
-					i {
-						transform: translateY(-24px);
-						cursor: pointer;
-					};
-				};
-			};
-		};
-
-		div.tablewrap.intervencoes {
-
-			table {
-				font-size: initial;
-				margin: .4rem 0 .8rem 0;
-				&:last-child { margin-bottom: 0; };
-				tr td span.bold { font-weight: bold; };
-			};
-
-			div.intervencoesTitulo {
-				text-align: center;
-				font-size: smaller;
-				font-weight: 700;
-				margin-bottom: -1.2rem;
-			};
-
-			.col1, .col2 { width: 20%; font-size: smaller; };
-
-			span.cod { color: #BDBDBD; };
-
-			span.interv {
-				display: inline-block;
-				line-height: 1rem;
-				width: 1rem;
-				font-size: x-small;
-				text-align: center;
-				background: #BDBDBD;
-				border-radius: 100%;
-				color: #333;
-				margin: 0 0 0 4px;
-			};
-
-			div.eixo {
-				font-size: initial;
-				color: #BDBDBD;
-				margin: 3.2rem 0 .4rem 0;
-
-				span.tema {
-					font-size: larger;
-					color: #333;
-					display: block;
-					font-weight: bold;
-				};
-			};
-
-			div.diretriz {
-				font-size: smaller;
-				color: #BDBDBD;
-				display: block;
-				margin: 0;
-
-				span { color: #333; };
-				span.dir2 { font-weight: bolder; color: #333; display: block; };
-			};
-
-			div.legenda {
-				margin: 1rem 0;
-				font-size: small;
-
-				h6 {
-					margin: 0;
-					padding: .8rem 0 .6rem 0;
-					font-weight: bold;
-					text-transform: uppercase;
-					font-size: smaller;
-				};
-
-				span.interv { margin: 0 4px 0 0; };
-			};
-		};
-
-		ul.pdfBox {
-			display: block;
-			list-style-type: none;
-			margin: 2rem auto;
-			padding: 2rem;
-			background: #F5F5F5;
-			border-radius: 2px;
-			font-family: inherit;
-
-			li {
-				margin: 2rem 0;
-				padding: 0;
-				border-radius: 2px;
-				border: 1px solid #BDBDBD;
-				background: #FFF;
-				box-shadow: 0 2px 2px rgba(0, 0, 0, .12);
-				transition: all .1s;
-
-				a {
-					display: flex;
-					flex-direction: row;
-					align-items: center;
-					padding: 1rem;
-					color: inherit;
-					border-bottom: 0;
-
-					i {
-						margin-right: 1rem;
-						align-self:center
-					};
-					div {
-						width: 100%;
-					};
-					span {
-						font-size: .75em;
-						margin-left: 1rem;
-						white-space: nowrap;
-						color: #BDBDBD;
-					};
-
-					&:hover { text-decoration: none; background-color: transparent; };
-				};
-
-				&:hover { border-color: #EB5757; box-shadow: 0 4px 4px rgba(0, 0, 0, .12); };
-
-				&:first-child { margin-top: 0; };
-				&:last-child { margin-bottom: 0; };
-			};
-		};
-	};
-
-	.ai2html {
-		margin: 4rem 0;
-	};
-
-	div.commentCtx {
-		position: absolute;
-		transform: scale(0);
-		max-width: 2.4rem;
-		max-height: 2.4rem;
-		width: 100%;
-		height: 100%;
-		text-align: center;
-		background: #333;
-		color: #FFF;
-		border-radius: 100%;
-		box-shadow: 0 4px 4px rgba(0, 0, 0, .24);
-		transition: all .1s;
-
-		a { color: inherit;
-			i { line-height: 2.4rem; };
-		};
-
-		&:hover {
-			box-shadow: 0 8px 8px rgba(0, 0, 0, .24);
-			transform: scale(1.2) !important;
-			cursor: pointer;
-			a i { cursor: pointer; };
-		};
-	};
-
-	@media (max-width: 600px) {
-		div.Anhembi2 {
-			font-size: 16px;
-
-			div.titulo {
-				& > div h1 { font-size: 40px; };
-			};
-		};
-	};
-
-	// @media print {
-	// 	@page {
-	// 		size: A4 portrait;
-	// 		margin: 30mm 30mm 30mm 30mm;
-	// 	}
-
-	// 	.Cabecalho { display: none; };
-	// 	.Rodape { display: none; };
-	// 	.Indice { display: none; };
-	// 	.Apoio { display: none; };
-	// 	.Comments { display: none; };
-
-	// 	div.Anhembi2 {
-	// 		font-size: 11pt;
-
-	// 		h1, h2, h3 {
-	// 			break-after: avoid-page;
-	// 			page-break-after: avoid;
-	// 			padding: 0;
-	// 			margin: 3rem 0 1rem 0;
+	// 			div#statusConsulta {
+	// 				font-size: 10px;
+	// 				text-transform: uppercase;
+	// 				color: #fff;
+	// 				font-weight: 500;
+	// 				border-radius: 2px;
+	// 				white-space: nowrap;
+	// 				margin: 0 .5rem;
+	// 			}
+	// 			div#statusConsulta::after{
+	// 				padding:.35rem .5rem;
+	// 			}
+	// 			div#statusConsulta.aberta::after{
+	// 				content: "Em consulta";
+	// 				background-color: #008015;
+	// 			}
+	// 			div#statusConsulta.fechada::after{
+	// 				content: "Consulta Encerrada";
+	// 				background-color: #EB5757;
+	// 			}
+	// 			& > h1 {
+	// 				font-size: calc(16px + 8vmin);
+	// 				line-height: calc(6vmin + 32px);
+	// 				margin: 1rem;
+	// 				text-align: center;
+	// 			};
 	// 		};
 
-	// 		p, ol, ul, figure, div.Minuta blockquote.minuta, div.tablewrap, .Commentsloader {
-	// 			padding: 0;
-	// 			margin: 0 0 1rem 0;
-	// 			max-width: unset;
+	// 		.setaBaixo {
+	// 			position: absolute;
+	// 			bottom: 0;
+	// 			left: 0;
+	// 			display: flex;
+	// 			align-items: flex-end;
+	// 			justify-content: center;
 	// 			width: 100%;
+	// 			height: 25vh;
+	// 			background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .8));
+	// 			transform: translateY(0);
+	// 			transition: all .4s;
+
+	// 			i {
+	// 				font-size: calc(24px + 16vmin);
+	// 				line-height: .8;
+	// 				color: #FFF;
+	// 				text-shadow: 0 2px 2px rgba(0, 0, 0, .24);
+	// 				transition: all .1s;
+	// 			};
+
+	// 			&:hover {
+	// 				cursor: pointer;
+	// 				transform: translateY(32px);
+
+	// 				i {
+	// 					transform: translateY(-24px);
+	// 					cursor: pointer;
+	// 				};
+	// 			};
 	// 		};
-
-	// 		p { padding-right: 40mm; };
-
-	// 		figure, .tablewrap, .Galeria {
-	// 			break-inside: avoid-page;
-	// 			page-break-inside: avoid;
-	// 		};
-
-	// 		ul.pdfBox { display: none; };
 	// 	};
 
-	// 	.ai2html {
-	// 		break-inside: avoid-page;
-	// 		page-break-inside: avoid;
-	// 		max-height: 100%;
+	// 	div.tablewrap.intervencoes {
+
+	// 		table {
+	// 			font-size: initial;
+	// 			margin: .4rem 0 .8rem 0;
+	// 			&:last-child { margin-bottom: 0; };
+	// 			tr td span.bold { font-weight: bold; };
+	// 		};
+
+	// 		div.intervencoesTitulo {
+	// 			text-align: center;
+	// 			font-size: smaller;
+	// 			font-weight: 700;
+	// 			margin-bottom: -1.2rem;
+	// 		};
+
+	// 		.col1, .col2 { width: 20%; font-size: smaller; };
+
+	// 		span.cod { color: #BDBDBD; };
+
+	// 		span.interv {
+	// 			display: inline-block;
+	// 			line-height: 1rem;
+	// 			width: 1rem;
+	// 			font-size: x-small;
+	// 			text-align: center;
+	// 			background: #BDBDBD;
+	// 			border-radius: 100%;
+	// 			color: #333;
+	// 			margin: 0 0 0 4px;
+	// 		};
+
+	// 		div.eixo {
+	// 			font-size: initial;
+	// 			color: #BDBDBD;
+	// 			margin: 3.2rem 0 .4rem 0;
+
+	// 			span.tema {
+	// 				font-size: larger;
+	// 				color: #333;
+	// 				display: block;
+	// 				font-weight: bold;
+	// 			};
+	// 		};
+
+	// 		div.diretriz {
+	// 			font-size: smaller;
+	// 			color: #BDBDBD;
+	// 			display: block;
+	// 			margin: 0;
+
+	// 			span { color: #333; };
+	// 			span.dir2 { font-weight: bolder; color: #333; display: block; };
+	// 		};
+
+	// 		div.legenda {
+	// 			margin: 1rem 0;
+	// 			font-size: small;
+
+	// 			h6 {
+	// 				margin: 0;
+	// 				padding: .8rem 0 .6rem 0;
+	// 				font-weight: bold;
+	// 				text-transform: uppercase;
+	// 				font-size: smaller;
+	// 			};
+
+	// 			span.interv { margin: 0 4px 0 0; };
+	// 		};
 	// 	};
-	// }
+
+	// 	ul.pdfBox {
+	// 		display: block;
+	// 		list-style-type: none;
+	// 		margin: 2rem auto;
+	// 		padding: 2rem;
+	// 		background: #F5F5F5;
+	// 		border-radius: 2px;
+	// 		font-family: inherit;
+
+	// 		li {
+	// 			margin: 2rem 0;
+	// 			padding: 0;
+	// 			border-radius: 2px;
+	// 			border: 1px solid #BDBDBD;
+	// 			background: #FFF;
+	// 			box-shadow: 0 2px 2px rgba(0, 0, 0, .12);
+	// 			transition: all .1s;
+
+	// 			a {
+	// 				display: flex;
+	// 				flex-direction: row;
+	// 				align-items: center;
+	// 				padding: 1rem;
+	// 				color: inherit;
+	// 				border-bottom: 0;
+
+	// 				i {
+	// 					margin-right: 1rem;
+	// 					align-self:center
+	// 				};
+	// 				div {
+	// 					width: 100%;
+	// 				};
+	// 				span {
+	// 					font-size: .75em;
+	// 					margin-left: 1rem;
+	// 					white-space: nowrap;
+	// 					color: #BDBDBD;
+	// 				};
+
+	// 				&:hover { text-decoration: none; background-color: transparent; };
+	// 			};
+
+	// 			&:hover { border-color: #EB5757; box-shadow: 0 4px 4px rgba(0, 0, 0, .12); };
+
+	// 			&:first-child { margin-top: 0; };
+	// 			&:last-child { margin-bottom: 0; };
+	// 		};
+	// 	};
+	// };
+
+	// .ai2html {
+	// 	margin: 4rem 0;
+	// };
+
+	// div.commentCtx {
+	// 	position: absolute;
+	// 	transform: scale(0);
+	// 	max-width: 2.4rem;
+	// 	max-height: 2.4rem;
+	// 	width: 100%;
+	// 	height: 100%;
+	// 	text-align: center;
+	// 	background: #333;
+	// 	color: #FFF;
+	// 	border-radius: 100%;
+	// 	box-shadow: 0 4px 4px rgba(0, 0, 0, .24);
+	// 	transition: all .1s;
+
+	// 	a { color: inherit;
+	// 		i { line-height: 2.4rem; };
+	// 	};
+
+	// 	&:hover {
+	// 		box-shadow: 0 8px 8px rgba(0, 0, 0, .24);
+	// 		transform: scale(1.2) !important;
+	// 		cursor: pointer;
+	// 		a i { cursor: pointer; };
+	// 	};
+	// };
+
+	// @media (max-width: 600px) {
+	// 	div.Anhembi2 {
+	// 		font-size: 16px;
+
+	// 		div.titulo {
+	// 			& > div h1 { font-size: 40px; };
+	// 		};
+	// 	};
+	// };
 </style>

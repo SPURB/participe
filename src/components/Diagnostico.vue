@@ -542,6 +542,14 @@ div.Diagnostico {
 			}
 
 			& > ol.fonte { transition-delay: .1s; }
+
+			&.escondido {
+				animation: fade ease-in-out .2s;
+				@keyframes fade {
+					from { opacity: 1; }
+					to { opacity: 0; }
+				}
+			}
 		}
 
 		div#dados_populacao {

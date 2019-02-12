@@ -552,6 +552,7 @@ export default {
 <style lang="scss" scoped>
 @import '../variables';
 @import '../consulta';
+@import '../oldstylestoprint';
 
 div.ArcoPinheiros {
 

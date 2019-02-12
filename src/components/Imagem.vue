@@ -67,7 +67,7 @@ div.Imagem {
 		margin: 4rem auto;
 		padding: 0 2rem;
 		max-width: 700px;
-		@media (max-width: 600px) { margin: 2rem 1rem; }
+		@media screen and (max-width: 600px) { margin: 2rem 1rem; }
 		* {
 			font-family: $grotesca;
 			font-size: small;
@@ -94,7 +94,7 @@ div.Imagem {
 					text-decoration: none;
 					background-color: $sombra-2;
 				}
-				@media (max-width: 600px) {
+				@media screen and (max-width: 600px) {
 					opacity: 1;
 				}
 				display: none;
@@ -147,7 +147,7 @@ div.Imagem {
 				}
 			}
 		}
-		@media (max-width: 600px) {
+		@media screen and (max-width: 600px) {
 			div.legenda {
 				padding: 1rem;
 				ul {
@@ -215,7 +215,7 @@ div.Imagem {
 			font-size: x-small;
 			span { font-size: inherit; }
 		}
-		@media (max-width: 600px) {
+		@media screen and (max-width: 600px) {
 			margin: 1rem 0;
 			padding: 1rem;
 			align-items: flex-start;
@@ -276,7 +276,7 @@ div.Imagem {
 		}
 		div.legenda { display: none; }
 		div.fonte { display: none; }
-		@media (max-width: 600px) {
+		@media screen and (max-width: 600px) {
 			background-color: $preto;
 			div.imgWrap {
 				img { object-fit: contain; }
@@ -293,7 +293,7 @@ div.Imagem {
 	}
 	figure.coluna {
 		padding: 0 2rem;
-		@media (max-width: 600px) { padding: 0; }
+		@media screen and (max-width: 600px) { padding: 0; }
 		max-width: 700px;
 		div.imgWrap {
 			img { width: 100%; }
@@ -334,7 +334,7 @@ div.Imagem {
 				color: $cinza-2;
 			}
 		}
-		@media (max-width: 600px) {
+		@media screen and (max-width: 600px) {
 			padding: 0;
 			width: initial;
 			max-width: calc(100% - 2rem);
@@ -342,13 +342,14 @@ div.Imagem {
 		}
 	}
 	figure.ai2html {
+		padding: 0;
 		div.imgWrap, div.legenda, div.fonte { display: none; }
 		div.ai2htmlWrap {
 			display: block;
 			padding: 0;
 			& > *.ai2html { margin: 0; }
 		}
-		@media (max-width: 600px) {
+		@media screen and (max-width: 600px) {
 			padding: 0;
 			div.ai2htmlWrap { overflow-x: auto; }
 		}
@@ -361,6 +362,76 @@ div.Imagem {
 				display: inline-block;
 				font-size: inherit;
 				color: $cinza-2;
+			}
+		}
+	}
+	@media print {
+		figure {
+			padding: 0 !important;
+			max-width: unset;
+			page-break-inside: avoid;
+			break-inside: avoid-page;
+			div.imgWrap {
+				img {
+					width: -moz-min-content;
+					width: min-content;
+				}
+				a {
+					display: none !important;
+				}
+			}
+		}
+		figure.destaque, figure.hero {
+			background-color: #FFF;
+			max-height: -moz-min-content !important;
+			max-height: min-content !important;
+			width: -moz-fit-content;
+			width: fit-content;
+			min-width: unset;
+			max-width: 100%;
+			display: block;
+			padding: 40px !important;
+			text-align: center;
+			border: 2px solid $cinza-2;
+			margin: 4rem auto;
+			div.imgWrap {
+				min-width: -moz-fit-content;
+				min-width: fit-content;
+				max-width: 100%;
+				img {
+					box-shadow: none;
+					background-color: inherit;
+					object-fit: none;
+					height: -moz-min-content;
+					height: min-content;
+				}
+			}			
+			figcaption, div.fonte {
+				position: relative;
+				margin-top: 12px;
+				padding: 0;
+				left: 0;
+				right: 0;
+				bottom: unset;
+				width: 100%;
+				background-color: transparent;
+				color: $preto;
+			}
+		}
+		figure.mapa div.legenda {
+			ul {
+				display: block;
+				columns: 2;
+				column-gap: 2rem;
+				text-align: left;
+				li {
+					display: block;
+					font-size: small;
+					margin: 0 0 4px 0;
+					page-break-inside: avoid;
+					break-inside: avoid;
+					div { vertical-align: text-bottom; }
+				}
 			}
 		}
 	}

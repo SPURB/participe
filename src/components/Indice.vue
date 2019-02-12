@@ -129,12 +129,12 @@ div.Indice {
 			color: $preto;
 		};
 
-		@media (max-width: 1200px) {
+		@media screen and (max-width: 1200px) {
 			&::before { display: none; };
 		};
 	};
 
-	@media (max-width: 1200px) {
+	@media screen and (max-width: 1200px) {
 		ul {
 			display: block;
 			position: relative;
@@ -178,7 +178,7 @@ div.Indice {
 		};
 	};
 
-	@media (max-width: 600px) {
+	@media screen and (max-width: 600px) {
 		ul {
 			margin: -1rem 0;
 			padding: 0 1rem;

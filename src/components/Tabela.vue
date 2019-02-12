@@ -141,7 +141,7 @@ div.Tabela {
 	background-color: $cinza-3;
 	border-radius: 2px;
 
-	@media (max-width: 600px) { padding: 1rem; }
+	@media screen and (max-width: 600px) { padding: 1rem; }
 
 	table {
 		width: 100%;
@@ -185,7 +185,7 @@ div.Tabela {
 			tr:nth-child(even) { background-color: $sombra-4; }
 		}
 
-		@media (max-width: 600px) {
+		@media screen and (max-width: 600px) {
 			display: block;
 			background-color: transparent;
 
@@ -264,6 +264,22 @@ div.Tabela {
 		margin: 1rem 0 0 0;
 		font-size: x-small;
 		color: $cinza-1;
+	}
+
+	@media print {
+		page-break-inside: avoid;
+		break-inside: avoid-page;
+		padding: 0 !important;
+		table th, table td {
+			page-break-inside: avoid;
+			break-inside: avoid-page;
+		}
+		* {
+			background-color: transparent !important;
+			border-width: 1px !important;
+			border-color: $preto !important;
+		}
+		div.notas ul { columns: 2; }
 	}
 }
 </style>

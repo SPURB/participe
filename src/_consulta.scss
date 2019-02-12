@@ -275,7 +275,7 @@ blockquote {
 			text-indent: 0;
 		}
 
-		@media (max-width: 600px) {
+		@media screen and (max-width: 600px) {
 			margin: 2rem auto;
 			padding: .8rem 0;
 			max-width: calc(100% - 2rem);
@@ -634,6 +634,14 @@ div.VidaSegura {
 		margin: 20mm 20mm 40mm 20mm;
 	}
 
+	a[href]::after {
+		content: ' ('attr(href)')';
+	}
+
+	p { orphans: 3; }
+
+	p, ul, ul li, ol li, ol, blockquote, table { font-size: $sizeprint !important; }
+
 	h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, table {
 		margin-bottom: 1rem;
 		padding: 0;
@@ -643,35 +651,38 @@ div.VidaSegura {
 		page-break-after: avoid;
 		break-after: avoid-page;
 	}
-	p, ul, ul li, ol li, ol, blockquote, table {
-		font-size: 12pt;
-	}
-	p { orphans: 3; }
+
 	h2 {
 		font-size: 20pt;
 		margin-top: 8rem;
 		&.subtitulo, & div.sub { font-size: 20pt; }
 	}
+
 	h3 {
 		font-size: 18pt;
 		&.subtitulo, & div.sub { font-size: 18pt; }
 	}
+
 	h4 {
 		font-size: 16pt;
 		&.subtitulo, & div.sub { font-size: 16pt; }
 	}
+
 	h5 {
 		font-size: 14pt;
 		&.subtitulo, & div.sub { font-size: 14pt; }
 	}
+
 	h6 {
 		font-size: 12pt;
 		&.subtitulo, & div.sub { font-size: 12pt; }
 	}
+
 	* + *.subtitulo, * + div.sub {
 		font-weight: normal;
 		color: $cinza-1;
 	}
+
 	h1, h2, h3, h4, h5, h6 {
 		font-family: $grotesca;
 		margin: 4rem 0 1rem 0;
@@ -685,27 +696,79 @@ div.VidaSegura {
 			margin-top: 1rem;
 		}
 	}
-	figure {
-		max-width: 100% !important;
-		padding: 0 !important;
-		margin: 4rem 0;
-		page-break-inside: avoid;
-		break-inside: avoid-page;
-		img {
-			max-width: 100%;
-		}
-		.legenda {
-			min-height: -moz-min-content;
-			min-height: min-content;
-			max-height: unset;
-			max-width: 100% !important;
-			display: block !important;
-			column-count: 2 !important;
-			& > li {
-				display: flex !important;
-				align-items: flex-start !important;
-				max-width: 100%;
+
+	ul.links, ol.links, ul.pdfBox {
+		padding: 0;
+		background-color: transparent;
+		margin: 1rem auto;
+		li {
+			margin: 0 0 8px 0;
+			&:last-child { margin-bottom: 0; }
+			background: transparent;
+			box-shadow: none;
+			& > * { font-size: smaller !important; }
+			a {
+				display: block;
+				padding: 0;
+				font-size: initial;
+				i { display: none; }
+				div {
+					display: inline-block;
+					width: auto;
+					font-weight: bold;
+				}
+				span {
+					display: inline-block;
+					margin: 0 4px !important;
+				}
 			}
 		}
+	}
+
+	blockquote {
+		padding: 0 !important;
+		box-shadow: none;
+		margin-left: 4rem;
+		max-width: unset;
+		background-color: transparent;
+		&::before {
+			background-color: transparent;
+			border: 1px solid $preto;
+			color: $preto;
+			top: 0;
+			left: calc(-4rem - 2px);
+		}
+		&.leg {
+			background-color: transparent;
+			margin-left: 0;
+			border: none;
+			p.numero { margin-bottom: 0; }
+			p.caput { max-width: unset; }
+		}
+	}
+
+	div.tablewrap {
+		max-width: 100%;
+		padding: 0 !important;
+		overflow: visible;
+		page-break-inside: avoid;
+		break-inside: avoid-page;
+		* {
+			background-color: transparent !important;
+			color-adjust: exact;
+			-webkit-print-color-adjust: exact;
+		}
+		table div.notas ol {
+			columns: 2 !important;
+			font-size: smaller;
+		}
+		caption { margin-bottom: 8px; }
+	}
+	table {
+		max-width: 100%;
+		padding: 0 !important;
+		background-color: transparent !important;
+		page-break-inside: avoid;
+		break-inside: avoid-page;
 	}
 }

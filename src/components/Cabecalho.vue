@@ -92,12 +92,12 @@ div.Cabecalho {
 		};
 	};
 
-	@media (max-width: 420px) {
+	@media screen and (max-width: 420px) {
 
 		header a img { display: none; };
 	};
 
-	@media (max-width: 800px) {
+	@media screen and (max-width: 800px) {
 
 		header {
 			h1 a { font-size: 16px; vertical-align: 4px; };

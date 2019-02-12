@@ -101,7 +101,7 @@ div.PageTop {
 	& > div:first-child {
 		padding: 1.2rem;
 		max-width: 52vw;
-		@media (max-width: 600px) {
+		@media screen and (max-width: 600px) {
 			max-width: unset;
 		}
 		background: #FFF;

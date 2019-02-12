@@ -9,7 +9,7 @@ const WifiLivreSP = () => import(/* webpackChunkName: "wifilivresp" */ '@/views/
 const DigilabLivreSP = () => import(/* webpackChunkName: "digilablivresp" */ '@/views/DigilabLivreSP')
 const VidaSegura = () => import(/* webpackChunkName: "vidasegura" */ '@/views/VidaSegura')
 const VilaLeopoldina2 = () => import(/* webpackChunkName: "vilaleopoldina2" */ '@/views/VilaLeopoldina2')
-// const PortalPrefeitura = () => import(/* webpackChunkName: "portalprefeitura" */ '@/views/PortalPrefeitura')
+const PortalPrefeitura = () => import(/* webpackChunkName: "portalprefeitura" */ '@/views/PortalPrefeitura')
 
 // Admin
 const Login = () => import(/* webpackChunkName: "login" */ '@/views/Login')
@@ -79,14 +79,14 @@ export default new Router({
 				id: 37
 			}
 		},
-		// {
-		// 	path: '/portal-prefeitura',
-		// 	name: 'PortalPrefeitura',
-		// 	components: { PortalPrefeitura },
-		// 	meta: {
-		// 		id: 38
-		// 	}
-		// },
+		{
+			path: '/portal-prefeitura',
+			name: 'PortalPrefeitura',
+			components: { PortalPrefeitura },
+			meta: {
+				id: 38
+			}
+		},
 		/*
 	 * Modelo para novas consultas
 	/*

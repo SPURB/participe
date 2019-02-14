@@ -367,7 +367,7 @@ div.Imagem {
 	}
 	@media print {
 		figure {
-			padding: 0 !important;
+			padding: 0 20mm;
 			max-width: unset;
 			page-break-inside: avoid;
 			break-inside: avoid-page;
@@ -405,7 +405,7 @@ div.Imagem {
 					height: -moz-min-content;
 					height: min-content;
 				}
-			}			
+			}
 			figcaption, div.fonte {
 				position: relative;
 				margin-top: 12px;

@@ -202,9 +202,9 @@ div.PageTop {
 		background: none !important;
 		height: unset;
 		width: 100%;
-		max-width: unset;
+		max-width: 210mm;
 		align-items: flex-start;
-		padding: 0;
+		padding: 0 20mm;
 		margin: 0;
 		& > div:first-child {
 			outline: none;
@@ -218,6 +218,7 @@ div.PageTop {
 				text-align: left;
 				margin: 0;
 				font-size: 36pt;
+				padding: 0;
 				div {
 					width: 100%;
 				}

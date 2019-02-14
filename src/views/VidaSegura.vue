@@ -807,6 +807,7 @@ export default {
 <style lang="scss">
 @import '../variables';
 @import '../consulta';
+@import '../oldstylestoprint';
 
 	/*figure {
 		text-align: center;
@@ -876,4 +877,5 @@ export default {
 		padding-left: 20%;
 	}*/
 
+	figure table { margin: 2rem 0; }
 </style>

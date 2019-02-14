@@ -325,10 +325,8 @@
 			<p>A implantação de rede ambiental realiza-se pelo planejamento das soluções de mitigação dos problemas ambientais (como a proposição de arborização para sombreamento) de maneira articulada com os diferentes modais da rede de circulação e seus equipamentos (estações de metrô e trem, pontos de ônibus, etc.), de modo a conectar parques, praças, demais áreas verdes urbanas e equipamentos relevantes (saúde, educação, esporte, etc.), existentes e projetados, por meio de eixos ambientais, qualificadores do espaço e referenciais na paisagem (alamedas e bulevares), incentivando a utilização do espaço público para o lazer e deslocamento não motorizado e disponibilizando caminhos ecológicos para a fauna.</p>
 			<p>Os bulevares e alamedas são vias arborizadas e equipadas e sua implantação de maneira planejada visa à criação de percursos sombreados, acessíveis e iluminados, como meio de proporcionar maior segurança e conforto ao percurso de pedestres e ciclistas, além de orientar os principais deslocamentos.</p>
 
-			<figure class="coluna">
+			<figure class="">
 				<img :src="imgSrc('arquivos/arco-pinheiros/alamedas-e-bulevares_2.png')">
-			</figure>
-			<figure class="coluna">
 				<img :src="imgSrc('arquivos/arco-pinheiros/alamedas-e-bulevares_1.png')">
 				<figcaption>Representação dos eixos ambientais - bulevares e alamedas, respectivamente</figcaption>
 			</figure>

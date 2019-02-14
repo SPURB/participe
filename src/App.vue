@@ -111,12 +111,10 @@ div#interruptor {
 };
 
 @media print {
-	body {
-		margin: 2rem;
-	}
-	div#interruptor {
-		display: none;
-	}
+	body { background-color: $preto; }
+	div#app { background-color: white; width: 210mm; }
+	div#interruptor { display: none; }
+	div#carregando { display: none; }
 }
 
 </style>

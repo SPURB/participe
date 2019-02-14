@@ -1,16 +1,25 @@
 @media print {
 	figure {
-		max-width: unset !important;
-		margin: 4rem 0 !important;
+		max-width: calc(100% - 40mm);
+		width: auto;
+		margin: 4rem auto !important;
 		page-break-inside: avoid;
 		break-inside: avoid-page;
+		text-align: left;
+		color-adjust: exact;
+		-webkit-print-color-adjust: exact;
 		img {
-			// max-width: 100%;
+			width: auto;
+			margin: 0;
+			max-width: 100%;
+		}
+		& > h1, h2, h3, h4, h5, h6 {
+			width: 100%;
+			text-align: center;
+			padding: 0 12px;
 		}
 		figcaption {
-			text-align: center;
-			margin: 0 auto;
-			max-width: -moz-max-content;
+			text-align: left;
 			max-width: max-content;
 		}
 		&.borda, &.mapa {
@@ -23,31 +32,28 @@
 				column-gap: 12px;
 				overflow: hidden;
 				padding: 0 12px;
-
 				li {
-					display: block;
-					max-width: 100%;
+					display: flex;
 					break-inside: avoid;
 					page-break-inside: avoid;
 					text-align: left;
 					line-height: initial;
 					margin: 0 0 12px 0;
+					padding: 8px;
 					font-size: small !important;
-
 					div {
 						display: inline-block;
 						vertical-align: text-bottom;
-
-						&.linha {
-							vertical-align: 4px;
-						}
+						margin-right: 8px;
+						&.linha { vertical-align: 4px; }
 					}
 					a {}
 				}
 			}
 		}
 		&.coluna {
-			padding: 0 !important;
+			img { width: 100%; }
+			figcaption { width: 100%; }
 		}
 		&.ai2html {}
 		div.fontes {}

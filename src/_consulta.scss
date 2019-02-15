@@ -624,16 +624,16 @@ div.VidaSegura {
 }
 
 @media print {
+	body {
+		table-layout: fixed;
+	}
 	@page {
 		size: A4 portrait;
 		margin: 20mm 0;
 	}
-
 	section {
-		// width: 210mm;
 		box-sizing: border-box;
 	}
-
 	a[href]::after {
 		content: ' ('attr(href)')';
 		overflow-wrap: break-word;
@@ -641,11 +641,11 @@ div.VidaSegura {
 		word-break: break-word;
 		hyphens: auto;
 	}
-
-	p { orphans: 3; }
-
-	p, ul, ul li, ol li, ol, blockquote, table { font-size: $sizeprint; }
-
+	p {
+		orphans: 3;
+		widows: 3;
+	}
+	p, ul, ul li, ol li, ol, blockquote, table { font-size: $sizeprint !important; }
 	h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, table {
 		margin-bottom: 1rem;
 		padding: 0 60mm 0 20mm;
@@ -655,7 +655,6 @@ div.VidaSegura {
 		page-break-after: avoid;
 		break-after: avoid-page;
 	}
-
 	h2 {
 		font-size: 20pt;
 		margin-top: 8rem;
@@ -671,14 +670,13 @@ div.VidaSegura {
 	h1, h2, h3, h4, h5, h6 {
 		font-family: $grotesca;
 		margin: 4rem 0 1rem 0;
-		line-height: 120%;
+		line-height: 1.6;
 		page-break-inside: avoid;
 		break-inside: avoid-page;
 		&.subtitulo, div.sub {
 			page-break-after: avoid;
 			break-after: avoid-page;
-			font-size: 120%;
-			line-height: 160%;
+			font-size: inherit;
 		}
 		&.subtitulo + *, div.sub + * {
 			margin-top: 1rem;
@@ -691,6 +689,11 @@ div.VidaSegura {
 			break-after: avoid-page;
 		}
 	}
+	h2 div.sub, h2.subtitulo {}
+	h3 div.sub, h3.subtitulo {}
+	h4 div.sub, h4.subtitulo {}
+	h5 div.sub, h5.subtitulo {}
+	h6 div.sub, h6.subtitulo {}
 	ul.links, ol.links, ul.pdfBox {
 		padding: 0 60mm 0 20mm;
 		background-color: transparent;
@@ -719,6 +722,8 @@ div.VidaSegura {
 		}
 	}
 	blockquote, p.quotation {
+		display: block;
+		max-width: 100%;
 		box-shadow: none;
 		background-color: transparent;
 		margin: 2rem 0;
@@ -732,7 +737,7 @@ div.VidaSegura {
 		}
 		&.leg {
 			background-color: transparent;
-			padding: 0 20mm;
+			padding: 0 20mm !important;
 			border: none;
 			p.numero { margin-bottom: 0; }
 			p.caput { max-width: unset; }

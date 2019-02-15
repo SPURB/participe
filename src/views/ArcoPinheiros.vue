@@ -14,7 +14,7 @@
 			<p>A Macroárea de Estruturação Metropolitana – MEM, devido ao seu potencial de transformação, tem papel estratégico na reestruturação do Município e é neste contexto que se insere o Arco Pinheiros – ACP, subsetor da Orla Ferroviária e Fluvial.</p>
 			<p>Os estudos introdutórios para o Arco Pinheiros, ora apresentados pela Prefeitura Municipal, por meio da Secretaria Municipal de Urbanismo e Licenciamento – SMUL complementam os estudos já elaborados para os demais subsetores da Orla ferroviária e Fluvial, propostos pelo PDE.</p>
 
-			<figure>
+			<figure class="ai2html">
 				<ACPMEM></ACPMEM>
 				<figcaption>Subsetor Arco Pinheiros do Setor Orla Ferroviária e Fluvial</figcaption>
 			</figure>
@@ -69,14 +69,14 @@
 			<h3>Perímetro de Estudo</h3>
 			<p>O ACP abrange áreas de 2 Subprefeituras – Lapa e Butantã – e 5 Distritos – Butantã, Jaguaré, Vila Leopoldina e pequenas porções dos territórios dos Distritos de Jaguara e Rio Pequeno.</p>
 
-			<figure>
+			<figure class="ai2html">
 				<LimitesAdm></LimitesAdm>
 				<figcaption>Subprefeituras e Distritos integrantes do perímetro do Arco Pinheiros</figcaption>
 			</figure>
 
 			<p>O território do Arco Pinheiros, localizado na região oeste do município de São Paulo, faz divisa com Osasco e possui localização estratégica na confluência dos dois principais eixos de estruturação da metrópole, os rios Pinheiros e Tietê. Seu perímetro delimita uma área de 1.467 ha, sendo que 48% do território apresenta condicionantes específicas no desenvolvimento dos estudos do PIU ACP, correspondendo aos perímetros da Universidade de São Paulo – USP, Instituto de Pesquisas Tecnológicas – IPT, Instituto Butantan, Área de Intervenção Urbana Parque Tecnológico Jaguaré, Companhia de Entrepostos e Armazéns Gerais de São Paulo – CEAGESP e Projeto de Intervenção Urbana Vila Leopoldina Villa Lobos.</p>
 
-			<figure>
+			<figure class="ai2html">
 				<ProjetosColocalizados></ProjetosColocalizados>
 				<figcaption>Perímetro do Arco Pinheiros – Projetos Colocalizados</figcaption>
 			</figure>

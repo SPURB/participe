@@ -47,7 +47,6 @@
 						margin-right: 8px;
 						&.linha { vertical-align: 4px; }
 					}
-					a {}
 				}
 			}
 		}
@@ -55,7 +54,13 @@
 			img { width: 100%; }
 			figcaption { width: 100%; }
 		}
-		&.ai2html {}
 		div.fontes {}
+	}
+	figure.ai2html, div.ai2html {
+		max-width: 100%;
+		* {
+			margin: 0 auto;
+			width: fit-content;
+		}
 	}
 }

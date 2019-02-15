@@ -81,7 +81,7 @@
 					</figure>
 				</template>
 				<template slot='tabela9'>
-					<figure style="width: 100%; margin: auto;">
+					<figure style="width: 100%; margin: 0 auto;">
 						<table class="simple-table"><tr><th colspan="5">Programa: Ações e s Serviços de Saúde</th></tr><tr><td>Ação Orçamentária</td><td>2018</td><td>2019</td><td>2020</td><td>2021</td></tr><tr><td>1518 - Implantação de Serviço de Atendimento Médico de Urgência (SAMU)</td><td>R$ 1.000</td><td>R$ 0</td><td>R$ 0</td><td>R$ 0</td></tr><tr><td>2514 - Manutenção e Operação de Serviço de Atendimento Médico de Urgência(SAMU)</td><td>R$ 87.359.581</td><td>R$ 83.330.576</td><td>R$ 72.556.533</td><td>R$ 75.946.087</td></tr><tr><td colspan="5"><strong><center>Programa: Direitos da pessoa com deficiência</center></strong></td></tr><tr><td>1169 - Reforma e Acessibilidade em Passeios Públicos</td><td>R$ 38.760.181</td><td>R$ 47.510.740</td><td>R$ 52.252.009</td><td>R$ 73.254.566</td></tr><tr><td>4705 - Transporte de Pessoas com Deficiência ou Mobilidade Reduzida - ATENDE</td><td>R$ 87.028.975</td><td>R$ 101.637.384</td><td>R$ 106.211.537</td><td>R$ 110.991.057</td></tr><tr><td colspan="5"><strong><center>Programa: Melhoria da mobilidade urbana universal</center></strong></td></tr><tr><td>1095 - Construção de Terminais de Ônibus</td><td>R$ 97.300.370</td><td>R$ 76.288.544</td><td>R$ 303.845.101</td><td>R$ 248.124.476</td></tr><tr><td>1096 - Acessibilidade, Ampliação, Reforma e Requalificação de Terminais de Ônibus</td><td>R$ 5.246.785</td><td>R$ 4.397.701</td><td>R$ 24.533.100</td><td>R$ 13.350.534</td></tr><tr><td>1097 - Construção de Ciclovias, Ciclofaixas e Ciclorrotas</td><td>R$ 2.000</td><td>R$ 2.000</td><td>R$ 2.000</td><td>R$ 2.000</td></tr><tr><td>1098 - Ampliação, Reforma e Requalificação de Ciclovias, Ciclofaixas e Ciclorrotas</td><td>R$ 8.992.681</td><td>R$ 10.334.104</td><td>R$ 9.450.880</td><td>R$ 1.000</td></tr><tr><td>1099 - Construção de Corredores de Ônibus</td><td>R$ 505.547.297</td><td>R$ 216.341.186</td><td>R$ 384.672.059</td><td>R$ 299.426.660</td></tr><tr><td>1100 - Ampliação, Reforma e Requalificação de Corredores de Ônibus</td><td>R$ 41.116.074</td><td>R$ 26.475.159</td><td>R$ 2.073.000</td><td>R$ 2.802.000</td></tr><tr><td>1240 - Modernização Semafórica</td><td>R$ 2.000</td><td>R$ 2.000</td><td>R$ 2.000</td><td>R$ 2.000</td></tr><tr><td>2096 - Manutenção e Operação de Terminais de Ônibus</td><td>R$ 2.000</td><td>R$ 3.000</td><td>R$ 3.000</td><td>R$ 3.000</td></tr><tr><td>2098 - Manutenção de Ciclovias, Ciclofaixas e Ciclorrotas</td><td>R$ 61.000</td><td>R$ 61.166</td><td>R$ 63.192</td><td>R$ 64.385</td></tr><tr><td>2099 - Manutenção de Corredores de Ônibus</td><td>R$ 2.000</td><td>R$ 3.000</td><td>R$ 3.000</td><td>R$ 3.000</td></tr><tr><td>3012 - Projetos de Transporte e Mobilidade Oriundos de Recursos de Desestatizações e Parcerias</td><td>R$ 6.000</td><td>R$ 6.000</td><td>R$ 6.000</td><td>R$ 6.000</td></tr><tr><td>3380 - Construção de Pontes, Viadutos e Alças</td><td>R$ 3.000</td><td>R$ 3.000</td><td>R$ 3.000</td><td>R$ 3.000</td></tr><tr><td>3704 - Ações paramodernização do sistema de transportes</td><td>R$ 13.700.000</td><td>R$ 13.920.000</td><td>R$ 14.450.000</td><td>R$ 15.000.000</td></tr><tr><td>3742 - Participação no Sistema de Transporte sobre Trilhos</td><td>R$ 2.000</td><td>R$ 2.000</td><td>R$ 2.000</td><td>R$ 2.000</td></tr><tr><td>3743 - Modernização do Controle e Fiscalização de Tráfego</td><td>R$ 1.000</td><td>R$ 1.000</td><td>R$ 1.000</td><td>R$ 1.000</td></tr><tr><td>3745 - Aumento de Capital da SPTrans</td><td>R$ 14.095.811</td><td>R$ 15.595.811</td><td>R$ 15.595.811</td><td>R$ 15.595.811</td></tr><tr><td>3746 - Aumento de Capital da CET</td><td>R$ 1.000</td><td>R$ 1.000</td><td>R$ 1.000</td><td>R$ 1.000</td></tr><tr><td>4656 - Manutenção e Operação do Policiamento de Trânsito</td><td>R$ 44.144.500</td><td>R$ 44.144.500</td><td>R$ 44.144.500</td><td>R$ 44.144.500</td></tr><tr><td>4657 - Ações de Educação de Trânsito</td><td>R$ 35.000.000</td><td>R$ 1.000</td><td>R$ 1.000</td><td>R$ 1.000</td></tr><tr><td>4658 - Manutenção e Operação da Sinalização do Sistema Viário</td><td>R$ 70.068.481</td><td>R$ 73.004.955</td><td>R$ 60.506.449</td><td>R$ 46.234.078</td></tr><tr><td>4700 - Manutenção e operação do sistema municipal de transporte coletivo</td><td>R$ 375.005.646</td><td>R$ 375.005.646</td><td>R$ 375.005.646</td><td>R$ 375.005.646</td></tr><tr><td>4701 - Compensações tarifárias do sistema de ônibus</td><td>R$ 2.342.987.676</td><td>R$ 2.327.984.033</td><td>R$ 2.333.941.543</td><td>R$ 2.340.227.415</td></tr><tr><td>4702 - Serviços de Engenharia de Tráfego</td><td>R$ 718.430.642</td><td>R$ 700.738.509</td><td>R$ 695.075.664</td><td>R$ 750.292.808</td></tr><tr><td>4703 - Manutenção e Operação do Controle e Fiscalização de Tráfego</td><td>R$ 139.200.000</td><td>R$ 139.200.000</td><td>R$ 139.200.000</td><td>R$ 139.200.000</td></tr><tr><td>5100 - Intervenções no Sistema Viário</td><td>R$ 224.128.391</td><td>R$ 216.769.580</td><td>R$ 211.984.533</td><td>R$ 99.436.588</td></tr><tr><td>6841 - Manutenção e Operação Semafórica</td><td>R$ 33.402.558</td><td>R$ 33.316.571</td><td>R$ 32.670.344</td><td>R$ 35.791.775</td></tr><tr><td>9201 - Intervenções na Área de Mobilidade Urbana</td><td>R$ 184.057.683</td><td>R$ 24.949.317</td><td>R$ 3.000</td><td>R$ 3.000</td></tr></table>
 						<figcaption>Tabela 9 - Ações orçamentárias Plano Plurianual 2018-2021</figcaption>
 					</figure>
@@ -809,6 +809,7 @@ export default {
 @import '../consulta';
 @import '../oldstylestoprint';
 
+div.VidaSegura {
 	/*figure {
 		text-align: center;
 	}
@@ -877,5 +878,16 @@ export default {
 		padding-left: 20%;
 	}*/
 
-	figure table { margin: 2rem 0; }
+	figure table { margin: 2rem auto; }
+	table * td, table * th { min-width: 120px; }
+	section u { margin: 0 auto; }
+	@media print { 
+		section u {
+			margin: 0 20mm 8px 20mm;
+			padding: 0;
+			max-width: unset;
+			display: inline-block;
+		} 
+	}
+}
 </style>

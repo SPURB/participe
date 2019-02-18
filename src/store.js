@@ -22,7 +22,8 @@ const store = new Vuex.Store({
 		isAdmin: false,
 		infoAdmin: undefined,
 		fetching: true,
-		routeId: undefined
+		routeId: undefined,
+		toPrint: false
 	},
 	getters: {
 		apiPath () { return process.env.VUE_APP_API_URL },
@@ -66,6 +67,9 @@ const store = new Vuex.Store({
 				state.modalState.error = false
 				state.modalState.success = false
 			}
+		},
+		DISPATCH_PRINT (state) {
+			state.toPrint = !state.toPrint
 		}
 	},
 	actions: {

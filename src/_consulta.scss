@@ -90,7 +90,8 @@ h6 {
 section:first-of-type h2 { margin-top: 4rem; }
 
 sup {
-	vertical-align: 60%;
+	display: inline-block;
+	transform: translateY(-4px);
 	margin: 0 0 0 2px;
 	font-weight: normal;
 	color: $cinza-1;
@@ -645,7 +646,7 @@ div.VidaSegura {
 		orphans: 3;
 		widows: 3;
 	}
-	p, ul, ul li, ol li, ol, blockquote, table { font-size: $sizeprint !important; }
+	p, ul, ul li, ol li, ol, blockquote, table { font-size: $sizeprint; }
 	h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, table {
 		margin-bottom: 1rem;
 		padding: 0 60mm 0 20mm;
@@ -757,9 +758,9 @@ div.VidaSegura {
 			color-adjust: exact;
 			-webkit-print-color-adjust: exact;
 		}
-		table div.notas ol {
-			columns: 2 !important;
-			font-size: smaller;
+		div.notas ol {
+			columns: 2;
+			li { font-size: small; }
 		}
 		caption { margin-bottom: 8px; }
 	}

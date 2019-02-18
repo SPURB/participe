@@ -1,6 +1,6 @@
 <template>
 	<div class="ProcessoPIU ai2html">
-		<div id="g-Infografico_processo_piu_arco_pinheiros-box" class="ai2html ai2html-box-v5">
+		<div id="g-Infografico_processo_piu_arco_pinheiros-box" class="ai2html ai2html-box-v5" v-if="!toPrint">
 			<!-- Artboard: acp_processo -->
 			<div id="g-Infografico_processo_piu_arco_pinheiros-acp_processo" class="g-artboard">
 				<img id="g-Infografico_processo_piu_arco_pinheiros-acp_processo-img" class="g-aiImg" :src="imgSrc('arquivos/arco-pinheiros/ACP-PROCESSO.png')"/>
@@ -67,7 +67,7 @@
 			</div>
 		</div>
 
-		<div id="g-Infografico_processo_piu_arco_pinheiros-320-box" class="ai2html ai2html-box-v5">
+		<div id="g-Infografico_processo_piu_arco_pinheiros-320-box" class="ai2html ai2html-box-v5" v-if="!toPrint">
 			<!-- Artboard: Prancheta_1 -->
 			<div id="g-Infografico_processo_piu_arco_pinheiros-320-Prancheta_1" class="g-artboard" data-aspect-ratio="0.234" data-min-width="320">
 				<img id="g-Infografico_processo_piu_arco_pinheiros-320-Prancheta_1-img" class="g-aiImg" :src="imgSrc('arquivos/arco-pinheiros/ACP-PROCESSO_320.png')"/>
@@ -131,12 +131,19 @@
 				</div>
 			</div>
 		</div>
+
+		<figure class="print">
+			<img src="https://placehold.it/700x520" alt="" v-if="toPrint">
+		</figure>
 	</div>
 </template>
 
 <script>
 export default {
 	name: 'ProcessoPIU',
+	computed: {
+		toPrint() { return this.$store.state.toPrint }
+	},
 	methods: {
 		imgSrc (caminho) {
 			let url = this.$store.getters.basePath + caminho
@@ -393,6 +400,13 @@ div.ProcessoPIU {
 		padding-bottom:2px;
 		text-align:center;
 		color:rgb(237.000001072884,137.000007033348,52.0000007003546);
+	}
+}
+figure.print {
+	max-width: 100%;
+	text-align: center;
+	img {
+		max-width: 100%;
 	}
 }
 </style>

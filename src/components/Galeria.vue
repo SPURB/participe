@@ -1,6 +1,6 @@
 <template>
 	<div class="Galeria" id="x">
-		<div class="gall" :style="{maxWidth: gallery_attrs.width + 'px'}" v-if="!isPrint">
+		<div class="gall" :style="{maxWidth: gallery_attrs.width + 'px'}">
 			<a
 				class="pagination-previous"
 				:disabled="isFirst"
@@ -55,7 +55,6 @@ export default {
 	data () {
 		return {
 			loading: true,
-			isPrint: false,
 		}
 	},
 	props: ['gallery_attrs'],
@@ -63,9 +62,7 @@ export default {
 		isFirst () { return this.gallery_attrs.images[0].state },
 		isLast () { return this.gallery_attrs.images[this.gallery_attrs.images.length - 1].state }
 	},
-	mounted () {
-		detectPrint()
-	},
+	mounted () {},
 	methods: {
 		numberClicked (number) {
 			let app = this
@@ -99,11 +96,6 @@ export default {
 				this.gallery_attrs.images[previousIndex].state = true
 			} else {
 				console.log('first image')
-			}
-		},
-		detectPrint() {
-			if (window.matchMedia('print').matches) {
-				isPrint = true
 			}
 		}
 	}

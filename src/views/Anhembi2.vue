@@ -18,6 +18,9 @@
 			<p>Esta 2ª consulta pública tem como finalidade apresentar as diretrizes urbanísticas consolidadas, bem como o detalhamento do programa de intervenções e propostas de intervenção que fundamentarão o decreto do PIU Anhembi.</p>
 			<p>Encerrada esta 2ª consulta pública, as sugestões recebidas serão consolidadas, sendo publicada a versão definitiva do PIU, com as justificativas para a incorporação ou não das contribuições recebidas.</p>
 
+			<section style="max-width: 700px; margin: 0 auto; padding: 0 2rem;">
+				<button id="print" @click="print()">Imprimir</button>
+			</section>
 			<ProcessoPIU></ProcessoPIU>
 		</section>
 
@@ -1038,8 +1041,11 @@ export default {
 				fonte: 'SPUrbanismo, 2018'
 			},
 			consultas: false,
-			estaConsulta: {}
+			estaConsulta: {},
 		}
+	},
+	computed: {
+		toPrint () { return this.$store.state.toPrint }
 	},
 	components: {
 		PageTop,
@@ -1054,6 +1060,17 @@ export default {
 		Apoio,
 		Tabela,
 		Imagem
+	},
+	watch: {
+		toPrint (value) {
+			if (value) { window.print() }
+		}
+		// if (this.toPrint) { window.print() }
+	},
+	methods: {
+		print () {
+			this.$store.commit('DISPATCH_PRINT')
+		}
 	},
 	mixins: [ consultasCommons ]
 }

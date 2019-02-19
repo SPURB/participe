@@ -132,8 +132,8 @@
 			</div>
 		</div>
 
-		<figure class="print">
-			<img src="https://placehold.it/700x520" alt="" v-if="toPrint">
+		<figure class="print" v-if="toPrint">
+			<img src="https://placehold.it/700x520" alt="">
 		</figure>
 	</div>
 </template>
@@ -142,7 +142,7 @@
 export default {
 	name: 'ProcessoPIU',
 	computed: {
-		toPrint() { return this.$store.state.toPrint }
+		toPrint () { return this.$store.state.toPrint }
 	},
 	methods: {
 		imgSrc (caminho) {

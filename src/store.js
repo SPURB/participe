@@ -70,6 +70,10 @@ const store = new Vuex.Store({
 		},
 		DISPATCH_PRINT (state) {
 			state.toPrint = !state.toPrint
+			return state.toPrint
+		},
+		PRINT () {
+			window.print()
 		}
 	},
 	actions: {
@@ -88,6 +92,17 @@ const store = new Vuex.Store({
 					commit('FETCHING_ERROR', true)
 				})
 				.then(() => commit('FETCHING_STATE', false))
+		},
+		imprime ({ commit }) {
+			return new Promise(() => {
+				commit('DISPATCH_PRINT')
+				setTimeout(() => {
+					window.print()
+				}, 1)
+				setTimeout(() => {
+					commit('DISPATCH_PRINT')
+				}, 2)
+			})
 		}
 	}
 })

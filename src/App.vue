@@ -48,7 +48,15 @@ export default {
 		isAdmin () { return this.$store.state.isAdmin },
 		modalState () { return this.$store.state.modalState }
 	},
-	created () { this.$store.dispatch('fetchConsultas', { self: this }) },
+	created () {
+		let app = this
+		this.$store.dispatch('fetchConsultas', { self: this })
+		window.addEventListener('keydown', function (event) {
+			if (event.ctrlKey && event.code == 'KeyP') {
+				app.$store.dispatch('imprime')
+			}
+		})
+	},
 	mounted () { document.getElementById('carregando').classList.add('some') },
 	updated () { this.$refs.interruptor.style.height = this.$el.clientHeight + 'px' },
 	methods: {

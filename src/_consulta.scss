@@ -765,7 +765,8 @@ div.VidaSegura {
 		caption { margin-bottom: 8px; }
 	}
 	table {
-		max-width: calc(210mm - 40mm);
+		table-layout: fixed;
+		max-width: 100%;
 		padding: 0;
 		margin: 2rem 20mm;
 		width: auto;

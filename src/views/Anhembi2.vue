@@ -18,7 +18,6 @@
 			<p>Esta 2ª consulta pública tem como finalidade apresentar as diretrizes urbanísticas consolidadas, bem como o detalhamento do programa de intervenções e propostas de intervenção que fundamentarão o decreto do PIU Anhembi.</p>
 			<p>Encerrada esta 2ª consulta pública, as sugestões recebidas serão consolidadas, sendo publicada a versão definitiva do PIU, com as justificativas para a incorporação ou não das contribuições recebidas.</p>
 
-			<p><button id="print" @click="print()">Imprimir</button></p>
 			<ProcessoPIU></ProcessoPIU>
 		</section>
 
@@ -98,6 +97,8 @@
 			<p>Partindo do pressuposto que a ZOE Anhembi poderá ser parcelada e ter seu uso intensificado, com um acréscimo significativo tanto populacional, quanto de atividades comerciais e de serviços, cabe ao PIU estabelecer um conjunto essencial de diretrizes urbanísticas de forma a associar o adensamento previsto à qualificação urbana necessária.</p>
 			<p>As diretrizes consistem em indicações de conexões viárias transversais, promovendo a ruptura de barreiras formadas por grandes quadras, a distribuição de áreas verdes, recuperando a Área de Preservação Permanente do Rio Tietê, além do alargamento e melhorias de passeios públicos.</p>
 			<p>Além do mais, o PIU prevê a possibilidade de desenvolvimento dos vários subsetores que compõem a ZOE de forma independente, garantindo a flexibilidade na implantação de novos usos.</p>
+
+			<p><button id="print" @click="print()">Imprimir</button></p>
 
 			<Galeria :gallery_attrs="gallery_attrs"></Galeria>
 

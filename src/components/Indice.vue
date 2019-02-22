@@ -7,7 +7,7 @@
 				:style="{ paddingLeft: titulo.indent + 'rem'}"
 				@click="rolar(titulo.offsetObj)">{{ titulo.nome }}</li>
 		</ul>
-		<button @click="topo"><i class="icon-seta_cima icon"><span>arrow_upward</span></i></button>
+		<button @click="rolar()"><i class="icon-seta_cima icon"><span>arrow_upward</span></i></button>
 	</div>
 </template>
 
@@ -22,13 +22,20 @@ export default {
 	},
 	methods: {
 		rolar (obj) {
-			window.scrollBy({
-				top: obj.getBoundingClientRect().y - 30,
-				left: 0,
-				behavior: 'smooth'
-			})
-		},
-		topo () { window.scrollTo({ top: window.innerHeight, behavior: 'smooth' }) }
+			if (obj) {
+				window.scrollBy({
+					top: obj.getBoundingClientRect().y - 30,
+					left: 0,
+					behavior: 'smooth'
+				})
+			}
+			else {
+				window.scrollTo({
+					top: 0,
+					behavior: 'smooth'
+				})
+			}
+		}
 	}
 }
 </script>
@@ -44,10 +51,11 @@ div.Indice {
 		flex-flow: column nowrap;
 		justify-content: center;
 		position: fixed;
-		top: 60px;
+		top: 0;
 		bottom: 0;
 		left: 0;
 		padding: 0;
+		margin: 0;
 		list-style-type: none;
 
 		li {
@@ -140,7 +148,7 @@ div.Indice {
 			position: relative;
 			height: auto;
 			top: 0;
-			margin: 2rem 0;
+			margin: 4rem 0 2rem 0;
 			padding: 0 2rem;
 			font-size: initial;
 			line-height: 1.1;
@@ -179,10 +187,7 @@ div.Indice {
 	};
 
 	@media screen and (max-width: 600px) {
-		ul {
-			margin: -1rem 0;
-			padding: 0 1rem;
-		}
+		ul { padding: 0 1rem; }
 	}
 
 	@media print {

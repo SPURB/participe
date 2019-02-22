@@ -115,6 +115,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 div.Home {
+	padding-top: 60px;
 	main {
 		div.busca {
 			position: relative;

@@ -52,7 +52,7 @@ export default {
 		let app = this
 		this.$store.dispatch('fetchConsultas', { self: this })
 		window.addEventListener('keydown', function (event) {
-			if (event.ctrlKey && event.code == 'KeyP') {
+			if (event.ctrlKey && event.code === 'KeyP') {
 				app.$store.dispatch('imprime')
 			}
 		})
@@ -117,6 +117,8 @@ div#interruptor {
 		height: unset;
 	};
 };
+
+div#carregando.some { height: 0; }
 
 @media print {
 	body { background-color: $preto; }

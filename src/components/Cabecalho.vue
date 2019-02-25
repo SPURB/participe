@@ -14,9 +14,12 @@ export default {
 	computed: {
 		basePath () { return this.$store.getters.basePath },
 		isConsulta () {
-			if (this.$route.meta.id) { return true }
-			else { return false }
-		},
+			if (this.$route.meta.id) {
+				return true
+			} else {
+				return false
+			}
+		}
 	},
 	methods: {
 		abreMenu () {
@@ -26,8 +29,8 @@ export default {
 		logoSrc () {
 			var arch
 			switch (this.isConsulta) {
-				case false: arch = 'arquivos/img/PMSP_horizontal_cor_pos.png'; break
-				case true: arch = 'arquivos/img/PMSP_horizontal_mono_neg.png'; break
+			case false: arch = 'arquivos/img/PMSP_horizontal_cor_pos.png'; break
+			case true: arch = 'arquivos/img/PMSP_horizontal_mono_neg.png'; break
 			}
 			return this.basePath + arch
 		}
@@ -79,6 +82,7 @@ div.Cabecalho {
 		a {
 			line-height: 100%;
 			width: auto;
+			margin: 0;
 			@supports (display: flex) {
 				width: 0;
 			}
@@ -115,6 +119,9 @@ div.Cabecalho {
 	}
 	@media screen and (max-width: 420px) {
 		header a img { display: none; };
+	};
+	@media screen and (max-width: 600px) {
+		header { padding: 0 1rem; };
 	};
 	@media screen and (max-width: 800px) {
 		header {

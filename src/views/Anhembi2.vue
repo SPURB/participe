@@ -98,8 +98,6 @@
 			<p>As diretrizes consistem em indicações de conexões viárias transversais, promovendo a ruptura de barreiras formadas por grandes quadras, a distribuição de áreas verdes, recuperando a Área de Preservação Permanente do Rio Tietê, além do alargamento e melhorias de passeios públicos.</p>
 			<p>Além do mais, o PIU prevê a possibilidade de desenvolvimento dos vários subsetores que compõem a ZOE de forma independente, garantindo a flexibilidade na implantação de novos usos.</p>
 
-			<p><button id="print" @click="print()">Imprimir</button></p>
-
 			<Galeria :gallery_attrs="gallery_attrs"></Galeria>
 
 			<Comments :attr="{id:4, context:'Diretrizes urbanísticas para o perímetro de abrangência'}" v-if="estaConsulta.ativo == 1"></Comments>

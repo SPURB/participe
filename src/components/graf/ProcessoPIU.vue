@@ -132,9 +132,9 @@
 			</div>
 		</div>
 
-		<figure class="print" v-if="toPrint">
+		<!-- <figure class="print" v-if="toPrint">
 			<img src="https://placehold.it/700x520" alt="">
-		</figure>
+		</figure> -->
 	</div>
 </template>
 
@@ -402,11 +402,11 @@ div.ProcessoPIU {
 		color:rgb(237.000001072884,137.000007033348,52.0000007003546);
 	}
 }
-figure.print {
+/*figure.print {
 	max-width: 100%;
 	text-align: center;
 	img {
 		max-width: 100%;
 	}
-}
+}*/
 </style>

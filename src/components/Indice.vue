@@ -1,6 +1,6 @@
 <template>
 	<div class="Indice">
-		<ul>
+		<ul ref="lista">
 			<li
 				v-for="(titulo, index) in titulos" :key="index"
 				:class="{ ativo: titulo.ativo }"
@@ -20,6 +20,20 @@ export default {
 			required: true
 		}
 	},
+	mounted () {
+		let app = this
+		if (window.matchMedia("(min-width: 1200px)").matches) {
+			window.addEventListener('scroll', function () {
+				if (window.scrollY > window.innerHeight/2) {
+					app.$refs.lista.style.opacity = '1'
+				} else if (window.scrollY < window.innerHeight/2) {
+					app.$refs.lista.style.opacity = '0.12'
+				}
+			})
+		} else {
+			app.$refs.lista.style.opacity = '1'
+		}
+	},
 	methods: {
 		rolar (obj) {
 			if (obj) {
@@ -28,8 +42,7 @@ export default {
 					left: 0,
 					behavior: 'smooth'
 				})
-			}
-			else {
+			} else {
 				window.scrollTo({
 					top: 0,
 					behavior: 'smooth'
@@ -57,6 +70,8 @@ div.Indice {
 		padding: 0;
 		margin: 0;
 		list-style-type: none;
+		opacity: 0.12;
+		transition: opacity ease-in .2s;
 
 		li {
 			display: block;

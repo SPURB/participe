@@ -8,10 +8,10 @@
 			<div class="contribuicoes" v-if="esta_consulta.nContribuicoes">
 				<i class="icon-comentario icon"><span>chat</span></i> {{ esta_consulta.nContribuicoes }} contribuições
 			</div>
-			<div class="periodo">
+			<div class="periodo" v-if="esta_consulta.dataFinal">
 				<i class="icon-data icon"><span>período</span></i> {{ data(esta_consulta.dataCadastro) }}–{{ data(esta_consulta.dataFinal) }}
 			</div>
-			<div class="publicacao">
+			<div class="publicacao" v-if="esta_consulta.dataCadastro">
 				Publicado em {{ data(esta_consulta.dataCadastro)}}
 			</div>
 		</aside>
@@ -19,11 +19,21 @@
 			<h1><slot name="titulo"></slot></h1>
 			<h2><slot name="subtitulo"></slot></h2>
 		</main>
-		<ul class="share" :class="{ social: !esta_consulta.social }"> <!-- mudar para esta_consulta.social true -->
-			<li @click="imprime"><i class="icon-imprimir icon"><span>imprimir</span></i></li>
-			<li><img :src="imgsrc('share_whatsapp.svg')" alt=""></li>
-			<li><img :src="imgsrc('share_twitter.svg')" alt=""></li>
-			<li><img :src="imgsrc('share_facebook.svg')" alt=""></li>
+		<ul class="share" :class="{ social: esta_consulta.social }"> <!-- mudar para esta_consulta.social true -->
+			<li @click="imprime" class="print">
+				<i class="icon-imprimir icon"><span>imprimir</span></i>
+			</li>
+			<template v-if="social">
+				<li>
+					<a :href="social.whatsapp" data-action="share/whatsapp/share"><img :src="imgsrc('share_whatsapp.svg')" alt=""></a>
+				</li>
+				<li>
+					<a :href="social.twitter"><img :src="imgsrc('share_twitter.svg')" alt=""></a>
+				</li>
+				<li>
+					<a :href="social.facebook"><img :src="imgsrc('share_facebook.svg')" alt=""></a>
+				</li>
+			</template>
 		</ul>
 	</div>
 </template>
@@ -84,6 +94,7 @@ export default{
 div.PageTop {
 	position: relative;
 	padding: 12rem 2rem 4rem 2rem;
+	margin-bottom: 4rem;
 	color: #FFF;
 	z-index: 2;
 	display: flex;
@@ -96,6 +107,7 @@ div.PageTop {
 		width: 100%;
 		height: 100%;
 		z-index: -1;
+		background-color: $cinza-3;
 		object-fit: cover;
 		object-position: center center;
 		user-select: none;
@@ -104,7 +116,8 @@ div.PageTop {
 			min-width: 100%;
 			min-height: 100%;
 			transform: scale(1.1);
-			filter: blur(16px);
+			filter: blur(8px);
+			-webkit-filter: blur(8px);
 		}
 		&::after {
 			content: '';
@@ -179,11 +192,12 @@ div.PageTop {
 		display: flex;
 		flex-flow: row nowrap;
 		align-items: center;
-		padding: 0 12px 0 8px;
+		padding: 0 12px;
 		margin: 0;
 		height: 40px;
 		position: absolute;
 		bottom: -20px;
+		left: 2rem;
 		list-style-type: none;
 		box-sizing: border-box;
 		border-radius: 20px;
@@ -199,11 +213,11 @@ div.PageTop {
 				cursor: pointer;
 			}
 			display: inline-block;
-			margin: 0 8px;
 			line-height: 0;
+			margin: 0 12px 0 0;
 			padding: 0;
-			&::first-child { margin-left: 0; }
-			&::last-child { margin-right: 0; }
+			&:last-child { margin-right: 0; }
+			&:last-child:not(.print) { margin-right: 4px; }
 		}
 		&:hover {
 			box-shadow: 0px 0px 16px $sombra-2;
@@ -258,7 +272,7 @@ div.PageTop {
 			padding: 0;
 			background-color: transparent;
 			box-shadow: none;
-			// transform: translateX(-12px);
+			left: 1rem;
 			li:first-child { display: none; }
 			li {
 				background-color: #FFF;
@@ -271,44 +285,39 @@ div.PageTop {
 			&:hover { box-shadow: none; }
 		}
 	}
-	@media print {}
 
-	// @media print {
-	// 	background: none !important;
-	// 	height: unset;
-	// 	width: 100%;
-	// 	max-width: 210mm;
-	// 	align-items: flex-start;
-	// 	padding: 0 20mm;
-	// 	margin: 0;
-	// 	& > div:first-child {
-	// 		outline: none;
-	// 		max-width: unset;
-	// 		width: 100%;
-	// 		padding: 0;
-	// 		background: transparent;
-	// 		#statusConsulta { display: none; }
-	// 		h1 {
-	// 			width: 100%;
-	// 			text-align: left;
-	// 			margin: 0;
-	// 			font-size: 36pt;
-	// 			padding: 0;
-	// 			div {
-	// 				width: 100%;
-	// 			}
-	// 		}
-	// 		& > div {
-	// 			text-align: left;
-	// 			font-size: 10pt;
-	// 			display: inline-block;
-	// 			margin: 0;
-	// 			&::after { content: ' | '; }
-	// 			&:last-child::after { content: ''; }
-	// 			i, a { display: none; }
-	// 		}
-	// 	}
-	// 	.setaBaixo { display: none; }
-	// }
+	@media print {
+		color: $preto;
+		display: block;
+		padding: 0 2cm;
+		div.bg { display: none; }
+		aside {
+			width: 100%;
+			max-width: unset;
+			div:not(:last-child) {
+				display: inline-block;
+				margin-right: 16px;
+			}
+			div.statusConsulta::after {
+				color-adjust: exact;
+				-webkit-print-color-adjust: exact;
+			}
+		}
+		main {
+			margin-left: 0;
+			width: 100%;
+			h1, h2 {
+				max-width: 100%;
+				padding: 0;
+			}
+			h1 {
+				margin: 0 0 16px 0;
+				text-shadow: none;
+				font-size: 36pt;
+			}
+			h2 { font-size: 12pt; }
+		}
+		ul.share { display: none; }
+	}
 };
 </style>

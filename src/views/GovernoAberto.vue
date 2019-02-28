@@ -1,6 +1,6 @@
 <template>
 	<div class="GovernoAberto" ref="conteudoConsulta">
-		<PageTop background_image_src="arquivos/capas/governo-aberto_1900w.jpg" :esta_consulta="estaConsulta" :social="social_assets">
+		<PageTop background_image_src="arquivos/capas/governo-aberto_1900w.jpg" :esta_consulta="estaConsulta">
 			<template slot="titulo"><div>Edital de Credenciamento do Programa Agentes de Governo Aberto - 2019</div></template>
 		</PageTop>
 
@@ -8,115 +8,95 @@
 
 		<section>
 			<h2 class="titulo" indent="1">Introdução</h2>
-			<p>A Consulta Pública irá colher sugestões sobre o Edital do Programa Agentes de Governo Aberto (edição de 2019).
-O propósito do programa é engajar a sociedade civil na agenda de Governo Aberto através da contratação de pessoas para a oferta de formações gratuitas aos demais munícipes, de modo a disseminar e descentralizar conceitos, ferramentas e práticas de Governo Aberto na cidade de São Paulo.
-</p>
-
-			<ul class="links">
-				<li>
-					<a href="https://www.prefeitura.sp.gov.br/cidade/secretarias/upload/comunicacao/consulta_publica" target="_blank">
-						<i class="icon-acessar_url icon"><span>url</span></i>
-						<div>Protótipo</div>
-						<span>7.9 MB</span>
-					</a>
-				</li>
-			</ul>
-			<CommentsContext :id="1" :context="'Introdução e protótipo'">
-				<p>Comente aqui o protótipo do novo portal da prefeitura.</p>
-			</CommentsContext>
-
-			<h2 class="titulo" indent="2">1. Histórico</h2>
-			<CommentsContext :id="2" :context="'1. Histórico'">
-				<p>A Prefeitura de São Paulo (PMSP) trabalha oferecendo transparência e informando o cidadão por diversos meios de comunicação. Os sites institucionais utilizam sistemas para publicar e gerenciar as informações dos Órgãos municipais.</p>
-				<p>A publicação do conteúdo nos sites institucionais é realizada pelos funcionários das Secretarias e Subprefeituras, com controle de acesso monitorado pela Secretaria do Governo Municipal visando a divulgação de atos da administração pública, respeitando a Lei de Acesso à Informação nº 12.527 de 18 de novembro de 2011 e o interesse do cidadão.</p>
-			</CommentsContext>
-
-			<h2 class="titulo" indent="2">2. Proposta de Mudança</h2>
-			<CommentsContext :id="3" :context="'2. Proposta de Mudança'">
-				<p>O Portal da Prefeitura de São Paulo da Secretaria do Governo Municipal, responsável pela parte técnica dos Portais, propõe a mudança de plataforma do site da Prefeitura do CMS Plone para o CMS Drupal.  .</p>
-				<p>A nova arquitetura dará maior liberdade no desenvolvimento, manutenção e atualização do sistema com uma nova identidade visual dos Portais Institucionais da Prefeitura de São Paulo. O novo portal também será livre de custos, visto que o CMS Drupal é uma plataforma livre e gratuita e poderá ser implantada pelos funcionários técnicos conhecedores da ferramenta.</p>
-			</CommentsContext>
-
-			<h2 class="titulo" indent="2">3. Novo Portal da Prefeitura de SP</h2>
-			<CommentsContext :id="4" :context="'3. Novo Portal da Prefeitura de SP'">
-				<p>Além de uma nova identidade visual para os sites da PMSP, o objetivo principal dessa nova estrutura é fazer com que todos os sites fiquem unidos em uma mesma plataforma possibilitando a criação de um portal que receberá dados de todas as Secretarias e Subprefeituras. Isso faz com que as informações fiquem concentradas em um só lugar facilitando o acesso às informações ao cidadão e minimizando os ruídos de comunicação entre os Órgãos Municipais.</p>
-			</CommentsContext>
-
-			<h2 class="titulo" indent="2">4. Processo participativo</h2>
-			<CommentsContext :id="5" :context="'4. Processo participativo'">
-				<p>A construção dos novos sites tem caráter colaborativo para que as necessidades da população sejam, em sua maioria, contempladas nos novos portais </p>
-				<p>Por este motivo, ficará disponível entre os dias 09/02/2019 a 28/02/2019, no link <a href="https://www.prefeitura.sp.gov.br/cidade/secretarias/upload/comunicacao/consulta_publica">https://www.prefeitura.sp.gov.br/cidade/secretarias/upload/comunicacao/consulta_publica</a> o acesso ao protótipo do novo portal, que também será discutido na Campus Party 2019 onde ficará disponível aos visitantes o acesso à algumas páginas internas do novo Portal da PMSP.</p>
-				<p>Após o período de consulta, os dados coletados e poderão ser utilizados para orientar o desenvolvimento do projeto com melhores práticas, buscando atender os anseios do cidadão.</p>
-				<p>Fica disponível o endereço de e-mail novoportal@prefeitura.sp.gov.br para que sejam direcionadas as dúvidas e sugestões quanto ao protótipo disponível. </p>
-			</CommentsContext>
+			<p>A Consulta Pública irá acolher sugestões sobre o Edital do Programa Agentes de Governo Aberto de 2019, promovido pela Prefeitura de São Paulo, por meio da Secretaria do Governo Municipal e Controladoria Geral do Município. 
+O propósito do programa é engajar a sociedade civil na agenda de Governo Aberto através da contratação de pessoas para a oferta de formações gratuitas aos munícipes, de modo a descentralizar conceitos, ferramentas e práticas de Governo Aberto na cidade</p>
 		</section>
-
 		<section>
-			<h2 class="titulo" indent="1">2. Mudanças propostas </h2>
-			<p>A partir da implantação do CMS Drupal, algumas mudanças poderão ser viabilizadas no novo portal:</p>
-
-			<h3 class="titulo" indent="2">1. Identidade Visual</h3>
-			<CommentsContext :id="6" :context="'2.1. Identidade Visual'">
-				<p>Um dos objetivos da aplicação da nova plataforma é poder dar uma nova identidade visual, mais moderna e dinâmica, para os sites da Prefeitura de São Paulo. </p>
-			</CommentsContext>
-
-			<h3 class="titulo" indent="2">2. Menu Principal</h3>
-
-			<CommentsContext :id="7" :context="'2.2. Menu Principal'">
-			<p>O menu será simplificado e levará para as principais áreas do site com busca para auxiliar a procura pelo conteúdo, relacionamos alguns assuntos que serão apresentados no novo Portal. </p>
-
-			<ol class="decimais">
-				<li><strong>Prefeitura</strong><br>
-				Exibirá dados da Equipe de Governo, agenda do Prefeito, Secretarias, Subprefeituras, Licitações, informações para o servidor público.
-				</li>
-				<li><strong>São Paulo</strong><br>
-					História da cidade, localização de escolas, parques, unidades de saúde, dados estatísticos sobre a população, Educação economia entre outros.
-				</li>
-				<li><strong>Turismo</strong><br>
-					Pontos turísticos da cidade, centrais turísticas, roteiros, consulados, telefones e informações úteis.
-				</li>
-				<li><strong>Serviços</strong><br>
-					Lista de relação dos serviços da PMSP sendo direcionado para a página específica do serviço.
-				</li>
-				<li><strong>Notícias</strong><br>
-					Informações sobre atos da administração pública e interesse do município a fim de manter o cidadão informado com os acontecimentos recentes e ações na cidade.
-				</li>
-			</ol>
-			</CommentsContext>
-
-			<h3 class="titulo" indent="2">3. Eventos</h3>
-			<CommentsContext :id="8" :context="'2.3. Eventos'">
-				<p>A parte de eventos é uma área nova, que não existe atualmente no site. Essa área será dividida em duas partes: </p>
-
-				<ol class="decimais">
-					<li><strong>Conheça São Paulo</strong><br>
-					Este é um bloco onde serão indicados lugares históricos de atrativo turístico para que o cidadão conheça melhor a cidade e os benefícios que tem a oferecer, o espaço é reservado para obter conhecimento cultural.</li>
-					<li><strong>Acontece em SP</strong><br>
-					Esta área é uma agenda de eventos da cidade promovidos pela PMSP que acontecerão na cidade de São Paulo oferecendo opções de lazer para o cidadão e promovendo assim uma proximidade maior entre a população e a cidade.
-					</li>
-				</ol>
-			</CommentsContext>
-
-			<h3 class="titulo" indent="2">4. Ações e projetos da Prefeitura</h3>
-			<CommentsContext :id="9" :context="'2.4. Ações e projetos da Prefeitura'">
-				<p>A área mostrará informações sobre cada ação e projeto em destaque feitos pela Prefeitura. </p>
-			</CommentsContext>
-
-			<h3 class="titulo" indent="2">5. Canal SP</h3>
-			<CommentsContext :id="10" :context="'2.5. Canal SP'">
-				<p>Vídeos do canal oficial da Prefeitura de São Paulo.</p>
-			</CommentsContext>
-
-			<h3 class="titulo" indent="2">6. Agenda do Prefeito</h3>
-			<CommentsContext :id="11" :context="'2.6. Agenda do Prefeito'">
-				<p>Atualmente para o cidadão ou jornalista conferirem a agenda do Prefeito, eles precisam ir ao rodapé para clicar em um link pequeno e escondido. A nova proposta é que a agenda já exiba seus primeiros eventos na página inicial do Portal evitando tantos cliques, ficará mais fácil visualizar.</p>
-			</CommentsContext>
-
-			<h3 class="titulo" indent="2">7. Portal da Transparência </h3>
-			<CommentsContext :id="11" :context="'2.7. Portal da Transparência'">
-				<p>Outra área nova que irá mostrar um gráfico das receitas e despesas do município de São Paulo, mostrando mais uma vez o desejo de aproximar o cidadão da Prefeitura e de tudo que ela faz. Ao clicar no gráfico, será encaminhado para o Portal da Transparência.</p>
+			<h2 class="titulo" indent="1"><center>EDITAL Nº 01/2019 – SGM/CGM - EDITAL DE CREDENCIAMENTO DE AGENTES DE GOVERNO ABERTO <br />
+				Processo SEI</center>
+			</h2>
+			<CommentsContext :id="1" :context="'EDITAL DE CREDENCIAMENTO DE AGENTES DE GOVERNO ABERTO'">
+				<p>
+					A Prefeitura de São Paulo, por meio da Secretaria do Governo Municipal e a Controladoria Geral do Município, <b>com apoio do Comitê Intersecretarial de Governo Aberto da Cidade de São Paulo (CIGA-SP)</b>, FAZ SABER que, durante o período de <mark style="background-color: yellow">xx de xxxx a xx  de xxxx de 2019, às 23h59</mark>, por cadastramento online na plataforma SP Cultura (http://spcultura.prefeitura.sp.gov.br), estarão abertas as inscrições para credenciamento de Agentes de Governo Aberto.
+				</p>
 			</CommentsContext>
 		</section>
+		<section>
+			<h3 class="titulo" indent="2">1. DO OBJETO</h3>
+			<CommentsContext :id="2" :context="'ITEM 1.1'">
+				<p>
+					1.1 O presente Edital tem por objeto o credenciamento de Agentes de Governo Aberto para a realização de oficinas formativas de promoção e cultura de governo aberto nas áreas de abrangência de todas as Subprefeituras da cidade de São Paulo.
+					<p>1.1.1. As oficinas formativas serão destinadas aos cidadãos, redes, associações, organizações e coletivos da sociedade civil, visando ampliar e qualificar a participação política na gestão municipal.</p>
+				</p>
+			</CommentsContext>
+		</section>
+		<section>
+			<h3 class="titulo" indent="2">2. DAS DIRETRIZES, DOS OBJETIVOS E DAS ORIENTAÇÕES</h3>
+			<CommentsContext :id="3" :context="'ITEM 2.1'">
+				<p>2.1. Para fins deste Edital, com base no conceito adotado pela iniciativa internacional Open Government Partnership, consideram-se como diretrizes de Governo Aberto:
+					<ol type="a">
+					    <li>A transparência e o acesso às informações públicas;</li>
+					    <li>O fortalecimento da participação social;</li>
+					    <li>O fomento à inovação tecnológica;</li>
+					    <li>O fortalecimento da integridade pública, por meio da prevenção e do combate à corrupção. </li>
+					</ol>
+					<p>2.1.1. O programa Agentes de Governo Aberto tem como objetivo engajar a sociedade civil na agenda de Governo Aberto, por meio da contratação de Agentes Formadores e a oferta de formações gratuitas para munícipes, de modo a descentralizar conceitos, ferramentas e práticas de Governo Aberto no município de São Paulo e atingindo o maior número possível de cidadãos, capacitando-os para uma boa participação política junto ao poder público.</p>
+				</p>
+			</CommentsContext>
+			<CommentsContext :id="4" :context="'ITEM 2.2'">
+				<p>2.2. Por promoção da cultura de Governo Aberto, para fins deste Edital, entende-se:
+					<ol type="a">
+					    <li>A difusão do conceito e das <b>práticas de transparência, dados abertos</b> e <b>acesso à informação</b>;</li>
+					    <li>O fomento ao uso de <b>instrumentos de gestão participativa</b>, de <b>mapeamento colaborativo</b> e outras <b>técnicas de georreferenciamento</b> dos territórios;</li>
+					    <li>A criação de aplicações e ferramentas tecnológicas voltadas à <b>promoção da cidadania</b>, por meio do uso e desenvolvimento de hardwares e softwares livres e abertos e incentivo às <b>inovações sociais e colaborativas</b>;</li>
+					    <li>A difusão dos instrumentos de <b>comunicação cidadã</b> existentes e o estímulo ao desenvolvimento de novos que tenham como propósito compartilhar <b>experiências e iniciativas de governo aberto</b>;</li>
+					    <li>A difusão do conhecimento de existência de <b>mecanismos internos e externos de combate à corrupção</b>, fomentando o <b>controle social</b> e disseminando a cultura de atendimento às exigências de <b>programas de integridade (compliance)</b>, além de propiciar uma <b>educação política</b> que capacite o cidadão para a <b>avaliação e monitoramento de políticas públicas</b>.</li>
+					    <li>A difusão do conhecimento das <b>estruturas públicas</b> e suas <b>competências</b> e a capacitação para a <b>interação com o Poder Público</b> de forma ética e atendendo a programas de integridade (<b>formação de relações governamentais</b>).</li>
+					</ol>
+				</p>
+			</CommentsContext>
+			<CommentsContext :id="5" :context="'ITEM 2.3'">
+				<p>
+					2.3.  A 4ª edição do Edital de Credenciamento de Agentes de Governo Aberto terá sua primeira etapa com a contratação de 32 (trinta e dois) Agentes, com a concessão de bolsa com duração de 04 (quatro) meses no decorrer do segundo semestre de 2019.
+					<p>2.3.1. O candidato interessado em se credenciar como Agente de Governo Aberto deve inscrever um projeto de oficina inserido nas categorias descritas no item 6.1 atendendo aos objetivos, diretrizes e orientações do programa.</p>
+					<p>2.3.2. Por “oficina” entende-se como conjunto de atividades em metodologias ativas que visam formar e capacitar o participante, ampliando seu conhecimento e desenvolvendo habilidades específicas.</p>
+					<p>2.3.3. os Agentes serão selecionados pela Comissão de Seleção prevista pelo item 10.1  de acordo com os critérios estabelecidos neste edital.</p>
+				</p>
+			</CommentsContext>
+		</section>
+		<section>
+			<h3 class="titulo" indent="2">3. DO PAGAMENTO</h3>
+			<CommentsContext :id="6" :context="'ITEM 3.1'">
+				<p>
+					3.1. Cada Agente de Governo Aberto receberá bolsa pessoal e intransferível no valor bruto de até R$ 6.000,00 (seis mil  reais) pela realização das atividades no período da ocorrência das oficinas (04 meses) a partir da assinatura do Termo de Compromisso. 
+					<p>3.1.1. Os pagamentos serão efetuados mensalmente na proporção de horas de atividades presenciais executadas em cada mês, condicionados à comprovação em prestação de contas, conforme o item 14.2 deste edital, e à participação nos Encontros Formativos.</p>
+					<p>3.1.2. Sobre o valor mensal de pagamento incidirá os tributos conforme a legislação vigente, incorrendo pagamento de INSS e, quando o pagamento for superior ao limite de isenção de tributação, incorrerá pagamento de IR.</p>
+				</p>
+			</CommentsContext>
+			<CommentsContext :id="7" :context="'ITEM 3.2'">
+				<p>
+					3.2. O valor ofertado de bolsa refere-se à atividade e ao seu respectivo planejamento, não sendo os demais custos como produção de materiais e cartilhas, cópias reprográficas, deslocamento, alimentação e outros arcados pela Prefeitura de São Paulo.
+					<p>3.2.1. As horas de atividade de planejamento são presumidas como existentes na proporção de 30 minutos de planejamento para cada hora de oficina ministrada.</p>
+				</p>
+			</CommentsContext>
+			<CommentsContext :id="8" :context="'ITEM 3.3'">
+				<p>
+					3.3. O valor da bolsa está condicionado à efetiva execução da oficina e sua não ocorrência, independentemente do motivo, não ensejará qualquer pagamento ou reembolso.
+				</p>
+			</CommentsContext>
+			<CommentsContext :id="9" :context="'ITEM 3.4'">
+				<p>
+					3.4. A concessão da bolsa ao Agente não gera qualquer tipo de vínculo empregatício com a Prefeitura de São Paulo.
+				</p>
+			</CommentsContext>
+			<CommentsContext :id="10" :context="'ITEM 3.5'">
+				<p>
+					3.5. A relação jurídica entre a Prefeitura de São Paulo e o Agente de Governo Aberto é intransferível a terceiros, sendo de responsabilidade única e exclusiva do Agente qualquer auxílio que venha a utilizar (tais quais assessores, monitores, ajudantes ou estagiários), não configurando qualquer vínculo destes com o município ou com o Programa Agentes de Governo Aberto.
+				</p>
+			</CommentsContext>
+		</section>
+
+			
 
 		<section ref="allComments">
 			<h2 v-show="commentsLoaded" class="titulo" indent="1">Contribuições</h2>

@@ -10,6 +10,7 @@ const DigilabLivreSP = () => import(/* webpackChunkName: "digilablivresp" */ '@/
 const VidaSegura = () => import(/* webpackChunkName: "vidasegura" */ '@/views/VidaSegura')
 const VilaLeopoldina2 = () => import(/* webpackChunkName: "vilaleopoldina2" */ '@/views/VilaLeopoldina2')
 const PortalPrefeitura = () => import(/* webpackChunkName: "portalprefeitura" */ '@/views/PortalPrefeitura')
+const GovernoAberto = () => import(/* webpackChunkName: "governoaberto" */ '@/views/GovernoAberto')
 
 // Admin
 const Login = () => import(/* webpackChunkName: "login" */ '@/views/Login')
@@ -85,6 +86,14 @@ export default new Router({
 			components: { PortalPrefeitura },
 			meta: {
 				id: 38
+			}
+		},
+		{
+			path: '/governo-aberto',
+			name: 'GovernoAberto',
+			components: { GovernoAberto },
+			meta: {
+				id: 39
 			}
 		},
 		/*

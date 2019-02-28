@@ -11,6 +11,7 @@
 	<router-view name="VidaSegura"></router-view>
 	<router-view name="VilaLeopoldina2"></router-view>
 	<router-view name="PortalPrefeitura"></router-view>
+	<router-view name="GovernoAberto"></router-view>
 	<router-view name="Login"></router-view>
 	<router-view name="Admin"></router-view>
 

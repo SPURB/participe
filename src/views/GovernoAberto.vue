@@ -17,7 +17,7 @@ O propósito do programa é engajar a sociedade civil na agenda de Governo Abert
 			</h2>
 			<CommentsContext :id="1" :context="'EDITAL DE CREDENCIAMENTO DE AGENTES DE GOVERNO ABERTO'">
 				<p>
-					A Prefeitura de São Paulo, por meio da Secretaria do Governo Municipal e a Controladoria Geral do Município, <b>com apoio do Comitê Intersecretarial de Governo Aberto da Cidade de São Paulo (CIGA-SP)</b>, FAZ SABER que, durante o período de <mark style="background-color: yellow">xx de xxxx a xx  de xxxx de 2019, às 23h59</mark>, por cadastramento online na plataforma SP Cultura (http://spcultura.prefeitura.sp.gov.br), estarão abertas as inscrições para credenciamento de Agentes de Governo Aberto.
+					A Prefeitura de São Paulo, por meio da Secretaria do Governo Municipal e a Controladoria Geral do Município, <b>com apoio do Comitê Intersecretarial de Governo Aberto da Cidade de São Paulo (CIGA-SP)</b>, FAZ SABER que, durante o período de <mark>xx de xxxx a xx  de xxxx de 2019, às 23h59</mark>, por cadastramento online na plataforma SP Cultura (http://spcultura.prefeitura.sp.gov.br), estarão abertas as inscrições para credenciamento de Agentes de Governo Aberto.
 				</p>
 			</CommentsContext>
 		</section>
@@ -95,8 +95,412 @@ O propósito do programa é engajar a sociedade civil na agenda de Governo Abert
 				</p>
 			</CommentsContext>
 		</section>
-
-			
+		<section>
+		 	<h3 class="titulo" indent="2">4. DO AGENDAMENTO E ARTICULAÇÃO DAS OFICINAS</h3>
+			<CommentsContext :id="11" :context="'ITEM 4.1'">
+				<p>
+					4.1. O Agente será responsável pelo agendamento e articulação das oficinas em equipamentos públicos previamente informados pela organização ou locais de sua rede de atuação, contanto que sejam condizentes com as finalidades do programa, e mediante prévio acordo com a Supervisão para Assuntos de Governo Aberto, não podendo ser realizadas em locais de acessos restritos, com impedimentos jurídicos, ou que não disponham de condições mínimas de segurança e funcionamento.
+					<p>4.1.1.. A realização das oficinas em espaços privados não poderá restringir o acesso de interessados. </p>
+					<p>4.1.2. Os espaços destinados às oficinas, sendo públicos ou privados, não podem ter capacidade inferior à 30 participantes.
+						<p>4.1.2.1. A realização de oficinas em locais que não atendam às exigências está condicionada à submissão de aprovação formal do Núcleo de Gestão do Edital;</p>
+					</p>
+					<p>4.1.3. A lista de equipamentos públicos disponíveis para a realização das oficinas será entregue por meio eletrônico aos Agentes na data da assinatura do contrato constando endereço, meios de contato, capacidade de público e equipamentos eletrônicos disponíveis.</p>
+					<p>4.1.4. No Anexo VI deste edital consta lista de datas e locais já previamente agendados pela Supervisão para Assuntos de Governo Aberto, e os Agentes credenciados serão designados após assinatura do Termo de Compromisso.</p>
+				</p>
+			</CommentsContext>
+			<CommentsContext :id="12" :context="'ITEM 4.2'">
+				<p>
+					4.2. Em caso de não realização da oficina o Agente deverá relatar os motivos à Supervisão para Assuntos de Governo Aberto anexando comprovantes quando necessário, e reagendar de acordo com os itens anteriores.
+				</p>
+			</CommentsContext>
+			<CommentsContext :id="13" :context="'ITEM 4.3'">
+				<p>
+					4.3. O Agente deve realizar as oficinas e atividades de planejamento em todos os quatro meses do contrato, preferencialmente distribuídas na proporção de 15 horas mensais, sendo 10 (dez) horas de atividades presenciais (oficinas) e 5 (cinco) horas de atividades de planejamento;
+				</p>
+			</CommentsContext>
+			<CommentsContext :id="14" :context="'ITEM 4.4'">
+				<p>
+					4.4. Remanejamentos para outros locais, ou mudanças de datas, quando por vontade do Agente, deverão ser solicitados à Supervisão para Assuntos de Governo Aberto, com as respectivas justificativas e comprovantes, quando necessário.
+				</p>
+			</CommentsContext>
+		</section>
+		<section>
+		 	<h3 class="titulo" indent="2">5. DO CRONOGRAMA</h3>
+			<CommentsContext :id="15" :context="'ITEM 5.1'">
+				<p>
+					5.1. O cronograma do programa “Agentes de Governo Aberto” seguirá as seguintes etapas:
+					<ol type="a">
+					    <li>Período de inscrição de interessados;</li>
+					    <li>Publicação do resultado preliminar dos aprovados pela Comissão de Seleção;</li>
+					    <li>Prazo de recurso dos não aprovados;</li>
+					    <li>Publicação da homologação do resultado final;</li>
+					    <li>Assinatura dos Termos de Compromisso e evento solene de diplomação como “Agente de Governo Aberto 2019”;</li>
+					    <li>Execução das oficinas;</li>
+					    <li>Encerramento da edição 2019 do programa.</li>					    
+					</ol>
+				</p>
+			</CommentsContext>
+			<CommentsContext :id="16" :context="'ITEM 5.2'">
+				<p>
+					5.2. O credenciamento dos Agentes terá validade a partir da homologação do seu resultado final publicado no Diário Oficial da Cidade até o dia 15 de dezembro de 2019;
+				</p>
+			</CommentsContext>
+		</section>
+		<section>
+		 	<h3 class="titulo" indent="2">6. DAS CATEGORIAS DOS PROJETOS DE OFICINAS</h3>
+		 	<CommentsContext :id="17" :context="'ITEM 6.1'">
+		 		<p>
+		 			6.1. Os projetos deverão ser adequados a uma das seguintes categorias:
+		 			<p>
+		 				6.1.1. Categoria 1 - Transparência, acesso à informação e política de dados abertos, tendo como orientação exemplificativa a realização de oficinas relacionadas à temática de transparência ativa e passiva; à apresentação, uso e difusão de técnicas de pedido de acesso à informação; à realização de atividades de tratamento e análise de dados públicos, com diferentes formas de visualização e a reutilização de informações públicas; às atividades que utilizem as novas plataformas de Dados Abertos; às atividades relacionadas à utilização e coleta de dados do Portal da Transparência, do Diário Oficial da cidade de São Paulo e do Sistema de Orçamento e Finanças, dentre outras pertinentes ao tema.
+		 			</p>
+		 			<p>
+		 				6.1.2. Categoria 2 - Participação Social e Mapeamento Colaborativo: tendo como orientação exemplificativa a realização de oficinas relacionadas à produção e difusão de metodologias e ações para a gestão de projetos participativos; às esferas de participação (conselhos, terceiro setor, etc.), fomentando o desenvolvimento da sociedade civil organizada; à apresentação de técnicas e metodologias para promoção e fortalecimento da participação, inclusão, diversidade e colaboração no âmbito das políticas públicas; às atividades voltadas à realização e difusão de mapeamentos colaborativos; às atividades de técnicas de georreferenciamento e outras técnicas de mapeamento.
+		 			</p>
+		 			<p>
+		 				6.1.3. Categoria 3 - Inovação, Tecnologia Aberta e Inclusão Digital: tendo como orientação exemplificativa a realização de oficinas destinadas ao fomento de inovações tecnológicas e conhecimento dos instrumentos já existentes de governo aberto e demais políticas públicas do município; ao desenvolvimento de meios lúdicos de ampliação da capacitação de participação cívica, como jogos, aplicativos de aparelhos móveis, programas de computador, etc.; às oficinas formativas práticas de uso, desenvolvimento de hardwares e softwares livres e abertos, de segurança da informação e de inovações sociais e colaborativas.
+		 			</p>
+		 			<p>
+		 				6.1.4. Categoria 4 - Comunicação social, Cultura digital, Mídias alternativas e colaborativas: tendo como orientação exemplificativa a realização de oficinas relacionadas ao fomento de práticas de governo aberto, promoção da cultura digital e/ou  criação de ações de comunicação, através da produção, edição e finalização de arquivos em multimídia, a partir do uso de software livre, de técnicas de produção criativa, de comunicação não escrita e de educomunicação; apresentação, criação e difusão de ferramentas de conhecimento colaborativo disponíveis em redes e mecanismos digitais e não digitais, para fomento e divulgação de políticas públicas através de mídias alternativas e colaborativas.
+		 			</p>
+		 			<p>
+		 				6.1.5. Categoria 5 - Educação Política e mecanismos de Combate à Corrupção: tendo como orientação exemplificativa a realização de oficinas relacionadas aos procedimentos administrativos e burocráticos da Prefeitura de São Paulo, especialmente com as temáticas de contratação pública e licitações, fomentando a participação cidadã quando possível; atividades de disseminação de programas, projetos e políticas públicas do governo municipal; atividades relacionadas à avaliação e monitoramento de políticas públicas de Governo Aberto e correlacionadas; oficinas voltadas à discussões sobre desafios e cocriação de soluções para a Prefeitura de São Paulo; produção de indicadores de políticas públicas da Prefeitura de São Paulo; atividades introdutórias, intermediárias e avançadas sobre a estrutura e funcionamento da máquina pública. 
+		 			</p>
+		 			<p>
+		 				6.1.6. Participação Legislativa, Estrutura Pública Municipal e Atividades de Relações Governamentais Éticas e Adequadas: tendo como orientação exemplificativa a realização de oficinas relacionadas aos processos legislativos tanto do Poder Legislativo (leis), quanto do Poder Executivo (portarias e decretos); meios de sugerir e influenciar a atividade dos legisladores e dos gestores de políticas públicas atendendo às exigências éticas e de programas de integridade (formação de profissionais de Relações Governamentais); percepção das competências legislativas e administrativas dos entes da Federação, com ênfase nas municipais; percepção de que a democracia se concretiza em maior medida na esfera municipal; percepção da distinção da atividade legislativa e da atividade administrativa e das atribuições dos Poderes Legislativo e Executivo; técnicas de logística e capacitação para assessoramento político.
+		 			</p>
+		 		</p>
+		 	</CommentsContext>
+		 	<CommentsContext :id="18" :context="'ITEM 6.2'">
+		 		<p>
+		 			6.2. A Categoria deve estar indicada na capa do projeto e a adequação deve ser justificada de forma clara, estabelecendo quais conhecimentos e habilidades pretende desenvolver nos participantes e por qual motivo considera inseridas em uma das seis categorias.
+		 			<p>
+		 				6.2.1. Em caso de possibilidade de adequação a mais de uma categoria, o candidato deve escolher pela que considera mais adequada, podendo, entretanto, ressaltar em sua justificativa a múltipla adequação.
+		 			</p>
+		 			<p>
+		 				6.2.2. A Comissão de Seleção aprovará os melhores projetos por categoria, sendo 5 (cinco) bolsas para cada uma das categorias previstas pelos itens 6.1.1 ao 6.1.4 e 6 (seis) bolsas para as categorias 6.1.5 e 6.1.6.
+		 			</p>
+		 		</p>
+		 	</CommentsContext>
+		</section>
+		<section>
+		 	<h3 class="titulo" indent="2">7. DAS ATRIBUIÇÕES DO AGENTE DE GOVERNO ABERTO</h3>
+		 	<CommentsContext :id="19" :context="'ITEM 7.1'">
+		 		<p>
+		 			7.1. O Agente de Governo Aberto selecionado terá como atribuições:
+		 			<p>
+		 				7.1.1. Realizar 60 (sessenta) horas de atividades, na proporção de 40 horas (quarenta) horas de atividades presenciais com aplicação de metodologias ativas e 20 (vinte) horas de atividades de planejamento, conforme descrito no Anexo V (Projeto de Atividade), apresentado e selecionado, e no Plano de Trabalho elaborado em conformidade com as diretrizes do Núcleo de Gestão do Edital (item 9.5, b);
+		 				<p>
+		 					7.1.1.1. O Agente deverá adequar suas 20 (vinte) horas de atividades de planejamento às atividades presenciais exercidas, observando o estabelecido pelo item 3.2.1.
+		 				</p>
+		 				<p>
+		 					7.1.1.2. O Agente deverá adequar suas 40h de oficinas presenciais em ciclos de atividades de, no máximo, 5 horas, obedecendo a um dos critérios abaixo:
+		 					<ol type="a">
+		 					    <li>1 (uma) oficina de módulo único de 5h, sendo ministrada para públicos diferentes em 8 datas distintas, distribuídas pelos quatro meses do programa, preferencialmente totalizando 10 horas por mês;</li>
+		 					    <li>1 (uma) oficina de módulo único de 3h20 h de atividades presenciais, sendo ministrada para públicos diferentes em 12 datas distintas, distribuídas pelos quatro meses do programa, preferencialmente totalizando 10 horas por mês </li>
+		 					    <li>1 (uma) oficina de módulo único de 2h30 de atividades presenciais, sendo ministrada para públicos diferentes em 16 datas distintas, distribuídas pelos quatro meses do programa, preferencialmente totalizando 10 horas por mês</li>
+		 					    <li>1 (uma) oficina desmembrada em dois módulos de 5 horas cada, sendo ministrada para públicos diferentes em 4 edições, distribuídas pelos quatro meses do programa, preferencialmente totalizando 10 horas por mês. </li>
+		 					    <li>1 (uma) oficina desmembrada em três módulos de 3h20 horas cada, sendo ministrada para públicos diferentes em 4 edições, distribuídas pelos quatro meses do programa, preferencialmente totalizando 10 horas por mês;</li>
+		 					    <li>1 (uma) oficina desmembrada em quatro módulos de 2h30 cada, sendo ministrada para públicos diferentes em 4 edições, distribuídas pelos quatro meses do programa, preferencialmente totalizando 10 horas por mês</li>
+		 					</ol>		 					
+		 				</p>
+		 				<p>
+		 					7.1.1.3. Outros formatos ou alterações após aprovação deverão ser submetidos à análise da Supervisão para Assuntos de Governo Aberto que poderá aprovar, ou instruir para a adequação que melhor atenda ao interesse público.
+		 				</p>
+		 			</p>
+		 			<p>
+		 				7.1.2. Produzir e disponibilizar recursos e materiais relacionados às oficinas formativas que propuser, tais como apostilas, apresentações, tutoriais, certificados para os participantes, em meio impresso ou digital, entre outros, observado o disposto pelo item 3.2
+		 			</p>
+		 			<p>
+		 				7.1.3. Documentar e comprovar as oficinas formativas realizadas por meio da entrega digital de lista de presença e Relatório Mensal nos modelos padrões fornecidos pela Supervisão para Assuntos de Governo Aberto; no mínimo 3 (três) registros fotográficos por oficina, realizado com recursos do próprio Agente (em que registre a sua presença e do público participante). A lista de presença também deverá ser enviada fisicamente ao Núcleo de Gestão do Edital.
+		 			</p>
+		 			<p>
+		 				7.1.4. Promover, articular e divulgar as oficinas em parceria com a Prefeitura de São Paulo;
+		 			</p>
+		 			<p>
+		 				7.1.5. Participar de todos os encontros formativos do programa Agentes de Governo Aberto propostos pela Prefeitura de São Paulo, conforme itens 14.5 deste Edital;
+		 			</p>
+		 			<p>
+		 				7.1.6. Apresentar Relatório Final sobre o desenvolvimento das oficinas formativas realizadas durante o ciclo, no padrão fornecido pela Supervisão para Assuntos de Governo Aberto;
+		 			</p>
+		 		</p>
+		 	</CommentsContext>
+	 		<CommentsContext :id="20" :context="'ITEM 7.2'">
+	 			<p>
+	 				7.2. Após aprovação pela Comissão de Seleção, a equipe Supervisão para Assuntos de Governo Aberto poderá adequar o título da oficina, seu formato e duração para melhor atender ao interesse público.
+	 				<p>
+	 					7.2.1. O Agente poderá participar junto à equipe da Supervisão para Assuntos de Governo Aberto das discussões sobre eventuais alterações em seu projeto, e seus posicionamentos e colocações deverão ser atendidos na maior medida possível, respeitada, primordialmente, o interesse público e objetivos do programa.
+	 				</p>
+	 				<p>
+	 					7.2.2. O título de divulgação da oficina deverá ser chamativo e em linguagem cidadã, devendo ser aprovado pela equipe de comunicação da Supervisão para Assuntos de Governo Aberto.
+	 				</p>
+	 			</p>
+		 	</CommentsContext>
+		 	<CommentsContext :id="21" :context="'ITEM 7.3'">
+		 		<p>
+		 			7.3. A realização das oficinas deverá contemplar ao máximo possível as diversas regiões da cidade, nas áreas de abrangência das Subprefeituras, sendo vedada a concentração da mesma oficina no território de uma única Subprefeitura.
+		 		</p>
+		 	</CommentsContext>
+		 	<CommentsContext :id="22" :context="'ITEM 7.4'">
+		 		<p>
+		 			7.4. As ações dos Agentes deverão ser desenvolvidas visando a inclusão de diferentes públicos e atendendo às diversidades sociais.
+		 		</p>
+		 	</CommentsContext>
+		</section>
+		<section>
+		 	<h3 class="titulo" indent="2">8. DAS EXIGÊNCIAS PARA PARTICIPAÇÃO</h3>
+		 	<CommentsContext :id="23" :context="'ITEM 8.1'">
+		 		<p>
+		 			8.1. Poderão participar do credenciamento pessoas:
+		 			<ol type="a">
+		 			    <li>maiores de 18 (dezoito) anos, sem restrição máxima de idade;</li>
+		 				<li>que comprovem domicílio, vínculo de estudo ou vínculo de trabalho no município de São Paulo;</li>
+		 				<li>com comprovada atuação e/ou conhecimento na temática de interesse há, no mínimo, 01 (um) ano;</li>
+		 				<li>com disponibilidade de horário para oferecer as oficinas formativas propostas e comparecer aos Encontros Formativos obrigatórios, nos termos do item 14.5.</li>
+		 			</ol>
+		 		</p>
+		 	</CommentsContext>
+		 	<CommentsContext :id="24" :context="'ITEM 8.2'">
+			 	<p>
+			 		8.2. Não poderão participar:
+			 		<ol type="a">
+				 		<li>pessoas físicas que não cumprirem todas as exigências do item 8.1 deste Edital;</li>
+				 		<li>funcionários públicos da Administração Direta e Indireta da Prefeitura de São Paulo;</li>
+				 		<li>pessoas que tenham ocupado cargo público de qualquer espécie no município de São Paulo nos últimos 5 (cinco) anos.</li>
+				 		<li>parentes de até segundo grau, cônjuge ou companheiro(a) de membro da Comissão de Seleção ou de servidores vinculados ou lotados na Secretaria do Governo Municipal ou na Controladoria Geral do Município; </li>
+				 		<li>estudantes que possuam contrato de estágio em vigência com a Prefeitura de São Paulo lotados nas Secretarias que compõem a Comissão de Seleção do Edital, definida pela Portaria Conjunta <mark>N° xxxx/2019 – SGM/CGM.</mark></li>
+					</ol>
+			 	</p>
+			</CommentsContext>
+			<CommentsContext :id="25" :context="'ITEM 8.3'">
+			 	<p>
+			 		8.3. É imprescindível que o Agente possua ou esteja em condições de abrir conta corrente no Banco do Brasil para recebimento da bolsa.
+			 	</p>			 	
+			</CommentsContext>
+			<CommentsContext :id="26" :context="'ITEM 8.4'">
+				<p>
+					8.4. Os Agentes credenciados poderão participar de outros projetos e programas financiados pela Prefeitura de São Paulo, desde que não correspondam ao mesmo projeto a ser desenvolvido no âmbito do programa Agentes de Governo Aberto e desde que o financiamento pelo programa não apresente impeditivo para esta contratação.
+				</p>
+			</CommentsContext>
+			<CommentsContext :id="27" :context="'ITEM 8.5'">
+			 	<p>
+			 		8.5 O Agente selecionado deverá ter no mínimo 1 (um) dia útil da semana em horário comercial livre para realizar as oficinas formativas.
+			 	</p>
+			</CommentsContext>
+		</section>
+		<section>
+		 	<h3 class="titulo" indent="2">9. DAS INSCRIÇÕES DOS AGENTES DE GOVERNO ABERTO</h3>
+		 	<CommentsContext :id="28" :context="'ITEM 9.1'">
+		 		<p>
+		 			9.1. Para a inscrição será realizada online, o projeto deverá ser enviado por meio da plataforma SP CULTURA (http://spcultura.prefeitura.sp.gov.br/).
+		 			<p>
+		 				9.1.1. Excepcionalmente, a inscrição poderá também ser realizada por meio físico, <mark>no dia 12 de abril de 2019, das 10h às 17h, na sede da Secretaria do Governo Municipal (Edifício Matarazzo - Viaduto do Chá, n° 15, 7ª andar)</mark>, devendo ser entregues todos os documentos requeridos para a inscrição, conforme disposto no item 9.5 deste Edital.
+		 			</p>
+		 		</p>
+		 	</CommentsContext>
+		 	<CommentsContext :id="29" :context="'ITEM 9.2'">
+		 		<p>
+		 			9.2. O candidato deve se cadastrar na Plataforma SP Cultura como “Agente”, clicando no link “Entrar”, criando uma conta com nome, sobrenome, e-mail e senha e preenchendo todos os campos no respectivo perfil de Agente.
+		 		</p>
+		 	</CommentsContext>
+		 	<CommentsContext :id="30" :context="'ITEM 9.3'">
+		 		<p>
+		 			9.3. No campo “Projetos”, o Agente deverá localizar “Agentes de Governo Aberto 2019”, utilizando o filtro “Editais”.
+		 			<p>
+		 				9.3.1. Apenas Agentes com cadastro devidamente preenchido na plataforma SP CULTURA (item 9.2) terão acesso ao processo de inscrição e poderão enviar seu projeto.
+		 			</p>
+		 		</p>
+		 	</CommentsContext>
+		 	<CommentsContext :id="31" :context="'ITEM 9.4'">
+		 		<p>
+		 			9.4. O Agente deverá selecionar uma das categorias elencadas no item 6.1 e observadas as temáticas estabelecidas no item 2.2.
+		 		</p>
+		 	</CommentsContext>
+		 	<CommentsContext :id="32" :context="'ITEM 9.5'">
+		 		<p>
+		 			9.5. O Agente deverá anexar na sua inscrição na plataforma SP Cultura as seguintes informações:
+		 			<ol type="a">
+		 				<li>Declaração de Aceite das condições do Edital (Anexo I);</li>
+		 				<li>Projeto de Atividade seguindo modelo do Anexo V, com, no máximo, 5 (cinco) páginas, respeitado o dever de anonimato estabelecido pelo item 9.5.b.1, trazendo o detalhamento das atividades a serem desenvolvidas e contendo os seguintes itens obrigatórios: 
+		 					<ol type="1">
+			 					<li>título do projeto e título de divulgação da oficina, podendo ser idênticos, observada a determinação do item 7.2.2; </li>
+			 					<li>categoria escolhida;</li>
+			 					<li>resumo do projeto; </li>
+			 					<li>objetivo (o que pretende atingir); </li>
+			 					<li>justificativa (como o seu projeto contribui para um governo aberto e por qual motivo considera adequado à categoria escolhida);</li>
+			 					<li>resultados esperados (de que forma a sua oficina impactará os participantes e a gestão pública e qual será a usabilidade e a aplicação dos conhecimentos adquiridos em sua atividade formativa); </li>
+			 					<li>descrição da metodologia ativa da oficina; </li>
+			 					<li>público alvo, caso tenha uma coletividade específica que deseje atingir, sendo vedada qualquer forma de exclusão aos demais interessados; </li>
+			 					<li>recursos necessários (espaços públicos e estrutura física para desenvolvimento da atividade, como a disponibilidade de equipamentos multimídia), observado o previsto no item 3.2 deste Edital;</li>
+			 					<li>cronograma da oficina (como serão organizadas as horas/aula, as atividades propostas, observado o disposto no item 7.1.1.2.)</li>
+			 				</ol>
+			 				<p>b.1) O projeto obrigatoriamente deve ser redigido <b>sem qualquer meio de identificação dos dados pessoais do candidato</b>, sendo observado o disposto pelo item 9.8.1.</p>
+		 				</li>
+		 				<li>currículo adequado ao projeto, com no máximo 2 (duas) páginas, incluindo informações sobre escolarização, histórico profissional e endereço completo. O currículo pode conter informações como formação, participação em grupos, coletivos, redes ou em outros projetos que comprovem experiência na realização de atividades pedagógicas;</li>
+		 				<li>comprovante ou declaração de residência atual;</li>
+		 				<li>Declaração de Disponibilidade do Agente para exercer as oficinas formativas (Anexo II).</li>
+		 			</ol>
+		 			<p>
+		 				9.5.1. Os documentos anexados deverão estar preferencialmente em formato “odt” ou “.doc”, também sendo aceitos em formato ”pdf”, em qualquer hipótese, não podendo ultrapassar o limite de 8 MB.
+		 			</p>
+		 		</p>
+		 	</CommentsContext>
+		 	<CommentsContext :id="33" :context="'ITEM 9.6'">
+		 		<p>
+		 			9.6. Depois de finalizadas as etapas anteriores, o Agente deverá confirmar sua inscrição clicando em “Enviar Inscrição”, cessando sua autonomia para alterar os arquivos, complementar ou substituir informações de seu projeto.
+		 		</p>
+		 	</CommentsContext>
+		 	<CommentsContext :id="34" :context="'ITEM 9.7'">
+		 		<p>
+		 			9.7. Para conferir o envio de sua inscrição e certificar-se de que está efetivamente cadastrado, o Agente poderá acessar o item “Minhas Inscrições” em seu Painel de Controle e verificar se a respectiva inscrição ao Edital está marcada como “enviada”.
+		 		</p>
+		 	</CommentsContext>
+		 	<CommentsContext :id="35" :context="'ITEM 9.8'">
+		 		<p>
+		 			9.8. Serão desclassificados os candidatos que não apresentarem todos os documentos solicitados no item 9.5 deste Edital ou que não se enquadrarem nas exigências de participação descritas no item 8.
+		 			<p>9.8.1 - Serão desclassificados, também, os candidatos que de qualquer forma se identificarem no Projeto de Atividade, devendo ser mantido o anonimato para o julgamento pela Comissão.</p>
+		 			<p>9.8.2 - O candidato que de qualquer forma tentar burlar o caráter anônimo do julgamento pela Comissão será desclassificado e a ele poderá ser atribuída a pena estabelecida pelo item 16.1.d de declaração de inidoneidade, sem prejuízo das demais consequências criminais.</p>
+		 		</p>
+		 	</CommentsContext>
+		 	<CommentsContext :id="36" :context="'ITEM 9.9'">
+		 		<p>
+		 			9.9. Cada Agente poderá realizar no máximo 1 (uma) inscrição de projeto por categoria.
+		 			<p>9.9.1. Desrespeitada essa regra, apenas o primeiro cadastro será considerado.</p>
+		 		</p>
+		 	</CommentsContext>
+		 	<CommentsContext :id="37" :context="'ITEM 9.10'">
+		 		<p>
+		 			9.10. Caso existam outras pessoas que colaboraram com o projeto inscrito pelo Agente, os nomes poderão ser indicados na Ficha de Identificação (Anexo IV).
+		 		</p>
+		 	</CommentsContext>
+		 	<CommentsContext :id="38" :context="'ITEM 9.11'">
+		 		<p>
+		 			9.11. É vedada a recandidatura de projetos idênticos aos aprovados nas edições anteriores do programa e o plágio de qualquer tipo, sujeitando o Agente à desclassificação imediata
+		 			<p>9.11.1. Em caso de plágio o autor plagiado deverá ser informado da utilização de seu trabalho e a pena de declaração de inidoneidade estabelecida pelo item 16.1.d poderá ser aplicada ao candidato sem prejuízo das demais consequências jurídicas estabelecidas por lei.</p>
+		 		</p>
+		 	</CommentsContext>
+		</section>
+		<section>
+		 	<h3 class="titulo" indent="2">10. DA COMISSÃO DE SELEÇÃO E SUAS ATRIBUIÇÕES</h3>
+		 	<CommentsContext :id="39" :context="'ITEM 10.1'">
+		 		<p>
+		 			10.1. A avaliação dos projetos será realizada por uma Comissão de Seleção composta por 7 (sete) membros, conforme definido pela Portaria Conjunta Nº XX/2019 – SGM/CGM, sendo 01 (um) indicado pela Controladoria Geral do Município, 01 (um) indicado pela Secretaria Municipal de Inovação e Tecnologia, 01 (um) indicado pela Secretaria Municipal de Educação, 01 (um) indicado pela Secretaria Municipal de Direitos Humanos e Cidadania, 01 (um) indicado pela Secretaria Municipal de Gestão, 01 (um) indicado pela Secretaria do Governo Municipal e 01 (um) indicado pela Secretaria Municipal de Urbanismo e Licenciamento.
+		 			<p>10.2.1 O Núcleo de Gestão do Edital, ao receber os arquivos do projeto e dos documentos exigidos no item 9.5, atribuirá ao candidato um número de cadastro e enviará para a Comissão de Seleção apenas o arquivo do projeto enumerado, assim, sem qualquer identificação dos dados pessoais do candidato, garantindo, assim, seu anonimato.</p>
+		 			<p>10.2 A Comissão de Seleção é soberana e decidirá, no âmbito de sua competência pelos 32 projetos que melhor atendem às diretrizes e objetivos estabelecidos no item 2, e os critérios de seleção estabelecidos pelo item 11, cabendo recurso no prazo de 2 (dois) dias contados da publicação da lista preliminar de credenciados.</p>
+		 			<p>10.2.1. O recurso deverá ser endereçado ao Núcleo de Gestão do Edital instituído pela Portaria Conjunta nº XXX/2019 SGM/CGM, nos termos do item XXX da Portaria.</p>
+		 		</p>
+		 	</CommentsContext>
+		</section>
+		<section>
+		 	<h3 class="titulo" indent="2">11. DOS CRITÉRIOS DE SELEÇÃO</h3>
+		 	<CommentsContext :id="40" :context="'ITEM 11.1'">
+		 		<p>
+		 			11.1. A Comissão de Seleção avaliará e classificará os projetos inscritos por categoria conforme item 6, considerando as diretrizes, os objetivos e as exigências especificadas neste Edital.
+		 		</p>
+		 	</CommentsContext>
+		 	<CommentsContext :id="41" :context="'ITEM 11.2'">
+		 		<p>
+		 			11.2. Os critérios adotados para a avaliação dos projetos e as respectivas pontuações são:
+		 			<table>
+		 			  <tr>
+		 			    <th><br><br>Critérios<br><br></th>
+		 			    <th><br><br>Questões a serem consideradas<br><br></th>
+		 			    <th><br><br>Pontuação<br><br></th>
+		 			  </tr>
+		 			  <tr>
+		 			    <td colspan="3"><br><center>Avaliação técnica dos projetos</center><br></td>
+		 			  </tr>
+		 			  <tr>
+		 			    <td>Adequação do conteúdo do projeto à temática de Governo Aberto e à categoria escolhida</td>
+		 			    <td>Critério que avalia o projeto de acordo com os preceitos do governo aberto (participação social, transparência e linguagem cidadã, integridade, inovação, tecnológica e a aplicação de ferramentas livres), e com a Categoria apontada pelo candidato</td>
+		 			    <td>Caráter eliminatório</td>
+		 			  </tr>
+		 			  <tr>
+		 			    <td>Adequação formal do Projeto às especificações previstas no Edital</td>
+		 			    <td>Critério que avalia o projeto cuja apresentação formal e de conteúdo esteja de acordo com as disposições constantes do Credenciamento.</td>
+		 			    <td>0 a 1 ponto</td>
+		 			  </tr>
+		 			  <tr>
+		 			    <td>Interesse público do projeto</td>
+		 			    <td>Critério que avalia o impacto social, cultural e formativo da ação.</td>
+		 			    <td>0 a 3 pontos</td>
+		 			  </tr>
+		 			  <tr>
+		 			    <td>Viabilidade do projeto e à adequação dos métodos de trabalho</td>
+		 			    <td>Critério que avalia o projeto cuja viabilidade esteja tecnicamente demonstrada quanto ao tempo e espaço de execução e cuja metodologia apresentada em Projetos de Atividades demonstre capacidade técnica para trabalhar a categoria do projeto. Avaliação da metodologia ativa aplicada na oficina.</td>
+		 			    <td>0 a 2 pontos<br></td>
+		 			  </tr>
+		 			  <tr>
+		 			    <td>Transversalidade</td>
+		 			    <td>Critério que avalia se o projeto abarca mais de um preceito de governo aberto, se contempla mais do que uma<br> categoria.</td>
+		 			    <td>0 a 2 pontos</td>
+		 			  </tr>
+		 			  <tr>
+		 			    <td>Inovação do projeto</td>
+		 			    <td>Critério que avalia a inovação do projeto em relação às edições anteriores e também à setorialização do mesmo.</td>
+		 			    <td>0 a 1 ponto<br></td>
+		 			  </tr>
+		 			  <tr>
+		 			    <td>Avaliação da experiência na categoria escolhida</td>
+		 			    <td>Critério que avalia a qualificação do Agente acerca do tema e seu conhecimento e experiência na categoria escolhida, por meio da análise do campo “experiências práticas” do projeto.<br></td>
+		 			    <td>0 a 1 ponto<br></td>
+		 			  </tr>
+		 			</table>
+		 		</p>
+		 	</CommentsContext>
+		 	<CommentsContext :id="42" :context="'ITEM 11.3'">
+		 		<p>
+		 			11.3. Feita a avaliação técnica dos projetos e do Agente, se for o caso, será aplicada a pontuação extra conforme o critério abaixo:
+		 			<table>
+		 				<tr>
+		 					<th colspan="2">Pontuação Extra: Os projetos receberão pontuação extra caso o Agente atenda ao requisito abaixo:</th>
+		 				</tr>
+		 				<tr>
+		 					<td>Índice de Vulnerabilidade Social do local de residência do Agente (item 11.4)</td>
+		 					<td>1 ponto</td>
+		 				</tr>
+		 			</table>
+		 		</p>
+		 	</CommentsContext>
+		 	<CommentsContext :id="43" :context="'ITEM 11.4'">
+		 		<p>
+		 			11.4. Os candidatos que comprovarem moradia nos territórios classificados como mais vulneráveis, conforme as definições estabelecidas pelo Índice Paulista de Vulnerabilidade Social - IPVS 2015, da Fundação Sistema Estadual de Análise de Dados – SEADE, especificamente os “grupos 3, 4, 5 e 6”, tendo em vista a finalidade de expansão do Programa “Agentes de Governo Aberto”, receberão um ponto extra após a avaliação dos demais critérios estabelecidos neste edital.
+		 			<p>11.4.1. O Índice Paulista de Vulnerabilidade Social - IPVS 2015 encontra-se disponível em:
+&lt;<a target="_blank" href="http://www.prefeitura.sp.gov.br/cidade/secretarias/upload/assistencia_social/arquivos/atlas_socioassistencial_sp_2015.pdf">http://www.prefeitura.sp.gov.br/cidade/secretarias/upload/<br />assistencia_social/arquivos/atlas_socioassistencial_sp_2015.pdf</a>&gt; e disponível também no site do Geosampa: <a href="http://geosampa.prefeitura.sp.gov.br/PaginasPublicas/_SBC.aspx" target="_blank">http://geosampa.prefeitura.sp.gov.br/PaginasPublicas/_SBC.aspx</a>
+</p>
+		 		</p>
+		 	</CommentsContext>
+		 	<CommentsContext :id="44" :context="'ITEM 11.5'">
+		 		<p>
+		 			11.5. Os projetos serão classificados em ordem decrescente de pontos.
+		 		</p>
+		 	</CommentsContext>
+		 	<CommentsContext :id="45" :context="'ITEM 11.6'">
+		 		<p>
+		 			11.6. Serão classificados somente projetos que obtiverem nota mínima de 6,0 (seis) pontos.
+		 		</p>
+		 	</CommentsContext>
+		 	<CommentsContext :id="46" :context="'ITEM 11.7'">
+		 		<p>
+		 			11.7. Caso o Agente tenha sido classificado em mais de uma categoria, será selecionado para participar do programa Agentes de Governo Aberto um único projeto, escolhendo-se o melhor classificado.
+		 		</p>
+		 	</CommentsContext>
+		 	<CommentsContext :id="47" :context="'ITEM 11.8'">
+		 		<p>
+		 			11.8. Caso não haja o mínimo de projetos aprovados por categoria, conforme estabelecido pelo item 6.1, serão selecionados projetos de outras categorias, conforme a ordem decrescente de pontos dos projetos aprovados em todo o programa.
+		 		</p>
+		 	</CommentsContext>
+		 	<CommentsContext :id="48" :context="'ITEM 11.9'">
+		 		<p>
+		 			11.9. Havendo empate na nota final, terá preferência o projeto: 
+		 			<ol type="a">
+			 			<li>que possuir a maior pontuação no critério “Interesse público do projeto”;</li>
+			 			<li>que possuir a maior pontuação no critério “Avaliação da experiência na categoria escolhida”;</li>
+			 			<li>cujo Agente tenha a idade mais elevada.</li>
+			 		</ol>
+		 		</p>
+		 	</CommentsContext>
+		</section>
 
 		<section ref="allComments">
 			<h2 v-show="commentsLoaded" class="titulo" indent="1">Contribuições</h2>
@@ -139,4 +543,7 @@ export default {
 <style lang="scss" scoped>
 @import '../variables';
 @import '../consulta';
+.GovernoAberto mark {
+	background-color: yellow;
+}
 </style>

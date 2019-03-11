@@ -17,7 +17,7 @@
 			</h2>
 			<CommentsContext :id="1" :context="'EDITAL DE CREDENCIAMENTO DE AGENTES DE GOVERNO ABERTO'">
 				<div>
-					A Prefeitura de São Paulo, por meio da Secretaria do Governo Municipal e a Controladoria Geral do Município, <b>com apoio do Comitê Intersecretarial de Governo Aberto da Cidade de São Paulo (CIGA-SP)</b>, FAZ SABER que, durante o período de <mark>xx de xxxx a xx  de xxxx de 2019, às 23h59</mark>, por cadastramento online na plataforma SP Cultura (http://spcultura.prefeitura.sp.gov.br), estarão abertas as inscrições para credenciamento de Agentes de Governo Aberto.
+					<p>A Prefeitura de São Paulo, por meio da Secretaria do Governo Municipal e a Controladoria Geral do Município, <b>com apoio do Comitê Intersecretarial de Governo Aberto da Cidade de São Paulo (CIGA-SP)</b>, FAZ SABER que, durante o período de <mark>xx de xxxx a xx  de xxxx de 2019, às 23h59</mark>, por cadastramento online na plataforma SP Cultura (http://spcultura.prefeitura.sp.gov.br), estarão abertas as inscrições para credenciamento de Agentes de Governo Aberto.</p>
 				</div>
 			</CommentsContext>
 		</section>
@@ -25,7 +25,7 @@
 			<h3 class="titulo" indent="2">1. DO OBJETO</h3>
 			<CommentsContext :id="2" :context="'ITEM 1.1'">
 				<div>
-					<b>1.1</b> O presente Edital tem por objeto o credenciamento de Agentes de Governo Aberto para a realização de oficinas formativas de promoção e cultura de governo aberto nas áreas de abrangência de todas as Subprefeituras da cidade de São Paulo.
+					<p><b>1.1</b> O presente Edital tem por objeto o credenciamento de Agentes de Governo Aberto para a realização de oficinas formativas de promoção e cultura de governo aberto nas áreas de abrangência de todas as Subprefeituras da cidade de São Paulo.</p>
 					<p><b>1.1.1.</b> As oficinas formativas serão destinadas aos cidadãos, redes, associações, organizações e coletivos da sociedade civil, visando ampliar e qualificar a participação política na gestão municipal.</p>
 				</div>
 			</CommentsContext>
@@ -33,7 +33,8 @@
 		<section>
 			<h3 class="titulo" indent="2">2. DAS DIRETRIZES, DOS OBJETIVOS E DAS ORIENTAÇÕES</h3>
 			<CommentsContext :id="3" :context="'ITEM 2.1'">
-				<div><b>2.1.</b> Para fins deste Edital, com base no conceito adotado pela iniciativa internacional Open Government Partnership, consideram-se como diretrizes de Governo Aberto:
+				<div>
+					<p><b>2.1.</b> Para fins deste Edital, com base no conceito adotado pela iniciativa internacional Open Government Partnership, consideram-se como diretrizes de Governo Aberto:</p>
 					<ol type="a">
 					    <li>A transparência e o acesso às informações públicas;</li>
 					    <li>O fortalecimento da participação social;</li>
@@ -45,7 +46,7 @@
 			</CommentsContext>
 			<CommentsContext :id="4" :context="'ITEM 2.2'">
 				<div>
-					<b>2.2.</b> Por promoção da cultura de Governo Aberto, para fins deste Edital, entende-se:
+					<p><b>2.2.</b> Por promoção da cultura de Governo Aberto, para fins deste Edital, entende-se:</p>
 					<ol type="a">
 					    <li>A difusão do conceito e das <b>práticas de transparência, dados abertos</b> e <b>acesso à informação</b>;</li>
 					    <li>O fomento ao uso de <b>instrumentos de gestão participativa</b>, de <b>mapeamento colaborativo</b> e outras <b>técnicas de georreferenciamento</b> dos territórios;</li>
@@ -58,7 +59,7 @@
 			</CommentsContext>
 			<CommentsContext :id="5" :context="'ITEM 2.3'">
 				<div>
-					<b>2.3.</b>  A 4ª edição do Edital de Credenciamento de Agentes de Governo Aberto terá sua primeira etapa com a contratação de 32 (trinta e dois) Agentes, com a concessão de bolsa com duração de 04 (quatro) meses no decorrer do segundo semestre de 2019.
+					<p><b>2.3.</b>  A 4ª edição do Edital de Credenciamento de Agentes de Governo Aberto terá sua primeira etapa com a contratação de 32 (trinta e dois) Agentes, com a concessão de bolsa com duração de 04 (quatro) meses no decorrer do segundo semestre de 2019.</p>
 					<p><b>2.3.1.</b> O candidato interessado em se credenciar como Agente de Governo Aberto deve inscrever um projeto de <b>oficina</b> inserido nas categorias descritas no item 6.1 atendendo aos objetivos, diretrizes e orientações do programa.</p>
 					<p><b>2.3.2.</b> Por <b>“oficina”</b> entende-se como conjunto de atividades em metodologias ativas que visam formar e capacitar o participante, ampliando seu conhecimento e desenvolvendo habilidades específicas.</p>
 					<p><b>2.3.3.</b> os Agentes serão selecionados pela Comissão de Seleção prevista pelo item 10.1  de acordo com os critérios estabelecidos neste edital.</p>
@@ -69,30 +70,30 @@
 			<h3 class="titulo" indent="2">3. DO PAGAMENTO</h3>
 			<CommentsContext :id="6" :context="'ITEM 3.1'">
 				<div>
-					<b>3.1.</b> Cada Agente de Governo Aberto receberá bolsa pessoal e intransferível no valor bruto de até R$ 6.000,00 (seis mil  reais) pela realização das atividades no período da ocorrência das oficinas (04 meses) a partir da assinatura do Termo de Compromisso. 
+					<p><b>3.1.</b> Cada Agente de Governo Aberto receberá bolsa pessoal e intransferível no valor bruto de até R$ 6.000,00 (seis mil  reais) pela realização das atividades no período da ocorrência das oficinas (04 meses) a partir da assinatura do Termo de Compromisso.</p> 
 					<p><b>3.1.1.</b> Os pagamentos serão efetuados mensalmente na proporção de horas de atividades presenciais executadas em cada mês, condicionados à comprovação em prestação de contas, conforme o item 14.2 deste edital, e à participação nos Encontros Formativos.</p>
 					<p><b>3.1.2.</b> Sobre o valor mensal de pagamento incidirá os tributos conforme a legislação vigente, incorrendo pagamento de INSS e, quando o pagamento for superior ao limite de isenção de tributação, incorrerá pagamento de IR.</p>
 				</div>
 			</CommentsContext>
 			<CommentsContext :id="7" :context="'ITEM 3.2'">
 				<div>
-					<b>3.2.</b> O valor ofertado de bolsa refere-se à atividade e ao seu respectivo planejamento, não sendo os demais custos como produção de materiais e cartilhas, cópias reprográficas, deslocamento, alimentação e outros arcados pela Prefeitura de São Paulo.
+					<p><b>3.2.</b> O valor ofertado de bolsa refere-se à atividade e ao seu respectivo planejamento, não sendo os demais custos como produção de materiais e cartilhas, cópias reprográficas, deslocamento, alimentação e outros arcados pela Prefeitura de São Paulo.</p>
 					<p><b>3.2.1.</b> As horas de atividade de planejamento são presumidas como existentes na proporção de 30 minutos de planejamento para cada hora de oficina ministrada.</p>
 				</div>
 			</CommentsContext>
 			<CommentsContext :id="8" :context="'ITEM 3.3'">
 				<div>
-					<b>3.3.</b> O valor da bolsa está condicionado à efetiva execução da oficina e sua não ocorrência, independentemente do motivo, não ensejará qualquer pagamento ou reembolso.
+					<p><b>3.3.</b> O valor da bolsa está condicionado à efetiva execução da oficina e sua não ocorrência, independentemente do motivo, não ensejará qualquer pagamento ou reembolso.</p>
 				</div>
 			</CommentsContext>
 			<CommentsContext :id="9" :context="'ITEM 3.4'">
 				<div>
-					<b>3.4.</b> A concessão da bolsa ao Agente não gera qualquer tipo de vínculo empregatício com a Prefeitura de São Paulo.
+					<p><b>3.4.</b> A concessão da bolsa ao Agente não gera qualquer tipo de vínculo empregatício com a Prefeitura de São Paulo.</p>
 				</div>
 			</CommentsContext>
 			<CommentsContext :id="10" :context="'ITEM 3.5'">
 				<div>
-					<b>3.5.</b> A relação jurídica entre a Prefeitura de São Paulo e o Agente de Governo Aberto é intransferível a terceiros, sendo de responsabilidade única e exclusiva do Agente qualquer auxílio que venha a utilizar (tais quais assessores, monitores, ajudantes ou estagiários), não configurando qualquer vínculo destes com o município ou com o Programa Agentes de Governo Aberto.
+					<p><b>3.5.</b> A relação jurídica entre a Prefeitura de São Paulo e o Agente de Governo Aberto é intransferível a terceiros, sendo de responsabilidade única e exclusiva do Agente qualquer auxílio que venha a utilizar (tais quais assessores, monitores, ajudantes ou estagiários), não configurando qualquer vínculo destes com o município ou com o Programa Agentes de Governo Aberto.</p>
 				</div>
 			</CommentsContext>
 		</section>
@@ -100,58 +101,66 @@
 			<h3 class="titulo" indent="2">4. DO AGENDAMENTO E ARTICULAÇÃO DAS OFICINAS</h3>
 			<CommentsContext :id="11" :context="'ITEM 4.1'">
 				<div>
-					<b>4.1.</b> O Agente será responsável pelo agendamento e articulação das oficinas em equipamentos públicos previamente informados pela organização ou locais de sua rede de atuação, contanto que sejam condizentes com as finalidades do programa, e mediante prévio acordo com a Supervisão para Assuntos de Governo Aberto, não podendo ser realizadas em locais de acessos restritos, com impedimentos jurídicos, ou que não disponham de condições mínimas de segurança e funcionamento.
-					<p><b>4.1.1.</b>. A realização das oficinas em espaços privados não poderá restringir o acesso de interessados. </p>
-					<p><b>4.1.2.</b> Os espaços destinados às oficinas, sendo públicos ou privados, não podem ter capacidade inferior à 30 participantes.
-						<p><b>4.1.2.1.</b> A realização de oficinas em locais que não atendam às exigências está condicionada à submissão de aprovação formal do Núcleo de Gestão do Edital;</p>
-					</p>
-					<p><b>4.1.3.</b> A lista de equipamentos públicos disponíveis para a realização das oficinas será entregue por meio eletrônico aos Agentes na data da assinatura do contrato constando endereço, meios de contato, capacidade de público e equipamentos eletrônicos disponíveis.</p>
-					<p><b>4.1.4.</b> No Anexo VI deste edital consta lista de datas e locais já previamente agendados pela Supervisão para Assuntos de Governo Aberto, e os Agentes credenciados serão designados após assinatura do Termo de Compromisso.</p>
+					<p><b>4.1.</b> As datas e locais das oficinas são as definidas no Anexo VI deste edital.</p>
+					<p><b>4.1.1.</b> Além das oficinas já previamente definidas no Anexo VI, durante toda a duração do programa, a Supervisão para Assuntos de Governo Aberto, ficará responsável por agendar oficinas até que se cumpra a carga horaria do programa.</p>
 				</div>
 			</CommentsContext>
 			<CommentsContext :id="12" :context="'ITEM 4.2'">
 				<div>
-					<b>4.2.</b> Em caso de não realização da oficina o Agente deverá relatar os motivos à Supervisão para Assuntos de Governo Aberto anexando comprovantes quando necessário, e reagendar de acordo com os itens anteriores.
+					<p><b>4.2.</b> Os Agentes receberão na data da assinatura do contrato informações sobre o local de realização das suas oficinas, tais como endereço, meios de contato, capacidade de público e equipamentos eletrônicos disponíveis.</p>
 				</div>
 			</CommentsContext>
 			<CommentsContext :id="13" :context="'ITEM 4.3'">
 				<div>
-					<b>4.3.</b> O Agente deve realizar as oficinas e atividades de planejamento em todos os quatro meses do contrato, preferencialmente distribuídas na proporção de 15 horas mensais, sendo 10 (dez) horas de atividades presenciais (oficinas) e 5 (cinco) horas de atividades de planejamento;
+					<p><b>4.3.</b> Excepcionalmente, o Agente também poderá realizar articulação para agendamento da sua oficina, contanto que sejam condizentes com as finalidades do programa, e mediante prévio acordo com a Supervisão para Assuntos de Governo Aberto, não podendo ser realizadas em locais de acessos restritos, com impedimentos jurídicos, ou que não disponham de condições mínimas de segurança e funcionamento.</p>
+					<p><b>4.3.1</b> A realização das oficinas em espaços privados não poderá restringir o acesso de interessados.</p>
+					<p><b>4.3.2</b> Os espaços destinados às oficinas, sendo públicos ou privados, não podem ter capacidade inferior à 30 participantes.</p>
+					<p><b>4.3.2.1</b> A realização de oficinas em locais que não atendam às exigências está condicionada à submissão de aprovação formal do Núcleo de Gestão do Edital;</p>
 				</div>
 			</CommentsContext>
 			<CommentsContext :id="14" :context="'ITEM 4.4'">
 				<div>
-					<b>4.4.</b> Remanejamentos para outros locais, ou mudanças de datas, quando por vontade do Agente, deverão ser solicitados à Supervisão para Assuntos de Governo Aberto, com as respectivas justificativas e comprovantes, quando necessário.
+					<p><b>4.4.</b> Em caso de não realização da oficina o Agente deverá relatar os motivos à Supervisão para Assuntos de Governo Aberto anexando comprovantes quando necessário, e reagendar de acordo com os itens anteriores.</p>
+				</div>
+			</CommentsContext>
+			<CommentsContext :id="15" :context="'ITEM 4.5'">
+				<div>
+					<p><b>4.5.</b> O Agente deve realizar as oficinas e atividades de planejamento em todos os quatro meses do contrato, preferencialmente distribuídas na proporção de 15 horas mensais, sendo 10 (dez) horas de atividades presenciais (oficinas) e 5 (cinco) horas de atividades de planejamento;</p>
+				</div>
+			</CommentsContext>
+			<CommentsContext :id="16" :context="'ITEM 4.6'">
+				<div>
+					<p><b>4.6.</b> Remanejamentos para outros locais, ou mudanças de datas, quando por vontade do Agente, deverão ser solicitados à Supervisão para Assuntos de Governo Aberto, com as respectivas justificativas e comprovantes, quando necessário, no prazo de no máximo 5 (cinco) dias. </p>
 				</div>
 			</CommentsContext>
 		</section>
 		<section>
 			<h3 class="titulo" indent="2">5. DO CRONOGRAMA</h3>
-			<CommentsContext :id="15" :context="'ITEM 5.1'">
+			<CommentsContext :id="17" :context="'ITEM 5.1'">
 				<div>
-					<b>5.1.</b> O cronograma do programa “Agentes de Governo Aberto” seguirá as seguintes etapas:
+					<p><b>5.1.</b> O cronograma do programa “Agentes de Governo Aberto” seguirá as seguintes etapas:</p>
 					<ol type="a">
 					    <li>Período de inscrição de interessados;</li>
 					    <li>Publicação do resultado preliminar dos aprovados pela Comissão de Seleção;</li>
 					    <li>Prazo de recurso dos não aprovados;</li>
-					    <li>Publicação da homologação do resultado final;</li>
+					    <li>d)	Publicação da homologação do resultado final e resposta aos recursos impetrados;</li>
 					    <li>Assinatura dos Termos de Compromisso e evento solene de diplomação como “Agente de Governo Aberto 2019”;</li>
 					    <li>Execução das oficinas;</li>
 					    <li>Encerramento da edição 2019 do programa.</li>					    
 					</ol>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="16" :context="'ITEM 5.2'">
+			<CommentsContext :id="18" :context="'ITEM 5.2'">
 				<div>
-					<b>5.2.</b> O credenciamento dos Agentes terá validade a partir da homologação do seu resultado final publicado no Diário Oficial da Cidade até o dia 15 de dezembro de 2019;
+					<P><b>5.2.</b> O credenciamento dos Agentes terá validade a partir da homologação do seu resultado final publicado no Diário Oficial da Cidade até o dia 15 de dezembro de 2019;</P>
 				</div>
 			</CommentsContext>
 		</section>
 		<section>
 			<h3 class="titulo" indent="2">6. DAS CATEGORIAS DOS PROJETOS DE OFICINAS</h3>
-			<CommentsContext :id="17" :context="'ITEM 6.1'">
+			<CommentsContext :id="19" :context="'ITEM 6.1'">
 				<div>
-					<b>6.1.</b> Os projetos deverão ser adequados a uma das seguintes categorias:
+					<p><b>6.1.</b> Os projetos deverão ser adequados a uma das seguintes categorias:</p>
 					<p>
 						<b>6.1.1.</b> <b>Categoria 1 - Transparência, acesso à informação e política de dados abertos,</b> tendo como orientação exemplificativa a realização de oficinas relacionadas à temática de transparência ativa e passiva; à apresentação, uso e difusão de técnicas de pedido de acesso à informação; à realização de atividades de tratamento e análise de dados públicos, com diferentes formas de visualização e a reutilização de informações públicas; às atividades que utilizem as novas plataformas de Dados Abertos; às atividades relacionadas à utilização e coleta de dados do Portal da Transparência, do Diário Oficial da cidade de São Paulo e do Sistema de Orçamento e Finanças, dentre outras pertinentes ao tema.
 					</p>
@@ -172,23 +181,24 @@
 					</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="18" :context="'ITEM 6.2'">
+			<CommentsContext :id="20" :context="'ITEM 6.2'">
 				<div>
-					<b>6.2.</b> A Categoria deve estar indicada na capa do projeto e a adequação deve ser justificada de forma clara, estabelecendo quais conhecimentos e habilidades pretende desenvolver nos participantes e por qual motivo considera inseridas em uma das seis categorias.
+					<p><b>6.2.</b> A Categoria deve estar indicada na capa do projeto e a adequação deve ser justificada de forma clara, estabelecendo quais conhecimentos e habilidades pretende desenvolver nos participantes e por qual motivo considera inseridas em uma das seis categorias.</p>
 					<p>
 						<b>6.2.1.</b> Em caso de possibilidade de adequação a mais de uma categoria, o candidato deve escolher pela que considera mais adequada, podendo, entretanto, ressaltar em sua justificativa a múltipla adequação.
 					</p>
 					<p>
 						<b>6.2.2.</b> A Comissão de Seleção aprovará os melhores projetos por categoria, sendo 5 (cinco) bolsas para cada uma das categorias previstas pelos itens 6.1.1 ao 6.1.4 e 6 (seis) bolsas para as categorias 6.1.5 e 6.1.6.
 					</p>
+					<p><b>6.2.2.1</b>Caso o número de projetos recebidos seja menor que o número de bolsas conforme elencado no item 6.2.2, a Comissão de Seleção aprovará os projetos de outras categorias por ordem decrescente.</p>
 				</div>
 			</CommentsContext>
 		</section>
 		<section>
 			<h3 class="titulo" indent="2">7. DAS ATRIBUIÇÕES DO AGENTE DE GOVERNO ABERTO</h3>
-			<CommentsContext :id="19" :context="'ITEM 7.1'">
+			<CommentsContext :id="21" :context="'ITEM 7.1'">
 				<div>
-					<b>7.1.</b> O Agente de Governo Aberto selecionado terá como atribuições:
+					<p><b>7.1.</b> O Agente de Governo Aberto selecionado terá como atribuições:</p>
 					<p>
 						<b>7.1.1.</b> Realizar 60 (sessenta) horas de atividades, na proporção de 40 horas (quarenta) horas de atividades presenciais com aplicação de metodologias ativas e 20 (vinte) horas de atividades de planejamento, conforme descrito no Anexo V (Projeto de Atividade), apresentado e selecionado, e no Plano de Trabalho elaborado em conformidade com as diretrizes do Núcleo de Gestão do Edital (item 9.5, b);
 						<p>
@@ -226,9 +236,9 @@
 					</p>
 				</div>
 			</CommentsContext>
-	 		<CommentsContext :id="20" :context="'ITEM 7.2'">
+	 		<CommentsContext :id="22" :context="'ITEM 7.2'">
 	 			<div>
-	 				<b>7.2.</b> Após aprovação pela Comissão de Seleção, a equipe Supervisão para Assuntos de Governo Aberto poderá adequar o título da oficina, seu formato e duração para melhor atender ao interesse público.
+	 				<p><b>7.2.</b> Após aprovação pela Comissão de Seleção, a equipe Supervisão para Assuntos de Governo Aberto poderá adequar o título da oficina, seu formato e duração para melhor atender ao interesse público.</p>
 	 				<p>
 	 					<b>7.2.1.</b> O Agente poderá participar junto à equipe da Supervisão para Assuntos de Governo Aberto das discussões sobre eventuais alterações em seu projeto, e seus posicionamentos e colocações deverão ser atendidos na maior medida possível, respeitada, primordialmente, o interesse público e objetivos do programa.
 	 				</p>
@@ -237,22 +247,22 @@
 	 				</p>
 	 			</div>
 			</CommentsContext>
-			<CommentsContext :id="21" :context="'ITEM 7.3'">
+			<CommentsContext :id="23" :context="'ITEM 7.3'">
 				<div>
-					<b>7.3.</b> A realização das oficinas deverá contemplar ao máximo possível as diversas regiões da cidade, nas áreas de abrangência das Subprefeituras, sendo vedada a concentração da mesma oficina no território de uma única Subprefeitura.
+					<p><b>7.3.</b> A realização das oficinas deverá contemplar ao máximo possível as diversas regiões da cidade, nas áreas de abrangência das Subprefeituras, sendo vedada a concentração da mesma oficina no território de uma única Subprefeitura.</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="22" :context="'ITEM 7.4'">
+			<CommentsContext :id="24" :context="'ITEM 7.4'">
 				<div>
-					<b>7.4.</b> As ações dos Agentes deverão ser desenvolvidas visando a inclusão de diferentes públicos e atendendo às diversidades sociais.
+					<p><b>7.4.</b> As ações dos Agentes deverão ser desenvolvidas visando a inclusão de diferentes públicos e atendendo às diversidades sociais.</p>
 				</div>
 			</CommentsContext>
 		</section>
 		<section>
 			<h3 class="titulo" indent="2">8. DAS EXIGÊNCIAS PARA PARTICIPAÇÃO</h3>
-			<CommentsContext :id="23" :context="'ITEM 8.1'">
+			<CommentsContext :id="25" :context="'ITEM 8.1'">
 				<div>
-					<b>8.1.</b> Poderão participar do credenciamento pessoas:
+					<p><b>8.1.</b> Poderão participar do credenciamento pessoas:</p>
 					<ol type="a">
 					    <li>maiores de 18 (dezoito) anos, sem restrição máxima de idade;</li>
 						<li>que comprovem domicílio, vínculo de estudo ou vínculo de trabalho no município de São Paulo;</li>
@@ -261,9 +271,9 @@
 					</ol>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="24" :context="'ITEM 8.2'">
+			<CommentsContext :id="26" :context="'ITEM 8.2'">
 				<div>
-					<b>8.2.</b> Não poderão participar:
+					<p><b>8.2.</b> Não poderão participar:</p>
 					<ol type="a">
 						<li>pessoas físicas que não cumprirem todas as exigências do item 8.1 deste Edital;</li>
 						<li>funcionários públicos da Administração Direta e Indireta da Prefeitura de São Paulo;</li>
@@ -273,53 +283,53 @@
 					</ol>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="25" :context="'ITEM 8.3'">
+			<CommentsContext :id="27" :context="'ITEM 8.3'">
 				<div>
-					<b>8.3.</b> É imprescindível que o Agente possua ou esteja em condições de abrir conta corrente no Banco do Brasil para recebimento da bolsa.
+					<p><b>8.3.</b> É imprescindível que o Agente possua ou esteja em condições de abrir conta corrente no Banco do Brasil para recebimento da bolsa.</p>
 				</div>				
 			</CommentsContext>
-			<CommentsContext :id="26" :context="'ITEM 8.4'">
+			<CommentsContext :id="28" :context="'ITEM 8.4'">
 				<div>
-					<b>8.4.</b> Os Agentes credenciados poderão participar de outros projetos e programas financiados pela Prefeitura de São Paulo, desde que não correspondam ao mesmo projeto a ser desenvolvido no âmbito do programa Agentes de Governo Aberto e desde que o financiamento pelo programa não apresente impeditivo para esta contratação.
+					<p><b>8.4.</b> Os Agentes credenciados poderão participar de outros projetos e programas financiados pela Prefeitura de São Paulo, desde que não correspondam ao mesmo projeto a ser desenvolvido no âmbito do programa Agentes de Governo Aberto e desde que o financiamento pelo programa não apresente impeditivo para esta contratação.</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="27" :context="'ITEM 8.5'">
+			<CommentsContext :id="29" :context="'ITEM 8.5'">
 				<div>
-					<b>8.5.</b> O Agente selecionado deverá ter no mínimo 1 (um) dia útil da semana em horário comercial livre para realizar as oficinas formativas.
+					<p><b>8.5.</b> O Agente selecionado deverá ter no mínimo 1 (um) dia útil da semana em horário comercial livre para realizar as oficinas formativas.</p>
 				</div>
 			</CommentsContext>
 		</section>
 		<section>
 			<h3 class="titulo" indent="2">9. DAS INSCRIÇÕES DOS AGENTES DE GOVERNO ABERTO</h3>
-			<CommentsContext :id="28" :context="'ITEM 9.1'">
+			<CommentsContext :id="30" :context="'ITEM 9.1'">
 				<div>
-					<b>9.1.</b> Para a inscrição será realizada online, o projeto deverá ser enviado por meio da plataforma SP CULTURA (http://spcultura.prefeitura.sp.gov.br/).
+					<p><b>9.1.</b> Para a inscrição será realizada online, o projeto deverá ser enviado por meio da plataforma SP CULTURA (http://spcultura.prefeitura.sp.gov.br/).</p>
 					<p>
-						<b>9.1.1.</b> Excepcionalmente, a inscrição poderá também ser realizada por meio físico, <mark>no dia 12 de abril de 2019, das 10h às 17h, na sede da Secretaria do Governo Municipal (Edifício Matarazzo - Viaduto do Chá, n° 15, 7ª andar)</mark>, devendo ser entregues todos os documentos requeridos para a inscrição, conforme disposto no item 9.5 deste Edital.
+						<b>9.1.1.</b> Excepcionalmente, a inscrição poderá também ser realizada por meio físico, <mark>no dia xx de abril de 2019, das 10h às 17h, na sede da Supervisão para Assuntos de Governo Aberto na Secretaria do Governo Municipal (Edifício Matarazzo - Viaduto do Chá, n° 15, 7ª andar)</mark>, devendo ser entregues todos os documentos requeridos para a inscrição, conforme disposto no item 9.5 deste Edital.
 					</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="29" :context="'ITEM 9.2'">
+			<CommentsContext :id="31" :context="'ITEM 9.2'">
 				<div>
-					<b>9.2.</b> O candidato deve se cadastrar na Plataforma SP Cultura como “Agente”, clicando no link “Entrar”, criando uma conta com nome, sobrenome, e-mail e senha e preenchendo todos os campos no respectivo perfil de Agente.
+					<p><b>9.2.</b> O candidato deve se cadastrar na Plataforma SP Cultura como “Agente”, clicando no link “Entrar”, criando uma conta com nome, sobrenome, e-mail e senha e preenchendo todos os campos no respectivo perfil de Agente.</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="30" :context="'ITEM 9.3'">
+			<CommentsContext :id="32" :context="'ITEM 9.3'">
 				<div>
-					<b>9.3.</b> No campo “Projetos”, o Agente deverá localizar “Agentes de Governo Aberto 2019”, utilizando o filtro “Editais”.
+					<p><b>9.3.</b> No campo “Projetos”, o Agente deverá localizar “Agentes de Governo Aberto 2019”, utilizando o filtro “Editais”.</p>
 					<p>
 						<b>9.3.1.</b> Apenas Agentes com cadastro devidamente preenchido na plataforma SP CULTURA (item 9.2) terão acesso ao processo de inscrição e poderão enviar seu projeto.
 					</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="31" :context="'ITEM 9.4'">
+			<CommentsContext :id="33" :context="'ITEM 9.4'">
 				<div>
-					<b>9.4.</b> O Agente deverá selecionar uma das categorias elencadas no item 6.1 e observadas as temáticas estabelecidas no item 2.2.
+					<p><b>9.4.</b> O Agente deverá selecionar uma das categorias elencadas no item 6.1 e observadas as temáticas estabelecidas no item 2.2.</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="32" :context="'ITEM 9.5'">
+			<CommentsContext :id="34" :context="'ITEM 9.5'">
 				<div>
-					<b>9.5.</b> O Agente deverá anexar na sua inscrição na plataforma SP Cultura as seguintes informações:
+					<p><b>9.5.</b> O Agente deverá anexar na sua inscrição na plataforma SP Cultura as seguintes informações:</p>
 					<ol type="a">
 						<li>Declaração de Aceite das condições do Edital (Anexo I);</li>
 						<li>Projeto de Atividade seguindo modelo do Anexo V, com, no máximo, 5 (cinco) páginas, <b>respeitado o dever de anonimato</b> estabelecido pelo item 9.5.b.1, trazendo o detalhamento das atividades a serem desenvolvidas e contendo os seguintes itens obrigatórios: 
@@ -346,62 +356,62 @@
 					</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="33" :context="'ITEM 9.6'">
+			<CommentsContext :id="35" :context="'ITEM 9.6'">
 				<div>
-					<b>9.6.</b> Depois de finalizadas as etapas anteriores, o Agente deverá confirmar sua inscrição clicando em “Enviar Inscrição”, cessando sua autonomia para alterar os arquivos, complementar ou substituir informações de seu projeto.
+					<p><b>9.6.</b> Depois de finalizadas as etapas anteriores, o Agente deverá confirmar sua inscrição clicando em “Enviar Inscrição”, cessando sua autonomia para alterar os arquivos, complementar ou substituir informações de seu projeto.</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="34" :context="'ITEM 9.7'">
+			<CommentsContext :id="36" :context="'ITEM 9.7'">
 				<div>
-					<b>9.7.</b> Para conferir o envio de sua inscrição e certificar-se de que está efetivamente cadastrado, o Agente poderá acessar o item “Minhas Inscrições” em seu Painel de Controle e verificar se a respectiva inscrição ao Edital está marcada como “enviada”.
+					<p><b>9.7.</b> Para conferir o envio de sua inscrição e certificar-se de que está efetivamente cadastrado, o Agente poderá acessar o item “Minhas Inscrições” em seu Painel de Controle e verificar se a respectiva inscrição ao Edital está marcada como “enviada”.</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="35" :context="'ITEM 9.8'">
+			<CommentsContext :id="37" :context="'ITEM 9.8'">
 				<div>
-					<b>9.8.</b> Serão desclassificados os candidatos que não apresentarem todos os documentos solicitados no item 9.5 deste Edital ou que não se enquadrarem nas exigências de participação descritas no item 8.
+					<p><b>9.8.</b> Serão desclassificados os candidatos que não apresentarem todos os documentos solicitados no item 9.5 deste Edital ou que não se enquadrarem nas exigências de participação descritas no item 8.</p>
 					<p><b>9.8.1.</b> - Serão desclassificados, também, os candidatos que de qualquer forma se identificarem no Projeto de Atividade, <b>devendo ser mantido o anonimato</b> para o julgamento pela Comissão.</p>
 					<p><b>9.8.2.</b> - O candidato que de qualquer forma tentar burlar o caráter anônimo do julgamento pela Comissão será desclassificado e a ele poderá ser atribuída a pena estabelecida pelo item 16.1.d de declaração de inidoneidade, sem prejuízo das demais consequências criminais.</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="36" :context="'ITEM 9.9'">
+			<CommentsContext :id="38" :context="'ITEM 9.9'">
 				<div>
-					<b>9.9.</b> Cada Agente poderá realizar no máximo 1 (uma) inscrição de projeto por categoria.
+					<p><b>9.9.</b> Cada Agente poderá realizar no máximo 1 (uma) inscrição de projeto por categoria.</p>
 					<p><b>9.9.1.</b> Desrespeitada essa regra, apenas o primeiro cadastro será considerado.</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="37" :context="'ITEM 9.10'">
+			<CommentsContext :id="39" :context="'ITEM 9.10'">
 				<div>
-					<b>9.10.</b>. Caso existam outras pessoas que colaboraram com o projeto inscrito pelo Agente, os nomes poderão ser indicados na Ficha de Identificação (Anexo IV).
+					<p><b>9.10.</b> Caso existam outras pessoas que colaboraram com o projeto inscrito pelo Agente, os nomes poderão ser indicados na Ficha de Identificação (Anexo IV).</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="38" :context="'ITEM 9.11'">
+			<CommentsContext :id="40" :context="'ITEM 9.11'">
 				<div>
-					<b>9.11.</b>. É vedada a recandidatura de projetos idênticos aos aprovados nas edições anteriores do programa e o plágio de qualquer tipo, sujeitando o Agente à desclassificação imediata
+					<p><b>9.11.</b> É vedada a recandidatura de projetos idênticos aos aprovados nas edições anteriores do programa e o plágio de qualquer tipo, sujeitando o Agente à desclassificação imediata.</p>
 					<p><b>9.11.1.</b> Em caso de plágio o autor plagiado deverá ser informado da utilização de seu trabalho e a pena de declaração de inidoneidade estabelecida pelo item 16.1.d poderá ser aplicada ao candidato sem prejuízo das demais consequências jurídicas estabelecidas por lei.</p>
 				</div>
 			</CommentsContext>
 		</section>
 		<section>
 			<h3 class="titulo" indent="2">10. DA COMISSÃO DE SELEÇÃO E SUAS ATRIBUIÇÕES</h3>
-			<CommentsContext :id="39" :context="'ITEM 10.1'">
+			<CommentsContext :id="41" :context="'ITEM 10.1'">
 				<div>
-					<b>10.1</b>. A avaliação dos projetos será realizada por uma <b>Comissão de Seleção</b> composta por 7 (sete) membros, conforme definido pela Portaria Conjunta Nº XX/2019 – SGM/CGM, sendo 01 (um) indicado pela Controladoria Geral do Município, 01 (um) indicado pela Secretaria Municipal de Inovação e Tecnologia, 01 (um) indicado pela Secretaria Municipal de Educação, 01 (um) indicado pela Secretaria Municipal de Direitos Humanos e Cidadania, 01 (um) indicado pela Secretaria Municipal de Gestão, 01 (um) indicado pela Secretaria do Governo Municipal e 01 (um) indicado pela Secretaria Municipal de Urbanismo e Licenciamento.
-					<p><b>10.2.1.</b> O Núcleo de Gestão do Edital, ao receber os arquivos do projeto e dos documentos exigidos no item 9.5, atribuirá ao candidato um número de cadastro e enviará para a Comissão de Seleção apenas o arquivo do projeto enumerado, assim, sem qualquer identificação dos dados pessoais do candidato, garantindo, assim, seu anonimato.</p>
-					<p><b>10.2.</b> A Comissão de Seleção é soberana e decidirá, no âmbito de sua competência pelos 32 projetos que melhor atendem às diretrizes e objetivos estabelecidos no item 2, e os critérios de seleção estabelecidos pelo item 11, cabendo recurso no prazo de 2 (dois) dias contados da publicação da lista preliminar de credenciados.</p>
-					<p><b>10.2.1.</b> O recurso deverá ser endereçado ao Núcleo de Gestão do Edital instituído pela Portaria Conjunta nº XXX/2019 SGM/CGM, nos termos do item XXX da Portaria.</p>
+					<p><b>10.1</b> A avaliação dos projetos será realizada por uma <b>Comissão de Seleção</b> composta por 7 (sete) membros, conforme definido pela <mark>Portaria Conjunta Nº XX/2019 – SGM/CGM</mark>, sendo 01 (um) indicado pela Controladoria Geral do Município, 01 (um) indicado pela Secretaria Municipal de Inovação e Tecnologia, 01 (um) indicado pela Secretaria Municipal de Educação, 01 (um) indicado pela Secretaria Municipal de Direitos Humanos e Cidadania, 01 (um) indicado pela Secretaria Municipal de Gestão, 01 (um) indicado pela Secretaria do Governo Municipal e 01 (um) indicado pela Secretaria Municipal de Urbanismo e Licenciamento.</p>
+					<p><b>10.2.</b> O Núcleo de Gestão do Edital, ao receber os arquivos do projeto e dos documentos exigidos no item 9.5, atribuirá ao candidato um número de cadastro e enviará para a Comissão de Seleção apenas o arquivo do projeto enumerado, assim, sem qualquer identificação dos dados pessoais do candidato, garantindo, assim, seu anonimato.</p>
+					<p><b>10.3.</b> A Comissão de Seleção é soberana e decidirá, no âmbito de sua competência pelos 32 projetos que melhor atendem às diretrizes e objetivos estabelecidos no item 2, e os critérios de seleção estabelecidos pelo item 11, cabendo recurso no prazo de 2 (dois) dias contados da publicação da lista preliminar de credenciados.</p>
+					<p><b>10.4.</b> O recurso deverá ser endereçado ao Núcleo de Gestão do Edital instituído pela <mark>Portaria Conjunta nº XXX/2019 SGM/CGM, nos termos do item XXX da Portaria</mark>.</p>
 				</div>
 			</CommentsContext>
 		</section>
 		<section>
 			<h3 class="titulo" indent="2">11. DOS CRITÉRIOS DE SELEÇÃO</h3>
-			<CommentsContext :id="40" :context="'ITEM 11.1'">
+			<CommentsContext :id="42" :context="'ITEM 11.1'">
 				<div>
-					<b>11.1.</b> A Comissão de Seleção avaliará e classificará os projetos inscritos por categoria conforme item 6, considerando as diretrizes, os objetivos e as exigências especificadas neste Edital.
+					<p><b>11.1.</b> A Comissão de Seleção avaliará e classificará os projetos inscritos por categoria conforme item 6, considerando as diretrizes, os objetivos e as exigências especificadas neste Edital.</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="41" :context="'ITEM 11.2'">
+			<CommentsContext :id="43" :context="'ITEM 11.2'">
 				<div>
-					<b>11.2.</b> Os critérios adotados para a avaliação dos projetos e as respectivas pontuações são:
+					<p><b>11.2.</b> Os critérios adotados para a avaliação dos projetos e as respectivas pontuações são:</p>
 					<table>
 					  <tr>
 					    <th><br><br>Critérios<br><br></th>
@@ -449,9 +459,9 @@
 					</table>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="42" :context="'ITEM 11.3'">
+			<CommentsContext :id="44" :context="'ITEM 11.3'">
 				<div>
-					<b>11.3.</b> Feita a avaliação técnica dos projetos e do Agente, se for o caso, será aplicada a pontuação extra conforme o critério abaixo:
+					<p><b>11.3.</b> Feita a avaliação técnica dos projetos e do Agente, se for o caso, será aplicada a pontuação extra conforme o critério abaixo:</p>
 					<table>
 						<tr>
 							<th colspan="2">Pontuação Extra: Os projetos receberão pontuação extra caso o Agente atenda ao requisito abaixo:</th>
@@ -463,37 +473,37 @@
 					</table>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="43" :context="'ITEM 11.4'">
+			<CommentsContext :id="45" :context="'ITEM 11.4'">
 				<div>
-					<b>11.4.</b> Os candidatos que comprovarem moradia nos territórios classificados como mais vulneráveis, conforme as definições estabelecidas pelo Índice Paulista de Vulnerabilidade Social - IPVS 2015, da Fundação Sistema Estadual de Análise de Dados – SEADE, especificamente os “grupos 3, 4, 5 e 6”, tendo em vista a finalidade de expansão do Programa “Agentes de Governo Aberto”, receberão um ponto extra após a avaliação dos demais critérios estabelecidos neste edital.
+					<p><b>11.4.</b> Os candidatos que comprovarem moradia nos territórios classificados como mais vulneráveis, conforme as definições estabelecidas pelo Índice Paulista de Vulnerabilidade Social - IPVS 2015, da Fundação Sistema Estadual de Análise de Dados – SEADE, especificamente os “grupos 3, 4, 5 e 6”, tendo em vista a finalidade de expansão do Programa “Agentes de Governo Aberto”, receberão um ponto extra após a avaliação dos demais critérios estabelecidos neste edital.</p>
 					<p><b>11.4.1.</b> O Índice Paulista de Vulnerabilidade Social - IPVS 2015 encontra-se disponível em:
 					&lt;<a target="_blank" href="http://www.prefeitura.sp.gov.br/cidade/secretarias/upload/assistencia_social/arquivos/atlas_socioassistencial_sp_2015.pdf">http://www.prefeitura.sp.gov.br/cidade/secretarias/upload/<br />assistencia_social/arquivos/atlas_socioassistencial_sp_2015.pdf</a>&gt; e disponível também no site do Geosampa: <a href="http://geosampa.prefeitura.sp.gov.br/PaginasPublicas/_SBC.aspx" target="_blank">http://geosampa.prefeitura.sp.gov.br/PaginasPublicas/_SBC.aspx</a>
 					</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="44" :context="'ITEM 11.5'">
+			<CommentsContext :id="46" :context="'ITEM 11.5'">
 				<div>
-					<b>11.5.</b> Os projetos serão classificados em ordem decrescente de pontos.
+					<p><b>11.5.</b> Os projetos serão classificados em ordem decrescente de pontos.</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="45" :context="'ITEM 11.6'">
+			<CommentsContext :id="47" :context="'ITEM 11.6'">
 				<div>
-					<b>11.6.</b> Serão classificados somente projetos que obtiverem nota mínima de 6,0 (seis) pontos.
+					<p><b>11.6.</b> Serão classificados somente projetos que obtiverem nota mínima de 6,0 (seis) pontos.</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="46" :context="'ITEM 11.7'">
+			<CommentsContext :id="48" :context="'ITEM 11.7'">
 				<div>
-					<b>11.7.</b> Caso o Agente tenha sido classificado em mais de uma categoria, será selecionado para participar do programa Agentes de Governo Aberto um único projeto, escolhendo-se o melhor classificado.
+					<p><b>11.7.</b> Caso o Agente tenha sido classificado em mais de uma categoria, será selecionado para participar do programa Agentes de Governo Aberto um único projeto, escolhendo-se o melhor classificado.</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="47" :context="'ITEM 11.8'">
+			<CommentsContext :id="49" :context="'ITEM 11.8'">
 				<div>
-					<b>11.8.</b> Caso não haja o mínimo de projetos aprovados por categoria, conforme estabelecido pelo item 6.1, serão selecionados projetos de outras categorias, conforme a ordem decrescente de pontos dos projetos aprovados em todo o programa.
+					<p><b>11.8.</b> Caso não haja o mínimo de projetos aprovados por categoria, conforme estabelecido pelo item 6.1, serão selecionados projetos de outras categorias, conforme a ordem decrescente de pontos dos projetos aprovados em todo o programa.</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="48" :context="'ITEM 11.9'">
+			<CommentsContext :id="50" :context="'ITEM 11.9'">
 				<div>
-					<b>11.9.</b> Havendo empate na nota final, terá preferência o projeto: 
+					<p><b>11.9.</b> Havendo empate na nota final, terá preferência o projeto:</p> 
 					<ol type="a">
 						<li>que possuir a maior pontuação no critério <b>“Interesse público do projeto”</b>;</li>
 						<li>que possuir a maior pontuação no critério <b>“Avaliação da experiência na categoria escolhida”</b>;</li>
@@ -504,13 +514,13 @@
 		</section>
 		<section>
 			<h3 class="titulo" indent="2">12. DO RESULTADO FINAL E DO RECURSO</h3>
-			<CommentsContext :id="49" :context="'ITEM 12.1'">
+			<CommentsContext :id="51" :context="'ITEM 12.1'">
 				<div>
-					<b>12.1.</b> A lista de Agentes e respectivos projetos classificados, será publicada no Diário Oficial da Cidade de São Paulo com a pontuação em ordem decrescente.
+					<p><b>12.1.</b> A lista de Agentes e respectivos projetos classificados, será publicada no Diário Oficial da Cidade de São Paulo com a pontuação em ordem decrescente.</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="50" :context="'ITEM 12.2'">
-				<div><b>12.2.</b> Caberá recurso do resultado no prazo de 5 (cinco) dias úteis da publicação do resultado no Diário Oficial da Cidade de São Paulo, dirigido ao Núcleo de Gestão do Edital do programa Agentes de Governo Aberto, a ser entregue em via física impressa e assinada, pessoalmente na Secretaria do Governo Municipal <mark>(Viaduto do Chá, n°15 – Edifício Matarazzo, 7º andar, das 10h às 17h).</mark>
+			<CommentsContext :id="52" :context="'ITEM 12.2'">
+				<div><p><b>12.2.</b> Caberá recurso do resultado no prazo de 5 (cinco) dias úteis da publicação do resultado no Diário Oficial da Cidade de São Paulo, dirigido ao Núcleo de Gestão do Edital do programa Agentes de Governo Aberto, a ser entregue em via física impressa e assinada, pessoalmente na <mark>Supervisão para Assuntos de Governo Aberto na Secretaria do Governo Municipal (Viaduto do Chá, n°15 – Edifício Matarazzo, 7º andar, das 10h às 17h)</mark>.</p>
 					<p><b>12.2.1.</b> O Núcleo de Gestão do Edital irá reconvocar a Comissão de Seleção para que avalie os eventuais recursos.</p>
 					<p><b>12.2.2.</b> O Agente deverá ser objetivo e consistente em seu recurso.</p>
 					<p><b>12.2.3.</b> Não serão conhecidos recursos enviados pelo correio, fac-símile, correio eletrônico ou qualquer outro meio de comunicação.</p>
@@ -525,41 +535,41 @@
 					</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="51" :context="'ITEM 12.3'">
+			<CommentsContext :id="53" :context="'ITEM 12.3'">
 				<div>
-					<b>12.3.</b> A Comissão de Seleção terá o prazo de 5 (cinco) dias úteis para análise do recurso.
+					<p><b>12.3.</b> A Comissão de Seleção terá o prazo de 5 (cinco) dias úteis para análise do recurso.</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="52" :context="'ITEM 12.4'">
+			<CommentsContext :id="54" :context="'ITEM 12.4'">
 				<div>
-					<b>12.4.</b> As respostas de todos os recursos, quer procedentes ou improcedentes, serão levadas ao conhecimento dos inscritos na edição 2019 do Programa Agentes de Governo Aberto, por meio do site da Secretaria do Governo Municipal e o Diário Oficial da Cidade de São Paulo.
+					<p><b>12.4.</b> As respostas de todos os recursos, quer procedentes ou improcedentes, serão levadas ao conhecimento dos inscritos na edição 2019 do Programa Agentes de Governo Aberto, por meio do site da Secretaria do Governo Municipal e o Diário Oficial da Cidade de São Paulo.</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="53" :context="'ITEM 12.5'">
+			<CommentsContext :id="55" :context="'ITEM 12.5'">
 				<div>
-					<b>12.5.</b> Decididos os recursos, o certame será homologado pelas autoridades competentes.
+					<p><b>12.5.</b> Decididos os recursos, o certame será homologado pelas autoridades competentes.</p>
 				</div>
 			</CommentsContext>
 		 </section>
 		 <section>
 		  	<h3 class="titulo" indent="2">13. DAS CONDIÇÕES DE CONTRATAÇÃO DE AGENTES</h3>
-		  	<CommentsContext :id="54" :context="'ITEM 13.1'">
+		  	<CommentsContext :id="56" :context="'ITEM 13.1'">
 		  		<p>
 		  			<b>13.1.</b> A contratação de cada Agente de Governo Aberto será feita por processo administrativo próprio com fundamento no caput do artigo 25 da Lei Federal nº 8.666/93, que ficará vinculado ao Processo SEI nº 6073.2019/0000062-2;
 		  		</p>
 		  	</CommentsContext>
-		  	<CommentsContext :id="55" :context="'ITEM 13.2'">
+		  	<CommentsContext :id="57" :context="'ITEM 13.2'">
 		  		<p>
 		  			<b>13.2.</b> O apoio financeiro concedido aos projetos selecionados será repassado diretamente ao respectivo Agente.
 		  		</p>
 		  	</CommentsContext>
-		  	<CommentsContext :id="56" :context="'ITEM 13.3'">
+		  	<CommentsContext :id="58" :context="'ITEM 13.3'">
 		  		<p>
 		  			<b>13.3.</b> Após a aprovação na seleção, os Agentes receberão os recursos em parcelas mensais e proporcionais às horas realizadas conforme item 3, subsequentes à assinatura do Termo de Compromisso no período proposto pelo Núcleo de Gestão do Edital. 
 		  			<p><b>13.3.1.</b> O Agente deverá fornecer seus dados bancários da conta corrente do Banco do Brasil para o recebimento da bolsa, conforme item 8.3.</p>
 		  		</p>
 		  	</CommentsContext>
-		  	<CommentsContext :id="57" :context="'ITEM 13.4'">
+		  	<CommentsContext :id="59" :context="'ITEM 13.4'">
 		  		<p>
 		  			<b>13.4.</b> Haverá convocação dos Agentes selecionados por meio de correspondência eletrônica, com inequívoca ciência e prazo de até <b>5 (cinco) dias úteis</b> após o recebimento para confirmação do interesse na contratação. Firmado o interesse, deverão ser apresentados, em data a ser agendada pela Supervisão para Assuntos de Governo Aberto, os documentos relacionados a seguir:
 		  			<p>
@@ -580,23 +590,23 @@
 							<a href="http://www.receita.fazenda.gov.br/Aplicacoes/ATSPO/Certidao/CndConjuntaInter/InformaNICertidao.asp?Tipo=2" target="_blank">http://www.receita.fazenda.gov.br/Aplicacoes/ATSPO/Certidao/CndConjuntaInter/InformaNICertidao.asp?Tipo=2</a>.</li>
 						</ol>
 							<p>
-								<b>13.4.1.</b> Os documentos deverão ser entregues na Secretaria do Governo Municipal - Supervisão para Assuntos de Governo Aberto (Viaduto do Chá, n° 15 – Edifício Matarazzo, 7º andar).
+								<b>13.4.1.</b> Os documentos deverão ser entregues na <mark>Supervisão para Assuntos de Governo Aberto na Secretaria do Governo Municipal (Viaduto do Chá, n° 15 – Edifício Matarazzo, 7º andar)</mark>.
 							</p>
 		  			</p>
 		  		</p>	
 		  	</CommentsContext>
-		  	<CommentsContext :id="58" :context="'ITEM 13.5'">
+		  	<CommentsContext :id="60" :context="'ITEM 13.5'">
 		  		<p>
 		  			<b>13.5.</b> Na falta de documentação ou na hipótese de desistência do interessado no prazo estabelecido será convocado outro Agente, de acordo com a ordem de classificação.
 		  			<p><b>13.5.1.</b> Nas hipóteses de desistência posteriores ao prazo do item 13.4, a substituição fica a critério do Núcleo de Gestão do Edital, podendo ser convocados outros Agentes, respeitando-se a ordem de classificação. </p>
 		  		</p>
 		  	</CommentsContext>
-		  	<CommentsContext :id="59" :context="'ITEM 13.6'">
+		  	<CommentsContext :id="61" :context="'ITEM 13.6'">
 		  		<p>
 		  			<b>13.6.</b> Não poderão ser contratados aqueles que tiverem pendências no Cadastro Informativo Municipal – CADIN, aprovado pela Lei nº. 14.094 de 06 de dezembro de 2005 e regulamentado pelo Decreto nº. 47.096 de 21 de março de 2006.
 		  		</p>
 		  	</CommentsContext>
-		  	<CommentsContext :id="60" :context="'ITEM 13.7'">
+		  	<CommentsContext :id="62" :context="'ITEM 13.7'">
 		  		<p>
 		  			<b>13.7.</b> Fica a critério da Administração Pública realizar filmagens e fotografia das atividades desenvolvidas pelos Agentes durante a execução das oficinas.
 		  		</p>
@@ -605,14 +615,14 @@
 
 		<section>
 			<h3 class="titulo" indent="2">14. DO ACOMPANHAMENTO E DA PRESTAÇÃO DE CONTAS</h3>
-			<CommentsContext :id="61" :context="'ITEM 14.1'">
+			<CommentsContext :id="63" :context="'ITEM 14.1'">
 				<div>
-					<b>14.1.</b> Após a entrega da documentação, os Agentes elaborarão um Plano de Trabalho das atividades em conjunto com o Núcleo de Gestão do Edital, com a possibilidade de adequação do público-alvo, cronograma, metodologia e categoria relacionada.
+					<p><b>14.1.</b> Após a entrega da documentação, os Agentes elaborarão um Plano de Trabalho das atividades em conjunto com o Núcleo de Gestão do Edital, com a possibilidade de adequação do público-alvo, cronograma, metodologia e categoria relacionada.</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="62" :context="'ITEM 14.2'">
+			<CommentsContext :id="64" :context="'ITEM 14.2'">
 				<div>
-					<b>14.2.</b> Para que se proceda o pagamento, os Agentes deverão comprovar a realização de cada atividade formativa, de acordo com os itens 7.1.2, 7.1.3, 7.1.5 e 7.1.6, apresentando para cada uma delas:
+					<p><b>14.2.</b> Para que se proceda o pagamento, os Agentes deverão comprovar a realização de cada atividade formativa, de acordo com os itens 7.1.2, 7.1.3, 7.1.5 e 7.1.6, apresentando para cada uma delas:</p>
 					<ol type="a">
 						<li>Lista de presença formal (modelo padrão fornecido pela Supervisão para Assuntos de Governo Aberto, entregue em via digitalizada e física original);</li>
 						<li>Registros fotográficos que permitam a visualização do local, do próprio Agente e do público presente (mínimo 3 fotos);</li>
@@ -623,20 +633,20 @@
 
 					<p><b>14.2.2.</b> A lista de presença física original poderá ser apresentada posteriormente, tendo como prazo o mês subsequente ao da realização da oficina, sendo suficiente, de imediato, a apresentação de lista digitalizada para fins de liberação do pagamento.</p>
 
-					<span><b>14.2.3.</b> As fotografias têm finalidade de prestação de contas e é vedada a sua utilização para fins externos, exceto mediante autorização do Núcleo de Gestão do Edital.
+					<p><b>14.2.3.</b> As fotografias têm finalidade de prestação de contas e é vedada a sua utilização para fins externos, exceto mediante autorização do Núcleo de Gestão do Edital.</p>
 					<p><b>14.2.3.1.</b> Em caso de autorização da utilização das imagens para fins externos e ou publicações da PMSP, a foto deve ser respaldada por Termo de Autorização de Uso de Imagem (Anexo III) assinado pelos participantes da oficina que estiverem na foto.</p>
 					</span>
 					<p><b>14.2.4.</b> O pagamento das horas de Planejamento está condicionado às entregas elencadas no item 14.2 e observado o item 3.2.1.</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="62" :context="'ITEM 14.4'">
+			<CommentsContext :id="65" :context="'ITEM 14.4'">
 				<div>
-					<b>14.4.</b> No caso da impossibilidade de apresentação dos documentos obrigatórios acima elencados, o Agente poderá apresentar outros elementos comprobatórios da realização das oficinas que serão analisados pelo fiscal do contrato caso a caso, ficando o aceite e aprovação a cargo deste para efeitos de liberação de pagamento, não elidindo possibilidade de aplicação de penalidade por descumprimento contratual.
+					<p><b>14.4.</b> No caso da impossibilidade de apresentação dos documentos obrigatórios acima elencados, o Agente poderá apresentar outros elementos comprobatórios da realização das oficinas que serão analisados pelo fiscal do contrato caso a caso, ficando o aceite e aprovação a cargo deste para efeitos de liberação de pagamento, não elidindo possibilidade de aplicação de penalidade por descumprimento contratual.</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="63" :context="'ITEM 14.5'">
+			<CommentsContext :id="66" :context="'ITEM 14.5'">
 				<div>
-					<b>14.5.</b> Os Agentes selecionados deverão comparecer a todos os encontros formativos do programa Agentes de Governo Aberto, nas seguintes datas:<br>
+					<p><b>14.5.</b> Os Agentes selecionados deverão comparecer a todos os encontros formativos do programa Agentes de Governo Aberto, nas seguintes datas:</p><br>
 					<table>
 						<tr align=center>
 							<th></th>
@@ -676,19 +686,19 @@
 					<p><b>14.5.5.</b> Os Agentes que tiverem oficinas formativas agendadas por ele ou pela Supervisão para Assuntos de Governo Aberto no dia e horário dos Encontros Formativos terão suas faltas justificadas por meio de envio de documentação comprobatória da realização da oficina, conforme o item 14.2.</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="64" :context="'ITEM 14.6'">
+			<CommentsContext :id="67" :context="'ITEM 14.6'">
 				<div>
-					<b>14.6.</b> Os Agentes deverão entregar ao Núcleo de Gestão do Edital 1 (um) Relatório Final de desenvolvimento das oficinas formativas realizadas durante o ciclo, conforme o padrão determinado pelo Núcleo de Gestão do Edital.
+					<p><b>14.6.</b> Os Agentes deverão entregar ao Núcleo de Gestão do Edital 1 (um) Relatório Final de desenvolvimento das oficinas formativas realizadas durante o ciclo, conforme o padrão determinado pelo Núcleo de Gestão do Edital.</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="65" :context="'ITEM 14.7'">
+			<CommentsContext :id="68" :context="'ITEM 14.7'">
 				<div>
-					<b>14.7.</b> A não entrega do Relatório Final configurará inadimplência do Agente, implicando na suspensão de bolsa, estando este sujeito à penalidade prevista no item 16.1 c.
+					<p><b>14.7.</b> A não entrega do Relatório Final configurará inadimplência do Agente, implicando na suspensão de bolsa, estando este sujeito à penalidade prevista no item 16.1 c.</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="66" :context="'ITEM 14.8'">
+			<CommentsContext :id="69" :context="'ITEM 14.8'">
 				<div>
-					<b>14.8.</b> A Prefeitura de São Paulo poderá interromper o pagamento da bolsa quando:
+					<p><b>14.8.</b> A Prefeitura de São Paulo poderá interromper o pagamento da bolsa quando:</p>
 					<ol type="a">
 					<li>As oficinas formativas estiverem sendo executadas em desacordo com o Plano de Trabalho elaborado em conjunto com o Núcleo de Gestão do Edital;</li>
 					<li>O Agente, por motivos adversos, não atribuíveis à Prefeitura de São Paulo, não comparecer às oficinas formativas agendadas;</li>
@@ -698,56 +708,56 @@
 					</ol>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="67" :context="'ITEM 14.9'">
+			<CommentsContext :id="70" :context="'ITEM 14.9'">
 				<div>
-					<b>14.9.</b> Em caso de desligamento de Agente do programa Agentes de Governo Aberto, no decorrer da execução, a sua substituição fica a critério do Núcleo de Gestão do Edital, sendo analisada a substituição, caso o Agente tenha desistido em até 25% do tempo decorrido do Programa. A substituição, se houver, seguirá a lista geral de credenciamento, respeitando-se a ordem de classificação de acordo com o item 11.6. O pagamento da bolsa será proporcional ao período e carga-horária restantes.
+					<p><b>14.9.</b> Em caso de desligamento de Agente do programa Agentes de Governo Aberto, no decorrer da execução, a sua substituição fica a critério do Núcleo de Gestão do Edital, sendo analisada a substituição, caso o Agente tenha desistido em até 25% do tempo decorrido do Programa. A substituição, se houver, seguirá a lista geral de credenciamento, respeitando-se a ordem de classificação de acordo com o item 11.6. O pagamento da bolsa será proporcional ao período e carga-horária restantes.</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="68" :context="'ITEM 14.10'">
+			<CommentsContext :id="71" :context="'ITEM 14.10'">
 				<div>
-					<b>14.10.</b> O Agente deverá inserir as logomarcas do programa Agentes de Governo Aberto e da Prefeitura de São Paulo em quaisquer produtos ou materiais de divulgação resultantes das oficinas formativas subsidiadas, de acordo com as orientações do Núcleo de Gestão do Edital.
+					<p><b>14.10.</b> O Agente deverá inserir as logomarcas do programa Agentes de Governo Aberto e da Prefeitura de São Paulo em quaisquer produtos ou materiais de divulgação resultantes das oficinas formativas subsidiadas, de acordo com as orientações do Núcleo de Gestão do Edital.</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="69" :context="'ITEM 14.11'">
+			<CommentsContext :id="72" :context="'ITEM 14.11'">
 				<div>
-					<b>14.11.</b> As responsabilidades civis, penais, comerciais e outras advindas de utilização de direitos autorais ou patrimoniais cabem exclusivamente ao Agente.
+					<p><b>14.11.</b> As responsabilidades civis, penais, comerciais e outras advindas de utilização de direitos autorais ou patrimoniais cabem exclusivamente ao Agente.</p>
 					</div>
 			</CommentsContext>
-			<CommentsContext :id="70" :context="'ITEM 14.12'">
+			<CommentsContext :id="73" :context="'ITEM 14.12'">
 				<div>
-					<b>14.12.</b> A Prefeitura de São Paulo não se responsabilizará, em hipótese alguma, pelos atos, contratos ou compromissos assumidos, de natureza comercial, financeira, trabalhista ou outra, realizados pelo Agente para fins de cumprimento do Termo de Compromisso fruto deste Edital.
+					<p><b>14.12.</b> A Prefeitura de São Paulo não se responsabilizará, em hipótese alguma, pelos atos, contratos ou compromissos assumidos, de natureza comercial, financeira, trabalhista ou outra, realizados pelo Agente para fins de cumprimento do Termo de Compromisso fruto deste Edital.</p>
 				</div>
 			</CommentsContext>
 		</section>
 		<section>
 			<h3 class="titulo" indent="2">15. DA RESCISÃO</h3>
-			<CommentsContext :id="71" :context="'ITEM 15.1'">
+			<CommentsContext :id="74" :context="'ITEM 15.1'">
 				<div>
-					<b>15.1.</b> O Agente poderá solicitar seu desligamento do programa Agentes de Governo Aberto caso haja impedimento à continuidade da execução das oficinas formativas, por meio de justificativa escrita e assinada, que será analisada pelo Núcleo de Gestão do Edital.
+					<p><b>15.1.</b> O Agente poderá solicitar seu desligamento do programa Agentes de Governo Aberto caso haja impedimento à continuidade da execução das oficinas formativas, por meio de justificativa escrita e assinada, que será analisada pelo Núcleo de Gestão do Edital.</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="72" :context="'ITEM 15.2'">
+			<CommentsContext :id="75" :context="'ITEM 15.2'">
 				<div>
-					<b>15.2.</b> O ajuste poderá ser rescindido pelo Núcleo de Gestão do Edital a qualquer tempo.
+					<p><b>15.2.</b> O ajuste poderá ser rescindido pelo Núcleo de Gestão do Edital a qualquer tempo.</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="73" :context="'ITEM 15.3'">
+			<CommentsContext :id="76" :context="'ITEM 15.3'">
 				<div>
-					<b>15.3.</b> A inexecução total ou parcial do ajuste, considerando todas as condições estabelecidas neste Edital, poderá ensejar a sua rescisão, além das consequências legais cabíveis.
+					<p><b>15.3.</b> A inexecução total ou parcial do ajuste, considerando todas as condições estabelecidas neste Edital, poderá ensejar a sua rescisão, além das consequências legais cabíveis.</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="74" :context="'ITEM 15.4'">
+			<CommentsContext :id="77" :context="'ITEM 15.4'">
 				<div>
-					<b>15.4.</b> A rescisão sem justo motivo pelo Agente ensejará a penalidade prevista pelo item 16.1.C
+					<p><b>15.4.</b> A rescisão sem justo motivo pelo Agente ensejará a penalidade prevista pelo item 16.1.C</p>
 					<p><b>15.4.1.</b> A falta de comunicação sem justificativa prévia por tempo maior que 7 (sete) dias corridos será considerada como rescisão do contrato unilateralmente sem justo motivo, incidindo a mesma penalidade.</p>
 				</div>
 			</CommentsContext>
 		</section>
 		<section>
 			<h3 class="titulo" indent="2">16. DAS PENALIDADES</h3>
-			<CommentsContext :id="75" :context="'ITEM 16.1.'">
+			<CommentsContext :id="78" :context="'ITEM 16.1.'">
 				<div>
-					<b>16.1.</b> Ao Agente, caso descumpra qualquer obrigação determinada neste instrumento, poderão ser aplicadas penalidades de:
+					<p><b>16.1.</b> Ao Agente, caso descumpra qualquer obrigação determinada neste instrumento, poderão ser aplicadas penalidades de:</p>
 					<ol type="a">
 						<li>Advertência publicada no Diário Oficial;</li>
 						<li>Multa de 5% (cinco por cento) do valor da bolsa para descumprimento de qualquer cláusula do Termo de Compromisso;</li>
@@ -758,72 +768,993 @@
 					<p><b>16.1.2.</b> Nos termos previstos no Decreto 44.279/03, uma vez proposta a aplicação de penalidade, o Agente será intimado através de publicação em Diário Oficial, sendo garantida a ampla defesa e o contraditório.</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="76" :context="'ITEM 16.2'">
+			<CommentsContext :id="79" :context="'ITEM 16.2'">
 				<div>
-					<b>16.2.</b> A responsabilidade administrativa é independente da civil e da penal, de modo que, quando houver indício de ilícito, as instâncias e órgãos competentes serão comunicados.
+					<p><b>16.2.</b> A responsabilidade administrativa é independente da civil e da penal, de modo que, quando houver indício de ilícito, as instâncias e órgãos competentes serão comunicados.</p>
 				</div>
 			</CommentsContext>
 		</section>
 		<section>
 			<h3 class="titulo" indent="2">17. DISPOSIÇÕES FINAIS </h3>
-			<CommentsContext :id="77" :context="'ITEM 17.1'">
+			<CommentsContext :id="80" :context="'ITEM 17.1'">
 				<div>
-					<b>17.1.</b> Os Projetos de Atividades apresentados pelos Agentes selecionados ficarão disponíveis para consulta pública no site da Secretaria de Governo Municipal no botão “Governo Aberto na Cidade de São Paulo”.
+					<p><b>17.1.</b> Os Projetos de Atividades apresentados pelos Agentes selecionados ficarão disponíveis para consulta pública no site da Secretaria de Governo Municipal no botão “Governo Aberto na Cidade de São Paulo”.</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="78" :context="'ITEM 17.2'">
+			<CommentsContext :id="81" :context="'ITEM 17.2'">
 				<div>
-					<b>17.2.</b> Os materiais, metodologias e ferramentas elaborados ou utilizados pelo Agente, tais como mapas, apresentações, cartilhas, entre outros, durante ou posteriormente às atividades, deverão ser disponibilizados e poderão ser usados, replicados e difundidos pela Prefeitura de São Paulo. Tais materiais serão disponibilizados no site da Secretaria de Governo Municipal e no Portal da Transparência do município de São Paulo.
+					<p><b>17.2.</b> Os materiais, metodologias e ferramentas elaborados ou utilizados pelo Agente, tais como mapas, apresentações, cartilhas, entre outros, durante ou posteriormente às atividades, deverão ser disponibilizados e poderão ser usados, replicados e difundidos pela Prefeitura de São Paulo. Tais materiais serão disponibilizados no site da Secretaria de Governo Municipal e no Portal da Transparência do município de São Paulo.</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="79" :context="'ITEM 17.3'">
+			<CommentsContext :id="82" :context="'ITEM 17.3'">
 				<div>
-					<b>17.3.</b> Os Agentes, na execução das oficinas formativas, devem adotar postura responsável, ética e adequada à proposta de formação.
+					<p><b>17.3.</b> Os Agentes, na execução das oficinas formativas, devem adotar postura responsável, ética e adequada à proposta de formação.</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="80" :context="'ITEM 17.4'">
+			<CommentsContext :id="83" :context="'ITEM 17.4'">
 				<div>
-					<b>17.4.</b> Não poderá haver vinculação, de qualquer modo, deste programa a atividades ou discursos político-partidários, bem como não é permitido ao Agente vincular o programa a sua promoção pessoal, promoção de Agentes políticos e Agentes públicos, ou de terceiros.
+					<p><b>17.4.</b> Não poderá haver vinculação, de qualquer modo, deste programa a atividades ou discursos político-partidários, bem como não é permitido ao Agente vincular o programa a sua promoção pessoal, promoção de Agentes políticos e Agentes públicos, ou de terceiros.</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="81" :context="'ITEM 17.5'">
+			<CommentsContext :id="84" :context="'ITEM 17.5'">
 				<div>
-					<b>17.5.</b> Os casos omissos relativos ao presente Edital serão resolvidos pelo Núcleo de Gestão do Edital, ouvida a Assessoria Jurídica da Secretaria do Governo Municipal.
+					<p><b>17.5.</b> Os casos omissos relativos ao presente Edital serão resolvidos pelo Núcleo de Gestão do Edital, ouvida a Assessoria Jurídica da Secretaria do Governo Municipal.</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="82" :context="'ITEM 17.6'">
+			<CommentsContext :id="85" :context="'ITEM 17.6'">
 				<div>
-					<b>17.6.</b> A inscrição do Agente implica na prévia e integral concordância com as normas deste Edital.
+					<p><b>17.6.</b> A inscrição do Agente implica na prévia e integral concordância com as normas deste Edital.</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="83" :context="'ITEM 17.7'">
+			<CommentsContext :id="86" :context="'ITEM 17.7'">
 				<div>
-					<b>17.7.</b> Os Agentes serão responsáveis pelo desenvolvimento das oficinas formativas que lhes couberem e pelas informações e conteúdo dos documentos apresentados, excluída qualquer responsabilidade civil ou penal da Prefeitura de São Paulo.
+					<p><b>17.7.</b> Os Agentes serão responsáveis pelo desenvolvimento das oficinas formativas que lhes couberem e pelas informações e conteúdo dos documentos apresentados, excluída qualquer responsabilidade civil ou penal da Prefeitura de São Paulo.</p>
 				</div>
 			</CommentsContext>
 		</section>
 		<section>
 			<h3 class="titulo" indent="2">18. DÚVIDAS</h3>
-			<CommentsContext :id="84" :context="'ITEM 18.1'">
+			<CommentsContext :id="87" :context="'ITEM 18.1'">
 				<div>
-					<b>18.1.</b> A Supervisão para Assuntos de Governo Aberto estará disponível para consultas sobre a utilização da ferramenta de inscrição online no período de xx de xxxx a xx de xxxx de 2019, das 10h às 17h, em dias úteis, por meio do e-mail saopauloaberta@prefeitura.sp.gov.br e telefones (11) 3113-8553 ou 3113-9276;
+					<p><b>18.1.</b> A Supervisão para Assuntos de Governo Aberto estará disponível para consultas sobre a utilização da ferramenta de inscrição online no <mark>período de xx de xxxx a xx de xxxx de 2019, das 10h às 17h, em dias úteis, por meio do e-mail <a href="mailto:governoaberto@prefeitura.sp.gov.br">governoaberto@prefeitura.sp.gov.br</a> e telefones (11) 3113-8553 ou 3113-9276</mark>;</p>
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="85" :context="'ITEM 18.2'">
+			<CommentsContext :id="88" :context="'ITEM 18.2'">
 				<div>
-					<b>18.2.</b> A Supervisão para Assuntos de Governo Aberto realizará oficinas de divulgação e esclarecimentos acerca do edital e do processo de inscrição, conforme o calendário abaixo:
+					<p><b>18.2.</b> A Supervisão para Assuntos de Governo Aberto realizará oficinas de divulgação e esclarecimentos acerca do edital e do processo de inscrição, conforme o calendário abaixo:</p>
 					(Calendário em construção)
 				</div>
 			</CommentsContext>
-			<CommentsContext :id="86" :context="'ITEM 18.3'">
+			<CommentsContext :id="89" :context="'ITEM 18.3'">
 				<div>
-					<b>18.3.</b> Quaisquer dúvidas ou informações adicionais deverão ser solicitadas pelo endereço eletrônico <a href="mailto:saopauloaberta@prefeitura.sp.gov.br">saopauloaberta@prefeitura.sp.gov.br</a>, com assunto “Edital Agentes de Governo Aberto 2019”.
+					<p><b>18.3.</b> Quaisquer dúvidas ou informações adicionais deverão ser solicitadas pelo endereço eletrônico <a href="mailto:saopauloaberta@prefeitura.sp.gov.br">saopauloaberta@prefeitura.sp.gov.br</a>, com assunto “Edital Agentes de Governo Aberto 2019”.</p>
 				</div>
 			</CommentsContext>
+		</section>
+		<section>
+			<h3 class="titulo" indent="1">ANEXOS</h3><br>
+		</section>
+		<section>
+			<h3 class="titulo" indent="2">ANEXO I - Declaração de Aceite das Condições do Edital Nº 01/2019 - SGM/CGM</h3>
+			<CommentsContext :id="90" :context="'ANEXOS'">
+				<div>
+					<p><br>DECLARO, na condição de inscrito(a), que:</p>
+					<ul>
+						<li>Conheço e aceito incondicionalmente as regras do presente Edital;</li>
+						<li>Responsabilizo-me por todas as informações contidas no projeto;</li>
+						<li>Declaro que não sou servidor(a) público vinculado ou lotado em qualquer órgão do Executivo ou Legislativo do Município de São Paulo, que não possuo parentes de até o 2º grau, cônjuge ou companheiro(a) de membros da Comissão de Seleção ou lotado nas Secretarias envolvidas neste Edital e de que não possuo impedimento legal para a contratação a ser realizada pela Controladoria Geral do Município e Secretaria de Governo Municipal. Não incorro em nenhuma das hipóteses de impedimento.</li>
+						<li>Declaro, ainda, que não trabalhei em órgão do Executivo ou Legislativo do município de São Paulo nos últimos 5 anos.</li>	
+					</ul><br>
+					<p align="center">São Paulo, _____ de _____________________ de 2019</p>
+					<p align="center"><br>___________________________________<br>Assinatura</p>
+					<p align="center"><br>Nome: __________________________________</p>
+					<p align="center"><br>RG: ____________________________________</p>
+				</div>
+			</CommentsContext>
+		</section>
+		<section>
+			<h3 class="titulo" indent="2">ANEXO II - Declaração de Disponibilidade de Horário para realizar as oficinas formativas - Edital Nº 01/2019 - SGM/CGM</h3>
+			<CommentsContext :id="91" :context="'ANEXO II - Declaração de Disponibilidade de Horário para realizar as oficinas formativas - Edital Nº 01/2019 - SGM/CGM'">
+				<div>
+					<p><br>DECLARO, na condição de inscrito (a), que:</p>
+					<ul>
+						<li>Conheço e aceito incondicionalmente as regras do presente Edital;</li>
+						<li>Responsabilizo-me por todas as informações contidas no Anexo III;</li>
+						<li>Declaro ainda que tenho disponibilidade em realizar as oficinas formativas nos dias e períodos listados abaixo (Marcar X em mais de 5 itens):</li>	
+					</ul>
+					<table>
+						<thead>
+							<th width="150px">Dias da semana</th>
+							<th width="130px">Manhã</th>
+							<th width="130px">Tarde</th>
+							<th width="130px">Noite</th>
+						</thead>
+						<tr>
+							<th>Segunda-feira</th>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th>Terça-feira</th>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th>Quarta-feira</th>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th>Quinta-feira</th>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th>Sexta-feira</th>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th>Sábado</th>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table><br>
+					<p align="center">São Paulo, _____ de _____________________ de 2019</p>
+					<p align="center"><br>___________________________________<br>Assinatura</p>
+				</div>
+			</CommentsContext>
+		</section>
+		<section>
+			<h3 class="titulo" indent="2">ANEXO III: TERMO DE AUTORIZAÇÃO DE USO DE IMAGEM</h3>
+			<CommentsContext :id="92" :context="'ANEXO III: TERMO DE AUTORIZAÇÃO DE USO DE IMAGEM'">
+				<div>
+					Eu,_______________________________________________, ________ anos, portador da Cédula de Identidade nº ____________, inscrito no CPF sob nº ________________, residente à ________________________________________<br>______________________________________ na cidade de _____________________, AUTORIZO o uso de minha imagem (ou do menor _______________________________ sob minha responsabilidade) em fotos ou filme, sem finalidade comercial, para ser utilizada no trabalho _______________________________.
+A presente autorização é concedida a título gratuito, abrangendo o uso da imagem acima mencionada em todo território nacional e no exterior, em todas as suas modalidades, por quaisquer meios físicos ou digitais, para fins de divulgação em geral.
+ 
+Por esta ser a expressão da minha vontade declaro que autorizo o uso acima descrito sem que nada haja a ser reclamado a título de direitos conexos à minha imagem ou a qualquer outro.
+					<p align="center">São Paulo, _____ de _____________________ de 2019</p>
+					<p align="center"><br>___________________________________<br>Assinatura do Participante</p>
+				</div>
+			</CommentsContext>
+		</section>
+		<section>
+			<h3 class="titulo" indent="2">ANEXO IV: FICHA DE IDENTIFICAÇÃO</h3>
+			<CommentsContext :id="93" :context="'ANEXO IV: FICHA DE IDENTIFICAÇÃO'">
+				<div>
+					<table>
+						<tr height="0px" valign="top">
+							<td>Título do projeto:</td></tr>
+						<tr height="0px" valign="top">
+							<td>Nome da categoria do projeto:</td></tr>
+						<tr height="50px" valign="top">
+							<td>Nome do responsável pelo projeto:</td></tr>
+						<tr height="200px" valign="top">
+							<td>Nome de colaboradores que contribuíram com o texto do projeto:</td></tr>
+					</table>
+				</div>
+				<br><br>
+				<div>
+					<p><b>2. Dados pessoais do responsável pelo projeto</b></p>
+					<table>
+						<tr height="0px" valign="top">
+							<td>Nome completo:</td></tr>
+						<tr height="150px" valign="top">
+							<td>Endereço para correspondência (Rua, número, complemento, bairro, cidade e CEP):</td></tr>
+						<tr height="100px" valign="top">
+							<td>Telefone residencial/celular:</td></tr>
+						<tr height="0px" valign="top">
+							<td>Possui conta no Banco do Brasil? (   ) Sim     (    ) Não</td></tr>
+						<tr height="0px" valign="top">
+							<td>Possui alguma deficiência? (   ) Sim (   ) Não</td></tr>
+						<tr height="0px" valign="top">
+							<td>Se sim, qual?<br>(   ) Auditiva (   ) Física  (   ) Intelectual  (   ) Visual  (   ) Múltipla</td></tr>
+					</table>
+				</div>
+			</CommentsContext>
+		</section>
+		<section>
+			<h3 class="titulo" indent="2">ANEXO V - PROJETO DE ATIVIDADE FORMATIVA</h3>
+			<CommentsContext :id="94" :context="'ANEXO V - PROJETO DE ATIVIDADE FORMATIVA'">
+				<div>
+					<table>
+						<tr height="0px" valign="top">
+							<td><b>ANEXO V: PROJETO DE ATIVIDADE</b></td></tr>
+						<tr height="0px" valign="top">
+							<td>Título do projeto:<br><small>Título referente ao projeto, podendo ser igual ao título para divulgação.</small></td></tr>
+						<tr height="0px" valign="top">
+							<td>Título para a divulgação da oficina:<br><small>O título deverá ser chamativo - conforme especificado no item 7.2.2.</small></td></tr>
+						<tr height="50px" valign="top">
+							<td>Categoria Temática:<br><small>Escolha uma das seis categorias temáticas especificadas em 6.1.</small></td></tr>
+						<tr height="50px" valign="top">
+							<td>Experiência prática do Agente na categoria escolhida:<br><small>Conte um pouco sobre a sua experiência prática e profissional (de acordo com o item 6.1) relacionadas à categoria temática escolhida, lembrando-se que não é permitido colocar dados pessoais relacionados ao inscrito, às pessoas que trabalhou e à nomes de entidades e/ou empresas que trabalhou.</small></td></tr>
+						<tr height="0px" valign="top">
+							<td>Resumo do projeto para divulgação:<br><small>Resuma brevemente o seu projeto - o texto será utilizado para o agendamento e divulgação do mesmo.</small></td></tr>
+						<tr height="50px" valign="top">
+							<td>Objetivo:<br><small>Escreva o que pretende atingir com o seu projeto, dentro do Edital Programa Agentes de Governo Aberto 2019.</small></td></tr>
+						<tr height="50px" valign="top">
+							<td>Descrição da atividade:<br><small>Escreva sobre o conteúdo da oficina a ser oferecido.</small></td></tr>
+						<tr height="0px" valign="top">
+							<td>Metodologia ativa a ser aplicada:<br><small>Descreva qual a metodologia ativa que será utilizada para aplicar o conteúdo colocado na descrição da atividade.</small></td></tr>
+						<tr height="0px" valign="top">
+							<td>Público:<br><small>Escreva caso há uma coletividade específica que deseje atingir, lembrando também que será vedada qualquer forma de exclusão aos demais interessados, conforme disposto no item 9.5.b.8.</small></td></tr>
+						<tr height="50px" valign="top">
+							<td>Resultados esperados:<br><small>De que forma a sua oficina impactará os participantes e a gestão pública, qual será a usabilidade e a aplicação dos conhecimentos adquiridos pelos participantes em sua atividade formativa, conforme disposto no item 9.5.b.6.</small></td></tr>
+						<tr height="50px" valign="top">
+							<td>Como a sua oficina contribui para um governo aberto?<br><small>Atentando-se ao disposto nos itens 2.1 e 2.2, escreva como a sua oficina contribuirá para um governo mais aberto.</small></td></tr>
+						<tr height="0px" valign="top">
+							<td>Recursos Necessários:<br><small>Espaços públicos e estrutura física para desenvolvimento da atividade, lembrando-se que dependerá também de os equipamentos disponibilizarem tais recursos.</small></td></tr>
+						<tr height="0px" valign="top">
+							<td>Cronograma:<br><small>Especificar distribuição da carga horária da oficina, mensalmente, conforme item 7.1.1.2.</small></td></tr>
+					</table>
+					<table>
+						<tr>
+							<td>O Agente tem mobilização no território para agendamento de oficinas? (   ) Sim (   )Não</td>
+						</tr>
+						<tr><td>Caso sim, em quais subprefeituras?<br>
+							(  )Aricanduva, (  )Butantã, (  )Campo Limpo, (  )Casa Verde/Cachoeirinha, (  )Capela do Socorro, <br>(  )Cidade Ademar, (  )Cid. Tiradentes, (  )Ermelino Matarazzo, (  )Freguesia/Brasilândia, (  )Guaianases, <br>(  )Ipiranga, (  )Itaim Paulista, (  )Itaquera, (  )Jabaquara, (  )Lapa, (  )M'Boi Mirim, (  )Mooca, (  )Parelheiros, <br>(  )Penha, (  )Perus, (  )Pinheiros, (  )Pirituba/Jaraguá, (  )Santana/Tucuruvi, (  )Santo Amaro, (  )São Mateus, <br>(  )São Miguel,  (  )Sapopemba, (   )Sé, (   )Tremembé/Jaçanã,       (   )Vila Maria/Vila Guilherme, (   )Vila Mariana, <br>(   )Vila Prudente</td></tr>
+					</table>
+
+				</div>
+			</CommentsContext>			
+		</section>
+		<section>
+		 	<h3 class="titulo" indent="2">ANEXO VI: CALENDÁRIO DE OFICINAS A SEREM REALIZADAS</h3>
+		 	<CommentsContext :id="95" :context="'ANEXO VI: CALENDÁRIO DE OFICINAS A SEREM REALIZADAS'">
+		 		<table>
+				  <tr>
+				    <th>Datas</th>
+				    <th>Categoria</th>
+				    <th>Local</th>
+				  </tr>
+				  <tr>
+				    <td>01/08/2019</td>
+				    <td>Participação Social e Mapeamento Colaborativo</td>
+				    <td>UniCEU Parque Bristol – R. Professor Artur Primavesi, SN</td>
+				  </tr>
+				  <tr>
+				    <td>01/08/2019</td>
+				    <td>Participação Social e Mapeamento Colaborativo</td>
+				    <td>UniCEU Parelheiros – R. Jose Pedro de Borba, 20</td>
+				  </tr>
+				  <tr>
+				    <td>01/08/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU Vila Atlântica – R. Coronel Jose Venâncio Dias, 840</td>
+				  </tr>
+				  <tr>
+				    <td>01/08/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU Vila do Sol – Av. dos Funcionários Públicos, 369</td>
+				  </tr>
+				  <tr>
+				    <td>03/08/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU São Rafael - R. Cinira Polônio, 98</td>
+				  </tr>
+				  <tr>
+				    <td>06/08/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU Inácio Monteiro – R. Barão Joaquim do Amparo, SN</td>
+				  </tr>
+				  <tr>
+				    <td>06/08/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU Navegantes – R. Maria Mossab Barbour, SN</td>
+				  </tr>
+				  <tr>
+				    <td>06/08/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Perus - R. Bernardo Jose de Lorena, SN</td>
+				  </tr>
+				  <tr>
+				    <td>07/08/2019</td>
+				    <td>Participação Social e Mapeamento Colaborativo</td>
+				    <td>UniCEU Jaguaré – Av. Kenkiti Simomoto, SN</td>
+				  </tr>
+				  <tr>
+				    <td>07/08/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU Inácio Monteiro – R. Barão Joaquim do Amparo, SN</td>
+				  </tr>
+				  <tr>
+				    <td>07/08/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU Vila do Sol – Av. dos Funcionários Públicos, 369</td>
+				  </tr>
+				  <tr>
+				    <td>08/08/2019</td>
+				    <td>Participação Social e Mapeamento Colaborativo</td>
+				    <td>UniCEU Parque Bristol – R. Professor Artur Primavesi</td>
+				  </tr>
+				  <tr>
+				    <td>08/08/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU Campo Limpo – Av. Carlos Lacerda, 678</td>
+				  </tr>
+				  <tr>
+				    <td>09/08/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU Campo Limpo – Av. Carlos Lacerda, 678</td>
+				  </tr>
+				  <tr>
+				    <td>13/08/2019</td>
+				    <td>Transparência, Acesso à Informação e Política de Dados Abertos</td>
+				    <td>UniCEU Alto Alegre - Av. Bento Guelfi, SN</td>
+				  </tr>
+				  <tr>
+				    <td>13/08/2019</td>
+				    <td>Participação Social e Mapeamento Colaborativo</td>
+				    <td>UniCEU Parque Anhanguera – R. Pedro Jose de Lima, 10</td>
+				  </tr>
+				  <tr>
+				    <td>14/08/2019</td>
+				    <td>Participação Social e Mapeamento Colaborativo</td>
+				    <td>UniCEU Vila Rubi – R. Domingos Tarroso, 101</td>
+				  </tr>
+				  <tr>
+				    <td>14/08/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU Casa Blanca - R Joao Damasceno, SN</td>
+				  </tr>
+				  <tr>
+				    <td>14/08/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU Feitiço da Vila – R. Feitiço da Vila, 399</td>
+				  </tr>
+				  <tr>
+				    <td>14/08/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU Vila Curuçá - Av. Marechal Tito, 3450</td>
+				  </tr>
+				  <tr>
+				    <td>14/08/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Sapopemba – R. Manuel Quirino de Mattos, SN</td>
+				  </tr>
+				  <tr>
+				    <td>14/08/2019</td>
+				    <td>Transparência, Acesso à Informação e Política de Dados Abertos</td>
+				    <td>CCSP - Rua Vergueiro, 1000</td>
+				  </tr>
+				  <tr>
+				    <td>15/08/2019</td>
+				    <td>Participação Social e Mapeamento Colaborativo</td>
+				    <td>UniCEU Caminho do Mar - Av. Eng. Armando de Arruda Pereira, 5080</td>
+				  </tr>
+				  <tr>
+				    <td>15/08/2019</td>
+				    <td>Participação Social e Mapeamento Colaborativo</td>
+				    <td>UniCEU Parque Anhanguera – R. Pedro Jose de Lima, 10</td>
+				  </tr>
+				  <tr>
+				    <td>15/08/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU Tiquatira – Av. Condessa Elisabeth Robiano, 10</td>
+				  </tr>
+				  <tr>
+				    <td>19/08/2019</td>
+				    <td>Participação Social e Mapeamento Colaborativo</td>
+				    <td>UniCEU Pêra Marmelo – R. Pêra Marmelo, 225</td>
+				  </tr>
+				  <tr>
+				    <td>20/08/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU Lajeado - R. Manuel da Mota Coutinho, 294</td>
+				  </tr>
+				  <tr>
+				    <td>20/08/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU Alvarenga - Estrada do Alvarenga, 3750</td>
+				  </tr>
+				  <tr>
+				    <td>20/08/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU São Mateus - R. Curumatim, 201</td>
+				  </tr>
+				  <tr>
+				    <td>20/08/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU São Mateus - R. Curumatim, 201</td>
+				  </tr>
+				  <tr>
+				    <td>20/08/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Cidade Dutra – Av. Interlagos, 7350</td>
+				  </tr>
+				  <tr>
+				    <td>20/08/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Paraisópolis – R. Doutor Jose Augusto de Souza e Silva, SN</td>
+				  </tr>
+				  <tr>
+				    <td>21/08/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Jambeiro/ UAB Jardim Moreno - Av. Flores do Jambeiro, 61</td>
+				  </tr>
+				  <tr>
+				    <td>22/08/2019</td>
+				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
+				    <td>UniCEU/UAB Aricanduva - R. Olga Fadel Abarca, 10</td>
+				  </tr>
+				  <tr>
+				    <td>22/08/2019</td>
+				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
+				    <td>UniCEU Três Pontes – R. Capachos, 344</td>
+				  </tr>
+				  <tr>
+				    <td>23/08/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU Jardim Paulistano – R. Aparecida do Taboado, SN</td>
+				  </tr>
+				  <tr>
+				    <td>23/08/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU Gilberto Dupas – Av. Deputado Emilio Carlos, 3641</td>
+				  </tr>
+				  <tr>
+				    <td>23/08/2019</td>
+				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
+				    <td>UniCEU/UAB Aricanduva - R. Olga Fadel Abarca, 10</td>
+				  </tr>
+				  <tr>
+				    <td>29/08/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU Cantos do Amanhecer – Av. Cantos do Amanhecer, 10</td>
+				  </tr>
+				  <tr>
+				    <td>29/08/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Butantã - Av. Eng. Heitor Antonio Eiras Garcia, 1870</td>
+				  </tr>
+				  <tr>
+				    <td>30/08/2019</td>
+				    <td>Transparência, Acesso à Informação e Política de Dados Abertos</td>
+				    <td>UniCEU Rosa da China – R. Clara Petrela, 113</td>
+				  </tr>
+				  <tr>
+				    <td>31/08/2019</td>
+				    <td>Transparência, Acesso à Informação e Política de Dados Abertos</td>
+				    <td>UniCEU Formosa – R. Manoel Ferreira Pires, SN</td>
+				  </tr>
+				  <tr>
+				    <td>02/09/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU Quinta do Sol - Av. Luiz Imparato, 564</td>
+				  </tr>
+				  <tr>
+				    <td>04/09/2019</td>
+				    <td>Participação Social e Mapeamento Colaborativo</td>
+				    <td>UniCEU São Mateus - R. Curumatim, 201</td>
+				  </tr>
+				  <tr>
+				    <td>04/09/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU Sapopemba- R. Curumatim, 201</td>
+				  </tr>
+				  <tr>
+				    <td>04/09/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Tiquatira – Av. Condessa Elisabeth Robiano, 10</td>
+				  </tr>
+				  <tr>
+				    <td>04/09/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Navegantes – R. Maria Mossab Barbour, SN</td>
+				  </tr>
+				  <tr>
+				    <td>05/09/2019</td>
+				    <td>Transparência, Acesso à Informação e Política de Dados Abertos</td>
+				    <td>UniCEU Parelheiros – R. Jose Pedro de Borba, 20</td>
+				  </tr>
+				  <tr>
+				    <td>05/09/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU Perus – R. Bernardo Jose de Lorena, SN</td>
+				  </tr>
+				  <tr>
+				    <td>05/09/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU Jaguaré – Av. Kenkiti Simomoto, SN</td>
+				  </tr>
+				  <tr>
+				    <td>05/09/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Vila do Sol – Av. dos Funcionários Públicos, 369</td>
+				  </tr>
+				  <tr>
+				    <td>10/09/2019</td>
+				    <td>Participação Social e Mapeamento Colaborativo</td>
+				    <td>UniCEU Alto Alegre - Av. Bento Guelfi, SN</td>
+				  </tr>
+				  <tr>
+				    <td>10/09/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Inácio Monteiro – R. Barão Joaquim do Amparo, SN</td>
+				  </tr>
+				  <tr>
+				    <td>11/09/2019</td>
+				    <td>Participação Social e Mapeamento Colaborativo</td>
+				    <td>CCSP - Rua Vergueiro, 1000</td>
+				  </tr>
+				  <tr>
+				    <td>11/09/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU Parque Anhanguera – R. Pedro Jose de Lima, 10</td>
+				  </tr>
+				  <tr>
+				    <td>11/09/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Vila Rubi – R. Domingos Tarroso, 101</td>
+				  </tr>
+				  <tr>
+				    <td>12/09/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU Capão Redondo - R. Daniel Gran, SN</td>
+				  </tr>
+				  <tr>
+				    <td>12/09/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU Parque Anhanguera - R Pedro Jose de Lima, 10</td>
+				  </tr>
+				  <tr>
+				    <td>12/09/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Vila Atlântica – R.Coronel Jose Venâncio Dias, 840</td>
+				  </tr>
+				  <tr>
+				    <td>12/09/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Vila do Sol – Av. dos Funcionários Públicos, 369</td>
+				  </tr>
+				  <tr>
+				    <td>12/09/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Paraisópolis – R. Doutor Jose Augusto de Souza e Silva, SN</td>
+				  </tr>
+				  <tr>
+				    <td>12/09/2019</td>
+				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
+				    <td>UniCEU Cantos do Amanhecer – Av. Cantos do Amanhecer, 10</td>
+				  </tr>
+				  <tr>
+				    <td>17/09/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Inácio Monteiro – R. Barão Joaquim do Amparo, SN</td>
+				  </tr>
+				  <tr>
+				    <td>17/09/2019</td>
+				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
+				    <td>UniCEU Casa Blanca – R. Joao Damasceno, SN</td>
+				  </tr>
+				  <tr>
+				    <td>18/09/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU Jaçanã – Av. Antonio Cesar Neto, 104</td>
+				  </tr>
+				  <tr>
+				    <td>18/09/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Feitiço da Vila – R. Feitiço da Vila, 399</td>
+				  </tr>
+				  <tr>
+				    <td>18/09/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Vila Curuçá - Av. Marechal Tito, 3450</td>
+				  </tr>
+				  <tr>
+				    <td>19/09/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Alvarenga - Estrada do Alvarenga, 3750</td>
+				  </tr>
+				  <tr>
+				    <td>19/09/2019</td>
+				    <td>Participação Legislativa, Estrutura Pública Municipal e Atividades de Relações Governamentais Éticas e Adequadas</td>
+				    <td>UniCEU Aricanduva - R. Olga Fadel Abarca, 10</td>
+				  </tr>
+				  <tr>
+				    <td>20/09/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Jardim Paulistano – R. Aparecida do Taboado, SN</td>
+				  </tr>
+				  <tr>
+				    <td>20/09/2019</td>
+				    <td>Participação Legislativa, Estrutura Pública Municipal e Atividades de Relações Governamentais Éticas e Adequadas</td>
+				    <td>UniCEU Aricanduva - R. Olga Fadel Abarca, 10</td>
+				  </tr>
+				  <tr>
+				    <td>21/09/2019</td>
+				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
+				    <td>UniCEU Lajeado - R. Manuel da Mota Coutinho, 294</td>
+				  </tr>
+				  <tr>
+				    <td>23/09/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Caminho do Mar - Av. Eng. Armando de Arruda Pereira, 5080</td>
+				  </tr>
+				  <tr>
+				    <td>24/09/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU Três Pontes – R. Capachos, 344</td>
+				  </tr>
+				  <tr>
+				    <td>25/09/2019</td>
+				    <td>Participação Social e Mapeamento Colaborativo</td>
+				    <td>UniCEU Campo Limpo – Av. Carlos Lacerda, 678</td>
+				  </tr>
+				  <tr>
+				    <td>26/09/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU Formosa – R. Manoel Ferreira Pires, SN</td>
+				  </tr>
+				  <tr>
+				    <td>27/09/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU Rosa da China – R. Clara Petrela, 113</td>
+				  </tr>
+				  <tr>
+				    <td>27/09/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Gilberto Dupas – Av. Deputado Emilio Carlos, 3641</td>
+				  </tr>
+				  <tr>
+				    <td>30/09/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU Butantã - Av. Eng. Heitor Antonio Eiras Garcia, 1870</td>
+				  </tr>
+				  <tr>
+				    <td>30/09/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU Quinta do Sol - Av. Luiz Imparato, 564</td>
+				  </tr>
+				  <tr>
+				    <td>01/10/2019</td>
+				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
+				    <td>UniCEU Navegantes – R. Maria Mossab Barbour, SN</td>
+				  </tr>
+				  <tr>
+				    <td>02/10/2019</td>
+				    <td>Transparência, Acesso à Informação e Política de Dados Abertos</td>
+				    <td>UniCEU Vila do Sol – Av. dos Funcionários Públicos, 369</td>
+				  </tr>
+				  <tr>
+				    <td>02/10/2019</td>
+				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
+				    <td>UniCEU Feitiço da Vila – R. Feitiço da Vila, 399</td>
+				  </tr>
+				  <tr>
+				    <td>03/10/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Parelheiros – R. Jose Pedro de Borba, 20</td>
+				  </tr>
+				  <tr>
+				    <td>03/10/2019</td>
+				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
+				    <td>UniCEU São Mateus - R. Curumatim, 201</td>
+				  </tr>
+				  <tr>
+				    <td>05/10/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCeu São Rafael - R. Cinira Polônio, 98</td>
+				  </tr>
+				  <tr>
+				    <td>08/10/2019</td>
+				    <td>Participação Social e Mapeamento Colaborativo</td>
+				    <td>UniCEU Alvarenga - Estrada do Alvarenga, 3750</td>
+				  </tr>
+				  <tr>
+				    <td>08/10/2019</td>
+				    <td>Participação Social e Mapeamento Colaborativo</td>
+				    <td>UniCEU Jaguaré – Av. Kenkiti Simomoto, SN</td>
+				  </tr>
+				  <tr>
+				    <td>09/10/2019</td>
+				    <td>Transparência, Acesso à Informação e Política de Dados Abertos</td>
+				    <td>UniCEU Vila do Sol – Av. dos Funcionários Públicos, 369</td>
+				  </tr>
+				  <tr>
+				    <td>09/10/2019</td>
+				    <td>Participação Social e Mapeamento Colaborativo</td>
+				    <td>UniCEU Sapopemba - Rua Manuel Quirino de Mattos, SN</td>
+				  </tr>
+				  <tr>
+				    <td>09/10/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Campo Limpo – Av. Carlos Lacerda, 678</td>
+				  </tr>
+				  <tr>
+				    <td>09/10/2019</td>
+				    <td>Participação Legislativa, Estrutura Pública Municipal e Atividades de Relações Governamentais Éticas e Adequadas</td>
+				    <td>UniCEU Vila Rubi – R. Domingos Tarroso, 101</td>
+				  </tr>
+				  <tr>
+				    <td>10/10/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU Alto Alegre - Av. Bento Guelfi, SN</td>
+				  </tr>
+				  <tr>
+				    <td>10/10/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Capão Redondo - R. Daniel Gran, SN</td>
+				  </tr>
+				  <tr>
+				    <td>10/10/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Paraisópolis – R. Doutor Jose Augusto de Souza e Silva, SN</td>
+				  </tr>
+				  <tr>
+				    <td>10/10/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Campo Limpo – Av. Carlos Lacerda, 678</td>
+				  </tr>
+				  <tr>
+				    <td>16/10/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>CCSP - Rua Vergueiro, 1000</td>
+				  </tr>
+				  <tr>
+				    <td>16/10/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Parque Anhanguera - R Pedro Jose de Lima, 10</td>
+				  </tr>
+				  <tr>
+				    <td>17/10/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Parque Anhanguera – R. Pedro Jose de Lima, 10</td>
+				  </tr>
+				  <tr>
+				    <td>17/10/2019</td>
+				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
+				    <td>UniCEU Vila Atlântica – R. Coronel Jose Venâncio Dias, 840</td>
+				  </tr>
+				  <tr>
+				    <td>18/10/2019</td>
+				    <td>Participação Social e Mapeamento Colaborativo</td>
+				    <td>UniCEU Jardim Paulistano – R. Aparecida do Taboado, SN</td>
+				  </tr>
+				  <tr>
+				    <td>21/10/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Cantos do Amanhecer – Av. Cantos do Amanhecer, 10</td>
+				  </tr>
+				  <tr>
+				    <td>21/10/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Casa Blanca – R. Joao Damasceno, SN</td>
+				  </tr>
+				  <tr>
+				    <td>22/10/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Lajeado - R. Manuel da Mota Coutinho, 294</td>
+				  </tr>
+				  <tr>
+				    <td>24/10/2019</td>
+				    <td>Participação Social e Mapeamento Colaborativo</td>
+				    <td>UniCEU Formosa – R. Manoel Ferreira Pires, SN</td>
+				  </tr>
+				  <tr>
+				    <td>24/10/2019</td>
+				    <td>Participação Social e Mapeamento Colaborativo</td>
+				    <td>UniCEU Aricanduva - R. Olga Fadel Abarca, 10</td>
+				  </tr>
+				  <tr>
+				    <td>24/10/2019</td>
+				    <td>Participação Legislativa, Estrutura Pública Municipal e Atividades de Relações Governamentais Éticas e Adequadas</td>
+				    <td>UniCEU Três Pontes – R. Capachos, 344</td>
+				  </tr>
+				  <tr>
+				    <td>25/10/2019</td>
+				    <td>Participação Social e Mapeamento Colaborativo</td>
+				    <td>UniCEU/UAB Aricanduva - R. Olga Fadel Abarca, 10</td>
+				  </tr>
+				  <tr>
+				    <td>25/10/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Rosa da China – R. Clara Petrela, 113</td>
+				  </tr>
+				  <tr>
+				    <td>25/10/2019</td>
+				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
+				    <td>UniCEU Gilberto Dupas – Av. Deputado Emilio Carlos, 3641</td>
+				  </tr>
+				  <tr>
+				    <td>28/10/2019</td>
+				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
+				    <td>UniCEU Perus – R. Bernardo Jose de Lorena, SN</td>
+				  </tr>
+				  <tr>
+				    <td>29/10/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Tiquatira – Av. Condessa Elisabeth Robiano, 10</td>
+				  </tr>
+				  <tr>
+				    <td>29/10/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Pêra Marmelo – R. Pera Marmelo, 225</td>
+				  </tr>
+				  <tr>
+				    <td>30/10/2019</td>
+				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
+				    <td>UniCEU Vila Curuçá - Av. Marechal Tito, 3450</td>
+				  </tr>
+				  <tr>
+				    <td>30/10/2019</td>
+				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
+				    <td>UniCEU Butantã - Av. Eng. Heitor Antonio Eiras Garcia, 1870</td>
+				  </tr>
+				  <tr>
+				    <td>31/10/2019</td>
+				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
+				    <td>UniCEU Butantã - Av. Eng. Heitor Antonio Eiras Garcia, 1870</td>
+				  </tr>
+				  <tr>
+				    <td>01/11/2019</td>
+				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
+				    <td>UniCEU Parelheiros – R. Jose Pedro de Borba, 20</td>
+				  </tr>
+				  <tr>
+				    <td>05/11/2019</td>
+				    <td>Transparência, Acesso à Informação e Política de Dados Abertos</td>
+				    <td>UniCEU Campo Limpo – Av. Carlos Lacerda, 678</td>
+				  </tr>
+				  <tr>
+				    <td>05/11/2019</td>
+				    <td>Participação Social e Mapeamento Colaborativo</td>
+				    <td>UniCEU Navegantes – R. Maria Mossab Barbour, SN</td>
+				  </tr>
+				  <tr>
+				    <td>05/11/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU Casa Blanca – R. Joao Damasceno, SN</td>
+				  </tr>
+				  <tr>
+				    <td>06/11/2019</td>
+				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
+				    <td>CCSP - Rua Vergueiro, 1000</td>
+				  </tr>
+				  <tr>
+				    <td>06/11/2019</td>
+				    <td>Participação Social e Mapeamento Colaborativo</td>
+				    <td>UniCEU Perus – R. Bernardo Jose de Lorena, SN</td>
+				  </tr>
+				  <tr>
+				    <td>06/11/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU Jambeiro Jardim Moreno - Av. Flores do Jambeiro, 61</td>
+				  </tr>
+				  <tr>
+				    <td>06/11/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Alto Alegre - Av. Bento Guelfi, SN</td>
+				  </tr>
+				  <tr>
+				    <td>06/11/2019</td>
+				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
+				    <td>UniCEU Sapopemba – R. Manuel Quirino de Mattos, SN</td>
+				  </tr>
+				  <tr>
+				    <td>06/11/2019</td>
+				    <td>Participação Legislativa, Estrutura Pública Municipal e Atividades de Relações Governamentais Éticas e Adequadas</td>
+				    <td>UniCEU Feitiço da Vila – R. Feitiço da Vila, 399</td>
+				  </tr>
+				  <tr>
+				    <td>07/11/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Jaguaré – Av. Kenkiti Simomoto, SN</td>
+				  </tr>
+				  <tr>
+				    <td>11/11/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU/UAB Tiquatira – Av. Condessa Elisabeth Robiano, 10</td>
+				  </tr>
+				  <tr>
+				    <td>11/11/2019</td>
+				    <td>Participação Legislativa, Estrutura Pública Municipal e Atividades de Relações Governamentais Éticas e Adequadas</td>
+				    <td>UniCEU Parque Anhanguera – R. Pedro Jose de Lima, 10</td>
+				  </tr>
+				  <tr>
+				    <td>12/11/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU Lajeado - R. Manuel da Mota Coutinho, 294</td>
+				  </tr>
+				  <tr>
+				    <td>12/11/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Três Pontes – R. Capachos, 344</td>
+				  </tr>
+				  <tr>
+				    <td>13/11/2019</td>
+				    <td>Transparência, Acesso à Informação e Política de Dados Abertos</td>
+				    <td>UniCEU Alvarenga - Estrada do Alvarenga, 3750</td>
+				  </tr>
+				  <tr>
+				    <td>13/11/2019</td>
+				    <td>Participação Social e Mapeamento Colaborativo</td>
+				    <td>UniCEU Vila Curuçá - Av. Marechal Tito, 3450</td>
+				  </tr>
+				  <tr>
+				    <td>13/11/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU Vila Rubi – R. Domingos Tarroso, 101</td>
+				  </tr>
+				  <tr>
+				    <td>13/11/2019</td>
+				    <td>Participação Legislativa, Estrutura Pública Municipal e Atividades de Relações Governamentais Éticas e Adequadas</td>
+				    <td>UniCEU Parque Anhanguera – R. Pedro Jose de Lima, 10</td>
+				  </tr>
+				  <tr>
+				    <td>21/11/2019</td>
+				    <td>Participação Social e Mapeamento Colaborativo</td>
+				    <td>UniCEU Vila do Sol – Av. dos Funcionários Públicos, 369</td>
+				  </tr>
+				  <tr>
+				    <td>21/11/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU Aricanduva - R. Olga Fadel Abarca, 10</td>
+				  </tr>
+				  <tr>
+				    <td>21/11/2019</td>
+				    <td>Participação Legislativa, Estrutura Pública Municipal e Atividades de Relações Governamentais Éticas e Adequadas</td>
+				    <td>UniCEU Vila Atlântica – R. Coronel Jose Venâncio Dias, 840</td>
+				  </tr>
+				  <tr>
+				    <td>22/11/2019</td>
+				    <td>Transparência, Acesso à Informação e Política de Dados Abertos</td>
+				    <td>UniCEU Gilberto Dupas – Av. Deputado Emilio Carlos, 3641</td>
+				  </tr>
+				  <tr>
+				    <td>22/11/2019</td>
+				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
+				    <td>UniCEU/UAB Aricanduva - R. Olga Fadel Abarca, 10</td>
+				  </tr>
+				  <tr>
+				    <td>25/11/2019</td>
+				    <td>Participação Social e Mapeamento Colaborativo</td>
+				    <td>UniCEU Cantos do Amanhecer – Av. Cantos do Amanhecer, 10</td>
+				  </tr>
+				  <tr>
+				    <td>26/11/2019</td>
+				    <td>Participação Social e Mapeamento Colaborativo</td>
+				    <td>UniCEU Butantã - Av. Eng. Heitor Antonio Eiras Garcia, 1870</td>
+				  </tr>
+				  <tr>
+				    <td>26/11/2019</td>
+				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
+				    <td>UniCEU Paraisópolis – R. Doutor Jose Augusto de Souza e Silva, SN</td>
+				  </tr>
+				  <tr>
+				    <td>26/11/2019</td>
+				    <td>Participação Legislativa, Estrutura Pública Municipal e Atividades de Relações Governamentais Éticas e Adequadas</td>
+				    <td>UniCEU Jaçanã – Av. Antonio Cesar Neto, 104</td>
+				  </tr>
+				  <tr>
+				    <td>28/11/2019</td>
+				    <td>Participação Social e Mapeamento Colaborativo</td>
+				    <td>UniCEU Vila do Sol – Av. dos Funcionários Públicos, 369</td>
+				  </tr>
+				  <tr>
+				    <td>29/11/2019</td>
+				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
+				    <td>UniCEU Jardim Paulistano - R Aparecida do Taboado, SN</td>
+				  </tr>
+				  <tr>
+				    <td>29/11/2019</td>
+				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
+				    <td>UniCEU Rosa da China – R. Clara Petrela, 113</td>
+				  </tr>
+				</table>
+		 	</CommentsContext>
 		</section>
 		<section ref="allComments">
 			<h2 v-show="commentsLoaded" class="titulo" indent="1">Contribuições</h2>
 			<CommentsLoader :attr="estaConsulta"></CommentsLoader>
+
 		</section>
 	</div>
 </template>

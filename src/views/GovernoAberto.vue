@@ -8,7 +8,7 @@
 
 		<section>
 			<h2 class="titulo" indent="1">Introdução</h2>
-			<p>A Consulta Pública irá acolher sugestões sobre o Edital do Programa Agentes de Governo Aberto de 2019, promovido pela Prefeitura de São Paulo, por meio da Secretaria do Governo Municipal e Controladoria Geral do Município. 
+			<p>A Consulta Pública irá acolher sugestões sobre o Edital do Programa Agentes de Governo Aberto de 2019, promovido pela Prefeitura de São Paulo, por meio da Secretaria do Governo Municipal e Controladoria Geral do Município.
 			O propósito do programa é engajar a sociedade civil na agenda de Governo Aberto através da contratação de pessoas para a oferta de formações gratuitas aos munícipes, de modo a descentralizar conceitos, ferramentas e práticas de Governo Aberto na cidade</p>
 		</section>
 		<section>
@@ -36,10 +36,10 @@
 				<div>
 					<p><b>2.1.</b> Para fins deste Edital, com base no conceito adotado pela iniciativa internacional Open Government Partnership, consideram-se como diretrizes de Governo Aberto:</p>
 					<ol type="a">
-					    <li>A transparência e o acesso às informações públicas;</li>
-					    <li>O fortalecimento da participação social;</li>
-					    <li>O fomento à inovação tecnológica;</li>
-					    <li>O fortalecimento da integridade pública, por meio da prevenção e do combate à corrupção. </li>
+						<li>A transparência e o acesso às informações públicas;</li>
+						<li>O fortalecimento da participação social;</li>
+						<li>O fomento à inovação tecnológica;</li>
+						<li>O fortalecimento da integridade pública, por meio da prevenção e do combate à corrupção.</li>
 					</ol>
 					<p><b>2.1.1.</b> O programa Agentes de Governo Aberto tem como objetivo engajar a sociedade civil na agenda de Governo Aberto, por meio da contratação de Agentes Formadores e a oferta de formações gratuitas para munícipes, de modo a descentralizar conceitos, ferramentas e práticas de Governo Aberto no município de São Paulo e atingindo o maior número possível de cidadãos, capacitando-os para uma boa participação política junto ao poder público.</p>
 				</div>
@@ -48,12 +48,12 @@
 				<div>
 					<p><b>2.2.</b> Por promoção da cultura de Governo Aberto, para fins deste Edital, entende-se:</p>
 					<ol type="a">
-					    <li>A difusão do conceito e das <b>práticas de transparência, dados abertos</b> e <b>acesso à informação</b>;</li>
-					    <li>O fomento ao uso de <b>instrumentos de gestão participativa</b>, de <b>mapeamento colaborativo</b> e outras <b>técnicas de georreferenciamento</b> dos territórios;</li>
-					    <li>A criação de aplicações e ferramentas tecnológicas voltadas à <b>promoção da cidadania</b>, por meio do uso e desenvolvimento de hardwares e softwares livres e abertos e incentivo às <b>inovações sociais e colaborativas</b>;</li>
-					    <li>A difusão dos instrumentos de <b>comunicação cidadã</b> existentes e o estímulo ao desenvolvimento de novos que tenham como propósito compartilhar <b>experiências e iniciativas de governo aberto</b>;</li>
-					    <li>A difusão do conhecimento de existência de <b>mecanismos internos e externos de combate à corrupção</b>, fomentando o <b>controle social</b> e disseminando a cultura de atendimento às exigências de <b>programas de integridade (compliance)</b>, além de propiciar uma <b>educação política</b> que capacite o cidadão para a <b>avaliação e monitoramento de políticas públicas</b>.</li>
-					    <li>A difusão do conhecimento das <b>estruturas públicas</b> e suas <b>competências</b> e a capacitação para a <b>interação com o Poder Público</b> de forma ética e atendendo a programas de integridade (<b>formação de relações governamentais</b>).</li>
+						<li>A difusão do conceito e das <b>práticas de transparência, dados abertos</b> e <b>acesso à informação</b>;</li>
+						<li>O fomento ao uso de <b>instrumentos de gestão participativa</b>, de <b>mapeamento colaborativo</b> e outras <b>técnicas de georreferenciamento</b> dos territórios;</li>
+						<li>A criação de aplicações e ferramentas tecnológicas voltadas à <b>promoção da cidadania</b>, por meio do uso e desenvolvimento de hardwares e softwares livres e abertos e incentivo às <b>inovações sociais e colaborativas</b>;</li>
+						<li>A difusão dos instrumentos de <b>comunicação cidadã</b> existentes e o estímulo ao desenvolvimento de novos que tenham como propósito compartilhar <b>experiências e iniciativas de governo aberto</b>;</li>
+						<li>A difusão do conhecimento de existência de <b>mecanismos internos e externos de combate à corrupção</b>, fomentando o <b>controle social</b> e disseminando a cultura de atendimento às exigências de <b>programas de integridade (compliance)</b>, além de propiciar uma <b>educação política</b> que capacite o cidadão para a <b>avaliação e monitoramento de políticas públicas</b>.</li>
+						<li>A difusão do conhecimento das <b>estruturas públicas</b> e suas <b>competências</b> e a capacitação para a <b>interação com o Poder Público</b> de forma ética e atendendo a programas de integridade (<b>formação de relações governamentais</b>).</li>
 					</ol>
 				</div>
 			</CommentsContext>
@@ -70,7 +70,7 @@
 			<h3 class="titulo" indent="2">3. DO PAGAMENTO</h3>
 			<CommentsContext :id="6" :context="'ITEM 3.1'">
 				<div>
-					<p><b>3.1.</b> Cada Agente de Governo Aberto receberá bolsa pessoal e intransferível no valor bruto de até R$ 6.000,00 (seis mil  reais) pela realização das atividades no período da ocorrência das oficinas (04 meses) a partir da assinatura do Termo de Compromisso.</p> 
+					<p><b>3.1.</b> Cada Agente de Governo Aberto receberá bolsa pessoal e intransferível no valor bruto de até R$ 6.000,00 (seis mil reais) pela realização das atividades no período da ocorrência das oficinas (04 meses) a partir da assinatura do Termo de Compromisso.</p>
 					<p><b>3.1.1.</b> Os pagamentos serão efetuados mensalmente na proporção de horas de atividades presenciais executadas em cada mês, condicionados à comprovação em prestação de contas, conforme o item 14.2 deste edital, e à participação nos Encontros Formativos.</p>
 					<p><b>3.1.2.</b> Sobre o valor mensal de pagamento incidirá os tributos conforme a legislação vigente, incorrendo pagamento de INSS e, quando o pagamento for superior ao limite de isenção de tributação, incorrerá pagamento de IR.</p>
 				</div>
@@ -140,13 +140,13 @@
 				<div>
 					<p><b>5.1.</b> O cronograma do programa “Agentes de Governo Aberto” seguirá as seguintes etapas:</p>
 					<ol type="a">
-					    <li>Período de inscrição de interessados;</li>
-					    <li>Publicação do resultado preliminar dos aprovados pela Comissão de Seleção;</li>
-					    <li>Prazo de recurso dos não aprovados;</li>
-					    <li>d)	Publicação da homologação do resultado final e resposta aos recursos impetrados;</li>
-					    <li>Assinatura dos Termos de Compromisso e evento solene de diplomação como “Agente de Governo Aberto 2019”;</li>
-					    <li>Execução das oficinas;</li>
-					    <li>Encerramento da edição 2019 do programa.</li>					    
+						<li>Período de inscrição de interessados;</li>
+						<li>Publicação do resultado preliminar dos aprovados pela Comissão de Seleção;</li>
+						<li>Prazo de recurso dos não aprovados;</li>
+						<li>d)	Publicação da homologação do resultado final e resposta aos recursos impetrados;</li>
+						<li>Assinatura dos Termos de Compromisso e evento solene de diplomação como “Agente de Governo Aberto 2019”;</li>
+						<li>Execução das oficinas;</li>
+						<li>Encerramento da edição 2019 do programa.</li>
 					</ol>
 				</div>
 			</CommentsContext>
@@ -174,7 +174,7 @@
 						<b>6.1.4.</b> <b>Categoria 4 - Comunicação social, Cultura digital, Mídias alternativas e colaborativas:</b> tendo como orientação exemplificativa a realização de oficinas relacionadas ao fomento de práticas de governo aberto, promoção da cultura digital e/ou  criação de ações de comunicação, através da produção, edição e finalização de arquivos em multimídia, a partir do uso de software livre, de técnicas de produção criativa, de comunicação não escrita e de educomunicação; apresentação, criação e difusão de ferramentas de conhecimento colaborativo disponíveis em redes e mecanismos digitais e não digitais, para fomento e divulgação de políticas públicas através de mídias alternativas e colaborativas.
 					</p>
 					<p>
-						<b>6.1.5.</b> <b>Categoria 5 - Educação Política e mecanismos de Combate à Corrupção:</b> tendo como orientação exemplificativa a realização de oficinas relacionadas aos procedimentos administrativos e burocráticos da Prefeitura de São Paulo, especialmente com as temáticas de contratação pública e licitações, fomentando a participação cidadã quando possível; atividades de disseminação de programas, projetos e políticas públicas do governo municipal; atividades relacionadas à avaliação e monitoramento de políticas públicas de Governo Aberto e correlacionadas; oficinas voltadas à discussões sobre desafios e cocriação de soluções para a Prefeitura de São Paulo; produção de indicadores de políticas públicas da Prefeitura de São Paulo; atividades introdutórias, intermediárias e avançadas sobre a estrutura e funcionamento da máquina pública. 
+						<b>6.1.5.</b> <b>Categoria 5 - Educação Política e mecanismos de Combate à Corrupção:</b> tendo como orientação exemplificativa a realização de oficinas relacionadas aos procedimentos administrativos e burocráticos da Prefeitura de São Paulo, especialmente com as temáticas de contratação pública e licitações, fomentando a participação cidadã quando possível; atividades de disseminação de programas, projetos e políticas públicas do governo municipal; atividades relacionadas à avaliação e monitoramento de políticas públicas de Governo Aberto e correlacionadas; oficinas voltadas à discussões sobre desafios e cocriação de soluções para a Prefeitura de São Paulo; produção de indicadores de políticas públicas da Prefeitura de São Paulo; atividades introdutórias, intermediárias e avançadas sobre a estrutura e funcionamento da máquina pública.
 					</p>
 					<p>
 						<b>6.1.6.</b> <b>Participação Legislativa, Estrutura Pública Municipal e Atividades de Relações Governamentais Éticas e Adequadas:</b> tendo como orientação exemplificativa a realização de oficinas relacionadas aos processos legislativos tanto do Poder Legislativo (leis), quanto do Poder Executivo (portarias e decretos); meios de sugerir e influenciar a atividade dos legisladores e dos gestores de políticas públicas atendendo às exigências éticas e de programas de integridade (formação de profissionais de Relações Governamentais); percepção das competências legislativas e administrativas dos entes da Federação, com ênfase nas municipais; percepção de que a democracia se concretiza em maior medida na esfera municipal; percepção da distinção da atividade legislativa e da atividade administrativa e das atribuições dos Poderes Legislativo e Executivo; técnicas de logística e capacitação para assessoramento político.
@@ -199,26 +199,28 @@
 			<CommentsContext :id="21" :context="'ITEM 7.1'">
 				<div>
 					<p><b>7.1.</b> O Agente de Governo Aberto selecionado terá como atribuições:</p>
-					<p>
-						<b>7.1.1.</b> Realizar 60 (sessenta) horas de atividades, na proporção de 40 horas (quarenta) horas de atividades presenciais com aplicação de metodologias ativas e 20 (vinte) horas de atividades de planejamento, conforme descrito no Anexo V (Projeto de Atividade), apresentado e selecionado, e no Plano de Trabalho elaborado em conformidade com as diretrizes do Núcleo de Gestão do Edital (item 9.5, b);
+					<div>
+						<p>
+							<b>7.1.1.</b> Realizar 60 (sessenta) horas de atividades, na proporção de 40 horas (quarenta) horas de atividades presenciais com aplicação de metodologias ativas e 20 (vinte) horas de atividades de planejamento, conforme descrito no Anexo V (Projeto de Atividade), apresentado e selecionado, e no Plano de Trabalho elaborado em conformidade com as diretrizes do Núcleo de Gestão do Edital (item 9.5, b);
+						</p>
 						<p>
 							<b>7.1.1.1.</b> O Agente deverá adequar suas 20 (vinte) horas de atividades de planejamento às atividades presenciais exercidas, observando o estabelecido pelo item 3.2.1.
 						</p>
 						<p>
 							<b>7.1.1.2.</b> O Agente deverá adequar suas 40h de oficinas presenciais em ciclos de atividades de, no máximo, 5 horas, obedecendo a um dos critérios abaixo:
 							<ol type="a">
-							    <li>1 (uma) oficina de módulo único de 5h, sendo ministrada para públicos diferentes em 8 datas distintas, distribuídas pelos quatro meses do programa, preferencialmente totalizando 10 horas por mês;</li>
-							    <li>1 (uma) oficina de módulo único de 3h20 h de atividades presenciais, sendo ministrada para públicos diferentes em 12 datas distintas, distribuídas pelos quatro meses do programa, preferencialmente totalizando 10 horas por mês </li>
-							    <li>1 (uma) oficina de módulo único de 2h30 de atividades presenciais, sendo ministrada para públicos diferentes em 16 datas distintas, distribuídas pelos quatro meses do programa, preferencialmente totalizando 10 horas por mês</li>
-							    <li>1 (uma) oficina desmembrada em dois módulos de 5 horas cada, sendo ministrada para públicos diferentes em 4 edições, distribuídas pelos quatro meses do programa, preferencialmente totalizando 10 horas por mês. </li>
-							    <li>1 (uma) oficina desmembrada em três módulos de 3h20 horas cada, sendo ministrada para públicos diferentes em 4 edições, distribuídas pelos quatro meses do programa, preferencialmente totalizando 10 horas por mês;</li>
-							    <li>1 (uma) oficina desmembrada em quatro módulos de 2h30 cada, sendo ministrada para públicos diferentes em 4 edições, distribuídas pelos quatro meses do programa, preferencialmente totalizando 10 horas por mês</li>
-							</ol>							
+								<li>1 (uma) oficina de módulo único de 5h, sendo ministrada para públicos diferentes em 8 datas distintas, distribuídas pelos quatro meses do programa, preferencialmente totalizando 10 horas por mês;</li>
+								<li>1 (uma) oficina de módulo único de 3h20 h de atividades presenciais, sendo ministrada para públicos diferentes em 12 datas distintas, distribuídas pelos quatro meses do programa, preferencialmente totalizando 10 horas por mês </li>
+								<li>1 (uma) oficina de módulo único de 2h30 de atividades presenciais, sendo ministrada para públicos diferentes em 16 datas distintas, distribuídas pelos quatro meses do programa, preferencialmente totalizando 10 horas por mês</li>
+								<li>1 (uma) oficina desmembrada em dois módulos de 5 horas cada, sendo ministrada para públicos diferentes em 4 edições, distribuídas pelos quatro meses do programa, preferencialmente totalizando 10 horas por mês. </li>
+								<li>1 (uma) oficina desmembrada em três módulos de 3h20 horas cada, sendo ministrada para públicos diferentes em 4 edições, distribuídas pelos quatro meses do programa, preferencialmente totalizando 10 horas por mês;</li>
+								<li>1 (uma) oficina desmembrada em quatro módulos de 2h30 cada, sendo ministrada para públicos diferentes em 4 edições, distribuídas pelos quatro meses do programa, preferencialmente totalizando 10 horas por mês</li>
+							</ol>
 						</p>
 						<p>
 							<b>7.1.1.3.</b> Outros formatos ou alterações após aprovação deverão ser submetidos à análise da Supervisão para Assuntos de Governo Aberto que poderá aprovar, ou instruir para a adequação que melhor atenda ao interesse público.
 						</p>
-					</p>
+					</div>
 					<p>
 						<b>7.1.2.</b> Produzir e disponibilizar recursos e materiais relacionados às oficinas formativas que propuser, tais como apostilas, apresentações, tutoriais, certificados para os participantes, em meio impresso ou digital, entre outros, observado o disposto pelo item 3.2
 					</p>
@@ -236,16 +238,16 @@
 					</p>
 				</div>
 			</CommentsContext>
-	 		<CommentsContext :id="22" :context="'ITEM 7.2'">
-	 			<div>
-	 				<p><b>7.2.</b> Após aprovação pela Comissão de Seleção, a equipe Supervisão para Assuntos de Governo Aberto poderá adequar o título da oficina, seu formato e duração para melhor atender ao interesse público.</p>
-	 				<p>
-	 					<b>7.2.1.</b> O Agente poderá participar junto à equipe da Supervisão para Assuntos de Governo Aberto das discussões sobre eventuais alterações em seu projeto, e seus posicionamentos e colocações deverão ser atendidos na maior medida possível, respeitada, primordialmente, o interesse público e objetivos do programa.
-	 				</p>
-	 				<p>
-	 					<b>7.2.2.</b> O título de divulgação da oficina deverá ser chamativo e em linguagem cidadã, devendo ser aprovado pela equipe de comunicação da Supervisão para Assuntos de Governo Aberto.
-	 				</p>
-	 			</div>
+			<CommentsContext :id="22" :context="'ITEM 7.2'">
+				<div>
+					<p><b>7.2.</b> Após aprovação pela Comissão de Seleção, a equipe Supervisão para Assuntos de Governo Aberto poderá adequar o título da oficina, seu formato e duração para melhor atender ao interesse público.</p>
+					<p>
+						<b>7.2.1.</b> O Agente poderá participar junto à equipe da Supervisão para Assuntos de Governo Aberto das discussões sobre eventuais alterações em seu projeto, e seus posicionamentos e colocações deverão ser atendidos na maior medida possível, respeitada, primordialmente, o interesse público e objetivos do programa.
+					</p>
+					<p>
+						<b>7.2.2.</b> O título de divulgação da oficina deverá ser chamativo e em linguagem cidadã, devendo ser aprovado pela equipe de comunicação da Supervisão para Assuntos de Governo Aberto.
+					</p>
+				</div>
 			</CommentsContext>
 			<CommentsContext :id="23" :context="'ITEM 7.3'">
 				<div>
@@ -264,7 +266,7 @@
 				<div>
 					<p><b>8.1.</b> Poderão participar do credenciamento pessoas:</p>
 					<ol type="a">
-					    <li>maiores de 18 (dezoito) anos, sem restrição máxima de idade;</li>
+						<li>maiores de 18 (dezoito) anos, sem restrição máxima de idade;</li>
 						<li>que comprovem domicílio, vínculo de estudo ou vínculo de trabalho no município de São Paulo;</li>
 						<li>com comprovada atuação e/ou conhecimento na temática de interesse há, no mínimo, 01 (um) ano;</li>
 						<li>com disponibilidade de horário para oferecer as oficinas formativas propostas e comparecer aos Encontros Formativos obrigatórios, nos termos do item 14.5.</li>
@@ -286,7 +288,7 @@
 			<CommentsContext :id="27" :context="'ITEM 8.3'">
 				<div>
 					<p><b>8.3.</b> É imprescindível que o Agente possua ou esteja em condições de abrir conta corrente no Banco do Brasil para recebimento da bolsa.</p>
-				</div>				
+				</div>
 			</CommentsContext>
 			<CommentsContext :id="28" :context="'ITEM 8.4'">
 				<div>
@@ -332,7 +334,7 @@
 					<p><b>9.5.</b> O Agente deverá anexar na sua inscrição na plataforma SP Cultura as seguintes informações:</p>
 					<ol type="a">
 						<li>Declaração de Aceite das condições do Edital (Anexo I);</li>
-						<li>Projeto de Atividade seguindo modelo do Anexo V, com, no máximo, 5 (cinco) páginas, <b>respeitado o dever de anonimato</b> estabelecido pelo item 9.5.b.1, trazendo o detalhamento das atividades a serem desenvolvidas e contendo os seguintes itens obrigatórios: 
+						<li>Projeto de Atividade seguindo modelo do Anexo V, com, no máximo, 5 (cinco) páginas, <b>respeitado o dever de anonimato</b> estabelecido pelo item 9.5.b.1, trazendo o detalhamento das atividades a serem desenvolvidas e contendo os seguintes itens obrigatórios:
 							<ol type="1">
 								<li>título do projeto e título de divulgação da oficina, podendo ser idênticos, observada a determinação do item 7.2.2; </li>
 								<li>categoria escolhida;</li>
@@ -413,49 +415,49 @@
 				<div>
 					<p><b>11.2.</b> Os critérios adotados para a avaliação dos projetos e as respectivas pontuações são:</p>
 					<table>
-					  <tr>
-					    <th><br><br>Critérios<br><br></th>
-					    <th><br><br>Questões a serem consideradas<br><br></th>
-					    <th><br><br>Pontuação<br><br></th>
-					  </tr>
-					  <tr>
-					    <td colspan="3"><br><center>Avaliação técnica dos projetos</center><br></td>
-					  </tr>
-					  <tr>
-					    <td>Adequação do conteúdo do projeto à temática de Governo Aberto e à categoria escolhida</td>
-					    <td>Critério que avalia o projeto de acordo com os preceitos do governo aberto (participação social, transparência e linguagem cidadã, integridade, inovação, tecnológica e a aplicação de ferramentas livres), e com a Categoria apontada pelo candidato</td>
-					    <td>Caráter eliminatório</td>
-					  </tr>
-					  <tr>
-					    <td>Adequação formal do Projeto às especificações previstas no Edital</td>
-					    <td>Critério que avalia o projeto cuja apresentação formal e de conteúdo esteja de acordo com as disposições constantes do Credenciamento.</td>
-					    <td>0 a 1 ponto</td>
-					  </tr>
-					  <tr>
-					    <td>Interesse público do projeto</td>
-					    <td>Critério que avalia o impacto social, cultural e formativo da ação.</td>
-					    <td>0 a 3 pontos</td>
-					  </tr>
-					  <tr>
-					    <td>Viabilidade do projeto e à adequação dos métodos de trabalho</td>
-					    <td>Critério que avalia o projeto cuja viabilidade esteja tecnicamente demonstrada quanto ao tempo e espaço de execução e cuja metodologia apresentada em Projetos de Atividades demonstre capacidade técnica para trabalhar a categoria do projeto. Avaliação da metodologia ativa aplicada na oficina.</td>
-					    <td>0 a 2 pontos<br></td>
-					  </tr>
-					  <tr>
-					    <td>Transversalidade</td>
-					    <td>Critério que avalia se o projeto abarca mais de um preceito de governo aberto, se contempla mais do que uma<br> categoria.</td>
-					    <td>0 a 2 pontos</td>
-					  </tr>
-					  <tr>
-					    <td>Inovação do projeto</td>
-					    <td>Critério que avalia a inovação do projeto em relação às edições anteriores e também à setorialização do mesmo.</td>
-					    <td>0 a 1 ponto<br></td>
-					  </tr>
-					  <tr>
-					    <td>Avaliação da experiência na categoria escolhida</td>
-					    <td>Critério que avalia a qualificação do Agente acerca do tema e seu conhecimento e experiência na categoria escolhida, por meio da análise do campo “experiências práticas” do projeto.<br></td>
-					    <td>0 a 1 ponto<br></td>
-					  </tr>
+						<tr>
+							<th><br><br>Critérios<br><br></th>
+							<th><br><br>Questões a serem consideradas<br><br></th>
+							<th><br><br>Pontuação<br><br></th>
+						</tr>
+						<tr>
+							<td colspan="3"><br><center>Avaliação técnica dos projetos</center><br></td>
+						</tr>
+						<tr>
+							<td>Adequação do conteúdo do projeto à temática de Governo Aberto e à categoria escolhida</td>
+							<td>Critério que avalia o projeto de acordo com os preceitos do governo aberto (participação social, transparência e linguagem cidadã, integridade, inovação, tecnológica e a aplicação de ferramentas livres), e com a Categoria apontada pelo candidato</td>
+							<td>Caráter eliminatório</td>
+						</tr>
+						<tr>
+							<td>Adequação formal do Projeto às especificações previstas no Edital</td>
+							<td>Critério que avalia o projeto cuja apresentação formal e de conteúdo esteja de acordo com as disposições constantes do Credenciamento.</td>
+							<td>0 a 1 ponto</td>
+						</tr>
+						<tr>
+							<td>Interesse público do projeto</td>
+							<td>Critério que avalia o impacto social, cultural e formativo da ação.</td>
+							<td>0 a 3 pontos</td>
+						</tr>
+						<tr>
+							<td>Viabilidade do projeto e à adequação dos métodos de trabalho</td>
+							<td>Critério que avalia o projeto cuja viabilidade esteja tecnicamente demonstrada quanto ao tempo e espaço de execução e cuja metodologia apresentada em Projetos de Atividades demonstre capacidade técnica para trabalhar a categoria do projeto. Avaliação da metodologia ativa aplicada na oficina.</td>
+							<td>0 a 2 pontos<br></td>
+						</tr>
+						<tr>
+							<td>Transversalidade</td>
+							<td>Critério que avalia se o projeto abarca mais de um preceito de governo aberto, se contempla mais do que uma<br> categoria.</td>
+							<td>0 a 2 pontos</td>
+						</tr>
+						<tr>
+							<td>Inovação do projeto</td>
+							<td>Critério que avalia a inovação do projeto em relação às edições anteriores e também à setorialização do mesmo.</td>
+							<td>0 a 1 ponto<br></td>
+						</tr>
+						<tr>
+							<td>Avaliação da experiência na categoria escolhida</td>
+							<td>Critério que avalia a qualificação do Agente acerca do tema e seu conhecimento e experiência na categoria escolhida, por meio da análise do campo “experiências práticas” do projeto.<br></td>
+							<td>0 a 1 ponto<br></td>
+						</tr>
 					</table>
 				</div>
 			</CommentsContext>
@@ -503,7 +505,7 @@
 			</CommentsContext>
 			<CommentsContext :id="50" :context="'ITEM 11.9'">
 				<div>
-					<p><b>11.9.</b> Havendo empate na nota final, terá preferência o projeto:</p> 
+					<p><b>11.9.</b> Havendo empate na nota final, terá preferência o projeto:</p>
 					<ol type="a">
 						<li>que possuir a maior pontuação no critério <b>“Interesse público do projeto”</b>;</li>
 						<li>que possuir a maior pontuação no critério <b>“Avaliação da experiência na categoria escolhida”</b>;</li>
@@ -550,31 +552,30 @@
 					<p><b>12.5.</b> Decididos os recursos, o certame será homologado pelas autoridades competentes.</p>
 				</div>
 			</CommentsContext>
-		 </section>
-		 <section>
-		  	<h3 class="titulo" indent="2">13. DAS CONDIÇÕES DE CONTRATAÇÃO DE AGENTES</h3>
-		  	<CommentsContext :id="56" :context="'ITEM 13.1'">
-		  		<p>
-		  			<b>13.1.</b> A contratação de cada Agente de Governo Aberto será feita por processo administrativo próprio com fundamento no caput do artigo 25 da Lei Federal nº 8.666/93, que ficará vinculado ao Processo SEI nº 6073.2019/0000062-2;
-		  		</p>
-		  	</CommentsContext>
-		  	<CommentsContext :id="57" :context="'ITEM 13.2'">
-		  		<p>
-		  			<b>13.2.</b> O apoio financeiro concedido aos projetos selecionados será repassado diretamente ao respectivo Agente.
-		  		</p>
-		  	</CommentsContext>
-		  	<CommentsContext :id="58" :context="'ITEM 13.3'">
-		  		<p>
-		  			<b>13.3.</b> Após a aprovação na seleção, os Agentes receberão os recursos em parcelas mensais e proporcionais às horas realizadas conforme item 3, subsequentes à assinatura do Termo de Compromisso no período proposto pelo Núcleo de Gestão do Edital. 
-		  			<p><b>13.3.1.</b> O Agente deverá fornecer seus dados bancários da conta corrente do Banco do Brasil para o recebimento da bolsa, conforme item 8.3.</p>
-		  		</p>
-		  	</CommentsContext>
-		  	<CommentsContext :id="59" :context="'ITEM 13.4'">
-		  		<p>
-		  			<b>13.4.</b> Haverá convocação dos Agentes selecionados por meio de correspondência eletrônica, com inequívoca ciência e prazo de até <b>5 (cinco) dias úteis</b> após o recebimento para confirmação do interesse na contratação. Firmado o interesse, deverão ser apresentados, em data a ser agendada pela Supervisão para Assuntos de Governo Aberto, os documentos relacionados a seguir:
-		  			<p>
-		  				<ol type="a">
-		  					<li>Fotocópia legível da Carteira de Identidade (RG ou CNH);</li>
+		</section>
+		<section>
+				<h3 class="titulo" indent="2">13. DAS CONDIÇÕES DE CONTRATAÇÃO DE AGENTES</h3>
+				<CommentsContext :id="56" :context="'ITEM 13.1'">
+					<p>
+						<b>13.1.</b> A contratação de cada Agente de Governo Aberto será feita por processo administrativo próprio com fundamento no caput do artigo 25 da Lei Federal nº 8.666/93, que ficará vinculado ao Processo SEI nº 6073.2019/0000062-2;
+					</p>
+				</CommentsContext>
+				<CommentsContext :id="57" :context="'ITEM 13.2'">
+					<p>
+						<b>13.2.</b> O apoio financeiro concedido aos projetos selecionados será repassado diretamente ao respectivo Agente.
+					</p>
+				</CommentsContext>
+				<CommentsContext :id="58" :context="'ITEM 13.3'">
+					<div>
+						<p><b>13.3.</b> Após a aprovação na seleção, os Agentes receberão os recursos em parcelas mensais e proporcionais às horas realizadas conforme item 3, subsequentes à assinatura do Termo de Compromisso no período proposto pelo Núcleo de Gestão do Edital. </p>
+						<p><b>13.3.1.</b> O Agente deverá fornecer seus dados bancários da conta corrente do Banco do Brasil para o recebimento da bolsa, conforme item 8.3.</p>
+					</div>
+				</CommentsContext>
+				<CommentsContext :id="59" :context="'ITEM 13.4'">
+					<div>
+						<p><b>13.4.</b> Haverá convocação dos Agentes selecionados por meio de correspondência eletrônica, com inequívoca ciência e prazo de até <b>5 (cinco) dias úteis</b> após o recebimento para confirmação do interesse na contratação. Firmado o interesse, deverão ser apresentados, em data a ser agendada pela Supervisão para Assuntos de Governo Aberto, os documentos relacionados a seguir:</p>
+							<ol type="a">
+								<li>Fotocópia legível da Carteira de Identidade (RG ou CNH);</li>
 							<li>Fotocópia legível do Registro no Cadastro de Pessoa Física – CPF;</li>
 							<li>Fotocópia legível do comprovante de residência (conta de água, luz ou telefone) atual de no mínimo 2 (dois) meses de defasagem;</li>
 							<li>Fotocópia do NIT/PIS/PASEP;</li>
@@ -589,30 +590,30 @@
 							<li>Certidão de Débitos relativos a Créditos Tributários Federais e à Dívida Ativa da União, por meio do link:
 							<a href="http://www.receita.fazenda.gov.br/Aplicacoes/ATSPO/Certidao/CndConjuntaInter/InformaNICertidao.asp?Tipo=2" target="_blank">http://www.receita.fazenda.gov.br/Aplicacoes/ATSPO/Certidao/CndConjuntaInter/InformaNICertidao.asp?Tipo=2</a>.</li>
 						</ol>
-							<p>
-								<b>13.4.1.</b> Os documentos deverão ser entregues na <mark>Supervisão para Assuntos de Governo Aberto na Secretaria do Governo Municipal (Viaduto do Chá, n° 15 – Edifício Matarazzo, 7º andar)</mark>.
-							</p>
-		  			</p>
-		  		</p>	
-		  	</CommentsContext>
-		  	<CommentsContext :id="60" :context="'ITEM 13.5'">
-		  		<p>
-		  			<b>13.5.</b> Na falta de documentação ou na hipótese de desistência do interessado no prazo estabelecido será convocado outro Agente, de acordo com a ordem de classificação.
-		  			<p><b>13.5.1.</b> Nas hipóteses de desistência posteriores ao prazo do item 13.4, a substituição fica a critério do Núcleo de Gestão do Edital, podendo ser convocados outros Agentes, respeitando-se a ordem de classificação. </p>
-		  		</p>
-		  	</CommentsContext>
-		  	<CommentsContext :id="61" :context="'ITEM 13.6'">
-		  		<p>
-		  			<b>13.6.</b> Não poderão ser contratados aqueles que tiverem pendências no Cadastro Informativo Municipal – CADIN, aprovado pela Lei nº. 14.094 de 06 de dezembro de 2005 e regulamentado pelo Decreto nº. 47.096 de 21 de março de 2006.
-		  		</p>
-		  	</CommentsContext>
-		  	<CommentsContext :id="62" :context="'ITEM 13.7'">
-		  		<p>
-		  			<b>13.7.</b> Fica a critério da Administração Pública realizar filmagens e fotografia das atividades desenvolvidas pelos Agentes durante a execução das oficinas.
-		  		</p>
-		  	</CommentsContext>
-		 </section>
-
+						<p>
+							<b>13.4.1.</b> Os documentos deverão ser entregues na <mark>Supervisão para Assuntos de Governo Aberto na Secretaria do Governo Municipal (Viaduto do Chá, n° 15 – Edifício Matarazzo, 7º andar)</mark>.
+						</p>
+					</div>
+			</CommentsContext>
+			<CommentsContext :id="60" :context="'ITEM 13.5'">
+				<p>
+					<b>13.5.</b> Na falta de documentação ou na hipótese de desistência do interessado no prazo estabelecido será convocado outro Agente, de acordo com a ordem de classificação.
+				</p>
+				<p>
+					<b>13.5.1.</b> Nas hipóteses de desistência posteriores ao prazo do item 13.4, a substituição fica a critério do Núcleo de Gestão do Edital, podendo ser convocados outros Agentes, respeitando-se a ordem de classificação.
+				</p>
+			</CommentsContext>
+			<CommentsContext :id="61" :context="'ITEM 13.6'">
+				<p>
+					<b>13.6.</b> Não poderão ser contratados aqueles que tiverem pendências no Cadastro Informativo Municipal – CADIN, aprovado pela Lei nº. 14.094 de 06 de dezembro de 2005 e regulamentado pelo Decreto nº. 47.096 de 21 de março de 2006.
+				</p>
+			</CommentsContext>
+			<CommentsContext :id="62" :context="'ITEM 13.7'">
+				<p>
+					<b>13.7.</b> Fica a critério da Administração Pública realizar filmagens e fotografia das atividades desenvolvidas pelos Agentes durante a execução das oficinas.
+				</p>
+			</CommentsContext>
+		</section>
 		<section>
 			<h3 class="titulo" indent="2">14. DO ACOMPANHAMENTO E DA PRESTAÇÃO DE CONTAS</h3>
 			<CommentsContext :id="63" :context="'ITEM 14.1'">
@@ -635,7 +636,6 @@
 
 					<p><b>14.2.3.</b> As fotografias têm finalidade de prestação de contas e é vedada a sua utilização para fins externos, exceto mediante autorização do Núcleo de Gestão do Edital.</p>
 					<p><b>14.2.3.1.</b> Em caso de autorização da utilização das imagens para fins externos e ou publicações da PMSP, a foto deve ser respaldada por Termo de Autorização de Uso de Imagem (Anexo III) assinado pelos participantes da oficina que estiverem na foto.</p>
-					</span>
 					<p><b>14.2.4.</b> O pagamento das horas de Planejamento está condicionado às entregas elencadas no item 14.2 e observado o item 3.2.1.</p>
 				</div>
 			</CommentsContext>
@@ -822,7 +822,7 @@
 			<CommentsContext :id="88" :context="'ITEM 18.2'">
 				<div>
 					<p><b>18.2.</b> A Supervisão para Assuntos de Governo Aberto realizará oficinas de divulgação e esclarecimentos acerca do edital e do processo de inscrição, conforme o calendário abaixo:</p>
-					(Calendário em construção)
+					<center>(Calendário em construção)</center>
 				</div>
 			</CommentsContext>
 			<CommentsContext :id="89" :context="'ITEM 18.3'">
@@ -836,14 +836,14 @@
 		</section>
 		<section>
 			<h3 class="titulo" indent="2">ANEXO I - Declaração de Aceite das Condições do Edital Nº 01/2019 - SGM/CGM</h3>
-			<CommentsContext :id="90" :context="'ANEXOS'">
+			<CommentsContext :id="90" :context="'ANEXO I'">
 				<div>
 					<p><br>DECLARO, na condição de inscrito(a), que:</p>
 					<ul>
 						<li>Conheço e aceito incondicionalmente as regras do presente Edital;</li>
 						<li>Responsabilizo-me por todas as informações contidas no projeto;</li>
 						<li>Declaro que não sou servidor(a) público vinculado ou lotado em qualquer órgão do Executivo ou Legislativo do Município de São Paulo, que não possuo parentes de até o 2º grau, cônjuge ou companheiro(a) de membros da Comissão de Seleção ou lotado nas Secretarias envolvidas neste Edital e de que não possuo impedimento legal para a contratação a ser realizada pela Controladoria Geral do Município e Secretaria de Governo Municipal. Não incorro em nenhuma das hipóteses de impedimento.</li>
-						<li>Declaro, ainda, que não trabalhei em órgão do Executivo ou Legislativo do município de São Paulo nos últimos 5 anos.</li>	
+						<li>Declaro, ainda, que não trabalhei em órgão do Executivo ou Legislativo do município de São Paulo nos últimos 5 anos.</li>
 					</ul><br>
 					<p align="center">São Paulo, _____ de _____________________ de 2019</p>
 					<p align="center"><br>___________________________________<br>Assinatura</p>
@@ -854,13 +854,13 @@
 		</section>
 		<section>
 			<h3 class="titulo" indent="2">ANEXO II - Declaração de Disponibilidade de Horário para realizar as oficinas formativas - Edital Nº 01/2019 - SGM/CGM</h3>
-			<CommentsContext :id="91" :context="'ANEXO II - Declaração de Disponibilidade de Horário para realizar as oficinas formativas - Edital Nº 01/2019 - SGM/CGM'">
+			<CommentsContext :id="91" :context="'ANEXO II'">
 				<div>
 					<p><br>DECLARO, na condição de inscrito (a), que:</p>
 					<ul>
 						<li>Conheço e aceito incondicionalmente as regras do presente Edital;</li>
 						<li>Responsabilizo-me por todas as informações contidas no Anexo III;</li>
-						<li>Declaro ainda que tenho disponibilidade em realizar as oficinas formativas nos dias e períodos listados abaixo (Marcar X em mais de 5 itens):</li>	
+						<li>Declaro ainda que tenho disponibilidade em realizar as oficinas formativas nos dias e períodos listados abaixo (Marcar X em mais de 5 itens):</li>
 					</ul>
 					<table>
 						<thead>
@@ -913,11 +913,11 @@
 		</section>
 		<section>
 			<h3 class="titulo" indent="2">ANEXO III: TERMO DE AUTORIZAÇÃO DE USO DE IMAGEM</h3>
-			<CommentsContext :id="92" :context="'ANEXO III: TERMO DE AUTORIZAÇÃO DE USO DE IMAGEM'">
+			<CommentsContext :id="92" :context="'ANEXO III'">
 				<div>
 					Eu,_______________________________________________, ________ anos, portador da Cédula de Identidade nº ____________, inscrito no CPF sob nº ________________, residente à ________________________________________<br>______________________________________ na cidade de _____________________, AUTORIZO o uso de minha imagem (ou do menor _______________________________ sob minha responsabilidade) em fotos ou filme, sem finalidade comercial, para ser utilizada no trabalho _______________________________.
 A presente autorização é concedida a título gratuito, abrangendo o uso da imagem acima mencionada em todo território nacional e no exterior, em todas as suas modalidades, por quaisquer meios físicos ou digitais, para fins de divulgação em geral.
- 
+
 Por esta ser a expressão da minha vontade declaro que autorizo o uso acima descrito sem que nada haja a ser reclamado a título de direitos conexos à minha imagem ou a qualquer outro.
 					<p align="center">São Paulo, _____ de _____________________ de 2019</p>
 					<p align="center"><br>___________________________________<br>Assinatura do Participante</p>
@@ -926,7 +926,7 @@ Por esta ser a expressão da minha vontade declaro que autorizo o uso acima desc
 		</section>
 		<section>
 			<h3 class="titulo" indent="2">ANEXO IV: FICHA DE IDENTIFICAÇÃO</h3>
-			<CommentsContext :id="93" :context="'ANEXO IV: FICHA DE IDENTIFICAÇÃO'">
+			<CommentsContext :id="93" :context="'ANEXO IV'">
 				<div>
 					<table>
 						<tr height="0px" valign="top">
@@ -961,7 +961,7 @@ Por esta ser a expressão da minha vontade declaro que autorizo o uso acima desc
 		</section>
 		<section>
 			<h3 class="titulo" indent="2">ANEXO V - PROJETO DE ATIVIDADE FORMATIVA</h3>
-			<CommentsContext :id="94" :context="'ANEXO V - PROJETO DE ATIVIDADE FORMATIVA'">
+			<CommentsContext :id="94" :context="'ANEXO V'">
 				<div>
 					<table>
 						<tr height="0px" valign="top">
@@ -1000,761 +1000,19 @@ Por esta ser a expressão da minha vontade declaro que autorizo o uso acima desc
 						<tr><td>Caso sim, em quais subprefeituras?<br>
 							(  )Aricanduva, (  )Butantã, (  )Campo Limpo, (  )Casa Verde/Cachoeirinha, (  )Capela do Socorro, <br>(  )Cidade Ademar, (  )Cid. Tiradentes, (  )Ermelino Matarazzo, (  )Freguesia/Brasilândia, (  )Guaianases, <br>(  )Ipiranga, (  )Itaim Paulista, (  )Itaquera, (  )Jabaquara, (  )Lapa, (  )M'Boi Mirim, (  )Mooca, (  )Parelheiros, <br>(  )Penha, (  )Perus, (  )Pinheiros, (  )Pirituba/Jaraguá, (  )Santana/Tucuruvi, (  )Santo Amaro, (  )São Mateus, <br>(  )São Miguel,  (  )Sapopemba, (   )Sé, (   )Tremembé/Jaçanã,       (   )Vila Maria/Vila Guilherme, (   )Vila Mariana, <br>(   )Vila Prudente</td></tr>
 					</table>
-
 				</div>
-			</CommentsContext>			
+			</CommentsContext>
 		</section>
+		<hr />
 		<section>
-		 	<h3 class="titulo" indent="2">ANEXO VI: CALENDÁRIO DE OFICINAS A SEREM REALIZADAS</h3>
-		 	<CommentsContext :id="95" :context="'ANEXO VI: CALENDÁRIO DE OFICINAS A SEREM REALIZADAS'">
-		 		<table>
-				  <tr>
-				    <th>Datas</th>
-				    <th>Categoria</th>
-				    <th>Local</th>
-				  </tr>
-				  <tr>
-				    <td>01/08/2019</td>
-				    <td>Participação Social e Mapeamento Colaborativo</td>
-				    <td>UniCEU Parque Bristol – R. Professor Artur Primavesi, SN</td>
-				  </tr>
-				  <tr>
-				    <td>01/08/2019</td>
-				    <td>Participação Social e Mapeamento Colaborativo</td>
-				    <td>UniCEU Parelheiros – R. Jose Pedro de Borba, 20</td>
-				  </tr>
-				  <tr>
-				    <td>01/08/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU Vila Atlântica – R. Coronel Jose Venâncio Dias, 840</td>
-				  </tr>
-				  <tr>
-				    <td>01/08/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU Vila do Sol – Av. dos Funcionários Públicos, 369</td>
-				  </tr>
-				  <tr>
-				    <td>03/08/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU São Rafael - R. Cinira Polônio, 98</td>
-				  </tr>
-				  <tr>
-				    <td>06/08/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU Inácio Monteiro – R. Barão Joaquim do Amparo, SN</td>
-				  </tr>
-				  <tr>
-				    <td>06/08/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU Navegantes – R. Maria Mossab Barbour, SN</td>
-				  </tr>
-				  <tr>
-				    <td>06/08/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Perus - R. Bernardo Jose de Lorena, SN</td>
-				  </tr>
-				  <tr>
-				    <td>07/08/2019</td>
-				    <td>Participação Social e Mapeamento Colaborativo</td>
-				    <td>UniCEU Jaguaré – Av. Kenkiti Simomoto, SN</td>
-				  </tr>
-				  <tr>
-				    <td>07/08/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU Inácio Monteiro – R. Barão Joaquim do Amparo, SN</td>
-				  </tr>
-				  <tr>
-				    <td>07/08/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU Vila do Sol – Av. dos Funcionários Públicos, 369</td>
-				  </tr>
-				  <tr>
-				    <td>08/08/2019</td>
-				    <td>Participação Social e Mapeamento Colaborativo</td>
-				    <td>UniCEU Parque Bristol – R. Professor Artur Primavesi</td>
-				  </tr>
-				  <tr>
-				    <td>08/08/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU Campo Limpo – Av. Carlos Lacerda, 678</td>
-				  </tr>
-				  <tr>
-				    <td>09/08/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU Campo Limpo – Av. Carlos Lacerda, 678</td>
-				  </tr>
-				  <tr>
-				    <td>13/08/2019</td>
-				    <td>Transparência, Acesso à Informação e Política de Dados Abertos</td>
-				    <td>UniCEU Alto Alegre - Av. Bento Guelfi, SN</td>
-				  </tr>
-				  <tr>
-				    <td>13/08/2019</td>
-				    <td>Participação Social e Mapeamento Colaborativo</td>
-				    <td>UniCEU Parque Anhanguera – R. Pedro Jose de Lima, 10</td>
-				  </tr>
-				  <tr>
-				    <td>14/08/2019</td>
-				    <td>Participação Social e Mapeamento Colaborativo</td>
-				    <td>UniCEU Vila Rubi – R. Domingos Tarroso, 101</td>
-				  </tr>
-				  <tr>
-				    <td>14/08/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU Casa Blanca - R Joao Damasceno, SN</td>
-				  </tr>
-				  <tr>
-				    <td>14/08/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU Feitiço da Vila – R. Feitiço da Vila, 399</td>
-				  </tr>
-				  <tr>
-				    <td>14/08/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU Vila Curuçá - Av. Marechal Tito, 3450</td>
-				  </tr>
-				  <tr>
-				    <td>14/08/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Sapopemba – R. Manuel Quirino de Mattos, SN</td>
-				  </tr>
-				  <tr>
-				    <td>14/08/2019</td>
-				    <td>Transparência, Acesso à Informação e Política de Dados Abertos</td>
-				    <td>CCSP - Rua Vergueiro, 1000</td>
-				  </tr>
-				  <tr>
-				    <td>15/08/2019</td>
-				    <td>Participação Social e Mapeamento Colaborativo</td>
-				    <td>UniCEU Caminho do Mar - Av. Eng. Armando de Arruda Pereira, 5080</td>
-				  </tr>
-				  <tr>
-				    <td>15/08/2019</td>
-				    <td>Participação Social e Mapeamento Colaborativo</td>
-				    <td>UniCEU Parque Anhanguera – R. Pedro Jose de Lima, 10</td>
-				  </tr>
-				  <tr>
-				    <td>15/08/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU Tiquatira – Av. Condessa Elisabeth Robiano, 10</td>
-				  </tr>
-				  <tr>
-				    <td>19/08/2019</td>
-				    <td>Participação Social e Mapeamento Colaborativo</td>
-				    <td>UniCEU Pêra Marmelo – R. Pêra Marmelo, 225</td>
-				  </tr>
-				  <tr>
-				    <td>20/08/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU Lajeado - R. Manuel da Mota Coutinho, 294</td>
-				  </tr>
-				  <tr>
-				    <td>20/08/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU Alvarenga - Estrada do Alvarenga, 3750</td>
-				  </tr>
-				  <tr>
-				    <td>20/08/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU São Mateus - R. Curumatim, 201</td>
-				  </tr>
-				  <tr>
-				    <td>20/08/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU São Mateus - R. Curumatim, 201</td>
-				  </tr>
-				  <tr>
-				    <td>20/08/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Cidade Dutra – Av. Interlagos, 7350</td>
-				  </tr>
-				  <tr>
-				    <td>20/08/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Paraisópolis – R. Doutor Jose Augusto de Souza e Silva, SN</td>
-				  </tr>
-				  <tr>
-				    <td>21/08/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Jambeiro/ UAB Jardim Moreno - Av. Flores do Jambeiro, 61</td>
-				  </tr>
-				  <tr>
-				    <td>22/08/2019</td>
-				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
-				    <td>UniCEU/UAB Aricanduva - R. Olga Fadel Abarca, 10</td>
-				  </tr>
-				  <tr>
-				    <td>22/08/2019</td>
-				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
-				    <td>UniCEU Três Pontes – R. Capachos, 344</td>
-				  </tr>
-				  <tr>
-				    <td>23/08/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU Jardim Paulistano – R. Aparecida do Taboado, SN</td>
-				  </tr>
-				  <tr>
-				    <td>23/08/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU Gilberto Dupas – Av. Deputado Emilio Carlos, 3641</td>
-				  </tr>
-				  <tr>
-				    <td>23/08/2019</td>
-				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
-				    <td>UniCEU/UAB Aricanduva - R. Olga Fadel Abarca, 10</td>
-				  </tr>
-				  <tr>
-				    <td>29/08/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU Cantos do Amanhecer – Av. Cantos do Amanhecer, 10</td>
-				  </tr>
-				  <tr>
-				    <td>29/08/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Butantã - Av. Eng. Heitor Antonio Eiras Garcia, 1870</td>
-				  </tr>
-				  <tr>
-				    <td>30/08/2019</td>
-				    <td>Transparência, Acesso à Informação e Política de Dados Abertos</td>
-				    <td>UniCEU Rosa da China – R. Clara Petrela, 113</td>
-				  </tr>
-				  <tr>
-				    <td>31/08/2019</td>
-				    <td>Transparência, Acesso à Informação e Política de Dados Abertos</td>
-				    <td>UniCEU Formosa – R. Manoel Ferreira Pires, SN</td>
-				  </tr>
-				  <tr>
-				    <td>02/09/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU Quinta do Sol - Av. Luiz Imparato, 564</td>
-				  </tr>
-				  <tr>
-				    <td>04/09/2019</td>
-				    <td>Participação Social e Mapeamento Colaborativo</td>
-				    <td>UniCEU São Mateus - R. Curumatim, 201</td>
-				  </tr>
-				  <tr>
-				    <td>04/09/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU Sapopemba- R. Curumatim, 201</td>
-				  </tr>
-				  <tr>
-				    <td>04/09/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Tiquatira – Av. Condessa Elisabeth Robiano, 10</td>
-				  </tr>
-				  <tr>
-				    <td>04/09/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Navegantes – R. Maria Mossab Barbour, SN</td>
-				  </tr>
-				  <tr>
-				    <td>05/09/2019</td>
-				    <td>Transparência, Acesso à Informação e Política de Dados Abertos</td>
-				    <td>UniCEU Parelheiros – R. Jose Pedro de Borba, 20</td>
-				  </tr>
-				  <tr>
-				    <td>05/09/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU Perus – R. Bernardo Jose de Lorena, SN</td>
-				  </tr>
-				  <tr>
-				    <td>05/09/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU Jaguaré – Av. Kenkiti Simomoto, SN</td>
-				  </tr>
-				  <tr>
-				    <td>05/09/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Vila do Sol – Av. dos Funcionários Públicos, 369</td>
-				  </tr>
-				  <tr>
-				    <td>10/09/2019</td>
-				    <td>Participação Social e Mapeamento Colaborativo</td>
-				    <td>UniCEU Alto Alegre - Av. Bento Guelfi, SN</td>
-				  </tr>
-				  <tr>
-				    <td>10/09/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Inácio Monteiro – R. Barão Joaquim do Amparo, SN</td>
-				  </tr>
-				  <tr>
-				    <td>11/09/2019</td>
-				    <td>Participação Social e Mapeamento Colaborativo</td>
-				    <td>CCSP - Rua Vergueiro, 1000</td>
-				  </tr>
-				  <tr>
-				    <td>11/09/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU Parque Anhanguera – R. Pedro Jose de Lima, 10</td>
-				  </tr>
-				  <tr>
-				    <td>11/09/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Vila Rubi – R. Domingos Tarroso, 101</td>
-				  </tr>
-				  <tr>
-				    <td>12/09/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU Capão Redondo - R. Daniel Gran, SN</td>
-				  </tr>
-				  <tr>
-				    <td>12/09/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU Parque Anhanguera - R Pedro Jose de Lima, 10</td>
-				  </tr>
-				  <tr>
-				    <td>12/09/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Vila Atlântica – R.Coronel Jose Venâncio Dias, 840</td>
-				  </tr>
-				  <tr>
-				    <td>12/09/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Vila do Sol – Av. dos Funcionários Públicos, 369</td>
-				  </tr>
-				  <tr>
-				    <td>12/09/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Paraisópolis – R. Doutor Jose Augusto de Souza e Silva, SN</td>
-				  </tr>
-				  <tr>
-				    <td>12/09/2019</td>
-				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
-				    <td>UniCEU Cantos do Amanhecer – Av. Cantos do Amanhecer, 10</td>
-				  </tr>
-				  <tr>
-				    <td>17/09/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Inácio Monteiro – R. Barão Joaquim do Amparo, SN</td>
-				  </tr>
-				  <tr>
-				    <td>17/09/2019</td>
-				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
-				    <td>UniCEU Casa Blanca – R. Joao Damasceno, SN</td>
-				  </tr>
-				  <tr>
-				    <td>18/09/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU Jaçanã – Av. Antonio Cesar Neto, 104</td>
-				  </tr>
-				  <tr>
-				    <td>18/09/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Feitiço da Vila – R. Feitiço da Vila, 399</td>
-				  </tr>
-				  <tr>
-				    <td>18/09/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Vila Curuçá - Av. Marechal Tito, 3450</td>
-				  </tr>
-				  <tr>
-				    <td>19/09/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Alvarenga - Estrada do Alvarenga, 3750</td>
-				  </tr>
-				  <tr>
-				    <td>19/09/2019</td>
-				    <td>Participação Legislativa, Estrutura Pública Municipal e Atividades de Relações Governamentais Éticas e Adequadas</td>
-				    <td>UniCEU Aricanduva - R. Olga Fadel Abarca, 10</td>
-				  </tr>
-				  <tr>
-				    <td>20/09/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Jardim Paulistano – R. Aparecida do Taboado, SN</td>
-				  </tr>
-				  <tr>
-				    <td>20/09/2019</td>
-				    <td>Participação Legislativa, Estrutura Pública Municipal e Atividades de Relações Governamentais Éticas e Adequadas</td>
-				    <td>UniCEU Aricanduva - R. Olga Fadel Abarca, 10</td>
-				  </tr>
-				  <tr>
-				    <td>21/09/2019</td>
-				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
-				    <td>UniCEU Lajeado - R. Manuel da Mota Coutinho, 294</td>
-				  </tr>
-				  <tr>
-				    <td>23/09/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Caminho do Mar - Av. Eng. Armando de Arruda Pereira, 5080</td>
-				  </tr>
-				  <tr>
-				    <td>24/09/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU Três Pontes – R. Capachos, 344</td>
-				  </tr>
-				  <tr>
-				    <td>25/09/2019</td>
-				    <td>Participação Social e Mapeamento Colaborativo</td>
-				    <td>UniCEU Campo Limpo – Av. Carlos Lacerda, 678</td>
-				  </tr>
-				  <tr>
-				    <td>26/09/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU Formosa – R. Manoel Ferreira Pires, SN</td>
-				  </tr>
-				  <tr>
-				    <td>27/09/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU Rosa da China – R. Clara Petrela, 113</td>
-				  </tr>
-				  <tr>
-				    <td>27/09/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Gilberto Dupas – Av. Deputado Emilio Carlos, 3641</td>
-				  </tr>
-				  <tr>
-				    <td>30/09/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU Butantã - Av. Eng. Heitor Antonio Eiras Garcia, 1870</td>
-				  </tr>
-				  <tr>
-				    <td>30/09/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU Quinta do Sol - Av. Luiz Imparato, 564</td>
-				  </tr>
-				  <tr>
-				    <td>01/10/2019</td>
-				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
-				    <td>UniCEU Navegantes – R. Maria Mossab Barbour, SN</td>
-				  </tr>
-				  <tr>
-				    <td>02/10/2019</td>
-				    <td>Transparência, Acesso à Informação e Política de Dados Abertos</td>
-				    <td>UniCEU Vila do Sol – Av. dos Funcionários Públicos, 369</td>
-				  </tr>
-				  <tr>
-				    <td>02/10/2019</td>
-				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
-				    <td>UniCEU Feitiço da Vila – R. Feitiço da Vila, 399</td>
-				  </tr>
-				  <tr>
-				    <td>03/10/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Parelheiros – R. Jose Pedro de Borba, 20</td>
-				  </tr>
-				  <tr>
-				    <td>03/10/2019</td>
-				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
-				    <td>UniCEU São Mateus - R. Curumatim, 201</td>
-				  </tr>
-				  <tr>
-				    <td>05/10/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCeu São Rafael - R. Cinira Polônio, 98</td>
-				  </tr>
-				  <tr>
-				    <td>08/10/2019</td>
-				    <td>Participação Social e Mapeamento Colaborativo</td>
-				    <td>UniCEU Alvarenga - Estrada do Alvarenga, 3750</td>
-				  </tr>
-				  <tr>
-				    <td>08/10/2019</td>
-				    <td>Participação Social e Mapeamento Colaborativo</td>
-				    <td>UniCEU Jaguaré – Av. Kenkiti Simomoto, SN</td>
-				  </tr>
-				  <tr>
-				    <td>09/10/2019</td>
-				    <td>Transparência, Acesso à Informação e Política de Dados Abertos</td>
-				    <td>UniCEU Vila do Sol – Av. dos Funcionários Públicos, 369</td>
-				  </tr>
-				  <tr>
-				    <td>09/10/2019</td>
-				    <td>Participação Social e Mapeamento Colaborativo</td>
-				    <td>UniCEU Sapopemba - Rua Manuel Quirino de Mattos, SN</td>
-				  </tr>
-				  <tr>
-				    <td>09/10/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Campo Limpo – Av. Carlos Lacerda, 678</td>
-				  </tr>
-				  <tr>
-				    <td>09/10/2019</td>
-				    <td>Participação Legislativa, Estrutura Pública Municipal e Atividades de Relações Governamentais Éticas e Adequadas</td>
-				    <td>UniCEU Vila Rubi – R. Domingos Tarroso, 101</td>
-				  </tr>
-				  <tr>
-				    <td>10/10/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU Alto Alegre - Av. Bento Guelfi, SN</td>
-				  </tr>
-				  <tr>
-				    <td>10/10/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Capão Redondo - R. Daniel Gran, SN</td>
-				  </tr>
-				  <tr>
-				    <td>10/10/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Paraisópolis – R. Doutor Jose Augusto de Souza e Silva, SN</td>
-				  </tr>
-				  <tr>
-				    <td>10/10/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Campo Limpo – Av. Carlos Lacerda, 678</td>
-				  </tr>
-				  <tr>
-				    <td>16/10/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>CCSP - Rua Vergueiro, 1000</td>
-				  </tr>
-				  <tr>
-				    <td>16/10/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Parque Anhanguera - R Pedro Jose de Lima, 10</td>
-				  </tr>
-				  <tr>
-				    <td>17/10/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Parque Anhanguera – R. Pedro Jose de Lima, 10</td>
-				  </tr>
-				  <tr>
-				    <td>17/10/2019</td>
-				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
-				    <td>UniCEU Vila Atlântica – R. Coronel Jose Venâncio Dias, 840</td>
-				  </tr>
-				  <tr>
-				    <td>18/10/2019</td>
-				    <td>Participação Social e Mapeamento Colaborativo</td>
-				    <td>UniCEU Jardim Paulistano – R. Aparecida do Taboado, SN</td>
-				  </tr>
-				  <tr>
-				    <td>21/10/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Cantos do Amanhecer – Av. Cantos do Amanhecer, 10</td>
-				  </tr>
-				  <tr>
-				    <td>21/10/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Casa Blanca – R. Joao Damasceno, SN</td>
-				  </tr>
-				  <tr>
-				    <td>22/10/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Lajeado - R. Manuel da Mota Coutinho, 294</td>
-				  </tr>
-				  <tr>
-				    <td>24/10/2019</td>
-				    <td>Participação Social e Mapeamento Colaborativo</td>
-				    <td>UniCEU Formosa – R. Manoel Ferreira Pires, SN</td>
-				  </tr>
-				  <tr>
-				    <td>24/10/2019</td>
-				    <td>Participação Social e Mapeamento Colaborativo</td>
-				    <td>UniCEU Aricanduva - R. Olga Fadel Abarca, 10</td>
-				  </tr>
-				  <tr>
-				    <td>24/10/2019</td>
-				    <td>Participação Legislativa, Estrutura Pública Municipal e Atividades de Relações Governamentais Éticas e Adequadas</td>
-				    <td>UniCEU Três Pontes – R. Capachos, 344</td>
-				  </tr>
-				  <tr>
-				    <td>25/10/2019</td>
-				    <td>Participação Social e Mapeamento Colaborativo</td>
-				    <td>UniCEU/UAB Aricanduva - R. Olga Fadel Abarca, 10</td>
-				  </tr>
-				  <tr>
-				    <td>25/10/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Rosa da China – R. Clara Petrela, 113</td>
-				  </tr>
-				  <tr>
-				    <td>25/10/2019</td>
-				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
-				    <td>UniCEU Gilberto Dupas – Av. Deputado Emilio Carlos, 3641</td>
-				  </tr>
-				  <tr>
-				    <td>28/10/2019</td>
-				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
-				    <td>UniCEU Perus – R. Bernardo Jose de Lorena, SN</td>
-				  </tr>
-				  <tr>
-				    <td>29/10/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Tiquatira – Av. Condessa Elisabeth Robiano, 10</td>
-				  </tr>
-				  <tr>
-				    <td>29/10/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Pêra Marmelo – R. Pera Marmelo, 225</td>
-				  </tr>
-				  <tr>
-				    <td>30/10/2019</td>
-				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
-				    <td>UniCEU Vila Curuçá - Av. Marechal Tito, 3450</td>
-				  </tr>
-				  <tr>
-				    <td>30/10/2019</td>
-				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
-				    <td>UniCEU Butantã - Av. Eng. Heitor Antonio Eiras Garcia, 1870</td>
-				  </tr>
-				  <tr>
-				    <td>31/10/2019</td>
-				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
-				    <td>UniCEU Butantã - Av. Eng. Heitor Antonio Eiras Garcia, 1870</td>
-				  </tr>
-				  <tr>
-				    <td>01/11/2019</td>
-				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
-				    <td>UniCEU Parelheiros – R. Jose Pedro de Borba, 20</td>
-				  </tr>
-				  <tr>
-				    <td>05/11/2019</td>
-				    <td>Transparência, Acesso à Informação e Política de Dados Abertos</td>
-				    <td>UniCEU Campo Limpo – Av. Carlos Lacerda, 678</td>
-				  </tr>
-				  <tr>
-				    <td>05/11/2019</td>
-				    <td>Participação Social e Mapeamento Colaborativo</td>
-				    <td>UniCEU Navegantes – R. Maria Mossab Barbour, SN</td>
-				  </tr>
-				  <tr>
-				    <td>05/11/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU Casa Blanca – R. Joao Damasceno, SN</td>
-				  </tr>
-				  <tr>
-				    <td>06/11/2019</td>
-				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
-				    <td>CCSP - Rua Vergueiro, 1000</td>
-				  </tr>
-				  <tr>
-				    <td>06/11/2019</td>
-				    <td>Participação Social e Mapeamento Colaborativo</td>
-				    <td>UniCEU Perus – R. Bernardo Jose de Lorena, SN</td>
-				  </tr>
-				  <tr>
-				    <td>06/11/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU Jambeiro Jardim Moreno - Av. Flores do Jambeiro, 61</td>
-				  </tr>
-				  <tr>
-				    <td>06/11/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Alto Alegre - Av. Bento Guelfi, SN</td>
-				  </tr>
-				  <tr>
-				    <td>06/11/2019</td>
-				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
-				    <td>UniCEU Sapopemba – R. Manuel Quirino de Mattos, SN</td>
-				  </tr>
-				  <tr>
-				    <td>06/11/2019</td>
-				    <td>Participação Legislativa, Estrutura Pública Municipal e Atividades de Relações Governamentais Éticas e Adequadas</td>
-				    <td>UniCEU Feitiço da Vila – R. Feitiço da Vila, 399</td>
-				  </tr>
-				  <tr>
-				    <td>07/11/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Jaguaré – Av. Kenkiti Simomoto, SN</td>
-				  </tr>
-				  <tr>
-				    <td>11/11/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU/UAB Tiquatira – Av. Condessa Elisabeth Robiano, 10</td>
-				  </tr>
-				  <tr>
-				    <td>11/11/2019</td>
-				    <td>Participação Legislativa, Estrutura Pública Municipal e Atividades de Relações Governamentais Éticas e Adequadas</td>
-				    <td>UniCEU Parque Anhanguera – R. Pedro Jose de Lima, 10</td>
-				  </tr>
-				  <tr>
-				    <td>12/11/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU Lajeado - R. Manuel da Mota Coutinho, 294</td>
-				  </tr>
-				  <tr>
-				    <td>12/11/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Três Pontes – R. Capachos, 344</td>
-				  </tr>
-				  <tr>
-				    <td>13/11/2019</td>
-				    <td>Transparência, Acesso à Informação e Política de Dados Abertos</td>
-				    <td>UniCEU Alvarenga - Estrada do Alvarenga, 3750</td>
-				  </tr>
-				  <tr>
-				    <td>13/11/2019</td>
-				    <td>Participação Social e Mapeamento Colaborativo</td>
-				    <td>UniCEU Vila Curuçá - Av. Marechal Tito, 3450</td>
-				  </tr>
-				  <tr>
-				    <td>13/11/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU Vila Rubi – R. Domingos Tarroso, 101</td>
-				  </tr>
-				  <tr>
-				    <td>13/11/2019</td>
-				    <td>Participação Legislativa, Estrutura Pública Municipal e Atividades de Relações Governamentais Éticas e Adequadas</td>
-				    <td>UniCEU Parque Anhanguera – R. Pedro Jose de Lima, 10</td>
-				  </tr>
-				  <tr>
-				    <td>21/11/2019</td>
-				    <td>Participação Social e Mapeamento Colaborativo</td>
-				    <td>UniCEU Vila do Sol – Av. dos Funcionários Públicos, 369</td>
-				  </tr>
-				  <tr>
-				    <td>21/11/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU Aricanduva - R. Olga Fadel Abarca, 10</td>
-				  </tr>
-				  <tr>
-				    <td>21/11/2019</td>
-				    <td>Participação Legislativa, Estrutura Pública Municipal e Atividades de Relações Governamentais Éticas e Adequadas</td>
-				    <td>UniCEU Vila Atlântica – R. Coronel Jose Venâncio Dias, 840</td>
-				  </tr>
-				  <tr>
-				    <td>22/11/2019</td>
-				    <td>Transparência, Acesso à Informação e Política de Dados Abertos</td>
-				    <td>UniCEU Gilberto Dupas – Av. Deputado Emilio Carlos, 3641</td>
-				  </tr>
-				  <tr>
-				    <td>22/11/2019</td>
-				    <td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td>
-				    <td>UniCEU/UAB Aricanduva - R. Olga Fadel Abarca, 10</td>
-				  </tr>
-				  <tr>
-				    <td>25/11/2019</td>
-				    <td>Participação Social e Mapeamento Colaborativo</td>
-				    <td>UniCEU Cantos do Amanhecer – Av. Cantos do Amanhecer, 10</td>
-				  </tr>
-				  <tr>
-				    <td>26/11/2019</td>
-				    <td>Participação Social e Mapeamento Colaborativo</td>
-				    <td>UniCEU Butantã - Av. Eng. Heitor Antonio Eiras Garcia, 1870</td>
-				  </tr>
-				  <tr>
-				    <td>26/11/2019</td>
-				    <td>Inovação, Tecnologia Aberta e Inclusão Digital</td>
-				    <td>UniCEU Paraisópolis – R. Doutor Jose Augusto de Souza e Silva, SN</td>
-				  </tr>
-				  <tr>
-				    <td>26/11/2019</td>
-				    <td>Participação Legislativa, Estrutura Pública Municipal e Atividades de Relações Governamentais Éticas e Adequadas</td>
-				    <td>UniCEU Jaçanã – Av. Antonio Cesar Neto, 104</td>
-				  </tr>
-				  <tr>
-				    <td>28/11/2019</td>
-				    <td>Participação Social e Mapeamento Colaborativo</td>
-				    <td>UniCEU Vila do Sol – Av. dos Funcionários Públicos, 369</td>
-				  </tr>
-				  <tr>
-				    <td>29/11/2019</td>
-				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
-				    <td>UniCEU Jardim Paulistano - R Aparecida do Taboado, SN</td>
-				  </tr>
-				  <tr>
-				    <td>29/11/2019</td>
-				    <td>Educação Política e mecanismos de Combate à Corrupção</td>
-				    <td>UniCEU Rosa da China – R. Clara Petrela, 113</td>
-				  </tr>
-				</table>
-		 	</CommentsContext>
+			<h3 class="titulo" indent="2">ANEXO VI: CALENDÁRIO DE OFICINAS A SEREM REALIZADAS</h3>
+			<CommentsContext :id="95" :context="'ANEXO VI'">
+				<table><tr><th>Datas</th><th>Categoria</th><th>Local</th></tr><tr><td>01/08/2019</td><td>Participação Social e Mapeamento Colaborativo</td><td>UniCEU Parque Bristol – R. Professor Artur Primavesi, SN</td></tr><tr><td>01/08/2019</td><td>Participação Social e Mapeamento Colaborativo</td><td>UniCEU Parelheiros – R. Jose Pedro de Borba, 20</td></tr><tr><td>01/08/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU Vila Atlântica – R. Coronel Jose Venâncio Dias, 840</td></tr><tr><td>01/08/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU Vila do Sol – Av. dos Funcionários Públicos, 369</td></tr><tr><td>03/08/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU São Rafael - R. Cinira Polônio, 98</td></tr><tr><td>06/08/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU Inácio Monteiro – R. Barão Joaquim do Amparo, SN</td></tr><tr><td>06/08/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU Navegantes – R. Maria Mossab Barbour, SN</td></tr><tr><td>06/08/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Perus - R. Bernardo Jose de Lorena, SN</td></tr><tr><td>07/08/2019</td><td>Participação Social e Mapeamento Colaborativo</td><td>UniCEU Jaguaré – Av. Kenkiti Simomoto, SN</td></tr><tr><td>07/08/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU Inácio Monteiro – R. Barão Joaquim do Amparo, SN</td></tr><tr><td>07/08/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU Vila do Sol – Av. dos Funcionários Públicos, 369</td></tr><tr><td>08/08/2019</td><td>Participação Social e Mapeamento Colaborativo</td><td>UniCEU Parque Bristol – R. Professor Artur Primavesi</td></tr><tr><td>08/08/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU Campo Limpo – Av. Carlos Lacerda, 678</td></tr><tr><td>09/08/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU Campo Limpo – Av. Carlos Lacerda, 678</td></tr><tr><td>13/08/2019</td><td>Transparência, Acesso à Informação e Política de Dados Abertos</td><td>UniCEU Alto Alegre - Av. Bento Guelfi, SN</td></tr><tr><td>13/08/2019</td><td>Participação Social e Mapeamento Colaborativo</td><td>UniCEU Parque Anhanguera – R. Pedro Jose de Lima, 10</td></tr><tr><td>14/08/2019</td><td>Participação Social e Mapeamento Colaborativo</td><td>UniCEU Vila Rubi – R. Domingos Tarroso, 101</td></tr><tr><td>14/08/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU Casa Blanca - R Joao Damasceno, SN</td></tr><tr><td>14/08/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU Feitiço da Vila – R. Feitiço da Vila, 399</td></tr><tr><td>14/08/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU Vila Curuçá - Av. Marechal Tito, 3450</td></tr><tr><td>14/08/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Sapopemba – R. Manuel Quirino de Mattos, SN</td></tr><tr><td>14/08/2019</td><td>Transparência, Acesso à Informação e Política de Dados Abertos</td><td>CCSP - Rua Vergueiro, 1000</td></tr><tr><td>15/08/2019</td><td>Participação Social e Mapeamento Colaborativo</td><td>UniCEU Caminho do Mar - Av. Eng. Armando de Arruda Pereira, 5080</td></tr><tr><td>15/08/2019</td><td>Participação Social e Mapeamento Colaborativo</td><td>UniCEU Parque Anhanguera – R. Pedro Jose de Lima, 10</td></tr><tr><td>15/08/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU Tiquatira – Av. Condessa Elisabeth Robiano, 10</td></tr><tr><td>19/08/2019</td><td>Participação Social e Mapeamento Colaborativo</td><td>UniCEU Pêra Marmelo – R. Pêra Marmelo, 225</td></tr><tr><td>20/08/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU Lajeado - R. Manuel da Mota Coutinho, 294</td></tr><tr><td>20/08/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU Alvarenga - Estrada do Alvarenga, 3750</td></tr><tr><td>20/08/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU São Mateus - R. Curumatim, 201</td></tr><tr><td>20/08/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU São Mateus - R. Curumatim, 201</td></tr><tr><td>20/08/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Cidade Dutra – Av. Interlagos, 7350</td></tr><tr><td>20/08/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Paraisópolis – R. Doutor Jose Augusto de Souza e Silva, SN</td></tr><tr><td>21/08/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Jambeiro/ UAB Jardim Moreno - Av. Flores do Jambeiro, 61</td></tr><tr><td>22/08/2019</td><td>Educação Política e mecanismos de Combate à Corrupção</td><td>UniCEU/UAB Aricanduva - R. Olga Fadel Abarca, 10</td></tr><tr><td>22/08/2019</td><td>Educação Política e mecanismos de Combate à Corrupção</td><td>UniCEU Três Pontes – R. Capachos, 344</td></tr><tr><td>23/08/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU Jardim Paulistano – R. Aparecida do Taboado, SN</td></tr><tr><td>23/08/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU Gilberto Dupas – Av. Deputado Emilio Carlos, 3641</td></tr><tr><td>23/08/2019</td><td>Educação Política e mecanismos de Combate à Corrupção</td><td>UniCEU/UAB Aricanduva - R. Olga Fadel Abarca, 10</td></tr><tr><td>29/08/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU Cantos do Amanhecer – Av. Cantos do Amanhecer, 10</td></tr><tr><td>29/08/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Butantã - Av. Eng. Heitor Antonio Eiras Garcia, 1870</td></tr><tr><td>30/08/2019</td><td>Transparência, Acesso à Informação e Política de Dados Abertos</td><td>UniCEU Rosa da China – R. Clara Petrela, 113</td></tr><tr><td>31/08/2019</td><td>Transparência, Acesso à Informação e Política de Dados Abertos</td><td>UniCEU Formosa – R. Manoel Ferreira Pires, SN</td></tr><tr><td>02/09/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU Quinta do Sol - Av. Luiz Imparato, 564</td></tr><tr><td>04/09/2019</td><td>Participação Social e Mapeamento Colaborativo</td><td>UniCEU São Mateus - R. Curumatim, 201</td></tr><tr><td>04/09/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU Sapopemba- R. Curumatim, 201</td></tr><tr><td>04/09/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Tiquatira – Av. Condessa Elisabeth Robiano, 10</td></tr><tr><td>04/09/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Navegantes – R. Maria Mossab Barbour, SN</td></tr><tr><td>05/09/2019</td><td>Transparência, Acesso à Informação e Política de Dados Abertos</td><td>UniCEU Parelheiros – R. Jose Pedro de Borba, 20</td></tr><tr><td>05/09/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU Perus – R. Bernardo Jose de Lorena, SN</td></tr><tr><td>05/09/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU Jaguaré – Av. Kenkiti Simomoto, SN</td></tr><tr><td>05/09/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Vila do Sol – Av. dos Funcionários Públicos, 369</td></tr><tr><td>10/09/2019</td><td>Participação Social e Mapeamento Colaborativo</td><td>UniCEU Alto Alegre - Av. Bento Guelfi, SN</td></tr><tr><td>10/09/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Inácio Monteiro – R. Barão Joaquim do Amparo, SN</td></tr><tr><td>11/09/2019</td><td>Participação Social e Mapeamento Colaborativo</td><td>CCSP - Rua Vergueiro, 1000</td></tr><tr><td>11/09/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU Parque Anhanguera – R. Pedro Jose de Lima, 10</td></tr><tr><td>11/09/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Vila Rubi – R. Domingos Tarroso, 101</td></tr><tr><td>12/09/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU Capão Redondo - R. Daniel Gran, SN</td></tr><tr><td>12/09/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU Parque Anhanguera - R Pedro Jose de Lima, 10</td></tr><tr><td>12/09/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Vila Atlântica – R.Coronel Jose Venâncio Dias, 840</td></tr><tr><td>12/09/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Vila do Sol – Av. dos Funcionários Públicos, 369</td></tr><tr><td>12/09/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Paraisópolis – R. Doutor Jose Augusto de Souza e Silva, SN</td></tr><tr><td>12/09/2019</td><td>Educação Política e mecanismos de Combate à Corrupção</td><td>UniCEU Cantos do Amanhecer – Av. Cantos do Amanhecer, 10</td></tr><tr><td>17/09/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Inácio Monteiro – R. Barão Joaquim do Amparo, SN</td></tr><tr><td>17/09/2019</td><td>Educação Política e mecanismos de Combate à Corrupção</td><td>UniCEU Casa Blanca – R. Joao Damasceno, SN</td></tr><tr><td>18/09/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU Jaçanã – Av. Antonio Cesar Neto, 104</td></tr><tr><td>18/09/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Feitiço da Vila – R. Feitiço da Vila, 399</td></tr><tr><td>18/09/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Vila Curuçá - Av. Marechal Tito, 3450</td></tr><tr><td>19/09/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Alvarenga - Estrada do Alvarenga, 3750</td></tr><tr><td>19/09/2019</td><td>Participação Legislativa, Estrutura Pública Municipal e Atividades de Relações Governamentais Éticas e Adequadas</td><td>UniCEU Aricanduva - R. Olga Fadel Abarca, 10</td></tr><tr><td>20/09/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Jardim Paulistano – R. Aparecida do Taboado, SN</td></tr><tr><td>20/09/2019</td><td>Participação Legislativa, Estrutura Pública Municipal e Atividades de Relações Governamentais Éticas e Adequadas</td><td>UniCEU Aricanduva - R. Olga Fadel Abarca, 10</td></tr><tr><td>21/09/2019</td><td>Educação Política e mecanismos de Combate à Corrupção</td><td>UniCEU Lajeado - R. Manuel da Mota Coutinho, 294</td></tr><tr><td>23/09/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Caminho do Mar - Av. Eng. Armando de Arruda Pereira, 5080</td></tr><tr><td>24/09/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU Três Pontes – R. Capachos, 344</td></tr><tr><td>25/09/2019</td><td>Participação Social e Mapeamento Colaborativo</td><td>UniCEU Campo Limpo – Av. Carlos Lacerda, 678</td></tr><tr><td>26/09/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU Formosa – R. Manoel Ferreira Pires, SN</td></tr><tr><td>27/09/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU Rosa da China – R. Clara Petrela, 113</td></tr><tr><td>27/09/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Gilberto Dupas – Av. Deputado Emilio Carlos, 3641</td></tr><tr><td>30/09/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU Butantã - Av. Eng. Heitor Antonio Eiras Garcia, 1870</td></tr><tr><td>30/09/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU Quinta do Sol - Av. Luiz Imparato, 564</td></tr><tr><td>01/10/2019</td><td>Educação Política e mecanismos de Combate à Corrupção</td><td>UniCEU Navegantes – R. Maria Mossab Barbour, SN</td></tr><tr><td>02/10/2019</td><td>Transparência, Acesso à Informação e Política de Dados Abertos</td><td>UniCEU Vila do Sol – Av. dos Funcionários Públicos, 369</td></tr><tr><td>02/10/2019</td><td>Educação Política e mecanismos de Combate à Corrupção</td><td>UniCEU Feitiço da Vila – R. Feitiço da Vila, 399</td></tr><tr><td>03/10/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Parelheiros – R. Jose Pedro de Borba, 20</td></tr><tr><td>03/10/2019</td><td>Educação Política e mecanismos de Combate à Corrupção</td><td>UniCEU São Mateus - R. Curumatim, 201</td></tr><tr><td>05/10/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCeu São Rafael - R. Cinira Polônio, 98</td></tr><tr><td>08/10/2019</td><td>Participação Social e Mapeamento Colaborativo</td><td>UniCEU Alvarenga - Estrada do Alvarenga, 3750</td></tr><tr><td>08/10/2019</td><td>Participação Social e Mapeamento Colaborativo</td><td>UniCEU Jaguaré – Av. Kenkiti Simomoto, SN</td></tr><tr><td>09/10/2019</td><td>Transparência, Acesso à Informação e Política de Dados Abertos</td><td>UniCEU Vila do Sol – Av. dos Funcionários Públicos, 369</td></tr><tr><td>09/10/2019</td><td>Participação Social e Mapeamento Colaborativo</td><td>UniCEU Sapopemba - Rua Manuel Quirino de Mattos, SN</td></tr><tr><td>09/10/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Campo Limpo – Av. Carlos Lacerda, 678</td></tr><tr><td>09/10/2019</td><td>Participação Legislativa, Estrutura Pública Municipal e Atividades de Relações Governamentais Éticas e Adequadas</td><td>UniCEU Vila Rubi – R. Domingos Tarroso, 101</td></tr><tr><td>10/10/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU Alto Alegre - Av. Bento Guelfi, SN</td></tr><tr><td>10/10/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Capão Redondo - R. Daniel Gran, SN</td></tr><tr><td>10/10/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Paraisópolis – R. Doutor Jose Augusto de Souza e Silva, SN</td></tr><tr><td>10/10/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Campo Limpo – Av. Carlos Lacerda, 678</td></tr><tr><td>16/10/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>CCSP - Rua Vergueiro, 1000</td></tr><tr><td>16/10/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Parque Anhanguera - R Pedro Jose de Lima, 10</td></tr><tr><td>17/10/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Parque Anhanguera – R. Pedro Jose de Lima, 10</td></tr><tr><td>17/10/2019</td><td>Educação Política e mecanismos de Combate à Corrupção</td><td>UniCEU Vila Atlântica – R. Coronel Jose Venâncio Dias, 840</td></tr><tr><td>18/10/2019</td><td>Participação Social e Mapeamento Colaborativo</td><td>UniCEU Jardim Paulistano – R. Aparecida do Taboado, SN</td></tr><tr><td>21/10/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Cantos do Amanhecer – Av. Cantos do Amanhecer, 10</td></tr><tr><td>21/10/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Casa Blanca – R. Joao Damasceno, SN</td></tr><tr><td>22/10/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Lajeado - R. Manuel da Mota Coutinho, 294</td></tr><tr><td>24/10/2019</td><td>Participação Social e Mapeamento Colaborativo</td><td>UniCEU Formosa – R. Manoel Ferreira Pires, SN</td></tr><tr><td>24/10/2019</td><td>Participação Social e Mapeamento Colaborativo</td><td>UniCEU Aricanduva - R. Olga Fadel Abarca, 10</td></tr><tr><td>24/10/2019</td><td>Participação Legislativa, Estrutura Pública Municipal e Atividades de Relações Governamentais Éticas e Adequadas</td><td>UniCEU Três Pontes – R. Capachos, 344</td></tr><tr><td>25/10/2019</td><td>Participação Social e Mapeamento Colaborativo</td><td>UniCEU/UAB Aricanduva - R. Olga Fadel Abarca, 10</td></tr><tr><td>25/10/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Rosa da China – R. Clara Petrela, 113</td></tr><tr><td>25/10/2019</td><td>Educação Política e mecanismos de Combate à Corrupção</td><td>UniCEU Gilberto Dupas – Av. Deputado Emilio Carlos, 3641</td></tr><tr><td>28/10/2019</td><td>Educação Política e mecanismos de Combate à Corrupção</td><td>UniCEU Perus – R. Bernardo Jose de Lorena, SN</td></tr><tr><td>29/10/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Tiquatira – Av. Condessa Elisabeth Robiano, 10</td></tr><tr><td>29/10/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Pêra Marmelo – R. Pera Marmelo, 225</td></tr><tr><td>30/10/2019</td><td>Educação Política e mecanismos de Combate à Corrupção</td><td>UniCEU Vila Curuçá - Av. Marechal Tito, 3450</td></tr><tr><td>30/10/2019</td><td>Educação Política e mecanismos de Combate à Corrupção</td><td>UniCEU Butantã - Av. Eng. Heitor Antonio Eiras Garcia, 1870</td></tr><tr><td>31/10/2019</td><td>Educação Política e mecanismos de Combate à Corrupção</td><td>UniCEU Butantã - Av. Eng. Heitor Antonio Eiras Garcia, 1870</td></tr><tr><td>01/11/2019</td><td>Educação Política e mecanismos de Combate à Corrupção</td><td>UniCEU Parelheiros – R. Jose Pedro de Borba, 20</td></tr><tr><td>05/11/2019</td><td>Transparência, Acesso à Informação e Política de Dados Abertos</td><td>UniCEU Campo Limpo – Av. Carlos Lacerda, 678</td></tr><tr><td>05/11/2019</td><td>Participação Social e Mapeamento Colaborativo</td><td>UniCEU Navegantes – R. Maria Mossab Barbour, SN</td></tr><tr><td>05/11/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU Casa Blanca – R. Joao Damasceno, SN</td></tr><tr><td>06/11/2019</td><td>Educação Política e mecanismos de Combate à Corrupção</td><td>CCSP - Rua Vergueiro, 1000</td></tr><tr><td>06/11/2019</td><td>Participação Social e Mapeamento Colaborativo</td><td>UniCEU Perus – R. Bernardo Jose de Lorena, SN</td></tr><tr><td>06/11/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU Jambeiro Jardim Moreno - Av. Flores do Jambeiro, 61</td></tr><tr><td>06/11/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Alto Alegre - Av. Bento Guelfi, SN</td></tr><tr><td>06/11/2019</td><td>Educação Política e mecanismos de Combate à Corrupção</td><td>UniCEU Sapopemba – R. Manuel Quirino de Mattos, SN</td></tr><tr><td>06/11/2019</td><td>Participação Legislativa, Estrutura Pública Municipal e Atividades de Relações Governamentais Éticas e Adequadas</td><td>UniCEU Feitiço da Vila – R. Feitiço da Vila, 399</td></tr><tr><td>07/11/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Jaguaré – Av. Kenkiti Simomoto, SN</td></tr><tr><td>11/11/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU/UAB Tiquatira – Av. Condessa Elisabeth Robiano, 10</td></tr><tr><td>11/11/2019</td><td>Participação Legislativa, Estrutura Pública Municipal e Atividades de Relações Governamentais Éticas e Adequadas</td><td>UniCEU Parque Anhanguera – R. Pedro Jose de Lima, 10</td></tr><tr><td>12/11/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU Lajeado - R. Manuel da Mota Coutinho, 294</td></tr><tr><td>12/11/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Três Pontes – R. Capachos, 344</td></tr><tr><td>13/11/2019</td><td>Transparência, Acesso à Informação e Política de Dados Abertos</td><td>UniCEU Alvarenga - Estrada do Alvarenga, 3750</td></tr><tr><td>13/11/2019</td><td>Participação Social e Mapeamento Colaborativo</td><td>UniCEU Vila Curuçá - Av. Marechal Tito, 3450</td></tr><tr><td>13/11/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU Vila Rubi – R. Domingos Tarroso, 101</td></tr><tr><td>13/11/2019</td><td>Participação Legislativa, Estrutura Pública Municipal e Atividades de Relações Governamentais Éticas e Adequadas</td><td>UniCEU Parque Anhanguera – R. Pedro Jose de Lima, 10</td></tr><tr><td>21/11/2019</td><td>Participação Social e Mapeamento Colaborativo</td><td>UniCEU Vila do Sol – Av. dos Funcionários Públicos, 369</td></tr><tr><td>21/11/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU Aricanduva - R. Olga Fadel Abarca, 10</td></tr><tr><td>21/11/2019</td><td>Participação Legislativa, Estrutura Pública Municipal e Atividades de Relações Governamentais Éticas e Adequadas</td><td>UniCEU Vila Atlântica – R. Coronel Jose Venâncio Dias, 840</td></tr><tr><td>22/11/2019</td><td>Transparência, Acesso à Informação e Política de Dados Abertos</td><td>UniCEU Gilberto Dupas – Av. Deputado Emilio Carlos, 3641</td></tr><tr><td>22/11/2019</td><td>Comunicação social, Cultura digital, Mídias alternativas e colaborativas</td><td>UniCEU/UAB Aricanduva - R. Olga Fadel Abarca, 10</td></tr><tr><td>25/11/2019</td><td>Participação Social e Mapeamento Colaborativo</td><td>UniCEU Cantos do Amanhecer – Av. Cantos do Amanhecer, 10</td></tr><tr><td>26/11/2019</td><td>Participação Social e Mapeamento Colaborativo</td><td>UniCEU Butantã - Av. Eng. Heitor Antonio Eiras Garcia, 1870</td></tr><tr><td>26/11/2019</td><td>Inovação, Tecnologia Aberta e Inclusão Digital</td><td>UniCEU Paraisópolis – R. Doutor Jose Augusto de Souza e Silva, SN</td></tr><tr><td>26/11/2019</td><td>Participação Legislativa, Estrutura Pública Municipal e Atividades de Relações Governamentais Éticas e Adequadas</td><td>UniCEU Jaçanã – Av. Antonio Cesar Neto, 104</td></tr><tr><td>28/11/2019</td><td>Participação Social e Mapeamento Colaborativo</td><td>UniCEU Vila do Sol – Av. dos Funcionários Públicos, 369</td></tr><tr><td>29/11/2019</td><td>Educação Política e mecanismos de Combate à Corrupção</td><td>UniCEU Jardim Paulistano - R Aparecida do Taboado, SN</td></tr><tr><td>29/11/2019</td><td>Educação Política e mecanismos de Combate à Corrupção</td><td>UniCEU Rosa da China – R. Clara Petrela, 113</td></tr></table>
+			</CommentsContext>
 		</section>
 		<section ref="allComments">
 			<h2 v-show="commentsLoaded" class="titulo" indent="1">Contribuições</h2>
 			<CommentsLoader :attr="estaConsulta"></CommentsLoader>
-
 		</section>
 	</div>
 </template>

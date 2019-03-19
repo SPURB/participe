@@ -22,11 +22,11 @@ export default {
 	},
 	mounted () {
 		let app = this
-		if (window.matchMedia("(min-width: 1200px)").matches) {
+		if (window.matchMedia('(min-width: 1200px)').matches) {
 			window.addEventListener('scroll', function () {
-				if (window.scrollY > window.innerHeight/2) {
+				if (window.scrollY > window.innerHeight / 2) {
 					app.$refs.lista.style.opacity = '1'
-				} else if (window.scrollY < window.innerHeight/2) {
+				} else if (window.scrollY < window.innerHeight / 2) {
 					app.$refs.lista.style.opacity = '0.12'
 				}
 			})

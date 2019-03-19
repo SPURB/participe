@@ -432,10 +432,21 @@ export default {
 		};
 	};
 	@media (max-width: 600px) {
-
 		.content-comentario {
 			padding-left:0;
 			margin-left: 0
+		}
+	}
+	@media print {
+		max-width: unset;
+		user-select: none;
+		& > div {
+			display: block;
+			.icon-counter { display: none; }
+			.content-comentario {
+				padding: 0 20mm;
+				p, ol { padding-right: 0; }
+			}
 		}
 	}
 };

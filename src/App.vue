@@ -49,7 +49,15 @@ export default {
 		isAdmin () { return this.$store.state.isAdmin },
 		modalState () { return this.$store.state.modalState }
 	},
-	created () { this.$store.dispatch('fetchConsultas', { self: this }) },
+	created () {
+		let app = this
+		this.$store.dispatch('fetchConsultas', { self: this })
+		window.addEventListener('keydown', function (event) {
+			if (event.ctrlKey && event.code === 'KeyP') {
+				app.$store.dispatch('imprime')
+			}
+		})
+	},
 	mounted () { document.getElementById('carregando').classList.add('some') },
 	updated () { this.$refs.interruptor.style.height = this.$el.clientHeight + 'px' },
 	methods: {
@@ -110,5 +118,14 @@ div#interruptor {
 		height: unset;
 	};
 };
+
+div#carregando.some { height: 0; }
+
+@media print {
+	body { background-color: $preto; }
+	div#app { background-color: white; width: 210mm; }
+	div#interruptor { display: none; }
+	div#carregando { display: none; }
+}
 
 </style>

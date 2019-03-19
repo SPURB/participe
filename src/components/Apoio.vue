@@ -258,5 +258,9 @@ div.Apoio {
 		};
 		button::before { display: none; };
 	};
+
+	@media print {
+		display: none;
+	}
 };
 </style>

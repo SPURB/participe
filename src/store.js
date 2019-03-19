@@ -22,7 +22,8 @@ const store = new Vuex.Store({
 		isAdmin: false,
 		infoAdmin: undefined,
 		fetching: true,
-		routeId: undefined
+		routeId: undefined,
+		toPrint: false
 	},
 	getters: {
 		apiPath () { return process.env.VUE_APP_API_URL },
@@ -66,6 +67,13 @@ const store = new Vuex.Store({
 				state.modalState.error = false
 				state.modalState.success = false
 			}
+		},
+		DISPATCH_PRINT (state) {
+			state.toPrint = !state.toPrint
+			return state.toPrint
+		},
+		PRINT () {
+			window.print()
 		}
 	},
 	actions: {
@@ -84,6 +92,17 @@ const store = new Vuex.Store({
 					commit('FETCHING_ERROR', true)
 				})
 				.then(() => commit('FETCHING_STATE', false))
+		},
+		imprime ({ commit }) {
+			return new Promise(() => {
+				commit('DISPATCH_PRINT')
+				setTimeout(() => {
+					window.print()
+				}, 1)
+				setTimeout(() => {
+					commit('DISPATCH_PRINT')
+				}, 2)
+			})
 		}
 	}
 })

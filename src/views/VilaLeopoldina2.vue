@@ -629,5 +629,15 @@ div.VilaLeopoldina2 {
 			span { font-size: 0 }
 		}
 	}
+	@media print {
+		p#print a { display: none; }
+		ul.links .rodape {
+			display: block;
+			padding-left: 2rem;
+			font-size: smaller;
+			color: $cinza-1;
+		}
+		ul.links br { display: none; }
+	}
 }
 </style>

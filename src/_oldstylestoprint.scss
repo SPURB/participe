@@ -1,0 +1,93 @@
+@media print {
+  figure {
+    break-inside: avoid-page;
+    color-adjust: exact;
+    margin: 4rem auto !important;
+    max-width: calc(100% - 40mm);
+    page-break-inside: avoid;
+    -webkit-print-color-adjust: exact;
+    text-align: left;
+    width: auto;
+    
+    img {
+      margin: 0;
+      max-width: 100%;
+      width: auto;
+    }
+    
+    & > h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      width: 100%;
+      text-align: center;
+      padding: 0 12px;
+    }
+    
+    figcaption {
+      max-width: max-content;
+      text-align: left;
+    }
+    
+    &.borda,
+    &.mapa {
+    
+      ul.legenda {
+        column-gap: 12px;
+        columns: 2;
+        display: block !important;
+        max-height: none !important;
+        min-height: -moz-min-content;
+        min-height: min-content;
+        overflow: hidden;
+        padding: 0 12px;
+    
+        li {
+          break-inside: avoid;
+          display: flex;
+          font-size: small !important;
+          line-height: initial;
+          margin: 0 0 12px;
+          padding: 8px;
+          page-break-inside: avoid;
+          text-align: left;
+    
+          div {
+            display: inline-block;
+            vertical-align: text-bottom;
+            margin-right: 8px;
+    
+            &.linha { vertical-align: 4px; }
+
+          }
+
+        }
+
+      }
+
+    }
+    
+    &.coluna {
+    
+      img { width: 100%; }
+    
+      figcaption { width: 100%; }
+
+    }
+
+  }
+
+  figure.ai2html,
+  div.ai2html {
+    max-width: 100%;
+
+    * {
+      margin: 0 auto;
+      width: fit-content;
+    }
+
+  }
+
+}

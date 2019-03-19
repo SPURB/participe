@@ -1,13 +1,13 @@
 <template>
 	<div class="Indice">
-		<ul>
+		<ul ref="lista">
 			<li
 				v-for="(titulo, index) in titulos" :key="index"
 				:class="{ ativo: titulo.ativo }"
 				:style="{ paddingLeft: titulo.indent + 'rem'}"
 				@click="rolar(titulo.offsetObj)">{{ titulo.nome }}</li>
 		</ul>
-		<button @click="topo"><i class="icon-seta_cima icon"><span>arrow_upward</span></i></button>
+		<button @click="rolar()"><i class="icon-seta_cima icon"><span>arrow_upward</span></i></button>
 	</div>
 </template>
 
@@ -20,15 +20,35 @@ export default {
 			required: true
 		}
 	},
+	mounted () {
+		let app = this
+		if (window.matchMedia('(min-width: 1200px)').matches) {
+			window.addEventListener('scroll', function () {
+				if (window.scrollY > window.innerHeight / 2) {
+					app.$refs.lista.style.opacity = '1'
+				} else if (window.scrollY < window.innerHeight / 2) {
+					app.$refs.lista.style.opacity = '0.12'
+				}
+			})
+		} else {
+			app.$refs.lista.style.opacity = '1'
+		}
+	},
 	methods: {
 		rolar (obj) {
-			window.scrollBy({
-				top: obj.getBoundingClientRect().y - 30,
-				left: 0,
-				behavior: 'smooth'
-			})
-		},
-		topo () { window.scrollTo({ top: window.innerHeight, behavior: 'smooth' }) }
+			if (obj) {
+				window.scrollBy({
+					top: obj.getBoundingClientRect().y - 30,
+					left: 0,
+					behavior: 'smooth'
+				})
+			} else {
+				window.scrollTo({
+					top: 0,
+					behavior: 'smooth'
+				})
+			}
+		}
 	}
 }
 </script>
@@ -44,11 +64,14 @@ div.Indice {
 		flex-flow: column nowrap;
 		justify-content: center;
 		position: fixed;
-		top: 60px;
+		top: 0;
 		bottom: 0;
 		left: 0;
 		padding: 0;
+		margin: 0;
 		list-style-type: none;
+		opacity: 0.12;
+		transition: opacity ease-in .2s;
 
 		li {
 			display: block;
@@ -129,18 +152,18 @@ div.Indice {
 			color: $preto;
 		};
 
-		@media (max-width: 1200px) {
+		@media screen and (max-width: 1200px) {
 			&::before { display: none; };
 		};
 	};
 
-	@media (max-width: 1200px) {
+	@media screen and (max-width: 1200px) {
 		ul {
 			display: block;
 			position: relative;
 			height: auto;
 			top: 0;
-			margin: 2rem 0;
+			margin: 4rem 0 2rem 0;
 			padding: 0 2rem;
 			font-size: initial;
 			line-height: 1.1;
@@ -178,11 +201,12 @@ div.Indice {
 		};
 	};
 
-	@media (max-width: 600px) {
-		ul {
-			margin: -1rem 0;
-			padding: 0 1rem;
-		}
+	@media screen and (max-width: 600px) {
+		ul { padding: 0 1rem; }
+	}
+
+	@media print {
+		display: none;
 	}
 };
 </style>

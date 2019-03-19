@@ -89,10 +89,10 @@ export default {
 
 <style lang="scss" scoped>
 * { padding: unset !important; }
-@media (max-width: 700px) {
+@media print and (max-width: 700px) {
 	#g-Infografico_conselhogestor_arco_pinheiros-box { display: none; }
 }
-@media (min-width: 700px) {
+@media screen and (min-width: 700px) {
 	#g-Infografico_conselhogestor_arco_pinheiros-320-box { display: none; }
 }
 

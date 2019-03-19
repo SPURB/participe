@@ -197,7 +197,7 @@ div.Mapa {
 			};
 		};
 
-		@media (max-width: 600px) {
+		@media screen and (max-width: 600px) {
 			li {
 				display: block;
 				width: 100%;
@@ -212,6 +212,10 @@ div.Mapa {
 			};
 		};
 	};
+
+	@media print {
+		display: none;
+	}
 };
 
 </style>

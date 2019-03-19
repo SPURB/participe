@@ -1,6 +1,6 @@
 <template>
-	<div class="Galeria">
-		<div class="gall" :style="{maxWidth: gallery_attrs.width + 'px'}">
+	<div class="Galeria" :class="{ print: toPrint }">
+		<div class="gall" :style="{maxWidth: gallery_attrs.width + 'px'}" v-if="!toPrint">
 			<a
 				class="pagination-previous"
 				:disabled="isFirst"
@@ -30,6 +30,7 @@
 			role="navigation"
 			aria-label="pagination"
 			:style="{maxWidth: gallery_attrs.width + 'px'}"
+			v-if="!toPrint"
 			>
 
 			<ul>
@@ -47,6 +48,12 @@
 				</template>
 			</ul>
 		</nav>
+		<ul class="print" v-if="toPrint">
+			<li v-for="image in gallery_attrs.images">
+				<img :src="image.url">
+				<p>{{ image.legenda }}</p>
+			</li>
+		</ul>
 	</div>
 </template>
 <script>
@@ -60,20 +67,26 @@ export default {
 	props: ['gallery_attrs'],
 	computed: {
 		isFirst () { return this.gallery_attrs.images[0].state },
-		isLast () { return this.gallery_attrs.images[this.gallery_attrs.images.length - 1].state }
+		isLast () { return this.gallery_attrs.images[this.gallery_attrs.images.length - 1].state },
+		toPrint () { return this.$store.state.toPrint }
 	},
+	mounted () {},
 	methods: {
 		numberClicked (number) {
 			let app = this
 			app.gallery_attrs.images.map(function (index, elem) {
-				if (index.state == true) { app.gallery_attrs.images[elem].state = false } else if (elem == number) { app.gallery_attrs.images[elem].state = true }
+				if (index.state === true) {
+					app.gallery_attrs.images[elem].state = false
+				} else if (elem === number) {
+					app.gallery_attrs.images[elem].state = true
+				}
 			})
 		},
 		next () {
 			if (!this.isLast) {
 				let nextIndex
 				this.gallery_attrs.images.map(function (index, elem) {
-					if (index.state == true) {
+					if (index.state === true) {
 						index.state = false
 						nextIndex = elem + 1
 					}
@@ -87,7 +100,7 @@ export default {
 			if (!this.isFirst) {
 				let previousIndex
 				this.gallery_attrs.images.map(function (index, elem) {
-					if (index.state == true) {
+					if (index.state === true) {
 						index.state = false
 						previousIndex = elem - 1
 					}
@@ -102,6 +115,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../variables';
 .Galeria{
 	margin: 4rem auto;
 	max-width: 992px;
@@ -254,5 +268,49 @@ export default {
 	&:hover div.gall a {
 		opacity: .4;
 	};
+
+	&.print {
+		max-width: 100%;
+		margin: 4rem 20mm;
+		border-width: 0;
+		counter-reset: number;
+		color-adjust: exact;
+		-webkit-print-color-adjust: exact;
+		ul.print {
+			max-width: 100%;
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+			li {
+				margin: 0 0 10mm 0;
+				counter-increment: number;
+				border: 1px solid $cinza-1;
+				border-radius: 2px;
+				break-inside: avoid-page;
+				page-break-inside: avoid;
+				overflow: hidden;
+				img {
+					max-width: 100%;
+				}
+				p {
+					font-size: small;
+					margin: 0 8px;
+					padding-bottom: 8px;
+					&::before {
+						content: counter(number);
+						display: inline-block;
+						vertical-align: baseline;
+						line-height: 1rem;
+						text-align: center;
+						width: 1rem;
+						font-size: x-small;
+						border-radius: 100%;
+						border: 1px solid $preto;
+						margin-right: 8px;
+					}
+				}
+			}
+		}
+	}
 };
 </style>

@@ -277,6 +277,12 @@
 				Faça o donwload do diagnóstico completo (25,5 Mb)
 			</a>
 		</div>
+		<div id="dl">
+			<a :href="imgSrc('arquivos/arco-pinheiros/Diagnostico_Consulta-publica_2018_09_06.pdf')" download="PIU Arco Pinheiros - Diagnóstico para Consulta pública (2018-09-06)">
+				<i class="icon-pdf icon"><span>picture_as_pdf</span></i>
+				Faça o donwload do diagnóstico completo (25,5 Mb)
+			</a>
+		</div>
 	</div>
 </template>
 
@@ -363,6 +369,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../variables';
+
 div.Diagnostico {
 	font-size: 16px;
 	max-width: 992px;
@@ -542,6 +550,14 @@ div.Diagnostico {
 			}
 
 			& > ol.fonte { transition-delay: .1s; }
+
+			&.escondido {
+				animation: fade ease-in-out .2s;
+				@keyframes fade {
+					from { opacity: 1; }
+					to { opacity: 0; }
+				}
+			}
 		}
 
 		div#dados_populacao {
@@ -1127,11 +1143,36 @@ div.Diagnostico {
 			order: 5;
 			font-size: initial;
 		}
+
+		div#dl { display: none; }
 	}
 
 	@media (-ms-high-contrast: none), (-ms-high-contrast: active) {
 		div.menu, div.main, div.legenda_mob, div.dados { margin-bottom: 1rem; }
 		ol.fonte { padding: 8px 12px 8px 28px !important; }
+	}
+}
+
+@media print {
+	div.Diagnostico div:not(#dl) { display: none; }
+	div.Diagnostico {
+		display: block;
+		background-color: transparent;
+		padding: 0;
+		div#dl {
+			padding: 0 20mm;
+			a {
+				color: $preto;
+				line-height: 100%;
+				font-weight: bold;
+				i { display: none; }
+				&::after {
+					content: attr(href);
+					color: $cinza-1;
+					font-weight: normal;
+				}
+			}
+		}
 	}
 }
 </style>

@@ -115,6 +115,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 div.Home {
+	padding-top: 60px;
 	main {
 		div.busca {
 			position: relative;
@@ -129,9 +130,7 @@ div.Home {
 				padding: 0 10px;
 			};
 
-			i:after {
-				visibility:hidden;
-			};
+			i:after { visibility: hidden; };
 
 			input {
 				width: 100%;
@@ -153,10 +152,12 @@ div.Home {
 
 		ul {
 			display: grid;
-			grid-template-columns: repeat(auto-fill, minmax(320px, 720px));
+			grid-template-columns: repeat(3, 1fr);
+			@media (max-width: 1400px) { grid-template-columns: repeat(2, 1fr); }
 			grid-gap: 2rem;
 			padding: 2rem;
 			margin: 0 auto;
+			max-width: 2000px;
 
 			&.load {
 				animation: surge ease-out .64s;
@@ -343,7 +344,8 @@ div.Home {
 			};
 
 			li.card:first-child {
-				grid-column: 1 / span all;
+				grid-column: 1 / span 3;
+				@media (max-width: 1400px) { grid-column: 1 / span 2; }
 				grid-template-columns: repeat(7, 1fr);
 				grid-template-rows: minmax(300px, 72vh) 64px;
 
@@ -538,9 +540,5 @@ div.Home {
 			};
 		};
 	};
-
-	@media screen and (min-width: 2000px) {
-		main ul { max-width: 2000px; }
-	}
 }
 </style>

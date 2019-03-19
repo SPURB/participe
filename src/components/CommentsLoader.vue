@@ -92,5 +92,8 @@ export default {
 			line-height: 1rem;
 		}
 	}
+	@media print {
+		display: none;
+	}
 }
 </style>

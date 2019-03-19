@@ -116,7 +116,7 @@ export default {
 			let app = this
 			let n
 			app.notas.map(function (index) {
-				if (conteudo == index.nota) {
+				if (conteudo === index.nota) {
 					n = index.num
 				}
 			})

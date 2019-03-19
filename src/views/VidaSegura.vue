@@ -881,13 +881,13 @@ div.VidaSegura {
 	figure table { margin: 2rem auto; }
 	table * td, table * th { min-width: 120px; }
 	section u { margin: 0 auto; }
-	@media print { 
+	@media print {
 		section u {
 			margin: 0 20mm 8px 20mm;
 			padding: 0;
 			max-width: unset;
 			display: inline-block;
-		} 
+		}
 	}
 }
 </style>

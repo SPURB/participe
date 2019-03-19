@@ -61,21 +61,16 @@ export default{
 	},
 	methods: {
 		consultaState (par) {
-			if (par === 1 || par === '1') { return 'aberta' }
-			else { return 'fechada' }
-		},
-		scrollToallComments () {
-			let appRef = this.$refs.allComments
-			window.scrollBy({
-				top: appRef.getBoundingClientRect().y - 30,
-				left: 0,
-				behavior: 'smooth'
-			})
+			if (par === 1 || par === '1') {
+				return 'aberta'
+			} else {
+				return 'fechada'
+			}
 		},
 		data (full) {
-			let dd = full.substring(8,10)
-			let mm = full.substring(5,7)
-			let aa = full.substring(0,4)
+			let dd = full.substring(8, 10)
+			let mm = full.substring(5, 7)
+			let aa = full.substring(0, 4)
 			return dd + '/' + mm + '/' + aa
 		},
 		imgsrc (name) { return this.basePath + 'arquivos/img/' + name },
@@ -108,13 +103,17 @@ div.PageTop {
 		height: 100%;
 		z-index: -1;
 		background-color: $cinza-3;
-		object-fit: cover;
-		object-position: center center;
 		user-select: none;
+		-ms-user-select: none;
 		-moz-user-select: none;
+		-webkit-user-select: none;
 		img {
-			min-width: 100%;
-			min-height: 100%;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center center;
+			-o-object-fit: cover;
+			-o-object-position: center center;
 			transform: scale(1.1);
 			filter: blur(8px);
 			-webkit-filter: blur(8px);
@@ -262,7 +261,7 @@ div.PageTop {
 				font-size: 2.5rem;
 				padding: 0;
 			}
-			h2 {				
+			h2 {
 				font-size: 1rem;
 				@media screen and (max-width: 600px) { font-size: 12px; }
 				padding: 0;

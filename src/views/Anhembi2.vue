@@ -1038,7 +1038,7 @@ export default {
 				fonte: 'SPUrbanismo, 2018'
 			},
 			consultas: false,
-			estaConsulta: {},
+			estaConsulta: {}
 		}
 	},
 	components: {

@@ -13,7 +13,7 @@
 			<div class="legenda">
 				<h1>{{ dados.titulo }}</h1>
 				<ul>
-					<li v-for="item in dados.legenda">
+					<li v-for="(item, index) in dados.legenda" :key=index>
 						<div :style="{ backgroundColor: item.fundo }" :class="{ linha: item.linha }"><img v-if="item.simbolo" :src="item.simbolo"></div> {{ item.descricao }}
 					</li>
 				</ul>
@@ -26,7 +26,6 @@
 <script>
 export default {
 	name: 'Imagem',
-	computed: {},
 	props: {
 		dados: {
 			type: Object,

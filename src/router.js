@@ -11,13 +11,7 @@ const VidaSegura = () => import(/* webpackChunkName: "vidasegura" */ '@/views/Vi
 const VilaLeopoldina2 = () => import(/* webpackChunkName: "vilaleopoldina2" */ '@/views/VilaLeopoldina2')
 const PortalPrefeitura = () => import(/* webpackChunkName: "portalprefeitura" */ '@/views/PortalPrefeitura')
 const GovernoAberto = () => import(/* webpackChunkName: "governoaberto" */ '@/views/GovernoAberto')
-
-// Admin
-const Login = () => import(/* webpackChunkName: "login" */ '@/views/Login')
-const Admin = () => import(/* webpackChunkName: "admin" */ '@/views/admin/Admin')
-const AdminHome = () => import(/* webpackChunkName: "adminhome" */ '@/views/admin/AdminHome')
-const AdminNovaConsulta = () => import(/* webpackChunkName: "adminnovaconsulta" */ '@/views/admin/AdminNovaConsulta')
-const AdminPagConsulta = () => import(/* webpackChunkName: "adminpagconsulta" */ '@/views/admin/AdminPagConsulta')
+const ConcessaoMartinelli = () => import(/* webpackChunkName: "martinelli" */ '@/views/ConcessaoMartinelli')
 
 Vue.use(Router)
 
@@ -96,44 +90,25 @@ export default new Router({
 				id: 39
 			}
 		},
+		{
+			path: '/concessao-martinelli',
+			name: 'ConcessaoMartinelli',
+			components: { ConcessaoMartinelli },
+			meta: {
+				id: 40
+			}
+		}
 		/*
 	 * Modelo para novas consultas
 	/*
-    {
-      path: '/nome-da-consulta',
-      name: 'NomeDaConsulta',
-      components: { NomeDaConsulta },
-      meta: {
-        id: #
-      }
-    },
-    */
 		{
-			path: '/login',
-			name: 'Login',
-			components: { Login }
+			path: '/nome-da-consulta',
+			name: 'NomeDaConsulta',
+			components: { NomeDaConsulta },
+			meta: {
+				id: #
+			}
 		},
-		{
-			path: '/admin',
-			components: { Admin },
-			children: [
-				{
-					path: '',
-					name: 'Admin',
-					component: AdminHome
-				},
-				{
-					path: 'novaconsulta',
-					name: 'novaConsulta',
-					title: 'Nova Consulta',
-					component: AdminNovaConsulta
-				},
-				{
-					path: ':id',
-					name: 'pageConsulta',
-					component: AdminPagConsulta
-				}
-			]
-		}
+		*/
 	]
 })

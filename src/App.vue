@@ -12,8 +12,7 @@
 	<router-view name="VilaLeopoldina2"></router-view>
 	<router-view name="PortalPrefeitura"></router-view>
 	<router-view name="GovernoAberto"></router-view>
-	<router-view name="Login"></router-view>
-	<router-view name="Admin"></router-view>
+	<router-view name="ConcessaoMartinelli"></router-view>
 
 	<Modal v-if="modalState.error">
 		<h3 slot="header" class="modal-error">Erro!</h3>

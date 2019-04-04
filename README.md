@@ -5,12 +5,11 @@ Frontend do [https://participe.gestaourbana.prefeitura.sp.gov.br](https://partic
 ## Setup do backend
 Clone e faça o setup dos repositórios:
 * [Consultas-publicas-backend](https://github.com/SPURB/consultas-publicas-backend)
-* [Consultas-publicas-login-backend](https://github.com/SPURB/consultas-publicas-login-backend)
 
-## Altere o arquivo `.env`
+## Configure as variáveis de ambiente 
+Altere o arquivo `.env`
 ```
 VUE_APP_API_URL=http://localhost/consultas-publicas-backend
-VUE_APP_API_LOGIN_URL=http://localhost/consultas-publicas-backend-login
 VUE_APP_ASSETS_BASE_URL=http://localhost/consultas-external-assets
 VUE_APP_BING_MAPS_KEY=your_bing_maps_key
 ```
@@ -36,16 +35,12 @@ ___
 
 ## Outras opções
 Verificar erros com eslint `npm run lint`
-
-Corrigir automaticamente os erros `npm run lint --fix`
-
-Iniciar testes unitários: `npm run test:unit`
-
-Iniciar testes end-to-end: `npm run test:e2e`
+Corrigir os com eslint `npm run lint --fix`
+TODO: Iniciar testes unitários: `npm run test:unit`
+TODO: Iniciar testes end-to-end: `npm run test:e2e`
 
 ## Padrões de interface
 Antes de desenvolver uma nova consulta veja a documentação dos [padrões de interface](https://github.com/SPURB/participe/wiki) disponibilizados no wiki deste repositório.
-
 
 ## Issues
 Toda contribuição é bem vinda. Crie uma [issue](https://github.com/SPURB/participe/issues).

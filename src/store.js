@@ -39,8 +39,8 @@ const store = new Vuex.Store({
 		SET_ROUTE_ID (state, routeId) { state.routeId = routeId },
 		FETCHING_STATE (state, fetchState) { state.fetching = fetchState },
 		FETCHING_ERROR (state, errorState) { state.errors = errorState },
-		adminStatus (state, status) { state.isAdmin = status },
-		addAdminInfo (state, info) { state.infoAdmin = info },
+		adminStatus (state, status) { state.isAdmin = status }, // retirar? 
+		addAdminInfo (state, info) { state.infoAdmin = info }, // retirar?
 		FETCH_CONSULTAS (state, consultas) {
 			state.consultas = consultas.sort(function (a, b) {
 				return new Date(b.dataCadastro) - new Date(a.dataCadastro)

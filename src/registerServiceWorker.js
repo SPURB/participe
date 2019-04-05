@@ -5,8 +5,7 @@ if (process.env.NODE_ENV === 'production') {
 	register(`${process.env.BASE_URL}service-worker.js`, {
 		ready () {
 			console.log(
-				'O aplicativo está sendo servido pelo cache do service worker\n' +
-        'Para mais detalhes visite https://goo.gl/AFskqB'
+				'O aplicativo está sendo servido pelo cache do service worker\n' + 'Para mais detalhes visite https://goo.gl/AFskqB'
 			)
 		},
 		cached () {

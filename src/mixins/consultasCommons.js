@@ -81,6 +81,7 @@ export const consultasCommons = {
 		backgroundImg (caminho) {
 			let url = this.$store.getters.basePath + caminho
 			return 'background-image: url(' + url + ');'
-		}
+		},
+		print () { this.$store.dispatch('imprime') }
 	}
 }

@@ -2,6 +2,7 @@
 	<div class="VideoContent">
 		<h3 v-if="titulo">{{ titulo }}</h3>
 		<video
+			:class="{canvasBorder: addBorder}"
 			:controls="controls"
 			:width="width"
 			:muted="muted">
@@ -13,11 +14,25 @@
 			<a :href="srcPath">Link do arquivo</a>.
 		</p>
 		</video>
-		<p v-if="descricao">{{ descricao }}</p>
+		<div class="video-description">
+			<p v-if="descricao">{{ descricao }}</p>
+			<a :href="srcPath">Baixe este vídeo</a>
+		</div>
 	</div>
 </template>
 
 <script>
+/**
+* usage
+	<VideoContent
+		titulo="Conheça a história do edifício"
+		descricao="Edifício Martinelli - 2/2"
+		poster="arquivos/concessao-martinelli/martinelli-poster.jpg"
+		src="arquivos/concessao-martinelli/martinelli-1.mp4"
+		width="100%"
+		type="video/mp4">
+	</VideoContent> -->
+*/
 // checar especificações em https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
 export default {
 	name: 'VideoContent',
@@ -54,6 +69,11 @@ export default {
 		poster: {
 			required: false,
 			default: false
+		},
+		addBorder: {
+			type: Boolean,
+			required: false,
+			default: true
 		}
 	},
 	computed: {
@@ -69,13 +89,21 @@ export default {
 	max-width: 700px;
 	margin: 2rem auto;
 	background-color: $cinza-3;
-	h3, p {
+	.video-description {
+		display: flex;
+		justify-content: space-between
+	}
+	h3, p, a {
 		margin: 0;
 		padding: 0.75rem 1rem;
 	}
 	p { padding-bottom: 1.25rem }
 	video {
 		border-radius: 2px;
+		&.canvasBorder{ 
+			border-right: 1px solid $cinza-3;
+			border-left: 1px solid $cinza-3
+		}
 		&:hover {
 			cursor: pointer
 		}

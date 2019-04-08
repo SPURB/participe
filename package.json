@@ -3,7 +3,27 @@
   "version": "2.0.0",
   "private": true,
   "description": "Ferramenta de participação social da Secretaria Municipal de Urbanismo e Licenciamento – SMUL - e São Paulo Urbanismo",
-  "author": "SP Urbanismo <desenvolvimento@spurbanismo.sp.gov.br>",
+  "author": {
+    "name": "São Paulo Urbanismo",
+    "email": "desenvolvimento@spurbanismo.sp.gov.br"
+  },
+  "license": "(GPL-3.0)",
+  "keywords": [
+    "participe",
+    "participacao",
+    "gestao",
+    "government",
+    "sao-paulo",
+    "prefeitura",
+    "vuejs",
+    "pwa"
+  ],
+  "homepage": "https://participe.gestaourbana.prefeitura.sp.gov.br/",
+  "bugs": "https://github.com/SPURB/participe/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SPURB/participe.git"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

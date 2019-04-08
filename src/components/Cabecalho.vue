@@ -2,7 +2,7 @@
 	<div class="Cabecalho" :class="{ negativo: isConsulta }">
 		<header>
 			<i class="icon icon-menu" @click="abreMenu"><span>menu</span></i>
-			<h1><a href=""><span>participe</span>.gestaourbanaSP</a></h1>
+			<h1><a href="/"><span>participe</span>.gestaourbanaSP</a></h1>
 			<a href="http://www.capital.sp.gov.br/" title="Prefeitura de São Paulo"><img :src="logoSrc('cor')"></a>
 		</header>
 	</div>

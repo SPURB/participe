@@ -74,11 +74,13 @@ export default {
 		basePathImgSrc () { return this.$store.getters.basePath + 'arquivos/capas/' },
 		fetching () { return this.$store.state.fetching }
 	},
+	mounted () {
+		if (window.location.hash !== '') this.checkOldRoutesWithHashes(window.location.hash)// redirect if url contain old patter. ex -> /#/anhembi2
+	},
 	methods: {
 		checaContribuicoes (n) { return parseInt(n) > 0 },
 		imgset (nomeStr) {
 			let nome = this.basePathImgSrc + nomeStr.slice(0, nomeStr.lastIndexOf('.'))
-			// let nome = '../../public/img/testes/' + nomeStr.slice(0, nomeStr.lastIndexOf('.'))
 			let ext = nomeStr.slice(nomeStr.lastIndexOf('.') + 1, nomeStr.lenght)
 			let declare =
 				nome + '_1900w.' + ext + ' 1900w, ' +
@@ -100,16 +102,14 @@ export default {
 		dataDisplay (data) {
 			return data.substring(8, 10) + '/' + data.substring(5, 7) + '/' + data.substring(0, 4)
 		},
-		// diasRestantes (data) {
-		// 	// if(data != null || data != '' ){
-		// 	let hoje = new Date()
-		// 	let dataFinal = new Date(data.substring(0, 4), data.substring(5, 7) - 1, data.substring(8, 10))
-		// 	let dias = Math.round((dataFinal - hoje) / (1000 * 60 * 60 * 24)) + 1
-		// 	if (dias <= 0) {
-		// 		return 'Não é mais possível contribuir'
-		// 	} else { return dias + ' dias restantes para contribuir' }
-		// },
-		redirect (dest) { location.assign(dest) }
+		redirect (dest) { location.assign(dest) },
+		checkOldRoutesWithHashes (hash) {
+			const noHash = hash.replace('#', '')
+			const routes = this.$router.options.routes.map(route => route.path)
+
+			if (routes.includes(noHash)) this.redirect(noHash)
+			else throw new Error('A rota ' + hash + ' não existe. Checar url.')
+		}
 	}
 }
 </script>

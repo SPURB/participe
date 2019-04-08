@@ -1,5 +1,5 @@
 <template>
-	<div class="Comments" :class="{ aberto: abreComentario }">
+	<div class="Comments" :class="{ aberto: abreComentario, sempreAberto: alwaysOpen }">
 		<div @click="abreComentario = !abreComentario" :class="{ sucesso: sucesso }"><i class="icon-comentario icon"><span>chat</span></i></div>
 		<form>
 			<fieldset>
@@ -86,7 +86,17 @@ export default {
 		validator: 'new' // give me my own validator scope.
 	},
 	name: 'CommentsOption',
-	props: ['options'],
+	props: {
+		options: {
+			type: Array,
+			required: true
+		},
+		alwaysOpen:{
+			type: Boolean, 
+			required: false,
+			default: false
+		}
+	},
 	data () {
 		return {
 			form_name: null,
@@ -386,7 +396,7 @@ div.Comments {
 		};
 	};
 
-	&.aberto { max-height: 1000px; };
+	&.aberto, &.sempreAberto { max-height: 1000px; };
 
 	@media (max-width: 600px) { font-size: 20px; }
 };

@@ -64,7 +64,6 @@
 			</CommentsOption>
 		</section>
 
-
 		<section>
 			<h2 class="titulo" indent="1">Vídeos</h2>
 

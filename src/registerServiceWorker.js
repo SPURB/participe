@@ -9,9 +9,15 @@ if (process.env.NODE_ENV === 'production') {
 		cached () {
 			console.log('O conteúdo foi armazenado no cache para utilização offline')
 		},
-		updated () {
-			console.log('Novo conteúdo está disponível; por favor atualize o navegador')
-			location.reload(true)
+		updated (registration) {
+			document.dispatchEvent(
+				new CustomEvent('swUpdated', { detail: registration })
+			)
+		},
+		registered (registration) {
+			setInterval(() => {
+				registration.update()
+			}, 1000 * 60 * 60) // e.g. hourly checks
 		},
 		offline () {
 			console.log('Não há conexão. O app está rodando em modo offline')

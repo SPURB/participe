@@ -14,6 +14,11 @@
 	<router-view name="GovernoAberto"></router-view>
 	<router-view name="ConcessaoMartinelli"></router-view>
 
+	<!-- service worker user action-->
+	<div id="btn-sw-update" v-if="updateExists">
+		<a @click="refreshApp">Atualização disponível. Clique para atualizar</a>
+	</div>
+
 	<Modal v-if="modalState.error">
 		<h3 slot="header" class="modal-error">Erro!</h3>
 		<!-- <p slot="body">Estamos com um erro de comunicação com o servidor. Tente novamente mais tarde.</p> -->
@@ -37,6 +42,13 @@ import Modal from '@/components/Modal.vue'
 
 export default {
 	name: 'Participe',
+	data () {
+		return {
+			refreshing: false,
+			registration: null,
+			updateExists: false
+		}
+	},
 	components: {
 		Cabecalho,
 		MenuLateral,
@@ -56,10 +68,34 @@ export default {
 				app.$store.dispatch('imprime')
 			}
 		})
+
+		// service worker eventListener
+		document.addEventListener(
+			'swUpdated', this.showRefreshUI, { once: true }
+		)
+
+		navigator.serviceWorker.addEventListener(
+			'controllerchange', () => {
+				if (this.refreshing) return
+				this.refreshing = true
+				window.location.reload()
+			}
+		)
 	},
 	mounted () { document.getElementById('carregando').classList.add('some') },
 	updated () { this.$refs.interruptor.style.height = this.$el.clientHeight + 'px' },
 	methods: {
+		// service worker UI Controller
+		showRefreshUI (e) {
+			this.registration = e.detail
+			this.updateExists = true
+		},
+		refreshApp () {
+			this.updateExists = false
+			if (!this.registration || !this.registration.waiting) { return }
+			this.registration.waiting.postMessage('skipWaiting')
+		},
+
 		setModal (typeOfmodal) {
 			this.$store.commit('COMMENT_MODAL_STATUS', typeOfmodal)
 		},
@@ -119,6 +155,27 @@ div#interruptor {
 };
 
 div#carregando.some { height: 0; }
+
+#btn-sw-update {
+	width: 100%;
+	height: 65px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	background-color: #ef8383;
+	a {
+		color: white;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	transition: all ease-in-out .2s;
+	&:hover {
+		cursor: pointer;
+		background-color: #EB5757
+	}
+}
 
 @media print {
 	body { background-color: $preto; }

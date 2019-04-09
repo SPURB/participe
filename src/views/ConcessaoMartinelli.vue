@@ -1,6 +1,6 @@
 <template>
 	<div class="ConcessaoMartinelli" ref="conteudoConsulta">
-		<PageTop background_image_src="arquivos/capas/concessao-martinelli_1900w.jpg" :esta_consulta="estaConsulta" :social="social_assets">
+		<PageTop background_image_src="arquivos/capas/concessao-martinelli_480w.jpg" :esta_consulta="estaConsulta" :social="social_assets">
 			<template slot="titulo"><div>Chamamento do edital de concessão da cobertura do Edifício Martinelli</div></template>
 		</PageTop>
 
@@ -81,6 +81,12 @@
 				caption: 'Vista da cobertura do edifício Martinelli.',
 				fonte: 'Acervo São Paulo Urbanismo. Fotografia de 1935.'
 			}"></Imagem>
+
+			<blockquote>
+				<p>Participe!</p>
+				<p>No dia 12/04 (sexta-feira), às 15h00, a SP Urbanismo fará a apresentação da iniciativa, com rodada de perguntas e visitação no espaço objeto deste chamamento, sem prejuízo da realização de outras apresentações e visitas públicas, presenciais ou remotas. As inscrições são limitadas e para participar, é necessária a inscrição por meio  do e-mail a <a href="mailto:concessaomartinelli@spurbanismo.sp.gov.br?subject=Chamamento Público edital da cobertura do Edifífio Martinelli">concessaomartinelli@spurbanismo.sp.gov.br</a>
+				</p>
+			</blockquote>
 
 		</section>
 

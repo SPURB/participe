@@ -30,5 +30,13 @@ module.exports = {
 			headless: true,
 			onlyProduction: true
 		}
+	},
+	pwa: {
+		themeColor: '#EB5757',
+		workboxPluginMode: 'InjectManifest',
+		workboxOptions: {
+			swSrc: './src/sw.js',
+			swDest: 'service-worker.js'
+		}
 	}
 }

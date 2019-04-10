@@ -54,7 +54,7 @@
 		"@vue/eslint-config-standard": "3.0.5",
 		"@vue/test-utils": "1.0.0-beta.29",
 		"chai": "4.2.0",
-		"eslint": "5.7.0",
+		"eslint": "5.16.0",
 		"node-sass": "4.11.0",
 		"prerender-spa-plugin": "^3.4.0",
 		"sass-loader": "7.1.0",

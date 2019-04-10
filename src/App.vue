@@ -15,9 +15,9 @@
 	<router-view name="ConcessaoMartinelli"></router-view>
 
 	<!-- service worker user action-->
-	<div id="btn-sw-update" v-if="updateExists">
+	<!-- <div id="btn-sw-update" v-if="updateExists">
 		<a @click="refreshApp">Atualização disponível. Clique para atualizar</a>
-	</div>
+	</div> -->
 
 	<Modal v-if="modalState.error">
 		<h3 slot="header" class="modal-error">Erro!</h3>
@@ -70,15 +70,15 @@ export default {
 		})
 
 		// service worker eventListener
-		document.addEventListener(
-			'swUpdated', this.showRefreshUI, { once: true }
-		)
+		// document.addEventListener(
+		// 	'swUpdated', this.showRefreshUI, { once: true }
+		// )
 
 		navigator.serviceWorker.addEventListener(
 			'controllerchange', () => {
 				if (this.refreshing) return
 				this.refreshing = true
-				window.location.reload()
+				// window.location.reload()
 			}
 		)
 	},
@@ -86,6 +86,7 @@ export default {
 	updated () { this.$refs.interruptor.style.height = this.$el.clientHeight + 'px' },
 	methods: {
 		// service worker UI Controller
+		/*
 		showRefreshUI (e) {
 			this.registration = e.detail
 			this.updateExists = true
@@ -95,6 +96,7 @@ export default {
 			if (!this.registration || !this.registration.waiting) { return }
 			this.registration.waiting.postMessage('skipWaiting')
 		},
+		*/
 
 		setModal (typeOfmodal) {
 			this.$store.commit('COMMENT_MODAL_STATUS', typeOfmodal)

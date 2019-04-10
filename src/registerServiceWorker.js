@@ -10,9 +10,9 @@ if (process.env.NODE_ENV === 'production') {
 			console.log('O conteúdo foi armazenado no cache para utilização offline')
 		},
 		updated (registration) {
-			document.dispatchEvent(
-				new CustomEvent('swUpdated', { detail: registration })
-			)
+			// document.dispatchEvent(
+			// 	new CustomEvent('swUpdated', { detail: registration })
+			// )
 		},
 		registered (registration) {
 			setInterval(() => {

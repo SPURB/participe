@@ -32,11 +32,11 @@ module.exports = {
 		}
 	},
 	pwa: {
-		themeColor: '#EB5757',
-		workboxPluginMode: 'InjectManifest',
-		workboxOptions: {
-			swSrc: './src/sw.js',
-			swDest: 'service-worker.js'
-		}
+		themeColor: '#EB5757'
+		// ,workboxPluginMode: 'InjectManifest',
+		// workboxOptions: {
+		// 	swSrc: './src/sw.js',
+		// 	swDest: 'service-worker.js'
+		// }
 	}
 }

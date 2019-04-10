@@ -19,6 +19,11 @@
 			<p>Todas as manifestações serão recebidas até a data limite de 16/05/2019 e, a partir de então, serão avaliadas e, eventualmente, por decisão da SPUrbanismo, incorporadas no Termo de Referência e estruturação do eventual edital de concessão, com prazos e etapas a serem definidos pela SPUrbanismo.</p>
 
 			<p>Serão desconsideradas as manifestações fora do escopo do chamamento ou que tenham sido formuladas de forma distinta das premissas e diretrizes do Termo de Referência.</p>
+			<blockquote>
+				<p>Participe!</p>
+				<p>No dia 12/04 (sexta-feira), às 15h00, a SP Urbanismo fará a apresentação da iniciativa, com rodada de perguntas e visitação no espaço objeto deste chamamento, sem prejuízo da realização de outras apresentações e visitas públicas, presenciais ou remotas. As inscrições são limitadas e para participar, é necessária a inscrição por meio do e-mail <a href="mailto:concessaomartinelli@spurbanismo.sp.gov.br?subject=Solicito inscrição no evento do dia 12/04/2019&body=Nome completo: %0D%0ANúmero de identificação: ">concessaomartinelli@spurbanismo.sp.gov.br</a>
+				</p>
+			</blockquote>
 
 			<Imagem :dados="{
 				tipo: 'default',
@@ -81,13 +86,6 @@
 				caption: 'Vista da cobertura do edifício Martinelli.',
 				fonte: 'Acervo São Paulo Urbanismo. Fotografia de 1935.'
 			}"></Imagem>
-
-			<blockquote>
-				<p>Participe!</p>
-				<p>No dia 12/04 (sexta-feira), às 15h00, a SP Urbanismo fará a apresentação da iniciativa, com rodada de perguntas e visitação no espaço objeto deste chamamento, sem prejuízo da realização de outras apresentações e visitas públicas, presenciais ou remotas. As inscrições são limitadas e para participar, é necessária a inscrição por meio  do e-mail a <a href="mailto:concessaomartinelli@spurbanismo.sp.gov.br?subject=Chamamento Público edital da cobertura do Edifífio Martinelli">concessaomartinelli@spurbanismo.sp.gov.br</a>
-				</p>
-			</blockquote>
-
 		</section>
 
 		<section ref="allComments">

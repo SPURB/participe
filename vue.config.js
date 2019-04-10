@@ -24,7 +24,8 @@ module.exports = {
 				'/vila-leopoldina-projeto-de-lei',
 				'/portal-prefeitura',
 				'/governo-aberto',
-				'/concessao-martinelli'
+				'/concessao-martinelli',
+				'/arco-pinheiros-2'
 			],
 			useRenderEvent: true,
 			headless: true,

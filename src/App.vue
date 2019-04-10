@@ -13,6 +13,7 @@
 	<router-view name="PortalPrefeitura"></router-view>
 	<router-view name="GovernoAberto"></router-view>
 	<router-view name="ConcessaoMartinelli"></router-view>
+	<router-view name="ArcoPinheiros2"></router-view>
 
 	<Modal v-if="modalState.error">
 		<h3 slot="header" class="modal-error">Erro!</h3>

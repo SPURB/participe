@@ -2,7 +2,7 @@
 	<div class="ArcoPinheiros2" ref="conteudoConsulta">
 		<PageTop background_image_src="arquivos/capas/arco-pinheiros_dt.jpg" :esta_consulta="estaConsulta">
 			<template slot="titulo"><div>PIU Arco Pinheiros</div></template>
-			<template slot="subtitulo"><div>1ª consulta pública – Projeto de Intervenção Urbana Arco Pinheiros</div></template>
+			<template slot="subtitulo"><div>2ª consulta pública – Projeto de Intervenção Urbana Arco Pinheiros</div></template>
 		</PageTop>
 
 		<Indice :titulos="titulosLimpo"></Indice>
@@ -28,7 +28,6 @@
 
 		<section>
 			<h2 class="titulo" indent="1">Características básicas da proposta</h2>
-			
 			<section>
 				<h3 class="titulo" indent="2">Objetivos gerais</h3>
 				<p>Conforme diagnóstico, a área do Arco Pinheiros – ACP, porção mais a oeste da Macroárea de Estruturação Metropolitana – MEM, engloba elementos físico-territoriais de caráter metropolitano: a confluência dos rios Tietê e Pinheiros, a presença da ferrovia e o conjunto formado pelos eixos do sistema rodoviário Anhanguera/Bandeirantes, Presidente Castelo Branco e Raposo Tavares.</p>
@@ -146,12 +145,98 @@
 				<p>Essa concentração de setores específicos da indústria e a presença de instituições de ensino e pesquisa também devem ser observadas à luz dos debates recentes sobre as transformações do setor produtivo paulistano. Segundo dados do Observatório do Trabalho (DIEESE e Secretaria do Desenvolvimento Econômico da PMSP), as atividades ligadas ao campo da Economia Criativa, que inclui a inovação, correspondiam em 2015 a 9,5% do total de empregos no município, uma ampliação de 52,7% em relação a 2007, frente ao incremento de 21,9% dos vínculos totais. No ACP, as atividades predominantes nesse setor correspondem à Pesquisa & Desenvolvimento – aquelas com a maior remuneração média das áreas que compõem a Economia Criativa – representando 20% dos empregos nesse segmento para todo o município (RAIS, DIEESE, 2016).</p>
 				<p>A localização estratégica dos vetores produtivos, a presença de importantes instituições de ensino e pesquisa, a permanência de atividades industriais de ponta, os estímulos à Economia Criativa e à atração de agentes <i>inovativos</i> na implantação do parque tecnológico e vislumbrados na conversão da gleba da Ceagesp, bem como a presença de áreas passíveis de transformação definem parte importante dos atributos para que o ACP seja compreendido como território propício a recepcionar atividades de inovação.</p>
 				<p>Identificada esta vocação, o PIU ARCO PINHEIROS alinha-se à Política de Desenvolvimento Econômico e Sustentável expressa no PDE.</p>
-				<img src="" alt="Tabelas em img, melhor ser texto">
+				<div class="colunas w992">
+					<div class="cinza w100">
+						<label>POLÍTICA DE DESENVOLVIMENTO ECONÔMICO SUSTENTÁVEL (Art. 175 e 176)</label>
+						<ul>
+							<li>Reforçar o papel do Município como centro industrial, comercial, de serviços, de conhecimento, de criação e inovação</li>
+							<li>Investir em infraestrutura para minimizar as deseconomias de aglomeração presentes no Município</li>
+							<li>Proteger as áreas industriais em funcionamento e estimular sua expansão</li>
+							<li>Potencializar a capacidade criativa, o conhecimento científico e tecnológico e a inovação</li>
+						</ul>
+					</div>
+					<div class="laranja w50">
+						<label>POLOS ECONOMIA CRIATIVA (Art. 182)</label>
+						<ul>
+							<li>Fomentar a <b>diversidade cultural e o potencial criativo e inovador</b>, o desenvolvimento humano, a inclusão social e a sustentabilidade</li>
+							<li>Estimular a formação e o <b>desenvolvimento de outros distritos criativos</b></li>
+							<li>Estimular o setor empresarial a <b>valorizar seus ativos criativos e inovadores</b> com a finalidade de promover <b>a competitividade</b></li>
+						</ul>
+					</div>
+					<div class="laranja w50">
+						<label>PARQUES TECNOLÓGICOS (Art. 187)</label>
+						<ul>
+							<li>Concentrar em <b>áreas estratégicas empresas e instituições</b> voltadas às atividades de <b>pesquisa, desenvolvimento e inovação</b></li>
+							<li>Criar <b>novas oportunidades de negócios</b> e fomentar o <b>empreendedorismo e incubar novas empresas</b> inovadoras</li>
+							<li>Aumentar <b>a sinergia entre instituições de ciência e tecnologia e empresas</b></li>
+							<li>Construir <b>espaços atraentes para profissionais do conhecimento emergente</b></li>
+						</ul>
+					</div>
+				</div>
 				<p>De forma específica, o Art. 188 do PDE demarca no território do ACP a AIU Parque Tecnológico do Jaguaré, em parte coincidente com a ZDE existente, além de apontar a necessidade de sua integração com o PIU ARCO PINHEIROS.</p>
 				<p>No entanto, romper o isolamento é essencial para que se atualize a forma de fomento às atividades de inovação. Do ponto de vista urbanístico, os conceitos recentes sobre inovação reiteram o protagonismo do território no sentido de estimular as relações de cooperação, concorrência e interação entre os múltiplos agentes envolvidos, de forma a possibilitar a consolidação de redes de interação. Nesse contexto, a inovação deixa de ser compreendida como algo linear e restrita ao momento de se lançar uma ideia ou serviço no mercado, e passa a ser encarada como um processo mais complexo, no qual sua eficácia reside na capacidade desses agentes estabelecerem relações e interações variadas, mobilizando e conhecimento e estabelecendo relações de aprendizagem que ocorrem muitas vezes externas às empresas<sup>1</sup>.</p>
 				<p>Desse ponto de vista, o território é um suporte fundamental para promover a interação entre os agentes, pois possibilita trocas essenciais para efetivar o chamado transbordamento de conhecimento, a estruturação de novos negócios e a construção de um ambiente dinâmico do ponto de vista produtivo, vantagens evidentes de economias de aglomeração. Para efetivar tais propósitos, são necessários determinados atributos, em parte existentes no ACP – como a presença de mão de obra qualificada e a existência de redes científicas e profissionais – e outros que ainda devem ser complementados, como a ampliação de serviços de qualidade e a atratividade do ambiente urbano.</p>
 				<p>A presença de agentes <i>inovativos</i>, como colocado anteriormente, e o desafio de incorporar novos atributos ao território são elementos que se desdobram em ações físico-territoriais e em políticas de desenvolvimento urbano no PIU ARCO PINHEIROS. Foram resumidas no quadro a seguir as principais condicionantes necessárias para formulação dos territórios de inovação, dentro das quais estão detalhados atributos fundamentais para melhoria da atratividade do ambiente urbano. Dentro do escopo apresentado, merecem destaque as ações de mobilidade urbana – todas previstas no programa de intervenções – bem como o incentivo à habitação, comércio, serviços e áreas livres qualificadas, demonstrando que as atividades de inovação necessitam estar integradas a bairros de uso misto e com diversidade social.</p>
-				<img src="" alt="quatro colunas em img, melhor ser texto">
+				<div class="colunas">
+					<div class="cinza w25">
+						<label>EXISTENTE</label>
+						<ul>
+							<li class="destaque">UNIVERSIDADE</li>
+							<li class="destaque">INDÚSTRIA</li>
+							<li class="destaque">TERRA DISPONÍVEL</li>
+						</ul>
+					</div>
+					<div class="cinza w25">
+						<label>VOCAÇÃO</label>
+						<ul>
+							<li class="destaque">TERRITÓRIO DE INOVAÇÃO</li>
+						</ul>
+					</div>
+					<div class="cinza w25">
+						<label>CONDICIONANTES</label>
+						<ul class="laranja pont">
+							<li>
+								<b>URBANIDADE</b>
+								<p>DIVERSIDADE, ESPAÇOS DE ENCONTRO</p>
+							</li>
+							<li>
+								<b>MOBILIDADE</b>
+								<p>TRANSPORTE PÚBLICO DE MÉDIA OU ALTA CAPACIDADE, CAMINHABILIDADE</p>
+							</li>
+							<li>
+								<b>COOPERAÇÃO</b>
+								<p>UNIVERSIDADE, GOVERNO, EMPRESAS</p>
+							</li>
+						</ul>
+						<div class="obs">TECNOLOGIA, TALENTO E TOLERÂNCIA</div>
+					</div>
+					<div class="cinza w25">
+						<label>O QUE FALTA?</label>
+						<ul>
+							<li>
+								<ul>
+									<li>Habitação (diversidade)</li>
+									<li>Comércio e serviços de âmbito local</li>
+									<li>Equipamentos públicos</li>
+									<li>Praças</li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li>Conexão entre modais</li>
+									<li>Abertura de novas vias</li>
+									<li>Passeios qualificados e confortáveis (amplos, seguros, sombreados)</li>
+								</ul>
+							</li>
+							<li>
+								<ul>
+									<li>Adequação do instrumento urbanístico à política urbana (PDE Art. 187 188)</li>
+									<li>Gestão coordenada</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
 				<ol class="decimais notas">
 					<caption>Notas</caption>
 					<li>TUNES, Regina. <i>Geografia da Inovação. Território e Inovação no Brasil no século XXI</i>. Tese (Doutorado em Geografia Humana), Faculdade de Filosofia, Letras e Ciências Humanas da Universidade de São Paulo. São Paulo, 2015.</li>
@@ -176,7 +261,29 @@
 				<p>Já a Zona de Desenvolvimento Econômico (ZDE), apesar da presença incipiente de atividades produtivas, decorrente de um processo de transformação interrompido proporcionado pela classificação da área anteriormente como Zona Mista (Lei n°13.885/2004), e da previsão de desenvolvimento de um Parque Tecnológico, ainda encontra-se estagnada, razão pela qual o PIU prevê diretrizes para sua transformação gradual, incluindo a nova centralidade urbana, sem perder de vista a vocação da área para recepcionar novas atividades produtivas.</p>
 				<p>Para as demais áreas do PIU ARCO PINHEIROS foram previstos parâmetros urbanísticos em função das especificidades de uso e ocupação do solo existentes, resultando, em linhas gerais: em trechos de ocupação predominantemente consolidada e para os quais se adotam densidades moderadas, como as Zonas Mistas (ZM) no Jaguaré e as quadras ao longo da Av. Imperatriz Leopoldina e da Rua Guaipá; em áreas com grande diversidade de uso e com horizonte de transformação dos usos industriais para bairros de uso misto de média densidade, como a região do Jardim Humaitá.</p>
 				<p>Em relação aos instrumentos de implantação do plano, o PIU ARCO PINHEIROS indica uma única <b>Área de Intervenção Urbana (AIU)</b>. Definida pelo art. 145, § 3°, do PDE, a AIU consiste em porções do território nas quais se pretende conduzir processos de remodelagem e reestruturação urbana, econômica, social e ambiental. Elaborada pelo Poder Público, com gestão participativa e regulamentada por lei específica, os recursos arrecadados no perímetro de uma AIU devem permanecer em conta segregada no Fundo de Desenvolvimento Urbano (FUNDURB), de forma a atrelar os valores originados da venda de potencial construtivo adicional, mediante Outorga Onerosa do Direito de Construir, ao programa de intervenções proposto pelo PIU.</p>
-				<img src="" alt="figure default ou texto - tag do pde">
+				<div class="card-pde">
+					<div class="titulo">Área de Intervenção Urbana (AIU)</div>
+					<p>Porções de território destinadas à reestruturação, transformação, recuperação e melhoria ambiental.</p>
+					<ul>
+						<li>Ocupação mais intensa, qualificada, inclusiva do espaço urbano</li>
+						<li>Desenvolvimento econômico</li>
+						<li>Racionalização da infraestrutura</li>
+						<li>Destinação mínima de <b>25%</b> dos recursos para <b>Habitação de Interesse Social</b></li>
+						<li>Preservação dos sistemas ambientais</li>
+					</ul>
+					<div class="iconCont">
+						<div class="icone">
+							<img :src="imgSrc('arquivos/arco-pinheiros-2/cards-pde/aiu-1.png')" alt="">
+							<div>ELABORADO PELO PODER PÚBLICO</div>
+						</div>
+						<span>&#10140;</span>
+						<div class="icone">
+							<img :src="imgSrc('arquivos/arco-pinheiros-2/cards-pde/aiu-2.png')" alt="">
+							<div>COM GESTÃO PARTICIPATIVA</div>
+						</div>
+					</div>
+					<img :src="imgSrc('arquivos/arco-pinheiros-2/cards-pde/aiu-ilust.png')" alt="">
+				</div>
 				<img src="" alt="Mapa interativo 1 - aiu">
 				<p>Além disso, o Art. 188 do PDE demarca dentro do Arco Pinheiros a AIU Parque Tecnológico do Jaguaré e exige sua integração com o PIU ARCO PINHEIROS. Como resposta a essa premissa, o PIU incorpora o perímetro da AIU Parque Tecnológico do Jaguaré à AIU ARCO PINHEIROS, mantendo os objetivos dispostos no Art. 187 do PDE e compreendendo a necessidade de se compartilhar recursos e intervenções na construção de um projeto coeso para todo o perímetro do Arco Pinheiros.</p>
 				<p>Duas áreas permanecerão fora da AIU Arco Pinheiros: a Cidade Universitária e o recorte do PIU Vila Leopoldina-Villa Lobos (PIU-VLVL).</p>
@@ -287,7 +394,25 @@
 				<section>
 					<h4 class="titulo" indent="3">Áreas de Estruturação Local - AEL</h4>
 					<p>Definida pelo Art. 149 do PDE, a Área de Estruturação Local (AEL) consiste em porções do território destinadas à transformação local, especialmente nas áreas de maior vulnerabilidade, nas quais deve ocorrer uma convergência de políticas públicas integradas, como, por exemplo, a oferta de transporte coletivo, ampliação de áreas verdes, oferta de habitação de interesse social e regularização fundiária, bem como equipamentos urbanos e sociais. O PIU ARCO PINHEIROS propõe a demarcação de duas AEL sobrepostas a AIU ARCO PINHEIROS: a <b>AEL São Remo</b> e a <b>AEL Humaitá</b>.</p>
-					<img src="" alt="figure default ou melhor texto? tag do pde">
+					<div class="card-pde">
+						<div class="titulo">Áreas de Estruturação Local (AEL)</div>
+						<p>Porções do território destinadas à transformação local e associadas à Rede de Estruturação da Transformação Urbana.</p>
+						<ul>
+							<li>Desenvolvimento urbano, especialmente nas áreas de maior vulnerabilidade </li>
+							<li>Fortalecimento das centralidades locais</li>
+							<li>Integração com transporte coletivo</li>
+							<li>Ampliação de áreas verdes</li>
+							<li>Oferta de HIS e regularização fundiária</li>
+							<li>Oferta de equipamentos urbanos e sociais</li>
+						</ul>
+						<div class="iconCont">
+							<div class="icone horizontal">
+								<img :src="imgSrc('arquivos/arco-pinheiros-2/cards-pde/ael-1.png')" alt="">
+								<div>Conforme diretrizes estabelecidas nos <b>Planos Regionais das Subprefeituras</b></div>
+							</div>
+						</div>
+						<img :src="imgSrc('arquivos/arco-pinheiros-2/cards-pde/ael-ilust.png')" alt="">
+					</div>
 
 					<section>
 						<h5 class="titulo" indent="4">AEL São Remo</h5>
@@ -318,7 +443,7 @@
 				<p>No que se refere ao adensamento populacional previsto para o território do PIU ARCO PINHEIROS, a estimativa realizada para 30 anos partiu do cruzamento das Áreas de Transformação, Qualificação e Preservação com os lotes e glebas efetivamente transformáveis, ou seja, excluindo-se aqueles cujo uso, ocupação ou condições fundiárias condicionariam baixas probabilidades de transformação, sendo considerados consolidados. Foram considerados nesta condição: Edifícios residenciais verticais, conjuntos habitacionais, núcleos urbanizados, edifícios de uso misto, comércio e serviços verticais, comércio e serviços horizontais de porte significativo, áreas produtivas ativas, como indústrias, condomínios multissetorais, gerenciamento de dados e tecnologia, equipamentos urbanos, usos especiais e coletivos, lotes menores que 500m² e lotes de grande porte já com protocolos para desenvolvimento e novos projetos.O mapa X resume este conjunto de lotes e glebas consolidados, demonstrando, em seu negativo, todas as áreas passíveis de recepcionarem transformações urbanas.</p>
 				<img src="" alt="figure mapa - Graus de consolidação por uso no perímetro do PIU ARCO PINHEIROS">
 				<p>O resultado do cálculo de adensamento demonstrou que houve acréscimo de 81.030 pessoas em todo o perímetro do PIU ARCO PINHEIROS, resultando na ampliação da densidade populacional bruta de 63 hab/ha para 157 hab/ha em 30 anos. Para compreender melhor a distribuição desse acréscimo populacional pelo território, os cálculos foram realizados por setores, cada um representando unidades com características homogêneas. A eventual transformação da Ceagesp, por exemplo, promoverá um adensamento considerável, passando a ter uma densidade similar a do distrito da Bela Vista hoje. Já os setores Vila Leopoldina e Centralidade Jaguaré, passarão a ter densidades similares ao distrito da Santa Cecília. O setor Gastão Vidigal, por sua vez, passará a ter densidade similar ao distrito de Perdizes, enquanto o setor Mofarrej passará a ter densidade similares ao distrito do Jabaquara. Essa ampliação da oferta de moradia em setores específicos do ACP reitera a estratégia do plano de incentivar a conformação de bairros de uso misto em consonância com as novas centralidades previstas.</p>
-				<img src="" alt="tabela - populacao/setor">
+				<Tabela :dados="tabela1"></Tabela>
 				<p>Para garantir qualidade ambiental ao território, para que suporte esse futuro adensamento, foram considerados os problemas levantados pelo Diagnóstico Ambiental do PIU ARCO PINHEIROS, com destaque para a reduzida disponibilidade de áreas verdes, áreas sujeitas a inundações, elevada impermeabilização do solo, presença de córregos contaminados por esgoto doméstico, invasão de Áreas de Preservação Permanente (APP), ausência de conexão ambiental entre áreas verdes, presença de ilha de calor no território e a necessidade de instalação de equipamentos públicos para atendimento à população existente e futura. A partir desse diagnóstico foram definidas diretrizes que buscam simultaneamente a qualificação dos espaços públicos e a promoção do equilíbrio ambiental. São elas:</p>
 				<ol class="decimais">
 					<li>
@@ -465,6 +590,7 @@ import Indice from '@/components/Indice'
 import Comments from '@/components/Comments'
 import CommentsLoader from '@/components/CommentsLoader'
 import Apoio from '@/components/Apoio'
+import Tabela from '@/components/Tabela'
 import { consultasCommons } from '@/mixins/consultasCommons'
 
 export default {
@@ -474,7 +600,87 @@ export default {
 			titulosLimpo: [],
 			comments_atrr: undefined,
 			consultas: false,
-			estaConsulta: {}
+			estaConsulta: {},
+			tabela1: {
+				titulo: 'Título da tabela 1',
+				colunas: [{
+					titulo: '',
+				}, {
+					titulo: 'Setor 1 (Setor Parque Tecnológico do Jaguaré)',
+				}, {
+					titulo: 'Setor 2 (Setor misto do Jaguaré)',
+				}, {
+					titulo: 'Setor 3 (Setor Presidente Altino)',
+				}, {
+					titulo: 'Setor 4 (Setor Gastão Vidigal)',
+				}, {
+					titulo: 'Setor 5 (Setor Mofarrej)',
+				}, {
+					titulo: 'Setor 6 (Setor Jardim Humaitá)',
+				}, {
+					titulo: 'Setor 7 (Setor São Remo/Corifeu)',
+				}, {
+					titulo: 'Setor 8 (Setor Ceagesp)',
+				}, {
+					titulo: 'Setor 9 (Setor Vila Leopoldina)',
+				}, {
+					titulo: 'Total',
+				}],
+				linhas: [
+					[
+						[ { data: 'Número de habitantes' } ],
+						[ { data: '13.265' } ],
+						[ { data: '3.155' } ],
+						[ { data: '3.780' } ],
+						[ { data: '16.224' } ],
+						[ { data: '8.363' } ],
+						[ { data: '7.667' } ],
+						[ { data: '5.071' } ],
+						[ { data: '17.582' } ],
+						[ { data: '5.923' } ],
+						[ { data: '81.030' } ],
+					],
+					[
+						[ { data: 'População residente atual' } ],
+						[ { data: '' } ],
+						[ { data: '' } ],
+						[ { data: '' } ],
+						[ { data: '' } ],
+						[ { data: '' } ],
+						[ { data: '' } ],
+						[ { data: '' } ],
+						[ { data: '' } ],
+						[ { data: '' } ],
+						[ { data: '' } ],
+					],
+					[
+						[ { data: 'Danside resultante em 30 anos (hab/ha)' } ],
+						[ { data: '' } ],
+						[ { data: '' } ],
+						[ { data: '' } ],
+						[ { data: '' } ],
+						[ { data: '' } ],
+						[ { data: '' } ],
+						[ { data: '' } ],
+						[ { data: '' } ],
+						[ { data: '' } ],
+						[ { data: '' } ],
+					],
+					[
+						[ { data: 'Densidade atual (hab/ha)' } ],
+						[ { data: '' } ],
+						[ { data: '' } ],
+						[ { data: '' } ],
+						[ { data: '' } ],
+						[ { data: '' } ],
+						[ { data: '' } ],
+						[ { data: '' } ],
+						[ { data: '' } ],
+						[ { data: '' } ],
+						[ { data: '' } ],
+					],
+				]
+			}
 		}
 	},
 	components: {
@@ -482,7 +688,8 @@ export default {
 		Indice,
 		Comments,
 		CommentsLoader,
-		Apoio
+		Apoio,
+		Tabela
 	},
 	mixins: [ consultasCommons ]
 
@@ -494,19 +701,22 @@ export default {
 @import '../consulta';
 
 div.ArcoPinheiros2 {
-	// path -> \\spurbsp01\Gestao_Projetos\Projetos\Arco Pinheiros\01_PIU_ACP\02_Proposta_Preliminar\Apresentações\ACP_MAR_ABRIL_2019.pptx
+	/* path -> \\spurbsp01\Gestao_Projetos\Projetos\Arco Pinheiros\01_PIU_ACP\02_Proposta_Preliminar\Apresentações\ACP_MAR_ABRIL_2019.pptx */
 	ol.objetivos {
+		columns: 280px;
+		column-gap: 2rem;
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(calc(320px - 2rem), 1fr));
 		counter-reset: li;
 		list-style-type: none;
 		padding: 2rem 2rem 0;
 		margin: 4rem auto;
-		columns: 280px;
-		column-gap: 2rem;
 		position: relative;
-		width: 992px;
-		max-width: 100%;
+		width: 100%;
+		max-width: calc(100% - 400px - 4rem);
+		@media (max-width: 1200px) {
+			max-width: 100%;
+		}
 		caption {
 			position: absolute;
 			top: -1rem;
@@ -515,6 +725,7 @@ div.ArcoPinheiros2 {
 			text-align: center;
 			line-height: 1.2;
 			font-weight: bold;
+			font-size: 1.5rem;
 			text-align: center;
 			color: #F39200;
 		}
@@ -531,22 +742,26 @@ div.ArcoPinheiros2 {
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
+			width: 100%;
 			&::before {
 				counter-increment: li;
 				content: counters(li, '', upper-roman);
 				display: block;
 				margin: 0 auto 1rem;
-				width: 4rem;
-				line-height: 4rem;
+				width: 2rem;
+				line-height: 2rem;
 				text-align: center;
 				color: #FFF;
-				font-size: 2rem;
+				font-size: 1rem;
 				background-color: #F39200;
 				border-radius: 50%;
 			}
 			&, * {
 				font-family: $grotesca;
 				font-size: 1rem;
+				-webkit-hyphens: auto;
+				-ms-hyphens: auto;
+				hyphens: auto;
 			}
 			p {
 				text-align: center;
@@ -564,11 +779,9 @@ div.ArcoPinheiros2 {
 					align-items: center;
 					width: 50%;
 					img {
-						padding: 0;
 						margin: 0 0 4px;
 						width: 80px;
 						height: 80px;
-						background-color: transparent;
 					}
 					span {
 						display: block;
@@ -578,19 +791,228 @@ div.ArcoPinheiros2 {
 						line-height: 1.2;
 						text-transform: uppercase;
 						color: #F39200;
+						max-width: 120px;
+						font-weight: bold;
 					}
 				}
 			}
 		}
 		@media (max-width: 600px) {
 			padding: 1rem 1rem 0;
+			li {
+				margin-bottom: 1rem;
+			}
 			caption {
 				width: calc(100% - 2rem);
 				margin: 0 1rem;
+				font-size: 1rem;
 			}
 		}
 	}
-	section img {
+	div.colunas {
+		display: flex;
+		flex-flow: row wrap;
+		align-items: flex-start;
+		justify-content: center;
+		padding: 0 2rem 0;
+		margin: 4rem auto;
+		max-width: calc(100% - 400px - 4rem);
+		&.w992 { max-width: 992px; }
+		@media (max-width: 1200px) {
+			max-width: 100%;
+		}
+		@media (max-width: 600px) {
+			padding: 0 1rem 0;
+			margin: 2rem auto;
+		}
+		& > div {
+			position: relative;
+			border-width: 2px;
+			border-style: solid;
+			border-radius: 20px;
+			min-width: calc(320px - 2rem);
+			width: 100%;
+			label {
+				display: block;
+				padding: 0.4rem 1rem;
+				border-radius: 16px 16px 0 0;
+				font-weight: bold;
+				color: #FFF;
+				text-align: center;
+				line-height: 1.2;
+			}
+			ul {
+				margin: 0;
+				padding: 0.8rem 1rem;
+				list-style-type: none;
+				border-radius: 20px;
+				li {
+					font-family: $grotesca;
+					font-size: 1rem;
+					-webkit-hyphens: auto;
+					-ms-hyphens: auto;
+					hyphens: auto;
+					margin: 0 0 0.4rem;
+					padding: 0;
+					&:last-child { margin-bottom: 0; }
+					& > ul {
+						border-width: 1px;
+						border-style: solid;
+						list-style-type: square;
+						padding-left: 2rem;
+						margin: 0.1rem 0;
+						li { margin-bottom: 0; }
+					}
+					&.destaque {
+						font-size: 1.2rem;
+						text-align: center;
+					}
+				}
+				&.laranja {
+					margin: 1rem 1rem 0;
+					padding: 8px;
+					border: 1px dashed #F39200;
+					li {
+						border: 2px solid #F39200;
+						border-radius: 16px;
+						padding: 0.4rem 0.6rem;
+						text-align: center;
+						b {
+							color: #F39200;
+						}
+						p {
+							font-family: inherit;
+							font-size: inherit;
+							margin: 0.1rem 0 0;
+						}
+					}
+				}
+			}
+			&.w100 {
+				max-width: 100%;
+				margin: 0 0 2rem;
+			}
+			&.w50 {
+				max-width: calc(50% - 1rem);
+				margin: 0 2rem 2rem 0;
+			}
+			&.w33 {
+				max-width: calc((100% / 3) - 2rem);
+				margin: 0 2rem 2rem 0;
+			}
+			&.w25 {
+				max-width: calc(25% - 2rem);
+				margin: 0 2rem 2rem 0;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+			&.cinza {
+				border-color: $cinza-2;
+				label { background-color: $cinza-2; }
+				ul li > ul { border-color: $cinza-2; }
+			}
+			&.laranja {
+				border-color: #F39200;
+				label { background-color: #F39200; }
+			}
+			@media (max-width: 600px) {
+				&.w100, &.w50, &.w33, &.w25 {
+					margin: 0 0 1rem;
+				}
+			}
+			@media (max-width: calc(2*(320px - 1rem))) {
+				min-width: 100%;
+			}
+			div.obs {
+				font-size: 0.8rem;
+				line-height: 1.2;
+				font-weight: bold;
+				text-align: center;
+				margin: 4px 0 0.8rem;
+				padding: 0 1rem;
+			}
+		}
+	}
+	div.card-pde {
+		width: calc(320px - 2rem);
+		margin: 2rem auto;
+		border: 2px solid #E30513;
+		border-radius: 8px;
+		overflow: hidden;
+		background-color: #FFF;
+		* {
+			font-family: $grotesca;
+			font-size: 0.8rem;
+		}
+		.titulo {
+			font-size: 1.2rem;
+			line-height: 1.2;
+			font-weight: bold;
+			color: #E30513;
+			margin: 0.8rem 1rem;
+			text-align: center;
+		}
+		p, ul {
+			padding: 0 1rem;
+			margin-bottom: 0.5rem;
+			-webkit-hyphens: auto;
+			-ms-hyphens: auto;
+			hyphens: auto;
+		}
+		ul li {
+			margin: 0 0 0 1rem;
+			padding: 0;
+		}
+		div.iconCont {
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: center;
+			align-items: center;
+			padding: 0 1rem;
+			div.icone {
+				display: flex;
+				flex-flow: column nowrap;
+				align-items: center;
+				width: 100%;
+				margin-right: 1rem;
+				&:last-child { margin-right: 0; }
+				& > img {
+					width: 80px;
+					height: 80px;
+				}
+				& > div {
+					font-weight: bold;
+					font-size: smaller;
+					text-align: center;
+					line-height: 1.2;
+					color: #E30513;
+					margin-top: 4px;
+				}
+				&.horizontal {
+					flex-flow: row nowrap;
+					& > div {
+						color: inherit;
+						margin-top: 0;
+						font-weight: inherit;
+						font-size: inherit;
+						text-align: left;
+						b { color: #E30513; }
+					}
+				}
+			}
+			span {
+				color: #E30513;
+				font-size: 2rem;
+				margin: 0 -1rem;
+			}
+		}
+		& > img {
+			margin: 1rem 0 -8px;
+			width: 100%;
+		}
+	}
+	section > img {
 		display: block;
 		max-width: 700px;
 		background-color: #EEE;

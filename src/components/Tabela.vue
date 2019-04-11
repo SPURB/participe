@@ -17,7 +17,7 @@
 				</tr>
 			</tbody>
 		</table>
-		<div class="notas">
+		<div class="notas" v-if="notas.length > 0">
 			<h1>Notas</h1>
 			<ul>
 				<li v-for="nota in notas">
@@ -86,6 +86,7 @@ export default {
 	},
 	created () {
 		this.montaNotas()
+		this.isNotas()
 	},
 	methods: {
 		col (elem, group) { return group.indexOf(elem) },
@@ -136,8 +137,9 @@ export default {
 
 div.Tabela {
 	max-width: 700px;
+	overflow-x: auto;
 	margin: 2rem auto;
-	padding: 1rem 2rem 2rem 2rem;
+	padding: 0;
 	background-color: $cinza-3;
 	border-radius: 2px;
 
@@ -147,7 +149,7 @@ div.Tabela {
 		width: 100%;
 		position: relative;
 		border-collapse: collapse;
-		margin: 0;
+		margin: 2rem;
 		background-color: #FFF;
 
 		& > * { color: $preto; }

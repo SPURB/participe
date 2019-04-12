@@ -1,7 +1,7 @@
 <template>
-	<div class="Tabela">
+	<div class="Tabela" :class="{ larga: dados.colunas.length > 6 }">
 		<table :class="{ listrada: dados.tabelaListrada }">
-			<caption>{{ dados.titulo }}</caption>
+			<caption v-if="dados.titulo">{{ dados.titulo }}</caption>
 			<thead>
 				<tr>
 					<th v-for="coluna in dados.colunas">{{ coluna.titulo }}</th>
@@ -10,7 +10,7 @@
 			<tbody>
 				<tr v-for="linha in dados.linhas">
 					<template v-for="celula in linha">
-						<td :data-coluna="dados.colunas[col(celula, linha)].titulo">
+						<td :data-coluna="dados.colunas[col(celula, linha)].titulo" :class="{ destaque: celula[0].destaque, cor: celula[0].cor, vazio: celula[0].vazio }">
 							<span>{{ celula[0].data }}<sup class="nota" v-if="celula[1]">{{ numeraNotas(celula[1].ref) }}</sup></span>
 						</td>
 					</template>
@@ -45,7 +45,7 @@ export default {
 			type: Object,
 			titulo: {
 				type: String,
-				required: true
+				required: false
 			},
 			colunas: {
 				type: Array,
@@ -60,7 +60,15 @@ export default {
 						type: Object,
 						data: {
 							type: String,
-							required: true
+							required: true,
+							destaque: {
+								type: Boolean,
+								required: false
+							},
+							cor: {
+								type: Boolean,
+								required: false
+							}
 						},
 						ref: {
 							type: String,
@@ -84,9 +92,8 @@ export default {
 			tabelaListrada: Boolean
 		}
 	},
-	created () {
+	beforeMount () {
 		this.montaNotas()
-		this.isNotas()
 	},
 	methods: {
 		col (elem, group) { return group.indexOf(elem) },
@@ -97,7 +104,7 @@ export default {
 			// let dados = app.$props
 			this.dados.linhas.map(function (linha) {
 				linha.map(function (celula) {
-					celula.map(function (conteudo) {
+					celula.map((conteudo) => {
 						if (conteudo.ref) {
 							notasB.push(conteudo.ref)
 						}
@@ -139,7 +146,7 @@ div.Tabela {
 	max-width: 700px;
 	overflow-x: auto;
 	margin: 2rem auto;
-	padding: 0;
+	padding: 2rem;
 	background-color: $cinza-3;
 	border-radius: 2px;
 
@@ -149,7 +156,7 @@ div.Tabela {
 		width: 100%;
 		position: relative;
 		border-collapse: collapse;
-		margin: 2rem;
+		margin: 0;
 		background-color: #FFF;
 
 		& > * { color: $preto; }
@@ -158,11 +165,12 @@ div.Tabela {
 			font-size: initial;
 			font-weight: bold;
 			padding: 8px 0;
+			background-color: $cinza-3;
 		}
 
 		th, td {
-			border: 1px solid $cinza-2 !important;
-			padding: 4px 8px !important;
+			border: 1px solid $cinza-2;
+			padding: 4px 8px;
 			font-size: smaller;
 			color: $preto;
 			position: relative;
@@ -173,14 +181,18 @@ div.Tabela {
 				margin: 0 0 0 2px;
 				vertical-align: 4px;
 			}
+
+			&.destaque span { font-weight: bold; }
+			&.cor { background-color: $vermelho-tr; }
+			&.vazio { background-color: $cinza-3; }
 		}
 
 		th { background-color: $sombra-4; }
 
 		&.listrada {
 			th, td {
-				border: 0px !important;
-				border-bottom: 1px solid $cinza-2 !important;
+				border: 0px;
+				border-bottom: 1px solid $cinza-2;
 				text-align: center;
 			}
 			th { background-color: $cinza-3; }
@@ -191,13 +203,30 @@ div.Tabela {
 			display: block;
 			background-color: transparent;
 
+			th, td {
+				&.cor {
+					background-color: transparent;
+					span {
+						display: block;
+						width: 100%;
+						background-color: $vermelho-tr;
+						padding: 0 0.4rem;
+						border-radius: 1rem;
+					}
+				}
+			}
+
+			caption {
+				width: calc(100vw - 2rem);
+			}
+
 			&.listrada {
-				tr { background-color: #FFF !important; }
 				th, td {
 					border-width: 0 !important;
 					text-align: unset;
 					background-color: unset;
 				}
+				tr:nth-child(even) { background-color: #FFF; }
 			}
 
 			thead { display: none; }
@@ -267,6 +296,11 @@ div.Tabela {
 		font-size: x-small;
 		color: $cinza-1;
 	}
+	&.larga {
+		max-width: calc(100% - 400px - 4rem);
+		width: min-content;
+		th, td { min-width: 6rem; }
+	}
 
 	@media print {
 		page-break-inside: avoid;
@@ -280,6 +314,9 @@ div.Tabela {
 			background-color: transparent !important;
 			border-width: 1px !important;
 			border-color: $preto !important;
+		}
+		&.larga {
+			max-width: 100%;
 		}
 		div.notas ul { columns: 2; }
 	}

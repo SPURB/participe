@@ -262,7 +262,7 @@
 				<p>Para as demais áreas do PIU ARCO PINHEIROS foram previstos parâmetros urbanísticos em função das especificidades de uso e ocupação do solo existentes, resultando, em linhas gerais: em trechos de ocupação predominantemente consolidada e para os quais se adotam densidades moderadas, como as Zonas Mistas (ZM) no Jaguaré e as quadras ao longo da Av. Imperatriz Leopoldina e da Rua Guaipá; em áreas com grande diversidade de uso e com horizonte de transformação dos usos industriais para bairros de uso misto de média densidade, como a região do Jardim Humaitá.</p>
 				<p>Em relação aos instrumentos de implantação do plano, o PIU ARCO PINHEIROS indica uma única <b>Área de Intervenção Urbana (AIU)</b>. Definida pelo art. 145, § 3°, do PDE, a AIU consiste em porções do território nas quais se pretende conduzir processos de remodelagem e reestruturação urbana, econômica, social e ambiental. Elaborada pelo Poder Público, com gestão participativa e regulamentada por lei específica, os recursos arrecadados no perímetro de uma AIU devem permanecer em conta segregada no Fundo de Desenvolvimento Urbano (FUNDURB), de forma a atrelar os valores originados da venda de potencial construtivo adicional, mediante Outorga Onerosa do Direito de Construir, ao programa de intervenções proposto pelo PIU.</p>
 				<div class="card-pde">
-					<div class="titulo">Área de Intervenção Urbana (AIU)</div>
+					<div class="title">Área de Intervenção Urbana (AIU)</div>
 					<p>Porções de território destinadas à reestruturação, transformação, recuperação e melhoria ambiental.</p>
 					<ul>
 						<li>Ocupação mais intensa, qualificada, inclusiva do espaço urbano</li>
@@ -395,7 +395,7 @@
 					<h4 class="titulo" indent="3">Áreas de Estruturação Local - AEL</h4>
 					<p>Definida pelo Art. 149 do PDE, a Área de Estruturação Local (AEL) consiste em porções do território destinadas à transformação local, especialmente nas áreas de maior vulnerabilidade, nas quais deve ocorrer uma convergência de políticas públicas integradas, como, por exemplo, a oferta de transporte coletivo, ampliação de áreas verdes, oferta de habitação de interesse social e regularização fundiária, bem como equipamentos urbanos e sociais. O PIU ARCO PINHEIROS propõe a demarcação de duas AEL sobrepostas a AIU ARCO PINHEIROS: a <b>AEL São Remo</b> e a <b>AEL Humaitá</b>.</p>
 					<div class="card-pde">
-						<div class="titulo">Áreas de Estruturação Local (AEL)</div>
+						<div class="title">Áreas de Estruturação Local (AEL)</div>
 						<p>Porções do território destinadas à transformação local e associadas à Rede de Estruturação da Transformação Urbana.</p>
 						<ul>
 							<li>Desenvolvimento urbano, especialmente nas áreas de maior vulnerabilidade </li>
@@ -443,7 +443,7 @@
 				<p>No que se refere ao adensamento populacional previsto para o território do PIU ARCO PINHEIROS, a estimativa realizada para 30 anos partiu do cruzamento das Áreas de Transformação, Qualificação e Preservação com os lotes e glebas efetivamente transformáveis, ou seja, excluindo-se aqueles cujo uso, ocupação ou condições fundiárias condicionariam baixas probabilidades de transformação, sendo considerados consolidados. Foram considerados nesta condição: Edifícios residenciais verticais, conjuntos habitacionais, núcleos urbanizados, edifícios de uso misto, comércio e serviços verticais, comércio e serviços horizontais de porte significativo, áreas produtivas ativas, como indústrias, condomínios multissetorais, gerenciamento de dados e tecnologia, equipamentos urbanos, usos especiais e coletivos, lotes menores que 500m² e lotes de grande porte já com protocolos para desenvolvimento e novos projetos.O mapa X resume este conjunto de lotes e glebas consolidados, demonstrando, em seu negativo, todas as áreas passíveis de recepcionarem transformações urbanas.</p>
 				<img src="" alt="figure mapa - Graus de consolidação por uso no perímetro do PIU ARCO PINHEIROS">
 				<p>O resultado do cálculo de adensamento demonstrou que houve acréscimo de 81.030 pessoas em todo o perímetro do PIU ARCO PINHEIROS, resultando na ampliação da densidade populacional bruta de 63 hab/ha para 157 hab/ha em 30 anos. Para compreender melhor a distribuição desse acréscimo populacional pelo território, os cálculos foram realizados por setores, cada um representando unidades com características homogêneas. A eventual transformação da Ceagesp, por exemplo, promoverá um adensamento considerável, passando a ter uma densidade similar a do distrito da Bela Vista hoje. Já os setores Vila Leopoldina e Centralidade Jaguaré, passarão a ter densidades similares ao distrito da Santa Cecília. O setor Gastão Vidigal, por sua vez, passará a ter densidade similar ao distrito de Perdizes, enquanto o setor Mofarrej passará a ter densidade similares ao distrito do Jabaquara. Essa ampliação da oferta de moradia em setores específicos do ACP reitera a estratégia do plano de incentivar a conformação de bairros de uso misto em consonância com as novas centralidades previstas.</p>
-				<Tabela :dados="tabela1"></Tabela>
+				<Tabela :dados="tabela01"></Tabela>
 				<p>Para garantir qualidade ambiental ao território, para que suporte esse futuro adensamento, foram considerados os problemas levantados pelo Diagnóstico Ambiental do PIU ARCO PINHEIROS, com destaque para a reduzida disponibilidade de áreas verdes, áreas sujeitas a inundações, elevada impermeabilização do solo, presença de córregos contaminados por esgoto doméstico, invasão de Áreas de Preservação Permanente (APP), ausência de conexão ambiental entre áreas verdes, presença de ilha de calor no território e a necessidade de instalação de equipamentos públicos para atendimento à população existente e futura. A partir desse diagnóstico foram definidas diretrizes que buscam simultaneamente a qualificação dos espaços públicos e a promoção do equilíbrio ambiental. São elas:</p>
 				<ol class="decimais">
 					<li>
@@ -475,25 +475,25 @@
 
 			<section>
 				<h3 class="titulo" indent="2">Projeto de Intervenção Urbana Arco Pinheiros: cenário base</h3>
-				<p>O cenário base do PIU-ACP tem como escopo responder as questões básicas do campo da Economia Urbana, como a demanda e a oferta por área computável, seu preço e a receita esperada com o instrumento de outorga onerosa. Essa leitura inicial toma como recorte o cenário no qual o PIU-ACP se desenvolve sem a incorporação do PIU-VL. Posteriormente, sobre essa camada é sobreposta o layer do PIU-VLVL, compreendendo seus impactos sobre a primeira.</p>
+				<p>O cenário base do PIU-ACP tem como escopo responder as questões básicas do campo da Economia Urbana, como a demanda e a oferta por área computável, seu preço e a receita esperada com o instrumento de outorga onerosa. Essa leitura inicial toma como recorte o cenário no qual o PIU-ACP se desenvolve sem a incorporação do PIU-VL. Posteriormente, sobre essa camada é sobreposta o <i>layer</i> do PIU-VLVL, compreendendo seus impactos sobre a primeira.</p>
 
 				<section>
 					<h4 class="titulo" indent="3">Áreas projetadas</h4>
 					<p>O ponto de partida para o estudo econômico e para a avaliação da forma de financiamento do PIU-ARCO PINHEIROS, parte da avaliação da capacidade de absorção das famílias e das firmas ao lançamento de novas unidades imobiliárias. Os dados sobre os lançamentos imobiliários foram obtidos junto à Geoimóvel, que oferece detalhes sobre os produtos, sua localização e preço desde 2006. Essa base foi plotada no mapa de São Paulo e selecionados os lançamentos inseridos no limite territorial do Projeto, conforme pode ser observado na figura abaixo.</p>
 					<p>Essa base possui a informação da área privativa das plantas, da qual se depreende a área privativa total lançada ao longo dos anos. Como pode ser observada na tabela abaixo, a produção na área circunscrita ao PIU-ARCO PINHEIROS, começa a série em alta, atingindo seu pico em 2008, com o lançamento de aproximadamente 190 mil metros quadrados de área privativa. A partir do ano seguinte, contudo, a produção despenca e, praticamente se extingue entre 2012 e 2016, quando volta a subir em 2017. Essa queda deve-se, sobretudo, ao término dos estoques previstos para a região, que só foram novamente liberados, quando da edição da nova Lei 16.402 de 2016, que aboliu o regime de estoques máximos de potencial construtivo adicional.</p>
 					<p>Ao longo desse período a média lançada foi de 67 mil metros quadrados de área privativa. Para unificar as unidades de conta e facilitar o cálculo da área onerosa e de sua receita proveniente, todas as informações foram convertidas em área computável. Estudos de massa elaborados a partir de tipologia comuns lançadas na região apontam para uma razão de 1,3 entre a área privativa e a área computável.</p>
-					<img src="" alt="tabela - área de terreno, área privativa e área computável">
+					<Tabela :dados="tabela02"></Tabela>
 					<p>Para a projeção da capacidade de absorção de área no futuro, foi considerada uma metodologia padrão em estudos econométricos, baseada em modelos autoregressivos e de média móvel (ARIMA). Essa é uma técnica usual de estimação de variáveis econômicas e que, no presente estudo, é utilizada para a projeção da capacidade de absorção de área privativa para os próximos 20 anos. O resultado aparece no gráfico e na tabela abaixo.</p>
 					<img src="" alt="gráfico - Estimativa de capacidade de absorção de área privativa – média móvel (m²/aa)">
 					<p>Como pode se observar, o estimador apresenta alta aderência com os dados observados e, ao excluir choques do passado, eleva a projeção de área privativa e respectivamente de área computável para 78,7 mil e 60,5 mil metros quadrados. Assim, considerando um horizonte de 20 anos, a estimativa de produção e consumo de área computável é de 1,2 milhões de metros quadrados.</p>
-					<img src="" alt="tabela - Projeção de área privativa e área computável (m²/aa)">
+					<Tabela :dados="tabela03"></Tabela>
 					<p>Os resultados de demanda por área computável, então, são confrontados com sua oferta possível, partindo da disponibilidade de terrenos. A tabela abaixo revela o total de terrenos e o total de terrenos potenciais por setor, que são calculados a partir da probabilidade de transformação de acordo com o uso em cada lote. Como muitos terrenos já apresentam tipologias verticais, altamente consolidadas, mescladas com outras de alta probabilidade de transformação, o cálculo de estoque de terrenos potenciais assume uma fração do primeiro.</p>
-					<img src="" alt="tabela - Estoque total e estoque potencial por setor do PIU-ACP">
+					<Tabela :dados="tabela04"></Tabela>
 					<p>Considerando o estoque de terrenos potenciais, é possível calcular a área computável potencial de acordo com o coeficiente máximo de cada zona associada a cada lote. Os dados na planilha abaixo aparecem agrupados por parâmetros urbanísticos, no qual “T” representa as áreas de transformação, “Q1” apenas as áreas de qualificação 1 e “Q2,3” as demais áreas de qualificação, e por “grandes setores”, nos quais “Vila Leopoldina” representa toda porção de terreno a leste do Rio Pinheiros e “Jaguaré” toda porção a oeste do Rio.</p>
-					<img src="" alt="tabela - Estoque potencial de área computável por grandes setores e parâmetros urbanísticos (m²)">
+					<Tabela :dados="tabela05"></Tabela>
 					<p>Os resultados finais em termos de áreas computáveis podem ser depreendidos da Tabela 8. As áreas de transformação representam 35,2% contra 64,8% das áreas de qualificação. E o total de áreas computáveis potenciais é de 8,0 milhões de metros quadrados. Assim, considerando uma demanda de 60 mil metros quadrados ao ano, calculada no capítulo anterior, isso representa um horizonte de consumo que só se consolidaria em 133 anos. Dessa forma, embora os dados de estoque ajudem a nortear o trabalho, mais relevante é o entendimento do fluxo e da classificação das áreas mais prováveis de transformação.</p>
 					<p>Tomando a distribuição histórica de consumo de área computável por grande setor e a atratividade de produção de acordo com o regramento, é possível estabelecer a distribuição espacial da produção, conforme apresentado na tabela abaixo.</p>
-					<img src="" alt="tabela - Distribuição espacial da área computável – horizonte de 20 anos">
+					<Tabela :dados="tabela06"></Tabela>
 					<p>Como pode se observar, o consumo de 1,2 milhões de metros quadrados de área computável em 20 anos, calculados anteriormente, aparecem distribuídos no espaço. Deste total, 74,4% devem ser absorvidos no grande setor Vila Leopoldina e 25,6% no grande setor Jaguaré, enquanto 67,0 % devem ser empregados nas áreas de transformação e 33,0% nas áreas de qualificação.</p>
 				</section>
 
@@ -502,9 +502,9 @@
 					<p>Concluído todo o estudo de oferta e demanda de área computável para o PIU-ACP, o cálculo da receita é relativamente simples. Tomando a fórmula da outorga como:</p>
 					<pre class="formula">R = (V/C<sub>a</sub>) ⋅ (AC–AT) ⋅ F<sup>s</sup> ⋅ F<sup>p</sup></pre>
 					<p>Onde <pre class="formula declara">V</pre> é o valor de cadastro (a base de cálculo para o valor da terra), <pre class="formula declara">C<sub>a</sub></pre> o coeficiente de aproveitamento, que juntos representam o preço em metros quadrados, e <pre class="formula declara">(AC – AT)</pre> a área computável menos a área de terreno que equivale à área onerosa (ou a quantidade), e <pre class="formula declara">F<sup>s</sup></pre> e <pre class="formula declara">F<sup>p</sup></pre> os fatores de solidariedade e planejamento. Basta fazer o somatório das áreas previamente calculadas por grande setor e categoria urbana e multiplicar pelo valor de cadastro de cada sub-região.</p>
-					<img src="" alt="tabela - Valor de cadastro por grandes setores e parâmetros urbanísticos">
+					<Tabela :dados="tabela07"></Tabela>
 					<p>O resultado para um horizonte planejamento de 20 anos é de R$ 424 milhões, como pode ser observado na tabela abaixo.</p>
-					<img src="" alt="tabela - Estimativa de receita pelo instrumento de OODC para o PIU-ACP (R$)">
+					<Tabela :dados="tabela08"></Tabela>
 					<p>Essa estimativa está bem aquém das expectativas e da avaliação, em andamento, das intervenções urbanas necessárias para a região pode ser explicada por alguns motivos. O primeiro, evidentemente, é a adoção de um único instrumento de financiamento restrito a uma pequena base de contribuintes – os terrenos em transformação. Segundo, os valores de contribuição da outorga estão bem abaixo da linha dos 5,0% do VGV, o que pode ser explicado pela adoção de uma base de cálculo de preços de terreno, o Valor de Cadastro (2014), que parece muito defasado frente os preços inferidos do mercado. Como pode se notar, os estudos de viabilidade econômica consideram que os preços de terreno na região podem variar de R$ 4.200 a 8.400 o metro quadrado, enquanto o Valor do Cadastro (2014) médio é de apenas R$ 1.866,5.</p>
 					<p>O último ponto a se considerar é que as quantidades estimadas dependem dos seus valores pregressos, segundo a metodologia de séries temporais (ARIMA). Essa é uma região relativamente pequena e que no auge de seu desenvolvimento sofreu com o esgotamento dos estoques. Nada impede que, com a implantação de um Projeto de Intervenção Urbana, o consumo de área computável na região possa crescer comparativamente ao seu histórico.</p>
 				</section>
@@ -512,7 +512,7 @@
 				<section>
 					<h4 class="titulo" indent="3">Encaminhamentos: aumento da receita</h4>
 					<p>Diante dessas possibilidades de variação no preço e na quantidade, foram desenvolvidos alguns cenários alternativos. O primeiro inclui um aumento no preço do metro quadrado da área onerosa, que pode ser obtido por uma atualização do Valor de Cadastro ou por uma alteração nos fatores de planejamento. Tomando a relação de 5,0% do gasto com outorga sobre o VGV como alvo, isso equivaleria a um aumento de 100% do Valor de Cadastro em áreas de transformação e de 50% em áreas de qualificação ou a alteração do fator de planejamento para 2,0 no primeiro caso e para 1,5 no segundo. A segunda hipótese prevê um aumento de consumo anual de 50%, o que equivaleria também a uma reavaliação do horizonte de planejamento para 30 anos – dado que as projeções de consumo anual são constantes. Esses cenários são apresentados na tabela abaixo.</p>
-					<img src="" alt="tabela - Estimativa de receita em diferentes cenários – aumento do valor de cadastro e/ou aumento do horizonte de planejamento (R$)">
+					<Tabela :dados="tabela09"></Tabela>
 					<p>Caso fosse efetuada a atualização dos preços, variável sob controle do Poder Público, a arrecadação com o PIU-ACP poderia subir de R$ 424 milhões para R$ 794 milhões. Para que esse valor fosse acrescido ainda mais, depender-se-ia de uma alteração nos volumes produzidos, o que não depende diretamente da atuação do Poder Público.</p>
 				</section>
 			</section>
@@ -521,15 +521,15 @@
 				<h3 class="titulo" indent="3">Projeto de Intervenção Urbana Vila Leopoldina</h3>
 				<p>Com a proposição de outro Projeto de Intervenção Urbana nas cercanias do Arco Pinheiros, o PIU Vila Leopoldina, faz-se necessária uma revisão dos cálculos de área construída e de receita do cenário base. Primeiramente, contudo, vale considerar os elementos essenciais constituintes do PIU-VL.</p>
 				<p>O PIU-VL deverá ser negociado a partir da execução de dois leilões de potencial construtivo. Em ambos, as contrapartidas estão fixadas e o vencedor é o proponente que fizer a menor oferta de área computável adicional. Na primeira hasta, as contrapartidas totalizam R$ 80 milhões e estão discriminadas conforme a tabela abaixo.</p>
-				<img src="" alt="tabela - contrapartidas previstas na hasta 01">
+				<Tabela :dados="tabela10"></Tabela>
 				<p>Segundo cálculos da São Paulo Urbanismo, esse valor possivelmente será negociado por 266 mil metros quadrados de área computável adicional, o que equivale a 334 mil metros quadrados de área computável. Estudo da Consultoria Amaral d’Avila, considerando o histórico de produção e consumo na região, estima que essa quantidade de área computável deverá ser absorvida a um ritmo de 22 mil metros quadrados ao ano em média ao longo de 15 anos. Confrontando esses dados com a absorção estimada para o Arco Pinheiros (61 mil metros quadrados), isso equivale a 36% da capacidade absorção de área computável total (ver gráfico abaixo).</p>
 				<img src="" alt="grafico - Capacidade de absorção de área computável PIU-VL e PIU-ACP (m²)">
 				<p>	Para completar o rol de intervenções urbanísticas programas para a região, o PIU-VL prevê a execução de uma segunda hasta com o objetivo de arrecadar R$ 55 milhões em contrapartidas adicionais, a serem alocadas conforme tabela abaixo.</p>
-				<img src="" alt="tabela - contrapartidas previstas na hasta 02">
+				<Tabela :dados="tabela11"></Tabela>
 				<p>	Essa segunda hasta será aberta para utilização em todo o Arco Pinheiros, o que deve acirrar sua concorrência. Tomando como base o preço médio de negociação de área computável adicional de R$ 587 no Cenário 01, sem atualização do valor de cadastro, e de R$ 1.062 no Cenário 02, com atualização, estima-se que a segunda contrapartida deva ser negociada dentro de um intervalo de 93,8 mil metros quadrados de máxima e 53, 7 mil metros quadrados de mínima de área computável adicional (ver tabelas abaixo).</p>
-				<img src="" alt="tabela - Valor médio da outorga e do valor de cadastro por zona – Cenário 01">
-				<img src="" alt="tabela - Valor médio da outorga e do valor de cadastro por zona – Cenário 02">
-				<img src="" alt="tabela - Intervalo de negociação de área computável adicional por cenário de preços">
+				<Tabela :dados="tabela12"></Tabela>
+				<Tabela :dados="tabela13"></Tabela>
+				<Tabela :dados="tabela14"></Tabela>
 			</section>
 
 			<section>
@@ -538,7 +538,7 @@
 				<p>Isso ocorre de duas maneiras. Primeiramente, o lançamento concentrado de potencial construtivo na região, advindo da primeira hasta, virá a concorrer com a capacidade de absorção de área computável da região. Conforme já comentado, estima-se um consumo de 61 mil metros quadrados de área computável ao ano no Arco Pinheiros, desses, cerca de 22 mil metros quadrados serão orientados para o PIU Vila Leopoldina por cerca de 15 anos.</p>
 				<p>Adicionalmente, o PIU-VLVL deverá lançar títulos de potencial construtivo, oriundos da segunda hasta, que serão concorrentes à compra de outorga, afetando a captação de recursos do PIU-ARCO PINHEIROS. Dessa maneira, as interferências das duas hastas podem ser resumidas como uma subtração da área computável do cenário base do Arco Pinheiros e, consequentemente, de sua receita.</p>
 				<p>A tabela abaixo apresenta os possíveis impactos do PIU-VLVL sobre o PIU-ARCO PINHEIROS. Partindo do cenário base com capacidade de absorção de 1,2 milhões de metros quadrados de área computável, 335 mil serão destinadas para a hasta 1 e algo em torno de 141 mil e 80 mil metros quadrados serão dirigidos para a hasta 2. Assim, cerca de 795 mil metros quadrados de área computável efetivamente servirão para o pagamento de outorga, que ao preço corrigido de R$ 1.026 para o metro quadrado de área computável adicional resultariam numa receita de R$ 500 milhões em 20 anos.</p>
-				<img src="" alt="tabela - intervalo de negociação de área computável adiiconal por cenário de preços">
+				<Tabela :dados="tabela15"></Tabela>
 				<p>	Ou seja, dos R$ 800 milhões de receita gerados a partir do instrumento de Outorga Onerosa do Direito de Construção (OODC) estimados para a região do Arco Pinheiros, nos primeiros 20 anos, restarão cerca de R$ 500 milhões, 62,5% do total. Isso ocorre, pois dos 1,2 milhões de metros quadrados de área computável sobrarão 800 mil para o pagamento de outorga, visto que o restante do potencial construtivo será negociado e pago antecipadamente para a execução do plano de intervenções do PIU Vila Leopoldina.</p>
 			</section>
 		</section>
@@ -564,7 +564,7 @@
 					<li>Implantação de sistema de espaços públicos articulado aos terminais e estações de transporte, áreas verdes e locais de moradia e trabalho.</li>
 				</ol>
 				<p>A partir desses temas, sugere-se uma composição, a saber:</p>
-				<img src="" alt="tabela - composição gurpo gestor aiu acp">
+				<Tabela :dados="tabela16"></Tabela>
 				<p>A partir da aprovação das ações a serem implantadas, e seus respectivos PAI e/ou AEL, o Grupo Gestor poderá criar Comitês Locais do Grupo Gestor, com a composição dos membros relacionados ao tema central e a colaboração de outros agentes. OS Comitês Locais funcionam como grupo técnico de apoio às ações e projetos do Grupo Gestor da AIU ARCO PINHEIROS.</p>
 				<p>A SP-URBANISMO poderá prestar o apoio administrativo para os trabalhos do Grupo Gestor da AIU ARCO PINHEIROS, mantendo a divulgação das reuniões e deliberações acessíveis à sociedade.</p>
 			</section>
@@ -601,31 +601,20 @@ export default {
 			comments_atrr: undefined,
 			consultas: false,
 			estaConsulta: {},
-			tabela1: {
-				titulo: 'Título da tabela 1',
-				colunas: [{
-					titulo: '',
-				}, {
-					titulo: 'Setor 1 (Setor Parque Tecnológico do Jaguaré)',
-				}, {
-					titulo: 'Setor 2 (Setor misto do Jaguaré)',
-				}, {
-					titulo: 'Setor 3 (Setor Presidente Altino)',
-				}, {
-					titulo: 'Setor 4 (Setor Gastão Vidigal)',
-				}, {
-					titulo: 'Setor 5 (Setor Mofarrej)',
-				}, {
-					titulo: 'Setor 6 (Setor Jardim Humaitá)',
-				}, {
-					titulo: 'Setor 7 (Setor São Remo/Corifeu)',
-				}, {
-					titulo: 'Setor 8 (Setor Ceagesp)',
-				}, {
-					titulo: 'Setor 9 (Setor Vila Leopoldina)',
-				}, {
-					titulo: 'Total',
-				}],
+			tabela01: {
+				colunas: [
+					{ titulo: '' },
+					{ titulo: 'Setor 1 (Setor Parque Tecnológico do Jaguaré)' },
+					{ titulo: 'Setor 2 (Setor misto do Jaguaré)' },
+					{ titulo: 'Setor 3 (Setor Presidente Altino)' },
+					{ titulo: 'Setor 4 (Setor Gastão Vidigal)' },
+					{ titulo: 'Setor 5 (Setor Mofarrej)' },
+					{ titulo: 'Setor 6 (Setor Jardim Humaitá)' },
+					{ titulo: 'Setor 7 (Setor São Remo/Corifeu)' },
+					{ titulo: 'Setor 8 (Setor Ceagesp)' },
+					{ titulo: 'Setor 9 (Setor Vila Leopoldina)' },
+					{ titulo: 'Total' }
+				],
 				linhas: [
 					[
 						[ { data: 'Número de habitantes' } ],
@@ -638,47 +627,749 @@ export default {
 						[ { data: '5.071' } ],
 						[ { data: '17.582' } ],
 						[ { data: '5.923' } ],
-						[ { data: '81.030' } ],
+						[ { data: '81.030' } ]
 					],
 					[
 						[ { data: 'População residente atual' } ],
-						[ { data: '' } ],
-						[ { data: '' } ],
-						[ { data: '' } ],
-						[ { data: '' } ],
-						[ { data: '' } ],
-						[ { data: '' } ],
-						[ { data: '' } ],
-						[ { data: '' } ],
-						[ { data: '' } ],
-						[ { data: '' } ],
+						[ { data: '3.634' } ],
+						[ { data: '19.245' } ],
+						[ { data: '6.266' } ],
+						[ { data: '11.407' } ],
+						[ { data: '1.844' } ],
+						[ { data: '3.249' } ],
+						[ { data: '9.988' } ],
+						[ { data: '0' } ],
+						[ { data: '1250' } ],
+						[ { data: '54.883' } ]
 					],
 					[
-						[ { data: 'Danside resultante em 30 anos (hab/ha)' } ],
-						[ { data: '' } ],
-						[ { data: '' } ],
-						[ { data: '' } ],
-						[ { data: '' } ],
-						[ { data: '' } ],
-						[ { data: '' } ],
-						[ { data: '' } ],
-						[ { data: '' } ],
-						[ { data: '' } ],
-						[ { data: '' } ],
+						[ { data: 'Denside resultante em 30 anos (hab/ha)' } ],
+						[ { data: '176' } ],
+						[ { data: '216' } ],
+						[ { data: '57' } ],
+						[ { data: '186' } ],
+						[ { data: '162' } ],
+						[ { data: '75' } ],
+						[ { data: '407' } ],
+						[ { data: '259' } ],
+						[ { data: '210' } ],
+						[ { data: '157' } ]
 					],
 					[
 						[ { data: 'Densidade atual (hab/ha)' } ],
-						[ { data: '' } ],
-						[ { data: '' } ],
-						[ { data: '' } ],
-						[ { data: '' } ],
-						[ { data: '' } ],
-						[ { data: '' } ],
-						[ { data: '' } ],
-						[ { data: '' } ],
-						[ { data: '' } ],
-						[ { data: '' } ],
+						[ { data: '38' } ],
+						[ { data: '185' } ],
+						[ { data: '36' } ],
+						[ { data: '77' } ],
+						[ { data: '29' } ],
+						[ { data: '22' } ],
+						[ { data: '249' } ],
+						[ { data: '0' } ],
+						[ { data: '37' } ],
+						[ { data: '63' } ]
 					],
+				]
+			},
+			tabela02: {
+				titulo: 'Área de terreno, área privativa e área computável (2006–2017)',
+				colunas: [
+					{ titulo: 'Ano' },
+					{ titulo: 'Área de Terreno' },
+					{ titulo: 'Área Privativa' },
+					{ titulo: 'Área Computável' }
+				],
+				linhas: [
+					[
+						[ { data: '2006' } ],
+						[ { data: '118.789' } ],
+						[ { data: '119.807' } ],
+						[ { data: '91.159' } ]
+					],
+					[
+						[ { data: '2007' } ],
+						[ { data: '88.660' } ],
+						[ { data: '181.462' } ],
+						[ { data: '139.586' } ]
+					],
+					[
+						[ { data: '2008' } ], 
+						[ { data: '86.359' } ], 
+						[ { data: '190.263' } ], 
+						[ { data: '146.356' } ]
+					],
+					[
+						[ { data: '2009' } ], 
+						[ { data: '27.999' } ], 
+						[ { data: '88.556' } ], 
+						[ { data: '68.120' } ]
+					],
+					[
+						[ { data: '2010' } ], 
+						[ { data: '43.568' } ], 
+						[ { data: '62.950' } ], 
+						[ { data: '48.423' } ]
+					],
+					[
+						[ { data: '2011' } ], 
+						[ { data: '46.625' } ], 
+						[ { data: '80.950' } ], 
+						[ { data: '62.269' } ]
+					],
+					[
+						[ { data: '2012' } ], 
+						[ { data: '4.735' } ], 
+						[ { data: '10.246' } ], 
+						[ { data: '7.882' } ]
+					],
+					[
+						[ { data: '2013' } ], 
+						[ { data: '1.065' } ], 
+						[ { data: '2.110' } ], 
+						[ { data: '1.623' } ]
+					],
+					[
+						[ { data: '2014' } ], 
+						[ { data: '2.183' } ], 
+						[ { data: '5.608' } ], 
+						[ { data: '4.314' } ]
+					],
+					[
+						[ { data: '2015' } ], 
+						[ { data: '2.624' } ], 
+						[ { data: '6.264' } ], 
+						[ { data: '4.819' } ]
+					],
+					[
+						[ { data: '2016' } ], 
+						[ { data: '4.000' } ], 
+						[ { data: '10.390' } ], 
+						[ { data: '7.993' } ]
+					],
+					[
+						[ { data: '2017' } ], 
+						[ { data: '15.328' } ], 
+						[ { data: '44.976' } ], 
+						[ { data: '34.597' } ]
+					],
+					[
+						[ { data: 'Média', destaque: true, cor: true } ],
+						[ { data: '36.819', destaque: true, cor: true } ],
+						[ { data: '66.965', destaque: true, cor: true } ],
+						[ { data: '51.512', destaque: true, cor: true } ],
+					],
+					[
+						[ { data: 'Soma', destaque: true } ], 
+						[ { data: '441.822', destaque: true } ], 
+						[ { data: '803.582', destaque: true } ], 
+						[ { data: '618.140', destaque: true } ]
+					]
+				],
+				fonte: 'Elaborado pela SP-Urbanismo a partir de dados da Geoimóvel'
+			},
+			tabela03: {
+				titulo: 'Projeção de área privativa e área computável (m²/aa)',
+				colunas: [
+					{ titulo: 'Ano' },
+					{ titulo: 'Área Privativa' },
+					{ titulo: 'Área Computável' }
+				],
+				linhas: [
+					[
+						[ { data: '1' } ],
+						[ { data: '86,434' } ],
+						[ { data: '66,488' } ]
+					],
+					[
+						[ { data: '2', cor: true } ],
+						[ { data: '78,659', cor: true } ],
+						[ { data: '60,507', cor: true } ]
+					],
+					[
+						[ { data: '3' } ],
+						[ { data: '78,659' } ],
+						[ { data: '60,507' } ]
+					],
+					[
+						[ { data: '4' } ],
+						[ { data: '78,659' } ],
+						[ { data: '60,507' } ]
+					],
+					[
+						[ { data: '...' } ],
+						[ { data: '...' } ],
+						[ { data: '...' } ]
+					],
+					[
+						[ { data: '18' } ],
+						[ { data: '78,659' } ],
+						[ { data: '60,507' } ]
+					],
+					[
+						[ { data: '19' } ],
+						[ { data: '78,659' } ],
+						[ { data: '60,507' } ]
+					],
+					[
+						[ { data: '20' } ],
+						[ { data: '78,659' } ],
+						[ { data: '60,507' } ]
+					],
+					[
+						[ { data: 'Soma', destaque: true } ],
+						[ { data: '1,580,962', destaque: true } ],
+						[ { data: '1,216,125', destaque: true } ]
+					]
+				],
+				fonte: 'Elaborado pela SP-Urbanismo a partir de dados da Geoimóvel'
+			},
+			tabela04: {
+				titulo: 'Estoque total e estoque potencial por setor do PIU-ACP',
+				colunas: [
+					{ titulo: 'Setor Arco Pinheiros' },
+					{ titulo: 'Estoque total' },
+					{ titulo: 'Estoque potencial' },
+					{ titulo: 'Taxa de transformação (%)' },
+					{ titulo: 'Participação (%)' }
+				],
+				linhas: [
+					[
+						[ { data: 'Setor 1 (Parque Tecnológico do Jaguaré)' } ],
+						[ { data: '739.264' } ],
+						[ { data: '511.837' } ],
+						[ { data: '69,2' } ],
+						[ { data: '14,7' } ]
+					],
+					[
+						[ { data: 'Setor 2 (Misto do Jaguaré)' } ],
+						[ { data: '494.919' } ],
+						[ { data: '353.383' } ],
+						[ { data: '71,4' } ],
+						[ { data: '10,2' } ]
+					],
+					[
+						[ { data: 'Setor 3 (Presite Altino)' } ],
+						[ { data: '1.328.941' } ],
+						[ { data: '931.772' } ],
+						[ { data: '70,1' } ],
+						[ { data: '26,8' } ]
+					],
+					[
+						[ { data: 'Setor 4 (Gastão Vidigal)' } ],
+						[ { data: '1.016.286' } ],
+						[ { data: '724.334' } ],
+						[ { data: '75,4' } ],
+						[ { data: '9,4' } ]
+					],
+					[
+						[ { data: 'Setor 5 (Mofarrej)' } ],
+						[ { data: '430.935' } ],
+						[ { data: '324.981' } ],
+						[ { data: '75,4' } ],
+						[ { data: '9,4' } ]
+					],
+					[
+						[ { data: 'Setor 6 (Jardim Humaitá)' } ],
+						[ { data: '628.762' } ],
+						[ { data: '437.253' } ],
+						[ { data: '69,5' } ],
+						[ { data: '12,6' } ]
+					],
+					[
+						[ { data: 'Setor 7 (São Remo-Corifeu)' } ],
+						[ { data: '96.518' } ],
+						[ { data: '56.292' } ],
+						[ { data: '58,3' } ],
+						[ { data: '1,6' } ]
+					],
+					[
+						[ { data: 'Setor 8 (Ceagesp)' } ],
+						[ { data: '18.815' } ],
+						[ { data: '9.408' } ],
+						[ { data: '50,0' } ],
+						[ { data: '0,3' } ]
+					],
+					[
+						[ { data: 'Setor 9 (Vila Leopoldina)' } ],
+						[ { data: '168.556' } ],
+						[ { data: '122.925' } ],
+						[ { data: '72,9' } ],
+						[ { data: '3,5' } ]
+					],
+					[
+						[ { data: 'ZOE - USP' } ],
+						[ { data: 'NA' } ],
+						[ { data: 'NA' } ],
+						[ { data: 'NA' } ],
+						[ { data: 'NA' } ]
+					],
+					[
+						[ { data: 'Total', destaque: true } ],
+						[ { data: '4.922.995', destaque: true } ],
+						[ { data: '3.472.184', destaque: true } ],
+						[ { data: '70,5', destaque: true } ],
+						[ { data: '100,0', destaque: true } ]
+					]
+				],
+				fonte: 'Elaborado pela SP-Urbanismo'
+			},
+			tabela05: {
+				titulo: 'Estoque potencial de área computável por grandes setores e parâmetros urbanísticos (m²)',
+				colunas: [
+					{ titulo: '' },
+					{ titulo: 'T' },
+					{ titulo: 'Q1' },
+					{ titulo: 'Q2,3' },
+					{ titulo: 'Total' },
+					{ titulo: '(%)' }
+				],
+				linhas: [
+					[
+						[ { data: 'Vila Leopoldina' } ],
+						[ { data: '2.295.957' } ],
+						[ { data: '902.832' } ],
+						[ { data: '1.141.190' } ],
+						[ { data: '4.339.978' } ],
+						[ { data: '54,4' } ]
+					],
+					[
+						[ { data: 'Jaguaré' } ],
+						[ { data: '512.226' } ],
+						[ { data: '30.553' } ],
+						[ { data: '3.101.280' } ],
+						[ { data: '3.644.060' } ],
+						[ { data: '45,6' } ]
+					],
+					[
+						[ { data: 'Total', destaque: true } ],
+						[ { data: '2.808.183', destaque: true } ],
+						[ { data: '933.385', destaque: true } ],
+						[ { data: '4.242.470', destaque: true } ],
+						[ { data: '7.984.038', destaque: true } ],
+						[ { data: '100,0', destaque: true } ]
+					],
+					[
+						[ { data: '(%)' } ],
+						[ { data: '35,2' } ],
+						[ { data: '11,7' } ],
+						[ { data: '53,1' } ],
+						[ { data: '100,0' } ],
+						[ { data: '', vazio: true } ]
+					]
+				],
+				fonte: 'Elaborado pela SP-Urbanismo'
+			},
+			tabela06: {
+				titulo: 'Distribuição espacial da área computável – horizonte de 20 anos',
+				colunas: [
+					{ titulo: '' },
+					{ titulo: 'T' },
+					{ titulo: 'Q1' },
+					{ titulo: 'Q2,3' },
+					{ titulo: 'Total' },
+					{ titulo: '(%)' }
+				],
+				linhas: [
+					[
+						[ { data: 'Vila Leopoldina' } ],
+						[ { data: '606.018' } ],
+						[ { data: '147.110' } ],
+						[ { data: '147.110' } ],
+						[ { data: '900.237' } ],
+						[ { data: '74,4' } ]
+					],
+					[
+						[ { data: 'Jaguaré' } ],
+						[ { data: '204.211' } ],
+						[ { data: '27.374' } ],
+						[ { data: '75.318' } ],
+						[ { data: '309.903' } ],
+						[ { data: '25,6' } ]
+					],
+					[
+						[ { data: 'Total', destaque: true } ],
+						[ { data: '810.229' } ],
+						[ { data: '174.483' } ],
+						[ { data: '225.428' } ],
+						[ { data: '1.210.140', destaque: true } ],
+						[ { data: '100,0' } ]
+					],
+					[
+						[ { data: '(%)' } ],
+						[ { data: '67,0' } ],
+						[ { data: '14,4' } ],
+						[ { data: '18,6' } ],
+						[ { data: '100,0' } ],
+						[ { data: '', vazio: true } ]
+					]
+				],
+				fonte: 'Elaborado pela SP-Urbanismo'
+			},
+			tabela07: {
+				titulo: 'Valor de cadastro por grandes setores e parâmetros urbanísticos',
+				colunas: [
+					{ titulo: '' },
+					{ titulo: 'T' },
+					{ titulo: 'Q1' },
+					{ titulo: 'Q2,3' }
+				],
+				linhas: [
+					[
+						[ { data: 'Vila Leopoldina' } ],
+						[ { data: '1.866,5' } ],
+						[ { data: '1.864,9' } ],
+						[ { data: '1.652,9' } ]
+					],
+					[
+						[ { data: 'Jaguaré' } ],
+						[ { data: '1.613,6' } ],
+						[ { data: '1.329,6' } ],
+						[ { data: '1.304,4' } ]
+					],
+				],
+				fonte: 'Elaborado pela SP-Urbanismo'
+			},
+			tabela08: {
+				titulo: 'Estimativa de receita pelo instrumento de OODC para o PIU-ACP (R$)',
+				colunas: [
+					{ titulo: '' },
+					{ titulo: 'T' },
+					{ titulo: 'Q1' },
+					{ titulo: 'Q2,3' },
+					{ titulo: 'Total' },
+					{ titulo: '(%)' }
+				],
+				linhas: [
+					[
+						[ { data: 'Vila Leopoldina' } ],
+						[ { data: '212.087.616' } ],
+						[ { data: '68.696.676' } ],
+						[ { data: '60.789.089' } ],
+						[ { data: '341.573.381' } ],
+						[ { data: '78,0' } ]
+					],
+					[
+						[ { data: 'Jaguaré' } ],
+						[ { data: '61.785.535' } ],
+						[ { data: '9.098.839' } ],
+						[ { data: '25.539.119' } ],
+						[ { data: '96.423.492' } ],
+						[ { data: '22,0' } ]
+					],
+					[
+						[ { data: 'Total', destaque: true } ],
+						[ { data: '273.873.151', destaque: true } ],
+						[ { data: '77.795.515', destaque: true } ],
+						[ { data: '86.328.207', destaque: true } ],
+						[ { data: '437.996.873', destaque: true, cor: true } ],
+						[ { data: '100,0', destaque: true } ]
+					],
+					[
+						[ { data: '(%)' } ],
+						[ { data: '62,5' } ],
+						[ { data: '17,8' } ],
+						[ { data: '19,7' } ],
+						[ { data: '100,0' } ],
+						[ { data: '', vazio: true } ]
+					]
+				],
+				fonte: 'Elaborado pela SP-Urbanismo'
+			},
+			tabela09: {
+				titulo: 'Estimativa de receita em diferentes cenários – aumento do valor de cadastro e/ou aumento do horizonte de planejamento (R$)',
+				colunas: [
+					{ titulo: '' },
+					{ titulo: '20 anos' },
+					{ titulo: '30 anos' }
+				],
+				linhas: [
+					[
+						[ { data: 'Valor de Cadastro (atual)' } ],
+						[ { data: '437,993,873' } ],
+						[ { data: '656,676,258' } ]
+					],
+					[
+						[ { data: 'Valor de Cadastro (100% - T; 50% - Q)' } ],
+						[ { data: '793,931,886', cor: true } ],
+						[ { data: '1,191,915,823' } ]
+					]
+				],
+				fonte: 'Elaborado pela SP-Urbanismo'
+			},
+			tabela10: {
+				titulo: 'Contrapartidas previstas na hasta 01',
+				colunas: [
+					{ titulo: 'Contrapartidas' },
+					{ titulo: 'R$' }
+				],
+				linhas: [
+					[
+						[ { data: 'Realocação de famílias em favelas' } ],
+						[ { data: '46,717,307' } ]
+					],
+					[
+						[ { data: 'Reabilitação do Cingapura' } ],
+						[ { data: '12,931,250' } ]
+					],
+					[
+						[ { data: 'Arborização' } ],
+						[ { data: '2,000,000' } ]
+					],
+					[
+						[ { data: 'Sociabilização' } ],
+						[ { data: '2,920,943' } ]
+					],
+					[
+						[ { data: 'Equipamentos' } ],
+						[ { data: '15,430,500' } ]
+					],
+					[
+						[ { data: 'Total', destaque: true } ],
+						[ { data: '80,000,000', destaque: true } ]
+					]
+				]
+			},
+			tabela11: {
+				titulo: 'Contrapartidas previstas na hasta 02',
+				colunas: [
+					{ titulo: 'Contrapartidas' },
+					{ titulo: 'R$' }
+				],
+				linhas: [
+					[
+						[ { data: 'Realocação de famílias em favelas' } ],
+						[ { data: '51,530,032' } ]
+					],
+					[
+						[ { data: 'Reabilitação do Cingapura' } ],
+						[ { data: '–' } ]
+					],
+					[
+						[ { data: 'Arborização' } ],
+						[ { data: '–' } ]
+					],
+					[
+						[ { data: 'Sociabilização' } ],
+						[ { data: '3,559,057' } ]
+					],
+					[
+						[ { data: 'Equipamentos' } ],
+						[ { data: '–' } ]
+					],
+					[
+						[ { data: 'Total', destaque: true } ],
+						[ { data: '55,089,089', destaque: true } ]
+					]
+				]
+			},
+			tabela12: {
+				titulo: 'Valor médio da outorga e do valor de cadastro por zona – Cenário 01',
+				colunas: [
+					{ titulo: '' },
+					{ titulo: 'T' },
+					{ titulo: 'Q1' },
+					{ titulo: 'Q2,3' },
+					{ titulo: 'Total' }
+				],
+				linhas: [
+					[
+						[ { data: 'Total', destaque: true } ],
+						[ { data: '273,873,151', destaque: true } ],
+						[ { data: '77,795,515', destaque: true } ],
+						[ { data: '86,328,207', destaque: true } ],
+						[ { data: '437,996,873', destaque: true } ]
+					],
+					[
+						[ { data: 'OODC / AC' } ],
+						[ { data: '348.6' } ],
+						[ { data: '332.6' } ],
+						[ { data: '452.7' } ],
+						[ { data: '361.9' } ]
+					],
+					[
+						[ { data: 'OODC / ACA' } ],
+						[ { data: '464.8' } ],
+						[ { data: '665.3' } ],
+						[ { data: '905.4' } ],
+						[ { data: '587.3', cor: true } ]
+					],
+					[
+						[ { data: 'Valor de cadastro médio (R$/m²)' } ],
+						[ { data: '1,751.1' } ],
+						[ { data: '1,622.2' } ],
+						[ { data: '1,493.8' } ],
+						[ { data: '1,755.9' } ]
+					]
+				],
+				fonte: 'Elaborado pela SP-Urbanismo'
+			},
+			tabela13: {
+				titulo: 'Valor médio da outorga e do valor de cadastro por zona – Cenário 02',
+				colunas: [
+					{ titulo: '' },
+					{ titulo: 'T' },
+					{ titulo: 'Q1' },
+					{ titulo: 'Q2,3' },
+					{ titulo: 'Total' }
+				],
+				linhas: [
+					[
+						[ { data: 'Total', destaque: true } ],
+						[ { data: '547,746,302', destaque: true } ],
+						[ { data: '116,693,273', destaque: true } ],
+						[ { data: '129,492,311', destaque: true } ],
+						[ { data: '793,931,886', destaque: true } ]
+					],
+					[
+						[ { data: 'OODC / AC' } ],
+						[ { data: '697.3' } ],
+						[ { data: '499.0' } ],
+						[ { data: '679.1' } ],
+						[ { data: '656.1' } ]
+					],
+					[
+						[ { data: 'OODC / ACA' } ],
+						[ { data: '929.7' } ],
+						[ { data: '997.9' } ],
+						[ { data: '1,358.1' } ],
+						[ { data: '1,026.2', cor: true } ]
+					],
+					[
+						[ { data: 'Valor de cadastro médio (R$/m²)' } ],
+						[ { data: '3,502.2' } ],
+						[ { data: '2,433.3' } ],
+						[ { data: '2,240.7' } ],
+						[ { data: '3,063.7' } ]
+					]
+				],
+				fonte: 'Elaborado pela SP-Urbanismo'
+			},
+			tabela14: {
+				titulo: 'Intervalo de negociação de área computável adicional por cenário de preços',
+				colunas: [
+					{ titulo: '' },
+					{ titulo: 'Cenário 01' },
+					{ titulo: 'Cenário 02' }
+				],
+				linhas: [
+					[
+						[ { data: 'OODC (R$)' } ],
+						[ { data: '55,089,088.77' } ],
+						[ { data: '55,089,088.77' } ]
+					],
+					[
+						[ { data: 'Preço (R$/m²)' } ],
+						[ { data: '587.27' } ],
+						[ { data: '1,026.24' } ]
+					],
+					[
+						[ { data: 'ACA (m²)' } ],
+						[ { data: '93,804.63', cor: true } ],
+						[ { data: '53,680.48', cor: true } ]
+					],
+				]
+			},
+			tabela15: {
+				titulo: 'Intervalo de negociação de área computável adicional por cenário de preços',
+				colunas: [
+					{ titulo: '' },
+					{ titulo: 'Área computável' },
+					{ titulo: 'Área computável adicional' },
+					{ titulo: 'Receita (C01)' },
+					{ titulo: 'Receita (C02)' }
+				],
+				linhas: [
+					[
+						[ { data: 'Cenário base' } ],
+						[ { data: '1,210,140' } ],
+						[ { data: '807,627' } ],
+						[ { data: '437,996,873' } ],
+						[ { data: '793,931,886' } ]
+					],
+					[
+						[ { data: 'Hasta 1' } ],
+						[ { data: '334,677' } ],
+						[ { data: '266,376' } ],
+						[ { data: '...' } ],
+						[ { data: '...' } ]
+					],
+					[
+						[ { data: 'Hasta 2 (C01)' } ],
+						[ { data: '140,556' } ],
+						[ { data: '93,805' } ],
+						[ { data: '...' } ],
+						[ { data: '...' } ]
+					],
+					[
+						[ { data: 'Hasta 2 (C02)' } ],
+						[ { data: '80,434' } ],
+						[ { data: '53,680' } ],
+						[ { data: '...' } ],
+						[ { data: '...' } ]
+					],
+					[
+						[ { data: 'Cenário final (C01)' } ],
+						[ { data: '734,907' } ],
+						[ { data: '447,447' } ],
+						[ { data: '262,774,349' } ],
+						[ { data: '459,188,350', cor: true } ]
+					],
+					[
+						[ { data: 'Cenário final (C02)' } ],
+						[ { data: '7995,029' } ],
+						[ { data: '487,571' } ],
+						[ { data: '286,338,249' } ],
+						[ { data: '500,365,384', cor: true } ]
+					]
+				],
+				fonte: 'Elaborado pela SP-Urbanismo'
+			},
+			tabela16: {
+				colunas: [
+					{ titulo: 'Tema' },
+					{ titulo: 'PMSP' },
+					{ titulo: 'Sociedade Civil' }
+				],
+				linhas: [
+					[
+						[ { data: 'Habitação social' } ],
+						[ { data: 'COHAB' } ],
+						[ { data: 'Conselho Municipal de Habitação' } ]
+					],
+					[
+						[ { data: 'Habitação - Mercado imobiliário' } ],
+						[ { data: 'SEHAB' } ],
+						[ { data: 'Segmento empresarial (CMPU)' } ]
+					],
+					[
+						[ { data: 'Vulnerabilidade social' } ],
+						[ { data: 'SMADS, SMDHC' } ],
+						[ { data: 'ONG, Universidade (CMPU)' } ]
+					],
+					[
+						[ { data: 'Polos econômicos' } ],
+						[ { data: 'SMTE' } ],
+						[ { data: 'Segmento comercial (CMPU)' } ]
+					],
+					[
+						[ { data: 'Mobilidade' } ],
+						[ { data: 'SMT' } ],
+						[ { data: 'ONG' } ]
+					],
+					[
+						[ { data: 'Espaços públicos' } ],
+						[ { data: 'SP-Urbanismo/SMDU' } ],
+						[ { data: 'Conselho Participativo Municipal' } ]
+					],
+					[
+						[ { data: 'Zeladoria urbana' } ],
+						[ { data: 'Subprefeitura' } ],
+						[ { data: 'Conselho Participativo Municipal' } ]
+					],
+					[
+						[ { data: 'Intervenções' } ],
+						[ { data: 'SIURB' } ],
+						[ { data: 'Conselho Participativo Municipal' } ]
+					]
 				]
 			}
 		}
@@ -945,7 +1636,7 @@ div.ArcoPinheiros2 {
 			font-family: $grotesca;
 			font-size: 0.8rem;
 		}
-		.titulo {
+		.title {
 			font-size: 1.2rem;
 			line-height: 1.2;
 			font-weight: bold;

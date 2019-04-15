@@ -315,9 +315,6 @@ div.Tabela {
 			border-width: 1px !important;
 			border-color: $preto !important;
 		}
-		&.larga {
-			max-width: 100%;
-		}
 		div.notas ul { columns: 2; }
 	}
 }

@@ -16,19 +16,40 @@ a {
   color: $vermelho;
   border-bottom: 2px solid transparent;
   padding: 2px 0;
-
   &:hover {
     text-decoration: none !important;
     border-bottom-color: $vermelho-tr;
     cursor: pointer;
   }
-
   &:active {
     color: $vermelho-tr;
     background-color: $vermelho-tr;
     border-bottom-color: transparent;
   }
-
+  &.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0.8rem;
+    border-radius: 2px;
+    background-color: $vermelho;
+    color: #FFF !important;
+    border: 2px solid $sombra-4;
+    font-size: larger !important;
+    line-height: 1.2;
+    transition: all ease-out .2s;
+    i {
+      color: #FFF;
+      margin-left: 0.2rem;
+      cursor: pointer;
+    }
+    &:hover {
+      background-color: $vermelho-tr;
+    }
+    &:active {
+      border-color: $sombra-2;
+    }
+  }
 }
 
 p {

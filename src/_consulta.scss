@@ -35,7 +35,6 @@ a {
     background-color: $vermelho;
     color: #FFF !important;
     border: 2px solid $sombra-4;
-    font-size: larger !important;
     line-height: 1.2;
     transition: all ease-out .2s;
     i {
@@ -724,7 +723,6 @@ figure {
 
   &.ai2html {
     margin: 4rem auto;
-
     & > * { overflow-x: auto; }
   }
 

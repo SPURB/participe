@@ -5,10 +5,9 @@
 				<img :src="dados.url" :alt="dados.caption" :title="dados.titulo">
 				<a :href="dados.url" target="_blank"><i class="icon-acessar_url icon"></i></a>
 			</div>
-			<div class="ai2htmlWrap"><slot name="ai2html"></slot></div>
 			<figcaption v-if="dados.caption">
 				{{ dados.caption }}
-				<span class="captionFonte"> (Fonte: {{ dados. fonte }})</span>
+				<span class="captionFonte" v-if="dados.fonte"> (Fonte: {{ dados. fonte }})</span>
 			</figcaption>
 			<div class="legenda">
 				<h1 v-if="dados.titulo">{{ dados.titulo }}</h1>
@@ -104,7 +103,7 @@ div.Imagem {
 			}
 			&:hover a { opacity: 1; };
 		}
-		div.ai2htmlWrap, div.legenda, div.fonte { display: none; }
+		div.legenda, div.fonte { display: none; }
 	}
 	figure.mapa {
 		max-width: 992px;
@@ -360,30 +359,6 @@ div.Imagem {
 			width: initial;
 			max-width: calc(100% - 2rem);
 			div.imgWrap img { width: 100%; max-width: unset; }
-		}
-	}
-	figure.ai2html {
-		padding: 0;
-		div.imgWrap, div.legenda, div.fonte { display: none; }
-		div.ai2htmlWrap {
-			display: block;
-			padding: 0;
-			& > *.ai2html { margin: 0; }
-		}
-		@media screen and (max-width: 600px) {
-			padding: 0;
-			div.ai2htmlWrap { overflow-x: auto; }
-		}
-		figcaption {
-			margin: 0;
-			padding: 8px 0;
-			color: $cinza-1;
-			border-bottom: 1px solid $sombra-4;
-			span.captionFonte {
-				display: inline-block;
-				font-size: inherit;
-				color: $cinza-2;
-			}
 		}
 	}
 	@media print {

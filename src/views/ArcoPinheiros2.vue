@@ -16,7 +16,7 @@
 			<p>Para que o Arco Pinheiros seja o “Território de Inovação” na cidade de São Paulo caberá ao PIU ARCO PINHEIROS promover as melhores condições para atração desta atividade ao melhorar a acessibilidade interna e externamente, conectar os diferentes modos de transporte motorizados e não motorizados, criar espaços capazes de fomentar o intercambio do conhecimento, incentivar a diversidade de usos associando a moradia aos demais usos urbanos de forma a garantir o atendimento e a permanência da população de menores rendas e implantar infraestrutura equipamentos que suportem o adensamento proposto.</p>
 			<img src="" alt="figure ai2html ACPMEM">
 			<p>O Processo de elaboração do PIU ARCO PINHEIROS segue os passos dispostos no Decreto n° 56.901/2016 e desta forma, as contribuições a serem colhidas nesta consulta irão colaborar para o seu aperfeiçoamento. Após consolidação o conteúdo final do PIU e seu Projeto de Lei serão objeto será debatido com a sociedade em audiências públicas, para posteriormente serem encaminhados ao Legislativo.</p>
-			<img src="" alt="figure ai2html Elaboração PIU">
+			<Processo></Processo>
 		</section>
 
 		<section>
@@ -91,14 +91,12 @@
 			<section>
 				<h3 class="titulo" indent="2">Objetivos do PIU Arco Pinheiros</h3>
 				<p>A caracterização urbana do ACP está estreitamente ligada à presença dos elementos físico-territoriais de caráter metropolitano descritos. Um das especificidades do território é a existência de grandes áreas isoladas do ponto de vista territorial. Fazem parte desse quadro o conjunto formado pela USP e demais institutos (Instituto de Pesquisas Tecnológicas, Instituto de Pesquisas Energéticas e Nucleares e Instituto Butantan), as áreas industriais ativas da Zona Predominantemente Industrial (ZPI) de Presidente Altino; o Parque Tecnológico do Estado de São Paulo (Parque Tecnológico Jaguaré), ainda que incipiente; e a Ceagesp.</p>
-				<img src="" alt="figure coluna contextualização / 3 imagens / animacao ?">
 				<p>Ou seja, aproximadamente 50% do território contem <b>grandes porções isoladas, verdadeiras ilhas desconectadas e monofuncionais</b>.</p>
 				<p>De acordo com diagnóstico objeto da <a href="https://participe.gestaourbana.prefeitura.sp.gov.br/arco-pinheiros">primeira consulta pública</a>, os desequilíbrios e desigualdades também se refletem em outros aspectos do perímetro do ACP: predominam baixas densidades populacionais na maior parte do território enquanto altas densidades coincidem, predominantemente, com assentamentos precários; o índice de área verde por habitante é apropriado se considerada a referência da OMS, mas as concentrações espaciais tornam a distribuição e o acesso desiguais; faixas exclusivas de ônibus e a linha de trens metropolitano irrigam o território, mas barreiras físicas e falta de acessibilidade local tornam os trajetos não motorizados extensos e difíceis, por vezes inviáveis; predominam os usos não residenciais, responsáveis por altas taxas de emprego, mas áreas ociosas, ocupações extensivas e monofuncionalidade desqualificam o espaço urbano.</p>
 				<p> Essas características são incoerentes com o modelo de cidade desejado e reiterado pelos conceitos do PIU ARCO PINHEIROS: <i>uma cidade compacta, conectada, sustentável e inclusiva, na qual seja possível aproximar o emprego da moradia por meio do adensamento planejado e orientado pelo transporte público de média e alta capacidade, onde se promova a recuperação e o resgate de seus recursos naturais, e onde se promova novas centralidades com diversidades de usos, serviços e espaços públicos seguros e ativos que favoreçam a interação social</i>.</p>
-				<img src="" alt="figure coluna diagrama situação proposta">
+				<Galeria :gallery_attrs="galeria"></Galeria>
 				<p>Desta forma, alinhado aos objetivos do PDE para a MEM, mais especificamente o Setor Orla Ferroviária e Fluvial, o PIU ARCO PINHEIROS busca promover a transformação urbana que contribua para integrar, e reforçar as sinergias entre as diferentes porções do seu território, de modo a assegurar o uso mais coerente e inteligente da cidade, de sua infraestrutura e de seus recursos. Pretende, em suma, realizar uma costura entre os diferentes usos e programas do perímetro, potencializando as sinergias decorrentes dos vínculos metropolitanos existentes, com especial atenção à vocação científica e tecnológica associada ao desenvolvimento de novas centralidades de âmbito local.</p>
 				<ol class="objetivos romanos">
-					<caption>Objetivos do PIU Arco Pinheiros</caption>
 					<li>
 						<p><b>Incremento populacional e construtivo</b> apoiado na melhoria da infraestrutura, incentivando o melhor aproveitamento da terra urbana</p>
 						<div class="iconCont">
@@ -186,6 +184,7 @@
 					url: imgSrc('arquivos/arco-pinheiros-2/mapas/territorios-de-inovacao.png'),
 					titulo: 'Territórios de inovação existentes e potenciais',
 					legenda: [
+						{ borda: '#713400', espessura: '3', pontilhado: true, descricao: 'AIU Arco Pinheiros' },
 						{ simbolo: '', char: '1', linha: false, fundo: '', descricao: 'Universidade de São Paulo' },
 						{ simbolo: '', char: '2', linha: false, fundo: '', descricao: 'Núcleo do Parque Tecnológico' },
 						{ simbolo: '', char: '3', linha: false, fundo: '', descricao: 'Ceagesp' },
@@ -212,18 +211,18 @@
 					<div class="laranja w50">
 						<label>POLOS ECONOMIA CRIATIVA (Art. 182)</label>
 						<ul>
-							<li>Fomentar a <b>diversidade cultural e o potencial criativo e inovador</b>, o desenvolvimento humano, a inclusão social e a sustentabilidade</li>
-							<li>Estimular a formação e o <b>desenvolvimento de outros distritos criativos</b></li>
-							<li>Estimular o setor empresarial a <b>valorizar seus ativos criativos e inovadores</b> com a finalidade de promover <b>a competitividade</b></li>
+							<li>Fomentar a diversidade cultural e o potencial criativo e inovador, o desenvolvimento humano, a inclusão social e a sustentabilidade</li>
+							<li>Estimular a formação e o desenvolvimento de outros distritos criativos</li>
+							<li>Estimular o setor empresarial a valorizar seus ativos criativos e inovadores com a finalidade de promover a competitividade</li>
 						</ul>
 					</div>
 					<div class="laranja w50">
 						<label>PARQUES TECNOLÓGICOS (Art. 187)</label>
 						<ul>
-							<li>Concentrar em <b>áreas estratégicas empresas e instituições</b> voltadas às atividades de <b>pesquisa, desenvolvimento e inovação</b></li>
-							<li>Criar <b>novas oportunidades de negócios</b> e fomentar o <b>empreendedorismo e incubar novas empresas</b> inovadoras</li>
-							<li>Aumentar <b>a sinergia entre instituições de ciência e tecnologia e empresas</b></li>
-							<li>Construir <b>espaços atraentes para profissionais do conhecimento emergente</b></li>
+							<li>Concentrar em áreas estratégicas empresas e instituições voltadas às atividades de pesquisa, desenvolvimento e inovação</li>
+							<li>Criar novas oportunidades de negócios e fomentar o empreendedorismo e incubar novas empresas inovadoras</li>
+							<li>Aumentar a sinergia entre instituições de ciência e tecnologia e empresas</li>
+							<li>Construir espaços atraentes para profissionais do conhecimento emergente</li>
 						</ul>
 					</div>
 				</div>
@@ -362,11 +361,8 @@
 					titulo: 'Área de Intervenção Urbana',
 					url: imgSrc('arquivos/arco-pinheiros-2/mapas/aiu.png'),
 					legenda: [
-						{ simbolo: '', linha: false, fundo: '', descricao: 'AEL - Área de Estruturação Local' },
-						{ simbolo: '', linha: false, fundo: '', descricao: 'ZEIS-1' },
-						{ simbolo: '', linha: false, fundo: '', descricao: 'ZEIS-2' },
-						{ simbolo: '', linha: false, fundo: '', descricao: 'ZEIS-3' },
-						{ simbolo: '', linha: false, fundo: '', descricao: 'ZEIS-5' },
+						{ fundo: '#EEC4A4', borda: '#DD8949', espessura: '2', descricao: 'Área de Intervenção Urbana Arco Pinheiros' },
+						{ fundo: '#D3C6A4', borda: '#BBA25E', espessura: '2', descricao: 'Área de Intervenção Urbana Vila Leopoldina-Villa Lobos' },
 						{ simbolo: '', linha: false, fundo: '', borda: '#000', espessura: '2', descricao: 'Perímetro Arco Pinheiros' },
 						{ simbolo: '', linha: false, fundo: '', borda: '#aaa', espessura: '1', descricao: 'Perímetros municípios' },
 						{ simbolo: imgSrc('arquivos/arco-pinheiros-2/mapas/legendas/mapa3_ferrovias.png'), linha: false, fundo: '', descricao: 'Ferrovia' },
@@ -462,7 +458,17 @@
 				<Imagem :dados="{
 					tipo: 'mapa',
 					titulo: 'Parâmetros urbanísticos',
-					url: imgSrc('arquivos/arco-pinheiros-2/mapas/parametros.png')
+					url: imgSrc('arquivos/arco-pinheiros-2/mapas/parametros.png'),
+					legenda: [
+						{ fundo: '#B1948D', borda: '#783E2F', descricao: 'Área de Transformação T1' },
+						{ fundo: '#C5B0A0', borda: '#A07656', descricao: 'Área de Transformação T3' },
+						{ fundo: '#E2C983', borda: '#D9A71C', descricao: 'Área de Qualificação Q1' },
+						{ fundo: '#F0E29E', borda: '#F5DA51', descricao: 'Área de Qualificação Q2' },
+						{ fundo: '#EDE8C8', borda: '#EFE6A5', descricao: 'Área de Qualificação Q3' },
+						{ fundo: '#E4C8D5', borda: '#DEA6C0', descricao: 'Área de Preservação P2' },
+						{ fundo: '#F5EBEF', borda: '#F5EBEF', descricao: 'Área de Preservação P3' },
+						{ borda: '#000', descricao: 'Perímetro Arco Pinheiros ' }
+					]
 				}">
 					<template slot="extra">
 						<a href="" class="button">Acesse o mapa interativo <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
@@ -722,7 +728,7 @@
 			</section>
 
 			<section>
-				<h3 class="titulo" indent="3">Projeto de Intervenção Urbana Vila Leopoldina</h3>
+				<h3 class="titulo" indent="3">Projeto de Intervenção Urbana Vila Leopoldina - Villa Lobos</h3>
 				<p>Com a proposição de outro Projeto de Intervenção Urbana nas cercanias do Arco Pinheiros, o PIU Vila Leopoldina, faz-se necessária uma revisão dos cálculos de área construída e de receita do cenário base. Primeiramente, contudo, vale considerar os elementos essenciais constituintes do PIU-VL.</p>
 				<p>O PIU-VL deverá ser negociado a partir da execução de dois leilões de potencial construtivo. Em ambos, as contrapartidas estão fixadas e o vencedor é o proponente que fizer a menor oferta de área computável adicional. Na primeira hasta, as contrapartidas totalizam R$ 80 milhões e estão discriminadas conforme a tabela abaixo.</p>
 				<Tabela :dados="tabela10"></Tabela>
@@ -796,6 +802,8 @@ import CommentsLoader from '@/components/CommentsLoader'
 import Apoio from '@/components/Apoio'
 import Tabela from '@/components/Tabela'
 import Imagem from '@/components/Imagem'
+import Galeria from '@/components/Galeria'
+import Processo from '@/components/graf/arco-pinheiros-2/processo'
 import { consultasCommons } from '@/mixins/consultasCommons'
 
 export default {
@@ -806,6 +814,39 @@ export default {
 			comments_atrr: undefined,
 			consultas: false,
 			estaConsulta: {},
+			galeria: {
+				width: 992,
+				height: 625,
+				images: [{
+					url: this.$store.getters.basePath + 'arquivos/arco-pinheiros-2/galeria/01-contextualizacao.png',
+					state: true,
+					title: '',
+					icon: false,
+					legenda: 'Contextualização do Arco Pinheiros',
+					id: 1
+				}, {
+					url: this.$store.getters.basePath + 'arquivos/arco-pinheiros-2/galeria/02-contextualizacao.png',
+					state: false,
+					title: '',
+					icon: false,
+					legenda: 'Contextualização do Arco Pinheiros - barreiras e ilhas existentes',
+					id: 2
+				}, {
+					url: this.$store.getters.basePath + 'arquivos/arco-pinheiros-2/galeria/03-contextualizacao.png',
+					state: false,
+					title: '',
+					icon: false,
+					legenda: 'Contextualização do Arco Pinheiros - diagrama da situação existente',
+					id: 3
+				}, {
+					url: this.$store.getters.basePath + 'arquivos/arco-pinheiros-2/galeria/04-proposta.png',
+					state: false,
+					title: '',
+					icon: false,
+					legenda: 'Caracterização do Arco Pinheiros – diagrama da situação proposta',
+					id: 3
+				} ]
+			},
 			tabela01: {
 				colunas: [
 					{ titulo: '' },
@@ -1586,7 +1627,9 @@ export default {
 		CommentsLoader,
 		Apoio,
 		Tabela,
-		Imagem
+		Imagem,
+		Galeria,
+		Processo
 	},
 	mixins: [ consultasCommons ]
 
@@ -1599,6 +1642,9 @@ export default {
 
 div.ArcoPinheiros2 {
 	/* path -> \\spurbsp01\Gestao_Projetos\Projetos\Arco Pinheiros\01_PIU_ACP\02_Proposta_Preliminar\Apresentações\ACP_MAR_ABRIL_2019.pptx */
+	a.button {
+		&, & > i { font-size: 1.2rem !important; }
+	}
 	ol.objetivos {
 		columns: 280px;
 		column-gap: 2rem;
@@ -1606,25 +1652,13 @@ div.ArcoPinheiros2 {
 		grid-template-columns: repeat(auto-fill, minmax(calc(320px - 2rem), 1fr));
 		counter-reset: li;
 		list-style-type: none;
-		padding: 2rem 2rem 0;
+		padding: 0 2rem;
 		margin: 4rem auto;
 		position: relative;
 		width: 100%;
 		max-width: calc(100% - 400px - 4rem);
 		@media (max-width: 1200px) {
 			max-width: 100%;
-		}
-		caption {
-			position: absolute;
-			top: -1rem;
-			margin: 0 2rem 2rem;
-			width: calc(100% - 4rem);
-			text-align: center;
-			line-height: 1.2;
-			font-weight: bold;
-			font-size: 1.5rem;
-			text-align: center;
-			color: #F39200;
 		}
 		li {
 			padding: 1rem 1rem 1.6rem;

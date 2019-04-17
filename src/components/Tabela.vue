@@ -10,7 +10,7 @@
 			<tbody>
 				<tr v-for="linha in dados.linhas">
 					<template v-for="celula in linha">
-						<td :data-coluna="dados.colunas[col(celula, linha)].titulo" :class="{ destaque: celula[0].destaque, cor: celula[0].cor, vazio: celula[0].vazio }">
+						<td :data-coluna="dados.colunas[col(celula, linha)].titulo" :class="{ destaque: celula[0].destaque, cor: celula[0].cor, vazio: celula[0].vazio }" :colspan="celula[0].nCol" :rowspan="celula[0].nLin">
 							<span>{{ celula[0].data }}<sup class="nota" v-if="celula[1]">{{ numeraNotas(celula[1].ref) }}</sup></span>
 						</td>
 					</template>
@@ -69,6 +69,14 @@ export default {
 								type: Boolean,
 								required: false
 							}
+						},
+						nCol: {
+							type: String,
+							required: false
+						},
+						nLin: {
+							type: String,
+							required: false
 						},
 						ref: {
 							type: String,
@@ -296,11 +304,6 @@ div.Tabela {
 		font-size: x-small;
 		color: $cinza-1;
 	}
-	&.larga {
-		max-width: calc(100% - 400px - 4rem);
-		width: min-content;
-		th, td { min-width: 6rem; }
-	}
 
 	@media print {
 		page-break-inside: avoid;
@@ -316,6 +319,15 @@ div.Tabela {
 			border-color: $preto !important;
 		}
 		div.notas ul { columns: 2; }
+	}
+	&.larga {
+		max-width: calc(100% - 400px - 4rem);
+		width: min-content;
+		th, td { min-width: 6rem; }
+		@media (max-width: 600px) {
+			min-width: 100%;
+			width: unset;
+		}
 	}
 }
 </style>

@@ -46,7 +46,7 @@
 				<div id="g-ai0-12" class="g-Camada_1 g-aiAbs" style="top:73.5%;left:39.2255%;width:45.3125%;">
 					<p class="g-pstyle9">2&ordf; CONSULTA PÚBLICA +</p>
 					<p class="g-pstyle9">AUDIÊNCIAS</p>
-					<p class="g-pstyle9" style="opacity: 0.4;">ABRIL&ndash;MAIO/2018</p>
+					<p class="g-pstyle9" style="opacity: 0.4;">ABRIL&ndash;MAIO/2019</p>
 				</div>
 				<div id="g-ai0-13" class="g-Camada_1 g-aiAbs" style="top:83.1264%;left:50.0003%;margin-left:-120.5px;width:75.3125%;">
 					<p class="g-pstyle10">PIU ARCO PINHEIROS</p>
@@ -105,7 +105,7 @@
 				</div>
 				<div id="g-ai0-11" class="g-Camada_1 g-aiAbs" style="top:71%;left:38.8849%;width:34.8333%;">
 					<p class="g-pstyle8">2&ordf; CONSULTA PÚBLICA + AUDIÊNCIAS</p>
-					<p class="g-pstyle8" style="opacity: 0.4;">ABRIL&ndash;MAIO/2018</p>
+					<p class="g-pstyle8" style="opacity: 0.4;">ABRIL&ndash;MAIO/2019</p>
 				</div>
 				<div id="g-ai0-12" class="g-Camada_1 g-aiAbs" style="top:72.5156%;left:79.4523%;width:10%;">
 					<p class="g-pstyle0">EM CURSO</p>
@@ -138,7 +138,7 @@ export default {
 			return url.toString()
 		}
 	}
-};
+}
 </script>
 
 <style lang="scss" scoped>
@@ -155,6 +155,8 @@ div.processo {
 		div.ai2html-desktop { display: block; }
 	}
 	@media print {
+		-webkit-color-adjust: exact;
+		color-adjust: exact;
 	}
 	/*MOBILE*/
 	#g-320-box .g-artboard {

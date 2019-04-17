@@ -1,6 +1,6 @@
 <template>
 	<div class="ArcoPinheiros2" ref="conteudoConsulta">
-		<PageTop background_image_src="arquivos/capas/arco-pinheiros_dt.jpg" :esta_consulta="estaConsulta">
+		<PageTop background_image_src="arquivos/capas/arco-pinheiros-2_480w.jpg" :esta_consulta="estaConsulta" :social="social_assets">
 			<template slot="titulo"><div>PIU Arco Pinheiros</div></template>
 			<template slot="subtitulo"><div>2ª consulta pública – Projeto de Intervenção Urbana Arco Pinheiros</div></template>
 		</PageTop>
@@ -384,7 +384,7 @@
 					]
 				}">
 					<template slot="extra">
-						<a href="" class="button">Acesse o mapa interativo <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
+						<a :href="this.$store.getters.basePath + 'mapas/piu-arco-pinheiros-2/#1'" class="button">Acesse o mapa interativo <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
 					</template>
 				</Imagem>
 				<p>Além disso, o Art. 188 do PDE demarca dentro do Arco Pinheiros a AIU Parque Tecnológico do Jaguaré e exige sua integração com o PIU ARCO PINHEIROS. Como resposta a essa premissa, o PIU incorpora o perímetro da AIU Parque Tecnológico do Jaguaré à AIU ARCO PINHEIROS, mantendo os objetivos dispostos no Art. 187 do PDE e compreendendo a necessidade de se compartilhar recursos e intervenções na construção de um projeto coeso para todo o perímetro do Arco Pinheiros.</p>
@@ -430,7 +430,7 @@
 					]
 				}">
 					<template slot="extra">
-						<a href="" class="button">Acesse o mapa interativo <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
+						<a :href="this.$store.getters.basePath + 'mapas/piu-arco-pinheiros-2/#2'" class="button">Acesse o mapa interativo <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
 					</template>
 				</Imagem>
 				<p>O Programa de Intervenções compreende um conjunto indicativo de projetos e obras que deverá ser desenvolvido para o perímetro, tendo como meta a consolidação das diretrizes do PIU em ações concretas, de forma a garantir a qualificação urbanística dos bairros e a implantação de infraestrutura de suporte para transformação pretendida.</p>
@@ -490,7 +490,7 @@
 					]
 				}">
 					<template slot="extra">
-						<a href="" class="button">Acesse o mapa interativo <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
+						<a :href="this.$store.getters.basePath + 'mapas/piu-arco-pinheiros-2/#3'" class="button">Acesse o mapa interativo <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
 					</template>
 				</Imagem>
 				<p>A proposta de parâmetros urbanísticos para a AIU ARCO PINHEIROS, de forma similar aos conceitos utilizados na Lei de Parcelamento, Uso e Ocupação do Solo (LPUOS, Lei nº 16.402 de 2016), parte de perímetros de intervenção categorizados em <b>Áreas de Transformação</b>, <b>Áreas de Qualificação</b> e <b>Áreas de Preservação</b>.</p>
@@ -902,6 +902,11 @@ export default {
 	name: 'ArcoPinheiros2',
 	data () {
 		return {
+			social_assets: {
+				whatsapp: 'https://api.whatsapp.com/send?text=Participe%20da%20consulta%20p%C3%BAblica%20do%20PIU%20Arco%20Pinheiros%20-%20https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br/arco-pinheiros-2',
+				facebook: 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br/arco-pinheiros-2',
+				twitter: 'https://twitter.com/intent/tweet?text=Participe%20da%20consulta%20p%C3%BAblica%20do%20PIU%20Arco%20Pinheiros%20%20-%20https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br/arco-pinheiros-2'
+			},
 			titulosLimpo: [],
 			comments_atrr: undefined,
 			consultas: false,

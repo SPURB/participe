@@ -1,6 +1,6 @@
 <template>
 	<div class="ConcessaoMartinelli" ref="conteudoConsulta">
-		<PageTop background_image_src="arquivos/capas/concessao-martinelli_1900w.jpg" :esta_consulta="estaConsulta" :social="social_assets">
+		<PageTop background_image_src="arquivos/capas/concessao-martinelli_480w.jpg" :esta_consulta="estaConsulta" :social="social_assets">
 			<template slot="titulo"><div>Chamamento do edital de concessão da cobertura do Edifício Martinelli</div></template>
 		</PageTop>
 
@@ -19,6 +19,11 @@
 			<p>Todas as manifestações serão recebidas até a data limite de 16/05/2019 e, a partir de então, serão avaliadas e, eventualmente, por decisão da SPUrbanismo, incorporadas no Termo de Referência e estruturação do eventual edital de concessão, com prazos e etapas a serem definidos pela SPUrbanismo.</p>
 
 			<p>Serão desconsideradas as manifestações fora do escopo do chamamento ou que tenham sido formuladas de forma distinta das premissas e diretrizes do Termo de Referência.</p>
+			<blockquote>
+				<p>Participe!</p>
+				<p>No dia 12/04 (sexta-feira), às 15h00, a SP Urbanismo fará a apresentação da iniciativa, com rodada de perguntas e visitação no espaço objeto deste chamamento, sem prejuízo da realização de outras apresentações e visitas públicas, presenciais ou remotas. As inscrições são limitadas e para participar, é necessária a inscrição por meio do e-mail <a href="mailto:concessaomartinelli@spurbanismo.sp.gov.br?subject=Solicito inscrição no evento do dia 12/04/2019&body=Nome completo: %0D%0ANúmero de identificação: ">concessaomartinelli@spurbanismo.sp.gov.br</a>
+				</p>
+			</blockquote>
 
 			<Imagem :dados="{
 				tipo: 'default',
@@ -81,7 +86,6 @@
 				caption: 'Vista da cobertura do edifício Martinelli.',
 				fonte: 'Acervo São Paulo Urbanismo. Fotografia de 1935.'
 			}"></Imagem>
-
 		</section>
 
 		<section ref="allComments">
@@ -108,9 +112,9 @@ export default {
 			consultas: false,
 			estaConsulta: {},
 			social_assets: {
-				whatsapp: 'https://api.whatsapp.com/send?text=Participe%20da%20consulta%20p%C3%BAblica%20do%20edital%20de%20concess%C3%A3o%20da%20cobertura%20do%20Edif%C3%ADcio%20Martinelli%20-%20https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br/#/concessao-martinelli',
-				facebook: 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br/#/concessao-martinelli',
-				twitter: 'https://twitter.com/intent/tweet?text=Participe%20da%20consulta%20p%C3%BAblica%20do%20edital%20de%20concess%C3%A3o%20da%20cobertura%20do%20Edif%C3%ADcio%20Martinelli%20-%20https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br/#/concessao-martinelli'
+				whatsapp: 'https://api.whatsapp.com/send?text=Participe%20da%20consulta%20p%C3%BAblica%20do%20edital%20de%20concess%C3%A3o%20da%20cobertura%20do%20Edif%C3%ADcio%20Martinelli%20-%20https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br/concessao-martinelli',
+				facebook: 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br/concessao-martinelli',
+				twitter: 'https://twitter.com/intent/tweet?text=Participe%20da%20consulta%20p%C3%BAblica%20do%20edital%20de%20concess%C3%A3o%20da%20cobertura%20do%20Edif%C3%ADcio%20Martinelli%20-%20https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br/concessao-martinelli'
 			}
 		}
 	},

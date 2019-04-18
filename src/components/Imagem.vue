@@ -7,7 +7,7 @@
 			</div>
 			<figcaption v-if="dados.caption">
 				{{ dados.caption }}
-				<span class="captionFonte" v-if="dados.fonte"> (Fonte: {{ dados. fonte }})</span>
+				<span class="captionFonte" v-if="dados.fonte"> (Fonte: {{ dados.fonte }})</span>
 			</figcaption>
 			<div class="legenda">
 				<h1 v-if="dados.titulo">{{ dados.titulo }}</h1>
@@ -49,10 +49,28 @@ export default {
 					descricao: String
 				}
 			},
-			fonte: String
+			fonte: String,
+			externo: String
 		}
 	},
-	methods: {}
+	methods: {
+		montaLink () {
+			if (this.$props.dados.externo && this.$props.dados.externo != '' && this.$props.dados.externo != ' ') {
+				let app = this
+				this.$el.classList.add('link')
+				this.$el.firstElementChild.addEventListener('click', function(event) {
+					if (event.target.nodeName !== 'I') {
+						window.location.href = app.$store.getters.basePath + app.$props.dados.externo
+					}
+				})
+			} else {
+				return false
+			}
+		}
+	},
+	mounted () {
+		this.montaLink()
+	}
 }
 </script>
 
@@ -195,6 +213,16 @@ div.Imagem {
 				color: inherit;
 				font-size: inherit;
 			}
+		}
+	}
+	figure.w992 {
+		padding: 0;
+		max-width: 992px;
+		div.imgWrap a { display: inline-block; }
+		figcaption {
+			padding: 0 0 4px;
+			color: $cinza-1;
+			border-bottom: 1px solid $cinza-3;
 		}
 	}
 	figure.destaque {
@@ -367,6 +395,10 @@ div.Imagem {
 			max-width: unset;
 			page-break-inside: avoid;
 			break-inside: avoid-page;
+			&, & > * {
+				color-adjust: exact;
+				-webkit-color-adjust: exact;
+			}
 			div.imgWrap {
 				img {
 					width: -moz-min-content;
@@ -414,22 +446,38 @@ div.Imagem {
 				color: $preto;
 			}
 		}
-		figure.mapa div.legenda {
-			ul {
-				display: block;
-				columns: 2;
-				column-gap: 2rem;
-				text-align: left;
-				li {
+		figure.mapa {
+			div.imgWrap {
+				min-width: -moz-fit-content;
+				min-width: fit-content;
+				max-width: 100%;
+				img {
+					max-width: 100%;
+					max-height: 5mm;
+				}
+			}
+			div.legenda {
+				ul {
 					display: block;
-					font-size: small;
-					margin: 0 0 4px 0;
-					page-break-inside: avoid;
-					break-inside: avoid;
-					div { vertical-align: text-bottom; }
+					columns: 2;
+					column-gap: 2rem;
+					text-align: left;
+					li {
+						display: block;
+						font-size: small;
+						margin: 0 0 4px 0;
+						page-break-inside: avoid;
+						break-inside: avoid;
+						div {
+							vertical-align: text-bottom;
+							color-adjust: exact;
+							-webkit-color-adjust: exact;
+						}
+					}
 				}
 			}
 		}
 	}
+	&.link div { cursor: pointer; }
 }
 </style>

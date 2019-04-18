@@ -106,7 +106,7 @@ div.caracterizacao {
 		width:700px;
 	}
 	#g-caracterizacao-Prancheta_1 p {
-		font-family:'roboto',segoe ui,myriad pro,arial,helvetica,sans-serif;
+		font-family:'roboto','segoe ui','myriad pro',arial,helvetica,sans-serif;
 		font-weight:400;
 		font-size:10px;
 		line-height:24px;

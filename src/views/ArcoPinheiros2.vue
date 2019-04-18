@@ -8,11 +8,15 @@
 		<Indice :titulos="titulosLimpo"></Indice>
 		<Apoio></Apoio>
 
+		<div class="linkMapaInterativo">
+			<a @click="abrePath('mapas/piu-arco-pinheiros-2/')">MAPA INTERATIVO <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
+		</div>
+
 		<section>
 			<h2 class="titulo" indent="1">Apresentação</h2>
-			<p>Em conformidade com a cronologia estabelecida pelo Plano Diretor Estratégico – PDE, a Prefeitura do Município de São Paulo por intermédio da Secretaria Municipal de Desenvolvimento Urbano – SMDU e da São Paulo Urbanismo – SP-Urbanismo apresenta proposta de Projeto de Intervenção Urbana – PIU para o subsetor Arco Pinheiros, da Orla Ferroviária e Fluvial da Macroárea de Estruturação Metropolitana (MEM), o qual estabelece objetivos, diretrizes, estratégias e mecanismos para a implantação do Projeto de Intervenção Urbana. </p>
-			<p>A proposta ora apresentada objetiva tornar público o Projeto de Intervenção Urbana do Arco Pinheiros – PIU ARCO PINHEIROS, por meio de consulta pública a ser realizada entre os dias XX de abril e XX de maio de 2019, expondo o conteúdo preliminar do PIU, com vistas a colher contribuições da sociedade civil ao aperfeiçoamento e consolidação do projeto.  </p>
-			<p>Localizado junto ao encontro dos dois mais importantes rios da cidade – Pinheiros e Tietê – e conectado aos eixos do sistema rodoviário Anhanguera/ Bandeirantes, Pres. Castelo Branco e Raposo Tavares, o Arco Pinheiros conta com a presença de relevantes instituições de ensino e pesquisa (Universidade de São Paulo, Instituto Butantan, Instituto de Pesquisas Tecnológicas, Instituto de Pesquisas Energéticas e Nucleares), com o Parque Tecnológico do Jaguaré, com o setor industrial ao norte do distrito do Jaguaré, voltado a indústrias de alta tecnologia, bem como com a disponibilidade de terras passíveis de transformação urbana, representada pelas antigas áreas industriais e também pela possibilidade de transferência total ou parcial da Companhia de Entrepostos e Armazéns Gerais de São Paulo - Ceagesp. Esses atributos e usos convertem o território do Arco Pinheiros em local estratégico para o desenvolvimento econômico da cidade e, mais especificamente, com alto potencial de abrigar atividades de inovação. </p>
+			<p>Em conformidade com a cronologia estabelecida pelo Plano Diretor Estratégico – PDE, a Prefeitura do Município de São Paulo por intermédio da Secretaria Municipal de Desenvolvimento Urbano – SMDU e da São Paulo Urbanismo – SP-Urbanismo apresenta proposta de Projeto de Intervenção Urbana – PIU para o subsetor Arco Pinheiros, da Orla Ferroviária e Fluvial da Macroárea de Estruturação Metropolitana (MEM), o qual estabelece objetivos, diretrizes, estratégias e mecanismos para a implantação do Projeto de Intervenção Urbana.</p>
+			<p>A proposta ora apresentada objetiva tornar público o Projeto de Intervenção Urbana do Arco Pinheiros – PIU ARCO PINHEIROS, por meio de consulta pública a ser realizada entre os dias 22 de abril e 22 de maio de 2019, expondo o conteúdo preliminar do PIU, com vistas a colher contribuições da sociedade civil ao aperfeiçoamento e consolidação do projeto.</p>
+			<p>Localizado junto ao encontro dos dois mais importantes rios da cidade – Pinheiros e Tietê – e conectado aos eixos do sistema rodoviário Anhanguera/ Bandeirantes, Pres. Castelo Branco e Raposo Tavares, o Arco Pinheiros conta com a presença de relevantes instituições de ensino e pesquisa (Universidade de São Paulo, Instituto Butantan, Instituto de Pesquisas Tecnológicas, Instituto de Pesquisas Energéticas e Nucleares), com o Parque Tecnológico do Jaguaré, com o setor industrial ao norte do distrito do Jaguaré, voltado a indústrias de alta tecnologia, bem como com a disponibilidade de terras passíveis de transformação urbana, representada pelas antigas áreas industriais e também pela possibilidade de transferência total ou parcial da Companhia de Entrepostos e Armazéns Gerais de São Paulo - Ceagesp. Esses atributos e usos convertem o território do Arco Pinheiros em local estratégico para o desenvolvimento econômico da cidade e, mais especificamente, com alto potencial de abrigar atividades de inovação.</p>
 			<p>Para que o Arco Pinheiros seja um “Território de Inovação” na cidade de São Paulo caberá ao PIU ARCO PINHEIROS promover as melhores condições para atração de atividades com esse perfil, a partir de ações com o objetivo de melhorar a acessibilidade interna e externamente, conectar os diferentes modos de transporte motorizados e não motorizados, criar espaços capazes de fomentar o intercâmbio do conhecimento, incentivar a diversidade de usos, associando a moradia aos demais usos urbanos, de forma a garantir o atendimento e a permanência da população de menor renda e implantar infraestrutura e equipamentos urbanos que suportem o adensamento proposto.</p>
 			<figure>
 				<MEM></MEM>
@@ -25,7 +29,7 @@
 
 		<section>
 			<h2 class="titulo" indent="1">Perímetro de intervenção</h2>
-			<p>O Perímetro do Arco Pinheiros foi definido pelo Plano Diretor Estratégico, juntamente com os demais subsetores da Orla Ferroviária e Fluvial incluídos na Macroárea de Estruturação Metropolitana – MEM – Mapa 2A.</p>
+			<p>O Perímetro do Arco Pinheiros foi definido pelo Plano Diretor Estratégico, juntamente com os demais subsetores da Orla Ferroviária e Fluvial incluídos na Macroárea de Estruturação Metropolitana – MEM, em seu Mapa 2A.</p>
 			<p>Com a justificativa de contemplar a totalidade de assentamentos precários contíguos ou vizinhos, delimitados como Zona Especial de Interesse Social – ZEIS 1 pelo Plano Diretor Estratégico (confirmados na Lei de Parcelamento, Uso e Ocupação do Solo – LPUOS), e englobar áreas vazias classificadas como ZEIS 2, o PIU ARCO PINHEIROS propõe a adequação do perímetro original, com a inclusão das quadras a nordeste da Av. Corifeu Azevedo Marques. A proposta busca construir possíveis vínculos entre atendimento e demanda habitacional.</p>
 			<figure>
 				<Caracterizacao></Caracterizacao>
@@ -191,7 +195,7 @@
 					url: imgSrc('arquivos/arco-pinheiros-2/mapas/territorios-de-inovacao.png'),
 					titulo: 'Territórios de inovação existentes e potenciais',
 					legenda: [
-						{ borda: '#713400', espessura: '3', pontilhado: true, descricao: 'AIU Arco Pinheiros' },
+						{ borda: '#713400', espessura: '3', pontilhado: true, descricao: 'AIU Parque Tecnológico Jaguaré' },
 						{ simbolo: '', char: '1', linha: false, fundo: '', descricao: 'Universidade de São Paulo' },
 						{ simbolo: '', char: '2', linha: false, fundo: '', descricao: 'Núcleo do Parque Tecnológico' },
 						{ simbolo: '', char: '3', linha: false, fundo: '', descricao: 'Ceagesp' },
@@ -323,7 +327,6 @@
 						{ simbolo: '', linha: false, fundo: '#00a9bf', descricao: 'Rede hídrica principal' },
 						{ simbolo: '', linha: true, fundo: '#000000', descricao: 'Corredores de ônibus' },
 						{ simbolo: imgSrc('arquivos/arco-pinheiros-2/mapas/legendas/mapa2_ferrovias.png'), linha: false, fundo: '', descricao: 'Ferrovias' },
-						{ simbolo: imgSrc('arquivos/arco-pinheiros-2/mapas/legendas/mapa2_marginais.png'), linha: false, fundo: '', descricao: 'Sistema viário (marginais)' },
 						{ simbolo: '', linha: false, fundo: '#ff0100', descricao: 'Travessias' },
 						{ simbolo: '', linha: false, fundo: '#b1abc0', descricao: 'Zona Predominantemente Industrial (ZPI)' },
 						{ simbolo: '', linha: false, fundo: '#d1b7c0', descricao: 'Zona de Desenvolvimento Econômico (ZDE)' },
@@ -373,15 +376,16 @@
 					titulo: 'Área de Intervenção Urbana',
 					url: imgSrc('arquivos/arco-pinheiros-2/mapas/aiu.png'),
 					legenda: [
-						{ fundo: '#f7dbb0', borda: '#d98949', espessura: '2', descricao: 'Área de Intervenção Urbana Arco Pinheiros' },
-						{ fundo: '#f1eaa7', borda: '#bba25d', espessura: '2', descricao: 'Área de Intervenção Urbana Vila Leopoldina-Villa Lobos' },
+						{ fundo: '#dab99d', borda: '#ba3200', espessura: '2', descricao: 'Área de Intervenção Urbana Arco Pinheiros' },
+						{ fundo: '#d8cbaf', borda: '#996b01', espessura: '2', descricao: 'Área de Intervenção Urbana Vila Leopoldina-Villa Lobos' },
 						{ simbolo: '', linha: false, fundo: '', borda: '#000', espessura: '2', descricao: 'Perímetro Arco Pinheiros' },
 						{ simbolo: '', linha: false, fundo: '', borda: '#aaa', espessura: '1', descricao: 'Perímetros municípios' },
 						{ simbolo: imgSrc('arquivos/arco-pinheiros-2/mapas/legendas/mapa3_ferrovias.png'), linha: false, fundo: '', descricao: 'Ferrovia' },
 						{ simbolo: '', linha: false, fundo: '#bbcca8', descricao: 'Praças e canteiros' },
 						{ simbolo: '', linha: false, fundo: '#85b1be', descricao: 'Hidrografia' },
 						{ simbolo: '', linha: false, fundo: '#d3d3d3', descricao: 'Quadra viária' }
-					]
+					],
+					externo: 'mapas/piu-arco-pinheiros-2/#1'
 				}">
 					<template slot="extra">
 						<a :href="this.$store.getters.basePath + 'mapas/piu-arco-pinheiros-2/#1'" class="button">Acesse o mapa interativo <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
@@ -427,7 +431,8 @@
 						{ simbolo: '', linha: false, fundo: '#bbcca8', descricao: 'Praças e canteiros' },
 						{ simbolo: '', linha: false, fundo: '#85b1be', descricao: 'Hidrografia' },
 						{ simbolo: '', linha: false, fundo: '#d3d3d3', descricao: 'Quadra viária' }
-					]
+					],
+					externo: 'mapas/piu-arco-pinheiros-2/#2'
 				}">
 					<template slot="extra">
 						<a :href="this.$store.getters.basePath + 'mapas/piu-arco-pinheiros-2/#2'" class="button">Acesse o mapa interativo <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
@@ -455,7 +460,7 @@
 							O PIU ARCO PINHEIROS contempla ações específicas de provisão do Programa Habitacional de Interesse Social conforme os seguintes eixos de abordagem:
 							<ul>
 								<li>realização das <a @click="rolar('aelHumaita')">AEL Humaitá</a> e <a @click="rolar('aelSaoRemo')">São Remo</a></li>
-								<li>obrigatoriedade de cumprimento da cota de solidariedade nos perímetros dos <a @click="rolar('territoriosDeIntegracao')">territórios de inovação</a>, mais especificamente <a @click="rolar('ceagesp')">Ceagesp</a> e <a @click="rolar('centralidadeDoJaguare')">Centralidade do Jaguaré</a></li>
+								<li>obrigatoriedade de cumprimento da cota de solidariedade, mediante destinação de terra e/ou unidades habitacionais nos perímetros do Território de Integração, mais especificamente mais especificamente <a @click="rolar('ceagesp')">Ceagesp</a> e <a @click="rolar('centralidadeDoJaguare')">Centralidade do Jaguaré</a></li>
 							</ul>
 						</p>
 						<p>Cabe ressaltar também que o PIU-VLVL contempla parte significativa dos seus recursos para atendimento habitacional de 796 famílias incluídas no perímetro do Arco Pinheiros (Favela da Linha, Favela do Nove e ocupação do Conjunto Madeirite). Desse total, o atendimento habitacional de cerca de 325 famílias deverá utilizar parte do potencial construtivo adicional disponibilizado pela AIU ARCO PINHEIROS, demonstrando o compromisso de ambos os PIU com a viabilidade do programa habitacional.</p>
@@ -487,7 +492,8 @@
 						{ simbolo: imgSrc('arquivos/arco-pinheiros-2/mapas/legendas/mapa5_icone3.png'), descricao: 'Área de Preservação P3-A' },
 						{ fundo: '#FCEAF2', descricao: 'Área de Preservação P4' },
 						{ borda: '#000', descricao: 'Perímetro Arco Pinheiros ' }
-					]
+					],
+					externo: 'mapas/piu-arco-pinheiros-2/#3'
 				}">
 					<template slot="extra">
 						<a :href="this.$store.getters.basePath + 'mapas/piu-arco-pinheiros-2/#3'" class="button">Acesse o mapa interativo <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
@@ -522,11 +528,11 @@
 							{ simbolo: imgSrc('arquivos/arco-pinheiros-2/mapas/legendas/mapa6_icone5.png'), linha: false, fundo: '', borda: '', descricao: 'Alinhamento viário PIU ACP' },
 							{ simbolo: imgSrc('arquivos/arco-pinheiros-2/mapas/legendas/mapa6_icone6.png'), linha: false, fundo: '', borda: '', descricao: 'Diretrizes viárias PIU ACP' },
 							{ simbolo: imgSrc('arquivos/arco-pinheiros-2/mapas/legendas/mapa6_icone7.png'), linha: false, fundo: '', borda: '', descricao: 'Conexões promovidas' },
-							{ simbolo: '', char: 'A1', linha: false, fundo: '', borda: '', descricao: 'Setor Oeste' },
-							{ simbolo: '', char: 'A2', linha: false, fundo: '', borda: '', descricao: 'Setor Central' },
-							{ simbolo: '', char: 'A3', linha: false, fundo: '', borda: '', descricao: 'Setor Oeste' },
-							{ simbolo: '', char: 'A4', linha: false, fundo: '', borda: '', descricao: 'Setor Gastão Vidigal' },
-							{ simbolo: '', char: 'A5', linha: false, fundo: '', borda: '', descricao: 'Setor ZEIS-5' },
+							{ simbolo: '', char: 'A1', linha: false, fundo: '', borda: '', descricao: 'Ceagesp Setor Oeste' },
+							{ simbolo: '', char: 'A2', linha: false, fundo: '', borda: '', descricao: 'Ceagesp Setor Central' },
+							{ simbolo: '', char: 'A3', linha: false, fundo: '', borda: '', descricao: 'Ceagesp Setor Oeste' },
+							{ simbolo: '', char: 'A4', linha: false, fundo: '', borda: '', descricao: 'Ceagesp Setor Gastão Vidigal' },
+							{ simbolo: '', char: 'A5', linha: false, fundo: '', borda: '', descricao: 'Ceagesp Setor ZEIS-5' },
 							{ simbolo: '', char: 'A6', linha: false, fundo: '', borda: '', descricao: 'Núcleo do Parque Tecnológico' },
 							{ simbolo: '', char: 'A7', linha: false, fundo: '', borda: '', descricao: 'Frente do Rio Pinheiros Quadra 1' },
 							{ simbolo: '', char: 'A8', linha: false, fundo: '', borda: '', descricao: 'Frente do Rio Pinheiros Quadra 2' },
@@ -543,7 +549,17 @@
 							{ simbolo: '', char: 'C5', linha: false, fundo: '', borda: '', descricao: 'Conexão com pavilhão central Ceagesp' },
 							{ simbolo: '', char: 'C6', linha: false, fundo: '', borda: '', descricao: 'Conexão com ciclopassarela proposta' },
 							{ simbolo: '', char: 'C7', linha: false, fundo: '', borda: '', descricao: 'Conexão com Estação Ceasa' }
-						]
+						],
+						externo: 'mapas/piu-arco-pinheiros-2/#4'
+					}">
+						<template slot="extra">
+							<a :href="this.$store.getters.basePath + 'mapas/piu-arco-pinheiros-2/#4'" class="button">Acesse o mapa interativo <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
+						</template>						
+					</Imagem>
+					<Imagem :dados="{
+						tipo: 'w992',
+						url: imgSrc('arquivos/arco-pinheiros-2/simulacao-preliminar-territorios-de-integracao.png'),
+						caption: 'Simulação preliminar dos Territórios de Integração'
 					}"></Imagem>
 					<p>Uma importante proposta do PIU para viabilizar a vocação de ambiente de inovação consiste na demarcação dos chamados <b>Territórios de Integração</b>, formado pelas quadras lindeiras ao Rio Pinheiros, que deverão acomodar as novas travessias previstas no Programa de Intervenções, e por grandes áreas transformáveis que exigem projetos urbanos específicos, como é o caso da Ceagesp.</p>
 					<p>Os Territórios de Integração têm como premissa superar o isolamento entre as áreas, abrindo caminhos para maior diversidade de usos, a valorização dos espaços de encontro, dos recursos ambientais e da alta acessibilidade promovida pelo transporte público existente. Sobrepostos à AIU Arco Pinheiros, consistem em quadras ou glebas que apresentam grande diversidade de ocupação do solo e organização fundiária, alternando terras públicas e privadas.</p>
@@ -568,7 +584,7 @@
 						<p>Além da reativação das vias públicas existentes e hoje cedidas à Ceagesp, foram indicadas as conexões viárias consideradas fundamentais para integração com a malha urbana do entorno: a ligação entre a futura ponte e a Av. Dr. Gastão Vidigal, a ligação entre as Ruas Bruno Bauer e Japiaçu e a extensão da Rua Othão, da Av. José César de Oliveira, bem como da futura rua prevista no PIU Vila Leopoldina-Villa Lobos.</p>
 						<p>Essas diretrizes viárias mínimas definem 5 áreas (A1, A2, A3, A4 e A5) – diferentes unidades de projeto – às quais se impõe o reparcelamento do solo. Pretende-se, assim, evitar projetos fragmentados a partir dos lotes hoje existentes, bem como garantir que áreas verdes e institucionais sejam distribuídas formando uma rede que dialoga com o entorno.</p>
 						<p>Em relação ao gabarito, o PIU indica duas faixas com restrição de altura: a primeira é fixa e localiza-se no entorno imediato do Pavilhão Central, com limite máximo de 15 metros; a segunda faixa é móvel, tem cerca de 280 metros de largura, localiza-se entre a Av. Gastão Vidigal e a Av. Nações Unidas e tem limite de altura máxima de 28 metros, podendo ser deslocada contanto que inclua, na integridade, a faixa do entorno imediato do Pavilhão Central acima referida. Tais restrições têm dois objetivos: primeiro, valorizar o Pavilhão como elemento marcante na paisagem e, segundo, construir uma área de transição, com densidade construtiva menor, entre as extremidades de ocupação mais intensa, próximas às estações do trem (de um lado, o entorno das Ruas Hassib Mofarrej e Xavier Kraus, junto à Estação CEASA e, do outro, o PIU Vila Leopoldina-Villa Lobos, mais próximo à Estação Villa Lobos/Jaguaré).</p>
-						<p>As demais diretrizes correspondem à exigência de aplicação da Cota de Solidariedade na modalidade de doação de unidades edificadas no próprio local, garantindo diversidade social, a definição de percentual máximo para usos residenciais e a exigência de implantação de um percentual mínimo de atividades ligadas à inovação (cota de inovação).</p>
+						<p>As demais diretrizes correspondem à exigência de aplicação da Cota de Solidariedade na modalidade de destinação de terra e/ou unidades habitacionais no próprio local, garantindo diversidade social, a definição de percentual máximo para usos residenciais e a exigência de implantação de um percentual mínimo de atividades ligadas à inovação (cota de inovação).</p>
 					</section>
 
 					<section ref="centralidadeDoJaguare">
@@ -591,6 +607,29 @@
 
 				<section>
 					<h4 class="titulo" indent="3">Áreas de Estruturação Local - AEL</h4>
+					<Imagem :dados="{
+						tipo: 'mapa',
+						titulo: '',
+						url: imgSrc('arquivos/arco-pinheiros-2/mapas/ael.png'),
+						legenda: [
+							{ borda: '#c63b34', espessura: '2',  descricao: 'AEL - Área de Estruturação Local' },
+							{ fundo: '#b89e40', descricao: 'ZEIS-1' },
+							{ fundo: '#ffa237', descricao: 'ZEIS-2' },
+							{ fundo: '#ffdb55', descricao: 'ZEIS-3' },
+							{ fundo: '#fff4bc', descricao: 'ZEIS-5' },
+							{ borda: '#000', espessura: '2', descricao: 'Perímetro Arco Pinheiros' },
+							{ borda: '#aaa', espessura: '1', descricao: 'Perímetros municípios' },
+							{ simbolo: imgSrc('arquivos/arco-pinheiros-2/mapas/legendas/mapa3_ferrovias.png'), descricao: 'Ferrovia' },
+							{ simbolo: '', linha: false, fundo: '#bbcca8', descricao: 'Praças e canteiros' },
+							{ simbolo: '', linha: false, fundo: '#85b1be', descricao: 'Hidrografia' },
+							{ simbolo: '', linha: false, fundo: '#d3d3d3', descricao: 'Quadra viária' }
+						],
+						externo: 'mapas/piu-arco-pinheiros-2/#5'
+					}">
+						<template slot="extra">
+							<a :href="this.$store.getters.basePath + 'mapas/piu-arco-pinheiros-2/#5'" class="button">Acesse o mapa interativo <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
+						</template>
+					</Imagem>
 					<p>Definida pelo Art. 149 do PDE, a Área de Estruturação Local (AEL) consiste em porções do território destinadas à transformação local, especialmente nas áreas de maior vulnerabilidade, nas quais deve ocorrer uma convergência de políticas públicas integradas, como, por exemplo, a oferta de transporte coletivo, ampliação de áreas verdes, oferta de habitação de interesse social e regularização fundiária, bem como equipamentos urbanos e sociais. O PIU ARCO PINHEIROS propõe a demarcação de duas AEL sobrepostas a AIU ARCO PINHEIROS: a <b>AEL São Remo</b> e a <b>AEL Humaitá</b>.</p>
 					<div class="card-pde">
 						<div class="title">Áreas de Estruturação Local (AEL)</div>
@@ -639,13 +678,23 @@
 					url: imgSrc('arquivos/arco-pinheiros-2/mapas/lpuos-piuacp.png'),
 					legenda: [
 						{ fundo: '#99f0f6', descricao: 'Redução em relação à LPUOS' },
-						{ fundo: '#db6181', descricao: 'Majoramento em relação à LPUOS' },
-						{ fundo: '#d3d3d3', descricao: 'Sem alteração em relação à LPUOS' }
+						{ fundo: '#db6181', descricao: 'Majoração em relação à LPUOS' },
+						{ fundo: '#d3d3d3', descricao: 'Sem alteração em relação à LPUOS' },
+						{ borda: '#000', espessura: '1', pontilhado: true, descricao: 'Perímetro dos Setores' },
+						{ char: '1', descricao: 'Setor Pq. Tecnológico do Jaguaré' },
+						{ char: '2', descricao: 'Setor Misto Jaguaré' },
+						{ char: '3', descricao: 'Setor Presidente Altino' },
+						{ char: '4', descricao: 'Setor Gastão Vidigal' },
+						{ char: '5', descricao: 'Setor Mofarrej' },
+						{ char: '6', descricao: 'Setor Jardim Humaitá' },
+						{ char: '7', descricao: 'Setor São Remo/Corifeu' },
+						{ char: '8', descricao: 'Setor Ceagesp' },
+						{ char: '9', descricao: 'Setor Vila Leopoldina' }
 					]
 				}"></Imagem>
 				<p>No que se refere às reduções nos índices de adensamento construtivo e populacional, isso ocorreu em função da proximidade do Rio Pinheiros e de áreas onde o sistema fundiário fragmentado dificulta um adensamento significativo. O Pátio da CPTM, em frente à Ceagesp, e o Centro de Detenção Provisória de Pinheiros são exemplos de áreas que, caso sejam transformadas, devem manter baixos coeficientes de aproveitamento, pela aproximação do rio e pelo potencial de exercerem funções mais voltadas à constituição da rede ambiental do PIU ARCO PINHEIROS. Já as áreas da Vila Bela Aliança e do quadrante constituído pelas avenidas Queiroz Filho, Imperatriz Leopoldina, Gastão Vidigal e Rua Constantino Fraga, consistem em bairros horizontais de uso misto consolidados, com baixa probabilidade de transformação.</p>
 				<p>Em determinadas áreas, próximas a corredores de ônibus, estações de trem e ancoragem de ciclopassarelas propostas pelo Programa de Intervenções do PIU ARCO PINHEIROS, o Coeficiente de Aproveitamento foi majorado em relação à LPUOS, como nos grandes lotes ociosos lindeiros à Av. Jaguaré e aqueles próximos à Estação Vila Leopoldina da CPTM. Já o eixo da Rua Hassib Mofarrej e as áreas da ZPI de Presidente Altino mais próximas ao trem, constituirão nova área de adensamento cuja conexão com a estação CEASA da CPTM será qualificada pelas ações previstas no Programa de Intervenções do PIU ARCO PINHEIROS.</p>
-				<p>No que se refere ao adensamento populacional previsto para o território do PIU ARCO PINHEIROS, a estimativa realizada para 30 anos partiu do cruzamento das Áreas de Transformação, Qualificação e Preservação com os lotes e glebas efetivamente transformáveis, ou seja, excluindo-se aqueles cujo uso, ocupação ou condições fundiárias condicionariam baixas probabilidades de transformação, sendo considerados consolidados. Foram incluídos nessa condição: edifícios residenciais verticais, conjuntos habitacionais, núcleos urbanizados, edifícios de uso misto, comércio e serviços verticais, comércio e serviços horizontais de porte significativo, áreas produtivas ativas, como indústrias, condomínios multissetorais, gerenciamento de dados e tecnologia, equipamentos urbanos, usos especiais e coletivos, lotes menores que 500m² e lotes de grande porte já com protocolos para desenvolvimento e novos projetos. O mapa X resume este conjunto de lotes e glebas consolidados, demonstrando, em seu negativo, todas as áreas passíveis de recepcionarem transformações urbanas.</p>
+				<p>No que se refere ao adensamento populacional previsto para o território do PIU ARCO PINHEIROS, a estimativa realizada para 30 anos partiu do cruzamento das Áreas de Transformação, Qualificação e Preservação com os lotes e glebas efetivamente transformáveis, ou seja, excluindo-se aqueles cujo uso, ocupação ou condições fundiárias condicionariam baixas probabilidades de transformação, sendo considerados consolidados. Foram incluídos nessa condição: edifícios residenciais verticais, conjuntos habitacionais, núcleos urbanizados, edifícios de uso misto, comércio e serviços verticais, comércio e serviços horizontais de porte significativo, áreas produtivas ativas, como indústrias, condomínios multissetorais, gerenciamento de dados e tecnologia, equipamentos urbanos, usos especiais e coletivos, lotes menores que 500m² e lotes de grande porte já com protocolos para desenvolvimento e novos projetos. O mapa abaixo resume este conjunto de lotes e glebas consolidados, demonstrando, em seu negativo, todas as áreas passíveis de recepcionarem transformações urbanas.</p>
 				<Imagem :dados="{
 					tipo: 'mapa',
 					titulo: 'Graus de consolidação por uso no perímetro do PIU Arco Pinheiros',
@@ -805,7 +854,7 @@
 					<li>Incremento populacional suportado pela oferta de emprego e serviços existentes na região;</li>
 					<li>Redução da Vulnerabilidade Social e qualificação da moradia;</li>
 					<li>Desenvolvimento Orientado pelo Transporte Sustentável – DOTS: adensamento populacional e construtivo junto aos meios de transporte público de média e alta capacidade;</li>
-					<li>Melhoria da acessibilidade interna externa ao perímetro e  conexão diferentes modos de transportes motorizados e não motorizados;</li>
+					<li>Melhoria da acessibilidade interna externa ao perímetro e conexão diferentes modos de transportes motorizados e não motorizados;</li>
 					<li>Promoção às atividades econômicas associadas à inovação e pesquisa;</li>
 					<li>Implantação de sistema de espaços públicos articulado aos terminais e estações de transporte, áreas verdes e locais de moradia e trabalho.</li>
 				</ol>
@@ -817,7 +866,7 @@
 
 			<section>
 				<h3 class="titulo" indent="2">Conselho Gestor de ZEIS</h3>
-				<p>Nos termos do art. 48 do Plano Diretor Estratégico (PDE), nas ZEIS 1 e 3, quando habitadas por população de baixa renda, deverão ser constituídos Conselhos Gestores compostos por representantes dos moradores, do Executivo e da sociedade civil organizada, que  participarão da formulação e implementação das intervenções a serem realizadas em suas áreas. Para isso, a instalação dos Conselhos Gestores deverá preceder a elaboração do plano de urbanização específico para a ZEIS 1, ou do projeto de intervenção específico para a ZEIS 3, ambos a serem aprovados pelos respectivos Conselhos Gestores nos termos dos artigos 48 a 52 do PDE.</p>
+				<p>Nos termos do art. 48 do Plano Diretor Estratégico (PDE), nas ZEIS 1 e 3, quando habitadas por população de baixa renda, deverão ser constituídos Conselhos Gestores compostos por representantes dos moradores, do Executivo e da sociedade civil organizada, que participarão da formulação e implementação das intervenções a serem realizadas em suas áreas. Para isso, a instalação dos Conselhos Gestores deverá preceder a elaboração do plano de urbanização específico para a ZEIS 1, ou do projeto de intervenção específico para a ZEIS 3, ambos a serem aprovados pelos respectivos Conselhos Gestores nos termos dos artigos 48 a 52 do PDE.</p>
 				<p>Desta forma, seja nas intervenções a serem realizadas na AEL ou aquelas que impactam os perímetros definidos como ZEIS 1 e ZEIS 3, mediante os Planos de Ação Integrada (PAI), a necessária instalação dos Conselhos Gestores deverá ser definida pelo Grupo Gestor da AIU ARCO PINHEIROS, garantindo assim a participação social previa a elaboração do plano de urbanização e projetos de intervenção requeridos pelo PDE.</p>
 			</section>
 			<Comments :attr="{id:1005, context:'Modelo de gestão democrática'}" v-if="estaConsulta.ativo == 1"></Comments>
@@ -832,6 +881,10 @@
 			<p>
 				<b>Leonardo Amaral Castro</b><br>
 				Diretoria de Desenvolvimento
+			</p>
+			<p>
+				<b>Marcelo Fonseca Ignatios</b><br>
+				Superintendência de Estruturação de projetos
 			</p>
 			<p>
 				<b>Modelagem urbanística</b><br>
@@ -878,7 +931,7 @@
 		<section ref="allComments">
 			<h2 v-show="commentsLoaded" class="titulo" indent="1">Contribuições</h2>
 			<CommentsLoader :attr="estaConsulta"></CommentsLoader>
-			<Comments v-if="commentsLoaded && estaConsulta.ativo == 1" :attr="{id:14, context:'Comentarios'}"></Comments> <!-- id do comentário, 14 seria o último -->
+			<Comments v-if="commentsLoaded && estaConsulta.ativo == 1" :attr="{id:1006, context:'Comentários'}"></Comments> <!-- id do comentário, 14 seria o último -->
 		</section>
 
 	</div>
@@ -960,56 +1013,69 @@ export default {
 				],
 				linhas: [
 					[
-						[ { data: 'Número de habitantes' } ],
-						[ { data: '13.265' } ],
-						[ { data: '3.155' } ],
-						[ { data: '3.780' } ],
-						[ { data: '16.224' } ],
-						[ { data: '8.363' } ],
-						[ { data: '7.667' } ],
-						[ { data: '5.071' } ],
-						[ { data: '17.582' } ],
-						[ { data: '5.923' } ],
-						[ { data: '81.030' } ]
+						[ { data: 'Área bruta do Setor (m²)' } ],
+						[ { data: '957.840', centro: true } ],
+						[ { data: '1.037.862', centro: true } ],
+						[ { data: '1.753.191', centro: true } ],
+						[ { data: '1.484.191', centro: true } ],
+						[ { data: '630.532', centro: true } ],
+						[ { data: '1.456.636', centro: true } ],
+						[ { data: '320.673', centro: true } ],
+						[ { data: '679.711', centro: true } ],
+						[ { data: '341.388', centro: true } ],
+						[ { data: '8.662.025', centro: true } ]
 					],
 					[
-						[ { data: 'População residente atual' } ],
-						[ { data: '3.634' } ],
-						[ { data: '19.245' } ],
-						[ { data: '6.266' } ],
-						[ { data: '11.407' } ],
-						[ { data: '1.844' } ],
-						[ { data: '3.249' } ],
-						[ { data: '9.988' } ],
-						[ { data: '0' } ],
-						[ { data: '1250' } ],
-						[ { data: '54.883' } ]
+						[ { data: 'Número de habitantes esperado (30 anos)' } ],
+						[ { data: '13.265', centro: true } ],
+						[ { data: '3.155', centro: true } ],
+						[ { data: '3.780', centro: true } ],
+						[ { data: '16.224', centro: true } ],
+						[ { data: '8.363', centro: true } ],
+						[ { data: '7.667', centro: true } ],
+						[ { data: '5.071', centro: true } ],
+						[ { data: '17.582', centro: true } ],
+						[ { data: '5.923', centro: true } ],
+						[ { data: '81.030', centro: true } ]
+					],
+					[
+						[ { data: 'População residente atual estimada' } ],
+						[ { data: '3.634', centro: true } ],
+						[ { data: '19.245', centro: true } ],
+						[ { data: '6.266', centro: true } ],
+						[ { data: '11.407', centro: true } ],
+						[ { data: '1.844', centro: true } ],
+						[ { data: '3.249', centro: true } ],
+						[ { data: '9.988', centro: true } ],
+						[ { data: '0', centro: true } ],
+						[ { data: '1250', centro: true } ],
+						[ { data: '54.883', centro: true } ]
 					],
 					[
 						[ { data: 'Denside resultante em 30 anos (hab/ha)' } ],
-						[ { data: '176' } ],
-						[ { data: '216' } ],
-						[ { data: '57' } ],
-						[ { data: '186' } ],
-						[ { data: '162' } ],
-						[ { data: '75' } ],
-						[ { data: '407' } ],
-						[ { data: '259' } ],
-						[ { data: '210' } ],
-						[ { data: '157' } ]
+						[ { data: '176', centro: true } ],
+						[ { data: '216', centro: true } ],
+						[ { data: '57', centro: true } ],
+						[ { data: '186', centro: true } ],
+						[ { data: '162', centro: true } ],
+						[ { data: '75', centro: true } ],
+						[ { data: '407', centro: true } ],
+						[ { data: '259', centro: true } ],
+						[ { data: '210', centro: true } ],
+						[ { data: '157', centro: true } ]
 					],
 					[
 						[ { data: 'Densidade atual (hab/ha)' } ],
-						[ { data: '38' } ],
-						[ { data: '185' } ],
-						[ { data: '36' } ],
-						[ { data: '77' } ],
-						[ { data: '29' } ],
-						[ { data: '22' } ],
-						[ { data: '249' } ],
-						[ { data: '0' } ],
-						[ { data: '37' } ],
-						[ { data: '63' } ]
+						[ { data: '38', centro: true } ],
+						[ { data: '185', centro: true } ],
+						[ { data: '36', centro: true } ],
+						[ { data: '77', centro: true } ],
+						[ { data: '29', centro: true } ],
+						[ { data: '22', centro: true } ],
+						[ { data: '249', centro: true } ],
+						[ { data: '0', centro: true } ],
+						[ { data: '37', centro: true } ],
+						[ { data: '63', centro: true } ]
 					]
 				]
 			},
@@ -1716,7 +1782,7 @@ export default {
 				]
 			},
 			tabela17: {
-				titulo: 'Parâmetros Urbanísticos da Orla Ferroviária e Fluvial da Macroárea de Estruturação Metropolitana (MEM) com destaque para as Áreas adotadas no PIU ARCO PINHEIROS',
+				titulo: 'Parâmetros Urbanísticos da Macroárea de Estruturação Metropolitana (MEM) com destaque para as Áreas adotadas no PIU ARCO PINHEIROS',
 				colunas: [
 					{ titulo: 'Área' },
 					{ titulo: 'Coeficiente de Aproveitamento' },
@@ -1725,98 +1791,98 @@ export default {
 				linhas: [
 					[
 						[ { data: 'Área de Transformação T1' } ],
-						[ { data: '6' } ],
-						[ { data: 'NA' } ]
+						[ { data: '6', centro: true } ],
+						[ { data: 'NA', centro: true } ]
 					],
 					[
-						[ { data: 'Área de Transformação T2', cor: true } ],
-						[ { data: '4', cor: true } ],
-						[ { data: 'NA', cor: true } ]
+						[ { data: 'Área de Transformação T2', destaque: true } ],
+						[ { data: '4', centro: true, destaque: true } ],
+						[ { data: 'NA', centro: true, destaque: true } ]
 					],
 					[
-						[ { data: 'Área de Transformação T2-A', cor: true } ],
-						[ { data: 'NA', cor: true } ],
-						[ { data: 'NA', cor: true } ]
+						[ { data: 'Área de Transformação T2-A', destaque: true } ],
+						[ { data: 'NA', centro: true, destaque: true } ],
+						[ { data: 'NA', centro: true, destaque: true } ]
 					],
 					[
-						[ { data: 'Área de Transformação T3', cor: true } ],
-						[ { data: '4', cor: true } ],
-						[ { data: '48', cor: true } ]
+						[ { data: 'Área de Transformação T3', destaque: true } ],
+						[ { data: '4', centro: true, destaque: true } ],
+						[ { data: '48', centro: true, destaque: true } ]
 					],
 					[
 						[ { data: 'Área de Transformação T4' } ],
-						[ { data: '4' } ],
-						[ { data: '28' } ]
+						[ { data: '4', centro: true } ],
+						[ { data: '28', centro: true } ]
 					],
 					[
-						[ { data: 'Área de Qualificação Q1', cor: true } ],
-						[ { data: '2', cor: true } ],
-						[ { data: '48', cor: true } ]
+						[ { data: 'Área de Qualificação Q1', destaque: true } ],
+						[ { data: '2', centro: true, destaque: true } ],
+						[ { data: '48', centro: true, destaque: true } ]
 					],
 					[
-						[ { data: 'Área de Qualificação Q2', cor: true } ],
-						[ { data: '2', cor: true } ],
-						[ { data: '28', cor: true } ]
+						[ { data: 'Área de Qualificação Q2', destaque: true } ],
+						[ { data: '2', centro: true, destaque: true } ],
+						[ { data: '28', centro: true, destaque: true } ]
 					],
 					[
-						[ { data: 'Área de Qualificação Q2-A', cor: true } ],
-						[ { data: 'NA', cor: true } ],
-						[ { data: '28', cor: true } ]
+						[ { data: 'Área de Qualificação Q2-A', destaque: true } ],
+						[ { data: 'NA', centro: true, destaque: true } ],
+						[ { data: '28', centro: true, destaque: true } ]
 					],
 					[
-						[ { data: 'Área de Qualificação Q3', cor: true } ],
-						[ { data: '1,5', cor: true } ],
-						[ { data: '28', cor: true } ]
+						[ { data: 'Área de Qualificação Q3', destaque: true } ],
+						[ { data: '1,5', centro: true, destaque: true } ],
+						[ { data: '28', centro: true, destaque: true } ]
 					],
 					[
 						[ { data: 'Área de Qualificação Q4' } ],
-						[ { data: '4' } ],
-						[ { data: '28' } ]
+						[ { data: '4', centro: true } ],
+						[ { data: '28', centro: true } ]
 					],
 					[
 						[ { data: 'Área de Qualificação Q5' } ],
-						[ { data: '4' } ],
-						[ { data: '48' } ]
+						[ { data: '4', centro: true } ],
+						[ { data: '48', centro: true } ]
 					],
 					[
 						[ { data: 'Área de Qualificação Q6' } ],
-						[ { data: '4' } ],
-						[ { data: '60' } ]
+						[ { data: '4', centro: true } ],
+						[ { data: '60', centro: true } ]
 					],
 					[
 						[ { data: 'Área de Qualificação Q7' } ],
-						[ { data: '4' } ],
-						[ { data: '60' } ]
+						[ { data: '4', centro: true } ],
+						[ { data: '60', centro: true } ]
 					],
 					[
 						[ { data: 'Área de Qualificação Q8' } ],
-						[ { data: '6' } ],
-						[ { data: 'NA' } ]
+						[ { data: '6', centro: true } ],
+						[ { data: 'NA', centro: true } ]
 					],
 					[
 						[ { data: 'Área de Preservação P1' } ],
-						[ { data: '2' } ],
-						[ { data: '10' } ]
+						[ { data: '2', centro: true } ],
+						[ { data: '10', centro: true } ]
 					],
 					[
 						[ { data: 'Área de Preservação P2' } ],
-						[ { data: '1' } ],
-						[ { data: '10' } ]
+						[ { data: '1', centro: true } ],
+						[ { data: '10', centro: true } ]
 					],
 					[
-						[ { data: 'Área de Preservação P3', cor: true } ],
-						[ { data: '1', cor: true } ],
-						[ { data: '15', cor: true } ]
+						[ { data: 'Área de Preservação P3', destaque: true } ],
+						[ { data: '1', centro: true, destaque: true } ],
+						[ { data: '15', centro: true, destaque: true } ]
 					],
 					[
-						[ { data: 'Área de Preservação P3-A', cor: true } ],
-						[ { data: 'NA', cor: true } ],
-						[ { data: '15', cor: true } ]
+						[ { data: 'Área de Preservação P3-A', destaque: true } ],
+						[ { data: 'NA', centro: true, destaque: true } ],
+						[ { data: '15', centro: true, destaque: true } ]
 					],
 					[
-						[ { data: 'Área de Preservação P4', cor: true } ],
-						[ { data: '0,5', cor: true } ],
-						[ { data: '28', cor: true } ]
+						[ { data: 'Área de Preservação P4', destaque: true } ],
+						[ { data: '0,5', centro: true, destaque: true } ],
+						[ { data: '28', centro: true, destaque: true } ]
 					]
 				]
 			}
@@ -1844,6 +1910,9 @@ export default {
 				left: 0,
 				behavior: 'smooth'
 			})
+		},
+		abrePath (pathStr) {
+			window.location.href = this.$store.getters.basePath + pathStr
 		}
 	},
 	mixins: [ consultasCommons ]
@@ -1856,9 +1925,50 @@ export default {
 @import '../consulta';
 
 div.ArcoPinheiros2 {
-	/* path -> \\spurbsp01\Gestao_Projetos\Projetos\Arco Pinheiros\01_PIU_ACP\02_Proposta_Preliminar\Apresentações\ACP_MAR_ABRIL_2019.pptx */
+	div.linkMapaInterativo {
+		position: fixed;
+		right: 2rem;
+		top: 2rem;
+		font-size: 1rem;
+		background-color: $vermelho;
+		padding: 0 1rem;
+		border-radius: 2rem;
+		box-shadow: 0 4px 4px $sombra-3;
+		cursor: pointer;
+		z-index: 1;
+		transition: all ease-in .1s;
+		a {
+			line-height: 3rem;
+			color: #FFF;
+			i {
+				line-height: inherit;
+			}
+		}
+		&:hover {
+			background-color: $vermelho-escuro;
+			a {
+				border: none;
+			}
+		}
+		@media screen and (max-width: 992px) {
+			a {
+				line-height: 2rem;
+				font-size: smaller;
+			}
+		}
+		@media screen and (max-width: 600px) {
+			top: 1rem;
+			right: 1rem;
+		}
+	}
 	a.button {
 		&, & > i { font-size: 1.2rem !important; }
+	}
+	figure:not([class]) {
+		width: -webkit-min-content;
+		width: -moz-min-content;
+		width: min-content;
+		max-width: calc(100% - 2rem);
 	}
 	ol.objetivos {
 		columns: 280px;
@@ -2192,12 +2302,13 @@ div.ArcoPinheiros2 {
 				flex-wrap: nowrap;
 				align-items: center;
 				img {
-					min-width: 100px;
+					max-width: 100px;
 					width: 100%;
 				}
 				p {
 					font-size: 1rem;
 					line-height: 1.2;
+					max-width: 130px;
 				}
 			}
 			.cima {
@@ -2379,7 +2490,8 @@ div.ArcoPinheiros2 {
 			background-color: #FFF;
 		}
 		& .fonte {
-			font-size: 0.8rem;
+			font-size: 0.75rem;
+			line-height: 1.2;
 			color: #777;
 			span { font-weight: bold; }
 		}

@@ -87,7 +87,7 @@ div.mem {
 		width:720px;
 	}
 	#g-acpmem-Prancheta_1_c_pia p {
-		font-family:'roboto',segoe ui,myriad pro,arial,helvetica,sans-serif;
+		font-family:'roboto','segoe ui','myriad pro',arial,helvetica,sans-serif;
 		font-weight:400;
 		font-size:12px;
 		line-height:14px;

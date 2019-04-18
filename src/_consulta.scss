@@ -16,19 +16,39 @@ a {
   color: $vermelho;
   border-bottom: 2px solid transparent;
   padding: 2px 0;
-
   &:hover {
     text-decoration: none !important;
     border-bottom-color: $vermelho-tr;
     cursor: pointer;
   }
-
   &:active {
     color: $vermelho-tr;
     background-color: $vermelho-tr;
     border-bottom-color: transparent;
   }
-
+  &.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0.8rem;
+    border-radius: 2px;
+    background-color: $vermelho;
+    color: #FFF !important;
+    border: 2px solid $sombra-4;
+    line-height: 1.2;
+    transition: all ease-out .2s;
+    i {
+      color: #FFF;
+      margin-left: 0.2rem;
+      cursor: pointer;
+    }
+    &:hover {
+      background-color: $vermelho-tr;
+    }
+    &:active {
+      border-color: $sombra-2;
+    }
+  }
 }
 
 p {
@@ -136,6 +156,38 @@ sup {
   font-size: 11px;
 }
 
+pre.formula {
+  font-family: $serifada;
+  font-style: italic;
+  font-size: $sizedesk;
+  letter-spacing: 0.1rem;
+  background-color: $cinza-3;
+  margin: 0 auto 1rem;
+  padding: 1rem 2rem;
+  max-width: 700px;
+  border-radius: 2px;
+  text-align: center;
+  white-space: nowrap;
+  overflow-x: auto;
+  * {
+    color: inherit;
+    font-family: inherit;
+  }
+  sub, sup {
+    font-size: inherit;
+    font-size: 80%;
+  }
+  &.declara, &.inline {
+    display: inline;
+    margin: 0;
+    padding: 2px 4px;
+  }
+  @media (max-width: 600px) {
+    font-size: $sizemob;
+    padding: 4px 8px;
+  }
+}
+
 a.ref {
   font-family: $grotesca;
   display: inline-block;
@@ -240,6 +292,21 @@ ul.pdfBox {
 
 }
 
+ol.notas,
+ul.notas {
+  background-color: $cinza-3;
+  border-radius: 2px;
+  padding: 1.6rem 2rem;
+  caption {
+    color: $cinza-1;
+    margin: 0 0 1rem;
+  }
+  li {
+    margin: 0 0.8rem;
+    font-size: smaller;
+  }
+}
+
 ul li,
 ol li {
   margin: 0 0 1rem 2rem;
@@ -253,6 +320,10 @@ li ul,
 p ol,
 p ul {
   margin: 1rem 0;
+  padding: 0;
+}
+
+li p {
   padding: 0;
 }
 
@@ -652,7 +723,6 @@ figure {
 
   &.ai2html {
     margin: 4rem auto;
-
     & > * { overflow-x: auto; }
   }
 

@@ -5,20 +5,22 @@
 				<img :src="dados.url" :alt="dados.caption" :title="dados.titulo">
 				<a :href="dados.url" target="_blank"><i class="icon-acessar_url icon"></i></a>
 			</div>
-			<div class="ai2htmlWrap"><slot name="ai2html"></slot></div>
 			<figcaption v-if="dados.caption">
 				{{ dados.caption }}
-				<span class="captionFonte"> (Fonte: {{ dados. fonte }})</span>
+				<span class="captionFonte" v-if="dados.fonte"> (Fonte: {{ dados. fonte }})</span>
 			</figcaption>
 			<div class="legenda">
-				<h1>{{ dados.titulo }}</h1>
+				<h1 v-if="dados.titulo">{{ dados.titulo }}</h1>
 				<ul>
 					<li v-for="(item, index) in dados.legenda" :key=index>
-						<div :style="{ backgroundColor: item.fundo }" :class="{ linha: item.linha }"><img v-if="item.simbolo" :src="item.simbolo"></div> {{ item.descricao }}
+						<div :style="{ backgroundColor: item.fundo, outlineColor: item.borda, outlineWidth: item.espessura + 'px' }" :class="{ linha: item.linha, pontilhado: item.pontilhado }"><img v-if="item.simbolo" :src="item.simbolo"><span v-if="item.char">{{ item.char }}</span></div> {{ item.descricao }}
 					</li>
 				</ul>
 			</div>
-			<div class="fonte">Fonte: <span>{{ dados.fonte }}</span></div>
+			<div class="fonte" v-if="dados.fonte">Fonte: <span>{{ dados.fonte }}</span></div>
+			<div class="extra">
+				<slot name="extra"></slot>
+			</div>
 		</figure>
 	</div>
 </template>
@@ -41,6 +43,7 @@ export default {
 				item: {
 					type: Object,
 					simbolo: String,
+					char: String,
 					linha: Boolean,
 					fundo: String,
 					descricao: String
@@ -100,7 +103,7 @@ div.Imagem {
 			}
 			&:hover a { opacity: 1; };
 		}
-		div.ai2htmlWrap, div.legenda, div.fonte { display: none; }
+		div.legenda, div.fonte { display: none; }
 	}
 	figure.mapa {
 		max-width: 992px;
@@ -119,11 +122,11 @@ div.Imagem {
 			h1 {
 				font-size: initial;
 				text-align: center;
-				margin: 0;
+				margin: 0 0 1rem 0;
 			}
 			ul {
 				list-style-type: none;
-				margin: 1rem 0 0 0;
+				margin: 0;
 				padding: 0;
 				text-align: center;
 				li {
@@ -133,17 +136,34 @@ div.Imagem {
 					border: 1px solid $sombra-4;
 					border-radius: 2px;
 					div {
-						display: inline-block;
+						display: inline-flex;
+						align-items: center;
+						justify-content: center;
 						min-width: 16px;
 						height: 16px;
 						overflow: hidden;
 						vertical-align: middle;
 						margin-right: 4px;
+						outline-style: solid;
+						outline-color: transparent;
+						outline-offset: -2px;
+						span {
+							font-weight: bold;
+						}
 						&.linha {
 							max-height: 2px;
 						}
+						&.pontilhado {
+							outline-style: dashed;
+						}
 					}
 				}
+			}
+		}
+		div.extra {
+			text-align: center;
+			& > * {
+				margin: 0 2rem 2rem;
 			}
 		}
 		@media screen and (max-width: 600px) {
@@ -163,6 +183,7 @@ div.Imagem {
 					}
 				}
 			}
+			div.extra > * { margin: 0 1rem 1rem; }
 		}
 		div.fonte {
 			margin: 0 0 1rem 0;
@@ -338,30 +359,6 @@ div.Imagem {
 			width: initial;
 			max-width: calc(100% - 2rem);
 			div.imgWrap img { width: 100%; max-width: unset; }
-		}
-	}
-	figure.ai2html {
-		padding: 0;
-		div.imgWrap, div.legenda, div.fonte { display: none; }
-		div.ai2htmlWrap {
-			display: block;
-			padding: 0;
-			& > *.ai2html { margin: 0; }
-		}
-		@media screen and (max-width: 600px) {
-			padding: 0;
-			div.ai2htmlWrap { overflow-x: auto; }
-		}
-		figcaption {
-			margin: 0;
-			padding: 8px 0;
-			color: $cinza-1;
-			border-bottom: 1px solid $sombra-4;
-			span.captionFonte {
-				display: inline-block;
-				font-size: inherit;
-				color: $cinza-2;
-			}
 		}
 	}
 	@media print {

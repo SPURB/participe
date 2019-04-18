@@ -15,8 +15,7 @@
 		"government",
 		"sao-paulo",
 		"prefeitura",
-		"vuejs",
-		"pwa"
+		"vuejs"
 	],
 	"homepage": "https://participe.gestaourbana.prefeitura.sp.gov.br/",
 	"bugs": "https://github.com/SPURB/participe/issues",
@@ -38,7 +37,6 @@
 		"axios": "0.18.0",
 		"es6-promise": "4.2.5",
 		"ol": "5.3.1",
-		"register-service-worker": "1.5.2",
 		"vee-validate": "2.1.0-beta.11",
 		"vue": "2.5.17",
 		"vue-axios": "2.1.4",
@@ -48,7 +46,6 @@
 	"devDependencies": {
 		"@vue/cli-plugin-babel": "^3.5.5",
 		"@vue/cli-plugin-eslint": "3.0.5",
-		"@vue/cli-plugin-pwa": "^3.0.5",
 		"@vue/cli-plugin-unit-mocha": "3.0.5",
 		"@vue/cli-service": "^3.5.3",
 		"@vue/eslint-config-standard": "3.0.5",

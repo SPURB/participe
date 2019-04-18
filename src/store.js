@@ -19,8 +19,6 @@ const store = new Vuex.Store({
 			error: false,
 			success: false
 		},
-		isAdmin: false,
-		infoAdmin: undefined,
 		fetching: true,
 		routeId: undefined,
 		toPrint: false

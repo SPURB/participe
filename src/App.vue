@@ -13,11 +13,7 @@
 	<router-view name="PortalPrefeitura"></router-view>
 	<router-view name="GovernoAberto"></router-view>
 	<router-view name="ConcessaoMartinelli"></router-view>
-
-	<!-- service worker user action-->
-	<!-- <div id="btn-sw-update" v-if="updateExists">
-		<a @click="refreshApp">Atualização disponível. Clique para atualizar</a>
-	</div> -->
+	<router-view name="ArcoPinheiros2"></router-view>
 
 	<Modal v-if="modalState.error">
 		<h3 slot="header" class="modal-error">Erro!</h3>
@@ -42,13 +38,6 @@ import Modal from '@/components/Modal.vue'
 
 export default {
 	name: 'Participe',
-	data () {
-		return {
-			refreshing: false,
-			registration: null,
-			updateExists: false
-		}
-	},
 	components: {
 		Cabecalho,
 		MenuLateral,
@@ -68,36 +57,10 @@ export default {
 				app.$store.dispatch('imprime')
 			}
 		})
-
-		// service worker eventListener
-		// document.addEventListener(
-		// 	'swUpdated', this.showRefreshUI, { once: true }
-		// )
-
-		navigator.serviceWorker.addEventListener(
-			'controllerchange', () => {
-				if (this.refreshing) return
-				this.refreshing = true
-				// window.location.reload()
-			}
-		)
 	},
 	mounted () { document.getElementById('carregando').classList.add('some') },
 	updated () { this.$refs.interruptor.style.height = this.$el.clientHeight + 'px' },
 	methods: {
-		// service worker UI Controller
-		/*
-		showRefreshUI (e) {
-			this.registration = e.detail
-			this.updateExists = true
-		},
-		refreshApp () {
-			this.updateExists = false
-			if (!this.registration || !this.registration.waiting) { return }
-			this.registration.waiting.postMessage('skipWaiting')
-		},
-		*/
-
 		setModal (typeOfmodal) {
 			this.$store.commit('COMMENT_MODAL_STATUS', typeOfmodal)
 		},

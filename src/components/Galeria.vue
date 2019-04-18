@@ -13,7 +13,7 @@
 						<img :src="image.icon">
 						<span :class="{ noIcon:!image.icon }">{{ image.title }}</span>
 					</h3>
-					<div class="placeholder" v-if="loading" :style="{width: gallery_attrs.width + 'px'}" ></div>
+					<div class="placeholder" v-if="loading" :style="{ maxWidth: gallery_attrs.width + 'px'}" ></div>
 					<img :src="image.url" :width="gallery_attrs.width">
 					<p class="legenda" v-if="image.legenda"> {{ image.legenda }} </p>
 				</figure>
@@ -122,12 +122,12 @@ export default {
 	border: 1px solid #BDBDBD;
 	border-radius: 2px;
 	overflow: hidden;
-	z-index: 1;
 
 	div.gall {
 		background: #F5F5F5;
 		display: flex;
 		position: relative;
+		z-index: 2;
 
 		& > a {
 			position: absolute;
@@ -139,7 +139,6 @@ export default {
 			color: #FFF;
 			opacity: 0;
 			transition: all ease-in .1s;
-			z-index: 1;
 
 			i { font-size: calc(24px + 2vmin); };
 
@@ -170,11 +169,12 @@ export default {
 
 		figure.item {
 			align-self: flex-start;
-			margin: 0;
+			margin: -2px;
 			padding: 0;
-			z-index: 0;
 
-			img { max-width: max-content; };
+			img {
+				width: 100%;
+			};
 		};
 
 		p.legenda {
@@ -189,7 +189,6 @@ export default {
 			font-family: inherit;
 			font-size: smaller;
 			background: #FFF;
-			z-index: 3;
 		};
 
 		div.placeholder {

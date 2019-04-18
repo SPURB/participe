@@ -38,6 +38,7 @@
 				<p class="g-pstyle0">DO SUL</p>
 			</div>
 		</div>
+		<div class="legenda">Arco Pinheiros, Setor Orla Ferroviária e Fluvial da MEM – Macroárea de Estruturação Metropolitana</div>
 	</div>
 </template>
 

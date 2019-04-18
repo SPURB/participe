@@ -12,6 +12,7 @@ const VilaLeopoldina2 = () => import(/* webpackChunkName: "vilaleopoldina2" */ '
 const PortalPrefeitura = () => import(/* webpackChunkName: "portalprefeitura" */ '@/views/PortalPrefeitura')
 const GovernoAberto = () => import(/* webpackChunkName: "governoaberto" */ '@/views/GovernoAberto')
 const ConcessaoMartinelli = () => import(/* webpackChunkName: "martinelli" */ '@/views/ConcessaoMartinelli')
+const ArcoPinheiros2 = () => import(/* webpackChunkName: "arcopinheiros2" */ '@/views/ArcoPinheiros2')
 
 Vue.use(Router)
 
@@ -97,6 +98,14 @@ export default new Router({
 			components: { ConcessaoMartinelli },
 			meta: {
 				id: 40
+			}
+		},
+		{
+			path: '/arco-pinheiros-2',
+			name: 'ArcoPinheiros2',
+			components: { ArcoPinheiros2 },
+			meta: {
+				id: 41
 			}
 		}
 		/*

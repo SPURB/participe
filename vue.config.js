@@ -24,19 +24,12 @@ module.exports = {
 				'/vila-leopoldina-projeto-de-lei',
 				'/portal-prefeitura',
 				'/governo-aberto',
-				'/concessao-martinelli'
+				'/concessao-martinelli',
+				'/arco-pinheiros-2'
 			],
 			useRenderEvent: true,
 			headless: true,
 			onlyProduction: true
 		}
-	},
-	pwa: {
-		themeColor: '#EB5757'
-		// ,workboxPluginMode: 'InjectManifest',
-		// workboxOptions: {
-		// 	swSrc: './src/sw.js',
-		// 	swDest: 'service-worker.js'
-		// }
 	}
 }

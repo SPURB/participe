@@ -1,5 +1,5 @@
 <template>
-	<div class="Tabela" :class="{ larga: dados.colunas.length > 6 }">
+	<div class="Tabela" :class="{ larga: dados.colunas.length > 6, estreita: dados.colunas.length <= 3 }">
 		<table :class="{ listrada: dados.tabelaListrada }">
 			<caption v-if="dados.titulo">{{ dados.titulo }}</caption>
 			<thead>
@@ -10,7 +10,7 @@
 			<tbody>
 				<tr v-for="linha in dados.linhas">
 					<template v-for="celula in linha">
-						<td :data-coluna="dados.colunas[col(celula, linha)].titulo" :class="{ destaque: celula[0].destaque, cor: celula[0].cor, vazio: celula[0].vazio }" :colspan="celula[0].nCol" :rowspan="celula[0].nLin">
+						<td :data-coluna="dados.colunas[col(celula, linha)].titulo" :class="{ destaque: celula[0].destaque, cor: celula[0].cor, vazio: celula[0].vazio, centralizado: celula[0].centro }" :colspan="celula[0].nCol" :rowspan="celula[0].nLin">
 							<span>{{ celula[0].data }}<sup class="nota" v-if="celula[1]">{{ numeraNotas(celula[1].ref) }}</sup></span>
 						</td>
 					</template>
@@ -172,7 +172,7 @@ div.Tabela {
 		caption {
 			font-size: initial;
 			font-weight: bold;
-			padding: 8px 0;
+			padding: 0 0 8px 0;
 			background-color: $cinza-3;
 		}
 
@@ -193,6 +193,7 @@ div.Tabela {
 			&.destaque span { font-weight: bold; }
 			&.cor { background-color: $vermelho-tr; }
 			&.vazio { background-color: $cinza-3; }
+			&.centralizado { text-align: center; }
 		}
 
 		th { background-color: $sombra-4; }
@@ -212,6 +213,7 @@ div.Tabela {
 			background-color: transparent;
 
 			th, td {
+				width: calc(100vw - 3rem);
 				&.cor {
 					background-color: transparent;
 					span {
@@ -253,6 +255,7 @@ div.Tabela {
 					display: flex;
 					border: none !important;
 					padding: 4px 0 !important;
+					&.vazio { display: none; }
 
 					&:not(:first-child) { border-top: 1px solid $cinza-2 !important; }
 
@@ -266,6 +269,7 @@ div.Tabela {
 						vertical-align: top;
 						hyphens: auto;
 						padding-right: 4px;
+						text-align: left;
 					}
 				}
 			}
@@ -322,12 +326,21 @@ div.Tabela {
 	}
 	&.larga {
 		max-width: calc(100% - 400px - 4rem);
+		width: -webkit-min-content;
+		width: -moz-min-content;
 		width: min-content;
 		th, td { min-width: 6rem; }
-		@media (max-width: 600px) {
+		@media (max-width: 992px) {
 			min-width: 100%;
 			width: unset;
 		}
+	}
+	&.estreita {
+		max-width: unset;
+		width: -webkit-min-content;
+		width: -moz-min-content;
+		width: min-content;
+		th, td { min-width: 120px; }
 	}
 }
 </style>

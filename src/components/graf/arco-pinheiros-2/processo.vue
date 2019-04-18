@@ -183,7 +183,7 @@ div.processo {
 		width:320px;
 	}
 	#g-320-Prancheta_1 p {
-		font-family:'roboto',segoe ui,myriad pro,arial,helvetica,sans-serif;
+		font-family:'roboto','segoe ui','myriad pro',arial,helvetica,sans-serif;
 		font-weight:400;
 		font-size:12px;
 		line-height:14px;

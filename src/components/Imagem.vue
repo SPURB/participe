@@ -55,10 +55,10 @@ export default {
 	},
 	methods: {
 		montaLink () {
-			if (this.$props.dados.externo && this.$props.dados.externo != '' && this.$props.dados.externo != ' ') {
+			if (this.$props.dados.externo && this.$props.dados.externo !== '' && this.$props.dados.externo !== ' ') {
 				let app = this
 				this.$el.classList.add('link')
-				this.$el.firstElementChild.addEventListener('click', function(event) {
+				this.$el.firstElementChild.addEventListener('click', function (event) {
 					if (event.target.nodeName !== 'I') {
 						window.location.href = app.$store.getters.basePath + app.$props.dados.externo
 					}

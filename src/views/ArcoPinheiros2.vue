@@ -394,7 +394,7 @@
 				<p>Além disso, o Art. 188 do PDE demarca dentro do Arco Pinheiros a AIU Parque Tecnológico do Jaguaré e exige sua integração com o PIU ARCO PINHEIROS. Como resposta a essa premissa, o PIU incorpora o perímetro da AIU Parque Tecnológico do Jaguaré à AIU ARCO PINHEIROS, mantendo os objetivos dispostos no Art. 187 do PDE e compreendendo a necessidade de se compartilhar recursos e intervenções na construção de um projeto coeso para todo o perímetro do Arco Pinheiros.</p>
 				<p>Duas áreas permanecerão fora da AIU ARCO PINHEIROS: a Zona de Ocupação Especial (ZOE) Cidade Universitária e o recorte do PIU Vila Leopoldina-Villa Lobos (PIU-VLVL).</p>
 				<p>No primeiro caso, diversas diretrizes previstas no Plano Diretor da Cidade Universitária “Armando Salles Oliveira” de 2013, são compartilhadas pelo PIU, como a preservação da qualidade ambiental da área e a integração com os sistemas de transporte público de alta capacidade no entorno. Considerando também a demanda por regularização municipal das construções existentes no Campus, o PIU propõe adotar para a ZOE os parâmetros de uso e ocupação do solo indicados no Plano Diretor da Cidade Universitária. Como se trata de uma área extensa, com governança própria, vasto potencial construtivo, o PIU ARCO PINHEIROS opta por não incluí-la na AIU ARCO PINHEIROS, apesar de apresentar propostas de conexão com o entorno.</p>
-				<p>No segundo caso, o PIU-VLVL deriva de Manifestação de Interesse Privado (MIP) protocolada em 2016, cujo desenvolvimento encontra-se em estágio avançado, incluindo processo de diálogo com a sociedade. A AIU Vila Leopoldina-Villa Lobos prevê um Programa de Interesse Público e um conjunto de intervenções e parâmetros de adensamento coerente com as disposições da AIU ARCO PINHEIROS. O conteúdo específico do PIU e as diversas etapas de processo participativo podem ser acessados <a href="https://gestaourbana.prefeitura.sp.gov.br/projeto-de-intervencao-urbana-vila-leopoldina-villa-lobos/)">aqui</a>.</p>
+				<p>No segundo caso, o PIU-VLVL deriva de Manifestação de Interesse Privado (MIP) protocolada em 2016, cujo desenvolvimento encontra-se em estágio avançado, incluindo processo de diálogo com a sociedade. A AIU Vila Leopoldina-Villa Lobos prevê um Programa de Interesse Público e um conjunto de intervenções e parâmetros de adensamento coerente com as disposições da AIU ARCO PINHEIROS. O conteúdo específico do PIU e as diversas etapas de processo participativo podem ser acessados <a href="https://gestaourbana.prefeitura.sp.gov.br/projeto-de-intervencao-urbana-vila-leopoldina-villa-lobos/">aqui</a>.</p>
 				<p>Além disso, a criação da AIU Vila Leopoldina-Villa Lobos justifica-se em função das estratégias de venda de potencial construtivo adicional e sua articulação com o atendimento habitacional de interesse social e demais propostas de qualificação urbanísticas previstas para o perímetro. Cabe também ressaltar que, do ponto de vista das estratégias de implantação do programa de intervenções previsto para o Arco Pinheiros, o desenvolvimento urbano e imobiliário de um recorte menor, como o proposto no PIU-VLVL, é encarado como uma forma de impulsionar a transformação prevista no vasto território do Arco Pinheiros.</p>
 			</section>
 
@@ -530,7 +530,7 @@
 							{ simbolo: imgSrc('arquivos/arco-pinheiros-2/mapas/legendas/mapa6_icone7.png'), linha: false, fundo: '', borda: '', descricao: 'Conexões promovidas' },
 							{ simbolo: '', char: 'A1', linha: false, fundo: '', borda: '', descricao: 'Ceagesp Setor Oeste' },
 							{ simbolo: '', char: 'A2', linha: false, fundo: '', borda: '', descricao: 'Ceagesp Setor Central' },
-							{ simbolo: '', char: 'A3', linha: false, fundo: '', borda: '', descricao: 'Ceagesp Setor Oeste' },
+							{ simbolo: '', char: 'A3', linha: false, fundo: '', borda: '', descricao: 'Ceagesp Setor Leste' },
 							{ simbolo: '', char: 'A4', linha: false, fundo: '', borda: '', descricao: 'Ceagesp Setor Gastão Vidigal' },
 							{ simbolo: '', char: 'A5', linha: false, fundo: '', borda: '', descricao: 'Ceagesp Setor ZEIS-5' },
 							{ simbolo: '', char: 'A6', linha: false, fundo: '', borda: '', descricao: 'Núcleo do Parque Tecnológico' },
@@ -554,7 +554,7 @@
 					}">
 						<template slot="extra">
 							<a :href="this.$store.getters.basePath + 'mapas/piu-arco-pinheiros-2/#4'" class="button">Acesse o mapa interativo <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
-						</template>						
+						</template>
 					</Imagem>
 					<Imagem :dados="{
 						tipo: 'w992',
@@ -845,7 +845,7 @@
 
 			<section>
 				<h3 class="titulo" indent="2">Grupo Gestor da AIU ARCO PINHEIROS</h3>
-				<p>O Grupo Gestor deverá ter composição paritária entre representantes do Poder Público e sociedade civil Com o intuito de integração das ações da Prefeitura, os integrantes do Poder Público devem ser indicados entre aqueles que já compõem o colegiado dos Núcleos Regionais e Planejamento de modo a permitir uma troca de informações e ações estratégicas.</p>
+				<p>O Grupo Gestor deverá ter composição paritária entre representantes do Poder Público e sociedade civil. Com o intuito de integração das ações da Prefeitura, os integrantes do Poder Público devem ser indicados entre aqueles que já compõem o colegiado dos Núcleos Regionais e Planejamento de modo a permitir uma troca de informações e ações estratégicas.</p>
 				<p>Os representantes da população dos distritos devem ser escolhidos entre os integrantes do Conselho Participativo Municipal, que foram eleitos. Conselho Participativo Municipal é um órgão autônomo da sociedade civil com pelo menos 5 representantes eleitos de cada distrito que se reúnem mensalmente para discutir e acompanhar as políticas públicas municipais na sua execução territorial, fazendo o controle social das diversas leis e programas municipais das subprefeituras.</p>
 				<p>Os demais representantes da sociedade podem ser escolhidos entre alguns dos participantes de outro colegiado eleito, como o CMPU – Conselho Municipal de Política Urbana, vinculado à SMDU – Secretaria Municipal de Desenvolvimento Urbano.</p>
 				<p>A área de abrangência do PIU ARCO PINHEIROS incide porções dos territórios das subprefeituras da Lapa e do Butantã, respectivamente sobre os distritos Vila Leopoldina, Jaguaré, Butantã e Rio Pequeno.</p>
@@ -854,8 +854,8 @@
 					<li>Incremento populacional suportado pela oferta de emprego e serviços existentes na região;</li>
 					<li>Redução da Vulnerabilidade Social e qualificação da moradia;</li>
 					<li>Desenvolvimento Orientado pelo Transporte Sustentável – DOTS: adensamento populacional e construtivo junto aos meios de transporte público de média e alta capacidade;</li>
-					<li>Melhoria da acessibilidade interna externa ao perímetro e conexão diferentes modos de transportes motorizados e não motorizados;</li>
-					<li>Promoção às atividades econômicas associadas à inovação e pesquisa;</li>
+					<li>Melhoria da acessibilidade interna e externa ao perímetro e conexão diferentes modos de transportes motorizados e não motorizados;</li>
+					<li>Promoção de atividades econômicas associadas à inovação e pesquisa;</li>
 					<li>Implantação de sistema de espaços públicos articulado aos terminais e estações de transporte, áreas verdes e locais de moradia e trabalho.</li>
 				</ol>
 				<p>A partir desses temas, sugere-se uma composição, a saber:</p>
@@ -1026,19 +1026,6 @@ export default {
 						[ { data: '8.662.025', centro: true } ]
 					],
 					[
-						[ { data: 'Número de habitantes esperado (30 anos)' } ],
-						[ { data: '13.265', centro: true } ],
-						[ { data: '3.155', centro: true } ],
-						[ { data: '3.780', centro: true } ],
-						[ { data: '16.224', centro: true } ],
-						[ { data: '8.363', centro: true } ],
-						[ { data: '7.667', centro: true } ],
-						[ { data: '5.071', centro: true } ],
-						[ { data: '17.582', centro: true } ],
-						[ { data: '5.923', centro: true } ],
-						[ { data: '81.030', centro: true } ]
-					],
-					[
 						[ { data: 'População residente atual estimada' } ],
 						[ { data: '3.634', centro: true } ],
 						[ { data: '19.245', centro: true } ],
@@ -1052,17 +1039,17 @@ export default {
 						[ { data: '54.883', centro: true } ]
 					],
 					[
-						[ { data: 'Denside resultante em 30 anos (hab/ha)' } ],
-						[ { data: '176', centro: true } ],
-						[ { data: '216', centro: true } ],
-						[ { data: '57', centro: true } ],
-						[ { data: '186', centro: true } ],
-						[ { data: '162', centro: true } ],
-						[ { data: '75', centro: true } ],
-						[ { data: '407', centro: true } ],
-						[ { data: '259', centro: true } ],
-						[ { data: '210', centro: true } ],
-						[ { data: '157', centro: true } ]
+						[ { data: 'Número adicional de habitantes esperado (30 anos)' } ],
+						[ { data: '13.265', centro: true } ],
+						[ { data: '3.155', centro: true } ],
+						[ { data: '3.780', centro: true } ],
+						[ { data: '16.224', centro: true } ],
+						[ { data: '8.363', centro: true } ],
+						[ { data: '7.667', centro: true } ],
+						[ { data: '5.071', centro: true } ],
+						[ { data: '17.582', centro: true } ],
+						[ { data: '5.923', centro: true } ],
+						[ { data: '81.030', centro: true } ]
 					],
 					[
 						[ { data: 'Densidade atual (hab/ha)' } ],
@@ -1076,6 +1063,19 @@ export default {
 						[ { data: '0', centro: true } ],
 						[ { data: '37', centro: true } ],
 						[ { data: '63', centro: true } ]
+					],
+					[
+						[ { data: 'Denside resultante em 30 anos (hab/ha)' } ],
+						[ { data: '176', centro: true } ],
+						[ { data: '216', centro: true } ],
+						[ { data: '57', centro: true } ],
+						[ { data: '186', centro: true } ],
+						[ { data: '162', centro: true } ],
+						[ { data: '75', centro: true } ],
+						[ { data: '407', centro: true } ],
+						[ { data: '259', centro: true } ],
+						[ { data: '210', centro: true } ],
+						[ { data: '157', centro: true } ]
 					]
 				]
 			},
@@ -1695,21 +1695,21 @@ export default {
 						[ { data: '793,931,886' } ]
 					],
 					[
-						[ { data: 'Hasta 1' } ],
+						[ { data: 'Leilão 1' } ],
 						[ { data: '334,677' } ],
 						[ { data: '266,376' } ],
 						[ { data: '...' } ],
 						[ { data: '...' } ]
 					],
 					[
-						[ { data: 'Hasta 2 (C01)' } ],
+						[ { data: 'Leilão 2 (C01)' } ],
 						[ { data: '140,556' } ],
 						[ { data: '93,805' } ],
 						[ { data: '...' } ],
 						[ { data: '...' } ]
 					],
 					[
-						[ { data: 'Hasta 2 (C02)' } ],
+						[ { data: 'Leilão 2 (C02)' } ],
 						[ { data: '80,434' } ],
 						[ { data: '53,680' } ],
 						[ { data: '...' } ],

@@ -6,8 +6,8 @@
 			<div id="g-caracterizacao-Prancheta_1" class="g-artboard" data-aspect-ratio="1.321" data-min-width="700">
 				<img id="g-caracterizacao-Prancheta_1-img" class="g-aiImg" :src="imgSrc('arquivos/arco-pinheiros-2/ai2html/caracterizacao.png')"/>
 				<div id="g-ai0-1" class="g-Camada_1 g-aiAbs" style="top:2.4528%;left:2.8574%;width:40.5714%;">
-					<p><span class="g-cstyle0">48.300</span><span class="g-cstyle1"> hab</span> (atualização 2017 + novo perímetro)</p>
-					<p><span class="g-cstyle0">32</span><span class="g-cstyle1"> hab/ha</span> (MSP: <span class="g-cstyle2">74</span> hab/ha)</p>
+					<p><span class="g-cstyle0">54.883</span><span class="g-cstyle1"> hab</span> (atualização 2017 + novo perímetro)</p>
+					<p><span class="g-cstyle0">36</span><span class="g-cstyle1"> hab/ha</span> (MSP: <span class="g-cstyle2">74</span> hab/ha)</p>
 				</div>
 				<div id="g-ai0-2" class="g-Camada_1 g-aiAbs g-aiPointText" style="top:13.6804%;margin-top:-5.5px;left:94.2626%;margin-left:-20.5px;width:41px;">
 					<p class="g-pstyle0">LAPA</p>

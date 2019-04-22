@@ -299,11 +299,14 @@ ul.notas {
   padding: 1.6rem 2rem;
   caption {
     color: $cinza-1;
-    margin: 0 0 1rem;
+    margin: 0 0 0.5rem;
   }
   li {
-    margin: 0 0.8rem;
+    margin: 0.5rem 0.8rem 0;
     font-size: smaller;
+    &:first-child {
+      margin-top: 0;
+    }
   }
 }
 

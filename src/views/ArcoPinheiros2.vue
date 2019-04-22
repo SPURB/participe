@@ -707,7 +707,7 @@
 					],
 					fonte: 'SP-Urbanismo, 2018'
 				}"></Imagem>
-				<p>O resultado do cálculo de adensamento demonstrou que houve acréscimo de <b>81.030 pessoas</b> em todo o perímetro do PIU ARCO PINHEIROS, resultando na ampliação da densidade populacional bruta de <b>63 hab/ha</b> para <b>157 hab/ha</b> em 30 anos. Para compreender melhor a distribuição desse acréscimo populacional pelo território, os cálculos foram realizados por setores, cada um representando unidades com características homogêneas. A eventual transformação da Ceagesp, por exemplo, promoverá um adensamento considerável, passando a ter uma densidade similar a do distrito da Bela Vista hoje. Já os setores Vila Leopoldina e Centralidade Jaguaré, passarão a ter densidades similares ao distrito da Santa Cecília. O setor Gastão Vidigal, por sua vez, passará a ter densidade similar ao distrito de Perdizes, enquanto o setor Mofarrej passará a ter densidade similares ao distrito do Jabaquara. Essa ampliação da oferta de moradia em setores específicos do ACP reitera a estratégia do plano de incentivar a conformação de bairros de uso misto em consonância com as novas centralidades previstas.</p>
+				<p>O resultado do cálculo de adensamento demonstrou que haverá acréscimo aproximado de <b>81.030 pessoas</b> em todo o perímetro do PIU ARCO PINHEIROS, resultando na ampliação da densidade populacional bruta de <b>63 hab/ha</b> para <b>157 hab/ha</b> em 30 anos. Para compreender melhor a distribuição desse acréscimo populacional pelo território, os cálculos foram realizados por setores, cada um representando unidades com características homogêneas. A eventual transformação da Ceagesp, por exemplo, promoverá um adensamento considerável, passando a ter uma densidade similar a do distrito da Bela Vista hoje. Já os setores Vila Leopoldina e Centralidade Jaguaré, passarão a ter densidades similares ao distrito da Santa Cecília. O setor Gastão Vidigal, por sua vez, passará a ter densidade similar ao distrito de Perdizes, enquanto o setor Mofarrej passará a ter densidade similar ao distrito do Jabaquara. Essa ampliação da oferta de moradia em setores específicos do ACP reitera a estratégia do plano de incentivar a conformação de bairros de uso misto em consonância com as novas centralidades previstas.</p>
 				<Tabela :dados="tabela01"></Tabela>
 				<p>Para garantir qualidade ambiental ao território, para que suporte esse futuro adensamento, foram considerados os problemas levantados pelo Diagnóstico Ambiental do PIU ARCO PINHEIROS, com destaque para a reduzida disponibilidade de áreas verdes, áreas sujeitas a inundações, elevada impermeabilização do solo, presença de córregos contaminados por esgoto doméstico, invasão de Áreas de Preservação Permanente (APP), ausência de conexão ambiental entre áreas verdes, presença de ilha de calor no território e a necessidade de instalação de equipamentos públicos para atendimento à população existente e futura. A partir desse diagnóstico foram definidas diretrizes que buscam simultaneamente a qualificação dos espaços públicos e a promoção do equilíbrio ambiental. São elas:</p>
 				<ol class="decimais">
@@ -842,13 +842,31 @@
 			<p>A participação popular é de grande importância no processo de planejamento urbano da cidade sendo garantida pelo PDE e pelo Decreto que dispõe sobre o processo de elaboração do PIU. O PDE define as instâncias e instrumentos de participação popular e controle social garantindo o papel da sociedade civil no planejamento e na gestão da política de desenvolvimento urbano da cidade.</p>
 			<p>Ademais, a participação social constitui requisito de validade jurídica dos planos urbanísticos, daí a necessidade de que seja inteligentemente formulada, atenta à cultura local, aos espaços constituídos e aos movimentos organizados, a fim de colher contribuições efetivas dos atores engajados.</p>
 			<p>Desta forma, através de representantes dos diferentes segmentos da população de forma direta ou por intermédio de associações representativas será possível acompanhar e monitorar o andamento dos projetos, a realização de investimentos públicos, a elaboração, implantação e avaliação de planos, programas e projetos de desenvolvimento relacionados ao PIU ARCO PINHEIROS.</p>
+			<p>A implantação das intervenções previstas para a AIU ARCO PINHEIROS será realizada por três instâncias de gerenciamento e deliberação: a Coordenação Geral, o Grupo Gestor e os Comitês Locais, tendo como base os Programas de Ação Integrada (PAI).</p>
+			<figure>
+				<GestaoDemocratica></GestaoDemocratica>
+			</figure>
+
+			<section>
+				<h3 class="titulo" indent="2">PAI – Programa de Ação Integrada e Comitê Local</h3>
+				<p>O Programa de Intervenções elaborado no PIU ARCO PINHEIROS não deve ser implantado de forma atomizada, ou seja, cada ação deverá fazer parte de um Programa de Ação Integrada (PAI), responsável por agrupar as intervenções das secretarias municipais.</p>
+				<p>Com a arrecadação de recursos ou a partir de demandas da administração ou da sociedade, a Coordenação Geral da AIU deverá identificar, dentre as ações do Programa de Intervenções, aquelas a serem implantadas e priorizadas. Assim, as propostas de PAI deverão ser submetidas ao Grupo Gestor da AIU ARCO PINHEIROS que poderá deliberar pela sua implementação.</p>
+				<p>Cada PAI será acompanhado de um <b>Comitê Local</b> do Grupo Gestor, com a participação de agentes comprometidos com o tema específico. Este Comitê Local deve ser definido a partir da reunião do Grupo Gestor da AIU ARCO PINHEIROS, como um grupo de apoio, composto por membros do Grupo Gestor e/ou outras pessoas convidadas para colaborar, da administração pública ou não.</p>
+			</section>
+
+			<section>
+				<h3 class="titulo" indent="2">Coordenação geral da AIU ARCO PINHEIROS</h3>
+				<p>A SP-Urbanismo, a partir da criação de um <b>Núcleo Técnico de Gestão e Planejamento</b>, deverá coordenar, em nome da Prefeitura Municipal, a implantação da AIU ARCO PINHEIROS, ficando autorizada a praticar todos os atos necessários à sua realização, promovendo a interação entre órgãos da administração direta e indireta, com outras esferas de governo e com a sociedade civil para fins concretizar os objetivos gerais e diretrizes específicas do PIU.</p>
+				<p>Caberá ao Núcleo Técnico de Gestão e Planejamento impulsionar as ações de efetiva implantação do projeto urbano, garantindo a integração da gestão operacional, financeira, urbanística, social e de planejamento e o controle da transformação urbana por intermédio do acompanhamento das políticas públicas e do monitoramento dos indexadores da transformação territorial.</p>
+				<p>A Diretoria de Gestão da SP-Urbanismo está organizada em Gerências e Assessorias que poderão atender à coordenação da implantação do PIU ARCO PINHEIROS e das ações da AIU.</p>
+			</section>
 
 			<section>
 				<h3 class="titulo" indent="2">Grupo Gestor da AIU ARCO PINHEIROS</h3>
-				<p>O Grupo Gestor deverá ter composição paritária entre representantes do Poder Público e sociedade civil. Com o intuito de integração das ações da Prefeitura, os integrantes do Poder Público devem ser indicados entre aqueles que já compõem o colegiado dos Núcleos Regionais e Planejamento de modo a permitir uma troca de informações e ações estratégicas.</p>
-				<p>Os representantes da população dos distritos devem ser escolhidos entre os integrantes do Conselho Participativo Municipal, que foram eleitos. Conselho Participativo Municipal é um órgão autônomo da sociedade civil com pelo menos 5 representantes eleitos de cada distrito que se reúnem mensalmente para discutir e acompanhar as políticas públicas municipais na sua execução territorial, fazendo o controle social das diversas leis e programas municipais das subprefeituras.</p>
-				<p>Os demais representantes da sociedade podem ser escolhidos entre alguns dos participantes de outro colegiado eleito, como o CMPU – Conselho Municipal de Política Urbana, vinculado à SMDU – Secretaria Municipal de Desenvolvimento Urbano.</p>
-				<p>A área de abrangência do PIU ARCO PINHEIROS incide porções dos territórios das subprefeituras da Lapa e do Butantã, respectivamente sobre os distritos Vila Leopoldina, Jaguaré, Butantã e Rio Pequeno.</p>
+				<p>O Grupo Gestor da AIU ARCO PINHEIROS deverá ter composição paritária entre representantes do Poder Público e sociedade civil. Com o intuito de integrar as ações da Prefeitura, os membros do Poder Público devem ser indicados entre aqueles que já compõem o colegiado dos <b>Núcleos Regionais e Planejamento</b><sup>1</sup> de modo a permitir uma troca de informações e ações estratégicas.</p>
+				<p>Os representantes da população dos distritos devem ser escolhidos entre os integrantes do <b>Conselho Participativo Municipal</b>, que foram eleitos. Conselho Participativo Municipal é um órgão autônomo da sociedade civil com pelo menos 5 representantes eleitos de cada distrito que se reúnem mensalmente para discutir e acompanhar as políticas públicas municipais na sua execução territorial, fazendo o controle social das diversas leis e programas municipais das subprefeituras.</p>
+				<p>Os demais representantes da sociedade podem ser escolhidos entre alguns dos participantes de outro colegiado eleito, como o <b>CMPU – Conselho Municipal de Política Urbana</b>, vinculado à SMDU – Secretaria Municipal de Desenvolvimento Urbano.<sup>2</sup></p>
+				<p>A área de abrangência do PIU ARCO PINHEIROS engloba porções dos territórios das subprefeituras da Lapa e do Butantã, respectivamente os distritos Vila Leopoldina, Jaguaré, Butantã e Rio Pequeno.</p>
 				<p>O Grupo Gestor da AIU ARCO PINHEIROS deve ser composto pelos representantes da administração pública e sociedade civil relacionados aos temas principais do projeto urbano público proposto, a seguir:</p>
 				<ol class="romanos">
 					<li>Incremento populacional suportado pela oferta de emprego e serviços existentes na região;</li>
@@ -860,14 +878,25 @@
 				</ol>
 				<p>A partir desses temas, sugere-se uma composição, a saber:</p>
 				<Tabela :dados="tabela16"></Tabela>
-				<p>A partir da aprovação das ações a serem implantadas, e seus respectivos PAI (Planos de Ação Integrada) e/ou AEL (Área de Estruturação Local), o Grupo Gestor poderá criar Comitês Locais do Grupo Gestor, com a composição dos membros relacionados ao tema central e a colaboração de outros agentes. Os Comitês Locais funcionam como grupo técnico de apoio às ações e projetos do Grupo Gestor da AIU ARCO PINHEIROS.</p>
 				<p>A SP-Urbanismo poderá prestar o apoio administrativo para os trabalhos do Grupo Gestor da AIU ARCO PINHEIROS, mantendo a divulgação das reuniões e deliberações acessíveis à sociedade.</p>
+				<ol class="decimais notas">
+					<caption>Notas</caption>
+					<li>Os Núcleos Regionais de Planejamento são compostos por representantes da subprefeitura responsáveis pelo seu planejamento territorial e secretarias e órgãos municipais que atuam na região, buscando a integração territorial das políticas públicas setoriais. É composto por 16 membros, designados por Portaria, entre as seguintes secretarias municipais: Secretaria Municipal de Desenvolvimento Urbano - SMDU, Secretaria Municipal do Verde e Meio Ambiente – SVMA, Secretaria Municipal de Gestão – SMG, Secretaria do Governo Municipal – SGM, Secretaria Municipal de Justiça – SMJ, Secretaria Municipal de Direitos Humanos e Cidadania – SMDHC, Secretaria Municipal de Mobilidade e Transportes – SMT, Secretaria Municipal de Inovação e Tecnologia – SMIT, Secretaria Municipal de Trabalho e Empreendedorismo – SMTE, Secretaria Municipal de Desestatização e Parcerias – SMDP, Secretaria Municipal de Assistência e Desenvolvimento Social – SMADS, Secretaria Municipal de Segurança Urbana – SMSU (Guarda Civil Metropolitana – GCM e Guarda Ambiental), Controladoria Geral do Município – CGM, Secretaria Municipal da Pessoa com Deficiência – SMPED e Secretaria Municipal de Relações Internacionais – SMRI, num total de 16 membros, designados por Portaria (PORTARIA SECRETARIA MUNICIPAL DAS PREFEITURAS REGIONAIS - SMPR Nº 31 DE 7 DE JULHO DE 2017).</li>
+					<li>PDE, Art. 327. O Conselho Municipal de Política Urbana - CMPU, órgão colegiado integrante da estrutura da Secretaria Municipal de Desenvolvimento Urbano, tem por finalidade estudar e propor diretrizes para a formulação e implementação da Política Municipal de Desenvolvimento Urbano, bem como acompanhar e avaliar sua execução, conforme dispõe a Lei Federal nº 10.257, de 10 de julho de 2001.<br>
+					§ 1º O CMPU será composto por 60 membros titulares e respectivos suplentes, representantes do Poder Público e da sociedade civil, organizados por segmentos, com direito a voz e voto, a saber:<br>
+					I - 26 membros representantes de órgãos do Poder Público indicados pelo Prefeito, sendo no mínimo:<br>
+					a) 2 membros da Secretaria Municipal de Desenvolvimento Urbano; b) 8 membros das Subprefeituras, um por macrorregião, de acordo com a divisão utilizada pelo Executivo;<br>
+					II - 34 membros da sociedade civil, distribuídos da seguinte forma:<br>
+					a) 8 membros oriundos do Conselho Participativo Municipal ou do Conselho de Representantes, um de cada macrorregião, de acordo com a divisão utilizada pelo Executivo; b) 4 membros representantes dos movimentos de moradia; c) 4 membros representantes de associações de bairros; d) 4 membros representantes do setor empresarial, sendo no mínimo 1 da indústria, 1 do comércio e 1 de serviços; e) 1 membro representante dos trabalhadores, por suas entidades sindicais; f) 1 membro de ONGs; g) 1 membro de entidades profissionais; h) 2 membros de entidades acadêmicas e de pesquisa; i) 2 membros representantes de movimentos ambientalistas; j) 1 membro representante de movimentos de mobilidade urbana; k) 1 membro representante de movimentos culturais; l) 1 membro representante de entidades religiosas; m) 1 membro escolhido dentre os representantes do Conselho Municipal do Meio Ambiente e Desenvolvimento Sustentável - CADES; n) 1 membro eleito entre os representantes do Conselho Municipal de Planejamento e Orçamento Participativos - CPOP; o) 1 membro eleito entre os representantes do Conselho Municipal de Trânsito e Transporte - CMTT; p) 1 membro eleito entre os representantes do Conselho Municipal de Habitação - CMH.<br>
+					§ 2º Terão assento com direito a voz no Conselho 4 representantes de órgãos estaduais com atuação metropolitana, além de 1 representante de cada consórcio de municípios integrantes da região metropolitana.
+					</li>
+				</ol>
 			</section>
 
 			<section>
 				<h3 class="titulo" indent="2">Conselho Gestor de ZEIS</h3>
 				<p>Nos termos do art. 48 do Plano Diretor Estratégico (PDE), nas ZEIS 1 e 3, quando habitadas por população de baixa renda, deverão ser constituídos Conselhos Gestores compostos por representantes dos moradores, do Executivo e da sociedade civil organizada, que participarão da formulação e implementação das intervenções a serem realizadas em suas áreas. Para isso, a instalação dos Conselhos Gestores deverá preceder a elaboração do plano de urbanização específico para a ZEIS 1, ou do projeto de intervenção específico para a ZEIS 3, ambos a serem aprovados pelos respectivos Conselhos Gestores nos termos dos artigos 48 a 52 do PDE.</p>
-				<p>Desta forma, seja nas intervenções a serem realizadas na AEL ou aquelas que impactam os perímetros definidos como ZEIS 1 e ZEIS 3, mediante os Planos de Ação Integrada (PAI), a necessária instalação dos Conselhos Gestores deverá ser definida pelo Grupo Gestor da AIU ARCO PINHEIROS, garantindo assim a participação social previa a elaboração do plano de urbanização e projetos de intervenção requeridos pelo PDE.</p>
+				<p>Desta forma, nas intervenções indicadas pelo Grupo Gestor da AIU ARCO PINHEIROS, sejam nas Áreas de Estruturação Local (AEL) ou aquelas que impactam os perímetros definidos como ZEIS 1 e ZEIS 3, o momento de instalação dos Conselhos Gestores deverá ser definido pela Secretaria Municipal de Habitação (SEHAB) , garantindo assim a participação social previa a elaboração do plano de urbanização e projetos de intervenção requeridos pelo PDE.</p>
 			</section>
 			<Comments :attr="{id:1005, context:'Modelo de gestão democrática'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
@@ -949,6 +978,7 @@ import Galeria from '@/components/Galeria'
 import Processo from '@/components/graf/arco-pinheiros-2/processo'
 import MEM from '@/components/graf/arco-pinheiros-2/mem'
 import Caracterizacao from '@/components/graf/arco-pinheiros-2/caracterizacao'
+import GestaoDemocratica from '@/components/graf/arco-pinheiros-2/gestaoDemocratica'
 import { consultasCommons } from '@/mixins/consultasCommons'
 
 export default {
@@ -1493,13 +1523,13 @@ export default {
 				linhas: [
 					[
 						[ { data: 'Valor de Cadastro (atual)' } ],
-						[ { data: '437,993,873' } ],
-						[ { data: '656,676,258' } ]
+						[ { data: '437.993.873' } ],
+						[ { data: '656.676.258' } ]
 					],
 					[
 						[ { data: 'Valor de Cadastro (100% - T; 50% - Q)' } ],
-						[ { data: '793,931,886', cor: true } ],
-						[ { data: '1,191,915,823' } ]
+						[ { data: '793.931.886', cor: true } ],
+						[ { data: '1.191.915.823' } ]
 					]
 				],
 				fonte: 'Elaborado pela SP-Urbanismo'
@@ -1513,27 +1543,27 @@ export default {
 				linhas: [
 					[
 						[ { data: 'Realocação de famílias em favelas' } ],
-						[ { data: '46,717,307' } ]
+						[ { data: '46.717.307' } ]
 					],
 					[
 						[ { data: 'Reabilitação do Cingapura' } ],
-						[ { data: '12,931,250' } ]
+						[ { data: '12.931.250' } ]
 					],
 					[
 						[ { data: 'Arborização' } ],
-						[ { data: '2,000,000' } ]
+						[ { data: '2.000.000' } ]
 					],
 					[
 						[ { data: 'Sociabilização' } ],
-						[ { data: '2,920,943' } ]
+						[ { data: '2.920.943' } ]
 					],
 					[
 						[ { data: 'Equipamentos' } ],
-						[ { data: '15,430,500' } ]
+						[ { data: '15.430.500' } ]
 					],
 					[
 						[ { data: 'Total', destaque: true } ],
-						[ { data: '80,000,000', destaque: true } ]
+						[ { data: '80.000.000', destaque: true } ]
 					]
 				]
 			},
@@ -1546,7 +1576,7 @@ export default {
 				linhas: [
 					[
 						[ { data: 'Realocação de famílias em favelas' } ],
-						[ { data: '51,530,032' } ]
+						[ { data: '51.530.032' } ]
 					],
 					[
 						[ { data: 'Reabilitação do Cingapura' } ],
@@ -1558,7 +1588,7 @@ export default {
 					],
 					[
 						[ { data: 'Sociabilização' } ],
-						[ { data: '3,559,057' } ]
+						[ { data: '3.559.057' } ]
 					],
 					[
 						[ { data: 'Equipamentos' } ],
@@ -1566,7 +1596,7 @@ export default {
 					],
 					[
 						[ { data: 'Total', destaque: true } ],
-						[ { data: '55,089,089', destaque: true } ]
+						[ { data: '55.089.089', destaque: true } ]
 					]
 				]
 			},
@@ -1582,31 +1612,31 @@ export default {
 				linhas: [
 					[
 						[ { data: 'Total', destaque: true } ],
-						[ { data: '273,873,151', destaque: true } ],
-						[ { data: '77,795,515', destaque: true } ],
-						[ { data: '86,328,207', destaque: true } ],
-						[ { data: '437,996,873', destaque: true } ]
+						[ { data: '273.873.151', destaque: true } ],
+						[ { data: '77.795.515', destaque: true } ],
+						[ { data: '86.328.207', destaque: true } ],
+						[ { data: '437.996.873', destaque: true } ]
 					],
 					[
 						[ { data: 'OODC / AC' } ],
-						[ { data: '348.6' } ],
-						[ { data: '332.6' } ],
-						[ { data: '452.7' } ],
-						[ { data: '361.9' } ]
+						[ { data: '348,6' } ],
+						[ { data: '332,6' } ],
+						[ { data: '452,7' } ],
+						[ { data: '361,9' } ]
 					],
 					[
 						[ { data: 'OODC / ACA' } ],
-						[ { data: '464.8' } ],
-						[ { data: '665.3' } ],
-						[ { data: '905.4' } ],
-						[ { data: '587.3', cor: true } ]
+						[ { data: '464,8' } ],
+						[ { data: '665,3' } ],
+						[ { data: '905,4' } ],
+						[ { data: '587,3', cor: true } ]
 					],
 					[
 						[ { data: 'Valor de cadastro médio (R$/m²)' } ],
-						[ { data: '1,751.1' } ],
-						[ { data: '1,622.2' } ],
-						[ { data: '1,493.8' } ],
-						[ { data: '1,755.9' } ]
+						[ { data: '1.751,1' } ],
+						[ { data: '1.622,2' } ],
+						[ { data: '1.493,8' } ],
+						[ { data: '1.755,9' } ]
 					]
 				],
 				fonte: 'Elaborado pela SP-Urbanismo'
@@ -1623,31 +1653,31 @@ export default {
 				linhas: [
 					[
 						[ { data: 'Total', destaque: true } ],
-						[ { data: '547,746,302', destaque: true } ],
-						[ { data: '116,693,273', destaque: true } ],
-						[ { data: '129,492,311', destaque: true } ],
-						[ { data: '793,931,886', destaque: true } ]
+						[ { data: '547.746.302', destaque: true } ],
+						[ { data: '116.693.273', destaque: true } ],
+						[ { data: '129.492.311', destaque: true } ],
+						[ { data: '793.931.886', destaque: true } ]
 					],
 					[
 						[ { data: 'OODC / AC' } ],
-						[ { data: '697.3' } ],
-						[ { data: '499.0' } ],
-						[ { data: '679.1' } ],
-						[ { data: '656.1' } ]
+						[ { data: '697,3' } ],
+						[ { data: '499,0' } ],
+						[ { data: '679,1' } ],
+						[ { data: '656,1' } ]
 					],
 					[
 						[ { data: 'OODC / ACA' } ],
-						[ { data: '929.7' } ],
-						[ { data: '997.9' } ],
-						[ { data: '1,358.1' } ],
-						[ { data: '1,026.2', cor: true } ]
+						[ { data: '929,7' } ],
+						[ { data: '997,9' } ],
+						[ { data: '1.358,1' } ],
+						[ { data: '1.026,2', cor: true } ]
 					],
 					[
 						[ { data: 'Valor de cadastro médio (R$/m²)' } ],
-						[ { data: '3,502.2' } ],
-						[ { data: '2,433.3' } ],
-						[ { data: '2,240.7' } ],
-						[ { data: '3,063.7' } ]
+						[ { data: '3.502,2' } ],
+						[ { data: '2.433,3' } ],
+						[ { data: '2.240,7' } ],
+						[ { data: '3.063,7' } ]
 					]
 				],
 				fonte: 'Elaborado pela SP-Urbanismo'
@@ -1662,18 +1692,18 @@ export default {
 				linhas: [
 					[
 						[ { data: 'OODC (R$)' } ],
-						[ { data: '55,089,088.77' } ],
-						[ { data: '55,089,088.77' } ]
+						[ { data: '55.089.088,77' } ],
+						[ { data: '55.089.088,77' } ]
 					],
 					[
 						[ { data: 'Preço (R$/m²)' } ],
-						[ { data: '587.27' } ],
-						[ { data: '1,026.24' } ]
+						[ { data: '587,27' } ],
+						[ { data: '1.026,24' } ]
 					],
 					[
 						[ { data: 'ACA (m²)' } ],
-						[ { data: '93,804.63', cor: true } ],
-						[ { data: '53,680.48', cor: true } ]
+						[ { data: '93.804,63', cor: true } ],
+						[ { data: '53.680,48', cor: true } ]
 					]
 				]
 			},
@@ -1689,45 +1719,45 @@ export default {
 				linhas: [
 					[
 						[ { data: 'Cenário base' } ],
-						[ { data: '1,210,140' } ],
-						[ { data: '807,627' } ],
-						[ { data: '437,996,873' } ],
-						[ { data: '793,931,886' } ]
+						[ { data: '1.210.140' } ],
+						[ { data: '807.627' } ],
+						[ { data: '437.996.873' } ],
+						[ { data: '793.931.886' } ]
 					],
 					[
 						[ { data: 'Leilão 1' } ],
-						[ { data: '334,677' } ],
-						[ { data: '266,376' } ],
+						[ { data: '334.677' } ],
+						[ { data: '266.376' } ],
 						[ { data: '...' } ],
 						[ { data: '...' } ]
 					],
 					[
 						[ { data: 'Leilão 2 (C01)' } ],
-						[ { data: '140,556' } ],
-						[ { data: '93,805' } ],
+						[ { data: '140.556' } ],
+						[ { data: '93.805' } ],
 						[ { data: '...' } ],
 						[ { data: '...' } ]
 					],
 					[
 						[ { data: 'Leilão 2 (C02)' } ],
-						[ { data: '80,434' } ],
-						[ { data: '53,680' } ],
+						[ { data: '80.434' } ],
+						[ { data: '53.680' } ],
 						[ { data: '...' } ],
 						[ { data: '...' } ]
 					],
 					[
 						[ { data: 'Cenário final (C01)' } ],
-						[ { data: '734,907' } ],
-						[ { data: '447,447' } ],
-						[ { data: '262,774,349' } ],
-						[ { data: '459,188,350', cor: true } ]
+						[ { data: '734.907' } ],
+						[ { data: '447.447' } ],
+						[ { data: '262.774.349' } ],
+						[ { data: '459.188.350', cor: true } ]
 					],
 					[
 						[ { data: 'Cenário final (C02)' } ],
-						[ { data: '7995,029' } ],
-						[ { data: '487,571' } ],
-						[ { data: '286,338,249' } ],
-						[ { data: '500,365,384', cor: true } ]
+						[ { data: '795.029' } ],
+						[ { data: '487.571' } ],
+						[ { data: '286.338.249' } ],
+						[ { data: '500.365.384', cor: true } ]
 					]
 				],
 				fonte: 'Elaborado pela SP-Urbanismo'
@@ -1756,8 +1786,8 @@ export default {
 					],
 					[
 						[ { data: 'Polos econômicos' } ],
-						[ { data: 'SMTE' } ],
-						[ { data: 'Segmento comercial (CMPU)' } ]
+						[ { data: 'SMIT, SMDET' } ],
+						[ { data: 'Segmento empresarial (CMPU)' } ]
 					],
 					[
 						[ { data: 'Mobilidade' } ],
@@ -1899,7 +1929,8 @@ export default {
 		Galeria,
 		Processo,
 		MEM,
-		Caracterizacao
+		Caracterizacao,
+		GestaoDemocratica
 	},
 	methods: {
 		rolar (refName) {

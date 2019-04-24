@@ -7,6 +7,32 @@
 		"name": "São Paulo Urbanismo",
 		"email": "desenvolvimento@spurbanismo.sp.gov.br"
 	},
+	"contributors": [
+		{
+			"name": "Thomas Yuba",
+			"email": "yubathom@gmail.com"
+		},
+		{
+			"name": "Davi Hosogiri",
+			"email": "hosogiri.davi@gmail.com"
+		},
+		{
+			"name": "Renan Gomes",
+			"email": "renan.smul@gmail.com"
+		},
+		{
+			"name": "Alex Santana Boccia",
+			"email": "alexboccia@gmail.com"
+		},
+		{
+			"name": "Flávia Lopes Martins Pereira",
+			"email": "flavia.lmpereira@gmail.com"
+		},
+		{
+			"name": "Rogério Lobo",
+			"email": "matusael5004@hotmail.com"
+		}
+	],
 	"license": "(GPL-3.0)",
 	"keywords": [
 		"participe",
@@ -44,10 +70,10 @@
 		"vuex": "3.1.0"
 	},
 	"devDependencies": {
-		"@vue/cli-plugin-babel": "3.5.5",
-		"@vue/cli-plugin-eslint": "3.0.5",
-		"@vue/cli-plugin-unit-mocha": "3.0.5",
-		"@vue/cli-service": "3.5.3",
+		"@vue/cli-plugin-babel": "3.6.0",
+		"@vue/cli-plugin-eslint": "3.6.0",
+		"@vue/cli-plugin-unit-mocha": "3.6.0",
+		"@vue/cli-service": "3.6.0",
 		"@vue/eslint-config-standard": "4.0.0",
 		"@vue/test-utils": "1.0.0-beta.29",
 		"chai": "4.2.0",

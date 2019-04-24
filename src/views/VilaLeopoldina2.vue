@@ -1,6 +1,6 @@
 <template>
 	<div class="VilaLeopoldina2" ref="conteudoConsulta">
-		<PageTop background_image_src="arquivos/capas/capa_vl_1900w.png" :esta_consulta="estaConsulta" :social="social_assets">
+		<PageTop background_image_src="arquivos/capas/capa_vl_480w.jpg" :esta_consulta="estaConsulta" :social="social_assets">
 			<template slot="titulo"><div>PIU Vila Leopoldina-Villa Lobos</div></template>
 			<template slot="subtitulo"><div>Projeto de Lei do PIU Vila Leopoldina</div></template>
 		</PageTop>
@@ -530,9 +530,9 @@ export default {
 			consultas: false,
 			estaConsulta: {},
 			social_assets: {
-				whatsapp: 'https://api.whatsapp.com/send?text=Contribua%20para%20a%20Consulta%20Pública%20do%20PIU%20Vila%20Leopoldina-Villa%20Lobos!%20-%20https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br/#/vila-leopoldina-projeto-de-lei',
+				whatsapp: 'https://api.whatsapp.com/send?text=Contribua%20para%20a%20Consulta%20Pública%20do%20PIU%20Vila%20Leopoldina-Villa%20Lobos!%20-%20https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br/vila-leopoldina-projeto-de-lei',
 				facebook: 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br%2F%23%2Fvila-leopoldina-projeto-de-lei',
-				twitter: 'https://twitter.com/intent/tweet?text=Contribua%20para%20a%20Consulta%20Pública%20do%20PIU%20Vila%20Leopoldina-Villa%20Lobos!%20https://participe.gestaourbana.prefeitura.sp.gov.br/#/vila-leopoldina-projeto-de-lei'
+				twitter: 'https://twitter.com/intent/tweet?text=Contribua%20para%20a%20Consulta%20Pública%20do%20PIU%20Vila%20Leopoldina-Villa%20Lobos!%20https://participe.gestaourbana.prefeitura.sp.gov.br/vila-leopoldina-projeto-de-lei'
 			}
 		}
 	},

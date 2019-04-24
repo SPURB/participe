@@ -1,6 +1,6 @@
 <template>
 	<div class="VidaSegura" ref="conteudoConsulta">
-		<PageTop background_image_src="./arquivos/capas/vida-segura.jpg" :esta_consulta="estaConsulta">
+		<PageTop background_image_src="./arquivos/capas/vida-segura_480w.jpg" :esta_consulta="estaConsulta">
 			<template slot="titulo"><div>Vida Segura, o Plano de Segurança Viária do Município de São Paulo</div></template>
 			<template slot="subtitulo">
 				<div>{{ estaConsulta.textoIntro }}</div>

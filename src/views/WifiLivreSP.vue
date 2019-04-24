@@ -1,6 +1,6 @@
 <template>
 	<div class="WifiLivreSP" ref="conteudoConsulta">
-		<PageTop background_image_src="arquivos/capas/wifi-livre-sp_dt.jpg" :esta_consulta="estaConsulta">
+		<PageTop background_image_src="arquivos/capas/wifi-livre-sp_pb_480w.jpg" :esta_consulta="estaConsulta">
 			<template slot="titulo"><div>WiFi Livre SP</div></template>
 			<template slot="subtitulo">
 				<div>{{ estaConsulta.textoIntro }}</div>

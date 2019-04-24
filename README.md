@@ -4,18 +4,18 @@ Frontend do [https://participe.gestaourbana.prefeitura.sp.gov.br](https://partic
 
 ## Setup
 1. Clone este repositório
-```
-git clone https://github.com/SPURB/consultas-publicas-backend.git
+```bash
+git clone https://github.com/SPURB/participe.git
 ```
 
 2. Instale as dependências
-```
-# cd participe
+```bash
+cd participe
 npm install
 ```
 
 3. Inicie servidor para desenvolvimento local na porta 8080
-```
+```bash
 npm run serve
 ```
 

@@ -1,6 +1,4 @@
 module.exports = {
-	// publicPath: './participe/',
-	// publicPath: './participe/dist/',
 	lintOnSave: true,
 
 	configureWebpack: {
@@ -28,8 +26,9 @@ module.exports = {
 				'/arco-pinheiros-2'
 			],
 			useRenderEvent: true,
-			headless: true,
-			onlyProduction: true
+			headless: false,
+			onlyProduction: true,
+			maxConcurrentRoutes: 1
 		}
 	}
 }

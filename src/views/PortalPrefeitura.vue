@@ -1,6 +1,6 @@
 <template>
 	<div class="PortalPrefeitura" ref="conteudoConsulta">
-		<PageTop background_image_src="arquivos/capas/portal-prefeitura_1900w.jpg" :esta_consulta="estaConsulta" :social="social_assets">
+		<PageTop background_image_src="arquivos/capas/portal-prefeitura_480w.jpg" :esta_consulta="estaConsulta" :social="social_assets">
 			<template slot="titulo"><div>Layout do Novo Portal da Prefeitura de São Paulo</div></template>
 		</PageTop>
 
@@ -141,9 +141,9 @@ export default {
 			consultas: false,
 			estaConsulta: {},
 			social_assets: {
-				whatsapp: 'https://api.whatsapp.com/send?text=Participe%20da%20consulta%20p%C3%BAblica%20de%20reformula%C3%A7%C3%A3o%20da%20prefeitura%20de%20S%C3%A3o%20Paulo%20-%20https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br/#/portal-prefeitura',
-				facebook: 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br/#/portal-prefeitura',
-				twitter: 'https://twitter.com/intent/tweet?text=Participe%20da%20consulta%20p%C3%BAblica%20de%20reformula%C3%A7%C3%A3o%20da%20prefeitura%20de%20S%C3%A3o%20Paulo%20-%20http%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br%2F#%2Fportal-prefeitura'
+				whatsapp: 'https://api.whatsapp.com/send?text=Participe%20da%20consulta%20p%C3%BAblica%20de%20reformula%C3%A7%C3%A3o%20da%20prefeitura%20de%20S%C3%A3o%20Paulo%20-%20https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br/portal-prefeitura',
+				facebook: 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br/portal-prefeitura',
+				twitter: 'https://twitter.com/intent/tweet?text=Participe%20da%20consulta%20p%C3%BAblica%20de%20reformula%C3%A7%C3%A3o%20da%20prefeitura%20de%20S%C3%A3o%20Paulo%20-%20http%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br%2Fportal-prefeitura'
 			}
 		}
 	},

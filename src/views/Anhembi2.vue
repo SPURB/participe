@@ -1,6 +1,6 @@
 <template>
 	<div class="Anhembi2" ref="conteudoConsulta">
-		<PageTop background_image_src="arquivos/piu-anhembi/img/capa.jpg" :esta_consulta="estaConsulta">
+		<PageTop background_image_src="arquivos/piu-anhembi/img/capa_480w.jpg" :esta_consulta="estaConsulta">
 			<template slot="titulo"><div>PIU Anhembi 2</div></template>
 			<template slot="subtitulo"><div>2ª consulta pública – Projeto de Intervenção Urbana Anhembi</div></template>
 		</PageTop>

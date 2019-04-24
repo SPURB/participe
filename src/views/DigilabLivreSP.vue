@@ -1,6 +1,6 @@
 <template>
 	<div class="DigilabLivreSP" ref="conteudoConsulta">
-		<PageTop background_image_src="arquivos/capas/digilab-livre-sp_dt.jpg" :esta_consulta="estaConsulta">
+		<PageTop background_image_src="arquivos/capas/digilab-livre-sp_dt_480w.jpg" :esta_consulta="estaConsulta">
 			<template slot="titulo"><div>Projeto Piloto DIGILAB LIVRE SP</div></template>
 			<template slot="subtitulo">
 				<div>{{ estaConsulta.textoIntro }}</div>

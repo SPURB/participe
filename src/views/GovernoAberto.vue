@@ -1,6 +1,6 @@
 <template>
 	<div class="GovernoAberto" ref="conteudoConsulta">
-		<PageTop background_image_src="arquivos/capas/governo-aberto_1900w.jpg" :esta_consulta="estaConsulta">
+		<PageTop background_image_src="arquivos/capas/governo-aberto_480w.jpg" :esta_consulta="estaConsulta">
 			<template slot="titulo"><div>Edital de Credenciamento do Programa Agentes de Governo Aberto - 2019</div></template>
 		</PageTop>
 

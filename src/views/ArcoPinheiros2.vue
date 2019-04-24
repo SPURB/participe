@@ -558,7 +558,7 @@
 					</Imagem>
 					<Imagem :dados="{
 						tipo: 'w992',
-						url: imgSrc('arquivos/arco-pinheiros-2/simulacao-preliminar-territorios-de-integracao.png'),
+						url: imgSrc('arquivos/arco-pinheiros-2/simulacao-preliminar-territorios-de-integracao_1920w.jpg'),
 						caption: 'Simulação preliminar dos Territórios de Integração'
 					}"></Imagem>
 					<p>Uma importante proposta do PIU para viabilizar a vocação de ambiente de inovação consiste na demarcação dos chamados <b>Territórios de Integração</b>, formado pelas quadras lindeiras ao Rio Pinheiros, que deverão acomodar as novas travessias previstas no Programa de Intervenções, e por grandes áreas transformáveis que exigem projetos urbanos específicos, como é o caso da Ceagesp.</p>

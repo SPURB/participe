@@ -7,6 +7,32 @@
 		"name": "São Paulo Urbanismo",
 		"email": "desenvolvimento@spurbanismo.sp.gov.br"
 	},
+	"contributors": [
+		{
+			"name": "Thomas Yuba",
+			"email": "yubathom@gmail.com"
+		},
+		{
+			"name": "Davi Hosogiri",
+			"email": "hosogiri.davi@gmail.com"
+		},
+		{
+			"name": "Renan Gomes",
+			"email": "renan.smul@gmail.com"
+		},
+		{
+			"name": "Alex Santana Boccia",
+			"email": "alexboccia@gmail.com"
+		},
+		{
+			"name": "Flávia Lopes Martins Pereira",
+			"email": "flavia.lmpereira@gmail.com"
+		},
+		{
+			"name": "Rogério Lobo",
+			"email": "matusael5004@hotmail.com"
+		}
+	],
 	"license": "(GPL-3.0)",
 	"keywords": [
 		"participe",

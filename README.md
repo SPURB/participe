@@ -1,6 +1,6 @@
 # Participe
 
-Frontend do [https://participe.gestaourbana.prefeitura.sp.gov.br](https://participe.gestaourbana.prefeitura.sp.gov.br). Ferramenta de participação social da Secretaria Municipal de Urbanismo e Licenciamento – SMUL - e São Paulo Urbanismo.
+Frontend do [https://participe.gestaourbana.prefeitura.sp.gov.br](https://participe.gestaourbana.prefeitura.sp.gov.br), site de participação social da Secretaria Municipal de Urbanismo e Licenciamento – SMUL - e São Paulo Urbanismo.
 
 ## Setup
 1. Clone este repositório
@@ -20,11 +20,11 @@ npm run serve
 ```
 
 4. Visualize as rotas especificadas em `src/router.js`. Exemplos abaixo:
-* [http://localhost:8080/piu-arco-pinheiros](http://localhost:8080/arco-pinheiros-2)
-* [http://localhost:8080/piu-anhembi](http://localhost:8080//anhembi2)
-* [http://localhost:8080/vida-segura](:http://localhost:8080/vida-segura)
+* [http://localhost:8080/piu-arco-pinheiros-2](http://localhost:8080/arco-pinheiros-2)
+* [http://localhost:8080/anhembi2](http://localhost:8080/anhembi2)
+* [http://localhost:8080/vida-segura](http://localhost:8080/vida-segura)
 
-> Observação: Para visualizar a home e gerar os formulários é necessário realizar o setup do [backend](https://github.com/SPURB/consultas-publicas-backend) e criar um arquivo `.env.development.local` com as variáveis configuradas.
+> Observação: Para visualizar a home e gerar e gerar formulários é necessário realizar o setup do [backend](https://github.com/SPURB/consultas-publicas-backend) e criar um arquivo `.env.development.local` com as variáveis configuradas.
 
 Explicações detalhadas deste template no [guia](http://vuejs-templates.github.io/webpack/) e [documentação do vue-loader](http://vuejs.github.io/vue-loader).
 

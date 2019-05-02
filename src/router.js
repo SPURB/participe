@@ -13,6 +13,7 @@ const PortalPrefeitura = () => import(/* webpackChunkName: "portalprefeitura" */
 const GovernoAberto = () => import(/* webpackChunkName: "governoaberto" */ '@/views/GovernoAberto')
 const ConcessaoMartinelli = () => import(/* webpackChunkName: "martinelli" */ '@/views/ConcessaoMartinelli')
 const ArcoPinheiros2 = () => import(/* webpackChunkName: "arcopinheiros2" */ '@/views/ArcoPinheiros2')
+const PlanoCicloviario = () => import(/* webpackChunkName: "plano-cicloviario" */ '@/views/PlanoCicloviario')
 
 Vue.use(Router)
 
@@ -106,6 +107,14 @@ export default new Router({
 			components: { ArcoPinheiros2 },
 			meta: {
 				id: 41
+			}
+		},
+		{
+			path: '/plano-cicloviario',
+			name: 'PlanoCicloviario',
+			components: { PlanoCicloviario },
+			meta: {
+				id: 42
 			}
 		}
 		/*

@@ -271,6 +271,13 @@ div.Tabela {
 						padding-right: 4px;
 						text-align: left;
 					}
+
+					&.centralizado span {
+						display: inline-flex;
+						width: 100%;
+						align-items: center;
+						justify-content: center;
+					}
 				}
 			}
 		}
@@ -329,7 +336,10 @@ div.Tabela {
 		width: -webkit-min-content;
 		width: -moz-min-content;
 		width: min-content;
-		th, td { min-width: 6rem; }
+		th, td {
+			min-width: 6rem;
+			hyphens: auto;
+		}
 		@media (max-width: 992px) {
 			min-width: 100%;
 			width: unset;

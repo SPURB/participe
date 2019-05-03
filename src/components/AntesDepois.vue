@@ -1,6 +1,6 @@
 <template>
 	<div class="AntesDepois" :class="{ print: toPrint }" :style="{ maxWidth: dados.largura + 'px' }">
-		<nav class="actions" @click="depois = !depois">
+		<nav class="actions"  @click="depois = !depois">
 			<div class="indicador">
 				<span v-if="!depois">Antes</span>
 				<span v-if="depois">Depois</span>
@@ -10,7 +10,7 @@
 				<i class="icon-seta_esquerda icon" v-if="depois" title="Voltar"><span>seta_esquerda</span></i>
 			</button>
 		</nav>
-		<div class="imgWrap" :style="{ height: dados.altura + 'px' }">
+		<div class="imgWrap" :style="{ height: dados.altura + 'px' }"  @click="depois = !depois">
 			<img :src="dados.imgAntes" alt="Antes">
 			<img :src="dados.imgDepois" alt="Depois" :class="{ hidden: !depois }">
 		</div>
@@ -130,6 +130,7 @@ export default {
 		max-width: 100%;
 		overflow-x: auto;
 		overflow-y: hidden;
+		cursor: pointer;
 		img {
 			position: absolute;
 			z-index: 3;

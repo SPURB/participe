@@ -304,6 +304,13 @@ ul.notas {
   li {
     margin: 0.5rem 0.8rem 0;
     font-size: smaller;
+    ol {
+      margin: 0;
+      li {
+        margin: 0 0 0 2rem;
+        font-size: inherit;
+      }
+    }
     &:first-child {
       margin-top: 0;
     }
@@ -327,6 +334,14 @@ p ul {
 }
 
 li p {
+  padding: 0;
+}
+
+li h2,
+li h3, 
+li h4, 
+li h5, 
+li h6 {
   padding: 0;
 }
 

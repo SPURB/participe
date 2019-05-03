@@ -72,8 +72,6 @@
 		</section>
 	</div>
 </template>
-<!-- <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script> -->
-<!-- <script src="fileSrc('ol.js')"></script> -->
 
 <script>
 import PageTop from '@/components/PageTop'
@@ -95,89 +93,102 @@ export default {
 			estaConsulta: {},
 			audiencias: [
 				{
-					dataRegiao: "23/05 - Norte 1"
-					,bairros: "PERUS , PIRITUBA , FREGUESIA DO Ó/BRASILANDIA, CASAVERDE / CACHOEIRINHA"
-					,horario: "19- 21h"
-					,local: "Casa de Cultura Salvador Ligabue"
-					,endereco: "Largo da Matriz de Nossa Senhora do Ó nº 215-Freguesia do Ó"
-				}
-				,{
-					dataRegiao: "24/05 - Norte 2"
-					,bairros: "JAÇANÃ/TREMEMBÉ, SANTANA/TUCURUVI - VILA MARIA / VILA GUILHERME"
-					,horario: "19- 21h"
-					,local: "Auditório da Subprefeitura Santana/Tucuruvi"
-					,endereco: "Av. Tucuruvi, nº 808 – Tucuruvi"
-				}
-				,{
-					dataRegiao: "30/05 – Oeste"
-					,bairros: "LAPA , BUTANTÃ , PINHEIROS "
-					,horario: "19 -21h"
-					,local: "AUDITÓRIO DA SUBPREFEITURA DE PINHEIROS"
-					,endereco: "Av. das Nações Unidas,nº 7123 - Alto de Pinheiros"
-				}
-				,{
-					dataRegiao: "31/05 – Leste 1"
-					,bairros: "MOOCA ,  PENHA,  VILA PRUDENTE"
-					,horario: "19- 21h "
-					,local: "AUDITÓRIO DA SUBPREFEITURA DA MOOCA"
-					,endereco: "Rua Taquari, nº 549 – Mooca "
-				}
-				,{
-					dataRegiao: "06/06 – Leste 2"
-					,bairros: "SAPOPEMBA  , ARICANDUVA"
-					,horario: "19 -21h "
-					,local: "SUBPREFEITURA ARICANDUVA / FORMOSA/CARRÃO"
-					,endereco: "RUA Atucuri nº 699- Chácara Santo Antônio"
-				}
-				,{
-					dataRegiao: "07/06 – Leste 3"
-					,bairros: "SÃO MIGUEL, ITAIM PAULISTA , ITAQUERA , GUAIANAZES, SÃO MATEUS, CIDADE TIRADENTES ,  ERMELINO MATARAZZO"
-					,horario: "19 – 21h "
-					,local: "SUBPREFEITURA DE CIDADE TIRADENTES "
-					,endereco: "Rua Juá Mirim s/nº  – Chácara Santa Etelvina"
-				}
-				,{
-					dataRegiao: "12/06 – Centro"
-					,bairros: "SÉ"
-					,horario: "19h – 21h "
-					,local: "PRAÇA DE ATENDIMENTO DA SUBPREFEITURA DA SÉ "
-					,endereco: "Rua Álvares Penteado,nº 53 – Centro"
-				}
-				, {
-					dataRegiao: "13/06 – Sul 1"
-					,bairros: "IPIRANGA ,  JABAQUARA , VILA MARIANA"
-					,horario: "19 - 21h "
-					,local: "AUDITÓRIO DA SUBPREFEITURA DO IPIRANGA "
-					,endereco: "Rua Lino Coutinho,nº 444 - 1º Andar - Ipiranga"
-				}
-				,{
-					dataRegiao: "14/06 - Sul 2"
-					,bairros: "SANTO AMARO , CIDADE ADEMAR , CAMPO LIMPO   "
-					,horario: "19 – 21h "
-					,local: "SUBPREFEITURA DE SANTO AMARO"
-					,endereco: "RUA Floriano Peixoto ,nº 54 - 1º Andar – Santo amaro"
-				}
-				,{
-					dataRegiao: "19/06 – Sul 3"
-					,bairros: "PARELHEIROS,  CAPELA DO SOCORRO ,  M’BOI MIRIM "
-					,horario: "19 – 21h "
-					,local: "SUBPREFEITURA DE M’BOI MIRIM"
-					,endereco: "Av. Guarapiranga , nº1695 – Parque Alves Lima"
+					dataRegiao: '23/05 - Norte 1',
+					bairros: 'PERUS , PIRITUBA , FREGUESIA DO Ó/BRASILANDIA, CASAVERDE / CACHOEIRINHA',
+					horario: '19- 21h',
+					local: 'Casa de Cultura Salvador Ligabue',
+					endereco: 'Largo da Matriz de Nossa Senhora do Ó nº 215-Freguesia do Ó'
+				},
+				{
+					dataRegiao: '24/05 - Norte 2',
+					bairros: 'JAÇANÃ/TREMEMBÉ, SANTANA/TUCURUVI - VILA MARIA / VILA GUILHERME',
+					horario: '19- 21h',
+					local: 'Auditório da Subprefeitura Santana/Tucuruvi',
+					endereco: 'Av. Tucuruvi, nº 808 – Tucuruvi'
+				},
+				{
+					dataRegiao: '30/05 – Oeste',
+					bairros: 'LAPA , BUTANTÃ , PINHEIROS ',
+					horario: '19 -21h',
+					local: 'AUDITÓRIO DA SUBPREFEITURA DE PINHEIROS',
+					endereco: 'Av. das Nações Unidas,nº 7123 - Alto de Pinheiros'
+				},
+				{
+					dataRegiao: '31/05 – Leste 1',
+					bairros: 'MOOCA ,  PENHA,  VILA PRUDENTE',
+					horario: '19- 21h ',
+					local: 'AUDITÓRIO DA SUBPREFEITURA DA MOOCA',
+					endereco: 'Rua Taquari, nº 549 – Mooca '
+				},
+				{
+					dataRegiao: '06/06 – Leste 2',
+					bairros: 'SAPOPEMBA  , ARICANDUVA',
+					horario: '19 -21h ',
+					local: 'SUBPREFEITURA ARICANDUVA / FORMOSA/CARRÃO',
+					endereco: 'RUA Atucuri nº 699- Chácara Santo Antônio'
+				},
+				{
+					dataRegiao: '07/06 – Leste 3',
+					bairros: 'SÃO MIGUEL, ITAIM PAULISTA , ITAQUERA , GUAIANAZES, SÃO MATEUS, CIDADE TIRADENTES ,  ERMELINO MATARAZZO',
+					horario: '19 – 21h ',
+					local: 'SUBPREFEITURA DE CIDADE TIRADENTES ',
+					endereco: 'Rua Juá Mirim s/nº  – Chácara Santa Etelvina'
+				},
+				{
+					dataRegiao: '12/06 – Centro',
+					bairros: 'SÉ',
+					horario: '19h – 21h ',
+					local: 'PRAÇA DE ATENDIMENTO DA SUBPREFEITURA DA SÉ ',
+					endereco: 'Rua Álvares Penteado,nº 53 – Centro'
+				},
+				{
+					dataRegiao: '13/06 – Sul 1',
+					bairros: 'IPIRANGA ,  JABAQUARA , VILA MARIANA',
+					horario: '19 - 21h ',
+					local: 'AUDITÓRIO DA SUBPREFEITURA DO IPIRANGA ',
+					endereco: 'Rua Lino Coutinho,nº 444 - 1º Andar - Ipiranga'
+				},
+				{
+					dataRegiao: '14/06 - Sul 2',
+					bairros: 'SANTO AMARO , CIDADE ADEMAR , CAMPO LIMPO   ',
+					horario: '19 – 21h ',
+					local: 'SUBPREFEITURA DE SANTO AMARO',
+					endereco: 'RUA Floriano Peixoto ,nº 54 - 1º Andar – Santo amaro'
+				},
+				{
+					dataRegiao: '19/06 – Sul 3',
+					bairros: 'PARELHEIROS,  CAPELA DO SOCORRO ,  M’BOI MIRIM ',
+					horario: '19 – 21h ',
+					local: 'SUBPREFEITURA DE M’BOI MIRIM',
+					endereco: 'Av. Guarapiranga , nº1695 – Parque Alves Lima'
 				}
 			],
 			anexos: [
-				"Apresentacao_audiencias_publicas_Plano_Cicloviario-29abr2019.pptx"
+				'Apresentacao_audiencias_publicas_Plano_Cicloviario-29abr2019.pptx'
 			],
 			mapaAttrs: {
 				center: [ -5191000, -2698002 ],
 				zoom: 12,
 				layers: [
 					{
-						// title: 'Perímetro de abrangência Arco Pinheiros',
-						path: this.$store.getters.basePath + 'arquivos/arco-pinheiros/perimetro_ACP.kml',
-						stroke_color: 'rgba(255, 135, 0, 1)',
-						fill_color: 'rgba(255, 255, 255, .1)',
+						title: 'Rede de Referência',
+						path: this.$store.getters.basePath + 'arquivos/plano-cicloviario/01-RedeDeReferencia_polyline.kml',
+						stroke_color: 'rgba(25, 20, 20, 1)',
+						// fill_color: 'rgba(255, 255, 255, .5)',
+						stroke_width: 1
+					},
+					{
+						title: 'Conexões SMT 2019-2020',
+						path: this.$store.getters.basePath + 'arquivos/plano-cicloviario/02-Conexoes_SMT_2019-2020_polyline.kml',
+						stroke_color: 'rgba(150, 0, 39, 1)',
 						stroke_width: 2
+					},					
+					{
+						title: 'Ciclovias Implantadas',
+						path: this.$store.getters.basePath + 'arquivos/plano-cicloviario/04_CicloviasImplantadas_polyline.kml',
+						stroke_color: 'rgba(255, 170, 187, 1)',
+						stroke_width: 2,
+						stroke_dash: [10,4]
 					}
 				]
 			}
@@ -211,8 +222,8 @@ export default {
 <style lang="scss" scoped>
 @import '../variables';
 @import '../consulta';
-#app div.WifiLivreSP div.Apoio button::before {
-	content: "Ver downloads";
+div.Apoio button::before{
+	content: "Ver downloads" !important; 
 }
 .map {
 	height: 400px;

@@ -1,20 +1,35 @@
 <template>
 	<div class="Mapa" ref="mapa">
 		<div id="map"></div>
+		<ul class="legenda">
+			<template v-for="(layer, index) in mapaAttrs.layers">
+				<li :key="index">					
+					<div :style="{
+						backgroundColor:layer.fill_color,
+						borderColor: layer.stroke_color,
+						borderWidth: layer.stroke_width + 'px',
+						// borderStyle: layer.stroke_dash.length > 1 ? 'dashed none none' : ''
+						height: layer.fill_color ? '' : '0'
+				}"></div>
+				<a
+					:href="layer.path"
+					:download="layer.title + '.kml'"
+				>{{ layer.title }}</a></li>
+			</template>
+		</ul>
 	</div>
 </template>
 
 <script>
-// import ol 				from 'ol'
 import { Map, View } 	from 'ol'
 import TileLayer 		from 'ol/layer/Tile'
-// import VectorLayer 		from 'ol/layer/Vector'
-// import Style 			from 'ol/style/Style'
-// import Stroke 			from 'ol/style/Stroke'
-// import Fill 			from 'ol/style/Fill'
+import VectorLayer 		from 'ol/layer/Vector'
+import Style 			from 'ol/style/Style'
+import Stroke 			from 'ol/style/Stroke'
+import Fill 			from 'ol/style/Fill'
 import KML 				from 'ol/format/KML'
-// import VectorSource 	from 'ol/source/Vector'
-import OSM from 'ol/source/OSM'
+import VectorSource 	from 'ol/source/Vector'
+import OSM				from 'ol/source/OSM'
 // import {defaults as defaultControls, Attribution } from 'ol/control.js';
 // import ScaleLine 		from 'ol/control/ScaleLine';
 
@@ -44,12 +59,43 @@ export default {
 					path: String,
 					stroke_color: String,
 					stroke_width: Number,
+					stroke_dash: Array,
 					title: String
 				}
 			]
 		}
 	},
 	computed: {
+		mapLayers () {
+			let retLayers = [
+				new TileLayer({
+					source: new OSM()
+				})
+			]
+			this.mapaAttrs.layers.map(function (index) {
+				let kmlLayer = new VectorLayer({
+					style: new Style({
+						stroke: new Stroke({
+							color: index.stroke_color,
+							width: index.stroke_width,
+							lineDash: index.stroke_dash
+						}),
+						fill: new Fill({
+							color: index.fill_color
+						})
+					}),
+					source: new VectorSource({
+						url: index.path,
+						format: new KML({
+							// extractStyles: false
+							extractStyles: true
+						})
+					})
+				})
+				retLayers.push(kmlLayer)
+			})
+			return retLayers
+		},
 		mapView () {
 			return new View({
 				center: this.mapaAttrs.center,
@@ -65,18 +111,16 @@ export default {
 		createMap () {
 			const map = new Map({
 				target: 'map',
-				// layers: this.mapLayers,
-				layers: [
-					new TileLayer({
-						source: new OSM()
-					})
-				],
-				view: this.mapView
-				// view: new View({
-				// 	center: [ -5191000, -2698002 ],
-				// 	zoom: 12
-				// })
+				layers: this.mapLayers,
+				// layers: [
+				// 	new TileLayer({
+				// 		source: new OSM()
+				// 	})
+				// ],
+				view: this.mapView				
 			})
+			console.log(map);
+			// map.getView().fit(vectorLayerInformacoes.getSource().getExtent(), mapInformacoes.getSize());
 		}
 	}
 }

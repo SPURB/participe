@@ -23,7 +23,8 @@ module.exports = {
 				'/portal-prefeitura',
 				'/governo-aberto',
 				'/concessao-martinelli',
-				'/arco-pinheiros-2'
+				'/arco-pinheiros-2',
+				'/plano-cicloviario'
 			],
 			useRenderEvent: true,
 			headless: false,

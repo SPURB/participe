@@ -28,7 +28,7 @@
 		<section>
 			<h2 class="titulo" indent="1">Introdução</h2>
 			<div>
-				<p>A Prefeitura Municipal de São Paulo convida todos os munícipes a contribuírem para a melhoria da rede cicloviária da cidade de São Paulo. As audiências terão por objetivo a apresentação da proposta inicial do Plano Cicloviário elaborada pela PMSP/SMT/CET.</p>
+				<p>A Prefeitura do Município de São Paulo convida todos os munícipes a contribuírem para a melhoria da rede cicloviária da cidade de São Paulo. As audiências terão por objetivo a apresentação da proposta inicial do Plano Cicloviário elaborada pela PMSP/SMT/CET.</p>
 				<p>O objetivo é, a partir desse plano colher as sugestões da sociedade para então elaborar a versão atualizada.</p>
 				<p>Dentro do Plano de Metas proposto para o biênio 2019/2020 pela Prefeitura, foi estabelecida como primeira etapa, a meta de implantar 173,3 km de infraestrutura cicloviária, através das conexões e requalificar 310,6 km de infraestrutura cicloviária até o final de 2020. </p>
 				<p>A seleção dos locais de implantação foi realizada pelas áreas de planejamento da CET, adotando como principais diretrizes, desde o início do processo, a segurança, a integração modal e a implantação com o mínimo de intervenções. Na sequência, a definição dos locais seguiu o critério da conectividade entre os trechos já implantados, a fim de consolidar uma rede. A definição dos locais foi feita de forma a abranger todas as regiões da cidade.</p>

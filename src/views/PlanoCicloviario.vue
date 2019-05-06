@@ -168,7 +168,7 @@ export default {
 			],
 			mapaAttrs: {
 				center: [ -5191000, -2698002 ],
-				zoom: 12,
+				zoom: 11,
 				layers: [
 					{
 						title: 'Rede de Referência',
@@ -182,13 +182,13 @@ export default {
 						path: this.$store.getters.basePath + 'arquivos/plano-cicloviario/02-Conexoes_SMT_2019-2020_polyline.kml',
 						stroke_color: 'rgba(150, 0, 39, 1)',
 						stroke_width: 2
-					},					
+					},
 					{
 						title: 'Ciclovias Implantadas',
 						path: this.$store.getters.basePath + 'arquivos/plano-cicloviario/04_CicloviasImplantadas_polyline.kml',
 						stroke_color: 'rgba(255, 170, 187, 1)',
-						stroke_width: 2,
-						stroke_dash: [10,4]
+						stroke_width: 2
+						// stroke_dash: [10,8]
 					}
 				]
 			}
@@ -223,7 +223,7 @@ export default {
 @import '../variables';
 @import '../consulta';
 div.Apoio button::before{
-	content: "Ver downloads" !important; 
+	content: "Ver downloads";
 }
 .map {
 	height: 400px;

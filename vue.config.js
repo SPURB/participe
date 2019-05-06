@@ -14,6 +14,7 @@ module.exports = {
 			registry: undefined,
 			renderRoutes: [
 				'/',
+				'/plano-cicloviario',
 				'/anhembi2',
 				'/arco-pinheiros',
 				'/wifi-livre-sp',
@@ -23,8 +24,7 @@ module.exports = {
 				'/portal-prefeitura',
 				'/governo-aberto',
 				'/concessao-martinelli',
-				'/arco-pinheiros-2',
-				'/plano-cicloviario'
+				'/arco-pinheiros-2'
 			],
 			useRenderEvent: true,
 			headless: false,

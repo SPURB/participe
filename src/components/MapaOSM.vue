@@ -3,7 +3,7 @@
 		<div id="map"></div>
 		<ul class="legenda">
 			<template v-for="(layer, index) in mapaAttrs.layers">
-				<li :key="index">					
+				<li :key="index">
 					<div :style="{
 						backgroundColor:layer.fill_color,
 						borderColor: layer.stroke_color,
@@ -87,8 +87,8 @@ export default {
 					source: new VectorSource({
 						url: index.path,
 						format: new KML({
-							// extractStyles: false
-							extractStyles: true
+							extractStyles: false
+							// extractStyles: true
 						})
 					})
 				})
@@ -117,9 +117,8 @@ export default {
 				// 		source: new OSM()
 				// 	})
 				// ],
-				view: this.mapView				
+				view: this.mapView
 			})
-			console.log(map);
 			// map.getView().fit(vectorLayerInformacoes.getSource().getExtent(), mapInformacoes.getSize());
 		}
 	}

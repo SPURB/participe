@@ -53,7 +53,7 @@
 			<br />
 			<iframe id="ifrSlides" src="https://docs.google.com/presentation/d/19tfb2aSxfYc8fZdxt1QKjiQlunV4Mv_qcqayTW0RCVs/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="405" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 			<br />
-			<p><small>Caso tenha dificuldades para visualizar a apresentação acima, <a href="LINK PARA O ARQUIVO">clique aqui para fazer o download</a>.</small></p>
+			<p><small>Caso tenha dificuldades para visualizar a apresentação acima, <a :href="fileSrc('Apresentacao_audiencias_publicas_Plano_Cicloviario-29abr2019.pptx')">clique aqui para fazer o download</a>.</small></p>
 			<Comments :attr="{id:commentId(), context:'Apresentação'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 		<hr />

@@ -44,10 +44,10 @@
 				}"></Imagem>
 				<ul class="links">
 					<li>
-						<a href="">
+						<a :href="src('arquivos/setor-central-2/NT_Perimetro.pdf')">
 							<i class="icon-pdf icon"><span>pdf</span></i>
 							<div>Nota Técnica - Perímetro</div>
-							<span>XXX Mb</span>
+							<span>55,8 Mb</span>
 						</a>
 					</li>
 				</ul>
@@ -85,9 +85,9 @@
 			<section>
 				<h3 class="titulo" indent="2">O Centro que queremos</h3>
 				<p>Considerando a dinâmica atualmente existente na região central de São Paulo, que concentra uma significativa quantidade de empregos, comércios e serviços, sendo polo de atração de viagens com origem em outras partes do município e em outras cidades da região metropolitana e do país, mas que apresenta densidade populacional abaixo da desejada e diversos problemas sociais em seu território, foi inicialmente necessário definir as finalidades às quais o projeto e os instrumentos de intervenção a ele vinculados devem estar relacionadas.</p>
-
-				<p class="img">infografico.indd</p>
-
+				<figure>
+					<Infografico></Infografico>
+				</figure>
 				<h4>Atendimento habitacional</h4>
 				<p>Nos distritos centrais da cidade, o tema do atendimento habitacional tem prioridade indiscutível. Trata-se de território de oferta concentrada de empregos e serviços e com parcelas expressivas de baixa densidade populacional, aptas ao recebimento de moradores.</p>
 				<p>Aqui estão representadas todas as modalidades de moradia sub-normal – condomínios precarizados, cortiços, ocupações de edifícios adaptados, favelas – e a maior concentração da cidade de população em situação de rua.</p>
@@ -211,15 +211,21 @@
 				<h3 class="titulo" indent="2">Infraestrutura de transporte coletivo de massa</h3>
 				<p>O Plano Diretor Estratégico (Lei nº 16.050/2014) instituiu as áreas de influência dos Eixos de Estruturação da Transformação Urbana (EETU), territórios definidos pela presença de elementos estruturais dos sistemas de transporte coletivo de média e alta capacidade (estações de trem e metrô e corredores de ônibus), para as quais foi direcionado o adensamento construtivo e populacional do Município.</p>
 				<p>Em vista da incidência da Operação Urbana Centro e da Macroárea de Estruturação Metropolitana, na maior parte do território do PIU Setor Central não foram demarcadas zonas vinculadas aos EETU. Considerando, entretanto, as diretrizes do PDE para adensamento e melhor aproveitamento das áreas servidas de transporte público de massa, os parâmetros de ocupação do PIU Setor Central levaram em consideração a aplicação dos critérios dos EETU no território do projeto.</p>
-
-				<p class="img">buffer.pdf</p>
-
+				<Imagem :dados="{
+					tipo: 'mapa',
+					url: imgSrc('arquivos/setor-central-2/mapas/novas-areas-adensamento.jpg'),
+					legenda: [
+						{ borda: '#9a989d', espessura: '3', pontilhado: true, descricao: 'Perímetro proposto do PIU Setor Central' },
+						{ fundo: '#c9aba1', descricao: 'Novas áreas de adensamento populacional' },
+						{ fundo: '#bbcca8', descricao: 'Parques, praças e canteiros' }
+					]
+				}"></Imagem>
 			</section>
 			<section>
 				<h3 class="titulo" indent="2">Densidades</h3>
 				<p>O <i>Diagnóstico - Análise Territorial</i> apresentado na primeira consulta pública do PIU Setor Central evidenciou que segundo dados da RAIS de 2014, os dez distritos centrais concentram 19% dos empregos formais do município – número que não considera os empregos ofertados pela administração pública, numerosos nessa região.</p>
 				<p>Esses mais de 800 mil empregos que promovem a grande diversidade de serviços ofertados fundamentam a diretriz específica do PDE de fortalecer a polaridade de alcance municipal, aumentando a densidade demográfica e a oferta habitacional da região central.</p>
-				<p>Os distritos da Liberdade, Bela Vista e Consolação e parcelas dos distritos do Cambuci e de Santa Cecília que já sofreram um processo de transformação e verticalização e apresentam padrão de urbanização elevado e alta concentração de empregos e de serviços referenciam a proposta de adensamento populacional e construtivo pretendido no projeto. C</p>
+				<p>Os distritos da Liberdade, Bela Vista e Consolação e parcelas dos distritos do Cambuci e de Santa Cecília que já sofreram um processo de transformação e verticalização e apresentam padrão de urbanização elevado e alta concentração de empregos e de serviços referenciam a proposta de adensamento populacional e construtivo pretendido no projeto.</p>
 				<p>Consideradas as densidades populacionais dos três distritos mais populosos, destacam-se os índices de Santa Cecília, República e Bela Vista, todos acima de 200 hab/ha, densidade compatível com o modelo de cidade compacta que vem sendo adotado em projetos urbanos recentes.</p>
 				<p>A partir desses dados e da diretriz de adensamento populacional do Setor Central da Macroárea de Estruturação Metropolitana, a densidade populacional média futura do projeto foi estabelecida entre 200 e 250 hab/ha, contra a média atual de 145 hab/ha, o que corresponde a um incremento populacional situado entre 115.000 e 220.000 novos moradores para área de 2.098 ha compreendida no perímetro de intervenção.</p>
 				<p>Os incentivos à produção imobiliária no Setor Central buscam associar adensamento construtivo e adensamento populacional e promover o convívio entre pessoas de faixas de renda distintas e o uso misto nas edificações – diversidade aqui entendida como elemento qualificador da vida urbana.</p>
@@ -245,13 +251,12 @@
 					tipo: 'mapa',
 					titulo: 'Densidade média por distrito',
 					url: imgSrc('arquivos/setor-central-2/mapas/densidade-distritos.jpg')
-				}"></Imagem>
-				<p>
-					<a href="" class="button">Acesse o mapa interativo "Densidade Populacional" <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
-				</p>
-				<p>
-					<a href="" class="button">Acesse o mapa interativo "Densidade Construtiva" <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
-				</p>
+				}">
+					<template slot="extra">
+						<a href="" class="button">Acesse o mapa interativo "Densidade Populacional" <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
+						<a href="" class="button">Acesse o mapa interativo "Densidade Construtiva" <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
+					</template>
+				</Imagem>
 			</section>
 			<section>
 				<h3 class="titulo" indent="2">Apoio Sul</h3>
@@ -294,8 +299,8 @@
 				<p>As <b><i>Zonas Eixo de Estruturação da Transformação Urbana</i></b> são encontradas nos distritos de Santa Cecília, no entorno da estação Santa Cecília da Linha 3 Vermelha do Metrô, e Mooca e Belém, polarizadas pela Linha 3 Vermelha e pelas linhas 10 Turqueza e 11 Coral da CPTM.</p>
 				<p>As <b><i>Zonas Eixo de Estruturação da Transformação Metropolitana</i></b> são encontradas nos distritos contidos na MEM, abrangendo trechos de Santa Cecília servidos pela Linha 3 Vermelha, pela Linha 4 Amarela e pela Linha 1 Azul do Metrô e pela Linha 7 Rubi e Linha 11 Coral da CPTM.</p>
 				<p>A setorização do PIU Setor Central adota categorização semelhante, definindo Áreas de Transformação (T), Áreas de Qualificação (Q) e Áreas de Preservação (P).</p>
-				<p class="img">quadro de parametros piu acp</p>
-				<p>Essa nomenclatura, que será adotada nos demais projetos de intervenção urbana propostos para a Macroárea de Urbanização Consolidada, foi introduzida no <i>Projeto de Intervenção Urbana do Arco Tietê</i>, atualmente em processo de revisão. Considerando-se que os Arcos Tamanduateí, Tietê, Jurubatuba e Pinheiros e o Setor Central compõem a MEM, buscou-se equalizar as análises e proposições para toda a Macroárea. Sendo assim, preservadas as especificidades de territórios tão distintos, foram propostos neste projeto parâmetros urbanísticos que participam da mesma hierarquia de regramentos utilizados nos Projetos de Intervenção Urbana dos demais subsetores da MEM. Dessa forma, algumas categorias de setor podem estar ausentes em determinados trechos da MEM – como ocorre com as categorias T1 e Q3 neste projeto</p>
+				<Tabela :dados="parametros_urb_piusce"></Tabela>
+				<p>Essa nomenclatura, que será adotada nos demais projetos de intervenção urbana propostos para a Macroárea de Urbanização Consolidada, foi introduzida no <i>Projeto de Intervenção Urbana do Arco Tietê</i>, atualmente em processo de revisão. Considerando-se que os Arcos Tamanduateí, Tietê, Jurubatuba e Pinheiros e o Setor Central compõem a MEM, buscou-se equalizar as análises e proposições para toda a Macroárea. Sendo assim, preservadas as especificidades de territórios tão distintos, foram propostos neste projeto parâmetros urbanísticos que participam da mesma hierarquia de regramentos utilizados nos Projetos de Intervenção Urbana dos demais subsetores da MEM. Dessa forma, algumas categorias de setor podem estar ausentes em determinados trechos da MEM – como ocorre com T1, T2-A, T3, T4, Q1, Q2-A, Q3, P3, P3-A e P4, ausentes neste projeto.</p>
 			</section>
 			<section>
 				<h3 class="titulo" indent="2">Áreas e Eixos</h3>
@@ -304,9 +309,345 @@
 					tipo: 'coluna',
 					url: imgSrc('arquivos/setor-central-2/img/diagramatico-4.png')
 				}"></Imagem>
-
-				<p class="img">excel parametros R02 xlsx</p>
-
+				<div class="parametros_bonus">
+					<div>
+						<table>
+							<caption>Parâmetros de ocupação e utilização de bônus (PIU Setor Central)</caption>
+							<thead>
+								<tr>
+									<th></th>
+									<th>Tipo de área</th>
+									<th>Coeficiente de Aproveitamento (CA) máximo</th>
+									<th>Taxa de Ocupação (TO) máxima</th>
+									<th>Gabarito de altura máxima (m)</th>
+									<th>Fachada ativa</th>
+									<th>Utilização do Bônus de Potencial Construtivo Adicional</th>
+									<th>Cota Parte máxima de terreno por unidade (m²)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td rowspan="3">Transformação<sup>a</sup></td>
+									<td>T2</td>
+									<td>4</td>
+									<td>80%</td>
+									<td>NA</td>
+									<td>Não obrigatória</td>
+									<td><b>Obrigatório acima do CA 2</b><sup>s</sup></td>
+									<td>NA</td>
+								</tr>
+								<tr>
+									<td>T2C</td>
+									<td>4</td>
+									<td>80%</td>
+									<td>NA</td>
+									<td>Não obrigatória</td>
+									<td><b>Obrigatório acima do CA 2</b><sup>s</sup></td>
+									<td>20</td>	
+								</tr>
+								<tr>
+									<td>T5</td>
+									<td>2<sup>b</sup></td>
+									<td>80%</td>
+									<td>Zoneamento<sup>b</sup></td>
+									<td>Não obrigatória</td>
+									<td><b>Permitida</b></td>
+									<td>NA<sup>a</sup></td>
+								</tr>
+								<tr>
+									<td rowspan="6">Qualificação<sup>a</sup></td>
+									<td>Q2<sup>d</sup></td>
+									<td>2<sup>b</sup></td>
+									<td>80%</td>
+									<td>28m<sup>b</sup></td>
+									<td>Obrigatória<sup>c</sup></td>
+									<td><b>Permitida</b></td>
+									<td>NA<sup>a</sup></td>
+								</tr>
+								<tr>
+									<td>Q4<sup>q</sup></td>
+									<td>4</td>
+									<td>80%</td>
+									<td>36m</td>
+									<td>Não obrigatória</td>
+									<td><b>Permitida</b></td>
+									<td>NA</td>
+								</tr>
+								<tr>
+									<td>Q5<sup>q</sup></td>
+									<td>4</td>
+									<td>80%</td>
+									<td>48m<sup>q</sup></td>
+									<td>Não obrigatória</td>
+									<td><b>Permitida</b></td>
+									<td>NA</td>
+								</tr>
+								<tr>
+									<td>Q6<sup>q</sup></td>
+									<td>4</td>
+									<td>80%</td>
+									<td>60m</td>
+									<td>Não obrigatória</td>
+									<td><b>Permitida</b></td>
+									<td>NA</td>
+								</tr>
+								<tr>
+									<td>Q7<sup>q</sup></td>
+									<td>4</td>
+									<td>80%</td>
+									<td>60m</td>
+									<td>Não obrigatória</td>
+									<td><b>Permitida</b></td>
+									<td>NA</td>
+								</tr>
+								<tr>
+									<td>Q8<sup>p, v</sup></td>
+									<td>6<sup>e</sup></td>
+									<td>80%</td>
+									<td>NA</td>
+									<td>Não obrigatória</td>
+									<td><b>Obrigatório acima do CA 4<sup>t</sup></b></td>
+									<td>NA</td>
+								</tr>
+								<tr>
+									<td rowspan="3">Preservação<sup>a</sup></td>
+									<td>P1</td>
+									<td>2</td>
+									<td>80%</td>
+									<td>15m</td>
+									<td>Não obrigatória</td>
+									<td><b>Permitida</b></td>
+									<td>NA</td>
+								</tr>
+								<tr>
+									<td>P2</td>
+									<td>1</td>
+									<td>80%</td>
+									<td>10m</td>
+									<td>Não obrigatória</td>
+									<td><b>Permitida</b></td>
+									<td>NA</td>
+								</tr>
+								<tr>
+									<td>P5<sup>q</sup></td>
+									<td>4</td>
+									<td>80%</td>
+									<td><sup>y</sup></td>
+									<td>Não obrigatória</td>
+									<td><b>Permitida</b></td>
+									<td>NA</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div>
+						<table>
+							<caption>Parâmetros de ocupação e utilização de bônus (Eixos)</caption>
+							<thead>
+								<th></th>
+								<th>Tipo de área</th>
+								<th>Coeficiente de Aproveitamento (CA) máximo</th>
+								<th>Taxa de Ocupação (TO) máxima</th>
+								<th>Gabarito de altura máxima (m)</th>
+								<th>Recuo frontal</th>
+								<th>Fachada ativa</th>
+								<th>Fruição pública</th>
+								<th>Lote mínimo</th>
+								<th>Doação de calçada</th>
+								<th>Incentivo ao remembramento de lotes</th>
+								<th>Incentivo de qualificação de frente de lote</th>
+								<th>Usos incentivados</th>
+							</thead>
+							<tbody>
+								<tr>
+									<td rowspan="3">Eixos de Transformação<sup>a</sup></td>
+									<td>Elevado Pres. João Goulart<sup>f</sup></td>
+									<td>6</td>
+									<td>80%</td>
+									<td>NA</td>
+									<td>NA</td>
+									<td>Incentivada<sup>g</sup></td>
+									<td>Obrigatória<sup>h, n</sup></td>
+									<td>NA</td>
+									<td>NA</td>
+									<td>Sim<sup>v</sup></td>
+									<td>NA</td>
+									<td>NA</td>
+								</tr>
+								<tr>
+									<td>Rua Mauá</td>
+									<td>4</td>
+									<td>80%</td>
+									<td>NA</td>
+									<td>NA</td>
+									<td>Obrigatória<sup>i</sup></td>
+									<td>Obrigatória<sup>h</sup></td>
+									<td>NA</td>
+									<td>NA</td>
+									<td>NA</td>
+									<td>NA</td>
+									<td>NA</td>
+								</tr>
+								<tr>
+									<td>Radial Leste-Oeste, Alcântara Machado e Prestes Maia</td>
+									<td>4</td>
+									<td>80%</td>
+									<td>NA</td>
+									<td>5m<sup>r</sup></td>
+									<td>Obrigatória<sup>i</sup></td>
+									<td>Obrigatória<sup>h</sup></td>
+									<td>NA</td>
+									<td><sup>o</sup></td>
+									<td>NA</td>
+									<td>NA</td>
+									<td>NA</td>
+								</tr>
+								<tr>
+									<td rowspan="2">Eixos de Transformação da Orla Fluvial<sup>a</sup></td>
+									<td>Tamanduateí<sup>m</sup></td>
+									<td>4</td>
+									<td>70%</td>
+									<td>NA</td>
+									<td><sup>j</sup></td>
+									<td>Obrigatória<sup>i</sup></td>
+									<td>Obrigatória<sup>h</sup></td>
+									<td>1000m²<sup>u</sup></td>
+									<td><sup>o</sup></td>
+									<td>Sim<sup>x</sup></td>
+									<td>Sim<sup>x</sup></td>
+									<td>Incentivado<sup>p, w</sup></td>
+								</tr>
+								<tr>
+									<td>Marginal Tietê<sup>m</sup></td>
+									<td>4</td>
+									<td>70%</td>
+									<td>NA</td>
+									<td><sup>j</sup></td>
+									<td>Não brigatória</td>
+									<td>Obrigatória<sup>h</sup></td>
+									<td>1000m²<sup>u</sup></td>
+									<td><sup>o</sup></td>
+									<td>Sim<sup>x</sup></td>
+									<td>Sim<sup>x</sup></td>
+									<td>Incentivado<sup>p, w</sup></td>
+								</tr>
+								<tr>
+									<td colspan="2">Eixos estratégicos<sup>a</sup></td>
+									<td>Parâmetro da área</td>
+									<td>80%</td>
+									<td>Parâmetro da área</td>
+									<td>Parâmetro da área<sup>r</sup></td>
+									<td>Obrigatória<sup>i</sup></td>
+									<td>Não obrigatória</td>
+									<td>1000m²<sup>u</sup></td>
+									<td><sup>l</sup></td>
+									<td>NA</td>
+									<td>NA</td>
+									<td>NA</td>
+								</tr>
+								<tr>
+									<td colspan="2">Eixos estratégicos com faixa de indução II<sup>a, q</sup></td>
+									<td>Parâmetro da área</td>
+									<td>80%</td>
+									<td>NA<sup>k</sup></td>
+									<td>Parâmetro da área<sup>r</sup></td>
+									<td>Obrigatória<sup>i</sup></td>
+									<td>Não obrigatória</td>
+									<td>1000m²<sup>u</sup></td>
+									<td><sup>l</sup></td>
+									<td>NA</td>
+									<td>NA</td>
+									<td>NA</td>
+								</tr>
+								<tr>
+									<td colspan="2">Eixos de Ordenamento da Paisagem 1<sup>a, q</sup></td>
+									<td>4</td>
+									<td>80%</td>
+									<td>60m</td>
+									<td><sup>q</sup></td>
+									<td>Não obrigatória</td>
+									<td>Não obrigatória</td>
+									<td>NA</td>
+									<td>NA</td>
+									<td>NA</td>
+									<td>NA</td>
+									<td>NA</td>
+								</tr>
+								<tr>
+									<td colspan="2">Eixos de Ordenamento da Paisagem 2<sup>a, q</sup></td>
+									<td>4</td>
+									<td>80%</td>
+									<td>48m</td>
+									<td><sup>q</sup></td>
+									<td>Não obrigatória</td>
+									<td>Não obrigatória</td>
+									<td>NA</td>
+									<td>NA</td>
+									<td>NA</td>
+									<td>NA</td>
+									<td>NA</td>
+								</tr>
+								<tr>
+									<td colspan="2">Eixos de Ordenamento da Paisagem 3<sup>a, q</sup></td>
+									<td>4</td>
+									<td>80%</td>
+									<td>48m</td>
+									<td><sup>q</sup></td>
+									<td>Não obrigatória</td>
+									<td>Não obrigatória</td>
+									<td>NA</td>
+									<td>NA</td>
+									<td>NA</td>
+									<td>NA</td>
+									<td>NA</td>
+								</tr>
+								<tr>
+									<td colspan="2">Eixos de Ordenamento da Paisagem 4<sup>a, q</sup></td>
+									<td>4</td>
+									<td>80%</td>
+									<td>28m<sup>q</sup></td>
+									<td><sup>q</sup></td>
+									<td>Não obrigatória</td>
+									<td>Não obrigatória</td>
+									<td>NA</td>
+									<td>NA</td>
+									<td>NA</td>
+									<td>NA</td>
+									<td>NA</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="notas">
+						<ol class="minusculas">
+							<li>Nos imóveis enquadrados como Zonas Especiais de Interesse Social (ZEIS) pela Lei nº 16.402/2016, aplicam-se os parâmetros e disposições instituídos para as referidas zonas de uso pela Lei nº 16.050/2014, tais como destinação de percentuais mínimos de área construída total para HIS e necessidade de constituição de Conselhos Gestores e, complementarmente, os parâmetros estabelecidos pelo PIU Setor Central para as Áreas ou Eixos incidentes.</li>
+							<li>O CA máximo poderá ser majorado em até  4 e o  gabarito de altura máxima em até 48m, desde que atendidas as seguintes condicionantes: (1) utilização mínima de CA 1 para uso nR; (2) utilização mínima de CA 2 para uso R;  (3) atendimento da cota parte máxima de terreno por unidade habitacional de 20 m² para a área construída correspondente ao uso R.</li>
+							<li>Fachada Ativa obrigatória em pelo menos 25% de cada uma das testadas do lote, não computável nos termos do art. 62, VII da Lei nº 16.402/2016, desde que atendido o disposto no art. 71 da mencionada Lei.</li>
+							<li>A faixa do lote correspondente ao recuo frontal deverá ser arborizada e integrada à calçada por meio de piso nivelado e da ausência de fechamentos e barreiras junto às divisas frontal e laterais.</li>
+							<li>Mediante análise caso a caso e deliberação do Conselho Gestor da Operação Urbana, o CA máximo poderá ultrapassar 6 com pagamento de contrapartida financeira pelo potencial construtivo adicional.</li>
+							<li>Recebem os parâmetros deste Eixo os lotes com frente para os seguintes logradouros: Rua Amaral Gurgel, Avenida São João (entre a Rua Helvétia e a Praça Marechal Deodoro) e Av General Olímpio da Silveira (entre a Praça Marechal Deodóro e Largo Padre Péricles).</li>
+							<li>Atendidas as condições do inciso VII do art. 62 e do art. 71 da Lei nº 16.402/2016, serão consideradas não computáveis as áreas destinadas a usos não residenciais no nível da rua, com exceção daqueles enquadrados nos grupos de atividade referentes a serviço de armazenamento e guarda de bens móveis, até o limite da Taxa de Ocupação do lote.</li>
+							<li>Fruição Pública obrigatória em empreendimentos com frente para mais de um logradouro, para interligação de faces de quadra, devendo atender o disposto no art. 70 da Lei nº 16.402/2016.				</li>
+							<li> Fachada Ativa obrigatória em pelo menos 25% de cada uma das testadas do lote, não computável nos termos do art. 62, VII da Lei nº 16.402/2016 até o limite da Taxa de Ocupação máxima, desde que atendido o disposto no art. 71 da mencionada Lei.</li>
+							<li>Correspondente à faixa de Área de Preservação Permanente (APP) dos rios Tietê e Tamanduateí incidente nos lotes, que deverá ser majoritariamente permeável, arborizada e livre de fechamentos e barreiras, permitindo a fruição pública.</li>
+							<li>Gabarito de altura máxima não aplicado à faixa de 50m medida a partir do alinhamento frontal voltado ao Eixo Estratégico. Para o restante do lote, aplica-se o parâmetro da Área em que este encontra-se inserido.</li>
+							<li>Exigência de doação de área para alargamento das calçadas voltadas ao Eixo de Transformação, que deverão ter largura final mínima de 5 m.</li>
+							<li>Novos parcelamentos ou edificações em lotes atingidos pela Área de Preservação Permanente (APP) dos rios Tietê e Tamanduateí deverão atender a diretrizes específicas estabelecidas pela São Paulo Urbanismo mediante análise caso a caso.</li>
+							<li>No caso de transformação do Elevado Pres. João Goulart em parque, será permitida a execução de passagem aérea conectando os empreendimentos lindeiros e o Elevado. Nesses casos, poderá ser destinada à fruição pública vertical parcelas do pavimento térreo e do pavimento de acesso ao Elevado, além da circulação vertical entre os mencionados pavimentos, estendendo-se a essas áreas o incentivo previsto no art. 88 da Lei nº 16.402/2016, deste que elas configurem área mínima de 250m² em cada um dos pavimentos, estando integradas ao passeio público ou ao Elevado, sem fechamento e não ocupada por estacionamento de veículos.</li>
+							<li>Exigência de doação de área para alargamento das calçadas voltadas ao Eixo de Transformação, que deverão ter largura final mínima de 8 m.</li>
+							<li>Novas construções e reformas com ampliação de área construída de estabelecimentos culturais ou de ensino terão direito à gratuidade de potencial construtivo adicional, mesmo que associadas a outros usos.</li>
+							<li>Observar especificidades constantes no regramento para o Perímetro de Requalificação de Imóveis Tombados (PRIT) - Ver nota técnica específica</li>
+							<li>Os lotes que doarem área para alargamento da calçada ficam dispensados do atendimento do recuo obrigatório de frente e os potenciais construtivos básico e máximo serão calculados com base na área original do lote, sem cobrança de outorga onerosa do direito de construir relativa ao potencial construtivo adicional correspondente à área doada.</li>
+							<li>O potencial construtivo acima do CA 2 até o CAmax só poderá ser adquirido por meio de Bônus de Potencial Construtivo Adicional.</li>
+							<li>O potencial construtivo acima do CA 4 até o CAmax só poderá ser adquirido por meio de Bônus de Potencial Construtivo Adicional.</li>
+							<li>Com limite máximo de 25% (vinte e cinco por cento) de vedação da testada do lote com muros.</li>
+							<li>Empreendimentos que atinjam lote mínimo de 1.000m², resultantes do remembramento de três ou mais lotes, terão direito à gratuidade do potencial construtivo correspondente a 10% da área do terreno resultante para cada lote rememembrado, até o limite de 100%.</li>
+							<li>Para novas construções e reformas com ampliação de área construída de hospitais e hotéis, o coeficiente de aproveitamento máximo será majorado em 50%, mediante pagamento de outorga onerosa de potencial construtivo adicional.</li>
+							<li>Será concedido incentivo aos empreendimentos lindeiros às orlas fluviais obrigados à destinar a faixa de APP incidente em seu lote à fruição pública, nos termos da nota "j", na forma de Potencial Construtivo Adicional  Gratuito proporcional à relação entre extensão da testada e a largura da faixa de APP.</li>
+							<li>Igual à altura da platibanda dos bens tombados na quadra.</li>
+						</ol>
+					</div>
+				</div>
 				<p>Os <b>Territórios de Transformação</b>, buscam o adensamento populacional e construtivo, fortalecimento das atividades econômicas e de serviços, mix de atividades e otimização do uso da infraestrutura.</p>
 				<p>O projeto parte dessa definição e traz incentivos que orientam a transformação urbana, principalmente onde existe baixo adensamento construtivo e habitacional e onde novas infraestruturas abrirão frentes urbanas e processos de transformação – especialmente àquelas ligadas a implantação do Apoio Urbano Sul. Também recebe maior incentivo à transformação a parte leste do território, integrante do atual Perímetro da Operação Urbana Centro – onde, junto a ações de melhoria da microacessibilidade, é possível comportar o incremento populacional e construtivo.</p>
 				<p>A conceituação das Áreas de Transformação comporta modulações.</p>
@@ -806,9 +1147,7 @@
 				<li>a AIU SETOR CENTRAL, nos demais distritos do PIU;</li>
 				<li>as ÁREAS DE ESTRUTURAÇÃO LOCAL, delimitadas em torno do Terminal Princesa Isabel e dos perímetros de ZEIS.</li>
 			</ol>
-
-			<p class="img">mapas diagramaticos X3 – X6</p>
-
+			<Galeria :gallery_attrs="galeria03"></Galeria>
 			<section>
 				<h3 class="titulo" indent="2">Operação Urbana Centro</h3>
 				<p>A Operação Urbana Centro será mantida como instrumento de implantação do PIU Setor Central nos distritos Sé e República, com as seguintes características:</p>
@@ -894,10 +1233,10 @@
 				<p>O Perímetro de Requalificação de Imóveis Tombados (PRIT) é resultado da articulação de preexistências peculiares à região dos Campos Elíseos, Santa Ifigênia e Rua Florêncio de Abreu, especialmente no âmbito dos processos de preservação do patrimônio histórico edificado e de sua ambiência. No PRIT, observa-se uma alta incidência de imóveis tombados ou em processos de tombamento, ocupação do solo relativamente densa e, ao mesmo tempo, densidade construída relativamente baixa. Soma-se a esses fatores a convivência entre intensa atividade comercial, em muitos casos especializada, e a demanda por moradia de qualidade. Dessa forma, o território do PRIT apresenta oportunidades de transformação apoiadas na regulação da paisagem e na preservação do patrimônio e, por isso, foi objeto de proposta de regramento urbanístico específico, com o objetivo de permitir o adensamento construtivo em consonância com a ambiência dos bens tombados.</p>				
 				<ul class="links">
 					<li>
-						<a href="">
+						<a :href="src('arquivos/setor-central-2/NT_PRIT.pdf')">
 							<i class="icon-pdf icon"><span>pdf</span></i>
 							<div>Nota Técnica - PRIT</div>
-							<span>XXX Mb</span>
+							<span>91,9 Mb</span>
 						</a>
 					</li>
 				</ul>
@@ -1037,36 +1376,75 @@
 				<h3 class="titulo" indent="2">Projetos Estratégicos</h3>
 				<p>PROJETOS ESTRATÉGICOS são intervenções às quais se atribui um potencial indutor de transformações em seu entorno imediato.</p>
 				<p>Concentração de imóveis vagos ou subutilizados, áreas públicas em processo de transformação, vizinhanças fisicamente degradadas, potencialidades de aproveitamento inexploradas são situações que justificam a inclusão dessas áreas no rol dos Projetos Estratégicos.</p>
+				<ul class="links">
+					<li>
+						<a :href="src('arquivos/setor-central-2/NT_Projetos-Estrategicos.pdf')">
+							<i class="icon-pdf icon"><span>pdf</span></i>
+							<div>Nota Técnica - Projetos Estratégicos</div>
+							<span>15,4 Mb</span>
+						</a>
+					</li>
+				</ul>
 				<p>Ao norte do perímetro do PIU Setor Central há uma concentração de áreas públicas de grandes dimensões e subutilizadas cuja transformação potencializa a transformação de áreas privadas ao longo do Apoio Urbano Sul.</p>
 				<p>Cada uma dessas áreas configura um PROJETO ESTRATÉGICO, vinculado a um Plano de Parcelamento e um Programa de Interesse Público, com proposta de provisão de moradias de interesse social e equipamentos públicos, criação de áreas verdes e qualificação de espaços públicos. São eles:</p>
 				<ul>
 					<li>
 						<h4>PE DETRAN</h4>
 						<p>O projeto tem como objetivo otimizar o uso de terras públicas que hoje abrigam serviços públicos como a sede administrativa do Departamento Estadual de Transito – Detran – e Estação de Transbordo. Ampliando as frentes de lotes que se abrem para o Rio Tamanduateí e para o novo Parque, espera-se que novos usos, como escritórios, hotéis e outros, se instalem no local, tirando partido da proximidade com o Anhembi, Campo de Marte e Terminal Rodoviário Tietê. Faixas da Área de Preservação Permanente – APP do Tamanduateí serão destinadas para a criação de praças que valorizem os equipamentos públicos e usos residenciais.</p>
-						<p class="img">antes depois</p>						
+						<AntesDepois :dados="{
+						caption: 'Projeto Estratégico Detran',
+						largura: '700',
+						altura: '500',
+						imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/projetos-estrategicos/detran_antes.jpg'),
+						imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/projetos-estrategicos/detran_depois.jpg')
+						}"></AntesDepois>
 					</li>
 					<li>
 						<h4>PE CANINDÉ/PORTUGUESA</h4>
 						<p>Com a complementação do viário que compõe o Apoio Urbano Sul, previsto na Lei nº 16.541/2016, uma nova frente urbana passa a dar acesso a áreas municipais subutilizadas do Canindé. O projeto específico previsto para esta área propiciará a reorganização das terras públicas e privadas, podendo abranger ou não a manutenção do estádio de futebol, a depender do plano urbanístico a ser elaborado, além de contemplar a implantação de travessia qualificada para pedestres e ciclistas sobre o Rio Tietê, conectada por meio de áreas verdes ou calçadas. Pretende-se, ainda, a desocupação e a requalificação da APP do Rio Tietê, que voltará a integrar o Sistema de Áreas Protegidas, Áreas Verdes e Espaços Livres da cidade, auxiliando na melhoria da drenagem e do microclima urbano e compondo o corredor ambiental. Serão, ainda, observadas as diretrizes apontadas pelo Art. 169 da Lei nº 16.402/2016 , que trata da ZOE do Canindé, a saber possibilidade de coeficiente de aproveitamento máximo superior ao estabelecido pelo Quadro 2A da Lei nº 16.050/2014 (Plano Diretor Estratégico), desde que o potencial construtivo total do projeto seja limitado a 300 mil m² de área construída computável e que seja respeitada uma destinação mínima obrigatória de 20% de área pública.</p>
-						<p class="img">antes depois</p>
+						<AntesDepois :dados="{
+						caption: 'Projeto Estratégico Canindé/Portuguesa',
+						largura: '700',
+						altura: '500',
+						imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/projetos-estrategicos/caninde-portuguesa_antes.jpg'),
+						imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/projetos-estrategicos/caninde-portuguesa_depois.jpg')
+						}"></AntesDepois>
 					</li>
 					<li>
 						<h4>PE CANINDÉ/SANTO ANTÔNIO</h4>
 						<p>A complementação do viário que compõe o Apoio Sul na região, previsto na Lei nº 16.541/2016, somada à implantação de viário complementar, trará a oportunidade de organizar o território composto por lotes públicos localizados no Canindé, que compõem o Projeto Estratégico Canindé – Santo Antônio.</p>
 						<p>Um componente importante deste projeto estratégico é a previsão de viabilização de áreas de ZEIS, instituídas pela Lei nº 16.402/2016, considerando a demanda local na destinação das unidades de interesse social produzidas. As áreas verdes propostas tiram partido da identidade local e das áreas de lazer já existentes, possibilitando a prática de atividades esportivas e reforçando a memória dos campos de futebol de várzea da região.</p>
-						<p class="img">antes depois</p>
+						<AntesDepois :dados="{
+						caption: 'Projeto Estratégico Canindé - Santo Antônio',
+						largura: '700',
+						altura: '500',
+						imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/projetos-estrategicos/caninde-stoantonio_antes.jpg'),
+						imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/projetos-estrategicos/caninde-stoantonio_depois.jpg')
+						}"></AntesDepois>
 					</li>
 					<li>
 						<h4>PE CANINDÉ/CMTC</h4>
 						<p>Usos institucionais existentes serão reorganizados para ocupar menor área de terreno, liberando espaço para implantação de conjuntos residenciais e de novas atividades, que estarão, preferencialmente, voltados para a Avenida Cruzeiro do Sul, construindo uma nova frente para este logradouro. A provisão de áreas verdes irá garantir integração com os equipamentos públicos modernizados, qualificando a vida dos futuros moradores do bairro.</p>
-						<p class="img">antes depois</p>
+						<AntesDepois :dados="{
+						caption: 'Projeto Estratégico Canindé/CMTC',
+						largura: '700',
+						altura: '500',
+						imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/projetos-estrategicos/caninde-cmtc_antes.jpg'),
+						imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/projetos-estrategicos/caninde-cmtc_depois.jpg')
+						}"></AntesDepois>
 					</li>
 					<li>
 						<h4>PE SANTA RITA</h4>
 						<p>No terreno de propriedade da SPTrans onde funcionava a garagem de ônibus Santa Rita, são planejadas melhorias urbanísticas, tanto em passeios quanto em praças, como elemento indutor da transformação de outros terrenos na região.</p>
 						<p>Como diretriz de projeto, entende-se que estas novas áreas verdes deverão se concentrar junto ao Apoio Urbano Sul de forma a criar um “respiro” na avenida. Novas vias, transversais ao Apoio, aumentarão a permeabilidade do bairro e deverão dar continuidade ao viário existente no entorno, proporcionando novas conexões aos deslocamentos locais. Por se tratar de quadras novas na cidade, nas quais se pretende maior adensamento populacional e construtivo, as novas calçadas deverão apresentar dimensões compatíveis e atributos condizentes com este novo padrão.</p>
 						<p>Além de trazer a oferta de terrenos empreendíveis pelo mercado, o projeto promoverá a reconstrução das áreas existentes da SPTrans, do Departamento de Transportes Públicos – DTP e do Departamento de Transportes Internos – DTI.</p>
-						<p class="img">antes depois</p>
+						<AntesDepois :dados="{
+						caption: 'Projeto Estratégico Santa Rita',
+						largura: '700',
+						altura: '500',
+						imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/projetos-estrategicos/starita_antes.jpg'),
+						imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/projetos-estrategicos/starita_depois.jpg')
+						}"></AntesDepois>
 					</li>
 				</ul>
 				<p>Esses PROJETOS ESTRATÉGICOS foram estudados no PIU ARCO TIETÊ que abrangia distritos da Subprefeitura da Sé absorvidos no PIU SETOR CENTRAL.</p>
@@ -1147,9 +1525,9 @@
 				<p>A partir da deliberação dos grupos gestores, o Plano de Ação Integrada será desenvolvido pelo NÚCLEO TÉCNICO DE GESTÃO E PLANEJAMENTO, com a participação de um COMITÊ LOCAL do Grupo Gestor/CEOUC.</p>
 				<p>Este COMITÊ LOCAL será definido em reunião do Grupo Gestor da AIU-SETOR CENTRAL, e atuará um grupo de apoio ao desenvolvimento e acompanhamento do PA.</p>
 				<p>Será composto por membros do Núcleo Técnico de Gestão e Planejamento, do Grupo Gestor/Comissão Executiva e de outros atores locais convidados, de forma a melhorar a interlocução com a população local e consolidar consensos em torno das propostas e de seu encaminhamento.</p>
-
-				<p class="img">ai2html PAI</p>
-
+				<figure>
+					<Pai></Pai>
+				</figure>
 				<p>Quanto a implantação de PLANO DE AÇÃO INTEGRADA em perímetro de ÁREA DE ESTRUTURAÇÃO LOCAL DA MORADIA prever a Provisão Habitacional de Interesse Social de Promoção Pública, o COMITÊ LOCAL demandará à SEHAB a Constituição do CONSELHO GESTOR DE ZEIS.</p>
 				<p>Nos termos do PDE, Nas ZEIS 1 e 3, quando habitadas por população de baixa renda, deverão ser constituídos CONSELHOS GESTORES compostos por representantes dos moradores, do Executivo e da sociedade civil organizada, que participarão da formulação, aprovação e implementação das intervenções a serem realizadas em suas áreas.</p>
 				<p>A instalação do CONSELHO GESTOR deverá preceder a elaboração do PROJETO DE INTERVENÇÃO.</p>
@@ -1171,13 +1549,13 @@
 		<section>
 			<h2 class="titulo" indent="1">Modelo de Gestão Financeira</h2>
 			<section>
-				<h3 class="titulo" indent="2">Estoque de Potencial Constutivo Adicional do PIU SETOR CENTRAL</h3>				
+				<h3 class="titulo" indent="2">Estoque de Potencial Constutivo Adicional do PIU SETOR CENTRAL</h3>
 				<ul class="links">
 					<li>
-						<a href="">
+						<a :href="src('arquivos/setor-central-2/NT_Estoque.pdf')">
 							<i class="icon-pdf icon"><span>pdf</span></i>
 							<div>Nota Técnica - Estoque</div>
-							<span>XXX Mb</span>
+							<span>0,45 Mb</span>
 						</a>
 					</li>
 				</ul>
@@ -1191,23 +1569,22 @@
 				<p>Como o PIU SETOR CENTRAL propõe parâmetros alternativos ao Zoneamento para o desenvolvimento da região, para acompanhar o desempenho do território, face ao adensamento populacional e construtivo pretendido, foi definido um ESTOQUE DE POTENCIAL CONSTRUTIVO ADICIONAL para o projeto, inferior ao montante autorizado pela LPUOS.</p>
 				<p>Os estudos econômicos que subsidiam o PIU SETOR CENTRAL, com base no desempenho do setor imobiliário nos últimos doze anos na região, estimaram a capacidade de consumo de estoque de potencial construtivo oneroso para o uso residencial em 1.080.000 m², no prazo previsto de implantação do PIU de vinte anos.</p>
 				<p>Com base no Censo de 2010, os dados referentes á distribuição de domicílios por faixa de rendimento, em salários mínimos, nos Distritos Municipais, indicam que, na área central, os domicílios compreendidos na faixa de interesse social correspondem a aproximadamente 50% dos domicílios totais.</p>
-
-				<p class="img">gestao financeira - graf 1</p>
-
+				<Imagem :dados="{
+					tipo: 'coluna',
+					url: imgSrc('arquivos/setor-central-2/img/gestaofinanceira_grafico1.jpg')
+				}"></Imagem>
 				<p>Para garantir que não haja alteração no perfil de renda da população da área central, ou seja, para controle do processo de gentrificação que acompanha a implantação de projetos de requalificação urbana, é meta do projeto que 50% das novas unidades produzidas correspondam a Habitações de Interesse Social - HIS.</p>
 				<p>Considerando os parâmetros estabelecidos para enquadramento das HIS e das Habitações de Mercado Popular – HMP, o Estoque de Potencial Construtivo Adicional para o uso residencial no âmbito do PIU do Setor Central tem a seguinte distribuição:</p>
-
-				<p class="img">excel gestao financeira plan:tabela1</p>
-
+				<Tabela :dados="distribuicao_estoque"></Tabela>
 				<p>Para o uso não residencial, bastante expressivo na região, propõe-se um estoque de potencial construtivo adicional ou de 200.000 m², algo em torno de 20% do estoque residencial total. Os estoques de potencial construtivo para o uso residencial, para HIS e para o uso não residencial somam 2.000.000 de metros quadrados.</p>
 				<p>O PIU SETOR CENTRAL também reserva estoque de potencial construtivo adicional gratuito para os usos e eixos incentivados, correspondendo a 20% do potencial construtivo apurado.</p>
 				<p>Desta forma, o estoque de potencial construtivo adicional, para os 20 anos de implantação do PIU SETOR CENTRAL é igual a 2.400.000 m², assim distribuídos:</p>
-
-				<p class="img">excel gestao financeira plan:tabela2</p>
+				<Tabela :dados="distribuicao_estoque_adicional"></Tabela>
 				<p>A fixação de Estoques de Potencial Construtivo Adicional no âmbito do PIU SETOR CENTRAL, onerosos ou não, opera como uma ferramenta de monitoramento da transformação – em termos da capacidade de resposta do território – e do adensamento populacional – em termos da participação das faixas de renda nos benefícios do projeto.</p>
-
-				<p class="img">infografico grande que pode ser que mude</p>
-
+				<Imagem :dados="{
+					tipo: 'w992',
+					url: imgSrc('arquivos/setor-central-2/img/bonus-outorga.png')
+				}"></Imagem>
 				<p>Novos estoques poderão ser atribuídos ao PIU SETOR CENTRAL no caso do esgotamento do estoque proposto antes de implementado o Programa de Intervenções, limitados ao potencial construtivo total autorizado pelo Zoneamento.</p>
 				<p>Para tanto, serão conduzidos estudos urbanísticos e econômicos para definição do estoque acrescido, bem como da sua distribuição entre categorias de uso e formas de distribuição, gratuita ou onerosa.</p>
 				<ol class="notas">
@@ -1220,9 +1597,14 @@
 				<p>A transformação urbana ocorre em áreas privadas, a partir dos instrumentos de indução oferecidos pelo PIU SETOR CENTRAL e nas áreas públicas, com a implantação das ações do Programa de Intervenções.</p>
 				<p>Os instrumentos indutores da transformação urbana dos imóveis estão baseados na oferta, gratuita ou onerosa, de Potencial Construtivo Adicional até o limite de estoque definido no PIU SETOR CENTRAL.</p>
 				<p>Estão organizados em 4 categorias: VENDA DE POTENCIAL CONSTRUTIVO ADICIONAL – disponibilizados em Venda Direta ou através de Leilões, BÔNUS EQUIVALENTES, TRANSFERÊNCIA DO DIREITO DE CONSTRUIR e INCENTIVOS concedidos na forma de potencial adicional gratuito que se distribuem nas áreas da AIU e OPERAÇÃO URBANA.</p>
-
-				<p class="img">\\spurbsp01\Gestao_Projetos\Projetos\OUC_Centro_RevisaoLei12349_97\01_Projeto_Urbanistico\91_Entregas\PIU_Setor_Central_Consulta_2019_03\Diagrama_estoque_PIU\AI\Diagrama_ferramenta_bonus_outorga_rev5.ai</p>
-
+				<Imagem :dados="{
+					tipo: 'w992',
+					url: imgSrc('arquivos/setor-central-2/img/estrategias-oferta-pc-adicional.jpg')
+				}"></Imagem>
+				<Imagem :dados="{
+					tipo: 'w992',
+					url: imgSrc('arquivos/setor-central-2/img/distribuicao-estoque.jpg')
+				}"></Imagem>
 				<Imagem :dados="{
 					tipo: 'default',
 					url: imgSrc('arquivos/setor-central-2/img/image12.jpg')
@@ -1257,15 +1639,13 @@ import PageTop from '@/components/PageTop'
 import Indice from '@/components/Indice'
 import Comments from '@/components/Comments'
 import CommentsLoader from '@/components/CommentsLoader'
-import ProcessoPIU from '@/components/graf/ProcessoPIU'
-import ConselhoGestor from '@/components/graf/ConselhoGestor'
 import Galeria from '@/components/Galeria'
-import Mapa from '@/components/Mapa'
-import Minuta from '@/components/Minuta'
 import Apoio from '@/components/Apoio'
 import Tabela from '@/components/Tabela'
 import Imagem from '@/components/Imagem'
 import AntesDepois from '@/components/AntesDepois'
+import Infografico from '@/components/graf/setor-central-2/infografico'
+import Pai from '@/components/graf/setor-central-2/pai'
 import { consultasCommons } from '@/mixins/consultasCommons'
 
 export default {
@@ -1446,6 +1826,36 @@ export default {
 					title: '',
 					icon: false,
 					id: 11
+				}]
+			},
+			galeria03: {
+				width: 842,
+				height: 545,
+				legendas: true,
+				images: [{
+					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria03/ou-nova.jpg',
+					state: true,
+					title: '',
+					icon: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria03/ou-nova_leg.png',
+					id: 1
+				}, {
+					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria03/aiu-x-sce.jpg',
+					state: false,
+					title: '',
+					icon: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria03/aiu-x-sce_leg.png',
+					id: 2
+				}, {
+					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria03/ael.jpg',
+					state: false,
+					title: '',
+					icon: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria03/ael_leg.png',
+					id: 3
+				}, {
+					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria03/tudo.jpg',
+					state: false,
+					title: '',
+					icon: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria03/tudo_leg.png',
+					id: 4
 				}]
 			},
 			tabela_estrategias: {
@@ -1761,7 +2171,8 @@ export default {
 						[ { data: 'SVMA' } ],
 						[ { data: 'Conselhos Participativos Municipais, Organização Não Governamental' } ]
 					]
-				]
+				],
+				estreita: false
 			},
 			tabela_grupogestor: {
 				colunas: [
@@ -1801,7 +2212,8 @@ export default {
 						[ { data: 'Ambiente urbano' } ],
 						[ { data: 'SVMA' } ]
 					]
-				]
+				],
+				estreita: false
 			},
 			tabela_areaconstruida: {
 				titulo: 'Área Construída Computável (m²)',
@@ -1814,24 +2226,216 @@ export default {
 				linhas: [
 					[
 						[ { data: 'OUCentro' } ],
-						[ { data: '8396381,99' } ],
-						[ { data: '10023885,2' } ],
+						[ { data: '8.396.381,99' } ],
+						[ { data: '10.023.885,2' } ],
 						[ { data: '1627503,21' } ]
 					],
 					[
 						[ { data: 'AIU Setor Central' } ],
-						[ { data: '11073835,43' } ],
-						[ { data: '25064695,03' } ],
-						[ { data: '13990859,6' } ]
+						[ { data: '11.073.835,43' } ],
+						[ { data: '25.064.695,03' } ],
+						[ { data: '13.990.859,6' } ]
 					],
 					[
 						[ { data: 'PIU Setor Central' } ],
-						[ { data: '19470217,42' } ],
-						[ { data: '35088580,23' } ],
-						[ { data: '15618362,81' } ]
+						[ { data: '19.470.217,42' } ],
+						[ { data: '35.088.580,23' } ],
+						[ { data: '15.618.362,81' } ]
 					]
 				]
 			},
+			parametros_urb_piusce: {
+				titulo: 'Parâmetros Urbanísticos da Macroárea de Estruturação Metropolitana (MEM) com destaque para as Áreas adotadas no PIU SETOR CENTRAL',
+				colunas: [
+					{ titulo: 'Área' },
+					{ titulo: 'Coeficiente de Aproveitamento' },
+					{ titulo: 'Gabarito máximo de altura' }
+				],
+				linhas: [
+					[
+						[ { data: 'Área de Transformação T1' } ],
+						[ { data: '6', centro: true } ],
+						[ { data: 'NA', centro: true } ]
+					], 
+					[
+						[ { data: 'Área de Transformação T2', destaque: true } ],
+						[ { data: '4', destaque: true, centro: true } ],
+						[ { data: 'NA', destaque: true, centro: true } ]
+					], 
+					[
+						[ { data: 'Área de Transformação T2-A' } ],
+						[ { data: 'NA', centro: true } ],
+						[ { data: 'NA', centro: true } ]
+					], 
+					[
+						[ { data: 'Área de Transformação T2C', destaque: true } ],
+						[ { data: '4', destaque: true, centro: true } ],
+						[ { data: 'NA', destaque: true, centro: true } ]
+					], 
+					[
+						[ { data: 'Área de Transformação T3' } ],
+						[ { data: '4', centro: true } ],
+						[ { data: '48', centro: true } ]
+					], 
+					[
+						[ { data: 'Área de Transformação T4' } ],
+						[ { data: '4', centro: true } ],
+						[ { data: '28', centro: true } ]
+					], 
+					[
+						[ { data: 'Área de Transformação T5', destaque: true } ],
+						[ { data: '2', destaque: true, centro: true } ],
+						[ { data: 'Zoneamento', destaque: true, centro: true } ]
+					], 
+					[
+						[ { data: 'Área de Qualificação Q1' } ],
+						[ { data: '2', centro: true } ],
+						[ { data: '48', centro: true } ]
+					], 
+					[
+						[ { data: 'Área de Qualificação Q2', destaque: true } ],
+						[ { data: '2', destaque: true, centro: true } ],
+						[ { data: '28', destaque: true, centro: true } ]
+					], 
+					[
+						[ { data: 'Área de Qualificação Q2-A' } ],
+						[ { data: 'NA', centro: true } ],
+						[ { data: '28', centro: true } ]
+					], 
+					[
+						[ { data: 'Área de Qualificação Q3' } ],
+						[ { data: '1,5', centro: true } ],
+						[ { data: '28', centro: true } ]
+					], 
+					[
+						[ { data: 'Área de Qualificação Q4', destaque: true } ],
+						[ { data: '4', destaque: true, centro: true } ],
+						[ { data: '36', destaque: true, centro: true } ]
+					], 
+					[
+						[ { data: 'Área de Qualificação Q5', destaque: true } ],
+						[ { data: '4', destaque: true, centro: true } ],
+						[ { data: '48', destaque: true, centro: true } ]
+					], 
+					[
+						[ { data: 'Área de Qualificação Q6', destaque: true } ],
+						[ { data: '4', destaque: true, centro: true } ],
+						[ { data: '60', destaque: true, centro: true } ]
+					], 
+					[
+						[ { data: 'Área de Qualificação Q7', destaque: true } ],
+						[ { data: '4', destaque: true, centro: true } ],
+						[ { data: '60', destaque: true, centro: true } ]
+					], 
+					[
+						[ { data: 'Área de Qualificação Q8', destaque: true } ],
+						[ { data: '6', destaque: true, centro: true } ],
+						[ { data: 'NA', destaque: true, centro: true } ]
+					], 
+					[
+						[ { data: 'Área de Preservação P1', destaque: true } ],
+						[ { data: '2', destaque: true, centro: true } ],
+						[ { data: '15', destaque: true, centro: true } ]
+					], 
+					[
+						[ { data: 'Área de Preservação P2', destaque: true } ],
+						[ { data: '1', destaque: true, centro: true } ],
+						[ { data: '10', destaque: true, centro: true } ]
+					], 
+					[
+						[ { data: 'Área de Preservação P3' } ],
+						[ { data: '1', centro: true } ],
+						[ { data: '15', centro: true } ]
+					], 
+					[
+						[ { data: 'Área de Preservação P3-A' } ],
+						[ { data: 'NA', centro: true } ],
+						[ { data: '15', centro: true } ]
+					], 
+					[
+						[ { data: 'Área de Preservação P4' } ],
+						[ { data: '0,5', centro: true } ],
+						[ { data: '28', centro: true } ]
+					], 
+					[
+						[ { data: 'Área de Preservação P5', destaque: true } ],
+						[ { data: '4', destaque: true, centro: true } ],
+						[ { data: 'Gabarito dos bens tombados da quadra', destaque: true, centro: true } ]
+					]
+				],
+				estreita: false
+			},
+			distribuicao_estoque: {
+				titulo: 'PIU Setor Central',
+				colunas: [
+					{ titulo: '' },
+					{ titulo: '' },
+					{ titulo: '' }
+				],
+				linhas: [
+					[
+						[ { data: 'Residencial oneroso' } ],
+						[ { data: '1.080.000' } ],
+						[ { data: '60%' } ]
+					],
+					[
+						[ { data: 'HIS' } ],
+						[ { data: '720.000' } ],
+						[ { data: '40%' } ]
+					],
+					[
+						[ { data: 'Residencial total' } ],
+						[ { data: '1.800.000' } ],
+						[ { data: '100%' } ]
+					],
+					[
+						[ { data: 'UH (HIS)' } ],
+						[ { data: '24.000' } ],
+						[ { data: '52%' } ]
+					],
+					[
+						[ { data: 'UH (HMP)' } ],
+						[ { data: '17.000' } ],
+						[ { data: '37%' } ]
+					],
+					[
+						[ { data: 'UH (Livre)' } ],
+						[ { data: '5.250' } ],
+						[ { data: '11%' } ]
+					],
+					[
+						[ { data: 'Novos moradores' } ],
+						[ { data: '140.605' } ],
+						[ { data: '' } ]
+					]
+				],
+				estreita: false
+			},
+			distribuicao_estoque_adicional: {
+				titulo: 'Estoque de potencial construtivo adicional',
+				colunas: [
+					{ titulo: 'Estoque' },
+					{ titulo: 'Quantidade' }
+				],
+				linhas: [
+					[
+						[ { data: 'Residencial – HMP + Livre' } ],
+						[ { data: '1.080.000' } ]
+					],
+					[
+						[ { data: 'Residencial – HIS' } ],
+						[ { data: '720.000' } ]
+					],
+					[
+						[ { data: 'Não residencial' } ],
+						[ { data: '200.000' } ]
+					],
+					[
+						[ { data: 'Estoque total' } ],
+						[ { data: '2.000.000' } ]
+					]
+				]
+			}
 		}
 	},
 	components: {
@@ -1839,15 +2443,13 @@ export default {
 		Indice,
 		Comments,
 		CommentsLoader,
-		ProcessoPIU,
-		ConselhoGestor,
 		Galeria,
-		Mapa,
-		Minuta,
 		Apoio,
 		Tabela,
 		Imagem,
-		AntesDepois
+		AntesDepois,
+		Infografico,
+		Pai
 	},
 	methods: {
 		print () {
@@ -1877,7 +2479,60 @@ div.SetorCentral2 {
 		padding: 1rem;
 		overflow: auto;
 	}
-
+	div.parametros_bonus {
+		position: relative;
+		margin: 2rem auto;
+		padding: 0 2rem;
+		background-color: $cinza-3;
+		max-width: 992px;
+		width: min-content;
+		width: -ms-min-content;
+		width: -moz-min-content;
+		width: -webkit-min-content;
+		border-radius: 2px;
+		& > div:not(.notas) {
+			overflow-x: auto;
+			margin: 2rem 0;
+			table {
+				min-width: 100%;
+				background-color: #FFF;
+				margin: 0;
+				caption {
+					border-top: none;
+				}
+				td {
+					text-align: center;
+					min-width: 8rem;
+				}
+			}
+		}
+		div.notas {
+			ol {
+				max-width: 992px;
+				columns: 240px;
+				column-gap: 2rem;
+				padding: 0 0 2rem 12px;
+				li {
+					font-family: $grotesca;
+					font-size: small;
+					margin: 0 0 1rem;
+					page-break-inside: avoid-column;
+					break-inside: avoid;
+				}
+			}
+		}
+		@media (max-width: 992px) {
+			width: 100vw;
+			padding: 0 1rem;
+			max-width: calc(100vw - 2rem);
+			div.notas {
+				ol {
+					column-gap: 1rem;
+					padding-bottom: 1rem;
+				}
+			}
+		}
+	}
 	div.card-pde {
 		width: calc(320px - 2rem);
 		margin: 2rem auto;

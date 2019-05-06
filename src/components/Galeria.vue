@@ -10,7 +10,7 @@
 			<template v-for="image in gallery_attrs.images">
 				<figure class="item" v-show="image.state">
 					<h3 v-if="image.icon">
-						<img :src="image.icon">
+						<img :src="image.icon" :class="{ legenda: gallery_attrs.legendas }">
 						<span :class="{ noIcon:!image.icon }">{{ image.title }}</span>
 					</h3>
 					<div class="placeholder" v-if="loading" :style="{ maxWidth: gallery_attrs.width + 'px'}" ></div>
@@ -159,10 +159,15 @@ export default {
 		};
 		figure.item {
 			align-self: flex-start;
-			margin: -2px;
+			margin: 0;
 			padding: 0;
 			img {
 				width: 100%;
+				&.legenda {
+					width: unset;
+					margin: 0 1rem;
+					vertical-align: middle;
+				}
 			};
 		};
 		p.legenda {

@@ -14,7 +14,7 @@
 			<img :src="dados.imgAntes" alt="Antes">
 			<img :src="dados.imgDepois" alt="Depois" :class="{ hidden: !depois }">
 		</div>
-		<div class="picto">
+		<div class="picto" v-if="dados.pictogramas">
 			<h1>{{ dados.caption }}</h1>
 			<ul>
 				<li v-for="pictograma in dados.pictogramas">
@@ -51,7 +51,7 @@ export default {
 		pictogramas: [{ // ícones abaixo das imagens
 			url: { // url da imagem do ícone
 				type: String,
-				required: true
+				required: false
 			},
 			legenda: { // legenda da imagem do ícone, se houver - descrever informação do pictograma
 				type: String,
@@ -81,6 +81,8 @@ export default {
 @import '../variables';
 
 .AntesDepois {
+	font-family: $grotesca;
+	box-sizing: border-box;
 	margin: 2rem auto;
 	position: relative;
 	z-index: 2;

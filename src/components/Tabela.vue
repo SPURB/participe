@@ -1,5 +1,5 @@
 <template>
-	<div class="Tabela" :class="{ larga: dados.colunas.length > 6, estreita: dados.colunas.length <= 3 }">
+	<div class="Tabela" :class="{ larga: dados.colunas.length > 6, estreita: dados.colunas.length <= 3 && dados.estreita != false }">
 		<table :class="{ listrada: dados.tabelaListrada }">
 			<caption v-if="dados.titulo">{{ dados.titulo }}</caption>
 			<thead>
@@ -157,47 +157,38 @@ div.Tabela {
 	padding: 2rem;
 	background-color: $cinza-3;
 	border-radius: 2px;
-
 	@media screen and (max-width: 600px) { padding: 1rem; }
-
 	table {
 		width: 100%;
 		position: relative;
 		border-collapse: collapse;
 		margin: 0;
 		background-color: #FFF;
-
 		& > * { color: $preto; }
-
 		caption {
 			font-size: initial;
 			font-weight: bold;
 			padding: 0 0 8px 0;
 			background-color: $cinza-3;
 		}
-
 		th, td {
 			border: 1px solid $cinza-2;
 			padding: 4px 8px;
 			font-size: smaller;
 			color: $preto;
 			position: relative;
-
 			sup.nota {
 				color: $cinza-1;
 				font-weight: bold;
 				margin: 0 0 0 2px;
 				vertical-align: 4px;
 			}
-
 			&.destaque span { font-weight: bold; }
 			&.cor { background-color: $vermelho-tr; }
 			&.vazio { background-color: $cinza-3; }
 			&.centralizado { text-align: center; }
 		}
-
 		th { background-color: $sombra-4; }
-
 		&.listrada {
 			th, td {
 				border: 0px;
@@ -207,11 +198,9 @@ div.Tabela {
 			th { background-color: $cinza-3; }
 			tr:nth-child(even) { background-color: $sombra-4; }
 		}
-
 		@media screen and (max-width: 600px) {
 			display: block;
 			background-color: transparent;
-
 			th, td {
 				width: calc(100vw - 3rem);
 				&.cor {
@@ -225,11 +214,9 @@ div.Tabela {
 					}
 				}
 			}
-
 			caption {
 				width: calc(100vw - 2rem);
 			}
-
 			&.listrada {
 				th, td {
 					border-width: 0 !important;
@@ -238,9 +225,7 @@ div.Tabela {
 				}
 				tr:nth-child(even) { background-color: #FFF; }
 			}
-
 			thead { display: none; }
-
 			tbody tr {
 				display: block;
 				margin: 12px 0 0 0;
@@ -250,15 +235,12 @@ div.Tabela {
 				width: 100%;
 				background-color: #FFF;
 				&:first-child { margin-top: 0; }
-
 				& > td {
 					display: flex;
 					border: none !important;
 					padding: 4px 0 !important;
 					&.vazio { display: none; }
-
 					&:not(:first-child) { border-top: 1px solid $cinza-2 !important; }
-
 					&::before {
 						content: attr(data-coluna);
 						display: inline-block;
@@ -271,7 +253,6 @@ div.Tabela {
 						padding-right: 4px;
 						text-align: left;
 					}
-
 					&.centralizado span {
 						display: inline-flex;
 						width: 100%;
@@ -294,7 +275,6 @@ div.Tabela {
 			padding: 0;
 			columns: 160px;
 			column-gap: 2rem;
-
 			li {
 				margin: 0 0 8px 0;
 				font-size: small;
@@ -302,7 +282,6 @@ div.Tabela {
 				break-inside: avoid;
 				page-break-inside: avoid;
 				&:last-child { margin-bottom: 0; }
-
 				span {
 					color: $cinza-1;
 					font-weight: bold;
@@ -315,7 +294,6 @@ div.Tabela {
 		font-size: x-small;
 		color: $cinza-1;
 	}
-
 	@media print {
 		page-break-inside: avoid;
 		break-inside: avoid-page;

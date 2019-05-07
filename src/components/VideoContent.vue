@@ -100,7 +100,7 @@ export default {
 	p { padding-bottom: 1.25rem }
 	video {
 		border-radius: 2px;
-		&.canvasBorder{ 
+		&.canvasBorder{
 			border-right: 1px solid $cinza-3;
 			border-left: 1px solid $cinza-3
 		}

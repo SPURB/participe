@@ -22,7 +22,7 @@
 </template>
 
 <script>
-export default{
+export default {
 	name: 'Modal',
 	computed: {
 		modalState () { return this.$store.state.modalState }

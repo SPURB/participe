@@ -91,19 +91,19 @@
 				<h4>Atendimento habitacional</h4>
 				<p>Nos distritos centrais da cidade, o tema do atendimento habitacional tem prioridade indiscutível. Trata-se de território de oferta concentrada de empregos e serviços e com parcelas expressivas de baixa densidade populacional, aptas ao recebimento de moradores.</p>
 				<p>Aqui estão representadas todas as modalidades de moradia sub-normal – condomínios precarizados, cortiços, ocupações de edifícios adaptados, favelas – e a maior concentração da cidade de população em situação de rua.</p>
-				<p>O centro que queremos deve abrigar mais pessoas e abrigar melhor as pessoas – aquelas que aqui residem e que aqui virão residir. A oferta de oportunidades de moradia para diversas faixas de renda é diretriz de projeto, com ênfase no atendimento habitacional de interesse social. Considerando a convivência de usos residenciais e não residenciais observada nos distritos centrais, será assegurada qualidade urbanística às vizinhanças residenciais – ruas qualificadas, conectividade entre elementos referenciais do bairro e serviços públicos ajustados à demanda.</p>				
+				<p>O centro que queremos deve abrigar mais pessoas e abrigar melhor as pessoas – aquelas que aqui residem e que aqui virão residir. A oferta de oportunidades de moradia para diversas faixas de renda é diretriz de projeto, com ênfase no atendimento habitacional de interesse social. Considerando a convivência de usos residenciais e não residenciais observada nos distritos centrais, será assegurada qualidade urbanística às vizinhanças residenciais – ruas qualificadas, conectividade entre elementos referenciais do bairro e serviços públicos ajustados à demanda.</p>
 				<h4>Mobilidade sustentável</h4>
 				<p>Desejamos um padrão sustentável de mobilidade, um centro acessível por transporte público, onde a mobilidade ativa seja facilitada, a circulação e a distribuição de carga estejam organizadas e o transporte privado disciplinado.</p>
 				<p>Para a melhoria das condições de mobilidade ativa foi proposto um plano de qualificação de logradouros abrangendo eixos comerciais e ruas destacadas que integram vizinhanças residenciais, zonas comerciais, terminais de ônibus e áreas verdes públicas. Essa qualificação pode abranger alargamento, requalificação e arborização de calçadas, implantação de <i>pokcket parks</i>, adequação da sinalização horizontal e vertical e o conjunto de dispositivos de acessibilidade universal. Abrange também a complementação da malha cicloviária que serve a área central. O plano considera as barreiras existentes – ferrovias, vias estruturais de tráfego, orlas fluviais – e propõe mais alternativas e modalidades de transposição.</p>
-				<p>O transporte público, já assegurado pelas estações de trem e metrô, pelos terminais e linhas de ônibus que servem os distritos centrais, será positivamente impactado pela melhoria das condições de circulação no entorno dos terminais da área central – os mais importantes Princesa Isabel, Bandeira e Parque Dom Pedro – e pela própria qualificação desses equipamentos, a ser alcançada pela aplicação da Lei Municipal nº 16.211, de 27 de maio de 2015, que regulamenta a concessão de terminais municipais à exploração e à operação da iniciativa privada.</p>				
+				<p>O transporte público, já assegurado pelas estações de trem e metrô, pelos terminais e linhas de ônibus que servem os distritos centrais, será positivamente impactado pela melhoria das condições de circulação no entorno dos terminais da área central – os mais importantes Princesa Isabel, Bandeira e Parque Dom Pedro – e pela própria qualificação desses equipamentos, a ser alcançada pela aplicação da Lei Municipal nº 16.211, de 27 de maio de 2015, que regulamenta a concessão de terminais municipais à exploração e à operação da iniciativa privada.</p>
 				<h4>Valorização do patrimônio edificado</h4>
-				<p>As pré-existências são um ativo do projeto. O extenso conjunto de edificações tombadas nos bairros de Santa Ifigênia e Campos Elíseos, no Vale do Anhangabaú e na Rua Florêncio de Abreu subsidia a proposta de volumetria para as novas construções nessa região do centro, que ainda apresenta significativo potencial de transformação. Em áreas mais adensadas, no coração dos distritos Sé e República, também com alta concentração de edificações tombadas, as oportunidades de renovação são menores, justificando o estudo caso a caso de novos empreendimentos propostos.</p>				
+				<p>As pré-existências são um ativo do projeto. O extenso conjunto de edificações tombadas nos bairros de Santa Ifigênia e Campos Elíseos, no Vale do Anhangabaú e na Rua Florêncio de Abreu subsidia a proposta de volumetria para as novas construções nessa região do centro, que ainda apresenta significativo potencial de transformação. Em áreas mais adensadas, no coração dos distritos Sé e República, também com alta concentração de edificações tombadas, as oportunidades de renovação são menores, justificando o estudo caso a caso de novos empreendimentos propostos.</p>
 				<h4>Organização de fluxos em centros comerciais</h4>
 				<p>Os centros comerciais consolidados são também preexistências a serem valorizadas através das intervenções urbanísticas previstas no projeto: plano de requalificação de logradouros e medidas de regulação de circulação de cargas e da oferta de vagas de estacionamento. A proposta de incremento do uso residencial nesses centros comerciais vem ao encontro de demandas de associações de lojistas que pretendem vitalidade noturna para as ruas fervilhantes de consumidores que se tornam desertas à noite.</p>
-				<p>Nessas áreas, está previsto o incentivo à implantação de mini centros de distribuição associados a estacionamentos verticais em localizações estratégicas da área central. Esses equipamentos melhoram as condições de distribuição de mercadorias na região, minimizando a circulação diurna de caminhões de pequeno porte, e organizam a oferta de vagas nos centros comerciais, viabilizando as propostas de restrição de estacionamento na via e de alargamento das calçadas das ruas comerciais.</p>				
+				<p>Nessas áreas, está previsto o incentivo à implantação de mini centros de distribuição associados a estacionamentos verticais em localizações estratégicas da área central. Esses equipamentos melhoram as condições de distribuição de mercadorias na região, minimizando a circulação diurna de caminhões de pequeno porte, e organizam a oferta de vagas nos centros comerciais, viabilizando as propostas de restrição de estacionamento na via e de alargamento das calçadas das ruas comerciais.</p>
 				<h4>Qualificação de espaços públicos</h4>
 				<p>A rede de espaços públicos e os bulevares centrais herdados de intervenções urbanísticas do início do século XX são ativos valorizados no projeto. O plano de qualificação de logradouros propõe a arborização dos bulevares e a integração de áreas verdes, conformando um sistema de espaços públicos que favorece a mobilidade ativa e atua como fator de mitigação de ilhas de calor.</p>
-				<p>A precariedade das orlas fluviais tem sido enfrentada nas propostas do Arco Tamanduateí e do Arco Tietê, através de incentivos à desocupação das parcelas de Áreas de Preservação Permanente que gravam lotes privados. No PIU do Setor Central, além da qualificação das APPs, há o propósito de incentivar a intensificação da ocupação nas orlas fluviais dos rios Tamanduateí e Tietê e a localização de usos institucionais – lazer, educação e cultura – que potencializem, no Setor Central, a atratividade metropolitana dos territórios da MEM, como previsto no Plano Diretor Estratégico do Município.</p>				
+				<p>A precariedade das orlas fluviais tem sido enfrentada nas propostas do Arco Tamanduateí e do Arco Tietê, através de incentivos à desocupação das parcelas de Áreas de Preservação Permanente que gravam lotes privados. No PIU do Setor Central, além da qualificação das APPs, há o propósito de incentivar a intensificação da ocupação nas orlas fluviais dos rios Tamanduateí e Tietê e a localização de usos institucionais – lazer, educação e cultura – que potencializem, no Setor Central, a atratividade metropolitana dos territórios da MEM, como previsto no Plano Diretor Estratégico do Município.</p>
 				<h4>Gestão participativa</h4>
 				<p>O Projeto Urbanístico Específico do Setor Central, que aborda intervenções físicas, combina-se ao Regramento Urbanístico que orienta, restringe ou incentiva o aproveitamento de lotes privados. A eficácia do PIU depende da correspondência das medidas e intervenções propostas aos interesses e demandas da sociedade civil em relação à gestão dos distritos centrais.</p>
 				<p>A participação desses interlocutores na construção do projeto, no processo de aprovação dos instrumentos legais necessários e na gestão de implantação do PIU Setor Central – através das representações dos órgãos colegiados, da participação direta nas consultas abertas no portal Gestão Urbana e das audiências públicas programadas – é condição para que esse projeto atinja as finalidades pretendidas.</p>
@@ -343,7 +343,7 @@
 									<td>NA</td>
 									<td>Não obrigatória</td>
 									<td><b>Obrigatório acima do CA 2</b><sup>s</sup></td>
-									<td>20</td>	
+									<td>20</td>
 								</tr>
 								<tr>
 									<td>T5</td>
@@ -1230,7 +1230,7 @@
 			<p>Para que sejam atingidos esses objetivos, a São Paulo Urbanismo introduz <i>estratégias de implantação</i> do PIU Setor Central, detalhadas a seguir.</p>
 			<section>
 				<h3 class="titulo" indent="2">Perímetro de requalificação de imóveis tombados - PRIT</h3>
-				<p>O Perímetro de Requalificação de Imóveis Tombados (PRIT) é resultado da articulação de preexistências peculiares à região dos Campos Elíseos, Santa Ifigênia e Rua Florêncio de Abreu, especialmente no âmbito dos processos de preservação do patrimônio histórico edificado e de sua ambiência. No PRIT, observa-se uma alta incidência de imóveis tombados ou em processos de tombamento, ocupação do solo relativamente densa e, ao mesmo tempo, densidade construída relativamente baixa. Soma-se a esses fatores a convivência entre intensa atividade comercial, em muitos casos especializada, e a demanda por moradia de qualidade. Dessa forma, o território do PRIT apresenta oportunidades de transformação apoiadas na regulação da paisagem e na preservação do patrimônio e, por isso, foi objeto de proposta de regramento urbanístico específico, com o objetivo de permitir o adensamento construtivo em consonância com a ambiência dos bens tombados.</p>				
+				<p>O Perímetro de Requalificação de Imóveis Tombados (PRIT) é resultado da articulação de preexistências peculiares à região dos Campos Elíseos, Santa Ifigênia e Rua Florêncio de Abreu, especialmente no âmbito dos processos de preservação do patrimônio histórico edificado e de sua ambiência. No PRIT, observa-se uma alta incidência de imóveis tombados ou em processos de tombamento, ocupação do solo relativamente densa e, ao mesmo tempo, densidade construída relativamente baixa. Soma-se a esses fatores a convivência entre intensa atividade comercial, em muitos casos especializada, e a demanda por moradia de qualidade. Dessa forma, o território do PRIT apresenta oportunidades de transformação apoiadas na regulação da paisagem e na preservação do patrimônio e, por isso, foi objeto de proposta de regramento urbanístico específico, com o objetivo de permitir o adensamento construtivo em consonância com a ambiência dos bens tombados.</p>
 				<ul class="links">
 					<li>
 						<a :href="src('arquivos/setor-central-2/NT_PRIT.pdf')">
@@ -1535,7 +1535,7 @@
 			<ol class="notas">
 				<caption>Notas</caption>
 				<li>
-					PDE, Artigo 327. O Conselho Municipal de Política Urbana - CMPU, órgão colegiado integrante da estrutura da Secretaria Municipal de Desenvolvimento Urbano, tem por finalidade estudar e propor diretrizes para a formulação e implementação da Política Municipal de Desenvolvimento Urbano, bem como acompanhar e avaliar sua execução, conforme dispõe a Lei Federal nº 10.257, de 10 de julho de 2001. 
+					PDE, Artigo 327. O Conselho Municipal de Política Urbana - CMPU, órgão colegiado integrante da estrutura da Secretaria Municipal de Desenvolvimento Urbano, tem por finalidade estudar e propor diretrizes para a formulação e implementação da Política Municipal de Desenvolvimento Urbano, bem como acompanhar e avaliar sua execução, conforme dispõe a Lei Federal nº 10.257, de 10 de julho de 2001.
 					§ 1º O CMPU será composto por 60 (sessenta) membros titulares e respectivos suplentes, representantes do Poder Público e da sociedade civil, organizados por segmentos, com direito a voz e voto, a saber:<br>
 					I - 26 (vinte e seis) membros representantes de órgãos do Poder Público indicados pelo Prefeito, sendo no mínimo:<br>
 					a) 2 (dois) membros da Secretaria Municipal de Desenvolvimento Urbano; b) 8 (oito) membros das Subprefeituras, um por macrorregião, de acordo com a divisão utilizada pelo Executivo;<br>
@@ -1665,91 +1665,91 @@ export default {
 					title: '',
 					icon: false,
 					id: 1
-				},{
+				}, {
 					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria01/Slide2.JPG',
 					state: false,
 					title: '',
 					icon: false,
 					id: 2
-				},{
+				}, {
 					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria01/Slide3.JPG',
 					state: false,
 					title: '',
 					icon: false,
 					id: 3
-				},{
+				}, {
 					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria01/Slide4.JPG',
 					state: false,
 					title: '',
 					icon: false,
 					id: 4
-				},{
+				}, {
 					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria01/Slide5.JPG',
 					state: false,
 					title: '',
 					icon: false,
 					id: 5
-				},{
+				}, {
 					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria01/Slide6.JPG',
 					state: false,
 					title: '',
 					icon: false,
 					id: 6
-				},{
+				}, {
 					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria01/Slide7.JPG',
 					state: false,
 					title: '',
 					icon: false,
 					id: 7
-				},{
+				}, {
 					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria01/Slide8.JPG',
 					state: false,
 					title: '',
 					icon: false,
 					id: 8
-				},{
+				}, {
 					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria01/Slide9.JPG',
 					state: false,
 					title: '',
 					icon: false,
 					id: 9
-				},{
+				}, {
 					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria01/Slide10.JPG',
 					state: false,
 					title: '',
 					icon: false,
 					id: 10
-				},{
+				}, {
 					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria01/Slide11.JPG',
 					state: false,
 					title: '',
 					icon: false,
 					id: 11
-				},{
+				}, {
 					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria01/Slide12.JPG',
 					state: false,
 					title: '',
 					icon: false,
 					id: 12
-				},{
+				}, {
 					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria01/Slide13.JPG',
 					state: false,
 					title: '',
 					icon: false,
 					id: 13
-				},{
+				}, {
 					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria01/Slide14.JPG',
 					state: false,
 					title: '',
 					icon: false,
 					id: 14
-				},{
+				}, {
 					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria01/Slide15.JPG',
 					state: false,
 					title: '',
 					icon: false,
 					id: 15
-				},{
+				}, {
 					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria01/Slide16.JPG',
 					state: false,
 					title: '',
@@ -2075,8 +2075,8 @@ export default {
 						[ { data: '', centro: true } ],
 						[ { data: '✓', centro: true } ],
 						[ { data: '✓', centro: true } ]
-					],
-				],
+					]
+				]
 			},
 			tabela_densidade: {
 				titulo: 'Áreas construídas totais e Coeficiente de Aproveitamento médio residencial e não-residencial',
@@ -2140,32 +2140,32 @@ export default {
 						[ { data: 'Habitação' } ],
 						[ { data: 'COHAB, SEHAB' } ],
 						[ { data: 'Conselho Municipal de Habitação, Segmento Empresarial (CMPU)' } ]
-					], 
+					],
 					[
 						[ { data: 'Vulnerabilidade social' } ],
 						[ { data: 'SMADS, SMDHC' } ],
 						[ { data: 'Conselho Pop. Rua, Organização Não Governamental' } ]
-					], 
+					],
 					[
 						[ { data: 'Patrimônio histórico e promoção cultural' } ],
 						[ { data: 'SMC' } ],
 						[ { data: 'Universidade (CMPU)' } ]
-					], 
+					],
 					[
 						[ { data: 'Atividade econômica' } ],
 						[ { data: 'SMTE' } ],
 						[ { data: 'Segmento Comercial (CMPU)' } ]
-					], 
+					],
 					[
 						[ { data: 'Regulação urbanística e intervenções' } ],
 						[ { data: 'SPURBANISMO, SMDU' } ],
 						[ { data: 'Conselhos Participativos Municipais, Organização Não Governamental' } ]
-					], 
+					],
 					[
 						[ { data: 'Zeladoria urbana' } ],
 						[ { data: 'Subprefeituras' } ],
 						[ { data: 'Conselhos Participativos Municipais, Organização Não Governamental' } ]
-					], 
+					],
 					[
 						[ { data: 'Ambiente urbano' } ],
 						[ { data: 'SVMA' } ],
@@ -2256,107 +2256,107 @@ export default {
 						[ { data: 'Área de Transformação T1' } ],
 						[ { data: '6', centro: true } ],
 						[ { data: 'NA', centro: true } ]
-					], 
+					],
 					[
 						[ { data: 'Área de Transformação T2', destaque: true } ],
 						[ { data: '4', destaque: true, centro: true } ],
 						[ { data: 'NA', destaque: true, centro: true } ]
-					], 
+					],
 					[
 						[ { data: 'Área de Transformação T2-A' } ],
 						[ { data: 'NA', centro: true } ],
 						[ { data: 'NA', centro: true } ]
-					], 
+					],
 					[
 						[ { data: 'Área de Transformação T2C', destaque: true } ],
 						[ { data: '4', destaque: true, centro: true } ],
 						[ { data: 'NA', destaque: true, centro: true } ]
-					], 
+					],
 					[
 						[ { data: 'Área de Transformação T3' } ],
 						[ { data: '4', centro: true } ],
 						[ { data: '48', centro: true } ]
-					], 
+					],
 					[
 						[ { data: 'Área de Transformação T4' } ],
 						[ { data: '4', centro: true } ],
 						[ { data: '28', centro: true } ]
-					], 
+					],
 					[
 						[ { data: 'Área de Transformação T5', destaque: true } ],
 						[ { data: '2', destaque: true, centro: true } ],
 						[ { data: 'Zoneamento', destaque: true, centro: true } ]
-					], 
+					],
 					[
 						[ { data: 'Área de Qualificação Q1' } ],
 						[ { data: '2', centro: true } ],
 						[ { data: '48', centro: true } ]
-					], 
+					],
 					[
 						[ { data: 'Área de Qualificação Q2', destaque: true } ],
 						[ { data: '2', destaque: true, centro: true } ],
 						[ { data: '28', destaque: true, centro: true } ]
-					], 
+					],
 					[
 						[ { data: 'Área de Qualificação Q2-A' } ],
 						[ { data: 'NA', centro: true } ],
 						[ { data: '28', centro: true } ]
-					], 
+					],
 					[
 						[ { data: 'Área de Qualificação Q3' } ],
 						[ { data: '1,5', centro: true } ],
 						[ { data: '28', centro: true } ]
-					], 
+					],
 					[
 						[ { data: 'Área de Qualificação Q4', destaque: true } ],
 						[ { data: '4', destaque: true, centro: true } ],
 						[ { data: '36', destaque: true, centro: true } ]
-					], 
+					],
 					[
 						[ { data: 'Área de Qualificação Q5', destaque: true } ],
 						[ { data: '4', destaque: true, centro: true } ],
 						[ { data: '48', destaque: true, centro: true } ]
-					], 
+					],
 					[
 						[ { data: 'Área de Qualificação Q6', destaque: true } ],
 						[ { data: '4', destaque: true, centro: true } ],
 						[ { data: '60', destaque: true, centro: true } ]
-					], 
+					],
 					[
 						[ { data: 'Área de Qualificação Q7', destaque: true } ],
 						[ { data: '4', destaque: true, centro: true } ],
 						[ { data: '60', destaque: true, centro: true } ]
-					], 
+					],
 					[
 						[ { data: 'Área de Qualificação Q8', destaque: true } ],
 						[ { data: '6', destaque: true, centro: true } ],
 						[ { data: 'NA', destaque: true, centro: true } ]
-					], 
+					],
 					[
 						[ { data: 'Área de Preservação P1', destaque: true } ],
 						[ { data: '2', destaque: true, centro: true } ],
 						[ { data: '15', destaque: true, centro: true } ]
-					], 
+					],
 					[
 						[ { data: 'Área de Preservação P2', destaque: true } ],
 						[ { data: '1', destaque: true, centro: true } ],
 						[ { data: '10', destaque: true, centro: true } ]
-					], 
+					],
 					[
 						[ { data: 'Área de Preservação P3' } ],
 						[ { data: '1', centro: true } ],
 						[ { data: '15', centro: true } ]
-					], 
+					],
 					[
 						[ { data: 'Área de Preservação P3-A' } ],
 						[ { data: 'NA', centro: true } ],
 						[ { data: '15', centro: true } ]
-					], 
+					],
 					[
 						[ { data: 'Área de Preservação P4' } ],
 						[ { data: '0,5', centro: true } ],
 						[ { data: '28', centro: true } ]
-					], 
+					],
 					[
 						[ { data: 'Área de Preservação P5', destaque: true } ],
 						[ { data: '4', destaque: true, centro: true } ],

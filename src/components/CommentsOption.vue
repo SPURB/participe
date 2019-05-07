@@ -91,8 +91,8 @@ export default {
 			type: Array,
 			required: true
 		},
-		alwaysOpen:{
-			type: Boolean, 
+		alwaysOpen: {
+			type: Boolean,
 			required: false,
 			default: false
 		}

@@ -233,9 +233,9 @@ div.Apoio {
 		};
 
 		&::before {
-			content: 'Ver texto de apoio';
+			content: 'Ver material de apoio';
 			position: absolute;
-			margin: 4px 0 0 -132px;
+			margin: 4px 0 0 -150px;
 			line-height: 32px;
 			padding: 0 8px;
 			border-radius: 10px;

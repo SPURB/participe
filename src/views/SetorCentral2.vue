@@ -1,7 +1,7 @@
 <template>
 	<div class="SetorCentral2" ref="conteudoConsulta">
 		<PageTop background_image_src="" :esta_consulta="estaConsulta">
-			<template slot="titulo"><div>PIU Setor Central 2</div></template>
+			<template slot="titulo"><div>PIU Setor Central</div></template>
 			<template slot="subtitulo"><div>2ª consulta pública – Projeto de Intervenção Urbana Setor Central</div></template>
 		</PageTop>
 		<Indice :titulos="titulosLimpo"></Indice>
@@ -1888,7 +1888,7 @@
 			<h2 class="titulo" indent="1">Modelagem econômica</h2>
 			<h3>O Projeto de Intervenção Urbana Setor Central</h3>
 			<p>As diretrizes urbanísticas estabelecidas no projeto consideram o potencial construtivo adicional (PCA) como principal mecanismo impulsionador do projeto do Setor Central. O projeto prevê que a produção e o consumo de novas unidades residenciais e comerciais serão capazes de fomentar a produção de contrapartidas urbanísticas almejadas pelo projeto, tais como habitação de interesse social, Retrofit, reforma de imóveis tombados, além de permitir a arrecadação por meio da captura da mais-valia urbana. Para isso, foram definidos quatro instrumentos de acesso ao potencial construtivo adicional – (i) Outorga Onerosa do Direito de Construir (OODC); (ii) BÔNUS de Potencial Construtivo Adicional (BÔNUS); (iii) Transferência do Direito de Construir (TDC) e (iv) INCENTIVOS concedidos. Sendo assim, foram definidas as seguintes premissas para modelagem econômica.</p>
-			<h3 class="titulo" indent="2">Premissas da modelagem econômica</h3>
+			<h3>Premissas da modelagem econômica</h3>
 			<p>A modelagem econômica propõe-se a apresentar as estimativas de produção privada vertical de área construída e de consequente receita do Projeto em um horizonte de planejamento de 20 anos.</p>
 			<p>O estudo realizado dividiu-se em duas etapas de cálculo: a primeira delas compõe o quadro de cálculo do potencial construtivo capaz de ser absorvido pelo projeto (Etapa 1). A segunda etapa estabeleceu cenários de distribuição desse potencial entre os instrumentos previstos pelo projeto (Etapa 2).</p>
 			<h4>Etapa 1</h4>
@@ -1935,18 +1935,36 @@
 				]
 			}"></Imagem>
 			<p>Em síntese, a quantidade de metros quadrados de área computável consumida nos últimos 12 anos está distribuída pelos seguintes distritos abrangidos, no todo ou em parte, pelo PIU Setor Central:</p>
-			<p>TABELA 1 CONSUMO DE ÁREA CONS...</p>
+
+			<Tabela :dados="tabela_economico_1"></Tabela>
+
 			<h6>Estimativa demanda por área privativa</h6>
 			<p>A partir da análise desse consumo por ano e utilizando metodologia de estudos econométricos, baseada em modelos autoregressivos e de média móvel (ARIMA), foi realizada a projeção média da demanda por área construída computável para os próximos 20 anos. A média resultante para todo o PIU Setor Central está na ordem de 80.000m² de área construída computável (ACC) por ano conforme pode ser visto no gráfico a seguir.</p>
-			<p>GRAFICO 1 S TITULO</p>
+
+			<Imagem :dados="{
+					tipo: 'mapa',
+					url: imgSrc('arquivos/setor-central-2/economico/grafico1.gif'),
+					legenda: [
+						{ simbolo: '', linha: true, fundo: '#77933c', descricao: 'ACC' },
+						{ simbolo: '', linha: true, fundo: '#558ed5', descricao: 'ACC Estimada' },
+					]
+			}"></Imagem>
+
+
 			<p>A partir desta a média foi realizada a estimativa da distribuição territorial em função das concentrações dos últimos anos, de modo a identificar proporcionalmente as variações entre os setores do PIU Setor Central. Juntamente, foi estimada a área de terreno necessária para abrigar esta demanda, de modo a verificar a representatividade no total do setor conforme tabela a seguir.</p>
-			<p>GRAFICO 2 ÁREA CONSTRUIDA COMPUTAVEL...</p>
+
+
+			<Tabela :dados="tabela_economico_2"></Tabela>
+	
+
 			<p>Sendo assim, tem-se a previsão de acréscimo de aproximadamente 1,6 milhão de metros quadrados de área construída adicional para os próximos 20 anos de projeto, dos quais 1,2 milhão é passível de cobrança de OODC. A estimativa de terreno necessária para essa transformação é da ordem de 400 mil metros quadrados. Os setores que preveem a maior demanda de transformação são os territórios da transformação T2 e T5, com mais de 43% deste potencial construtivo adicional.</p>
 			<h5>Oferta de terrenos e renovação do uso do solo</h5>
 			<p>Para verificar a disponibilidade de terreno transformável (oferta) existente nos setores do PIU Setor Central, foram analisadas as composições por tipologia de uso e de edificação (horizontal e vertical) a partir das bases do IPTU 2018.</p>
 			<p>Para a modelagem inicial, foi utilizado o critério da Área Mais Provável de Transformação (AMPT) que estabelece usos transformáveis e seus respectivos percentuais de transformação. A partir deste método, obteve-se a média 30% de capacidade de transformação. Esse resultado permite ao projeto considerar que há disponibilidade de terreno suficiente para transformação prevista mediante demanda (média de 3%).</p>
 			<p>Dada a diferença na ordem de grandeza (10 vezes menor) entre as formas de cálculo, é possível afirmar que mesmo com uma AMPT específica para o Centro, a disponibilidade de terreno será suficiente nas previsões de implantação do projeto. Como forma de demonstração, se analisados somente os usos terrenos e estacionamentos nestes setores (5% e 2% da área de terrenos totais, respectivamente), seriam suficientes para a transformação estimada pelo projeto (7% de oferta de terrenos, frente a 3% de demanda necessária projetada).</p>
-			<p>GRAFICO 3 ESTIMATIVAS DE ÁREA DE TERR...</p>
+
+			<Tabela :dados="tabela_economico_3"></Tabela>
+
 			<h5>Equilíbrio Oferta e Demanda</h5>
 			<p>Se considerada a oferta de terreno passível de transformação (AMPT) e o potencial adicional permitido pelo projeto (por setor) são estimados mais de 17 milhões de metros quadrados. Considerando a produção imobiliária dos últimos 12 anos, na ordem de 1 milhão de metros quadrados, seriam necessários mais de 200 anos para realização deste consumo outorgado pelo projeto. Neste sentido, é possível afirmar que não haveria escassez de terra. No entanto, é preciso esclarecer que seriam necessárias medidas para garantir a real utilização destes terrenos (estacionamentos, usos comerciais horizontais, galpões de armazenamento e depósito), vide o alto valor de troca que os mesmos possuem, assim como problemas fundiários e jurídicos que os mesmos apresentam e que precisam ser resolvidos para ingressem no mercado de terras para empreendimentos imobiliários.</p>
 			<p>A questão valor de terreno na área central requer levantamentos e ponderações mais refinadas. O projeto prevê estimar a viabilidade de empreendimentos imobiliários considerando a variação de valores de terrenos e a dinâmica econômica própria da região central (presença de aglomerações comerciais, por exemplo).</p>
@@ -1974,6 +1992,9 @@
 			<p>Além disso, como forma de controle da viabilidade econômica para definição do valor a ser cobrado pela OODC, foram feitas verificações da representatividade desse custo em empreendimentos paradigmas, buscando sempre garantir o percentual entre 1% e 5% do valor geral de vendas (VGV). Outra métrica constantemente avaliada foi o próprio valor da OODC por metro quadrado.</p>
 			<h6>Estimativa de receita</h6>
 			<p>Inicialmente, optou-se por realizar e estimativa de arrecadação da OODC para todo o Potencial Construtivo Adicional a ser consumido pela demanda estimada (80 mil m²/ano), mesmo sabendo que parte deste será consumido pelo instrumento BÔNUS, cuja aplicação, como se verá adiante, importará dedução dos valores a seguir apresentados.</p>
+
+			<Tabela :dados='tabela_economico_4'></Tabela>
+
 			<h5>Bônus Equivalente</h5>
 			<p>A seguir estão apresentadas as premissas e memória de cálculo do BÔNUS a partir da viabilidade de empreendimentos de HIS Faixa 1, execução de <i>Retrofit</i> voltados à produção de HIS Faixa 1 eà eforma de bens tombados.</p>
 			<h6>Cálculo do BÔNUS EQUIVALENTE para HIS Faixa 1</h6>
@@ -2129,6 +2150,255 @@ export default {
 			comments_atrr: undefined,
 			consultas: false,
 			estaConsulta: {},
+
+			// figuras econômico
+			tabela_economico_4: {
+				colunas: [
+					{ titulo: 'Setores' },
+					{ titulo: 'ACC total ' },
+					{ titulo: 'PCA total (sem CA básico)' },
+					{ titulo: 'OODC estimada (em milhões)' },
+					{ titulo: '% OODC estimada Valor médio OODC (R$/m²)' },
+					{ titulo: 'Valor médio OODC (R$/m²)' }
+				],
+				linhas: [
+					[
+						[ { data:'T2 + T5' } ],
+						[ { data:'722.161 m²' } ],
+						[ { data:'541.620 m²' } ],
+						[ { data:'R$ 356,5' } ],
+						[ { data:'37,8' } ],
+						[ { data:'R$718m²' } ]
+					],
+					[
+						[ { data:'T2ZEIS' } ],
+						[ { data:'322.352 m²' } ],
+						[ { data:'241.764 m² ' } ],
+						[ { data:'R$ 135,6 ' } ],
+						[ { data:'14,4' } ],
+						[ { data:'R$ 561/m²' } ]
+					],
+					[
+						[ { data:'Q2' } ],
+						[ { data:'233.796 m²' } ],
+						[ { data:'175.347 m² ' } ],
+						[ { data:'R$ 145,3 ' } ],
+						[ { data:'15,4' } ],
+						[ { data:'R$ 829/m²' } ]
+					],
+					[
+						[ { data:'Q4-7' } ],
+						[ { data:'178.890 m²' } ],
+						[ { data:'134.167 m² ' } ],
+						[ { data:'R$ 161,8 ' } ],
+						[ { data:'17,1' } ],
+						[ { data:'R$ 1.206/m²' } ]
+					],
+					[
+						[ { data:'Q8' } ],
+						[ { data:'206.070 m²' } ],
+						[ { data:'171.725 m² ' } ],
+						[ { data:'R$ 144,0 ' } ],
+						[ { data:'15,3' } ],
+						[ { data:'R$ 842/m²' } ]
+					],
+					[
+						[ { data:'TOTAL', destaque: true } ],
+						[ { data:'1.663.268 m²' } ],
+						[ { data:'1.264.624 m² ' } ],
+						[ { data:'R$ 943,8 ' } ],
+						[ { data:'100,0' } ],
+						[ { data:'R$ 757/m²' } ]
+					]
+				]
+			},
+
+			tabela_economico_3: {
+				titulo: 'Estimativas de área de terreno a ser consumida por setor',
+				colunas: [
+					{ titulo: 'Setores' },
+					{ titulo: 'Área de terreno Total' },
+					{ titulo: 'Área de terreno prevista na AMPT' },
+					{ titulo: '% AMPT' },
+					{ titulo: 'Área terreno prevista na demanda' },
+					{ titulo: '% demanda' },
+					{ titulo: 'Área de terreno e estacionamento (AMPT)' },
+					{ titulo: '% estacionamentos' },
+				],
+				linhas:[
+					[
+						[ { data: 'T2+T5' } ],
+						[ { data: '6.211.332m²' } ],
+						[ { data: '1.984.548m²' } ],
+						[ { data: '32%' } ],
+						[ { data: '184.049m²' } ],
+						[ { data: '3,0%' } ],
+						[ { data: '321.690m²' } ],
+						[ { data: '5,2%' } ]
+					],
+					[
+						[ { data: 'T2ZEIS' } ],
+						[ { data: '2.273.462 ' } ],
+						[ { data: '934.661m²' } ],
+						[ { data: '41%' } ],
+						[ { data: '81.668m²' } ],
+						[ { data: '3,6%' } ],
+						[ { data: '225.519m²' } ],
+						[ { data: '9,9%' } ]
+					],
+					[
+						[ { data: 'Q2' } ],
+						[ { data: '2.460.969 ' } ],
+						[ { data: '784.413m²' } ],
+						[ { data: '32%' } ],
+						[ { data: '58.973m²' } ],
+						[ { data: '2,4%' } ],
+						[ { data: '110.666m²' } ],
+						[ { data: '4,5%' } ]
+					],
+					[
+						[ { data: 'Q4-7' } ],
+						[ { data: '911.022 ' } ],
+						[ { data: '221.264m²' } ],
+						[ { data: '24%' } ],
+						[ { data: '45.104m²' } ],
+						[ { data: '5,0%' } ],
+						[ { data: '60.053m²' } ],
+						[ { data: '6,6%' } ]
+					],
+					[
+						[ { data: 'Q8' } ],
+						[ { data: '1.490.339 ' } ],
+						[ { data: '237.494m²' } ],
+						[ { data: '16%' } ],
+						[ { data: '34.486m²' } ],
+						[ { data: '2,3%' } ],
+						[ { data: '63.277m²' } ],
+						[ { data: '4,2%' } ]
+					],
+					[
+						[ { data: 'TOTAL', destaque: true } ],
+						[ { data: '13.347.124 ' } ],
+						[ { data: '4.162.380m²' } ],
+						[ { data: '31%' } ],
+						[ { data: '404.280m²' } ],
+						[ { data: '3,0%' } ],
+						[ { data: '781.317m²' } ],
+						[ { data: '5,9%' } ]
+					]
+				],
+				fonte: 'IPTU 2018. Elaboração SPURBANISMO, 2019'
+			},
+
+			tabela_economico_2: {
+				titulo: 'Área Construída Computável e área de terreno líquida por setor',
+				colunas:[
+					{ titulo: 'Setores' },
+					{ titulo: 'Área de terreno Total' },
+					{ titulo: 'Área Terreno Líquida (prevista na demanda)'},
+					{ titulo: 'Participação demanda % sobre área do setor' },
+					{ titulo: 'Área Construída Computável (ACC)' },
+					{ titulo: 'PCA total (sem CA básico)' }
+				],
+				linhas: [
+					[
+						[ { data: 'T2 + T5'} ],
+						[ { data: '6.211.332m²'} ],
+						[ { data: '184.049m²'} ],
+						[ { data: '3,0%'} ],
+						[ { data: '722.161m²'} ],
+						[ { data: '541.621m²'} ]
+					],
+
+					[
+						[ { data: 'AELs'} ],
+						[ { data: '2.273.462m²'} ],
+						[ { data: '81.668m²'} ],
+						[ { data: '3,6%'} ],
+						[ { data: '322.352m²'} ],
+						[ { data: '241.764m²'} ]
+					],
+					[
+						[ { data: 'Q2'} ],
+						[ { data: '2.460.969 m²'} ],
+						[ { data: '58.973m²'} ],
+						[ { data: '2,4%'} ],
+						[ { data: '233.796m²'} ],
+						[ { data: '175.347m²'} ]
+					],
+					[
+						[ { data: 'Q4-7'} ],
+						[ { data: '911.022m²'} ],
+						[ { data: '45.104m²'} ],
+						[ { data: '5,0%'} ],
+						[ { data: '178.890m²'} ],
+						[ { data: '134.167m²'} ]
+					],
+					[
+						[ { data: 'Q8'} ],
+						[ { data: '1.490.339m²'} ],
+						[ { data: '34.486m²'} ],
+						[ { data: '2,3%'} ],
+						[ { data: '206.070m²'} ],
+						[ { data: '171.725m²'} ]
+					],
+					[
+						[ { data: 'TOTAL', destaque: true }, ],
+						[ { data: '13.347.123m²'} ],
+						[ { data: '404.280m²'} ],
+						[ { data: '3,0%'} ],
+						[ { data: '1.663.268m²'} ],
+						[ { data: '1.264.624m²'} ]
+					]
+				],
+				fonte: 'Elaboração: SPURBANISMO, 2019.'
+			},
+
+			tabela_economico_1: {
+				titulo: 'Tabela | Consumo de área construída computável (2006-2018)',
+				colunas: [
+					{ titulo: 'Distrito' },
+					{ titulo: 'Demanda ACC 12a' }
+				],
+				linhas: [
+					[
+						[ { data: 'REPUBLICA' } ],
+						[ { data: '203.792 m²'} ]
+					],
+					[
+						[ { data: 'SE' } ],
+						[ { data: '25.428 m²'} ]
+					],
+					[
+						[ { data: 'BELEM' } ],
+						[ { data: '215.721 m²'} ]
+					],
+					[
+						[ { data: 'PARI (*)' }, { ref: '(*) Lançamentos contidos na intersecção do Distrito Pari e perímetro do PIU Setor Central (não compõe o Distrito integralmente).'} ],
+						[ { data: '43.856 m²'} ]
+					],
+					[
+						[ { data: 'BOM RETIRO' } ],
+						[ { data: '100.955 m²'} ]
+					],
+					[
+						[ { data: 'BRAS' } ],
+						[ { data: '154.724 m²'} ]
+					],
+					[
+						[ { data: 'SANTA CECILIA' } ],
+						[ { data: '264.901 m²'} ]
+					],
+					[
+						[ { data: 'Total' } ],
+						[ { data: '1.009.376 m²'} ]
+					]
+				],
+				fonte: 'Geoimóvel (2006-2018). Elaboração SPURBANISMO, 2019.'
+			},
+			// fim figuras econômico
+
+
 			galeria01: {
 				width: 960,
 				height: 720,

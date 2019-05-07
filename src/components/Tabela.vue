@@ -325,8 +325,10 @@ div.Tabela {
 	}
 	&.estreita {
 		max-width: unset;
+		width: 700px;
 		width: -webkit-min-content;
 		width: -moz-min-content;
+		width: -ms-min-content;
 		width: min-content;
 		th, td { min-width: 120px; }
 	}

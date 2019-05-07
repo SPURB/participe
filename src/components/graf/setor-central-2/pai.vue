@@ -70,7 +70,6 @@ div.pai {
 	overflow-x: auto;
 	max-width: 100%;
 	width: 992px;
-	border-radius: 40px;
 	@media print {
 		-webkit-color-adjust: exact;
 		color-adjust: exact;

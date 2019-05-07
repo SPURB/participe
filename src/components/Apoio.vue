@@ -123,47 +123,38 @@ div.Apoio {
 		transform: translateX(100%);
 		transition: transform ease-in .2s;
 		z-index: 5;
-
-		&.aberto { transform: translateX(0); box-shadow: -8px 0 8px rgba(0, 0, 0, .48); };
-
+		&.aberto { transform: translateX(0); box-shadow: -8px 0 8px $sombra-2; };
 		ul.tabs {
 			list-style-type: none;
 			padding: 0;
 			margin: 0;
-
 			& > li {
 				float: left;
 				margin: 0;
 				padding: 0;
 				font-family: $grotesca;
-
 				& > input { display: none; };
-
 				& > label {
 					display: inline-block;
 					cursor: pointer;
 					padding: 20px 2rem;
 					opacity: .4;
-					font-size: smaller;
+					font-size: 1rem;
 					line-height: 20px;
 					transition: all ease-in .1s;
-
 					&:hover { color: #333; };
 				};
-
 				& > input:checked + label {
 					opacity: 1;
 					background-color: $vermelho;
 					color: #FFF;
 					z-index: 1;
 				};
-
 				& > input:checked ~ div.conteudoTab {
 					opacity: 1;
 					z-index: 2;
 				};
 			};
-
 			div.conteudoTab {
 				/*opacity: 0;*/
 				position: absolute;
@@ -175,24 +166,20 @@ div.Apoio {
 				overflow-y: auto;
 				transition: opacity ease-out .2s;
 				background: #FFF;
-
 				h1 {
 					margin: 0 0 2rem 0;
 					padding: 0;
 					font-size: larger;
 				};
-
 				p.caput {
 					font-size: smaller;
 					margin: 0 0 2rem 0;
 					color: $cinza-1;
 				};
-
 				p { padding: 0; }
 			};
 		};
 	};
-
 	button {
 		position: fixed;
 		padding: 0;
@@ -209,7 +196,6 @@ div.Apoio {
 		display: block;
 		font-family: inherit;
 		z-index: 1;
-
 		i {
 			line-height: 41px;
 			height: 1rem;
@@ -217,7 +203,6 @@ div.Apoio {
 			font-weight: normal;
 			font-size: 22px;
 		};
-
 		&:active {
 			background: $vermelho;
 			color: #FFF;
@@ -225,13 +210,10 @@ div.Apoio {
 
 			&::before { color: $preto; };
 		};
-
 		&:hover {
 			cursor: pointer;
-
 			&::before { opacity: 1; };
 		};
-
 		&::before {
 			content: 'Ver material de apoio';
 			position: absolute;
@@ -245,12 +227,10 @@ div.Apoio {
 			color: $preto;
 		};
 	};
-
 	button.aberto {
 		transform: rotate(180deg);
 		&::before { opacity: 0; };
 	};
-
 	@media (max-width: 1200px) {
 		aside ul.tabs {
 			li label { padding: 8px 12px; };
@@ -258,7 +238,6 @@ div.Apoio {
 		};
 		button::before { display: none; };
 	};
-
 	@media print {
 		display: none;
 	}

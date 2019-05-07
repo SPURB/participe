@@ -114,7 +114,7 @@ export default new Router({
 			name: 'SetorCentral2',
 			components: { SetorCentral2 },
 			meta: {
-				id: 42
+				id: 43
 			}
 		}
 		/*

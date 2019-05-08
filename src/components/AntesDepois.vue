@@ -14,6 +14,7 @@
 			<img :src="dados.imgAntes" alt="Antes">
 			<img :src="dados.imgDepois" alt="Depois" :class="{ hidden: !depois }">
 		</div>
+		<p class="fonte" v-if="dados.fonte">{{ dados.fonte }}</p>
 		<div class="picto" v-if="dados.pictogramas">
 			<h1>{{ dados.caption }}</h1>
 			<ul>
@@ -22,6 +23,7 @@
 				</li>
 			</ul>
 		</div>
+
 	</div>
 </template>
 <script>
@@ -57,7 +59,11 @@ export default {
 				type: String,
 				required: false
 			}
-		}]
+		}],
+		fonte: {
+			type: String,
+			required: false
+		}
 	},
 	data () {
 		return {
@@ -80,6 +86,12 @@ export default {
 <style lang="scss" scoped>
 @import '../variables';
 
+.fonte{
+	padding: 0 0.5rem;
+	font-size: x-small;
+	color: $cinza-1;
+}
+
 .AntesDepois {
 	font-family: $grotesca;
 	box-sizing: border-box;
@@ -88,6 +100,7 @@ export default {
 	z-index: 2;
 	border-radius: 2px;
 	overflow: hidden;
+	background-color: $cinza-3;
 	& > nav {
 		position: absolute;
 		top: 4px;
@@ -141,6 +154,10 @@ export default {
 			&.hidden {
 				opacity: 0;
 			}
+		}
+		transition: opacity 0.35s ease;
+		&:hover{
+			opacity: 0.85;
 		}
 	}
 	div.picto {

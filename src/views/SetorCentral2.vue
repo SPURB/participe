@@ -1,6 +1,6 @@
 <template>
 	<div class="SetorCentral2" ref="conteudoConsulta">
-		<PageTop background_image_src="" :esta_consulta="estaConsulta">
+		<PageTop background_image_src="arquivos/capas/setor-central-2_480w.jpg" :esta_consulta="estaConsulta" :social="social_assets">
 			<template slot="titulo"><div>PIU Setor Central</div></template>
 			<template slot="subtitulo"><div>2ª consulta pública – Projeto de Intervenção Urbana Setor Central</div></template>
 		</PageTop>
@@ -13,56 +13,56 @@
 					<div class="conteudoTab">
 						<ul class="links">
 							<li>
-								<a :href="src('arquivos/setor-central-2/NT_Perimetro.pdf')">
+								<a :href="src('arquivos/setor-central-2/NT_Perimetro.pdf')" target="_blank">
 									<i class="icon-pdf icon"><span>pdf</span></i>
 									<div>Nota Técnica - Perímetro</div>
 									<span>55,8 Mb</span>
 								</a>
 							</li>
 							<li>
-								<a :href="src('arquivos/setor-central-2/NT_PRIT.pdf')">
+								<a :href="src('arquivos/setor-central-2/NT_PRIT.pdf')" target="_blank">
 									<i class="icon-pdf icon"><span>pdf</span></i>
 									<div>Nota Técnica - PRIT</div>
 									<span>91,9 Mb</span>
 								</a>
 							</li>
 							<li>
-								<a :href="src('arquivos/setor-central-2/NT_Projetos-Estrategicos.pdf')">
+								<a :href="src('arquivos/setor-central-2/NT_Projetos-Estrategicos.pdf')" target="_blank">
 									<i class="icon-pdf icon"><span>pdf</span></i>
 									<div>Nota Técnica - Projetos Estratégicos</div>
 									<span>15,4 Mb</span>
 								</a>
 							</li>
 							<li>
-								<a :href="src('arquivos/setor-central-2/NT_Estoque.pdf')">
+								<a :href="src('arquivos/setor-central-2/NT_Estoque.pdf')" target="_blank">
 									<i class="icon-pdf icon"><span>pdf</span></i>
 									<div>Nota Técnica - Estoque</div>
 									<span>0,45 Mb</span>
 								</a>
 							</li>
 							<li>
-								<a :href="src('arquivos/setor-central-2/NT_Modelagem-Economica.pdf')">
+								<a :href="src('arquivos/setor-central-2/NT_Modelagem-Economica.pdf')" target="_blank">
 									<i class="icon-pdf icon"><span>pdf</span></i>
 									<div>Nota Técnica - Modelagem Econômica</div>
 									<span>2,99 Mb</span>
 								</a>
 							</li>
 							<li>
-								<a :href="src('arquivos/setor-central-2/PIUSCE_Contribuicoes_Setoriais.pdf')">
+								<a :href="src('arquivos/setor-central-2/PIUSCE_Contribuicoes_Setoriais.pdf')"  target="_blank">
 									<i class="icon-pdf icon"><span>pdf</span></i>
 									<div>Contribuições Setoriais</div>
 									<span>951 Kb</span>
 								</a>
 							</li>
 							<li>
-								<a :href="src('arquivos/setor-central-2/PIUSCE_Contribuicoes_Comissao_Executiva.pdf')">
+								<a :href="src('arquivos/setor-central-2/PIUSCE_Contribuicoes_Comissao_Executiva.pdf')" target="_blank">
 									<i class="icon-pdf icon"><span>pdf</span></i>
 									<div>Contribuições da Comissão Executiva</div>
 									<span>1,12 Mb</span>
 								</a>
 							</li>
 							<li>
-								<a :href="src('arquivos/setor-central-2/PIUSCE_Devolutiva_1_Consulta.pdf')">
+								<a :href="src('arquivos/setor-central-2/PIUSCE_Devolutiva_1_Consulta.pdf')" target="_blank">
 									<i class="icon-pdf icon"><span>pdf</span></i>
 									<div>Relatório de Consolidação das Contribuições da 1º Consulta Pública</div>
 									<span>830 Kb</span>
@@ -74,13 +74,16 @@
 			</template>
 		</Apoio>
 		<div class="linkMapaInterativo">
-			<a @click="abrePath('mapas/piu-arco-pinheiros-2/')">MAPA INTERATIVO <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
+			<a :href="imgSrc('mapas/piu-setor-central-2/')" target="_blank">MAPA INTERATIVO <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
 		</div>
 		<section>
 			<h2 class="titulo" indent="1">A revisão da Operação Urbana Centro e o PIU Setor Central</h2>
 			<h3>Abertura</h3>
-			<p>A Operação Urbana Centro vai mudar.</p>
-			<p>A OU Centro foi instituída pela Lei Municipal nº 12.349, de 6 de junho de 1997, com objetivo de promover a requalificação e a renovação do centro de São Paulo, através da preservação do patrimônio edificado, do incremento populacional e do estímulo às atividades típicas de áreas centrais: hoteleira, educacional, cultural e de entretenimento.</p>
+			<CommentsContext :id="1001" :context="'A revisão da Operação Urbana Centro e o PIU Setor Central'">
+				<p>A Operação Urbana Centro vai mudar.</p>
+				<p>A OU Centro foi instituída pela Lei Municipal nº 12.349, de 6 de junho de 1997, com objetivo de promover a requalificação e a renovação do centro de São Paulo, através da preservação do patrimônio edificado, do incremento populacional e do estímulo às atividades típicas de áreas centrais: hoteleira, educacional, cultural e de entretenimento.</p>
+			</CommentsContext>
+
 			<p>Embora a transferência de potencial construtivo de imóveis tombados estivesse disciplinada por legislação específica, a Operação Urbana Centro estabeleceu um cálculo alternativo para esse potencial transferível, proporcional à área construída, que favorecia a restauração de edificações históricas de grande porte, como o Prédio Martinelli, por exemplo.</p>
 			<p>Outro ponto importante foi o incentivo aos empreendimentos habitacionais, pela dispensa do pagamento de contrapartida para áreas edificadas até 6 vezes a área do terreno.</p>
 			<p>De forma precursora na legislação urbanística municipal, a Lei da Operação Urbana Centro admitiu a construção de edifícios residenciais sem a oferta até então obrigatória de vagas de estacionamento, dispensa que foi estendida aos demais usos incentivados de educação, cultura, entretenimento e hospedagem, considerada a oferta abundante de transporte público na área central.</p>
@@ -90,10 +93,10 @@
 			<p>Essas leis possibilitaram a implementação do coeficiente de aproveitamento básico único no Município, estabelecendo a separação entre a propriedade do solo e o direito de construir; trouxeram maior eficácia à ação pública sobre o território, criando instrumentos de regulação de acesso à terra, de reordenamento de atividades no território, de recuperação da valorização fundiária em benefício da coletividade e de indução de transformações necessárias ao melhor aproveitamento da infraestrutura urbana e ao cumprimento da função social da propriedade.</p>
 			<p>Mudará para se integrar a um centro metropolitano maior, revelado quando a São Paulo Urbanismo, que coordena a proposta de mudança, passou a estudar a região central além dos distritos Sé e República, rastreando a vitalidade que se espraia pelos distritos de Santa Cecília, Bom Retiro, Pari, Brás, Belém, Mooca e Liberdade.</p>
 			<p>Essa expansão se impôs pela percepção das diversas dinâmicas de alcance metropolitano distribuídas nesses distritos e da necessidade de integrá-las em um sistema urbano qualificado e eficiente, capaz de suportar adensamento populacional, de estimular a ampliação da atividade econômica e de elevar o patamar de investimento privado local.</p>
-			<p>O estudo resultante, conduzido sob os parâmetros do <a href="http://legislacao.prefeitura.sp.gov.br/leis/decreto-56901-de-29-de-marco-de-2016">PROJETO DE INTERVENÇÃO URBANA - PIU</a>, abrangeu um perímetro muito maior que o da Operação Urbana Centro original.</p>
+			<p>O estudo resultante, conduzido sob os parâmetros do <a href="http://legislacao.prefeitura.sp.gov.br/leis/decreto-56901-de-29-de-marco-de-2016" target="_blank">PROJETO DE INTERVENÇÃO URBANA - PIU</a>, abrangeu um perímetro muito maior que o da Operação Urbana Centro original.</p>
 			<p>O PIU SETOR CENTRAL consolidado propõe um Programa de Intervenções, Regramentos Específicos, Estratégias de Intervenção, um Modelo de Gestão Financeira e um Modelo de Gestão Participativa e a proposta de utilização de dois instrumentos de implantação que se complementam: a OPERAÇÃO URBANA CENTRO revisada e a ÁREA DE INTERVENÇÃO URBANA SETOR CENTRAL.</p>
 			<p>O que muda na Operação Urbana Centro que conhecemos?</p>
-			<p>MUDA O SEU PERÍMETRO DE ABRANGÊNCIA, voltando àquele proposto nos seus estudos iniciais, nos anos 1990, desenvolvidos em substituição à Operação Urbana Anhangabaú vigente à época. A proposta técnica daquele momento era de que a Operação Urbana Centro abrangesse exclusivamente as áreas conhecidas como Centro Velho e Centro Novo de São Paulo, cujo espaço construído e significado singulares justificavam um projeto específico de requalificação. O acréscimo do distrito do Brás aos distritos Sé e República deu-se por decisão intempestiva, visando o financiamento de intervenções em ruas comerciais daquele distrito.</p>
+			<p>MUDA O SEU PERÍMETRO DE ABRANGÊNCIA, voltando àquele proposto nos seus estudos iniciais, nos anos 1990, desenvolvidos em substituição à Operação Urbana Anhangabaú vigente à época. A proposta técnica daquele momento era de que a Operação Urbana Centro abrangesse exclusivamente as áreas conhecidas como Centro Velho e Centro Novo de São Paulo, cujos espaço construído e significado singulares justificavam um projeto específico de requalificação. O acréscimo do distrito do Brás aos distritos Sé e República deu-se por decisão intempestiva, visando o financiamento de intervenções em ruas comerciais daquele distrito.</p>
 			<p>MUDA A COMPOSIÇÃO DA COMISSÃO EXECUTIVA da Operação Urbana Centro, para que tenha paridade de representação do setor público e da sociedade civil e paridade de gênero, para que tenha participação rotativa das associações e organizações da sociedade civil capazes de contribuir com os objetivos do projeto e para abrigar representantes eleitos dos órgãos colegiados da administração municipal, favorecendo a atuação integrada de agentes públicos e privados.</p>
 			<p>MUDAM OS INCENTIVOS DE GRATUIDADE, agora direcionados à produção de habitações de interesse social, à recuperação de edifícios existentes para essa finalidade e para a recuperação do patrimônio histórico.</p>
 			<p>PERMANECEM OS OBJETIVOS expressos na Lei Municipal nº 12.349/1997, agora potencializados pelo Plano Urbanístico, pela Estratégias, pelos Instrumentos e pelos Modelos de Gestão Financeira e Gestão Participativa, detalhados a seguir.</p>
@@ -102,25 +105,27 @@
 				url: imgSrc('arquivos/setor-central-2/mapas/perimetro-antigo.jpg'),
 				legenda: [
 					{ borda: '#D32026', espessura: '3', pontilhado: true, descricao: 'Operação Urbana Centro - Lei nº 12.349/1997' }
-				]
+				],
+				fonte: 'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019'
 			}"></Imagem>
 			<Imagem :dados="{
 				tipo: 'mapa',
 				url: imgSrc('arquivos/setor-central-2/mapas/perimetro-novo.jpg'),
 				legenda: [
 					{ borda: '#000000', espessura: '3', pontilhado: true, descricao: 'Perímetro proposto - PIU Setor Central' }
-				]
+				],
+				fonte: 'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019'
 			}"></Imagem>
 			<ul class="links">
 				<li>
-					<a :href="src('arquivos/setor-central-2/NT_Perimetro.pdf')">
+					<a :href="src('arquivos/setor-central-2/NT_Perimetro.pdf')" target="_blank">
 						<i class="icon-pdf icon"><span>pdf</span></i>
 						<div>Nota Técnica - Perímetro</div>
 						<span>55,8 Mb</span>
 					</a>
 				</li>
 			</ul>
-			<p>O território compreendido no projeto abrange uma área de 2.098 ha, dos quais 1.485 ha estão contidos no Subsetor Arco Tietê do Setor Orla Ferroviária e Fluvial da Macroárea de Estruturação Metropolitana. A abrangência proposta reinterpreta a setorização da Macroárea de Estrturação Metropolitana – MEM – indicada no PDE ao expandir a área identificada como centro metropolitano. O projeto, então, passa a integrar objetivos propostos para o Setor Central e para o Arco Tietê:</p>
+			<p>O território compreendido no projeto abrange uma área de 2.098 ha, dos quais 1.485 ha estão contidos no Subsetor Arco Tietê do Setor Orla Ferroviária e Fluvial da Macroárea de Estruturação Metropolitana. A abrangência proposta reinterpreta a setorização da Macroárea de Estruturação Metropolitana – MEM – indicada no PDE ao expandir a área identificada como centro metropolitano. O projeto, então, passa a integrar objetivos propostos para o Setor Central e para o Arco Tietê:</p>
 			<ol class="romanos">
 				<li>fortalecimento da centralidade municipal;</li>
 				<li>maior aproveitamento da terra urbana, através da reabilitação de áreas degradadas ou subutilizadas;</li>
@@ -136,17 +141,18 @@
 			<Galeria :gallery_attrs="galeria01"></Galeria>
 			<ul class="links">
 				<li>
-					<a href="">
+					<a href="https://minuta.gestaourbana.prefeitura.sp.gov.br/piu-setor-central/anexos/Diagnostico_Socio-Territorial.pdf" target="_blank">
 						<i class="icon-pdf icon"><span>pdf</span></i>
 						<div>Diagnóstico Sócio-territorial</div>
-						<span>XXX Mb</span>
+						<span>126 Mb</span>
 					</a>
 				</li>
+
 				<li>
-					<a href="">
+					<a href="https://minuta.gestaourbana.prefeitura.sp.gov.br/piu-setor-central/anexos/Diagnostico_Ambiental.pdf" target="_blank">
 						<i class="icon-pdf icon"><span>pdf</span></i>
 						<div>Diagnóstico Ambiental</div>
-						<span>XXX Mb</span>
+						<span>220 Mb</span>
 					</a>
 				</li>
 			</ul>
@@ -164,7 +170,7 @@
 			<p>Para a melhoria das condições de mobilidade ativa foi proposto um plano de qualificação de logradouros abrangendo eixos comerciais e ruas destacadas que integram vizinhanças residenciais, zonas comerciais, terminais de ônibus e áreas verdes públicas. Essa qualificação pode abranger alargamento, requalificação e arborização de calçadas, implantação de <i>pokcket parks</i>, adequação da sinalização horizontal e vertical e o conjunto de dispositivos de acessibilidade universal. Abrange também a complementação da malha cicloviária que serve a área central. O plano considera as barreiras existentes – ferrovias, vias estruturais de tráfego, orlas fluviais – e propõe mais alternativas e modalidades de transposição.</p>
 			<p>O transporte público, já assegurado pelas estações de trem e metrô, pelos terminais e linhas de ônibus que servem os distritos centrais, será positivamente impactado pela melhoria das condições de circulação no entorno dos terminais da área central – os mais importantes Princesa Isabel, Bandeira e Parque Dom Pedro – e pela própria qualificação desses equipamentos, a ser alcançada pela aplicação da Lei Municipal nº 16.211, de 27 de maio de 2015, que regulamenta a concessão de terminais municipais à exploração e à operação da iniciativa privada.</p>
 			<h4>Valorização do patrimônio edificado</h4>
-			<p>As pré-existências são um ativo do projeto. O extenso conjunto de edificações tombadas nos bairros de Santa Ifigênia e Campos Elíseos, no Vale do Anhangabaú e na Rua Florêncio de Abreu subsidia a proposta de volumetria para as novas construções nessa região do centro, que ainda apresenta significativo potencial de transformação. Em áreas mais adensadas, no coração dos distritos Sé e República, também com alta concentração de edificações tombadas, as oportunidades de renovação são menores, justificando o estudo caso a caso de novos empreendimentos propostos.</p>
+			<p>As preexistências são um ativo do projeto. O extenso conjunto de edificações tombadas nos bairros de Santa Ifigênia e Campos Elíseos, no Vale do Anhangabaú e na Rua Florêncio de Abreu subsidia a proposta de volumetria para as novas construções nessa região do centro, que ainda apresenta significativo potencial de transformação. Em áreas mais adensadas, no coração dos distritos Sé e República, também com alta concentração de edificações tombadas, as oportunidades de renovação são menores, justificando o estudo caso a caso de novos empreendimentos propostos.</p>
 			<h4>Organização de fluxos em centros comerciais</h4>
 			<p>Os centros comerciais consolidados são também preexistências a serem valorizadas através das intervenções urbanísticas previstas no projeto: plano de requalificação de logradouros e medidas de regulação de circulação de cargas e da oferta de vagas de estacionamento. A proposta de incremento do uso residencial nesses centros comerciais vem ao encontro de demandas de associações de lojistas que pretendem vitalidade noturna para as ruas fervilhantes de consumidores que se tornam desertas à noite.</p>
 			<p>Nessas áreas, está previsto o incentivo à implantação de mini centros de distribuição associados a estacionamentos verticais em localizações estratégicas da área central. Esses equipamentos melhoram as condições de distribuição de mercadorias na região, minimizando a circulação diurna de caminhões de pequeno porte, e organizam a oferta de vagas nos centros comerciais, viabilizando as propostas de restrição de estacionamento na via e de alargamento das calçadas das ruas comerciais.</p>
@@ -177,7 +183,9 @@
 		</section>
 		<section>
 			<h2 class="titulo" indent="1">Programa de Intervenções</h2>
-			<p>Em vista das finalidades do PIU Setor Central, o Programa de Intervenções proposto considerou principalmente a necessidade de integração e qualificação do território, de forma a dar suporte ao adensamento populacional e construtivo, à diversificação de atividades e ao fortalecimento da economia pretendidos pela intervenção.</p>
+			<CommentsContext :id="1002" :context="'Programa de Intervenções'">
+				<p>Em vista das finalidades do PIU Setor Central, o Programa de Intervenções proposto considerou principalmente a necessidade de integração e qualificação do território, de forma a dar suporte ao adensamento populacional e construtivo, à diversificação de atividades e ao fortalecimento da economia pretendidos pela intervenção.</p>
+			</CommentsContext>
 			<p>Para isso, o Programa de Intervenções do PIU Setor Central distribui-se em três frentes – Qualificação do Habitat, Mobilidade e Ambiental.</p>
 			<p>A Qualificação do Habitat abrange a provisão habitacional de interesse social, para atendimento da população moradora de favelas, cortiços e ocupações ou em situação de rua, além da provisão dos equipamentos públicos necessários ao atendimento das demandas presente e futura, oriunda do incremento populacional proposto no projeto.</p>
 			<p>A provisão habitacional de interesse social é tratada no âmbito de Áreas de Estruturação Local (AEL), mas a qualificação dessas áreas e sua integração com o restante do território estão intrinsecamente relacionadas às ações das frentes de Mobilidade e Ambiental.</p>
@@ -190,7 +198,8 @@
 			<Imagem :dados="{
 				tipo: 'mapa',
 				titulo: 'Território fragmentado',
-				url: imgSrc('arquivos/setor-central-2/mapas/barreiras.jpg')
+				url: imgSrc('arquivos/setor-central-2/mapas/barreiras.jpg'),
+				fonte: 'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019.'
 			}"></Imagem>
 			<Imagem :dados="{
 				tipo: 'mapa',
@@ -201,8 +210,9 @@
 					{ borda: '#ffe000', linha: true, espessura: 3, descricao: 'Requalificação/alargamento de calçada' },
 					{ borda: '#bc6b00', linha: true, espessura: 3, descricao: 'Calçadão' },
 					{ borda: '#ff6700', linha: true, espessura: 2, descricao: 'Melhoramentos viários' },
-					{ borda: '#ba9600', linha: true, espessura: 3, descricao: 'Requalificação de logradouro' }
-				]
+					{ borda: '#ba9600', linha: true, espessura: 3, descricao: 'Requalificação de logradouro' },
+				],
+				fonte: 'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019.'
 			}"></Imagem>
 			<Galeria :gallery_attrs="galeria04"></Galeria>
 			<p>Embora de maneira geral a região central apresente uma malha viária bem estruturada, o PIU Setor Central propõe alguns melhoramentos viários, necessários à transformação e à qualificação do território.</p>
@@ -217,7 +227,7 @@
 			<p>Junto à rede de caminhos verdes, a requalificação de áreas verdes existentes e a implantação de novos parques, praças e canteiros são ações que visam à complementação do Sistema de Áreas Protegidas, Áreas Verdes e Espaços Livres (SAPAVEL), seguindo as diretrizes estabelecidas no Plano Diretor Estratégico (PDE) – Lei nº 16.050/14.</p>
 			<Imagem :dados="{
 				tipo: 'coluna',
-				url: imgSrc('arquivos/setor-central-2/img/diagramatico-1.png')
+				url: imgSrc('arquivos/setor-central-2/img/diagramatico-1.png'),
 			}"></Imagem>
 			<Imagem :dados="{
 				tipo: 'mapa',
@@ -228,10 +238,11 @@
 					{ simbolo: imgSrc('arquivos/setor-central-2/mapas/legendas/plano-arborizacao_1.png'), descricao: 'Caminhos verdes existentes' },
 					{ simbolo: imgSrc('arquivos/setor-central-2/mapas/legendas/plano-arborizacao_2.png'), descricao: 'Caminhos verdes a requalificar' },
 					{ simbolo: imgSrc('arquivos/setor-central-2/mapas/legendas/plano-arborizacao_3.png'), descricao: 'Caminhos verdes novos' }
-				]
+				],
+				fonte: 'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019.'
 			}">
 				<template slot="extra">
-					<a :href="this.$store.getters.basePath + ''" class="button">Acesse o mapa interativo <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
+					<a :href="src('mapas/piu-setor-central-2/#301')" target="_blank" class="button">Acesse o mapa interativo <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
 				</template>
 			</Imagem>
 			<p>Entretanto, as características da urbanização que se consolidou na região dificultam a implantação de novas áreas verdes de grande porte. Assim, pretende-se a instalação de <i>pocket parks</i>, praças implantadas em lotes isolados de pequena dimensão, com baixa probabilidade de aproveitamento para verticalização, que além de melhorias ambientais na escala da quadra e qualificação das rotas de circulação, possibilitam locais de lazer e descanso à população.</p>
@@ -239,15 +250,16 @@
 			<p>Buscou-se, ainda, a demarcação de ao menos uma área verde por Área de Estruturação Local da Moradia, de forma a garantir áreas de lazer e qualidade ambiental aos moradores destas vizinhanças.</p>
 			<p>Em relação às questões de drenagem, o projeto busca atenuar os problemas decorrentes do elevado nível de impermeabilização da mancha urbana e da alta ocupação das várzeas fluviais com medidas de recomposição da vegetação existente nas margens dos rios e de contenção de águas pluviais desde as áreas mais elevadas das bacias até as planícies aluviais.</p>
 			<p>Esta contenção pode se dar por meio de praças rebaixadas de contenção ou absorção que, em épocas de seca, configuram área de estar e lazer, e por canteiros e jardins drenantes ao longo do sistema viário.</p>
-			<p>Para a definição das áreas de encosta onde serão privilegiadas as medidas de contenção de águas pluviais e das áreas de várzea onde serão incentivadas as medidas de ampliação da cobertura vegetal, foi traçado o <a href="">MAPA DE COMPARTIMENTOS AMBIENTAIS</a>, que subsidia a aplicação da Quota Ambiental instituída na lei de Zoneamento e aplicável ao PIU do Setor Central.</p>
+			<p>Para a definição das áreas de encosta onde serão privilegiadas as medidas de contenção de águas pluviais e das áreas de várzea onde serão incentivadas as medidas de ampliação da cobertura vegetal, foi traçado o <a :href="src('mapas/piu-setor-central-2/#303')" target="_blank">MAPA DE COMPARTIMENTOS AMBIENTAIS</a>, que subsidia a aplicação da Quota Ambiental instituída na lei de Zoneamento e aplicável ao PIU do Setor Central.</p>
 			<p>
-				<a href="" class="button">Acesse o mapa interativo "Mapa de Compartimentos Ambientais" <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
+				<a :href="src('mapas/piu-setor-central-2/#303')" target='_blank' class="button">Acesse o mapa interativo "Mapa de Compartimentos Ambientais" <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
 			</p>
 			<p>Em conjunto, as ações propostas buscam a conformação de uma rede ambiental, que conecte áreas verdes existentes e novas, qualifique o percurso do pedestre e a vida urbana, permita a movimentação da avifauna e contenha mecanismos que atenuem os problemas de drenagem oriundos da ocupação e adensamento.</p>
 			<p>Adicionalmente às medidas citadas, os incentivos urbanísticos à renovação das orlas fluviais devem contribuir para qualificação das áreas de preservação permanente dos rios Tietê e Tamanduateí e estabelecer uma nova relação entre a população de São Paulo e dois de seus principais rios.</p>
 		</section>
 		<section>
 			<h2 class="titulo" indent="1">Setorização do PIU Setor Central</h2>
+			<CommentsContext :id="1003" :context="'Setorização do PIU Setor Central'">
 			<p>A proposta de setorização do PIU Setor Central foi elaborada considerando os seguintes elementos e critérios, detalhados na sequência:</p>
 			<ol class="romanos">
 				<li>Territórios voltados à habitação e setores com predomínio comercial</li>
@@ -257,10 +269,12 @@
 				<li>Patrimônio histórico</li>
 				<li>Territórios de transformação, qualificação e preservação</li>
 			</ol>
+			</CommentsContext>
+
 			<h3>Habitação e atividade comercial</h3>
 			<p>A partir da concentração de imóveis enquadrados como Zonas Especiais de Interesse Social (ZEIS) no território do PIU Setor Central, foram definidas as Áreas de Estruturação Local (AEL) da Moradia, que configuram elemento estruturador de propostas de intervenção para as vizinhanças habitacionais e de provisão habitacional de interesse social, e identificados logradouros cuja qualificação é importante ao adensamento populacional e construtivo desejado para tais perímetros.</p>
 			<p>
-				<a href="" class="button">Acesse o mapa interativo "ZEIS e ZDE" <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
+				<a :href="src('mapas/piu-setor-central-2/#3')" target="_blank" class="button">Acesse o mapa interativo "ZEIS e ZDE" <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
 			</p>
 			<p>De forma similar, com base na identificação dos setores censitários com predominância comercial, foram levantadas ruas de comércio especializado que configuram polos de atração metropolitana e, por isso, demandam qualificação e ordenamento do espaço público.</p>
 			<p>Os logradouros identificados configuraram EIXOS ESTRATÉGICOS, que apresentam incentivo aos usos não residenciais com fachada ativa no térreo, visando à instalação de atividades que deem suporte ao uso residencial nas AEL ou a manutenção de atividades comerciais já existentes.</p>
@@ -269,7 +283,7 @@
 				url: imgSrc('arquivos/setor-central-2/img/diagramatico-2.png')
 			}"></Imagem>
 			<p>
-				<a href="" class="button">Acesse o mapa interativo "Eixos comerciais e de moradia" <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
+				<a :href="src('mapas/piu-setor-central-2/#109')" target='_blank' class="button">Acesse o mapa interativo "ZEIS, setores comerciais e eixos" <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
 			</p>
 			<h3>Infraestrutura de transporte coletivo de massa</h3>
 			<p>O Plano Diretor Estratégico (Lei nº 16.050/2014) instituiu as áreas de influência dos Eixos de Estruturação da Transformação Urbana (EETU), territórios definidos pela presença de elementos estruturais dos sistemas de transporte coletivo de média e alta capacidade (estações de trem e metrô e corredores de ônibus), para as quais foi direcionado o adensamento construtivo e populacional do Município.</p>
@@ -296,6 +310,9 @@
 			<p>A análise dos usos transformáveis pelos setores do projeto revela que a porção ao norte da ferrovia tem em torno de 540 mil metros quadrados de terreno passíveis de transformação. Analisadas as demais áreas abrangidas no projeto, foi estimada a possibilidade de transformação de 2,1 milhões de metros quadrados de terrenos, cuja utilização é parametrizada por índices urbanísticos ajustados a cada setor do projeto, pela adoção da cota máxima de terreno por unidade habitacional e por incentivos construtivos e parâmetros qualificadores da edificação.</p>
 			<p>A área para transformação disponível, somada aos domicílios vagos, é muito superior ao que é demandado para se atingir a densidade meta do projeto de 115 a 220.000 novos habitantes na região, meta que poderá ser ultrapassada e determinar o ajuste da proposta em anos futuros.</p>
 			<p>Nesse sentido, a incidência das diferentes Áreas do projeto e dos parâmetros construtivos a elas vinculados levaram em consideração o estoque construído hoje existente para uso residencial e não residencial e a possibilidade de adensamento construtivo dessas regiões.</p>
+
+			<p>Para alcance dos objetivos apresentados, foram desenvolvidas estratégias para o PIU Setor Central, detalhadas posteriormente, em consonância com as estratégias estabelecidas pelo PDE, conforme sintetizado no quadro abaixo.</p>
+
 			<div class="parametros_bonus padding">
 				<div>
 					<table>
@@ -515,7 +532,7 @@
 				<div class="notas">
 					<ul class="links" style="margin: 1rem auto 0; padding: 0 2rem;">
 						<li>
-							<a :href="src('arquivos/setor-central-2/Estrategias-PDE-x-SCE.xlsx')" style="margin: 0">
+							<a :href="src('arquivos/setor-central-2/Estrategias-PDE-x-SCE.xlsx')" target="_blank" style="margin: 0">
 								<i class="icon-download icon"><span>download</span></i>
 								<div>Estratégias PDE x Estratégias PIU Setor Central (.xlsx)</div>
 								<span>13 Kb</span>
@@ -538,11 +555,12 @@
 			<Imagem :dados="{
 				tipo: 'mapa',
 				titulo: 'Densidade média por distrito',
-				url: imgSrc('arquivos/setor-central-2/mapas/densidade-distritos.jpg')
+				url: imgSrc('arquivos/setor-central-2/mapas/densidade-distritos.jpg'),
+				fonte: 'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019.'
 			}">
 				<template slot="extra">
-					<a href="" class="button">Acesse o mapa interativo "Densidade Populacional" <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
-					<a href="" class="button">Acesse o mapa interativo "Densidade Construtiva" <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
+					<a :href="src('mapas/piu-setor-central-2/#101')" target='blank' class="button">Acesse o mapa interativo "Densidade populacional (hab/ha)" <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
+					<a :href="src('mapas/piu-setor-central-2/#102')" target='blank' class="button">Acesse o mapa interativo "Densidade construtiva" <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
 				</template>
 			</Imagem>
 			<h3>Apoio Sul</h3>
@@ -559,10 +577,10 @@
 				url: imgSrc('arquivos/setor-central-2/mapas/diagrama-perimetros-tombamento.png')
 			}"></Imagem>
 			<p>
-				<a href="" class="button">Acesse o mapa interativo "Patrimônio" <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
+				<a :href="src('mapas/piu-setor-central-2/#108')" target='blank' class="button">Acesse o mapa interativo "Patrimônio" <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
 			</p>
 			<p>
-				<a href="" class="button">Acesse o mapa interativo "PRIT" <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
+				<a :href="src('mapas/piu-setor-central-2/#405')" target='blank' class="button">Acesse o mapa interativo "PRIT" <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
 			</p>
 			<h3>Territórios de Transformação, Qualificação e Preservação</h3>
 			<p>O Projeto de Intervenção Urbana do Setor Central tem por objetivo construir um projeto estruturante para área central, em conformidade com o PDE e a Lei de Parcelamento, Uso e Ocupação do Solo, Lei Municipal nº 16.402 de 22 de março de 2016.</p>
@@ -942,7 +960,7 @@
 				url: imgSrc('arquivos/setor-central-2/mapas/setores_transformacao.png'),
 				legenda: [
 					{ fundo: '#7C5D29', descricao: 'Setor de Transformação 2 - T2' },
-					{ simbolo: imgSrc('arquivos/setor-central-2/mapas/legendas/setores-transformacao_1.png'), descricao: 'Setor de Transformação 2 - T2' },
+					{ simbolo: imgSrc('arquivos/setor-central-2/mapas/legendas/setores-transformacao_1.png'), descricao: 'Setor de Transformação 2 - T2c' },
 					{ fundo: '#DCC8B3', descricao: 'Setor de Transformação 5 - T5' },
 					{ pontilhado: true, borda: '#000000', espessura: '1', descricao: 'Perímetro do PIU Setor Central' },
 					{ fundo: '#c9e2b0', descricao: 'Parques, praças e canteiros' }
@@ -951,10 +969,11 @@
 			<h4>SETOR DE TRANSFORMAÇÃO 2 e 2C - T2 e T2C</h4>
 			<AntesDepois :dados="{
 				caption: 'Parâmetros das Áreas de Transformação T2 e T2C',
-				largura: '700',
-				altura: '500',
-				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/t2_antes.png'),
-				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/t2_depois.png'),
+				largura: '1561',
+				altura: '816',
+				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/t2_antes.jpg'),
+				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/t2_depois.jpg'),
+				fonte:'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019',
 				pictogramas: [{
 					url: imgSrc('arquivos/setor-central-2/antes-depois/t2_1.png'),
 					legenda: 'C.A. 4'
@@ -969,10 +988,11 @@
 			<h4>SETOR DE TRANSFORMAÇÃO 5 - T5</h4>
 			<AntesDepois :dados="{
 				caption: 'Parâmetros das Áreas de Transformação T5',
-				largura: '700',
-				altura: '500',
-				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/t5_antes.png'),
-				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/t5_depois.png'),
+				largura: '1561',
+				altura: '816',
+				fonte:'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019',
+				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/t5_antes.jpg'),
+				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/t5_depois.jpg'),
 				pictogramas: [{
 					url: imgSrc('arquivos/setor-central-2/antes-depois/t5_1.png'),
 					legenda: 'C.A. 2 (4 para Uso Misto)'
@@ -1010,10 +1030,11 @@
 			<h4>SETOR DE QUALIFICAÇÃO 2 - Q2</h4>
 			<AntesDepois :dados="{
 				caption: 'Parâmetros das Áreas de Qualificação Q2',
-				largura: '700',
-				altura: '500',
-				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/q2_antes.png'),
-				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/q2_depois.png'),
+				largura: '1561',
+				altura: '816',
+				fonte:'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019',
+				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/q2_antes.jpg'),
+				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/q2_depois.jpg'),
 				pictogramas: [{
 					url: imgSrc('arquivos/setor-central-2/antes-depois/q2_1.png'),
 					legenda: 'C.A. 2 (4 para Uso Misto)'
@@ -1031,10 +1052,11 @@
 			<h4>SETOR DE QUALIFICAÇÃO 4 - Q4</h4>
 			<AntesDepois :dados="{
 				caption: 'Parâmetros das Áreas de Qualificação Q4',
-				largura: '700',
-				altura: '500',
-				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/q4_antes.png'),
-				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/q4_depois.png'),
+				largura: '1561',
+				altura: '816',
+				fonte:'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019',
+				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/q4_antes.jpg'),
+				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/q4_depois.jpg'),
 				pictogramas: [{
 					url: imgSrc('arquivos/setor-central-2/antes-depois/q4_1.png'),
 					legenda: 'C.A. 4'
@@ -1052,10 +1074,11 @@
 			<h4>SETOR DE QUALIFICAÇÃO 5 - Q5</h4>
 			<AntesDepois :dados="{
 				caption: 'Parâmetros das Áreas de Qualificação Q5',
-				largura: '700',
-				altura: '500',
-				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/q5_antes.png'),
-				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/q5_depois.png'),
+				largura: '1561',
+				altura: '816',
+				fonte:'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019',
+				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/q5_antes.jpg'),
+				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/q5_depois.jpg'),
 				pictogramas: [{
 					url: imgSrc('arquivos/setor-central-2/antes-depois/q5_1.png'),
 					legenda: 'C.A. 4'
@@ -1079,10 +1102,11 @@
 			<h4>SETOR DE QUALIFICAÇÃO 6 - Q6</h4>
 			<AntesDepois :dados="{
 				caption: 'Parâmetros das Áreas de Qualificação Q6',
-				largura: '700',
-				altura: '500',
-				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/q6_antes.png'),
-				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/q6_depois.png'),
+				largura: '1561',
+				altura: '816',
+				fonte:'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019',
+				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/q6_antes.jpg'),
+				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/q6_depois.jpg'),
 				pictogramas: [{
 					url: imgSrc('arquivos/setor-central-2/antes-depois/q6_1.png'),
 					legenda: 'C.A. 4'
@@ -1100,10 +1124,11 @@
 			<h4>SETOR DE QUALIFICAÇÃO 7 - Q7</h4>
 			<AntesDepois :dados="{
 				caption: 'Parâmetros das Áreas de Qualificação Q7',
-				largura: '700',
-				altura: '500',
-				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/q7_antes.png'),
-				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/q7_depois.png'),
+				largura: '1561',
+				altura: '816',
+				fonte:'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019',
+				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/q7_antes.jpg'),
+				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/q7_depois.jpg'),
 				pictogramas: [{
 					url: imgSrc('arquivos/setor-central-2/antes-depois/q7_1.png'),
 					legenda: 'C.A. 4'
@@ -1127,10 +1152,11 @@
 			<h4>SETOR DE QUALIFICAÇÃO 8 - Q8</h4>
 			<AntesDepois :dados="{
 				caption: 'Parâmetros das Áreas de Qualificação Q8',
-				largura: '700',
-				altura: '500',
-				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/q8_antes.png'),
-				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/q8_depois.png'),
+				largura: '1561',
+				altura: '816',
+				fonte:'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019',
+				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/q8_antes.jpg'),
+				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/q8_depois.jpg'),
 				pictogramas: [{
 					url: imgSrc('arquivos/setor-central-2/antes-depois/q8_1.png'),
 					legenda: 'C.A. 6'
@@ -1161,10 +1187,11 @@
 			<h4>SETOR DE PRESERVAÇÃO - P1</h4>
 			<AntesDepois :dados="{
 				caption: 'Parâmetros das Áreas de Preservação P1',
-				largura: '700',
-				altura: '500',
-				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/p1_antes.png'),
-				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/p1_depois.png'),
+				largura: '1561',
+				altura: '816',
+				fonte:'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019',
+				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/p1_antes.jpg'),
+				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/p1_depois.jpg'),
 				pictogramas: [{
 					url: imgSrc('arquivos/setor-central-2/antes-depois/p1_1.png'),
 					legenda: 'C.A. 2'
@@ -1179,10 +1206,11 @@
 			<h4>SETOR DE PRESERVAÇÃO - P5</h4>
 			<AntesDepois :dados="{
 				caption: 'Parâmetros das Áreas de Preservação P5',
-				largura: '700',
-				altura: '500',
-				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/p5_antes.png'),
-				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/p5_depois.png'),
+				largura: '1561',
+				altura: '816',
+				fonte:'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019',
+				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/p5_antes.jpg'),
+				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/p5_depois.jpg'),
 				pictogramas: [{
 					url: imgSrc('arquivos/setor-central-2/antes-depois/p5_1.png'),
 					legenda: 'C.A. 4'
@@ -1220,10 +1248,11 @@
 			<h4>EIXOS ESTRATÉGICOS</h4>
 			<AntesDepois :dados="{
 				caption: 'Parâmetros dos Eixos Estratégicos',
-				largura: '700',
-				altura: '500',
-				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/eixo-estrategico_antes.png'),
-				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/eixo-estrategico_depois.png'),
+				largura: '1561',
+				altura: '816',
+				fonte:'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019',
+				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/eixo-estrategico_antes.jpg'),
+				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/eixo-estrategico_depois.jpg'),
 				pictogramas: [{
 					url: imgSrc('arquivos/setor-central-2/antes-depois/eixo-estrategico_1.png'),
 					legenda: 'T.O. 80%'
@@ -1248,10 +1277,11 @@
 			<h4>EIXOS DE ORDENAMENTO DA PAISAGEM 1</h4>
 			<AntesDepois :dados="{
 				caption: 'Parâmetros do Eixo de Ordenamento da Paisagem 1',
-				largura: '700',
-				altura: '500',
-				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/eixo-ordena-paisa-1_antes.png'),
-				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/eixo-ordena-paisa-1_depois.png'),
+				largura: '1561',
+				altura: '816',
+				fonte:'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019',
+				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/eixo-ordena-paisa-1_antes.jpg'),
+				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/eixo-ordena-paisa-1_depois.jpg'),
 				pictogramas: [{
 					url: imgSrc('arquivos/setor-central-2/antes-depois/eixo-ordena-paisa-1_1.png'),
 					legenda: 'C.A. 4'
@@ -1275,10 +1305,11 @@
 			<h4>EIXOS DE ORDENAMENTO DA PAISAGEM 2</h4>
 			<AntesDepois :dados="{
 				caption: 'Parâmetros do Eixo de Ordenamento da Paisagem 2',
-				largura: '700',
-				altura: '500',
-				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/eixo-ordena-paisa-2_antes.png'),
-				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/eixo-ordena-paisa-2_depois.png'),
+				largura: '1561',
+				altura: '816',
+				fonte:'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019',
+				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/eixo-ordena-paisa-2_antes.jpg'),
+				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/eixo-ordena-paisa-2_depois.jpg'),
 				pictogramas: [{
 					url: imgSrc('arquivos/setor-central-2/antes-depois/eixo-ordena-paisa-2_1.png'),
 					legenda: 'C.A. 4'
@@ -1296,10 +1327,11 @@
 			<h4>EIXOS DE ORDENAMENTO DA PAISAGEM 3</h4>
 			<AntesDepois :dados="{
 				caption: 'Parâmetros do Eixo de Ordenamento da Paisagem 3',
-				largura: '700',
-				altura: '500',
-				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/eixo-ordena-paisa-3_antes.png'),
-				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/eixo-ordena-paisa-3_depois.png'),
+				largura: '1561',
+				altura: '816',
+				fonte:'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019',
+				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/eixo-ordena-paisa-3_antes.jpg'),
+				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/eixo-ordena-paisa-3_depois.jpg'),
 				pictogramas: [{
 					url: imgSrc('arquivos/setor-central-2/antes-depois/eixo-ordena-paisa-3_1.png'),
 					legenda: 'C.A. 4'
@@ -1317,10 +1349,11 @@
 			<h4>EIXOS DE ORDENAMENTO DA PAISAGEM 4</h4>
 			<AntesDepois :dados="{
 				caption: 'Parâmetros do Eixo de Ordenamento da Paisagem 4',
-				largura: '700',
-				altura: '500',
-				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/eixo-ordena-paisa-4_antes.png'),
-				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/eixo-ordena-paisa-4_depois.png'),
+				largura: '1561',
+				altura: '816',
+				fonte:'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019',
+				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/eixo-ordena-paisa-4_antes.jpg'),
+				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/eixo-ordena-paisa-4_depois.jpg'),
 				pictogramas: [{
 					url: imgSrc('arquivos/setor-central-2/antes-depois/eixo-ordena-paisa-4_1.png'),
 					legenda: 'C.A. 4'
@@ -1339,10 +1372,11 @@
 			<h4>EIXOS DE TRANSFORMAÇÃO</h4>
 			<AntesDepois :dados="{
 				caption: 'Parâmetros dos Eixos de Transformação',
-				largura: '700',
-				altura: '500',
-				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf_antes.png'),
-				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf_depois.png'),
+				largura: '1561',
+				altura: '816',
+				fonte:'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019',
+				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf_antes.jpg'),
+				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf_depois.jpg'),
 				pictogramas: [{
 					url: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf_1.png'),
 					legenda: 'C.A. 4'
@@ -1367,10 +1401,11 @@
 			<h4>EIXOS DE TRANSFORMAÇÃO DA ORLA FLUVIAL</h4>
 			<AntesDepois :dados="{
 				caption: 'Parâmetros dos Eixos de Transformação da Orla',
-				largura: '700',
-				altura: '500',
-				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf-orla_antes.png'),
-				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf-orla_depois.png'),
+				largura: '1561',
+				altura: '816',
+				fonte:'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019',
+				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf-orla_antes.jpg'),
+				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf-orla_depois.jpg'),
 				pictogramas: [{
 					url: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf-orla_1.png'),
 					legenda: 'C.A. 4'
@@ -1391,14 +1426,41 @@
 					legenda: 'Lote mínimo 1000m²'
 				}]
 			}"></AntesDepois>
-			<p>A desativação gradativa do Elevado Presidente João Goulart e sua demolição ou transformação, parcial ou integral, em parque foi determinada pelo Plano Diretor Estratégico (Lei nº 16.050/2014, Art. 375, Parágrafo Único). Nesse sentido, no início de 2018, foi criado o Parque Municipal do Minhocão, pela Lei nº 16.833/2018, estabelecendo, entre outras disposições, a elaboração de Projeto de Intervenção Urbana (PIU) que transforme o Elevado parcial ou integralmente em parque.</p>
+
+			<p>O Plano Diretor Estratégico do Município de São Paulo - PDE, aprovado em 2014, estabeleceu a desativação do Elevado João Goulart – Minhocão - como via de tráfego, prevendo sua demolição ou transformação, parcial ou integral, em parque (Lei Municipal nº 16.050/2014, Art. 375, parágrafo único). </p>
+
+			<p>Essa disposição expressa o ideal de transformação e qualificação do tecido urbano previsto no PDE, que prioriza o adensamento construtivo e populacional no entorno dos grandes eixos servidos por transporte coletivo e propõe o aumento das áreas de lazer e fruição pública, de modo a tornar o ambiente urbano mais aprazível e adequado à convivência humana.</p>
+
+			<p>Após a edição do PDE, foi aprovada a Lei Municipal nº 16.833/2018, que cria o Parque Municipal do Minhocão e estabelece a desativação gradativa do Elevado João Goulart.</p>
+
+			<p>De acordo com esta lei, cabe ao Poder Executivo apresentar Projeto de Intervenção Urbana - PIU, por decreto ou por lei específica, com a finalidade de estabelecer as condicionantes urbanísticas específicas para o local e regular a transição da atual condição de equipamento de mobilidade (leito carroçável de interligação das regiões Leste-Oeste da cidade) para a nova situação. </p>
+
+			<p>Este será o Projeto de Intervenção Urbana do Parque Minhocão, (PIU do Parque Minhocão).</p>
+
+			<p>Como o PIU do Parque Minhocão se relaciona com PIU Setor Central?</p>
+
+			<p>A gestão urbana é realizada em diversas escalas de abordagem. </p>
+
+			<p>O Projeto de Intervenção Urbana – PIU Setor Central tem por objetivo atualizar a Lei da Operação Urbana Centro e definir o planejamento urbanístico dos distritos do anel central contidos na Macroárea de Estruturação Metropolitana e para isso propõe um Plano Urbanístico, um Programa de Intervenções e Regramentos e Incentivos específicos para 2.098 hectares dos distritos centrais.</p>
+
+			<p>Trata-se de uma nova <i>camada</i> de regulação urbanística que se combina ao PDE e à Lei de Parcelamento Uso e Ocupação do Solo.</p>
+
+			<p>O PIU Setor Central abrange as quadras lindeiras ao Minhocão e, face ao cenário de transformação indicado no PDE, definiu o <i>Eixo de Transformação Elevado João Goulart</i>, associado a parâmetros de uso e ocupação do solo e incentivos específicos que têm o objetivo de alavancar o aproveitamento de imóveis subutilizados, lindeiros ao elevado.</p>
+
+			<p>O PIU do Parque Minhocão tem como ponto de partida a desmobilização do Elevado e, a partir disso, a discussão específica do impacto urbanístico dessa medida e a proposição de soluções estruturantes em resposta às determinações expressas pelo PDE e pela Lei nº 16.833/2018 e às contribuições advindas das consultas públicas realizadas no desenvolvimento do projeto, em conformidade com o procedimento previsto pelo Decreto 56.901/2016.</p>
+
+			<p>Trata-se de uma intervenção de requalificação urbanística, balizada por um processo participativo e amparada pelo quadro normativo do PIU Setor Central que potencializa os efeitos transformadores dessa intervenção e permite à Municipalidade a captura da valorização imobiliária promovida em sua vizinhança.</p>
+
+			<p>Ambos os projetos - o PIU do Setor Central da escala do planejamento e o PIU do Parque Minhocão da escala da intervenção urbanística - estão integrados para gerar o máximo de eficiência administrativa na gestão da cidade, tem em mira o desenvolvimento urbano harmonioso e consequente para a região central de São Paulo.</p>
+
 			<h4>EIXOS DE TRANSFORMAÇÃO - PARQUE MINHOCÃO</h4>
 			<AntesDepois :dados="{
 				caption: 'Parâmetros dos Eixos de Transformação Elevado Pres. João Goulart',
-				largura: '700',
-				altura: '500',
-				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf-minhocao_antes.png'),
-				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf-minhocao_depois.png'),
+				largura: '1561',
+				altura: '816',
+				fonte:'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019',
+				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf-minhocao_antes.jpg'),
+				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf-minhocao_depois.jpg'),
 				pictogramas: [{
 					url: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf-minhocao_1.png'),
 					legenda: 'C.A. 6'
@@ -1420,6 +1482,7 @@
 		</section>
 		<section>
 			<h2 class="titulo" indent="1">Instrumentos de implantação do PIU Setor Central</h2>
+			<CommentsContext :id="1004" :context="'Instrumentos de implantação do PIU Setor Central'">
 			<p>O PROJETO DE INTERVENÇÃO URBANA DO SETOR CENTRAL define as diretrizes de transformação do espaço público e regramentos urbanísticos e incentivos para a transformação dos lotes privados contidos na parcela da Macroárea de Estruturação Metropolitana que abrange a Subprefeitura da Sé e trechos de distritos da Subprefeitura da Mooca.</p>
 			<p>Para a sua implantação, é proposta a utilização de três instrumentos de ordenamento e reestruturação urbana previstos no PDE:</p>
 			<ol class="decimais">
@@ -1427,6 +1490,7 @@
 				<li>a AIU SETOR CENTRAL, nos demais distritos do PIU;</li>
 				<li>as ÁREAS DE ESTRUTURAÇÃO LOCAL, delimitadas em torno do Terminal Princesa Isabel e dos perímetros de ZEIS.</li>
 			</ol>
+			</CommentsContext>
 			<Galeria :gallery_attrs="galeria03"></Galeria>
 			<h3>Operação Urbana Centro</h3>
 			<p>A Operação Urbana Centro será mantida como instrumento de implantação do PIU Setor Central nos distritos Sé e República, com as seguintes características:</p>
@@ -1491,7 +1555,8 @@
 				legenda: [
 					{ fundo: 'rgba(255, 225, 0, 0.4)', descricao: 'AEL' },
 					{ borda: '#D14000', linha: true, descricao: 'Eixos estratégicos' }
-				]
+				],
+				fonte: 'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019.'
 			}">
 				<template slot="extra"></template>
 			</Imagem>
@@ -1499,14 +1564,16 @@
 		</section>
 		<section>
 			<h2 class="titulo" indent="1">Estratégias</h2>
-			<p>O PIU SETOR CENTRAL abrange um território de 2.089 ha, expandindo a área identificada como centro metropolitano.</p>
-			<p>A parcela de 1.483 ha contida no Subsetor Arco Tietê do Setor Orla Ferroviária e Fluvial integra-se aos 606 ha do Setor Central da Macroárea de Estruturação Metropolitana, compartilhando os objetivos gerais do ordenamento urbanístico, trazidos no Plano Diretor Estratégico do Município de São Paulo, Lei Municipal nº 16.050/2014.</p>
-			<p>Para que sejam atingidos esses objetivos, a São Paulo Urbanismo introduz <i>estratégias de implantação</i> do PIU Setor Central, detalhadas a seguir.</p>
+			<CommentsContext :id="1005" :context="'Estratégias'">
+				<p>O PIU SETOR CENTRAL abrange um território de 2.089 ha, expandindo a área identificada como centro metropolitano.</p>
+				<p>A parcela de 1.483 ha contida no Subsetor Arco Tietê do Setor Orla Ferroviária e Fluvial integra-se aos 606 ha do Setor Central da Macroárea de Estruturação Metropolitana, compartilhando os objetivos gerais do ordenamento urbanístico, trazidos no Plano Diretor Estratégico do Município de São Paulo, Lei Municipal nº 16.050/2014.</p>
+				<p>Para que sejam atingidos esses objetivos, a São Paulo Urbanismo introduz <i>estratégias de implantação</i> do PIU Setor Central, detalhadas a seguir.</p>
+			</CommentsContext>
 			<h3>Perímetro de requalificação de imóveis tombados - PRIT</h3>
 			<p>O Perímetro de Requalificação de Imóveis Tombados (PRIT) é resultado da articulação de preexistências peculiares à região dos Campos Elíseos, Santa Ifigênia e Rua Florêncio de Abreu, especialmente no âmbito dos processos de preservação do patrimônio histórico edificado e de sua ambiência. No PRIT, observa-se uma alta incidência de imóveis tombados ou em processos de tombamento, ocupação do solo relativamente densa e, ao mesmo tempo, densidade construída relativamente baixa. Soma-se a esses fatores a convivência entre intensa atividade comercial, em muitos casos especializada, e a demanda por moradia de qualidade. Dessa forma, o território do PRIT apresenta oportunidades de transformação apoiadas na regulação da paisagem e na preservação do patrimônio e, por isso, foi objeto de proposta de regramento urbanístico específico, com o objetivo de permitir o adensamento construtivo em consonância com a ambiência dos bens tombados.</p>
 			<ul class="links">
 				<li>
-					<a :href="src('arquivos/setor-central-2/NT_PRIT.pdf')">
+					<a :href="src('arquivos/setor-central-2/NT_PRIT.pdf')" target="_blank">
 						<i class="icon-pdf icon"><span>pdf</span></i>
 						<div>Nota Técnica - PRIT</div>
 						<span>91,9 Mb</span>
@@ -1639,7 +1706,7 @@
 			<p>Concentração de imóveis vagos ou subutilizados, áreas públicas em processo de transformação, vizinhanças fisicamente degradadas, potencialidades de aproveitamento inexploradas são situações que justificam a inclusão dessas áreas no rol dos Projetos Estratégicos.</p>
 			<ul class="links">
 				<li>
-					<a :href="src('arquivos/setor-central-2/NT_Projetos-Estrategicos.pdf')">
+					<a :href="src('arquivos/setor-central-2/NT_Projetos-Estrategicos.pdf')" target="_blank">
 						<i class="icon-pdf icon"><span>pdf</span></i>
 						<div>Nota Técnica - Projetos Estratégicos</div>
 						<span>15,4 Mb</span>
@@ -1648,75 +1715,75 @@
 			</ul>
 			<p>Ao norte do perímetro do PIU Setor Central há uma concentração de áreas públicas de grandes dimensões e subutilizadas cuja transformação potencializa a transformação de áreas privadas ao longo do Apoio Urbano Sul.</p>
 			<p>Cada uma dessas áreas configura um PROJETO ESTRATÉGICO, vinculado a um Plano de Parcelamento e um Programa de Interesse Público, com proposta de provisão de moradias de interesse social e equipamentos públicos, criação de áreas verdes e qualificação de espaços públicos. São eles:</p>
-			<ul>
-				<li>
-					<h4>PE DETRAN</h4>
-					<p>O projeto tem como objetivo otimizar o uso de terras públicas que hoje abrigam serviços públicos como a sede administrativa do Departamento Estadual de Transito – Detran – e Estação de Transbordo. Ampliando as frentes de lotes que se abrem para o Rio Tamanduateí e para o novo Parque, espera-se que novos usos, como escritórios, hotéis e outros, se instalem no local, tirando partido da proximidade com o Anhembi, Campo de Marte e Terminal Rodoviário Tietê. Faixas da Área de Preservação Permanente – APP do Tamanduateí serão destinadas para a criação de praças que valorizem os equipamentos públicos e usos residenciais.</p>
-					<AntesDepois :dados="{
-					caption: 'Projeto Estratégico Detran',
-					largura: '700',
-					altura: '500',
-					imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/projetos-estrategicos/detran_antes.jpg'),
-					imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/projetos-estrategicos/detran_depois.jpg')
-					}"></AntesDepois>
-				</li>
-				<li>
-					<h4>PE CANINDÉ/PORTUGUESA</h4>
-					<p>Com a complementação do viário que compõe o Apoio Urbano Sul, previsto na Lei nº 16.541/2016, uma nova frente urbana passa a dar acesso a áreas municipais subutilizadas do Canindé. O projeto específico previsto para esta área propiciará a reorganização das terras públicas e privadas, podendo abranger ou não a manutenção do estádio de futebol, a depender do plano urbanístico a ser elaborado, além de contemplar a implantação de travessia qualificada para pedestres e ciclistas sobre o Rio Tietê, conectada por meio de áreas verdes ou calçadas. Pretende-se, ainda, a desocupação e a requalificação da APP do Rio Tietê, que voltará a integrar o Sistema de Áreas Protegidas, Áreas Verdes e Espaços Livres da cidade, auxiliando na melhoria da drenagem e do microclima urbano e compondo o corredor ambiental. Serão, ainda, observadas as diretrizes apontadas pelo Art. 169 da Lei nº 16.402/2016 , que trata da ZOE do Canindé, a saber possibilidade de coeficiente de aproveitamento máximo superior ao estabelecido pelo Quadro 2A da Lei nº 16.050/2014 (Plano Diretor Estratégico), desde que o potencial construtivo total do projeto seja limitado a 300 mil m² de área construída computável e que seja respeitada uma destinação mínima obrigatória de 20% de área pública.</p>
-					<AntesDepois :dados="{
-					caption: 'Projeto Estratégico Canindé/Portuguesa',
-					largura: '700',
-					altura: '500',
-					imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/projetos-estrategicos/caninde-portuguesa_antes.jpg'),
-					imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/projetos-estrategicos/caninde-portuguesa_depois.jpg')
-					}"></AntesDepois>
-				</li>
-				<li>
-					<h4>PE CANINDÉ/SANTO ANTÔNIO</h4>
-					<p>A complementação do viário que compõe o Apoio Sul na região, previsto na Lei nº 16.541/2016, somada à implantação de viário complementar, trará a oportunidade de organizar o território composto por lotes públicos localizados no Canindé, que compõem o Projeto Estratégico Canindé – Santo Antônio.</p>
-					<p>Um componente importante deste projeto estratégico é a previsão de viabilização de áreas de ZEIS, instituídas pela Lei nº 16.402/2016, considerando a demanda local na destinação das unidades de interesse social produzidas. As áreas verdes propostas tiram partido da identidade local e das áreas de lazer já existentes, possibilitando a prática de atividades esportivas e reforçando a memória dos campos de futebol de várzea da região.</p>
-					<AntesDepois :dados="{
-					caption: 'Projeto Estratégico Canindé - Santo Antônio',
-					largura: '700',
-					altura: '500',
-					imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/projetos-estrategicos/caninde-stoantonio_antes.jpg'),
-					imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/projetos-estrategicos/caninde-stoantonio_depois.jpg')
-					}"></AntesDepois>
-				</li>
-				<li>
-					<h4>PE CANINDÉ/CMTC</h4>
-					<p>Usos institucionais existentes serão reorganizados para ocupar menor área de terreno, liberando espaço para implantação de conjuntos residenciais e de novas atividades, que estarão, preferencialmente, voltados para a Avenida Cruzeiro do Sul, construindo uma nova frente para este logradouro. A provisão de áreas verdes irá garantir integração com os equipamentos públicos modernizados, qualificando a vida dos futuros moradores do bairro.</p>
-					<AntesDepois :dados="{
-					caption: 'Projeto Estratégico Canindé/CMTC',
-					largura: '700',
-					altura: '500',
-					imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/projetos-estrategicos/caninde-cmtc_antes.jpg'),
-					imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/projetos-estrategicos/caninde-cmtc_depois.jpg')
-					}"></AntesDepois>
-				</li>
-				<li>
-					<h4>PE SANTA RITA</h4>
-					<p>No terreno de propriedade da SPTrans onde funcionava a garagem de ônibus Santa Rita, são planejadas melhorias urbanísticas, tanto em passeios quanto em praças, como elemento indutor da transformação de outros terrenos na região.</p>
-					<p>Como diretriz de projeto, entende-se que estas novas áreas verdes deverão se concentrar junto ao Apoio Urbano Sul de forma a criar um “respiro” na avenida. Novas vias, transversais ao Apoio, aumentarão a permeabilidade do bairro e deverão dar continuidade ao viário existente no entorno, proporcionando novas conexões aos deslocamentos locais. Por se tratar de quadras novas na cidade, nas quais se pretende maior adensamento populacional e construtivo, as novas calçadas deverão apresentar dimensões compatíveis e atributos condizentes com este novo padrão.</p>
-					<p>Além de trazer a oferta de terrenos empreendíveis pelo mercado, o projeto promoverá a reconstrução das áreas existentes da SPTrans, do Departamento de Transportes Públicos – DTP e do Departamento de Transportes Internos – DTI.</p>
-					<AntesDepois :dados="{
-					caption: 'Projeto Estratégico Santa Rita',
-					largura: '700',
-					altura: '500',
-					imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/projetos-estrategicos/starita_antes.jpg'),
-					imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/projetos-estrategicos/starita_depois.jpg')
-					}"></AntesDepois>
-				</li>
-			</ul>
+
+			<h4>PE DETRAN</h4>
+			<p>O projeto tem como objetivo otimizar o uso de terras públicas que hoje abrigam serviços públicos como a sede administrativa do Departamento Estadual de Transito – Detran – e Estação de Transbordo. Ampliando as frentes de lotes que se abrem para o Rio Tamanduateí e para o novo Parque, espera-se que novos usos, como escritórios, hotéis e outros, se instalem no local, tirando partido da proximidade com o Anhembi, Campo de Marte e Terminal Rodoviário Tietê. Faixas da Área de Preservação Permanente – APP do Tamanduateí serão destinadas para a criação de praças que valorizem os equipamentos públicos e usos residenciais.</p>
+			<AntesDepois :dados="{
+				caption: 'Projeto Estratégico Detran',
+				largura: '1561',
+				altura: '816',
+				fonte:'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019',
+				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/projetos-estrategicos/detran_antes.jpg'),
+				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/projetos-estrategicos/detran_depois.jpg')
+			}"></AntesDepois>
+
+			<h4>PE CANINDÉ/PORTUGUESA</h4>
+			<p>Com a complementação do viário que compõe o Apoio Urbano Sul, previsto na Lei nº 16.541/2016, uma nova frente urbana passa a dar acesso a áreas municipais subutilizadas do Canindé. O projeto específico previsto para esta área propiciará a reorganização das terras públicas e privadas, podendo abranger ou não a manutenção do estádio de futebol, a depender do plano urbanístico a ser elaborado, além de contemplar a implantação de travessia qualificada para pedestres e ciclistas sobre o Rio Tietê, conectada por meio de áreas verdes ou calçadas. Pretende-se, ainda, a desocupação e a requalificação da APP do Rio Tietê, que voltará a integrar o Sistema de Áreas Protegidas, Áreas Verdes e Espaços Livres da cidade, auxiliando na melhoria da drenagem e do microclima urbano e compondo o corredor ambiental. Serão, ainda, observadas as diretrizes apontadas pelo Art. 169 da Lei nº 16.402/2016 , que trata da ZOE do Canindé, a saber possibilidade de coeficiente de aproveitamento máximo superior ao estabelecido pelo Quadro 2A da Lei nº 16.050/2014 (Plano Diretor Estratégico), desde que o potencial construtivo total do projeto seja limitado a 300 mil m² de área construída computável e que seja respeitada uma destinação mínima obrigatória de 20% de área pública.</p>
+			<AntesDepois :dados="{
+				caption: 'Projeto Estratégico Canindé/Portuguesa',
+				largura: '1561',
+				altura: '816',
+				fonte:'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019',
+				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/projetos-estrategicos/caninde-portuguesa_antes.jpg'),
+				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/projetos-estrategicos/caninde-portuguesa_depois.jpg')
+			}"></AntesDepois>
+
+			<h4>PE CANINDÉ/SANTO ANTÔNIO</h4>
+			<p>A complementação do viário que compõe o Apoio Sul na região, previsto na Lei nº 16.541/2016, somada à implantação de viário complementar, trará a oportunidade de organizar o território composto por lotes públicos localizados no Canindé, que compõem o Projeto Estratégico Canindé – Santo Antônio.</p>
+			<p>Um componente importante deste projeto estratégico é a previsão de viabilização de áreas de ZEIS, instituídas pela Lei nº 16.402/2016, considerando a demanda local na destinação das unidades de interesse social produzidas. As áreas verdes propostas tiram partido da identidade local e das áreas de lazer já existentes, possibilitando a prática de atividades esportivas e reforçando a memória dos campos de futebol de várzea da região.</p>
+			<AntesDepois :dados="{
+				caption: 'Projeto Estratégico Canindé - Santo Antônio',
+				largura: '1561',
+				altura: '816',
+				fonte:'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019',
+				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/projetos-estrategicos/caninde-stoantonio_antes.jpg'),
+				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/projetos-estrategicos/caninde-stoantonio_depois.jpg')
+			}"></AntesDepois>
+
+			<h4>PE CANINDÉ/CMTC</h4>
+			<p>Usos institucionais existentes serão reorganizados para ocupar menor área de terreno, liberando espaço para implantação de conjuntos residenciais e de novas atividades, que estarão, preferencialmente, voltados para a Avenida Cruzeiro do Sul, construindo uma nova frente para este logradouro. A provisão de áreas verdes irá garantir integração com os equipamentos públicos modernizados, qualificando a vida dos futuros moradores do bairro.</p>
+			<AntesDepois :dados="{
+				caption: 'Projeto Estratégico Canindé/CMTC',
+				largura: '1561',
+				altura: '816',
+				fonte:'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019',
+				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/projetos-estrategicos/caninde-cmtc_antes.jpg'),
+				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/projetos-estrategicos/caninde-cmtc_depois.jpg')
+			}"></AntesDepois>
+
+			<h4>PE SANTA RITA</h4>
+			<p>No terreno de propriedade da SPTrans onde funcionava a garagem de ônibus Santa Rita, são planejadas melhorias urbanísticas, tanto em passeios quanto em praças, como elemento indutor da transformação de outros terrenos na região.</p>
+			<p>Como diretriz de projeto, entende-se que estas novas áreas verdes deverão se concentrar junto ao Apoio Urbano Sul de forma a criar um “respiro” na avenida. Novas vias, transversais ao Apoio, aumentarão a permeabilidade do bairro e deverão dar continuidade ao viário existente no entorno, proporcionando novas conexões aos deslocamentos locais. Por se tratar de quadras novas na cidade, nas quais se pretende maior adensamento populacional e construtivo, as novas calçadas deverão apresentar dimensões compatíveis e atributos condizentes com este novo padrão.</p>
+			<p>Além de trazer a oferta de terrenos empreendíveis pelo mercado, o projeto promoverá a reconstrução das áreas existentes da SPTrans, do Departamento de Transportes Públicos – DTP e do Departamento de Transportes Internos – DTI.</p>
+			<AntesDepois :dados="{
+				caption: 'Projeto Estratégico Santa Rita',
+				largura: '1561',
+				altura: '816',
+				fonte:'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019',
+				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/projetos-estrategicos/starita_antes.jpg'),
+				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/projetos-estrategicos/starita_depois.jpg')
+			}"></AntesDepois>
+
 			<p>Esses PROJETOS ESTRATÉGICOS foram estudados no PIU ARCO TIETÊ que abrangia distritos da Subprefeitura da Sé absorvidos no PIU SETOR CENTRAL.</p>
 			<p>A transformação dessas áreas será viabilizada através de chamamento público, para o recebimento de propostas de empreendedores, formuladas a partir de diretrizes gerais estabelecidas no PIU SETOR CENTRAL e com a possibilidade de recurso ao Reordenamento Urbanístico Integrado.</p>
 			<p>Caberá aos GRUPOS GESTORES, subsidiados por análises técnicas, a deliberação sobre a viabilidade e adequação das propostas apresentadas.</p>
 			<p>A esses projetos estratégicos, soma-se o PROJETO ESTRATÉGICO MINHOCÃO, que será objeto de Projeto de Intervenção Urbana Específico que discutirá as alternativas assinaladas para o Elevado João Goulart no parágrafo único do Artigo 375 do PDE.</p>
-			<p>Cabe ao PIU SETOR CENTRAL fixar o regramento urbanístico, dependente de regulamentação legal, aplicável ao entorno desse equipamento, tendo em vista sua desativação definitiva como via de tráfego, como determina o PDE.</p>
 		</section>
 		<section>
 			<h2 class="titulo" indent="1">Modelo de Gestão Participativa</h2>
-			<p>A GESTÃO DEMOCRÁTICA da cidade é um dos princípios que regem a Política de Desenvolvimento Urbano traduzida no Plano Diretor Estratégico de 2014. Trata-se de garantir a participação diferentes segmentos da população de forma direta ou por intermédio de associações representativas, nos processos de planejamento e gestão da cidade, de realização de investimentos públicos e na elaboração, implementação e avaliação de planos, programas e projetos de desenvolvimento urbano.</p>
+			<CommentsContext :id="1006" :context="'Modelo de Gestão Participativa'">
+				<p>A GESTÃO DEMOCRÁTICA da cidade é um dos princípios que regem a Política de Desenvolvimento Urbano traduzida no Plano Diretor Estratégico de 2014. Trata-se de garantir a participação diferentes segmentos da população de forma direta ou por intermédio de associações representativas, nos processos de planejamento e gestão da cidade, de realização de investimentos públicos e na elaboração, implementação e avaliação de planos, programas e projetos de desenvolvimento urbano.</p>
+			</CommentsContext>
 			<p>Para a implantação do PIU SETOR CENTRAL, serão instituídas a OPERAÇÃO URBANA CENTRO revisada e a ÁREA DE INTERVENÇÃO URBANA SETOR CENTRAL.</p>
 			<p>O MODELO DE GESTÃO PARTICIPATIVA proposto preserva competências específicas da COMISSÃO EXECUTIVA DA OPERAÇÃO URBANA CENTRO e do GRUPO GESTOR DA AIU SETOR CENTRAL nos âmbitos territoriais respectivos e definidos em Lei.</p>
 			<p>As duas instâncias de gestão de implantação do PIU SETOR CENTRAL são integradas através do NÚCLEO TÉCNICO DE GESTÃO E PLANEJAMENTO, coordenado pela São Paulo Urbanismo, para a garantia da convergência dos dois instrumentos para os objetivos do PIU SETOR CENTRAL.</p>
@@ -1806,16 +1873,18 @@
 			<h3>Estoque de Potencial Construtivo Adicional do PIU SETOR CENTRAL</h3>
 			<ul class="links">
 				<li>
-					<a :href="src('arquivos/setor-central-2/NT_Estoque.pdf')">
+					<a :href="src('arquivos/setor-central-2/NT_Estoque.pdf')" target="_blank">
 						<i class="icon-pdf icon"><span>pdf</span></i>
 						<div>Nota Técnica - Estoque</div>
 						<span>0,45 Mb</span>
 					</a>
 				</li>
 			</ul>
-			<p>O PIU SETOR CENTRAL, resumido em uma única meta, objetiva o adensamento populacional dos distritos centrais.</p>
-			<p>Estudos urbanísticos (ver nota técnica 1) elaborados para estimativa do potencial construtivo atribuído pelo Zoneamento<sup>1</sup> aos imóveis contidos no PIU SETOR CENTRAL indicam o expressivo montante de mais de 35 milhões de metros quadrados.</p>
-			<p>Deduzidos os mais de 19 milhões de metros quadrados já edificados, pode-se afirmar que, segundo a LPUOS, a região comportaria um adensamento construtivo total de mais de 15 milhões de metros quadrados.</p>
+			<CommentsContext :id="1007" :context="'Modelo de Gestão Financeira'">
+				<p>O PIU SETOR CENTRAL, resumido em uma única meta, objetiva o adensamento populacional dos distritos centrais.</p>
+				<p>Estudos urbanísticos (ver nota técnica 1) elaborados para estimativa do potencial construtivo atribuído pelo Zoneamento<sup>1</sup> aos imóveis contidos no PIU SETOR CENTRAL indicam o expressivo montante de mais de 35 milhões de metros quadrados.</p>
+				<p>Deduzidos os mais de 19 milhões de metros quadrados já edificados, pode-se afirmar que, segundo a LPUOS, a região comportaria um adensamento construtivo total de mais de 15 milhões de metros quadrados.</p>
+			</CommentsContext>
 			<Tabela :dados="tabela_areaconstruida"></Tabela>
 			<p>O PIU SETOR CENTRAL, contudo, considerando as características atuais e os cenários futuros desejáveis, propõe a alocação de altas densidades populacionais e construtivas em áreas assinaladas pelo Zoneamento como áreas de densidade média e uso controlado.</p>
 			<p>Trata-se da faixa norte do projeto, atravessada pelo APOIO URBANO SUL, onde são observadas as menores densidades do perímetro e onde se identifica o maior potencial de transformação.</p>
@@ -1851,7 +1920,7 @@
 			<p>Estão organizados em 4 categorias: VENDA DE POTENCIAL CONSTRUTIVO ADICIONAL – disponibilizados em Venda Direta ou através de Leilões, BÔNUS EQUIVALENTES, TRANSFERÊNCIA DO DIREITO DE CONSTRUIR e INCENTIVOS concedidos na forma de potencial adicional gratuito que se distribuem nas áreas da AIU e OPERAÇÃO URBANA.</p>
 			<Imagem :dados="{
 				tipo: 'w992',
-				url: imgSrc('arquivos/setor-central-2/img/distribuicao-estoque.jpg')
+				url: imgSrc('arquivos/setor-central-2/img/distribuicao-estoque.png')
 			}"></Imagem>
 			<Imagem :dados="{
 				tipo: 'w992',
@@ -1876,7 +1945,7 @@
 			}"></Imagem>
 			<ul class="links">
 				<li>
-					<a :href="src('arquivos/setor-central-2/NT_Modelagem-Economica.pdf')">
+					<a :href="src('arquivos/setor-central-2/NT_Modelagem-Economica.pdf')" target="_blank">
 						<i class="icon-pdf icon"><span>pdf</span></i>
 						<div>Nota Técnica - Modelagem Econômica</div>
 						<span>2,99 Mb</span>
@@ -1887,7 +1956,9 @@
 		<section>
 			<h2 class="titulo" indent="1">Modelagem econômica</h2>
 			<h3>O Projeto de Intervenção Urbana Setor Central</h3>
-			<p>As diretrizes urbanísticas estabelecidas no projeto consideram o potencial construtivo adicional (PCA) como principal mecanismo impulsionador do projeto do Setor Central. O projeto prevê que a produção e o consumo de novas unidades residenciais e comerciais serão capazes de fomentar a produção de contrapartidas urbanísticas almejadas pelo projeto, tais como habitação de interesse social, Retrofit, reforma de imóveis tombados, além de permitir a arrecadação por meio da captura da mais-valia urbana. Para isso, foram definidos quatro instrumentos de acesso ao potencial construtivo adicional – (i) Outorga Onerosa do Direito de Construir (OODC); (ii) BÔNUS de Potencial Construtivo Adicional (BÔNUS); (iii) Transferência do Direito de Construir (TDC) e (iv) INCENTIVOS concedidos. Sendo assim, foram definidas as seguintes premissas para modelagem econômica.</p>
+			<CommentsContext :id="1008" :context="'Modelagem econômica'">
+				<p>As diretrizes urbanísticas estabelecidas no projeto consideram o potencial construtivo adicional (PCA) como principal mecanismo impulsionador do projeto do Setor Central. O projeto prevê que a produção e o consumo de novas unidades residenciais e comerciais serão capazes de fomentar a produção de contrapartidas urbanísticas almejadas pelo projeto, tais como habitação de interesse social, Retrofit, reforma de imóveis tombados, além de permitir a arrecadação por meio da captura da mais-valia urbana. Para isso, foram definidos quatro instrumentos de acesso ao potencial construtivo adicional – (i) Outorga Onerosa do Direito de Construir (OODC); (ii) BÔNUS de Potencial Construtivo Adicional (BÔNUS); (iii) Transferência do Direito de Construir (TDC) e (iv) INCENTIVOS concedidos. Sendo assim, foram definidas as seguintes premissas para modelagem econômica.</p>
+			</CommentsContext>
 			<h3>Premissas da modelagem econômica</h3>
 			<p>A modelagem econômica propõe-se a apresentar as estimativas de produção privada vertical de área construída e de consequente receita do Projeto em um horizonte de planejamento de 20 anos.</p>
 			<p>O estudo realizado dividiu-se em duas etapas de cálculo: a primeira delas compõe o quadro de cálculo do potencial construtivo capaz de ser absorvido pelo projeto (Etapa 1). A segunda etapa estabeleceu cenários de distribuição desse potencial entre os instrumentos previstos pelo projeto (Etapa 2).</p>
@@ -1906,7 +1977,7 @@
 				<li>a <u>utilização da demanda</u> para estimativa do volume e cenários de consumo.</li>
 			</ul>
 			<h4>Cálculo do Potencial Construtivo</h4>
-			<p>A seguir, está demonstrado o raciocínio de cálculo para cada uma das premissas estabelecidas. Para maiores detalhes e informações a cerca do método de cálculo, ver <a :href="src('arquivos/setor-central-2/NT_Modelagem-Economica.pdf')">NOTA TÉCNICA DA MODELAGEM ECONÔMICA</a>.</p>
+			<p>A seguir, está demonstrado o raciocínio de cálculo para cada uma das premissas estabelecidas. Para maiores detalhes e informações a cerca do método de cálculo, ver <a :href="src('arquivos/setor-central-2/NT_Modelagem-Economica.pdf')" target="_blank">NOTA TÉCNICA DA MODELAGEM ECONÔMICA</a>.</p>
 			<h5>Cálculo da demana prevista</h5>
 			<h6>Demanda por imóveis e por área privativa</h6>
 			<p>Para cálculo do potencial construtivo adicional foram utilizados os dados de lançamentos imobiliários considerando os elementos sistematizados de 2006 a 2018<sup>1</sup>. As pesquisas contemplaram informações da produção e do consumo de novas unidades residenciais e não residenciais por ano, incluindo diferentes tipologias, áreas de terreno, área construída total, área privativa, assim como valores e volume de venda, entre outros. </p>
@@ -2008,14 +2079,12 @@
 			<p>Como forma de simular o cenário mais agravado, o empreendimento paradigma utilizou 100% das unidades de habitacionais voltadas para HIS Faixa 1, por conta da dificuldade de utilização de financiamento para tipologias e usos diferentes, ou seja, não foi consideradaa a possibilidade de utilização de uso comercial no térreo, ou a composição com UHs de outras faixas de renda. Não obstante, não descarta a hipótese de configuração de cenários com mistura de produtos imobiliários diversificados que possam representar incremento potencial da atratividade do empreendimento, tendo sido feita a opção metodológica pelo cenário mais conservador e homogêneo na prática de produção de HIS 1 no município.</p>
 			<p>O resultado aparece disposto na forma de demonstrativo financeiro, conforme tabela abaixo. Observa-se que o empreendimento, ainda não computado o custo do terreno, praticamente zera o resultado financeiro. Ou seja, entende-se que seja necessário um subsídio não apenas para garantir uma taxa mínima de atratividade para o construtor, mas também para adquirir o lote. Entre as despesas, a construção representa 88,6%, o que revela que qualquer economia ou substituição de modelo construtivo são muito significativas na determinação da viabilidade.</p>
 
-			<!-- <p>TABELA RESULTADOS</p> -->
 			<Imagem :dados="{
 				tipo: 'default',
 				url: imgSrc('arquivos/setor-central-2/economico/resultados.png')
 			}"></Imagem>
 			<p>A partir do resultado financeiro, é possível determinar a magnitude do subsídio em reais (R$) de acordo com o preço do terreno. Considerando o preço médio dos terrenos no setor central de R$ 6 mil reais por metro quadrado, o subsídio por metro quadrado de área computável necessário para a viabilização do empreendimento seria de R$ 1.522, conforme apresentado no Gráfico abaixo.</p>
 
-			<!-- <p>GRAFICO PREÇO DO TERRENO X VALOR DO SUBSIDIO</p> -->
 			<Imagem :dados="{
 				tipo: 'default',
 				url: imgSrc('arquivos/setor-central-2/economico/grafico.png')
@@ -2023,7 +2092,6 @@
 
 			<p>Como o valor do bônus será estimado em função da demanda de aquisição de potencial construtivo (pelo empreendimento destino), foi feita a matriz que correlaciona valor da OODC do empreendimento destino conforme preço de terreno (Tabela abaixo). Cada combinatória representa o valor calculado do Bônus equivalente em função do valor de terreno e do valor de cadastro do Quadro 14 para fins de cálculo da OODC. Considerando as regiões com maior demanda de empreendimentos nos últimos anos, tais como Santa Cecília e Brás, o valor de cadastro médio fica por volta de R$3.000/m². Por outro lado, como o valor de terreno é uma variável de difícil definição, o estudo utilizou um valor referencial médio<sup>2</sup> de R$6.000,00/m² dada a diversidade de imóveis e localizações intrínsecas as AEL.</p>
 
-			<!-- <p>TABELA PREÇO DE TERRENO</p> -->
 			<Imagem :dados="{
 				tipo: 'default',
 				url: imgSrc('arquivos/setor-central-2/economico/terreno.png')
@@ -2050,7 +2118,6 @@
 			<p>Partindo de premissas de modelagem simplificada da viabilidade econômica de empreendimentos<sup>4</sup>, no primeiro caso, obteve-se um resultado positivo de margem liquida de 18%, o que é considerado normal/viável para este tipo de empreendimento<sup>5</sup>. No segundo caso, obteve-se uma margem liquida menor, da ordem de 10,7% o que demonstra a necessidade de subsídio para auxiliar a viabilização desta modalidade e produto imobiliário.</p>
 			<p>De outro lado, foi estimada a necessidade de consumo de OODC por um empreendimento-paradigma que utilizaria o Bônus com objetivo de aferir o valor possível de ser pago em relação de equivalência. O quadro abaixo mostra as premissas do empreendimento-paradigma receptor (ou de destino), cujo resultado apresenta um saldo de 22,6%, sendo positivo em relação à margem liquida média de 18,2%.</p>
 
-			<!-- <p>TRES TABELAS</p> -->
 			<Imagem :dados="{
 				tipo: 'default',
 				url: imgSrc('arquivos/setor-central-2/economico/3_tabelas.png')
@@ -2076,7 +2143,6 @@
 			<p>Para cálculo do consumo de BÔNUS para HIS frente à demanda por OODC foram utilizados cenários de consumo em função do CA mínimo a partir do qual o bônus pode ser utilizado. Para viabilizar o cálculo desses cenários foi utilizado como pressuposto que parte do CA terá pagamento por OODC e parte de consumo em BÔNUS para HIS.</p>
 			<p>Semelhante à estimativa de OODC foi utilizada a demanda de ACC dos setores do projeto, tanto para AEL quanto para o restante, de modo a obter a quantidade de ACC prevista para os próximos 20 anos. A quantidade total de ACC foi estratificada em função do CA mínimo de utilização, com variações para CA 1,0; 2,0; 3,0 e 4,0. A partir daíí, foi demonstrado como o consumo de bônus abateria a compra de OODC e estimada a quantidade de unidades de HIS-1 produzidas  pela ACC previstas de HIS.</p>
 
-			<!-- <p>TABELA ?</p> -->
 			<Tabela :dados='tabela_economico_7'></Tabela>
 
 			<h5>Relação entre as demais formas de BÔNUS EQUIVALENTE (Retrofit e Tombados) e OODC</h5>
@@ -2085,13 +2151,15 @@
 			<ol class="notas">
 				<li>Fonte: Geoimovel/SPUrbanismo</li>
 				<li>O projeto está realizando uma pesquisa mais detalhada de imóveis, de modo a estimar melhor este valor para refinamento dos cálculos.</li>
-				<li>Para maiores detalhes ver <a :href="src('arquivos/setor-central-2/NT_Modelagem-Economica.pdf')">Nota Técnica Modelagem Econômica</a></li>
+				<li>Para maiores detalhes ver <a :href="src('arquivos/setor-central-2/NT_Modelagem-Economica.pdf')" target="_blank">Nota Técnica Modelagem Econômica</a></li>
 				<li>Considerando estimativa geral de VGV, custo de reforma, custo de aquisição do imóvel (R$/m² de área construída), despesas indiretas somadas.</li>
 				<li>Foi considerada como padrão uma margem líquida de aproximadamente 18%.</li>
-				<li>Para mais detalhes ver <a :href="src('arquivos/setor-central-2/NT_Modelagem-Economica.pdf')">Nota Técnica Modelagem Econômica</a></li>
+				<li>Para mais detalhes ver <a :href="src('arquivos/setor-central-2/NT_Modelagem-Economica.pdf')" target="_blank">Nota Técnica Modelagem Econômica</a></li>
 				<li>Utilizou-se uma taxa de conversão de ACC para UHs, a partir da premissa que 1 UH possui 40m².</li>
 			</ol>
 		</section>
+
+		<Comments :attr="{id:1009, context:'Geral'}" v-if="estaConsulta.ativo == 1"></Comments>
 
 		<section>
 			<h2 class="titulo" indent="1">Ficha técnica</h2>
@@ -2100,8 +2168,8 @@
 			Presidente</p>
 			<p><b>Leonardo Amaral Castro</b><br>
 			Diretor de Desenvolvimento</p>
-			<p><b>Denise Lopes De Souza</b><br>
-			Diretora de Gestão de Operações urbanas</p>
+			<p><b>Denise Lopes de Souza</b><br>
+			Diretora de Gestão de Operações Urbanas</p>
 			<p><b>Marcelo Fonseca Ignatios</b><br>
 			Superintendente de Estruturação de Projetos</p>
 			<p><b>Arquitetos e Urbanistas</b><br>
@@ -2138,7 +2206,7 @@
 			Roberto Cornacchioni Alegre<br>
 			Saliny Ribeiro Marin<br>
 			Victor Mendes del Prete</p>
-			<p><b>Engenheiros</b><br><br>
+			<p><b>Engenheiros</b>
 			Leonardo Machert Pereira Bueno<br>
 			Maria Cristina Fernandes<br>
 			Waldir Macho La Rubbia</p>
@@ -2171,6 +2239,7 @@
 import PageTop from '@/components/PageTop'
 import Indice from '@/components/Indice'
 import Comments from '@/components/Comments'
+import CommentsContext from '@/components/CommentsContext'
 import CommentsLoader from '@/components/CommentsLoader'
 import Galeria from '@/components/Galeria'
 import Apoio from '@/components/Apoio'
@@ -2189,8 +2258,11 @@ export default {
 			comments_atrr: undefined,
 			consultas: false,
 			estaConsulta: {},
-
-			// tabelas econômico
+			social_assets: {
+				whatsapp: 'https://api.whatsapp.com/send?text=Participe%20da%20consulta%20p%C3%BAblica%20do%20PIU%20Setor%20Central%20-%20https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br/setor-central-2',
+				facebook: 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br/setor-central-2',
+				twitter: 'https://twitter.com/intent/tweet?text=Participe%20da%20consulta%20p%C3%BAblica%20do%20PIU%20Setor%20Central%20%20-%20https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br/setor-central-2'
+			},
 			tabela_economico_7: {
 				colunas: [
 					{ titulo: 'CA a partir do qual o bônus seria consumido' },
@@ -2202,13 +2274,13 @@ export default {
 				],
 				linhas: [
 					[
-						[	[ { data: '-' } ],
-							[ { data: '100%' } ],
-							[ { data: '0,0' } ],
-							[ { data: 'R$ 943,77' } ],
-							[ { data: 'R$ 0,00' } ],
-							[ { data: '-' } ]
-						]					],
+						[ { data: '-' } ],
+						[ { data: '100%' } ],
+						[ { data: '0,0' } ],
+						[ { data: 'R$ 943,77' } ],
+						[ { data: 'R$ 0,00' } ],
+						[ { data: '-' } ]
+					],
 					[
 						[ { data: '> 4' } ],
 						[ { data: '77%' } ],
@@ -2680,70 +2752,82 @@ export default {
 				}]
 			},
 			galeria02: {
-				width: 992,
-				height: 494,
+				width: 1440,
+				height: 718,
+				legendas: true,
 				images: [{
-					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria02/1.png',
+					legenda: 'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019.',
+					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria02/PIU_Setor_Central_P1.jpg',
 					state: true,
-					title: '',
+					title: 'Território Atual',
 					icon: false,
 					id: 1
 				}, {
-					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria02/2.png',
+					legenda: 'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019.',
+					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria02/PIU_Setor_Central_P2.jpg',
 					state: false,
 					title: '',
 					icon: false,
 					id: 2
 				}, {
-					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria02/3.png',
+					legenda: 'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019.',
+					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria02/PIU_Setor_Central_P3.jpg',
 					state: false,
 					title: '',
 					icon: false,
 					id: 3
 				}, {
-					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria02/4.png',
+					legenda: 'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019.',
+					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria02/PIU_Setor_Central_P4.jpg',
 					state: false,
 					title: '',
 					icon: false,
 					id: 4
 				}, {
-					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria02/5.png',
+					legenda: 'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019.',
+					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria02/PIU_Setor_Central_P5.jpg',
 					state: false,
 					title: '',
 					icon: false,
 					id: 5
 				}, {
-					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria02/6.png',
+					legenda: 'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019.',
+					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria02/PIU_Setor_Central_P6.jpg',
 					state: false,
 					title: '',
 					icon: false,
 					id: 6
 				}, {
-					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria02/7.png',
+					legenda: 'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019.',
+					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria02/PIU_Setor_Central_P7.jpg',
 					state: false,
 					title: '',
 					icon: false,
 					id: 7
 				}, {
-					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria02/8.png',
+					legenda: 'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019.',
+					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria02/PIU_Setor_Central_P8.jpg',
 					state: false,
 					title: '',
 					icon: false,
 					id: 8
 				}, {
-					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria02/9.png',
+					legenda: 'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019.',
+					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria02/PIU_Setor_Central_P9.jpg',
 					state: false,
 					title: '',
 					icon: false,
 					id: 9
 				}, {
-					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria02/10.png',
+					legenda: 'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019.',
+					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria02/PIU_Setor_Central_P10.jpg',
 					state: false,
 					title: '',
 					icon: false,
 					id: 10
 				}, {
-					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria02/11.png',
+					legenda: 'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019.',
+					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria02/PIU_Setor_Central_P11.jpg',
 					state: false,
 					title: '',
 					icon: false,
@@ -2755,24 +2839,28 @@ export default {
 				height: 545,
 				legendas: true,
 				images: [{
+					legenda: 'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo.',
 					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria03/ou-nova.jpg',
 					state: true,
 					title: '',
 					icon: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria03/ou-nova_leg.png',
 					id: 1
 				}, {
+					legenda: 'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo.',
 					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria03/aiu-x-sce.jpg',
 					state: false,
 					title: '',
 					icon: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria03/aiu-x-sce_leg.png',
 					id: 2
 				}, {
+					legenda: 'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo.',
 					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria03/ael.jpg',
 					state: false,
 					title: '',
 					icon: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria03/ael_leg.png',
 					id: 3
 				}, {
+					legenda: 'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo.',
 					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria03/tudo.jpg',
 					state: false,
 					title: '',
@@ -2783,73 +2871,86 @@ export default {
 			galeria04: {
 				width: 960,
 				height: 541,
+				legenda: true,
 				images: [{
+					legenda: 'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019.',
 					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria04/passarelas-01.jpg',
 					state: true,
 					title: '',
 					icon: false,
 					id: 1
 				}, {
+					legenda: 'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019.',
 					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria04/passarelas-02.jpg',
 					state: false,
 					title: '',
 					icon: false,
 					id: 2
 				}, {
+					legenda: 'Elaboração: SP Urbanismo, 2019.',
 					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria04/passarelas-03.jpg',
 					state: false,
 					title: '',
 					icon: false,
 					id: 3
 				}, {
+					legenda: 'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019.',
 					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria04/passarelas-04.jpg',
 					state: false,
 					title: '',
 					icon: false,
 					id: 4
 				}, {
+					legenda: 'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019.',
 					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria04/passarelas-05.jpg',
 					state: false,
 					title: '',
 					icon: false,
 					id: 5
 				}, {
+					legenda: 'Elaboração: SP Urbanismo, 2019.',
 					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria04/passarelas-06.jpg',
 					state: false,
 					title: '',
 					icon: false,
 					id: 6
 				}, {
+					legenda: 'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019.',
 					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria04/passarelas-07.jpg',
 					state: false,
 					title: '',
 					icon: false,
 					id: 7
 				}, {
+					legenda: 'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019.',
 					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria04/passarelas-08.jpg',
 					state: false,
 					title: '',
 					icon: false,
 					id: 8
 				}, {
+					legenda: 'Elaboração: SP Urbanismo, 2019.',
 					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria04/passarelas-09.jpg',
 					state: false,
 					title: '',
 					icon: false,
 					id: 9
 				}, {
+					legenda: 'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019.',
 					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria04/passarelas-10.jpg',
 					state: false,
 					title: '',
 					icon: false,
 					id: 10
 				}, {
+					legenda: 'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019.',
 					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria04/passarelas-11.jpg',
 					state: false,
 					title: '',
 					icon: false,
 					id: 11
 				}, {
+					legenda: 'Elaboração: SP Urbanismo, 2019.',
 					url: this.$store.getters.basePath + 'arquivos/setor-central-2/galeria04/passarelas-12.jpg',
 					state: false,
 					title: '',
@@ -3442,6 +3543,7 @@ export default {
 		Indice,
 		Comments,
 		CommentsLoader,
+		CommentsContext,
 		Galeria,
 		Apoio,
 		Tabela,

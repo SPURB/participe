@@ -177,7 +177,7 @@ export default {
 			justify-content: center;
 			align-items: center;
 			min-height: 40px;
-			max-width: 992px;
+			// max-width: 992px;
 			width: 100%;
 			font-family: inherit;
 			font-size: smaller;

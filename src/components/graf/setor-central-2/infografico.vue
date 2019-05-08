@@ -10,10 +10,10 @@
 					<p>ÁREA DE P<span class="g-cstyle0">R</span>OJ<span class="g-cstyle1">E</span><span class="g-cstyle2">T</span>O: 2<span class="g-cstyle3">.</span>0<span class="g-cstyle4">9</span>0 ha</p>
 				</div>
 				<div id="g-ai0-3" class="g-Camada_3 g-aiAbs" style="top:19.3874%;left:74.7983%;width:21.1694%;">
-					<p>DENSI<span class="g-cstyle5">D</span>ADE POPU<span class="g-cstyle6">L</span><span class="g-cstyle7">A</span>CINAL MÉDIA NOS DISTRI<span class="g-cstyle2">T</span>OS CENT<span class="g-cstyle6">R</span>AIS: <span class="g-cstyle8">1</span>45 hab/ha</p>
+					<p>DENSIDADE POPULACIONAL MÉDIA NOS DISTRITOS CENTRAIS: 145 hab/ha</p>
 				</div>
 				<div id="g-ai0-4" class="g-Camada_3 g-aiAbs" style="top:25.9449%;left:74.7983%;width:21.1694%;">
-					<p>EM MÉDIA, 2<span class="g-cstyle3">.</span>0<span class="g-cstyle8">5</span><span class="g-cstyle9">7</span>.305 PESS<span class="g-cstyle5">O</span>AS<span class="g-cstyle10"> </span><span class="g-cstyle11">V</span><span class="g-cstyle7">Ã</span>O <span class="g-cstyle7">A</span>O CENT<span class="g-cstyle12">R</span>O<span class="g-cstyle13"> </span><span class="g-cstyle2">T</span>ODOS OS DIAS, MAIS <span class="g-cstyle7">D</span>A M<span class="g-cstyle1">E</span><span class="g-cstyle14">T</span>ADE <span class="g-cstyle11">V</span>AI A<span class="g-cstyle13"> </span>T<span class="g-cstyle15">R</span>ABA<span class="g-cstyle16">L</span>HO</p>
+					<p>EM MÉDIA, 257.305 PESSOAS VÃO AO CENTRO TODOS OS DIAS, MAIS DA METADE VAI A TRABALHO</p>
 				</div>
 				<div id="g-ai0-5" class="g-Camada_3 g-aiAbs" style="top:34.2131%;left:74.7983%;width:21.1694%;">
 					<p>HÁ 33.149 DOMICÍLIOS VAGOS, 14.6% DO TOTAL. MAIS DE 600 IMÓVEIS FORAM NOTIFICADOS PARA PEUC</p>

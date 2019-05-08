@@ -1,6 +1,5 @@
 module.exports = {
 	lintOnSave: true,
-
 	configureWebpack: {
 		optimization: {
 			splitChunks: {

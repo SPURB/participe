@@ -1147,16 +1147,16 @@
 			<p>Já os <b>Territórios de Preservação P2</b> consolidam a proteção de territórios indicados pelos órgãos de Preservação do Patrimônio Histórico, como a Estação da Luz e a Sala São Paulo.</p>
 			<p>Os <b>Territórios de Preservação P5</b> incidem sobre uma quadra do PRIT, permitindo a transformação dos terrenos livres em consonância com o conjunto histórico existente.</p>
 			<Imagem :dados="{
-			 tipo: 'mapa',
-			 titulo: 'Setores de Preservação',
-			 url: imgSrc('arquivos/setor-central-2/mapas/setores_preservacao.png'),
-			 legenda: [
-			 	{ fundo: '#cfa8b3', descricao: 'Setor de preservação 1 - P1' },
-			 	{ fundo: '#eadbe0', descricao: 'Setor de preservação 2 - P2' },
-			 	{ simbolo: imgSrc('arquivos/setor-central-2/mapas/legendas/setores-preservacao_1.png'), descricao: 'Setor de preservação 5 - P5' },
-			 	{ pontilhado: true, borda: '#000000', espessura: '1', descricao: 'Perímetro do PIU Setor Central' },
-			 	{ fundo: '#c9e2b0', descricao: 'Parques, praças e canteiros' }
-			 ]
+			tipo: 'mapa',
+			titulo: 'Setores de Preservação',
+			url: imgSrc('arquivos/setor-central-2/mapas/setores_preservacao.png'),
+			legenda: [
+				{ fundo: '#cfa8b3', descricao: 'Setor de preservação 1 - P1' },
+				{ fundo: '#eadbe0', descricao: 'Setor de preservação 2 - P2' },
+				{ simbolo: imgSrc('arquivos/setor-central-2/mapas/legendas/setores-preservacao_1.png'), descricao: 'Setor de preservação 5 - P5' },
+				{ pontilhado: true, borda: '#000000', espessura: '1', descricao: 'Perímetro do PIU Setor Central' },
+				{ fundo: '#c9e2b0', descricao: 'Parques, praças e canteiros' }
+			]
 			}"></Imagem>
 			<h4>SETOR DE PRESERVAÇÃO - P1</h4>
 			<AntesDepois :dados="{
@@ -1212,8 +1212,8 @@
 					{ simbolo: imgSrc('arquivos/setor-central-2/mapas/legendas/eixos-estrategicos_7.png'), descricao: 'Eixos de Transformação' },
 					{ simbolo: imgSrc('arquivos/setor-central-2/mapas/legendas/eixos-estrategicos_8.png'), descricao: 'Eixos de Transformação da Orla Fluvial' },
 					{ simbolo: imgSrc('arquivos/setor-central-2/mapas/legendas/eixos-estrategicos_9.png'), descricao: 'Eixos de Transformação Elev. Pres. João Goulart' },
-				 	{ pontilhado: true, borda: '#000000', espessura: '1', descricao: 'Perímetro do PIU Setor Central' },
-				 	{ fundo: '#c9e2b0', descricao: 'Parques, praças e canteiros' }
+					{ pontilhado: true, borda: '#000000', espessura: '1', descricao: 'Perímetro do PIU Setor Central' },
+					{ fundo: '#c9e2b0', descricao: 'Parques, praças e canteiros' }
 				]
 			}"></Imagem>
 			<p>Os Eixos Estratégicos configuram logradouros que, por seu papel na dinâmica da região, receberão incentivo à instalação ou manutenção de usos não residenciais no térreo, relacionado à promoção de fachada ativa. Em associação com instrumentos de requalificação dos espaços públicos, como os Caminhos Verdes e o alargamento ou melhoria dos passeios públicos, tal incentivo visa a fortalecer a função desses logradouros de conectar usos residenciais, elementos de referência dos bairros, usos comerciais existentes e a rede de transporte público coletivo, conformando uma malha de percursos qualificados para a mobilidade ativa. Quando integrantes das AEL da Moradia, podem dar suporte ao adensamento populacional, com o estímulo ao uso misto, que possibilita a instalação de atividades não residenciais necessários à vizinhança residencial.</p>
@@ -1932,7 +1932,8 @@
 					{ borda: '#e58751', espessura: 3, descricao: 'Perímetro do PIU Setor Central' },
 					{ borda: '#575757', espessura: '1', descricao: 'Distritos' },
 					{ fundo: '#7dbc85', descricao: 'Praças e canteiros' }
-				]
+				],
+				fonte: 'Geoimovel/SPUrbanismo'
 			}"></Imagem>
 			<p>Em síntese, a quantidade de metros quadrados de área computável consumida nos últimos 12 anos está distribuída pelos seguintes distritos abrangidos, no todo ou em parte, pelo PIU Setor Central:</p>
 
@@ -1950,14 +1951,12 @@
 					]
 			}"></Imagem>
 
-
 			<p>A partir desta a média foi realizada a estimativa da distribuição territorial em função das concentrações dos últimos anos, de modo a identificar proporcionalmente as variações entre os setores do PIU Setor Central. Juntamente, foi estimada a área de terreno necessária para abrigar esta demanda, de modo a verificar a representatividade no total do setor conforme tabela a seguir.</p>
 
-
 			<Tabela :dados="tabela_economico_2"></Tabela>
-	
 
 			<p>Sendo assim, tem-se a previsão de acréscimo de aproximadamente 1,6 milhão de metros quadrados de área construída adicional para os próximos 20 anos de projeto, dos quais 1,2 milhão é passível de cobrança de OODC. A estimativa de terreno necessária para essa transformação é da ordem de 400 mil metros quadrados. Os setores que preveem a maior demanda de transformação são os territórios da transformação T2 e T5, com mais de 43% deste potencial construtivo adicional.</p>
+
 			<h5>Oferta de terrenos e renovação do uso do solo</h5>
 			<p>Para verificar a disponibilidade de terreno transformável (oferta) existente nos setores do PIU Setor Central, foram analisadas as composições por tipologia de uso e de edificação (horizontal e vertical) a partir das bases do IPTU 2018.</p>
 			<p>Para a modelagem inicial, foi utilizado o critério da Área Mais Provável de Transformação (AMPT) que estabelece usos transformáveis e seus respectivos percentuais de transformação. A partir deste método, obteve-se a média 30% de capacidade de transformação. Esse resultado permite ao projeto considerar que há disponibilidade de terreno suficiente para transformação prevista mediante demanda (média de 3%).</p>
@@ -2001,15 +2000,35 @@
 			<p>O Projeto de Intervenção Urbana do Setor Central contempla um novo instrumento para estimular a produção de Habitação de Interesse Social (HIS), aquela que atende e está balizada pela chamadaa faixa 1 de renda familiar do Programa Minha Casa Minha Vida (PMCMV), nos limites do projeto. O bônus de HIS assemelha-se a um certificado de potencial construtivo adicional gerado a partir da produção de unidades habitacionais para esse fim e que pode ser utilizado em empreendimentos quaisquer do em substituição ao pagamento parcial ou integral da outorga onerosa do direito de construção. Assim, a produção em metros quadrados de HIS é convertida em metros quadrados de potencial construtivo, sem vínculos com a tipologia utilizada.</p>
 			<p>Para calcular a taxa de conversão da metragem de origem para a metragem de destino, foram feitos estudos baseados de um empreendimento paradigma de HIS de acordo com sua tipologia esperada para a região central. A partir desses estudos, chegou-se a uma avaliação do subsídio necessário para conclusão do empreendimento e, daí, calculada a taxa de conversão.</p>
 			<p>Primeiramente, foi elaborado um estudo de massa do empreendimento de HIS considerando um lote padrão de 1.000 m² (mil metros quadrados), coeficiente de aproveitamento de seis vezes o terreno (CA 6,0), numa tipologia de baixo padrão construtivo com elevador. O material aparece resumido na tabela abaixo.</p>
-			<p>DUAS TABELAS - ESTUDO DE MASSA / VIABILIDADE</p>
+
+			<Tabela :dados='tabela_economico_5'></Tabela>
+			<Tabela :dados='tabela_economico_6'></Tabela>
+
 			<p>O empreendimento voltado para HIS Faixa 1 utilizou os valores adotados na atual configuração do PMCMV faixa 1, equivalente a R$ 96.000,00/unidade habitacional, somando-se-lhe o subsidio estadual de R$20.000,00 complementar do Programa Estadual ou Municipal, atingindo o total R$116.000,00 por unidade habitacional. Foi considerado um custo de construção de R$1.665/m² ,00de área equivalente, de acordo com a Tabela Sinduscon para construção de baixo padrão com elevador. E foram acrescidas ainda outras despesas relativas à execução do empreendimento discriminadas na tabela acima.</p>
 			<p>Como forma de simular o cenário mais agravado, o empreendimento paradigma utilizou 100% das unidades de habitacionais voltadas para HIS Faixa 1, por conta da dificuldade de utilização de financiamento para tipologias e usos diferentes, ou seja, não foi consideradaa a possibilidade de utilização de uso comercial no térreo, ou a composição com UHs de outras faixas de renda. Não obstante, não descarta a hipótese de configuração de cenários com mistura de produtos imobiliários diversificados que possam representar incremento potencial da atratividade do empreendimento, tendo sido feita a opção metodológica pelo cenário mais conservador e homogêneo na prática de produção de HIS 1 no município.</p>
 			<p>O resultado aparece disposto na forma de demonstrativo financeiro, conforme tabela abaixo. Observa-se que o empreendimento, ainda não computado o custo do terreno, praticamente zera o resultado financeiro. Ou seja, entende-se que seja necessário um subsídio não apenas para garantir uma taxa mínima de atratividade para o construtor, mas também para adquirir o lote. Entre as despesas, a construção representa 88,6%, o que revela que qualquer economia ou substituição de modelo construtivo são muito significativas na determinação da viabilidade.</p>
-			<p>TABELA RESULTADOS</p>
+
+			<!-- <p>TABELA RESULTADOS</p> -->
+			<Imagem :dados="{
+				tipo: 'default',
+				url: imgSrc('arquivos/setor-central-2/economico/resultados.png')
+			}"></Imagem>
 			<p>A partir do resultado financeiro, é possível determinar a magnitude do subsídio em reais (R$) de acordo com o preço do terreno. Considerando o preço médio dos terrenos no setor central de R$ 6 mil reais por metro quadrado, o subsídio por metro quadrado de área computável necessário para a viabilização do empreendimento seria de R$ 1.522, conforme apresentado no Gráfico abaixo.</p>
-			<p>GRAFICO PREÇO DO TERRENO X VALOR DO SUBSIDIO</p>
+
+			<!-- <p>GRAFICO PREÇO DO TERRENO X VALOR DO SUBSIDIO</p> -->
+			<Imagem :dados="{
+				tipo: 'default',
+				url: imgSrc('arquivos/setor-central-2/economico/grafico.png')
+			}"></Imagem>
+
 			<p>Como o valor do bônus será estimado em função da demanda de aquisição de potencial construtivo (pelo empreendimento destino), foi feita a matriz que correlaciona valor da OODC do empreendimento destino conforme preço de terreno (Tabela abaixo). Cada combinatória representa o valor calculado do Bônus equivalente em função do valor de terreno e do valor de cadastro do Quadro 14 para fins de cálculo da OODC. Considerando as regiões com maior demanda de empreendimentos nos últimos anos, tais como Santa Cecília e Brás, o valor de cadastro médio fica por volta de R$3.000/m². Por outro lado, como o valor de terreno é uma variável de difícil definição, o estudo utilizou um valor referencial médio<sup>2</sup> de R$6.000,00/m² dada a diversidade de imóveis e localizações intrínsecas as AEL.</p>
-			<p>TABELA PREÇO DE TERRENO</p>
+
+			<!-- <p>TABELA PREÇO DE TERRENO</p> -->
+			<Imagem :dados="{
+				tipo: 'default',
+				url: imgSrc('arquivos/setor-central-2/economico/terreno.png')
+			}"></Imagem>
+
 			<p>A partir desses valores definidos, o bônus equivalente que visa a estimular a produção de HIS Faixa 1 é de 2,0, isso significa, que para cada 1 (um) metro quadrado de HIS Faixa 1 construído há emissão de 2 (dois) metros quadrados de outorga onerosa para ser consumida fora das AEL, dentro do perímetro do PIU Setor Central. O projeto prevê que essa transação ocorrerá entre privados, de modo a agilizar a produção e transação entre os agentes produtivos de ambos os produtos imobiliários. Pelo partido do projeto, entende-se que essa é uma forma de dinamizar a produção imobiliária, visto que permite um maior volume de negócios imobiliários (diversidade de agentes produtivos), deixando a critério do privado a opção de maior eficiência na produção das unidades habitacionais para a faixa 1.</p>
 			<p>Mais adiante, estão demonstradas as relações entre as formas de consumo de BONUS e OODC, de modo a estimar o valor desta e a quantidade de metros quadrados que serão deduzidos da alienação via OODC em função do consumo de BÔNUS.</p>
 			<h6>BÔNUS EQUIVALENTE para Retrofit e produção de HIS</h6>
@@ -2017,11 +2036,26 @@
 			<p>No entanto, em decorrência do interesse público na requalificação dos imóveis verticais no perímetro do PIU Setor Central, faz-se relevante o incentivo, paraa fim de que, com o Bônus Equivalente, este empreendimento passe a dispor de margem líquida similar a de outros que ordinariamente pagariam OODC.</p>
 			<p>Dada a heterogeneidade deste tipo de empreendimento, para sistematização dos parâmetros de valores alcançados, foram utilizados como <i>benchmarking</i> imóveis obtidos a partir de pesquisa de 11 empreendimentos<sup>3</sup> que utilizaram Retrofitforam submetidos a. A amostra contém diferentes tipologias e agentes produtores, assim como produtos imobiliários para HIS e não-HIS. Os de custocustos médios utilizados para essa modelagem são R$1.245/m² para reformas voltadas para HIS, e de 1.930/m² para empreendimentos não-HIS.</p>
 			<p>A partir desses valores, foram calculados dois empreendimentos-paradigma, um Retrofit para HMP e outro Retrofit para HIS.</p>
-			<p>TABELA EMPRRENDIMENTO RETROFIT HMP</p>
-			<p>TABELA EMPREENDIMENTO RETROFIT HIS-1</p>
+
+			<Imagem :dados="{
+				tipo: 'default',
+				url: imgSrc('arquivos/setor-central-2/economico/retrofit.png')
+			}"></Imagem>
+
+			<Imagem :dados="{
+				tipo: 'default',
+				url: imgSrc('arquivos/setor-central-2/economico/retrofit-his.png'),
+			}"></Imagem>
+
 			<p>Partindo de premissas de modelagem simplificada da viabilidade econômica de empreendimentos<sup>4</sup>, no primeiro caso, obteve-se um resultado positivo de margem liquida de 18%, o que é considerado normal/viável para este tipo de empreendimento<sup>5</sup>. No segundo caso, obteve-se uma margem liquida menor, da ordem de 10,7% o que demonstra a necessidade de subsídio para auxiliar a viabilização desta modalidade e produto imobiliário.</p>
 			<p>De outro lado, foi estimada a necessidade de consumo de OODC por um empreendimento-paradigma que utilizaria o Bônus com objetivo de aferir o valor possível de ser pago em relação de equivalência. O quadro abaixo mostra as premissas do empreendimento-paradigma receptor (ou de destino), cujo resultado apresenta um saldo de 22,6%, sendo positivo em relação à margem liquida média de 18,2%.</p>
-			<p>TRES TABELAS</p>
+
+			<!-- <p>TRES TABELAS</p> -->
+			<Imagem :dados="{
+				tipo: 'default',
+				url: imgSrc('arquivos/setor-central-2/economico/3_tabelas.png')
+			}"></Imagem>
+
 			<p>Para cálculo do BÔNUS equivalente de Retrofit foi considerada a composição simultânea entre empreendimentos, de modo que a margem líquida que o empreendedor obterá em relação ao VGV de ambos somados (18,2% de um VGV maior) seja maior do que se ele fizesse o empreendimento paradigma sozinho (22,6% de um VGV menor)<sup>6</sup>.</p>
 			<p>O resultado é um Bônus para Retrofit de 0,35, ou seja, para cada metro quadrado da edificação submetido a Retrofit, o empreendedor terá uma declaração de 0,35 metros quadrados de potencial construtivo para utilização em outros empreendimentos não subsidiados (não HIS, não tombados, etc).</p>
 			<h5>Transferência do Direito de Construir</h5>
@@ -2041,7 +2075,10 @@
 			<h5>Relação entre BÔNUS EQUIVALENTE para HIS e OODC</h5>
 			<p>Para cálculo do consumo de BÔNUS para HIS frente à demanda por OODC foram utilizados cenários de consumo em função do CA mínimo a partir do qual o bônus pode ser utilizado. Para viabilizar o cálculo desses cenários foi utilizado como pressuposto que parte do CA terá pagamento por OODC e parte de consumo em BÔNUS para HIS.</p>
 			<p>Semelhante à estimativa de OODC foi utilizada a demanda de ACC dos setores do projeto, tanto para AEL quanto para o restante, de modo a obter a quantidade de ACC prevista para os próximos 20 anos. A quantidade total de ACC foi estratificada em função do CA mínimo de utilização, com variações para CA 1,0; 2,0; 3,0 e 4,0. A partir daíí, foi demonstrado como o consumo de bônus abateria a compra de OODC e estimada a quantidade de unidades de HIS-1 produzidas  pela ACC previstas de HIS.</p>
-			<p>TABELA ?</p>
+
+			<!-- <p>TABELA ?</p> -->
+			<Tabela :dados='tabela_economico_7'></Tabela>
+
 			<h5>Relação entre as demais formas de BÔNUS EQUIVALENTE (Retrofit e Tombados) e OODC</h5>
 			<p>Por ora, ainda não foi estimado o impacto na arrecadação de OODC frente à utilização prevista do Bônus Equivalente para Retrofit e Tombados. Durante o processo de debate público poderão ser levantados dados sobre o volume comercializado de empreendimentos de Retrofit, para que seja possível estimar o consumo e atratividade deste benefício.</p>
 			<p>Caberá ao debate público, também, discutir se haverá um limite para utilização destes instrumentos, frente à suposta competição que haveria com a OODC. Para tanto pretendemos fornecer gradativamente insumos técnicos deste conteúdo.</p>
@@ -2052,8 +2089,10 @@
 				<li>Considerando estimativa geral de VGV, custo de reforma, custo de aquisição do imóvel (R$/m² de área construída), despesas indiretas somadas.</li>
 				<li>Foi considerada como padrão uma margem líquida de aproximadamente 18%.</li>
 				<li>Para mais detalhes ver <a :href="src('arquivos/setor-central-2/NT_Modelagem-Economica.pdf')">Nota Técnica Modelagem Econômica</a></li>
+				<li>Utilizou-se uma taxa de conversão de ACC para UHs, a partir da premissa que 1 UH possui 40m².</li>
 			</ol>
 		</section>
+
 		<section>
 			<h2 class="titulo" indent="1">Ficha técnica</h2>
 			<p><b>SP Urbanismo - São Paulo Urbanismo</b></p>
@@ -2151,7 +2190,148 @@ export default {
 			consultas: false,
 			estaConsulta: {},
 
-			// figuras econômico
+			// tabelas econômico
+			tabela_economico_7: {
+				colunas: [
+					{ titulo: 'CA a partir do qual o bônus seria consumido' },
+					{ titulo: '% OODC' },
+					{ titulo: '% BÔNUS HIS' },
+					{ titulo: 'Receita estimada OODC (em milhões)' },
+					{ titulo: '"Receita" Bônus HIS (em milhões)' },
+					{ titulo: 'Quantidade de HIS-1 prevista' }
+				],
+				linhas: [
+					[
+						[	[ { data: '-' } ],
+							[ { data: '100%' } ],
+							[ { data: '0,0' } ],
+							[ { data: 'R$ 943,77' } ],
+							[ { data: 'R$ 0,00' } ],
+							[ { data: '-' } ]
+						]					],
+					[
+						[ { data: '> 4' } ],
+						[ { data: '77%' } ],
+						[ { data: '23%' } ],
+						[ { data: 'R$ 722,66' } ],
+						[ { data: 'R$ 221,10' } ],
+						[ { data: '3.545' } ]
+					],
+
+					[
+						[ { data: '> 3' } ],
+						[ { data: '70%' } ],
+						[ { data: '30%' } ],
+						[ { data: 'R$ 646,10' } ],
+						[ { data: 'R$ 297,67' } ],
+						[ { data: '5.493' } ]
+					],
+					[
+						[ { data: '> 2' } ],
+						[ { data: '58% ' } ],
+						[ { data: '42% ' } ],
+						[ { data: 'R$ 544,03' } ],
+						[ { data: 'R$ 399,74' } ],
+						[ { data: '7.324' } ]
+					],
+					[
+						[ { data: '> 1' } ],
+						[ { data: '46% ' } ],
+						[ { data: '54% ' } ],
+						[ { data: 'R$ 437,81' } ],
+						[ { data: 'R$ 505,95' } ],
+						[ { data: '9.155' } ]
+					]
+				]
+			},
+
+			tabela_economico_6: {
+				titulo: 'Viabilidade',
+				colunas: [
+					{ titulo: '' },
+					{ titulo: '' }
+				],
+				linhas: [
+					[
+						[ { data: 'Preço da UH' } ],
+						[ { data: '116,000.0' } ]
+					],
+					[
+						[ { data: 'Outros custos de terreno' } ],
+						[ { data: '-1.9%' } ]
+					],
+					[
+						[ { data: 'Desenvolvimento' } ],
+						[ { data: '-1.5%' } ]
+					],
+					[
+						[ { data: 'Outorga onerosa' } ],
+						[ { data: '0%' } ]
+					],
+					[
+						[ { data: 'Despesas comerciais e MKT' } ],
+						[ { data: '0%' } ]
+					],
+					[
+						[ { data: 'Custo de construção' } ],
+						[ { data: '1,665.3' } ]
+					],
+					[
+						[ { data: 'Despesa pós-obra' } ],
+						[ { data: '-2%' } ]
+					],
+					[
+						[ { data: 'Taxa de administração' } ],
+						[ { data: '-4%' } ]
+					],
+					[
+						[ { data: 'Despesas financeiras' } ],
+						[ { data: '-2%' } ]
+					],
+					[
+						[ { data: 'Impostos' } ],
+						[ { data: '-4%' } ]
+					]
+				]
+			},
+
+			tabela_economico_5: {
+				titulo: 'Estudo de massa',
+				colunas: [
+					{ titulo: '' },
+					{ titulo: '' }
+				],
+				linhas: [
+					[
+						[ { data: 'Terreno' } ],
+						[ { data: '1,000.0' } ]
+					],
+					[
+						[ { data: 'CA' } ],
+						[ { data: '6.0' } ]
+					],
+					[
+						[ { data: 'Planta' } ],
+						[ { data: '40.0' } ]
+					],
+					[
+						[ { data: 'Nº UH' } ],
+						[ { data: '150' } ]
+					],
+					[
+						[ { data: 'Nº de vagas por UH' } ],
+						[ { data: '33%' } ]
+					],
+					[
+						[ { data: 'AP/AC' } ],
+						[ { data: '1.0' } ]
+					],
+					[
+						[ { data: 'AB/AC' } ],
+						[ { data: '1.6' } ]
+					]
+				]
+			},
 			tabela_economico_4: {
 				colunas: [
 					{ titulo: 'Setores' },
@@ -2163,52 +2343,52 @@ export default {
 				],
 				linhas: [
 					[
-						[ { data:'T2 + T5' } ],
-						[ { data:'722.161 m²' } ],
-						[ { data:'541.620 m²' } ],
-						[ { data:'R$ 356,5' } ],
-						[ { data:'37,8' } ],
-						[ { data:'R$718m²' } ]
+						[ { data: 'T2 + T5' } ],
+						[ { data: '722.161 m²' } ],
+						[ { data: '541.620 m²' } ],
+						[ { data: 'R$ 356,5' } ],
+						[ { data: '37,8' } ],
+						[ { data: 'R$718m²' } ]
 					],
 					[
-						[ { data:'T2ZEIS' } ],
-						[ { data:'322.352 m²' } ],
-						[ { data:'241.764 m² ' } ],
-						[ { data:'R$ 135,6 ' } ],
-						[ { data:'14,4' } ],
-						[ { data:'R$ 561/m²' } ]
+						[ { data: 'T2ZEIS' } ],
+						[ { data: '322.352 m²' } ],
+						[ { data: '241.764 m² ' } ],
+						[ { data: 'R$ 135,6 ' } ],
+						[ { data: '14,4' } ],
+						[ { data: 'R$ 561/m²' } ]
 					],
 					[
-						[ { data:'Q2' } ],
-						[ { data:'233.796 m²' } ],
-						[ { data:'175.347 m² ' } ],
-						[ { data:'R$ 145,3 ' } ],
-						[ { data:'15,4' } ],
-						[ { data:'R$ 829/m²' } ]
+						[ { data: 'Q2' } ],
+						[ { data: '233.796 m²' } ],
+						[ { data: '175.347 m² ' } ],
+						[ { data: 'R$ 145,3 ' } ],
+						[ { data: '15,4' } ],
+						[ { data: 'R$ 829/m²' } ]
 					],
 					[
-						[ { data:'Q4-7' } ],
-						[ { data:'178.890 m²' } ],
-						[ { data:'134.167 m² ' } ],
-						[ { data:'R$ 161,8 ' } ],
-						[ { data:'17,1' } ],
-						[ { data:'R$ 1.206/m²' } ]
+						[ { data: 'Q4-7' } ],
+						[ { data: '178.890 m²' } ],
+						[ { data: '134.167 m² ' } ],
+						[ { data: 'R$ 161,8 ' } ],
+						[ { data: '17,1' } ],
+						[ { data: 'R$ 1.206/m²' } ]
 					],
 					[
-						[ { data:'Q8' } ],
-						[ { data:'206.070 m²' } ],
-						[ { data:'171.725 m² ' } ],
-						[ { data:'R$ 144,0 ' } ],
-						[ { data:'15,3' } ],
-						[ { data:'R$ 842/m²' } ]
+						[ { data: 'Q8' } ],
+						[ { data: '206.070 m²' } ],
+						[ { data: '171.725 m² ' } ],
+						[ { data: 'R$ 144,0 ' } ],
+						[ { data: '15,3' } ],
+						[ { data: 'R$ 842/m²' } ]
 					],
 					[
-						[ { data:'TOTAL', destaque: true } ],
-						[ { data:'1.663.268 m²' } ],
-						[ { data:'1.264.624 m² ' } ],
-						[ { data:'R$ 943,8 ' } ],
-						[ { data:'100,0' } ],
-						[ { data:'R$ 757/m²' } ]
+						[ { data: 'TOTAL', destaque: true } ],
+						[ { data: '1.663.268 m²' } ],
+						[ { data: '1.264.624 m² ' } ],
+						[ { data: 'R$ 943,8 ' } ],
+						[ { data: '100,0' } ],
+						[ { data: 'R$ 757/m²' } ]
 					]
 				]
 			},
@@ -2223,9 +2403,9 @@ export default {
 					{ titulo: 'Área terreno prevista na demanda' },
 					{ titulo: '% demanda' },
 					{ titulo: 'Área de terreno e estacionamento (AMPT)' },
-					{ titulo: '% estacionamentos' },
+					{ titulo: '% estacionamentos' }
 				],
-				linhas:[
+				linhas: [
 					[
 						[ { data: 'T2+T5' } ],
 						[ { data: '6.211.332m²' } ],
@@ -2292,63 +2472,63 @@ export default {
 
 			tabela_economico_2: {
 				titulo: 'Área Construída Computável e área de terreno líquida por setor',
-				colunas:[
+				colunas: [
 					{ titulo: 'Setores' },
 					{ titulo: 'Área de terreno Total' },
-					{ titulo: 'Área Terreno Líquida (prevista na demanda)'},
+					{ titulo: 'Área Terreno Líquida (prevista na demanda)' },
 					{ titulo: 'Participação demanda % sobre área do setor' },
 					{ titulo: 'Área Construída Computável (ACC)' },
 					{ titulo: 'PCA total (sem CA básico)' }
 				],
 				linhas: [
 					[
-						[ { data: 'T2 + T5'} ],
-						[ { data: '6.211.332m²'} ],
-						[ { data: '184.049m²'} ],
-						[ { data: '3,0%'} ],
-						[ { data: '722.161m²'} ],
-						[ { data: '541.621m²'} ]
+						[ { data: 'T2 + T5' } ],
+						[ { data: '6.211.332m²' } ],
+						[ { data: '184.049m²' } ],
+						[ { data: '3,0%' } ],
+						[ { data: '722.161m²' } ],
+						[ { data: '541.621m²' } ]
 					],
 
 					[
-						[ { data: 'AELs'} ],
-						[ { data: '2.273.462m²'} ],
-						[ { data: '81.668m²'} ],
-						[ { data: '3,6%'} ],
-						[ { data: '322.352m²'} ],
-						[ { data: '241.764m²'} ]
+						[ { data: 'AELs' } ],
+						[ { data: '2.273.462m²' } ],
+						[ { data: '81.668m²' } ],
+						[ { data: '3,6%' } ],
+						[ { data: '322.352m²' } ],
+						[ { data: '241.764m²' } ]
 					],
 					[
-						[ { data: 'Q2'} ],
-						[ { data: '2.460.969 m²'} ],
-						[ { data: '58.973m²'} ],
-						[ { data: '2,4%'} ],
-						[ { data: '233.796m²'} ],
-						[ { data: '175.347m²'} ]
+						[ { data: 'Q2' } ],
+						[ { data: '2.460.969 m²' } ],
+						[ { data: '58.973m²' } ],
+						[ { data: '2,4%' } ],
+						[ { data: '233.796m²' } ],
+						[ { data: '175.347m²' } ]
 					],
 					[
-						[ { data: 'Q4-7'} ],
-						[ { data: '911.022m²'} ],
-						[ { data: '45.104m²'} ],
-						[ { data: '5,0%'} ],
-						[ { data: '178.890m²'} ],
-						[ { data: '134.167m²'} ]
+						[ { data: 'Q4-7' } ],
+						[ { data: '911.022m²' } ],
+						[ { data: '45.104m²' } ],
+						[ { data: '5,0%' } ],
+						[ { data: '178.890m²' } ],
+						[ { data: '134.167m²' } ]
 					],
 					[
-						[ { data: 'Q8'} ],
-						[ { data: '1.490.339m²'} ],
-						[ { data: '34.486m²'} ],
-						[ { data: '2,3%'} ],
-						[ { data: '206.070m²'} ],
-						[ { data: '171.725m²'} ]
+						[ { data: 'Q8' } ],
+						[ { data: '1.490.339m²' } ],
+						[ { data: '34.486m²' } ],
+						[ { data: '2,3%' } ],
+						[ { data: '206.070m²' } ],
+						[ { data: '171.725m²' } ]
 					],
 					[
-						[ { data: 'TOTAL', destaque: true }, ],
-						[ { data: '13.347.123m²'} ],
-						[ { data: '404.280m²'} ],
-						[ { data: '3,0%'} ],
-						[ { data: '1.663.268m²'} ],
-						[ { data: '1.264.624m²'} ]
+						[ { data: 'TOTAL', destaque: true } ],
+						[ { data: '13.347.123m²' } ],
+						[ { data: '404.280m²' } ],
+						[ { data: '3,0%' } ],
+						[ { data: '1.663.268m²' } ],
+						[ { data: '1.264.624m²' } ]
 					]
 				],
 				fonte: 'Elaboração: SPURBANISMO, 2019.'
@@ -2363,41 +2543,40 @@ export default {
 				linhas: [
 					[
 						[ { data: 'REPUBLICA' } ],
-						[ { data: '203.792 m²'} ]
+						[ { data: '203.792 m²' } ]
 					],
 					[
 						[ { data: 'SE' } ],
-						[ { data: '25.428 m²'} ]
+						[ { data: '25.428 m²' } ]
 					],
 					[
 						[ { data: 'BELEM' } ],
-						[ { data: '215.721 m²'} ]
+						[ { data: '215.721 m²' } ]
 					],
 					[
-						[ { data: 'PARI (*)' }, { ref: '(*) Lançamentos contidos na intersecção do Distrito Pari e perímetro do PIU Setor Central (não compõe o Distrito integralmente).'} ],
-						[ { data: '43.856 m²'} ]
+						[ { data: 'PARI (*)' }, { ref: '(*) Lançamentos contidos na intersecção do Distrito Pari e perímetro do PIU Setor Central (não compõe o Distrito integralmente).' } ],
+						[ { data: '43.856 m²' } ]
 					],
 					[
 						[ { data: 'BOM RETIRO' } ],
-						[ { data: '100.955 m²'} ]
+						[ { data: '100.955 m²' } ]
 					],
 					[
 						[ { data: 'BRAS' } ],
-						[ { data: '154.724 m²'} ]
+						[ { data: '154.724 m²' } ]
 					],
 					[
 						[ { data: 'SANTA CECILIA' } ],
-						[ { data: '264.901 m²'} ]
+						[ { data: '264.901 m²' } ]
 					],
 					[
 						[ { data: 'Total' } ],
-						[ { data: '1.009.376 m²'} ]
+						[ { data: '1.009.376 m²' } ]
 					]
 				],
 				fonte: 'Geoimóvel (2006-2018). Elaboração SPURBANISMO, 2019.'
 			},
 			// fim figuras econômico
-
 
 			galeria01: {
 				width: 960,
@@ -3364,7 +3543,7 @@ div.SetorCentral2 {
 			}
 			& > div:not(.notas) {
 				margin: 0 auto;
-			}			
+			}
 			thead tr th.vertical {
 				vertical-align: bottom;
 				min-width: 120px;

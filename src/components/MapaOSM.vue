@@ -2,12 +2,14 @@
 	<div class="Mapa" ref="mapa">
 		<div id="map"></div>
 		<ul class="legenda">
-			<template v-for="(index, layer) in mapa_attrs.layers">
+			<template v-for="(layer, index) in mapaAttrs.layers">
 				<li :key="index">
 					<div :style="{
 						backgroundColor:layer.fill_color,
 						borderColor: layer.stroke_color,
 						borderWidth: layer.stroke_width + 'px',
+						// borderStyle: layer.stroke_dash.length > 1 ? 'dashed none none' : ''
+						height: layer.fill_color ? '' : '0'
 				}"></div>
 				<a
 					:href="layer.path"
@@ -26,17 +28,17 @@ import Style 			from 'ol/style/Style'
 import Stroke 			from 'ol/style/Stroke'
 import Fill 			from 'ol/style/Fill'
 import KML 				from 'ol/format/KML'
-import BingMaps 		from 'ol/source/BingMaps'
 import VectorSource 	from 'ol/source/Vector'
+import OSM				from 'ol/source/OSM'
 // import {defaults as defaultControls, Attribution } from 'ol/control.js';
 // import ScaleLine 		from 'ol/control/ScaleLine';
 
 // import { chavesExternas } from '../../apiconfig.json'
 
 export default {
-	name: 'Mapa',
+	name: 'MapaOSM',
 	props: {
-		'mapa_attrs': {
+		'mapaAttrs': {
 			center: [
 				{ // centróide do kml (eixo y)
 					type: Number,
@@ -57,6 +59,7 @@ export default {
 					path: String,
 					stroke_color: String,
 					stroke_width: Number,
+					stroke_dash: Array,
 					title: String
 				}
 			]
@@ -64,21 +67,18 @@ export default {
 	},
 	computed: {
 		mapLayers () {
-			let output_layers = [
+			let retLayers = [
 				new TileLayer({
-					source: new BingMaps({
-						imagerySet: 'AerialWithLabels',
-						culture: 'pt-BR',
-						key: process.env.VUE_APP_BING_MAPS_KEY
-					})
+					source: new OSM()
 				})
 			]
-			this.mapa_attrs.layers.map(function (index) {
-				let kml_layer = new VectorLayer({
+			this.mapaAttrs.layers.map(function (index) {
+				let kmlLayer = new VectorLayer({
 					style: new Style({
 						stroke: new Stroke({
 							color: index.stroke_color,
-							width: index.stroke_width
+							width: index.stroke_width,
+							lineDash: index.stroke_dash
 						}),
 						fill: new Fill({
 							color: index.fill_color
@@ -88,17 +88,19 @@ export default {
 						url: index.path,
 						format: new KML({
 							extractStyles: false
+							// extractStyles: true
 						})
 					})
 				})
-				output_layers.push(kml_layer)
+				retLayers.push(kmlLayer)
 			})
-			return output_layers
+			return retLayers
 		},
 		mapView () {
 			return new View({
-				center: this.mapa_attrs.center,
-				zoom: this.mapa_attrs.zoom
+				center: this.mapaAttrs.center,
+				zoom: this.mapaAttrs.zoom,
+				layers: this.mapaAttrs.layers
 			})
 		}
 	},
@@ -107,26 +109,17 @@ export default {
 	},
 	methods: {
 		createMap () {
-			let map = new Map({
-				layers: this.mapLayers,
+			const map = new Map({
 				target: 'map',
+				layers: this.mapLayers,
+				// layers: [
+				// 	new TileLayer({
+				// 		source: new OSM()
+				// 	})
+				// ],
 				view: this.mapView
-				// controls: defaultControls({
-				// 	attributionOptions: {
-				// 		collapsible: true,
-				// 		collapsed: true
-				// 		label:'some Label'
-				// 	}
-				// })
-				// .extend([
-				// 	new ScaleLine(),
-				// ])
 			})
-			if (this.$refs.mapa.clientHeight < 500) {
-				this.mapView.setZoom(12)
-			} else {
-				this.mapView.setMinZoom(this.mapa_attrs.zoom)
-			}
+			// map.getView().fit(vectorLayerInformacoes.getSource().getExtent(), mapInformacoes.getSize());
 		}
 	}
 }
@@ -141,22 +134,24 @@ export default {
 @import "../../node_modules/ol/ol.css";
 
 div.Mapa {
-	max-width: 992px;
+	max-width: 700px;
+	// width: 512px;
+	// height: 256px;
 	margin: 4rem auto 2rem auto;
-	border: 1px solid #BDBDBD;
-	border-radius: 2px;
-	overflow: hidden;
-	z-index: 1;
+	// border: 1px solid #BDBDBD;
+	// border-radius: 2px;
+	// overflow: hidden;
+	// z-index: 1;
 
-	#map:active {
-		cursor: move;
-	};
+	// #map:active {
+		// cursor: move;
+	// };
 
 	ul.legenda {
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: center;
-		max-width: 992px;
+		max-width: 700px;
 		padding: 1rem;
 		margin: 0;
 		font-family: inherit;

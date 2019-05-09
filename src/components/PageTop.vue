@@ -38,7 +38,7 @@
 	</div>
 </template>
 <script>
-export default{
+export default {
 	name: 'PageTop',
 	props: {
 		background_image_src: {

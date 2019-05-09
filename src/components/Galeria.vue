@@ -1,6 +1,6 @@
 <template>
-	<div class="Galeria" :class="{ print: toPrint }">
-		<div class="gall" :style="{maxWidth: gallery_attrs.width + 'px'}" v-if="!toPrint">
+	<div class="Galeria" :class="{ print: toPrint }" :style="{maxWidth: gallery_attrs.width + 'px'}">
+		<div class="gall" v-if="!toPrint" :style="{maxWidth: gallery_attrs.width + 'px'}">
 			<a
 				class="pagination-previous"
 				:disabled="isFirst"
@@ -10,7 +10,7 @@
 			<template v-for="image in gallery_attrs.images">
 				<figure class="item" v-show="image.state">
 					<h3 v-if="image.icon">
-						<img :src="image.icon">
+						<img :src="image.icon" :class="{ legenda: gallery_attrs.legendas }">
 						<span :class="{ noIcon:!image.icon }">{{ image.title }}</span>
 					</h3>
 					<div class="placeholder" v-if="loading" :style="{ maxWidth: gallery_attrs.width + 'px'}" ></div>
@@ -122,61 +122,54 @@ export default {
 	border: 1px solid #BDBDBD;
 	border-radius: 2px;
 	overflow: hidden;
-
 	div.gall {
 		background: #F5F5F5;
 		display: flex;
 		position: relative;
 		z-index: 2;
-
 		& > a {
 			position: absolute;
 			display: inline-flex;
 			align-items: center;
-			top: 0;
+			top: calc(50% - 20px);
 			bottom: 0;
-			width: 50%;
+			width: 60px;
+			height: 60px;
 			color: #FFF;
+			background-color: $sombra-1;
 			opacity: 0;
 			transition: all ease-in .1s;
-
 			i { font-size: calc(24px + 2vmin); };
-
 			&:hover {
 				text-decoration: none;
 				cursor: pointer;
 				opacity: 1 !important;
-
 				i { cursor: pointer; };
 			};
-
 			&:nth-of-type(1) {
 				left: 0;
-				background: linear-gradient(to left, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, .56));
-				background: radial-gradient(circle at left center, rgba(0, 0, 0, .72), rgba(0, 0, 0, 0) 20%);
 				justify-content: flex-start;
 				&:hover { transform: translateX(-8px); };
 			};
-
 			&:nth-of-type(2) {
 				right: 0;
-				background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, .56));
-				background: radial-gradient(circle at right center, rgba(0, 0, 0, .72), rgba(0, 0, 0, 0) 20%);
 				justify-content: flex-end;
 				&:hover { transform: translateX(8px); };
 			};
 		};
-
 		figure.item {
 			align-self: flex-start;
-			margin: -2px;
+			margin: 0;
 			padding: 0;
-
 			img {
 				width: 100%;
+				&.legenda {
+					width: unset;
+					margin: 0 1rem;
+					vertical-align: middle;
+				}
 			};
 		};
-
 		p.legenda {
 			margin: -10px 0 0 0;
 			padding: 1rem;
@@ -184,25 +177,22 @@ export default {
 			justify-content: center;
 			align-items: center;
 			min-height: 40px;
-			max-width: 992px;
+			// max-width: 992px;
 			width: 100%;
 			font-family: inherit;
 			font-size: smaller;
 			background: #FFF;
 		};
-
 		div.placeholder {
 			/*background-color: grey;*/ /* DESCOMENTAR QUANDO LOADING ESTIVER COM EVENT LISTENER*/
 			height: 100%;
 			position: absolute;
 		};
 	};
-
 	nav {
 		margin: 0 auto;
 		width: 100%;
 		display: flex;
-
 		ul {
 			margin: 0;
 			padding: 1rem 0;
@@ -215,14 +205,11 @@ export default {
 			align-items: center;
 			font-family: inherit;
 			z-index: 2;
-
 			li {
 				padding: 0;
 				margin: 4px;
-
 				&:first-child { margin-left: 0; };
 				&:last-child { margin-right: 0; };
-
 				a {
 					padding: 0 8px;
 					display: inline-block;
@@ -238,24 +225,20 @@ export default {
 					align-items: center;
 					color: inherit;
 					transition: all .2s;
-
 					&.ativo {
 						color: #FFF;
 						background: #EB5757;
 						border-color: #EB5757;
-
 						&:hover {
 							color: #FFF;
 						};
 					};
-
 					&:hover {
 						text-decoration: none;
 						cursor: pointer;
 						color: #EB5757;
 					};
 				};
-
 				a.disabled{
 					pointer-events: none;
 					cursor: default;
@@ -263,11 +246,9 @@ export default {
 			};
 		};
 	};
-
 	&:hover div.gall a {
 		opacity: .4;
 	};
-
 	&.print {
 		max-width: 100%;
 		margin: 4rem 20mm;

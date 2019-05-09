@@ -1,6 +1,5 @@
 module.exports = {
 	lintOnSave: true,
-
 	configureWebpack: {
 		optimization: {
 			splitChunks: {
@@ -23,7 +22,9 @@ module.exports = {
 				'/portal-prefeitura',
 				'/governo-aberto',
 				'/concessao-martinelli',
-				'/arco-pinheiros-2'
+				'/arco-pinheiros-2',
+				'/plano-cicloviario',
+				'/setor-central-2'
 			],
 			useRenderEvent: true,
 			headless: false,

@@ -14,10 +14,11 @@
 	<router-view name="GovernoAberto"></router-view>
 	<router-view name="ConcessaoMartinelli"></router-view>
 	<router-view name="ArcoPinheiros2"></router-view>
+	<router-view name="SetorCentral2"></router-view>
+	<router-view name="PlanoCicloviario"></router-view>
 
 	<Modal v-if="modalState.error">
 		<h3 slot="header" class="modal-error">Erro!</h3>
-		<!-- <p slot="body">Estamos com um erro de comunicação com o servidor. Tente novamente mais tarde.</p> -->
 		<p slot="body">Não foi possível enviar a contribuição. Isso pode ocorrer se você já realizou uma contribuição com o mesmo conteúdo ou se ocorrer alguma falha de conexão com o servidor.</p>
 	</Modal>
 	<Modal v-if="modalState.success">

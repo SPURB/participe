@@ -15,6 +15,7 @@ const ConcessaoMartinelli = () => import(/* webpackChunkName: "martinelli" */ '@
 const ArcoPinheiros2 = () => import(/* webpackChunkName: "arcopinheiros2" */ '@/views/ArcoPinheiros2')
 const SetorCentral2 = () => import(/* webpackChunkName: "arcopinheiros2" */ '@/views/SetorCentral2')
 const PlanoCicloviario = () => import(/* webpackChunkName: "plano-cicloviario" */ '@/views/PlanoCicloviario')
+const ParqueMinhocao = () => import(/* webpackChunkName: "plano-cicloviario" */ '@/views/ParqueMinhocao')
 
 Vue.use(Router)
 
@@ -124,6 +125,14 @@ export default new Router({
 			components: { SetorCentral2 },
 			meta: {
 				id: 43
+			}
+		},
+		{
+			path: '/parque-minhocao',
+			name: 'ParqueMinhocao',
+			components: { ParqueMinhocao },
+			meta: {
+				id: 44
 			}
 		}
 		/*

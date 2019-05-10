@@ -1,5 +1,5 @@
 <template>
-	<div class="Preloader"  v-if="consultas===undefined && !fetching" :class="{ fim: !fetching, erro: errors }">
+	<div class="Preloader"  v-if="consultas===undefined && fetching" :class="{ fim: !fetching, erro: errors }">
 		<svg width="170" height="170">
 			<path id="temp" fill="none" class="balao" stroke-width="6" stroke-miterlimit="10" d="M139.233 39.767v66.359c0 6.079-4.979 11.058-11.059 11.058H50.756l-22.119 22.119V39.767c0-6.08 4.974-11.06 11.059-11.06h88.479c6.08.001 11.058 4.98 11.058 11.06z"/>
 		</svg>

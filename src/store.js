@@ -67,7 +67,10 @@ const store = new Vuex.Store({
 			state.toPrint = !state.toPrint
 			return state.toPrint
 		},
-		PRINT () { window.print() }
+		PRINT () { window.print() },
+		OPEN_APOIO (state) {
+			state.apoioToggle = !state.apoioToggle
+		}
 	},
 	actions: {
 		fetchConsultas ({ commit }, { self }) {

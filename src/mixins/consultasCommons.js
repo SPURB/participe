@@ -7,6 +7,7 @@ export const consultasCommons = {
 	mounted () {
 		this.titulosLimpo = this.listaTitulos()
 		this.$store.commit('SET_ROUTE_ID', this.$route.meta.id)
+		this.listaErros()
 	},
 	updated () { this.alteraIndice() },
 	methods: {
@@ -86,6 +87,13 @@ export const consultasCommons = {
 			let url = this.$store.getters.basePath + caminho
 			return 'background-image: url(' + url + ');'
 		},
-		print () { this.$store.dispatch('imprime') }
+		print () { this.$store.dispatch('imprime') },
+		listaErros () {
+			Array.from(this.$el.getElementsByClassName('errata')).map(erro => {
+				erro.addEventListener('click', event => {
+					this.$store.commit('TOGGLE_APOIO')
+				})
+			})
+		}
 	}
 }

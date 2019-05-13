@@ -11,7 +11,7 @@
 					<input type="radio" name="tabs" id="item2">
 					<label for="item2">Anexos</label>
 					<div class="conteudoTab">
-						<ul class="links">
+						<ul class="links" style="margin: 0 0;">
 							<li>
 								<a :href="src('arquivos/setor-central-2/NT_Perimetro.pdf')" target="_blank">
 									<i class="icon-pdf icon"><span>pdf</span></i>
@@ -299,7 +299,7 @@
 				url: imgSrc('arquivos/setor-central-2/mapas/novas-areas-adensamento.jpg'),
 				legenda: [
 					{ borda: '#9a989d', espessura: '3', pontilhado: true, descricao: 'Perímetro proposto do PIU Setor Central' },
-					{ fundo: '#c9aba1', descricao: 'Potenciais eixos de estruturação da transformação urbana', errata: true, id: 0 },
+					{ fundo: '#c9aba1', descricao: 'Potenciais eixos de estruturação da transformação urbana', errata: true, id: 3 },
 					{ fundo: '#bbcca8', descricao: 'Parques, praças e canteiros' }
 				]
 			}"></Imagem>
@@ -1903,13 +1903,15 @@
 				url: imgSrc('arquivos/setor-central-2/img/gestaofinanceira_grafico1.jpg')
 			}"></Imagem>
 			<p>Para garantir que não haja alteração no perfil de renda da população da área central, ou seja, para controle do processo de gentrificação que acompanha a implantação de projetos de requalificação urbana, é meta do projeto que 50% das novas unidades produzidas correspondam a Habitações de Interesse Social - HIS.</p>
-			<p class="errata remocao" data-id="5"></p>
-			<Tabela :dados="distribuicao_estoque" class="errata" data-id="2"></Tabela>
-			<p class="errata" data-id="4">A estimativa de novos moradores considera apenas a produção de unidades residenciais em novas construções. O retrofit de edificações existentes, que não utilizará potencial construtivo adicional, não foi computado nessa estimativa.</p>
-			<p class="errata" data-id="4">Para definição do Estoque de Potencial Construtivo Adicional para o uso residencial, foram considerados os parâmetros estabelecidos para o enquadramento das HIS e das Habitações de Mercado Popular – HMP.</p>
-			<p class="errata" data-id="4">Para o uso não residencial, bastante expressivo na região, propõe-se um estoque de potencial construtivo de 400.000 m², em torno de 20% do estoque residencial total, sendo 200.000 m² de potencial construtivo oneroso e 200.000 m² de potencial construtivo gratuito para os usos e eixos incentivados. -</p>
-			<p class="errata" data-id="4">Desta forma, o estoque de potencial construtivo adicional, para os 20 anos de implantação do PIU SETOR CENTRAL é igual a 2.200.000 m², assim distribuídos:</p>
-			<Tabela :dados="distribuicao_estoque_adicional" class="errata" data-id="3"></Tabela>
+			<p class="errata remocao" id-erro="4"></p>
+			<Tabela :dados="distribuicao_estoque" class="errata" id-erro="5"></Tabela>
+			<p class="errata remocao" id-erro="6"></p>
+			<p class="errata remocao" id-erro="7"></p>
+			<p class="errata" id-erro="8">A estimativa de novos moradores considera apenas a produção de unidades residenciais em novas construções. O retrofit de edificações existentes, que não utilizará potencial construtivo adicional, não foi computado nessa estimativa.</p>
+			<p class="errata" id-erro="9">Para definição do Estoque de Potencial Construtivo Adicional para o uso residencial, foram considerados os parâmetros estabelecidos para o enquadramento das HIS e das Habitações de Mercado Popular – HMP.</p>
+			<p class="errata" id-erro="10">Para o uso não residencial, bastante expressivo na região, propõe-se um estoque de potencial construtivo de 400.000 m², em torno de 20% do estoque residencial total, sendo 200.000 m² de potencial construtivo oneroso e 200.000 m² de potencial construtivo gratuito para os usos e eixos incentivados. -</p>
+			<p class="errata" id-erro="11">Desta forma, o estoque de potencial construtivo adicional, para os 20 anos de implantação do PIU SETOR CENTRAL é igual a 2.200.000 m², assim distribuídos:</p>
+			<Tabela :dados="distribuicao_estoque_adicional" class="errata" id-erro="12"></Tabela>
 			<p>A fixação de Estoques de Potencial Construtivo Adicional no âmbito do PIU SETOR CENTRAL, onerosos ou não, opera como uma ferramenta de monitoramento da transformação – em termos da capacidade de resposta do território – e do adensamento populacional – em termos da participação das faixas de renda nos benefícios do projeto.</p>
 			<Imagem :dados="{
 				tipo: 'w992',
@@ -1927,9 +1929,9 @@
 			<p>Estão organizados em 4 categorias: VENDA DE POTENCIAL CONSTRUTIVO ADICIONAL – disponibilizados em Venda Direta ou através de Leilões, BÔNUS EQUIVALENTES, TRANSFERÊNCIA DO DIREITO DE CONSTRUIR e INCENTIVOS concedidos na forma de potencial adicional gratuito que se distribuem nas áreas da AIU e OPERAÇÃO URBANA.</p>
 			<Imagem :dados="{
 				tipo: 'w992',
-				url: imgSrc('arquivos/setor-central-2/img/distribuicao-estoque_2019-10-05.png'),
+				url: imgSrc('arquivos/setor-central-2/img/distribuicao-estoque_2019-05-10.png'),
 				errata: true,
-				id: '1'
+				id: '13'
 			}"></Imagem>
 			<Imagem :dados="{
 				tipo: 'w992',
@@ -3576,7 +3578,7 @@ div.SetorCentral2 {
 			position: absolute;
 			top: 4px;
 			right: 4px;
-			content: attr(data-id);
+			content: attr(id-erro);
 			display: inline-flex;
 			align-items: center;
 			justify-content: center;

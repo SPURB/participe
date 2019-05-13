@@ -1,38 +1,65 @@
 <template>
-	<!-- <div class="Errata">
+	<div class="Errata">
 		<ul>
-			<li v-for="erro in erros" :class="{ correcao: erro.conteudoAntigo && erro.conteudoNovo, adicao: !erro.conteudoAntigo && erro.conteudoNovo, remocao: erro.conteudoAntigo && !erro.conteudoNovo }">
+			<li v-for="erro in erros" :class="{ correcao: erro.conteudoAntigo.conteudo && erro.conteudoNovo.conteudo, adicao: !erro.conteudoAntigo.conteudo && erro.conteudoNovo.conteudo, remocao: erro.conteudoAntigo.conteudo && !erro.conteudoNovo.conteudo }">
 				<div class="dados">
 					<div>
 						<h2>{{ erro.id }}</h2>
 						<i class="icon-novamente icon"><span>novamente</span></i>
 						<i class="icon-adicionar icon"><span>adicionar</span></i>
 						<i class="icon-remover icon"><span>remover</span></i>
-					</div>					
-					<span class="data">{{ erro.correcao }}</span>
+					</div>
+					<span class="data">{{ displayDate(erro.atualizacao) }}</span>
 				</div>
-				<div class="antigo" v-if="erro.conteudoAntigo">
+				<div class="antigo" v-if="erro.conteudoAntigo.conteudo">
 					<span>Conteúdo removido</span>
-					<p>{{ erro.conteudoAntigo }}</p>
+					<p v-if="erro.conteudoAntigo.tipo == 'texto'">{{ erro.conteudoAntigo.conteudo }}</p>
+					<a v-if="erro.conteudoAntigo.tipo == 'imagem'" :href="erro.conteudoAntigo.conteudo" target="_blank">
+						<img :src="erro.conteudoAntigo.conteudo" alt="Imagem removida">
+						<i class="icon-acessar_url icon"><span>acessar_url</span></i>
+					</a>
 				</div>
-				<div class="novo" v-if="erro.conteudoNovo">
+				<div class="novo" v-if="erro.conteudoNovo.conteudo">
 					<span>Conteúdo inserido</span>
-					<p>{{ erro.conteudoNovo  }}</p>
+					<p v-if="erro.conteudoNovo.tipo == 'texto'">{{ erro.conteudoNovo.conteudo }}</p>
+					<a v-if="erro.conteudoNovo.tipo == 'imagem'" :href="erro.conteudoNovo.conteudo" target="_blank">
+						<img :src="erro.conteudoNovo.conteudo" alt="Imagem inserida">
+						<i class="icon-acessar_url icon"><span>acessar_url</span></i>
+					</a>
 				</div>
 			</li>
 		</ul>
-	</div> -->
+	</div>
 </template>
 
 <script>
 export default {
 	name: 'Errata',
 	data () {
-		return {
-			
+		return {}
+	},
+	computed: {
+		idConsulta () {
+			return this.$route.meta.id
+		},
+		erros () {
+			return this.$store.state.erratas.erros
 		}
 	},
-	methods: {}
+	methods: {
+		fetchErros () {
+			this.$store.dispatch('erratas/fetchErrata', { id: this.idConsulta, self: this })
+		},
+		displayDate (dateStr) {
+			let y = dateStr.slice(0,4)
+			let m = dateStr.slice(5,7)
+			let d = dateStr.slice(8,10)
+			return d + '/' + m + '/' + y
+		}
+	},
+	mounted () {
+		this.fetchErros()
+	}
 }
 </script>
 
@@ -40,6 +67,7 @@ export default {
 @import '../variables';
 
 div.Errata {
+	padding-bottom: 2rem;
 	p {
 		font-family: $serifada;
 		margin: 0;
@@ -74,6 +102,7 @@ div.Errata {
 						display: inline-flex;
 						align-items: center;
 						justify-content: center;
+						background-color: $preto;
 						color: #FFF;
 						border-radius: 100%;
 						width: 2.5rem;
@@ -86,7 +115,6 @@ div.Errata {
 						padding: 2px;
 						font-size: 1.25rem;
 						margin-left: 0.5rem;
-						background-color: $preto;
 						display: none;
 					}
 				}
@@ -107,6 +135,19 @@ div.Errata {
 					font-size: 0.75rem;
 					color: $cinza-1;
 				}
+				& > a {
+					display: inline-block;
+					position: relative;
+					background-color: #FFF;
+					padding: 0.5rem;
+					line-height: 0.8;
+					border: 1px solid $sombra-4;
+					border-radius: 2px;
+					img {
+						height: 8rem;
+						opacity: 0.75;
+					}
+				}
 			}
 			div.novo {
 				span {
@@ -123,39 +164,61 @@ div.Errata {
 					background-color: #FFF;
 					padding: 0.2rem 0.6em;
 				}
+				& > a {
+					display: inline-block;
+					position: relative;
+					background-color: #FFF;
+					padding: 1rem;
+					line-height: 0.8;
+					border: 1px solid $sombra-3;
+					border-radius: 2px;
+					img {
+						max-width: 100%;
+					}
+				}
 			}
+			div:not(.dados) > a i.icon {
+				position: absolute;
+				top: 4px;
+				right: 4px;
+				background-color: $sombra-2;
+				color: #FFF;
+				border-radius: 2px;
+				font-size: 1rem;
+				padding: 0.1rem;
+			}
+			div.antigo + div.novo { margin-top: -0.5rem; }
 			&.correcao {
 				border-top-color: $cinza-1;
 				div.dados {
-					& > div h2 {
-						background-color: $cinza-1;
-					}
 					i.icon-novamente {
 						display: inline-block;
+						background-color: $cinza-1;
 					}
 				}
 			}
 			&.adicao {
 				border-top-color: $verde;
 				div.dados {
-					& > div h2 {
-						background-color: $verde;
-					}
 					i.icon-adicionar {
 						display: inline-block;
+						background-color: $verde;
 					}
 				}
+				div.antigo { display: none; }
 			}
 			&.remocao {
 				border-top-color: $vermelho;
 				div.dados {
-					& > div h2 {
-						background-color: $vermelho;
-					}
 					i.icon-remover {
 						display: inline-block;
+						background-color: $vermelho;
 					}
 				}
+				div.antigo p {
+					font-size: 1rem;
+				}
+				div.novo { display: none; }
 			}
 		}
 	}

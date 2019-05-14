@@ -51,9 +51,9 @@ export default {
 			this.$store.dispatch('erratas/fetchErrata', { id: this.idConsulta, self: this })
 		},
 		displayDate (dateStr) {
-			let y = dateStr.slice(0,4)
-			let m = dateStr.slice(5,7)
-			let d = dateStr.slice(8,10)
+			let y = dateStr.slice(0, 4)
+			let m = dateStr.slice(5, 7)
+			let d = dateStr.slice(8, 10)
 			return d + '/' + m + '/' + y
 		}
 	},

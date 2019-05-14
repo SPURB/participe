@@ -2160,6 +2160,7 @@
 			<p>Por ora, ainda não foi estimado o impacto na arrecadação de OODC frente à utilização prevista do Bônus Equivalente para Retrofit e Tombados. Durante o processo de debate público poderão ser levantados dados sobre o volume comercializado de empreendimentos de Retrofit, para que seja possível estimar o consumo e atratividade deste benefício.</p>
 			<p>Caberá ao debate público, também, discutir se haverá um limite para utilização destes instrumentos, frente à suposta competição que haveria com a OODC. Para tanto pretendemos fornecer gradativamente insumos técnicos deste conteúdo.</p>
 			<ol class="notas">
+				<caption>Notas</caption>
 				<li>Fonte: Geoimovel/SPUrbanismo</li>
 				<li>O projeto está realizando uma pesquisa mais detalhada de imóveis, de modo a estimar melhor este valor para refinamento dos cálculos.</li>
 				<li>Para maiores detalhes ver <a :href="src('arquivos/setor-central-2/NT_Modelagem-Economica.pdf')" target="_blank">Nota Técnica Modelagem Econômica</a></li>
@@ -2217,7 +2218,7 @@
 			Roberto Cornacchioni Alegre<br>
 			Saliny Ribeiro Marin<br>
 			Victor Mendes del Prete</p>
-			<p><b>Engenheiros</b>
+			<p><b>Engenheiros</b><br>
 			Leonardo Machert Pereira Bueno<br>
 			Maria Cristina Fernandes<br>
 			Waldir Macho La Rubbia</p>
@@ -2229,7 +2230,7 @@
 			Bruno Martins Hermann</p>
 			<p><b>Procurador do Município</b><br>
 			José Antônio Apparecido Junior</p>
-			<p><b>Estagiária Gestão Pública e Direito</b><br>
+			<p><b>Estagiária Gestão Pública</b><br>
 			Marília Formoso Camargo</p>
 			<p><b>Designer Gráfico</b><br>
 			Thomas Len Yuba</p>

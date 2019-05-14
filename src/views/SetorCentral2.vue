@@ -1382,7 +1382,7 @@
 				altura: '816',
 				fonte:'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019',
 				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf_antes.jpg'),
-				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf_depois.jpg'),
+				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf_depois_2019-05-14.jpg'),
 				pictogramas: [{
 					url: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf_1.png'),
 					legenda: 'C.A. 4'
@@ -1466,7 +1466,7 @@
 				altura: '816',
 				fonte:'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019',
 				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf-minhocao_antes.jpg'),
-				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf-minhocao_depois.jpg'),
+				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf-minhocao_depois_2019-05-14.jpg'),
 				pictogramas: [{
 					url: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf-minhocao_1.png'),
 					legenda: 'C.A. 6'

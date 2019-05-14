@@ -1,0 +1,37 @@
+.errata {
+	position: relative;
+	transition: all ease-in-out .2s;
+	border-radius: 2px;
+	cursor: pointer;
+	&::after {
+		position: absolute;
+		top: 4px;
+		right: 4px;
+		content: attr(id-erro);
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 1rem;
+		height: 1rem;
+		background-color: $vermelho;
+		color: #FFF;
+		border-radius: 1rem;
+		font-family: $grotesca;
+		font-size: 0.75rem;
+	}
+	&.remocao {
+		border: 1px dashed $sombra-4;
+		border-radius: 2rem;
+		&::before {
+			content: 'Conteúdo removido';
+			font-size: 0.75rem;
+			line-height: 1.5rem;
+			font-family: $grotesca;
+			color: $cinza-2;
+			text-transform: uppercase;
+			display: block;
+			text-align: center;
+			transform: inherit;
+		}
+	}
+}

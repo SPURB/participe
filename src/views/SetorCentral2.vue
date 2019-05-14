@@ -11,7 +11,7 @@
 					<input type="radio" name="tabs" id="item2">
 					<label for="item2">Anexos</label>
 					<div class="conteudoTab">
-						<ul class="links">
+						<ul class="links" style="margin: 0 0;">
 							<li>
 								<a :href="src('arquivos/setor-central-2/NT_Perimetro.pdf')" target="_blank">
 									<i class="icon-pdf icon"><span>pdf</span></i>
@@ -71,6 +71,13 @@
 						</ul>
 					</div>
 				</li>
+				<li>
+					<input type="radio" name="tabs" id="item3">
+					<label for="item3">Errata</label>
+					<div class="conteudoTab" style="overflow-y: scroll;">
+						<Errata></Errata>
+					</div>
+				</li>
 			</template>
 		</Apoio>
 		<div class="linkMapaInterativo">
@@ -83,7 +90,6 @@
 				<p>A Operação Urbana Centro vai mudar.</p>
 				<p>A OU Centro foi instituída pela Lei Municipal nº 12.349, de 6 de junho de 1997, com objetivo de promover a requalificação e a renovação do centro de São Paulo, através da preservação do patrimônio edificado, do incremento populacional e do estímulo às atividades típicas de áreas centrais: hoteleira, educacional, cultural e de entretenimento.</p>
 			</CommentsContext>
-
 			<p>Embora a transferência de potencial construtivo de imóveis tombados estivesse disciplinada por legislação específica, a Operação Urbana Centro estabeleceu um cálculo alternativo para esse potencial transferível, proporcional à área construída, que favorecia a restauração de edificações históricas de grande porte, como o Prédio Martinelli, por exemplo.</p>
 			<p>Outro ponto importante foi o incentivo aos empreendimentos habitacionais, pela dispensa do pagamento de contrapartida para áreas edificadas até 6 vezes a área do terreno.</p>
 			<p>De forma precursora na legislação urbanística municipal, a Lei da Operação Urbana Centro admitiu a construção de edifícios residenciais sem a oferta até então obrigatória de vagas de estacionamento, dispensa que foi estendida aos demais usos incentivados de educação, cultura, entretenimento e hospedagem, considerada a oferta abundante de transporte público na área central.</p>
@@ -293,7 +299,7 @@
 				url: imgSrc('arquivos/setor-central-2/mapas/novas-areas-adensamento.jpg'),
 				legenda: [
 					{ borda: '#9a989d', espessura: '3', pontilhado: true, descricao: 'Perímetro proposto do PIU Setor Central' },
-					{ fundo: '#c9aba1', descricao: 'Novas áreas de adensamento populacional' },
+					{ fundo: '#c9aba1', descricao: 'Potenciais eixos de estruturação da transformação urbana', errata: true, id: 3 },
 					{ fundo: '#bbcca8', descricao: 'Parques, praças e canteiros' }
 				]
 			}"></Imagem>
@@ -1376,7 +1382,7 @@
 				altura: '816',
 				fonte:'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019',
 				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf_antes.jpg'),
-				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf_depois.jpg'),
+				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf_depois_2019-05-14.jpg'),
 				pictogramas: [{
 					url: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf_1.png'),
 					legenda: 'C.A. 4'
@@ -1460,7 +1466,7 @@
 				altura: '816',
 				fonte:'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019',
 				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf-minhocao_antes.jpg'),
-				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf-minhocao_depois.jpg'),
+				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf-minhocao_depois_2019-05-14.jpg'),
 				pictogramas: [{
 					url: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf-minhocao_1.png'),
 					legenda: 'C.A. 6'
@@ -1897,12 +1903,15 @@
 				url: imgSrc('arquivos/setor-central-2/img/gestaofinanceira_grafico1.jpg')
 			}"></Imagem>
 			<p>Para garantir que não haja alteração no perfil de renda da população da área central, ou seja, para controle do processo de gentrificação que acompanha a implantação de projetos de requalificação urbana, é meta do projeto que 50% das novas unidades produzidas correspondam a Habitações de Interesse Social - HIS.</p>
-			<p>Considerando os parâmetros estabelecidos para enquadramento das HIS e das Habitações de Mercado Popular – HMP, o Estoque de Potencial Construtivo Adicional para o uso residencial no âmbito do PIU do Setor Central tem a seguinte distribuição:</p>
-			<Tabela :dados="distribuicao_estoque"></Tabela>
-			<p>Para o uso não residencial, bastante expressivo na região, propõe-se um estoque de potencial construtivo adicional ou de 200.000 m², algo em torno de 20% do estoque residencial total. Os estoques de potencial construtivo para o uso residencial, para HIS e para o uso não residencial somam 2.000.000 de metros quadrados.</p>
-			<p>O PIU SETOR CENTRAL também reserva estoque de potencial construtivo adicional gratuito para os usos e eixos incentivados, correspondendo a 20% do potencial construtivo apurado.</p>
-			<p>Desta forma, o estoque de potencial construtivo adicional, para os 20 anos de implantação do PIU SETOR CENTRAL é igual a 2.400.000 m², assim distribuídos:</p>
-			<Tabela :dados="distribuicao_estoque_adicional"></Tabela>
+			<p class="errata remocao" id-erro="4"></p>
+			<Tabela :dados="distribuicao_estoque" class="errata" id-erro="5"></Tabela>
+			<p class="errata remocao" id-erro="6"></p>
+			<p class="errata remocao" id-erro="7"></p>
+			<p class="errata" id-erro="8">A estimativa de novos moradores considera apenas a produção de unidades residenciais em novas construções. O retrofit de edificações existentes, que não utilizará potencial construtivo adicional, não foi computado nessa estimativa.</p>
+			<p class="errata" id-erro="9">Para definição do Estoque de Potencial Construtivo Adicional para o uso residencial, foram considerados os parâmetros estabelecidos para o enquadramento das HIS e das Habitações de Mercado Popular – HMP.</p>
+			<p class="errata" id-erro="10">Para o uso não residencial, bastante expressivo na região, propõe-se um estoque de potencial construtivo de 400.000 m², em torno de 20% do estoque residencial total, sendo 200.000 m² de potencial construtivo oneroso e 200.000 m² de potencial construtivo gratuito para os usos e eixos incentivados. -</p>
+			<p class="errata" id-erro="11">Desta forma, o estoque de potencial construtivo adicional, para os 20 anos de implantação do PIU SETOR CENTRAL é igual a 2.200.000 m², assim distribuídos:</p>
+			<Tabela :dados="distribuicao_estoque_adicional" class="errata" id-erro="12"></Tabela>
 			<p>A fixação de Estoques de Potencial Construtivo Adicional no âmbito do PIU SETOR CENTRAL, onerosos ou não, opera como uma ferramenta de monitoramento da transformação – em termos da capacidade de resposta do território – e do adensamento populacional – em termos da participação das faixas de renda nos benefícios do projeto.</p>
 			<Imagem :dados="{
 				tipo: 'w992',
@@ -1920,7 +1929,9 @@
 			<p>Estão organizados em 4 categorias: VENDA DE POTENCIAL CONSTRUTIVO ADICIONAL – disponibilizados em Venda Direta ou através de Leilões, BÔNUS EQUIVALENTES, TRANSFERÊNCIA DO DIREITO DE CONSTRUIR e INCENTIVOS concedidos na forma de potencial adicional gratuito que se distribuem nas áreas da AIU e OPERAÇÃO URBANA.</p>
 			<Imagem :dados="{
 				tipo: 'w992',
-				url: imgSrc('arquivos/setor-central-2/img/distribuicao-estoque.png')
+				url: imgSrc('arquivos/setor-central-2/img/distribuicao-estoque_2019-05-10.png'),
+				errata: true,
+				id: '13'
 			}"></Imagem>
 			<Imagem :dados="{
 				tipo: 'w992',
@@ -2149,6 +2160,7 @@
 			<p>Por ora, ainda não foi estimado o impacto na arrecadação de OODC frente à utilização prevista do Bônus Equivalente para Retrofit e Tombados. Durante o processo de debate público poderão ser levantados dados sobre o volume comercializado de empreendimentos de Retrofit, para que seja possível estimar o consumo e atratividade deste benefício.</p>
 			<p>Caberá ao debate público, também, discutir se haverá um limite para utilização destes instrumentos, frente à suposta competição que haveria com a OODC. Para tanto pretendemos fornecer gradativamente insumos técnicos deste conteúdo.</p>
 			<ol class="notas">
+				<caption>Notas</caption>
 				<li>Fonte: Geoimovel/SPUrbanismo</li>
 				<li>O projeto está realizando uma pesquisa mais detalhada de imóveis, de modo a estimar melhor este valor para refinamento dos cálculos.</li>
 				<li>Para maiores detalhes ver <a :href="src('arquivos/setor-central-2/NT_Modelagem-Economica.pdf')" target="_blank">Nota Técnica Modelagem Econômica</a></li>
@@ -2206,7 +2218,7 @@
 			Roberto Cornacchioni Alegre<br>
 			Saliny Ribeiro Marin<br>
 			Victor Mendes del Prete</p>
-			<p><b>Engenheiros</b>
+			<p><b>Engenheiros</b><br>
 			Leonardo Machert Pereira Bueno<br>
 			Maria Cristina Fernandes<br>
 			Waldir Macho La Rubbia</p>
@@ -2218,7 +2230,7 @@
 			Bruno Martins Hermann</p>
 			<p><b>Procurador do Município</b><br>
 			José Antônio Apparecido Junior</p>
-			<p><b>Estagiária Gestão Pública e Direito</b><br>
+			<p><b>Estagiária Gestão Pública</b><br>
 			Marília Formoso Camargo</p>
 			<p><b>Designer Gráfico</b><br>
 			Thomas Len Yuba</p>
@@ -2248,6 +2260,7 @@ import Imagem from '@/components/Imagem'
 import AntesDepois from '@/components/AntesDepois'
 import Infografico from '@/components/graf/setor-central-2/infografico'
 import Pai from '@/components/graf/setor-central-2/pai'
+import Errata from '@/components/Errata'
 import { consultasCommons } from '@/mixins/consultasCommons'
 
 export default {
@@ -3466,7 +3479,7 @@ export default {
 				estreita: false
 			},
 			distribuicao_estoque: {
-				titulo: 'PIU Setor Central',
+				titulo: 'Unidades Habitacionais em Novas Construções',
 				colunas: [
 					{ titulo: '' },
 					{ titulo: '' },
@@ -3474,32 +3487,17 @@ export default {
 				],
 				linhas: [
 					[
-						[ { data: 'Residencial oneroso' } ],
-						[ { data: '1.080.000' } ],
-						[ { data: '60%' } ]
-					],
-					[
-						[ { data: 'HIS' } ],
-						[ { data: '720.000' } ],
-						[ { data: '40%' } ]
-					],
-					[
-						[ { data: 'Residencial total' } ],
-						[ { data: '1.800.000' } ],
-						[ { data: '100%' } ]
-					],
-					[
-						[ { data: 'UH (HIS)' } ],
+						[ { data: 'Unidades estimadas HIS' } ],
 						[ { data: '24.000' } ],
 						[ { data: '52%' } ]
 					],
 					[
-						[ { data: 'UH (HMP)' } ],
+						[ { data: 'Unidades estimadas HMP' } ],
 						[ { data: '17.000' } ],
 						[ { data: '37%' } ]
 					],
 					[
-						[ { data: 'UH (Livre)' } ],
+						[ { data: 'Unidades estimadas Produção Livre' } ],
 						[ { data: '5.250' } ],
 						[ { data: '11%' } ]
 					],
@@ -3512,22 +3510,26 @@ export default {
 				estreita: false
 			},
 			distribuicao_estoque_adicional: {
-				titulo: 'Estoque de potencial construtivo adicional',
+				titulo: '',
 				colunas: [
-					{ titulo: 'Estoque' },
-					{ titulo: 'Quantidade' }
+					{ titulo: 'Estoque de Potencial Construtivo Adicional' },
+					{ titulo: 'm²' }
 				],
 				linhas: [
 					[
-						[ { data: 'Residencial – HMP + Livre' } ],
+						[ { data: 'Residencial oneroso – HMP + Livre' } ],
 						[ { data: '1.080.000' } ]
 					],
 					[
-						[ { data: 'Residencial – HIS' } ],
+						[ { data: 'Residencial não-oneroso – HIS' } ],
 						[ { data: '720.000' } ]
 					],
 					[
-						[ { data: 'Não residencial' } ],
+						[ { data: 'Não residencial oneroso' } ],
+						[ { data: '200.000' } ]
+					],
+					[
+						[ { data: 'Não residencial incentivado' } ],
 						[ { data: '200.000' } ]
 					],
 					[
@@ -3550,7 +3552,8 @@ export default {
 		Imagem,
 		AntesDepois,
 		Infografico,
-		Pai
+		Pai,
+		Errata
 	},
 	methods: {
 		print () {
@@ -3567,6 +3570,43 @@ export default {
 @import '../oldstylestoprint';
 
 div.SetorCentral2 {
+	*.errata {
+		position: relative;
+		transition: all ease-in-out .2s;
+		border-radius: 2px;
+		cursor: pointer;
+		&::after {
+			position: absolute;
+			top: 4px;
+			right: 4px;
+			content: attr(id-erro);
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 1rem;
+			height: 1rem;
+			background-color: $vermelho;
+			color: #FFF;
+			border-radius: 1rem;
+			font-family: $grotesca;
+			font-size: 0.75rem;
+		}
+		&.remocao {
+			border: 1px dashed $sombra-4;
+			border-radius: 2rem;
+			&::before {
+				content: 'Conteúdo removido';
+				font-size: 0.75rem;
+				line-height: 1.5rem;
+				font-family: $grotesca;
+				color: $cinza-2;
+				text-transform: uppercase;
+				display: block;
+				text-align: center;
+				transform: inherit;
+			}
+		}
+	}
 	div.linkMapaInterativo {
 		position: fixed;
 		right: 2rem;

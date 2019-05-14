@@ -7,13 +7,13 @@
 					<p class="g-pstyle0">O CENTRO HOJE</p>
 				</div>
 				<div id="g-ai0-2" class="g-Camada_3 g-aiAbs" style="top:12.8299%;left:74.7983%;width:21.1694%;">
-					<p>ÁREA DE P<span class="g-cstyle0">R</span>OJ<span class="g-cstyle1">E</span><span class="g-cstyle2">T</span>O: 2<span class="g-cstyle3">.</span>0<span class="g-cstyle4">9</span>0 ha</p>
+					<p class="errata" id-erro="1">ÁREA DE PROJETO: 2.098 ha</p>
 				</div>
 				<div id="g-ai0-3" class="g-Camada_3 g-aiAbs" style="top:19.3874%;left:74.7983%;width:21.1694%;">
 					<p>DENSIDADE POPULACIONAL MÉDIA NOS DISTRITOS CENTRAIS: 145 hab/ha</p>
 				</div>
 				<div id="g-ai0-4" class="g-Camada_3 g-aiAbs" style="top:25.9449%;left:74.7983%;width:21.1694%;">
-					<p>EM MÉDIA, 257.305 PESSOAS VÃO AO CENTRO TODOS OS DIAS, MAIS DA METADE VAI A TRABALHO</p>
+					<p class="errata" id-erro="2">EM MÉDIA, 2.057.305 PESSOAS VÃO AO CENTRO TODOS OS DIAS, MAIS DA METADE VAI A TRABALHO</p>
 				</div>
 				<div id="g-ai0-5" class="g-Camada_3 g-aiAbs" style="top:34.2131%;left:74.7983%;width:21.1694%;">
 					<p>HÁ 33.149 DOMICÍLIOS VAGOS, 14.6% DO TOTAL. MAIS DE 600 IMÓVEIS FORAM NOTIFICADOS PARA PEUC</p>
@@ -98,7 +98,7 @@
 					<p>BÔNUS EM POTENCIAL CONSTRUTIVO ADICIONAL PARA REQUALIFICAÇÃO DE IMÓVEIS TOMBADOS E RETROFIT</p>
 				</div>
 				<div id="g-ai0-29" class="g-Camada_3 g-aiAbs" style="top:87.8136%;left:79.8394%;width:16.129%;">
-					<p>URBANIZAÇÃO, IMPLANTAÇÃO DE SISTEMA VIÁRIO E ÁREAS VERDES E INTITUCIONAIS EM PROJETOS ESTRATÉGICOS</p>
+					<p>URBANIZAÇÃO, IMPLANTAÇÃO DE SISTEMA VIÁRIO E ÁREAS VERDES E INSTITUCIONAIS EM PROJETOS ESTRATÉGICOS</p>
 				</div>
 				<div id="g-ai0-30" class="g-Camada_3 g-aiAbs" style="top:89.5243%;left:9.3757%;width:16.129%;">
 					<p>IMPLANTAÇÃO OU REQUALIFICAÇÃO DE 71 </p>
@@ -122,6 +122,44 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../../../variables';
+*.errata {
+	position: relative;
+	transition: all ease-in-out .2s;
+	border-radius: 2px;
+	cursor: pointer;
+	&::after {
+		position: absolute;
+		top: 4px;
+		right: 4px;
+		content: attr(id-erro);
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 1rem;
+		height: 1rem;
+		background-color: $vermelho;
+		color: #FFF;
+		border-radius: 1rem;
+		font-family: $grotesca;
+		font-size: 0.75rem;
+	}
+	&.remocao {
+		border: 1px dashed $sombra-4;
+		border-radius: 2rem;
+		&::before {
+			content: 'Conteúdo removido';
+			font-size: 0.75rem;
+			line-height: 1.5rem;
+			font-family: $grotesca;
+			color: $cinza-2;
+			text-transform: uppercase;
+			display: block;
+			text-align: center;
+			transform: inherit;
+		}
+	}
+}
 div.infografico {
 	margin: 0 auto;
 	overflow-x: auto;

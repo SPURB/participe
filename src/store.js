@@ -2,12 +2,16 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import Es6Promise from 'es6-promise'
 import api from '@/utils/api'
+import erratas from '@/modules/erratas'
 
 Es6Promise.polyfill()
 
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
+	modules: {
+		erratas: erratas
+	},
 	state: {
 		menuToggle: false,
 		apoioToggle: false,
@@ -67,7 +71,11 @@ const store = new Vuex.Store({
 			state.toPrint = !state.toPrint
 			return state.toPrint
 		},
-		PRINT () { window.print() }
+		PRINT () { window.print() },
+		TOGGLE_APOIO (state) {
+			state.apoioToggle = !state.apoioToggle
+			state.luzApaga = !state.luzApaga
+		}
 	},
 	actions: {
 		fetchConsultas ({ commit }, { self }) {

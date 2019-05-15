@@ -7,6 +7,191 @@
 		<Indice :titulos="titulosLimpo"></Indice>
 		<Apoio></Apoio>
 		<Processo></Processo>
+		<Imagem :dados="{
+			tipo: 'mapa',
+			url: imgSrc('arquivos/parque-minhocao/img/mapas/fig2.jpg'),
+			titulo: 'PIU Setor Central da MEM – inserção do Parque Minhocão como projeto estratégico',
+			legenda: [
+				{ borda: '#9107fd', espessura: '3', descricao: 'Projetos Estratégicos do PIU Setor Central' },
+				{ borda: '#333', pontilhado: true, espessura: '1', descricao: 'Perímetro do PIU Setor Central' }
+			],
+			fonte: 'SP Urbanismo, 2019'
+		}"></Imagem>
+		<Imagem :dados="{
+			tipo: 'coluna',
+			url: imgSrc('arquivos/parque-minhocao/img/fig3.jpg'),
+			caption: 'Mapa de Situação ',
+			fonte: 'ARTIGAS, R. et al. Caminhos do Elevado: Memória e Projetos. São Paulo: Ed. Imprensa Oficial, 2008, p.77'
+		}"></Imagem>
+		<Imagem :dados="{
+			tipo: 'mapa',
+			url: imgSrc('arquivos/parque-minhocao/img/mapas/fig4.jpg'),
+			titulo: 'Limites Administrativos',
+			legenda: [
+				{ borda: '#589fad', espessura: '2', descricao: 'Distritos' },
+				{ borda: '#ec6768', espessura: '2', descricao: 'Subprefeituras' },
+				{ linha: true, borda: '#333', espessura: '3', descricao: 'Minhocão - Elevado Pres. João Goulart' },
+				{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_3.jpg'), descricao: 'Linha férrea' },
+				{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_1.jpg'), descricao: 'Estações do Metrô' },
+				{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_2.jpg'), descricao: 'Estações da CPTM' }
+			],
+			fonte: 'Geoinfo, 2014'
+		}"></Imagem>
+		<Imagem :dados="{
+			tipo: 'mapa',
+			url: imgSrc('arquivos/parque-minhocao/img/mapas/fig5.jpg'),
+			titulo: 'Densidades Habitacionais',
+			legenda: [
+				{ fundo: '#a2b9c8', descricao: 'Até 25 hab/ha' },
+				{ fundo: '#cfe4f0', descricao: '25 a 50 hab/ha' },
+				{ fundo: '#f8f6d7', descricao: '50 a 100 hab/ha' },
+				{ fundo: '#fedcb1', descricao: '100 a 250 hab/ha' },
+				{ fundo: '#e6bc8f', descricao: '250 a 400 hab/ha' },
+				{ fundo: '#d29689', descricao: '400 a 600 hab/ha' },
+				{ fundo: '#af8284', descricao: 'Acima de 600 hab/ha' },
+				{ linha: true, borda: '#333', espessura: '3', descricao: 'Minhocão - Elevado Pres. João Goulart' },
+				{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_3.jpg'), descricao: 'Linha férrea' },
+				{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_1.jpg'), descricao: 'Estações do Metrô' },
+				{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_2.jpg'), descricao: 'Estações da CPTM' }
+			],
+			fonte: 'IBGE, 2010'
+		}"></Imagem>
+		<Imagem :dados="{
+			tipo: 'mapa',
+			url: imgSrc('arquivos/parque-minhocao/img/mapas/fig6.jpg'),
+			titulo: 'Densidades de Empregos *',
+			legenda: [
+				{ fundo: '#fee6b1', descricao: 'Até 25' },
+				{ fundo: '#fed884', descricao: '25 a 50' },
+				{ fundo: '#feb56b', descricao: '50 a 75' },
+				{ fundo: '#f9885e', descricao: '75 a 100' },
+				{ fundo: '#ea5958', descricao: '100 a 150' },
+				{ fundo: '#d13758', descricao: '150 a 200' },
+				{ fundo: '#ae3f71', descricao: 'Maior que 200' },
+				{ linha: true, borda: '#333', espessura: '3', descricao: 'Minhocão - Elevado Pres. João Goulart' },
+				{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_3.jpg'), descricao: 'Linha férrea' },
+				{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_1.jpg'), descricao: 'Estações do Metrô' },
+				{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_2.jpg'), descricao: 'Estações da CPTM' }
+			],
+			fonte: 'RAIS, 2017'
+		}">
+			<template slot="extra">
+				<div>* Unidade de análise: área de ponderação do IBGE</div>
+			</template>
+		</Imagem>
+		<Imagem :dados="{
+			tipo: 'mapa',
+			url: imgSrc('arquivos/parque-minhocao/img/mapas/fig7.jpg'),
+			titulo: 'Renda Média Familiar *',
+			legenda: [
+				{ fundo: '#daedf5', descricao: 'Até 2 s.m.' },
+				{ fundo: '#95bad0', descricao: '2 a 5 s.m.' },
+				{ fundo: '#bbbad0', descricao: '5 a 10 s.m.' },
+				{ fundo: '#dfc8d9', descricao: '10 a 20 s.m.' },
+				{ fundo: '#efb4b4', descricao: 'Acima de 20 s.m.' },
+				{ linha: true, borda: '#333', espessura: '3', descricao: 'Minhocão - Elevado Pres. João Goulart' },
+				{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_3.jpg'), descricao: 'Linha férrea' },
+				{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_1.jpg'), descricao: 'Estações do Metrô' },
+				{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_2.jpg'), descricao: 'Estações da CPTM' }
+			],
+			fonte: 'IBGE, 2010'
+		}">
+			<template slot="extra">
+				<div>* Média de renda mensal dos domicílios, em salários mínimos (s.m.) de 2010</div>
+			</template>
+		</Imagem>
+		<Imagem :dados="{
+			tipo: 'mapa',
+			url: imgSrc('arquivos/parque-minhocao/img/mapas/fig8.jpg'),
+			titulo: 'Vulnerabilidade Social',
+			legenda: [
+				{ fundo: '#ded5b0', descricao: 'Grupo 1: baixíssima' },
+				{ fundo: '#ccffa4', descricao: 'Grupo 2: muito baixa' },
+				{ fundo: '#55aa7f', descricao: 'Grupo 3: baixa' },
+				{ fundo: '#e6aa4a', descricao: 'Grupo 4: média' },
+				{ fundo: '#ff5500', descricao: 'Grupo 5: alta' },
+				{ fundo: '#ff0000', descricao: 'Grupo 6: muito alta' },
+				{ fundo: '#bcbcbc', descricao: 'Sem classificação' },
+				{ linha: true, borda: '#333', espessura: '3', descricao: 'Minhocão - Elevado Pres. João Goulart' },
+				{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_3.jpg'), descricao: 'Linha férrea' },
+				{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_1.jpg'), descricao: 'Estações do Metrô' },
+				{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_2.jpg'), descricao: 'Estações da CPTM' }
+			],
+			fonte: 'SEADE, 2010 (IPVS - Índice Paulista de Vulnerabilidade Social 2010)'
+		}"></Imagem>
+		<Imagem :dados="{
+			tipo: 'mapa',
+			url: imgSrc('arquivos/parque-minhocao/img/mapas/fig9.jpg'),
+			titulo: 'Predominância de Uso por Quadra',
+			legenda: [
+				{ fundo: '#f0f0f0', descricao: 'Sem informação' },
+				{ fundo: '#ffffb9', descricao: 'RH Baixo Padrão' },
+				{ fundo: '#ffcf55', descricao: 'RH Médio/Alto Padrão' },
+				{ fundo: '#a0c0ff', descricao: 'RV Baixo Padrão' },
+				{ fundo: '#427592', descricao: 'RV Médio/Alto Padrão' },
+				{ fundo: '#b63327', descricao: 'Comércio e Serviços' },
+				{ fundo: '#a2557e', descricao: 'Indústria e Armazéns' },
+				{ fundo: '#ff9933', descricao: 'Residencial + Comércio/Serviços' },
+				{ fundo: '#ffcc99', descricao: 'Residencial + Indústria/Armazéns' },
+				{ fundo: '#ffc6ff', descricao: 'Comércio/Serviços + Indústria/Armazéns' },
+				{ fundo: '#0000eb', descricao: 'Equipamentos públicos' },
+				{ fundo: '#00afaf', descricao: 'Escolas' },
+				{ fundo: '#9f5000', descricao: 'Terrenos vagos' },
+				{ fundo: '#c09000', descricao: 'Outros' },
+				{ fundo: '#909090', descricao: 'Sem predominância' },
+				{ linha: true, borda: '#333', espessura: '3', descricao: 'Minhocão - Elevado Pres. João Goulart' },
+				{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_3.jpg'), descricao: 'Linha férrea' },
+				{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_1.jpg'), descricao: 'Estações do Metrô' },
+				{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_2.jpg'), descricao: 'Estações da CPTM' }
+			],
+			fonte: 'TPCL, 2015'
+		}"></Imagem>
+		<Imagem :dados="{
+			tipo: 'mapa',
+			url: imgSrc('arquivos/parque-minhocao/img/mapas/fig10.jpg'),
+			titulo: 'Gabarito das edificações',
+			legenda: [
+				{ fundo: '#ffba73', descricao: 'Até 5 metros' },
+				{ fundo: '#fb613f', descricao: '5 até 10 metros' },
+				{ fundo: '#d80808', descricao: '10 até 30 metros' },
+				{ fundo: '#750606', descricao: '30 até 45 metros' },
+				{ fundo: '#050000', descricao: 'Maior que 45 metros' },
+				{ linha: true, borda: '#333', espessura: '3', descricao: 'Minhocão - Elevado Pres. João Goulart' },
+				{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_3.jpg'), descricao: 'Linha férrea' },
+				{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_1.jpg'), descricao: 'Estações do Metrô' },
+				{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_2.jpg'), descricao: 'Estações da CPTM' }
+			],
+			fonte: 'TPCL, 2019'
+		}"></Imagem>
+		<Imagem :dados="{
+			tipo: 'mapa',
+			url: imgSrc('arquivos/parque-minhocao/img/mapas/fig11.jpg'),
+			titulo: 'Relevo e hidrografia',
+			legenda: [
+				{ linha: true, borda: '#333', espessura: '3', descricao: 'Minhocão - Elevado Pres. João Goulart' },
+				{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_3.jpg'), descricao: 'Linha férrea' },
+				{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_1.jpg'), descricao: 'Estações do Metrô' },
+				{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_2.jpg'), descricao: 'Estações da CPTM' }
+			],
+			fonte: 'Deinfo, 2014'
+		}"></Imagem>
+		<Imagem :dados="{
+			tipo: 'mapa',
+			url: imgSrc('arquivos/parque-minhocao/img/mapas/fig12.jpg'),
+			titulo: 'Áreas verdes e arborização',
+			legenda: [
+				{ fundo: '#3c7e32', descricao: 'Parques Municipais' },
+				{ fundo: '#c0ea56', descricao: 'Parques Estaduais' },
+				{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig12_1.jpg'), descricao: 'Arborização urbana' },
+				{ fundo: '#58a48e', descricao: 'Canteiros viários' },
+				{ fundo: '#a5d48b', descricao: 'Praças' },
+				{ linha: true, borda: '#333', espessura: '3', descricao: 'Minhocão - Elevado Pres. João Goulart' },
+				{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_3.jpg'), descricao: 'Linha férrea' },
+				{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_1.jpg'), descricao: 'Estações do Metrô' },
+				{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_2.jpg'), descricao: 'Estações da CPTM' }
+			],
+			fonte: 'Deinfo, 2014'
+		}"></Imagem>
 		<Galeria :gallery_attrs="galeria01"></Galeria>
 		<Galeria :gallery_attrs="galeria02"></Galeria>
 		<Galeria :gallery_attrs="galeria03"></Galeria>
@@ -96,6 +281,7 @@ export default {
 				caracteristicas: [ 'Unidade de apoio e depósito de mobiliário portátil', 'Concentra informações sobre o projeto', 'Promove a zeladoria do espaço', 'Proporciona a interface com usuários' ]
 			}],
 			galeria01: {
+				galleryTitle: 'Fotografias de imóveis no Setor 007, Quadra 020',
 				width: 623,
 				height: 468,
 				images: [{
@@ -113,6 +299,7 @@ export default {
 				}]
 			},
 			galeria02: {
+				galleryTitle: 'Fotografias de imóveis no Setor 007, Quadra 041',
 				width: 623,
 				height: 468,
 				images: [{
@@ -130,6 +317,7 @@ export default {
 				}]
 			},
 			galeria03: {
+				galleryTitle: 'Fotografias de imóveis no Setor 007, Quadra 093',
 				width: 623,
 				height: 468,
 				images: [{
@@ -147,6 +335,7 @@ export default {
 				}]
 			},
 			galeria04: {
+				galleryTitle: 'Fotografias de imóveis no Setor 007, Quadra 094',
 				width: 623,
 				height: 468,
 				images: [{
@@ -164,6 +353,7 @@ export default {
 				}]
 			},
 			galeria05: {
+				galleryTitle: 'Fotografias de imóveis no Setor 007, Quadra 095',
 				width: 623,
 				height: 468,
 				images: [{

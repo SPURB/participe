@@ -1353,13 +1353,13 @@
 				}]
 			}"></AntesDepois>
 			<h4>EIXOS DE ORDENAMENTO DA PAISAGEM 4</h4>
-			<AntesDepois :dados="{
+			<AntesDepois class="errata" id-erro="15" :dados="{
 				caption: 'Parâmetros do Eixo de Ordenamento da Paisagem 4',
 				largura: '1561',
 				altura: '816',
 				fonte:'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019',
 				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/eixo-ordena-paisa-4_antes.jpg'),
-				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/eixo-ordena-paisa-4_depois.jpg'),
+				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/eixo-ordena-paisa-4_depois_2019-05-15.jpg'),
 				pictogramas: [{
 					url: imgSrc('arquivos/setor-central-2/antes-depois/eixo-ordena-paisa-4_1.png'),
 					legenda: 'C.A. 4'
@@ -1382,7 +1382,7 @@
 				altura: '816',
 				fonte:'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019',
 				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf_antes.jpg'),
-				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf_depois_2019-05-14.jpg'),
+				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf_depois.jpg'),
 				pictogramas: [{
 					url: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf_1.png'),
 					legenda: 'C.A. 4'
@@ -1396,10 +1396,10 @@
 					url: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf_4.png'),
 					legenda: 'Recuos: doação de calçada conforme quadro de parâmetros'
 				}, {
-					url: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf_4.png'),
+					url: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf_5.png'),
 					legenda: 'Fachada ativa obrigatória'
 				}, {
-					url: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf_4.png'),
+					url: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf_6.png'),
 					legenda: 'Lote mínimo: Quadro de parâmetros'
 				}]
 			}"></AntesDepois>
@@ -1460,7 +1460,7 @@
 			<p>Ambos os projetos - o PIU do Setor Central da escala do planejamento e o PIU do Parque Minhocão da escala da intervenção urbanística - estão integrados para gerar o máximo de eficiência administrativa na gestão da cidade, tem em mira o desenvolvimento urbano harmonioso e consequente para a região central de São Paulo.</p>
 
 			<h4>EIXOS DE TRANSFORMAÇÃO - PARQUE MINHOCÃO</h4>
-			<AntesDepois :dados="{
+			<AntesDepois class="errata" id-erro="14" :dados="{
 				caption: 'Parâmetros dos Eixos de Transformação Elevado Pres. João Goulart',
 				largura: '1561',
 				altura: '816',

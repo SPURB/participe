@@ -192,6 +192,734 @@
 			],
 			fonte: 'Deinfo, 2014'
 		}"></Imagem>
+
+		<!-- branch minhocao-TEMP -->
+
+		<!-- Figura 21 -->
+		<Imagem :dados="{
+			tipo:'default',
+			url: src('arquivos/parque-minhocao/img/fig21.gif'),
+			caption: ' Mapa ilustrativo dos fluxos veiculares no nível da rua',
+			fonte: 'CET'
+		}"></Imagem>
+		<!--/ Figura 21 -->
+
+		<!-- Figura 221 -->
+		<Imagem :dados="{
+			tipo:'default',
+			url: src('arquivos/parque-minhocao/img/fig22.gif'),
+			caption: 'Mapa ilustrativo dos fluxos veiculares no nível da via elevada',
+			fonte: 'CET'
+		}"></Imagem>
+		<!--/ Figura 22 -->
+
+		<!-- Figura 23 -->
+		<Imagem :dados="{
+			tipo:'default',
+			url: src('arquivos/parque-minhocao/img/fig23.gif'),
+			caption: 'Mapa ilustrativo do carregamento de ônibus. Destaque para o Corredor da Av. São João',
+			fonte: 'CET /Elaboração: SP-Urbanismo'
+		}"></Imagem>
+		<!--/ Figura 23 -->
+
+		<!-- Figura 24 -->
+		<Imagem :dados="{
+			tipo:'default',
+			url: src('arquivos/parque-minhocao/img/fig24.jpg'),
+			caption: 'Mapa ilustrativo dos pontos de concentração os fluxos de pedestres',
+			fonte: 'CET /Elaboração: SP-Urbanismo'
+		}"></Imagem>
+		<!--/ Figura 24 -->
+
+		<!-- Figura 25 -->
+		<Imagem :dados="{
+			tipo:'coluna',
+			url: src('arquivos/parque-minhocao/img/fig25.gif'),
+			caption: 'Rede cicloviária e bicicletários, com destaque (azul) para aquelas diretamente articuladas ao Elevado',
+			fonte: 'CET /Elaboração: SP-Urbanismo'
+		}"></Imagem>
+		<!--/ Figura 25 -->
+
+		<!-- Figura 26 -->
+		<Imagem :dados="{
+			tipo:'coluna',
+			url: src('arquivos/parque-minhocao/img/fig26.gif'),
+			caption: ' Níveis de poluição atmosférica medidos ao longo de uma semana',
+			fonte: 'Laboratório de Poluição Atmosférica Experimental da FMUSP'
+		}"></Imagem>
+		<!--/ Figura 26 -->
+
+		<!-- Figura 27 -->
+		<Imagem :dados="{
+			tipo:'coluna',
+			url: src('arquivos/parque-minhocao/img/fig27.gif'),
+			caption: ' Níveis de ruído medidos ao longo de uma semana',
+			fonte: 'Laboratório de Poluição Atmosférica Experimental da FMUSP'
+		}"></Imagem>
+		<!--/ Figura 27 -->
+
+		<!-- Figura 28 -->
+		<Imagem :dados="{
+			tipo:'coluna',
+			url: src('arquivos/parque-minhocao/img/fig28.jpg'),
+			caption: ' Ilustração do projeto de José Alves e Juliana Corradini',
+		}"></Imagem>
+		<!--/ Figura 28 -->
+
+		<!-- Figura 29 -->
+		<Imagem :dados="{
+			tipo:'coluna',
+			url: src('arquivos/parque-minhocao/img/fig29.jpg'),
+			caption: ' Ilustração do projeto de José Alves e Juliana Corradini',
+		}"></Imagem>
+		<!--/ Figura 29 -->
+
+		<!-- Figura 30 -->
+		<Imagem :dados="{
+			tipo:'coluna',
+			url: src('arquivos/parque-minhocao/img/fig30.jpg'),
+			caption: 'Ilustração da proposta da Triptyque em parceria com o paisagista Guil Blanche',
+		}"></Imagem>
+		<!--/ Figura 30 -->
+
+		<!-- Figura 31 -->
+		<Imagem :dados="{
+			tipo:'coluna',
+			url: src('arquivos/parque-minhocao/img/fig31.jpg'),
+			caption: 'Ilustração da proposta da Triptyque em parceria com o paisagista Guil Blanche',
+		}"></Imagem>
+		<!--/ Figura 31 -->
+
+		<!-- Figura 32 -->
+		<Imagem :dados="{
+			tipo:'coluna',
+			url: src('arquivos/parque-minhocao/img/fig32.jpg'),
+			caption: 'Ilustração da proposta do Escritório Jayme Lerner',
+		}"></Imagem>
+		<!--/ Figura 32 -->
+
+		<!-- Figura 33 -->
+		<Imagem :dados="{
+			tipo:'coluna',
+			url: src('arquivos/parque-minhocao/img/fig33.jpg'),
+			caption: 'Ilustração da proposta do Escritório Jayme Lerner',
+		}"></Imagem>
+		<!--/ Figura 33 -->
+
+		<!-- Figura 34 -->
+		<Imagem :dados="{
+			tipo:'destaque',
+			url: src('arquivos/parque-minhocao/img/fig34.jpg'),
+			caption: 'Ilustração da proposta do Escritório Jayme Lerner',
+		}"></Imagem>
+		<!--/ Figura 34 -->
+
+		<!-- Figura 35 -->
+		<Imagem :dados="{
+			tipo:'coluna',
+			url: src('arquivos/parque-minhocao/img/fig35.jpg'),
+			caption: 'Ilustração da proposta do Escritório Jayme Lerner',
+		}"></Imagem>
+		<!--/ Figura 35 -->
+
+		<!-- Figura 36 -->
+		<Imagem :dados="{
+			tipo:'default',
+			url: src('arquivos/parque-minhocao/img/fig36.jpg'),
+			caption: ' Fachada do Edifício Angélica (1927) Arq. Júlio de Abreu Jr. ',
+			fonte:' XAVIER,1983.'
+		}"></Imagem>
+		<!--/ Figura 36 -->
+
+		<!-- Figura 37 -->
+		<Imagem :dados="{
+			tipo:'default',
+			url: src('arquivos/parque-minhocao/img/fig37.jpg'),
+			caption: 'Fachada do Ufa-Palácio (1936)',
+			fonte:'http://salasdecinemasp2.blogspot.com.br'
+		}"></Imagem>
+		<!--/ Figura 37 -->
+
+		<!-- Figura 38 -->
+		<Imagem :dados="{
+			tipo:'default',
+			url: src('arquivos/parque-minhocao/img/fig38.jpg'),
+			caption: ' Fachada do Prédio Lívia Maria na Av. São João. Características art-déco (1939)',
+			fonte:'Acrópole.'
+		}"></Imagem>
+		<!--/ Figura 38 -->
+
+		<!-- Figura 40 -->
+		<Imagem :dados="{
+			tipo:'default',
+			url: src('arquivos/parque-minhocao/img/fig39.jpg'),
+			caption: 'Fachada do Edifício Trussardi (1941)',
+			fonte:'Anelli, 2001.'
+		}"></Imagem>
+		<!--/ Figura 39 -->
+
+		<!-- Figura 40 -->
+		<Imagem :dados="{
+			tipo:'default',
+			url: src('arquivos/parque-minhocao/img/fig40.jpg'),
+			caption: 'Edifício Racy (1950)',
+			fonte:'Anelli, 2001.'
+		}"></Imagem>
+		<!--/ Figura 40 -->
+
+		<!-- Figura 41 -->
+		<Imagem :dados="{
+			tipo:'default',
+			url: src('arquivos/parque-minhocao/img/fig41.jpg'),
+			caption: 'Edifício Racy (1950)',
+			fonte: 'Acervo Estado.'
+		}"></Imagem>
+		<!--/ Figura 41 -->
+
+		<!-- Figura 42 -->
+		<Imagem :dados="{
+			tipo:'coluna',
+			url: src('arquivos/parque-minhocao/img/fig42.jpg'),
+			caption: 'Avenida São João, anos 1930. Claude Lévi-Strauss',
+			fonte: 'Caminhos do Elevado – Memória e Projetos.'
+		}"></Imagem>
+		<!--/ Figura 42 -->
+
+		<!-- Figura 43 -->
+		<Imagem :dados="{
+			tipo:'coluna',
+			url: src('arquivos/parque-minhocao/img/fig43.jpg'),
+			caption: 'Avenida São João, anos 1930. J.B. Duarte',
+			fonte: 'Caminhos do Elevado – Memória e Projetos.'
+		}"></Imagem>
+		<!--/ Figura 43 -->
+
+		<!-- Figura 44 -->
+		<Imagem :dados="{
+			tipo:'coluna',
+			url: src('arquivos/parque-minhocao/img/fig44.jpg'),
+			caption: 'Perspectiva do projeto original, 1969 (trecho sobre o Largo do Arouche)',
+			fonte: 'BRANCO, 2006 apud ASSUNÇÃO, 2016 (Originais em Arquivo da SIURB).'
+		}"></Imagem>
+		<!--/ Figura 44 -->
+
+		<!-- Figura 45 -->
+		<Imagem :dados="{
+			tipo:'coluna',
+			url: src('arquivos/parque-minhocao/img/fig45.jpg'),
+			caption: ' Perspectiva do projeto original',
+			fonte: ' BRANCO, 2006 apud ASSUNÇÃO, 2016 (Originais em Arquivo da SIURB).'
+		}"></Imagem>
+		<!--/ Figura 45 -->
+
+		<!-- Figura 46 -->
+		<Imagem :dados="{
+			tipo:'coluna',
+			url: src('arquivos/parque-minhocao/img/fig46.jpg'),
+			caption: 'Perspectiva do projeto original, 1969',
+			fonte: ' BRANCO, 2006 apud ASSUNÇÃO, 2016 (Originais em Arquivo da SIURB).'
+		}"></Imagem>
+		<!--/ Figura 46 -->
+
+		<!-- Figura 47 -->
+		<Imagem :dados="{
+			tipo:'coluna',
+			url: src('arquivos/parque-minhocao/img/fig47.jpg'),
+			caption: 'Perspectiva do projeto original, 1969',
+			fonte: ' BRANCO, 2006 apud ASSUNÇÃO, 2016 (Originais em Arquivo da SIURB).'
+		}"></Imagem>
+		<!--/ Figura 47 -->
+
+		<!-- Figura 48 -->
+		<Imagem :dados="{
+			tipo:'default',
+			url: src('arquivos/parque-minhocao/img/fig48.jpg'),
+			caption: 'Arquibancada em trecho do High Line',
+			fonte: ' Vista aérea de trecho do High Line implantado'
+		}"></Imagem>
+		<!--/ Figura 48 -->
+
+		<!-- Figura 49 -->
+		<Imagem :dados="{
+			tipo:'default',
+			url: src('arquivos/parque-minhocao/img/fig49.jpg'),
+			caption: 'Arquibancada em trecho do High Line',
+			fonte: 'Imagem de Rowa Lee.'
+		}"></Imagem>
+		<!--/ Figura 49 -->
+
+		<!-- Figura 50 -->
+		<Imagem :dados="{
+			tipo:'default',
+			url: src('arquivos/parque-minhocao/img/fig50.jpg'),
+			caption: 'High Line Park. Fonte: Field Operations',
+			fonte: 'Imagem de Rowa Lee.'
+		}"></Imagem>
+		<!--/ Figura 50 -->
+
+		<!-- Figura 51 -->
+		<Imagem :dados="{
+			tipo:'default',
+			url: src('arquivos/parque-minhocao/img/fig51.jpg'),
+			caption: ' Média de renda em 2013 do entorno do High Line Park. Fonte: Field Operations',
+		}"></Imagem>
+		<!--/ Figura 51 -->
+
+		<!-- Figura 52 -->
+		<Imagem :dados="{
+			tipo:'default',
+			url: src('arquivos/parque-minhocao/img/fig52.jpg'),
+			caption: 'Promenade Plantée',
+		}"></Imagem>
+		<!--/ Figura 52 -->
+
+		<!-- Figura 53 -->
+		<Imagem :dados="{
+			tipo:'default',
+			url: src('arquivos/parque-minhocao/img/fig53.jpg'),
+			caption: 'Promenade Plantée',
+		}"></Imagem>
+		<!--/ Figura 53 -->
+		
+		<!-- Figura 54 -->
+		<Imagem :dados="{
+			tipo:'default',
+			url: src('arquivos/parque-minhocao/img/fig54.jpg'),
+			caption: 'Promenade Plantée',
+		}"></Imagem>
+		<!--/ Figura 54 -->
+		
+		<!-- Figura 55 -->
+		<Imagem :dados="{
+			tipo:'default',
+			url: src('arquivos/parque-minhocao/img/fig55.jpg'),
+			caption: 'Renaturalização do Riacho Cheong Gye Cheon',
+		}"></Imagem>
+		<!--/ Figura 55 -->
+
+		<!-- Figura 56 -->
+		<Imagem :dados="{
+			tipo:'default',
+			url: src('arquivos/parque-minhocao/img/fig56.jpg'),
+			caption: 'The Bentway e seu entorno',
+			fonte: 'Waterfront Toronto'
+		}"></Imagem>
+		<!--/ Figura 56 -->
+
+		<!-- Figura 57 -->
+		<Imagem :dados="{
+			tipo:'default',
+			url: src('arquivos/parque-minhocao/img/fig57.jpg'),
+			caption: 'The Bentway',
+			fonte: 'DailyHive.'
+		}"></Imagem>
+		<!--/ Figura 57 -->
+
+		<!-- Figura 58 -->
+		<Imagem :dados="{
+			tipo:'default',
+			url: src('arquivos/parque-minhocao/img/fig58.jpg'),
+			caption: 'The Bentway e a Gardiner',
+			fonte: 'Canadian Architect.'
+		}"></Imagem>
+		<!--/ Figura 58 -->
+
+		<!-- Tabela 59 -->
+		<!-- <div class="Tabela estreita">
+			<table>
+				<caption style="border:0">Receitas detalhadas</caption>
+				<thead>
+					<tr>
+						<th>Category</th>
+						<th colspan="2">Phase 1</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class='destaque'><span> </span></td>
+						<td class='destaque'><span>Low</span></td>
+						<td class='destaque'><span>High</span></td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="fonte">
+				Fonte <b>HR&A ADVISORS</b>
+			</div>
+		</div> -->
+		<!--/ Tabela 59 -->
+
+		<!-- Tabela 60 -->
+		<!-- <div class='Tabela estreita'>
+			<table>
+				<caption style="border:0">Custos e receitas</caption>
+				<thead>
+					<tr>
+						<th>Category</th>
+						<th colspan="2">Phase 1</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td></td>
+						<td class='destaque'><span>Low</span></td>
+						<td class='destaque'><span>High</span></td>
+					</tr>
+					<tr>
+						<td>Routine O&M</td>
+						<td>$ 540 K</td>
+						<td>$ $ 720 K</td>
+					</tr>
+					<tr>
+						<td>Staff & Administration</td>
+						<td>$ 1.0 M</td>
+						<td>$ 1.2 M</td>
+					</tr>
+					<tr>
+						<td>Capital Reserve</td>
+						<td>$ 200 K</td>
+						<td>$ 550 K</td>
+					</tr>
+					<tr>
+						<td>Fundraising</td>
+						<td>$ 60K</td>
+						<td>$ 180K</td>
+					</tr>
+					<tr>
+						<td>Ice Skating Trail</td>
+						<td>$ 130 K</td>
+						<td>$ 430 K </td>
+					</tr>
+					<tr>
+						<td>Foundational Programming</td>
+						<td>$ 1.2 M</td>
+						<td>$ 1.4 M</td>
+					</tr>
+					<tr>
+						<td class='destaque'><span>Estimated Annual Costs</span></td>
+						<td class='destaque'><span>$ 930 K</span></td>
+						<td class='destaque'><span>$ 1.7 M</span></td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="fonte">
+				Fonte <b>HR&A ADVISORS</b>
+			</div>
+		</div> -->
+		<!--/ Tabela 60 -->
+
+		<!-- Tabela 61 -->
+		<!-- <div class='Tabela estreita'>
+			<table><caption style="border:0">Custos e receitas</caption>
+				<thead>
+					<tr>
+						<th>Category</th>
+						<th colspan="2">Phase 1</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td></td>
+						<td class='destaque'><span>Low</span></td>
+						<td class='destaque'><span>High</span></td>
+					</tr>
+					<tr>
+						<td>Estimated Annual Costs</td>
+						<td>$ 3.2 M</td>
+						<td>$ 4.5 M</td>
+					</tr>
+					<tr>
+						<td>Estimated Annual Revenues</td>
+						<td>$ 930 K</td>
+						<td>$ 1.7 M</td>
+					</tr>
+					<tr>
+						<td class='destaque'><span>Estimated Annual Gap</span></td>
+						<td class='destaque'><span>$ 2.3 M</span></td>
+						<td class='destaque'><span>$ 2.8 M</span></td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="fonte">
+				Fonte <b>HR&A ADVISORS</b>
+			</div>
+		</div> -->
+		<!--/ Tabela 61 -->
+
+		<!-- Figura 62 -->
+		<Imagem :dados="{
+			tipo:'coluna',
+			url: src('arquivos/parque-minhocao/img/fig62.jpg'),
+			caption: 'Bloomingdale Line abandonada',
+			fonte: ' Untapped Cities.'
+		}"></Imagem>
+		<!--/ Figura 62 -->
+
+		<!-- Figura 63 -->
+		<Imagem :dados="{
+			tipo:'coluna',
+			url: src('arquivos/parque-minhocao/img/fig63.jpg'),
+			caption: 'Mapa do The 606',
+			fonte: ' The 606.'
+		}"></Imagem>
+		<!--/ Figura 63 -->
+
+
+		<!-- Figura 64 -->
+		<!-- <Imagem :dados="{
+			tipo:'coluna',
+			url: src('arquivos/parque-minhocao/img/fig64.jpg'),
+			caption: 'Tendência dos valores de novos imóveis entre 2000 e 2016',
+			fonte: ' DePaul University.'
+		}"></Imagem> -->
+		<!--/ Figura 64 -->
+
+		<!-- Figura 65 -->
+		<Imagem :dados="{
+			tipo:'default',
+			url: src('arquivos/parque-minhocao/img/fig65.jpg'),
+			caption: 'The 606',
+			fonte: 'Curbed Chicago'
+		}"></Imagem>
+		<!--/ Figura 65 -->
+
+		<!-- Figura 66 -->
+		<Imagem :dados="{
+			tipo:'default',
+			url: src('arquivos/parque-minhocao/img/fig66.jpg'),
+			caption: 'Elevado Estação Seoul antes das intervenções'
+		}"></Imagem>
+		<!--/ Figura 66 -->
+
+		<!-- Figura 67 -->
+		<Imagem :dados="{
+			tipo:'default',
+			url: src('arquivos/parque-minhocao/img/fig67.jpg'),
+			caption: 'Projeto do Seoullo 7017'
+		}"></Imagem>
+		<!--/ Figura 67 -->
+
+		<!-- Figura 68 -->
+		<Imagem :dados="{
+			tipo:'default',
+			url: src('arquivos/parque-minhocao/img/fig68.jpg'),
+			caption: 'Seoullo 7017. Planejamento da reorganização do trânsito'
+		}"></Imagem>
+		<!--/ Figura 68 -->
+
+
+		<!-- Figura 69 -->
+		<Imagem :dados="{
+			tipo:'default',
+			url: src('arquivos/parque-minhocao/img/fig69.jpg'),
+			caption: 'Seoullo 7017'
+		}"></Imagem>
+		<!--/ Figura 69 -->
+
+		<!-- Figura 70 -->
+		<Imagem :dados="{
+			tipo:'default',
+			url: src('arquivos/parque-minhocao/img/fig70.jpg'),
+			caption: 'Seoullo 7017'
+		}"></Imagem>
+		<!--/ Figura 70 -->
+
+		<!-- Galeria 72, 71 -->
+		<Galeria :gallery_attrs="galeria71_72"></Galeria>
+		<!-- Galeria/ 72, 71 -->
+
+		<!-- Figura 73 -->
+		<Imagem :dados="{
+			tipo:'coluna',
+			url: src('arquivos/parque-minhocao/img/fig73.gif'),
+			caption: 'Simulação de gradil de proteção'
+		}"></Imagem>
+		<!--/ Figura 73 -->
+
+
+		<!-- Figura 74 -->
+		<Imagem :dados="{
+			tipo:'default',
+			url: src('arquivos/parque-minhocao/img/fig74.gif'),
+			caption: 'Simulação de gradil de proteção'
+		}"></Imagem>
+		<!--/ Figura 74 -->
+
+		<!-- Figura 75 -->
+		<Imagem :dados="{
+			tipo:'default',
+			url: src('arquivos/parque-minhocao/img/fig75.jpg'),
+			caption: 'Volumes veiculares'
+		}"></Imagem>
+		<!--/ Figura 75 -->
+
+		<!-- Figura 76 -->
+		<Imagem :dados="{
+			tipo: 'mapa',
+			url: src('arquivos/parque-minhocao/img/fig76.gif'),
+			titulo: ' O Select Link representa a distribuição das viagens do Elevado na cidade',
+			legenda: [
+				{ fundo: '#00ffff', espessura: '0', pontilhado: false, descricao: 'Viagens sobre o Elevado' },
+				{ fundo: 'red', espessura: '0', pontilhado: false, descricao: 'Viagens embaixo do Elevado' }
+			]
+		}"></Imagem>
+		<!--/ Figura 76 -->
+
+		<!-- Figura 77 -->
+		<Imagem :dados="{
+			tipo: 'mapa',
+			url: src('arquivos/parque-minhocao/img/fig77.gif'),
+			titulo: 'Comparação da distribuição de viagens com e sem Elevado',
+			legenda: [
+				{ fundo: 'blue', espessura: '0', pontilhado: false, descricao: 'Viagens sobre o Elevado' },
+				{ fundo: 'red', espessura: '0', pontilhado: false, descricao: 'Viagens embaixo do Elevado' }
+			]
+		}"></Imagem>
+		<!--/ Figura 77 -->
+
+		<!-- Figura 78 -->
+		<Imagem :dados="{
+			tipo: 'coluna',
+			url: src('arquivos/parque-minhocao/img/fig78.jpg'),
+			caption: 'Área de Influência resultante da desativação do primeiro trecho do Elevado'
+		}"></Imagem>
+		<!--/ Figura 78 -->
+
+		<!-- Figura 79 -->
+		<Imagem :dados="{
+			tipo: 'coluna',
+			url: src('arquivos/parque-minhocao/img/fig79.jpg'),
+			caption: 'Perímetro da área do Minianel Viário',
+			fonte: 'http://cetsp.com.br/consultas/rodizio-municipal/como-funciona.aspx'
+		}"></Imagem>
+		<!--/ Figura 79 -->
+
+		<!-- Tabela 80 -->
+		<Tabela :dados="tabela_80"></Tabela>
+		<!--/ Tabela 80 -->
+
+		<!-- Tabela 80a -->
+		<Tabela :dados="tabela_80a"></Tabela>
+		<!--/ Tabela 80a -->
+
+		<!-- Figura 81 -->
+		<Imagem :dados="{
+			tipo: 'coluna',
+			url: src('arquivos/parque-minhocao/img/fig81.jpg'),
+			caption: 'Mapa da situação proposta para a Fase Praça Roosevelt – Largo do Arouche',
+			fonte: ' São Paulo Urbanismo – 2019.'
+		}"></Imagem>
+		<!--/ Figura 81 -->
+
+		<!-- Figura 82 -->
+		<Imagem :dados="{
+			tipo: 'coluna',
+			url: src('arquivos/parque-minhocao/img/fig82.jpg'),
+			caption: 'Situação atual da Praça Marechal Deodoro. Rampa de acesso ao Elevado',
+			fonte: ' São Paulo Urbanismo – 2019.'
+		}"></Imagem>
+		<!--/ Figura 82 -->
+
+		<!-- Figura 83 -->
+		<Imagem :dados="{
+			tipo: 'coluna',
+			url: src('arquivos/parque-minhocao/img/fig83.jpg'),
+			caption: 'Situação atual da Praça Marechal Deodoro. Baixio da rampa de acesso ao Elevado',
+			fonte: ' São Paulo Urbanismo – 2019.'
+		}"></Imagem>
+		<!--/ Figura 83 -->
+
+		<!-- Figura 84 -->
+		<Imagem :dados="{
+			tipo: 'mapa',
+			url: src('arquivos/parque-minhocao/img/fig84.jpg'),
+			titulo: 'Recuperação da Praça Marechal Deodoro',
+			fonte: ' São Paulo Urbanismo – 2019.'
+		}"></Imagem>
+		<!--/ Figura 84 -->
+
+		<!-- Figura 85 -->
+		<Imagem :dados="{
+			tipo: 'mapa',
+			url: src('arquivos/parque-minhocao/img/fig85.jpg'),
+			titulo: 'Mapa da situação proposta para a Fase Praça Roosevelt – Largo do Arouche',
+			fonte: ' São Paulo Urbanismo – 2019.'
+		}"></Imagem>
+		<!--/ Figura 85 -->
+
+		<!-- Figura 90 -->
+		<Imagem :dados="{
+			tipo: 'mapa',
+			url: src('arquivos/parque-minhocao/img/fig90.jpg'),
+			titulo: 'Abordagens segundo raio de 2,5km entre a Av São João, Rua Amaral Gurgel e Elevado Costa e Silva',
+		}"></Imagem>
+		<!--/ Figura 90 -->
+
+		<!-- Figura 91 -->
+		<Imagem :dados="{
+			tipo: 'mapa',
+			url: src('arquivos/parque-minhocao/img/fig91.png'),
+			titulo: 'Total de abordagens na Operação Baixa Temperatura, segundo raio de 2,5km entre Av. São João, Rua Amaral Gurgel e Elevado João Goulart do Município de São Paulo, total de maio à outrubro de 2018',
+			fonte: 'SMADS | Secretaria Municipal de Assistência e Desenvolvimento Social (05 a 10/2018)'
+		}"></Imagem>
+		<!--/ Figura 91 -->
+
+		<!-- Figura 97 -->
+		<Imagem :dados="{
+			tipo: 'mapa',
+			url: src('arquivos/parque-minhocao/img/fig97.jpg'),
+			titulo: 'Mapa de quadras e lotes gravados como ZEIS-3 internas ao perímetro da ZEM',
+			fonte: 'SEHAB/DTS Centro. Observação: Números reais do lado externo a quadra.',
+			legenda: [
+				{ fundo: '#fffe00', espessura: '3', pontilhado: false, descricao: 'ZEIS 3 | Zona Especial de Interesse Social 3' },
+				{ borda: '#000', espessura: '1', pontilhado: false, descricao: 'ZEM | Zona de Estruturação Metropolitana' },
+				{ borda: '#ff0077', espessura: '3', pontilhado: false, descricao: 'Setor 007 Quadra 020' },
+				{ borda: '#a006d8', espessura: '3', pontilhado: false, descricao: 'Setor 007 Quadra 093' },
+				{ borda: '#ff7c0d', espessura: '3', pontilhado: false, descricao: 'Setor 007 Quadra 094' },
+				{ borda: '#6adb0d', espessura: '3', pontilhado: false, descricao: 'Setor 007 Quadra 095' },
+				{ borda: '#057df7', espessura: '3', pontilhado: false, descricao: 'Setor 007 Quadra 041' }
+			]
+
+		}"></Imagem>
+		<!-- Figura 97 -->
+
+		<!-- Figura 99 -->
+		<Imagem :dados="{
+			tipo: 'mapa',
+			url: src('arquivos/parque-minhocao/img/fig99.jpg'),
+			titulo: 'Mapa de cortiços e ocupações sobre os perímetros das zonas (lei 16.402/16), destacado o perímetro da ZEM',
+			fonte: 'SEHAB/DTS Centro',
+			legenda: [
+				{ borda: '#fd0b07', espessura: '3', pontilhado: true, descricao: 'Perímetro da Zona de Estruturação Metropolitana (ZEM)' },
+				{ borda: '#000', espessura: '1', pontilhado: false, descricao: 'Cortiços e ocupações' }
+			]
+		}"></Imagem>
+		<!-- Figura 99 -->
+
+		<!-- Figuras 100-103: furtos e roubos na região setembro-outubro/2018 -->
+		<Galeria :gallery_attrs="galeria100_103"></Galeria>
+		<!-- /Figuras 100-103: furtos e roubos na região setembro-outubro/2018 -->
+
+		<!-- Figuras 104, 105 e 106-->
+		<Imagem :dados="{
+			tipo: 'default',
+			url: src('arquivos/parque-minhocao/img/fig104.jpg'),
+			caption: 'Programação infantil e mobiliário urbano'
+		}"></Imagem>
+
+		<Imagem :dados="{
+			tipo: 'default',
+			url: src('arquivos/parque-minhocao/img/fig105.jpg'),
+			caption: 'Teatro nas janelas dos edifícios (Grupo Esparrama)'
+		}"></Imagem>
+
+		<Imagem :dados="{
+			tipo: 'default',
+			url: src('arquivos/parque-minhocao/img/fig106.jpg'),
+			caption: 'Teatro nas janelas dos edifícios (Grupo Esparrama)'
+		}"></Imagem>
+		<!-- / figuras 104, 105 e 106-->
+		<!--/ branch minhocao-TEMP -->
+
 		<Galeria :gallery_attrs="galeria01"></Galeria>
 		<Galeria :gallery_attrs="galeria02"></Galeria>
 		<Galeria :gallery_attrs="galeria03"></Galeria>
@@ -369,6 +1097,133 @@ export default {
 					icon: false,
 					id: 2
 				}]
+			},
+			// início parque-minhocao-temp
+			galeria71_72: {
+				width: 992,
+				height: 482,
+				images: [
+					{
+						url: this.src('arquivos/parque-minhocao/galerias/71_72/fig71.jpg'),
+						state: true,
+						legenda: 'Simulação de escada de acesso (parte de baixo)',
+						icon: false,
+						id: 1
+					},
+					{
+						url: this.src('arquivos/parque-minhocao/galerias/71_72/fig72.jpg'),
+						state: false,
+						legenda: 'Simulação de escada de acesso (parte de cima)',
+						icon: false,
+						id: 2
+					}
+				]
+			},
+
+			tabela_80: {
+				titulo: 'Redução de velocidade média (KM/H) - Exemplo do pico da manhã',
+				colunas: [
+					{ titulo: 'Observado' },
+					{ titulo: 'Atual' },
+					{ titulo: 'Fechamento' },
+					{ titulo: 'Com ações de mitigação' }
+				],
+				linhas: [
+					[
+						[ { data: 'MUNICÍPIO' } ],
+						[ { data: '21,0 km/h' } ],
+						[ { data: '20,9 km/h (-0,16%)' } ],
+						[ { data: '20,9 km/h (-0,06%)' } ]
+					],
+					[
+						[ { data: 'CENTRO EXPANDIDO' } ],
+						[ { data: '26,8 km/h' } ],
+						[ { data: '26,6 km/h (-0,48%)' } ],
+						[ { data: '26,7 km/h (-0,28%)' } ]
+					],
+					[
+						[ { data: 'ÁREA DE INFLUÊNCIA' } ],
+						[ { data: '22,7 km/h' } ],
+						[ { data: '20,8 km/h (-8,01%)' } ],
+						[ { data: '21,1 km/h (-6,89%)' } ]
+					],
+					[
+						[ { data: 'RUA AMARAL GURGEL' } ],
+						[ { data: '42,8 km/h' } ],
+						[ { data: '27,3 km/h (-36,1%)' } ],
+						[ { data: '31,7 km/h (-25,7%)' } ]
+					],
+					[
+						[ { data: 'AV. SÃO JOÃO' } ],
+						[ { data: '31,4 km/h' } ],
+						[ { data: '29,1 km/h (-7,05%)' } ],
+						[ { data: '28,3 km/h (-9,71%)' } ]
+					]
+				]
+			},
+
+			tabela_80a: {
+				titulo: 'Aumento do tempo médio de viagem (minutos) - Exemplo do pico da manhã',
+				colunas: [
+					{ titulo: 'Observado' },
+					{ titulo: 'Atual' },
+					{ titulo: 'Fechamento' },
+					{ titulo: 'Com ações de mitigação' }
+				],
+				linhas: [
+					[
+						[ { data: 'MUNICÍPIO' } ],
+						[ { data: '25,69 min' } ],
+						[ { data: '25,75 min (+0,23%)' } ],
+						[ { data: '25,8 min' } ]
+					],
+					[
+						[ { data: 'CENTRO EXPANDIDO' } ],
+						[ { data: '15,32 min' } ],
+						[ { data: '15,41 min (+0,59%' } ],
+						[ { data: '15, 54' } ]
+					],
+					[
+						[ { data: 'ÁREA DE INFLUÊNCIA' } ],
+						[ { data: '4,72 min' } ],
+						[ { data: '4,83 min (+2,33%)' } ],
+						[ { data: '4,82 min' } ]
+					]
+				]
+			},
+
+			galeria100_103: {
+				width: 821,
+				height: 597,
+				images: [
+					{
+						url: this.src('arquivos/parque-minhocao/galerias/100_103/100.jpg'),
+						state: true,
+						legenda: 'Furtos e roubos na região. Setembro/2018',
+						icon: false,
+						id: 1
+					},
+					{
+						url: this.src('arquivos/parque-minhocao/galerias/100_103/101.jpg'),
+						state: false,
+						legenda: 'Furtos e roubos na região. Outubro/2018',
+						icon: false,
+						id: 2
+					},
+					{
+						url: this.src('arquivos/parque-minhocao/galerias/100_103/102.jpg'),
+						state: false,
+						legenda: 'Furtos e roubos na região. Novembro/2018',
+						icon: false,
+						id: 3
+					}, {
+						url: this.src('arquivos/parque-minhocao/galerias/100_103/103.jpg'),
+						state: false,
+						legenda: 'Furtos e roubos na região. Dezembro/2018',
+						icon: false,
+						id: 4
+					}
+				]
 			}
 		}
 	},

@@ -1,7 +1,7 @@
 <template>
 	<div class="Imagem">
 		<figure :class="dados.tipo">
-			<div class="imgWrap">
+			<div class="imgWrap" :class="{ errata: dados.errata }" :id-erro="dados.id">
 				<img :src="dados.url" :alt="dados.caption" :title="dados.titulo">
 				<a :href="dados.url" target="_blank"><i class="icon-acessar_url icon"></i></a>
 			</div>
@@ -12,9 +12,11 @@
 			<div class="legenda">
 				<h1 v-if="dados.titulo">{{ dados.titulo }}</h1>
 				<ul>
-					<li v-for="(item, index) in dados.legenda" :key=index>
-						<div :style="{ backgroundColor: item.fundo, outlineColor: item.borda, outlineWidth: item.espessura + 'px' }" :class="{ linha: item.linha, pontilhado: item.pontilhado }"><img v-if="item.simbolo" :src="item.simbolo"><span v-if="item.char">{{ item.char }}</span></div> {{ item.descricao }}
-					</li>
+					<template v-for="(item, index) in dados.legenda">
+						<li :class="{ errata: item.errata }" :key=index :id-erro="item.id">
+							<div :style="{ backgroundColor: item.fundo, outlineColor: item.borda, outlineWidth: item.espessura + 'px' }" :class="{ linha: item.linha, pontilhado: item.pontilhado }"><img v-if="item.simbolo" :src="item.simbolo"><span v-if="item.char">{{ item.char }}</span></div> {{ item.descricao }}
+						</li>
+					</template>
 				</ul>
 			</div>
 			<div class="extra">
@@ -83,6 +85,25 @@ export default {
 }
 
 div.Imagem {
+	.errata {
+		position: relative;
+		cursor: pointer;
+		&::after {
+			position: absolute;
+			top: -4px;
+			right: -4px;
+			content: attr(id-erro);
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 1rem;
+			height: 1rem;
+			background-color: $vermelho;
+			color: #FFF;
+			border-radius: 1rem;
+			font-size: 0.75rem;
+		}
+	}
 	figure {
 		margin: 4rem auto;
 		padding: 0 2rem;

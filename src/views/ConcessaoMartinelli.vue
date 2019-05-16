@@ -5,6 +5,17 @@
 		</PageTop>
 
 		<Indice :titulos="titulosLimpo"></Indice>
+		<Apoio>
+			<template slot="item1">
+				<li>
+					<input type="radio" name="tabs" id="item1">
+					<label for="item1">Errata</label>
+					<div class="conteudoTab" style="overflow-y: scroll;">
+						<Errata></Errata>
+					</div>
+				</li>
+			</template>
+		</Apoio>
 
 		<section>
 			<h2 class="titulo" indent="1">Introdução</h2>
@@ -16,14 +27,11 @@
 
 			<p>Finalmente, também podem ser feitas contribuições por meio do protocolo físico da SPUrbanismo localizado no 15º andar do Edifício Martinelli, na esquina da Rua Líbero Badaró com a Avenida São João, de segunda a sexta-feira, das 9h às 17h.</p>
 
-			<p>Todas as manifestações serão recebidas até a data limite de 16/05/2019 e, a partir de então, serão avaliadas e, eventualmente, por decisão da SPUrbanismo, incorporadas no Termo de Referência e estruturação do eventual edital de concessão, com prazos e etapas a serem definidos pela SPUrbanismo.</p>
+			<p class="errata" id-erro="1">Todas as manifestações serão recebidas até a data limite de 31/05/2019 e, a partir de então, serão avaliadas e, eventualmente, por decisão da SPUrbanismo, incorporadas no Termo de Referência e estruturação do eventual edital de concessão, com prazos e etapas a serem definidos pela SPUrbanismo.</p>
 
 			<p>Serão desconsideradas as manifestações fora do escopo do chamamento ou que tenham sido formuladas de forma distinta das premissas e diretrizes do Termo de Referência.</p>
-			<blockquote>
-				<p>Participe!</p>
-				<p>No dia 12/04 (sexta-feira), às 15h00, a SP Urbanismo fará a apresentação da iniciativa, com rodada de perguntas e visitação no espaço objeto deste chamamento, sem prejuízo da realização de outras apresentações e visitas públicas, presenciais ou remotas. As inscrições são limitadas e para participar, é necessária a inscrição por meio do e-mail <a href="mailto:concessaomartinelli@spurbanismo.sp.gov.br?subject=Solicito inscrição no evento do dia 12/04/2019&body=Nome completo: %0D%0ANúmero de identificação: ">concessaomartinelli@spurbanismo.sp.gov.br</a>
-				</p>
-			</blockquote>
+
+			<p class="errata remocao" id-erro="2"></p>
 
 			<Imagem :dados="{
 				tipo: 'default',
@@ -55,6 +63,20 @@
 						<i class="icon-pdf icon"><span>pdf</span></i>
 						<div>ANEXO I</div>
 						<span>3.8 MB</span>
+					</a>
+				</li>
+				<li class="errata" id-erro="3">
+					<a :href="imgSrc('arquivos/concessao-martinelli/OM_ObservatorioMartinelli_Chamamento.pdf')" target="_blank">
+						<i class="icon-pdf icon"><span>pdf</span></i>
+						<div>APRESENTAÇÃO - 2019-04-12</div>
+						<span>5 MB</span>
+					</a>
+				</li>
+				<li class="errata" id-erro="4">
+					<a :href="imgSrc('arquivos/concessao-martinelli/OM_ObservatorioMartinelli_Chamamento.pdf')" target="_blank">
+						<i class="icon-anexos icon"><span>dwg</span></i>
+						<div>DWG OBSERVATÓRIO MARTINELLI</div>
+						<span>899 KB</span>
 					</a>
 				</li>
 			</ul>
@@ -97,6 +119,8 @@
 
 <script>
 import PageTop from '@/components/PageTop'
+import Apoio from '@/components/Apoio'
+import Errata from '@/components/Errata'
 import Indice from '@/components/Indice'
 import Imagem from '@/components/Imagem'
 import CommentsOption from '@/components/CommentsOption'
@@ -120,6 +144,8 @@ export default {
 	},
 	components: {
 		PageTop,
+		Apoio,
+		Errata,
 		Indice,
 		Imagem,
 		CommentsOption,
@@ -133,6 +159,7 @@ export default {
 @import '../variables';
 @import '../consulta';
 @import '../oldstylestoprint';
+@import '../errata';
 
 .youtubeFrame {
 	max-width: 700;

@@ -79,7 +79,7 @@
 
 <script>
 export default {
-	name: 'Indice',
+	name: 'Apoio',
 	data () {
 		return {
 			aberto: false

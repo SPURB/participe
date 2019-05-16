@@ -13,9 +13,9 @@ const PortalPrefeitura = () => import(/* webpackChunkName: "portalprefeitura" */
 const GovernoAberto = () => import(/* webpackChunkName: "governoaberto" */ '@/views/GovernoAberto')
 const ConcessaoMartinelli = () => import(/* webpackChunkName: "martinelli" */ '@/views/ConcessaoMartinelli')
 const ArcoPinheiros2 = () => import(/* webpackChunkName: "arcopinheiros2" */ '@/views/ArcoPinheiros2')
-const SetorCentral2 = () => import(/* webpackChunkName: "arcopinheiros2" */ '@/views/SetorCentral2')
-const PlanoCicloviario = () => import(/* webpackChunkName: "plano-cicloviario" */ '@/views/PlanoCicloviario')
-const ParqueMinhocao = () => import(/* webpackChunkName: "plano-cicloviario" */ '@/views/ParqueMinhocao')
+const SetorCentral2 = () => import(/* webpackChunkName: "setorcentral2" */ '@/views/SetorCentral2')
+const PlanoCicloviario = () => import(/* webpackChunkName: "planocicloviario" */ '@/views/PlanoCicloviario')
+const ParqueMinhocao = () => import(/* webpackChunkName: "parqueminhocao" */ '@/views/ParqueMinhocao')
 
 Vue.use(Router)
 

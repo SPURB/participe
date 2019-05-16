@@ -24,7 +24,8 @@ module.exports = {
 				'/concessao-martinelli',
 				'/arco-pinheiros-2',
 				'/plano-cicloviario',
-				'/setor-central-2'
+				'/setor-central-2',
+				'/parque-minhocao'
 			],
 			useRenderEvent: true,
 			headless: false,

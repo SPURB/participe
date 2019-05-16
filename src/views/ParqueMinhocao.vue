@@ -1,6 +1,6 @@
 <template>
 	<div class="ParqueMinhocao" ref="conteudoConsulta">
-		<PageTop background_image_src="" :esta_consulta="estaConsulta" :social="social_assets">
+		<PageTop background_image_src="arquivos/capas/parque-minhocao_480w.jpg" :esta_consulta="estaConsulta" :social="social_assets">
 			<template slot="titulo"><div>PIU Parque Minhocão</div></template>
 			<template slot="subtitulo"><div>1ª consulta pública – Elementos prévios ao desenvolvimento do projeto</div></template>
 		</PageTop>
@@ -11,11 +11,13 @@
 			<h2 class="titulo" indent="1">Apresentação</h2>
 			<p>A Prefeitura do Município de São Paulo, por intermédio da Secretaria Municipal de Desenvolvimento Urbano – SMDU e da São Paulo Urbanismo–SP Urbanismo, em conformidade com a cronologia estabelecida pelo Plano Diretor Estratégico – PDE e ao disposto no Art. 2º do Decreto n° 56.901/2016, promove a presente Consulta Pública sobre os elementos prévios necessários à proposição de Projeto de Intervenção Urbana Parque Municipal do Minhocão - PIU PARQUE MINHOCÃO, a ser realizada entre os dias XX de maio a XX de junho de 2019, com vistas a colher contribuições da sociedade civil ao posterior desenvolvimento e consolidação deste projeto.</p>
 			<p>O conteúdo desta consulta pública tem por base os elementos definidos pelo art. 2º do referido decreto regulamentador dos projetos de intervenção urbana, correspondentes ao Diagnóstico Socioterritorial e ao Programa de Interesse Público, considerados como elementos específicos e indissociáveis do contexto do PIU do Setor Central da Macroárea de Estruturação Metropolitana - MEM, em desenvolvimento pela SP Urbanismo.</p>
+			<Comments :attr="{id:1, context:'Apresentação'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section>
 			<h2 class="titulo" indent="1">Objetivo</h2>
 			<p>O Projeto de Intervenção Urbana Parque Municipal do Minhocão (PIU Parque Minhocão) tem como objetivo o levantamento de insumos para o desenvolvimento do projeto de arquitetura e urbanismo deste equipamento, integrando-se às estratégias do Projeto de Intervenção Urbana do Setor Central da Macroárea de Estruturação Metropolitana (PIU Setor Central), em desenvolvimento pela municipalidade desde 2017 e, proposto para os distritos centrais de Santa Cecília, República, Sé, Bom Retiro, Pari e Brás e que abarca o eixo viário formado pela Rua Amaral Gurgel, pela Av. São João e pela Av. General Olímpio da Silveira, onde se desenvolve o Elevado, de forma a assegurar a harmonia e a coerência entre as propostas e a propiciar que as estratégias de desenvolvimento se reforcem mutuamente, sem perder de vista a natural necessidade de que o elevado, por sua relevância no contexto do PIU Setor Central, encontre um espaço específico para a sua discussão.</p>
+			<Comments :attr="{id:2, context:'Objetivo'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section>
@@ -51,6 +53,7 @@
 			<p>Deste modo, neste ato são apresentados:</p>
 			<p>A <b>Parte 1 – Contexto de Planejamento e Diagnóstico Socioterritorial</b> - apresenta a inserção da iniciativa do PIU Parque do Minhocão no contexto de planejamento da política urbana municipal e do desenvolvimento do PIU Setor Central e uma consolidação das informações dos diagnósticos socioterritorial, de mobilidade e incomodidade ambiental para subsidiar as propostas que constituem o Programa de interesse Público.</p>
 			<p>A <b>Parte 2 – Programa de Interesse Público</b> – apresenta os objetivos, diretrizes, premissas e elementos de estudo para a implantação gradual do Parque do Minhocão, e as medidas prévias para análise da iniciativa e seus resultados.</p>
+			<Comments :attr="{id:3, context:'Escopo e fases do PIU Parque Minhocão'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section>
@@ -89,6 +92,7 @@
 				<caption>Notas</caption>
 				<li>O Programa de Interesse Público da futura intervenção e o Diagnóstico da área objeto de intervenção</li>
 			</ol>
+			<Comments :attr="{id:4, context:'Contexto de planejamento do PIU Parque Minhocão'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section>
@@ -101,6 +105,7 @@
 			<h3>Controle Social</h3>
 			<p>No que toca à política de desenvolvimento urbano, o controle social é realizado basicamente por dois métodos: (a) o oferecimento de representações a órgãos de controle interno e externo da Administração Pública e no ajuizamento de ações pertinentes ao tema e (b) pela participação dos cidadãos e entidades no processo de elaboração dos estudos e projetos que redundarão nas leis urbanísticas e dos planos e projetos urbanos, bem como no acompanhamento da implantação de tais planos e projetos.</p>
 			<p>Desta forma, a par da participação construtiva de consensos nos processos decisórios da Administração Pública, também integra a gestão democrática a atuação dos interessados provocando o controle interno e externo dos atos do Poder Público, de modo a tentar obrigar a correção de decisões já adotadas ou em fase de construção. Esta realidade é tanto mais presente quanto menor o diálogo estabelecido entre a Administração Pública e a sociedade – a consensualidade tende a diminuir a litigiosidade e, portanto, o acionamento dos órgãos de controle.</p>
+			<Comments :attr="{id:5, context:'Gestão democrática'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section>
@@ -135,7 +140,7 @@
 						{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_1.jpg'), descricao: 'Estações do Metrô' },
 						{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_2.jpg'), descricao: 'Estações da CPTM' }
 					],
-					fonte: 'Geoinfo, 2014'
+					fonte: 'Geoinfo, 2014 (Elaboração: SP Urbanismo, 2019)'
 				}"></Imagem>
 				<!-- /Figura 4 -->
 
@@ -160,7 +165,7 @@
 						{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_1.jpg'), descricao: 'Estações do Metrô' },
 						{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_2.jpg'), descricao: 'Estações da CPTM' }
 					],
-					fonte: 'IBGE, 2010'
+					fonte: 'IBGE, 2010 (Elaboração: SP Urbanismo, 2019)'
 				}"></Imagem>
 				<!-- /Figura 5 -->
 
@@ -184,7 +189,7 @@
 						{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_1.jpg'), descricao: 'Estações do Metrô' },
 						{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_2.jpg'), descricao: 'Estações da CPTM' }
 					],
-					fonte: 'RAIS, 2017'
+					fonte: 'RAIS, 2017 (Elaboração: SP Urbanismo, 2019)'
 				}">
 					<template slot="extra">
 						<div>* Unidade de análise: área de ponderação do IBGE</div>
@@ -210,7 +215,7 @@
 						{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_1.jpg'), descricao: 'Estações do Metrô' },
 						{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_2.jpg'), descricao: 'Estações da CPTM' }
 					],
-					fonte: 'IBGE, 2010'
+					fonte: 'IBGE, 2010 (Elaboração: SP Urbanismo, 2019)'
 				}">
 					<template slot="extra">
 						<div>* Média de renda mensal dos domicílios, em salários mínimos (s.m.) de 2010</div>
@@ -238,7 +243,7 @@
 						{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_1.jpg'), descricao: 'Estações do Metrô' },
 						{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_2.jpg'), descricao: 'Estações da CPTM' }
 					],
-					fonte: 'SEADE, 2010 (IPVS - Índice Paulista de Vulnerabilidade Social 2010)'
+					fonte: 'SEADE, 2010 (IPVS - Índice Paulista de Vulnerabilidade Social 2010) (Elaboração: SP Urbanismo, 2019)'
 				}"></Imagem>
 				<!-- /Figura 8 -->
 
@@ -270,7 +275,7 @@
 						{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_1.jpg'), descricao: 'Estações do Metrô' },
 						{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_2.jpg'), descricao: 'Estações da CPTM' }
 					],
-					fonte: 'TPCL, 2015'
+					fonte: 'TPCL, 2015 (Elaboração: SP Urbanismo, 2019)'
 				}"></Imagem>
 				<!-- /Figura 9 -->
 
@@ -290,7 +295,7 @@
 						{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_1.jpg'), descricao: 'Estações do Metrô' },
 						{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_2.jpg'), descricao: 'Estações da CPTM' }
 					],
-					fonte: 'TPCL, 2019'
+					fonte: 'TPCL, 2018 (Elaboração: SP Urbanismo, 2019)'
 				}"></Imagem>
 				<!-- /Figura 10 -->
 
@@ -307,7 +312,7 @@
 						{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_1.jpg'), descricao: 'Estações do Metrô' },
 						{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_2.jpg'), descricao: 'Estações da CPTM' }
 					],
-					fonte: 'Deinfo, 2014'
+					fonte: 'Geinfo, 2014 (Elaboração: SP Urbanismo, 2019)'
 				}"></Imagem>
 				<!-- /Figura 11 -->
 
@@ -329,7 +334,7 @@
 						{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_1.jpg'), descricao: 'Estações do Metrô' },
 						{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_2.jpg'), descricao: 'Estações da CPTM' }
 					],
-					fonte: 'Deinfo, 2014'
+					fonte: 'PDE, 2014 (Elaboração: SP Urbanismo, 2019)'
 				}"></Imagem>
 				<!-- /Figura 12 -->
 
@@ -372,7 +377,7 @@
 						{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_1.jpg'), descricao: 'Estações do Metrô' },
 						{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_2.jpg'), descricao: 'Estações da CPTM' }
 					],
-					fonte: 'Deinfo, 2014'
+					fonte: 'Geinfo, 2014 (Elaboração: SP Urbanismo, 2019)'
 				}"></Imagem>
 				<!-- /Figura 14 -->
 
@@ -395,7 +400,7 @@
 						{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_1.jpg'), descricao: 'Estações do Metrô' },
 						{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_2.jpg'), descricao: 'Estações da CPTM' }
 					],
-					fonte: 'CET, 2016'
+					fonte: 'CET, 2016 e CEM, 2017 (Elaboração: SP Urbanismo, 2019)'
 				}"></Imagem>
 				<!-- /Figura 15 -->
 
@@ -418,7 +423,7 @@
 						{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_1.jpg'), descricao: 'Estações do Metrô' },
 						{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_2.jpg'), descricao: 'Estações da CPTM' }
 					],
-					fonte: 'Geosampa, 2019'
+					fonte: 'Geosampa, 2019 (Elaboração: SP Urbanismo, 2019)'
 				}"></Imagem>
 				<!-- /Figura 16 -->
 
@@ -442,7 +447,7 @@
 						{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_1.jpg'), descricao: 'Estações do Metrô' },
 						{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_2.jpg'), descricao: 'Estações da CPTM' }
 					],
-					fonte: 'Embraesp, 2013. Elaboração: SP Urbanismo, 2019.'
+					fonte: 'Embraesp, 2013 (Elaboração: SP Urbanismo, 2019)'
 				}"></Imagem>
 				<!-- /Figura 17 -->
 
@@ -466,7 +471,7 @@
 						{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_1.jpg'), descricao: 'Estações do Metrô' },
 						{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_2.jpg'), descricao: 'Estações da CPTM' }
 					],
-					fonte: 'Embraesp, 2013. Elaboração: SP Urbanismo, 2019.'
+					fonte: 'Embraesp, 2013 (Elaboração: SP Urbanismo, 2019)'
 				}"></Imagem>
 				<!-- /Figura 18 -->
 
@@ -520,7 +525,7 @@
 						{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_1.jpg'), descricao: 'Estações do Metrô' },
 						{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_2.jpg'), descricao: 'Estações da CPTM' }
 					],
-					fonte: 'SMUL, 2016. Elaboração: SP Urbanismo, 2019.'
+					fonte: 'SMUL, 2016 (Elaboração: SP Urbanismo, 2019)'
 				}"></Imagem>
 				<!-- /Figura 19 -->
 
@@ -543,9 +548,10 @@
 						{ fundo: '#ff00ae', descricao: 'Cortiço' },
 						{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/favelas.gif'), descricao: 'Favelas' }
 					],
-					fonte: 'Habitasampa, 2019. Elaboração: SP Urbanismo, 2019.'
+					fonte: 'Habitasampa, 2019 (Elaboração: SP Urbanismo, 2019)'
 				}"></Imagem>
 				<!-- /Figura 20 -->
+				<Comments :attr="{id:6, context:'Caracterização e diagnósticos do entorno do Minhocão'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</section>
 
 			<section>
@@ -609,6 +615,7 @@
 					fonte: 'CET (Elaboração: SP-Urbanismo)'
 				}"></Imagem>
 				<!--/ Figura 25 -->
+				<Comments :attr="{id:7, context:'Mobilidade urbana'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</section>
 
 			<section>
@@ -644,6 +651,7 @@
 					<caption>Notas</caption>
 					<li>Os dados foram publicados no blog Urbanidades no site <a href="http://conexaoplaneta.com.br">http://conexaoplaneta.com.br</a> em 20 de outubro de 2017.</li>
 				</ol>
+				<Comments :attr="{id:8, context:'Incomodidade urbana'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</section>
 
 			<section>
@@ -667,6 +675,7 @@
 				<p>A demolição através de explosivos é utilizada para a demolição de grandes estruturas, contudo, é necessário um estudo detalhado e uma equipe especializada para evitar acidentes e os danos adicionais que os explosivos podem causar. Esse estudo também deve observar as estruturas para identificar o melhor tipo de explosivos e onde posiciona-los.</p>
 				<p>Faz-se necessário o atendimento ao regimento legal quanto à realização de demolição, envolvendo procedimentos específicos, obtenção de autorizações, alvarás, Termo de Permissão para Ocupação de Vias – TPOV, plano de gerenciamento de resíduos da construção, entre outros. De acordo com a Resolução n.º 307 do Conselho Nacional do Meio Ambiente (Conama), os resíduos de demolição são considerados entulhos e, por isso, devem ser descartados de maneira correta.</p>
 				<p>O prazo estimado para a realização da demolição de todo o Elevado Presidente João Goulart seria de 24 meses e o orçamento estimado preliminarmente é de R$ 113.229.658,84.</p>
+				<Comments :attr="{id:9, context:'Análise estrutural do viaduto'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</section>
 
 			<section>
@@ -767,6 +776,7 @@
 					<li>Viabilidade técnica das soluções propostas;</li>
 					<li>Viabilidade financeira das soluções propostas.</li>
 				</ul>
+				<Comments :attr="{id:10, context:'Projetos de transformação e mudança de uso do “Minhocão”'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</section>
 
 			<section>
@@ -782,6 +792,7 @@
 				<p>Nos dois pontos em o traçado referencial cruza o Parque Minhocão, poderão ser previstas paradas integradas aos acessos ao parque.</p>
 				<p>Associada a este projeto, foi protocolada pela Alstom Brasil Energia e Transporte Ltda. e Telar Engenharia e Comércio S/A junto a Secretaria Municipal de Mobilidade e Transporte  a Manifestação de Interesse Privado (MIP) que tem como objetivo a implantação, operação e manutenção de Veículo Leve sobre Trilhos (“VLT”), visando à revitalização da área central do Município de São Paulo no formato Concessão Patrocinada (Pagamento de tarifas pelos usuários + contraprestação do Poder Concedente). O traçado encontra-se em fase de projeto e não há sugestão de prazo para o contrato.  Todavia, as principais características são: 26 km de via (ida e volta) com traçado circular, definido no Projeto de Engenharia; paradas a cada 700 metros; criação de bulevares na Rua José Paulino, Rua Mauá e Rua da Cantareira; demanda esperada de 80 mil passageiros por dia útil; intervalo de 4,5 minutos entre veículos no horário de pico; velocidade média esperada de 12 km/h; prazo de 3 anos para início da operação do circuito completo. </p>
 				<p>Em suma, podemos dizer que o Parque do Minhocão, sobretudo se implantado sobre a via elevada, terá papel integrador de diversos projetos e demandará ações pontuais no sentido de compatibilizá-lo com outros projetos do Setor Central, que se mostram oportunidades estratégicas no sentido da implementação de serviços e equipamentos.</p>
+				<Comments :attr="{id:11, context:'Projetos urbanísticos para o perímetro imediato e área de influência'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</section>
 		</section>
 
@@ -947,6 +958,7 @@
 				<li>CAMPOS, Candido Malta. Os rumos da cidade: urbanismo e modernização em São Paulo. São Paulo: Ed. Senac, p. 417</li>
 				<li>MAIA, Francisco Prestes. Ante-projeto de um sistema de transporte rápido metropolitano. São Paulo: Prefeitura do Município de São Paulo, 1955, p. 142.</li>
 			</ol>
+			<Comments :attr="{id:12, context:'Anexo A – Panorama histórico de ocupação do território integrado ao Elevado'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section>
@@ -1198,6 +1210,21 @@
 			<!--/ Figura 70 -->
 
 			<p>Além destes exemplos de requalificação de estruturas elevadas, exemplos de aproveitamento de estruturas fabris (Parque Fundidora, no México), prisionais (Parque da Juventude), entre outros também podem ser uma referência que subsidie os estudos de projeto do Parque Minhocão.</p>
+			<Comments :attr="{id:13, context:'Anexo B – Análise de experiências semelhantes (estudo preliminar)'}" v-if="estaConsulta.ativo == 1"></Comments>
+		</section>
+
+		<section>
+			<h2 class="titulo" indent="1">Anexo C – Caracterização Demográfica do Entorno do Minhocão</h2>
+			<ul class="links">
+				<li>
+					<a :href="src('arquivos/parque-minhocao/geoinfo_caracterizacao-demografica-minhocao.pdf')" target="_blank">
+						<i class="icon-pdf icon"><span>pdf</span></i>
+						<div>Caracterização Demográfica do Entorno do Minhocão</div>
+						<span>1,73 Mb</span>
+					</a>
+				</li>
+			</ul>
+			<Comments :attr="{id:14, context:'Caracterização Demográfica do Entorno do Minhocão'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section>
@@ -1231,6 +1258,7 @@
 					<li>Uso atual do Elevado como parque já consolidado em horários e dias específicos e;</li>
 					<li>Possibilidade de integração do Parque Municipal do Minhocão com as estratégias de médio e longo prazo a serem definidas pelo PIU Setor Central, em andamento na SP Urbanismo, que contém em seu perímetro de intervenção o Elevado João Goulart.</li>
 				</ul>
+				<Comments :attr="{id:15, context:'Princípios e premissas básicas'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</section>
 
 			<section>
@@ -1479,6 +1507,7 @@
 				<p>Nesse sentido, as intervenções na infraestrutura física existente se limitariam, em uma primeira fase, às correções e readequações necessárias para garantir a integridade e segurança do espaço, bem como recepcionar os elementos de mobiliário urbano.</p>
 				<p>Como não poderia deixar de ser, o projeto para a implantação do parque em seus 900 metros iniciais, da mesma forma que em seu estudo na totalidade, devem contemplar a parte elevada e o seu espaço inferior. Elementos de suporte à vida pública e à permanência das pessoas serão pensados e instalados nos dois níveis. O Parque é dessa forma considerado como um equipamento urbano que conta com o nível das ruas e calçadas do baixio e entorno além do tabuleiro elevado. Todos os acessos serão projetados com essa diretriz integrando os dois níveis do parque.</p>
 				<p>Em uma segunda fase, serão realizadas intervenções de aberturas no tabuleiro e demolições parciais e localizadas, com o intuito de melhorar as condições de incomodidade urbana e de falta de iluminação nos baixios do Elevado. Os projetos relativos a essa fase serão elaborados após a realização de laudo estrutural que garanta a segurança e indique os locais onde há viabilidade para as intervenções de abertura/demolição.</p>
+				<Comments :attr="{id:16, context:'Eixos estratégicos de intervenção'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</section>
 
 			<section>
@@ -1587,7 +1616,7 @@
 					tipo: 'mapa',
 					url: src('arquivos/parque-minhocao/img/fig97.jpg'),
 					titulo: 'Mapa de quadras e lotes gravados como ZEIS-3 internas ao perímetro da ZEM',
-					fonte: 'SEHAB/DTS Centro. Observação: Números reais do lado externo a quadra.',
+					fonte: 'SEHAB/DTS Centro.',
 					legenda: [
 						{ fundo: '#fffe00', espessura: '3', pontilhado: false, descricao: 'ZEIS 3 | Zona Especial de Interesse Social 3' },
 						{ borda: '#000', espessura: '1', pontilhado: false, descricao: 'ZEM | Zona de Estruturação Metropolitana' },
@@ -1597,8 +1626,9 @@
 						{ borda: '#6adb0d', espessura: '3', pontilhado: false, descricao: 'Setor 007 Quadra 095' },
 						{ borda: '#057df7', espessura: '3', pontilhado: false, descricao: 'Setor 007 Quadra 041' }
 					]
-
-				}"></Imagem>
+				}">
+					<template slot="extra">Observação: Números reais do lado externo a quadra.</template>
+				</Imagem>
 				<!-- Figura 97 -->
 
 				<p>Também em levantamento preliminar, foi identificada a existência de cortiços e ocupações na área do perímetro da Zona Eixo de Estruturação da Transformação Metropolitana (ZEM) relacionada ao Parque Municipal do Minhocão. O levantamento detalhado da situação será realizado dentro das atividades programadas no Censo de Cortiços e Assemelhados da área Central de São Paulo, ação contratada pela Secretaria Municipal de Habitação em março de 2019.</p>
@@ -1700,7 +1730,7 @@
 							tipo: 'default',
 							url: src('arquivos/parque-minhocao/img/fig104.jpg'),
 							caption: 'Programação infantil e mobiliário urbano'
-						}" style="margin-left: -4.4rem;"></Imagem>
+						}" class="liImagem"></Imagem>
 
 						<ul>
 							<li>
@@ -1712,12 +1742,13 @@
 							tipo: 'default',
 							url: src('arquivos/parque-minhocao/img/fig105.jpg'),
 							caption: 'Teatro nas janelas dos edifícios (Grupo Esparrama)'
-						}" style="margin-left: -4.4rem;"></Imagem>
+						}" class="liImagem"></Imagem>
+
 						<Imagem :dados="{
 							tipo: 'default',
 							url: src('arquivos/parque-minhocao/img/fig106.jpg'),
 							caption: 'Teatro nas janelas dos edifícios (Grupo Esparrama)'
-						}" style="margin-left: -4.4rem;"></Imagem>
+						}" class="liImagem"></Imagem>
 					</li>
 					<li>Galeria de Arte Urbana em empenas. Existem 18 empenas que poderiam receber esses trabalhos com linguagens como grafitti, projeções e mapping.</li>
 				</ol>
@@ -1750,6 +1781,7 @@
 				</ol>
 				<p>Tendo em vista a necessidade de se preservar certo ambiente de silêncio para a população que mora nas “bordas” do Minhocão, entendemos ser prudente a opção de modulação e combinações entre as disponibilizações desses equipamentos.</p>
 				<p>Ainda, vale observar que, a depender do calendário de criação do Parque, há interesse da parte de SEME de fazer do Parque Minhocão um dos polos mais estratégicos das nossas Viradas Esportivas, momento urbano no qual os equipamentos aqui propostos ganhariam ainda mais protagonismo na paisagem social e urbanística da região.</p>
+				<Comments :attr="{id:17, context:'Contribuições setoriais para ativação e qualificação'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</section>
 
 			<section>
@@ -1764,12 +1796,14 @@
 					<li>Processo de autorização de eventos no entorno e;</li>
 					<li>Termos de Cooperação para manutenção de áreas verdes ao longo do eixo do minhocão.</li>
 				</ul>
+				<Comments :attr="{id:18, context:'Zeladoria urbana e regulação de atividades em espaços públicos'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</section>
 
 			<section>
 				<h3 class="titulo" indent="2">Monitoramento ambiental</h3>
 				<p>É importante que se constitua uma sistemática de monitoramento ambiental da área de influência do Parque Municipal do Minhocão, com indicadores que possam ser acompanhados antes, durante e após as intervenções previstas neste relatório. </p>
 				<p>Recomenda-se, assim, a elaboração de um Plano de Monitoramento Ambiental que defina os indicadores de monitoramento, sua periodicidade, formas de acesso e medição, a linha de base atual e as bases do processo de monitoramento.</p>
+				<Comments :attr="{id:19, context:'Monitoramento ambiental'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</section>
 
 			<section>
@@ -1839,20 +1873,15 @@
 					<li>Integração da segurança pública do parque aos programas de Rondas Comunitárias. Nas proximidades do Minhocão, há pelo menos dois postos policiais, um na Praça Roosevelt e outro na Praça Monteiro Lobato;</li>
 					<li>Formação de Conselho Gestor do Parque Minhocão nos moldes do Conselho Gestor da Praça Roosevelt, composto de representantes eleitos entre moradores, artistas, usuários e indicados pela Prefeitura. </li>
 				</ul>
+				<Comments :attr="{id:20, context:'Estratégias de gestão'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</section>
 		</section>
 
-		<!-- Figuras 104, 105 e 106-->
-		
-
-		
-		<!-- / figuras 104, 105 e 106-->
-
-		<!-- <section ref="allComments">
+		<section ref="allComments">
 			<h2 v-show="commentsLoaded" class="titulo" indent="1">Contribuições</h2>
 			<CommentsLoader :attr="estaConsulta"></CommentsLoader>
 			<Comments v-if="commentsLoaded && estaConsulta.ativo == 1" :attr="{id:14, context:'Comentarios'}"></Comments>
-		</section> -->
+		</section>
 	</div>
 </template>
 
@@ -1880,9 +1909,9 @@ export default {
 			consultas: false,
 			estaConsulta: {},
 			social_assets: {
-				whatsapp: 'a',
-				facebook: 'a',
-				twitter: 'a'
+				whatsapp: 'https://api.whatsapp.com/send?text=Participe%20da%20consulta%20p%C3%BAblica%20do%20PIU%20Parque%20Minhoc%C3%A3o%3A%20https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br%2Fparque-minhocao',
+				facebook: 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br%2Fparque-minhocao',
+				twitter: 'https://twitter.com/intent/tweet?text=Participe%20da%20consulta%20p%C3%BAblica%20do%20PIU%20Parque%20Minhoc%C3%A3o%3A%20https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br%2Fparque-minhocao'
 			},
 			mobiliario_centro_aberto: [{
 				'titulo': 'Bancos Modulares',
@@ -2229,6 +2258,12 @@ div.ParqueMinhocao {
 					margin: 0;
 				}
 			}
+		}
+	}
+	*.liImagem {
+		margin-left: -4.4rem;
+		@media (max-width: 600px) {
+			margin-left: -2.4rem;
 		}
 	}
 }

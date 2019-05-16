@@ -623,7 +623,7 @@
 				<p>Parte fundamental das análises do impacto do tráfego de veículos sobre e sob o Elevado diz respeito aos elevados níveis de incomodidade urbana resultantes.</p>
 				<p>Conforme dados divulgados pelo Laboratório de Poluição Atmosférica Experimental da Faculdade de Medicina da USP<sup>1</sup>, o entorno imediato afetado pelo Elevado Pres. João Goulart apresenta altos índices de poluição. Em levantamentos realizados ao longo de uma semana de medição ininterrupta da qualidade do ar, os números do estudo revelam que a média de Material Particulado equivalente a 2,5 – partículas finas menores ou iguais a 2,5 μm (micrômetros) – encontrada na região do Elevado chega a ser de 3 a 4 vezes superiores ao limite de 25 μg/m³ definido pela CETESB e pela Organização Mundial de Saúde (OMS). Os dados ainda apontam que, mesmo quando o Elevado está fechado durante a semana para passagem de veículos aos sábados e domingos, os índices de poluição continuam altos e bem acima dos verificados no resto da capital paulista. </p>
 				<p>Ainda segundo os dados publicados, na altura do elevado, a média averiguada de material particulado por metro cúbico foi de 83,47 μg/m³, 79% maior que a média de 46,5 μg/m³ registrada em toda a metrópole pela CETESB em 2014, mesmo ano do levantamento da USP.</p>
-				
+
 				<!-- Figura 26 -->
 				<Imagem :dados="{
 					tipo:'coluna',
@@ -919,7 +919,7 @@
 			<p>O Elevado João Goulart passa a ter papel importante na história da urbanização e do urbanismo paulistano. A estrutura sintetiza três conceitos sobre o papel do sistema viário na cidade: primeiro, em relação ao papel do seu traçado dentro da estrutura urbana; segundo, às implicações do conceito de via expressa, idealizado para eliminar interferências e aumentar a velocidade dos deslocamentos; e, por fim, sua elevação ou rebaixamento de nível como forma de segregação do tecido urbano.</p>
 			<p>O Elevado como expressão do sistema viário estrutural corresponde à forma de sua articulação com o conjunto de vias, sendo duas delas radiais (Avenidas General Olimpio da Silveira e São João) e um trecho da segunda perimetral (Rua Amaral Gurgel). Ademais, estende-se a Leste a partir da Liberdade e Glicério, chegando até a Avenida Alcântara Machado e constituindo, desta forma, a primeira conexão diametral expressa entre as zonas Leste e Oeste, caracterizando-se por contornar o centro e o perímetro de irradiação do Plano de Avenidas de Prestes Maia, concebido em 1930<sup>1</sup>.</p>
 			<p>De fato, a conexão estrutural Leste-Oeste já estava presente no Plano de Avenidas, que dispunha de duas importantes conexões diametrais – a Norte-Sul, formando o conhecido “Sistema Y” e a Leste-Oeste, nunca inteiramente implantada, ligando a Avenida São João ao Parque Dom Pedro II, passando em túnel sob o Largo São Bento<sup>2</sup>. Como bem analisado por Anelli e Seixas (2008): “(...) se no primeiro caso a própria topografia resolvia a questão da transposição da área central, na ligação Leste-Oeste seria necessário uma solução de engenharia muito avançada para a época”.</p>
-			
+
 			<!-- Figura 45 -->
 			<Imagem :dados="{
 				tipo:'coluna',
@@ -1000,7 +1000,7 @@
 			<p>A entrada definitiva do tema na pauta na agenda da cidade ocorreu em 2005. A aprovação da emenda do instrumento de zoneamento do distrito onde está localizado o parque faria com que o distrito deixasse de ser industrial de baixa densidade. A emenda garantia o uso aberto do espaço e novos limites para o desenvolvimento de empreendimentos comerciais e residenciais, além da inclusão de novas áreas para moradia a custo acessível. </p>
 			<p>Os estudos de impacto do projeto que acompanharam a proposta de alteração de zoneamento do distrito consideraram um período de dez anos. Foram incluídos temas como poluição sonora, impactos sobre tráfego e estacionamento, uso por pedestres, área coberta por sombras, infraestrutura, uso do solo, impacto sobre a mudança do perfil socioeconômico da região, e alternativas ao projeto, entre outros. </p>
 			<p>Ainda em 2005, a CSX Transportation Inc transferiu a propriedade de um trecho da linha de trem elevada para a cidade de Nova Iorque e ambas assinaram um acordo de uso recreacional do espaço. No ano seguinte as obras da primeira seção do High Line tiveram início. As atividades envolveram a remoção dos trilhos, permeabilização do solo, construção de sistemas de acesso (escadas e elevadores), trilhas, arborização, iluminação, adequações de segurança, instalação de mobiliário urbano, etc.</p>
-			
+
 			<!-- Figura 50 -->
 			<Imagem :dados="{
 				tipo:'default',
@@ -1018,7 +1018,7 @@
 			<p>Os investimentos para a construção do parque (seções 1, 2 e 3) foram estimados em cerca de 220 milhões de dólares. A divisão desse valor ficou entre governo (federal, estadual e municipal), arrecadação de fundos privados feita pela Friends of the High Line e incorporadoras como Oxford Properties e The Related Companies. Em relação aos custos, segundo o balanço financeiro de 2017 divulgado pela responsável do parque, houve despesa total de 29,5 milhões de dólares e uma arrecadação de 25,2 milhões. Já em 2016 a receita foi de 21,1 milhões e as despesas de 16,8 milhões de dólares. A responsável pelo espaço estima que a cidade arrecade um bilhão de dólares em vinte anos.</p>
 			<p>Desde seu lançamento, os valores das quadras ao redor da seção 1 do parque cresceram em cerca de 50,6% e o da seção 2 em cerca de 48,2%. Uma área vizinha às primeiras apontou um crescimento de 31,4% no mesmo período. As informações são do site de vendas online de imóveis de Nova Iorque, StreetEasy.</p>
 			<p>A valorização também é medida quando comparado somente os valores de vendas de lançamentos. Em 2015, uma área vizinha ao parque, o valor médio de novas unidades foi cerca de 1,93 milhões de dólares. Já o valor médio ao redor da seção 1 foi de 4,42 milhões e para a seção 2 cerca de 6,06 milhões, o que representa 130% e 214% de superioridade, respectivamente.</p>
-			
+
 			<!-- Figura 51 -->
 			<Imagem :dados="{
 				tipo:'default',
@@ -1031,7 +1031,7 @@
 
 			<h3>Coulée Verte René-Dumont</h3>
 			<p>Em Paris, a “Promenade Plantée”, inaugurada em 1993, constitui-se de um parque sobre antigas estruturas ferroviárias, que se inicia a 10 m do chão, no Viaduc dês arts. A Promenade possui no total 4,5km de extensão, a maior parte sobre a antiga ferrovia, parte sobre novas passarelas e parte também ao nível do chão. A Promenade conecta-se ainda com o Parque Reully, áreas esportivas e culturais e outras áreas verdes menores.</p>
-			
+
 			<!-- Figura 52 -->
 			<Imagem :dados="{
 				tipo:'default',
@@ -1060,7 +1060,7 @@
 
 			<h3>Riacho Cheong Gye Cheon</h3>
 			<p>Outro exemplo, mais próximo do caso do Minhocão, pois trata-se de reforma de estrutura também rodoviarista e voltada ao transporte individual, é a Renaturalização do Riacho Cheong Gye Cheon, em Seul, que passou décadas coberto por vias arteriais e um viaduto, implantados na década de 70. Nos anos 2000, o então prefeito Myung-bak Lee, a partir da pressão da população que reclamava da degradação do local, optou pela retirada da via e do elevado em questão, e criou um parque linear com 5,84 quilômetros, com espaços de lazer, a implantação de uma rede de esgotamento sanitário, sistema de drenagem de águas pluviais, a construções de pontes de conexão entre os dois lados, o plantio de espécies nativas, entre outros aspectos que acabaram por conectar muito mais a população local.</p>
-			
+
 			<!-- Figura 55 -->
 			<Imagem :dados="{
 				tipo:'default',
@@ -1070,7 +1070,7 @@
 			<!--/ Figura 55 -->
 
 			<p>O aspecto mais verde do parque se intensifica na medida em que se afasta do centro, ganhando contornos cada vez menos urbanos. O Parque linear situa-se entre 3 a 5m abaixo do nível da rua, ainda bastante movimentada, criando um espaço preservado. Ao final dele, está uma reserva ecológica de mais de 1,1 quilometro quadrado, e posteriormente segue até o Rio Han, que atravessa a parte sul da cidade.</p>
-			
+
 			<h3>The Bentway</h3>
 			<p>O parque é parte de um projeto de desenvolvimento urbano que compreende uma área maior, liderado pela agência pública Waterfront Toronto (criada pelos governos do Canadá, Ontario e Toronto). Toda a região onde o parque está localizado tem uma extensão de cerca de 800 hectares e está localizada de frente ao lago Ontario. O objetivo do projeto é transformar a região, reduzindo o espraiamento da cidade, desenvolvendo comunidades sustentáveis, aumentando a oferta de moradias populares, expandindo o transporte público e aumentando a competitividade econômica.</p>
 
@@ -1084,7 +1084,7 @@
 			<!--/ Figura 56 -->
 
 			<p>Anunciado em novembro de 2015 e inaugurado em janeiro de 2018, The Bentway é composto por três grandes ambientes: intenso, médio e calmo, distribuídos em sua extensão de 1,75 km. Os ambientes ainda são seccionados em 55 espaços pelas pilastras que sustentam a rodovia sob a qual está construída, e que formam um grande corredor de 14,5 metros de altura e 24 metros de largura. Seu mobiliário inclui assentos e mesas; espreguiçadeiras; cones de sinalização; uma pista de patinação de gelo de 220 metros; tendas temporárias de comércio de alimentos; jardins rasteiros; e um espaço dedicado à pratica de skate com obstáculos não permanentes. Durante o inverno a pista de patinação no gelo torna-se a principal atração do espaço, sendo cobrada a sua utilização e aluguel de patins. Ainda, sua área total de mais de 4 hectares comporta um espaço dedicado à um pequeno teatro a céu aberto, painéis com grafite, e uma trilha para pedestres. O espaço é utilizado também para sediar diferentes tipos de eventos, como confraternizações, shows, feiras, etc. O espaço é aberto todos os dias e não há bilheteria.</p>
-			
+
 			<!-- Figura 57 -->
 			<Imagem :dados="{
 				tipo:'default',
@@ -1114,7 +1114,7 @@
 			<h3>The 606</h3>
 			<p>O parque “The 606” é construído sobre uma antiga linha de trem e inclui seis pequenos parques adjacentes. A linha elevada “Bloomingdale Line” serviu por quase um século para o escoamento de produtos de portos ferroviários para o rio Chicago. Após o boom industrial da cidade, o tráfego sobre a linha reduziu e na década de 1990 cessou-se por completo. O espaço então foi ocupado naturalmente por árvores, plantas e animais.</p>
 			<p>Ainda na década de 1990 surgiu a primeira recomendação para alterar a sua função, contida no Plano de Bicicletas da Cidade. Depois disso ainda apareceu em um plano de espaço aberto da cidade e outros planos de qualidade de vida de dois distritos. Aprovado em 2004, o Plano de Espaço Aberto do distrito se propôs a investigar oportunidades recreacionais e de espaço aberto ao longo da linha. O plano sugeriu a criação de um parque linear elevado que incluísse uma trilha, áreas passivas e espaços recreativos em suas vias de acesso, servindo como via de deslocamento e contribuindo para a melhoria da estética da área. Por fim, foram sugeridos uma avaliação de impacto ambiental e outra sobre a integridade dos 37 viadutos sobre os quais a linha está construída; identificação de fontes de financiamento de investimentos e custos.</p>
-			
+
 			<!-- Figura 62 -->
 			<Imagem :dados="{
 				tipo:'coluna',
@@ -1143,7 +1143,7 @@
 			<p>O perfil socioeconômico dos moradores também alterou no período que vai do planejamento à inauguração do parque. O quadro abaixo mostra a essa mudança, no período que vai de 2010 à 2016, em territórios próximos ao parque comparados com o resto da cidade, utilizando renda média, escolaridade, porcentagem de moradores brancos não hispânicos e valor médio de aluguel.</p>
 			<p>A gestão do parque é feita pela The Trust for Public Land em nome da Chicago Park District. A organização atua como o principal parceiro privado, gerenciando o envolvimento com a comunidade, captação de recursos, planejamento de longo prazo, comunicações e outros aspectos cruciais do projeto. </p>
 			<p>Instalado a 5,5 metros de altura, com 17 rampas e 12 pontos de acesso, o parque caracteriza-se por ser um local de passagem e não de destino. O parque opera diariamente das 6 am às 11 pm e tem entrada gratuita. Sua largura varia de 6 à 9 metros e comporta jardins e uma trilha de 3 metros de largura dividido em duas faixas ocupadas por ciclistas e pedestres. A infraestrutura conta com bancos, postes de iluminação e cinco miniparques no nível da rua que servem de entrada ao elevado e compensam a falta de espaço sobre ele. Ainda, há exposições de arte permanentes e temporárias que são escolhidas via convites, parcerias e chamamentos organizados pela The Trust for Public Land, Chicago Park District e Chicago Department of Cultural Affairs and Special Events.</p>
-			
+
 			<!-- Figura 65 -->
 			<Imagem :dados="{
 				tipo:'default',
@@ -1187,7 +1187,7 @@
 			<!--/ Figura 68 -->
 
 			<p>O espaço comporta mais de 24.000 plantas e árvores semeadas em grandes vasos de concreto. Sua infraestrutura é composta por câmeras de segurança, bancos, ativações que incluem centros de informação para turistas, comércios de alimentos e bebidas, uma loja oficial que comercializa produtos com a marca do parque, quiosques que trazem experiências educativas sobre horticultura, etc. O acesso é livre durante todo o dia e sem custos, exceto para a realização de eventos sob permissão do Governo Metropolitano de Seoul.</p>
-			
+
 			<!-- Figura 69 -->
 			<Imagem :dados="{
 				tipo:'default',
@@ -1200,7 +1200,7 @@
 			<p>A gestão do parque está sob responsabilidade do Governo Metropolitano de Seoul. Para fins de deliberação, aconselhamento, manutenção, gestão e uso do parque, um comitê operacional foi criado. O comitê tem permissão para implementar programas para promoção da ocupação do elevado com parceria com o setor público e/ou privado, formular planos, gerir e operacionais instalações na área do parque, etc. O comitê deve ser formado por não mais de quinze membros, respeitando ao limite de 60% de composição de só um gênero. Presidente e vice-presidente devem ser eleitos pelos próprios membros, que por sua vez, são nomeados pelo prefeito por um período de dois anos.</p>
 			<p>Apesar de não configurar área residencial antes mesmo da reforma do elevado, os poucos moradores que ficaram na área da Estação Seul estão se afastando. Moradores vendem ou alugam suas propriedades por causa do aumento dos preços dos imóveis e da abordagem agressiva de grandes empresas, como os hotéis, shoppings e restaurantes que podem conectar-se diretamente com o elevado. O governo aparenta não ter planos para a intervenção para a ordenação do uso da terra na região.</p>
 			<p>Até 2017, aproximadamente 7,4 milhões de pessoas haviam transitado pelo local. Os visitantes costumavam passar o tempo passeando, admirando a vegetação e a vista da cidade. No entanto, muitas pessoas não visitam as comunidades ao redor do Seoullo 7017, permanecendo apenas sobre o elevado.</p>
-			
+
 			<!-- Figura 70 -->
 			<Imagem :dados="{
 				tipo:'default',
@@ -1318,7 +1318,7 @@
 				<p>Os volumes veiculares do Elevado nos picos da manhã são da ordem de 3.900 no sentido Oeste-Leste e 3.300 no sentido Leste-Oeste, enquanto na Av. São João, é da ordem de 700 Veq. no sentido Centro e 1.000 Veq. no sentido Bairro. Nos picos da tarde são de 2.900 e 2.100, respectivamente, no Elevado e, na Av. São João, 600 e 1.400.</p>
 				<p>Somando-se os volumes da parte superior do Elevado com os volumes da Avenida, conforme indicado na figura abaixo, temos cerca de 4.600 Veq/h. A capacidade máxima da Av. São João é de 2.400 Veq/h (2 faixas) e da Av. Amaral Gurgel é de 3.600 Veq/h (3 faixas).</p>
 				<p>Por dia, circulam sobre o Elevado João Goulart cerca de 78 mil veículos, que significam 10 mil viagens/hora.</p>
-				
+
 				<!-- Figura 75 -->
 				<Imagem :dados="{
 					tipo:'default',
@@ -1345,7 +1345,7 @@
 
 				<p>De acordo com os estudos de simulação realizados, bem como análises da rede viária da cidade, estimamos que a implantação da primeira fase do Parque Minhocão implicará em impactos no trânsito na Rótula Central, no eixo Paulista, no eixo Sumaré/Brasil e nas Marginais Pinheiros e Tietê, conforme pode-se verificar na figura abaixo.</p>
 				<p>Lembramos que as análises da simulação são referentes à rede viária no pico da manhã, sendo que no pico da tarde estimamos impactos em toda a região central, em especial na R. da Consolação e região da Vila Buarque, Martins Fontes e Av. 9 de Julho.</p>
-				
+
 				<!-- Figura 77 -->
 				<Imagem :dados="{
 					tipo: 'mapa',
@@ -1363,7 +1363,7 @@
 				<p>Inicialmente foram coletados parâmetros de desempenho relativos a áreas pré-definidas, e posteriormente em vias elencadas como principais.</p>
 				<p>Para a primeira situação, calculou-se o tempo médio gasto pelos usuários de automóveis em circulação a partir das seguintes áreas de analise:</p>
 				<p><b>1</b> – Malha viária da <b>Área de Influência</b>: considera as vias com maiores diferenças de volumes entre a situação atual e com a situação resultante da desativação do primeiro trecho do Elevado (avaliação visual). Os resultados indicam como área de influência, entre outras, a Avenida Marques de São Vicente, Avenida Rudge, Avenida Rio Branco, Avenida Francisco Matarazzo, Avenida Tiradentes  e Avenida Pacaembu, conforme destaque em verde no desenho abaixo.</p>
-				
+
 				<!-- Figura 78 -->
 				<Imagem :dados="{
 					tipo: 'coluna',
@@ -1373,7 +1373,7 @@
 				<!--/ Figura 78 -->
 
 				<p><b>2</b> – Malha viária do <b>Minianel Viário</b>: considera as vias internas ao Minianel Viário, inclusive o seu perímetro, formado pelas Marginais Tietê e Pinheiros, Avenida dos Bandeirantes, Avenida Tancredo Neves, Rua das Juntas Provisórias, Avenida Professor Luis Inácio de Anhaia Melo e Avenida Salim Farah Maluf, conforme destacado em vermelho na imagem abaixo.</p>
-				
+
 				<!-- Figura 79 -->
 				<Imagem :dados="{
 					tipo: 'coluna',
@@ -1425,7 +1425,7 @@
 				</ul>
 				<p>Em função das condições de saturação do sistema viário e visando garantir a mobilidade do transporte coletivo, pedestres e ciclistas, enfatizamos a importância das obras estruturais previstas no Plano Diretor Estratégico (PDE), em especial a construção do Apoio Sul da Marginal Tietê e da Linha 6 Laranja do Metrô.</p>
 				<p>O diagnóstico de impactos no trânsito e a proposição de medidas de mitigação serão detalhados conforme cronograma apresentado ao final deste documento. Dados adicionais devem ser trabalhados para refinar as análises aqui presentes, incluindo projeções com base em cruzamento de dados de Big Data relativos aos registros de equipamentos de fiscalização, GPS de ônibus e bicicletas compartilhadas, bilhetagem, informações de aplicativos como Waze/Google e outros. A possibilidade de realização de fechamentos de testes também será considerada.</p>
-				
+
 				<h4>Eixo Ativação dos Espaços Públicos</h4>
 				<h5>Parque do Minhocão – Primeiro trecho proposto</h5>
 				<p>Recomenda-se a implantação do primeiro trecho desativado para veículos do Parque do Minhocão nos 900m entre a Praça Roosevelt e o Largo do Arouche.</p>
@@ -1587,28 +1587,28 @@
 					<b>Setor 007, Quadra 041</b><br>
 					Perímetro compreendido pela Rua Doutor Frederico Steidel, Avenida São João, Avenida Duque de Caxias e Largo do Arouche. Por estar associada à duas Avenidas importantes, a maior parte da quadra tem usos comerciais ou mistos, já na face voltada a Rua Doutor Frederico Steidel os comércios são de menor porte, onde também foi identificada uma Rua sem saída no miolo da quadra com sobrados ocupados por famílias de baixa renda. Possui um lote importante gravado como ZEIS-3 com fachada para a Avenida São João e lateral/fundos para a Rua Doutor Frederico Steidel, atualmente é ocupado por um estacionamento térreo descoberto. Além desse, existem mais dois lotes em ZEIS-3 que são ocupados por dois estacionamentos térreos fechados do tipo galpão. É uma quadra com potencial para a provisão de habitação de interesse social.
 				</p>
-				
+
 				<Galeria :gallery_attrs="galeria02"></Galeria>
 
 				<p>
 					<b>Setor 007, Quadra 093</b><br>
 					Perímetro compreendido pela Avenida São João, Rua Doutor Frederico Steidel, Travessa dos Desenhistas, Elevado Presidente João Goulart e Rua Ana Cintra. A quadra é pouco verticalizada e tem baixa densidade, principalmente por conta de dois grandes estacionamentos térreos, de um galpão abandonado e de uma área de lazer com quadra poliesportiva junto a primeira alça de descida do fluxo Leste-Oeste do Elevado Presidente João Goulart. De frente para a Rua Ana Cintra está localizado o Galpão do Folias, um espaço cultural que ocupa o imóvel desde o ano 2000. E, próximos à Travessa dos Desenhistas, estão alguns edifícios de uso residencial ou misto. É uma quadra com potencial para a provisão de habitação de interesse social.
 				</p>
-				
+
 				<Galeria :gallery_attrs="galeria03"></Galeria>
 
 				<p>
 					<b>Setor 007, Quadra 094</b><br>
 					Perímetro compreendido pela Travessa dos Desenhistas, Rua Doutor Frederico Steidel, Largo do Arouche e Elevado Presidente João Goulart. A quadra se relaciona principalmente com a Rua Doutor Frederico Steidel, tendo em vista que seu fundo está voltado para o Elevado Presidente João Goulart, que nesse trecho tem seu baixio ocupado pelo Terminal de Ônibus Amaral Gurgel. A quadra, demarcada em sua integralidade como ZEIS-3, tem características muito distintas de ocupação. Destacam-se dois edifícios de uso residencial, com comércio no térreo, de oito pavimentos cada, além de um conjunto de sobrados e um estacionamento do número 127 ao número 183. É importante apontar que a Rua Doutor Frederico Steidel tem problemas de drenagem das águas pluviais, a maioria dos imóveis tem comportas para evitar que a água das chuvas adentre suas moradas.
 				</p>
-				
+
 				<Galeria :gallery_attrs="galeria04"></Galeria>
 
 				<p>
 					<b>Setor 007, Quadra 095</b><br>
 					Perímetro compreendido pela primeira alça de descida no sentido Oeste-Leste do Elevado Presidente João Goulart, Elevado Presidente João Goulart (Terminal de Ônibus Amaral Gurgel), e Rua Sebastião Pereira. Possui dois edifícios residenciais de dez e onze pavimentos, ambos os térreos tem comércios e um deles tem uma igreja. Do outro lado da quadra existem comércios de mecânica, borracharia e serralheria de no máximo três pavimentos.
 				</p>
-				
+
 				<Galeria :gallery_attrs="galeria05"></Galeria>
 
 				<!-- Figura 97 -->
@@ -1697,7 +1697,7 @@
 					<li>Instalação de câmeras de segurança: importante mecanismo de inibição da prática delituosa e mecanismo de suporte a investigações criminais. As câmeras para instalação já estão disponíveis, sendo necessário prover o logradouro de <i>link</i> e nuvem para compartilhamento ao City Câmeras. Existe na SMSU doação de <i>biosites</i> pela empresa TIM, a qual compromete-se a instalar os biosites com 4 câmeras na extensão da via. A doação em questão está em análise pela consultoria da SMSU, para posterior encaminhamento à PGM.</li>
 				</ol>
 				<p>Abaixo seguem mapas de calor dos meses de setembro, outubro, novembro e dezembro de 2018 para conhecimento da problemática quanto a furtos e roubos na região.</p>
-				
+
 				<!-- Figuras 100-103: furtos e roubos na região setembro-outubro/2018 -->
 				<Galeria :gallery_attrs="galeria100_103"></Galeria>
 				<!-- /Figuras 100-103: furtos e roubos na região setembro-outubro/2018 -->

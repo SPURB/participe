@@ -387,6 +387,8 @@ p.quotation {
 		margin: 1rem 0 0
 	}
 
+	p:not(.fonte):last-child { margin-bottom: 0 }
+
 	&.leg {
 		background-color: #FFF;
 		border: 1px solid $sombra-4;

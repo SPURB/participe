@@ -19,10 +19,10 @@
 					</template>
 				</ul>
 			</div>
-			<div class="fonte" v-if="dados.fonte">Fonte: <span>{{ dados.fonte }}</span></div>
 			<div class="extra">
 				<slot name="extra"></slot>
 			</div>
+			<div class="fonte" v-if="dados.fonte">Fonte: <span>{{ dados.fonte }}</span></div>
 		</figure>
 	</div>
 </template>

@@ -1,26 +1,29 @@
 <template>
 	<div class="Galeria" :class="{ print: toPrint }" :style="{maxWidth: gallery_attrs.width + 'px'}">
 		<div class="gall" v-if="!toPrint" :style="{maxWidth: gallery_attrs.width + 'px'}">
-			<a
-				class="pagination-previous"
-				:disabled="isFirst"
-				@click="previous"
-				title="Anterior"
-				><i class="icon-abrir_esquerda icon"><span>chevron_left</span></i></a>
 			<template v-for="image in gallery_attrs.images">
 				<figure class="item" v-show="image.state">
 					<h3 v-if="image.icon">
 						<img :src="image.icon" :class="{ legenda: gallery_attrs.legendas }">
 						<span :class="{ noIcon:!image.icon }">{{ image.title }}</span>
 					</h3>
+					<h2 v-if="gallery_attrs.galleryTitle">{{ gallery_attrs.galleryTitle }}</h2>
 					<div class="placeholder" v-if="loading" :style="{ maxWidth: gallery_attrs.width + 'px'}" ></div>
 					<img :src="image.url" :width="gallery_attrs.width">
 					<p class="legenda" v-if="image.legenda"> {{ image.legenda }} </p>
 				</figure>
 			</template>
 			<a
+				class="pagination-previous"
+				:disabled="isFirst"
+				v-show="!isFirst"
+				@click="previous"
+				title="Anterior"
+				><i class="icon-abrir_esquerda icon"><span>chevron_left</span></i></a>
+			<a
 				class="pagination-next"
 				:disabled="isLast"
+				v-show="!isLast"
 				@click="next"
 				title="Próximo"
 				><i class="icon-abrir_direita icon"><span>chevron_right</span></i></a>
@@ -161,6 +164,21 @@ export default {
 			align-self: flex-start;
 			margin: 0;
 			padding: 0;
+			position: relative;
+			h2 {
+				position: absolute;
+				width: 100%;
+				background-color: $sombra-2;
+				color: #FFF;
+				font-size: small;
+				font-weight: normal;
+				line-height: 1.6;
+				margin: 0;
+				padding: 0.5rem 1rem;
+				text-align: center;
+				transform: translateY(-3rem);
+				transition: transform ease-in .2s;
+			}
 			img {
 				width: 100%;
 				&.legenda {
@@ -170,6 +188,9 @@ export default {
 				}
 			};
 		};
+		&:hover figure.item h2 {
+			transform: translateY(0);
+		}
 		p.legenda {
 			margin: -10px 0 0 0;
 			padding: 1rem;

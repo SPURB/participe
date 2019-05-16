@@ -73,7 +73,7 @@
 					</a>
 				</li>
 				<li class="errata" id-erro="4">
-					<a :href="imgSrc('arquivos/concessao-martinelli/OM_ObservatorioMartinelli_Chamamento.pdf')" target="_blank">
+					<a :href="imgSrc('arquivos/concessao-martinelli/Observatorio_Martinelli-M2.zip')" target="_blank">
 						<i class="icon-anexos icon"><span>dwg</span></i>
 						<div>DWG OBSERVATÓRIO MARTINELLI</div>
 						<span>899 KB</span>

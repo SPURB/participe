@@ -163,6 +163,7 @@
 			],
 			fonte: 'TPCL, 2019'
 		}"></Imagem>
+
 		<Imagem :dados="{
 			tipo: 'mapa',
 			url: imgSrc('arquivos/parque-minhocao/img/mapas/fig11.jpg'),
@@ -175,6 +176,7 @@
 			],
 			fonte: 'Deinfo, 2014'
 		}"></Imagem>
+
 		<Imagem :dados="{
 			tipo: 'mapa',
 			url: imgSrc('arquivos/parque-minhocao/img/mapas/fig12.jpg'),
@@ -194,6 +196,65 @@
 		}"></Imagem>
 
 		<!-- branch minhocao-TEMP -->
+
+		<!-- Figura 13 -->
+		<Imagem :dados="{
+			tipo: 'mapa',
+			url: imgSrc('arquivos/parque-minhocao/img/mapas/fig13.gif'),
+			titulo: 'Sistema Viário Estrutural',
+			legenda: [
+				{ linha: true, borda: '#802c13', espessura: '3', descricao: 'Vias de Trânsito Rápido' },
+				{ linha: true, borda: '#e3121c', espessura: '3', descricao: 'Arterial' },
+				{ linha: true, borda: '#ff8b18', espessura: '3', descricao: 'Coletora' },
+				{ linha: true, borda: '#ffd84e', espessura: '3', descricao: 'Local' },
+				{ linha: true, borda: '#a7cb97', espessura: '3', descricao: 'Vias de pedestres', pontilhado: true },
+
+				{ linha: true, borda: '#333', espessura: '3', descricao: 'Minhocão (Contorno)' },
+				{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_3.jpg'), descricao: 'Linha férrea' },
+				{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_1.jpg'), descricao: 'Estações do Metrô' },
+				{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_2.jpg'), descricao: 'Estações da CPTM' }
+			],
+			fonte: 'Elaboração: SP Urbanismo, 2019'
+		}"></Imagem>
+		<!-- /Figura 13 -->
+
+		<!-- Figura 14 -->
+		<Imagem :dados="{
+			tipo: 'mapa',
+			url: imgSrc('arquivos/parque-minhocao/img/mapas/fig14.gif'),
+			titulo: 'Sistema de transporte público',
+			legenda: [
+				{ linha: true, borda: '#ea2f41', espessura: '3', descricao: 'Corredor de ônibus' },
+				{ linha: true, borda: '#ffbd37', espessura: '3', descricao: 'Faixa de ônibus' },
+				{ linha: true, borda: '#fff8a8', espessura: '3', descricao: 'Linha de ônibus' },
+				{ simbolo: src('arquivos/parque-minhocao/img/mapas/legendas/onibus.gif'), descricao: 'Ponto de ônibus' },
+
+				{ linha: true, borda: '#333', espessura: '3', descricao: 'Minhocão (Contorno)' },
+				{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_3.jpg'), descricao: 'Linha férrea' },
+				{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_1.jpg'), descricao: 'Estações do Metrô' },
+				{ simbolo: imgSrc('arquivos/parque-minhocao/img/mapas/legendas/fig4_2.jpg'), descricao: 'Estações da CPTM' }
+			],
+			fonte: 'Geinfo, 2018. Elaboração: SP Urbanismo, 2019'
+		}"></Imagem>
+		<!-- /Figura 14 -->
+
+		<!-- Figura 15 -->
+		<!-- /Figura 15 -->
+
+		<!-- Figura 16 -->
+		<!-- /Figura 16 -->
+
+		<!-- Figura 17 -->
+		<!-- /Figura 17 -->
+
+		<!-- Figura 18 -->
+		<!-- /Figura 18 -->
+
+		<!-- Figura 19 -->
+		<!-- /Figura 19 -->
+
+		<!-- Figura 20 -->
+		<!-- /Figura 20 -->
 
 		<!-- Figura 21 -->
 		<Imagem :dados="{
@@ -918,6 +979,7 @@
 			caption: 'Teatro nas janelas dos edifícios (Grupo Esparrama)'
 		}"></Imagem>
 		<!-- / figuras 104, 105 e 106-->
+
 		<!--/ branch minhocao-TEMP -->
 
 		<Galeria :gallery_attrs="galeria01"></Galeria>

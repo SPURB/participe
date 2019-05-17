@@ -1353,7 +1353,7 @@
 				}]
 			}"></AntesDepois>
 			<h4>EIXOS DE ORDENAMENTO DA PAISAGEM 4</h4>
-			<AntesDepois class="errata" id-erro="15" :dados="{
+			<AntesDepois :dados="{
 				caption: 'Parâmetros do Eixo de Ordenamento da Paisagem 4',
 				largura: '1561',
 				altura: '816',
@@ -1372,7 +1372,9 @@
 				}, {
 					url: imgSrc('arquivos/setor-central-2/antes-depois/eixo-ordena-paisa-4_4.png'),
 					legenda: 'Gabarito máximo'
-				}]
+				}],
+				errata: true,
+				idErro: 15
 			}"></AntesDepois>
 			<p>Os Eixos de Transformação são compostos pela Av. Alcântara Machado, Av. Prestes Maia, Radial Leste-Oeste – entre a Praça Roosevelt e o Viaduto Jaceguai e Rua Mauá – no trecho entre a Av. Prestes Maia e a Rua da Cantareira. Estabelecem obrigatoriedade de utilização de parâmetros qualificadores – fachada ativa, fruição pública e recuos especiais, bonificados com potencial construtivo adicional, além de incentivo ao remembramento de lotes, na forma de desconto no pagamento da outorga onerosa do direito de construir. Os Eixos de Transformação são oriundos dos Eixos de Qualificação do Projeto de Lei 723/2015, que institui a Operação Urbana Consorciada Bairros do Tamanduateí, e delineiam parâmetros incentivadores e qualificadores da transformação em áreas de alta obsolescência e depreciação territorial, localizadas principalmente junto às vias estruturais. São divididos em Eixos de Transformação e Eixos de Transformação da Orla Fluvial.</p>
 			<h4>EIXOS DE TRANSFORMAÇÃO</h4>
@@ -1410,8 +1412,8 @@
 				largura: '1561',
 				altura: '816',
 				fonte:'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019',
-				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf-orla_antes.jpg'),
-				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf-orla_depois.jpg'),
+				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf-orla_antes_2019-05-17.jpg'),
+				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf-orla_depois_2019-05-17.jpg'),
 				pictogramas: [{
 					url: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf-orla_1.png'),
 					legenda: 'C.A. 4'
@@ -1430,7 +1432,9 @@
 				}, {
 					url: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf-orla_6.png'),
 					legenda: 'Lote mínimo 1000m²'
-				}]
+				}],
+				errata: true,
+				idErro: 16
 			}"></AntesDepois>
 
 			<p>O Plano Diretor Estratégico do Município de São Paulo - PDE, aprovado em 2014, estabeleceu a desativação do Elevado João Goulart – Minhocão - como via de tráfego, prevendo sua demolição ou transformação, parcial ou integral, em parque (Lei Municipal nº 16.050/2014, Art. 375, parágrafo único). </p>
@@ -1460,7 +1464,7 @@
 			<p>Ambos os projetos - o PIU do Setor Central da escala do planejamento e o PIU do Parque Minhocão da escala da intervenção urbanística - estão integrados para gerar o máximo de eficiência administrativa na gestão da cidade, tem em mira o desenvolvimento urbano harmonioso e consequente para a região central de São Paulo.</p>
 
 			<h4>EIXOS DE TRANSFORMAÇÃO - PARQUE MINHOCÃO</h4>
-			<AntesDepois class="errata" id-erro="14" :dados="{
+			<AntesDepois :dados="{
 				caption: 'Parâmetros dos Eixos de Transformação Elevado Pres. João Goulart',
 				largura: '1561',
 				altura: '816',
@@ -1479,7 +1483,9 @@
 				}, {
 					url: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf-minhocao_4.png'),
 					legenda: 'Fachada ativa incentivada'
-				}]
+				}],
+				errata: true,
+				idErro: 14
 			}"></AntesDepois>
 			<ol class="notas">
 				<caption>Notas</caption>

@@ -1,6 +1,7 @@
 <template>
 	<div class="AntesDepois" :class="{ print: toPrint }" :style="{ maxWidth: dados.largura + 'px' }">
-		<nav class="actions"  @click="depois = !depois">
+		<span v-if="dados.errata" class="errata" :id-erro="dados.idErro"></span>
+		<nav class="actions" @click="depois = !depois">
 			<div class="indicador">
 				<span v-if="!depois">Antes</span>
 				<span v-if="depois">Depois</span>
@@ -23,7 +24,6 @@
 				</li>
 			</ul>
 		</div>
-
 	</div>
 </template>
 <script>
@@ -73,7 +73,9 @@ export default {
 	computed: {
 		toPrint () { return this.$store.state.toPrint }
 	},
-	props: ['dados'],
+	props: [
+		'dados'
+	],
 	mounted () {},
 	methods: {
 		toggleImgDepois () {
@@ -85,6 +87,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '../variables';
+@import '../errata';
 
 .fonte{
 	padding: 0 0.5rem;
@@ -101,6 +104,15 @@ export default {
 	border-radius: 2px;
 	overflow: hidden;
 	background-color: $cinza-3;
+	& > span.errata {
+		position: absolute;
+		z-index: 5;
+		&::after {
+			top: 4px;
+			left: 4px;
+			width: 1rem;
+		}
+	}
 	& > nav {
 		position: absolute;
 		top: 4px;

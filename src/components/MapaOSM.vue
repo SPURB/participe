@@ -63,10 +63,12 @@ export default {
 					title: String
 				}
 			]
-		}
+		},
+		'styleFromKML': false
 	},
 	computed: {
 		mapLayers () {
+			let styleFromKML = this.styleFromKML;
 			let retLayers = [
 				new TileLayer({
 					source: new OSM()
@@ -87,8 +89,7 @@ export default {
 					source: new VectorSource({
 						url: index.path,
 						format: new KML({
-							extractStyles: false
-							// extractStyles: true
+							extractStyles: styleFromKML
 						})
 					})
 				})

@@ -2,6 +2,7 @@
 	<div class="Home">
 		<Preloader></Preloader>
 		<main id="listaProjetos">
+			<p>PR deploy test</p>
 			<!-- <div class="busca" @click="ativaBusca">
 				<i class="material-icons">search</i>
 				<input class="fuzzy-search" type="search" ref="busca" title="Digite o que pesquisa" value="Pesquisar" @focusout="desativaBusca">

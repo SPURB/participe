@@ -84,6 +84,8 @@
 			<a :href="imgSrc('mapas/piu-setor-central-2/')" target="_blank">MAPA INTERATIVO <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
 		</div>
 		<section>
+			<Comments :attr="{ id:1001, context:'A revisão da Operação Urbana Centro e o PIU Setor Central'}" v-if="estaConsulta.ativo == 1"></Comments>
+
 			<h2 class="titulo" indent="1">A revisão da Operação Urbana Centro e o PIU Setor Central</h2>
 			<h3>Abertura</h3>
 			<CommentsContext :id="1001" :context="'A revisão da Operação Urbana Centro e o PIU Setor Central'">

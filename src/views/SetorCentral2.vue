@@ -1850,7 +1850,7 @@
 				<li>Qualificação dos espaços públicos.</li>
 			</ol>
 			<p>A partir desse temas, sugere-se uma composição, a saber:</p>
-			<Tabela :dados="tabela_grupogestor"></Tabela>
+			<Tabela :dados="tabela_grupogestor" class="errata" id-erro="17"></Tabela>
 			<ol class="notas">
 				<caption>Notas</caption>
 				<li>Os Núcleos Regionais de Planejamento são compostos por representantes da subprefeitura responsáveis pelo seu planejamento territorial e secretarias e órgãos  municipais que atuam na região, buscando a integração territorial das políticas públicas setoriais. É composto por 16 membros, designados por Portaria, entre as seguintes secretarias municipais: Secretaria Municipal de Desenvolvimento Urbano - SMDU, Secretaria Municipal do Verde e Meio Ambiente – SVMA, Secretaria Municipal de Gestão – SMG, Secretaria do Governo Municipal – SGM, Secretaria Municipal de Justiça – SMJ, Secretaria Municipal de Direitos Humanos e Cidadania – SMDHC, Secretaria Municipal de Mobilidade e Transportes – SMT, Secretaria Municipal de Inovação e Tecnologia – SMIT, Secretaria Municipal de Trabalho e Empreendedorismo – SMTE, Secretaria Municipal de Desestatização e Parcerias – SMDP, Secretaria Municipal de Assistência e Desenvolvimento Social – SMADS, Secretaria Municipal de Segurança Urbana – SMSU (Guarda Civil Metropolitana – GCM e Guarda Ambiental), Controladoria Geral do Município – CGM, Secretaria Municipal da Pessoa com Deficiência – SMPED e Secretaria Municipal de Relações Internacionais – SMRI, num total de 16 membros, designados por Portaria. (PORTARIA SECRETARIA MUNICIPAL DAS PREFEITURAS REGIONAIS - SMPR Nº 31 DE 7 DE JULHO DE 2001.</li>
@@ -3298,40 +3298,49 @@ export default {
 			tabela_grupogestor: {
 				colunas: [
 					{ titulo: 'Tema' },
-					{ titulo: 'PMSP' }
+					{ titulo: 'PMSP' },
+					{ titulo: 'Sociedade civil' }
 				],
 				linhas: [
 					[
 						[ { data: 'Habitação - Social' } ],
-						[ { data: 'COHAB' } ]
+						[ { data: 'COHAB' } ],
+						[ { data: 'Conselho Municipal de Habitação' } ]
 					],
 					[
 						[ { data: 'Habitação - Mercado imobiliário' } ],
-						[ { data: 'SEHAB' } ]
+						[ { data: 'SEHAB' } ],
+						[ { data: 'Segmento Empresarial (CMPU)' } ]
 					],
 					[
 						[ { data: 'Vulnerabilidade social' } ],
-						[ { data: 'SMADS, SMDHC' } ]
+						[ { data: 'SMADS, SMDHC' } ],
+						[ { data: 'Conselho Pop Rua, Organização Não Governamental' } ]
 					],
 					[
 						[ { data: 'Atividade econômica' } ],
-						[ { data: 'SMTE' } ]
+						[ { data: 'SMTE' } ],
+						[ { data: 'Segmento Comercial (CMPU)' } ]
 					],
 					[
 						[ { data: 'Mobilidade' } ],
-						[ { data: 'SMT' } ]
+						[ { data: 'SMT' } ],
+						[ { data: 'Organização Não Governamental' } ]
 					],
 					[
 						[ { data: 'Regulação urbanística e intervenções' } ],
-						[ { data: 'SPURBANISMO, SMDU' } ]
+						[ { data: 'SPURBANISMO, SMDU' } ],
+						[ { data: 'Conselho Participativo Municipal, Organização Não Governamental, Universidade (CMPU)' } ]
 					],
 					[
 						[ { data: 'Zeladoria urbana' } ],
-						[ { data: 'Subprefeituras' } ]
+						[ { data: 'Subprefeituras' } ],
+						[ { data: 'Conselho Participativo Municipal, Organização Não Governamental, Universidade (CMPU)' } ]
 					],
 					[
 						[ { data: 'Ambiente urbano' } ],
-						[ { data: 'SVMA' } ]
+						[ { data: 'SVMA' } ],
+						[ { data: 'Conselho Participativo Municipal, Organização Não Governamental, Universidade (CMPU)' } ]
 					]
 				],
 				estreita: false

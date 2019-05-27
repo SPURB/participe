@@ -163,6 +163,7 @@ div.Apoio {
 				height: 100%;
 				max-height: calc(100vh - 60px);
 				min-width: 100%;
+				max-width: 100%;
 				overflow-y: auto;
 				transition: opacity ease-out .2s;
 				background: #FFF;

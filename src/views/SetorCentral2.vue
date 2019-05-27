@@ -3663,6 +3663,7 @@ div.SetorCentral2 {
 			max-width: calc(100vw - 4rem - 400px);
 			@media (max-width: 600px) {
 				padding: 1rem;
+				max-width: 100%;
 			}
 			& > div:not(.notas) {
 				margin: 0 auto;

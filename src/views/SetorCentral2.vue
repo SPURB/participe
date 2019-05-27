@@ -3588,6 +3588,23 @@ export default {
 @import '../errata';
 
 div.SetorCentral2 {
+	.conteudoTab ul.links li a {
+		@media (max-width: 600px) {
+			flex-flow: row wrap;
+			justify-content: space-between;
+			i.icon { order: 1; }
+			span {
+				order: 2;
+				justify-content: flex-end;
+			}
+			div {
+				order: 3;
+				width: 100%;
+				line-height: 1.2;
+				margin: 1rem 0 0;
+			}
+		}
+	}
 	div.linkMapaInterativo {
 		position: fixed;
 		right: 2rem;

@@ -84,6 +84,8 @@
 			<a :href="imgSrc('mapas/piu-setor-central-2/')" target="_blank">MAPA INTERATIVO <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
 		</div>
 		<section>
+			<Comments :attr="{ id:1001, context:'A revisão da Operação Urbana Centro e o PIU Setor Central'}" v-if="estaConsulta.ativo == 1"></Comments>
+
 			<h2 class="titulo" indent="1">A revisão da Operação Urbana Centro e o PIU Setor Central</h2>
 			<h3>Abertura</h3>
 			<CommentsContext :id="1001" :context="'A revisão da Operação Urbana Centro e o PIU Setor Central'">
@@ -1353,7 +1355,7 @@
 				}]
 			}"></AntesDepois>
 			<h4>EIXOS DE ORDENAMENTO DA PAISAGEM 4</h4>
-			<AntesDepois class="errata" id-erro="15" :dados="{
+			<AntesDepois :dados="{
 				caption: 'Parâmetros do Eixo de Ordenamento da Paisagem 4',
 				largura: '1561',
 				altura: '816',
@@ -1372,7 +1374,9 @@
 				}, {
 					url: imgSrc('arquivos/setor-central-2/antes-depois/eixo-ordena-paisa-4_4.png'),
 					legenda: 'Gabarito máximo'
-				}]
+				}],
+				errata: true,
+				idErro: 15
 			}"></AntesDepois>
 			<p>Os Eixos de Transformação são compostos pela Av. Alcântara Machado, Av. Prestes Maia, Radial Leste-Oeste – entre a Praça Roosevelt e o Viaduto Jaceguai e Rua Mauá – no trecho entre a Av. Prestes Maia e a Rua da Cantareira. Estabelecem obrigatoriedade de utilização de parâmetros qualificadores – fachada ativa, fruição pública e recuos especiais, bonificados com potencial construtivo adicional, além de incentivo ao remembramento de lotes, na forma de desconto no pagamento da outorga onerosa do direito de construir. Os Eixos de Transformação são oriundos dos Eixos de Qualificação do Projeto de Lei 723/2015, que institui a Operação Urbana Consorciada Bairros do Tamanduateí, e delineiam parâmetros incentivadores e qualificadores da transformação em áreas de alta obsolescência e depreciação territorial, localizadas principalmente junto às vias estruturais. São divididos em Eixos de Transformação e Eixos de Transformação da Orla Fluvial.</p>
 			<h4>EIXOS DE TRANSFORMAÇÃO</h4>
@@ -1410,8 +1414,8 @@
 				largura: '1561',
 				altura: '816',
 				fonte:'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019',
-				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf-orla_antes.jpg'),
-				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf-orla_depois.jpg'),
+				imgAntes: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf-orla_antes_2019-05-17.jpg'),
+				imgDepois: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf-orla_depois_2019-05-17.jpg'),
 				pictogramas: [{
 					url: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf-orla_1.png'),
 					legenda: 'C.A. 4'
@@ -1430,7 +1434,9 @@
 				}, {
 					url: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf-orla_6.png'),
 					legenda: 'Lote mínimo 1000m²'
-				}]
+				}],
+				errata: true,
+				idErro: 16
 			}"></AntesDepois>
 
 			<p>O Plano Diretor Estratégico do Município de São Paulo - PDE, aprovado em 2014, estabeleceu a desativação do Elevado João Goulart – Minhocão - como via de tráfego, prevendo sua demolição ou transformação, parcial ou integral, em parque (Lei Municipal nº 16.050/2014, Art. 375, parágrafo único). </p>
@@ -1460,7 +1466,7 @@
 			<p>Ambos os projetos - o PIU do Setor Central da escala do planejamento e o PIU do Parque Minhocão da escala da intervenção urbanística - estão integrados para gerar o máximo de eficiência administrativa na gestão da cidade, tem em mira o desenvolvimento urbano harmonioso e consequente para a região central de São Paulo.</p>
 
 			<h4>EIXOS DE TRANSFORMAÇÃO - PARQUE MINHOCÃO</h4>
-			<AntesDepois class="errata" id-erro="14" :dados="{
+			<AntesDepois :dados="{
 				caption: 'Parâmetros dos Eixos de Transformação Elevado Pres. João Goulart',
 				largura: '1561',
 				altura: '816',
@@ -1479,7 +1485,9 @@
 				}, {
 					url: imgSrc('arquivos/setor-central-2/antes-depois/eixo-transf-minhocao_4.png'),
 					legenda: 'Fachada ativa incentivada'
-				}]
+				}],
+				errata: true,
+				idErro: 14
 			}"></AntesDepois>
 			<ol class="notas">
 				<caption>Notas</caption>
@@ -1842,7 +1850,7 @@
 				<li>Qualificação dos espaços públicos.</li>
 			</ol>
 			<p>A partir desse temas, sugere-se uma composição, a saber:</p>
-			<Tabela :dados="tabela_grupogestor"></Tabela>
+			<Tabela :dados="tabela_grupogestor" class="errata" id-erro="17"></Tabela>
 			<ol class="notas">
 				<caption>Notas</caption>
 				<li>Os Núcleos Regionais de Planejamento são compostos por representantes da subprefeitura responsáveis pelo seu planejamento territorial e secretarias e órgãos  municipais que atuam na região, buscando a integração territorial das políticas públicas setoriais. É composto por 16 membros, designados por Portaria, entre as seguintes secretarias municipais: Secretaria Municipal de Desenvolvimento Urbano - SMDU, Secretaria Municipal do Verde e Meio Ambiente – SVMA, Secretaria Municipal de Gestão – SMG, Secretaria do Governo Municipal – SGM, Secretaria Municipal de Justiça – SMJ, Secretaria Municipal de Direitos Humanos e Cidadania – SMDHC, Secretaria Municipal de Mobilidade e Transportes – SMT, Secretaria Municipal de Inovação e Tecnologia – SMIT, Secretaria Municipal de Trabalho e Empreendedorismo – SMTE, Secretaria Municipal de Desestatização e Parcerias – SMDP, Secretaria Municipal de Assistência e Desenvolvimento Social – SMADS, Secretaria Municipal de Segurança Urbana – SMSU (Guarda Civil Metropolitana – GCM e Guarda Ambiental), Controladoria Geral do Município – CGM, Secretaria Municipal da Pessoa com Deficiência – SMPED e Secretaria Municipal de Relações Internacionais – SMRI, num total de 16 membros, designados por Portaria. (PORTARIA SECRETARIA MUNICIPAL DAS PREFEITURAS REGIONAIS - SMPR Nº 31 DE 7 DE JULHO DE 2001.</li>
@@ -3290,40 +3298,49 @@ export default {
 			tabela_grupogestor: {
 				colunas: [
 					{ titulo: 'Tema' },
-					{ titulo: 'PMSP' }
+					{ titulo: 'PMSP' },
+					{ titulo: 'Sociedade civil' }
 				],
 				linhas: [
 					[
 						[ { data: 'Habitação - Social' } ],
-						[ { data: 'COHAB' } ]
+						[ { data: 'COHAB' } ],
+						[ { data: 'Conselho Municipal de Habitação' } ]
 					],
 					[
 						[ { data: 'Habitação - Mercado imobiliário' } ],
-						[ { data: 'SEHAB' } ]
+						[ { data: 'SEHAB' } ],
+						[ { data: 'Segmento Empresarial (CMPU)' } ]
 					],
 					[
 						[ { data: 'Vulnerabilidade social' } ],
-						[ { data: 'SMADS, SMDHC' } ]
+						[ { data: 'SMADS, SMDHC' } ],
+						[ { data: 'Conselho Pop Rua, Organização Não Governamental' } ]
 					],
 					[
 						[ { data: 'Atividade econômica' } ],
-						[ { data: 'SMTE' } ]
+						[ { data: 'SMTE' } ],
+						[ { data: 'Segmento Comercial (CMPU)' } ]
 					],
 					[
 						[ { data: 'Mobilidade' } ],
-						[ { data: 'SMT' } ]
+						[ { data: 'SMT' } ],
+						[ { data: 'Organização Não Governamental' } ]
 					],
 					[
 						[ { data: 'Regulação urbanística e intervenções' } ],
-						[ { data: 'SPURBANISMO, SMDU' } ]
+						[ { data: 'SPURBANISMO, SMDU' } ],
+						[ { data: 'Conselho Participativo Municipal, Organização Não Governamental, Universidade (CMPU)' } ]
 					],
 					[
 						[ { data: 'Zeladoria urbana' } ],
-						[ { data: 'Subprefeituras' } ]
+						[ { data: 'Subprefeituras' } ],
+						[ { data: 'Conselho Participativo Municipal, Organização Não Governamental, Universidade (CMPU)' } ]
 					],
 					[
 						[ { data: 'Ambiente urbano' } ],
-						[ { data: 'SVMA' } ]
+						[ { data: 'SVMA' } ],
+						[ { data: 'Conselho Participativo Municipal, Organização Não Governamental, Universidade (CMPU)' } ]
 					]
 				],
 				estreita: false

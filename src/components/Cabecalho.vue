@@ -25,6 +25,7 @@ export default {
 		abreMenu () {
 			this.$store.state.menuToggle = true
 			this.$store.state.luzApaga = true
+			document.body.style.overflow = document.body.style.overflow === '' ? 'hidden' : ''
 		},
 		logoSrc () {
 			var arch

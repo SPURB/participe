@@ -35,10 +35,18 @@ export default {
 		menuToggle () { return this.$store.state.menuToggle },
 		logoGestaoUrbana () { return this.$store.getters.basePath + 'arquivos/img/logo_gestao_footer.jpg' }
 	},
+	beforeUpdate () {
+		this.$el.children[0].scrollTo({
+			top: 0,
+			left: 0,
+			behavior: 'smooth'
+		})
+	},
 	methods: {
 		fechaMenu () {
 			this.$store.state.menuToggle = false
 			this.$store.state.luzApaga = false
+			document.body.style.overflow = document.body.style.overflow === '' ? 'hidden' : ''
 		}
 	}
 }

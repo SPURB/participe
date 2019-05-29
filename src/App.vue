@@ -72,6 +72,7 @@ export default {
 				this.$store.state.apoioToggle = false
 				this.$store.state.luzApaga = false
 			};
+			document.body.style.overflow = document.body.style.overflow === '' ? 'hidden' : ''
 		}
 	}
 }

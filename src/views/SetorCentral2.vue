@@ -528,9 +528,9 @@
 								<td></td>
 								<td></td>
 								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
+								<td class="errata" id-erro="18">&#10004;</td>
+								<td class="errata" id-erro="18">&#10004;</td>
+								<td class="errata" id-erro="18">&#10004;</td>
 								<td></td>
 								<td>&#10004;</td>
 							</tr>
@@ -989,7 +989,7 @@
 					url: imgSrc('arquivos/setor-central-2/antes-depois/t2_2.png'),
 					legenda: 'T.O. 80%'
 				}, {
-					url: imgSrc('arquivos/setor-central-2/antes-depois/t2_2.png'),
+					url: imgSrc('arquivos/setor-central-2/antes-depois/t2_3.png'),
 					legenda: 'Gabarito máximo: não se aplica'
 				}]
 			}"></AntesDepois>
@@ -2067,7 +2067,7 @@
 			<ul>
 				<li>
 					Fórmula de cálculo
-					<pre class="formula">C = ( A<sub>t</sub> / A<sub>c</sub> ) × X × F<sub>s</sub> × F<sub>p</sub></pre>
+					<pre class="formula errata" id-erro="19">C = ( A<sub>t</sub> / A<sub>c</sub> ) × V × F<sub>s</sub> × F<sub>p</sub></pre>
 				</li>
 				<li>
 					Fator de Planejamento médio entre usos R e nR <pre class="formula declara">(F<sub>p</sub> = 1,25)</pre>
@@ -3551,7 +3551,7 @@ export default {
 					],
 					[
 						[ { data: 'Estoque total' } ],
-						[ { data: '2.000.000' } ]
+						[ { data: '2.200.000' } ]
 					]
 				]
 			}

@@ -991,7 +991,9 @@
 				}, {
 					url: imgSrc('arquivos/setor-central-2/antes-depois/t2_3.png'),
 					legenda: 'Gabarito máximo: não se aplica'
-				}]
+				}],
+				errata: true,
+				idErro: 20
 			}"></AntesDepois>
 			<h4>SETOR DE TRANSFORMAÇÃO 5 - T5</h4>
 			<AntesDepois :dados="{

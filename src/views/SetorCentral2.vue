@@ -1937,7 +1937,7 @@
 			<p>Estão organizados em 4 categorias: VENDA DE POTENCIAL CONSTRUTIVO ADICIONAL – disponibilizados em Venda Direta ou através de Leilões, BÔNUS EQUIVALENTES, TRANSFERÊNCIA DO DIREITO DE CONSTRUIR e INCENTIVOS concedidos na forma de potencial adicional gratuito que se distribuem nas áreas da AIU e OPERAÇÃO URBANA.</p>
 			<Imagem :dados="{
 				tipo: 'w992',
-				url: imgSrc('arquivos/setor-central-2/img/distribuicao-estoque_2019-05-10.png'),
+				url: imgSrc('arquivos/setor-central-2/errata/distribuicao-estoque_2019-05-29.jpg'),
 				errata: true,
 				id: '13'
 			}"></Imagem>

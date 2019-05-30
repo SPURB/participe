@@ -92,6 +92,7 @@ export const consultasCommons = {
 			Array.from(this.$el.getElementsByClassName('errata')).map(erro => {
 				erro.addEventListener('click', event => {
 					this.$store.commit('TOGGLE_APOIO')
+					document.body.style.overflow = document.body.style.overflow === '' ? 'hidden' : ''
 				})
 			})
 		}

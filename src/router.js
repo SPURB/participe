@@ -16,6 +16,7 @@ const ArcoPinheiros2 = () => import(/* webpackChunkName: "arcopinheiros2" */ '@/
 const SetorCentral2 = () => import(/* webpackChunkName: "setorcentral2" */ '@/views/SetorCentral2')
 const PlanoCicloviario = () => import(/* webpackChunkName: "planocicloviario" */ '@/views/PlanoCicloviario')
 const ParqueMinhocao = () => import(/* webpackChunkName: "parqueminhocao" */ '@/views/ParqueMinhocao')
+const MinutaArcoPinheiros = () => import(/* webpackChunkName: "minutaarcopinheiros" */ '@/views/MinutaArcoPinheiros')
 
 Vue.use(Router)
 
@@ -134,7 +135,16 @@ export default new Router({
 			meta: {
 				id: 44
 			}
+		},
+		{
+			path: '/minuta-arco-pinheiros',
+			name: 'MinutaArcoPinheiros',
+			components: { MinutaArcoPinheiros },
+			meta: {
+				id: 45
+			}
 		}
+
 		/*
 	 * Modelo para novas consultas
 	/*

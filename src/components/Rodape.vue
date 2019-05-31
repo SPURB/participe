@@ -1,7 +1,8 @@
 <template>
-	<div class="Rodape" :class="{ loading: fetching, error: error }" v-if="!fetching && error && !consultas">
+	<div class="Rodape" :class="{ loading: fetching, error: error }" v-if="!fetching">
 		<footer>
 			<p>Caso surjam dúvidas ou problemas técnicos, envie um e-mail para: <a href="mailto:imprensasmul@prefeitura.sp.gov.br">imprensasmul@prefeitura.sp.gov.br</a>.</p>
+			
 		</footer>
 	</div>
 </template>

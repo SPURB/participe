@@ -2,10 +2,6 @@
 	<div class="Home">
 		<Preloader></Preloader>
 		<main id="listaProjetos">
-			<!-- <div class="busca" @click="ativaBusca">
-				<i class="material-icons">search</i>
-				<input class="fuzzy-search" type="search" ref="busca" title="Digite o que pesquisa" value="Pesquisar" @focusout="desativaBusca">
-			</div> -->
 			<ul class="list" :class="{ load: !fetching }">
 				<li v-for="(consulta, index) in consultas" class="card" @click="redirect(setUrlByType(consulta.urlConsulta))" :key="index">
 					<div class="bgImg">
@@ -74,9 +70,13 @@ export default {
 		basePathImgSrc () { return this.$store.getters.basePath + 'arquivos/capas/' },
 		fetching () { return this.$store.state.fetching }
 	},
+	created () {
+		this.$store.dispatch('fetchConsultas', { self: this })
+	},
 	mounted () {
 		if (window.location.hash !== '') this.checkOldRoutesWithHashes(window.location.hash)// redirect if url contain old patter. ex -> /#/anhembi2
 	},
+
 	methods: {
 		checaContribuicoes (n) { return parseInt(n) > 0 },
 		imgset (nomeStr) {

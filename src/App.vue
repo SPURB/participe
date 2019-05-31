@@ -17,17 +17,7 @@
 	<router-view name="SetorCentral2"></router-view>
 	<router-view name="PlanoCicloviario"></router-view>
 	<router-view name="ParqueMinhocao"></router-view>
-
-	<Modal v-if="modalState.error">
-		<h3 slot="header" class="modal-error">Erro!</h3>
-		<p slot="body">Não foi possível enviar a contribuição. Isso pode ocorrer se você já realizou uma contribuição com o mesmo conteúdo ou se ocorrer alguma falha de conexão com o servidor.</p>
-	</Modal>
-	<Modal v-if="modalState.success">
-		<h3 slot="header" class="modal-success">Obrigado!</h3>
-		<div slot="body"><p>Agradecemos a sua contribuição!<br>
-		Seu comentário foi enviado e aguarda aprovação da moderação para ser publicado.</p></div>
-	</Modal>
-
+	<router-view name="MinutaArcoPinheiros"></router-view>
 	<Rodape></Rodape>
 </div>
 </template>
@@ -36,24 +26,19 @@
 import Cabecalho from '@/components/Cabecalho'
 import MenuLateral from '@/components/MenuLateral'
 import Rodape from '@/components/Rodape'
-import Modal from '@/components/Modal.vue'
 
 export default {
 	name: 'Participe',
 	components: {
 		Cabecalho,
 		MenuLateral,
-		Rodape,
-		Modal
+		Rodape
 	},
 	computed: {
-		interruptor () { return this.$store.state.luzApaga },
-		isAdmin () { return this.$store.state.isAdmin },
-		modalState () { return this.$store.state.modalState }
-	},
+		interruptor () { return this.$store.state.luzApaga } },
 	created () {
 		let app = this
-		this.$store.dispatch('fetchConsultas', { self: this })
+		// this.$store.dispatch('fetchConsultas', { self: this })
 		window.addEventListener('keydown', function (event) {
 			if (event.ctrlKey && event.code === 'KeyP') {
 				app.$store.dispatch('imprime')
@@ -63,9 +48,6 @@ export default {
 	mounted () { document.getElementById('carregando').classList.add('some') },
 	updated () { this.$refs.interruptor.style.height = this.$el.clientHeight + 'px' },
 	methods: {
-		setModal (typeOfmodal) {
-			this.$store.commit('COMMENT_MODAL_STATUS', typeOfmodal)
-		},
 		fechaTudo () {
 			if (this.$store.state.menuToggle || this.$store.state.apoioToggle) {
 				this.$store.state.menuToggle = false
@@ -93,7 +75,7 @@ body {
 	line-height: 1.6;
 	margin: 0;
 
-	a { text-decoration: none; color: #EB5757; };
+	a { text-decoration: none; color: $vermelho; };
 
 	a:hover { text-decoration: underline; };
 };

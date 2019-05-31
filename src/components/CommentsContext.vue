@@ -141,9 +141,9 @@ export default {
 	},
 
 	methods: {
-		setModal (typeOfmodal) {
-			this.$store.commit('COMMENT_MODAL_STATUS', typeOfmodal)
-		},
+		// setModal (typeOfmodal) {
+		// 	this.$store.commit('COMMENT_MODAL_STATUS', typeOfmodal)
+		// },
 		checkName () {
 			if (!this.fields.name.valid && !this.fields.email.valid && !this.fields.surname.valid) {
 				alert('Preencha corretamente os campos Nome e Email')
@@ -175,16 +175,11 @@ export default {
 				'commentcontext': app.context
 			})
 				.then(function (response) {
-					// let name = app.form_name
-					// let content = app.form_content
-					// console.log(app.id)
-					// app.setModal('success')
 					app.abreComentario = false
 					app.sucesso = true
 					app.resetForm()
 				})
 				.catch(function (error) {
-					// app.setModal('error')
 					app.erro = true
 					console.log(error)
 				})

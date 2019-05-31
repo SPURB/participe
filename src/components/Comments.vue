@@ -104,9 +104,9 @@ export default {
 	},
 
 	methods: {
-		setModal (typeOfmodal) {
-			this.$store.commit('COMMENT_MODAL_STATUS', typeOfmodal)
-		},
+		// setModal (typeOfmodal) {
+		// 	this.$store.commit('COMMENT_MODAL_STATUS', typeOfmodal)
+		// },
 		checkName () {
 			if (!this.fields.name.valid && !this.fields.email.valid && !this.fields.surname.valid) {
 				alert('Preencha corretamente os campos Nome e Email')
@@ -138,16 +138,14 @@ export default {
 				'commentcontext': app.attr.context
 			})
 				.then(function (response) {
-					let name = app.form_name
-					let content = app.form_content
+					// let name = app.form_name
+					// let content = app.form_content
 					console.log(app.attr.id)
-					// app.setModal('success')
 					app.abreComentario = false
 					app.sucesso = true
 					app.resetForm()
 				})
 				.catch(function (error) {
-					// app.setModal('error')
 					app.erro = true
 					console.log(error)
 				})
@@ -163,12 +161,6 @@ export default {
 			this.form_content = null
 			this.abreComentario = false
 		}
-		// x () {
-		// 	this.$refs.y.classList.toggle('enviando')
-		// 	// this.$refs.z.classList.toggle('sucesso')
-		// 	this.g = !this.g
-		// 	// this.abreComentario =! this.abreComentario
-		// }
 	}
 }
 

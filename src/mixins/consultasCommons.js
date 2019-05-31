@@ -36,7 +36,8 @@ export const consultasCommons = {
 		},
 		filterConsultas () {
 			this.consultas = this.$store.state.consultas
-			this.estaConsulta = this.consultas.filter(esta => esta.id_consulta === this.$route.meta.id)[0]
+			this.estaConsulta = this.consultas.find(consulta => consulta.id_consulta === this.$route.meta.id)
+
 			let app = this
 			this.consultas.map(function (index) {
 				if (parseInt(index.id_consulta) === parseInt(app.$route.meta.id)) {

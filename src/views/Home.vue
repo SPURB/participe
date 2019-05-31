@@ -20,7 +20,7 @@
 
 					<div class="cont">
 						<a>
-							<h1 :class="{ consultaAtiva: parseAtivo(consulta.ativo) }" class="nome">{{ consulta.nomePublico }}</h1>
+							<h2 :class="{ consultaAtiva: parseAtivo(consulta.ativo) }" class="nome">{{ consulta.nomePublico }}</h2>
 						</a>
 						<p v-if="consulta.ativo" title="Período da consulta">
 							<i class="icon-data icon"><span>date_range</span></i>
@@ -214,7 +214,7 @@ div.Home {
 					overflow: hidden;
 
 					a {
-						h1 {
+						h2 {
 							font-size: xx-large;
 							line-height: 120%;
 							color: #FFF;
@@ -359,7 +359,7 @@ div.Home {
 						display: block;
 						width: 100%;
 
-						h1 {
+						h2 {
 							margin: 0 0 2rem 0;
 							font-size: 64px;
 							line-height: 100%;
@@ -403,7 +403,7 @@ div.Home {
 
 				div.cont {
 					padding: 12px;
-					a h1 {
+					a h2 {
 						padding-top: 2.5rem;
 						margin-bottom: 2rem;
 						font-size: x-large;
@@ -431,7 +431,7 @@ div.Home {
 					flex-flow: column nowrap;
 					justify-content: flex-end;
 
-					a h1 {
+					a h2 {
 						font-size: xx-large;
 						line-height: 120%;
 						margin: 2rem 0 0 0;
@@ -472,7 +472,7 @@ div.Home {
 					margin-top: -26px;
 				};
 
-				div a h1 { padding-top: 2.5rem; };
+				div a h2 { padding-top: 2.5rem; };
 
 				p.esconde {
 					background: rgba(255, 255, 255, .92);
@@ -509,7 +509,7 @@ div.Home {
 					box-shadow: none;
 					margin-top: 0;
 
-					a h1 { width: 100%; };
+					a h2 { width: 100%; };
 
 					p {
 						position: relative;

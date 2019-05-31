@@ -38,7 +38,6 @@ export default {
 		interruptor () { return this.$store.state.luzApaga } },
 	created () {
 		let app = this
-		// this.$store.dispatch('fetchConsultas', { self: this })
 		window.addEventListener('keydown', function (event) {
 			if (event.ctrlKey && event.code === 'KeyP') {
 				app.$store.dispatch('imprime')
@@ -104,7 +103,7 @@ div#interruptor {
 	};
 };
 
-div#carregando.some { height: 0; }
+#carregando.some { height: 0; }
 
 #btn-sw-update {
 	width: 100%;

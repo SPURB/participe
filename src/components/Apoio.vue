@@ -90,7 +90,6 @@ export default {
 			return this.$store.state.apoioToggle
 		}
 	},
-	mounted () {},
 	methods: {
 		abreApoio () {
 			if (this.$store.state.apoioToggle) {
@@ -100,6 +99,7 @@ export default {
 				this.$store.state.apoioToggle = true
 				this.$store.state.luzApaga = true
 			};
+			document.body.style.overflow = document.body.style.overflow === '' ? 'hidden' : ''
 		}
 	}
 }
@@ -163,6 +163,7 @@ div.Apoio {
 				height: 100%;
 				max-height: calc(100vh - 60px);
 				min-width: 100%;
+				max-width: 100%;
 				overflow-y: auto;
 				transition: opacity ease-out .2s;
 				background: #FFF;

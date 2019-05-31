@@ -134,6 +134,8 @@ div.Errata {
 				& > p {
 					font-size: 0.75rem;
 					color: $cinza-1;
+					max-width: 100%;
+					hyphens: auto;
 				}
 				& > a {
 					display: inline-block;
@@ -144,7 +146,8 @@ div.Errata {
 					border: 1px solid $sombra-4;
 					border-radius: 2px;
 					img {
-						height: 8rem;
+						max-height: 8rem;
+						max-width: 100%;
 						opacity: 0.75;
 					}
 				}
@@ -163,6 +166,9 @@ div.Errata {
 					border-radius: 2px;
 					background-color: #FFF;
 					padding: 0.2rem 0.6em;
+					max-width: 100%;
+					overflow: hidden;
+					text-overflow: ellipsis;
 				}
 				& > a {
 					display: inline-block;
@@ -173,6 +179,7 @@ div.Errata {
 					border: 1px solid $sombra-3;
 					border-radius: 2px;
 					img {
+						max-height: 16rem;
 						max-width: 100%;
 					}
 				}

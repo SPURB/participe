@@ -528,9 +528,9 @@
 								<td></td>
 								<td></td>
 								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
+								<td class="errata" id-erro="18">&#10004;</td>
+								<td class="errata" id-erro="18">&#10004;</td>
+								<td class="errata" id-erro="18">&#10004;</td>
 								<td></td>
 								<td>&#10004;</td>
 							</tr>
@@ -989,9 +989,11 @@
 					url: imgSrc('arquivos/setor-central-2/antes-depois/t2_2.png'),
 					legenda: 'T.O. 80%'
 				}, {
-					url: imgSrc('arquivos/setor-central-2/antes-depois/t2_2.png'),
+					url: imgSrc('arquivos/setor-central-2/antes-depois/t2_3.png'),
 					legenda: 'Gabarito máximo: não se aplica'
-				}]
+				}],
+				errata: true,
+				idErro: 20
 			}"></AntesDepois>
 			<h4>SETOR DE TRANSFORMAÇÃO 5 - T5</h4>
 			<AntesDepois :dados="{
@@ -1937,7 +1939,7 @@
 			<p>Estão organizados em 4 categorias: VENDA DE POTENCIAL CONSTRUTIVO ADICIONAL – disponibilizados em Venda Direta ou através de Leilões, BÔNUS EQUIVALENTES, TRANSFERÊNCIA DO DIREITO DE CONSTRUIR e INCENTIVOS concedidos na forma de potencial adicional gratuito que se distribuem nas áreas da AIU e OPERAÇÃO URBANA.</p>
 			<Imagem :dados="{
 				tipo: 'w992',
-				url: imgSrc('arquivos/setor-central-2/img/distribuicao-estoque_2019-05-10.png'),
+				url: imgSrc('arquivos/setor-central-2/errata/distribuicao-estoque_2019-05-29.jpg'),
 				errata: true,
 				id: '13'
 			}"></Imagem>
@@ -2067,7 +2069,7 @@
 			<ul>
 				<li>
 					Fórmula de cálculo
-					<pre class="formula">C = ( A<sub>t</sub> / A<sub>c</sub> ) × X × F<sub>s</sub> × F<sub>p</sub></pre>
+					<pre class="formula errata" id-erro="19">C = ( A<sub>t</sub> / A<sub>c</sub> ) × V × F<sub>s</sub> × F<sub>p</sub></pre>
 				</li>
 				<li>
 					Fator de Planejamento médio entre usos R e nR <pre class="formula declara">(F<sub>p</sub> = 1,25)</pre>
@@ -3551,7 +3553,7 @@ export default {
 					],
 					[
 						[ { data: 'Estoque total' } ],
-						[ { data: '2.000.000' } ]
+						[ { data: '2.200.000' } ]
 					]
 				]
 			}
@@ -3588,6 +3590,23 @@ export default {
 @import '../errata';
 
 div.SetorCentral2 {
+	.conteudoTab ul.links li a {
+		@media (max-width: 600px) {
+			flex-flow: row wrap;
+			justify-content: space-between;
+			i.icon { order: 1; }
+			span {
+				order: 2;
+				justify-content: flex-end;
+			}
+			div {
+				order: 3;
+				width: 100%;
+				line-height: 1.2;
+				margin: 1rem 0 0;
+			}
+		}
+	}
 	div.linkMapaInterativo {
 		position: fixed;
 		right: 2rem;
@@ -3663,6 +3682,7 @@ div.SetorCentral2 {
 			max-width: calc(100vw - 4rem - 400px);
 			@media (max-width: 600px) {
 				padding: 1rem;
+				max-width: 100%;
 			}
 			& > div:not(.notas) {
 				margin: 0 auto;

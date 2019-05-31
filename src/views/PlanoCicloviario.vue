@@ -22,6 +22,13 @@
 					</ul>
 				</div>
 			</li>
+			<li>
+				<input type="radio" name="tabs" id="item2">
+				<label for="item2">Errata</label>
+				<div class="conteudoTab" style="overflow-y: scroll;">
+					<Errata></Errata>
+				</div>
+			</li>
 		</template>
 		</Apoio>
 
@@ -223,11 +230,20 @@
 			<p>
 				<embed :src="fileSrc('Apresentacao-audiencias-publicas_PlanoCicloviario-20mai2019.pdf')" width="700" height="500" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
 			</p>
-
 			<!-- <iframe id="ifrSlides" src="https://docs.google.com/presentation/d/19tfb2aSxfYc8fZdxt1QKjiQlunV4Mv_qcqayTW0RCVs/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="405" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe> -->
 			<!-- <p><small>Caso tenha dificuldades para visualizar a apresentação acima, <a :href="fileSrc('Apresentacao_audiencias_publicas_Plano_Cicloviario-29abr2019.pptx')">clique aqui para fazer o download</a>.</small></p> -->
 			<p><small>Caso tenha dificuldades para visualizar a apresentação acima, <a :href="fileSrc('Apresentacao-audiencias-publicas_PlanoCicloviario-20mai2019.pdf')">clique aqui para fazer o download</a>.</small></p>
 			<Comments :attr="{id:commentId(), context:'Apresentação'}" v-if="estaConsulta.ativo == 1"></Comments>
+		</section>
+		<hr>
+		<section>
+			<h2 class="errata titulo" id-erro="1" indent="1">Plano Cicloviário do Município de São Paulo - 2019</h2>
+			<br />
+			<p>
+				<embed :src="fileSrc('PlanoCicloviariodeSaoPaulo_2019.pdf')" width="700" height="500" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+			</p>
+			<p><small>Caso tenha dificuldades para visualizar a apresentação acima, <a :href="fileSrc('PlanoCicloviariodeSaoPaulo_2019.pdf')">clique aqui para fazer o download</a>.</small></p>
+			<Comments :attr="{id:commentId(), context:'Versao Preliminar'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 		<hr />
 		<section>
@@ -253,6 +269,7 @@ import Comments from '@/components/Comments'
 import CommentsLoader from '@/components/CommentsLoader'
 import { consultasCommons } from '@/mixins/consultasCommons'
 import Apoio from '@/components/Apoio'
+import Errata from '@/components/Errata'
 // OpenLayers
 const MapaOSM = () => import('@/components/MapaOSM')
 
@@ -410,7 +427,8 @@ export default {
 			],
 			anexos: [
 				// 'Apresentacao_audiencias_publicas_Plano_Cicloviario-29abr2019.pptx'
-				'Apresentacao-audiencias-publicas_PlanoCicloviario-20mai2019.pdf'
+				'Apresentacao-audiencias-publicas_PlanoCicloviario-20mai2019.pdf',
+				'PlanoCicloviariodeSaoPaulo_2019.pdf'
 			],
 			mapaAttrs: {
 				center: [ -5191000, -2698002 ],
@@ -452,7 +470,8 @@ export default {
 		PageTop,
 		Indice,
 		Comments,
-		CommentsLoader
+		CommentsLoader,
+		Errata
 	},
 	mixins: [ consultasCommons ],
 	methods: {
@@ -474,6 +493,7 @@ export default {
 <style lang="scss" scoped>
 @import '../variables';
 @import '../consulta';
+@import '../errata';
 div.Apoio button::before{
 	content: "Ver downloads";
 }

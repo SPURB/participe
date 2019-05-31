@@ -5,13 +5,14 @@
 			<ul class="list" :class="{ load: !fetching }">
 				<li v-for="(consulta, index) in consultas" class="card" @click="redirect(setUrlByType(consulta.urlConsulta))" :key="index">
 					<div class="bgImg">
-						<img :srcset="imgset(consulta.urlCapa)"
+						<img :srcset="imgset('placeholder.png')"
 							sizes="
 								(max-width: 480px) 480w,
 								(max-width: 700px) 700w,
 								(max-width: 1000px) 1000w,
 								(max-width: 1300px) 1300w,
 								(max-width: 1900px) 1900w"
+							v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, consulta.urlCapa)"
 						>
 					</div>
 
@@ -78,6 +79,11 @@ export default {
 	},
 
 	methods: {
+		visibilityChanged (isVisible, entry, capa) {
+			const srcset = this.imgset(capa)
+			if (isVisible) entry.target.srcset = srcset
+		},
+
 		checaContribuicoes (n) { return parseInt(n) > 0 },
 		imgset (nomeStr) {
 			let nome = this.basePathImgSrc + nomeStr.slice(0, nomeStr.lastIndexOf('.'))

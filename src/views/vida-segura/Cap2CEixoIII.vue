@@ -104,9 +104,9 @@
 		</ul>
 		<p>Compete inicialmente destacar a relevância da própria criação do CMUV, instância capaz de dinamicamente instituir e alterar as políticas públicas regulatórias de criação de incentivos e desincentivos dos referidos serviços. Além disso, dentre os dispositivos já implementados, destacam-se:</p>
 		<ul>
-		    <li>(i) a política de cobrança de preço público variável sobre as OTTCs, a depender do horário, dia, região geográfica, nível de poluição gerada pelo veículo, quantidade de quilômetros e quantidade de pessoas simultaneamente transportadas;</li>
-		    <li>(ii) definição de critérios mínimos de credenciamento dos condutores, incluindo obrigatoriedade de capacitação e</li>
-		    <li>(iii) a definição de tempo máximo de fabricação dos veículos. Tais normas cumprem o papel de dar maior segurança aos usuários.</li>
+			<li>(i) a política de cobrança de preço público variável sobre as OTTCs, a depender do horário, dia, região geográfica, nível de poluição gerada pelo veículo, quantidade de quilômetros e quantidade de pessoas simultaneamente transportadas;</li>
+			<li>(ii) definição de critérios mínimos de credenciamento dos condutores, incluindo obrigatoriedade de capacitação e</li>
+			<li>(iii) a definição de tempo máximo de fabricação dos veículos. Tais normas cumprem o papel de dar maior segurança aos usuários.</li>
 		</ul>
 		<p>Ainda no que se refere ao transporte individual prestado pelas OTTCs, são necessários estudos para se entender com maior profundidade quais são as consequências da entrada e expansão deste serviço ao sistema viário e quais devem ser os direcionamentos futuros. Neste sentido, o CMUV exige das prestadoras uma série de dados operacionais, de modo que seja possível fazer a análise dos dados e o melhor planejamento dos novos dispositivos regulamentadores. Os dados são utilizados para fins de tributação e devem ser mais bem explorados para fins de gestão.</p>
 		<p>O CMUV é responsável também pelo sistema de compartilhamento de bicicletas em vias e logradouros do município, regido pelo Decreto Municipal nº 57.889/2017. Este serviço consiste na disponibilização de bicicletas para locação por operadoras de tecnologia de bicicletas compartilhadas, seja por meio de estações em locais físicos definidos; seja sem estações, com sistema de autotravamento e georreferenciamento das bicicletas.</p>

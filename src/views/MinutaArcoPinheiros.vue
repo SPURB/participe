@@ -4,6 +4,7 @@
 			<template slot="titulo"><div>Minuta PIU Arco Pinheiros</div></template>
 			<template slot="subtitulo"><div>Minuta do Projeto de Lei do Projeto de Intervenção Urbana do Arco Pinheiros</div></template>
 		</PageTop>
+
 		<Indice :titulos="titulosLimpo"></Indice>
 		<Apoio></Apoio>
 

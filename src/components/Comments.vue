@@ -72,7 +72,7 @@ import api from '@/utils/api'
 
 export default {
 	$_veeValidate: {
-		validator: 'new' // give me my own validator scope.
+		validator: 'new' // instância de validator isolado neste componente
 	},
 	name: 'Comments',
 	props: ['attr'],
@@ -104,9 +104,6 @@ export default {
 	},
 
 	methods: {
-		// setModal (typeOfmodal) {
-		// 	this.$store.commit('COMMENT_MODAL_STATUS', typeOfmodal)
-		// },
 		checkName () {
 			if (!this.fields.name.valid && !this.fields.email.valid && !this.fields.surname.valid) {
 				alert('Preencha corretamente os campos Nome e Email')

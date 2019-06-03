@@ -142,7 +142,7 @@
 					<p><b>Art. 1º</b> Fica aprovado o Projeto de Intervenção Urbana Arco Pinheiros – PIU-ACP, compreendendo o conjunto integrado de intervenções e medidas promovidas ou coordenadas pela Prefeitura do Município de São Paulo, por intermédio da empresa SP-Urbanismo, para articular o ordenamento e a reestruturação urbana em áreas subutilizadas e com potencial de transformação do território do Arco Pinheiros.</p>
 				</CommentsContext>
 				<CommentsContext :id="1002" :context="'Capítulo I, Seção I, Art. 1º, §1º'">
-					<p><b>§ 1º.</b> Em atendimento ao inciso IV do § 3º do art. 76 da Lei nº 16.050, de 31 de julho de 2014 - Plano Diretor Estratégico (PDE), esta lei estabelece o regramento urbanístico para o território abrangido pelo Arco Pinheiros – ACP, cria a Área de Intervenção Urbana do Arco Pinheiros – AIU-ACP.</p>
+					<p><b>§ 1º.</b> Em atendimento ao inciso IV do § 3º do art. 76 da Lei nº 16.050, de 31 de julho de 2014 - Plano Diretor Estratégico (PDE), esta lei estabelece o regramento urbanístico para o território abrangido pelo Arco Pinheiros – ACP e cria a Área de Intervenção Urbana do Arco Pinheiros – AIU-ACP.</p>
 				</CommentsContext>
 				<CommentsContext :id="1003" :context="'Capítulo I, Seção I, Art. 1º, §2º'">
 					<p>Integram esta lei os mapas, quadros e plantas abaixo relacionados:</p>
@@ -153,14 +153,14 @@
 						<li>Mapa IV – Compartimentos Ambientais e Áreas Verdes;</li>
 						<li>Mapa V – Plano de Melhoramentos Viários;</li>
 						<li>Mapa VI – Programa de Intervenções;</li>
-						<li>Mapa VII - Perímetros Especiais – Projetos Estratégicos, Áreas de Estruturação Local e Zonas de Ocupação Especial;</li>
+						<li>Mapa VII – Perímetros Especiais – Projetos Estratégicos, Áreas de Estruturação Local e Zonas de Ocupação Especial;</li>
 						<li>Quadro 1A – Eixos Estratégicos;</li>
 						<li>Quadro 1B – Melhoramentos Viários;</li>
 						<li>Quadro 1C – Áreas Públicas Destinadas para Áreas Verdes; </li>
-						<li>Quadro 2A - Projetos Estratégicos e Áreas de Estruturação Local – Objetivos e Disposições Específicas; </li>
-						<li>Quadro 2B – Projetos Estratégicos - percentuais de destinação de área pública; </li>
+						<li>Quadro 2A – Projetos Estratégicos e Áreas de Estruturação Local – Objetivos e Disposições Específicas; </li>
+						<li>Quadro 2B – Projetos Estratégicos – percentuais de destinação de área pública; </li>
 						<li>Quadro 3A – Fatores de Planejamento e Parâmetros de Ocupação, exceto quota ambiental; </li>
-						<li>Quadro 3B – Cota Ambiental - pontuação mínima, taxa de permeabilidade mínima e fatores de ponderação segundo compartimento ambiental;</li>
+						<li>Quadro 3B – Cota Ambiental – pontuação mínima, taxa de permeabilidade mínima e fatores de ponderação segundo compartimento ambiental;</li>
 						<li>Quadro 4 – Programa de Intervenções;</li>
 						<li>Plantas nº XXX, Classificação XXX, do arquivo da Superintendência de Projetos Viários.</li>
 					</ol>
@@ -395,7 +395,7 @@
 					</ol>
 				</CommentsContext>
 				<CommentsContext :id="1049" :context="'Capítulo II, Seção I, Art. 7º, II'">
-					<ol class="romanos" start="1">
+					<ol class="romanos" start="2">
 						<li>reformas com demolição ou ampliação de menos de 30% (trinta por cento) da área construída original, em lotes com área inferior a 2.500m² (dois mil e quinhentos metros quadrados).</li>
 					</ol>
 				</CommentsContext>
@@ -490,9 +490,9 @@
 					</ol>
 				</CommentsContext>
 				<CommentsContext :id="1066" :context="'Capítulo II, Seção I, Art. 13'">
-					<p><b>Art. 13.</b> O atendimento habitacional da população moradora nas áreas demarcadas como ZEIS 1 e ZEIS 3 na AIU-ACP que forem atingidas pelo Plano de Melhoramentos Públicos do Programa de Intervenções desta lei observará o seguinte:</p>
+					<p><b>Art. 13.</b> O atendimento habitacional da população moradora nas áreas demarcadas como ZEIS 1 e ZEIS 3 na AIU-ACP que forem atingidas pelos melhoramentos públicos do Programa de Intervenções desta lei observará o seguinte:</p>
 					<ol class="romanos">
-						<li>qualquer intervenção para a implantação de elementos previstos no Quadro 4 desta Lei será precedida da constituição do Conselho Gestor da ZEIS 1 e da ZEIS 3, bem como da elaboração dos respectivos Planos de Urbanização, nos termos exigidos pela Lei nº 16.050, de 2014 - PDE e, se for o caso, de Plano de Reassentamento que defina o atendimento às famílias afetadas, preferencialmente de forma definitiva, em terrenos situados no perímetro do PIU-ACP, a uma distância máxima de 1 km (um quilômetro) de estação, ou de terminal de integração ou 500 m de corredores ou faixas exclusivas do Sistema de Transporte Público Coletivo;</li>
+						<li>qualquer intervenção para a implantação de elementos previstos no Quadro 4 desta Lei será precedida da constituição do Conselho Gestor da ZEIS 1 e da ZEIS 3, bem como da elaboração dos respectivos Planos de Urbanização ou Projeto de Intervenção, nos termos exigidos pela Lei nº 16.050, de 2014 - PDE e, se for o caso, de Plano de Reassentamento que defina o atendimento às famílias afetadas, preferencialmente de forma definitiva, em terrenos situados no perímetro do PIU-ACP, a uma distância máxima de 1 km (um quilômetro) de estação, ou de terminal de integração ou 500 m de corredores ou faixas exclusivas do Sistema de Transporte Público Coletivo;</li>
 						<li>em terrenos não demarcados originalmente como ZEIS onde for realizado o atendimento habitacional previsto no inciso I deste artigo, deverão ser mantidos os percentuais de área construída total por usos residenciais e não residenciais do Quadro 4 da Lei nº 16.050, de 2014 - PDE, previstos para as ZEIS de origem.</li>
 					</ol>
 				</CommentsContext>
@@ -579,7 +579,7 @@
 					<p><b>§ 1º.</b> A ZOE-CEAGESP atenderá às disposições desta Lei estabelecidas para Projeto Estratégico CEAGESP.</p>
 				</CommentsContext>
 				<CommentsContext :id="1079" :context="'Capítulo II, Seção II, Art. 19, § 2º'">
-					<p><b>§ 2º.</b> A ZOE-CDP, no caso de mudança de uso ou de saída do equipamento penitenciário atualmente existente, terá seus parâmetros definidos por projeto de intervenção urbana específico.</p>
+					<p><b>§ 2º.</b> A ZOE-CDP, no caso de mudança de uso ou de saída do equipamento penitenciário atualmente existente, terá seus parâmetros definidos por Projeto de Intervenção Urbana específico.</p>
 				</CommentsContext>
 			</section>
 			<section>
@@ -627,7 +627,7 @@
 						</ol>
 					</CommentsContext>
 					<CommentsContext :id="1088" :context="'Capítulo II, Seção III, Subseção I, Art. 22, Caput, II'">
-						<ol class="romanos" start="1">
+						<ol class="romanos" start="2">
 							<li>
 								o reparcelamento da área de abrangência do Projeto Estratégico ocorrerá de forma integral ou mediante definição de Setores, constantes de Projeto Intervenção Urbana específico, na seguinte conformidade:
 								<ol class="minusculas">
@@ -685,18 +685,18 @@
 						</ol>
 					</CommentsContext>
 					<CommentsContext :id="1099" :context="'Capítulo II, Seção III, Subseção II, Art. 24, Caput, II'">
-						<ol class="romanos" start="1">
+						<ol class="romanos" start="2">
 							<li>os empreendimentos com predominância de uso residencial poderão atingir gabarito máximo de 48m (quarenta e oito metros), desde que atendidas as disposições dos Quadros 2A e 2B desta Lei;</li>
 						</ol>
 					</CommentsContext>
 					<CommentsContext :id="1100" :context="'Capítulo II, Seção III, Subseção II, Art. 24, Caput, III'">
-						<ol class="romanos" start="1">
+						<ol class="romanos" start="3">
 							<li>em lotes com área até 10.000m², na hipótese de destinação de parcela a fruição pública, não será devida outorga onerosa correspondente à metade do potencial construtivo adicional previsto para a área destinada a esta finalidade, independentemente da zona em que se situem, desde que atendidas as disposições dos arts. 70 e 88, incisos I a III da Lei nº 16.402/2016;</li>
 						</ol>
 					</CommentsContext>
 					<CommentsContext :id="1101" :context="'Capítulo II, Seção III, Subseção II, Art. 24, Caput, IV'">
-						<ol class="romanos" start="1">
-							<li>os lotes resultantes do reparcelamento poderão calcular o potencial construtivo do básico e máximo do lote considerando a área original de terreno.</li>
+						<ol class="romanos" start="4">
+							<li>os lotes resultantes do reparcelamento poderão utilizar o potencial construtivo básico e máximo considerando a área dos lotes originais.</li>
 						</ol>
 					</CommentsContext>
 					<CommentsContext :id="1102" :context="'Capítulo II, Seção III, Subseção II, Art. 25, Caput'">
@@ -711,7 +711,7 @@
 						<ol class="romanos">
 							<li>serão permitidos os usos de categoria R2v até o limite de 20% (vinte por cento) da área construída computável total de cada um dos Setores, condicionado à implantação de fachada ativa nos termos do art. 62, inciso VII, alínea “a”, da Lei nº16.402/2016, aplicando-se, no que couber, as demais disposições do art. 24 “caput” desta Lei.</li>
 							<li>
-								a implantação por setores do Projeto Estratégico Núcleo Parque Tecnológico determina a incidência, aos seus lotes e glebas, do disposto nos Quadros 2A e 2B desta Lei, cabendo aos proprietários do terreno, ainda, alternativamente:
+								a implantação por Setores do Projeto Estratégico Núcleo Parque Tecnológico determina a incidência, aos seus lotes e glebas, do disposto nos Quadros 2A e 2B desta Lei, cabendo aos proprietários do terreno, ainda, alternativamente:
 								<ol class="minusculas">
 									<li>executar os melhoramentos públicos previstos para o perímetro;</li>
 									<li>realizar o pagamento de outorga onerosa do direito de construir para os empreendimentos que utilizem potencial construtivo adicional, na forma desta Lei.</li>
@@ -731,7 +731,7 @@
 					<h4 class="titulo" indent="3">Subseção III</h4>
 					<h4 class="subtitulo">Dos Projetos Estratégicos da Frente do Rio Pinheiros</h4>
 					<CommentsContext :id="1106" :context="'Capítulo II, Seção III, Subseção III, Art. 27, Caput'">
-						<p><b>Art. 27.</b> Os Projetos Estratégicos Alexandre Mackenzie, Engº Billings, Jaguaré e Mal. Mário Guedes integram o núcleo de projetos da Frente do Rio Pinheiros, observando-se as seguintes disposições:</p>
+						<p><b>Art. 27.</b> Os Projetos Estratégicos Alexandre Mackenzie, Engº Billings, Jaguaré e Mal. Mário Guedes integram o projeto da Frente do Rio Pinheiros, observando-se as seguintes disposições:</p>
 						<ol class="romanos">
 							<li>os lotes integrantes dos Projetos Estratégicos Engº Billings, Jaguaré e Mal. Mário Guedes deverão ser reparcelados, promovendo-se a destinação das áreas públicas nos termos previstos nesta Lei;</li>
 							<li>implantação dos melhoramentos públicos nos termos dos Quadros 2A e 2B desta Lei;</li>
@@ -760,7 +760,7 @@
 					</ol>
 				</CommentsContext>
 				<CommentsContext :id="1110" :context="'Capítulo II, Seção IV, Art. 30, § 1º'">
-					<p><b>§ 1º.</b> Os Projetos de Intervenção Urbana das AEL deverão contemplar os objetivos e disposições contidas no Quadro 2A desta lei, bem como estarem em consonância com os planos de urbanização das ZEIS 1, contidas em seus perímetros e com os Programas de Ação Integrada – PAI, a serem definidos no âmbito do PIU-ACP;</p>
+					<p><b>§ 1º.</b> Os Projetos de Intervenção Urbana das AEL deverão contemplar os objetivos e disposições contidas no Quadro 2A desta lei, bem como estarem em consonância com os Plano de Urbanização das ZEIS 1, contidas em seus perímetros e com os Programas de Ação Integrada – PAI, a serem definidos no âmbito do PIU-ACP;</p>
 				</CommentsContext>
 				<CommentsContext :id="1110" :context="'Capítulo II, Seção IV, Art. 30, § 2º'">
 					<p><b>§ 2º.</b> O desenvolvimento de propostas e projetos para a área deverá se realizar a partir da articulação entre os diversos atores colocalizados, em especial a Universidade de São Paulo - USP, proprietária de terrenos, Secretaria da Habitação e os respectivos Conselhos Gestores da ZEIS 1;</p>
@@ -780,12 +780,12 @@
 				<p><b>§ 1º.</b> São elementos do Programa de Intervenções previsto nesta Lei:</p>
 				<ol class="romanos">
 					<li>
-						Programa Habitacional de Interesse social, que contempla ações que busquem garantir o direito à moradia digna, promovendo o atendimento habitacional adequado e definitivo às famílias de baixa renda e prevendo o atendimento provisório quando necessário aplicam-se as seguintes disposições:
+						Programa Habitacional de Interesse social, que contempla ações que busquem garantir o direito à moradia digna, promovendo o atendimento habitacional adequado e definitivo às famílias de baixa renda e prevendo o atendimento provisório quando necessário, aplicam-se as seguintes disposições:
 						<ol class="minusculas">
 							<li>ao menos 30% (trinta por cento) dos recursos arrecadados na conta segregada citada no art. 35 desta Lei serão destinados a ações referentes ao Programa Habitacional de Interesse Social;</li>
 							<li>fica autorizada a aquisição de terrenos para subsídio à produção habitacional de interesse social e à provisão de moradias para população de baixa renda, incluindo-se a implantação Empreendimentos de Habitação de Interesse Social - EHIS, com uso misto nas edificações, destinados a formação de parque público de locação social;</li>
 							<li>devem ser promovidas a realização de parcerias com o setor privado para a provisão de Habitação de Interesse Social.;</li>
-							<li>a destinação de terrenos em função da aplicação da Cota de Solidariedade, observadas as demais disposições desta Lei, será realizada integralmente no parâmetro de abrangência da AIUU-ACP. </li>
+							<li>a destinação de terrenos em função da aplicação da Cota de Solidariedade, observadas as demais disposições desta Lei, será realizada integralmente no parâmetro de abrangência da AIU-ACP. </li>
 						</ol>
 					</li>
 					<li>execução dos Melhoramentos Viários indicado no Mapa V desta lei e descrito em seu Quadro 1B;</li>
@@ -802,7 +802,7 @@
 					</li>
 					<li>a desapropriação de imóveis, inclusive para posterior revenda, necessárias à implantação do Programa de Intervenções, dos Projetos Estratégicos e das AEL previstos nesta lei;</li>
 					<li>O subsídio ou fomento para transformação ou requalificação do território do ACP; </li>
-					<li>a contratação de projetos de desenvolvimento e detalhamento dos Planos de Ação Integrada e de Intervenção Urbana das AEL;</li>
+					<li>a contratação de projetos de desenvolvimento e detalhamento dos Projetos de Ação Integrada e de Intervenção Urbana das AEL;</li>
 				</ol>
 			</CommentsContext>
 			<CommentsContext :id="1113" :context="'Capítulo III, Art. 31, § 2º'">
@@ -886,16 +886,16 @@
 			<h2 class="titulo" indent="1">CAPÍTULO IV</h2>
 			<h2 class="subtitulo">DA OUTORGA ONEROSA DE POTENCIAL ADICIONAL DE CONSTRUÇÃO, DA CONTA SEGREGADA DO FUNDURB, SUA VINCULAÇÃO E DA DESTINAÇÃO DOS RECURSOS ARRECADADOS</h2>
 			<CommentsContext :id="1123" :context="'Capítulo IV, Art. 35, Caput'">
-				<p><b>Art. 35.</b> Fica o Executivo autorizado a efetuar a outorga onerosa de potencial adicional de construção para os lotes contidos nas AIU-ACP, na conformidade dos valores, critérios e condições estabelecidos nesta lei.</p>
+				<p><b>Art. 35.</b> Fica o Executivo autorizado a efetuar a outorga onerosa de potencial adicional de construção para os lotes contidos na AIU-ACP, na conformidade dos valores, critérios e condições estabelecidos nesta lei.</p>
 			</CommentsContext>
 			<CommentsContext :id="1124" :context="'Capítulo IV, Art. 35, § 1º'">
-				<p><b>§ 1º.</b> Os recursos captados pela aplicação desta lei para AIU-ACP destinam-se à execução dos elementos do Programa de Intervenções previstos para seu território.</p>
+				<p><b>§ 1º.</b> Os recursos captados pela aplicação desta lei para a AIU-ACP destinam-se à execução dos elementos do Programa de Intervenções previstos para seu território.</p>
 			</CommentsContext>
 			<CommentsContext :id="1125" :context="'Capítulo IV, Art. 35, § 2º'">
-				<p><b>§ 2º.</b> A AIU - ACP terá conta segregada no Fundo Municipal de Desenvolvimento Urbano - FUNDURB, cabendo ao seu Conselho Gestor publicar, anualmente, listagem de intervenções prioritárias para implantação do Programa de Intervenções em seu território.</p>
+				<p><b>§ 2º.</b> A AIU-ACP terá conta segregada no Fundo Municipal de Desenvolvimento Urbano - FUNDURB, cabendo ao seu Conselho Gestor publicar, anualmente, listagem de intervenções prioritárias para implantação do Programa de Intervenções em seu território.</p>
 			</CommentsContext>
 			<CommentsContext :id="1126" :context="'Capítulo IV, Art. 35, § 3º'">
-				<p><b>§ 3º.</b> Os recursos havidos em função da aplicação da Cota de Solidariedade em empreendimentos realizados no âmbito do PIU-ACP, observadas as demais disposições desta Lei, serão depositados na conta segregada prevista no § 1º.</p>
+				<p><b>§ 3º.</b> Os recursos havidos em função da aplicação da Cota de Solidariedade em empreendimentos realizados no âmbito do PIU-ACP, observadas as demais disposições desta Lei, serão depositados na conta segregada prevista no § 2º.</p>
 			</CommentsContext>
 			<CommentsContext :id="1127" :context="'Capítulo IV, Art. 36, Caput'">
 				<p><b>Art. 36.</b> A contrapartida financeira à outorga onerosa de potencial construtivo adicional será calculada segundo a equação definida no art. 117 da Lei nº 16.050, de 2014 - PDE.</p>
@@ -907,7 +907,7 @@
 				<p><b>§ 2º.</b> O potencial construtivo adicional comercializado mediante outorga onerosa será alienado nos termos previstos na Lei nº 16.050, de 2014 - PDE ou por intermédio de leilões promovidos pela empresa SP-Urbanismo para a implantação de Planos de Ação Integrada.</p>
 			</CommentsContext>
 			<CommentsContext :id="1130" :context="'Capítulo IV, Art. 36, § 3º'">
-				<p><b>§ 3º.</b> A modalidade do leilão, a quantidade de potencial construtivo adicional a ser disponibilizada e os respectivos descontos iniciais de seu valor de alienação deverão ser definidos por Plano de Ação Integrada, de acordo com as condições de mercado e as necessidades de viabilidade do Programa de Intervenções, devendo cada edital de leilão prever mecanismos que garantam a aplicação dos princípios da justa distribuição dos benefícios e ônus decorrentes do processo de urbanização, da ampla publicidade e da livre concorrência entre os interessados.</p>
+				<p><b>§ 3º.</b> Na modalidade do leilão, a quantidade de potencial construtivo adicional a ser disponibilizada e os respectivos descontos iniciais de seu valor de alienação deverão ser definidos por Plano de Ação Integrada, de acordo com as condições de mercado e as necessidades de viabilidade do Programa de Intervenções, devendo cada edital de leilão prever mecanismos que garantam a aplicação dos princípios da justa distribuição dos benefícios e ônus decorrentes do processo de urbanização, da ampla publicidade e da livre concorrência entre os interessados.</p>
 			</CommentsContext>
 			<CommentsContext :id="1131" :context="'Capítulo IV, Art. 36, § 4º'">
 				<p><b>§ 4º.</b> O potencial construtivo adicional adquirido mediante leilão será imediatamente vinculado ao lote, atendendo-se, no mínimo, às seguintes disposições:</p>
@@ -927,7 +927,7 @@
 			<h2 class="subtitulo">DA GESTÃO</h2>
 			<section>
 				<h3 class="titulo" indent="2">Seção I</h3>
-				<h3 class="subtitulo">Da Atuação Concertada dos órgãos e Entidades Municipais</h3>
+				<h3 class="subtitulo">Da Atuação Concertada dos Órgãos e Entidades Municipais</h3>
 				<CommentsContext :id="1133" :context="'Capítulo V, Seção I, Art. 38, Caput'">
 					<p><b>Art. 38.</b> A implantação do PIU-ACP e do seu Programa de Intervenções se dará mediante ação concertada entre os órgãos e entidades municipais, estaduais e federais e agentes privados, atendendo-se, no mínimo, às disposições desta lei.</p>
 				</CommentsContext>
@@ -965,7 +965,7 @@
 					<p><b>Parágrafo único.</b> A anuência prevista no "caput" deste artigo será prévia e indispensável à expedição de diretrizes para os Projetos Estratégicos instituídos por esta Lei e demais parcelamento de glebas ou lotes contidos no perímetro do ACP, podendo a SP-Urbanismo solicitar ajustes e adaptações de caráter urbanístico nos projetos, para atendimento a disposições do PIU-ACP.</p>
 				</CommentsContext>
 				<CommentsContext :id="1141" :context="'Capítulo V, Seção I, Art. 43, Caput'">
-					<p><b>Art. 43.</b> Caberá a Secretaria Municipal de Habitação:</p>
+					<p><b>Art. 43.</b> Caberá à Secretaria Municipal de Habitação:</p>
 					<ol class="romanos">
 						<li>operacionalizar o programa de atendimento da população impactada pelo Programa de Intervenções do Projeto, inclusive podendo aportar recursos de outras fontes do setor público e privado para a sua atuação;</li>
 						<li>realizar a promoção de programas e soluções habitacionais nos termos da política habitacional prevista para o território, observando-se o disposto nesta Lei e as determinações dos Planos de Ação Integrada; </li>
@@ -1007,7 +1007,7 @@
 				<CommentsContext :id="1144" :context="'Capítulo V, Seção II, Art. 45'">
 					<p><b>Art. 45.</b> Para a implantação do Programa de Intervenções, a empresa SP-Urbanismo utilizará as seguintes formas de financiamento e controle de recursos, dentre outras previstas na legislação empresarial:</p>
 					<ol class="romanos">
-						<li>monitoramento permanente dos valores de mercado do potenciai construtivo adicional na área de abrangência da AIU-ACP, de modo a possibilitar a captura de parte da valorização oriunda do desenvolvimento urbano por parte do Poder Público; </li>
+						<li>monitoramento permanente dos valores de mercado do potencial construtivo adicional na área de abrangência da AIU-ACP, de modo a possibilitar a captura de parte da valorização oriunda do desenvolvimento urbano por parte do Poder Público; </li>
 						<li>alienação de terrenos remanescentes de processos de desapropriação que não estejam afetos à função pública ou que sejam considerados inadequados ao Programa de Intervenções; </li>
 						<li>alienação de terrenos obtidos em sede de desapropriação urbanística, realizadas em função da implantação de seu Programa de Intervenções.</li>
 					</ol>
@@ -1309,6 +1309,60 @@
 				{ id: 214, context: 'Quadro 3B: Quota ambiental: pontuação mínima, taxa de permeabilidade...' },
 				{ id: 215, context: 'Quadro 4: Programa de intervenções' }				
 			]"></CommentsOption>
+		</section>
+
+		<section>
+				<h3 class="titulo" indent="1">Ficha técnica</h3>
+				<p><b>SP Urbanismo - São Paulo Urbanismo</b></p>
+				<p><b>José Armênio de Brito Cruz</b><br>
+				Presidente</p>
+				<p><b>Leonardo Amaral Castro</b><br>
+				Diretor de Desenvolvimento</p>
+				<p><b>Denise Lopes de Souza</b><br>
+				Diretora de Gestão de Operações Urbanas</p>
+				<p><b>Marcelo Fonseca Ignatios</b><br>
+				Superintendente de Estruturação de Projetos</p>
+
+				<p><b>Modelagem urbanística</b><br>
+				Ana Claudia Rocha Bonfim<br>
+				Anna Carvalho de Moraes Barros<br>
+				Daniela Tunes Zilio<br>
+				Eduardo Tavares de Carvalho<br>
+				Laísa Bócoli Chamme<br>
+				Marlon Rubio Longo<br>
+				Rafael Giorgi Costa<br>
+				Sônia da Silva Gonçalves<br>
+				Pedro Henrique Aragão Sena (estágio)</p>
+
+				<p><b>Estudos ambientais</b><br>
+				Waldir Macho de La Rubia<br>
+				Luciana Loureiro<br>
+
+				<p><b>Estimativa de custos</b><br>
+				Maria Cristina Fernandes</p>
+
+				<p><b>Modelagem jurídica</b><br>
+				José Antônio Apparecido Junior<br>
+				Marília Formoso Camargo (estágio)</p>
+
+				<p><b>Modelagem econômica</b><br>
+				Allan Martino Matos<br>
+				Bruno Martins Hermann<br>
+				Fernando Henrique Gasperini<br>
+				Gabriel Vasquez Rodriguez<br>
+				Marcelo Baliú Fiamenghi (estágio)</p>
+
+				<p><b>Design Gráfico</b><br>
+				Thomas Len Yuba<br>
+				Davi Masayuki Hosogiri (estágio)</p>
+
+				<p><b>Participação Social</b><br>
+				André Ramos<br>
+				Francila Natalia dos Santos<br>
+				Maria Fernanda Willy Fabro<br>
+				Patricia Saran<br>
+				Paulo de Moraes Junior<br>
+				Tais Sertorio Milanez<br></p>
 		</section>
 
 		<section ref="allComments">

@@ -126,9 +126,9 @@ export default {
 	},
 
 	methods: {
-		setModal (typeOfmodal) {
-			this.$store.commit('COMMENT_MODAL_STATUS', typeOfmodal)
-		},
+		// setModal (typeOfmodal) {
+		// 	this.$store.commit('COMMENT_MODAL_STATUS', typeOfmodal)
+		// },
 		checkName () {
 			if (!this.fields.name.valid && !this.fields.email.valid && !this.fields.surname.valid) {
 				alert('Preencha corretamente os campos Nome e Email')

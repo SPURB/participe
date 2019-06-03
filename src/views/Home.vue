@@ -2,20 +2,17 @@
 	<div class="Home">
 		<Preloader></Preloader>
 		<main id="listaProjetos">
-			<!-- <div class="busca" @click="ativaBusca">
-				<i class="material-icons">search</i>
-				<input class="fuzzy-search" type="search" ref="busca" title="Digite o que pesquisa" value="Pesquisar" @focusout="desativaBusca">
-			</div> -->
 			<ul class="list" :class="{ load: !fetching }">
 				<li v-for="(consulta, index) in consultas" class="card" @click="redirect(setUrlByType(consulta.urlConsulta))" :key="index">
 					<div class="bgImg">
-						<img :srcset="imgset(consulta.urlCapa)"
+						<img :srcset="imgset('placeholder.png')"
 							sizes="
 								(max-width: 480px) 480w,
 								(max-width: 700px) 700w,
 								(max-width: 1000px) 1000w,
 								(max-width: 1300px) 1300w,
 								(max-width: 1900px) 1900w"
+							v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, consulta.urlCapa)"
 						>
 					</div>
 
@@ -24,7 +21,7 @@
 
 					<div class="cont">
 						<a>
-							<h1 :class="{ consultaAtiva: parseAtivo(consulta.ativo) }" class="nome">{{ consulta.nomePublico }}</h1>
+							<h2 :class="{ consultaAtiva: parseAtivo(consulta.ativo) }" class="nome">{{ consulta.nomePublico }}</h2>
 						</a>
 						<p v-if="consulta.ativo" title="Período da consulta">
 							<i class="icon-data icon"><span>date_range</span></i>
@@ -74,10 +71,19 @@ export default {
 		basePathImgSrc () { return this.$store.getters.basePath + 'arquivos/capas/' },
 		fetching () { return this.$store.state.fetching }
 	},
+	created () {
+		this.$store.dispatch('fetchConsultas', { self: this })
+	},
 	mounted () {
 		if (window.location.hash !== '') this.checkOldRoutesWithHashes(window.location.hash)// redirect if url contain old patter. ex -> /#/anhembi2
 	},
+
 	methods: {
+		visibilityChanged (isVisible, entry, capa) {
+			const srcset = this.imgset(capa)
+			if (isVisible) entry.target.srcset = srcset
+		},
+
 		checaContribuicoes (n) { return parseInt(n) > 0 },
 		imgset (nomeStr) {
 			let nome = this.basePathImgSrc + nomeStr.slice(0, nomeStr.lastIndexOf('.'))
@@ -214,7 +220,7 @@ div.Home {
 					overflow: hidden;
 
 					a {
-						h1 {
+						h2 {
 							font-size: xx-large;
 							line-height: 120%;
 							color: #FFF;
@@ -359,7 +365,7 @@ div.Home {
 						display: block;
 						width: 100%;
 
-						h1 {
+						h2 {
 							margin: 0 0 2rem 0;
 							font-size: 64px;
 							line-height: 100%;
@@ -403,7 +409,7 @@ div.Home {
 
 				div.cont {
 					padding: 12px;
-					a h1 {
+					a h2 {
 						padding-top: 2.5rem;
 						margin-bottom: 2rem;
 						font-size: x-large;
@@ -431,7 +437,7 @@ div.Home {
 					flex-flow: column nowrap;
 					justify-content: flex-end;
 
-					a h1 {
+					a h2 {
 						font-size: xx-large;
 						line-height: 120%;
 						margin: 2rem 0 0 0;
@@ -472,7 +478,7 @@ div.Home {
 					margin-top: -26px;
 				};
 
-				div a h1 { padding-top: 2.5rem; };
+				div a h2 { padding-top: 2.5rem; };
 
 				p.esconde {
 					background: rgba(255, 255, 255, .92);
@@ -509,7 +515,7 @@ div.Home {
 					box-shadow: none;
 					margin-top: 0;
 
-					a h1 { width: 100%; };
+					a h2 { width: 100%; };
 
 					p {
 						position: relative;

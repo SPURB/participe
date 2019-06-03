@@ -110,7 +110,7 @@ export default {
 			form_organization: null,
 			form_email: null,
 			form_content: null,
-			// form_context: null,
+			form_context: null,
 			abreComentario: false,
 			enviandoComment: false,
 			sucesso: false,
@@ -141,9 +141,6 @@ export default {
 	},
 
 	methods: {
-		setModal (typeOfmodal) {
-			this.$store.commit('COMMENT_MODAL_STATUS', typeOfmodal)
-		},
 		checkName () {
 			if (!this.fields.name.valid && !this.fields.email.valid && !this.fields.surname.valid) {
 				alert('Preencha corretamente os campos Nome e Email')
@@ -175,16 +172,11 @@ export default {
 				'commentcontext': app.context
 			})
 				.then(function (response) {
-					// let name = app.form_name
-					// let content = app.form_content
-					// console.log(app.id)
-					// app.setModal('success')
 					app.abreComentario = false
 					app.sucesso = true
 					app.resetForm()
 				})
 				.catch(function (error) {
-					// app.setModal('error')
 					app.erro = true
 					console.log(error)
 				})

@@ -19,10 +19,6 @@ const store = new Vuex.Store({
 		consultas: undefined,
 		errors: undefined,
 		commentsLoaded: false,
-		modalState: {
-			error: false,
-			success: false
-		},
 		fetching: true,
 		routeId: undefined,
 		toPrint: false
@@ -56,15 +52,6 @@ const store = new Vuex.Store({
 						consultas[key][key2] = decodeURIComponent(escape(consultas[key][key2]))
 					}
 				}
-			}
-		},
-		COMMENT_MODAL_STATUS (state, typeOfmodal) {
-			switch (typeOfmodal) {
-			case 'error': state.modalState.error = !state.modalState.error; break
-			case 'success': state.modalState.success = !state.modalState.success; break
-			default:
-				state.modalState.error = false
-				state.modalState.success = false
 			}
 		},
 		DISPATCH_PRINT (state) {

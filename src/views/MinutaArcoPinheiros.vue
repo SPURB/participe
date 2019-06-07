@@ -121,6 +121,13 @@
 						</ul>
 					</div>
 				</li>
+				<li>
+					<input type="radio" name="tabs" id="item3">
+					<label for="item3">Errata</label>
+					<div class="conteudoTab" style="overflow-y: scroll">
+						<Errata></Errata>
+					</div>
+				</li>
 			</template>
 		</Apoio>
 
@@ -1164,10 +1171,11 @@
 				</ol>
 			</CommentsContext>
 			<CommentsContext :id="1168" :context="'Capítulo VII, Art. 54, Caput'">
-				<p><b>Art. 54.</b> Esta lei entrará em vigor na data de sua publicação, revogadas as Leis:</p>
+				<p class="errata" id-erro="1"><b>Art. 54.</b> Esta lei entrará em vigor na data de sua publicação, revogados:</p>
 				<ol class="romanos">
-					<li>Lei nº 7.792, de 29 de setembro de 1972;</li>
-					<li>Lei nº 15.160 de 17 de Maio de 2010.</li>
+					<li class="errata" id-erro="2">a Lei nº 7.792, de 29 de setembro de 1972;</li>
+					<li class="errata" id-erro="3">a Lei nº 15.160 de 17 de Maio de 2010.</li>
+					<li class="errata" id-erro="4">o inc. IV do art. 159 da Lei n. 16.402/2016-LPUOS.</li>
 				</ol>
 			</CommentsContext>
 			<CommentsContext :id="1169" :context="'Capítulo VII, Art. 54, § 1º'">
@@ -1382,6 +1390,7 @@ import CommentsLoader from '@/components/CommentsLoader'
 import CommentsContext from '@/components/CommentsContext'
 import CommentsOption from '@/components/CommentsOption'
 import Comments from '@/components/Comments'
+import Errata from '@/components/Errata'
 import { consultasCommons } from '@/mixins/consultasCommons'
 
 export default {
@@ -1401,6 +1410,7 @@ export default {
 	},
 	components: {
 		PageTop,
+		Errata,
 		Indice,
 		Apoio,
 		CommentsLoader,
@@ -1416,5 +1426,6 @@ export default {
 @import '../variables';
 @import '../consulta';
 @import '../oldstylestoprint';
+@import '../errata';
 
 </style>

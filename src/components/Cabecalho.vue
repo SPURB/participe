@@ -42,8 +42,6 @@ export default {
 <style lang="scss" scoped>
 @import '../variables';
 div.Cabecalho {
-	position: absolute;
-	width: 100%;
 	header {
 		display: flex;
 		flex-direction: row;
@@ -51,10 +49,11 @@ div.Cabecalho {
 		align-items: center;
 		padding: 0 2rem;
 		height: 60px;
+		width: 100%;
 		max-height: 120px;
 		background: $cinza-3;
 		box-shadow: 0 4px 8px $sombra-3;
-		position: relative;
+		position: fixed;
 		z-index: 3;
 		i {
 			color: $cinza-2;
@@ -102,6 +101,7 @@ div.Cabecalho {
 	};
 	&.negativo {
 		header {
+			position: absolute;
 			box-shadow: none;
 			background-color: transparent;
 			i {

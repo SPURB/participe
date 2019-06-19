@@ -43,34 +43,47 @@ export default {
 @import '../variables';
 div.Cabecalho {
 	header {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		text-align: center;
+		@supports (display: flex) {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+		}
 		padding: 0 2rem;
-		height: 60px;
 		width: 100%;
+		height: 60px;
 		max-height: 120px;
+		overflow: hidden;
 		background: $cinza-3;
 		box-shadow: 0 4px 8px $sombra-3;
-		position: fixed;
 		z-index: 3;
 		i {
+			display: inline-block;
+			float: left;
 			color: $cinza-2;
 			transition: color .1s;
-			width: 0;
+			&::before {
+				line-height: 60px;
+			}
 			&:hover {
 				color: $preto;
 				cursor: pointer;
 			};
 		};
 		h1 {
-			margin: 0;
+			display: inline-block;
+			margin: 0 auto;
 			padding: 0;
-			font-size: 24px;
-			font-weight: 400;
 			a {
+				font-size: 24px;
+				font-weight: 400;
 				color: $cinza-2;
+				line-height: 60px;
 				width: 100%;
 				padding: 0;
 				border-bottom: none;
@@ -80,22 +93,23 @@ div.Cabecalho {
 			};
 		};
 		a {
-			line-height: 100%;
-			width: auto;
+			display: inline-block;
+			float: right;
 			margin: 0;
+			text-align: right;
 			@supports (display: flex) {
+				display: inline-flex;
+				justify-content: flex-end;
 				width: 0;
 			}
-			text-align: right;
-			border-bottom: none;
-			text-align: right;
-			display: inline-flex;
-			justify-content: flex-end;
 			padding: 0 !important;
 			&:hover, &:active { background: unset; }
 			img {
+				border: none;
 				max-height: 40px;
 				min-height: 32px;
+				max-width: 117px;
+				min-width: 93px;
 			};
 		};
 	};

@@ -21,29 +21,21 @@ export default {
 @import '../variables';
 
 div.Rodape {
-	display: grid;
-	grid-template-columns: 1fr 66px;
-	grid-template-rows: 1fr;
-	grid-column-gap: 0px;
-	grid-row-gap: 0px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 2rem;
 	background: $cinza-3;
-	.github, .github > i  {
-		padding-top: 24px;
+	max-width: 100%;
+	.github {
+		font-size: 2rem;
 		color: $cinza-1;
 		text-decoration: none;
-		transition: color 0.25s ease-in-out;
+		transition: color 0.24s ease-in-out;
+		cursor: pointer;
 		&:hover {
-			cursor: pointer;
 			color: $vermelho;
 		}
-	}
-	i {
-		text-align: center;
-		font-size: 2em
-	}
-	footer {
-		clear: all;
-		padding: 16px 32px;
 	}
 	a:hover { background-color: transparent; }
 	a:active { background-color: transparent; }
@@ -51,6 +43,11 @@ div.Rodape {
 		bottom: 0;
 		width: 100%;
 		position: absolute
+	}
+	@media screen and (max-width: 600px) {
+		font-size: 0.75rem;
+		line-height: 1.2;
+		padding: 1rem;
 	}
 	@media print {
 		display: none;

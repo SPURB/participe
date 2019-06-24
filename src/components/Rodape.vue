@@ -27,6 +27,9 @@ div.Rodape {
 	padding: 1rem 2rem;
 	background: $cinza-3;
 	max-width: 100%;
+	p {
+		margin: 0;
+	}
 	.github {
 		font-size: 2rem;
 		color: $cinza-1;

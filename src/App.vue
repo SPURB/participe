@@ -90,6 +90,8 @@ i[class] {
 
 div#interruptor {
 	position: absolute;
+	top: 0;
+	left: 0;
 	transition: all ease-in-out .2s;
 	z-index: 4;
 

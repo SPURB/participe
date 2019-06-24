@@ -2,49 +2,19 @@
 	<div class="Home">
 		<Preloader></Preloader>
 		<main id="listaProjetos" :class="{ load: !fetching }">
-			<!-- <ul class="nabertas" ref="consultasAbertas">
-				<li v-for="(consulta, index) in consultas" v-if="consulta.ativo == 1" class="card" @click="redirect(setUrlByType(consulta.urlConsulta))" :key="index">
-					<div class="bgImg" :style="{ background: 'url(' + webpSrc(consulta.urlCapa) + ')', backgroundSize: 'cover' }">
-						<img v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, consulta.urlCapa)">
-					</div>
-					<aside>
-						<ul class="tags">
-							<li class="consAtiva">Em consulta</li>
-							<li class="ultimosDias" v-if="tempoRestante(consulta.dataFinal) <= 7">Últimos dias</li>
-						</ul>
-						<h2>{{ decodeURI(consulta.nomePublico) }}</h2>
-						<table class="info">
-							<tr v-if="tempoRestante(consulta.dataFinal)">
-								<td><i class="icon-tempo icon"><span>tempo</span></i></td>
-								<td>{{ tempoRestante(consulta.dataFinal) }} dias restantes para contribuir</td>
-							</tr>
-							<tr>
-								<td><i class="icon-data icon"><span>data</span></i></td>
-								<td v-if="tempoRestante(consulta.dataFinal)">{{ dataDisplay(consulta.dataCadastro) }}–{{ dataDisplay(consulta.dataFinal) }}</td>
-								<td v-else>Aberta em {{ dataDisplay(consulta.dataCadastro) }}</td>
-							</tr>
-							<tr>
-								<td><i class="icon-contribuicao icon"><span>contribuicao</span></i></td>
-								<td>{{ consulta.nContribuicoes }} contribuições</td>
-							</tr>
-						</table>
-						<p class="intro">{{ decodeURI(consulta.textoIntro) }}</p>
-						<button class="acesso" @click="redirect(setUrlByType(consulta.urlConsulta))" >
-							Acesse e contribua
-							<i class="icon-seta_direita icon"><span>seta_direita</span></i>
-						</button>
-					</aside>
-				</li>
-			</ul> -->
 			<section class="abertas">
 				<ul ref="consultas">
 					<li v-for="(consulta, index) in consultas" v-if="consulta.ativo == 1" class="card" @click="redirect(setUrlByType(consulta.urlConsulta))" :key="index">
-						<div class="img" :style="{ background: 'url(' + webpSrc(consulta.urlCapa) + ')', backgroundSize: 'cover' }">
+						<div class="img" :style="{ background: 'url(' + placeholderSrc(consulta.urlCapa) + ')', backgroundSize: 'cover' }">
 							<ul class="tags">
 								<li class="consAtiva">Em consulta</li>
 								<li class="ultimosDias" v-if="tempoRestante(consulta.dataFinal) <= 7">Últimos dias</li>
 							</ul>
-							<img v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, consulta.urlCapa)">
+							<img v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, consulta.urlCapa, consulta.ativo)" sizes="
+							(max-width: 600px) 568px, 
+							(max-width: 800px) 736px,
+							(min-width: 801px) 681px
+							">
 						</div>
 						<aside>
 							<h2>{{ decodeURI(consulta.nomePublico) }}</h2>
@@ -73,61 +43,19 @@
 						</aside>
 					</li>
 				</ul>
-				<!-- <nav>
-					<h2>Consultas abertas</h2>
-					<ul>
-						<li v-for="(consulta, index) in consultas" v-if="consulta.ativo == 1" :class="{ active: index == 0}" @click="display(index, $event)">
-							{{ decodeURI(consulta.nomePublico) }}
-						</li>
-					</ul>
-				</nav>
-				<ul ref="consultas">
-					<li v-for="(consulta, index) in consultas" v-if="consulta.ativo == 1" class="card" :class="{ show: index == 0 }" @click="redirect(setUrlByType(consulta.urlConsulta))">
-						<div class="bgImg" :style="{ background: 'url(' + webpSrc(consulta.urlCapa) + ')', backgroundSize: 'cover' }">
-							<img v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, consulta.urlCapa)">
-						</div>
-						<aside>
-							<ul class="tags">
-								<li class="consAberta">Em consulta</li>
-								<li class="ultimosDias" v-if="tempoRestante(consulta.dataFinal) <= 7">Últimos dias</li>
-							</ul>
-							<h2>{{ decodeURI(consulta.nomePublico) }}</h2>
-							<table class="info">
-								<tr v-if="tempoRestante(consulta.dataFinal)">
-									<td><i class="icon-tempo icon"><span>tempo</span></i></td>
-									<td>{{ tempoRestante(consulta.dataFinal) }} dias restantes para contribuir</td>
-								</tr>
-								<tr>
-									<td><i class="icon-data icon"><span>data</span></i></td>
-									<td v-if="tempoRestante(consulta.dataFinal)">{{ dataDisplay(consulta.dataCadastro) }}–{{ dataDisplay(consulta.dataFinal) }}</td>
-									<td v-else>Aberta em {{ dataDisplay(consulta.dataCadastro) }}</td>
-								</tr>
-								<tr>
-									<td><i class="icon-contribuicao icon"><span>contribuicao</span></i></td>
-									<td>{{ consulta.nContribuicoes }} contribuições</td>
-								</tr>
-							</table>
-							<p class="intro">{{ decodeURI(consulta.textoIntro) }}</p>
-							<button class="acesso" @click="redirect(setUrlByType(consulta.urlConsulta))" >
-								Acesse e contribua
-								<i class="icon-seta_direita icon"><span>seta_direita</span></i>
-							</button>
-						</aside>
-					</li>
-				</ul> -->
 			</section>
 			<section class="encerradas">
 				<header>
 					<h2>Consultas encerradas</h2>
 					<button @click="toggleListDisplay" ref="toggleListDisplayBt">
-						<i class="icon-listagem icon"><span>listagem</span></i>
+						<i class="icon-grade icon"><span>grade</span></i>
 						<i class="icon-listagem icon"><span>listagem</span></i>
 					</button>
 				</header>
 				<ul ref="consultasEncerradas">
 					<li v-for="consulta in consultas" v-if="consulta.ativo == 0" @click="redirect(setUrlByType(consulta.urlConsulta))">
-						<div class="sq" :style="{ background: 'url(' + webpSrc(consulta.urlCapa) + ')', backgroundSize: 'cover', backgroundColor: '#BDBDBD' }">
-							<img v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, consulta.urlCapa)">
+						<div class="sq" :style="{ background: 'url(' + placeholderSrc(consulta.urlCapa) + ')', backgroundSize: 'cover', backgroundColor: '#BDBDBD' }">
+							<img v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, consulta.urlCapa, consulta.ativo)">
 						</div>
 						<h3>{{consulta.nomePublico}}</h3>
 						<table class="info">
@@ -178,8 +106,8 @@ export default {
 		if (window.location.hash !== '') this.checkOldRoutesWithHashes(window.location.hash)// redirect if url contain old patter. ex -> /#/anhembi2
 	},
 	methods: {
-		visibilityChanged (isVisible, entry, capa) {
-			const srcset = this.imgset(capa)
+		visibilityChanged (isVisible, entry, capa, consultaAtiva) {
+			const srcset = this.imgset(capa, consultaAtiva)
 			if (isVisible) {
 				entry.target.srcset = srcset
 				entry.target.style.filter = 'blur(0)'
@@ -187,24 +115,25 @@ export default {
 				entry.target.style.opacity = 1
 			}
 		},
-		webpSrc (nomeStr) {
+		placeholderSrc (nomeStr) {
 			return this.basePathImgSrc + nomeStr.slice(0, nomeStr.indexOf('.')) + '_15w.webp'
 		},
 		checaContribuicoes (n) { return parseInt(n) > 0 },
-		imgset (nomeStr) {
+		imgset (nomeStr, isAtiva) {
 			let nome = this.basePathImgSrc + nomeStr.slice(0, nomeStr.lastIndexOf('.'))
 			let ext = nomeStr.slice(nomeStr.lastIndexOf('.') + 1, nomeStr.lenght)
-			let declare =
-				nome + '_1900w.' + ext + ' 1900w, ' +
-				nome + '_1300w.' + ext + ' 1300w, ' +
-				nome + '_1000w.' + ext + ' 1000w, ' +
-				nome + '_700w.' + ext + ' 700w, ' +
-				nome + '_480w.' + ext + ' 640w,' +
+			let declare = ''
+			if (isAtiva == 1) {
+				declare +=
 				nome + '_1900w.webp 1900w, ' +
-				nome + '_1300w.webp 1300w, ' +
-				nome + '_1000w.webp 1000w, ' +
 				nome + '_700w.webp 700w, ' +
-				nome + '_480w.webp 640w '
+				nome + '_1900w.' + ext + ' 1900w, ' +
+				nome + '_700w.' + ext + ' 700w'
+			} else {
+				declare += 
+				nome + '_480w.webp 480w, ' +
+				nome + '480w.' + ext + ' 480w'
+			}
 			return declare.toString()
 		},
 		parseAtivo (state) { return state !== '0' },
@@ -268,251 +197,250 @@ div.Home {
 			from { opacity: 0; }
 			to { opacity: 1; }
 		}
-		ul.abertas {
-			max-width: 1200px;
-			margin: calc(60px + 2rem) auto 2rem;
-			padding: 0;
-			list-style-type: none;
-			@supports (display: flex) {
-				display: flex;
-				flex-flow: row wrap;
-				justify-content: space-between;
-			}
-			li.card {
-				position: relative;
-				display: inline-block;
-				margin-bottom: 2rem;
-				width: calc(600px - 1rem);
-				vertical-align: top;
-				cursor: pointer;
-				&:nth-child(2n) {
-					margin-right: 2rem;
-				}
-				.img {
-					margin-bottom: 1rem;
-					height: 330px;
-					overflow: hidden;
-					position: relative;
-					border-radius: 4px;
-					.tags {
-						position: absolute;
-						padding: 0 1rem;
-						list-style-type: none;
-						z-index: 1;
-						li {
-							display: inline-block;
-							margin: 0 1rem 0 0;
-							padding: 1rem 1.25rem;
-							font-size: .75rem;
-							line-height: 1;
-							text-transform: uppercase;
-							box-shadow: 0 2px 2px $sombra-3;
-							text-shadow: 0 1px 1px $sombra-2;
-							color: #FFF;
-							&:last-child {
-								margin-right: 0;
-							}
-							&.consAtiva {
-								background-color: $verde;
-							}
-							&.ultimosDias {
-								background-color: $vermelho;
-							}
-						}
-					}
-					img {
-						object-fit: cover;
-						width: 100%;
-						height: 100%;
-						opacity: 0;
-						filter: blur(20px);
-						transform: scale(1.04);
-						transition: all ease-in .4s;
-						transition-delay: .2s;
-						background-color: $cinza-3;
-					}
-				}
-				aside {
-					h2 {
-						font-size: 1.5rem;
-						margin: 0 0 0.75rem;
-						line-height: 1.2;
-					}
-					.info {
-						font-size: 0.8rem;
-						color: $cinza-1;
-					}
-					.intro {
-						font-family: $serifada;
-						font-size: 0.9rem;
-						line-height: 1.32;
-						margin-top: 0.75rem;
-					}
-					span.acesso {
-						margin: 0;
-						color: $vermelho;
-						font-family: inherit;
-						white-space: nowrap;
-						font-family: $grotesca;
-						.icon::before {
-							vertical-align: -6px;
-							margin-left: -0.25rem;
-						}
-					}
-				}
-				&:first-child {
-					width: 100%;
-					.img {
-						display: inline-block;
-						width: 70%;
-						height: 475px;
-						margin-bottom: 0;
-					}
-					aside {
-						display: inline-block;
-						width: 30%;
-						vertical-align: top;
-						padding-left: 2rem;
-						h2 {
-							font-size: 2rem;
-						}
-						.intro {
-							font-size: 1rem;
-							line-height: 1.6;
-						}
-					}
-				}
-			}
-		}
-		ul.nabertas {
-			position: relative;
-			max-width: 1200px;
-			margin: calc(60px + 2rem) auto 2rem;
-			padding: 0 2rem;
-			list-style-type: none;
-			&.load {
-				animation: surge ease-out .64s;
-			}
-			li.card {
-				position: relative;
-				height: calc(1200px/16*9);
-				margin: 2rem 0 0;
-				overflow: hidden;
-				background-color: $cinza-2;
-				border-radius: 4px;
-				z-index: 0;
-				&, & * { cursor: pointer; }
-				.bgImg {
-					display: inline-block;
-					height: 100%;
-					width: 100%;
-					overflow: hidden;
-					img {
-						object-fit: cover;
-						width: 100%;
-						height: 100%;
-						opacity: 0;
-						filter: blur(20px);
-						transform: scale(1.04);
-						transition: all ease-in .4s;
-						transition-delay: .2s;
-					}
-				}
-				aside {
-					position: absolute;
-					top: 0;
-					left: 0;
-					max-width: 50%;
-					min-width: 320px;
-					height: 100%;
-					padding: 0 2rem 2rem;
-					background-color: $sombra-1;
-					color: #FFF;
-					.tags {
-						list-style-type: none;
-						margin: 0;
-						padding: 0;
-						li {
-							display: inline-block;
-							vertical-align: top;
-							margin: 0 1rem 0 0;
-							padding: 1rem 1.25rem;
-							font-size: .75rem;
-							line-height: 1;
-							text-transform: uppercase;
-							box-shadow: 0 2px 4px $sombra-2;
-							text-shadow: 0 1px 1px $sombra-2;
-							&:last-child {
-								margin-right: 0;
-							}
-							&.consAtiva {
-								background-color: $verde;
-							}
-							&.ultimosDias {
-								background-color: $vermelho;
-							}
-						}
-					}
-					h2 {
-						margin: 2rem 0 1rem;
-						font-size: 2rem;
-						line-height: 1.2;
-						text-shadow: 0 2px 2px $sombra-1;
-					}
-					.info {
-						margin: 1rem 0;
-						tr {
-							display: block;
-							margin: 0;
-							td {
-								display: inline-block;
-								padding: 0;
-								margin: 0;
-								font-size: 0.75rem;
-								line-height: 1;
-								opacity: 0.8;
-							}
-							td:first-child {
-								margin-right: 4px;
-								font-size: 1rem;
-							}
-						}
-					}
-					p.intro {
-						margin: 1rem 0 2rem;
-					}
-					button.acesso {
-						margin: 0;
-						padding: 1rem 0.75rem 1rem 1.25rem;
-						border: 0;
-						border-radius: 2rem;
-						background-color: $vermelho;
-						color: #FFF;
-						font-family: inherit;
-						box-shadow: 0 2px 4px $sombra-2;
-						text-shadow: 0 1px 1px $sombra-2;
-						&, & > * {
-							font-size: 1rem;
-							line-height: 1rem;
-						}
-					}
-				}
-				&:nth-child(2n) aside {
-					right: 0;
-					left: 50%;
-					button.acesso {
-						float: right;
-					}
-				}
-			};
-		};
+		// ul.abertas {
+		// 	max-width: 1200px;
+		// 	margin: calc(60px + 2rem) auto 2rem;
+		// 	padding: 0;
+		// 	list-style-type: none;
+		// 	@supports (display: flex) {
+		// 		display: flex;
+		// 		flex-flow: row wrap;
+		// 		justify-content: space-between;
+		// 	}
+		// 	li.card {
+		// 		position: relative;
+		// 		display: inline-block;
+		// 		margin-bottom: 2rem;
+		// 		width: calc(600px - 1rem);
+		// 		vertical-align: top;
+		// 		cursor: pointer;
+		// 		&:nth-child(2n) {
+		// 			margin-right: 2rem;
+		// 		}
+		// 		.img {
+		// 			margin-bottom: 1rem;
+		// 			height: 330px;
+		// 			overflow: hidden;
+		// 			position: relative;
+		// 			border-radius: 4px;
+		// 			.tags {
+		// 				position: absolute;
+		// 				padding: 0 1rem;
+		// 				list-style-type: none;
+		// 				z-index: 1;
+		// 				li {
+		// 					display: inline-block;
+		// 					margin: 0 1rem 0 0;
+		// 					padding: 1rem 1.25rem;
+		// 					font-size: .75rem;
+		// 					line-height: 1;
+		// 					text-transform: uppercase;
+		// 					box-shadow: 0 2px 2px $sombra-3;
+		// 					text-shadow: 0 1px 1px $sombra-2;
+		// 					color: #FFF;
+		// 					&:last-child {
+		// 						margin-right: 0;
+		// 					}
+		// 					&.consAtiva {
+		// 						background-color: $verde;
+		// 					}
+		// 					&.ultimosDias {
+		// 						background-color: $vermelho;
+		// 					}
+		// 				}
+		// 			}
+		// 			img {
+		// 				object-fit: cover;
+		// 				width: 100%;
+		// 				height: 100%;
+		// 				opacity: 0;
+		// 				filter: blur(20px);
+		// 				transform: scale(1.04);
+		// 				transition: all ease-in .4s;
+		// 				transition-delay: .2s;
+		// 				background-color: $cinza-3;
+		// 			}
+		// 		}
+		// 		aside {
+		// 			h2 {
+		// 				font-size: 1.5rem;
+		// 				margin: 0 0 0.75rem;
+		// 				line-height: 1.2;
+		// 			}
+		// 			.info {
+		// 				font-size: 0.8rem;
+		// 				color: $cinza-1;
+		// 			}
+		// 			.intro {
+		// 				font-family: $serifada;
+		// 				font-size: 0.9rem;
+		// 				line-height: 1.32;
+		// 				margin-top: 0.75rem;
+		// 			}
+		// 			span.acesso {
+		// 				margin: 0;
+		// 				color: $vermelho;
+		// 				font-family: inherit;
+		// 				white-space: nowrap;
+		// 				font-family: $grotesca;
+		// 				.icon::before {
+		// 					vertical-align: -6px;
+		// 					margin-left: -0.25rem;
+		// 				}
+		// 			}
+		// 		}
+		// 		&:first-child {
+		// 			width: 100%;
+		// 			.img {
+		// 				display: inline-block;
+		// 				width: 70%;
+		// 				height: 475px;
+		// 				margin-bottom: 0;
+		// 			}
+		// 			aside {
+		// 				display: inline-block;
+		// 				width: 30%;
+		// 				vertical-align: top;
+		// 				padding-left: 2rem;
+		// 				h2 {
+		// 					font-size: 2rem;
+		// 				}
+		// 				.intro {
+		// 					font-size: 1rem;
+		// 					line-height: 1.6;
+		// 				}
+		// 			}
+		// 		}
+		// 	}
+		// }
+		// ul.nabertas {
+		// 	position: relative;
+		// 	max-width: 1200px;
+		// 	margin: calc(60px + 2rem) auto 2rem;
+		// 	padding: 0 2rem;
+		// 	list-style-type: none;
+		// 	&.load {
+		// 		animation: surge ease-out .64s;
+		// 	}
+		// 	li.card {
+		// 		position: relative;
+		// 		height: calc(1200px/16*9);
+		// 		margin: 2rem 0 0;
+		// 		overflow: hidden;
+		// 		background-color: $cinza-2;
+		// 		border-radius: 4px;
+		// 		z-index: 0;
+		// 		&, & * { cursor: pointer; }
+		// 		.bgImg {
+		// 			display: inline-block;
+		// 			height: 100%;
+		// 			width: 100%;
+		// 			overflow: hidden;
+		// 			img {
+		// 				object-fit: cover;
+		// 				width: 100%;
+		// 				height: 100%;
+		// 				opacity: 0;
+		// 				filter: blur(20px);
+		// 				transform: scale(1.04);
+		// 				transition: all ease-in .4s;
+		// 				transition-delay: .2s;
+		// 			}
+		// 		}
+		// 		aside {
+		// 			position: absolute;
+		// 			top: 0;
+		// 			left: 0;
+		// 			max-width: 50%;
+		// 			min-width: 320px;
+		// 			height: 100%;
+		// 			padding: 0 2rem 2rem;
+		// 			background-color: $sombra-1;
+		// 			color: #FFF;
+		// 			.tags {
+		// 				list-style-type: none;
+		// 				margin: 0;
+		// 				padding: 0;
+		// 				li {
+		// 					display: inline-block;
+		// 					vertical-align: top;
+		// 					margin: 0 1rem 0 0;
+		// 					padding: 1rem 1.25rem;
+		// 					font-size: .75rem;
+		// 					line-height: 1;
+		// 					text-transform: uppercase;
+		// 					box-shadow: 0 2px 4px $sombra-2;
+		// 					text-shadow: 0 1px 1px $sombra-2;
+		// 					&:last-child {
+		// 						margin-right: 0;
+		// 					}
+		// 					&.consAtiva {
+		// 						background-color: $verde;
+		// 					}
+		// 					&.ultimosDias {
+		// 						background-color: $vermelho;
+		// 					}
+		// 				}
+		// 			}
+		// 			h2 {
+		// 				margin: 2rem 0 1rem;
+		// 				font-size: 2rem;
+		// 				line-height: 1.2;
+		// 				text-shadow: 0 2px 2px $sombra-1;
+		// 			}
+		// 			.info {
+		// 				margin: 1rem 0;
+		// 				tr {
+		// 					display: block;
+		// 					margin: 0;
+		// 					td {
+		// 						display: inline-block;
+		// 						padding: 0;
+		// 						margin: 0;
+		// 						font-size: 0.75rem;
+		// 						line-height: 1;
+		// 						opacity: 0.8;
+		// 					}
+		// 					td:first-child {
+		// 						margin-right: 4px;
+		// 						font-size: 1rem;
+		// 					}
+		// 				}
+		// 			}
+		// 			p.intro {
+		// 				margin: 1rem 0 2rem;
+		// 			}
+		// 			button.acesso {
+		// 				margin: 0;
+		// 				padding: 1rem 0.75rem 1rem 1.25rem;
+		// 				border: 0;
+		// 				border-radius: 2rem;
+		// 				background-color: $vermelho;
+		// 				color: #FFF;
+		// 				font-family: inherit;
+		// 				box-shadow: 0 2px 4px $sombra-2;
+		// 				text-shadow: 0 1px 1px $sombra-2;
+		// 				&, & > * {
+		// 					font-size: 1rem;
+		// 					line-height: 1rem;
+		// 				}
+		// 			}
+		// 		}
+		// 		&:nth-child(2n) aside {
+		// 			right: 0;
+		// 			left: 50%;
+		// 			button.acesso {
+		// 				float: right;
+		// 			}
+		// 		}
+		// 	};
+		// };
 		section.abertas {
 			position: relative;
 			margin: calc(60px + 2rem) auto 2rem auto;
 			padding: 0 2rem;
 			max-width: 1200px;
 			width: 100%;
-			height: calc(675px - 2rem);
 			nav {
 				position: absolute;
 				z-index: 1;
@@ -549,249 +477,166 @@ div.Home {
 					}
 				}
 			}
-			max-width: 1200px;
-			margin: calc(60px + 2rem) auto 2rem;
-			padding: 0;
-			list-style-type: none;
-			@supports (display: flex) {
-				display: flex;
-				flex-flow: row wrap;
-				justify-content: space-between;
-			}
-			li.card {
-				position: relative;
-				display: inline-block;
-				margin-bottom: 2rem;
-				width: calc(600px - 1rem);
-				vertical-align: top;
-				cursor: pointer;
-				&:nth-child(2n) {
-					margin-right: 2rem;
+			ul {
+				padding: 0;
+				list-style-type: none;
+				@supports (display: flex) {
+					display: flex;
+					flex-flow: row wrap;
+					justify-content: space-between;
+					align-items: flex-start;
 				}
-				.img {
-					margin-bottom: 1rem;
-					height: 330px;
-					overflow: hidden;
+				li.card {
 					position: relative;
+					display: inline-block;
+					margin-bottom: 2rem;
+					width: calc(50% - 1rem);
+					vertical-align: top;
+					cursor: pointer;
 					border-radius: 4px;
-					.tags {
-						position: absolute;
-						padding: 0 1rem;
-						list-style-type: none;
-						z-index: 1;
-						li {
-							display: inline-block;
-							margin: 0 1rem 0 0;
-							padding: 1rem 1.25rem;
-							font-size: .75rem;
-							line-height: 1;
-							text-transform: uppercase;
-							box-shadow: 0 2px 2px $sombra-3;
-							text-shadow: 0 1px 1px $sombra-2;
-							color: #FFF;
-							&:last-child {
-								margin-right: 0;
-							}
-							&.consAtiva {
-								background-color: $verde;
-							}
-							&.ultimosDias {
-								background-color: $vermelho;
-							}
-						}
+					&:nth-child(2n) {
+						margin-right: 2rem;
 					}
-					img {
-						object-fit: cover;
-						width: 100%;
-						height: 100%;
-						opacity: 0;
-						filter: blur(20px);
-						transform: scale(1.04);
-						transition: all ease-in .4s;
-						transition-delay: .2s;
-						background-color: $cinza-3;
-					}
-				}
-				aside {
-					h2 {
-						font-size: 1.5rem;
-						margin: 0 0 0.75rem;
-						line-height: 1.2;
-					}
-					.info {
-						font-size: 0.8rem;
-						color: $cinza-1;
-					}
-					.intro {
-						font-family: $serifada;
-						font-size: 0.9rem;
-						line-height: 1.32;
-						margin-top: 0.75rem;
-					}
-					span.acesso {
-						margin: 0;
-						color: $vermelho;
-						font-family: inherit;
-						white-space: nowrap;
-						font-family: $grotesca;
-						.icon::before {
-							vertical-align: -6px;
-							margin-left: -0.25rem;
-						}
-					}
-				}
-				&:first-child {
-					width: 100%;
 					.img {
-						display: inline-block;
-						width: 70%;
-						height: 475px;
-						margin-bottom: 0;
+						margin-bottom: 1rem;
+						height: 330px;
+						overflow: hidden;
+						position: relative;
+						border-radius: 4px;
+						background-color: $cinza-2 !important;
+						.tags {
+							position: absolute;
+							display: block;
+							top: 1rem;
+							left: 0;
+							list-style-type: none;
+							z-index: 1;
+							li {
+								display: block;
+								margin: 0 0 1rem 0;
+								padding: 0.75rem;
+								font-size: .75rem;
+								line-height: 1;
+								text-transform: uppercase;
+								box-shadow: 2px 0 4px $sombra-3;
+								text-shadow: 0 1px 1px $sombra-2;
+								border-width: 1px 1px 1px 0;
+								border-color: $sombra-4;
+								border-style: solid;
+								border-radius: 0 2px 2px 0;
+								color: #FFF;
+								&:last-child {
+									margin-right: 0;
+								}
+								&.consAtiva {
+									background-color: $verde;
+								}
+								&.ultimosDias {
+									background-color: $vermelho;
+								}
+							}
+						}
+						img {
+							object-fit: cover;
+							width: 100%;
+							height: 100%;
+							opacity: 0;
+							filter: blur(20px);
+							transform: scale(1.04);
+							transition: all ease-in .4s;
+							transition-delay: .2s;
+							background-color: $cinza-3;
+						}
 					}
 					aside {
-						display: inline-block;
-						width: 30%;
-						vertical-align: top;
-						padding-left: 2rem;
+						border-bottom: 1rem solid $cinza-3;
 						h2 {
-							font-size: 2rem;
+							font-size: 1.5rem;
+							margin: 0 0 0.75rem;
+							line-height: 1.2;
+						}
+						.info {
+							font-size: 0.8rem;
+							color: $cinza-1;
+							width: 100%;
+							border-collapse: collapse;
+							border-spacing: 0;
+							tr {
+								td {
+									padding: 0;
+									line-height: 1.4;
+								}
+								td:first-child {
+									width: 1.25rem;
+									.icon {
+										line-height: inherit;
+									}
+								}
+							}
 						}
 						.intro {
-							font-size: 1rem;
-							line-height: 1.6;
+							font-family: $serifada;
+							margin-top: 0.75rem;
+							hyphens: auto;
 						}
+						span.acesso {
+							margin: 0;
+							color: $vermelho;
+							font-family: inherit;
+							white-space: nowrap;
+							font-family: $grotesca;
+							font-weight: bold;
+							.icon::before {
+								vertical-align: -6px;
+								margin-left: -0.25rem;
+							}
+						}
+					}
+					&:first-child {
+						width: 100%;
+						.img {
+							display: inline-block;
+							width: 60%;
+							height: 0;
+							padding-bottom: calc(60% * 9/16);
+							margin-bottom: 0;
+							.tags {
+								left: inherit;
+								right: 0;
+								li {
+									border-width: 1px 0 1px 1px;
+									border-radius: 2px 0 0 2px;
+									box-shadow: -2px 0 8px $sombra-2;
+								}
+							}
+							img {
+								position: absolute;
+								top: 0;
+								left: 0;
+							}
+						}
+						aside {
+							display: inline-block;
+							width: 40%;
+							vertical-align: top;
+							padding-left: 2rem;
+							border-bottom: none;
+							h2 {
+								font-size: 2rem;
+							}
+							.intro {
+								font-size: 1rem;
+								line-height: 1.6;
+							}
+						}
+					}
+					&:active {
+						background-color: $vermelho-tr;
+						outline: 0.5rem solid $vermelho-tr;
+						-moz-outline-radius: 0.75rem;
 					}
 				}
 			}
-			// ul {
-			// 	margin: 0;
-			// 	padding: 0;
-			// 	width: 100%;
-			// 	height: 100%;
-			// 	list-style-type: none;
-			// 	position: relative;
-			// 	z-index: 0;
-			// 	li.card {
-			// 		height: 100%;
-			// 		margin: 0;
-			// 		background-color: $cinza-2;
-			// 		overflow: hidden;
-			// 		border-radius: 4px;
-			// 		&, &.show {
-			// 			transition: opacity ease-in-out .2s; 
-			// 		}
-			// 		&:not(.show) {
-			// 			opacity: 0;
-			// 			height: 0;
-			// 			overflow: hidden;
-			// 			aside {
-			// 				opacity: 0;
-			// 			}
-			// 		}
-			// 		&, & * { cursor: pointer; }
-			// 		.bgImg {
-			// 			display: inline-block;
-			// 			height: 100%;
-			// 			width: 100%;
-			// 			overflow: hidden;
-			// 			background-color: $cinza-2;
-			// 			img {
-			// 				object-fit: cover;
-			// 				width: 100%;
-			// 				height: 100%;
-			// 				opacity: 0;
-			// 				filter: blur(20px);
-			// 				transform: scale(1.04);
-			// 				transition: all ease-in .4s;
-			// 				transition-delay: .2s;
-			// 			}
-			// 		}
-			// 		aside {
-			// 			position: absolute;
-			// 			top: 0;
-			// 			right: 0;
-			// 			max-width: 40%;
-			// 			min-width: 320px;
-			// 			height: 100%;
-			// 			padding: 0 2rem 2rem;
-			// 			background-color: $sombra-1;
-			// 			color: #FFF;
-			// 			border-radius: 0 4px 4px 0;
-			// 			transition: inherit;
-			// 			overflow: hidden;
-			// 			.tags {
-			// 				list-style-type: none;
-			// 				margin: 0;
-			// 				padding: 0;
-			// 				height: auto;
-			// 				li {
-			// 					display: inline-block;
-			// 					vertical-align: top;
-			// 					margin: 0 1rem 0 0;
-			// 					padding: 1rem 1.25rem;
-			// 					font-size: .75rem;
-			// 					line-height: 1;
-			// 					text-transform: uppercase;
-			// 					box-shadow: 0 2px 4px $sombra-2;
-			// 					text-shadow: 0 1px 1px $sombra-2;
-			// 					&:last-child {
-			// 						margin-right: 0;
-			// 					}
-			// 					&.consAberta {
-			// 						background-color: $verde;
-			// 						display: none;
-			// 					}
-			// 					&.ultimosDias {
-			// 						background-color: $vermelho;
-			// 					}
-			// 				}
-			// 			}
-			// 			h2 {
-			// 				margin: 2rem 0 1rem;
-			// 				font-size: 2rem;
-			// 				line-height: 1.2;
-			// 				text-shadow: 0 2px 2px $sombra-1;
-			// 			}
-			// 			.info {
-			// 				margin: 1rem 0;
-			// 				tr {
-			// 					display: block;
-			// 					margin: 0;
-			// 					td {
-			// 						display: inline-block;
-			// 						padding: 0;
-			// 						margin: 0;
-			// 						font-size: 0.75rem;
-			// 						line-height: 1;
-			// 						opacity: 0.8;
-			// 					}
-			// 					td:first-child {
-			// 						margin-right: 4px;
-			// 						font-size: 1rem;
-			// 					}
-			// 				}
-			// 			}
-			// 			p.intro {
-			// 				margin: 1rem 0 2rem;
-			// 			}
-			// 			button.acesso {
-			// 				margin: 0;
-			// 				padding: 1rem 0.75rem 1rem 1.25rem;
-			// 				border: 0;
-			// 				border-radius: 2rem;
-			// 				background-color: $vermelho;
-			// 				color: #FFF;
-			// 				font-family: inherit;
-			// 				box-shadow: 0 2px 4px $sombra-2;
-			// 				text-shadow: 0 1px 1px $sombra-2;
-			// 				&, & > * {
-			// 					font-size: 1rem;
-			// 					line-height: 1rem;
-			// 				}
-			// 			}
-			// 		}
-			// 	};
-			// }
 		}
 		section.encerradas {
 			header {
@@ -955,107 +800,106 @@ div.Home {
 	@media screen and (max-width: 1200px) {
 		main {
 			section.abertas {
-				height: auto;
-				nav {
-					display: none;
-				}
 				ul {
-					li.card, li.card.show, li.card:not(.show) {
-						height: calc(100vh - 60px - 6rem);
-						max-height: 600px;
-						opacity: 1;
-						position: relative;
-						margin: 0 0 2rem;
-						border-radius: 4px;
-						.bgImg {
-						}
-						aside {
-							opacity: 1;
-							min-width: 100%;
-							height: auto;
-							border-radius: 4px 4px 0 0;
-							overflow: visible;
-							.tags .consAberta {
-								display: inline-block;
-							}
-							h2 {
-								font-size: 1.75rem;
-								margin: 1rem 0;
-							}
-							p.intro {
-								font-size: 1rem;
-								margin-bottom: 1rem;
-								max-width: 40rem;
-							}
-							button.acesso {
-								position: absolute;
-								margin-top: 0.75rem;
-								padding: 0.5rem 0.5rem 0.5rem 1rem;
-								font-size: 0.75rem;
-								line-height: 0.75rem;
-								text-transform: uppercase;
-								box-shadow: 0 2px 4px $sombra-1;
-								.icon {
-									font-size: inherit;
+					li.card {
+						.img {
+							width: auto;
+							height: 0;
+							padding-bottom: calc(100% * 9/16);
+							ul.tags {
+								top: 0.5rem;
+								li {
+									padding: 0.5rem;
+									margin-bottom: 0.5rem;
 								}
 							}
+							img {
+								position: absolute;
+								top: 0;
+								left: 0;
+							}
 						}
-						&:nth-child(2n) aside button.acesso {
-							right: 2rem;
+						aside {
+							.info {
+								width: 100%;
+							}
+						}
+						&:not(:first-child) {
+							aside p.intro {
+								font-size: 0.9rem;
+							}
 						}
 					}
 				}
 			}
 		}
 	};
+	@media screen and (max-width: 800px) {
+		main section.abertas ul li.card:first-child {
+			.img {
+				display: block;
+				width: 100%;
+				padding-bottom: calc(100% * 9/16);
+				.tags {
+					left: 0;
+					right: inherit;
+					bottom: 0.5rem;
+					top: inherit;
+					li {
+						border-width: 1px 1px 1px 0;
+						border-radius: 0 2px 2px 0;
+						box-shadow: 2px 0 8px $sombra-2;
+					}
+				}
+			}
+			aside {
+				display: block;
+				width: 100%;
+				padding-left: 0;
+				margin-top: 1rem;
+			}
+		}
+	}
 	@media screen and (max-width: 600px) {
 		main {
 			section.abertas {
-				padding: 0;
-				margin-top: 60px;
+				padding: 0 1rem;
+				margin-top: calc(60px + 1rem);
 				ul {
-					li.card.show, li.card:not(.show) {
-						border-radius: 0;
-						height: 88vh;
-						margin-bottom: 1rem;
+					li.card, li.card:nth-child(2n) {
+						display: block;
+						width: 100%;
+						margin: 0 0 2rem 0;
 						aside {
-							padding: 0 1rem 1rem;
-							border-radius: 0;
-							.bgImg {
-								border-radius: 0;
-							}
-							.tags li {
-								padding: 0.5rem;
-								font-size: 0.75rem;
-							}
 							h2 {
 								font-size: 1.25rem;
-								margin-bottom: 0.5rem;
-							}
-							.info {
-								margin: 0.5rem 0;
-								tr {
-									margin: 0 0 0.5rem 0;
-									max-height: 1rem;
-									td {
-										height: 1rem;
-										i::before {
-											font-size: 1rem;
-											line-height: .8;
-										}
-									}
-								}
+								margin-bottom: 0.2rem;
 							}
 							p.intro {
-								margin: 0.5rem 0;
-								font-size: 0.75rem;
-							}
-							button.acesso {
-								bottom: -1rem;
+								margin-top: 0.25rem;
 							}
 						}
-						&:nth-child(2n) aside button.acesso {
-							right: 1rem;
+					}
+					li.card:first-child {
+						.img {
+							margin-bottom: 0.75rem;
+						}
+						aside {
+							margin-top: 0.5rem;
+							h2 {
+								font-size: 1.75rem;
+							}
+							p.intro span.acesso {
+								display: block;
+								text-align: center;
+								margin-top: 0.5rem;
+								padding: 0.5rem 0.75rem 0.5rem 1rem;
+								border-radius: 2rem;
+								background-color: $vermelho;
+								color: #FFF;
+								box-shadow: 0 2px 2px $sombra-3;
+								font-weight: normal;
+							}
 						}
 					}
 				}

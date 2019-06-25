@@ -5,32 +5,28 @@
 			<section class="abertas">
 				<ul ref="consultas">
 					<li v-for="(consulta, index) in consultas" v-if="consulta.ativo == 1" class="card" @click="redirect(setUrlByType(consulta.urlConsulta))" :key="index">
-						<div class="img" :style="{ background: 'url(' + placeholderSrc(consulta.urlCapa) + ')', backgroundSize: 'cover' }">
+						<div class="img" :style="{ background: 'url(' + placeholderSrc(consulta.urlCapa) + ')', backgroundSize: 'cover', backgroundColor: '#BDBDBD' }">
 							<ul class="tags">
 								<li class="consAtiva">Em consulta</li>
 								<li class="ultimosDias" v-if="tempoRestante(consulta.dataFinal) <= 7">Últimos dias</li>
 							</ul>
-							<img v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, consulta.urlCapa, consulta.ativo)" sizes="
-							(max-width: 600px) 568px, 
-							(max-width: 800px) 736px,
-							(min-width: 801px) 681px
-							">
+							<img v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, consulta.urlCapa, consulta.ativo)">
 						</div>
 						<aside>
 							<h2>{{ decodeURI(consulta.nomePublico) }}</h2>
 							<table class="info">
 								<tr v-if="tempoRestante(consulta.dataFinal)">
 									<td><i class="icon-tempo icon"><span>tempo</span></i></td>
-									<td>{{ tempoRestante(consulta.dataFinal) }} dias restantes para contribuir</td>
+									<td title="Tempo restante para contribuir nesta consulta">{{ tempoRestante(consulta.dataFinal) }} dias restantes para contribuir</td>
 								</tr>
 								<tr>
 									<td><i class="icon-data icon"><span>data</span></i></td>
-									<td v-if="tempoRestante(consulta.dataFinal)">{{ dataDisplay(consulta.dataCadastro) }}–{{ dataDisplay(consulta.dataFinal) }}</td>
-									<td v-else>Aberta em {{ dataDisplay(consulta.dataCadastro) }}</td>
+									<td title="Período de contribuições desta consulta" v-if="tempoRestante(consulta.dataFinal)">{{ dataDisplay(consulta.dataCadastro) }}–{{ dataDisplay(consulta.dataFinal) }}</td>
+									<td title="Data de abertura desta consulta" v-else>Aberta em {{ dataDisplay(consulta.dataCadastro) }}</td>
 								</tr>
 								<tr>
 									<td><i class="icon-contribuicao icon"><span>contribuicao</span></i></td>
-									<td>{{ consulta.nContribuicoes }} contribuições</td>
+									<td title="Número de contribuições recolhidas até o momento">{{ consulta.nContribuicoes }} contribuições</td>
 								</tr>
 							</table>
 							<p class="intro">
@@ -110,41 +106,33 @@ export default {
 			const srcset = this.imgset(capa, consultaAtiva)
 			if (isVisible) {
 				entry.target.srcset = srcset
-				entry.target.style.filter = 'blur(0)'
-				entry.target.style.transform = 'scale(1)'
 				entry.target.style.opacity = 1
 			}
 		},
 		placeholderSrc (nomeStr) {
-			return this.basePathImgSrc + nomeStr.slice(0, nomeStr.indexOf('.')) + '_15w.webp'
+			return this.basePathImgSrc + nomeStr.slice(0, nomeStr.indexOf('.')) + '_40w.webp'
 		},
 		checaContribuicoes (n) { return parseInt(n) > 0 },
 		imgset (nomeStr, isAtiva) {
 			let nome = this.basePathImgSrc + nomeStr.slice(0, nomeStr.lastIndexOf('.'))
 			let ext = nomeStr.slice(nomeStr.lastIndexOf('.') + 1, nomeStr.lenght)
 			let declare = ''
-			if (isAtiva == 1) {
+			if (parseInt(isAtiva) === 1) {
 				declare +=
-				nome + '_1900w.webp 1900w, ' +
-				nome + '_700w.webp 700w, ' +
-				nome + '_1900w.' + ext + ' 1900w, ' +
-				nome + '_700w.' + ext + ' 700w'
-			} else {
-				declare += 
-				nome + '_480w.webp 480w, ' +
-				nome + '480w.' + ext + ' 480w'
+				nome + '_1600w.webp 2x, ' +
+				nome + '_800w.webp 1x, ' +
+				nome + '_1600w.' + ext + ' 2x, ' +
+				nome + '_800w.' + ext + ' 1x'
+			} else if (parseInt(isAtiva) === 0) {
+				declare +=
+				nome + '_244w.webp 2x, ' +
+				nome + '_122w.webp 1x, ' +
+				nome + '244w.' + ext + ' 2x' +
+				nome + '122w.' + ext + ' 1x'
 			}
 			return declare.toString()
 		},
 		parseAtivo (state) { return state !== '0' },
-		ativaBusca () {
-			this.$refs.busca.value = ''
-			this.$refs.busca.style.color = '#333'
-		},
-		desativaBusca () {
-			this.$refs.busca.value = 'Pesquisar'
-			this.$refs.busca.style.color = '#BDBDBD'
-		},
 		dataDisplay (data) {
 			return data.substring(8, 10) + '/' + data.substring(5, 7) + '/' + data.substring(0, 4)
 		},
@@ -161,22 +149,8 @@ export default {
 			this.$refs.toggleListDisplayBt.classList.toggle('lista')
 		},
 		tempoRestante (dataFinal) {
-			let restante = Math.ceil((Date.parse(dataFinal) - Date.now())/86400000)
+			let restante = Math.ceil((Date.parse(dataFinal) - Date.now()) / 86400000)
 			return restante
-		},
-		display (pos, event) {
-			let consultas = Array.from(this.$refs.consultas.children)
-			let clicked = event.target
-			let navList = Array.from(event.target.parentNode.children)
-			consultas.map(consulta => {
-				if (consulta != consultas[pos]) {
-					consulta.classList.remove('show')
-				} else if (consulta == consultas[pos]) {
-					consultas[pos].classList.add('show')
-				}
-			})
-			navList.map(item => item.classList.remove('active'))
-			clicked.classList.add('active')
 		}
 	}
 }
@@ -197,286 +171,12 @@ div.Home {
 			from { opacity: 0; }
 			to { opacity: 1; }
 		}
-		// ul.abertas {
-		// 	max-width: 1200px;
-		// 	margin: calc(60px + 2rem) auto 2rem;
-		// 	padding: 0;
-		// 	list-style-type: none;
-		// 	@supports (display: flex) {
-		// 		display: flex;
-		// 		flex-flow: row wrap;
-		// 		justify-content: space-between;
-		// 	}
-		// 	li.card {
-		// 		position: relative;
-		// 		display: inline-block;
-		// 		margin-bottom: 2rem;
-		// 		width: calc(600px - 1rem);
-		// 		vertical-align: top;
-		// 		cursor: pointer;
-		// 		&:nth-child(2n) {
-		// 			margin-right: 2rem;
-		// 		}
-		// 		.img {
-		// 			margin-bottom: 1rem;
-		// 			height: 330px;
-		// 			overflow: hidden;
-		// 			position: relative;
-		// 			border-radius: 4px;
-		// 			.tags {
-		// 				position: absolute;
-		// 				padding: 0 1rem;
-		// 				list-style-type: none;
-		// 				z-index: 1;
-		// 				li {
-		// 					display: inline-block;
-		// 					margin: 0 1rem 0 0;
-		// 					padding: 1rem 1.25rem;
-		// 					font-size: .75rem;
-		// 					line-height: 1;
-		// 					text-transform: uppercase;
-		// 					box-shadow: 0 2px 2px $sombra-3;
-		// 					text-shadow: 0 1px 1px $sombra-2;
-		// 					color: #FFF;
-		// 					&:last-child {
-		// 						margin-right: 0;
-		// 					}
-		// 					&.consAtiva {
-		// 						background-color: $verde;
-		// 					}
-		// 					&.ultimosDias {
-		// 						background-color: $vermelho;
-		// 					}
-		// 				}
-		// 			}
-		// 			img {
-		// 				object-fit: cover;
-		// 				width: 100%;
-		// 				height: 100%;
-		// 				opacity: 0;
-		// 				filter: blur(20px);
-		// 				transform: scale(1.04);
-		// 				transition: all ease-in .4s;
-		// 				transition-delay: .2s;
-		// 				background-color: $cinza-3;
-		// 			}
-		// 		}
-		// 		aside {
-		// 			h2 {
-		// 				font-size: 1.5rem;
-		// 				margin: 0 0 0.75rem;
-		// 				line-height: 1.2;
-		// 			}
-		// 			.info {
-		// 				font-size: 0.8rem;
-		// 				color: $cinza-1;
-		// 			}
-		// 			.intro {
-		// 				font-family: $serifada;
-		// 				font-size: 0.9rem;
-		// 				line-height: 1.32;
-		// 				margin-top: 0.75rem;
-		// 			}
-		// 			span.acesso {
-		// 				margin: 0;
-		// 				color: $vermelho;
-		// 				font-family: inherit;
-		// 				white-space: nowrap;
-		// 				font-family: $grotesca;
-		// 				.icon::before {
-		// 					vertical-align: -6px;
-		// 					margin-left: -0.25rem;
-		// 				}
-		// 			}
-		// 		}
-		// 		&:first-child {
-		// 			width: 100%;
-		// 			.img {
-		// 				display: inline-block;
-		// 				width: 70%;
-		// 				height: 475px;
-		// 				margin-bottom: 0;
-		// 			}
-		// 			aside {
-		// 				display: inline-block;
-		// 				width: 30%;
-		// 				vertical-align: top;
-		// 				padding-left: 2rem;
-		// 				h2 {
-		// 					font-size: 2rem;
-		// 				}
-		// 				.intro {
-		// 					font-size: 1rem;
-		// 					line-height: 1.6;
-		// 				}
-		// 			}
-		// 		}
-		// 	}
-		// }
-		// ul.nabertas {
-		// 	position: relative;
-		// 	max-width: 1200px;
-		// 	margin: calc(60px + 2rem) auto 2rem;
-		// 	padding: 0 2rem;
-		// 	list-style-type: none;
-		// 	&.load {
-		// 		animation: surge ease-out .64s;
-		// 	}
-		// 	li.card {
-		// 		position: relative;
-		// 		height: calc(1200px/16*9);
-		// 		margin: 2rem 0 0;
-		// 		overflow: hidden;
-		// 		background-color: $cinza-2;
-		// 		border-radius: 4px;
-		// 		z-index: 0;
-		// 		&, & * { cursor: pointer; }
-		// 		.bgImg {
-		// 			display: inline-block;
-		// 			height: 100%;
-		// 			width: 100%;
-		// 			overflow: hidden;
-		// 			img {
-		// 				object-fit: cover;
-		// 				width: 100%;
-		// 				height: 100%;
-		// 				opacity: 0;
-		// 				filter: blur(20px);
-		// 				transform: scale(1.04);
-		// 				transition: all ease-in .4s;
-		// 				transition-delay: .2s;
-		// 			}
-		// 		}
-		// 		aside {
-		// 			position: absolute;
-		// 			top: 0;
-		// 			left: 0;
-		// 			max-width: 50%;
-		// 			min-width: 320px;
-		// 			height: 100%;
-		// 			padding: 0 2rem 2rem;
-		// 			background-color: $sombra-1;
-		// 			color: #FFF;
-		// 			.tags {
-		// 				list-style-type: none;
-		// 				margin: 0;
-		// 				padding: 0;
-		// 				li {
-		// 					display: inline-block;
-		// 					vertical-align: top;
-		// 					margin: 0 1rem 0 0;
-		// 					padding: 1rem 1.25rem;
-		// 					font-size: .75rem;
-		// 					line-height: 1;
-		// 					text-transform: uppercase;
-		// 					box-shadow: 0 2px 4px $sombra-2;
-		// 					text-shadow: 0 1px 1px $sombra-2;
-		// 					&:last-child {
-		// 						margin-right: 0;
-		// 					}
-		// 					&.consAtiva {
-		// 						background-color: $verde;
-		// 					}
-		// 					&.ultimosDias {
-		// 						background-color: $vermelho;
-		// 					}
-		// 				}
-		// 			}
-		// 			h2 {
-		// 				margin: 2rem 0 1rem;
-		// 				font-size: 2rem;
-		// 				line-height: 1.2;
-		// 				text-shadow: 0 2px 2px $sombra-1;
-		// 			}
-		// 			.info {
-		// 				margin: 1rem 0;
-		// 				tr {
-		// 					display: block;
-		// 					margin: 0;
-		// 					td {
-		// 						display: inline-block;
-		// 						padding: 0;
-		// 						margin: 0;
-		// 						font-size: 0.75rem;
-		// 						line-height: 1;
-		// 						opacity: 0.8;
-		// 					}
-		// 					td:first-child {
-		// 						margin-right: 4px;
-		// 						font-size: 1rem;
-		// 					}
-		// 				}
-		// 			}
-		// 			p.intro {
-		// 				margin: 1rem 0 2rem;
-		// 			}
-		// 			button.acesso {
-		// 				margin: 0;
-		// 				padding: 1rem 0.75rem 1rem 1.25rem;
-		// 				border: 0;
-		// 				border-radius: 2rem;
-		// 				background-color: $vermelho;
-		// 				color: #FFF;
-		// 				font-family: inherit;
-		// 				box-shadow: 0 2px 4px $sombra-2;
-		// 				text-shadow: 0 1px 1px $sombra-2;
-		// 				&, & > * {
-		// 					font-size: 1rem;
-		// 					line-height: 1rem;
-		// 				}
-		// 			}
-		// 		}
-		// 		&:nth-child(2n) aside {
-		// 			right: 0;
-		// 			left: 50%;
-		// 			button.acesso {
-		// 				float: right;
-		// 			}
-		// 		}
-		// 	};
-		// };
 		section.abertas {
 			position: relative;
 			margin: calc(60px + 2rem) auto 2rem auto;
 			padding: 0 2rem;
 			max-width: 1200px;
 			width: 100%;
-			nav {
-				position: absolute;
-				z-index: 1;
-				width: 20%;
-				height: 100%;
-				border-radius: 4px 0 0 4px;
-				color: #FFF;
-				background-color: rgba(0, 128, 21, 0.8);
-				overflow: hidden;
-				h2 {
-					font-size: 1.25rem;
-					line-height: 1.2;
-					margin: 0;
-					padding: 0.75rem 1rem;
-					background-color: $sombra-3;
-				}
-				ul {
-					margin: 0;
-					padding: 0;
-					list-style-type: none;
-					li {
-						padding: 0.75rem 1rem;
-						line-height: 1.2;
-						cursor: pointer;
-						text-shadow: 0 1px 1px $sombra-4;
-						opacity: 0.56;
-						transition: opacity ease-in .2s;
-						&.active {
-							opacity: 1;
-						}
-						&:hover {
-							background-color: $sombra-4;
-						}
-					}
-				}
-			}
 			ul {
 				padding: 0;
 				list-style-type: none;
@@ -503,7 +203,6 @@ div.Home {
 						overflow: hidden;
 						position: relative;
 						border-radius: 4px;
-						background-color: $cinza-2 !important;
 						.tags {
 							position: absolute;
 							display: block;
@@ -541,15 +240,14 @@ div.Home {
 							width: 100%;
 							height: 100%;
 							opacity: 0;
-							filter: blur(20px);
-							transform: scale(1.04);
-							transition: all ease-in .4s;
+							transition: all ease-out .4s;
 							transition-delay: .2s;
 							background-color: $cinza-3;
 						}
 					}
 					aside {
 						border-bottom: 1rem solid $cinza-3;
+						padding-bottom: 0.5rem;
 						h2 {
 							font-size: 1.5rem;
 							margin: 0 0 0.75rem;
@@ -576,7 +274,7 @@ div.Home {
 						}
 						.intro {
 							font-family: $serifada;
-							margin-top: 0.75rem;
+							margin: 0.75rem 0 0;
 							hyphens: auto;
 						}
 						span.acesso {
@@ -620,6 +318,7 @@ div.Home {
 							width: 40%;
 							vertical-align: top;
 							padding-left: 2rem;
+							padding-bottom: 0;
 							border-bottom: none;
 							h2 {
 								font-size: 2rem;
@@ -709,9 +408,7 @@ div.Home {
 							width: 100%;
 							height: 100%;
 							opacity: 0;
-							filter: blur(20px);
-							transform: scale(1.04);
-							transition: all ease-in .4s;
+							transition: all ease-out .4s;
 							transition-delay: .2s;
 						}
 					}
@@ -740,12 +437,22 @@ div.Home {
 									width: calc(100% - 18px);
 								}
 								& > .icon {
-									margin-left: -4px;
-									margin-right: 4px;
-									vertical-align: baseline;
+									display: block;
+									position: relative;
+									width: 18px;
+									&::before {
+										display: block;
+										position: absolute;
+										left: -2px;
+									}
 								}
 							}
 						}
+					}
+					&:active {
+						background-color: $vermelho-tr;
+						outline: 0.5rem solid $vermelho-tr;
+						-moz-outline-radius: 0.75rem;
 					}
 				}
 				&.lista {
@@ -791,6 +498,10 @@ div.Home {
 						}
 						&:hover {
 							background-color: $sombra-4;
+						}
+						&:active {
+							outline: none;
+							background-color: $vermelho-tr;
 						}
 					}
 				}

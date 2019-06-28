@@ -35,12 +35,8 @@ export default {
 		menuToggle () { return this.$store.state.menuToggle },
 		logoGestaoUrbana () { return this.$store.getters.basePath + 'arquivos/img/logo_gestao_footer.jpg' }
 	},
-	beforeUpdate () {
-		this.$el.children[0].scrollTo({
-			top: 0,
-			left: 0,
-			behavior: 'smooth'
-		})
+	updated () {
+		this.$el.children[0].scrollTop = 0
 	},
 	methods: {
 		fechaMenu () {

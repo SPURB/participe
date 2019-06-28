@@ -4,20 +4,24 @@
 		<main id="listaProjetos" :class="{ load: !fetching }">
 			<section class="abertas">
 				<ul ref="consultas">
-					<li v-for="(consulta, index) in consultas" v-if="consulta.ativo == 1" class="card" @click="redirect(setUrlByType(consulta.urlConsulta))" :key="index">
+					<li v-for="(consulta, index) in consultasAbertas" v-if="consulta.ativo == 1" class="card" @click="redirect(setUrlByType(consulta.urlConsulta))" :key="index">
 						<div class="img" :style="{ background: 'url(' + placeholderSrc(consulta.urlCapa) + ')', backgroundSize: 'cover', backgroundColor: '#BDBDBD' }">
 							<ul class="tags">
 								<li class="consAtiva">Em consulta</li>
 								<li class="ultimosDias" v-if="tempoRestante(consulta.dataFinal) <= 7">Últimos dias</li>
 							</ul>
-							<img v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, consulta.urlCapa, consulta.ativo)">
+							<img v-if="!isIE" v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, consulta.urlCapa, consulta.ativo)">
+							<img v-if="isIE" :src="imgset(consulta.urlCapa, consulta.ativo)" :style="{ opacity: 1 }" alt="">
 						</div>
 						<aside>
 							<h2>{{ decodeURI(consulta.nomePublico) }}</h2>
 							<table class="info">
-								<tr v-if="tempoRestante(consulta.dataFinal)">
+								<tr v-if="tempoRestante(consulta.dataFinal) >= 0" :class="{ ultimoDia: tempoRestante(consulta.dataFinal) == 0 }">
 									<td><i class="icon-tempo icon"><span>tempo</span></i></td>
-									<td title="Tempo restante para contribuir nesta consulta">{{ tempoRestante(consulta.dataFinal) }} dias restantes para contribuir</td>
+									<td title="Tempo restante para contribuir nesta consulta">
+										<template v-if="tempoRestante(consulta.dataFinal) == 0">Último dia para contribuir</template>
+										<template v-else>{{ tempoRestante(consulta.dataFinal) }} dias restantes para contribuir</template>
+									</td>
 								</tr>
 								<tr>
 									<td><i class="icon-data icon"><span>data</span></i></td>
@@ -51,7 +55,8 @@
 				<ul ref="consultasEncerradas">
 					<li v-for="consulta in consultas" v-if="consulta.ativo == 0" @click="redirect(setUrlByType(consulta.urlConsulta))">
 						<div class="sq" :style="{ background: 'url(' + placeholderSrc(consulta.urlCapa) + ')', backgroundSize: 'cover', backgroundColor: '#BDBDBD' }">
-							<img v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, consulta.urlCapa, consulta.ativo)">
+							<img v-if="!isIE" v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, consulta.urlCapa, consulta.ativo)">
+							<div v-if="isIE" class="imgIE" :style="{ backgroundImage: 'url(' + imgset(consulta.urlCapa, consulta.ativo) + ')', backgroundSize: 'cover', backgroundPosition: 'center center', height: '100%', width: '100%' }"></div>
 						</div>
 						<h3>{{consulta.nomePublico}}</h3>
 						<table class="info">
@@ -92,51 +97,33 @@ export default {
 	mixins: [ consultasMutations ],
 	computed: {
 		consultas () { return this.$store.state.consultas },
+		consultasAbertas () { return Array.from(this.$store.state.consultas).sort(this.parametrosDestaque) },
 		basePathImgSrc () { return this.$store.getters.basePath + 'arquivos/capas/' },
-		fetching () { return this.$store.state.fetching }
+		fetching () { return this.$store.state.fetching },
+		isIE () {
+			let nav = window.navigator.userAgent
+			if (nav.match(/MSIE\s\d\S*;|Trident.*rv:\d*\.\d/)) {
+				return true
+			} else {
+				return false
+			}
+		}
 	},
 	created () {
 		this.$store.dispatch('fetchConsultas', { self: this })
 	},
 	mounted () {
 		if (window.location.hash !== '') this.checkOldRoutesWithHashes(window.location.hash)// redirect if url contain old patter. ex -> /#/anhembi2
+		// arr = this.consultas
+		// arr.map(consulta => {
+		// 	if (this.tempoPublicado(consulta.dataCadastro) <= 7 || this.tempoRestante(consulta.dataFinal) <= 7) {
+		// 		return 1
+		// 	} else {
+		// 		return -1
+		// 	}
+		// })
 	},
 	methods: {
-		visibilityChanged (isVisible, entry, capa, consultaAtiva) {
-			const srcset = this.imgset(capa, consultaAtiva)
-			if (isVisible) {
-				entry.target.srcset = srcset
-				entry.target.style.opacity = 1
-			}
-		},
-		placeholderSrc (nomeStr) {
-			return this.basePathImgSrc + nomeStr.slice(0, nomeStr.indexOf('.')) + '_40w.webp'
-		},
-		checaContribuicoes (n) { return parseInt(n) > 0 },
-		imgset (nomeStr, isAtiva) {
-			let nome = this.basePathImgSrc + nomeStr.slice(0, nomeStr.lastIndexOf('.'))
-			let ext = nomeStr.slice(nomeStr.lastIndexOf('.') + 1, nomeStr.lenght)
-			let declare = ''
-			if (parseInt(isAtiva) === 1) {
-				declare +=
-				nome + '_1600w.webp 2x, ' +
-				nome + '_800w.webp 1x, ' +
-				nome + '_1600w.' + ext + ' 2x, ' +
-				nome + '_800w.' + ext + ' 1x'
-			} else if (parseInt(isAtiva) === 0) {
-				declare +=
-				nome + '_244w.webp 2x, ' +
-				nome + '_122w.webp 1x, ' +
-				nome + '244w.' + ext + ' 2x' +
-				nome + '122w.' + ext + ' 1x'
-			}
-			return declare.toString()
-		},
-		parseAtivo (state) { return state !== '0' },
-		dataDisplay (data) {
-			return data.substring(8, 10) + '/' + data.substring(5, 7) + '/' + data.substring(0, 4)
-		},
-		redirect (dest) { location.assign(dest) },
 		checkOldRoutesWithHashes (hash) {
 			const noHash = hash.replace('#', '')
 			const routes = this.$router.options.routes.map(route => route.path)
@@ -144,13 +131,75 @@ export default {
 			if (routes.includes(noHash)) this.redirect(noHash)
 			else throw new Error('A rota ' + hash + ' não existe. Checar url.')
 		},
-		toggleListDisplay (event) {
-			this.$refs.consultasEncerradas.classList.toggle('lista')
-			this.$refs.toggleListDisplayBt.classList.toggle('lista')
+		parametrosDestaque (a, b) {
+			if (this.tempoRestante(a.dataFinal) < this.tempoRestante(b.dataFinal)) {
+				if (this.tempoPublicado(a.dataCadastro) > this.tempoPublicado(b.dataCadastro)) {
+					return -1
+				} else {
+					return 1
+				}
+			} else if (this.tempoRestante(a.dataFinal) > this.tempoRestante(b.dataFinal)) {
+				if (this.tempoPublicado(a.dataCadastro) < this.tempoPublicado(b.dataCadastro)) {
+					return 1
+				} else {
+					return -1
+				}
+			} else {
+				return 1
+			}
+		},
+		imgset (nomeStr, isAtiva) {
+			let nome = this.basePathImgSrc + nomeStr.slice(0, nomeStr.lastIndexOf('.'))
+			let ext = nomeStr.slice(nomeStr.lastIndexOf('.') + 1, nomeStr.lenght)
+			let declare = ''
+			if (!this.isIE) {
+				if (parseInt(isAtiva) === 1) {
+					declare +=
+					nome + '_1600w.webp 2x, ' +
+					nome + '_800w.webp 1x, ' +
+					nome + '_1600w.' + ext + ' 2x, ' +
+					nome + '_800w.' + ext + ' 1x'
+				} else if (parseInt(isAtiva) === 0) {
+					declare +=
+					nome + '_244w.webp 2x, ' +
+					nome + '_122w.webp 1x, ' +
+					nome + '244w.' + ext + ' 2x, ' +
+					nome + '122w.' + ext + ' 1x'
+				}
+			} else {
+				if (parseInt(isAtiva) === 1) {
+					declare = nome + '_1600w.' + ext
+				} else if (parseInt(isAtiva) === 0) {
+					declare = nome + '_244w.' + ext
+				}
+			}
+			return declare.toString()
+		},
+		placeholderSrc (nomeStr) {
+			return this.basePathImgSrc + nomeStr.slice(0, nomeStr.indexOf('.')) + '_40w.webp'
+		},
+		dataDisplay (data) {
+			return data.substring(8, 10) + '/' + data.substring(5, 7) + '/' + data.substring(0, 4)
 		},
 		tempoRestante (dataFinal) {
 			let restante = Math.ceil((Date.parse(dataFinal) - Date.now()) / 86400000)
-			return restante
+			return Math.abs(restante)
+		},
+		tempoPublicado (dataCadastro) {
+			let restante = Math.ceil((Date.now() - Date.parse(dataCadastro)) / 86400000)
+			return Math.abs(restante)
+		},
+		redirect (dest) { location.assign(dest) },
+		visibilityChanged (isVisible, entry, capa, consultaAtiva) {
+			const srcset = this.imgset(capa, consultaAtiva)
+			if (isVisible) {
+				entry.target.srcset = srcset
+				entry.target.style.opacity = 1
+			}
+		},
+		toggleListDisplay (event) {
+			this.$refs.consultasEncerradas.classList.toggle('lista')
+			this.$refs.toggleListDisplayBt.classList.toggle('lista')
 		}
 	}
 }
@@ -180,12 +229,10 @@ div.Home {
 			ul {
 				padding: 0;
 				list-style-type: none;
-				@supports (display: flex) {
-					display: flex;
-					flex-flow: row wrap;
-					justify-content: space-between;
-					align-items: flex-start;
-				}
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: space-between;
+				align-items: flex-start;
 				li.card {
 					position: relative;
 					display: inline-block;
@@ -270,6 +317,13 @@ div.Home {
 										line-height: inherit;
 									}
 								}
+								&.ultimoDia td:nth-child(2) {
+									display: inline-block;
+									padding: 0.25rem 0.5rem;
+									color: #FFF;
+									background: $vermelho;
+									border-radius: 0.25rem;
+								}
 							}
 						}
 						.intro {
@@ -297,7 +351,7 @@ div.Home {
 							width: 60%;
 							height: 0;
 							padding-bottom: calc(60% * 9/16);
-							margin-bottom: 0;
+							margin-bottom: -0.5rem;
 							.tags {
 								left: inherit;
 								right: 0;
@@ -321,7 +375,7 @@ div.Home {
 							padding-bottom: 0;
 							border-bottom: none;
 							h2 {
-								font-size: 2rem;
+								font-size: 2.5rem;
 							}
 							.intro {
 								font-size: 1rem;
@@ -333,6 +387,7 @@ div.Home {
 						background-color: $vermelho-tr;
 						outline: 0.5rem solid $vermelho-tr;
 						-moz-outline-radius: 0.75rem;
+						border-radius: 0;
 					}
 				}
 			}
@@ -354,7 +409,7 @@ div.Home {
 					top: 50%;
 					display: inline-block;
 					border: none;
-					margin: 0;
+					margin: 0 -4px 0 0;
 					padding:  0.25rem 0.5rem;
 					border-radius: 2rem;
 					transform: translateY(-50%);
@@ -376,6 +431,10 @@ div.Home {
 							color: $preto;
 						}
 					}
+					&:active {
+						box-shadow: 0 1px 0 $sombra-3;
+						margin-top: 1px;
+					}
 				}
 			}
 			ul {
@@ -385,10 +444,12 @@ div.Home {
 				padding: 0 1rem;
 				list-style-type: none;
 				text-align: center;
-				display: flex;
-				flex-flow: row wrap;
-				justify-content: space-between;
-				align-items: flex-start;
+				@supports (display: flex) {
+					display: flex;
+					flex-flow: row wrap;
+					justify-content: space-between;
+					align-items: flex-start;
+				}
 				& > li {
 					display: inline-block;
 					vertical-align: top;
@@ -603,7 +664,7 @@ div.Home {
 							p.intro span.acesso {
 								display: block;
 								text-align: center;
-								margin-top: 0.5rem;
+								margin: 0.5rem 0 0;
 								padding: 0.5rem 0.75rem 0.5rem 1rem;
 								border-radius: 2rem;
 								background-color: $vermelho;

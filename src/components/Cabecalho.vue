@@ -62,7 +62,7 @@ div.Cabecalho {
 		background: $cinza-3;
 		box-shadow: 0 4px 8px $sombra-3;
 		z-index: 3;
-		i {
+		& > i {
 			display: inline-block;
 			float: left;
 			color: $cinza-2;
@@ -75,11 +75,11 @@ div.Cabecalho {
 				cursor: pointer;
 			};
 		};
-		h1 {
+		& > h1 {
 			display: inline-block;
 			margin: 0 auto;
 			padding: 0;
-			a {
+			& > a {
 				font-size: 24px;
 				font-weight: 400;
 				color: $cinza-2;
@@ -92,24 +92,16 @@ div.Cabecalho {
 				&:hover { text-decoration: none; };
 			};
 		};
-		a {
-			display: inline-block;
-			float: right;
-			margin: 0;
-			text-align: right;
-			@supports (display: flex) {
-				display: inline-flex;
-				justify-content: flex-end;
-				width: 0;
-			}
-			padding: 0 !important;
+		& > a {
+			position: absolute;
+			right: 2rem;
+			height: 100%;
 			&:hover, &:active { background: unset; }
 			img {
 				border: none;
-				max-height: 40px;
-				min-height: 32px;
-				max-width: 117px;
-				min-width: 93px;
+				height: 40px;
+				width: 117px;
+				margin: 10px 0;
 			};
 		};
 	};
@@ -132,16 +124,39 @@ div.Cabecalho {
 			}
 		}
 	}
-	@media screen and (max-width: 420px) {
-		header a img { display: none; };
+	@media screen and (max-width: 359px) {
+		header {
+			h1 {
+				position: relative;
+				top: unset;
+				left: unset;
+			}
+			a img { display: none; };
+		}
 	};
 	@media screen and (max-width: 600px) {
-		header { padding: 0 1rem; };
+		header {
+			padding: 0 1rem;
+			h1 {
+				position: absolute;
+				top: -2px;
+				left: 3.25rem;
+			}
+			a {
+				right: 1rem;
+			}
+		}
 	};
 	@media screen and (max-width: 800px) {
 		header {
-			h1 a { font-size: 16px; vertical-align: 4px; };
-			a img { margin-left: 0; max-height: 32px; };
+			h1 a { 
+				font-size: 16px;
+			};
+			a img {
+				height: 32px;
+				width: 93px;
+				margin: 14px 0;
+			};
 		};
 	};
 	@media print {

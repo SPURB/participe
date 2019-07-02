@@ -3,7 +3,13 @@
 		<header>
 			<i class="icon icon-menu" @click="abreMenu"><span>menu</span></i>
 			<h1><a href="/"><span>participe</span>.gestaourbanaSP</a></h1>
-			<a href="http://www.capital.sp.gov.br/" title="Prefeitura de São Paulo"><img :src="logoSrc('cor')"></a>
+			<!-- <a href="http://www.capital.sp.gov.br/" title="Prefeitura de São Paulo"><img :src="logoSrc('cor')"></a> -->
+			<a href="http://www.capital.sp.gov.br/" title="Prefeitura de São Paulo">
+				<picture>
+					<source	type='image/webp' :srcset="logos('arquivos/img/PMSP_horizontal', 'webp')">
+					<img :src="logos('arquivos/img/PMSP_horizontal', 'png')">
+				</picture>
+			</a>
 		</header>
 	</div>
 </template>
@@ -14,11 +20,12 @@ export default {
 	computed: {
 		basePath () { return this.$store.getters.basePath },
 		isConsulta () {
-			if (this.$route.meta.id) {
-				return true
-			} else {
-				return false
-			}
+			if (this.$route.meta.id) { return true }
+			else { return false }
+		},
+		imageType() {
+			if (this.$route.meta.id) { return 'mono_neg' }
+			else { return 'cor_pos' }
 		}
 	},
 	methods: {
@@ -27,13 +34,8 @@ export default {
 			this.$store.state.luzApaga = true
 			document.body.style.overflow = document.body.style.overflow === '' ? 'hidden' : ''
 		},
-		logoSrc () {
-			var arch
-			switch (this.isConsulta) {
-			case false: arch = 'arquivos/img/PMSP_horizontal_cor_pos.png'; break
-			case true: arch = 'arquivos/img/PMSP_horizontal_mono_neg.png'; break
-			}
-			return this.basePath + arch
+		logos(baseName, extension){
+			return process.env.VUE_APP_ASSETS_BASE_URL + baseName + '_' + this.imageType + '.' + extension
 		}
 	}
 }
@@ -97,7 +99,7 @@ div.Cabecalho {
 			right: 2rem;
 			height: 100%;
 			&:hover, &:active { background: unset; }
-			img {
+			picture {
 				border: none;
 				height: 40px;
 				width: 117px;
@@ -118,7 +120,7 @@ div.Cabecalho {
 				color: #FFF;transition: all ease-in-out .1s;
 				&:hover { opacity: .4; }
 			}
-			a img {
+			a picture {
 				transition: all ease-in-out .1s;
 				&:hover { opacity: .4; }
 			}
@@ -131,7 +133,7 @@ div.Cabecalho {
 				top: unset;
 				left: unset;
 			}
-			a img { display: none; };
+			a picture { display: none; };
 		}
 	};
 	@media screen and (max-width: 600px) {
@@ -152,7 +154,7 @@ div.Cabecalho {
 			h1 a {
 				font-size: 16px;
 			};
-			a img {
+			a picture {
 				height: 32px;
 				width: 93px;
 				margin: 14px 0;

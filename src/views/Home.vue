@@ -4,44 +4,46 @@
 		<main id="listaProjetos" :class="{ load: !fetching }">
 			<section class="abertas">
 				<ul ref="consultas">
-					<li v-for="(consulta, index) in consultasAbertas" v-if="consulta.ativo == 1" class="card" @click="redirect(setUrlByType(consulta.urlConsulta))" :key="index">
-						<div class="img" :style="{ background: 'url(' + placeholderSrc(consulta.urlCapa) + ')', backgroundSize: 'cover', backgroundColor: '#BDBDBD' }">
-							<ul class="tags">
-								<li class="consAtiva">Em consulta</li>
-								<li class="ultimosDias" v-if="tempoRestante(consulta.dataFinal) <= 7">Últimos dias</li>
-							</ul>
-							<img v-if="!isIE" v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, consulta.urlCapa, consulta.ativo)">
-							<img v-if="isIE" :src="imgset(consulta.urlCapa, consulta.ativo)" :style="{ opacity: 1 }" alt="">
-						</div>
-						<aside>
-							<h2>{{ decodeURI(consulta.nomePublico) }}</h2>
-							<table class="info">
-								<tr v-if="tempoRestante(consulta.dataFinal) >= 0" :class="{ ultimoDia: tempoRestante(consulta.dataFinal) == 0 }">
-									<td><i class="icon-tempo icon"><span>tempo</span></i></td>
-									<td title="Tempo restante para contribuir nesta consulta">
-										<template v-if="tempoRestante(consulta.dataFinal) == 0">Último dia para contribuir</template>
-										<template v-else>{{ tempoRestante(consulta.dataFinal) }} dias restantes para contribuir</template>
-									</td>
-								</tr>
-								<tr>
-									<td><i class="icon-data icon"><span>data</span></i></td>
-									<td title="Período de contribuições desta consulta" v-if="tempoRestante(consulta.dataFinal)">{{ dataDisplay(consulta.dataCadastro) }}–{{ dataDisplay(consulta.dataFinal) }}</td>
-									<td title="Data de abertura desta consulta" v-else>Aberta em {{ dataDisplay(consulta.dataCadastro) }}</td>
-								</tr>
-								<tr>
-									<td><i class="icon-contribuicao icon"><span>contribuicao</span></i></td>
-									<td title="Número de contribuições recolhidas até o momento">{{ consulta.nContribuicoes }} contribuições</td>
-								</tr>
-							</table>
-							<p class="intro">
-								{{ decodeURI(consulta.textoIntro) }}
-								<span class="acesso" @click="redirect(setUrlByType(consulta.urlConsulta))">
-									Acesse e contribua
-									<i class="icon-seta_direita icon"><span>seta_direita</span></i>
-								</span>
-							</p>
-						</aside>
-					</li>
+					<template v-for="(consulta, index) in consultasAbertas">
+						<li v-if="consulta.ativo == 1" class="card" @click="redirect(setUrlByType(consulta.urlConsulta))" :key="index">
+							<div class="img" :style="{ background: 'url(' + placeholderSrc(consulta.urlCapa) + ')', backgroundSize: 'cover', backgroundColor: '#BDBDBD' }">
+								<ul class="tags">
+									<li class="consAtiva">Em consulta</li>
+									<li class="ultimosDias" v-if="tempoRestante(consulta.dataFinal) <= 7">Últimos dias</li>
+								</ul>
+								<img v-if="!isIE" v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, consulta.urlCapa, consulta.ativo)">
+								<img v-if="isIE" :src="imgset(consulta.urlCapa, consulta.ativo)" :style="{ opacity: 1 }" alt="">
+							</div>
+							<aside>
+								<h2>{{ decodeURI(consulta.nomePublico) }}</h2>
+								<table class="info">
+									<tr v-if="tempoRestante(consulta.dataFinal) >= 0" :class="{ ultimoDia: tempoRestante(consulta.dataFinal) == 0 }">
+										<td><i class="icon-tempo icon"><span>tempo</span></i></td>
+										<td title="Tempo restante para contribuir nesta consulta">
+											<template v-if="tempoRestante(consulta.dataFinal) == 0">Último dia para contribuir</template>
+											<template v-else>{{ tempoRestante(consulta.dataFinal) }} dias restantes para contribuir</template>
+										</td>
+									</tr>
+									<tr>
+										<td><i class="icon-data icon"><span>data</span></i></td>
+										<td title="Período de contribuições desta consulta" v-if="tempoRestante(consulta.dataFinal)">{{ dataDisplay(consulta.dataCadastro) }}–{{ dataDisplay(consulta.dataFinal) }}</td>
+										<td title="Data de abertura desta consulta" v-else>Aberta em {{ dataDisplay(consulta.dataCadastro) }}</td>
+									</tr>
+									<tr>
+										<td><i class="icon-contribuicao icon"><span>contribuicao</span></i></td>
+										<td title="Número de contribuições recolhidas até o momento">{{ consulta.nContribuicoes }} contribuições</td>
+									</tr>
+								</table>
+								<p class="intro">
+									{{ decodeURI(consulta.textoIntro) }}
+									<span class="acesso" @click="redirect(setUrlByType(consulta.urlConsulta))">
+										Acesse e contribua
+										<i class="icon-seta_direita icon"><span>seta_direita</span></i>
+									</span>
+								</p>
+							</aside>
+						</li>
+					</template>
 				</ul>
 			</section>
 			<section class="encerradas">
@@ -53,29 +55,31 @@
 					</button>
 				</header>
 				<ul ref="consultasEncerradas">
-					<li v-for="consulta in consultas" v-if="consulta.ativo == 0" @click="redirect(setUrlByType(consulta.urlConsulta))">
-						<div class="sq" :style="{ background: 'url(' + placeholderSrc(consulta.urlCapa) + ')', backgroundSize: 'cover', backgroundColor: '#BDBDBD' }">
-							<img v-if="!isIE" v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, consulta.urlCapa, consulta.ativo)">
-							<div v-if="isIE" class="imgIE" :style="{ backgroundImage: 'url(' + imgset(consulta.urlCapa, consulta.ativo) + ')', backgroundSize: 'cover', backgroundPosition: 'center center', height: '100%', width: '100%' }"></div>
-						</div>
-						<h3>{{consulta.nomePublico}}</h3>
-						<table class="info">
-							<tr>
-								<td><i class="icon-data icon"><span>data</span></i></td>
-								<td>
-									{{ dataDisplay(consulta.dataCadastro) }}<span v-if="consulta.dataFinal">–<br>{{ dataDisplay(consulta.dataFinal) }}</span>
-								</td>
-							</tr>
-							<tr>
-								<td><i class="icon-contribuicao icon"><span>contribuicao</span></i></td>
-								<td>{{ consulta.nContribuicoes }} contribuições</td>
-							</tr>
-							<tr v-if="consulta.urlDevolutiva">
-								<td><i class="icon-responder icon"><span>responder</span></i></td>
-								<td><a :href="consulta.urlDevolutiva" target="_blank">Ver devolutiva</a></td>
-							</tr>
-						</table>
-					</li>
+					<template v-for="(consulta, index) in consultas">
+						<li v-if="consulta.ativo == 0" @click="redirect(setUrlByType(consulta.urlConsulta))" :key="index">
+							<div class="sq" :style="{ background: 'url(' + placeholderSrc(consulta.urlCapa) + ')', backgroundSize: 'cover', backgroundColor: '#BDBDBD' }">
+								<img v-if="!isIE" v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, consulta.urlCapa, consulta.ativo)">
+								<div v-if="isIE" class="imgIE" :style="{ backgroundImage: 'url(' + imgset(consulta.urlCapa, consulta.ativo) + ')', backgroundSize: 'cover', backgroundPosition: 'center center', height: '100%', width: '100%' }"></div>
+							</div>
+							<h3>{{consulta.nomePublico}}</h3>
+							<table class="info">
+								<tr>
+									<td><i class="icon-data icon"><span>data</span></i></td>
+									<td>
+										{{ dataDisplay(consulta.dataCadastro) }}<span v-if="consulta.dataFinal">–<br>{{ dataDisplay(consulta.dataFinal) }}</span>
+									</td>
+								</tr>
+								<tr>
+									<td><i class="icon-contribuicao icon"><span>contribuicao</span></i></td>
+									<td>{{ consulta.nContribuicoes }} contribuições</td>
+								</tr>
+								<tr v-if="consulta.urlDevolutiva">
+									<td><i class="icon-responder icon"><span>responder</span></i></td>
+									<td><a :href="consulta.urlDevolutiva" target="_blank">Ver devolutiva</a></td>
+								</tr>
+							</table>
+						</li>
+					</template>
 				</ul>
 			</section>
 		</main>
@@ -83,10 +87,8 @@
 </template>
 <script>
 /*
-
 são métodos neste mixin:
 setUrlByType(urlOrSlug)
-
 */
 import { consultasMutations } from '@/mixins/consultasMutations'
 import Preloader from '@/components/Preloader'
@@ -114,14 +116,6 @@ export default {
 	},
 	mounted () {
 		if (window.location.hash !== '') this.checkOldRoutesWithHashes(window.location.hash)// redirect if url contain old patter. ex -> /#/anhembi2
-		// arr = this.consultas
-		// arr.map(consulta => {
-		// 	if (this.tempoPublicado(consulta.dataCadastro) <= 7 || this.tempoRestante(consulta.dataFinal) <= 7) {
-		// 		return 1
-		// 	} else {
-		// 		return -1
-		// 	}
-		// })
 	},
 	methods: {
 		checkOldRoutesWithHashes (hash) {

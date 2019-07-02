@@ -404,18 +404,18 @@ export default {
 					endereco: 'Rua Álvares Penteado, 53 – Centro'
 				},
 				{
-					dataRegiao: '13/06 – Região Sul 1',
-					bairros: 'Ipiranga, Jabaquara e Vila Mariana',
-					horario: '19h - 21h',
-					local: 'Auditório da Subprefeitura Ipiranga',
-					endereco: 'Rua Lino Coutinho, 444 - 1º Andar – Ipiranga'
-				},
-				{
 					dataRegiao: '14/06 - Região Sul 2',
 					bairros: 'Santo Amaro, Cidade Ademar e Campo Limpo ',
 					horario: '19h – 21h',
 					local: 'Subprefeitura Santo Amaro',
 					endereco: 'R. Floriano Peixoto, 54 – 1º andar, Santo Amaro'
+				},
+				{
+					dataRegiao: '24/06 – Região Sul 1',
+					bairros: 'Ipiranga, Jabaquara e Vila Mariana',
+					horario: '19h - 21h',
+					local: 'Auditório da Subprefeitura Ipiranga',
+					endereco: 'Rua Lino Coutinho, 444 - 1º Andar – Ipiranga'
 				},
 				{
 					dataRegiao: '27/06 – Região Sul 3',

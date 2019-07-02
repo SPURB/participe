@@ -11,7 +11,7 @@ const state = {
 const getters = { }
 const actions = {
 	fetchErrata (commit, obj) {
-		api.get(obj.self.$store.getters.apiPath + 'erratas/v1?id=' + obj.id)
+		api.get(process.env.VUE_APP_API_URL + 'erratas/v1?id=' + obj.id)
 			.then(response => {
 				obj.self.$store.commit('erratas/FETCHING_STATE', true)
 				obj.self.$store.commit('erratas/FILL_ERROS', response.data.erros)

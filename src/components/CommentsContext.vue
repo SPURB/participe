@@ -81,11 +81,9 @@
 
 <script>
 import api from '@/utils/api'
+import { commentsCommons } from '@/mixins/commentsCommons'
 
 export default {
-	$_veeValidate: {
-		validator: 'new' // give me my own validator scope.
-	},
 	name: 'CommentsContext',
 	props: {
 		id: {
@@ -103,31 +101,14 @@ export default {
 			default: 1
 		}
 	},
+	mixins: [ commentsCommons ],
 	data () {
 		return {
-			form_name: null,
-			form_surname: null,
-			form_organization: null,
-			form_email: null,
-			form_content: null,
-			form_context: null,
-			abreComentario: false,
-			enviandoComment: false,
-			sucesso: false,
-			erro: false
+			form_context: null
 		}
 	},
 
 	computed: {
-		currentRoute () { return this.$route.name },
-		returnFormNameObject () {
-			if (this.form_organization != null) {
-				return this.form_name + ' ' + this.form_surname + ' (' + this.form_organization + ')'
-			} else {
-				return this.form_name + ' ' + this.form_surname
-			}
-		},
-		apiPath () { return this.$store.getters.apiPath },
 		consultaAtiva () {
 			if (this.$store.getters.consultasClicada !== undefined) {
 				if (parseInt(this.$store.getters.consultasClicada.ativo) === 1) {
@@ -141,26 +122,11 @@ export default {
 	},
 
 	methods: {
-		checkName () {
-			if (!this.fields.name.valid && !this.fields.email.valid && !this.fields.surname.valid) {
-				alert('Preencha corretamente os campos Nome e Email')
-			} else if (!this.fields.name.valid) {
-				alert('Inclua seu nome')
-			} else if (!this.fields.surname.valid) {
-				alert('Inclua seu sobrenome')
-			} else if (!this.fields.email.valid) {
-				alert('Corrija seu e-mail')
-			} else if (!this.fields.content.valid) {
-				alert('Inclua seu comentário')
-			} else {
-				this.send()
-			}
-		},
 		send () {
 			let app = this
 			app.erro = false
 			app.enviandoComment = true
-			api.post(this.apiPath + 'members', {
+			api.post(process.env.VUE_APP_API_URL + 'members', {
 				'idConsulta': app.$route.meta.id,
 				'name': app.returnFormNameObject,
 				'email': app.form_email,
@@ -183,14 +149,6 @@ export default {
 				.then(function () {
 					app.enviandoComment = false
 				})
-		},
-		resetForm () {
-			this.form_name = null
-			this.form_surname = null
-			this.form_organization = null
-			this.form_email = null
-			this.form_content = null
-			this.abreComentario = false
 		}
 	}
 }

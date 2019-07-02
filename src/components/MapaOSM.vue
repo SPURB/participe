@@ -68,7 +68,7 @@ export default {
 	},
 	computed: {
 		mapLayers () {
-			let styleFromKML = this.styleFromKML;
+			let styleFromKML = this.styleFromKML
 			let retLayers = [
 				new TileLayer({
 					source: new OSM()

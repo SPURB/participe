@@ -80,11 +80,9 @@
 
 <script>
 import api from '@/utils/api'
+import { commentsCommons } from '@/mixins/commentsCommons'
 
 export default {
-	$_veeValidate: {
-		validator: 'new' // give me my own validator scope.
-	},
 	name: 'CommentsOption',
 	props: {
 		options: {
@@ -97,58 +95,19 @@ export default {
 			default: false
 		}
 	},
+	mixins: [ commentsCommons ],
 	data () {
 		return {
-			form_name: null,
-			form_surname: null,
-			form_organization: null,
-			form_email: null,
-			form_content: null,
 			form_context: null,
-			form_id: null,
-			abreComentario: false,
-			enviandoComment: false,
-			sucesso: false,
-			erro: false
+			form_id: null
 		}
 	},
-
-	computed: {
-		currentRoute () { return this.$route.name },
-		returnFormNameObject () {
-			if (this.form_organization != null) {
-				return this.form_name + ' ' + this.form_surname + ' (' + this.form_organization + ')'
-			} else {
-				return this.form_name + ' ' + this.form_surname
-			}
-		},
-		apiPath () { return this.$store.getters.apiPath }
-	},
-
 	methods: {
-		// setModal (typeOfmodal) {
-		// 	this.$store.commit('COMMENT_MODAL_STATUS', typeOfmodal)
-		// },
-		checkName () {
-			if (!this.fields.name.valid && !this.fields.email.valid && !this.fields.surname.valid) {
-				alert('Preencha corretamente os campos Nome e Email')
-			} else if (!this.fields.name.valid) {
-				alert('Inclua seu nome')
-			} else if (!this.fields.surname.valid) {
-				alert('Inclua seu sobrenome')
-			} else if (!this.fields.email.valid) {
-				alert('Corrija seu e-mail')
-			} else if (!this.fields.content.valid) {
-				alert('Inclua seu comentário')
-			} else {
-				this.send()
-			}
-		},
 		send () {
 			let app = this
 			app.erro = false
 			app.enviandoComment = true
-			api.post(this.apiPath + 'members', {
+			api.post(process.env.VUE_APP_API_URL + 'members', {
 				'idConsulta': app.$route.meta.id,
 				'name': app.returnFormNameObject,
 				'email': app.form_email,
@@ -160,16 +119,11 @@ export default {
 				'commentcontext': app.form_context
 			})
 				.then(function (response) {
-					// let name = app.form_name
-					// let content = app.form_content
-					// console.log(app.attr.id)
-					// app.setModal('success')
 					app.abreComentario = false
 					app.sucesso = true
 					app.resetForm()
 				})
 				.catch(function (error) {
-					// app.setModal('error')
 					app.erro = true
 					console.log(error)
 				})
@@ -177,16 +131,8 @@ export default {
 					app.enviandoComment = false
 				})
 		},
-		resetForm () {
-			this.form_name = null
-			this.form_surname = null
-			this.form_organization = null
-			this.form_email = null
-			this.form_content = null
-			this.abreComentario = false
-		},
 		alteraContexto (evt) {
-			this.form_context = 'Anexos - Caderno do Projeto (' + evt.target.options[evt.target.selectedIndex].text + ')'
+			this.form_context = evt.target.options[evt.target.selectedIndex].text
 		}
 	}
 }

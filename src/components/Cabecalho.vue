@@ -149,7 +149,7 @@ div.Cabecalho {
 	};
 	@media screen and (max-width: 800px) {
 		header {
-			h1 a { 
+			h1 a {
 				font-size: 16px;
 			};
 			a img {

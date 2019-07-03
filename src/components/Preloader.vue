@@ -1,7 +1,16 @@
 <template>
-	<div class="Preloader"  v-if="consultas===undefined && fetching" :class="{ fim: !fetching, erro: errors }">
+	<div
+		class="preloader"
+		v-if="consultas === undefined && fetching"
+		:class="{ fim: !fetching, erro: errors }">
 		<svg width="170" height="170">
-			<path id="temp" fill="none" class="balao" stroke-width="6" stroke-miterlimit="10" d="M139.233 39.767v66.359c0 6.079-4.979 11.058-11.059 11.058H50.756l-22.119 22.119V39.767c0-6.08 4.974-11.06 11.059-11.06h88.479c6.08.001 11.058 4.98 11.058 11.06z"/>
+			<path
+				id="temp"
+				fill="none"
+				class="balao"
+				stroke-width="6"
+				stroke-miterlimit="10"
+				d="M139.233 39.767v66.359c0 6.079-4.979 11.058-11.059 11.058H50.756l-22.119 22.119V39.767c0-6.08 4.974-11.06 11.059-11.06h88.479c6.08.001 11.058 4.98 11.058 11.06z"/>
 		</svg>
 		<p class="erro" :class="{ surge: errors }">Falha no carregamento. <a @click="reloadNoCache">Clique</a> para tentar novamente.</p>
 	</div>
@@ -12,19 +21,21 @@ import { mapState } from 'vuex'
 
 export default {
 	name: 'Preloader',
-	computed: mapState([
-		'fetching',
-		'errors',
-		'consultas'
-	]),
+	computed: {
+		...mapState([
+			'fetching',
+			'errors',
+			'consultas'
+		])
+	},
 	methods: {
-		// reload () {
-		// 	if (this.fetchError) {
-		// 		this.$store.dispatch('fetchConsultas', { self: this })
-		// 	} else {
-		// 		return false
-		// 	}
-		// },
+		reload () {
+			if (this.fetchError) {
+				this.$store.dispatch('fetchConsultas', { self: this })
+			} else {
+				return false
+			}
+		},
 		reloadNoCache () { location.reload(true) }
 	}
 }
@@ -33,13 +44,13 @@ export default {
 <style lang="scss" scoped>
 @import '../variables';
 
-div.Preloader {
+.preloader {
 	z-index: -1;
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 80vh;
+	height: 100vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;

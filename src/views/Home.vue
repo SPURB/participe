@@ -1,11 +1,10 @@
 <template>
-	<div class="Home">
-		<Preloader></Preloader>
+	<div class="home">
 		<main id="listaProjetos" :class="{ load: !fetching }">
 			<section class="abertas">
 				<ul ref="consultas">
 					<template v-for="(consulta, index) in consultasAbertas">
-						<li v-if="consulta.ativo == 1" class="card" @click="redirect(setUrlByType(consulta.urlConsulta))" :key="index">
+						<li v-if="parseInt(consulta.ativo) === 1" class="card" @click="redirect(setUrlByType(consulta.urlConsulta))" :key="index">
 							<div class="img" :style="{ background: 'url(' + placeholderSrc(consulta.urlCapa) + ')', backgroundSize: 'cover', backgroundColor: '#BDBDBD' }">
 								<ul class="tags">
 									<li class="consAtiva">Em consulta</li>
@@ -49,14 +48,15 @@
 			<section class="encerradas">
 				<header>
 					<h2>Consultas encerradas</h2>
-					<button @click="toggleListDisplay" ref="toggleListDisplayBt">
+					<button @click="toggleListDisplay" ref="toggleListDisplayBt" name='grade-ou-lista'>
 						<i class="icon-grade icon"><span>grade</span></i>
 						<i class="icon-listagem icon"><span>listagem</span></i>
 					</button>
 				</header>
 				<ul ref="consultasEncerradas">
 					<template v-for="(consulta, index) in consultas">
-						<li v-if="consulta.ativo == 0" @click="redirect(setUrlByType(consulta.urlConsulta))" :key="index">
+						<li v-if="!parseInt(consulta.ativo)" @click="redirect(setUrlByType(consulta.urlConsulta))" :key="index">
+
 							<div class="sq" :style="{ background: 'url(' + placeholderSrc(consulta.urlCapa) + ')', backgroundSize: 'cover', backgroundColor: '#BDBDBD' }">
 								<img v-if="!isIE" v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, consulta.urlCapa, consulta.ativo)" :alt="consulta.nomePublico">
 								<div v-if="isIE" class="imgIE" :style="{ backgroundImage: 'url(' + imgset(consulta.urlCapa, consulta.ativo) + ')', backgroundSize: 'cover', backgroundPosition: 'center center', height: '100%', width: '100%' }"></div>
@@ -85,21 +85,15 @@
 		</main>
 	</div>
 </template>
-<script>
-/*
-são métodos neste mixin:
-setUrlByType(urlOrSlug)
-*/
-import { consultasMutations } from '@/mixins/consultasMutations'
-import Preloader from '@/components/Preloader'
 
+<script>
+import { consultasMutations } from '@/mixins/consultasMutations'
 export default {
 	name: 'Home',
-	components: { Preloader },
 	mixins: [ consultasMutations ],
 	computed: {
-		consultas () { return this.$store.state.consultas },
-		consultasAbertas () { return Array.from(this.$store.state.consultas).sort(this.parametrosDestaque) },
+		consultas () { return this.$store.state.consultas.filter(consulta => !parseInt(consulta.ativo)) },
+		consultasAbertas () { return Array.from(this.$store.state.consultas).sort(this.parametrosDestaque).filter(consulta => parseInt(consulta.ativo)) },
 		basePathImgSrc () { return this.$store.getters.basePath + 'arquivos/capas/' },
 		fetching () { return this.$store.state.fetching },
 		isIE () {
@@ -180,7 +174,7 @@ export default {
 			return Math.abs(restante)
 		},
 		tempoPublicado (dataCadastro) {
-			let restante = Math.ceil((Date.now() - Date.parse(dataCadastro)) / 86400000)
+			const restante = Math.ceil((Date.now() - Date.parse(dataCadastro)) / 86400000)
 			return Math.abs(restante)
 		},
 		redirect (dest) { location.assign(dest) },
@@ -201,7 +195,7 @@ export default {
 <style lang="scss" scoped>
 @import '../variables';
 
-div.Home {
+.home {
 	position: relative;
 	main {
 		&:not(.load) > * {

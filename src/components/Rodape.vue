@@ -3,7 +3,7 @@
 		<footer>
 			<p>Caso surjam dúvidas ou problemas técnicos, envie um e-mail para: <a href="mailto:imprensasmul@prefeitura.sp.gov.br">imprensasmul@prefeitura.sp.gov.br</a>.</p>
 		</footer>
-		<a class='github' href="https://github.com/spurb/participe" alt='Veja o código fonte no Github'><i class="icon icon-github"><span>github</span></i></a>
+		<a name='codigo-fonte' class='github' href="https://github.com/spurb/participe" alt='Veja o código fonte no Github'><i class="icon icon-github"><span>github</span></i></a>
 	</div>
 </template>
 <script>

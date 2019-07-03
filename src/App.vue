@@ -1,6 +1,7 @@
 <template>
 <div id="app" @keyup.esc="fechaTudo">
 	<div :class="{ desligado: interruptor }" id="interruptor" ref="interruptor" @click="fechaTudo"></div>
+	<Preloader v-if='isHome'></Preloader>
 	<Cabecalho></Cabecalho>
 	<MenuLateral></MenuLateral>
 	<router-view/>
@@ -13,16 +14,19 @@
 import Cabecalho from '@/components/Cabecalho'
 import MenuLateral from '@/components/MenuLateral'
 import Rodape from '@/components/Rodape'
+import Preloader from '@/components/Preloader'
 
 export default {
 	name: 'Participe',
 	components: {
 		Cabecalho,
 		MenuLateral,
-		Rodape
+		Rodape,
+		Preloader
 	},
 	computed: {
-		interruptor () { return this.$store.state.luzApaga }
+		interruptor () { return this.$store.state.luzApaga },
+		isHome () { return this.$route.name === 'Home' }
 	},
 	created () {
 		let app = this

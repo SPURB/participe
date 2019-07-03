@@ -1,5 +1,5 @@
 <template>
-	<div class="Rodape" :class="{ loading: fetching, error: error }" v-if="!fetching">
+	<div class="rodape" :class="{ loading: fetching, error: error }" v-if="!fetching">
 		<footer>
 			<p>Caso surjam dúvidas ou problemas técnicos, envie um e-mail para: <a href="mailto:imprensasmul@prefeitura.sp.gov.br">imprensasmul@prefeitura.sp.gov.br</a>.</p>
 		</footer>
@@ -20,28 +20,14 @@ export default {
 <style lang="scss" scoped>
 @import '../variables';
 
-div.Rodape {
+.rodape {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 1rem 2rem;
 	background: $cinza-3;
 	max-width: 100%;
-	p {
-		margin: 0;
-	}
-	.github {
-		font-size: 2rem;
-		color: $cinza-1;
-		text-decoration: none;
-		transition: color 0.24s ease-in-out;
-		cursor: pointer;
-		&:hover {
-			color: $vermelho;
-		}
-	}
-	a:hover { background-color: transparent; }
-	a:active { background-color: transparent; }
+	p { margin: 0; }
 	&.error {
 		bottom: 0;
 		width: 100%;
@@ -56,4 +42,20 @@ div.Rodape {
 		display: none;
 	}
 }
+
+.github {
+	font-size: 2rem;
+	color: $cinza-1;
+	text-decoration: none;
+	transition: color 0.24s ease-in-out;
+	&:hover {
+		color: $vermelho;
+	}
+}
+
+.icon.icon-github:hover { cursor: pointer; }
+
+a:hover { background-color: transparent; }
+a:active { background-color: transparent; }
+
 </style>

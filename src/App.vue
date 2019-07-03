@@ -3,21 +3,8 @@
 	<div :class="{ desligado: interruptor }" id="interruptor" ref="interruptor" @click="fechaTudo"></div>
 	<Cabecalho></Cabecalho>
 	<MenuLateral></MenuLateral>
-	<router-view name="Home"></router-view>
-	<router-view name="Anhembi2"></router-view>
-	<router-view name="ArcoPinheiros"></router-view>
+	<router-view/>
 	<router-view name="WifiLivreSP"></router-view>
-	<router-view name="DigilabLivreSP"></router-view>
-	<router-view name="VidaSegura"></router-view>
-	<router-view name="VilaLeopoldina2"></router-view>
-	<router-view name="PortalPrefeitura"></router-view>
-	<router-view name="GovernoAberto"></router-view>
-	<router-view name="ConcessaoMartinelli"></router-view>
-	<router-view name="ArcoPinheiros2"></router-view>
-	<router-view name="SetorCentral2"></router-view>
-	<router-view name="PlanoCicloviario"></router-view>
-	<router-view name="ParqueMinhocao"></router-view>
-	<router-view name="MinutaArcoPinheiros"></router-view>
 	<Rodape></Rodape>
 </div>
 </template>
@@ -35,7 +22,8 @@ export default {
 		Rodape
 	},
 	computed: {
-		interruptor () { return this.$store.state.luzApaga } },
+		interruptor () { return this.$store.state.luzApaga }
+	},
 	created () {
 		let app = this
 		window.addEventListener('keydown', function (event) {

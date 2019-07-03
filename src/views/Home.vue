@@ -11,8 +11,8 @@
 									<li class="consAtiva">Em consulta</li>
 									<li class="ultimosDias" v-if="tempoRestante(consulta.dataFinal) <= 7">Últimos dias</li>
 								</ul>
-								<img v-if="!isIE" v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, consulta.urlCapa, consulta.ativo)">
-								<img v-if="isIE" :src="imgset(consulta.urlCapa, consulta.ativo)" :style="{ opacity: 1 }" alt="">
+								<img v-if="!isIE" v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, consulta.urlCapa, consulta.ativo)" :alt="consulta.nomePublico">
+								<img v-if="isIE" :src="imgset(consulta.urlCapa, consulta.ativo)" :style="{ opacity: 1 }" :alt="consulta.nomePublico">
 							</div>
 							<aside>
 								<h2>{{ decodeURI(consulta.nomePublico) }}</h2>
@@ -58,7 +58,7 @@
 					<template v-for="(consulta, index) in consultas">
 						<li v-if="consulta.ativo == 0" @click="redirect(setUrlByType(consulta.urlConsulta))" :key="index">
 							<div class="sq" :style="{ background: 'url(' + placeholderSrc(consulta.urlCapa) + ')', backgroundSize: 'cover', backgroundColor: '#BDBDBD' }">
-								<img v-if="!isIE" v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, consulta.urlCapa, consulta.ativo)">
+								<img v-if="!isIE" v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, consulta.urlCapa, consulta.ativo)" :alt="consulta.nomePublico">
 								<div v-if="isIE" class="imgIE" :style="{ backgroundImage: 'url(' + imgset(consulta.urlCapa, consulta.ativo) + ')', backgroundSize: 'cover', backgroundPosition: 'center center', height: '100%', width: '100%' }"></div>
 							</div>
 							<h3>{{consulta.nomePublico}}</h3>

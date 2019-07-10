@@ -24,7 +24,6 @@ export default {
 		}
 	},
 	props: ['attr'],
-	computed: { apiPath () { return this.$store.getters.apiPath } },
 	mounted () { this.loadThisComments() },
 	watch: {
 		comments () {
@@ -35,16 +34,10 @@ export default {
 	methods: {
 		loadThisComments () {
 			let app = this
-			api.post(this.apiPath + 'members/search/', {
-				'idConsulta': '=' + app.$route.meta.id,
-				'public': '=1' }
-			)
-				.then(function (response) {
-					app.comments = response.data
-				})
-				.catch(function (error) {
-					console.log(error)
-				})
+			const url = process.env.VUE_APP_API_URL + 'v2/members/?id_consulta=' + this.$route.meta.id + '&public=1'
+			api.get(url)
+				.then(response => { app.comments = response.data[0] })
+				.catch(error => console.error(error))
 		},
 		filterDate (dataString) {
 			let d = dataString.slice(8, 10)

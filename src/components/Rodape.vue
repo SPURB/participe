@@ -1,9 +1,9 @@
 <template>
-	<div class="Rodape" :class="{ loading: fetching, error: error }" v-if="!fetching">
+	<div class="rodape" :class="{ loading: fetching, error: error }" v-if="!fetching">
 		<footer>
 			<p>Caso surjam dúvidas ou problemas técnicos, envie um e-mail para: <a href="mailto:imprensasmul@prefeitura.sp.gov.br">imprensasmul@prefeitura.sp.gov.br</a>.</p>
 		</footer>
-		<a class='github' href="https://github.com/spurb/participe" alt='Veja o código fonte no Github'><i class="icon icon-github"><span>github</span></i></a>
+		<a name='codigo-fonte' class='github' href="https://github.com/spurb/participe" alt='Veja o código fonte no Github'><i class="icon icon-github"><span>github</span></i></a>
 	</div>
 </template>
 <script>
@@ -20,40 +20,42 @@ export default {
 <style lang="scss" scoped>
 @import '../variables';
 
-div.Rodape {
-	display: grid;
-	grid-template-columns: 1fr 66px;
-	grid-template-rows: 1fr;
-	grid-column-gap: 0px;
-	grid-row-gap: 0px;
+.rodape {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 2rem;
 	background: $cinza-3;
-	.github, .github > i  {
-		padding-top: 24px;
-		color: $cinza-1;
-		text-decoration: none;
-		transition: color 0.25s ease-in-out;
-		&:hover {
-			cursor: pointer;
-			color: $vermelho;
-		}
-	}
-	i {
-		text-align: center;
-		font-size: 2em
-	}
-	footer {
-		clear: all;
-		padding: 16px 32px;
-	}
-	a:hover { background-color: transparent; }
-	a:active { background-color: transparent; }
+	max-width: 100%;
+	p { margin: 0; }
 	&.error {
 		bottom: 0;
 		width: 100%;
 		position: absolute
 	}
+	@media screen and (max-width: 600px) {
+		font-size: 0.75rem;
+		line-height: 1.2;
+		padding: 1rem;
+	}
 	@media print {
 		display: none;
 	}
 }
+
+.github {
+	font-size: 2rem;
+	color: $cinza-1;
+	text-decoration: none;
+	transition: color 0.24s ease-in-out;
+	&:hover {
+		color: $vermelho;
+	}
+}
+
+.icon.icon-github:hover { cursor: pointer; }
+
+a:hover { background-color: transparent; }
+a:active { background-color: transparent; }
+
 </style>

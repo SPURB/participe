@@ -1,75 +1,109 @@
 <template>
-	<div class="Home">
-		<Preloader></Preloader>
-		<main id="listaProjetos">
-			<ul class="list" :class="{ load: !fetching }">
-				<li v-for="(consulta, index) in consultas" class="card" @click="redirect(setUrlByType(consulta.urlConsulta))" :key="index">
-					<div class="bgImg">
-						<img :srcset="imgset('placeholder.png')"
-							sizes="
-								(max-width: 480px) 480w,
-								(max-width: 700px) 700w,
-								(max-width: 1000px) 1000w,
-								(max-width: 1300px) 1300w,
-								(max-width: 1900px) 1900w"
-							v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, consulta.urlCapa)"
-						>
-					</div>
+	<div class="home">
+		<main id="listaProjetos" :class="{ load: !fetching }">
+			<section class="abertas">
+				<ul ref="consultas">
+					<template v-for="(consulta, index) in consultasAbertas">
+						<li v-if="parseInt(consulta.ativo) === 1" class="card" @click="redirect(setUrlByType(consulta.urlConsulta))" :key="index">
+							<div class="img" :style="{ background: 'url(' + placeholderSrc(consulta.urlCapa) + ')', backgroundSize: 'cover', backgroundColor: '#BDBDBD' }">
+								<ul class="tags">
+									<li class="consAtiva">Em consulta</li>
+									<li class="ultimosDias" v-if="tempoRestante(consulta.dataFinal) <= 7">Últimos dias</li>
+								</ul>
+								<img v-if="!isIE" v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, consulta.urlCapa, consulta.ativo)" :alt="consulta.nomePublico">
+								<img v-if="isIE" :src="imgset(consulta.urlCapa, consulta.ativo)" :style="{ opacity: 1 }" :alt="consulta.nomePublico">
+							</div>
+							<aside>
+								<h2>{{ decodeURI(consulta.nomePublico) }}</h2>
+								<table class="info">
+									<tr v-if="tempoRestante(consulta.dataFinal) >= 0" :class="{ ultimoDia: tempoRestante(consulta.dataFinal) == 0 }">
+										<td><i class="icon-tempo icon"><span>tempo</span></i></td>
+										<td title="Tempo restante para contribuir nesta consulta">
+											<template v-if="tempoRestante(consulta.dataFinal) == 0">Último dia para contribuir</template>
+											<template v-else>{{ tempoRestante(consulta.dataFinal) }} dias restantes para contribuir</template>
+										</td>
+									</tr>
+									<tr>
+										<td><i class="icon-data icon"><span>data</span></i></td>
+										<td title="Período de contribuições desta consulta" v-if="tempoRestante(consulta.dataFinal)">{{ dataDisplay(consulta.dataCadastro) }}–{{ dataDisplay(consulta.dataFinal) }}</td>
+										<td title="Data de abertura desta consulta" v-else>Aberta em {{ dataDisplay(consulta.dataCadastro) }}</td>
+									</tr>
+									<tr>
+										<td><i class="icon-contribuicao icon"><span>contribuicao</span></i></td>
+										<td title="Número de contribuições recolhidas até o momento">{{ consulta.nContribuicoes }} contribuições</td>
+									</tr>
+								</table>
+								<p class="intro">
+									{{ decodeURI(consulta.textoIntro) }}
+									<span class="acesso" @click="redirect(setUrlByType(consulta.urlConsulta))">
+										Acesse e contribua
+										<i class="icon-seta_direita icon"><span>seta_direita</span></i>
+									</span>
+								</p>
+							</aside>
+						</li>
+					</template>
+				</ul>
+			</section>
+			<section class="encerradas">
+				<header>
+					<h2>Consultas encerradas</h2>
+					<button @click="toggleListDisplay" ref="toggleListDisplayBt" name='grade-ou-lista'>
+						<i class="icon-grade icon"><span>grade</span></i>
+						<i class="icon-listagem icon"><span>listagem</span></i>
+					</button>
+				</header>
+				<ul ref="consultasEncerradas">
+					<template v-for="(consulta, index) in consultas">
+						<li v-if="!parseInt(consulta.ativo)" @click="redirect(setUrlByType(consulta.urlConsulta))" :key="index">
 
-					<p class="nome">{{ decodeURI(consulta.nomePublico) }}</p>
-					<p class="textoIntro">{{ decodeURI(consulta.textoIntro) }}</p>
-
-					<div class="cont">
-						<a>
-							<h2 :class="{ consultaAtiva: parseAtivo(consulta.ativo) }" class="nome">{{ consulta.nomePublico }}</h2>
-						</a>
-						<p v-if="consulta.ativo" title="Período da consulta">
-							<i class="icon-data icon"><span>date_range</span></i>
-							Consulta iniciada em {{ dataDisplay(consulta.dataCadastro) }}
-						</p>
-						<p v-if="!consulta.ativo" title="Período da consulta">
-							<i class="icon-data icon"><span>date_range</span></i>
-							{{ dataDisplay(consulta.dataCadastro) }}–{{ dataDisplay(consulta.dataFinal) }}
-						</p>
-						<p title="Número de contribuições" v-if="checaContribuicoes(consulta.nContribuicoes)">
-							<i class="icon-contribuicao icon"><span>contribuicao</span></i>
-							{{ consulta.nContribuicoes }} contribuições
-						</p>
-						<!-- <p v-if="consulta.ativo" title="Tempo restante para contribuir">
-							{{ diasRestantes(consulta.dataFinal) }}
-						</p> -->
-						<p v-if="consulta.urlDevolutiva" class="linkSistemat">
-							<a :href="consulta.urlDevolutiva" target="_blank">
-								<i class="icon-acessar_url icon" style="font-size: 0.7rem;"><span>launch</span></i> Acessar devolutiva
-							</a>
-						</p>
-					</div>
-
-					<p ref="textoIntro" class="esconde textoIntro">{{ consulta.textoIntro }}</p>
-					<a class="acesso">Acessar consulta</a>
-				</li>
-			</ul>
+							<div class="sq" :style="{ background: 'url(' + placeholderSrc(consulta.urlCapa) + ')', backgroundSize: 'cover', backgroundColor: '#BDBDBD' }">
+								<img v-if="!isIE" v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, consulta.urlCapa, consulta.ativo)" :alt="consulta.nomePublico">
+								<div v-if="isIE" class="imgIE" :style="{ backgroundImage: 'url(' + imgset(consulta.urlCapa, consulta.ativo) + ')', backgroundSize: 'cover', backgroundPosition: 'center center', height: '100%', width: '100%' }"></div>
+							</div>
+							<h3>{{consulta.nomePublico}}</h3>
+							<table class="info">
+								<tr>
+									<td><i class="icon-data icon"><span>data</span></i></td>
+									<td>
+										{{ dataDisplay(consulta.dataCadastro) }}<span v-if="consulta.dataFinal">–<br>{{ dataDisplay(consulta.dataFinal) }}</span>
+									</td>
+								</tr>
+								<tr>
+									<td><i class="icon-contribuicao icon"><span>contribuicao</span></i></td>
+									<td>{{ consulta.nContribuicoes }} contribuições</td>
+								</tr>
+								<tr v-if="consulta.urlDevolutiva">
+									<td><i class="icon-responder icon"><span>responder</span></i></td>
+									<td><a :href="consulta.urlDevolutiva" target="_blank">Ver devolutiva</a></td>
+								</tr>
+							</table>
+						</li>
+					</template>
+				</ul>
+			</section>
 		</main>
 	</div>
 </template>
+
 <script>
-/*
-
-são métodos neste mixin:
-setUrlByType(urlOrSlug)
-
-*/
 import { consultasMutations } from '@/mixins/consultasMutations'
-import Preloader from '@/components/Preloader'
-
 export default {
 	name: 'Home',
-	components: { Preloader },
 	mixins: [ consultasMutations ],
 	computed: {
-		consultas () { return this.$store.state.consultas },
+		consultas () { return this.$store.state.consultas.filter(consulta => !parseInt(consulta.ativo)) },
+		consultasAbertas () { return Array.from(this.$store.state.consultas).sort(this.parametrosDestaque).filter(consulta => parseInt(consulta.ativo)) },
 		basePathImgSrc () { return this.$store.getters.basePath + 'arquivos/capas/' },
-		fetching () { return this.$store.state.fetching }
+		fetching () { return this.$store.state.fetching },
+		isIE () {
+			let nav = window.navigator.userAgent
+			if (nav.match(/MSIE\s\d\S*;|Trident.*rv:\d*\.\d/)) {
+				return true
+			} else {
+				return false
+			}
+		}
 	},
 	created () {
 		this.$store.dispatch('fetchConsultas', { self: this })
@@ -77,474 +111,617 @@ export default {
 	mounted () {
 		if (window.location.hash !== '') this.checkOldRoutesWithHashes(window.location.hash)// redirect if url contain old patter. ex -> /#/anhembi2
 	},
-
 	methods: {
-		visibilityChanged (isVisible, entry, capa) {
-			const srcset = this.imgset(capa)
-			if (isVisible) entry.target.srcset = srcset
-		},
-
-		checaContribuicoes (n) { return parseInt(n) > 0 },
-		imgset (nomeStr) {
-			let nome = this.basePathImgSrc + nomeStr.slice(0, nomeStr.lastIndexOf('.'))
-			let ext = nomeStr.slice(nomeStr.lastIndexOf('.') + 1, nomeStr.lenght)
-			let declare =
-				nome + '_1900w.' + ext + ' 1900w, ' +
-				nome + '_1300w.' + ext + ' 1300w, ' +
-				nome + '_1000w.' + ext + ' 1000w, ' +
-				nome + '_700w.' + ext + ' 700w, ' +
-				nome + '_480w.' + ext + ' 640w'
-			return declare.toString()
-		},
-		parseAtivo (state) { return state !== '0' },
-		ativaBusca () {
-			this.$refs.busca.value = ''
-			this.$refs.busca.style.color = '#333'
-		},
-		desativaBusca () {
-			this.$refs.busca.value = 'Pesquisar'
-			this.$refs.busca.style.color = '#BDBDBD'
-		},
-		dataDisplay (data) {
-			return data.substring(8, 10) + '/' + data.substring(5, 7) + '/' + data.substring(0, 4)
-		},
-		redirect (dest) { location.assign(dest) },
 		checkOldRoutesWithHashes (hash) {
 			const noHash = hash.replace('#', '')
 			const routes = this.$router.options.routes.map(route => route.path)
 
 			if (routes.includes(noHash)) this.redirect(noHash)
 			else throw new Error('A rota ' + hash + ' não existe. Checar url.')
+		},
+		parametrosDestaque (a, b) {
+			if (this.tempoRestante(a.dataFinal) < this.tempoRestante(b.dataFinal)) {
+				if (this.tempoPublicado(a.dataCadastro) > this.tempoPublicado(b.dataCadastro)) {
+					return -1
+				} else {
+					return 1
+				}
+			} else if (this.tempoRestante(a.dataFinal) > this.tempoRestante(b.dataFinal)) {
+				if (this.tempoPublicado(a.dataCadastro) < this.tempoPublicado(b.dataCadastro)) {
+					return 1
+				} else {
+					return -1
+				}
+			} else {
+				return 1
+			}
+		},
+		imgset (nomeStr, isAtiva) {
+			let nome = this.basePathImgSrc + nomeStr.slice(0, nomeStr.lastIndexOf('.'))
+			let ext = nomeStr.slice(nomeStr.lastIndexOf('.') + 1, nomeStr.lenght)
+			let declare = ''
+			if (!this.isIE) {
+				if (parseInt(isAtiva) === 1) {
+					declare +=
+					nome + '_1600w.webp 2x, ' +
+					nome + '_800w.webp 1x, ' +
+					nome + '_1600w.' + ext + ' 2x, ' +
+					nome + '_800w.' + ext + ' 1x'
+				} else if (parseInt(isAtiva) === 0) {
+					declare +=
+					nome + '_244w.webp 2x, ' +
+					nome + '_122w.webp 1x, ' +
+					nome + '244w.' + ext + ' 2x, ' +
+					nome + '122w.' + ext + ' 1x'
+				}
+			} else {
+				if (parseInt(isAtiva) === 1) {
+					declare = nome + '_1600w.' + ext
+				} else if (parseInt(isAtiva) === 0) {
+					declare = nome + '_244w.' + ext
+				}
+			}
+			return declare.toString()
+		},
+		placeholderSrc (nomeStr) {
+			return this.basePathImgSrc + nomeStr.slice(0, nomeStr.indexOf('.')) + '_40w.webp'
+		},
+		dataDisplay (data) {
+			return data.substring(8, 10) + '/' + data.substring(5, 7) + '/' + data.substring(0, 4)
+		},
+		tempoRestante (dataFinal) {
+			let restante = Math.ceil((Date.parse(dataFinal) - Date.now()) / 86400000)
+			return Math.abs(restante)
+		},
+		tempoPublicado (dataCadastro) {
+			const restante = Math.ceil((Date.now() - Date.parse(dataCadastro)) / 86400000)
+			return Math.abs(restante)
+		},
+		redirect (dest) { location.assign(dest) },
+		visibilityChanged (isVisible, entry, capa, consultaAtiva) {
+			const srcset = this.imgset(capa, consultaAtiva)
+			if (isVisible) {
+				entry.target.srcset = srcset
+				entry.target.style.opacity = 1
+			}
+		},
+		toggleListDisplay (event) {
+			this.$refs.consultasEncerradas.classList.toggle('lista')
+			this.$refs.toggleListDisplayBt.classList.toggle('lista')
 		}
 	}
 }
 </script>
 <style lang="scss" scoped>
-div.Home {
-	padding-top: 60px;
+@import '../variables';
+
+.home {
+	position: relative;
 	main {
-		div.busca {
+		&:not(.load) > * {
+			opacity: 0;
+		}
+		&.load > * {
+			animation: surge ease-in-out .4s;
+		}
+		@keyframes surge {
+			from { opacity: 0; }
+			to { opacity: 1; }
+		}
+		section.abertas {
 			position: relative;
-			padding: 2rem 2rem 0 2rem;
-			z-index: 0;
-
-			i {
-				position: absolute;
-				font-size: 24px;
-				line-height: 40px;
-				color: #BDBDBD;
-				padding: 0 10px;
-			};
-
-			i:after { visibility: hidden; };
-
-			input {
-				width: 100%;
-				border: 1px solid #DDD;
-				border-radius: 2px;
-				height: 40px;
-				padding: 6px 8px 6px 40px;
-				font-family: inherit;
-				font-size: large;
-				transition: all ease-in-out .2s;
-				caret-color: #EB5757;
-				color: #BDBDBD;
-
-				&:hover { border-color: #BDBDBD };
-				&:focus {border-color: #EB5757; };
-			};
-
-		};
-
-		ul {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			@media (max-width: 1400px) { grid-template-columns: repeat(2, 1fr); }
-			grid-gap: 2rem;
-			padding: 2rem;
-			margin: 0 auto;
-			max-width: 2000px;
-
-			&.load {
-				animation: surge ease-out .64s;
-				@keyframes surge {
-					from { opacity: 0; }
-					to { opacity: 1; }
-				}
-			}
-
-			li.card {
-				display: grid;
-				grid-template-columns: 1fr 1fr;
-				grid-template-rows: 400px 48px;
-				border-radius: 2px;
-				box-shadow: 0 4px 4px rgba(0, 0, 0, .24);
-				transition: transform ease-in-out .1s, box-shadow .1s;
-				position: relative;
-				cursor: pointer;
-				z-index: 0;
-
-				div.bgImg {
-					position: absolute;
-					width: 100%;
-					height: 100%;
-					z-index: -1;
-					border-radius: inherit;
-					overflow: hidden;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-
-					img {
-						object-fit: cover;
-						min-width: 100%;
-						min-height: 100%;
-					}
-				}
-
-				&:nth-child(2n+1) { background-image: -moz-radial-gradient(left bottom, circle farthest-side, #777, #EB5757); }
-				&:nth-child(3n+2) { background-image: -moz-radial-gradient(left top, circle farthest-side, #FFF, #333); }
-				&:nth-child(5n+3) { background-image: -moz-radial-gradient(right bottom, circle farthest-side, #FFF, #EB5757); }
-				&:nth-child(7n+5) { background-image: -moz-radial-gradient(left top, circle farthest-side, #777, #333); }
-
-				p.nome, p.textoIntro { display: none; };
-
-				div.cont {
-					grid-row: 1 / 2;
-					grid-column: 1 / 2;
-					display: flex;
-					flex-flow: column wrap;
-					justify-content: center;
-					padding: 2rem;
+			margin: calc(60px + 2rem) auto 2rem auto;
+			padding: 0 2rem;
+			max-width: 1200px;
+			width: 100%;
+			ul {
+				padding: 0;
+				list-style-type: none;
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: space-between;
+				align-items: flex-start;
+				li.card {
 					position: relative;
-					overflow: hidden;
-
-					a {
+					display: inline-block;
+					margin-bottom: 2rem;
+					width: calc(50% - 1rem);
+					vertical-align: top;
+					cursor: pointer;
+					border-radius: 4px;
+					&:nth-child(2n) {
+						margin-right: 2rem;
+					}
+					.img {
+						margin-bottom: 1rem;
+						height: 330px;
+						overflow: hidden;
+						position: relative;
+						border-radius: 4px;
+						.tags {
+							position: absolute;
+							display: block;
+							top: 1rem;
+							left: 0;
+							list-style-type: none;
+							z-index: 1;
+							li {
+								display: block;
+								margin: 0 0 1rem 0;
+								padding: 0.75rem;
+								font-size: .75rem;
+								line-height: 1;
+								text-transform: uppercase;
+								box-shadow: 2px 0 4px $sombra-3;
+								text-shadow: 0 1px 1px $sombra-2;
+								border-width: 1px 1px 1px 0;
+								border-color: $sombra-4;
+								border-style: solid;
+								border-radius: 0 2px 2px 0;
+								color: #FFF;
+								&:last-child {
+									margin-right: 0;
+								}
+								&.consAtiva {
+									background-color: $verde;
+								}
+								&.ultimosDias {
+									background-color: $vermelho;
+								}
+							}
+						}
+						img {
+							object-fit: cover;
+							width: 100%;
+							height: 100%;
+							opacity: 0;
+							transition: all ease-out .4s;
+							transition-delay: .2s;
+							background-color: $cinza-3;
+						}
+					}
+					aside {
+						border-bottom: 1rem solid $cinza-3;
+						padding-bottom: 0.5rem;
 						h2 {
-							font-size: xx-large;
-							line-height: 120%;
-							color: #FFF;
-							margin: 0 0 12px 0;
-							width: calc(100% - 32px);
-
-							&::before {
+							font-size: 1.5rem;
+							margin: 0 0 0.75rem;
+							line-height: 1.2;
+						}
+						.info {
+							font-size: 0.8rem;
+							color: $cinza-1;
+							width: 100%;
+							border-collapse: collapse;
+							border-spacing: 0;
+							tr {
+								td {
+									padding: 0;
+									line-height: 1.4;
+								}
+								td:first-child {
+									width: 1.25rem;
+									.icon {
+										line-height: inherit;
+									}
+								}
+								&.ultimoDia td:nth-child(2) {
+									display: inline-block;
+									padding: 0.25rem 0.5rem;
+									color: #FFF;
+									background: $vermelho;
+									border-radius: 0.25rem;
+								}
+							}
+						}
+						.intro {
+							font-family: $serifada;
+							margin: 0.75rem 0 0;
+							hyphens: auto;
+						}
+						span.acesso {
+							margin: 0;
+							color: $vermelho;
+							font-family: inherit;
+							white-space: nowrap;
+							font-family: $grotesca;
+							font-weight: bold;
+							.icon::before {
+								vertical-align: -6px;
+								margin-left: -0.25rem;
+							}
+						}
+					}
+					&:first-child {
+						width: 100%;
+						.img {
+							display: inline-block;
+							width: 60%;
+							height: 0;
+							padding-bottom: calc(60% * 9/16);
+							margin-bottom: -0.5rem;
+							.tags {
+								left: inherit;
+								right: 0;
+								li {
+									border-width: 1px 0 1px 1px;
+									border-radius: 2px 0 0 2px;
+									box-shadow: -2px 0 8px $sombra-2;
+								}
+							}
+							img {
 								position: absolute;
 								top: 0;
 								left: 0;
-								display: inline-block;
-								margin: 2rem;
-								content: 'Consulta encerrada';
-								font-size: 12px;
-								font-weight: normal;
-								text-transform: uppercase;
-								text-align: center;
-								line-height: 24px;
-								white-space: nowrap;
-								text-overflow: ellipsis;
-								height: 24px;
-								padding: 0 8px;
-								border-radius: 2px;
-								border: 2px solid rgba(255, 255, 255, .24);
-								opacity: .5;
-								background: rgba(0, 0, 0, .8);
-							};
-
-							&.consultaAtiva::before {
-								opacity: 1;
-								content: 'Em consulta';
-								background: #008015;
-							};
-						};
-
-						&:hover { text-decoration: none; };
-					};
-
-					& p {
-						display: block;
-						width: auto;
-						font-family: inherit;
-						font-size: small;
-						text-shadow: none;
-						padding: 0;
-						margin: 0;
-						color: #FFF;
-						background: transparent;
-						box-shadow: none;
-						margin-bottom: 12px;
-						white-space: nowrap;
-
-						i { vertical-align: text-top; font-size: larger; margin-right: 8px; };
-						i:after { visibility: hidden; }
-
-						&.linkSistemat {
-
-							a {
-								display: inline;
-								background: transparent;
-								margin: 0;
-								padding: 6px 8px;
-								border-radius: 2px;
-								background: rgba(255, 255, 255, .2);
-								text-transform: none;
-								color: inherit;
-								transition: all ease-in-out .1s;
-
-								&:hover { text-decoration: none; background: transparent; };
-							};
-
-							i {
-								margin: 0;
-								display: inline-flex;
-								align-items: center; }
-							};
-
-						&:last-child { margin-bottom: 0; };
-					};
-				};
-
-				p.esconde {
-					grid-row: span all;
-					grid-column: 2 / 3;
-					align-self: end;
-					display: flex;
-					font-family: Georgia, serif;
-					padding: 8px 16px 0px 16px;
-					box-sizing: content-box;
-					margin: 0;
-					background: rgba(255, 255, 255, .88);
-					border-radius: 2px 0 0 0;
-					z-index: 1;
-					position: relative;
-					overflow-wrap: break-word;
-					hyphens: auto;
-					max-height: 100%;
-
-					a { color: inherit; overflow-y: hidden; &:hover { text-decoration: none; }; };
-				};
-
-				a.acesso {
-					grid-row: 2 / 3;
-					grid-column: 1 / span 2;
-					display: flex;
-					align-items: center;
-					padding: 16px;
-					background: #FFF;
-					text-transform: uppercase;
-					white-space: nowrap;
-					overflow: hidden;
-					text-overflow: ellipsis;
-					z-index: 1;
-				};
-			};
-
-			li.card::before {
-				content: '';
-				position: absolute;
-				display: block;
+							}
+						}
+						aside {
+							display: inline-block;
+							width: 40%;
+							vertical-align: top;
+							padding-left: 2rem;
+							padding-bottom: 0;
+							border-bottom: none;
+							h2 {
+								font-size: 2.5rem;
+							}
+							.intro {
+								font-size: 1rem;
+								line-height: 1.6;
+							}
+						}
+					}
+					&:active {
+						background-color: $vermelho-tr;
+						outline: 0.5rem solid $vermelho-tr;
+						-moz-outline-radius: 0.75rem;
+						border-radius: 0;
+					}
+				}
+			}
+		}
+		section.encerradas {
+			header {
+				position: relative;
+				margin: 2rem auto 0;
+				padding: 0 2rem;
 				width: 100%;
-				height: 100%;
-				background-image: linear-gradient(0deg, rgba(0,0,0,.2), rgba(0,0,0,.8));
-				transition: all ease-in-out .2s;
-				border-radius: 2px;
-				z-index: 0;
-			};
-
-			li.card:first-child {
-				grid-column: 1 / span 3;
-				@media (max-width: 1400px) { grid-column: 1 / span 2; }
-				grid-template-columns: repeat(7, 1fr);
-				grid-template-rows: minmax(300px, 72vh) 64px;
-
-				div.cont {
-					grid-column: 1 / span 5;
-					grid-row: 1 / span all;
-					align-items: center;
-					box-shadow: none;
-
-					a {
+				max-width: 1200px;
+				h2 {
+					display: inline-block;
+					font-size: 1.25rem;
+				}
+				button {
+					position: absolute;
+					right: 2rem;
+					top: 50%;
+					display: inline-block;
+					border: none;
+					margin: 0 -4px 0 0;
+					padding:  0.25rem 0.5rem;
+					border-radius: 2rem;
+					transform: translateY(-50%);
+					box-shadow: 0 2px 0 $sombra-3;
+					&, * { cursor: pointer; }
+					.icon {
+						transition: color ease-in .2s;
+						font-size: 1rem;
+					}
+					.icon:nth-child(2) {
+						color: $cinza-1;
+						margin-left: 4px;
+					}
+					&.lista {
+						.icon:first-child {
+							color: $cinza-1;
+						}
+						.icon:nth-child(2) {
+							color: $preto;
+						}
+					}
+					&:active {
+						box-shadow: 0 1px 0 $sombra-3;
+						margin-top: 1px;
+					}
+				}
+			}
+			ul {
+				max-width: 1200px;
+				width: 100%;
+				margin: 0 auto 4rem;
+				padding: 0 1rem;
+				list-style-type: none;
+				text-align: center;
+				@supports (display: flex) {
+					display: flex;
+					flex-flow: row wrap;
+					justify-content: space-between;
+					align-items: flex-start;
+				}
+				& > li {
+					display: inline-block;
+					vertical-align: top;
+					margin: 0 1rem 1rem;
+					width: 122px;
+					text-align: left;
+					&, & * { cursor: pointer; }
+					div.sq {
+						position: relative;
+						height: 68px;
+						width: 122px;
+						background-color: $cinza-2;
+						overflow: hidden;
+						border-radius: 2px;
+						img {
+							object-fit: cover;
+							width: 100%;
+							height: 100%;
+							opacity: 0;
+							transition: all ease-out .4s;
+							transition-delay: .2s;
+						}
+					}
+					h3 {
+						margin: 8px 0 4px;
+						font-size: 1rem;
+						line-height: 1.2;
+					}
+					.info {
+						padding: 0;
+						font-size: 0.75rem;
+						line-height: 1.6;
+						width: 100%;
+						color: $cinza-1;
+						tr {
+							display: block;
+							td {
+								display: inline-block;
+								margin: 0;
+								padding: 0;
+								vertical-align: top;
+								&:nth-child(2) {
+									white-space: nowrap;
+									overflow: hidden;
+									text-overflow: ellipsis;
+									width: calc(100% - 18px);
+								}
+								& > .icon {
+									display: block;
+									position: relative;
+									width: 18px;
+									&::before {
+										display: block;
+										position: absolute;
+										left: -2px;
+									}
+								}
+							}
+						}
+					}
+					&:active {
+						background-color: $vermelho-tr;
+						outline: 0.5rem solid $vermelho-tr;
+						-moz-outline-radius: 0.75rem;
+					}
+				}
+				&.lista {
+					text-align: left;
+					position: relative;
+					& > li {
 						display: block;
 						width: 100%;
-
-						h2 {
-							margin: 0 0 2rem 0;
-							font-size: 64px;
-							line-height: 100%;
-							width: 100%;
-						};
-					};
-
-					p {
-						align-self: flex-start;
-					};
-				};
-
-				p {
-					grid-column: 6 / 8;
-				};
-
-				a.acesso {
-					grid-column: 6 / 8;
-					justify-content: flex-end;
-				};
-			};
-
-			li.card:hover {
-				box-shadow: 0 8px 8px rgba(0, 0, 0, .24);
-				transform: translateY(-2px);
-			};
-		};
-	};
-
-	@media (max-width: 800px) {
-		main div.busca {
-			margin-bottom: 1rem;
-		}
-
-		main#listaProjetos ul {
-			grid-template-columns: repeat(auto-fill, minmax(160px, 720px)) !important;
-			li.card {
-				grid-template-columns: 1fr;
-				grid-template-rows: minmax(140px, auto) auto 48px;
-				overflow-y: hidden;
-
-				div.cont {
-					padding: 12px;
-					a h2 {
-						padding-top: 2.5rem;
-						margin-bottom: 2rem;
-						font-size: x-large;
-						&::before {
-							margin: 12px;
-							font-size: xx-small;
+						margin: 0;
+						padding: 1rem;
+						background-color: $cinza-3;
+						&:nth-child(2n) {
+							background-color: transparent;
 						}
-					};
+						div.sq {
+							width: 3.5rem;
+							height: 3.5rem;
+							display: inline-block;
+							vertical-align: middle;
+						}
+						h3 {
+							display: inline-block;
+							vertical-align: middle;
+							margin: 0 1rem;
+							width: calc(100% - 16rem);
+						}
+						.info {
+							width: auto;
+							display: inline-block;
+							vertical-align: middle;
+							tr {
+								td {
+									&:nth-child(2) {
+										white-space: nowrap;
+										overflow: hidden;
+										text-overflow: ellipsis;
+									}
+									br {
+										display: none;
+									}
+								}
+							}
+						}
+						&:hover {
+							background-color: $sombra-4;
+						}
+						&:active {
+							outline: none;
+							background-color: $vermelho-tr;
+						}
+					}
 				}
-
-				p.esconde { grid-row: 2 / 3; grid-column: 1 / 2;  border-radius: 0; max-height: calc(8rem + 4px); font-size: smaller; };
-				a.acesso { grid-row: 3 / 4; grid-column: 1 / 2; border-radius: 0 0 2px 2px; };
-			};
-
-			li.card:first-child {
-				grid-column: unset;
-				grid-template-columns: 1fr;
-				grid-template-rows: minmax(280px, auto) auto 48px;
-				transform: scale(1.04);
-				margin-bottom: 1rem;
-
-				div.cont {
-					grid-column: unset;
-					grid-row: 1 / 2;
-					flex-flow: column nowrap;
-					justify-content: flex-end;
-
-					a h2 {
-						font-size: xx-large;
-						line-height: 120%;
-						margin: 2rem 0 0 0;
-						text-align: center;
-					};
-
-					p {
-						&:nth-of-type(1) {
-							margin-top: 3rem;
-						};
-					};
-				};
-
-				p.esconde { grid-column: unset; max-height: unset; };
-				a.acesso { grid-column: unset; };
-			};
-		};
-	};
-
-	@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-		main div.busca { margin-bottom: 1rem; };
-		main ul {
-			display: block;
-			color: transparent;
-
-			li.card {
-				float: left;
-				min-width: 260px;
-				width: 100%;
-				max-width: 540px;
-				margin: 0 2rem 2rem 0;
-				position: relative;
-
-				div.cont {
-					background-image: linear-gradient(to right, rgba(0,0,0,.8), rgba(0,0,0,.4));
-					border-radius: 2px 0 0 2px;
-					min-height: 220px;
-					margin-top: -26px;
-				};
-
-				div a h2 { padding-top: 2.5rem; };
-
-				p.esconde {
-					background: rgba(255, 255, 255, .92);
-					color: #333;
-					overflow: hidden;
-					max-height: calc(9.6rem - 6px);
-					border-radius: 0;
-				};
-
-				a.acesso { width: 100%; };
-			};
-
-			li.card::before { background-image: none; };
-
-			li.card:first-child {
-				margin-bottom: 3rem;
-
-				div { margin-top: -26px; };
-				p.esconde { font-size: inherit; };
 			}
-		};
-
-		@media (min-width: 600px) {
-			main ul li.card:first-child {
-				min-width: 100%;
-				height: 540px;
-				position: relative;
-				margin-bottom: 2rem;
-
-				div.cont {
-					float: left;
-					width: calc(80% - 32px);
-					height: 100%;
-					box-shadow: none;
-					margin-top: 0;
-
-					a h2 { width: 100%; };
-
-					p {
-						position: relative;
-						min-height: 0;
-						display: block;
-						box-shadow: none;
-					};
-				};
-
-				p.esconde {
-					position: absolute;
-					right: 0;
-					width: 20%;
-					min-width: 160px;
-					min-height: calc(540px - 66px);
-					box-shadow: inset 0px -4px 4px rgba(0, 0, 0, .12);
-				};
-
-				a.acesso {
-					position: absolute;
-					bottom: 0;
-					right: 0;
-					width: calc(20% + 32px);
-					min-width: 192px;
-					display: block;
-					text-align: right;
-				};
-			};
-		};
+		}
 	};
+	@media screen and (max-width: 1200px) {
+		main {
+			section.abertas {
+				ul {
+					li.card {
+						.img {
+							width: auto;
+							height: 0;
+							padding-bottom: calc(100% * 9/16);
+							ul.tags {
+								top: 0.5rem;
+								li {
+									padding: 0.5rem;
+									margin-bottom: 0.5rem;
+								}
+							}
+							img {
+								position: absolute;
+								top: 0;
+								left: 0;
+							}
+						}
+						aside {
+							.info {
+								width: 100%;
+							}
+						}
+						&:not(:first-child) {
+							aside p.intro {
+								font-size: 0.9rem;
+							}
+						}
+					}
+				}
+			}
+		}
+	};
+	@media screen and (max-width: 800px) {
+		main section.abertas ul li.card:first-child {
+			.img {
+				display: block;
+				width: 100%;
+				padding-bottom: calc(100% * 9/16);
+				.tags {
+					left: 0;
+					right: inherit;
+					bottom: 0.5rem;
+					top: inherit;
+					li {
+						border-width: 1px 1px 1px 0;
+						border-radius: 0 2px 2px 0;
+						box-shadow: 2px 0 8px $sombra-2;
+					}
+				}
+			}
+			aside {
+				display: block;
+				width: 100%;
+				padding-left: 0;
+				margin-top: 1rem;
+			}
+		}
+	}
+	@media screen and (max-width: 600px) {
+		main {
+			section.abertas {
+				padding: 0 1rem;
+				margin-top: calc(60px + 1rem);
+				ul {
+					li.card, li.card:nth-child(2n) {
+						display: block;
+						width: 100%;
+						margin: 0 0 2rem 0;
+						aside {
+							h2 {
+								font-size: 1.25rem;
+								margin-bottom: 0.2rem;
+							}
+							p.intro {
+								margin-top: 0.25rem;
+							}
+						}
+					}
+					li.card:first-child {
+						.img {
+							margin-bottom: 0.75rem;
+						}
+						aside {
+							margin-top: 0.5rem;
+							h2 {
+								font-size: 1.75rem;
+							}
+							p.intro span.acesso {
+								display: block;
+								text-align: center;
+								margin: 0.5rem 0 0;
+								padding: 0.5rem 0.75rem 0.5rem 1rem;
+								border-radius: 2rem;
+								background-color: $vermelho;
+								color: #FFF;
+								box-shadow: 0 2px 2px $sombra-3;
+								font-weight: normal;
+							}
+						}
+					}
+				}
+			}
+			section.encerradas {
+				header {
+					padding: 0 1rem;
+					button {
+						right: calc(1rem - 1px);
+					}
+				}
+				ul {
+					padding: 0;
+					justify-content: center;
+					&.lista {
+						li {
+							div.sq {
+								float: left;
+								margin-right: 1rem;
+							}
+							h3 {
+								display: block;
+								width: 100%;
+								margin: 0;
+							}
+							.info {
+								width: calc(100% - 4.5rem);
+							}
+						}
+						@suports (display: grid) {
+							li {
+								display: grid;
+								grid-template-columns: 3.5rem 1fr;
+								grid-template-rows: 1fr auto;
+								grid-column-gap: 1rem;
+								div.sq {
+									grid-column: 1/2;
+									grid-row: 1/3;
+								}
+								h3 {
+									width: 100%;
+									margin: -3px 0 0 0;
+									grid-column: 2/3;
+									grid-row: 1/2;
+								}
+								.info {
+									grid-column: 2/3;
+									grid-row: 2/3;
+									tr {
+										line-height: 0.75rem;
+										margin: 4px 0;
+										td .icon {
+											line-height: 0.75rem;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 </style>

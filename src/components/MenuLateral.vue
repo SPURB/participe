@@ -4,15 +4,20 @@
 			<ul>
 				<li class="logo">
 					<a href="https://gestaourbana.prefeitura.sp.gov.br/">
-						<img :src="logoGestaoUrbana">
+						<picture>
+							<source type="image/webp" :srcset="logo('arquivos/img/gestaourbana', 'webp')">
+							<img :src="logo('arquivos/img/gestaourbana', 'jpg')" alt='Logo Gestão Urbana SP'>
+						</picture>
 					</a>
 				</li>
-				<li v-for="consulta in consultas" v-if="consulta.ativo == '1'">
-					<a :href="setUrlByType(consulta.urlConsulta)" class="consultaAtiva" @click="fechaMenu">{{ consulta.nomePublico }}</a>
-				</li>
-				<li v-for="consulta in consultas" v-if="consulta.ativo == '0'">
-					<a :href="setUrlByType(consulta.urlConsulta)">{{ consulta.nomePublico }}</a>
-				</li>
+				<template v-for="(consulta, index) in consultas">
+					<li v-if="parse(consulta.ativo)" :key="index">
+						<a :href="setUrlByType(consulta.urlConsulta)" class="consultaAtiva" @click="fechaMenu">{{ consulta.nomePublico }}</a>
+					</li>
+					<li v-else :key="index">
+						<a :href="setUrlByType(consulta.urlConsulta)">{{ consulta.nomePublico }}</a>
+					</li>
+				</template>
 			</ul>
 		</aside>
 	</div>
@@ -33,16 +38,14 @@ export default {
 	computed: {
 		consultas () { return this.$store.state.consultas },
 		menuToggle () { return this.$store.state.menuToggle },
-		logoGestaoUrbana () { return this.$store.getters.basePath + 'arquivos/img/logo_gestao_footer.jpg' }
+		logoGestaoUrbana () { return this.$store.getters.basePath + 'arquivos/img/gestaourbana.jpg' }
 	},
-	beforeUpdate () {
-		this.$el.children[0].scrollTo({
-			top: 0,
-			left: 0,
-			behavior: 'smooth'
-		})
+	updated () {
+		this.$el.children[0].scrollTop = 0
 	},
 	methods: {
+		parse (str) { return parseInt(str) },
+		logo (name, extension) { return this.$store.getters.basePath + name + '.' + extension },
 		fechaMenu () {
 			this.$store.state.menuToggle = false
 			this.$store.state.luzApaga = false

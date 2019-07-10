@@ -1315,7 +1315,7 @@
 				{ id: 212, context: 'Quadro 2B: Projetos estratégicos - Percentuais de destinação de área...' },
 				{ id: 213, context: 'Quadro 3A: Fatores de planejamento, parâmetros de ocupação exceto...' },
 				{ id: 214, context: 'Quadro 3B: Quota ambiental: pontuação mínima, taxa de permeabilidade...' },
-				{ id: 215, context: 'Quadro 4: Programa de intervenções' }				
+				{ id: 215, context: 'Quadro 4: Programa de intervenções' }
 			]"></CommentsOption>
 		</section>
 

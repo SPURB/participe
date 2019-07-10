@@ -5,7 +5,7 @@
 			<template slot="subtitulo"><div>Subtítulo da Nova Consulta</div></template>
 		</PageTop>
 		<Indice :titulos="titulosLimpo"></Indice>
-		
+
 		<!-- <Apoio></Apoio> -->
 		<!-- Decreto Nº 56.901 inclua este componente caso seja um PIU -->
 
@@ -49,8 +49,8 @@ export default {
 	},
 	components: {
 		PageTop,
-		Indice,
-		Apoio
+		Indice
+		// Apoio
 	},
 	mixins: [ consultasCommons ]
 }

@@ -183,11 +183,6 @@
 </template>
 
 <script>
-import AnexoA from '@/views/wifi-livre-sp/AnexoA'
-import AnexoB from '@/views/wifi-livre-sp/AnexoB'
-import AnexoBI from '@/views/wifi-livre-sp/AnexoBI'
-import AnexoBIII from '@/views/wifi-livre-sp/AnexoBIII'
-import AnexoBIV from '@/views/wifi-livre-sp/AnexoBIV'
 import PageTop from '@/components/PageTop'
 import Indice from '@/components/Indice'
 import Comments from '@/components/Comments'
@@ -204,13 +199,6 @@ export default {
 			consultas: false,
 			estaConsulta: {},
 			anexos: [
-				// 'Anexo A - Edital de Credenciamento n 01_2018 - Expansao do WiFi (V.Final).pdf',
-				// 'Anexo B - Minuta do Termo de Contrato.pdf',
-				// 'Anexo B I - Termo de Referência FINAL - 2018-09-13.pdf',
-				// 'Anexo B II - Lista de localidades.pdf',
-				// 'Anexo B III - Postes e placas.pdf',
-				// 'Anexo B IV - Política de Privacidade.pdf',
-				// 'Anexo B V - Manual de identidade visual.pdf'
 				'Edital de Credenciamento n 01_2018.pdf',
 				'Anexo A - Minuta do Termo de Contrato.pdf',
 				'Anexo B I - Termo de Referência.pdf',
@@ -227,11 +215,11 @@ export default {
 		Comments,
 		CommentsLoader,
 		Apoio,
-		AnexoA,
-		AnexoB,
-		AnexoBI,
-		AnexoBIII,
-		AnexoBIV
+		AnexoA: () => import(/* webpackChunkName: "AnexoA" */ '@/views/wifi-livre-sp/AnexoA'),
+		AnexoB: () => import(/* webpackChunkName: "AnexoB" */ '@/views/wifi-livre-sp/AnexoB'),
+		AnexoBI: () => import(/* webpackChunkName: "AnexoBI" */ '@/views/wifi-livre-sp/AnexoBI'),
+		AnexoBIII: () => import(/* webpackChunkName: "AnexoBIII" */ '@/views/wifi-livre-sp/AnexoBIII'),
+		AnexoBIV: () => import(/* webpackChunkName: "AnexoBIV" */ '@/views/wifi-livre-sp/AnexoBIV')
 	},
 	mixins: [ consultasCommons ],
 	methods: {
@@ -247,59 +235,6 @@ export default {
 @import '../variables';
 @import '../consulta';
 
-/*div.PageTop > div:first-child {
-	max-width: 700px;
-}
-table {
-	margin: auto;
-	min-width: 400px;
-}
-table.simple-table {
-	border-collapse: collapse;
-	table, th, td {
-		border: 1px solid black;
-		padding: 3px;
-	}
-}
-table.headed-table {
-	border-collapse: collapse;
-	text-align: center;
-	table, th, td {
-		border: 1px solid black;
-		padding: 3px;
-	}
-	tr:first-child {
-		background-color: #CCC;
-		font-weight: bold;
-	}
-}
-
-h2.titulo, h3.titulo {
-	margin: 2em auto auto;
-}
-h4 {
-	margin: 2em auto auto;
-}
-*::selection, *::-moz-selection {
-	background: #EB5757;
-	color: #FFF;
-}
-div.WifiLivreSP section {
-	max-width: 700px;
-	margin: 0 auto;
-	padding: 0 1em;
-}
-hr {
-	max-width: 700px;
-	margin: 3em auto;
-}
-img {
-	max-width: 100%;
-}
-div.WifiLivreSP p {
-	overflow: auto;
-	text-align: left;
-}*/
 #app div.WifiLivreSP div.Apoio button::before {
 	content: "Ver downloads";
 }

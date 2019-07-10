@@ -24,11 +24,10 @@ const store = new Vuex.Store({
 		toPrint: false
 	},
 	getters: {
-		apiPath () { return process.env.VUE_APP_API_URL },
 		basePath () { return process.env.VUE_APP_ASSETS_BASE_URL },
 		consultasClicada (state) {
 			if (state.consultas !== undefined) {
-				return state.consultas.find(consulta => parseInt(consulta.id_consulta) === state.routeId)
+				return state.consultas.find(consulta => parseInt(consulta.idConsulta) === state.routeId)
 			} else { return 'not Clicked' }
 		}
 	},
@@ -66,7 +65,7 @@ const store = new Vuex.Store({
 	},
 	actions: {
 		fetchConsultas ({ commit }, { self }) {
-			api.get(store.getters.apiPath + 'consultas')
+			api.get(process.env.VUE_APP_API_URL + 'v2/' + 'consultas')
 				.then(response => {
 					commit('FETCH_CONSULTAS', response.data.slice().reverse())
 					commit('FETCH_CONSULTAS_DECODE', store.state.consultas)

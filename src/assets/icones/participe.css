@@ -1,8 +1,8 @@
 @font-face {
 	font-family: "participe";
-	src: url("participe.eot?3d9a9cc05de5432b3986473fc1281fa5?#iefix") format("embedded-opentype"),
-url("participe.woff2?3d9a9cc05de5432b3986473fc1281fa5") format("woff2"),
-url("participe.woff?3d9a9cc05de5432b3986473fc1281fa5") format("woff");
+	src: url("participe.eot?8d0fad4f9f8455f406f8d8a9e6ea5156?#iefix") format("embedded-opentype"),
+url("participe.woff2?8d0fad4f9f8455f406f8d8a9e6ea5156") format("woff2"),
+url("participe.woff?8d0fad4f9f8455f406f8d8a9e6ea5156") format("woff");
 }
 
 .icon {
@@ -85,66 +85,69 @@ url("participe.woff?3d9a9cc05de5432b3986473fc1281fa5") format("woff");
 .icon-github:before {
 	content: "\f117";
 }
-.icon-home:before {
+.icon-grade:before {
 	content: "\f118";
 }
-.icon-imprimir:before {
+.icon-home:before {
 	content: "\f119";
 }
-.icon-incorreto:before {
+.icon-imprimir:before {
 	content: "\f11a";
 }
-.icon-lista:before {
+.icon-incorreto:before {
 	content: "\f11b";
 }
-.icon-listagem:before {
+.icon-lista:before {
 	content: "\f11c";
 }
-.icon-mais:before {
+.icon-listagem:before {
 	content: "\f11d";
 }
-.icon-material:before {
+.icon-mais:before {
 	content: "\f11e";
 }
-.icon-menu:before {
+.icon-material:before {
 	content: "\f11f";
 }
-.icon-novamente:before {
+.icon-menu:before {
 	content: "\f120";
 }
-.icon-oficio:before {
+.icon-novamente:before {
 	content: "\f121";
 }
-.icon-pdf:before {
+.icon-oficio:before {
 	content: "\f122";
 }
-.icon-pessoa-outline:before {
+.icon-pdf:before {
 	content: "\f123";
 }
-.icon-recolher:before {
+.icon-pessoa-outline:before {
 	content: "\f124";
 }
-.icon-rejeitar:before {
+.icon-recolher:before {
 	content: "\f125";
 }
-.icon-remover:before {
+.icon-rejeitar:before {
 	content: "\f126";
 }
-.icon-responder:before {
+.icon-remover:before {
 	content: "\f127";
 }
-.icon-seta_baixo:before {
+.icon-responder:before {
 	content: "\f128";
 }
-.icon-seta_cima:before {
+.icon-seta_baixo:before {
 	content: "\f129";
 }
-.icon-seta_direita:before {
+.icon-seta_cima:before {
 	content: "\f12a";
 }
-.icon-seta_esquerda:before {
+.icon-seta_direita:before {
 	content: "\f12b";
 }
-.icon-tempo:before {
+.icon-seta_esquerda:before {
 	content: "\f12c";
+}
+.icon-tempo:before {
+	content: "\f12d";
 }

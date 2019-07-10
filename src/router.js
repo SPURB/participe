@@ -2,21 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 // Pages
-const Home = () => import(/* webpackChunkName: "home" */'@/views/Home')
-const Anhembi2 = () => import(/* webpackChunkName: "anhembi2" */ '@/views/Anhembi2')
-const ArcoPinheiros = () => import(/* webpackChunkName: "arcopinheiros" */ '@/views/ArcoPinheiros')
 const WifiLivreSP = () => import(/* webpackChunkName: "wifilivresp" */ '@/views/WifiLivreSP')
-const DigilabLivreSP = () => import(/* webpackChunkName: "digilablivresp" */ '@/views/DigilabLivreSP')
-const VidaSegura = () => import(/* webpackChunkName: "vidasegura" */ '@/views/VidaSegura')
-const VilaLeopoldina2 = () => import(/* webpackChunkName: "vilaleopoldina2" */ '@/views/VilaLeopoldina2')
-const PortalPrefeitura = () => import(/* webpackChunkName: "portalprefeitura" */ '@/views/PortalPrefeitura')
-const GovernoAberto = () => import(/* webpackChunkName: "governoaberto" */ '@/views/GovernoAberto')
-const ConcessaoMartinelli = () => import(/* webpackChunkName: "martinelli" */ '@/views/ConcessaoMartinelli')
-const ArcoPinheiros2 = () => import(/* webpackChunkName: "arcopinheiros2" */ '@/views/ArcoPinheiros2')
-const SetorCentral2 = () => import(/* webpackChunkName: "setorcentral2" */ '@/views/SetorCentral2')
-const PlanoCicloviario = () => import(/* webpackChunkName: "planocicloviario" */ '@/views/PlanoCicloviario')
-const ParqueMinhocao = () => import(/* webpackChunkName: "parqueminhocao" */ '@/views/ParqueMinhocao')
-const MinutaArcoPinheiros = () => import(/* webpackChunkName: "minutaarcopinheiros" */ '@/views/MinutaArcoPinheiros')
 
 Vue.use(Router)
 
@@ -26,12 +12,12 @@ export default new Router({
 		{
 			path: '/',
 			name: 'Home',
-			components: { Home }
+			component: () => import(/* webpackChunkName: "home" */'./views/Home.vue')
 		},
 		{
 			path: '/anhembi2',
 			name: 'Anhembi2',
-			components: { Anhembi2 },
+			component: () => import(/* webpackChunkName: "anhembi2" */ '@/views/Anhembi2'),
 			meta: {
 				id: 8
 			}
@@ -39,7 +25,7 @@ export default new Router({
 		{
 			path: '/arco-pinheiros',
 			name: 'ArcoPinheiros',
-			components: { ArcoPinheiros },
+			component: () => import(/* webpackChunkName: "arcopinheiros" */ '@/views/ArcoPinheiros'),
 			meta: {
 				id: 9
 			}
@@ -59,7 +45,7 @@ export default new Router({
 		{
 			path: '/digilab-livre-sp',
 			name: 'DigilabLivreSP',
-			components: { DigilabLivreSP },
+			component: () => import(/* webpackChunkName: "digilablivresp" */ '@/views/DigilabLivreSP'),
 			meta: {
 				id: 35
 			}
@@ -67,7 +53,7 @@ export default new Router({
 		{
 			path: '/vida-segura',
 			name: 'VidaSegura',
-			components: { VidaSegura },
+			component: () => import(/* webpackChunkName: "vidasegura" */ '@/views/VidaSegura'),
 			meta: {
 				id: 36
 			}
@@ -75,7 +61,7 @@ export default new Router({
 		{
 			path: '/vila-leopoldina-projeto-de-lei',
 			name: 'VilaLeopoldina2',
-			components: { VilaLeopoldina2 },
+			component: () => import(/* webpackChunkName: "vilaleopoldina2" */ '@/views/VilaLeopoldina2'),
 			meta: {
 				id: 37
 			}
@@ -83,7 +69,7 @@ export default new Router({
 		{
 			path: '/portal-prefeitura',
 			name: 'PortalPrefeitura',
-			components: { PortalPrefeitura },
+			component: () => import(/* webpackChunkName: "portalprefeitura" */ '@/views/PortalPrefeitura'),
 			meta: {
 				id: 38
 			}
@@ -91,7 +77,7 @@ export default new Router({
 		{
 			path: '/governo-aberto',
 			name: 'GovernoAberto',
-			components: { GovernoAberto },
+			component: () => import(/* webpackChunkName: "governoaberto" */ '@/views/GovernoAberto'),
 			meta: {
 				id: 39
 			}
@@ -99,7 +85,7 @@ export default new Router({
 		{
 			path: '/concessao-martinelli',
 			name: 'ConcessaoMartinelli',
-			components: { ConcessaoMartinelli },
+			component: () => import(/* webpackChunkName: "martinelli" */ '@/views/ConcessaoMartinelli'),
 			meta: {
 				id: 40
 			}
@@ -107,7 +93,7 @@ export default new Router({
 		{
 			path: '/arco-pinheiros-2',
 			name: 'ArcoPinheiros2',
-			components: { ArcoPinheiros2 },
+			component: () => import(/* webpackChunkName: "arcopinheiros2" */ '@/views/ArcoPinheiros2'),
 			meta: {
 				id: 41
 			}
@@ -115,7 +101,7 @@ export default new Router({
 		{
 			path: '/plano-cicloviario',
 			name: 'PlanoCicloviario',
-			components: { PlanoCicloviario },
+			component: () => import(/* webpackChunkName: "planocicloviario" */ '@/views/PlanoCicloviario'),
 			meta: {
 				id: 42
 			}
@@ -123,7 +109,7 @@ export default new Router({
 		{
 			path: '/setor-central-2',
 			name: 'SetorCentral2',
-			components: { SetorCentral2 },
+			component: () => import(/* webpackChunkName: "setorcentral2" */ '@/views/SetorCentral2'),
 			meta: {
 				id: 43
 			}
@@ -131,7 +117,8 @@ export default new Router({
 		{
 			path: '/parque-minhocao',
 			name: 'ParqueMinhocao',
-			components: { ParqueMinhocao },
+			// components: { ParqueMinhocao },
+			component: () => import(/* webpackChunkName: "parqueminhocao" */ '@/views/ParqueMinhocao'),
 			meta: {
 				id: 44
 			}
@@ -139,23 +126,10 @@ export default new Router({
 		{
 			path: '/minuta-arco-pinheiros',
 			name: 'MinutaArcoPinheiros',
-			components: { MinutaArcoPinheiros },
+			component: () => import(/* webpackChunkName: "minutaarcopinheiros" */ '@/views/MinutaArcoPinheiros'),
 			meta: {
 				id: 45
 			}
 		}
-
-		/*
-	 * Modelo para novas consultas
-	/*
-		{
-			path: '/nome-da-consulta',
-			name: 'NomeDaConsulta',
-			components: { NomeDaConsulta },
-			meta: {
-				id: #
-			}
-		},
-		*/
 	]
 })

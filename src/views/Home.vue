@@ -92,8 +92,11 @@ export default {
 	name: 'Home',
 	mixins: [ consultasMutations ],
 	computed: {
-		consultas () { return this.$store.state.consultas.filter(consulta => !parseInt(consulta.ativo)) },
-		consultasAbertas () { return Array.from(this.$store.state.consultas).sort(this.parametrosDestaque).filter(consulta => parseInt(consulta.ativo)) },
+		consultas () { return this.$store.state.consultas === undefined ? false : this.$store.state.consultas.filter(consulta => !parseInt(consulta.ativo)) },
+		consultasAbertas () {
+			if (this.$store.state.consultas === undefined) { return }
+			return Array.from(this.$store.state.consultas).sort(this.parametrosDestaque).filter(consulta => parseInt(consulta.ativo))
+		},
 		basePathImgSrc () { return this.$store.getters.basePath + 'arquivos/capas/' },
 		fetching () { return this.$store.state.fetching },
 		isIE () {
@@ -120,21 +123,22 @@ export default {
 			else throw new Error('A rota ' + hash + ' não existe. Checar url.')
 		},
 		parametrosDestaque (a, b) {
-			if (this.tempoRestante(a.dataFinal) < this.tempoRestante(b.dataFinal)) {
-				if (this.tempoPublicado(a.dataCadastro) > this.tempoPublicado(b.dataCadastro)) {
-					return -1
-				} else {
-					return 1
-				}
-			} else if (this.tempoRestante(a.dataFinal) > this.tempoRestante(b.dataFinal)) {
-				if (this.tempoPublicado(a.dataCadastro) < this.tempoPublicado(b.dataCadastro)) {
-					return 1
-				} else {
-					return -1
-				}
-			} else {
-				return 1
-			}
+			return this.tempoRestante(a.dataFinal) < this.tempoRestante(b.dataFinal) ? -1 : 1
+			// if (this.tempoRestante(a.dataFinal) < this.tempoRestante(b.dataFinal)) {
+			// 	if (this.tempoPublicado(a.dataCadastro) > this.tempoPublicado(b.dataCadastro)) {
+			// 		return -1
+			// 	} else {
+			// 		return 1
+			// 	}
+			// } else if (this.tempoRestante(a.dataFinal) > this.tempoRestante(b.dataFinal)) {
+			// 	if (this.tempoPublicado(a.dataCadastro) < this.tempoPublicado(b.dataCadastro)) {
+			// 		return 1
+			// 	} else {
+			// 		return -1
+			// 	}
+			// } else {
+			// 	return 1
+			// }
 		},
 		imgset (nomeStr, isAtiva) {
 			let nome = this.basePathImgSrc + nomeStr.slice(0, nomeStr.lastIndexOf('.'))

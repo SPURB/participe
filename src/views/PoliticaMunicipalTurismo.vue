@@ -29,6 +29,7 @@
 			<p>
 				O Caderno de Propostas validado será o documento norteador da 1ª Conferência de Políticas de Turismo da Cidade de São Paulo, a ser realizada em 16 e 17 de agosto de 2019.
 			</p>
+			<Comments :attr="{id:commentId(true), context:'Resumo Executivo'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section>
@@ -79,7 +80,7 @@
 			<p>
 				Convidamos a todos ao debate democrático de ideias e à elaboração e priorização de propostas que contribuam para o incremento e aprimoramento do Turismo na Cidade de São Paulo.
 			</p>
-
+			<Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section>
@@ -117,11 +118,11 @@
 			<p>
 				<b>As indicações das dezenas de pessoas que participaram desse processo foram agrupadas em temas semelhantes e estão detalhadas a seguir, com o conteúdo levantado na etapa de elaboração de diagnóstico do plano.</b>
 			</p>
+			<Comments :attr="{id:commentId(), context:'CAPÍTULO 2'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section>
 		 	<h3 class="titulo" indent="2">2.1 Destaques Do Turismo Da Cidade De São Paulo </h3>
-		 	<CommentsContext :id="id" :context="'ITEM item.subitem'">
 		 		<p>
 		 			São Paulo já é o principal destino turístico do país, por isso, entender o que motiva esses visitantes e quais são os principais destaques da cidade que devem ser fortalecidos e divulgados é fundamental para definição de uma política de turismo.  Nos workshops, foram identificados dezenas de destaques, agrupados em oito grupos detalhados a seguir: 
 		 		</p>
@@ -215,12 +216,11 @@
 		 		<p>
 		 			Se por um lado, toda essa variedade faz de São Paulo uma cidade surpreendente e rica em boas experiências, por outro, há desafios a superar. 
 		 		</p>
-		 	</CommentsContext>
+		 		<Comments :attr="{id:commentId(), context:'CAPÍTULO 2.1'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section>
 		 	<h3 class="titulo" indent="2">2.2. DESAFIOS PARA O TURISMO DA CIDADE DE SÃO PAULO</h3>
-		 	<CommentsContext :id="id" :context="'ITEM item.subitem'">
 		 		<p>
 		 			Apesar dos destaques e de todo potencial atrelado a eles, para os participantes dos workshops ainda há uma série de desafios para o aprimoramento do turismo na cidade de São Paulo, a fim de alcançarmos os níveis de excelência almejados.
 		 		</p>
@@ -297,12 +297,10 @@
 		 		<p>
 		 			Talvez por sua característica multifacetada, haja dificuldade em se estabelecer uma marca forte que identifique a cidade. A diversidade marcante de São Paulo é difícil de ser traduzida visualmente em um símbolo, necessário para o reconhecimento imediato de uma São Paulo turística. E embora o município possua centenas de atrativos e milhares de serviços turísticos, percebe-se uma falta de divulgação eficiente destes e de integração entre os sistemas que compõem o turismo, de forma a facilitar o consumo da cidade. O próprio morador desconhece o que São Paulo tem de melhor, uma vez que há pouca circulação da população fora de seu entorno habitual. Além de divulgar os atrativos e serviços ao visitante, é preciso fazer com que o residente conheça a cidade em que vive, a reconheça como sua, como seu patrimônio, pois o maior multiplicador da informação será o próprio morador.
 		 		</p>
-		 		
-		 	</CommentsContext>
+		 		<Comments :attr="{id:commentId(), context:'CAPÍTULO 2.2'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 		<section>
 		 	<h3 class="titulo" indent="1">CAPÍTULO 3. Propostas</h3>
-		 	<CommentsContext :id="id" :context="'ITEM item.subitem'">
 		 		<p>
 		 			A análise dos desafios permitiu, de forma bastante resumida, desenhar o cenário atual que queremos mudar. Partindo dele e considerando as propostas sugeridas no processo de elaboração do plano, foram estabelecidos macroprogramas, que são, em síntese, o agrupamento das propostas com objetivos primários comuns, que quando realizadas, tendem a modificar essa realidade. Assim, as diversas propostas recebidas dos workshops e encontros com instituições de ensino viraram, após análise prévia de nossa equipe, 136 propostas sistematizadas nesta Consulta Pública, subdivididas nos macroprogramas abaixo:
 		 		</p>
@@ -311,13 +309,11 @@
 		 			<img :src="fileSrc('img7_macroprogramagas.jpg')" alt="Macroprogramas e número de propostas em cada um" style="height: auto; width: 100%;">
 		 			<figcaption>Figura 4. Macroprogramas e número de propostas em cada um.</figcaption>
 		 		</figure>
-
-		 	</CommentsContext>
+		 		<Comments :attr="{id:commentId(), context:'CAPÍTULO 3'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section>
 		 	<h3 class="titulo" indent="2">3.1. Macroprograma 1 - Articulação e Fortalecimento Institucional</h3>
-		 	<CommentsContext :id="id" :context="'ITEM item.subitem'">
 		 		<p>
 		 			Conforme explicação contida na apresentação desta consulta, a Política Pública de Turismo na cidade de São Paulo é de atribuição da Secretaria Municipal de Turismo – SMTUR, que possui, dentre as suas funções, o papel de formular e executar a política, a promoção e a exploração do turismo e atividades afins no município. Subordinada à SMTUR encontra-se a São Paulo Turismo – SPTuris, empresa oficial de turismo e eventos do município, que executa as diversas ações públicas do turismo da cidade demandadas pela Secretaria. 
 		 		</p>
@@ -417,12 +413,11 @@
 		 				</li>
 		 			</ol>
 		 		</p>
-		 	</CommentsContext>
+	 		<Comments :attr="{id:commentId(), context:'CAPÍTULO 3.1'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section>
 		 	<h3 class="titulo" indent="2">3.2 Macroprograma 2 - Inteligência de Mercado no Turismo</h3>
-		 	<CommentsContext :id="id" :context="'ITEM item.subitem'">
 		 		<p>
 		 			A evolução da tecnologia e as significativas transformações decorrentes mudaram a forma de como a coleta, monitoramento e análise dos dados são feitos. Hoje, destinos turísticos inteligentes utilizam-se de sistemas de inteligência de mercado, tanto para captação de informações da demanda turística, quanto para análise e melhor aproveitamento da oferta.
 		 		</p>
@@ -487,12 +482,11 @@
 		 				</li>
 		 			</ol>
 		 		</p>
-		 	</CommentsContext>
+		 	<Comments :attr="{id:commentId(), context:'CAPÍTULO 3.2'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section>
-		 	<h3 class="titulo" indent="2">3.3. Macrorograma 3 – Calendário de Eventos Inteligente</h3>
-		 	<CommentsContext :id="id" :context="'ITEM item.subitem'">
+		 	<h3 class="titulo" indent="2">3.3. Macroprograma 3 – Calendário de Eventos Inteligente</h3>
 		 		<p>
 		 			São Paulo é uma referência na realização de eventos. Em 2018, por exemplo, mais de 2 mil foram cadastrados no calendário do Visite São Paulo - entidade sem fins lucrativos, que busca ampliar o volume de negócios e o mercado de consumo na cidade, por meio da atividade turística, apoiando a melhoria dos serviços e atendimento aos visitantes.
 		 		</p>
@@ -588,12 +582,11 @@
 		 				</li>
 		 			</ol>
 		 		</p>
-		 	</CommentsContext>
+		 	<Comments :attr="{id:commentId(), context:'CAPÍTULO 3.3'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section>
 		 	<h3 class="titulo" indent="2">3.4. Macroprograma 4 – Formatação de Produtos</h3>
-		 	<CommentsContext :id="id" :context="'ITEM item.subitem'">
 		 		<p>
 		 			São Paulo é a maior metrópole brasileira e a quinta maior do mundo. São 12,18 milhões de habitantes em uma área de 1.521 km². A diversidade cultural, fruto dos processos migratórios que compuseram São Paulo, conferem à cidade características únicas, que despertam o interesse no turista. A concentração de certos povos em determinadas áreas transforma bairros em regiões turísticas, uma vez que oferece gastronomia, produtos, serviços e até mesmo arquitetura diferenciada. A Liberdade, o Bixiga e o Bom Retiro são bons exemplos. 
 		 		</p>
@@ -778,11 +771,10 @@
 		 				</li>
 		 			</ol>
 		 		</p>
-		 	</CommentsContext>
+		 	<Comments :attr="{id:commentId(), context:'CAPÍTULO 3.4'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 		<section>
 		 	<h3 class="titulo" indent="2">3.5. Macroprograma 5 – Aprimoramento na Experiência do Turista</h3>
-		 	<CommentsContext :id="id" :context="'ITEM item.subitem'">
 		 		<p>
 		 			A jornada do turista é ampla e inicia bem antes da realização da viagem, na fase do planejamento e compra, na pesquisa de destinos, paisagens, atrativos e serviços, na decisão por este ou aquele, visando suprir suas necessidades (que dependem não só da oferta, mas também e, principalmente, de suas características e desejos); continua quando visita os atrativos, aproveita da programação cultural e usufrui de todos os serviços e da infraestrutura básica, de apoio ou turística que a localidade dispõe, esperando encontrar, no mínimo, aquilo que descobriu em suas pesquisas; e finaliza bem depois do término da viagem, quando divulga e compartilha tudo o que viveu. Assim, a experiência presente em toda a jornada do turista precisa ser de qualidade.
 		 		</p>
@@ -904,11 +896,10 @@
 		 				</li>
 		 			</ol>
 		 		</p>
-		 	</CommentsContext>
+		 	<Comments :attr="{id:commentId(), context:'CAPÍTULO 3.5'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 		<section>
 		 	<h3 class="titulo" indent="2">3.6. Macroprograma 6 – Promoção Turística e Apoio à Comercialização</h3>
-		 	<CommentsContext :id="id" :context="'ITEM item.subitem'">
 		 		<p>
 		 			A capital paulista é o maior destino turístico do país em volume de turistas. Segundo projeções da FIPE, a cidade recebeu cerca de 15,7 milhões de turistas nacionais e internacionais em 2018. São Paulo é uma metrópole que possui vocação de cidade global de negócios, grandes eventos e pela sua diversidade de oferta cultural, gastronômica, vida noturna, reconhecidas e algumas delas até mesmo premiadas. 
 		 		</p>
@@ -1034,7 +1025,7 @@
 		 				</li>
 		 			</ol>
 		 		</p>
-		 	</CommentsContext>
+		 	<Comments :attr="{id:commentId(), context:'CAPÍTULO 3.6'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 	</div>
 </template>
@@ -1042,6 +1033,8 @@
 <script>
 import PageTop from '@/components/PageTop'
 import Indice from '@/components/Indice'
+import Comments from '@/components/Comments'
+import CommentsLoader from '@/components/CommentsLoader'
 // import Apoio from '@/components/Apoio'
 import { consultasCommons } from '@/mixins/consultasCommons'
 
@@ -1062,7 +1055,9 @@ export default {
 	},
 	components: {
 		PageTop,
-		Indice
+		Indice,
+		Comments,
+		CommentsLoader
 		// Apoio
 	},
 	mixins: [ consultasCommons ],

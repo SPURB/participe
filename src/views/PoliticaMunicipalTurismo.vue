@@ -671,6 +671,7 @@
 						<li>
 							Realizar estudo que permita mapear o turismo de São Paulo posicionando os segmentos nas regiões onde ocorrem com mais intensidade.
 						</li>
+						<Comments :attr="{id:commentId(), context:'CAPÍTULO 3.3'}" v-if="estaConsulta.ativo == 1"></Comments>						
 						<br>
 						<u>EIXO: Triângulo SP</u>
 						<li>
@@ -843,6 +844,7 @@
 						<li>
 							Ampliar pontos de Wi-FI gratuito em áreas turísticas.
 						</li>
+						<Comments :attr="{id:commentId(), context:'CAPÍTULO 3.5'}" v-if="estaConsulta.ativo == 1"></Comments>
 						<br>
 
 						<u>EIXO: Sinalização Turística</u><br>

@@ -10,7 +10,7 @@
 		<!-- Decreto Nº 56.901 inclua este componente caso seja um PIU -->
 
 		<section>
-			<!-- <h2 class="titulo" indent="1">Resumo Executivo</h2> -->
+			<h2 class="titulo" indent="1"><!-- Resumo Executivo --></h2>
 			<p>
 				Em 2019 a Prefeitura de São Paulo, por meio da Secretaria Municipal de Turismo - SMTur, deu início ao processo de formulação do novo Plano de Turismo Municipal – PLATUM. O Plano é o principal instrumento para a formulação da Política Municipal de Turismo da cidade de São Paulo e sua revisão é uma exigência da Lei nº 11.198/92.
 			</p>
@@ -29,7 +29,7 @@
 			<p>
 				O Caderno de Propostas validado será o documento norteador da 1ª Conferência de Políticas de Turismo da Cidade de São Paulo, a ser realizada em 16 e 17 de agosto de 2019.
 			</p>
-			<Comments :attr="{id:commentId(true), context:'Resumo Executivo'}" v-if="estaConsulta.ativo == 1"></Comments>
+			<!-- <Comments :attr="{id:commentId(true), context:'Resumo Executivo'}" v-if="estaConsulta.ativo == 1"></Comments> -->
 		</section>
 
 		<section>
@@ -303,7 +303,7 @@
 					<img :src="fileSrc('img7_macroprogramas.jpg')" alt="Macroprogramas e número de propostas em cada um" style="height: auto; width: 100%;">
 					<figcaption>Figura 4. Macroprogramas e número de propostas em cada um.</figcaption>
 				</figure>
-				<Comments :attr="{id:commentId(), context:'CAPÍTULO 3'}" v-if="estaConsulta.ativo == 1"></Comments>
+				<Comments :attr="{id:commentId(true), context:'CAPÍTULO 3'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section>
@@ -398,7 +398,9 @@
 						</li>
 						<li>
 							Criar carreiras e cargos específicos para área de Turismo como estratégia de qualificar a atuação da Secretaria e fortalecer a institucionalização da Política Municipal de Turismo.
-						</li><br>
+						</li>
+						<Comments :attr="{id:commentId(), context:'EIXO: Regulamentação'}" v-if="estaConsulta.ativo == 1"></Comments>
+						<br>
 
 						<u>EIXO: Relacionamento/Conexão</u><br><br>
 						<li>
@@ -413,7 +415,7 @@
 						<Comments :attr="{id:commentId(), context:'EIXO: Regulamentação'}" v-if="estaConsulta.ativo == 1"></Comments>
 					</ol>
 				</p>
-			<Comments :attr="{id:commentId(), context:'CAPÍTULO 3.1'}" v-if="estaConsulta.ativo == 1"></Comments>
+			<!-- <Comments :attr="{id:commentId(), context:'CAPÍTULO 3.1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
 		</section>
 
 		<section>
@@ -906,7 +908,7 @@
 					</ol>
 
 				</p>
-			<Comments :attr="{id:commentId(), context:'CAPÍTULO 3.5'}" v-if="estaConsulta.ativo == 1"></Comments>
+			<!-- <Comments :attr="{id:commentId(), context:'CAPÍTULO 3.5'}" v-if="estaConsulta.ativo == 1"></Comments> -->
 		</section>
 		<section>
 			<h3 class="titulo" indent="2">3.6. Macroprograma 6 – Promoção Turística e Apoio à Comercialização</h3>

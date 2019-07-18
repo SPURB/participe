@@ -1,4 +1,4 @@
-.DS_Store
+﻿.DS_Store
 node_modules
 /dist
 
@@ -26,3 +26,7 @@ yarn-error.log*
 # Configuração de api (apiPath)
 apiconfig.json
 
+
+
+# Package lock
+package-lock.json

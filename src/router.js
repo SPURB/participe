@@ -130,6 +130,14 @@ export default new Router({
 			meta: {
 				id: 45
 			}
+		},
+		{
+			path: '/politica-municipal-turismo',
+			name: 'PoliticaMunicipalTurismo',
+			component: () => import(/* webpackChunkName: "politicamunicipalturismo" */ '@/views/PoliticaMunicipalTurismo'),
+			meta: {
+				id: 46
+			}
 		}
 	]
 })

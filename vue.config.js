@@ -26,7 +26,8 @@ module.exports = {
 				'/plano-cicloviario',
 				'/setor-central-2',
 				'/parque-minhocao',
-				'/minuta-arco-pinheiros'
+				'/minuta-arco-pinheiros',
+				'/politica-municipal-turismo'
 			],
 			useRenderEvent: true,
 			headless: false,

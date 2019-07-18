@@ -24,6 +24,7 @@ export default {
 		let app = this
 		if (window.matchMedia('(min-width: 1200px)').matches) {
 			window.addEventListener('scroll', function () {
+				if (app.$refs.lista.style === undefined) { return }
 				if (window.scrollY > window.innerHeight / 2) {
 					app.$refs.lista.style.opacity = '1'
 				} else if (window.scrollY < window.innerHeight / 2) {

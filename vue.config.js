@@ -27,7 +27,8 @@ module.exports = {
 				'/setor-central-2',
 				'/parque-minhocao',
 				'/minuta-arco-pinheiros',
-				'/politica-municipal-turismo'
+				'/politica-municipal-turismo',
+				'/pdp-ibirapuera'
 			],
 			useRenderEvent: true,
 			headless: false,

@@ -138,6 +138,14 @@ export default new Router({
 			meta: {
 				id: 46
 			}
+		},
+		{
+			path: '/pdp-ibirapuera',
+			name: 'PlanoDiretorParqueIbirapuera',
+			component: () => import(/* webpackChunkName: "planodiretorparqueibirapuera" */ '@/views/PlanoDiretorParqueIbirapuera'),
+			meta: {
+				id: 47
+			}
 		}
 	]
 })

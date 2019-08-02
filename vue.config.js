@@ -28,7 +28,12 @@ module.exports = {
 				'/parque-minhocao',
 				'/minuta-arco-pinheiros',
 				'/politica-municipal-turismo',
-				'/pdp-ibirapuera'
+				'/pdp-ibirapuera',
+				'/parque-lajeado',
+				'/parque-dos-eucaliptos',
+				'/parque-jacinto-alberto',
+				'/parque-jardim-felicidade',
+				'/parque-brigadeiro-faria-lima'
 			],
 			useRenderEvent: true,
 			headless: false,

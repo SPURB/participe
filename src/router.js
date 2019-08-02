@@ -146,6 +146,46 @@ export default new Router({
 			meta: {
 				id: 47
 			}
+		},
+		{
+			path: '/parque-lajeado',
+			name: 'ParqueLajeado',
+			component: () => import(/* webpackChunkName: "ParqueLajeado" */ '@/views/ParqueLajeado'),
+			meta: {
+				id: 48
+			}
+		},
+		{
+			path: '/parque-dos-eucaliptos',
+			name: 'ParqueDosEucaliptos',
+			component: () => import(/* webpackChunkName: "ParqueDosEucaliptos" */ '@/views/ParqueDosEucaliptos'),
+			meta: {
+				id: 49
+			}
+		},
+		{
+			path: '/parque-jacinto-alberto',
+			name: 'ParqueJacintoAlberto',
+			component: () => import(/* webpackChunkName: "ParqueJacintoAlberto" */ '@/views/ParqueJacintoAlberto'),
+			meta: {
+				id: 50
+			}
+		},
+		{
+			path: '/parque-jardim-felicidade',
+			name: 'ParqueJardimFelicidade',
+			component: () => import(/* webpackChunkName: "ParqueJardimFelicidade" */ '@/views/ParqueJardimFelicidade'),
+			meta: {
+				id: 51
+			}
+		},
+		{
+			path: '/parque-brigadeiro-faria-lima',
+			name: 'ParqueBrigadeiroFariaLima',
+			component: () => import(/* webpackChunkName: "ParqueBrigadeiroFariaLima" */ '@/views/ParqueBrigadeiroFariaLima'),
+			meta: {
+				id: 52
+			}
 		}
 	]
 })

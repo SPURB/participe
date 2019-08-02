@@ -9,7 +9,9 @@ export const consultasCommons = {
 		this.$store.commit('SET_ROUTE_ID', this.$route.meta.id)
 		this.listaErros()
 	},
-	updated () { this.alteraIndice() },
+	updated () {
+		this.alteraIndice()
+	},
 	methods: {
 		scrollToRef (element) {
 			let documentEl = this.$refs[element]
@@ -58,9 +60,6 @@ export const consultasCommons = {
 				}
 			})
 			return titulosLimpo
-		},
-		setaBaixo () {
-			window.scrollTo({ top: Math.round(window.innerHeight), behavior: 'smooth' })
 		},
 		alteraIndice () {
 			let app = this

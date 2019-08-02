@@ -27,7 +27,13 @@ export default {
 	padding: 1rem 2rem;
 	background: $cinza-3;
 	max-width: 100%;
-	p { margin: 0; }
+	p {
+		font-family: inherit;
+		font-size: inherit;
+		margin: 0;
+		padding: inherit;
+		max-width: unset;
+	}
 	&.error {
 		bottom: 0;
 		width: 100%;

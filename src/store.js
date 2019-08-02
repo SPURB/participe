@@ -21,7 +21,8 @@ const store = new Vuex.Store({
 		commentsLoaded: false,
 		fetching: true,
 		routeId: undefined,
-		toPrint: false
+		toPrint: false,
+		comments: []
 	},
 	getters: {
 		basePath () { return process.env.VUE_APP_ASSETS_BASE_URL },
@@ -36,12 +37,17 @@ const store = new Vuex.Store({
 		FETCHING_STATE (state, fetchState) { state.fetching = fetchState },
 		FETCHING_ERROR (state, errorState) { state.errors = errorState },
 		FETCH_CONSULTAS (state, consultas) {
-			state.consultas = consultas.sort(function (a, b) {
-				return new Date(b.dataCadastro) - new Date(a.dataCadastro)
-			})
+			state.consultas = consultas
+				.sort(function (a, b) {
+					return new Date(b.dataCadastro) - new Date(a.dataCadastro)
+				})
 				.sort(function (a, b) {
 					if (a.ativo < b.ativo) { return 1 }
 					if (a.ativo > b.ativo) { return -1 }
+				})
+				.map(consulta => {
+					consulta.nContribuicoes = parseInt(consulta.nContribuicoes)
+					return consulta
 				})
 		},
 		FETCH_CONSULTAS_DECODE (state, consultas) {
@@ -61,6 +67,9 @@ const store = new Vuex.Store({
 		TOGGLE_APOIO (state) {
 			state.apoioToggle = !state.apoioToggle
 			state.luzApaga = !state.luzApaga
+		},
+		SET_COMMENTS (state, arr) {
+			state.comments = arr
 		}
 	},
 	actions: {

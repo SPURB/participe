@@ -2,7 +2,7 @@
 	<div class="home">
 		<main id="listaProjetos" :class="{ load: !fetching }">
 			<section class="abertas">
-				<ul ref="consultas">
+				<ul ref="consultas" :class="{ impar: !isEven(consultasAbertas.length) }">
 					<template v-for="(consulta, index) in consultasAbertas">
 						<li v-if="parseInt(consulta.ativo) === 1" class="card" @click="redirect(setUrlByType(consulta.urlConsulta))" :key="index">
 							<div class="img" :style="{ background: 'url(' + placeholderSrc(consulta.urlCapa) + ')', backgroundSize: 'cover', backgroundColor: '#BDBDBD' }">
@@ -30,7 +30,7 @@
 									</tr>
 									<tr>
 										<td><i class="icon-contribuicao icon"><span>contribuicao</span></i></td>
-										<td title="Número de contribuições recolhidas até o momento">{{ consulta.nContribuicoes }} contribuições</td>
+										<td title="Número de contribuições recolhidas até o momento">{{ totalContribuicoes(consulta) }} contribuições</td>
 									</tr>
 								</table>
 								<p class="intro">
@@ -56,7 +56,6 @@
 				<ul ref="consultasEncerradas">
 					<template v-for="(consulta, index) in consultas">
 						<li v-if="!parseInt(consulta.ativo)" @click="redirect(setUrlByType(consulta.urlConsulta))" :key="index">
-
 							<div class="sq" :style="{ background: 'url(' + placeholderSrc(consulta.urlCapa) + ')', backgroundSize: 'cover', backgroundColor: '#BDBDBD' }">
 								<img v-if="!isIE" v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, consulta.urlCapa, consulta.ativo)" :alt="consulta.nomePublico">
 								<div v-if="isIE" class="imgIE" :style="{ backgroundImage: 'url(' + imgset(consulta.urlCapa, consulta.ativo) + ')', backgroundSize: 'cover', backgroundPosition: 'center center', height: '100%', width: '100%' }"></div>
@@ -71,7 +70,7 @@
 								</tr>
 								<tr>
 									<td><i class="icon-contribuicao icon"><span>contribuicao</span></i></td>
-									<td>{{ consulta.nContribuicoes }} contribuições</td>
+									<td>{{ totalContribuicoes(consulta) }} contribuições</td>
 								</tr>
 								<tr v-if="consulta.urlDevolutiva">
 									<td><i class="icon-responder icon"><span>responder</span></i></td>
@@ -87,13 +86,20 @@
 </template>
 
 <script>
+import api from '@/utils/api'
+import apiWpCustom from '@/utils/apiWpCustom'
 import { consultasMutations } from '@/mixins/consultasMutations'
 export default {
 	name: 'Home',
 	mixins: [ consultasMutations ],
+	data () {
+		return {
+			idsNoticias: []
+		}
+	},
 	computed: {
 		consultas () { return this.$store.state.consultas.filter(consulta => !parseInt(consulta.ativo)) },
-		consultasAbertas () { return Array.from(this.$store.state.consultas).sort(this.parametrosDestaque).filter(consulta => parseInt(consulta.ativo)) },
+		consultasAbertas () { return Array.from(this.$store.state.consultas).sort(this.parametrosDestaque).filter(consulta => parseInt(consulta.ativo)).slice(0, 2) },
 		basePathImgSrc () { return this.$store.getters.basePath + 'arquivos/capas/' },
 		fetching () { return this.$store.state.fetching },
 		isIE () {
@@ -110,6 +116,12 @@ export default {
 	},
 	mounted () {
 		if (window.location.hash !== '') this.checkOldRoutesWithHashes(window.location.hash)// redirect if url contain old patter. ex -> /#/anhembi2
+		this.getNoticiasIds()
+	},
+	watch: {
+		idsNoticias (arr) {
+			if (arr.length) this.getNCommentsNoticias()
+		}
 	},
 	methods: {
 		checkOldRoutesWithHashes (hash) {
@@ -133,7 +145,7 @@ export default {
 					return -1
 				}
 			} else {
-				return 1
+				return 0
 			}
 		},
 		imgset (nomeStr, isAtiva) {
@@ -188,6 +200,39 @@ export default {
 		toggleListDisplay (event) {
 			this.$refs.consultasEncerradas.classList.toggle('lista')
 			this.$refs.toggleListDisplayBt.classList.toggle('lista')
+		},
+		getNoticiasIds () {
+			apiWpCustom.get(`consultasNoticias`)
+				.then(response => { return response.data })
+				.then(response => { response.map(obj => { this.idsNoticias.push(obj) }) })
+				.catch(error => console.error(error))
+		},
+		getNCommentsNoticias () {
+			let idsString = ''
+			this.idsNoticias.map(obj => {
+				idsString += obj.idNoticia.toString() + ','
+			})
+			idsString = idsString.slice(0, -1)
+			api.get(`wp-custom/v1/?noticias-comments-counter=${idsString}`)
+				.then(response => this.idsNoticias.map(noticia => {
+					noticia.commentcount = response.data.filter(obj => {
+						return parseInt(obj.idnoticia) === parseInt(noticia.idNoticia)
+					})
+					noticia.commentcount = parseInt(noticia.commentcount[0].commentcount)
+					return noticia
+				}))
+				.catch(error => console.error(error))
+		},
+		totalContribuicoes (consulta) {
+			let int = parseInt(consulta.nContribuicoes)
+			let ext = 0
+			let extobj = this.idsNoticias.filter(obj => { return obj.idConsulta === consulta.idConsulta })
+			extobj.map(index => { ext += index.commentcount })
+			return int + ext
+		},
+		isEven (num) {
+			if (num % 2 === 0) return true
+			else return false
 		}
 	}
 }
@@ -229,9 +274,6 @@ export default {
 					vertical-align: top;
 					cursor: pointer;
 					border-radius: 4px;
-					&:nth-child(2n) {
-						margin-right: 2rem;
-					}
 					.img {
 						margin-bottom: 1rem;
 						height: 330px;
@@ -332,7 +374,18 @@ export default {
 							}
 						}
 					}
-					&:first-child {
+					&:active {
+						background-color: $vermelho-tr;
+						outline: 0.5rem solid $vermelho-tr;
+						-moz-outline-radius: 0.75rem;
+						border-radius: 0;
+					}
+				}
+				&.impar {
+					li.card:nth-child(2n) {
+						margin-right: 2rem;
+					}
+					li.card:first-child {
 						width: 100%;
 						.img {
 							display: inline-block;
@@ -370,12 +423,6 @@ export default {
 								line-height: 1.6;
 							}
 						}
-					}
-					&:active {
-						background-color: $vermelho-tr;
-						outline: 0.5rem solid $vermelho-tr;
-						-moz-outline-radius: 0.75rem;
-						border-radius: 0;
 					}
 				}
 			}

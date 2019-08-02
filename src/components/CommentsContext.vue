@@ -82,7 +82,6 @@
 <script>
 import api from '@/utils/api'
 import { commentsCommons } from '@/mixins/commentsCommons'
-
 export default {
 	name: 'CommentsContext',
 	props: {
@@ -107,7 +106,6 @@ export default {
 			form_context: null
 		}
 	},
-
 	computed: {
 		consultaAtiva () {
 			if (this.$store.getters.consultasClicada !== undefined) {
@@ -120,7 +118,6 @@ export default {
 			return (this.abreComentario && this.consultaAtiva)
 		}
 	},
-
 	methods: {
 		send () {
 			let app = this
@@ -152,12 +149,10 @@ export default {
 		}
 	}
 }
-
 </script>
 
 <style lang="scss" scoped>
 @import '../variables';
-
 .comentavel {
 	margin:  0 auto;
 	max-width: 700px;
@@ -166,14 +161,12 @@ export default {
 	transition: all ease-in-out .2s;
 	position: relative;
 	z-index: 0;
-
 	.consulta-encerrada{
 		display: none;
 		background-color:$vermelho;
 		padding: 1em;
 		color: #FFF
 	}
-
 	&:hover,
 	&.aberto {
 		background: $cinza-3;
@@ -185,12 +178,10 @@ export default {
 			display: block
 		}
 	}
-
 	& > div {
 		display: grid;
 		grid-gap: 10px;
 		grid-template-columns: 30px 1fr;
-
 		.icon-counter{
 			display: flex;
 			flex-direction: column;
@@ -211,7 +202,6 @@ export default {
 				color: $preto
 			}
 		};
-
 		&.sucesso {
 			margin-bottom: 1em;
 			&::after {
@@ -225,13 +215,11 @@ export default {
 			}
 		}
 	}
-
 	& div.content-comentario{
 		p, ol, ul {
 			padding-left: 0
 		}
 	}
-
 	form {
 		background: $cinza-3;
 		display: block;
@@ -241,17 +229,14 @@ export default {
 		&.form_display-leave-to{
 			height: 0;
 		}
-
 		.form_title{
 			border-top: solid 1px $cinza-1;
 			padding-top: 1em
 		}
-
 		fieldset {
 			margin: 0;
 			padding: 0;
 			border: 0;
-
 			label {
 				display: block;
 				font-size: initial;
@@ -259,7 +244,6 @@ export default {
 				height: 30px;
 				line-height: 30px;
 			};
-
 			input, textarea {
 				display: block;
 				width: 100%;
@@ -274,43 +258,34 @@ export default {
 				box-shadow: inset 0 2px 2px rgba(0, 0, 0, .08);
 				margin-bottom: .8rem;
 				transition: all ease-in .1s;
-
 				&:focus { border-color: $vermelho; };
-
 				&.inputErro {
 					background: $vermelho;
 					color: #FFF;
 				};
-
 				&.inputAcerto { color: $verde; };
 			};
-
 			textarea {
 				height: 12rem;
 				line-height: 160%;
 				padding: 4px 8px;
 			};
 		};
-
 		div.action {
 			margin-top: 1rem;
 			height: 42px;
 			position: relative;
 			text-align: right;
-
 			svg {
 				position: absolute;
 				right: 0;
 				top: 0;
 				animation: surge ease-in .48s;
-
 				@keyframes surge {
 					from { opacity: 0 }
 					to { opacity: 1 }
 				}
-
 				.bolinha1, .bolinha2, .bolinha3 { fill: #FFF; }
-
 				@keyframes pulando {
 					0% {
 						transform: translateY(4px);
@@ -332,12 +307,10 @@ export default {
 					animation: pulando 0.6s 0.45s infinite;
 					transition: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 				}
-
 				.bolinha2 {
 					animation: pulando 0.6s 0.55s infinite;
 					transition: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 				}
-
 				.bolinha3 {
 					animation: pulando 0.6s 0.66s infinite;
 					transition: cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -372,7 +345,6 @@ export default {
 					background: $vermelho;
 					color: #FFF;
 					border-color: transparent;
-
 					&::after { content: 'Tentar novamente'; }
 				}
 				&.erro.enviando { background: transparent; }

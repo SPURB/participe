@@ -1,8 +1,9 @@
 <template>
 	<div
 		class="preloader"
-		v-if="consultas === undefined && fetching"
-		:class="{ fim: !fetching, erro: errors }">
+		v-if="consultas === undefined"
+		:class="{ fim: !fetching, erro: errors }"
+		@click="reloadNoCache">
 		<svg width="170" height="170">
 			<path
 				id="temp"
@@ -12,7 +13,7 @@
 				stroke-miterlimit="10"
 				d="M139.233 39.767v66.359c0 6.079-4.979 11.058-11.059 11.058H50.756l-22.119 22.119V39.767c0-6.08 4.974-11.06 11.059-11.06h88.479c6.08.001 11.058 4.98 11.058 11.06z"/>
 		</svg>
-		<p class="erro" :class="{ surge: errors }">Falha no carregamento. <a @click="reloadNoCache">Clique</a> para tentar novamente.</p>
+		<p class="erro" :class="{ surge: errors }">Falha no carregamento. <a>Clique</a> para tentar novamente.</p>
 	</div>
 </template>
 

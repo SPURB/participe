@@ -44,13 +44,16 @@ h1 {
 	& > a {
 		font-size: 24px;
 		font-weight: 400;
-		color: $preto;
+		color: $cinza-2;
 		line-height: 60px;
 		width: 100%;
 		padding: 0;
 		border-bottom: none;
 		&:hover, &:active { background: unset; }
-		span { font-weight: 800; };
+		span {
+			font-weight: 800;
+			color: $vermelho;
+		};
 		&:hover { text-decoration: none; };
 	};
 };

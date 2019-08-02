@@ -5,8 +5,8 @@
 			<div class="statusConsulta" :class="consultaState(esta_consulta.ativo)" v-if="esta_consulta.ativo">
 				<span></span>
 			</div>
-			<div class="contribuicoes" v-if="esta_consulta.nContribuicoes">
-				<i class="icon-comentario icon"><span>chat</span></i> {{ esta_consulta.nContribuicoes }} contribuições
+			<div class="contribuicoes" v-if="ncomments">
+				<i class="icon-comentario icon"><span>chat</span></i> {{ ncomments }} contribuições
 			</div>
 			<div class="periodo" v-if="esta_consulta.dataFinal">
 				<i class="icon-data icon"><span>período</span></i> {{ data(esta_consulta.dataCadastro) }}–{{ data(esta_consulta.dataFinal) }}
@@ -57,7 +57,8 @@ export default {
 	computed: {
 		basePath () { return this.$store.getters.basePath },
 		bgImg () { return this.$store.getters.basePath + this.background_image_src },
-		rota () { return this.$route.name }
+		rota () { return this.$route.name },
+		ncomments () { return this.$store.state.comments.length }
 	},
 	methods: {
 		consultaState (par) {
@@ -160,6 +161,11 @@ div.PageTop {
 			}
 		}
 		div.publicacao { opacity: .4; }
+		& > div i {
+			display: inline-block;
+			vertical-align: top;
+			height: 0;
+		}
 	}
 	main {
 		width: calc(100% - 400px - 4rem);

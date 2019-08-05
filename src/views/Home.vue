@@ -99,7 +99,7 @@ export default {
 	},
 	computed: {
 		consultas () { return this.$store.state.consultas.filter(consulta => !parseInt(consulta.ativo)) },
-		consultasAbertas () { return Array.from(this.$store.state.consultas).sort(this.parametrosDestaque).filter(consulta => parseInt(consulta.ativo)).slice(0, 2) },
+		consultasAbertas () { return Array.from(this.$store.state.consultas).sort(this.parametrosDestaque).filter(consulta => parseInt(consulta.ativo)) },
 		basePathImgSrc () { return this.$store.getters.basePath + 'arquivos/capas/' },
 		fetching () { return this.$store.state.fetching },
 		isIE () {

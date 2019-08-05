@@ -100,8 +100,7 @@ export default {
 						})
 						.catch(error => console.error(error))
 				})
-			}
-			else {
+			} else {
 				return false
 			}
 		},

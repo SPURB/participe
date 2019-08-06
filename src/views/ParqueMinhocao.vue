@@ -1908,11 +1908,6 @@ export default {
 			comments_atrr: undefined,
 			consultas: false,
 			estaConsulta: {},
-			social_assets: {
-				whatsapp: 'https://api.whatsapp.com/send?text=Participe%20da%20consulta%20p%C3%BAblica%20do%20PIU%20Parque%20Minhoc%C3%A3o%3A%20https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br%2Fparque-minhocao',
-				facebook: 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br%2Fparque-minhocao',
-				twitter: 'https://twitter.com/intent/tweet?text=Participe%20da%20consulta%20p%C3%BAblica%20do%20PIU%20Parque%20Minhoc%C3%A3o%3A%20https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br%2Fparque-minhocao'
-			},
 			mobiliario_centro_aberto: [{
 				'titulo': 'Bancos Modulares',
 				'ilustracao': this.$store.getters.basePath + 'arquivos/parque-minhocao/mobiliario-centro-aberto/1.jpg',

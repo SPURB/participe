@@ -199,12 +199,7 @@ export default {
 			titulosLimpo: [],
 			comments_atrr: undefined,
 			consultas: false,
-			estaConsulta: {},
-			social_assets: { // https://www.urlencoder.org/
-				whatsapp: 'https%3A%2F%2Fapi.whatsapp.com%2Fsend%3Ftext%3DParticipe%20da%20consulta%20p%C3%BAblica%20do%20Nome%20da%20Consulta%3A%20https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br%2Fnome-da-consulta',
-				facebook: 'https%3A%2F%2Fwww.facebook.com%2Fsharer%2Fsharer.php%3Fu%3Dhttps%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br%2Fnome-da-consulta',
-				twitter: 'https%3A%2F%2Ftwitter.com%2Fintent%2Ftweet%3Ftext%3DParticipe%20da%20consulta%20p%C3%BAblica%20do%20Nome%20da%20Consulta%3A%20https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br%2Fnome-da-consulta'
-			}
+			estaConsulta: {}
 		}
 	},
 	components: {

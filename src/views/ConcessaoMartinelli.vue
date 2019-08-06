@@ -134,12 +134,7 @@ export default {
 			titulosLimpo: [],
 			comments_atrr: undefined,
 			consultas: false,
-			estaConsulta: {},
-			social_assets: {
-				whatsapp: 'https://api.whatsapp.com/send?text=Participe%20da%20consulta%20p%C3%BAblica%20do%20edital%20de%20concess%C3%A3o%20da%20cobertura%20do%20Edif%C3%ADcio%20Martinelli%20-%20https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br/concessao-martinelli',
-				facebook: 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br/concessao-martinelli',
-				twitter: 'https://twitter.com/intent/tweet?text=Participe%20da%20consulta%20p%C3%BAblica%20do%20edital%20de%20concess%C3%A3o%20da%20cobertura%20do%20Edif%C3%ADcio%20Martinelli%20-%20https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br/concessao-martinelli'
-			}
+			estaConsulta: {}
 		}
 	},
 	components: {

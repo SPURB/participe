@@ -1,6 +1,6 @@
 <template>
 	<div class="MinutaArcoPinheiros" ref="conteudoConsulta">
-		<PageTop background_image_src="arquivos/capas/arco-pinheiros_perspectiva_480w.jpg" :esta_consulta="estaConsulta" :social="social_assets">
+		<PageTop background_image_src="arquivos/capas/arco-pinheiros_perspectiva_480w.jpg" :esta_consulta="estaConsulta">
 			<template slot="titulo"><div>Minuta PIU Arco Pinheiros</div></template>
 			<template slot="subtitulo"><div>Minuta do Projeto de Lei do Projeto de Intervenção Urbana do Arco Pinheiros</div></template>
 		</PageTop>

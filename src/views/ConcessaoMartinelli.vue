@@ -1,6 +1,6 @@
 <template>
 	<div class="ConcessaoMartinelli" ref="conteudoConsulta">
-		<PageTop background_image_src="arquivos/capas/concessao-martinelli_480w.jpg" :esta_consulta="estaConsulta" :social="social_assets">
+		<PageTop background_image_src="arquivos/capas/concessao-martinelli_480w.jpg" :esta_consulta="estaConsulta">
 			<template slot="titulo"><div>Chamamento do edital de concessão da cobertura do Edifício Martinelli</div></template>
 		</PageTop>
 

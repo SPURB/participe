@@ -1,6 +1,6 @@
 <template>
 	<div class="PortalPrefeitura" ref="conteudoConsulta">
-		<PageTop background_image_src="arquivos/capas/portal-prefeitura_480w.jpg" :esta_consulta="estaConsulta" :social="social_assets">
+		<PageTop background_image_src="arquivos/capas/portal-prefeitura_480w.jpg" :esta_consulta="estaConsulta">
 			<template slot="titulo"><div>Layout do Novo Portal da Prefeitura de São Paulo</div></template>
 		</PageTop>
 
@@ -126,9 +126,7 @@
 <script>
 import PageTop from '@/components/PageTop'
 import Indice from '@/components/Indice'
-import Comments from '@/components/Comments'
 import CommentsContext from '@/components/CommentsContext'
-import CommentsOption from '@/components/CommentsOption'
 import CommentsLoader from '@/components/CommentsLoader'
 import { consultasCommons } from '@/mixins/consultasCommons'
 
@@ -145,9 +143,7 @@ export default {
 	components: {
 		PageTop,
 		Indice,
-		Comments,
 		CommentsContext,
-		CommentsOption,
 		CommentsLoader
 	},
 	mixins: [consultasCommons]

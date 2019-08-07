@@ -114,7 +114,8 @@ export default {
 				if (parseInt(this.$store.getters.consultasClicada.ativo) === 1) {
 					return true
 				}
-			} else { return false }
+			}
+			return false
 		},
 		toggleFormOrMessage () {
 			return (this.abreComentario && this.consultaAtiva)

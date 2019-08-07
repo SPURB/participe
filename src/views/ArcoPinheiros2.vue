@@ -1,6 +1,6 @@
 <template>
 	<div class="ArcoPinheiros2" ref="conteudoConsulta">
-		<PageTop background_image_src="arquivos/capas/arco-pinheiros-2_480w.jpg" :esta_consulta="estaConsulta" :social="social_assets">
+		<PageTop background_image_src="arquivos/capas/arco-pinheiros-2_480w.jpg" :esta_consulta="estaConsulta">
 			<template slot="titulo"><div>PIU Arco Pinheiros</div></template>
 			<template slot="subtitulo"><div>2ª consulta pública – Projeto de Intervenção Urbana Arco Pinheiros</div></template>
 		</PageTop>

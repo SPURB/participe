@@ -1,6 +1,6 @@
 <template>
 	<div class="PoliticaMunicipalTurismo" ref="conteudoConsulta">
-		<PageTop background_image_src="arquivos/capas/politica-municipal-turismo_480w.jpg" :esta_consulta="estaConsulta" :social="social_assets">
+		<PageTop background_image_src="arquivos/capas/politica-municipal-turismo_480w.jpg" :esta_consulta="estaConsulta">
 			<template slot="titulo"><div>Política de Turismo da Cidade de São Paulo</div></template>
 			<template slot="subtitulo"><div>Perspectiva 2030</div></template>
 		</PageTop>
@@ -671,7 +671,7 @@
 						<li>
 							Realizar estudo que permita mapear o turismo de São Paulo posicionando os segmentos nas regiões onde ocorrem com mais intensidade.
 						</li>
-						<Comments :attr="{id:commentId(), context:'CAPÍTULO 3.3'}" v-if="estaConsulta.ativo == 1"></Comments>						
+						<Comments :attr="{id:commentId(), context:'CAPÍTULO 3.3'}" v-if="estaConsulta.ativo == 1"></Comments>
 						<br>
 						<u>EIXO: Triângulo SP</u>
 						<li>

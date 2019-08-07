@@ -1,22 +1,19 @@
 <template>
 	<div class="PoliticaMunicipalTurismo" ref="conteudoConsulta">
-		<PageTop background_image_src="arquivos/capas/pdp-ibirapuera_480w.jpg" :esta_consulta="estaConsulta" :social="social_assets">
+		<PageTop background_image_src="arquivos/capas/pdp-ibirapuera_480w.jpg" :esta_consulta="estaConsulta">
 			<template slot="titulo"><div>MINUTA DO PLANO DIRETOR DO PARQUE IBIRAPUERA</div></template>
 			<template slot="subtitulo"><div>Processo Participativo</div></template>
 		</PageTop>
 		<Indice :titulos="titulosLimpo"></Indice>
-
-		<!-- <Apoio></Apoio> -->
-		<!-- Decreto Nº 56.901 inclua este componente caso seja um PIU -->
 		<section>
 			<Comments :attr="{id:commentId(true), context:'GERAL'}" v-if="estaConsulta.ativo == 1"></Comments>
 			<!-- Comentario anterior ao inicio do conteúdo-->
 			<!-- O objetivo é ter a função de comentar/contribuir por tag <h2 class="titulo" indent="2">-->
-		
+
 			<h1 class="titulo" indent="1">CADERNO I</h1>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
 		</section>
-		
+
 		<section>
 			<h2 class="titulo" indent="2">1. APRESENTAÇÃO</h2>
 			<CommentsContext :id="1001" :context="'A revisão da Operação Urbana Centro e o PIU Setor Central'">
@@ -34,11 +31,11 @@
 			<p>O Plano está estruturado em dois cadernos, sendo, o primeiro de caráter teórico e esclarecedor do processo de elaboração, bem como as perspectivas colocadas ao Parque. E o segundo, mais propositivo expondo as diretrizes, objetivos e metas.</p>
 			<p>Por fim, importante salientar que o documento está balizado em princípios essenciais à garantia de que o Parque Ibirapuera permaneça sendo o parque que a população se orgulha, garantindo sua preservação ambiental, bem como da sua paisagem; a preservação do parque como patrimônio; e o caráter público, universal e diverso.</p>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>1.1	Equipe Técnica e Entidades Colaboradoras</h3>
 			<p>Sob a Coordenação da SVMA, os trabalhos para elaboração do plano contaram com a participação de técnicos de diversas áreas da Secretaria, bem como com o apoio da SP Parcerias.</p>
 			<p>
-				<b>Coordenação Geral: Secretaria Municipal do Verde e do Meio Ambiente</b>				
+				<b>Coordenação Geral: Secretaria Municipal do Verde e do Meio Ambiente</b>
 				<ul>
 					<li>Arquiteta e Urbanista Tamires Carla de Oliveira</li>
 					<li>Arquiteta e Urbanista Isabella Maria Davenis Armentano</li>
@@ -65,7 +62,7 @@
 				</ul>
 			</p>
 			<p>
-				<b>Apoio Técnico: São Paulo Parcerias</b>				
+				<b>Apoio Técnico: São Paulo Parcerias</b>
 				<ul>
 					<li>Arquiteto e Urbanista André Lucas de Medeiros França</li>
 					<li>Administrador de empresas Cainã Aminon de Medeiros</li>
@@ -84,7 +81,7 @@
 				</ul>
 			</p>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1.1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-				
+
 			<h3>1.2 Conceito de faseamento adotado</h3>
 			<p>O Plano Diretor do Parque Ibirapuera é composto por documentos interagentes denominados CADERNO 1 e CADERNO 2.</p>
 			<p>O Caderno 1 apresenta a Fundamentação Conceitual e a metodologia adotada. Constitui-se, sinteticamente de Apresentação, Equipe técnica envolvida e entidades colaboradoras na produção do Plano; Fundamentação conceitual com o conceito de Plano Diretor de Parque Urbano e o Faseamento Adotado explicando os critérios a compor as Ações de Projeto e as Visões de Futuro; Aspectos Históricos; Inserção Urbana do parque; e Conceito da Setorização do Parque, explicando conceitualmente a subdivisão do espaço do parque em zonas para diagnosticar as singularidades, as potencialidades, as fragilidades e os conflitos de uso.  A implantação do Plano Diretor deve seguir o faseamento contido nas Visões de Futuro. O produto da aplicação da metodologia é o primeiro item a compor o Caderno 2.</p>
@@ -94,8 +91,8 @@
 			<p>Denominam-se Visões de Futuro as intervenções e os projetos que necessitam de período maior para a sua implementação.  Neste caso, e para priorizar os trabalhos, será adotado a denominação de Curto Prazo para as intervenções que necessitam de até 2 anos para a efetivação; Médio Prazo para as intervenções que necessitam de até 5 anos para a efetivação; Longo Prazo para as intervenções que necessitam de até 10 anos.</p>
 			<p>Propõe se que após 10 anos, ou seja, em 2029 o Plano Diretor do Parque Ibirapuera deva ser revisado para corresponder às atualizações da dinâmica do tempo sobre o espaço como maneira de atender aos usuários e ao cumprimento da função social de espaço público de uso ambiental, cultural, e de lazer.</p>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1.2'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
-		  <h3>1.3	Metodologia Utilizada e Processo Participativo</h3>
+
+			<h3>1.3	Metodologia Utilizada e Processo Participativo</h3>
 			<p>O Plano Diretor Participativo do Parque Ibirapuera está construído a partir de uma metodologia que analisa determinado contexto ou realidade pela experimentação ou vivência podendo haver a incorporação de dados, para o estabelecimento do diagnóstico e das diretrizes de ação.</p>
 			<p>Utiliza o compêndio de material produzido pelos órgãos institucionais e gestores do Parque no decorrer das últimas seis décadas, a produção e compilação de dados de campo, análises digitais e do produto de fóruns e de oficinas temáticas participativas. Este processo é denominado Leitura Empírica, e foi utilizado para a consolidação do material justificativo dos Diagnósticos Temáticos.</p>
 			<p>O Diagnóstico Temático utiliza como recurso a subdivisão do espaço do parque em subzonas e em subespaços para diagnosticar, cada um, pela sua singularidade física, espacial e de uso, de maneira a consubstanciar as potencialidades, as fragilidades e os conflitos em quatro gradientes de intensidade. Este Diagnóstico conduz à constituição da Matriz de Compatibilidade de Uso na qual as características físicas serão confrontadas com os usos fundamentais do parque para orientar as Diretrizes, oportunizando Ações de Projeto e Visões de Futuro, considerando o curto, médio e longo prazo.</p>
@@ -108,7 +105,7 @@
 			<p>A metodologia de apoio às oficinas adaptou, para a efetivação, bibliografia específica para leitura e interpretação de paisagem e para identificação de elementos referenciais no espaço livre. Os autores são: Kevin Lynch, Gordon Cullen e Lawrence Halprin.</p>
 			<p>Compõe o processo participativo as oficinas já realizadas no mês de julho e outros mecanismos de participação que determinarão uma revisão deste documento ao final do processo, sendo: consulta pública, pesquisa com frequentadores, conselheiros e administrador, audiências públicas e fóruns temáticos com especialistas.</p>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1.2'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-			
+
 			<h3>1.4	Fundamentação Conceitual. O Conceito de Plano Diretor de Parque Urbano</h3>
 			<p>Instrumento de planejamento, o Plano Diretor visa orientar ações futuras, pautadas em análises situacionais para a elaboração de diagnósticos, visualizando se alcançar a melhoria de um objeto específico, ou seja, a estruturação do conteúdo dos planos está vinculada aos princípios fundamentais da atividade de leitura e análise, diagnóstico e planejamento estabelecendo objetivos e diretrizes de ação. Frequentemente o procedimento de elaboração de Plano Diretor está inserido em um universo mais amplo, como o do Planejamento Estratégico.</p>
 			<p>As experiências internacionais de Plano Diretor de Parque Urbano configuram, frequentemente, para instrumento de gestão denominado <i>Masterplan</i>. Este documento reporta de maneira gráfica e descritiva o Parque a partir de análises físico-ambiental e de uso. Os objetivos específicos de cada Plano Diretor variam de acordo com a situação de cada parque. Na bibliografia consultada, há documentos mais próximos de guias, outros cujo escopo é amplo nos quais são abordadas questões financeiras e orçamentárias, como captação de recursos e estabelecimento de concessões e de parcerias com agentes privados.</p>
@@ -131,7 +128,7 @@
 			<p>“Uma grande extensão de área livre de uso público inserida na cidade para o gozo da paisagem” é a definição de parque urbano atribuída por Frederick Law Olmsted em 1870. Esta concepção, decorrente de valores culturais conferidos à natureza repercutiram fortemente no desenho dos parques públicos urbanos ao longo da história. </p>
 			<p>Os parques públicos, originalmente, foram desenhados oferecendo os elementos que os cidadãos poderiam desejar: percursos sinuosos, lugares campestres, água em lagos plácidos de formas sinuosas, extensos campos relvados, árvores em maciços ou em conjunto, a exemplo da própria natureza. Na verdade, o parque urbano passou a ser o único lugar de proporções suficientes na cidade aonde se poderia reproduzir um jardim como imitação da natureza. Neste espaço foram historicamente introduzidas instalações para receber grande quantidade de pessoas para usos associados à cultura, à recreação, ao lazer e às práticas esportivas.</p>
 			<!-- Ocultar comentários:  <Comments :attr="{id:commentId(), context:'CAPÍTULO 2'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>2.1 O Parque Ibirapuera</h3>
 			<p>A estrutura urbana de São Paulo acomodou-se em um sítio com características peculiares de hidrografia e relevo, e de rica paisagem. O chamado Espigão Central, em cujo topo se encontra a Avenida Paulista, alongado e estreito divisor de águas entre as bacias dos rios Tietê e Pinheiros, configura uma extensa plataforma interfluvial aplainada. Para sul e sudoeste o sítio se caracteriza por vertentes abruptas e compartimentos aplainados de colinas baixas e baixos terraços, confluindo para as amplas várzeas do rio Pinheiros e rio Tietê. </p>
 			<p>Sob o aspecto ambiental, a reserva do Parque Ibirapuera foi fundamental por preservar sítio de notável fragilidade ambiental de qualquer outra forma de ocupação. Na verdade, é a maior extensão de área livre no quadrante sudoeste da cidade de São Paulo.</p>
@@ -177,7 +174,7 @@
 				<figcaption>Figura 6 - Parque do Ibirapuera 1951. Autor: Christiano Stockler das Neves. Acervo: Divisão do Arquivo Histórico Municipal de São Paulo – DPH/SMC/PMSP. Fonte: Andrade, Manuella.</figcaption>
 			</figure>
 			<!-- Ocultar comentários:  <Comments :attr="{id:commentId(), context:'CAPÍTULO 2.1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>2.2 Projeto do Parque Ibirapuera, 1952</h3>
 			<p>No Projeto de Paisagismo para o Parque Ibirapuera Teixeira Mendes se debruçou, primeiramente, sobre o espaço para acolher o conjunto arquitetônico, e na acomodação de construções, pavilhões provisórios (feira internacional e verde). O parque se estruturou harmônico e arrebatador, como uma sinfonia de movimentos autônomos cadenciados. Do todo para as partes (setores ou zonas) em gradientes ajustados aos subespaços (subsetores ou subzonas) com princípios modernos.</p>
 			<figure title="Figura 7 - Preservação e Paisagismo em S. Paulo. Fonte: Arquivo Histórico Washington Luís. In: Mariano, Cássia." class="coluna">
@@ -199,7 +196,7 @@
 				<figcaption>Figura 8 - Parque Ibirapuera, década de 1950. Fonte: Arquivo Histórico Washington Luís, setor de imagens e negativos em vidro.</figcaption>
 			</figure>
 			<!-- Ocultar comentários:  <Comments :attr="{id:commentId(), context:'CAPÍTULO 2'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>2.3 Os Planos Diretores de 1996 – 2002 – 2007</h3>
 			<p>A partir da década de 1990, três Planos Diretores foram elaborados para o parque Ibirapuera. </p>
 			<p>Em 1996, o escritório de Oscar Niemeyer elaborou Plano Diretor para o parque Ibirapuera com dois objetivos principais: de maneira polêmica, regularizar o perímetro do parque junto à avenida República do Líbano e a aprovação da construção do Auditório, previsto desde o projeto da Comissão do IV Centenário. A regularização, que integraria o parque de frente para a cidade neste perímetro, naturalmente ocasionaria a desapropriação dos imóveis.</p>
@@ -230,7 +227,7 @@
 			<p>Consolidado como um dos equipamentos públicos mais utilizados da cidade de São Paulo, e uma de suas principais áreas verdes, recebe aproximadamente 1,1 milhão de pessoas por mês  e se constitui em um dos principais polos de cultura e lazer na cidade.</p>
 			<p>Concebido para ser expressão do progresso paulistano no século XX, sua história se confunde com a história de São Paulo e da formação de sua identidade cultural, sendo comum a visita ao Parque Ibirapuera em diversos roteiros turísticos que pretendem apresentar os principais pontos da cidade. Dessa forma, o Parque Ibirapuera produz uma regionalização própria a partir de sua presença no tecido urbano, podendo-se falar em uma “região do Parque Ibirapuera” formada por bairros tradicionais, áreas verdes e nobres, ao mesmo tempo em que se insere na escala metropolitana, seja pelo número de visitas e importância na cidade, seja pela proximidade geográfica de centralidades econômicas.</p>
 			<!-- Ocultar comentários:  <Comments :attr="{id:commentId(), context:'CAPÍTULO 2'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>3.1 Análise do zoneamento e aspectos econômicos do entorno</h3>
 			<p>Do ponto de vista do uso do solo, pode-se afirmar que a região apresenta uso residencial, horizontal e vertical, de médio/alto padrão como padrão majoritário. A Lei Municipal nº 16.402/2016, que normatiza a ação pública e privada sobre as formas de uso do solo da cidade, apresenta 3 (três) categorias de zoneamento que estão presentes na região sob análise e se coadunam com tais usos.</p>
 			<figure title="Figura 10 – Ibirapuera Usos Residenciais Horizontais e Verticais de Médio e Alto Padrão. Fonte: Cadastro Territorial Predial de Conservação e Limpeza – TPCL." class="coluna">
@@ -271,14 +268,14 @@
 			<p>A região, em quase sua totalidade, pode ser classificada como área de baixíssima vulnerabilidade social (1), com a presença de poucas manchas de vulnerabilidade muito baixa (2), reforçando a imagem de área nobre e de excelente qualidade de vida da região vizinha ao Parque, presente no imaginário do cidadão paulistano. Como exceção a este padrão socioterritorial pode-se citar a área abarcada pela Favela Mario Cardim, em Vila Mariana, distante 2 km do Parque, classificada como área de vulnerabilidade social muito alta (6).</p>
 			<p>Outros indicadores sociais e demográficos da Subprefeitura de Vila Mariana, que engloba os distritos de Moema, Vila Mariana e Saúde, comprovam a boa qualidade de vida da média da região.  A região é a segunda colocada no ranking do Índice de Desenvolvimento Humano Municipal (IDHM 0,9) estando acima da média municipal, e, é importante que se diga, a primeira colocação pertence à Subprefeitura de Pinheiros, que engloba o restante do território sob análise. Apresenta, ainda, taxa de homicídio de 3,68 por 100 mil habitantes, bem abaixo da média municipal de 14,37; conta com 5,9 leitos SUS por mil habitantes, contra 1,53 de média municipal; e, por fim, nenhum dos moradores está a mais de 1 km de equipamentos de cultura, frente a uma parcela de 40% de pessoas no Município. A região apresenta, ainda, dados positivamente expressivos da relação emprego-habitante: Moema - 1,45; Vila Mariana - 1,60; Jardim Paulista - 2,31; Pinheiros - 1,8; Itaim Bibi - 4,15; e, por fim, Saúde - 0,83. Para fins de comparação, a média municipal é de 0,41 emprego por habitante.</p>
 			<!-- Ocultar comentários:  <Comments :attr="{id:commentId(), context:'CAPÍTULO 2'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>3.2 Equipamentos Públicos e Transporte</h3>
 			<!-- Ocultar comentários:  <Comments :attr="{id:commentId(), context:'CAPÍTULO 2'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>3.2.1 Assistência Social</h3>
 			<p>São 9 (nove) equipamentos públicos de Assistência Social, nas mais diversas dimensões deste serviço- proteção à mulher, ao idoso, à criança e à pessoas em situação de vulnerabilidade social.</p>
 			<!-- Ocultar comentários:  <Comments :attr="{id:commentId(), context:'CAPÍTULO 2'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>3.2.2 Segurança</h3>
 			<p>A região conta com 3 (três) Postos de Bombeiros; 2 (dois) Distritos Policiais de Polícia Civil; 1 Delegacia de Polícia Seccional; 4 (quatro) Companhias da Polícia Militar;  e 2 (duas) unidades de GCM, sendo uma lotada no Parque.</p>
 			<figure title="Figura 13 - Equipamentos públicos de Assistência Social e Segurança. Fonte: Geosampa." class="coluna">
@@ -286,7 +283,7 @@
 				<figcaption>Figura 13 - Equipamentos públicos de Assistência Social e Segurança. Fonte: Geosampa.</figcaption>
 			</figure>
 			<!-- Ocultar comentários:  <Comments :attr="{id:commentId(), context:'CAPÍTULO 2'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>3.2.3 Saúde</h3>
 			<p>A área que se analisa, em especial o distrito de Vila Clementino, dispõe de uma série de hospitais, clínicas e ambulatórios, que acabam por torná-la referência na cidade em termos de concentração de atendimentos e equipamentos de saúde. São 14 (catorze) equipamentos públicos de saúde, com destaque para os hospitais São Paulo, do Servidor Público e Dante Pazanese.</p>
 			<figure title="Figura 14 - Equipamentos Públicos de Saúde. Fonte: Geosampa." class="coluna">
@@ -294,7 +291,7 @@
 				<figcaption>Figura 14 - Equipamentos Públicos de Saúde. Fonte: Geosampa.</figcaption>
 			</figure>
 			<!-- Ocultar comentários:  <Comments :attr="{id:commentId(), context:'CAPÍTULO 2'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>3.2.4 Educação</h3>
 			<p>Do ponto de vista da disponibilidade de equipamentos de educação, são 30 (trinta) instituições da rede pública, sendo 15 (quinze) voltadas ao Ensino Infantil, 12 (doze) ao Ensino Fundamental e 2 (duas) ao Ensino Técnico e, aproximadamente, 125 ( cento e vinte e cinco) instituições de ensino privado. Não há Centros de Educação Unificados – CEUs.</p>
 			<figure title="Figura 15 - Equipamentos Públicos de Educação. Fonte: Geosampa." class="coluna">
@@ -302,7 +299,7 @@
 				<figcaption>Figura 15 - Equipamentos Públicos de Educação. Fonte: Geosampa.</figcaption>
 			</figure>
 			<!-- Ocultar comentários:  <Comments :attr="{id:commentId(), context:'CAPÍTULO 2'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>3.2.5 Cultura</h3>
 			<p>A maior parte dos equipamentos culturais está inserida no próprio Parque Ibirapuera, como a Oca, o MAC e o Planetário, reforçando a sua importância como centro cultural, esportivo e de lazer para a  região. Conforme informado na análise de inserção urbana, nenhum morador da região se encontra a mais de 1 (um) km de um equipamento cultural na região da subprefeitura da Vila Mariana.</p>
 			<figure title="Figura 16 - Equipamentos Públicos de Cultura. Fonte: Geosampa." class="coluna">
@@ -310,7 +307,7 @@
 				<figcaption>Figura 16 - Equipamentos Públicos de Cultura. Fonte: Geosampa.</figcaption>
 			</figure>
 			<!-- Ocultar comentários:  <Comments :attr="{id:commentId(), context:'CAPÍTULO 2'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>3.2.6 Abastecimento</h3>
 			<p>A região é atendida por um grande número de feiras livres, mas nota-se a ausência de mercados municipais e sacolões.</p>
 			<figure title="Figura 17 - Equipamentos Públicos de Abastecimento. Fonte: Geosampa." class="coluna">
@@ -318,7 +315,7 @@
 				<figcaption>Figura 17 - Equipamentos Públicos de Abastecimento. Fonte: Geosampa.</figcaption>
 			</figure>
 			<!-- Ocultar comentários:  <Comments :attr="{id:commentId(), context:'CAPÍTULO 2'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>3.2.7 Esportivo</h3>
 			<p>As regiões de Vila Mariana e Vila Clementino são atendidas por uma série de equipamentos esportivos públicos, tendo como destaque o Centro Olímpico, responsável pela formação de atletas de alto rendimento nas mais diversas modalidades. Nota-se no raio de estudo que não há equipamentos públicos de esporte na região dos Jardins, ao norte do Parque, local atendido por tradicionais clubes da cidade como o Esporte Clube Pinheiros e o Club Athletico Paulistano.</p>
 			<figure title="Figura 18 - Equipamentos Públicos Esportivos. Fonte: Geosampa." class="coluna">
@@ -326,7 +323,7 @@
 				<figcaption>Figura 18 - Equipamentos Públicos Esportivos. Fonte: Geosampa.</figcaption>
 			</figure>
 			<!-- Ocultar comentários:  <Comments :attr="{id:commentId(), context:'CAPÍTULO 2'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>3.2.8 Acessibilidade</h3>
 			<p>O Parque Ibirapuera está localizado no entroncamento de importantes vias, proporcionando ligação às regiões sul, oeste e central. Em relação ao transporte público, o parque é atendido pelo sistema metroferroviário por meio da estação AACD-Servidor da Linha 5-Lilás; distante 1,2 km dos portões 3 e 4, junto à Passarela Ciccillo Matarazzo; e 1,1 km dos portões 5 e 6, localizados na Avenida Quarto Centenário. Já pelo sistema municipal de ônibus, principal modal de transporte na região, o acesso ao parque ocorre pelas avenidas Pedro Álvares Cabral (portões 9, 10, 1, 2, 3 e 4), Brigadeiro Luís Antonio (portões 9 e 9A) e República do Líbano (portões 7, 8 e 9A). Nestes eixos, registra-se a passagem de 61 serviços de ônibus, entre linhas base, linhas noturnas, variantes de final de semana e apoios nos horários de pico, além de uma linha especial turística com três viagens ao dia, com ponto de controle junto ao portão 10. Desse total, 11 linhas tangenciam o parque pelo eixo da Avenida Brigadeiro Luís Antonio, ligando o centro e a região da Avenida Paulista às zonas sul e oeste; e 49 linhas têm passagem pela Avenida Pedro Álvares Cabral, formando relevante área de conexões regionais (ponto nodal). Dessa avenida, 34 serviços seguem para a região central, sendo 27 pela Avenida 23 de Maio, dois serviços pela Avenida Brasil e outros três pela Avenida Brigadeiro Luís Antonio. Seguem ainda para a Avenida Brigadeiro Luís Antonio três linhas com destino a Pinheiros, Campo Limpo e Itaim Bibi. Para a região sul, nove linhas seguem para a Rua Domingos de Morais, 26 linhas pelo eixo da Avenida Ibirapuera e 15 linhas pelo eixo das avenidas Rubem Berta e Washington Luís, em direção à região de Interlagos. Vale considerar ainda que apenas uma linha tem ponto final junto ao parque, outras oito funcionam em sistema circular na região, e três iniciam viagem a partir do parque como apoio em horário de pico. Destaca-se também que apenas uma linha realiza atendimento pelo eixo da Avenida República do Líbano, e duas linhas tangenciam os portões 7 e 8, sendo uma delas linha de atendimento especial à unidade do Lar Escola São Francisco, da AACD, que circula pela Rua Açores e vias internas do bairro Jardim Lusitânia. O parque é atendido por quatro linhas noturnas que circulam nos principais eixos viários locais, com exceção da Avenida República do Líbano.</p>
 			<ul class="links">
@@ -344,15 +341,15 @@
 			</figure>
 			<p>Quanto à infraestrutura cicloviária, registram-se oito estações para aluguel de bicicleta e três ciclovias ou ciclofaixas permanentes que se ligam ao parque, sendo uma junto à Rua Manuel da Nóbrega (oposta ao portão 9), que permite conexão com a ciclovia da Avenida Paulista e acesso à região dos Jardins; outra junto à Rua França Pinto (oposta aos portões 3 e 4), que permite acesso à regiões de Vila Mariana e Jabaquara; e outra junto aos portões 7 e 8 da Avenida República do Líbano, permitindo acesso às ciclovias das avenidas Brigadeiro Faria Lima e Engenheiro Luís Carlos Berrini, além das regiões de Pinheiros, Itaim Bibi e Santo Amaro. Há também a ativação aos domingos e feriados da ciclofaixa de lazer nas avenidas Brasil e República do Líbano.</p>
 			<!-- Ocultar comentários:  <Comments :attr="{id:commentId(), context:'CAPÍTULO 2'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>3.3 Geografia Física</h3>
 			<!-- Ocultar comentários:  <Comments :attr="{id:commentId(), context:'CAPÍTULO 2'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>3.3.1 Relevo</h3>
 			<p>A região é constituída de relevo majoritariamente plano, apresentando variação positiva de 65 metros de inclinação em extensão de 2 (dois) quilômetros no sentido do espigão da Avenida Paulista, um dos pontos mais elevados da cidade.</p>
 			<p>Do ponto de vista topográfico, o Parque está inserido em cotas altimétricas que variam de 720 metros no sentido do Rio Pinheiros, região de Itaim, a 761 metros na direção de Vila Mariana/Vila Clementino.</p>
 			<!-- Ocultar comentários:  <Comments :attr="{id:commentId(), context:'CAPÍTULO 2'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>3.3.2 Hidrografia</h3>
 			<p>Compondo a bacia hidrográfica do Rio Pinheiros e a microbacia do Sapateiro estão dois córregos que passam pelo Parque Ibirapuera e com ele se relacionam intimamente.</p>
 			<p>Com cerca de 6.600 metros de extensão, o Córrego do Sapateiro nasce na rua Rio Grande com a Dr. Mário Cardim, atravessa as avenidas Ibirapuera e 23 de Maio, alimenta os três lagos do parque pela IV Centenário, segue sob as avenidas Santo Amaro e Juscelino Kubitschek e por fim desemboca no Rio Pinheiros.</p>
@@ -362,7 +359,7 @@
 				<figcaption>Figura 20 - Mapa de Relevo e Hidrografia. Fonte: Geosampa</figcaption>
 			</figure>
 			<!-- Ocultar comentários:  <Comments :attr="{id:commentId(), context:'CAPÍTULO 2'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>3.3.3 Reserva de Mata Atlântica</h3>
 			<p>Notam-se algumas manchas de permanência de Mata Atlântica na área do Parque, sendo a totalidade dessas manchas representantes de Bosques Heterogêneos, corredores de adensamento de verde com espécies nativas e exóticas, conforme PMMA (Plano Municipal da Mata Atlântica, 2016). Fora das dependências do Parque, e no raio considerando de 2 (dois) quilômetros, a ocorrência de vegetação de Mata Atlântica se concentra na área em que estão inseridos o Instituto Biológico e a Secretaria de Agricultura, Indústria e Comércio do Estado de São Paulo, circunscrita pelas avenidas Dante Pazzanese, Ibirapuera e Conselheiro Rodrigues Alves.</p>
 			<figure title="Figura 21 - Classificação do Parque Ibirapuera de acordo com o Plano Municipal da Mata Atlântica (PMMA)." class="coluna">
@@ -370,7 +367,7 @@
 				<figcaption>Figura 21 - Classificação do Parque Ibirapuera de acordo com o Plano Municipal da Mata Atlântica (PMMA).</figcaption>
 			</figure>
 			<!-- Ocultar comentários:  <Comments :attr="{id:commentId(), context:'CAPÍTULO 2'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>3.3.4 Tipo Socioambiental</h3>
 			<p>A região sob análise contém duas classificações distintas de tipos socioambientais de distritos. Na área que abrange o distrito de Vila Mariana, a classificação é de distritos com baixíssima presença de cobertura vegetal em áreas de ocupação urbana consolidada e boa infraestrutura urbana. Já na porção abarcada por Moema, Jardins e Saúde, fala-se na ocorrência de distritos com alto adensamento vertical, onde se concentra a maior parte das ações de controle urbano do uso e ocupação do solo e com melhores condições de infraestrutura da cidade. São distritos que localmente podem apresentar altos valores de cobertura vegetal, representados por parques urbanos - Parque Ibirapuera - e arborização viária.</p>
 			<!-- Ocultar comentários:  <Comments :attr="{id:commentId(), context:'CAPÍTULO 2'}" v-if="estaConsulta.ativo == 1"></Comments> -->
@@ -387,7 +384,7 @@
 			<p>Desta forma, o processo participativo do Plano Diretor do Parque Ibirapuera foi contemplado por meio de quatro encontros, pesquisa com usuários realizada pela internet e in loco, fóruns temáticos, audiências e consulta pública. Os três primeiros encontros envolveram apresentações expositivas, oficinas temáticas e debates, e apoiaram-se em metodologias de Leitura da Paisagem e Diagnóstico Temático. Já o último encontro foi dedicado à devolução e validação das informações produzidas pelos participantes.</p>
 			<p>A agenda dos encontros foi divulgada por meio do site da prefeitura, redes sociais e de faixas e cartazes distribuídos pelo parque.</p>
 			<!-- Ocultar comentários:  <Comments :attr="{id:commentId(), context:'CAPÍTULO 2'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>4.1 1º Encontro: Projeto Paisagístico, Arquitetônico e Zoneamento: Usos e Apropriações</h3>
 			<p>O primeiro encontro intitulado Projeto Paisagístico, Arquitetônico. Zoneamento: Usos e Apropriações foi realizado em 13 de julho 2019, na sede da UMAPAZ e iniciou-se com uma apresentação expositiva sobre o Parque Ibirapuera, proferida pela Arq. Prof.ª Dr.ª Cássia Mariano. A apresentação O Parque Ibirapuera e o Paisagismo de Teixeira Mendes teve como objetivo apresentar sucintamente a história e a construção do Parque Ibirapuera, as características modernas existentes e os usos dos espaços do parque.</p>
 			<p>A oficina temática que se seguiu à apresentação, intitulada Mapa Mental. Percurso no Ibirapuera: Caminho que Impregna Significado teve por objetivo coletar a percepção do usuário e identificar os lugares e os espaços do parque retidos na memória das pessoas que o frequentam. Nesta oficina os participantes deveriam mentalizar um percurso que gostam de percorrer no parque, identificando os elementos que o compõem para representá-lo em um mapa indicativo.  A metodologia adotada é respaldada pelo trabalho de K. Lynch para identificar os elementos da Imagem da Cidade, conceituada ferramenta no processo de planejamento.</p>
@@ -439,7 +436,7 @@
 			<p>Por outro lado, 54% dos participantes representaram o parque a partir de uma perspectiva mais específica, evidenciando determinados elementos. Por exemplo, o Lago e as Áreas Verdes apareceram justapostos e em destaque em 30% desses desenhos.</p>
 			<p>A interface entre o parque e a cidade esteve presente em 20% dos mapas mentais, demonstrando que o parque também é percebido de forma integrada com o seu entorno, influenciando ou sendo influenciado pelo território que o cerca.</p>
 			<!-- Ocultar comentários:  <Comments :attr="{id:commentId(), context:'CAPÍTULO 2'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>4.2 2º Encontro: Relação com o Entorno e Gestão Ambiental</h3>
 			<p>O segundo encontro, intitulado <i>Relação com o Entorno e Gestão Ambiental</i>, envolveu uma oficina temática e uma apresentação expositiva seguida de debate, na sede da UMAPAZ.</p>
 			<p>A oficina temática <i>“Perspectivas do Parque e da Cidade”</i> teve como objetivo capturar a sensibilidade do usuário de vistas emblemáticas do Parque. Para isso os participantes (80 pessoas) se reuniram em frente ao Auditório e foram divididos em 4 grupos e encaminhados  para os seguintes locais: Ponte de Ferro, Entorno do Auditório, Praça da Serpente (também conhecida como Praça das Cobras) e Praça da Paz. </p>
@@ -479,7 +476,7 @@
 			<p>Do total de 128 palavras escritas pelos participantes retratando sensações, elementos ou características do Ibirapuera, as mais frequentes foram acessibilidade e segurança. Nota-se também que a oficina criou oportunidade para que fossem marcados diversos aspectos positivos do Parque como, local de refúgio, integração e preservação de fauna e flora. Além disso, as fotografias inspiraram ainda sentimentos como conexão, paz e energia. Por outro lado, registraram-se aspectos negativos, como conflitos, e também algumas demandas, como a necessidade de melhorar a segurança, a sinalização e a iluminação.</p>
 			<p>Por fim, houve uma palestra sobre Gestão Ambiental, proferida por técnico da UMAPAZ, com vistas a subsidiar uma discussão sobre o tema aplicada à realidade do Parque. Nessa ocasião, os participantes puderam tirar dúvidas sobre diferentes aspectos relacionados à gestão ambiental e Plano Diretor do Parque, como por exemplo, a necessidade de haver um bom diagnóstico socioambiental do Ibirapuera ou até mesmo questões mais específicas relacionadas à gestão de resíduos.</p>
 			<!-- Ocultar comentários:  <Comments :attr="{id:commentId(), context:'CAPÍTULO 2'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>4.3 3º Encontro: Caminhada Programada e Bases Naturais e Usos do parque.</h3>
 			<p>O terceiro encontro, intitulado <i>Caminhada Programada e Bases Naturais e Usos do Parque Ibirapuera</i> foi realizado no sábado, 20 de julho de 2019, das 9:00 às 15:30 horas, com cerca de 90 participantes.</p>
 			<figure title="Figura 23 – Caminhos percorridos na Oficina Caminhada Programada no Parque Ibirapuera. Fonte: PMSP." class="coluna">
@@ -510,7 +507,7 @@
 			<p>A melhoria da estrutura de apoio ao usuário surge da necessidade de reforma do edifício da antiga Administração do parque, na instalação de mais bancos, bebedouros, sanitários,boas opções de alimentação, além da regularização dos cerca de 160 vendedores ambulantes do parque.</p>
 			<p>A acessibilidade e sinalização surgem com frequência nos relatos, buscando a conscientização quanto à diversidade e o respeito social. Após a chegada na UMAPAz  os técnicos de SVMA apresentaram as bases naturais (Água, Solo, Vegetação, Fauna) e de Usos (Cultural, Lazer Recreativo, Ócio, Educacional) e Campo Experimental, explicitando a complexidade envolvida na gestão do Parque Ibirapuera.</p>
 			<!-- Ocultar comentários:  <Comments :attr="{id:commentId(), context:'CAPÍTULO 2'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>4.4 Devolutiva do processo participativo à população</h3>
 			<p>Finalizando esta etapa do processo participativo foi apresentada a devolutiva das Oficinas aos participantes. O evento ocorreu na sede da UMAPAZ na segunda-feira, 22 de julho de 2019, das 18:10 às 21:20 horas.</p>
 			<p>A Coordenadora de Gestão de Parques e Biodiversidade Municipal – CGPABI, iniciou a noite com uma síntese dos 3 encontros,  trazendo alguns dos resultados obtidos, sobretudo da 1ª e 2ª Oficinas. Apresentou um cronograma das próximas etapas para conclusão do Plano Diretor e abriu espaço para que os presentes pudessem debater e se manifestar sobre o processo de construção do documento.</p>
@@ -559,7 +556,7 @@
 			<h2 class="titulo" indent="2">2. BASES NATURAIS DO PARQUE</h2>
 			<Comments :attr="{id:commentId(), context:'2. BASES NATURAIS DO PARQUE'}" v-if="estaConsulta.ativo == 1"></Comments>
 			<!-- <CommentsContext :id="commentId()" :context="'6. APONTAMENTOS FINAIS'"></CommentsContext> -->
-		
+
 			<h3>2.1. Processo de mapeamento das Bases Naturais do Parque</h3>
 			<p>O mapeamento das bases naturais do Parque Ibirapuera, isto é, água, solo, vegetação e fauna, foi realizado durante por técnicos da SVMA da Divisão de Produção e Herbário Municipal – DPHM, da Divisão da Fauna Silvestre – DFS, da Escola Municipal de Jardinagem – EMJ e o Diretor do Parque ibirapuera.</p>
 			<p>De acordo com o conhecimento adquirido dos especialistas, foram mapeados diversos elementos relacionados às bases naturais, conforme indicado abaixo:</p>
@@ -571,7 +568,7 @@
 			</ul>
 			<p>Tais elementos foram identificados e desenhados sobre mapas-base do Parque Ibirapuera, com possibilidade da participação de vários técnicos simultaneamente, que discutiram entre si a fim de se chegar a informações mais qualificadas e de forma consensual. Posteriormente os mapas foram digitalizados em ambiente SIG (Sistema de Informação Geográfica) e finalmente validados durante um novo encontro, cabendo pequenos ajustes e complementações aos mapas gerados.</p>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>2.2 Água – Diagnóstico</h3>
 			<p>Os elementos relacionados à água no Parque Ibirapuera que foram mapeados podem ser observados na figura abaixo. Observa-se que além da identificação dos corpos d’água do Parque e de equipamentos como, vertedouros e bebedouros, foram identificadas ainda regiões que requerem cuidados específicos relacionados à saúde do Parque e proteção de suas águas. Chamam a atenção as áreas passíveis de alagamento e as porções do lago suscetíveis a assoreamento.</p>
 			<figure title="Figura 1 – Água – diagnóstico dos espaços e elementos relacionados à água. Fonte: PMSP." class="coluna">
@@ -617,7 +614,7 @@
 				<figcaption>Foto 5 – Projeto da Phytorestore - cenário proposto. Fonte: Phytorestore.</figcaption>
 			</figure>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>2.2.1 Diretrizes gerais</h3>
 			<p>A questão dos recursos hídricos do Parque é um de seus pontos sensíveis, tanto pela poluição da água do lago, quanto ao abastecimento como um todo, as diretrizes gerais elencadas abaixo deverão ainda ser definidas no âmbito do fórum que tratará do tema, bem como as metas que fazem parte do apêndice deste Plano.</p>
 			<ul>
@@ -626,13 +623,13 @@
 				<li>Em relação ao uso do lago, não deverão ser fomentadas atividades recreativas causadoras de impactos na fauna aquática. De acordo com determinação da SVMA/Divisão da Fauna Silvestre, as atividades não permitidas são aquelas que causam movimentação nas águas como, por exemplo, mergulho e uso de pedalinhos.</li>
 			</ul>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>2.3. Solo – Diagnóstico</h3>
 			<p>O solo é um recurso natural de grande importância, pois além de sustentar a produção de alimentos, recebe a água das chuvas que depois emerge na forma de nascentes e mananciais, e ainda sustenta toda a biodiversidade das florestas e campos.</p>
 			<p>No Parque Ibirapuera o solo possui maior quantidade de areia, seguido por silte e argila, e pH ligeiramente ácido, com bastante matéria orgânica<sup>1</sup> . É importante que esta seja mantida no Parque o máximo possível já que é responsável por disponibilizar os nutrientes para as espécies vegetais ali presentes. </p>
 			<p>Nesse sentido, foram identificados no Parque os locais onde o solo está comprometido por processos de erosão e compactação, com possível perda de matéria orgânica, e que portanto, requerem atenção especial.</p>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>2.3.1 Diretrizes gerais</h3>
 			<wbr>
 				<ul>
@@ -645,7 +642,7 @@
 					<figcaption>Figura 2 –  Solo – diagnóstico dos locais que requerem manejo de solo. Fonte: PMSP.</figcaption>
 				</figure>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>2.4. Vegetação – Diagnóstico</h3>
 			<ul class="links">
 				<li>
@@ -734,7 +731,7 @@
 				<li>Aproveitar as epífitas de galhos caídos, recolocando-as em outros troncos ou utilizando-as como elementos decorativos do Parque.</li>
 			</ul>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>2.5 Fauna – Diagnóstico</h3>
 			<ul class="links">
 				<li>
@@ -778,7 +775,7 @@
 			<p>Entre anfíbios e répteis, há registros de sapo-cururu (<em>Rhinella icterica</em>), cágado-pescoço-de-cobra (<em>Hydromedusa tectifera</em>), tartaruga-tigre-d’água (<em>Trachemys dorbigniidactylus mabouia</em>), cobra-de-duas-cabeças (<em>Amphisbaena alba</em>) e várias serpentes, de modo geral, não venenosas como cobra d’água (<em>Helicops modestus; Liophis miliaris</em>); papa-ovo (<em>Sibynomorphus mikanii</em>) e corre-campo (<em>Tomodon dorsatus</em>).</p>
 			<p>Entre as 16 espécies de mamíferos, verifica-se a ocorrência de doze  espécies de morcegos, com diferentes hábitos alimentares. Destaca-se uma espécie pouco conhecida e considerada com dados deficientes no Estado e pela IUCN, o morcego-cara-de-cachorro (<em>Molossops neglectus</em>). Também estão  registradas o morcego-beija-flor (<em>Glossophaga soricina</em>) e o morcego-das-listras-brancas-na-cabeça-e-nas-costas  (<em>Platyrrhinus lineatus</em>), que se alimentam de néctar, o morcego-das-listras-brancas-na-cabeça(<em>Artibeus lituratus</em>), espécie frugívora, e o morcego-de-cauda-livre (<em>Tadarida brasiliensis</em>), insetívora. Podem ser encontrados ainda o gambá-de-orelha-preta (<em>Didelphis aurita</em>) e mamíferos sinantrópicos como as ratazanas (<em>Rattus norvegicus</em>).</p>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>2.5.1 Diretrizes Gerais</h3>
 			<wbr>
 			<ul>
@@ -811,7 +808,7 @@
 				<p>Da mesma maneira, deve-se considerar que os usos propostos ao mesmo tempo em que são gatilhos a outras apropriações também se limitam: por exemplo, a questão ambiental impõe condições ao uso cultural, de lazer e esportivo, assim como este uso impõe limites para o aspecto ambiental. O patrimônio histórico, por sua vez, impõe condições de uso restritivas ao ambiente e ao esporte e à cultura. As pessoas atraídas para o Parque por um aspecto podem se interessar pelos outros, ou seja, cada uso ou apropriação pode, ao mesmo tempo, ser uma porta de entrada para outras apropriações.</p>
 				<p>A preservação do meio ambiente, as possibilidades de educação ambiental e o lazer devem estar presentes em todo o processo de planejamento e em todas as ações, incluindo as atividades de lazer recreativo ou de ócio.</p>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>3.1.	Uso Ambiental</h3>
 				<p>As Bases Naturais do Parque (Item 2) fundamentaram o Uso Ambiental no Parque Ibirapuera ter prevalência sobre toda outra forma de apropriação dos espaços do parque.  O Uso Ambiental embasa toda a persistência, resiliência e conservação dos processos naturais que fundamentam o parque como espaço livre.</p>
 				<p>O Plano Diretor Participativo categoriza e analisa os elementos separadamente para identificar os espaços e a intensidade de ocorrência. Desta maneira, caracterizam o Uso Ambiental as dinâmicas dos elementos naturais Vegetação, Fauna, Água e Solo, em termos da conservação do patrimônio natural do parque, de se permitir a regeneração natural, de estimular o enriquecimento ambiental e de promover a mitigação dos impactos.</p>
@@ -821,7 +818,7 @@
 				<p>Fauna categoriza os espaços de distribuição restrita (regiões específicas do Parque onde ocorrem algumas espécies com exclusividade); abrigo, alimentação e reprodução de anatídeos; abrigo e reprodução de rapinantes; abrigo e reprodução de aves aquáticas nativas; abrigo e reprodução de cágados; e roedores sinantrópicos.</p>
 				<p>Os demais usos identificados no parque – Educacional, Cultural, Lazer Recreativo, Lazer Esportivo e Ócio – equivalentes em importância, se submetem ao uso Ambiental, sob o qual se estruturam.</p>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>3.2.	Uso Educacional</h3>
 			<p>O Parque Ibirapuera conta com importantes equipamentos de educação, como o Planetário, a Escola de Astrofísica e a UMAPAZ, da qual se destaca a Escola de Jardinagem e Campo Experimental.  Há ainda o CECCO que oferece atividades socioeducativas e de saúde, vinculado a Secretaria Municipal de Saúde. </p>
 			<p>Esses equipamentos estão caracterizados em detalhes na seção 8 – Ações de Projeto e Visões de Futuro.</p>
@@ -830,7 +827,7 @@
 				<figcaption>Figura 7 – Levantamento dos Usos Educacionais no Parque Ibirapuera. Fonte: PMSP.</figcaption>
 			</figure>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>3.3. Uso Cultural</h3>
 			<p>O Uso Cultural é o terceiro em hierarquia de relevância para a apropriação dos espaços do parque. Adota-se como conceito de Uso Cultural toda a atividade de desenvolvimento de conhecimento humano que pode ser representada pelas artes, crença, costume, hábitos e aptidões, moral, comportamento, símbolo, prática social, de conhecimento da natureza, em um processo cíclico, adaptativo e acumulativo.</p>
 			<p>A categorização proposta subdivide o Uso Cultural em espaços livres de edificação, que são todos os espaços não cobertos ou protegidos por estruturas construídas, e Uso Cultural em espaços edificados. No parque, os espaços livres de edificação configuram a maior quantidade de espaço existente.</p>
@@ -849,7 +846,7 @@
 				<figcaption>Figura 9 – Levantamento de Usos Culturas em Espaços Livres no Parque Ibirapuera. Fonte: PMSP.</figcaption>
 			</figure>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>3.4. Lazer Recreativo – Ativo e Ócio</h3>
 			<p>O Lazer Recreativo Ativo classifica toda atividade lúdica desenvolvida no tempo livre de maneira espontânea e criativa que traga satisfação e descontração à pessoa. O Lazer Recreativo pode operar a partir do indivíduo ou de um grupo de pessoas; está associado a incrementar a qualidade de vida e a satisfazer as necessidades de ordem física e emocional, pessoal ou social. Pode também configurar jogo ou prática corporal.</p>
 			<p>O ócio como tempo em que se descansa, em complementaridade ao Lazer Recreativo Ativo, está associado à recriação ou ao tempo necessário, e fundamental, de desconexão com todo o pensamento para que o intelecto possa se reciclar como um processo de relaxamento. </p>
@@ -865,7 +862,7 @@
 				<figcaption>Figura 11 – Levantamento do Uso Lazer Recreativo – Ócio, no Parque Ibirapuera. Fonte: PMSP.</figcaption>
 			</figure>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>3.5.	Lazer Esportivo</h3>
 			<p>Em complementaridade  ao Lazer Recreativo, o Lazer Esportivo pode ser classificado como atividade física de grande benefício psíquico e emocional, porém, necessita de instalações apropriadas segundo regramentos próprios ao esporte e também impingidos à prática esportiva.  No parque Ibirapuera esta prática está restrita às quadras poliesportivas, a jogo, práticas corporais (por exemplo, Yoga), caminhada, corrida, ciclismo, slackline,  prática de skate.</p>
 			<figure title="Figura 12 – Levantamento dos Usos de Lazer Esportivo no Parque Ibirapuera. Fonte: PMSP." class="coluna">
@@ -874,11 +871,11 @@
 			</figure>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
 		</section>
-		
+
 		<section>
 			<h2 class="titulo" indent="2">4. SETORIZAÇÃO DO PARQUE IBIRAPUERA</h2>
 			<Comments :attr="{id:commentId(), context:'4. SETORIZAÇÃO DO PARQUE IBIRAPUERA'}" v-if="estaConsulta.ativo == 1"></Comments>
-		
+
 			<h3>4.1. Parque Ibirapuera: Caracterização da Paisagem</h3>
 			<p>O suporte físico e o processo natural dos elementos água, solo, vegetação, fauna e luz foram os condicionantes da solução de projeto do Parque Ibirapuera, expressos, por exemplo, na construção dos lagos para contenção de águas. O todo do parque e os subespaços criados configuram zonas integrantes, justapostas e cadenciadas articuladas a partir dos caminhos que compõe a estrutura de apropriação do parque. Esta estrutura é composta por caminhos sinuosos e harmônicos, que descortinam a paisagem à medida que se caminha por eles.</p>
 			<p>A caracterização que se apresenta está fundamentada no Projeto de Paisagismo original do parque, de autoria do engenheiro agrônomo Otávio Augusto Teixeira Mendes, e nas particularidades de uso que o Ibirapuera recebeu ao longo de seis décadas de apropriação pública.</p>
@@ -904,7 +901,7 @@
 			</figure>
 			<p>O terceiro percurso, não estruturante, com 1010m de extensão envolve o lago voltado para a avenida Pedro Álvares Cabral e, na singularidade de suas proporções impregna forte imaginabilidade<sup>2</sup> ao parque. O Monumento às Bandeiras na confluência do desenho urbano e o Conjunto Arquitetônico arrematam a perspectiva descortinada propiciando a visualização emblemática que possui forte simbolismo para os paulistanos.</p>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>4.2.	Do Conceito de Setorização Adotado</h3>
 			<p>A setorização proposta fundamenta-se na análise do projeto de Paisagismo de Teixeira Mendes, do projeto do Conjunto Arquitetônico de Niemeyer e nas particularidades de uso que o Ibirapuera recebeu ao longo de seis décadas. O uso contemporâneo é aquele que apoia as análises do espaço e da paisagem do parque. Entre as características de maior relevância destacamos:</p>
 			<p>Haver domínio do espaço perceptivo pelo caminhante do parque com proporção de escala e de espaço, ou seja, o usuário sente conforto ambiental e sensação de pertencimento. Este atributo é respaldado pela vegetação arbórea, que configura na dimensão do parque plano de vedo, que é a limitação do campo visual procedido pela vegetação disposta de maneira a limitar o campo visual, compartimentando o espaço de vivência. Esta é uma propriedade importante no espaço exterior porque ao se limitar o campo visual há condicionamento da horizontalidade pela verticalidade a partir do usuário. </p>
@@ -916,7 +913,7 @@
 			<p>O Parque Ibirapuera tem diversos aspectos fundamentais que se influenciam e se limitam mutuamente, como o de patrimônio histórico e paisagístico, de relevância ambiental, de caráter cultural, de lazer e de atividades esportivas. Esta é a hierarquia que embasa a interpretação de cada setor.</p>
 			<p>A singularidade do setor é caracterizada pela análise gráfica, produto da sobreposição dos mapeamentos Bases Naturais do Parque, denominado Mapa de Setorização. A Potencialidade compatibiliza o Mapa de Setorização com os Usos mais compatíveis pelas características físico-ambientais. A Fragilidade compatibiliza os Usos menos compatíveis devido às características físico-ambientais. O Conflito de Uso expõe onde pode haver impacto ambiental, comprometimento cultural, descaracterização do patrimônio ou desrespeito social como decorrência do uso público. A persistência do Parque, pública e institucionalmente, se compõe na multiplicidade destas dimensões e na decorrência de suas apropriações de uso.</p>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>4.3.	Setores e Subsetores do Parque</h3>
 			<p>Sobre o Parque Ibirapuera incidem os parâmetros de uso e ocupação do solo para Zonas Especiais de Proteção Ambiental – ZEPAM, conforme Lei 16.402/2016 . Todavia, as particularidades de implantação do parque consolidaram Setores e Subsetores bem definidos que orientam a apropriação do espaço por seus usuários.</p>
 			<p>A setorização, ora proposta para o parque, corrobora e aprofunda o zoneamento pensado por Niemeyer em seu Plano Diretor de 1996 e aquele elaborado por equipe técnica da Secretaria Municipal do Verde e Meio Ambiente, em 2007. Ou seja, ordena o espaço do parque segundo as características existentes, tendo nos lagos um forte delimitador dos Setores Cultural e Ambiental, conforme pode ser observado na figura seguinte.</p>
@@ -1036,18 +1033,18 @@
 				<figcaption>Tabela 7 – Eventos em espaços livres do parque. Fonte: PMSP.</figcaption>
 			</figure>
 				<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>6.1 Diretrizes de Uso – Locação publicitária</h3>
-			<p>	Além dos eventos, prática que já é permitida no parque e está consolidada por este Plano Diretor, é também permitida a utilização dos espaços e equipamentos do Ibirapuera como cenário fotográfico ou de filmagens, para a realização de comerciais, propagandas, filmes, programas de TV, catálogos publicitários, promoção de marcas, produtos ou serviços, ensaios com modelos e outros com finalidade comercial, desde que atendida a Lei 14.223/2006 – Cidade Limpa e aprovada pela Gestão do Parque.</p>			
+			<p>	Além dos eventos, prática que já é permitida no parque e está consolidada por este Plano Diretor, é também permitida a utilização dos espaços e equipamentos do Ibirapuera como cenário fotográfico ou de filmagens, para a realização de comerciais, propagandas, filmes, programas de TV, catálogos publicitários, promoção de marcas, produtos ou serviços, ensaios com modelos e outros com finalidade comercial, desde que atendida a Lei 14.223/2006 – Cidade Limpa e aprovada pela Gestão do Parque.</p>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>6.2 Diretrizes de Uso – Outras Atividades</h3>
 			<p>	Sendo os parques zonas especiais de preservação ambiental que comportam atividades de contemplação, lazer, recreação, atividades esportivas e físicas relacionadas ao bem estar e saúde, bem como propiciam a interação social, têm se consolidado no Parque Ibirapuera a exploração de atividades econômicas, tais como visitas guiadas gerais ou com temas específicos, assessorias esportivas, grupos de yoga e atividades similares, bem como tem aumentado a demanda por piqueniques corporativos, de aniversário ou casamentos, entre outros.</p>
 			<p>A prática de gestão do parque identifica que os piqueniques têm ocorrido em áreas gramadas e sombreadas em geral (Bosque das Araucárias, bosque próximo à GCM, Bosque da Leitura). As assessorias esportivas tem utilizado como ponto de encontro e aquecimento físico a grande marquise, as marquises da Bienal, Museu Afro, Pavilhão das Culturas Brasileiras, Praça do Porquinho e Serraria. Os grupos de Yoga têm utilizado com ponto de encontro e práticas a Praça do Porquinho, Praça da Paz e Serraria (Figura 25).</p>
 			<figure title="Figura 21 – Levantamento da situação atual da distribuição de outras atividades no Parque Ibirapuera, sem regulação de uso. Fonte: PMSP." class="coluna">
 				<img :src="fileSrc('2fig21.png')" alt="Figura 21 – Levantamento da situação atual da distribuição de outras atividades no Parque Ibirapuera, sem regulação de uso. Fonte: PMSP." style="height: auto; width: 100%;">
 				<figcaption>Figura 21 – Levantamento da situação atual da distribuição de outras atividades no Parque Ibirapuera, sem regulação de uso. Fonte: PMSP.</figcaption>
-			</figure>			
+			</figure>
 			<p>	Tais atividades passam a ser oficialmente permitidas, observados os espaços definidos para cada tipo de atividade, conforme a figura 5, e as seguintes diretrizes.</p>
 			<figure title="Figura 22 – Distribuição de outras atividades no parque. Proposta de regulação. Fonte: PMSP." class="coluna">
 				<img :src="fileSrc('2fig22.jpg')" alt="Figura 22 – Distribuição de outras atividades no parque. Proposta de regulação. Fonte: PMSP." style="height: auto; width: 100%;">
@@ -1108,7 +1105,7 @@
 			</ul>
 			<p>Por fim, deve-se garantir, por meio da permanente atualização de laudos técnicos, que o Parque se encontre livre de vetores que possam oferecer riscos à flora, fauna, aos usuários e aos equipamentos do Parque.</p>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>8.1 Gerenciamento de resíduos sólidos e coleta seletiva</h3>
 			<p>As lixeiras do Parque apresentam-se em distintos estados de conservação, umas em bom estado e outras deterioradas. Além disso, são insuficientes e inadequadas para atender o volume de resíduos produzidos nos dias de grande movimento do Parque.</p>
 			<p>	Nesse sentido, a gestão dos resíduos sólidos no Parque deve seguir as seguintes diretrizes:</p>
@@ -1126,14 +1123,13 @@
 				<li>Implantar lixeiras nos locais com maior concentração de usuários e ou manter as lixeiras do Parque disponíveis para receberem novos resíduos, impedindo o acesso de animais silvestres e domésticos a estes dispositivos.</li>
 			</ul>
 			<figure title="Foto 14 – Lixeiras do Parque Ibirapuera. Fonte: PMSP." class="coluna">
-    			<img :src="fileSrc('2fot14.jpg')" alt="Foto 14 – Lixeiras do Parque Ibirapuera. Fonte: PMSP." style="height: auto; width: 100%;">
+				<img :src="fileSrc('2fot14.jpg')" alt="Foto 14 – Lixeiras do Parque Ibirapuera. Fonte: PMSP." style="height: auto; width: 100%;">
 				<figcaption>Foto 14 – Lixeiras do Parque Ibirapuera. Fonte: PMSP.</figcaption>
 			</figure>
 			<ul>
 				<li>Manter registro quantitativo dos resíduos gerados no Parque, informando sua origem, tipo e destinação final, devendo atualizá-lo para fins de monitoramento.</li>
-			 </ul>
-    		<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+			</ul>
+
 			<h3>8.2 Educação Ambiental</h3>
 			<p>Desde 2014 a cidade de São Paulo conta com uma Política Municipal de Educação Ambiental – Lei Municipal nº 15.967 de 24 de janeiro de 2014 – que prevê diversas atividades no âmbito do Programa Municipal de Educação Ambiental, que inclui os Parques urbanos. Destacam-se a UMAPAZ (Universidade Aberta do Meio Ambiente e da Cultura de Paz) que desenvolve e dissemina desde 2006 conhecimentos e práticas de educação para a sustentabilidade, e o programa Trilhas Urbanas, que potencializa o aspecto pedagógico dos Parques, desenvolvendo nesses espaços trilhas monitoradas como estratégia em educação ambiental.</p>
 			<p>Nesse sentido, cabe à gestão do Parque atuar em consonância com as ações já desenvolvidas, seguindo as diretrizes estabelecidas pela Política Municipal de Educação Ambiental e proporcionando atividades a um maior número de pessoas, incluindo usuários do Parque, escolas e comunidade do entorno. O programa de educação ambiental a ser elaborado pela gestão do Parque pode incluir as seguintes atividades:</p>
@@ -1176,7 +1172,7 @@
 			<p>Cabe destacar novamente que as intervenções identificadas aqui necessitam serem desenvolvidas por meio de projetos específicos de arquitetura, engenharia, paisagismo, entre outros, além de necessitarem de aprovação, em especial pelos órgãos de preservação do patrimônio, considerando que o parque como um todo e não somente o conjunto arquitetônico das Comemorações do IV Centenário é protegido por tais órgãos.</p>
 			<p>Outra observação importante é que a premissa do Plano Diretor de 2007, de que a paisagem do parque deve ser a balizadora das Ações de intervenção, deve ser mantida, assim como a implantação ou melhoria da infraestrutura como acessibilidade, sinalização e comunicação visual, mobiliário e iluminação, imprescindível aos diversos usos que lá ocorrem.</p>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>9.1 Pavilhão Lucas Nogueira Garcez – Oca</h3>
 			<wbr>
 			<ul>
@@ -1190,8 +1186,8 @@
 			</ul>
 			<p>Manter as ações de manutenção, garantindo o bom estado da infraestrutura, com atenção especial à impermeabilização da cobertura e adequações relativas à acessibilidade, em consonância com as normas de preservação do patrimônio.    </p>
 		<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
-    	<h3>9.2 Auditório Ibirapuera  Oscar Niemeyer</h3>
+
+		<h3>9.2 Auditório Ibirapuera  Oscar Niemeyer</h3>
 			<wbr>
 			<ul>
 				<li><b>Caracterização</b></li>
@@ -1203,8 +1199,8 @@
 				<li><b>Ação de Projeto</b></li>
 			</ul>
 			<p>Manter as ações de manutenção, garantindo o bom estado da infraestrutura, em consonância com as normas de preservação do patrimônio.</p>
-			 <!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
+
 			<h3>9.3 Museu de Arte Moderna – MAM e Jardim das Esculturas</h3>
 			<wbr>
 			<ul>
@@ -1217,7 +1213,7 @@
 			</ul>
 			<p>Manter as ações de manutenção, garantindo o bom estado da infraestrutura e garantir que as atividades realizadas pelos usuários não interfiram na qualidade dos espaços, evitando depredações e usos inadequados.</p>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>9.4 Pavilhão Japonês</h3>
 			<wbr>
 			<ul>
@@ -1230,7 +1226,7 @@
 			<p>As instalações do Pavilhão Japonês devem ser mantidas em boas condições, garantindo a preservação de suas características arquitetônicas originais.</p>
 			<p>O paisagismo do local, considerando a vegetação e o lago não devem ser alterados, considerando sempre a preservação das visuais do local.</p>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>9.5 Pavilhão das Aves</h3>
 			<wbr>
 			<ul>
@@ -1243,7 +1239,7 @@
 			</ul>
 			<p>As instalações devem ser mantidas em boas condições, sendo a reforma emergencial indispensável para adequação e facilitação do manejo dos animais, tais como: melhorias do piso pavimentado e da área recoberta por “solo de terra” para evitar a formação de calos nas patas dos anatídeos; substituição das bases estruturais das telas que revestem os recintos externos, além da troca do alambrado; construção de piscinas em alvenaria nos recintos externos que não apresentam porção úmida; aprofundamento das piscinas nos recintos externos que já possuem, de forma a garantir a natação dos animais; instalação de portas laterais deslizantes nos recintos próximos ao lago e dispostos lado a lado, visando à interligação dos mesmos; instalação de portas em sistema de cambiamento nos recintos externos; reforma de todas as rampas de acesso do lago ao Pavilhão, com piso não abrasivo e antitérmico, para garantir o declive/aclive suave; reforma da casa de madeira; implantação de estrutura para abrigar os tratadores (banheiro, cozinha e vestiário);implantação de área de manejo externa, abrigada e iluminada, para as atividades necessárias na manutenção do plantel.</p>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>9.6 Praça da Paz</h3>
 			<wbr>
 			<ul>
@@ -1257,7 +1253,7 @@
 			<p>Além disso, deverá ser promovida a aeração e a descompactação do solo com cobertura de areia e de composto orgânico para melhoria do gramado; aguardar o sementeamento (produção e dispersão das sementes) para realizar os cortes de grama; manter gramíneas atrativas de aves granívoras com maior altura: coleirinhos, pintassilgo, , bico-de-lacre,, canário da terra.</p>
 			<p>No local devem ser mantidas as atividades de caráter de lazer e contemplação, garantindo o bom estado ambiental do espaço em consonâncias com os usos antrópicos.</p>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>9.7 UMAPAZ</h3>
 			<wbr>
 			<ul>
@@ -1273,7 +1269,7 @@
 			</ul>
 			<p>Realizar as ações de ações de manutenção, garantindo o bom estado da infraestrutura, de forma a manter as atividades de pesquisa e educação ambiental.</p>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-				
+
 			<h3>9.8 Campo Experimental da Escola de Jardinagem</h3>
 			<wbr>
 			<ul>
@@ -1284,14 +1280,14 @@
 				<li><b>Ação de Projeto</b></li>
 			</ul>
 			<p>Manter o Campo Experimental e incentivar as atividades de educação ambiental e o uso pela Escola de Jardinagem e CECCO. As edificações inseridas no Campo Experimental necessitam de reforma das instalações elétrica, hidráulica e de TI; piso e cobertura; reforma de caixilhos, esquadrias e portas; reforma e/ou nova instalação de louças e metais no caso de sanitários, vestiários, cozinhas e refeitórios; pintura interna e externa; reforma e/ou instalação de novos equipamentos e mobiliário, quando necessário, a depender do uso do espaço.</p>
-    		<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
-    	<h3>9.9 Centro de Convivência e Cooperativa – CECCO </h3>
+			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
+
+			<h3>9.9 Centro de Convivência e Cooperativa – CECCO </h3>
 			<wbr>
 			<ul>
 				<li><b>Caracterização</b></li>
 			</ul>
-			<p>O Centro de Convivência e Cooperativa – CECCO, no âmbito da Secretaria Municipal de Saúde – SMS, é um serviço de saúde que compõe a rede de atenção psicossocial alocada em espaços públicos como praças e parques. Não se configura, portanto, como edificação de apoio operacional do parque, mas compartilha a edificação utilizada pela equipe de manejo.</p>			
+			<p>O Centro de Convivência e Cooperativa – CECCO, no âmbito da Secretaria Municipal de Saúde – SMS, é um serviço de saúde que compõe a rede de atenção psicossocial alocada em espaços públicos como praças e parques. Não se configura, portanto, como edificação de apoio operacional do parque, mas compartilha a edificação utilizada pela equipe de manejo.</p>
 			<p>O Centro de Convivência e Cooperativa – CECCO, vinculado à Secretaria de Municipal de Saúde é um serviço de saúde que compõe a rede de atenção psicossocial alocada em espaços públicos com praças e parques ou outros vocacionados ao uso coletivo e à socialização dos munícipes, de acesso livre e gratuito. Os objetivos gerais do CECCO são Proporcionar o convívio social com a comunidade entre pessoas em situação de vulnerabilidade e a população geral, promovendo sua integração, promover cuidado em saúde mental, desenvolver ações que visem à inclusão social, ambiental, cultural e trabalho, incentivar a autonomia, a contratualidade de usuários e familiares e promover a Cultura de Paz.</p>
 			<p>A população beneficiada pelo CECCO inclui pessoas de qualquer faixa etária, condição de saúde, perfil sócio-cultural-econômico e de escolaridade, local de moradia ou trabalho e da diversidade de raça, gênero e credo, sobretudo segmentos populacionais em sofrimento mental, vítimas de violência, com necessidades decorrentes do uso de substâncias psicoativas, em situação de rua, bem como com deficiências e outras vulnerabilidades, que demonstrem vontade própria e interesse em participar de atividades.</p>
 			<ul>
@@ -1300,7 +1296,7 @@
 			<p>A edificação ocupada pelo CECCO necessita de reforma das instalações elétrica, hidráulica e de TI; piso e cobertura; reforma de caixilhos, esquadrias e portas; reforma e/ou nova instalação de louças e metais no caso de sanitários, vestiários, cozinhas e refeitórios; pintura interna e externa; reforma e/ou instalação de novos equipamentos e mobiliário, quando necessário, a depender do uso do espaço.</p>
 			<p>A edificação atualmente ocupada pelo CECCO deverá permanecer com o uso atual destinado a serviços de pequeno porte e atividades de pesquisa e educação ambiental, sob gestão da Secretaria Municipal de Saúde (SMC).</p>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>9.10	Praça de Jogos</h3>
 			<wbr>
 			<ul>
@@ -1313,7 +1309,7 @@
 			<p>Uma vez que a área é subutilizada, é recomendável pensar em novos usos para o espaço. Dado que fica próxima ao parquinho central é compatível e complementar a implantação de mesas de piquenique e módulos de sanitários.</p>
 			<p>Além disso, poderão ser instaladas mesas de piquenique, bebedouros, lixeiras, módulos de sanitários e outros mobiliários, como suporte para o melhor uso do local como espaço de reunião ou evento de pequeno porte, como festas de aniversário, piqueniques e outras comemorações.</p>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>9.11 Portarias</h3>
 			<wbr>
 				<ul>
@@ -1329,7 +1325,7 @@
 			<p>As novas instalações destinadas às portarias (centros de apoio aos usuários) poderão ser concebidas como parte do mobiliário do parque, de forma a garantir flexibilidade no atendimento aos usuários.</p>
 			<p>As portarias também poderão funcionar como centro de apoio aos usuários, de forma a agregar outras atividades, tais como a disponibilização de informações turísticas e da programação do parque, a venda de ingressos e tíquetes para eventos e serviços de alimentação, e devem estar disponíveis durante todo o período em que o parque estiver aberto.</p>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>9.12 Slackline e Redário</h3>
 			<wbr>
 				<ul>
@@ -1343,7 +1339,7 @@
 			<p>Deverá ser disponibilizado espaço adequado para práticas como Slack Line e instalação de redes, para que as mesmas não ocorram junto às árvores do Parque.</p>
 			<p>É vedado danificar, colher frutos, flores, retirar mudas, subir, escrever e amarrar redes, faixas, equipamentos ou outros objetos nas árvores do Parque. No caso específico da prática do slackline e utilização de redes, esses equipamentos deverão ser utilizados nas áreas próximas à Praça da Paz.</p>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>9.13.	Antiga Administração, Guarda Civil Metropolitana, edifício da Manutenção</h3>
 			<wbr>
 				<ul>
@@ -1357,7 +1353,7 @@
 			<p>As edificações necessitam de reforma da cobertura, forros e drenagem, bem como reforma das instalações elétrica, hidráulica e de TI; piso e cobertura; reforma de caixilhos, esquadrias e portas; reforma e/ou nova instalação de louças e metais no caso de sanitários, vestiários, cozinhas e refeitórios; pintura interna e externa; reforma e/ou instalação de novos equipamentos e mobiliário, quando necessário, a depender do uso do espaço.</p>
 			<p>As edificações poderão receber outros usos tais comoapoio aos usuários, -sanitários, vestiários, serviços de alimentação, conveniência e suvenir, ou atividades relacionadas a educação ambiental, lazer, esporte e recreação, compatíveis com este setor do parque.</p>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>9.14 Sanitários</h3>
 			<wbr>
 				<ul>
@@ -1379,7 +1375,7 @@
 			<p>Devem ser mantidas limpas e com boas condições de higiene, efetuando a remoção dos resíduos dos cestos, bem como a limpeza do piso e dos vasos sanitários, com aplicação de produtos desinfetantes e outras ações adequadas ao cumprimento dos encargos, na frequência necessária para tanto. Devem ser fornecidos os suprimentos de higiene necessários ao bom funcionamento dos sanitários, tais como papel higiênico, sabonete, papel para secar as mãos e/ou equipamentos de secagem.</p>
 			<p>	Durante eventos em espaços livres, de forma a prevenir e corrigir eventuais impactos causados ao parque e ao seu uso no menor tempo possível, adotando medidas como alocação de sanitários químicos e lixeiras, para o atendimento a eventos específicos.</p>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>9.15	Lanchonetes</h3>
 			<wbr>
 				<ul>
@@ -1398,7 +1394,7 @@
 			<p>Providenciar dedetização junto a Unidades de Vigilância de Saúde – SUVIS, quando da instalação da fauna sinantrópica;</p>
 			<p>Promover um programa de educação ou informação ambiental aos munícipes frequentadores quanto à importância do descarte correto dos restos de alimentos e resíduos.</p>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>9.16	Parquinhos</h3>
 			<wbr>
 				<ul>
@@ -1415,7 +1411,7 @@
 			<p>Em ambas as áreas deverá ser realizada a reforma e adequação dos parquinhos do parque, em atendimento às normas aplicáveis, considerando a integração dos equipamentos à paisagem do parque com a natureza, bem como o atendimento às normas de segurança da ABNT, com: (i) implantação de equipamentos lúdicos, incluindo equipamentos acessíveis, que fomentem a educação ambiental, estimulem a interação com o ambiente em que estará instalado e provoquem a percepção dos usuários sobre a flora e a fauna; (ii) implantação de equipamentos lúdicos que permitam a interação entre crianças de faixas etárias distintas, favoreçam a interação entre crianças e adultos, instiguem ações do brincar, trabalhem com habilidades motoras finas e brutas, habilidades sensoriais e sociais das crianças; (iii) ampliação e implantação de novas áreas reservadas para crianças de 0 (zero) a 7 (sete) anos; (iv) implantação de áreas de descanso com MOBILIÁRIO como bancos e bebedouros; (v) melhoria dos pisos.</p>
 			<p>Além dos brinquedos, os espaços precisam ser melhor equipados com mobiliário, tais como bancos e bebedouros, dando maior conforto aos usuários.</p>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>9.17 Cachorródromo</h3>
 			<wbr>
 				<ul>
@@ -1433,7 +1429,7 @@
 			<p>O cachorródromo poderá ser implantado no setor Ambiental, onde foram previamente identificadas duas  áreas propícias à sua implantação: uma próxima ao Portão 5, na antiga área de treinamento dos cães da polícia militar; e outra próxima ao Portão 6, entre a Praça Burle Marx e a Praça do Porquinho.</p>
 			<p>A instalação do Cachorródromo demanda ainda a adequação do Regulamento de Uso do Parque onde deverão constar as regras de uso do local.</p>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>9.18 Pavilhão das Culturas Brasileiras – PACUBRA</h3>
 			<wbr>
 			<ul>
@@ -1493,7 +1489,7 @@
 			<p>Tendo em vista os acidentes recorrentes com aves que colidem nas fachadas de vidro das edificações como da Bienal, sugere-se intervenções nesses vidros como a troca por vidros antirreflexo ou intervenções com quadrículas que permitam que as aves identifiquem a barreira.</p>
 			<p>Monitorar os casos de acidentes relacionados a fauna, principalmente as aves acidentadas. Todos os casos devem ser reportados a Divisão da Fauna Silvestre, a fim de mitigar os problemas.</p>
 			<!-- Ocultar comentários: <Comments :attr="{id:commentId(), context:'CAPÍTULO 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>9.19 Fundação Bienal de São Paulo</h3>
 			<wbr>
 			<ul><li><b>Caracterização</b></li></ul>
@@ -1503,7 +1499,7 @@
 			<p>Tendo em vista os acidentes recorrentes com aves que colidem nas fachadas de vidro das edificações como da Bienal, sugere-se intervenções nesses vidros como a troca por vidros antirreflexo ou intervenções com quadrículas que permitam que as aves identifiquem a barreira.</p>
 			<p>Monitorar os casos de acidentes relacionados a fauna, principalmente as aves acidentadas. Todos os casos devem ser reportados a Divisão da Fauna Silvestre, a fim de mitigar os problemas.</p>
 			<!-- Ocultar comentários:  <Comments :attr="{id:commentId(), context:'CAPÍTULO 2'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>9.20 Museu Afro Brasil</h3>
 			<wbr>
 			<ul><li><b>Caracterização</b></li></ul>
@@ -1514,7 +1510,7 @@
 			<p>Tendo em vista os acidentes recorrentes com aves que colidem nas fachadas de vidro das edificações como da Bienal, sugere-se intervenções nesses vidros como a troca por vidros antirreflexo ou intervenções com quadrículas que permitam que as aves identifiquem a barreira.</p>
 			<p>Monitorar os casos de acidentes relacionados a fauna, principalmente as aves acidentadas. Todos os casos devem ser reportados a Divisão da  Fauna Silvestre, a fim de mitigar os problemas.</p>
 			<!-- Ocultar comentários:  <Comments :attr="{id:commentId(), context:'CAPÍTULO 2'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>9.21 Planetário e Escola Municipal de Astrofísica – EMA</h3>
 			<wbr>
 			<ul class="links">
@@ -1544,7 +1540,7 @@
 			<p>Tendo em vista os acidentes recorrentes com aves que colidem nas fachadas de vidro das edificações como da Bienal, sugere-se intervenções nesses vidros como a troca por vidros antirreflexo ou intervenções com quadrículas que permitam que as aves identifiquem a barreira.</p>
 			<p>Monitorar os casos de acidentes relacionados a fauna, principalmente as aves acidentadas. Todos os casos devem ser reportados a Divisão da Fauna Silvestre, a fim de mitigar os problemas.</p>
 			<!-- Ocultar comentários:  <Comments :attr="{id:commentId(), context:'CAPÍTULO 2'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-		
+
 			<h3>9.22 Serraria, Praça Burle Marx e Bosque da Leitura</h3>
 			<wbr>
 			<ul><li><b>Caracterização</b></li></ul>
@@ -1553,7 +1549,7 @@
 			<p>Reforma da Praça com recuperação da fonte de água e substituição do piso impermeável atual por pavimento semipermeável ou permeável, respeitando o desenho existente.</p>
 			<p>Divulgar e conscientizar os usuários do parque quanto o caráter peculiar da Praça Burle Marx como de serviços ambientais, de transição entre o parque e viveiro e proteção à fauna silvestre;</p>
 			<p>Acionar a Secretaria Municipal de Cultura para entendimentos quanto à gestão do Bosque da Leitura.</p>
-		
+
 			<h3>9.23	Viveiro Manequinho Lopes, Divisão de Fauna Silvestre, Herbário Municipal</h3>
 			<wbr>
 			<ul><li><b>Caracterização</b></li></ul>
@@ -1564,7 +1560,7 @@
 			<p>A Divisão da Fauna Silvestre -DFS, possui atribuições voltadas especificamente para atividades de proteção, conservação e preservação da fauna silvestre no Município de São Paulo. Presta atendimento médico-veterinário com suporte laboratorial aos animais silvestres de vida livre resgatados e aos oriundos de ações de combate ao tráfico. Além das atividades voltadas ao atendimento da fauna silvestre, a Divisão conta com uma equipe que realiza vigilância ativa nos Parques, com vistas aos agravos às espécies de vida livre, bem como ações e monitoramento relacionados à fauna dos lagos e manejo do Acervo Municipal de Anatídeos nos Parques Municipais. Responde ainda pelo Acervo Municipal de carpas coloridas mantidos nos espelhos d´água existentes nos parques e do Gabinete do Prefeito. Por fim, mas não menos importante, a Divisão de Fauna executa o levantamento e monitoramento de fauna silvestre e elabora pareceres técnicos, em âmbito municipal, relacionados a obras e empreendimentos que podem impactar a fauna.</p>
 			<ul><li><b>Ação de Médio Prazo</b></li></ul>
 			<p>Com vistas a ampliar potencial produtivo e de atendimento das áreas técnicas que compõe a Subzona de Educação Ambiental é de fundamental importância a execução do Projeto de Revitalização do Viveiro Manequinho Lopes, Fauna e Herbário, concluído em 2012, e sob custódia da Divisão de Implantação, Projetos e Obras – DIPO.</p>
-		
+
 			<h3>9.24 Caminhos</h3>
 			<wbr>
 			<ul><li><b>Caracterização</b></li></ul>
@@ -1576,7 +1572,7 @@
 			<p>Demolição da Ciclovia Infantil. Essa área deve ser permeabilizada, uma vez que seu uso original não foi mantido e parte dela já foi demolida.</p>
 			<p>Considerando a grande demanda de uso, ações de conservação periódicas são necessárias.</p>
 			<p>Além disso, deverão ser promovidas ações de conscientização de pedestres de ciclistas e a realização de melhorias na sinalização horizontal com implantação de medidas de moderação do tráfego (traffic calming) como quebra-molas, diferenciação de pavimento e ordenamento de fluxos de tráfego, visando a aumentar a segurança dos deslocamentos de pedestres.</p>
-		
+
 			<h3>9.25 Quadras</h3>
 			<wbr>
 			<ul><li><b>Caracterização</b></li></ul>
@@ -1585,7 +1581,7 @@
 			<p>Realizar a manutenção periódica das quadras, evitando acidentes por conta de infraestruturas inadequadas.</p>
 			<p>Implantar vestiários para atender a demanda dos usuários que praticam esporte no local. A implantação pode ser feita a partir de estruturas móveis, como mobiliários urbanos, ressaltando-se que quaisquer implantações de novas estruturas devem ser aprovadas pela SVMA e órgãos de patrimônio histórico.</p>
 			<p>Recuperação do piso de duas quadras secundárias, sendo uma localizada próxima à atual pista de bicicleta infantil e outra próxima à quadra de voleibol/badminton, de modo a permitir o uso esportivo e seguro desses equipamentos.</p>
-		
+
 		<h3>9.26 Estacionamentos</h3>
 			<wbr>
 			<ul><li><b>Caracterização</b></li></ul>
@@ -1598,7 +1594,7 @@
 			<p>Deverá ser elaborado um plano de circulação viária interno ao Parque, de forma alinhada com CET, de forma a organizar os fluxos de veículos para que não causem impacto ao uso do parque, destacando ações e regramentos a serem aplicados nos casos de eventos.</p>
 			<p>O plano de circulação viária deverá considerar medidas de moderação do tráfego (traffic calming) como quebra-molas, diferenciação de pavimento e ordenamento de fluxos de tráfego, visando a aumentar a segurança dos deslocamentos de pedestres.</p>
 			<p>As vagas operacionais no acesso do portão 10, próximo ao Museu Afro, poderãoser mantidas, como apoio, principalmente, à realização de eventos dentro do parque.</p>
-		
+
 			<h3>9.27 Marquise</h3>
 			<wbr>
 			<ul><li><b>Caracterização</b></li></ul>
@@ -1610,7 +1606,7 @@
 			<p>Realização de melhorias na edificação: (i) impermeabilização da cobertura entre as juntas de dilatação do trecho onde se localiza o antigo restaurante “The Green”; (ii) conserto dos pontos de vazamento no restante da cobertura; (iii) colocação de pastilhas em trechos de toda a platibanda; (iv) reforma das instalações elétrica, hidráulica e pintura do depósito sob a MARQUISE; e (v) instalação de mictórios nos sanitários sob a MARQUISE.</p>
 			<p>Possibilidade da implantação de áreas de estar e descanso, que se relacionem com as atividades permitidas no local.</p>
 			<p>Reforma do antigo restaurante (hoje sem uso) como suporte para uma nova instalação de serviços de alimentação, conveniência e souvenir. A reforma deverá contemplar a demolição da parte do restaurante fora da marquise, e implantar uma estrutura leve, transparente e de baixo impacto visual, que permita a permeabilidade física e visual do espaço.</p>
-		
+
 			<h3>9.28 Mobiliário</h3>
 			<wbr>
 			<ul><li><b>Caracterização</b></li></ul>
@@ -1628,11 +1624,11 @@
 			<li>Banco com mesa de apoio para refeição: banco com conjunto de mesas resistentes, instalados em áreas sombreadas para realização de refeições e piqueniques. </li>
 			<li>Específicos: mobiliários que promovam a integração com a natureza,  instalado em áreas estratégicas do Parque, confortáveis e lúdicos.</li>
 			</ol>
-		
+
 			<h3>9.29	Acessibilidade no Parque Ibirapuera</h3>
 			<p>Aberto ao público em 1954 para os festejos do IV Centenário da fundação da cidade de São Paulo, o Parque Ibirapuera, nestes 65 anos evoluiu no tempo, inclusive quanto ao uso da vegetação do projeto paisagístico de Otávio Augusto Teixeira Mendes, sem  que o parque perdesse a sua  identidade, a força e a característica do projeto.</p>
 			<p>Esta dinâmica do tempo sobre o espaço deve nortear os diagnósticos, diretrizes e ações de projeto do parque, com planos de ações de curto, médio e longo prazos. E dentre as demandas prioritárias insere-se a garantia fruição do parque pelas pessoas com deficiência e mobilidade reduzida, sob os princípios do Desenho Universal.</p>
-		
+
 			<h3>9.29.1	O Conceito de Desenho Universal</h3>
 			<p>O conceito de Desenho Universal está definido conforme legislação vigente e normas técnicas. As Leis 13.146/2015 e  10.098/2000, o definem como:</p>
 			<p><i>Desenho Universal: concepção de produtos, ambientes, programas e serviços a serem usados por todas as pessoas, sem necessidade de adaptação ou de projeto específico, incluindo os recursos de tecnologia assistiva;</i></p>
@@ -1646,11 +1642,11 @@
 				<li><b>Baixo esforço físico:</b> nesse princípio, o ambiente ou elemento espacial deve oferecer condições de ser usado de maneira eficiente e confortável, com o mínimo de fadiga muscular do usuário. Para alcançar esse princípio deve-se: possibilitar que os usuários mantenham o corpo em posição neutra, usar força de operação razoável, minimizar ações repetidas e minimizar a sustentação do esforço físico;</li>
 				<li><b>Dimensão e espaço para aproximação e uso:</b> essa característica diz que o ambiente ou elemento espacial deve ter dimensão e espaço apropriado para aproximação, alcance, manipulação e uso, independentemente de tamanho de corpo, postura e mobilidade do usuário. Desta forma, deve-se: implantar sinalização em elementos importantes e tornar confortavelmente alcançáveis todos os componentes para usuários sentados ou em pé, acomodar variações de mãos e empunhadura e, por último, implantar espaços adequados para uso de tecnologias assistivas ou assistentes pessoais.</li>
 			</ol>
-		
+
 			<h3>9.29.2	Diretrizes para acessibilidade no parque Ibirapuera</h3>
 			<wbr>
 			<p><b>Curto Prazo: 1 ano. Desenvolvimento e aprovação de projetos.</b></p>
-			<p>As diretrizes ora apresentadas deverão ser concluídas até 1 (um) ano após a aprovação deste Plano Diretor:</p>			
+			<p>As diretrizes ora apresentadas deverão ser concluídas até 1 (um) ano após a aprovação deste Plano Diretor:</p>
 			<ul>
 				<li>Deverá ser elaborado anteprojeto de rotas acessíveis a partir dos passeios externos ao parque, contemplando portões de acesso de pedestres, pontos de ônibus e estacionamentos;</li>
 				<li>Deverá ser elaborado, anteprojeto de rotas internas que permitam acesso aos espaços livres e edificações. Tais rotas devem ser hierarquizadas por nível prioridade de implantação em curto e médio prazos;</li>
@@ -1660,26 +1656,26 @@
 				<li>No que tange à preservação do patrimônio cultural do parque o anteprojeto deverá passar por análise e aprovação dos órgãos de acautelamento patrimonial nas três esferas federativas, a saber: no âmbito municipal o Conselho Municipal de Preservação do Patrimônio Histórico, Cultural e Ambiental da Cidade de São Paulo – CONPRESP; no âmbito estadual o Conselho de Defesa do Patrimônio Histórico Arqueológico, Artístico e Turístico – CONDEPHAAT, e; no âmbito federal o Instituto do Patrimônio Histórico e Artístico Nacional – IPHAN;</li>
 				<li>Havendo inserção de logomarcas ou qualquer tipo de publicidade no anteprojeto de Sinalização Visual, este deverá passar por análise e aprovação da Comissão de Proteção à Paisagem Urbana – CPPU;</li>
 				<li>Todos os estudos, anteprojetos e aprovações serão acompanhados pela Divisão de Implantação, Projetos e Obras – DIPO, da Secretaria do Verde e Meio Ambiente – SVMA.</li>
-			</ul>			
+			</ul>
 			<wbr>
 			<p><b>Curto prazo: 2 anos. Implantação de sinalização visual e rota prioritária.</b></p>
-			<p>As diretrizes ora apresentadas deverão ser concluídas até 2 (dois) ano após a aprovação deste Plano Diretor:</p>			
+			<p>As diretrizes ora apresentadas deverão ser concluídas até 2 (dois) ano após a aprovação deste Plano Diretor:</p>
 			<ul>
 				<li>Deverá ser implementado o projeto de sinalização visual no parque;</li>
 				<li>Deverá ser implementada a acessibilidade no anel principal de circulação do parque, bem como o acesso e entorno dos equipamentos, como sanitários e lanchonetes.</li>
-			</ul>			
+			</ul>
 			<wbr>
 			<p><b>Médio prazo: 5 anos. Passeios externos e caminhos secundários.</b></p>
-			<p>As diretrizes ora apresentadas deverão ser concluídas até 5 (cinco) ano após a aprovação deste Plano Diretor:</p>			
+			<p>As diretrizes ora apresentadas deverão ser concluídas até 5 (cinco) ano após a aprovação deste Plano Diretor:</p>
 			<ul>
 				<li>Deverá ser implementada acessibilidade nos passeios externos ao parque, incluindo portões, pontos de ônibus, travessia de pedestres, vagas de estacionamento;</li>
 				<li>Deverá ser implementada acessibilidade nos caminhos secundários do parque e de acesso às edificações.</li>
-			</ul>	
+			</ul>
 			<wbr>
-			<p><b>Longo prazo: 10 anos. Acessibilidade Universal no parque.</b></p>			
+			<p><b>Longo prazo: 10 anos. Acessibilidade Universal no parque.</b></p>
 			<ul>
 				<li>Análise sistêmica de todas as edificações do parque, de forma a verificar o atendimento e contemporaneidade às normas de acessibilidade, bem como propor e implementar atualizações.</li>
-			</ul>	
+			</ul>
 		</section>
 
 		<section>
@@ -1733,7 +1729,6 @@
 			</ul>
 		</section>
 
-
 		<section ref="allComments">
 			<h2 v-show="commentsLoaded" class="titulo" indent="1">Contribuições</h2>
 			<CommentsLoader :attr="estaConsulta"></CommentsLoader>
@@ -1748,7 +1743,6 @@ import Indice from '@/components/Indice'
 import Comments from '@/components/Comments'
 import CommentsContext from '@/components/CommentsContext'
 import CommentsLoader from '@/components/CommentsLoader'
-import Apoio from '@/components/Apoio'
 import { consultasCommons } from '@/mixins/consultasCommons'
 
 export default {
@@ -1766,8 +1760,7 @@ export default {
 		Indice,
 		Comments,
 		CommentsContext,
-		CommentsLoader,
-		Apoio
+		CommentsLoader
 	},
 	mixins: [ consultasCommons ],
 	methods: {

@@ -1,6 +1,6 @@
 <template>
 	<div class="VilaLeopoldina2" ref="conteudoConsulta">
-		<PageTop background_image_src="arquivos/capas/capa_vl_480w.jpg" :esta_consulta="estaConsulta" :social="social_assets">
+		<PageTop background_image_src="arquivos/capas/capa_vl_480w.jpg" :esta_consulta="estaConsulta">
 			<template slot="titulo"><div>PIU Vila Leopoldina-Villa Lobos</div></template>
 			<template slot="subtitulo"><div>Projeto de Lei do PIU Vila Leopoldina</div></template>
 		</PageTop>

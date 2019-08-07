@@ -1,6 +1,6 @@
 <template>
 	<div class="ParqueMinhocao" ref="conteudoConsulta">
-		<PageTop background_image_src="arquivos/capas/parque-minhocao_480w.jpg" :esta_consulta="estaConsulta" :social="social_assets">
+		<PageTop background_image_src="arquivos/capas/parque-minhocao_480w.jpg" :esta_consulta="estaConsulta">
 			<template slot="titulo"><div>PIU Parque Minhocão</div></template>
 			<template slot="subtitulo"><div>1ª consulta pública – Elementos prévios ao desenvolvimento do projeto</div></template>
 		</PageTop>
@@ -1889,14 +1889,11 @@
 import PageTop from '@/components/PageTop'
 import Indice from '@/components/Indice'
 import Comments from '@/components/Comments'
-import CommentsContext from '@/components/CommentsContext'
 import CommentsLoader from '@/components/CommentsLoader'
 import Galeria from '@/components/Galeria'
 import Apoio from '@/components/Apoio'
 import Tabela from '@/components/Tabela'
 import Imagem from '@/components/Imagem'
-import AntesDepois from '@/components/AntesDepois'
-import GraficoLinha from '@/components/GraficoLinha'
 import Processo from '@/components/graf/parque-minhocao/processo'
 import { consultasCommons } from '@/mixins/consultasCommons'
 
@@ -2165,13 +2162,10 @@ export default {
 		Indice,
 		Comments,
 		CommentsLoader,
-		CommentsContext,
 		Galeria,
 		Apoio,
 		Tabela,
 		Imagem,
-		AntesDepois,
-		GraficoLinha,
 		Processo
 	},
 	methods: {

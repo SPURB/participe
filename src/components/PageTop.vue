@@ -62,14 +62,14 @@ export default {
 			let text = encodeURIComponent((`"${consulta.nomePublico}" está em consulta pública. Acesse e contribua!`).toString())
 			let url = encodeURIComponent((this.basePath + consulta.urlConsulta).toString())
 			switch (net) {
-				case 'whatsapp':
-					retStr = `https://api.whatsapp.com/send?text=${text}%20${url}`
-					break;
-				case 'twitter':
-					retStr = `https://twitter.com/intent/tweet?text=${text}%20${url}`
-					break;
-				case 'facebook':
-				 	retStr = `https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${text}`
+			case 'whatsapp':
+				retStr = `https://api.whatsapp.com/send?text=${text}%20${url}`
+				break
+			case 'twitter':
+				retStr = `https://twitter.com/intent/tweet?text=${text}%20${url}`
+				break
+			case 'facebook':
+				retStr = `https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${text}`
 			}
 			return retStr
 		},

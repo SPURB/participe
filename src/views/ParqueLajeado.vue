@@ -1,6 +1,6 @@
 <template>
 	<div class="PoliticaMunicipalTurismo" ref="conteudoConsulta">
-		<PageTop background_image_src="arquivos/capas/parque_lajeado.jpg" :esta_consulta="estaConsulta" :social="social_assets">
+		<PageTop background_image_src="arquivos/capas/parque_lajeado.jpg" :esta_consulta="estaConsulta">
 			<template slot="titulo"><div>PARQUE LAJEADO</div></template>
 			<template slot="subtitulo"><div>Processo Participativo</div></template>
 		</PageTop>
@@ -8,7 +8,7 @@
 
 		<!-- <Apoio></Apoio> -->
 		<!-- Decreto Nº 56.901 inclua este componente caso seja um PIU -->
-		
+
 		<section>
 			<h2 class="titulo" indent="1">1. APRESENTAÇÃO</h2>
 			<Comments :attr="{id:commentId(true), context:'1. APRESENTAÇÃO'}" v-if="estaConsulta.ativo == 1"></Comments>
@@ -16,7 +16,7 @@
 			<p>O referido Grupo de Trabalho contou com quadro técnico especializado e multidisciplinar da Secretaria Municipal do Verde e do Meio Ambiente e apoio da SP Parcerias, destacados pela formação em biologia, geografia, arquitetura, urbanismo, engenharias, direito, dentre outros.</p>
 			<p>A elaboração do Plano está em andamento desde março de 2019 percorrendo etapas que contemplaram desde levantamento de documentação existente, visitas técnicas, levantamentos de flora e fauna, análise dos dados encontrados até o processo participativo junto à população.</p>
 		</section>
-		
+
 		<section>
 			<h2 class="titulo" indent="1">2. INTRODUÇÃO</h2>
 			<Comments :attr="{id:commentId(), context:'2. INTRODUÇÃO'}" v-if="estaConsulta.ativo == 1"></Comments>
@@ -29,7 +29,7 @@
 			<p>Portanto, o presente Plano Diretor se aplica a todos envolvidos no cotidiano do Parque e responsáveis por sua gestão, incluindo Administração Pública, concessionária e usuários. Tem-se, portanto, uma ampla matriz de responsabilidades e diretrizes que devem ser seguidas por todos, conforme suas atribuições.</p>
 			<p>A ordenação do documento da maneira exibida busca fornecer diretrizes para abranger a gestão do Parque Lajeado como um todo, garantindo que o equipamento tenha suas funções ambientais mantidas e aprimoradas e que seus usuários possam desfrutar adequadamente de suas estruturas.</p>
 		</section>
-		
+
 		<section>
 			<h2 class="titulo" indent="1">3. INSERÇÃO URBANA</h2>
 			<Comments :attr="{id:commentId(), context:'3. INSERÇÃO URBANA'}" v-if="estaConsulta.ativo == 1"></Comments>
@@ -43,7 +43,7 @@
 				</li>
 			</ul>
 		</section>
-		
+
 		<section>
 			<h2 class="titulo" indent="1">4. DIAGNÓSTICO</h2>
 			<Comments :attr="{id:commentId(), context:'4. DIAGNÓSTICO'}" v-if="estaConsulta.ativo == 1"></Comments>
@@ -57,7 +57,7 @@
 				</li>
 			</ul>
 		</section>
-		
+
 		<section>
 			<h2 class="titulo" indent="1">5. GESTÃO</h2>
 			<Comments :attr="{id:commentId(), context:'5. GESTÃO'}" v-if="estaConsulta.ativo == 1"></Comments>
@@ -71,10 +71,10 @@
 				</li>
 			</ul>
 		</section>
-		
+
 		<section>
 			<h2 class="titulo" indent="1">6. PARTICIPAÇÃO SOCIAL</h2>
-			<Comments :attr="{id:commentId(), context:'6. PARTICIPAÇÃO SOCIAL'}" v-if="estaConsulta.ativo == 1"></Comments>			
+			<Comments :attr="{id:commentId(), context:'6. PARTICIPAÇÃO SOCIAL'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 		<section>
 			<h2 class="titulo" indent="2">6.1 CONSELHO GESTOR O PAPEL DOS CONSELHOS GESTORES NOS PARQUES URBANOS</h2>
@@ -96,9 +96,9 @@
 			<p><em>XIII - manter intercâmbio, trocar experiências e desenvolver atividades conjuntas, de cunho intersetorial, com outros conselhos que atuam em políticas públicas no âmbito de cada Subprefeitura;</em></p>
 			<p><em>XIV - incentivar a organização e a participação da sociedade em fóruns, associações, outras entidades e movimentos sociais, com vistas a fortalecer sua representação nos Conselhos Gestores dos Parques Municipais;</em></p>
 			<p><em>XV - elaborar, aprovar e manter atualizados o Regimento Interno de cada Conselho e suas normas de funcionamento, deliberando as questões de competência exclusiva dos Conselhos.</em>”</p>
-			<p>À luz das suas competências, conclui-se que o Conselho Gestor representa um órgão para auxiliar na governança de seu respectivo parque. Interessante repisar que o Plano Diretor é um instrumento que também serve para balizar a governança dos parques urbanos. Não é à toa, portanto, que o inc. III do art. 10º impõe a participação dos Conselhos Gestores na elaboração do Plano Diretor de seu respectivo parque.</p>	
+			<p>À luz das suas competências, conclui-se que o Conselho Gestor representa um órgão para auxiliar na governança de seu respectivo parque. Interessante repisar que o Plano Diretor é um instrumento que também serve para balizar a governança dos parques urbanos. Não é à toa, portanto, que o inc. III do art. 10º impõe a participação dos Conselhos Gestores na elaboração do Plano Diretor de seu respectivo parque.</p>
 		</section>
-		
+
 		<section>
 			<h2 class="titulo" indent="1">7. MONITORAMENTO</h2>
 			<Comments :attr="{id:commentId(), context:'7. MONITORAMENTO'}" v-if="estaConsulta.ativo == 1"></Comments>
@@ -112,7 +112,7 @@
 			<p>Tendo esse modelo como norteador, elaborou-se uma matriz de indicadores a partir de diretrizes traçadas ao longo do plano diretor, acrescentando-se ainda as formas de medição e os resultados esperados.</p>
 			<p>Compete ao Poder Público estipular os limites ou valores de referência dos parâmetros aferidos pelos indicadores conforme as regulamentações vigentes na época da medição, sendo que esta (coleta dos dados) é de responsabilidade da gestão do Parque.</p>
 		</section>
-		
+
 		<section>
 			<h2 class="titulo" indent="1">8. PERIODICIDADE DA REVISÃO INTEGRATIVA</h2>
 			<Comments :attr="{id:commentId(), context:'8. PERIODICIDADE DA REVISÃO INTEGRATIVA'}" v-if="estaConsulta.ativo == 1"></Comments>
@@ -123,7 +123,7 @@
 			<p>Há ainda que se utilizar e embasar com dados da concessão tal como pesquisas com usuário, relatórios de prestação de contas e demais indicadores que consigam propiciar um debate mais qualificado e enriquecedor ao processo revisional.</p>
 			<p>Ao fim dos ciclos quinquenais, o produto concebido se configurará de um modo mais intersetorial e democrático, estando mais condizente com a demanda da sociedade que é e sempre deverá ser a razão de se buscar ofertar cada vez mais e melhores serviços e experiências na cidade, destacadamente em espaços de Parques Urbanos.</p>
 		</section>
-		
+
 		<section>
 			<h2 class="titulo" indent="1">9. APONTAMENTOS FINAIS</h2>
 			<Comments :attr="{id:commentId(), context:'9. APONTAMENTOS FINAIS'}" v-if="estaConsulta.ativo == 1"></Comments>
@@ -187,9 +187,7 @@
 import PageTop from '@/components/PageTop'
 import Indice from '@/components/Indice'
 import Comments from '@/components/Comments'
-import CommentsContext from '@/components/CommentsContext'
 import CommentsLoader from '@/components/CommentsLoader'
-// import Apoio from '@/components/Apoio'
 import { consultasCommons } from '@/mixins/consultasCommons'
 
 export default {
@@ -206,9 +204,7 @@ export default {
 		PageTop,
 		Indice,
 		Comments,
-		CommentsContext,
 		CommentsLoader
-		// Apoio
 	},
 	mixins: [ consultasCommons ],
 	methods: {

@@ -1,6 +1,6 @@
 <template>
 	<div class="PoliticaMunicipalTurismo" ref="conteudoConsulta">
-		<PageTop background_image_src="arquivos/capas/politica-municipal-turismo_480w.jpg" :esta_consulta="estaConsulta" :social="social_assets">
+		<PageTop background_image_src="arquivos/capas/politica-municipal-turismo_480w.jpg" :esta_consulta="estaConsulta">
 			<template slot="titulo"><div>Política de Turismo da Cidade de São Paulo</div></template>
 			<template slot="subtitulo"><div>Perspectiva 2030</div></template>
 		</PageTop>
@@ -671,7 +671,7 @@
 						<li>
 							Realizar estudo que permita mapear o turismo de São Paulo posicionando os segmentos nas regiões onde ocorrem com mais intensidade.
 						</li>
-						<Comments :attr="{id:commentId(), context:'CAPÍTULO 3.3'}" v-if="estaConsulta.ativo == 1"></Comments>						
+						<Comments :attr="{id:commentId(), context:'CAPÍTULO 3.3'}" v-if="estaConsulta.ativo == 1"></Comments>
 						<br>
 						<u>EIXO: Triângulo SP</u>
 						<li>
@@ -1065,12 +1065,7 @@ export default {
 			titulosLimpo: [],
 			comments_atrr: undefined,
 			consultas: false,
-			estaConsulta: {},
-			social_assets: { // https://www.urlencoder.org/
-				whatsapp: 'https%3A%2F%2Fapi.whatsapp.com%2Fsend%3Ftext%3DParticipe%20da%20consulta%20p%C3%BAblica%20do%20Nome%20da%20Consulta%3A%20https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br%2Fnome-da-consulta',
-				facebook: 'https%3A%2F%2Fwww.facebook.com%2Fsharer%2Fsharer.php%3Fu%3Dhttps%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br%2Fnome-da-consulta',
-				twitter: 'https%3A%2F%2Ftwitter.com%2Fintent%2Ftweet%3Ftext%3DParticipe%20da%20consulta%20p%C3%BAblica%20do%20Nome%20da%20Consulta%3A%20https%3A%2F%2Fparticipe.gestaourbana.prefeitura.sp.gov.br%2Fnome-da-consulta'
-			}
+			estaConsulta: {}
 		}
 	},
 	components: {

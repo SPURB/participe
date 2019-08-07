@@ -19,7 +19,7 @@
 		<div class="picto" v-if="dados.pictogramas">
 			<h1>{{ dados.caption }}</h1>
 			<ul>
-				<li v-for="pictograma in dados.pictogramas">
+				<li v-for="(index, pictograma) in dados.pictogramas">
 					<img :src="pictograma.url" :alt="pictograma.legenda" :title="pictograma.legenda">
 				</li>
 			</ul>
@@ -29,42 +29,6 @@
 <script>
 export default {
 	name: 'AntesDepois',
-	props: {
-		caption: { // título
-			type: String,
-			required: true
-		},
-		largura: { // largura das imagens
-			type: String,
-			required: true
-		},
-		altura: { // altura das imagens
-			type: String,
-			required: true
-		},
-		imgAntes: { // url da imagem de antes
-			type: String,
-			required: true
-		},
-		imgDepois: { // url da imagem de depois
-			type: String,
-			required: true
-		},
-		pictogramas: [{ // ícones abaixo das imagens
-			url: { // url da imagem do ícone
-				type: String,
-				required: false
-			},
-			legenda: { // legenda da imagem do ícone, se houver - descrever informação do pictograma
-				type: String,
-				required: false
-			}
-		}],
-		fonte: {
-			type: String,
-			required: false
-		}
-	},
 	data () {
 		return {
 			depois: false

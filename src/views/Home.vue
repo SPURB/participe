@@ -30,7 +30,11 @@
 									</tr>
 									<tr>
 										<td><i class="icon-contribuicao icon"><span>contribuicao</span></i></td>
-										<td title="Número de contribuições recolhidas até o momento">{{ consulta.nContribuicoes }} contribuições</td>
+										<td title="Número de contribuições recolhidas até o momento">
+											<template v-if="consulta.nContribuicoes == 0">Nenhuma contribuição até agora</template>
+											<template v-if="consulta.nContribuicoes == 1">{{ consulta.nContribuicoes }} contribuição</template>
+											<template v-if="consulta.nContribuicoes > 1">{{ consulta.nContribuicoes }} contribuições</template>
+										</td>
 									</tr>
 								</table>
 								<p class="intro">
@@ -71,7 +75,11 @@
 								</tr>
 								<tr>
 									<td><i class="icon-contribuicao icon"><span>contribuicao</span></i></td>
-									<td>{{ consulta.nContribuicoes }} contribuições</td>
+									<td>
+										<template v-if="consulta.nContribuicoes == 0">Nenhuma contribuição</template>
+										<template v-if="consulta.nContribuicoes == 1">{{ consulta.nContribuicoes }} contribuição</template>
+										<template v-if="consulta.nContribuicoes > 1">{{ consulta.nContribuicoes }} contribuições</template>
+									</td>
 								</tr>
 								<tr v-if="consulta.urlDevolutiva">
 									<td><i class="icon-responder icon"><span>responder</span></i></td>

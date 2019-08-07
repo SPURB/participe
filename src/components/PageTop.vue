@@ -6,7 +6,7 @@
 				<span></span>
 			</div>
 			<div class="contribuicoes" v-if="esta_consulta.nContribuicoes">
-				<i class="icon-comentario icon"><span>chat</span></i> {{ esta_consulta.nContribuicoes }} contribuições
+				<i class="icon-comentario icon"><span>chat</span></i> {{ esta_consulta.nContribuicoes }} <span v-if="esta_consulta.nContribuicoes < 2">contribuição</span><span v-else>contribuições</span>
 			</div>
 			<div class="periodo" v-if="esta_consulta.dataFinal">
 				<i class="icon-data icon"><span>período</span></i> {{ data(esta_consulta.dataCadastro) }}–{{ data(esta_consulta.dataFinal) }}
@@ -23,15 +23,15 @@
 			<li @click="imprime" class="print">
 				<i class="icon-imprimir icon"><span>imprimir</span></i>
 			</li>
-			<template v-if="social">
+			<template v-if="esta_consulta.ativo == 1">
 				<li>
-					<a :href="social.whatsapp" data-action="share/whatsapp/share"><img :src="imgsrc('share_whatsapp.svg')" alt=""></a>
+					<a :href="socialMediaRedirect('whatsapp')" data-action="share/whatsapp/share"><img :src="imgsrc('share_whatsapp.svg')" alt=""></a>
 				</li>
 				<li>
-					<a :href="social.twitter"><img :src="imgsrc('share_twitter.svg')" alt=""></a>
+					<a :href="socialMediaRedirect('twitter')"><img :src="imgsrc('share_twitter.svg')" alt=""></a>
 				</li>
 				<li>
-					<a :href="social.facebook"><img :src="imgsrc('share_facebook.svg')" alt=""></a>
+					<a :href="socialMediaRedirect('facebook')"><img :src="imgsrc('share_facebook.svg')" alt=""></a>
 				</li>
 			</template>
 		</ul>
@@ -48,10 +48,6 @@ export default {
 		esta_consulta: {
 			required: true,
 			type: Object
-		},
-		social: {
-			required: false,
-			type: Object
 		}
 	},
 	computed: {
@@ -60,8 +56,25 @@ export default {
 		rota () { return this.$route.name }
 	},
 	methods: {
+		socialMediaRedirect (net) {
+			let consulta = this.esta_consulta
+			let retStr = ''
+			let text = encodeURIComponent((`"${consulta.nomePublico}" está em consulta pública. Acesse e contribua!`).toString())
+			let url = encodeURIComponent((this.basePath + consulta.urlConsulta).toString())
+			switch (net) {
+			case 'whatsapp':
+				retStr = `https://api.whatsapp.com/send?text=${text}%20${url}`
+				break
+			case 'twitter':
+				retStr = `https://twitter.com/intent/tweet?text=${text}%20${url}`
+				break
+			case 'facebook':
+				retStr = `https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${text}`
+			}
+			return retStr
+		},
 		consultaState (par) {
-			if (par === 1 || par === '1') {
+			if (parseInt(par) === 1) {
 				return 'aberta'
 			} else {
 				return 'fechada'

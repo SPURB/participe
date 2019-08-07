@@ -57,7 +57,7 @@ export default {
 	},
 	methods: {
 		socialMediaRedirect (net) {
-			let consulta = this.$props.esta_consulta
+			let consulta = this.esta_consulta
 			let retStr = ''
 			let text = encodeURIComponent((`"${consulta.nomePublico}" está em consulta pública. Acesse e contribua!`).toString())
 			let url = encodeURIComponent((this.basePath + consulta.urlConsulta).toString())
@@ -74,7 +74,7 @@ export default {
 			return retStr
 		},
 		consultaState (par) {
-			if (par === 1 || par === '1') {
+			if (parseInt(par) === 1) {
 				return 'aberta'
 			} else {
 				return 'fechada'

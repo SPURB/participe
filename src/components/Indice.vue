@@ -1,5 +1,5 @@
 <template>
-	<div class="Indice">
+	<div class="Indice" :class="{ visible: !commentContextAberto }">
 		<ul ref="lista">
 			<li
 				v-for="(titulo, index) in titulos" :key="index"
@@ -19,6 +19,9 @@ export default {
 			type: Array,
 			required: true
 		}
+	},
+	computed: {
+		commentContextAberto () { return this.$store.state.commentContextAberto }
 	},
 	mounted () {
 		let app = this
@@ -59,6 +62,16 @@ export default {
 
 div.Indice {
 	z-index: 0;
+	opacity: 0;
+	overflow: hidden;
+	transition: opacity ease-in .2s;
+	
+	&.visible {
+		opacity: 1;
+		ul {
+			max-width: 240px;
+		}
+	}
 
 	ul {
 		display: flex;
@@ -72,7 +85,9 @@ div.Indice {
 		margin: 0;
 		list-style-type: none;
 		opacity: 0.12;
-		transition: opacity ease-in .2s;
+		max-width: 0;
+		overflow: hidden;
+		transition: opacity ease-in .2s, max-width linear .2s;
 
 		li {
 			display: block;
@@ -121,6 +136,7 @@ div.Indice {
 		z-index: 1;
 		width: 42px;
 		height: 42px;
+		cursor: pointer;
 		&:active {
 			background: $vermelho;
 			color: #FFF;
@@ -138,6 +154,7 @@ div.Indice {
 			font-size: 22px;
 			height: 50px;
 			width: 42px;
+			cursor: pointer;
 		};
 
 		&::before {

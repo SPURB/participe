@@ -1,16 +1,20 @@
 <template>
-	<div class="comentavel" :class="{ aberto: abreComentario && consultaAtiva }">
-		<div class="cortina"></div>
+	<div class="comentavel" :class="{ aberto: abreComentario && consultaAtiva }" ref="scrollBackRef">
 		<div :class="{ sucesso: sucesso }">
-			<div class="content-comentario" @click="toggleForm()">
+			<div class="content-comentario">
 				<div class="icon-counter" @click="toggleForm()">
-					<i v-if="!abreComentario" class="icon-comentario icon" @click="toggleForm()"><span>comentario</span></i>
-					<!-- filtrar numero (será refatorar CommentsLoader e vuex)-->
-					<span v-if="!abreComentario" class="counter-comentario" @click="toggleForm()">89</span>
-					<i v-else class="icon-incorreto icon" @click="toggleForm()"><span>incorreto</span></i>
+					<i v-if="!abreComentario" class="icon-comentario icon" title="Contribuir neste trecho"><span>comentario</span></i>
+					<!-- <span v-if="!abreComentario" class="counter-comentario" title="89 contribuições nestre trecho">{{ comments.length }}</span> -->
+					<i v-else class="icon-incorreto icon" title="Fechar"><span>incorreto</span></i>
 				</div>
-				<h1>Escrevendo contribuição sobre o trecho:</h1>
-				<slot></slot>
+				<header>
+					<i class="icon-editar icon"><span>editar</span></i>
+					<h1>Escrevendo contribuição sobre o trecho a seguir</h1>
+					<h2>Para cancelar, clique novamente sobre o texto ou no ícone "fechar" ao lado.</h2>
+				</header>
+				<main @click="toggleForm()" ref="heightBackRef">
+					<slot></slot>
+				</main>
 			</div>
 		</div>
 		<form v-if="consultaAtiva">
@@ -79,7 +83,32 @@
 				</div>
 			</main>
 		</form>
-		<p class="consulta-encerrada" v-if="!consultaAtiva">Desculpe, mas o período de participação já foi encerrado.</p>
+		<!-- <aside>
+			<caption>
+				<i class="icon-responder icon"><span>responder</span></i>
+				<h1>Contribuições nestre trecho</h1>
+			</caption>
+			<ul>
+				<li v-for="comment in comments">
+					<header>
+						<ul>
+							<li>
+								<i class="icon-pessoa-outline icon"><span>pessoa-outline</span></i>
+								{{ comment.name }}
+							</li>
+							<li>
+								<i class="icon-tempo icon"><span>tempo</span></i>
+								{{ filterDate(comment.commentdate) }}
+							</li>
+						</ul>
+					</header>
+					<main>
+						{{ comment.content }}
+					</main>
+				</li>
+			</ul>
+		</aside> -->
+		<p ref="avisoConsultaEncerrada" class="consulta-encerrada" v-if="!consultaAtiva">O período para contribuir com esta consulta pública já foi encerrado.</p>
 	</div>
 </template>
 
@@ -111,22 +140,28 @@ export default {
 	data () {
 		return {
 			abreComentario: false,
-			form_context: null
+			form_context: null,
+			initialHeight: undefined,
 		}
 	},
 
 	watch: {
 		abreComentario () {
 			document.body.style.overflow = document.body.style.overflow === '' ? 'hidden' : ''
+			this.initialHeight = this.$refs.heightBackRef.getBoundingClientRect().height
 			if (this.abreComentario) {
+				this.$store.commit('SET_COMMENTCONTEXTABERTO', true)
+				this.$el.style.height = window.innerHeight + 32 + 'px'
 				window.scrollTo({
 					top: this.$el.offsetTop,
 					left: 0,
 					behavior: 'smooth'
 				})
 			} else {
+				this.$store.commit('SET_COMMENTCONTEXTABERTO', false)
+				this.$el.style.height = (this.initialHeight + 32) + 'px'
 				window.scrollTo({
-					top: this.$el.offsetTop - 60,
+					top: this.getInitialOffsetY() - 124,
 					left: 0,
 					behavior: 'smooth'
 				})
@@ -144,12 +179,36 @@ export default {
 		},
 		toggleFormOrMessage () {
 			return (this.abreComentario && this.consultaAtiva)
+		},
+		comments () {
+			return this.$store.state.comments
+		},
+		contextId () {
+			return this.$props.id
 		}
 	},
 
 	methods: {
 		toggleForm () {
-			this.abreComentario = !this.abreComentario
+			let app = this
+			// let estecc = this.$parent.$children.filter(el => el.$el == this.$el)[0]
+			// console.log(this.$parent.$children.indexOf(estecc))
+			// console.log(estecc)
+			if (this.consultaAtiva) {
+				this.abreComentario = !this.abreComentario
+			} else {
+				this.$refs.avisoConsultaEncerrada.classList.replace('', 'visible')
+			}
+		},
+		getInitialOffsetY () {
+			let y = this.$refs.scrollBackRef.offsetTop
+			return y
+		},
+		filterDate (dataString) {
+			let d = dataString.slice(8, 10)
+			let m = dataString.slice(5, 7)
+			let a = dataString.slice(0, 4)
+			return d + '/' + m + '/' + a
 		},
 		send () {
 			let app = this
@@ -189,32 +248,27 @@ export default {
 
 .comentavel {
 	position: relative;
-	transition: padding ease-in-out .4s;
-	div.cortina {
-		position: absolute;
-		top: 0;
-		width: 100vw;
-		height: 0;
-		z-index: 1;
-	}
-	& > div:not(.cortina) {
+	overflow-y: visible;
+	display: inline-block;
+	margin: 0 calc((100% - 700px + 2rem)/2);
+	transition: padding ease-in-out .2s, height ease-out .4s, margin ease-in .2s;
+	& > div {
 		position: relative;
-		margin: 0 auto 1rem;
-		max-width: calc(700px - 4rem + 2rem);
+		margin: 0;
+		max-width: calc(700px - 2rem);
 		background-color: $cinza-3;
 		border-radius: 4px;
 		cursor: pointer;
-		transition: all ease-in-out .2s;
-		z-index: 2;
+		transition: all ease-in-out .4s;
 		&:hover {
-			background-color: transparent;
+			background-color: $vermelho-tr;
 		}
 		.content-comentario {
 			padding: 0.5rem 0;
 			.icon-counter {
 				position: absolute;
-				top: -4px;
-				right: -4rem;
+				top: -5px;
+				right: -3rem;
 				& > * {
 					color: $cinza-2;
 					cursor: pointer;
@@ -224,8 +278,14 @@ export default {
 					font-size: 1.5rem;
 					&.icon-incorreto {
 						color: $vermelho;
+						position: absolute;
+						top: 1.5rem;
+						left: -6rem;
 						&::before {
 							font-size: 2.5rem;
+						}
+						&:hover {
+							color: $preto;
 						}
 					}
 				}
@@ -235,15 +295,42 @@ export default {
 					line-height: 1;
 				}
 			}
-			h1 {
-				margin: 0.5rem 0 0;
-				font-size: 1rem;
-				color: $cinza-1;
+			header {
 				max-height: 0;
 				overflow: hidden;
 				transition: all ease-in-out .2s;
+				border-radius: 4px;
+				cursor: default;
+				padding: 0;
+				opacity: 0;
+				.icon-editar {
+					margin: 0 0.5rem 0 -0.25rem;
+					color: $cinza-1;
+					font-size: 110%;
+					&::before { vertical-align: text-top; }
+				}
+				h1 {
+					margin: 0.5rem 0 0;
+					font-size: 1rem;
+					color: $cinza-1;
+					display: inline;
+					transition: inherit;
+
+				}
+				h2 {
+					margin: 0;
+					font-size: 0.8rem;
+					font-weight: normal;
+					color: $sombra-3;
+					transition: inherit;
+				}
 			}
-			& > * {
+			main {
+				overflow-y: auto;
+				max-height: 80rem;
+				transition: all ease-in-out .4s;
+			}
+			main > * {
 				padding-right: 1rem;
 				padding-left: 1rem;
 			}
@@ -251,18 +338,18 @@ export default {
 				margin-bottom: 0;
 			}
 			&:hover {
-				.icon, .counter-comentario { color: $preto; }
+				.icon:not(.icon-editar), .counter-comentario { color: $preto; }
 			}
 			&::before {
 				content: '“';
 				position: absolute;
-				top: 3.5rem;
-				left: -2rem;
+				top: 5.25rem;
+				left: -1.5rem;
 				font-family: $serifada;
-				font-size: 6rem;
+				font-size: 4rem;
 				color: $cinza-2;
 				opacity: 0;
-				transition: opacity ease-in .05s;
+				transition: opacity ease-in .02s;
 			}
 		}
 	}
@@ -275,8 +362,8 @@ export default {
 		margin: 0 auto;
 		max-height: 0;
 		overflow: hidden;
-		transition: all ease-in-out .4s;
-		z-index: 2;
+		opacity: 0;
+		transition: opacity .4s, max-height .2s;
 		fieldset {
 			margin: 0;
 			padding: 0;
@@ -392,38 +479,158 @@ export default {
 			};
 		};
 	}
-	& > p.consulta-encerrada {}
+	& > aside {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 0;
+		height: 100vh;
+		background-color: $cinza-1;
+		padding: 2rem 2.5rem;
+		transform: scale(0);
+		opacity: 0;
+		z-index: 1;
+		transition: all ease-in-out .2s;
+		caption {
+			display: block;
+			text-align: left;
+			color: #FFF;
+			i.icon::before {
+				vertical-align: top;
+			}
+			h1 {
+				display: inline-block;
+				margin: 0 0 0 .5rem;
+				line-height: 1;
+				font-size: 1.1rem;
+			}
+		}
+		ul {
+			list-style-type: none;
+			padding: 0;
+			margin: 2rem 0 0;
+			height: calc(100% - 4rem);
+			overflow-y: auto;
+			li {
+				background-color: #FFF;
+				border-radius: 4px;
+				padding: 0.75rem 1rem;
+				box-shadow: 0 2px 4px $sombra-3;
+				max-width: 640px;
+				&:not(:last-child) {
+					margin-bottom: 1rem;
+				}
+				ul {
+					margin: 0;
+					padding: 0;
+					list-style-type: none;
+					li {
+						padding: 0;
+						display: inline-block;
+						font-size: smaller;
+						color: $cinza-1;
+						background-color: transparent;
+						border-radius: unset;
+						box-shadow: none;
+						margin-bottom: 0;
+						&:not(:last-child) {
+							margin: 0 1rem 0 0;
+						}
+						i.icon {
+							display: inline;
+							color: $cinza-2;
+							font-size: initial;
+							margin-right: -2px;
+							&::before {
+								vertical-align: text-top;
+							}
+						}
+					}
+				}
+				main {
+					font-family: $serifada;
+					margin-top: 0.5rem;
+				}
+			}
+		}
+	}
+	& > p.consulta-encerrada {
+		@keyframes surge {
+			0% {
+				transform: translateY(-2rem);
+				opacity: 0;
+			}
+			10% {
+				transform: translateY(-4rem);
+				opacity: 1;
+			}
+			90% {
+				transform: translateY(-4rem);
+				opacity: 1;
+			}
+			100% {
+				transform: translateY(-2rem);
+				opacity: 0;
+			}
+		}
+		max-width: calc(700px - 6rem);
+		margin: 0 auto -2rem;
+		padding: 0.5rem 0.75rem;
+		background-color: $vermelho;
+		font-size: small;
+		color: #FFF;
+		border-radius: 4px;
+		box-shadow: 0 2px 2px $sombra-3;
+		z-index: 2;
+		transform: translateY(-2rem);
+		opacity: 0;
+		&.visible {
+			animation: surge ease-in-out 4s;
+		}
+	}
 	&:active {
-		& > div:not(.cortina) {
+		& > div {
 			background-color: $vermelho-tr;
 			transition: none;
 		}
 	}
 	&.aberto {
-		background-color: #FFF;
-		padding: 4rem 0;
-		height: 100vh;
-		overflow-y: auto;
-		div.cortina {
-			height: 100vh;
-		}
-		& > div:not(.cortina) {
+		padding: 2rem 0;
+		margin: 0 0 0 2.5rem;
+		& > div {
 			background-color: transparent;
 			.content-comentario {
-				h1 {
-					margin: 0 0 4rem;
-					max-height: 4rem;
+				header {
+					max-height: 160px;
+					padding: 0.5rem 1rem;
+					background-color: $cinza-3;
+					opacity: 1;
+					transition-delay: .1s;
+				}
+				& > main {
+					max-height: calc(100vh - 480px);
+					margin: 2rem 0 1rem;
 				}
 				&::before {
 					opacity: 1;
-					transition: opacity ease-in-out .4s;
-					transition-delay: .2s;
+					transition: opacity ease-in-out .8s;
+					transition-delay: .4s;
 				}
 			}
 		}
 		& > form {
-			margin: 4rem auto;
-			max-height: 100vh;
+			margin: 0 auto 2rem;
+			max-height: 480px;
+			opacity: 1;
+			transition: all ease-in-out .4s;
+			transition: opacity ease-in-out .4s .2s;
+		}
+		& > aside {
+			transform: scale(1);
+			left: calc(700px + 0.5rem);
+			opacity: 1;
+			width: calc(100vw - 700px - 3rem);
+			transition: transform ease-in-out .4s;
 		}
 	}
 }

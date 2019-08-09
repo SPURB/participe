@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 import Es6Promise from 'es6-promise'
 import api from '@/utils/api'
 import erratas from '@/modules/erratas'
+import comments from '@/modules/comments'
 
 Es6Promise.polyfill()
 
@@ -10,7 +11,8 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
 	modules: {
-		erratas: erratas
+		erratas: erratas,
+		comments: comments
 	},
 	state: {
 		menuToggle: false,
@@ -18,10 +20,10 @@ const store = new Vuex.Store({
 		luzApaga: false,
 		consultas: undefined,
 		errors: undefined,
-		commentsLoaded: false,
 		fetching: true,
 		routeId: undefined,
-		toPrint: false
+		toPrint: false,
+		commentContextAberto: false
 	},
 	getters: {
 		basePath () { return process.env.VUE_APP_ASSETS_BASE_URL },
@@ -61,6 +63,9 @@ const store = new Vuex.Store({
 		TOGGLE_APOIO (state) {
 			state.apoioToggle = !state.apoioToggle
 			state.luzApaga = !state.luzApaga
+		},
+		SET_COMMENTCONTEXTABERTO (state, newstate) {
+			state.commentContextAberto = newstate
 		}
 	},
 	actions: {

@@ -71,7 +71,7 @@
 				<slot name="item2"></slot>
 			</ul>
 		</aside>
-		<button @click="abreApoio" :class="{ aberto: apoioToggle }">
+		<button @click="abreApoio" :class="{ aberto: apoioToggle, visible: !commentContextAberto }">
 			<i class="icon-abrir_esquerda icon"><span>abrir_apoio</span></i>
 		</button>
 		</div>
@@ -88,7 +88,8 @@ export default {
 	computed: {
 		apoioToggle () {
 			return this.$store.state.apoioToggle
-		}
+		},
+		commentContextAberto () { return this.$store.state.commentContextAberto }
 	},
 	methods: {
 		abreApoio () {
@@ -197,12 +198,19 @@ div.Apoio {
 		display: block;
 		font-family: inherit;
 		z-index: 1;
+		cursor: pointer;
+		opacity: 0;
+		&.visible {
+			opacity: 1;
+			transition: opacity ease-in .4s;
+		}
 		i {
 			line-height: 41px;
 			height: 1rem;
 			width: 1rem;
 			font-weight: normal;
 			font-size: 22px;
+			cursor: pointer;
 		};
 		&:active {
 			background: $vermelho;

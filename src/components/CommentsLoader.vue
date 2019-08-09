@@ -8,36 +8,36 @@
 				<p class="content">{{comment.content}}</p>
 			</div>
 		</template>
+		<template v-if="comments.length == 0">
+			<div class="empty">Não há nenhuma contribuição nesta consulta.</div>
+		</template>
 	</div>
 </template>
 
 <script>
-import api from '@/utils/api'
 import { commentsMutations } from '@/mixins/commentsMutations'
 
 export default {
 	name: 'CommentsLoader',
 	mixins: [ commentsMutations ],
-	data () {
-		return {
-			comments: false
-		}
+	props: [ 'attr' ],
+	computed: {
+		idConsulta () { return this.$route.meta.id },
+		comments () { return this.$store.state.comments.comments }
 	},
-	props: ['attr'],
-	mounted () { this.loadThisComments() },
 	watch: {
 		comments () {
-			this.comments ? this.$store.state.commentsLoaded = true : this.$store.state.commentsLoaded = false
-			this.decodeComments(this.comments)
+			if (Object.keys(this.comments).length > 0) {
+				this.decodeComments(this.comments)
+			}
 		}
+	},
+	mounted () {
+		this.loadThisComments()
 	},
 	methods: {
 		loadThisComments () {
-			let app = this
-			const url = process.env.VUE_APP_API_URL + 'v2/members/?id_consulta=' + this.$route.meta.id + '&public=1'
-			api.get(url)
-				.then(response => { app.comments = response.data[0] })
-				.catch(error => console.error(error))
+			this.$store.dispatch('comments/fetchComments', { id: this.idConsulta, self: this })
 		},
 		filterDate (dataString) {
 			let d = dataString.slice(8, 10)
@@ -54,9 +54,9 @@ export default {
 
 .Commentsloader {
 	max-width: 700px;
-	margin: 2rem auto;
+	margin: 2rem auto 4rem;
 	padding: 0 2rem;
-	div.comment{
+	div.comment {
 		background: #F5F5F5;
 		padding: 1rem 1.2rem 0.8rem 1.2rem;
 		margin: 0 0 1rem 0;
@@ -75,8 +75,6 @@ export default {
 		p.content {
 			font-family: $serifada;
 			margin: 0.8rem 0 0 0;
-			font-size: smaller;
-			@media (max-width: 600px) { font-size: initial; }
 		}
 		* > i {
 			font-size: inherit;
@@ -85,8 +83,21 @@ export default {
 			line-height: 1rem;
 		}
 	}
+	div.empty {
+		font-size: smaller;
+		line-height: 1.2;
+		color: $sombra-3;
+		padding: 0.75rem 1rem;
+		background-color: $cinza-3;
+	}
 	@media print {
 		display: none;
+	}
+	@media (max-width: 600px) {
+		padding: 0 1rem;
+		.comment .content {
+			font-size: smaller;
+		}
 	}
 }
 </style>

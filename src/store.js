@@ -23,7 +23,8 @@ const store = new Vuex.Store({
 		fetching: true,
 		routeId: undefined,
 		toPrint: false,
-		commentContextAberto: false
+		commentContextAberto: false,
+		consultasAbertas: 0
 	},
 	getters: {
 		basePath () { return process.env.VUE_APP_ASSETS_BASE_URL },
@@ -66,6 +67,9 @@ const store = new Vuex.Store({
 		},
 		SET_COMMENTCONTEXTABERTO (state, newstate) {
 			state.commentContextAberto = newstate
+		},
+		COUNT_CONSULTASABERTAS (state, consultas) {
+			state.consultasAbertas = consultas.filter(consulta => consulta.ativo == 1)
 		}
 	},
 	actions: {
@@ -74,6 +78,7 @@ const store = new Vuex.Store({
 				.then(response => {
 					commit('FETCH_CONSULTAS', response.data.slice().reverse())
 					commit('FETCH_CONSULTAS_DECODE', store.state.consultas)
+					commit('COUNT_CONSULTASABERTAS', response.data)
 					commit('FETCHING_STATE', true)
 					if (self.estaConsulta !== undefined) {
 						self.filterConsultas()

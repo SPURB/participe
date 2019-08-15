@@ -1,18 +1,23 @@
 <template>
-	<div class="comentavel" :class="{ aberto: abreComentario && consultaAtiva }" ref="scrollBackRef">
+	<div class="comentavel" :class="{ aberto: abreComentario }" ref="scrollBackRef">
 		<div :class="{ sucesso: sucesso }">
 			<div class="content-comentario">
 				<div class="icon-counter" @click="toggleForm()">
 					<i v-if="!abreComentario" class="icon-comentario icon" title="Contribuir neste trecho"><span>comentario</span></i>
-					<!-- <span v-if="!abreComentario" class="counter-comentario" title="89 contribuições nestre trecho">{{ comments.length }}</span> -->
+					<span v-if="!abreComentario" class="counter-comentario">{{ nCommentsDisplay(comments.length) }}</span>
 					<i v-else class="icon-incorreto icon" title="Fechar"><span>incorreto</span></i>
 				</div>
-				<header>
+				<header v-if="consultaAtiva">
 					<i class="icon-editar icon"><span>editar</span></i>
 					<h1>Escrevendo contribuição sobre o trecho a seguir</h1>
-					<h2>Para cancelar, clique novamente sobre o texto ou no ícone "fechar" ao lado.</h2>
+					<h2>Para cancelar, clique sobre ícone "fechar" ao lado.</h2>
 				</header>
-				<main @click="toggleForm()" ref="heightBackRef">
+				<header v-if="!consultaAtiva">
+					<i class="icon-incorreto icon"><span>incorreto</span></i>
+					<h1>O período de contribuições para esta consulta está encerrado.</h1>
+					<h2>Para fechar clique no ícone ao lado.</h2>
+				</header>
+				<main ref="heightBackRef" :class="{ fullH: !consultaAtiva }">
 					<slot></slot>
 				</main>
 			</div>
@@ -83,13 +88,14 @@
 				</div>
 			</main>
 		</form>
-		<!-- <aside>
+		<aside>
 			<caption>
 				<i class="icon-responder icon"><span>responder</span></i>
 				<h1>Contribuições nestre trecho</h1>
 			</caption>
+			<p class="empty" v-if="comments.length == 0">Não há contribuições</p>
 			<ul>
-				<li v-for="comment in comments">
+				<li v-for="(comment, index) in comments" :style="commentsDelay(index)">
 					<header>
 						<ul>
 							<li>
@@ -102,19 +108,17 @@
 							</li>
 						</ul>
 					</header>
-					<main>
-						{{ comment.content }}
-					</main>
+					<main>{{ comment.content }}</main>
 				</li>
 			</ul>
-		</aside> -->
-		<p ref="avisoConsultaEncerrada" class="consulta-encerrada" v-if="!consultaAtiva">O período para contribuir com esta consulta pública já foi encerrado.</p>
+		</aside>
 	</div>
 </template>
 
 <script>
 import api from '@/utils/api'
 import { commentsCommons } from '@/mixins/commentsCommons'
+import { commentsMutations } from '@/mixins/commentsMutations'
 
 export default {
 	name: 'CommentsContext',
@@ -134,17 +138,14 @@ export default {
 			default: 1
 		}
 	},
-
-	mixins: [ commentsCommons ],
-
+	mixins: [ commentsCommons, commentsMutations ],
 	data () {
 		return {
 			abreComentario: false,
 			form_context: null,
-			initialHeight: undefined,
+			initialHeight: undefined
 		}
 	},
-
 	watch: {
 		abreComentario () {
 			document.body.style.overflow = document.body.style.overflow === '' ? 'hidden' : ''
@@ -166,9 +167,11 @@ export default {
 					behavior: 'smooth'
 				})
 			}
+		},
+		comments () {
+			this.decodeComments(this.comments)
 		}
 	},
-
 	computed: {
 		consultaAtiva () {
 			if (this.$store.getters.consultasClicada !== undefined) {
@@ -182,23 +185,20 @@ export default {
 			return (this.abreComentario && this.consultaAtiva)
 		},
 		comments () {
-			return this.$store.state.comments
+			return this.$store.state.comments.comments.filter(comment => parseInt(comment.commentid) === parseInt(this.contextId))
 		},
 		contextId () {
 			return this.$props.id
 		}
 	},
-
 	methods: {
 		toggleForm () {
-			let app = this
 			// let estecc = this.$parent.$children.filter(el => el.$el == this.$el)[0]
 			// console.log(this.$parent.$children.indexOf(estecc))
 			// console.log(estecc)
-			if (this.consultaAtiva) {
-				this.abreComentario = !this.abreComentario
-			} else {
-				this.$refs.avisoConsultaEncerrada.classList.replace('', 'visible')
+			this.abreComentario = !this.abreComentario
+			if (!this.consultaAtiva) {
+				console.log('consulta encerrada')
 			}
 		},
 		getInitialOffsetY () {
@@ -238,6 +238,24 @@ export default {
 				.then(function () {
 					app.enviandoComment = false
 				})
+		},
+		commentsDelay (factor) {
+			let value = parseInt(factor) * 0.05
+			return `transition-delay: ${0.2 + value}s;`
+		},
+		nCommentsDisplay (num) {
+			let display = ''
+			let n = parseInt(num)
+			if (n < 1000) {
+				display = n.toString()
+			} else if (n > 1000 && n < 99999) {
+				display = (n / 1000).toFixed(1) + 'K'
+			} else if (n > 100000 && n < 999999) {
+				display = (n / 1000).toFixed(0) + 'K'
+			} else if (n > 1000000) {
+				display = (n / 1000000).toFixed(1) + 'M'
+			}
+			return display
 		}
 	}
 }
@@ -251,7 +269,7 @@ export default {
 	position: relative;
 	overflow-y: visible;
 	display: inline-block;
-	margin: 0 calc((100% - 700px + 2rem)/2);
+	margin: 0 calc((100% - 700px + 2rem)/2) 1rem;
 	transition: padding ease-in-out .2s, height ease-out .4s, margin ease-in .2s;
 	& > div {
 		position: relative;
@@ -293,6 +311,7 @@ export default {
 				.counter-comentario {
 					display: block;
 					text-align: center;
+					font-size: 0.75rem;
 					line-height: 1;
 				}
 			}
@@ -304,7 +323,7 @@ export default {
 				cursor: default;
 				padding: 0;
 				opacity: 0;
-				.icon-editar {
+				& > .icon {
 					margin: 0 0.5rem 0 -0.25rem;
 					color: $cinza-1;
 					font-size: 110%;
@@ -328,29 +347,18 @@ export default {
 			}
 			main {
 				overflow-y: auto;
-				max-height: 80rem;
+				max-height: 500rem;
 				transition: all ease-in-out .4s;
 			}
 			main > * {
 				padding-right: 1rem;
 				padding-left: 1rem;
 			}
-			& > *:last-child, & > *:last-child > *:last-child {
+			& > *:last-child, & > *:last-child > *:last-child, & > *:last-child > *:last-child > *:last-child {
 				margin-bottom: 0;
 			}
 			&:hover {
-				.icon:not(.icon-editar), .counter-comentario { color: $preto; }
-			}
-			&::before {
-				content: '“';
-				position: absolute;
-				top: 5.25rem;
-				left: -1.5rem;
-				font-family: $serifada;
-				font-size: 4rem;
-				color: $cinza-2;
-				opacity: 0;
-				transition: opacity ease-in .02s;
+				.icon:not(.icon-editar):not(.icon-incorreto), .counter-comentario { color: $preto; }
 			}
 		}
 	}
@@ -506,6 +514,15 @@ export default {
 				font-size: 1.1rem;
 			}
 		}
+		p.empty {
+			background-color: $cinza-3;
+			max-width: 640px;
+			border-radius: 4px;
+			padding: 0.75rem 1rem;
+			color: $cinza-1;
+			opacity: 0;
+			transition: opacity ease-in .4s .4s;
+		}
 		ul {
 			list-style-type: none;
 			padding: 0;
@@ -518,6 +535,9 @@ export default {
 				padding: 0.75rem 1rem;
 				box-shadow: 0 2px 4px $sombra-3;
 				max-width: 640px;
+				white-space: pre-line;
+				opacity: 0;
+				transition: all ease-in .4s;
 				&:not(:last-child) {
 					margin-bottom: 1rem;
 				}
@@ -534,6 +554,7 @@ export default {
 						border-radius: unset;
 						box-shadow: none;
 						margin-bottom: 0;
+						white-space: normal;
 						&:not(:last-child) {
 							margin: 0 1rem 0 0;
 						}
@@ -598,6 +619,7 @@ export default {
 	&.aberto {
 		padding: 2rem 0;
 		margin: 0 0 0 2.5rem;
+		width: 100%;
 		& > div {
 			background-color: transparent;
 			.content-comentario {
@@ -610,17 +632,15 @@ export default {
 				}
 				& > main {
 					max-height: calc(100vh - 480px);
-					margin: 2rem 0 1rem;
-				}
-				&::before {
-					opacity: 1;
-					transition: opacity ease-in-out .8s;
-					transition-delay: .4s;
+					margin: 1.5rem 0;
+					&.fullH {
+						max-height: calc(100vh - 10rem);
+					}
 				}
 			}
 		}
 		& > form {
-			margin: 0 auto 2rem;
+			margin: 0 0 2rem;
 			max-height: 480px;
 			opacity: 1;
 			transition: all ease-in-out .4s;
@@ -632,6 +652,10 @@ export default {
 			opacity: 1;
 			width: calc(100vw - 700px - 3rem);
 			transition: transform ease-in-out .4s;
+			p.empty { opacity: 1; }
+			& > ul li {
+				opacity: 1;
+			}
 		}
 	}
 }
@@ -644,14 +668,12 @@ export default {
 // 	transition: all ease-in-out .2s;
 // 	position: relative;
 // 	z-index: 0;
-
 // 	.consulta-encerrada{
 // 		display: none;
 // 		background-color: $vermelho;
 // 		padding: 1em;
 // 		color: #FFF
 // 	}
-
 // 	&:hover,
 // 	&.aberto {
 // 		background: $cinza-3;
@@ -663,7 +685,6 @@ export default {
 // 			display: block
 // 		}
 // 	}
-
 // 	& > div {
 // 		display: grid;
 // 		grid-gap: 10px;
@@ -689,7 +710,6 @@ export default {
 // 				color: $preto
 // 			}
 // 		};
-
 // 		&.sucesso {
 // 			margin-bottom: 1em;
 // 			&::after {
@@ -703,14 +723,11 @@ export default {
 // 			}
 // 		}
 // 	}
-
 // 	& div.content-comentario{
 // 		p, ol, ul {
 // 			padding-left: 0
 // 		}
 // 	}
-
-	
 // 	@media (max-width: 600px) {
 // 		.content-comentario {
 // 			padding-left:0;

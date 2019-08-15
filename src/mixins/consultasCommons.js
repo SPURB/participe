@@ -1,11 +1,11 @@
 export const consultasCommons = {
-	computed: { commentsLoaded () { return this.$store.state.comments.fetching } },
+	computed: { commentsLoaded () { return Object.keys(this.$store.state.comments).length > 0 } },
 	created () {
 		this.$store.dispatch('fetchConsultas', { self: this })
 		this.consultas = this.$store.state.consultas
 	},
 	mounted () {
-		this.titulosLimpo = this.listaTitulos()
+		this.titulosLimpo = this.listaTitulos(this.$el.getElementsByClassName('titulo'))
 		this.$store.commit('SET_ROUTE_ID', this.$route.meta.id)
 		this.listaErros()
 	},
@@ -37,7 +37,6 @@ export const consultasCommons = {
 		filterConsultas () {
 			this.consultas = this.$store.state.consultas
 			this.estaConsulta = this.consultas.find(consulta => consulta.idConsulta === this.$route.meta.id)
-
 			let app = this
 			this.consultas.map(function (index) {
 				if (parseInt(index.idConsulta) === parseInt(app.$route.meta.id)) {
@@ -46,8 +45,8 @@ export const consultasCommons = {
 			})
 		},
 		consultaState () { return (this.estaConsulta.ativo === '1' ? 'aberta' : 'fechada') },
-		listaTitulos () {
-			const titulosBruto = Array.from(this.$refs.conteudoConsulta.getElementsByClassName('titulo'))
+		listaTitulos (titulos) {
+			const titulosBruto = Array.from(titulos)
 			const titulosLimpo = titulosBruto.map((item, index) => {
 				return {
 					id: index,

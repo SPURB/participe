@@ -1,6 +1,6 @@
 <template>
 	<div class="Indice" :class="{ visible: !commentContextAberto }">
-		<ul ref="lista">
+		<ul :class="{ maxOpacity: scrolled }">
 			<li
 				v-for="(titulo, index) in titulos" :key="index"
 				:class="{ ativo: titulo.ativo }"
@@ -12,6 +12,7 @@
 </template>
 
 <script>
+
 export default {
 	name: 'Indice',
 	props: {
@@ -20,27 +21,24 @@ export default {
 			required: true
 		}
 	},
+	data () {
+		return {
+			scrolled: false
+		}
+	},
 	computed: {
 		commentContextAberto () { return this.$store.state.commentContextAberto }
 	},
 	mounted () {
-		let app = this
-		if (app.$refs.lista) {
-			if (window.matchMedia('(min-width: 1200px)').matches) {
-				window.addEventListener('scroll', function () {
-					if (app.$refs.lista.style === undefined) { return }
-					if (window.scrollY > window.innerHeight / 2) {
-						app.$refs.lista.style.opacity = '1'
-					} else if (window.scrollY < window.innerHeight / 2) {
-						app.$refs.lista.style.opacity = '0.12'
-					}
-				})
-			} else {
-				app.$refs.lista.style.opacity = '1'
-			}
-		}
+		window.matchMedia('(min-width: 1200px)').matches ? window.addEventListener('scroll', this.setScroll) : this.scrolled = true
+	},
+	destroyed () {
+		window.removeEventListener('scroll', this.setScroll)
 	},
 	methods: {
+		setScroll () {
+			this.scrolled = window.scrollY > (window.innerHeight / 3)
+		},
 		rolar (obj) {
 			if (obj) {
 				window.scrollBy({
@@ -67,14 +65,12 @@ div.Indice {
 	opacity: 0;
 	overflow: hidden;
 	transition: opacity ease-in .2s;
-	
 	&.visible {
 		opacity: 1;
 		ul {
 			max-width: 240px;
 		}
 	}
-
 	ul {
 		display: flex;
 		flex-flow: column nowrap;
@@ -87,10 +83,10 @@ div.Indice {
 		margin: 0;
 		list-style-type: none;
 		opacity: 0.12;
+		&.maxOpacity { opacity: 1; }
 		max-width: 0;
 		overflow: hidden;
 		transition: opacity ease-in .2s, max-width linear .2s;
-
 		li {
 			display: block;
 			margin: 0 0 4px 0;
@@ -104,25 +100,21 @@ div.Indice {
 			border-left: 8px solid transparent;
 			font-family: $grotesca;
 			font-size: small;
-
 			&:active, &.ativo {
 				border-left-color: $preto;
 				font-weight: 700;
 			};
-
 			&:hover {
 				opacity: .4;
 				text-decoration: none;
 				cursor: pointer;
 				max-width: 1000px;
 			};
-
 			&.sub {
 				padding-left: calc(2.8rem - 8px);
 			};
 		};
 	};
-
 	button {
 		position: fixed;
 		padding: 0;
@@ -144,13 +136,11 @@ div.Indice {
 			color: #FFF;
 			border-color: $vermelho;
 		};
-
 		&:hover {
 			cursor: pointer;
 
 			&::before { opacity: 1; };
 		};
-
 		i {
 			line-height: 40px;
 			font-size: 22px;
@@ -158,7 +148,6 @@ div.Indice {
 			width: 42px;
 			cursor: pointer;
 		};
-
 		&::before {
 			content: 'Voltar ao topo';
 			position: absolute;
@@ -171,60 +160,57 @@ div.Indice {
 			font-size: 14px;
 			color: $preto;
 		};
-
 		@media screen and (max-width: 1200px) {
 			&::before { display: none; };
 		};
 	};
-
 	@media screen and (max-width: 1200px) {
-		ul {
-			display: block;
-			position: relative;
-			height: auto;
-			top: 0;
-			margin: 4rem 0 2rem 0;
-			padding: 0 2rem;
-			font-size: initial;
-			line-height: 1.1;
-			max-width: unset;
-
-			li {
-				display: inline-block;
-				padding: 4px 6px !important;
-				margin: 0 6px 4px 0;
-				background: $vermelho;
-				border: 1px solid $vermelho;
-				border-left-width: 0;
-				border-radius: 2px;
-				color: #FFF;
-				max-width: 100%;
-				font-size: small;
-
-				&:hover {
+		&, &.visible {
+			ul {
+				display: block;
+				position: relative;
+				height: auto;
+				top: 0;
+				margin: 0;
+				padding: 0 2rem;
+				font-size: initial;
+				line-height: 1.1;
+				max-width: unset;
+				li {
+					display: inline-block;
+					padding: 4px 6px !important;
+					margin: 0 6px 4px 0;
+					background: $vermelho;
+					border: 1px solid $vermelho;
+					border-left-width: 0;
+					border-radius: 2px;
+					color: #FFF;
+					max-width: 100%;
+					font-size: small;
+					&:hover {
+						max-width: 100%;
+					};
+				};
+				&::before {
+					content: 'Índice';
+					font-size: small;
+					display: inline-block;
+					padding: 4px 6px !important;
+					vertical-align: top;
+					margin: 0 6px 4px 0;
+					border: 1px solid $vermelho;
+					border-radius: 2px;
+					color: $vermelho;
 					max-width: 100%;
 				};
 			};
-
-			&::before {
-				content: 'Índice';
-				font-size: small;
-				display: inline-block;
-				padding: 4px 6px !important;
-				vertical-align: top;
-				margin: 0 6px 4px 0;
-				border: 1px solid $vermelho;
-				border-radius: 2px;
-				color: $vermelho;
-				max-width: 100%;
-			};
-		};
+		}
 	};
-
 	@media screen and (max-width: 600px) {
-		ul { padding: 0 1rem; }
+		&, &.visible {
+			ul { padding: 0 1rem; }
+		}
 	}
-
 	@media print {
 		display: none;
 	}

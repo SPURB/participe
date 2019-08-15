@@ -2,7 +2,7 @@
 	<div class="home">
 		<main id="listaProjetos" :class="{ load: !fetching }">
 			<section class="abertas">
-				<ul ref="consultas">
+				<ul ref="consultas" :class="{ impar: !isEven(consultasAbertas.length) }">
 					<template v-for="(consulta, index) in consultasAbertas">
 						<li v-if="parseInt(consulta.ativo) === 1" class="card" @click="redirect(setUrlByType(consulta.urlConsulta))" :key="index">
 							<div class="img" :style="{ background: 'url(' + placeholderSrc(consulta.urlCapa) + ')', backgroundSize: 'cover', backgroundColor: '#BDBDBD' }">
@@ -31,9 +31,9 @@
 									<tr>
 										<td><i class="icon-contribuicao icon"><span>contribuicao</span></i></td>
 										<td title="Número de contribuições recolhidas até o momento">
-											<template v-if="consulta.nContribuicoes == 0">Nenhuma contribuição até agora</template>
-											<template v-if="consulta.nContribuicoes == 1">{{ consulta.nContribuicoes }} contribuição</template>
-											<template v-if="consulta.nContribuicoes > 1">{{ consulta.nContribuicoes }} contribuições</template>
+											<template v-if="totalContribuicoes(consulta) == 0">Nenhuma contribuição até agora</template>
+											<template v-if="totalContribuicoes(consulta) == 1">Uma contribuição</template>
+											<template v-if="totalContribuicoes(consulta) > 1">{{ totalContribuicoes(consulta) }} contribuições</template>
 										</td>
 									</tr>
 								</table>
@@ -60,7 +60,6 @@
 				<ul ref="consultasEncerradas">
 					<template v-for="(consulta, index) in consultas">
 						<li v-if="!parseInt(consulta.ativo)" @click="redirect(setUrlByType(consulta.urlConsulta))" :key="index">
-
 							<div class="sq" :style="{ background: 'url(' + placeholderSrc(consulta.urlCapa) + ')', backgroundSize: 'cover', backgroundColor: '#BDBDBD' }">
 								<img v-if="!isIE" v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, consulta.urlCapa, consulta.ativo)" :alt="consulta.nomePublico">
 								<div v-if="isIE" class="imgIE" :style="{ backgroundImage: 'url(' + imgset(consulta.urlCapa, consulta.ativo) + ')', backgroundSize: 'cover', backgroundPosition: 'center center', height: '100%', width: '100%' }"></div>
@@ -76,9 +75,9 @@
 								<tr>
 									<td><i class="icon-contribuicao icon"><span>contribuicao</span></i></td>
 									<td>
-										<template v-if="consulta.nContribuicoes == 0">Nenhuma contribuição</template>
-										<template v-if="consulta.nContribuicoes == 1">{{ consulta.nContribuicoes }} contribuição</template>
-										<template v-if="consulta.nContribuicoes > 1">{{ consulta.nContribuicoes }} contribuições</template>
+										<template v-if="totalContribuicoes(consulta) == 0">Nenhuma contribuição</template>
+										<template v-if="totalContribuicoes(consulta) == 1">Uma contribuição</template>
+										<template v-if="totalContribuicoes(consulta) > 1">{{ totalContribuicoes(consulta) }} contribuições</template>
 									</td>
 								</tr>
 								<tr v-if="consulta.urlDevolutiva">
@@ -95,15 +94,22 @@
 </template>
 
 <script>
+import api from '@/utils/api'
+import apiWpCustom from '@/utils/apiWpCustom'
 import { consultasMutations } from '@/mixins/consultasMutations'
+
 export default {
 	name: 'Home',
 	mixins: [ consultasMutations ],
+	data () {
+		return {
+			idsNoticias: []
+		}
+	},
 	computed: {
 		consultas () { return this.$store.state.consultas === undefined ? false : this.$store.state.consultas.filter(consulta => !parseInt(consulta.ativo)) },
 		consultasAbertas () {
-			if (this.$store.state.consultas === undefined) { return }
-			return Array.from(this.$store.state.consultas).sort(this.parametrosDestaque).filter(consulta => parseInt(consulta.ativo))
+			return this.$store.state.consultasAbertas.sort(this.parametrosDestaque)
 		},
 		basePathImgSrc () { return this.$store.getters.basePath + 'arquivos/capas/' },
 		fetching () { return this.$store.state.fetching },
@@ -121,6 +127,12 @@ export default {
 	},
 	mounted () {
 		if (window.location.hash !== '') this.checkOldRoutesWithHashes(window.location.hash)// redirect if url contain old patter. ex -> /#/anhembi2
+		this.getNoticiasIds()
+	},
+	watch: {
+		idsNoticias (arr) {
+			if (arr.length) this.getNCommentsNoticias()
+		}
 	},
 	methods: {
 		checkOldRoutesWithHashes (hash) {
@@ -131,22 +143,19 @@ export default {
 			else throw new Error('A rota ' + hash + ' não existe. Checar url.')
 		},
 		parametrosDestaque (a, b) {
-			return this.tempoRestante(a.dataFinal) < this.tempoRestante(b.dataFinal) ? -1 : 1
-			// if (this.tempoRestante(a.dataFinal) < this.tempoRestante(b.dataFinal)) {
-			// 	if (this.tempoPublicado(a.dataCadastro) > this.tempoPublicado(b.dataCadastro)) {
-			// 		return -1
-			// 	} else {
-			// 		return 1
-			// 	}
-			// } else if (this.tempoRestante(a.dataFinal) > this.tempoRestante(b.dataFinal)) {
-			// 	if (this.tempoPublicado(a.dataCadastro) < this.tempoPublicado(b.dataCadastro)) {
-			// 		return 1
-			// 	} else {
-			// 		return -1
-			// 	}
-			// } else {
-			// 	return 1
-			// }
+			let restA = this.tempoRestante(a.dataFinal)
+			let restB = this.tempoRestante(b.dataFinal)
+			let publA = this.tempoPublicado(a.dataCadastro)
+			let publB = this.tempoPublicado(b.dataCadastro)
+			if (isNaN(restA) || isNaN(restB)) {
+				return 1
+			} else {
+				if (restA > restB) {
+					return publA <= publB ? 1 : 2
+				} else if (restA <= restB) {
+					return publA <= publB ? -2 : -1
+				}
+			}
 		},
 		imgset (nomeStr, isAtiva) {
 			let nome = this.basePathImgSrc + nomeStr.slice(0, nomeStr.lastIndexOf('.'))
@@ -200,6 +209,39 @@ export default {
 		toggleListDisplay (event) {
 			this.$refs.consultasEncerradas.classList.toggle('lista')
 			this.$refs.toggleListDisplayBt.classList.toggle('lista')
+		},
+		getNoticiasIds () {
+			apiWpCustom.get(`consultasNoticias`)
+				.then(response => { return response.data })
+				.then(response => { response.map(obj => { this.idsNoticias.push(obj) }) })
+				.catch(error => console.error(error))
+		},
+		getNCommentsNoticias () {
+			let idsString = ''
+			this.idsNoticias.map(obj => {
+				idsString += obj.idNoticia.toString() + ','
+			})
+			idsString = idsString.slice(0, -1)
+			api.get(`wp-custom/v1/?noticias-comments-counter=${idsString}`)
+				.then(response => this.idsNoticias.map(noticia => {
+					noticia.commentcount = response.data.filter(obj => {
+						return parseInt(obj.idnoticia) === parseInt(noticia.idNoticia)
+					})
+					noticia.commentcount = parseInt(noticia.commentcount[0].commentcount)
+					return noticia
+				}))
+				.catch(error => console.error(error))
+		},
+		totalContribuicoes (consulta) {
+			let int = parseInt(consulta.nContribuicoes)
+			let ext = 0
+			let extobj = this.idsNoticias.filter(obj => { return obj.idConsulta === consulta.idConsulta })
+			extobj.map(index => { ext += index.commentcount })
+			return int + ext
+		},
+		isEven (num) {
+			if (num % 2 === 0) return true
+			else return false
 		}
 	}
 }
@@ -241,9 +283,6 @@ export default {
 					vertical-align: top;
 					cursor: pointer;
 					border-radius: 4px;
-					&:nth-child(2n) {
-						margin-right: 2rem;
-					}
 					.img {
 						margin-bottom: 1rem;
 						height: 330px;
@@ -344,7 +383,18 @@ export default {
 							}
 						}
 					}
-					&:first-child {
+					&:active {
+						background-color: $vermelho-tr;
+						outline: 0.5rem solid $vermelho-tr;
+						-moz-outline-radius: 0.75rem;
+						border-radius: 0;
+					}
+				}
+				&.impar {
+					li.card:nth-child(2n) {
+						margin-right: 2rem;
+					}
+					li.card:first-child {
 						width: 100%;
 						.img {
 							display: inline-block;
@@ -382,12 +432,6 @@ export default {
 								line-height: 1.6;
 							}
 						}
-					}
-					&:active {
-						background-color: $vermelho-tr;
-						outline: 0.5rem solid $vermelho-tr;
-						-moz-outline-radius: 0.75rem;
-						border-radius: 0;
 					}
 				}
 			}

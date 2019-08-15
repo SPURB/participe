@@ -6,7 +6,7 @@
 				<span></span>
 			</div>
 			<div class="contribuicoes" v-if="esta_consulta.nContribuicoes">
-				<i class="icon-comentario icon"><span>chat</span></i> {{ esta_consulta.nContribuicoes }} <span v-if="esta_consulta.nContribuicoes < 2">contribuição</span><span v-else>contribuições</span>
+				<i class="icon-comentario icon"><span>chat</span></i> {{ soma(esta_consulta.nContribuicoes, contribuicoesExternas) }} contribuições
 			</div>
 			<div class="periodo" v-if="esta_consulta.dataFinal">
 				<i class="icon-data icon"><span>período</span></i> {{ data(esta_consulta.dataCadastro) }}–{{ data(esta_consulta.dataFinal) }}
@@ -53,7 +53,8 @@ export default {
 	computed: {
 		basePath () { return this.$store.getters.basePath },
 		bgImg () { return this.$store.getters.basePath + this.background_image_src },
-		rota () { return this.$route.name }
+		rota () { return this.$route.name },
+		contribuicoesExternas () { return this.$store.state.comments.extCommentsNumber }
 	},
 	methods: {
 		socialMediaRedirect (net) {
@@ -87,7 +88,10 @@ export default {
 			return dd + '/' + mm + '/' + aa
 		},
 		imgsrc (name) { return this.basePath + 'arquivos/img/' + name },
-		imprime () { this.$store.dispatch('imprime') }
+		imprime () { this.$store.dispatch('imprime') },
+		soma (a, b) {
+			return (parseInt(a) + parseInt(b)).toString()
+		}
 	}
 }
 </script>

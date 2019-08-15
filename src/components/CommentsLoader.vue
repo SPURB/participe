@@ -1,14 +1,20 @@
 <template>
 	<div class="Commentsloader">
-		<template v-if="comments">
-			<div v-for="(comment, index) in comments" class="comment" :key="index">
+		<template v-if="fetching">
+			<div class="empty">Carregando contribuições...</div>
+		</template>
+		<template v-if="!fetching && comments.length > 0">
+			<div v-for="(comment, index) in comments" class="comment" :class="{ externo: comment.commentcontext == 'noticia' }" :key="index">
+				<i class="icon-diagonal_para_baixo icon extInd" v-if="comment.commentcontext == 'noticia'"><span>diagonal_para_baixo</span></i>
 				<div class="name"><i class="icon-pessoa-outline icon"><span>person_outline</span></i>{{ comment.name }}</div>
 				<div class="comment_info"><i class="icon-tempo icon"><span>schedule</span></i>{{ filterDate(comment.commentdate) }}</div>
-				<div class="comment_info"><i class="icon-assunto icon"><span>subject</span></i>Comentou em "{{ comment.commentcontext }}"</div>
-				<p class="content">{{comment.content}}</p>
+				<div class="comment_info" v-if="comment.commentcontext != 'noticia'"><i class="icon-assunto icon"><span>subject</span></i>Comentou em "{{ comment.commentcontext }}"</div>
+				<div class="comment_info" v-if="comment.commentcontext == 'noticia' && comment.urlNoticia != '' && comment.urlNoticia != null"><i class="icon-assunto icon"><span>subject</span></i>Essa é uma contribuição original&nbsp;<a :href="'https://gestaourbana.prefeitura.sp.gov.br/noticias/' + comment.urlNoticia">desta notícia</a></div>
+				<div class="comment_info" v-if="comment.commentcontext == 'noticia' && comment.urlNoticia == '' || comment.commentcontext == 'noticia' && comment.urlNoticia == null"><i class="icon-assunto icon"><span>subject</span></i>Essa é uma contribuição externa.</div>
+				<p class="content">{{ comment.content }}</p>
 			</div>
 		</template>
-		<template v-if="comments.length == 0">
+		<template v-if="!fetching && comments.length == 0">
 			<div class="empty">Não há nenhuma contribuição nesta consulta.</div>
 		</template>
 	</div>
@@ -23,21 +29,31 @@ export default {
 	props: [ 'attr' ],
 	computed: {
 		idConsulta () { return this.$route.meta.id },
-		comments () { return this.$store.state.comments.comments }
+		fetching () { return this.$store.state.comments.fetching },
+		comments () {
+			return this.$store.state.comments.comments.sort((a, b) => {
+				return Date.parse(a.commentdate) > Date.parse(b.commentdate) ? 1 : -1
+			})
+		},
+		idsNoticias () { return this.$store.state.comments.idsNoticias }
+	},
+	mounted () {
+		this.loadIdsNoticias()
 	},
 	watch: {
 		comments () {
-			if (Object.keys(this.comments).length > 0) {
-				this.decodeComments(this.comments)
-			}
+			this.decodeComments(this.comments.filter(comment => comment.commentcontext !== 'noticia'))
+		},
+		idsNoticias (arr) {
+			arr ? this.loadThisComments(arr) : false
 		}
 	},
-	mounted () {
-		this.loadThisComments()
-	},
 	methods: {
-		loadThisComments () {
-			this.$store.dispatch('comments/fetchComments', { id: this.idConsulta, self: this })
+		loadThisComments (arr) {
+			this.$store.dispatch('comments/fetchComments', { id: this.idConsulta, self: this, noticiasIds: arr })
+		},
+		loadIdsNoticias () {
+			this.$store.dispatch('comments/fetchIdsNoticias', { id: this.idConsulta, self: this })
 		},
 		filterDate (dataString) {
 			let d = dataString.slice(8, 10)
@@ -57,7 +73,8 @@ export default {
 	margin: 2rem auto 4rem;
 	padding: 0 2rem;
 	div.comment {
-		background: #F5F5F5;
+		position: relative;
+		background: $cinza-3;
 		padding: 1rem 1.2rem 0.8rem 1.2rem;
 		margin: 0 0 1rem 0;
 		border-radius: 2px;
@@ -75,12 +92,22 @@ export default {
 		p.content {
 			font-family: $serifada;
 			margin: 0.8rem 0 0 0;
+			white-space: pre-line;
 		}
 		* > i {
 			font-size: inherit;
 			margin: 0 8px 0 0;
 			padding-top: 3px;
 			line-height: 1rem;
+		}
+		&.externo .extInd {
+			position: absolute;
+			top: calc(1rem - 1px);
+			right: calc(1rem - 1px);
+			background-color: $sombra-4;
+			color: #FFF;
+			border-radius: 100%;
+			font-size: larger;
 		}
 	}
 	div.empty {

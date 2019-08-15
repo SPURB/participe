@@ -33,7 +33,8 @@ module.exports = {
 				'/parque-dos-eucaliptos',
 				'/parque-jacinto-alberto',
 				'/parque-jardim-felicidade',
-				'/parque-brigadeiro-faria-lima'
+				'/parque-brigadeiro-faria-lima',
+				'/tr-156'
 			],
 			useRenderEvent: true,
 			headless: false,

@@ -117,7 +117,6 @@ export default new Router({
 		{
 			path: '/parque-minhocao',
 			name: 'ParqueMinhocao',
-			// components: { ParqueMinhocao },
 			component: () => import(/* webpackChunkName: "parqueminhocao" */ '@/views/ParqueMinhocao'),
 			meta: {
 				id: 44
@@ -185,6 +184,14 @@ export default new Router({
 			component: () => import(/* webpackChunkName: "ParqueBrigadeiroFariaLima" */ '@/views/ParqueBrigadeiroFariaLima'),
 			meta: {
 				id: 52
+			}
+		},
+		{
+			path: '/tr-156',
+			name: 'Tr156',
+			component: () => import(/* webpackChunkName: "Tr156" */ '@/views/Tr156'),
+			meta: {
+				id: 54
 			}
 		}
 	]

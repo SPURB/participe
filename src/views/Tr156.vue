@@ -72,6 +72,7 @@
 			<p>3.1.2. O conjunto dos itens destina-se ao atendimento e gerenciamento do relacionamento com o cidadão, à disponibilização de informações, à digitalização e à automação de serviços públicos, utilizando métodos ágeis e design de serviços, pelo prazo de trinta (30) meses, renováveis por igual período, de acordo com as condições e especificações constantes deste documento.</p>
 
 			<!-- <Tabela :dados="itensdacontratacao"></Tabela> -->
+			<Tabela :dados="itensDaContratacao"></Tabela>
 
 			<p>3.1.3. Indivisibilidade do Objeto</p>
 			<p>3.1.3.1. Para realizar a transformação, design e digitalização de serviços públicos, a empresa deverá dominar as funcionalidades da solução tecnológica que será utilizada para tanto.</p>
@@ -1370,7 +1371,85 @@ export default {
 			titulosLimpo: [],
 			comments_atrr: undefined,
 			consultas: false,
-			estaConsulta: {}
+			estaConsulta: {},
+			itensDaContratacao: {
+   			titulo: 'Tabela 2A',
+    colunas: [
+        { titulo: '#' },
+        { titulo: 'Item' },
+        { titulo: 'Detalhamento do Objeto' },
+        { titulo: 'Unidade de Medida' },
+        { titulo: 'Quantidade' }
+    ],
+    linhas: [
+        [
+            [ { data: '1' }],
+
+            [ { data: 'Fornecimento de plataforma multicanal integrada para atendimento, gerenciamento do relacionamento com o cidadão, digitalização e automação de serviços públicos em modelo SaaS (Software as a Service).' }],
+            [ { data: 'Perfil Atendimento' } ],
+            [ { data: 'Usuários em uso/mês' } ],
+            [ { data: '1.680' } ]
+        ],
+        [
+            [ { data: ' ' } ],
+            [ { data: '  ' } ],
+            [ { data: 'Perfil Operacional' } ],
+            [ { data: 'Usuários em uso/mês' }],
+            [ { data: '1.260' } ]
+        ],
+        [
+            [ { data: ' ' } ],
+            [ { data: '  ' } ],
+            [ { data: 'Perfil Operacional' } ],
+            [ { data: 'Usuários em uso/mês' }],
+            [ { data: '212' } ]
+        ],
+        [
+            [ { data: ' ' } ],
+            [ { data: '  ' } ],
+            [ { data: 'Perfil Operacional' } ],
+            [ { data: 'Usuários em uso/mês' }],
+            [ { data: '56' } ]
+        ],
+        [
+            [ { data: '2' } ],
+            [ { data: 'Fornecimento de Atendente Virtual Inteligente - Chatbot - em modelo SaaS (Software as a Service).' } ],
+            [ { data: ' ' } ],
+            [ { data: 'Pacote de 1000 Interações' }],
+            [ { data: '2.880' } ]
+        ],
+        [
+            [ { data: '3' } ],
+            [ { data: 'Suporte Técnico' } ],
+            [ { data: 'Suporte operacional das soluções dos itens 1, 2 e 5' } ],
+            [ { data: 'Serviços/mês' }],
+            [ { data: '1' } ]
+        ],
+        [
+            [ { data: '4' } ],
+            [ { data: 'Serviços Especializados - Transformação, design e digitalização de serviços públicos digitais com o uso da solução tecnológica' } ],
+            [ { data: 'Configuração, levantamento, melhoria e automação/digitalização de processos; Customização e Integração de sistemas e bases de dados existentes com a solução contratada.' } ],
+            [ { data: 'UST' }],
+            [ { data: '102.960' } ]
+        ],
+        [
+            [ { data: '5' } ],
+            [ { data: 'Fornecimento de plataforma de capacitação permanente em modelo SaaS (Software as a Service) para utilização da solução tecnológica' } ],
+            [ { data: 'Plataforma EAD de Capacitação.' } ],
+            [ { data: 'Serviço/mês' }],
+            [ { data: '1' } ]
+        ],
+        [
+            [ { data: '6' } ],
+            [ { data: 'Capacitação e Formação de Usuários para utilização da solução tecnológica' } ],
+            [ { data: 'Capacitação para os perfis de Atendimento, Operacional, Gerencial e de Configuração das soluções contratadas'  } ],
+            [ { data: 'Hora-aula' }],
+            [ { data: '1.692' } ]
+        ]
+
+    ],
+    tabelaListrada: false
+}
 		}
 	},
 	components: {

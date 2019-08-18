@@ -81,7 +81,7 @@
 		"node-sass": "4.12.0",
 		"prerender-spa-plugin": "3.4.0",
 		"sass-loader": "7.2.0",
-		"vue-cli-plugin-prerender-spa": "1.1.5",
+		"vue-cli-plugin-prerender-spa": "1.1.6",
 		"vue-template-compiler": "2.6.10"
 	}
 }

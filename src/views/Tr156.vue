@@ -1354,6 +1354,7 @@
 			<p>● Experiência comprovada de, no mínimo, 6 (seis) anos, em organizações públicas ou privadas, em atividades que gestão de produtos utilizando métodos ágeis e design.</p>
 			<p>● Experiência comprovada de, no mínimo, 3 (três) anos, em organizações públicas ou privadas, em atividades que envolvam a parametrização, a transformação e o gerenciamento de atendimento virtual automatizado utilizando a solução contratada.</p>
 			<p>● Conhecimento em Técnicas de Linguística Computacional, Processamento de Linguagem Natural e métodos ágeis.</p>
+			<p>TESTE</p>
 		</section>
 	</div>
 </template>

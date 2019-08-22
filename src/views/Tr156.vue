@@ -1,6 +1,6 @@
 <template>
 	<div class="TR156" ref="conteudoConsulta">
-		<PageTop background_image_src="arquivos/capas/tr156_480w.png" :esta_consulta="estaConsulta">
+		<PageTop background_image_src="arquivos/capas/tr156_480w.webp" :esta_consulta="estaConsulta">
 			<template slot="titulo"><div>Termo de Referência para contratação de solução tecnológica de atendimento e digitalização de serviços públicos</div></template>
 			<template slot="subtitulo"><div></div></template>
 		</PageTop>

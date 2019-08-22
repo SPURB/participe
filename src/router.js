@@ -193,6 +193,14 @@ export default new Router({
 			meta: {
 				id: 54
 			}
+		},
+		{
+			path: '/premia-sampa-edicao-2020',
+			name: 'PremiaSampaEdicao2020',
+			component: () => import(/* webpackChunkName: "PremiaSampaEdicao2020" */ '@/views/PremiaSampaEdicao2020'),
+			meta: {
+				id: 55
+			}
 		}
 	]
 })

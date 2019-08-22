@@ -7,11 +7,6 @@ body {
 	box-sizing: border-box;
 }
 
-*::selection, *::-moz-selection {
-	background: $vermelho;
-	color: #FFF;
-}
-
 a {
 	color: $vermelho;
 	border-bottom: 2px solid transparent;
@@ -95,9 +90,9 @@ h6 {
 	font-family: $grotesca;
 	margin-top: 4rem;
 
-	& + * { margin-top: -0.8rem; }
+	& + *:not(.comentavel) { margin-top: -0.8rem; }
 
-	&.subtitulo + * { margin-top: -1rem; }
+	&.subtitulo + *:not(.comentavel) { margin-top: -1rem; }
 
 }
 
@@ -320,7 +315,7 @@ ul.notas {
 ul li,
 ol li {
 	margin: 0 0 1rem 2rem;
-	padding-left: 8px;
+	padding-left: 0.5rem;
 	font-family: $serifada;
 	font-size: $sizedesk;
 }

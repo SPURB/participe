@@ -68,8 +68,22 @@ const store = new Vuex.Store({
 		SET_COMMENTCONTEXTABERTO (state, newstate) {
 			state.commentContextAberto = newstate
 		},
-		COUNT_CONSULTASABERTAS (state, consultas) {
-			state.consultasAbertas = consultas.filter(consulta => consulta.ativo == 1)
+		SET_CONSULTAS_ABERTAS (state, consultas) {
+			var abertas = consultas.filter(consulta => parseInt(consulta.ativo) === 1)
+			function parametros (a, b) {
+				function rest (obj) { return Math.abs(Math.ceil((Date.parse(obj.dataFinal) - Date.now()) / 86400000)) }
+				function pub (obj) { return Math.abs(Math.ceil((Date.now() - Date.parse(obj.dataCadastro)) / 86400000)) }
+				if (isNaN(rest(a)) || isNaN(rest(b))) {
+					return 1
+				} else {
+					if (rest(a) > rest(b)) {
+						return pub(a) <= pub(b) ? 1 : 2
+					} else if (rest(a) <= rest(b)) {
+						return pub(a) <= pub(b) ? -2 : -1
+					}
+				}
+			}
+			state.consultasAbertas = abertas.sort(parametros)
 		}
 	},
 	actions: {
@@ -78,7 +92,7 @@ const store = new Vuex.Store({
 				.then(response => {
 					commit('FETCH_CONSULTAS', response.data.slice().reverse())
 					commit('FETCH_CONSULTAS_DECODE', store.state.consultas)
-					commit('COUNT_CONSULTASABERTAS', response.data)
+					commit('SET_CONSULTAS_ABERTAS', response.data)
 					commit('FETCHING_STATE', true)
 					if (self.estaConsulta !== undefined) {
 						self.filterConsultas()

@@ -97,7 +97,11 @@ export default {
 				type: String,
 				required: false
 			},
-			tabelaListrada: Boolean
+			tabelaListrada: Boolean,
+			estreita: {
+				type: Boolean,
+				required: false
+			}
 		}
 	},
 	beforeMount () {

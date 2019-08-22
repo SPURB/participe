@@ -2,9 +2,9 @@
 	<div class="home">
 		<main id="listaProjetos" :class="{ load: !fetching }">
 			<section class="abertas">
-				<ul ref="consultas" :class="{ impar: !isEven(consultasAbertas.length) }">
+				<ul ref="consultasAbertas" :class="{ impar: !isEven(consultasAbertas.length) }">
 					<template v-for="(consulta, index) in consultasAbertas">
-						<li v-if="parseInt(consulta.ativo) === 1" class="card" @click="redirect(setUrlByType(consulta.urlConsulta))" :key="index">
+						<li class="card" @click="redirect(setUrlByType(consulta.urlConsulta))" :key="index">
 							<div class="img" :style="{ background: 'url(' + placeholderSrc(consulta.urlCapa) + ')', backgroundSize: 'cover', backgroundColor: '#BDBDBD' }">
 								<ul class="tags">
 									<li class="consAtiva">Em consulta</li>
@@ -58,7 +58,7 @@
 					</button>
 				</header>
 				<ul ref="consultasEncerradas">
-					<template v-for="(consulta, index) in consultas">
+					<template v-for="(consulta, index) in consultasEncerradas">
 						<li v-if="!parseInt(consulta.ativo)" @click="redirect(setUrlByType(consulta.urlConsulta))" :key="index">
 							<div class="sq" :style="{ background: 'url(' + placeholderSrc(consulta.urlCapa) + ')', backgroundSize: 'cover', backgroundColor: '#BDBDBD' }">
 								<img v-if="!isIE" v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, consulta.urlCapa, consulta.ativo)" :alt="consulta.nomePublico">
@@ -107,10 +107,8 @@ export default {
 		}
 	},
 	computed: {
-		consultas () { return this.$store.state.consultas === undefined ? false : this.$store.state.consultas.filter(consulta => !parseInt(consulta.ativo)) },
-		consultasAbertas () {
-			return this.$store.state.consultasAbertas.sort(this.parametrosDestaque)
-		},
+		consultasEncerradas () { return this.$store.state.consultas === undefined ? false : this.$store.state.consultas.filter(consulta => !parseInt(consulta.ativo)) },
+		consultasAbertas () { return this.$store.state.consultasAbertas },
 		basePathImgSrc () { return this.$store.getters.basePath + 'arquivos/capas/' },
 		fetching () { return this.$store.state.fetching },
 		isIE () {
@@ -141,21 +139,6 @@ export default {
 
 			if (routes.includes(noHash)) this.redirect(noHash)
 			else throw new Error('A rota ' + hash + ' não existe. Checar url.')
-		},
-		parametrosDestaque (a, b) {
-			let restA = this.tempoRestante(a.dataFinal)
-			let restB = this.tempoRestante(b.dataFinal)
-			let publA = this.tempoPublicado(a.dataCadastro)
-			let publB = this.tempoPublicado(b.dataCadastro)
-			if (isNaN(restA) || isNaN(restB)) {
-				return 1
-			} else {
-				if (restA > restB) {
-					return publA <= publB ? 1 : 2
-				} else if (restA <= restB) {
-					return publA <= publB ? -2 : -1
-				}
-			}
 		},
 		imgset (nomeStr, isAtiva) {
 			let nome = this.basePathImgSrc + nomeStr.slice(0, nomeStr.lastIndexOf('.'))
@@ -192,10 +175,6 @@ export default {
 		},
 		tempoRestante (dataFinal) {
 			let restante = Math.ceil((Date.parse(dataFinal) - Date.now()) / 86400000)
-			return Math.abs(restante)
-		},
-		tempoPublicado (dataCadastro) {
-			const restante = Math.ceil((Date.now() - Date.parse(dataCadastro)) / 86400000)
 			return Math.abs(restante)
 		},
 		redirect (dest) { location.assign(dest) },
@@ -296,6 +275,7 @@ export default {
 							left: 0;
 							list-style-type: none;
 							z-index: 1;
+							transition: all ease-in-out .4s;
 							li {
 								display: block;
 								margin: 0 0 1rem 0;
@@ -310,6 +290,7 @@ export default {
 								border-style: solid;
 								border-radius: 0 2px 2px 0;
 								color: #FFF;
+								transition: inherit;
 								&:last-child {
 									margin-right: 0;
 								}
@@ -396,6 +377,7 @@ export default {
 					}
 					li.card:first-child {
 						width: 100%;
+						margin: 2rem 0 4rem;
 						.img {
 							display: inline-block;
 							width: 60%;
@@ -421,7 +403,7 @@ export default {
 							display: inline-block;
 							width: 40%;
 							vertical-align: top;
-							padding-left: 2rem;
+							padding-left: 1.5rem;
 							padding-bottom: 0;
 							border-bottom: none;
 							h2 {
@@ -627,6 +609,7 @@ export default {
 								li {
 									padding: 0.5rem;
 									margin-bottom: 0.5rem;
+									font-size: 0.65rem;
 								}
 							}
 							img {
@@ -651,7 +634,7 @@ export default {
 		}
 	};
 	@media screen and (max-width: 800px) {
-		main section.abertas ul li.card:first-child {
+		main section.abertas ul.impar li.card:first-child {
 			.img {
 				display: block;
 				width: 100%;
@@ -685,7 +668,6 @@ export default {
 					li.card, li.card:nth-child(2n) {
 						display: block;
 						width: 100%;
-						margin: 0 0 2rem 0;
 						aside {
 							h2 {
 								font-size: 1.25rem;
@@ -718,6 +700,39 @@ export default {
 							}
 						}
 					}
+					&.impar {
+						li.card, li.card:nth-child(2n) {
+							margin-right: 0;
+						}
+						li.card:first-child {
+							margin: 0 0 4rem;
+							.img {
+								margin-bottom: 0.75rem;
+								width: 100%;
+								height: 0;
+								padding-bottom: calc(9/16*100%);
+							}
+							aside {
+								margin-top: 0;
+								padding-left: 0;
+								width: 100%;
+								h2 {
+									font-size: 1.75rem;
+								}
+								p.intro span.acesso {
+									display: block;
+									text-align: center;
+									margin: 0.5rem 0 0;
+									padding: 0.5rem 0.75rem 0.5rem 1rem;
+									border-radius: 2rem;
+									background-color: $vermelho;
+									color: #FFF;
+									box-shadow: 0 2px 2px $sombra-3;
+									font-weight: normal;
+								}
+							}
+						}
+					}
 				}
 			}
 			section.encerradas {
@@ -739,10 +754,11 @@ export default {
 							h3 {
 								display: block;
 								width: 100%;
-								margin: 0;
+								margin: -0.25rem 0 0.25rem;
 							}
 							.info {
 								width: calc(100% - 4.5rem);
+								float: right;
 							}
 						}
 						@suports (display: grid) {

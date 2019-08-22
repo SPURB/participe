@@ -69,6 +69,11 @@ body {
 	a { text-decoration: none; color: $vermelho; };
 
 	a:hover { text-decoration: underline; };
+
+	*::selection, *::-moz-selection {
+		background: $vermelho;
+		color: #FFF;
+	}
 };
 
 i[class] {

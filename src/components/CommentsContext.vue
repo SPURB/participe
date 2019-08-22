@@ -1,26 +1,30 @@
 <template>
 	<div class="comentavel" :class="{ aberto: abreComentario }" ref="scrollBackRef">
-		<div :class="{ sucesso: sucesso }">
+		<div class="head" :class="{ sucesso: sucesso }">
 			<div class="content-comentario">
-				<div class="icon-counter" @click="toggleForm()">
-					<i v-if="!abreComentario" class="icon-comentario icon" title="Contribuir neste trecho"><span>comentario</span></i>
-					<span v-if="!abreComentario" class="counter-comentario">{{ nCommentsDisplay(comments.length) }}</span>
-					<i v-else class="icon-incorreto icon" title="Fechar"><span>incorreto</span></i>
-				</div>
 				<header v-if="consultaAtiva">
 					<i class="icon-editar icon"><span>editar</span></i>
 					<h1>Escrevendo contribuição sobre o trecho a seguir</h1>
 					<h2>Para cancelar, clique sobre ícone "fechar" ao lado.</h2>
+					<i class="icon-incorreto icon" title="Fechar" @click="toggleForm()"><span>incorreto</span></i>
 				</header>
 				<header v-if="!consultaAtiva">
 					<i class="icon-incorreto icon"><span>incorreto</span></i>
 					<h1>O período de contribuições para esta consulta está encerrado.</h1>
 					<h2>Para fechar clique no ícone ao lado.</h2>
+					<i class="icon-incorreto icon" title="Fechar" @click="toggleForm()"><span>incorreto</span></i>
 				</header>
 				<main ref="heightBackRef" :class="{ fullH: !consultaAtiva }">
 					<slot></slot>
 				</main>
 			</div>
+		</div>
+		<div v-if="!abreComentario" class="call" @click="toggleForm()">
+			<div class="counter">
+				<i class="icon-comentario icon" title="Contribuir neste trecho"><span>comentario</span></i>
+				<span>{{ nCommentsDisplay(comments.length) }}</span>
+			</div>
+			<span class="call">Contribua neste trecho</span>
 		</div>
 		<form v-if="consultaAtiva">
 			<aside>
@@ -146,21 +150,23 @@ export default {
 			initialHeight: undefined
 		}
 	},
+	beforeUpdate () {
+		this.setInitialHeight()
+	},
 	watch: {
 		abreComentario () {
 			document.body.style.overflow = document.body.style.overflow === '' ? 'hidden' : ''
-			this.initialHeight = this.$refs.heightBackRef.getBoundingClientRect().height
 			if (this.abreComentario) {
 				this.$store.commit('SET_COMMENTCONTEXTABERTO', true)
-				this.$el.style.height = window.innerHeight + 32 + 'px'
+				this.$el.style.height = window.innerHeight + 35 + 'px'
 				window.scrollTo({
-					top: this.$el.offsetTop,
+					top: Math.abs(this.$el.offsetTop),
 					left: 0,
 					behavior: 'smooth'
 				})
 			} else {
 				this.$store.commit('SET_COMMENTCONTEXTABERTO', false)
-				this.$el.style.height = (this.initialHeight + 32) + 'px'
+				this.$el.style.height = (this.initialHeight + 35) + 'px'
 				window.scrollTo({
 					top: this.getInitialOffsetY() - 124,
 					left: 0,
@@ -192,6 +198,9 @@ export default {
 		}
 	},
 	methods: {
+		setInitialHeight () {
+			this.initialHeight = this.$refs.heightBackRef.getBoundingClientRect().height
+		},
 		toggleForm () {
 			// let estecc = this.$parent.$children.filter(el => el.$el == this.$el)[0]
 			// console.log(this.$parent.$children.indexOf(estecc))
@@ -269,52 +278,18 @@ export default {
 	position: relative;
 	overflow-y: visible;
 	display: inline-block;
-	margin: 0 calc((100% - 700px + 2rem)/2) 1rem;
+	margin: 0 calc((100% - 700px + 3rem)/2) 1rem;
 	transition: padding ease-in-out .2s, height ease-out .4s, margin ease-in .2s;
-	& > div {
+	& > div.head {
 		position: relative;
 		margin: 0;
 		max-width: calc(700px - 2rem);
-		background-color: $cinza-3;
-		border-radius: 4px;
+		border-radius: 0.75rem;
+		border: 1px dotted $sombra-4;
 		cursor: pointer;
 		transition: all ease-in-out .4s;
-		&:hover {
-			background-color: $vermelho-tr;
-		}
 		.content-comentario {
-			padding: 0.5rem 0;
-			.icon-counter {
-				position: absolute;
-				top: -5px;
-				right: -3rem;
-				& > * {
-					color: $cinza-2;
-					cursor: pointer;
-					transition: all ease-in-out .2s;
-				}
-				i.icon {
-					font-size: 1.5rem;
-					&.icon-incorreto {
-						color: $vermelho;
-						position: absolute;
-						top: 1.5rem;
-						left: -6rem;
-						&::before {
-							font-size: 2.5rem;
-						}
-						&:hover {
-							color: $preto;
-						}
-					}
-				}
-				.counter-comentario {
-					display: block;
-					text-align: center;
-					font-size: 0.75rem;
-					line-height: 1;
-				}
-			}
+			padding: 0;
 			header {
 				max-height: 0;
 				overflow: hidden;
@@ -328,6 +303,20 @@ export default {
 					color: $cinza-1;
 					font-size: 110%;
 					&::before { vertical-align: text-top; }
+				}
+				& > .icon-incorreto {
+					position: absolute;
+					right: 0.25rem;
+					top: 1rem;
+					display: inline-flex;
+					align-items: center;
+					height: 100%;
+					font-size: 1.5rem;
+					color: $vermelho;
+					cursor: pointer;
+					transition: all ease-in .2s;
+					opacity: 0;
+					display: none;
 				}
 				h1 {
 					margin: 0.5rem 0 0;
@@ -346,20 +335,69 @@ export default {
 				}
 			}
 			main {
-				overflow-y: auto;
 				max-height: 500rem;
 				transition: all ease-in-out .4s;
 			}
 			main > * {
-				padding-right: 1rem;
-				padding-left: 1rem;
+				background-color: transparent;
+				margin: 0 auto 1rem;
+			}
+			main > div.Tabela {
+				padding: 0.5rem;
+			}
+			main > figure {
+				padding: 0 0.5rem !important;
+				margin: 0.5rem 0 1rem !important;
+			}
+			main > ul:not(.links), main > ol {
+				padding: 0 0.5rem 0 2.25rem;
+				&.romanos {
+					padding-left: 4.5rem;
+				}
+				li {
+					margin: 0 0 1rem;
+				}
+			}
+			main > ul.links {
+				padding: 0.5rem;
+				& > li {
+					background-color: $cinza-3;
+					&:hover { background-color: $vermelho; }
+				}
+			}
+			main > p {
+				padding-right: 0.5rem;
+				padding-left: 0.5rem;
 			}
 			& > *:last-child, & > *:last-child > *:last-child, & > *:last-child > *:last-child > *:last-child {
 				margin-bottom: 0;
 			}
-			&:hover {
-				.icon:not(.icon-editar):not(.icon-incorreto), .counter-comentario { color: $preto; }
+		}
+	}
+	& > div.call {
+		display: inline-block;
+		padding: 0 calc(0.5rem - 2px);
+		margin-top: 0.5rem;
+		float: right;
+		color: $cinza-2;
+		& > * { transition: all ease-in-out .2s; }
+		div.counter {
+			display: inline-block;
+			line-height: 1.5rem;
+			cursor: pointer;
+			.icon::before {
+				font-size: 1.25rem;
+				vertical-align: -6px;
+				cursor: pointer;
 			}
+			&::after {
+				content: '·';
+				margin: 0 0.5rem;
+			}
+		}
+		span {
+			border-bottom: 1px solid transparent;
+			cursor: pointer;
 		}
 	}
 	& > form {
@@ -521,6 +559,7 @@ export default {
 			padding: 0.75rem 1rem;
 			color: $cinza-1;
 			opacity: 0;
+			box-shadow: 0 2px 4px $sombra-3;
 			transition: opacity ease-in .4s .4s;
 		}
 		ul {
@@ -610,9 +649,29 @@ export default {
 			animation: surge ease-in-out 4s;
 		}
 	}
+	&:hover {
+		div.head {
+			border-color: $vermelho;
+			cursor: default;
+		}
+		div.call {
+			background-color: transparent;
+			div.counter {
+				color: $cinza-1;
+			}
+			span.call {
+				color: $cinza-1;
+				&:hover {
+					color: $vermelho;
+					border-color: $vermelho;
+				}
+			}
+		}
+	}
 	&:active {
-		& > div {
+		& > div.head {
 			background-color: $vermelho-tr;
+			border-color: transparent;
 			transition: none;
 		}
 	}
@@ -622,6 +681,7 @@ export default {
 		width: 100%;
 		& > div {
 			background-color: transparent;
+			border: none;
 			.content-comentario {
 				header {
 					max-height: 160px;
@@ -629,12 +689,35 @@ export default {
 					background-color: $cinza-3;
 					opacity: 1;
 					transition-delay: .1s;
+					position: relative;
+					.icon-incorreto {
+						opacity: 1;
+						display: inline-block;
+						&:hover { color: $preto; }
+					}
 				}
 				& > main {
-					max-height: calc(100vh - 480px);
-					margin: 1.5rem 0;
+					overflow: visible auto;
+					max-height: calc(100vh - 320px - 8.5rem);
+					margin: 1.5rem 0 !important;
 					&.fullH {
 						max-height: calc(100vh - 10rem);
+					}
+					& > p {
+						padding-left: 1rem;
+						padding-right: 1rem;
+					}
+					& > div.Tabela {
+						padding: 0.5rem 1rem;
+					}
+					& > figure {
+						padding: 0 1rem !important;
+						margin-top: 0;
+					}
+					& > ul {
+						&.links { padding: 0.5rem 1rem; }
+					}
+					& > ol {
 					}
 				}
 			}
@@ -657,6 +740,45 @@ export default {
 				opacity: 1;
 			}
 		}
+		&:active {
+			& > div.head {
+				background-color: transparent;
+			}
+		}
+	}
+	@media (max-width: 1200px) {
+		&.aberto {
+		}
+	}
+	@media (max-width: 700px) {
+		max-width: 100%;
+		margin: 0 auto;
+		padding: 0 calc(2rem - 0.5rem);
+		div.head {
+			max-width: 100%;
+			margin: 0 auto;
+			.content-comentario {
+				main {}
+			}
+		}
+		div.call {
+			margin-top: 0;
+			div.counter {
+				.icon::before {
+					font-size: 1rem;
+					vertical-align: -4px;
+				}
+				span { font-size: 0.8rem; }
+				&::after {
+					font-size: 0.8rem;
+				}
+			}
+			span.call { font-size: 0.8rem; }
+		}
+	}
+	@media (max-width: 600px) {
+		margin-bottom: 0.5rem;
+		padding: 0 calc(1rem - 0.5rem);
 	}
 }
 

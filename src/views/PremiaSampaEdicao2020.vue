@@ -38,7 +38,7 @@
 					O Premia Sampa é aberto à participação de equipes de agentes públicos das unidades da administração pública municipal direta ou indireta no âmbito da Prefeitura do Município de São Paulo e entidades paraestatais (serviços sociais autônomos, entidades de apoio, organizações sociais e organizações da sociedade civil com interesse público).
 				</p>
 				<Comments :attr="{id:commentId(), context:'2.1 PARTICIPANTES'}" v-if="estaConsulta.ativo == 1"></Comments>
-			
+
 				<p>
 					<b>2.1.1.</b>
 					É permitida a participação de empresas, startups, organizações da sociedade civil (incluindo organizações sociais) e universidades, desde que usem dados públicos ou desenvolvam projetos em conjunto com a gestão pública municipal, exclusivamente na Categoria V: inovação aberta (ver abaixo).
@@ -77,7 +77,7 @@
 				<p>
 					<b><u>Categoria I: NOME A SER DEFINIDO. Dê a sua sugestão nos comentários!</u></b>
 				</p>
-				<p>	
+				<p>
 					<b>3.1.</b>
 					Para as iniciativas lideradas por agentes públicos  da Prefeitura Municipal de São Paulo em processos internos, serviços ou políticas públicas, levando em consideração as características das categorias III e IV, e que tenham representado mudança de larga escala na administração pública e/ou na cidade. Para ser caracterizado como um projeto de larga escala, deve ser considerada a transversalidade (número de secretarias envolvidas), priorização na agenda política e/ou no Programa de Metas, valor de recursos investidos, número de servidores envolvidos e abrangência territorial.
 				</p>
@@ -85,7 +85,7 @@
 				<p>
 					<b><u>Categoria II: NOME A SER DEFINIDO. Dê a sua sugestão nos comentários!</u></b>
 				</p>
-				<p>	
+				<p>
 					Para as iniciativas lideradas por agentes públicos municipais da Prefeitura Municipal de São Paulo alocados em órgãos públicos descentralizados, como: subprefeituras, CRAS, CREAS, Escolas Municipais, CEUs, Diretorias Regionais de Educação, Unidades Básicas de Saúde, entre outras. As inovações podem representar mudanças em processos internos, políticas públicas ou serviços públicos, levando em consideração as características das categorias III e IV.
 				</p>
 				<Comments :attr="{id:commentId(), context:'3. CATEGORIAS II'}" v-if="estaConsulta.ativo == 1"></Comments>
@@ -95,21 +95,21 @@
 				<p>
 					<b><u>Categoria III: Inovação em Processos Internos</u></b>
 				</p>
-				<p>	
+				<p>
 					Para as iniciativas lideradas por agentes públicos municipais da Prefeitura Municipal de São Paulo que visam à introdução de novas formas ou revisão das formas existentes de realização ou organização dos processos de trabalho, que contribuam para o aprimoramento do desempenho do órgão e de seus servidores. O foco é sua própria organização, seus colaboradores e outros órgãos da Administração Direta e Indireta, e Entidades Paraestatais. <b>Não podem participar projetos que se encaixem nas categorias I ou II</b>.
 				</p>
 				<Comments :attr="{id:commentId(), context:'3. CATEGORIAS III'}" v-if="estaConsulta.ativo == 1"></Comments>
 				<p>
 					<b><u>Categoria IV: Inovação em Serviços e Políticas Públicas</u></b>
 				</p>
-				<p>	
+				<p>
 					Para as iniciativas lideradas por agentes públicos municipais Prefeitura Municipal de São Paulo que visam à introdução de novos serviços ou aprimoramento dos serviços ao cidadão existentes ou novas formas de prestação dos serviços públicos que gerem melhoria da qualidade ou produtividade. Seu público-alvo é o usuário externo ou outra organização. No caso das políticas públicas, o foco são iniciativas que visam a uma nova forma de ação do poder público, no atendimento de uma demanda ou na resposta à um problema, a partir da mobilização de diferentes recursos (humanos, materiais, físicos, administrativos e financeiros) e de diferentes atores públicos e/ou privados, e que gerem impacto social. Seu público-alvo é o cidadão, e o que será avaliado não é o mérito da política pública em si, mas os elementos de inovação que ela apresenta. <b>Não podem participar projetos que se encaixem nas categorias I e II</b>.
 				</p>
 				<Comments :attr="{id:commentId(), context:'3. CATEGORIAS IV'}" v-if="estaConsulta.ativo == 1"></Comments>
 				<p>
 					<b><u>Categoria V: Inovação Aberta</u></b>
 				</p>
-				<p>	
+				<p>
 					Para iniciativas lideradas por <b>empresas, organizações da sociedade civil, startups e universidades, isoladas ou em parceria com órgãos públicos</b>, que visem a solução de problemas públicos por meio do uso de dados da Prefeitura do Município de São Paulo, sejam relativos a processos organizacionais ou a serviços e políticas públicas. Os projetos não poderão envolver repasses de recursos financeiros entre as organizações privadas e a Prefeitura do Município de São Paulo.
 				</p>
 				<Comments :attr="{id:commentId(), context:'3. CATEGORIAS V'}" v-if="estaConsulta.ativo == 1"></Comments>
@@ -138,7 +138,7 @@
 				<p>
 					<b>Observação:</b> em caso de inscrição com duplicidade, a Comissão Organizadora solicitará comprovação de responsabilidade pelo projeto em prazo determinado. Caso um dos envolvidos não responda dentro do prazo, isso o torna automaticamente inelegível. Caso ambos não respondam dentro do prazo, os dois projetos serão inelegíveis.
 				</p>
-				
+
 				<br>
 				<p>
 					<b>II. Etapa 2: Detalhamento do Projeto</b>
@@ -283,7 +283,7 @@
 		</section>
 
 		<section>
-			<h3 class="titulo" indent="1">7. Premiação</h3>
+			<h3 class="titulo" indent="1">7. PREMIAÇÃO</h3>
 		</section>
 		<section>
 				<p>
@@ -460,5 +460,3 @@ export default {
 @import '../consulta';
 @import '../oldstylestoprint';
 </style>
-
-

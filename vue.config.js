@@ -34,7 +34,8 @@ module.exports = {
 				'/parque-jacinto-alberto',
 				'/parque-jardim-felicidade',
 				'/parque-brigadeiro-faria-lima',
-				'/tr-156'
+				'/tr-156',
+				'/premia-sampa-edicao-2020'
 			],
 			useRenderEvent: true,
 			headless: false,

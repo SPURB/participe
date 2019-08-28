@@ -75,6 +75,9 @@
 		<section>
 			<h3 class="titulo" indent="1">3. CATEGORIAS</h3>
 				<p>
+					As iniciativas poderão ser inscritas em uma das cinco categorias do Premia Sampa. São elas:
+				</p>
+				<p>
 					<b><u>Categoria I: NOME A SER DEFINIDO. Dê a sua sugestão nos comentários!</u></b>
 				</p>
 				<p>
@@ -89,9 +92,6 @@
 					Para as iniciativas lideradas por agentes públicos municipais da Prefeitura Municipal de São Paulo alocados em órgãos públicos descentralizados, como: subprefeituras, CRAS, CREAS, Escolas Municipais, CEUs, Diretorias Regionais de Educação, Unidades Básicas de Saúde, entre outras. As inovações podem representar mudanças em processos internos, políticas públicas ou serviços públicos, levando em consideração as características das categorias III e IV.
 				</p>
 				<Comments :attr="{id:commentId(), context:'3. CATEGORIAS II'}" v-if="estaConsulta.ativo == 1"></Comments>
-				<p>
-					As iniciativas poderão ser inscritas em uma das cinco categorias do Premia Sampa. São elas:
-				</p>
 				<p>
 					<b><u>Categoria III: Inovação em Processos Internos</u></b>
 				</p>

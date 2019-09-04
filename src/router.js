@@ -203,7 +203,7 @@ export default new Router({
 			}
 		},
 		{
-			path: '/carnaval-2020',
+			path: '/carnaval-de-rua-2020',
 			name: 'carnaval2020',
 			component: () => import(/* webpackChunkName: "Carnaval2020" */ '@/views/Carnaval2020'),
 			meta: {

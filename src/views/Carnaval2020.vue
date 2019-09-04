@@ -1,9 +1,10 @@
 <template>
 	<div class="Carnaval2020" ref="conteudoConsulta" :key="componentKey">
-		<PageTop background_image_src="/arquivos/capas/carnaval-2020_244w.png" :esta_consulta="estaConsulta">
+		<!-- <PageTop background_image_src="/arquivos/capas/carnaval-2020_244w.png" :esta_consulta="estaConsulta">
 			<template slot="titulo"><div>Carnaval 2020</div></template>
 			<template slot="subtitulo"><div>Inscreva seu defile de carnaval de 2020</div></template>
-		</PageTop>
+		</PageTop> -->
+		<Imagem :dados="bigImg"></Imagem>
 		<Indice :titulos="titulosLimpo"></Indice>
 
 		<section  v-if="!fimForm" ref="apresentacao" class="apresentacao">
@@ -12,10 +13,11 @@
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero aspernatur accusantium eius! Necessitatibus, magnam a rerum nam dolorem labore possimus consequuntur tenetur veniam earum rem iusto vero similique voluptate animi!</p>
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nihil natus quos voluptatem excepturi labore, autem aliquid sit beatae minus reiciendis, accusamus modi obcaecati esse ipsa repellat magni ea recusandae?</p>
 
-		<Imagem :dados="bigImg"></Imagem>
 		</section>
 
+		<!-- <template  v-if="estaConsulta.ativo"> -->
 		<div class="form--create">
+		<!-- <div class="form--create" v-if="estaConsulta.ativo"> -->
 		<p v-if="!fimForm" class="obrigatorios">Os campos acompanhados de um asterisco (*) são de preenchimento obrigatório.</p>
 		<form @submit.prevent="criar" :class="{ hidden: fimForm }" ref="form">
 			<section ref="desfile">
@@ -183,7 +185,7 @@
 
 				<!-- ***** datas ******* -->
 				<!-- Data (2019) -->
-				<fieldset>
+				<!-- <fieldset>
 					<label class="create__label" for="data_do_desfile_2019">Data (2019)</label>
 					<input
 						id="data_do_desfile_2019"
@@ -195,22 +197,46 @@
 						v-model="desfile.data_do_desfile_2019"
 					/>
 					<span v-if="errors.first('data_do_desfile_2019')" class="errorPointer">{{ errors.first('data_do_desfile_2019') }}</span>
-				</fieldset>
+				</fieldset> -->
 
-				<!--  ocorrências filtradas do ano passado (verificar se muda para select/option?)
-				2019-02-23 00:00:00
-				2019-02-24 00:00:00
-				2019-03-03 00:00:00
-				2019-03-04 00:00:00
-				2019-03-05 00:00:00
-				2019-03-09 00:00:00
-				2019-03-10 00:00:00
-				-->
+				<!-- Data (2019) -->
+				<fieldset>
+					<label class="create__label" for="data_do_desfile_2019">Data em que desfilou em 2019</label>
+					<select
+						id="data_do_desfile_2019"
+						type="text"
+						name="data_do_desfile_2019"
+						:class="{ erro: errors.has('data_do_desfile_2019') }"
+						class="create__input"
+						v-validate="'required:false'"
+						@change="setOption('desfile','data_do_desfile_2019', $event, 'Especifique outra data e horário, conforme desfiles de anos anteriores')">
+							<option value="" disabled selected>Selecione uma data</option>
+							<option value="2020-02-23 00:00:00">23/02 - sábado pré-carnaval</option>
+							<option value="2020-02-24 00:00:00">24/02 - domingo pré-carnaval</option>
+							<option value="2020-03-02 00:00:00">02/02 - sábado carnaval</option>
+							<option value="2020-03-03 00:00:00">03/03 - domingo carnaval</option>
+							<option value="2020-03-04 00:00:00">04/03 - segunda-feira carnaval</option>
+							<option value="2020-03-05 00:00:00">05/03 - terça-feira carnaval</option>
+							<option value="2020-03-09 00:00:00">09/03 - sábado carnaval</option>
+							<option value="2020-03-10 00:00:00">10/03 - domingo carnaval</option>
+							<option value="opcional">Opcional (blocos tradicionais com histórico)</option>
+					</select>
+					<textarea
+						v-if="ui.opcional.data_do_desfile_2019"
+						name="data_do_desfile_2019--opcional"
+						id="data_do_desfile_2019--opcional"
+						:class="{ erro: errors.has('data_do_desfile_2019') }"
+						cols="30" rows="10"
+						v-model="desfile.data_do_desfile_2019">
+					</textarea>
+					<p v-else class="obs">Caso seja bloco tradicional com histórico, selecione <strong>Opcional</strong>.</p>
+					<span v-if="errors.first('data_do_desfile_2019')" class="errorPointer">{{ errors.first('data_do_desfile_2019') }}</span>
+				</fieldset>
 				<!-- FIM Data (2019) -->
 
 				<!-- Data (2020) -->
 				<fieldset>
-					<label class="create__label" for="data_do_desfile_2020">Data (2020)*</label>
+					<label class="create__label" for="data_do_desfile_2020">Data pretendida para 2020*</label>
 					<select
 						id="data_do_desfile_2020"
 						type="text"
@@ -220,19 +246,15 @@
 						v-validate="'required'"
 						@change="setOption('desfile','data_do_desfile_2020', $event, 'Especifique outra data e horário, conforme desfiles de anos anteriores')">
 							<option value="" disabled selected>Selecione uma data</option>
-							<option value="2020-02-15 00:00:00">Pré (15/02 - 16/02)</option>
-							<option value="2020-02-17 00:00:00">17/02 - segunda-feira</option>
-							<option value="2020-02-18 00:00:00">18/02 - terça-feira</option>
-							<option value="2020-02-19 00:00:00">19/02 - quarta-feira</option>
-							<option value="2020-02-20 00:00:00">20/02 - quinta-feira</option>
-							<option value="2020-02-21 00:00:00">21/02 - sexta-feira</option>
-							<option value="2020-02-22 00:00:00">22/02 - sábado</option>
-							<option value="2020-02-23 00:00:00">23/02 - domingo</option>
-							<option value="2020-02-24 00:00:00">24/02 - segunda-feira</option>
-							<option value="2020-02-25 00:00:00">25/02 - terça-feira</option>
-							<option value="2020-02-26 00:00:00">26/02 - quarta-feira</option>
-							<option value="2020-02-27 00:00:00">27/02 - quinta-feira</option>
-							<option value="opcional">Opcional (blocos tradicionais ou com histórico)</option>
+							<option value="2020-02-15 00:00:00">15/02 - sábado pré-carnaval</option>
+							<option value="2020-02-16 00:00:00">16/02 - domingo pré-carnaval</option>
+							<option value="2020-02-22 00:00:00">22/02 - sábado carnaval</option>
+							<option value="2020-02-23 00:00:00">23/02 - domingo carnaval</option>
+							<option value="2020-02-24 00:00:00">24/02 - segunda-feira carnaval</option>
+							<option value="2020-02-25 00:00:00">25/02 - terça-feira carnaval</option>
+							<option value="2020-02-29 00:00:00">29/02 - sábado carnaval</option>
+							<option value="2020-03-01 00:00:00">1º/03 - domingo carnaval</option>
+							<option value="opcional">Opcional (blocos tradicionais com histórico)</option>
 					</select>
 					<textarea
 						v-if="ui.opcional.data_do_desfile_2020"
@@ -259,25 +281,25 @@
 						v-validate="'required'"
 						@change="setOption('desfile','hr_concentracao', $event)">
 							<option value="" disabled selected>Selecione um horário</option>
-							<option value="08:00">8h</option>
+							<option value="08:00">8h00</option>
 							<option value="08:30">8h30</option>
-							<option value="09:00">9h</option>
+							<option value="09:00">9h00</option>
 							<option value="09:30">9h30</option>
-							<option value="10:00">10h</option>
+							<option value="10:00">10h00</option>
 							<option value="10:30">10h30</option>
-							<option value="11:00">11h</option>
+							<option value="11:00">11h00</option>
 							<option value="11:30">11h30</option>
-							<option value="12:00">12h</option>
+							<option value="12:00">12h00</option>
 							<option value="12:30">12h30</option>
-							<option value="13:00">13h</option>
+							<option value="13:00">13h00</option>
 							<option value="13:30">13h30</option>
-							<option value="14:00">14h</option>
+							<option value="14:00">14h00</option>
 							<option value="14:30">14h30</option>
-							<option value="15:00">15h</option>
+							<option value="15:00">15h00</option>
 							<option value="15:30">15h30</option>
-							<option value="16:00">16h</option>
+							<option value="16:00">16h00</option>
 							<option value="16:30">16h30</option>
-							<option value="17:00">17h</option>
+							<option value="17:00">17h00</option>
 					</select>
 					<span v-if="errors.first('hr_concentracao')" class="errorPointer">{{ errors.first('hr_concentracao') }}</span>
 				</fieldset>
@@ -295,25 +317,25 @@
 						v-validate="'required'"
 						@change="setOption('desfile','hr_desfile', $event)">
 							<option value="" disabled selected>Selecione um horário</option>
-							<option value="08:00">8h</option>
-							<option value="08:30">8h30</option>
-							<option value="09:00">9h</option>
+							<option value="09:00">9h00</option>
 							<option value="09:30">9h30</option>
-							<option value="10:00">10h</option>
+							<option value="10:00">10h00</option>
 							<option value="10:30">10h30</option>
-							<option value="11:00">11h</option>
+							<option value="11:00">11h00</option>
 							<option value="11:30">11h30</option>
-							<option value="12:00">12h</option>
+							<option value="12:00">12h00</option>
 							<option value="12:30">12h30</option>
-							<option value="13:00">13h</option>
+							<option value="13:00">13h00</option>
 							<option value="13:30">13h30</option>
-							<option value="14:00">14h</option>
+							<option value="14:00">14h00</option>
 							<option value="14:30">14h30</option>
-							<option value="15:00">15h</option>
+							<option value="15:00">15h00</option>
 							<option value="15:30">15h30</option>
-							<option value="16:00">16h</option>
+							<option value="16:00">16h00</option>
 							<option value="16:30">16h30</option>
-							<option value="17:00">17h</option>
+							<option value="17:00">17h00</option>
+							<option value="17:30">17h30</option>
+							<option value="18:00">18h00</option>
 					</select>
 					<span v-if="errors.first('hr_desfile')" class="errorPointer">{{ errors.first('hr_desfile') }}</span>
 				</fieldset>
@@ -331,37 +353,35 @@
 						v-validate="'required'"
 						@change="setOption('desfile','hr_encerramento', $event)">
 							<option value="" disabled selected>Selecione um horário</option>
-							<option value="08:00">8h</option>
+							<option value="08:00">8h00</option>
 							<option value="08:30">8h30</option>
-							<option value="09:00">9h</option>
+							<option value="09:00">9h00</option>
 							<option value="09:30">9h30</option>
-							<option value="10:00">10h</option>
+							<option value="10:00">10h00</option>
 							<option value="10:30">10h30</option>
-							<option value="11:00">11h</option>
+							<option value="11:00">11h00</option>
 							<option value="11:30">11h30</option>
-							<option value="12:00">12h</option>
+							<option value="12:00">12h00</option>
 							<option value="12:30">12h30</option>
-							<option value="13:00">13h</option>
+							<option value="13:00">13h00</option>
 							<option value="13:30">13h30</option>
-							<option value="14:00">14h</option>
+							<option value="14:00">14h00</option>
 							<option value="14:30">14h30</option>
-							<option value="15:00">15h</option>
+							<option value="15:00">15h00</option>
 							<option value="15:30">15h30</option>
-							<option value="16:00">16h</option>
+							<option value="16:00">16h00</option>
 							<option value="16:30">16h30</option>
-							<option value="17:00">17h</option>
+							<option value="17:00">17h00</option>
 							<option value="17:00">17h30</option>
-							<option value="18:00">18h</option>
+							<option value="18:00">18h00</option>
 							<option value="18:00">18h30</option>
-							<option value="19:00">19h*</option>
+							<option value="19:00">19h00</option>
 							<option value="19:00">19h30*</option>
-							<option value="20:00">20h*</option>
-							<option value="20:00">20h30*</option>
-							<option value="21:00">21h*</option>
-							<option value="21:00">21h30*</option>
-							<option value="22:00">22h*</option>
+							<option value="20:00">20h00*</option>
+							<option value="20:30">20h30*</option>
+							<option value="21:00">21h00*</option>
 					</select>
-					<p class="obs">Conforme <a href="">Guia de Regras</a>, o som deverá ser desligado até 19h e as vias liberadas para trânsito até 20h.</p>
+					<p class="obs">Conforme <a href="">Guia de Regras</a>, o som deverá ser desligado e as vias liberadas para trânsito até 20h, exceto mediante autorizações especiais emitidas expressamente por escrito pela comissão intersecretarial desde que previstas no Plano de Operações de Segurança do bloco</p>
 					<span v-if="errors.first('hr_encerramento')" class="errorPointer">{{ errors.first('hr_encerramento') }}</span>
 				</fieldset>
 				<!-- FIM Horário da encerramento -->
@@ -432,11 +452,9 @@
 							<option value="500 a 1000">500 a 1000</option>
 							<option value="500 a 2000">500 a 2.000</option>
 							<option value="2000 a 5000">2.000 a 5.000</option>
-							<option value="5000 a 10000">5.000 a 1.0000</option>
-							<option value="10000 a 15000">10.000 a 15.000</option>
-							<option value="20000 a 50000">20.000 a 50.000</option>
-							<option value="15000 a 20000">15.000 a 20.000</option>
-							<option value="50000 a 100000">50.000 a 100.000</option>
+							<option value="5000 a 15000">5.000 a 15.000</option>
+							<option value="15000 a 40000">15.000 a 40.000</option>
+							<option value="40000 a 100000">40.000 a 100.000</option>
 							<option value="Mais de 100000">Mais de 100.000</option>
 					</select>
 					<span v-if="errors.first('publico_2019')" class="errorPointer">{{ errors.first('publico_2019') }}</span>
@@ -580,7 +598,7 @@
 				<fieldset>
 					<label class="create__label" for="ano_fundacao">Ano Fundação</label>
 					<input
-						placeholder="1900"
+						placeholder="1947"
 						id="ano_fundacao"
 						v-validate="'required'"
 						:class="{ erro: errors.has('ano_fundacao') }"
@@ -657,19 +675,21 @@
 						<li><input type="radio" v-model.number="desfile.bloco_comunitario" value="1" id="comunitario-sim"><label class="create__label" for="comunitario-sim">Sim</label></li>
 						<li><input type="radio" v-model.number="desfile.bloco_comunitario" value="0" id="comunitario-nao"><label class="create__label" for="comunitario-nao">Não</label></li>
 					</ul>
+					<p>Máximo de 5000 pessoas, ausência de patrocínio.</p>
 				</div>
 				<!-- FIM bloco_comunitario -->
 
 				<!-- artistas SET CUSTOM ERROR -->
 				<div class="check-errors"
 					:class="{ erro: custom_errors.has('artistas') }">
-					<h5>Possui artistas?</h5>
+					<h5>Possui artistas convidados?</h5>
 					<ul>
 						<li>
 							<input type="radio" @change="setOption('desfile', 'artistas', $event)" value="opcional" id="artistas-opcional"><label class="create__label" for="artistas-opcional">Sim
 							<template v-if="ui.opcional.artistas"><span class="inputComplemento">Quais?</span></template></label>
+							<!-- !!! aumentar área !!!-->
 							<input
-								placeholder="ex. Caju e Castanha, Madonna, Anitta"
+								placeholder="Cite os artistas convidados ou músicos de destaque"
 								v-if="ui.opcional.artistas"
 								name="artistas--opcional"
 								id="artistas--opcional"
@@ -689,7 +709,7 @@
 							<input type="radio" @change="setOption('desfile', 'bateria', $event)" value="opcional" id="bateria-opcional"><label class="create__label" for="bateria-opcional">Sim
 							<template v-if="ui.opcional.bateria"><span class="inputComplemento">Descreva:</span></template></label>
 							<input
-								placeholder="ex. 2 caixas, 4 tons, 2 surdos, bumbo, chimbau, 3 pratos"
+								placeholder="Cite o número de integrantes da bateria"
 								v-if="ui.opcional.bateria"
 								name="bateria--opcional"
 								id="bateria--opcional"
@@ -755,7 +775,7 @@
 								v-if="ui.opcional.trio_eletrico"
 								for="trio_eletrico--opcional"><span class="inputComplemento">Informe as dimensões (largura x comprimento x altura) em metros</span></label>
 							<input
-								placeholder="Descreva"
+								placeholder="Descreva largura x comprimento x altura em metros"
 								v-if="ui.opcional.trio_eletrico"
 								name="trio_eletrico--opcional"
 								id="trio_eletrico--opcional"
@@ -796,7 +816,7 @@
 				<fieldset>
 					<label class="create__label" for="n_ambulancias">Número de ambulâncias*</label>
 					<input
-						placeholder="15"
+						placeholder="0"
 						id="n_ambulancias"
 						name="n_ambulancias"
 						v-validate="'required'"
@@ -812,7 +832,7 @@
 				<fieldset>
 					<label class="create__label" for="n_cordeiros">Número de cordeiros*</label>
 					<input
-						placeholder="15"
+						placeholder="0"
 						id="n_cordeiros"
 						name="n_cordeiros"
 						v-validate="'required'"
@@ -828,7 +848,7 @@
 				<fieldset>
 					<label class="create__label" for="n_segurancas_habilitados">Número de seguranças habilitados*</label>
 					<input
-						placeholder="15"
+						placeholder="0"
 						id="n_segurancas_habilitados"
 						name="n_segurancas_habilitados"
 						v-validate="'required'"
@@ -844,7 +864,7 @@
 				<fieldset>
 					<label class="create__label" for="n_banheiros_quimicos">Número de banheiros químicos*</label>
 					<input
-						placeholder="15"
+						placeholder="0"
 						id="n_banheiros_quimicos"
 						name="n_banheiros_quimicos"
 						v-validate="'required'"
@@ -860,7 +880,7 @@
 				<fieldset>
 					<label class="create__label" for="n_catadores_de_residuos">Número de catadores de resíduos*</label>
 					<input
-						placeholder="15"
+						placeholder="0"
 						id="n_catadores_de_residuos"
 						name="n_catadores_de_residuos"
 						v-validate="'required'"
@@ -885,7 +905,7 @@
 
 				<!-- plano_de_operacao -->
 				<fieldset>
-					<label class="create__label" for="plano_de_operacao">Plano de operação (até 2000 carac.)*</label>
+					<label class="create__label" for="plano_de_operacao">Plano de operação e segurança(até 2000 carac.)*</label>
 					<textarea
 						placeholder="Plano da operação em até 2000 caracteres"
 						id="plano_de_operacao"
@@ -942,7 +962,7 @@
 				<!-- apoiadores SET CUSTOM ERROR -->
 				<div class="custom-errors"
 					:class="{ erro: custom_errors.has('apoiadores') }">
-					<h5>Pretende divulgar apoiadores?</h5>
+					<h5>Pretende divulgar apoiadores regionais / de bairro?</h5>
 					<ul>
 						<li>
 							<input
@@ -998,7 +1018,8 @@
 				<!-- autoriza_divulgacao SET CUSTOM ERROR -->
 				<div class="custom-errors"
 					:class="{ erro: custom_errors.has('autoriza_divulgacao') }">
-					<h5>Autoriza divulgação?*</h5>
+					<!-- !!! destacar este item -->
+					<h5>Autoriza divulgação no plano de comunicação da Cidade contendo a lista de blocos oficiais do Carnaval de Rua 2020?*</h5>
 					<ul>
 						<li><input id="divulgacao-sim" type="radio" v-model.number="desfile.autoriza_divulgacao" value="1"><label class="create__label" for="divulgacao-sim">Sim</label></li>
 						<li><input id="divulgacao-nao" type="radio" v-model.number="desfile.autoriza_divulgacao" value="0"><label class="create__label" for="divulgacao-nao">Não</label></li>
@@ -1009,7 +1030,7 @@
 				<!-- resenha -->
 				<label class="create__label" for="resenha">Resenha (até 1000 carac.)*</label>
 				<textarea
-					placeholder="ex. O Bloco da Maria é um tradicional bloco do bairro X..."
+					placeholder="Conte-nos sobre sua proposta artística musical para nos ajudar a divulgar melhor seu trabalho"
 					type="text"
 					name="resenha"
 					v-validate="'required'"
@@ -1122,7 +1143,7 @@ export default {
 			return {
 				tipo: 'hero',
 				url: this.src('/arquivos/capas/carnaval-2020_1600w.webp'),
-				caption: 'Carnaval 2020',
+				caption: 'Carnaval de Rua 2020',
 				fonte: 'Secretaria Municipal da Cultura | SMC'
 			}
 		},
@@ -1246,12 +1267,12 @@ export default {
 				// id_percurso: '', // não incluir para posts
 				interesse_cadastrar_ambulantes: '',
 				interesse_contato_empresas: '',
-				n_ambulancias: '',
-				n_banheiros_quimicos: '',
-				n_brigadistas: '',
-				n_catadores_de_residuos: '',
-				n_cordeiros: '',
-				n_segurancas_habilitados: '',
+				n_ambulancias: 0,
+				n_banheiros_quimicos: 0,
+				n_brigadistas: 0,
+				n_catadores_de_residuos: 0,
+				n_cordeiros: 0,
+				n_segurancas_habilitados: 0,
 				participar_campanhas: '',
 				patrocinio: '',
 				plano_de_operacao: '',
@@ -1427,6 +1448,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import '../variables';
+$vermelho: #E71C88;
 
 $branco-clique: rgba(255, 255, 255, .2);
 

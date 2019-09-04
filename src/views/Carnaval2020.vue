@@ -1033,6 +1033,13 @@
 			</section>
 			<!-- FIM regras -->
 
+			<div v-if="!ui.form_valid">
+				<p>Erro no formulário. Corrija os seguintes campos:</p>
+				<ul>
+					<li v-for="(error, index) in errors.items" :key="index">{{error.field}}</li>
+				</ul>
+			</div>
+
 			<nav>
 				<button class="enviar" @click.prevent="criar">Enviar</button>
 			</nav>
@@ -1182,8 +1189,9 @@ export default {
 					banda_em_trio_ou_solo: false,
 					trio_eletrico: false,
 					patrocinio: false,
-					apoiadores: false
-				}
+					apoiadores: false,
+				},
+				form_valid: true
 			},
 
 			contato: {
@@ -1303,6 +1311,7 @@ export default {
 					else return true
 				})
 				.then(isValid => {
+					this.ui.form_valid = true
 					if (isValid) {
 						this.fetch.fazendo = true
 						// 1. Cria contato
@@ -1338,6 +1347,9 @@ export default {
 							})
 					} else {
 						// 3. criar feedback para usuário (erros no formulário)
+						console.error('criar feedback para usuário (erros no formulário)')
+						this.ui.form_valid = false
+
 					}
 				})
 		},

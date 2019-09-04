@@ -6,7 +6,7 @@
 		</PageTop> -->
 		<!-- Criar um topo customizado para esta consulta -->
 		<!-- <Imagem :dados="bigImg"></Imagem> -->
-		<img class="header__carnaval" :src="src('/arquivos/carnaval-2020/header-carnaval.png')" alt="">
+		<img widht="1920" height="100%" alt="Carnaval de Rua 2020" class="header__carnaval" :src="src('/arquivos/carnaval-2020/header-carnaval.png')">
 		<Indice :titulos="titulosLimpo"></Indice>
 
 		<section  v-if="!fimForm" ref="apresentacao" class="apresentacao">

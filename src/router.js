@@ -209,7 +209,7 @@ export default new Router({
 			meta: {
 				id: 56,
 				email: 'carnavalderua@prefeitura.sp.gov.br'
-			},
+			}
 			// children: [] // módulo de busca por email e atualização de dados
 		}
 	]

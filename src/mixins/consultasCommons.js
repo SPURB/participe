@@ -66,10 +66,12 @@ export const consultasCommons = {
 			let app = this
 			let sectionCollection = Array.from(this.$el.getElementsByTagName('section'))
 			window.addEventListener('scroll', function () {
-				sectionCollection.map(function (index, i) {
-					if (window.scrollY >= index.offsetTop - (window.innerHeight) / 2 && window.scrollY < (index.offsetTop + index.offsetHeight) - (window.innerHeight) / 4) {
-						app.titulosLimpo[i].ativo = true
-					} else { app.titulosLimpo[i].ativo = false };
+				sectionCollection.map((index, i) => {
+					if (app.titulosLimpo[i]) {
+						if (window.scrollY >= index.offsetTop - (window.innerHeight) / 2 && window.scrollY < (index.offsetTop + index.offsetHeight) - (window.innerHeight) / 4) {
+							app.titulosLimpo[i].ativo = true
+						} else { app.titulosLimpo[i].ativo = false }
+					}
 				})
 			}, {
 				capture: true,

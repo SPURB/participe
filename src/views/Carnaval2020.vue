@@ -1,10 +1,20 @@
 <template>
 	<div class="Carnaval2020" ref="conteudoConsulta" :key="componentKey">
-		<PageTop background_image_src="/arquivos/capas/placeholder_480w.png" :esta_consulta="estaConsulta">
+		<PageTop background_image_src="/arquivos/capas/carnaval-2020_244w.png" :esta_consulta="estaConsulta">
 			<template slot="titulo"><div>Carnaval 2020</div></template>
 			<template slot="subtitulo"><div>Inscreva seu defile de carnaval de 2020</div></template>
 		</PageTop>
 		<Indice :titulos="titulosLimpo"></Indice>
+
+		<section  v-if="!fimForm" ref="apresentacao" class="apresentacao">
+			<h2 class="titulo" indent="1">Apresentação</h2>
+			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit nostrum quis quod nesciunt veritatis magni, sapiente harum, ducimus suscipit tenetur deserunt dolorum totam, esse accusantium nemo voluptatum. Voluptas, atque earum?</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero aspernatur accusantium eius! Necessitatibus, magnam a rerum nam dolorem labore possimus consequuntur tenetur veniam earum rem iusto vero similique voluptate animi!</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nihil natus quos voluptatem excepturi labore, autem aliquid sit beatae minus reiciendis, accusamus modi obcaecati esse ipsa repellat magni ea recusandae?</p>
+
+		<Imagem :dados="bigImg"></Imagem>
+		</section>
+
 		<div class="form--create">
 		<p v-if="!fimForm" class="obrigatorios">Os campos acompanhados de um asterisco (*) são de preenchimento obrigatório.</p>
 		<form @submit.prevent="criar" :class="{ hidden: fimForm }" ref="form">
@@ -65,7 +75,7 @@
 						id="cep_concentracao"
 						type="text"
 						name="cep_concentracao"
-						v-validate="'required|min:5|type:number'"
+						v-validate="'required|min:5'"
 						:class="{ erro: errors.has('cep_concentracao') }"
 						class="create__input"
 						v-model="desfile.cep_concentracao"
@@ -1033,23 +1043,23 @@
 			</section>
 			<!-- FIM regras -->
 
-			<div v-if="!ui.form_valid">
-				<p>Erro no formulário. Corrija os seguintes campos:</p>
+			<div v-if="allErrors.length" class="errors-list">
+				<p>{{allErrors.length}} erros no formulário. Corrija os seguintes campos:</p>
 				<ul>
 					<li v-for="(error, index) in errors.items" :key="index">{{error.field}}</li>
+					<li v-for="customError in custom_errors">{{customError[0]}}</li>
 				</ul>
 			</div>
 
 			<nav>
 				<button class="enviar" @click.prevent="criar">Enviar</button>
 			</nav>
-			<p>{{ fetch.mensagem }}</p>
+			<!-- <p>{{ fetch.mensagem }}</p> -->
 		</form>
 
 		<template v-if="fimForm">
 			<div class="fim sucesso" v-if="!fetch.fazendo && fetch.sucesso">
 				<h3>Suas respostas foram enviadas!</h3>
-
 
 				<p>Esta inscrição não significa que o desfile desse bloco no Carnaval de Rua 2020 está garantida. A organização entrará em contato por e-mail para continuar o processo de cadastramento.</p>
 
@@ -1057,7 +1067,6 @@
 					<i class="icon-adicionar icon"><span>Criar outro</span></i>
 					Criar outro desfile
 				</button>
-				
 
 			</div>
 			<div class="fim erro" v-if="!fetch.fazendo && !fetch.sucesso">
@@ -1088,32 +1097,13 @@ import axios from 'axios'
 import fechadura from '@spurb/fechadura'
 import PageTop from '@/components/PageTop'
 import Indice from '@/components/Indice'
+import Imagem from '@/components/Imagem'
 import { consultasCommons } from '@/mixins/consultasCommons'
 const apiconfig = {
-	base: 'http://localhost/participe-restrito-backend/api.php',
-	chave: {
-		'3': 'Avestruz',
-		'6': 'Aguia',
-		'9': 'Burro',
-		'12': 'Borboleta',
-		'15': 'Cachorro',
-		'18': 'Cabra',
-		'21': 'Carneiro',
-		'24': 'Camelo',
-		'27': 'Cobra',
-		'30': 'Coelho',
-		'33': 'Cavalo',
-		'36': 'Elefante',
-		'39': 'Galo',
-		'42': 'Gato',
-		'45': 'Jacare',
-		'48': 'Leao',
-		'51': 'Macaco',
-		'54': 'Porco',
-		'57': 'Pavao',
-		'60': 'Peru'
-	}
+	base: process.env.VUE_APP_API_URL + '/participe-restrito'
 }
+
+let MD5 = function (d) { let result = M(V(Y(X(d), 8 * d.length))); return result.toLowerCase() }; function M (d) { for (var _, m = '0123456789ABCDEF', f = '', r = 0; r < d.length; r++)_ = d.charCodeAt(r), f += m.charAt(_ >>> 4 & 15) + m.charAt(15 & _); return f } function X (d) { for (var _ = Array(d.length >> 2), m = 0; m < _.length; m++)_[m] = 0; for (m = 0; m < 8 * d.length; m += 8)_[m >> 5] |= (255 & d.charCodeAt(m / 8)) << m % 32; return _ } function V (d) { for (var _ = '', m = 0; m < 32 * d.length; m += 8)_ += String.fromCharCode(d[m >> 5] >>> m % 32 & 255); return _ } function Y (d, _) { d[_ >> 5] |= 128 << _ % 32, d[14 + (_ + 64 >>> 9 << 4)] = _; for (var m = 1732584193, f = -271733879, r = -1732584194, i = 271733878, n = 0; n < d.length; n += 16) { var h = m; var t = f; var g = r; var e = i; f = md5_ii(f = md5_ii(f = md5_ii(f = md5_ii(f = md5_hh(f = md5_hh(f = md5_hh(f = md5_hh(f = md5_gg(f = md5_gg(f = md5_gg(f = md5_gg(f = md5_ff(f = md5_ff(f = md5_ff(f = md5_ff(f, r = md5_ff(r, i = md5_ff(i, m = md5_ff(m, f, r, i, d[n + 0], 7, -680876936), f, r, d[n + 1], 12, -389564586), m, f, d[n + 2], 17, 606105819), i, m, d[n + 3], 22, -1044525330), r = md5_ff(r, i = md5_ff(i, m = md5_ff(m, f, r, i, d[n + 4], 7, -176418897), f, r, d[n + 5], 12, 1200080426), m, f, d[n + 6], 17, -1473231341), i, m, d[n + 7], 22, -45705983), r = md5_ff(r, i = md5_ff(i, m = md5_ff(m, f, r, i, d[n + 8], 7, 1770035416), f, r, d[n + 9], 12, -1958414417), m, f, d[n + 10], 17, -42063), i, m, d[n + 11], 22, -1990404162), r = md5_ff(r, i = md5_ff(i, m = md5_ff(m, f, r, i, d[n + 12], 7, 1804603682), f, r, d[n + 13], 12, -40341101), m, f, d[n + 14], 17, -1502002290), i, m, d[n + 15], 22, 1236535329), r = md5_gg(r, i = md5_gg(i, m = md5_gg(m, f, r, i, d[n + 1], 5, -165796510), f, r, d[n + 6], 9, -1069501632), m, f, d[n + 11], 14, 643717713), i, m, d[n + 0], 20, -373897302), r = md5_gg(r, i = md5_gg(i, m = md5_gg(m, f, r, i, d[n + 5], 5, -701558691), f, r, d[n + 10], 9, 38016083), m, f, d[n + 15], 14, -660478335), i, m, d[n + 4], 20, -405537848), r = md5_gg(r, i = md5_gg(i, m = md5_gg(m, f, r, i, d[n + 9], 5, 568446438), f, r, d[n + 14], 9, -1019803690), m, f, d[n + 3], 14, -187363961), i, m, d[n + 8], 20, 1163531501), r = md5_gg(r, i = md5_gg(i, m = md5_gg(m, f, r, i, d[n + 13], 5, -1444681467), f, r, d[n + 2], 9, -51403784), m, f, d[n + 7], 14, 1735328473), i, m, d[n + 12], 20, -1926607734), r = md5_hh(r, i = md5_hh(i, m = md5_hh(m, f, r, i, d[n + 5], 4, -378558), f, r, d[n + 8], 11, -2022574463), m, f, d[n + 11], 16, 1839030562), i, m, d[n + 14], 23, -35309556), r = md5_hh(r, i = md5_hh(i, m = md5_hh(m, f, r, i, d[n + 1], 4, -1530992060), f, r, d[n + 4], 11, 1272893353), m, f, d[n + 7], 16, -155497632), i, m, d[n + 10], 23, -1094730640), r = md5_hh(r, i = md5_hh(i, m = md5_hh(m, f, r, i, d[n + 13], 4, 681279174), f, r, d[n + 0], 11, -358537222), m, f, d[n + 3], 16, -722521979), i, m, d[n + 6], 23, 76029189), r = md5_hh(r, i = md5_hh(i, m = md5_hh(m, f, r, i, d[n + 9], 4, -640364487), f, r, d[n + 12], 11, -421815835), m, f, d[n + 15], 16, 530742520), i, m, d[n + 2], 23, -995338651), r = md5_ii(r, i = md5_ii(i, m = md5_ii(m, f, r, i, d[n + 0], 6, -198630844), f, r, d[n + 7], 10, 1126891415), m, f, d[n + 14], 15, -1416354905), i, m, d[n + 5], 21, -57434055), r = md5_ii(r, i = md5_ii(i, m = md5_ii(m, f, r, i, d[n + 12], 6, 1700485571), f, r, d[n + 3], 10, -1894986606), m, f, d[n + 10], 15, -1051523), i, m, d[n + 1], 21, -2054922799), r = md5_ii(r, i = md5_ii(i, m = md5_ii(m, f, r, i, d[n + 8], 6, 1873313359), f, r, d[n + 15], 10, -30611744), m, f, d[n + 6], 15, -1560198380), i, m, d[n + 13], 21, 1309151649), r = md5_ii(r, i = md5_ii(i, m = md5_ii(m, f, r, i, d[n + 4], 6, -145523070), f, r, d[n + 11], 10, -1120210379), m, f, d[n + 2], 15, 718787259), i, m, d[n + 9], 21, -343485551), m = safe_add(m, h), f = safe_add(f, t), r = safe_add(r, g), i = safe_add(i, e) } return Array(m, f, r, i) } function md5_cmn (d, _, m, f, r, i) { return safe_add(bit_rol(safe_add(safe_add(_, d), safe_add(f, i)), r), m) } function md5_ff (d, _, m, f, r, i, n) { return md5_cmn(_ & m | ~_ & f, d, _, r, i, n) } function md5_gg (d, _, m, f, r, i, n) { return md5_cmn(_ & f | m & ~f, d, _, r, i, n) } function md5_hh (d, _, m, f, r, i, n) { return md5_cmn(_ ^ m ^ f, d, _, r, i, n) } function md5_ii (d, _, m, f, r, i, n) { return md5_cmn(m ^ (_ | ~f), d, _, r, i, n) } function safe_add (d, _) { var m = (65535 & d) + (65535 & _); return (d >> 16) + (_ >> 16) + (m >> 16) << 16 | 65535 & m } function bit_rol (d, _) { return d << _ | d >>> 32 - _ }
 
 // Sugestão -> utilizar um autofill para testar o formulário durante o desenvolvimento:
 // https://chrome.google.com/webstore/detail/form-filler/bnjjngeaknajbdcgpfkgnonkmififhfo
@@ -1124,9 +1114,24 @@ export default {
 		validator: 'new'
 	},
 
+	computed: {
+		allErrors () {
+			return this.errors.items.concat([...this.custom_errors])
+		},
+		bigImg () {
+			return {
+				tipo: 'hero',
+				url: this.src('/arquivos/capas/carnaval-2020_1600w.webp'),
+				caption: 'Carnaval 2020',
+				fonte: 'Secretaria Municipal da Cultura | SMC'
+			}
+		},
+	},
+
 	components: {
 		PageTop,
-		Indice
+		Indice,
+		Imagem
 	},
 
 	created () {
@@ -1189,7 +1194,7 @@ export default {
 					banda_em_trio_ou_solo: false,
 					trio_eletrico: false,
 					patrocinio: false,
-					apoiadores: false,
+					apoiadores: false
 				},
 				form_valid: true
 			},
@@ -1258,15 +1263,14 @@ export default {
 	mixins: [ consultasCommons ],
 
 	methods: {
-		criarOutro(){
+		criarOutro () {
 			for (const key in this.desfile) {
-				if(key !== 'sentido_ab' || key !== 'sentido_ab')
-				this.desfile[key] = ''
+				if (key !== 'sentido_ab' || key !== 'sentido_ab') { this.desfile[key] = '' }
 			}
 			for (const uiKey in this.ui) {
 				this.ui[uiKey] = false
 			}
-			
+
 			this.fetch.fazendo = false
 			this.fetch.sucesso = true
 			this.mensagem = ''
@@ -1296,7 +1300,7 @@ export default {
 
 			const config = {
 				headers: {
-					Current: fechadura(apiconfig.chave, 'bicho').encript,
+					// Current: fechadura(apiconfig.chave, 'bicho').encript,
 					'Content-Type': 'application/json'
 				}
 			}
@@ -1314,42 +1318,73 @@ export default {
 					this.ui.form_valid = true
 					if (isValid) {
 						this.fetch.fazendo = true
-						// 1. Cria contato
-						axios.post(apiconfig.base + '/contato/', this.contato, config)
-							.then(res => parseInt(res.data)) // id contato criado
-							.then(idContato => {
-								// 2. Cria desfile com id de contato
-								this.desfile.id_contato = idContato
-								axios.post(apiconfig.base + '/desfile/', this.desfile, config)
-									.then(res => {
-										// 3. criar feedback para usuário (defile criado)
-										console.log('desfile criado')
-										this.fimForm = true
-										this.fetch.sucesso = true
-										this.fetch.mensagem = res.statusText
-										this.fetch.fazendo = false
-									})
-									.catch(err => {
-										// 3. console.log('criar feedback para usuário (contato criado, desfile não foi criado)')
-										console.log('criar feedback para usuário (contato criado, desfile não foi criado)')
-										console.log(err)
-										this.fetch.sucesso = false
-										this.fetch.mensagem = "Falha para criar desfile."
-										this.fetch.fazendo = false
-									})
+						// 1.0 Checa contato
+						const contactGetKey = MD5(`${this.contato.email_coresponsavel}${this.contato.nome_responsavel}`)
+						axios.get(`${apiconfig.base}/contato/?key=${contactGetKey}&email_coresponsavel=${this.contato.email_coresponsavel}`)
+							.then(res => {
+								let idContato = 0
+								parseInt(res.status) === 200 ? idContato = parseInt(res.data[0].id) : idContato = 0
+								return idContato
 							})
-							.catch(err => {
-								// 3. criar feedback para usuário (contato não foi criado)
-								console.log(err)
-								this.fetch.sucesso = false
-								this.fetch.mensagem = "Falha para criar contato."
-								this.fetch.fazendo = false
+							.then(idContato => {
+								// 1.1 Cria contato
+								if (idContato === 0) {
+									axios.post(apiconfig.base + '/contato/', this.contato, config)
+										.then(res => parseInt(res.data)) // id contato criado
+										.then(idContato => {
+										// 2. Cria desfile com id de contato
+											this.desfile.id_contato = idContato
+											axios.post(apiconfig.base + '/desfile/', this.desfile, config)
+												.then(res => {
+												// 3. criar feedback para usuário (defile criado)
+													console.log('desfile criado')
+													this.fimForm = true
+													this.fetch.sucesso = true
+													this.fetch.mensagem = res.statusText
+													this.fetch.fazendo = false
+												})
+												.catch(err => {
+												// 3. console.log('criar feedback para usuário (contato criado, desfile não foi criado)')
+													console.log('criar feedback para usuário (contato criado, desfile não foi criado)')
+													console.log(err)
+													this.fetch.sucesso = false
+													this.fetch.mensagem = 'Falha para criar desfile.'
+													this.fetch.fazendo = false
+												})
+										})
+										.catch(err => {
+										// 3. criar feedback para usuário (contato não foi criado)
+											console.log(err)
+											this.fetch.sucesso = false
+											this.fetch.mensagem = 'Falha para criar contato.'
+											this.fetch.fazendo = false
+										})
+								} else {
+									// 2. Cria desfile com id de contato
+									this.desfile.id_contato = idContato
+									axios.post(apiconfig.base + '/desfile/', this.desfile, config)
+										.then(res => {
+											// 3. criar feedback para usuário (defile criado)
+											console.log('desfile criado')
+											this.fimForm = true
+											this.fetch.sucesso = true
+											this.fetch.mensagem = res.statusText
+											this.fetch.fazendo = false
+										})
+										.catch(err => {
+											// 3. console.log('criar feedback para usuário (contato criado, desfile não foi criado)')
+											console.log('criar feedback para usuário (contato criado, desfile não foi criado)')
+											console.log(err)
+											this.fetch.sucesso = false
+											this.fetch.mensagem = 'Falha para criar desfile.'
+											this.fetch.fazendo = false
+										})
+								}
 							})
 					} else {
 						// 3. criar feedback para usuário (erros no formulário)
 						console.error('criar feedback para usuário (erros no formulário)')
 						this.ui.form_valid = false
-
 					}
 				})
 		},
@@ -1369,10 +1404,10 @@ export default {
 		},
 
 		salvaRespostas () {
-			const todayDate = new Date().toISOString().slice(0, 10);
+			const todayDate = new Date().toISOString().slice(0, 10)
 			const filename = `${this.contato.email_responsavel}_${todayDate}.json`
 			const jsonStr = JSON.stringify({
-				contato: this.contato, 
+				contato: this.contato,
 				desfile: this.desfile
 			})
 
@@ -1392,13 +1427,32 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import '../variables';
-// @import '../consulta';
 
 $branco-clique: rgba(255, 255, 255, .2);
 
 * { box-sizing: border-box; }
-
 *::selection { background-color: $vermelho; }
+
+.apresentacao .titulo, .apresentacao p {
+	max-width: 700px;
+	margin: 1em auto;
+}
+
+.apresentacao .titulo {
+	font-size: 200%;
+	margin: 1rem auto;
+}
+.apresentacao p {
+	font-family: Georgia,serif;
+	font-size: 20px;
+	line-height: 1.6;
+	color:#333;
+	text-rendering: optimizeLegibility;
+	@media (max-width: 600px) {
+		font-size: 1rem;
+		margin: 0 1rem
+	}
+}
 
 @keyframes oscila {
 	0% { transform: translateY(-50%) translateX(0); }
@@ -1444,7 +1498,7 @@ h4 {
 
 textarea {
 	resize: both;
-} 
+}
 input[type="radio"] {
 	margin: 0 0.25rem 0 0;
 	-webkit-appearance: none;
@@ -1516,6 +1570,11 @@ input[type="radio"] + *[class$="label"], input[type="checkbox"] + *[class$="labe
 ::-webkit-input-placeholder { color: $cinza-1; }
 :-ms-input-placeholder { color: $cinza-1; }
 ::placeholder { color: $cinza-1; }
+
+.errors-list {
+    border: 1px solid $vermelho;
+    padding: 0.5rem 1rem;
+}
 
 .login__input, .create__input, .update__input {
 	font-family: $grotesca;
@@ -1779,7 +1838,8 @@ p.obs {
 .erro {
 	border-bottom-color: $vermelho;
 	background-color: $vermelho-tr;
-	&:focus { background-color: $cinza-3; }
+	border-radius: 5px;
+	&:focus { background-color: $cinza-3;}
 }
 div.fim {
 	position: absolute;

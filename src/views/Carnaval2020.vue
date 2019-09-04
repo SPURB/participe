@@ -4,15 +4,20 @@
 			<template slot="titulo"><div>Carnaval 2020</div></template>
 			<template slot="subtitulo"><div>Inscreva seu defile de carnaval de 2020</div></template>
 		</PageTop> -->
-		<Imagem :dados="bigImg"></Imagem>
+		<!-- Criar um topo customizado para esta consulta -->
+		<!-- <Imagem :dados="bigImg"></Imagem> -->
+		<img class="header__carnaval" :src="src('/arquivos/carnaval-2020/header-carnaval.png')" alt="">
 		<Indice :titulos="titulosLimpo"></Indice>
 
 		<section  v-if="!fimForm" ref="apresentacao" class="apresentacao">
 			<h2 class="titulo" indent="1">Apresentação</h2>
-			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit nostrum quis quod nesciunt veritatis magni, sapiente harum, ducimus suscipit tenetur deserunt dolorum totam, esse accusantium nemo voluptatum. Voluptas, atque earum?</p>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero aspernatur accusantium eius! Necessitatibus, magnam a rerum nam dolorem labore possimus consequuntur tenetur veniam earum rem iusto vero similique voluptate animi!</p>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nihil natus quos voluptatem excepturi labore, autem aliquid sit beatae minus reiciendis, accusamus modi obcaecati esse ipsa repellat magni ea recusandae?</p>
+				<p>Olá! Bem-vindo(a) ao portal oficial para cadastramento do seu bloco, banda ou cordão carnavalesco. O Carnaval de Rua de São Paulo está consolidado como um dos maiores do Brasil e a intenção da Prefeitura é tornar o processo de inscrição e planejamento mais inclusivo, estruturado e participativo, permitindo uma maior oferta de serviços e melhor experiência para todos para 2020. </p>
 
+				<p>Bloco, banda e cordão carnavalesco deve inscrever separadamente cada desfile, enviando as informações pelo formulário abaixo, no período de 9 a 30 de setembro de 2019. Após esse período de inscrições, será enviado um link para revisão e confirmação do desfile, através do e-mail cadastrado como responsável pelo bloco.</p>
+
+				<p>No Carnaval de Rua 2019, foram mais de 500 desfiles, com blocos, bandas e cordões carnavalescos dos mais diversos, em um modelo livre, democrático e descentralizado, de enorme relevância cultural, turística e econômica, um orgulho para a cidade. </p>
+
+				<p>Dúvidas ou pedidos de esclarecimento devem ser enviados à Comissão de Carnaval através do e-mail <a href="mailto:carnavalderua@prefeitura.sp.gov.br"> carnavalderua@prefeitura.sp.gov.br</a>.</p>
 		</section>
 
 		<!-- <template  v-if="estaConsulta.ativo"> -->
@@ -1116,7 +1121,7 @@
 <script>
 import axios from 'axios'
 import fechadura from '@spurb/fechadura'
-import PageTop from '@/components/PageTop'
+// import PageTop from '@/components/PageTop'
 import Indice from '@/components/Indice'
 import Imagem from '@/components/Imagem'
 import { consultasCommons } from '@/mixins/consultasCommons'
@@ -1138,19 +1143,18 @@ export default {
 	computed: {
 		allErrors () {
 			return this.errors.items.concat([...this.custom_errors])
-		},
-		bigImg () {
-			return {
-				tipo: 'hero',
-				url: this.src('/arquivos/capas/carnaval-2020_1600w.webp'),
-				caption: 'Carnaval de Rua 2020',
-				fonte: 'Secretaria Municipal da Cultura | SMC'
-			}
-		},
+		}
+		// bigImg () {
+		// 	return {
+		// 		tipo: 'hero',
+		// 		url: this.src('/arquivos/carnaval-2020/header-carnaval.png'),
+		// 		caption: 'Carnaval de Rua 2020',
+		// 		fonte: 'Secretaria Municipal da Cultura | SMC'
+		// 	}
+		// },
 	},
-
 	components: {
-		PageTop,
+		// PageTop,
 		Indice,
 		Imagem
 	},
@@ -1254,12 +1258,12 @@ export default {
 				publico_2019: '',
 				publico_estimado: '',
 				ano_fundacao: '',
-				perfil_bloco: '',
+				perfil_bloco: '-',
 				estilo_musical_predominante: '',
-				bloco_comunitario: '',
-				artistas: '',
-				bateria: '',
-				banda_em_trio_ou_solo: '',
+				bloco_comunitario: 'Não',
+				artistas: 'Não',
+				bateria: 'Não',
+				banda_em_trio_ou_solo: 'Não',
 				aceite_das_regras: '',
 				apoiadores: '',
 				autoriza_divulgacao: '',
@@ -1455,6 +1459,9 @@ $branco-clique: rgba(255, 255, 255, .2);
 * { box-sizing: border-box; }
 *::selection { background-color: $vermelho; }
 
+.header__carnaval {
+	width: 100%
+}
 .apresentacao .titulo, .apresentacao p {
 	max-width: 700px;
 	margin: 1em auto;
@@ -1474,6 +1481,9 @@ $branco-clique: rgba(255, 255, 255, .2);
 		font-size: 1rem;
 		margin: 0 1rem
 	}
+}
+.Indice ul li {
+	color: $vermelho;
 }
 
 @keyframes oscila {
@@ -1500,6 +1510,9 @@ a {
 	text-decoration: none;
 	color: $vermelho;
 	&:active { background-color: $vermelho-tr; }
+}
+h1, h2, h3, h4 {
+	color: $vermelho
 }
 
 h3 {

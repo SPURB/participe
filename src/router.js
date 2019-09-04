@@ -201,6 +201,16 @@ export default new Router({
 			meta: {
 				id: 55
 			}
+		},
+		{
+			path: '/carnaval-2020',
+			name: 'carnaval2020',
+			component: () => import(/* webpackChunkName: "Carnaval2020" */ '@/views/Carnaval2020'),
+			meta: {
+				id: 56,
+				email: 'carnavalderua@prefeitura.sp.gov.br'
+			},
+			// children: [] // módulo de busca por email e atualização de dados
 		}
 	]
 })

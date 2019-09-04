@@ -20,7 +20,7 @@
 			<p>Para facilitar a incorporação dos comentários, solicitamos aos participantes que organizem suas sugestões de alteração do texto utilizando os seguintes exemplos como modelo:</p>
 
 			<p>Comentário exemplo 1:</p>
-			<p>INCLUIR: 4.1.3. A solução deve atender aos padrões de qualidade internacional. [renumerando os seguintes]<p> 
+			<p>INCLUIR: 4.1.3. A solução deve atender aos padrões de qualidade internacional. [renumerando os seguintes]<p>
 			<p>Justificativa: É importante que a solução esteja aderente aos padrões internacionais para garantir a qualidade de atendimento ao cidadão.</p>
 			<p>Comentário exemplo 2:</p>
 			<p>EXCLUIR: 4.1.2. A solução deverá ser integrada através de API aos demais sistemas da CONTRATANTE. [renumerando os seguintes]<p>
@@ -33,7 +33,6 @@
 			<p>1. Recebimento de eventuais sugestões e/ou comentários até 09/09/2019. </p>
 			<p>2. Divulgação no site da SMIT (https://www.prefeitura.sp.gov.br/cidade/secretarias/inovacao/) da versão revisada do Termo de Referência considerando eventuais ajustes decorrentes do processo de consulta pública até 23/09/2019</p>
 			<p>3. Encaminhamento das Propostas contendo as respectivas Estimativas de Preços em conformidade com o Termo de Referência eventualmente ajustado em decorrência da consulta pública até 30/09/2019. As mesmas poderão ser enviadas para o e-mail. <b>consultapublica.smit@prefeitura.sp.gov.br</b></p>
-
 
 		</section>
 

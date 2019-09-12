@@ -407,7 +407,11 @@
 				</p>
 				<Comments :attr="{id:commentId(), context:'DISPOSIÇÕES GERAIS 10.8.'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
-
+		<section ref="allComments">
+			<h2 v-show="commentsLoaded" class="titulo" indent="1">Contribuições</h2>
+			<CommentsLoader :attr="estaConsulta"></CommentsLoader>
+			<Comments v-if="commentsLoaded && estaConsulta.ativo == 1" :attr="{id:commentId(), context:'Comentarios'}"></Comments>
+		</section>
 	</div>
 </template>
 

@@ -205,7 +205,7 @@
 
 						<!-- Data (2019) -->
 						<fieldset>
-							<label class="create__label" for="data_do_desfile_2019">Data em que desfilou em 2019</label>
+							<label class="create__label" for="data_do_desfile_2019">Data em que desfilou em 2019*</label>
 							<select
 								id="data_do_desfile_2019"
 								type="text"
@@ -224,6 +224,7 @@
 									<option value="2020-03-09 00:00:00">09/03 - sábado carnaval</option>
 									<option value="2020-03-10 00:00:00">10/03 - domingo carnaval</option>
 									<option value="opcional">Opcional (blocos tradicionais com histórico)</option>
+									<option value="0">Não desfilou</option>
 							</select>
 							<textarea
 								v-if="ui.opcional.data_do_desfile_2019"
@@ -385,7 +386,7 @@
 									<option value="20:30">20h30*</option>
 									<option value="21:00">21h00*</option>
 							</select>
-							<p class="obs">Conforme <a href="">Guia de Regras</a>, o som deverá ser desligado e as vias liberadas para trânsito até 20h, exceto mediante autorizações especiais emitidas expressamente por escrito pela comissão intersecretarial desde que previstas no Plano de Operações de Segurança do bloco</p>
+							<p class="obs">Conforme <a :href="guiaDeRegrasURL">Guia de Regras</a>, o som deverá ser desligado e as vias liberadas para trânsito até 20h, exceto mediante autorizações especiais emitidas expressamente por escrito pela comissão intersecretarial desde que previstas no Plano de Operações de Segurança do bloco</p>
 							<span v-if="errors.first('hr_encerramento')" class="errorPointer">{{ errors.first('hr_encerramento') }}</span>
 						</fieldset>
 						<!-- FIM Horário da encerramento -->
@@ -450,7 +451,7 @@
 								class="create__input"
 								type="text"
 								@change="setOption('desfile','publico_2019', $event)">
-									<option value="" disabled selected>Selecione uma estimativa</option>
+									<option value="-" disabled selected>Selecione uma estimativa</option>
 									<option value="0 a 100">0 a 100</option>
 									<option value="100 a 500">100 a 500</option>
 									<option value="500 a 1000">500 a 1000</option>
@@ -767,7 +768,7 @@
 						<!-- trio_eletrico SET CUSTOM ERROR-->
 						<div class="check-errors"
 							:class="{ erro: custom_errors.has('trio_eletrico') }">
-							<h5>Possui trio elétrico?</h5>
+							<h5>Possui trio elétrico?*</h5>
 							<ul>
 								<li>
 									<input
@@ -796,7 +797,7 @@
 									<label class="create__label" for="trio-nao">Não</label>
 								</li>
 							</ul>
-							<p>Consulte dimensões e autorizações especiais conforme <a href="">Guia de Regras</a> e legislação vigente.</p>
+							<p>Consulte dimensões e autorizações especiais conforme <a :href="guiaDeRegrasURL">Guia de Regras</a> e legislação vigente.</p>
 						</div>
 						<!-- FIM trio_eletrico -->
 
@@ -899,7 +900,7 @@
 						<!-- interesse_cadastrar_ambulantes SET CUSTOM ERROR -->
 						<div class="custom-errors"
 							:class="{ erro: custom_errors.has('interesse_cadastrar_ambulantes') }">
-							<h5>Tem interesse em cadastrar ambulantes do bloco?</h5>
+							<h5>Tem interesse em cadastrar ambulantes do bloco?*</h5>
 							<ul>
 								<li><input type="radio" v-model.number="desfile.interesse_cadastrar_ambulantes" value="1" id="cadastro-ambulantes-sim"><label class="create__label" for="cadastro-ambulantes-sim">Sim</label></li>
 								<li><input type="radio" v-model.number="desfile.interesse_cadastrar_ambulantes" value="0" id="cadastro-ambulantes-nao"><label class="create__label" for="cadastro-ambulantes-nao">Não</label></li>
@@ -932,7 +933,7 @@
 						<!-- patrocinio SET CUSTOM ERROR -->
 						<div class="custom-errors"
 							:class="{ erro: custom_errors.has('patrocinio') }">
-							<h5>Tem patrocínio com exposição de marcas?</h5>
+							<h5>Tem patrocínio com exposição de marcas?*</h5>
 							<ul>
 								<li>
 									<input
@@ -966,7 +967,7 @@
 						<!-- apoiadores SET CUSTOM ERROR -->
 						<div class="custom-errors"
 							:class="{ erro: custom_errors.has('apoiadores') }">
-							<h5>Pretende divulgar apoiadores regionais / de bairro?</h5>
+							<h5>Pretende divulgar apoiadores regionais / de bairro?*</h5>
 							<ul>
 								<li>
 									<input
@@ -1049,7 +1050,7 @@
 					<!-- FIM comunicacao -->
 
 					<section ref="regras">
-						<a href="" id="guiaDownload">
+						<a :href="guiaDeRegrasURL" target="_blank" id="guiaDownload">
 							<i class="icon-pdf icon"><span>pdf</span></i>
 							<span class="titulo" indent="1">Guia de Regras 2020</span>
 						</a>
@@ -1160,6 +1161,13 @@ export default {
 		Imagem
 	},
 
+	mounted: function () {
+		// Ajuste pontual no logo superior do participe
+		// window.settimeout(function(){
+			document.getElementsByTagName("h1")[0].innerHTML = ''
+		// }, 1000)
+	},
+
 	created () {
 		/* Cria um único watcher/observable para os "custom_errors" */
 		this.$watch(vm => [
@@ -1181,6 +1189,7 @@ export default {
 	data () {
 		return {
 			componentKey: 0,
+			guiaDeRegrasURL: 'https://carnavalderua.prefeitura.sp.gov.br/wp-content/uploads/2019/09/Carnaval-2020-Guia-de-Regras.pdf',
 			titulosLimpo: [],
 			// comments_atrr: undefined,
 			consultas: false,
@@ -1256,11 +1265,11 @@ export default {
 				hr_desfile: '',
 				hr_encerramento: '',
 				subprefeitura: '',
-				publico_2019: '',
+				publico_2019: '-',
 				publico_estimado: '',
-				ano_fundacao: '',
+				ano_fundacao: '-',
 				perfil_bloco: '-',
-				estilo_musical_predominante: '',
+				estilo_musical_predominante: '-',
 				bloco_comunitario: 'Não',
 				artistas: 'Não',
 				bateria: 'Não',

@@ -1521,6 +1521,11 @@
 			<Comments :attr="{id:commentId(), context:'Anexo 6 - 6 - Especialista de Chatbot'}" v-if="estaConsulta.ativo == 1"></Comments>
 
 		</section>
+		<section ref="allComments">
+			<h2 v-show="commentsLoaded" class="titulo" indent="1">Contribuições</h2>
+			<CommentsLoader :attr="estaConsulta"></CommentsLoader>
+			<Comments v-if="commentsLoaded && estaConsulta.ativo == 1" :attr="{id:commentId(), context:'Comentarios'}"></Comments>
+		</section>
 	</div>
 </template>
 

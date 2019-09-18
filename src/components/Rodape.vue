@@ -1,7 +1,7 @@
 <template>
 	<div class="rodape" :class="{ loading: fetching, error: error }" v-if="!fetching">
 		<footer>
-			<p>Caso surjam dúvidas ou problemas técnicos, envie um e-mail para: <a href="mailto:imprensasmul@prefeitura.sp.gov.br">imprensasmul@prefeitura.sp.gov.br</a>.</p>
+			<p>Caso surjam dúvidas ou problemas técnicos, envie um e-mail para: <a :href="mailTo">{{email}}</a>.</p>
 		</footer>
 		<a name='codigo-fonte' class='github' href="https://github.com/spurb/participe" alt='Veja o código fonte no Github'><i class="icon icon-github"><span>github</span></i></a>
 	</div>
@@ -9,7 +9,14 @@
 <script>
 export default {
 	name: 'Rodape',
+	props: {
+		email: {
+			required: true,
+			type: String
+		}
+	},
 	computed: {
+		mailTo () { return `mailto:${this.email}` },
 		fetching () { return this.$store.state.fetching },
 		error () { return this.$store.state.errors },
 		consultas () { return typeof (this.$store.state.consultas) === 'object' }

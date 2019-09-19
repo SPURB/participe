@@ -20,6 +20,20 @@
 				<p>Dúvidas ou pedidos de esclarecimento devem ser enviados à Comissão de Carnaval através do e-mail <a href="mailto:carnavalderua@prefeitura.sp.gov.br"> carnavalderua@prefeitura.sp.gov.br</a>.</p>
 		</section>
 
+		<!-- Mapa interativo -->
+		<section class="apresentacao">
+			<h2 class="titulo" indent="1">Mapa</h2>
+			<!-- MAPA -->
+			<MapaCarnaval :mapaAttrs="mapaAttrs" :styleFromKML="false"></MapaCarnaval>
+			<!-- END MAPA -->
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</section>
+		
 		<!-- <template  v-if="parseInt(estaConsulta.ativo)"> -->
 			<div class="form--create">
 				<p v-if="!fimForm" class="obrigatorios">Os campos acompanhados de um asterisco (*) são de preenchimento obrigatório.</p>
@@ -1115,7 +1129,6 @@
 						</ul>
 					</div>
 				</template>
-
 			</div>
 		<!-- </template> -->
 	</div>
@@ -1127,6 +1140,9 @@ import fechadura from '@spurb/fechadura'
 import Indice from '@/components/Indice'
 import Imagem from '@/components/Imagem'
 import { consultasCommons } from '@/mixins/consultasCommons'
+// OpenLayers
+const MapaCarnaval = () => import('@/components/MapaCarnaval')
+
 const apiconfig = {
 	base: process.env.VUE_APP_API_URL + '/participe-restrito'
 }
@@ -1158,13 +1174,14 @@ export default {
 	components: {
 		// PageTop,
 		Indice,
-		Imagem
+		Imagem,
+		MapaCarnaval
 	},
 
 	mounted: function () {
 		// Ajuste pontual no logo superior do participe
 		// window.settimeout(function(){
-			document.getElementsByTagName("h1")[0].innerHTML = ''
+		document.getElementsByTagName('h1')[0].innerHTML = ''
 		// }, 1000)
 	},
 
@@ -1218,6 +1235,20 @@ export default {
 			},
 
 			fimForm: false,
+
+			mapaAttrs: {
+				center: [ -5191000, -2698002 ],
+				zoom: 11,
+				layers: [
+					{
+						title: 'Percursos',
+						path: this.$store.getters.basePath + 'arquivos/carnaval-2020/Percursos.kml',
+						stroke_color: 'rgba(0, 0, 0, 1)',
+						// fill_color: 'rgba(255, 255, 255, .5)',
+						stroke_width: 2
+					}
+				]
+			},
 
 			ui: {
 				opcional: {

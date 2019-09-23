@@ -227,6 +227,7 @@
 								:class="{ erro: errors.has('data_do_desfile_2019') }"
 								class="create__input"
 								v-validate="'required:false'"
+								v-model="desfile.data_do_desfile_2019"
 								@change="setOption('desfile','data_do_desfile_2019', $event, 'Especifique outra data e horário, conforme desfiles de anos anteriores')">
 									<option value="" disabled selected>Selecione uma data</option>
 									<option value="2020-02-23 00:00:00">23/02 - sábado pré-carnaval</option>
@@ -263,6 +264,7 @@
 								:class="{ erro: errors.has('data_do_desfile_2020') }"
 								class="create__input"
 								v-validate="'required'"
+								v-model="desfile.data_do_desfile_2020"
 								@change="setOption('desfile','data_do_desfile_2020', $event, 'Especifique outra data e horário, conforme desfiles de anos anteriores')">
 									<option value="" disabled selected>Selecione uma data</option>
 									<option value="2020-02-15 00:00:00">15/02 - sábado pré-carnaval</option>
@@ -298,6 +300,7 @@
 								type="text"
 								name="hr_concentracao"
 								v-validate="'required'"
+								v-model="desfile.hr_concentracao"
 								@change="setOption('desfile','hr_concentracao', $event)">
 									<option value="" disabled selected>Selecione um horário</option>
 									<option value="08:00">8h00</option>
@@ -334,6 +337,7 @@
 								type="text"
 								name="hr_desfile"
 								v-validate="'required'"
+								v-model="desfile.hr_desfile"
 								@change="setOption('desfile','hr_desfile', $event)">
 									<option value="" disabled selected>Selecione um horário</option>
 									<option value="09:00">9h00</option>
@@ -370,6 +374,7 @@
 								type="text"
 								name="hr_encerramento"
 								v-validate="'required'"
+								v-model="desfile.hr_encerramento"
 								@change="setOption('desfile','hr_encerramento', $event)">
 									<option value="" disabled selected>Selecione um horário</option>
 									<option value="08:00">8h00</option>
@@ -415,6 +420,7 @@
 								type="text"
 								name="subprefeitura"
 								v-validate="'required'"
+								v-model="desfile.subprefeitura"
 								@change="setOption('desfile','subprefeitura', $event)">
 									<option value="" disabled selected>Selecione uma Subprefeitura</option>
 									<option value="Aricanduva/Vila Formosa">Aricanduva/Vila Formosa</option>
@@ -464,6 +470,7 @@
 								:class="{ erro: errors.has('publico_2019') }"
 								class="create__input"
 								type="text"
+								v-model="desfile.publico_2019"
 								@change="setOption('desfile','publico_2019', $event)">
 									<option value="-" disabled selected>Selecione uma estimativa</option>
 									<option value="0 a 100">0 a 100</option>

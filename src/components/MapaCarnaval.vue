@@ -18,8 +18,8 @@
 			</template>
 		</ul> -->
 		<div id="info"></div>
-		<input type="text" name="id_desfile" v-model="id">
-		<button v-on:click="carregarTrajeto(id)">Focar</button>
+		<!-- <input type="text" name="id_desfile" v-model="id">
+		<button v-on:click="carregarTrajeto(id)">Focar</button> -->
 	</div>
 </template>
 
@@ -80,7 +80,8 @@ export default {
 			allFeatures: [],
 			id: '',
 			contatos: [],
-			desfiles: []
+			desfiles: [],
+			feature_atual: {}
 		}
 	},
 	computed: {
@@ -125,14 +126,33 @@ export default {
 		}
 	},
 	mounted () {
-		this.createMap(),
+		let app = this		
+		let parametrosContato = app.$route.query.key ? '/?id=' + app.$route.query.id + '&key=' + app.$route.query.key : '/'
+		
+		this.createMap()
 		this.removeFeatures()
+		
 		axios
 			.get(apiconfig.base + '/desfile')
-			.then(response => (this.desfiles = response))
+			.then(function(response) {
+				app.desfiles = response
+				// Após resposta, dá alguns milissegundos para o processamento do mapa e carrega o trajeto e suas informações
+				window.setTimeout(function () {
+					app.carregarTrajeto(app.$route.query.bloco)
+				}, 1000)
+			})
 		axios
-			.get(apiconfig.base + '/contato')
-			.then(response => (this.contatos = response))
+			.get(apiconfig.base + '/contato' + parametrosContato)
+			.then(function(response){
+				app.contatos = response
+				// Carrega dados do contato no formulário
+				if(app.contatos.data.length === 1) {
+					app.$parent.contato = app.contatos.data[0]
+				}
+				else {
+					console.warn("Contato não obtido. Possível erro na chave.")
+				}
+			})
 	},
 	methods: {
 		createMap () {
@@ -160,7 +180,7 @@ export default {
 			this.map.forEachFeatureAtPixel(pixel, function (feature) {
 				features.push(feature)
 			})
-			// console.log(this.map);
+
 			if (features.length > 0) {
 				var info = []
 				var i, ii
@@ -180,8 +200,8 @@ export default {
 			this.filtraFeatures(idBloco)
 			for (var i = 0; i < app.desfiles.data.length; i++) {
 				if(app.desfiles.data[i].id === idBloco) {
-					console.log(app.desfiles.data[i])
 					app.$parent.desfile = app.desfiles.data[i]
+					app.$parent.desfile.trajeto_coords = JSON.stringify(app.feature_atual.values_.geometry.flatCoordinates)
 				}
 			}
 			// for (var i = this.mapLayers[1].getSource().getFeatures().length - 1; i >= 0; i--) {
@@ -207,6 +227,7 @@ export default {
 			for (var f in feats) {
 				if (parseInt(feats[f].values_.ID) === parseInt(idFeature)) {
 					this.mapLayers[1].getSource().addFeature(feats[f])
+					app.feature_atual = feats[f]
 				}
 			}
 			if (app.mapLayers[1].getSource().getFeatures().length === 0) {

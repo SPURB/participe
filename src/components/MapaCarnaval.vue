@@ -30,8 +30,10 @@ import VectorLayer 		from 'ol/layer/Vector'
 import KML 				from 'ol/format/KML'
 import VectorSource 	from 'ol/source/Vector'
 import OSM				from 'ol/source/OSM'
+import Feature			from 'ol/Feature.js';
+import Point			from 'ol/geom/Point.js';
 import { Draw, Modify, Snap } from 'ol/interaction.js'
-import { Circle as CircleStyle, Fill, Stroke, Style } from 'ol/style.js'
+import { Circle as CircleStyle, Fill, Icon, Stroke, Style } from 'ol/style.js'
 import axios from 'axios'
 
 const apiconfig = {
@@ -186,7 +188,6 @@ export default {
 				var i, ii
 				for (i = 0, ii = features.length; i < ii; ++i) {
 					info.push(features[i].get('name'))
-					console.log(features[i])
 				}
 				document.getElementById('info').innerHTML = info.join('; ') || '(unknown)'
 				// this.map.getTarget().style.cursor = 'pointer';
@@ -204,12 +205,47 @@ export default {
 					app.$parent.desfile.trajeto_coords = JSON.stringify(app.feature_atual.values_.geometry.flatCoordinates)
 				}
 			}
-			// for (var i = this.mapLayers[1].getSource().getFeatures().length - 1; i >= 0; i--) {
-			// 	// console.log(this.mapLayers[1].getSource().getFeatures()[i].values_)
-			// 	if (this.mapLayers[1].getSource().getFeatures()[i].values_.ID === idBloco) {
-			// 		console.log('Encontrado!')
-			// 	}
-			// }
+
+			// Denota ponto de concentração e ponto de dispersão
+			let aIconURL = this.$store.getters.basePath + 'arquivos/carnaval-2020/a_spot.png'
+			let bIconURL = this.$store.getters.basePath + 'arquivos/carnaval-2020/b_spot.png'
+
+			let aCoords = [app.feature_atual.values_.geometry.flatCoordinates[0], app.feature_atual.values_.geometry.flatCoordinates[1]]
+			let bCoords = [app.feature_atual.values_.geometry.flatCoordinates[app.feature_atual.values_.geometry.flatCoordinates.length - 3], app.feature_atual.values_.geometry.flatCoordinates[app.feature_atual.values_.geometry.flatCoordinates.length - 2]]
+			
+			let featureA = new Feature({
+				geometry: new Point(aCoords),
+				name: 'Ponto de Concentração'
+			});
+
+			let featureB = new Feature({
+				geometry: new Point(bCoords),
+				name: 'Ponto de Dispersão'
+			});
+
+			var iconStyleA = new Style({
+				image: new Icon(/** @type {module:ol/style/Icon~Options} */ ({
+					anchor: [0.5, 1],
+					anchorXUnits: 'fraction',
+					anchorYUnits: 'fraction',
+					src: aIconURL,
+					scale: 1
+				}))
+			});
+			var iconStyleB = new Style({
+				image: new Icon(/** @type {module:ol/style/Icon~Options} */ ({
+					anchor: [0.5, 1],
+					anchorXUnits: 'fraction',
+					anchorYUnits: 'fraction',
+					src: bIconURL,
+					scale: 1
+				}))
+			});
+			
+			featureA.setStyle(iconStyleA)
+			featureB.setStyle(iconStyleB)
+			
+			app.mapLayers[1].getSource().addFeatures([featureB, featureA])
 		},
 		filtraFeatures (idFeature) {
 			let app = this

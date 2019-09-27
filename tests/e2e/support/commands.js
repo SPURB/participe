@@ -23,3 +23,13 @@
 //
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('seedAndVisit', (consultas = 'fixture:consultas') => {
+	cy.server()
+	cy.route('GET', 'http://api.comunicacao.smul.pmsp/v2/consultas', consultas).as(
+		'consultas'
+	)
+	cy.visit('/')
+	cy.wait('@consultas')
+})
+

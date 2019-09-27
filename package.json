@@ -58,8 +58,7 @@
 		"serve-homolog": "vue-cli-service serve --mode staging",
 		"serve:e2e": "start-server-and-test serve http://localhost:8080 e2e:open",
 		"e2e": "cypress run",
-		"e2e:open": "cypress open",
-		"test:unit": "vue-cli-service test:unit"
+		"e2e:open": "cypress open"
 	},
 	"dependencies": {
 		"@spurb/fechadura": "^1.0.1",
@@ -76,10 +75,8 @@
 	"devDependencies": {
 		"@vue/cli-plugin-babel": "3.10.0",
 		"@vue/cli-plugin-eslint": "3.10.0",
-		"@vue/cli-plugin-unit-mocha": "3.10.0",
 		"@vue/cli-service": "3.10.0",
 		"@vue/eslint-config-standard": "4.0.0",
-		"@vue/test-utils": "1.0.0-beta.29",
 		"chai": "4.2.0",
 		"eslint": "5.16.0",
 		"node-sass": "4.12.0",

@@ -65,7 +65,7 @@
 		"axios": "0.19.0",
 		"cypress": "^3.4.1",
 		"es6-promise": "4.2.8",
-		"ol": "5.3.3",
+		"ol": "6.0.1",
 		"vee-validate": "2.2.15",
 		"vue": "2.6.10",
 		"vue-observe-visibility": "0.4.4",

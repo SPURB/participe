@@ -211,6 +211,16 @@ export default new Router({
 				email: 'carnavalderua@prefeitura.sp.gov.br'
 			}
 			// children: [] // módulo de busca por email e atualização de dados
+		},
+		{
+			path: '/confirma-bloco',
+			name: 'ConfirmaBloco',
+			component: () => import(/* webpackChunkName: "ConfirmaBloco" */ '@/views/ConfirmaBloco'),
+			meta: {
+				id: 57,
+				email: 'carnavalderua@prefeitura.sp.gov.br'
+			}
+			// children: [] // módulo de busca por email e atualização de dados
 		}
 	]
 })

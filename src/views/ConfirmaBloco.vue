@@ -20,9 +20,22 @@
 				<p>Dúvidas ou pedidos de esclarecimento devem ser enviados à Comissão de Carnaval através do e-mail <a href="mailto:carnavalderua@prefeitura.sp.gov.br"> carnavalderua@prefeitura.sp.gov.br</a>.</p>
 		</section>
 
+		<!-- Mapa interativo -->
+		<section class="apresentacao">
+			<h2 class="titulo" indent="1">Mapa</h2>
+			<!-- MAPA -->
+			<MapaCarnaval :mapaAttrs="mapaAttrs" :styleFromKML="false"></MapaCarnaval>
+			<!-- END MAPA -->
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat.</p>
+		</section>
+		
 		<!-- <template  v-if="parseInt(estaConsulta.ativo)"> -->
 			<div class="form--create">
-				<p v-if="!fimForm" class="obrigatorios">Os campos acompanhados de um asterisco (*) são de preenchimento obrigatório.</p>
+				<!-- <p v-if="!fimForm" class="obrigatorios">Os campos acompanhados de um asterisco (*) são de preenchimento obrigatório.</p> -->
+				<p v-if="!fimForm" class="obrigatorios">Confira os dados da inscrição:</p>
 				<form @submit.prevent="criar" :class="{ hidden: fimForm }" ref="form">
 					<section ref="desfile">
 						<h2 class="titulo" indent="1">Desfile</h2>
@@ -213,6 +226,7 @@
 								:class="{ erro: errors.has('data_do_desfile_2019') }"
 								class="create__input"
 								v-validate="'required:false'"
+								v-model="desfile.data_do_desfile_2019"
 								@change="setOption('desfile','data_do_desfile_2019', $event, 'Especifique outra data e horário, conforme desfiles de anos anteriores')">
 									<option value="" disabled selected>Selecione uma data</option>
 									<option value="2020-02-23 00:00:00">23/02 - sábado pré-carnaval</option>
@@ -249,6 +263,7 @@
 								:class="{ erro: errors.has('data_do_desfile_2020') }"
 								class="create__input"
 								v-validate="'required'"
+								v-model="desfile.data_do_desfile_2020"
 								@change="setOption('desfile','data_do_desfile_2020', $event, 'Especifique outra data e horário, conforme desfiles de anos anteriores')">
 									<option value="" disabled selected>Selecione uma data</option>
 									<option value="2020-02-15 00:00:00">15/02 - sábado pré-carnaval</option>
@@ -284,6 +299,7 @@
 								type="text"
 								name="hr_concentracao"
 								v-validate="'required'"
+								v-model="desfile.hr_concentracao"
 								@change="setOption('desfile','hr_concentracao', $event)">
 									<option value="" disabled selected>Selecione um horário</option>
 									<option value="08:00">8h00</option>
@@ -320,6 +336,7 @@
 								type="text"
 								name="hr_desfile"
 								v-validate="'required'"
+								v-model="desfile.hr_desfile"
 								@change="setOption('desfile','hr_desfile', $event)">
 									<option value="" disabled selected>Selecione um horário</option>
 									<option value="09:00">9h00</option>
@@ -356,6 +373,7 @@
 								type="text"
 								name="hr_encerramento"
 								v-validate="'required'"
+								v-model="desfile.hr_encerramento"
 								@change="setOption('desfile','hr_encerramento', $event)">
 									<option value="" disabled selected>Selecione um horário</option>
 									<option value="08:00">8h00</option>
@@ -401,6 +419,7 @@
 								type="text"
 								name="subprefeitura"
 								v-validate="'required'"
+								v-model="desfile.subprefeitura"
 								@change="setOption('desfile','subprefeitura', $event)">
 									<option value="" disabled selected>Selecione uma Subprefeitura</option>
 									<option value="Aricanduva/Vila Formosa">Aricanduva/Vila Formosa</option>
@@ -450,6 +469,7 @@
 								:class="{ erro: errors.has('publico_2019') }"
 								class="create__input"
 								type="text"
+								v-model="desfile.publico_2019"
 								@change="setOption('desfile','publico_2019', $event)">
 									<option value="-" disabled selected>Selecione uma estimativa</option>
 									<option value="0 a 100">0 a 100</option>
@@ -1115,7 +1135,6 @@
 						</ul>
 					</div>
 				</template>
-
 			</div>
 		<!-- </template> -->
 	</div>
@@ -1127,6 +1146,9 @@ import fechadura from '@spurb/fechadura'
 import Indice from '@/components/Indice'
 import Imagem from '@/components/Imagem'
 import { consultasCommons } from '@/mixins/consultasCommons'
+// OpenLayers
+const MapaCarnaval = () => import('@/components/MapaCarnaval')
+
 const apiconfig = {
 	base: process.env.VUE_APP_API_URL + '/participe-restrito'
 }
@@ -1137,7 +1159,7 @@ let MD5 = function (d) { let result = M(V(Y(X(d), 8 * d.length))); return result
 // https://chrome.google.com/webstore/detail/form-filler/bnjjngeaknajbdcgpfkgnonkmififhfo
 
 export default {
-	name: 'Carnaval2020',
+	name: 'ConfirmaBloco',
 	$_veeValidate: {
 		validator: 'new'
 	},
@@ -1158,13 +1180,14 @@ export default {
 	components: {
 		// PageTop,
 		Indice,
-		Imagem
+		Imagem,
+		MapaCarnaval
 	},
 
 	mounted: function () {
 		// Ajuste pontual no logo superior do participe
 		// window.settimeout(function(){
-			document.getElementsByTagName("h1")[0].innerHTML = ''
+		document.getElementsByTagName('h1')[0].innerHTML = ''
 		// }, 1000)
 	},
 
@@ -1218,6 +1241,20 @@ export default {
 			},
 
 			fimForm: false,
+
+			mapaAttrs: {
+				center: [ -5191000, -2698002 ],
+				zoom: 11,
+				layers: [
+					{
+						title: 'Percursos',
+						path: this.$store.getters.basePath + 'arquivos/carnaval-2020/Percursos.kml',
+						stroke_color: 'rgba(0, 0, 0, 1)',
+						// fill_color: 'rgba(255, 255, 255, .5)',
+						stroke_width: 2
+					}
+				]
+			},
 
 			ui: {
 				opcional: {
@@ -1354,7 +1391,7 @@ export default {
 					if (isValid) {
 						this.fetch.fazendo = true
 						// 1.0 Checa contato
-						const contactGetKey = MD5(`${this.contato.email_coresponsavel}${this.contato.nome_responsavel}`)
+						const contactGetKey = MD5(`${this.contato.email_responsavel}${this.contato.cpf_cnpj_responsavel}`)
 						axios.get(`${apiconfig.base}/contato/?key=${contactGetKey}&email_coresponsavel=${this.contato.email_coresponsavel}`)
 							.then(res => {
 								let idContato = 0
@@ -1397,7 +1434,8 @@ export default {
 								} else {
 									// 2. Cria desfile com id de contato
 									this.desfile.id_contato = idContato
-									axios.post(apiconfig.base + '/desfile/', this.desfile, config)
+									console.log(config);
+									axios.put(apiconfig.base + '/desfile/?id=' + this.desfile.id, this.desfile, config)
 										.then(res => {
 											// 3. criar feedback para usuário (defile criado)
 											console.log('desfile criado')

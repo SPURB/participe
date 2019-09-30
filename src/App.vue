@@ -6,7 +6,7 @@
 	<MenuLateral></MenuLateral>
 	<router-view/>
 	<router-view name="WifiLivreSP"></router-view>
-	<Rodape></Rodape>
+	<Rodape :email="footerMail"></Rodape>
 </div>
 </template>
 
@@ -25,6 +25,7 @@ export default {
 		Preloader
 	},
 	computed: {
+		footerMail () { return this.$route.meta.email ? this.$route.meta.email : 'imprensadu@prefeitura.sp.gov.br' },
 		interruptor () { return this.$store.state.luzApaga },
 		isHome () { return this.$route.name === 'Home' }
 	},

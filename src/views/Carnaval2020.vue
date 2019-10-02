@@ -10,7 +10,8 @@
 		<Indice :titulos="titulosLimpo"></Indice>
 
 		<section  v-if="!fimForm" ref="apresentacao" class="apresentacao">
-			<h2 class="titulo" indent="1">Apresentação</h2>
+			<h2 v-if="parseInt(estaConsulta.ativo)" class="titulo" indent="1">Apresentação</h2>
+			<div v-if="parseInt(estaConsulta.ativo)">
 				<p>Olá! Bem-vindo(a) ao portal oficial para cadastramento do seu bloco, banda ou cordão carnavalesco. O Carnaval de Rua de São Paulo está consolidado como um dos maiores do Brasil e a intenção da Prefeitura é tornar o processo de inscrição e planejamento mais inclusivo, estruturado e participativo, permitindo uma maior oferta de serviços e melhor experiência para todos para 2020. </p>
 
 				<p>Bloco, banda e cordão carnavalesco deve inscrever separadamente cada desfile, enviando as informações pelo formulário abaixo, no período de 9 a 30 de setembro de 2019. Após esse período de inscrições, será enviado um link para revisão e confirmação do desfile, através do e-mail cadastrado como responsável pelo bloco.</p>
@@ -18,10 +19,14 @@
 				<p>No Carnaval de Rua 2019, foram mais de 500 desfiles, com blocos, bandas e cordões carnavalescos dos mais diversos, em um modelo livre, democrático e descentralizado, de enorme relevância cultural, turística e econômica, um orgulho para a cidade. </p>
 
 				<p>Dúvidas ou pedidos de esclarecimento devem ser enviados à Comissão de Carnaval através do e-mail <a href="mailto:carnavalderua@prefeitura.sp.gov.br"> carnavalderua@prefeitura.sp.gov.br</a>.</p>
+			</div>
+			<div v-if="!parseInt(estaConsulta.ativo)">
+				<h2 class="ult-message" v-if="!parseInt(estaConsulta.ativo)">Período de inscrições encerrado.</h2>
+			</div>
 		</section>
 
 		<!-- <template  v-if="parseInt(estaConsulta.ativo)"> -->
-			<div class="form--create">
+			<div class="form--create" v-if="parseInt(estaConsulta.ativo)">
 				<p v-if="!fimForm" class="obrigatorios">Os campos acompanhados de um asterisco (*) são de preenchimento obrigatório.</p>
 				<form @submit.prevent="criar" :class="{ hidden: fimForm }" ref="form">
 					<section ref="desfile">
@@ -1163,9 +1168,10 @@ export default {
 
 	mounted: function () {
 		// Ajuste pontual no logo superior do participe
-		// window.settimeout(function(){
+		window.setTimeout(function(){
 			document.getElementsByTagName("h1")[0].innerHTML = ''
-		// }, 1000)
+			document.getElementsByClassName("rodape")[0].style = 'position: fixed; bottom: 0; width: 100%;'
+		}, 1500)
 	},
 
 	created () {
@@ -1985,5 +1991,11 @@ fieldset#aceite {
 		margin-bottom: 0;
 		vertical-align: middle;
 	}
+}
+.ult-message {
+	display: block;
+    margin: 20vh 0;
+    font-size: 4vh;
+    text-align: center;
 }
 </style>

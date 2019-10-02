@@ -1146,6 +1146,8 @@ import fechadura from '@spurb/fechadura'
 import Indice from '@/components/Indice'
 import Imagem from '@/components/Imagem'
 import { consultasCommons } from '@/mixins/consultasCommons'
+import { chave } from '@/utils/chave.json'
+
 // OpenLayers
 const MapaCarnaval = () => import('@/components/MapaCarnaval')
 
@@ -1369,10 +1371,10 @@ export default {
 			 * 2. Cria desfile em /desfile com id de contato criado
 			 * 3. Criar feedback para usuário (sucesso/fracasso)
 			*/
-
+			
 			const config = {
 				headers: {
-					// Current: fechadura(apiconfig.chave, 'bicho').encript,
+					Current: fechadura(chave, 'bicho').encript,
 					'Content-Type': 'application/json'
 				}
 			}
@@ -1435,7 +1437,7 @@ export default {
 									// 2. Cria desfile com id de contato
 									this.desfile.id_contato = idContato
 									console.log(config);
-									axios.put(apiconfig.base + '/desfile/?id=' + this.desfile.id, this.desfile, config)
+									axios.put(apiconfig.base + '/desfile/' + this.desfile.id, this.desfile, config)
 										.then(res => {
 											// 3. criar feedback para usuário (defile criado)
 											console.log('desfile criado')

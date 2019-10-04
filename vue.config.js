@@ -36,7 +36,8 @@ module.exports = {
 				'/parque-brigadeiro-faria-lima',
 				'/tr-156',
 				'/premia-sampa-edicao-2020',
-				'/carnaval-de-rua-2020'
+				'/carnaval-de-rua-2020',
+				'/arco-tiete'
 			],
 			useRenderEvent: true,
 			headless: false,

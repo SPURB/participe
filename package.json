@@ -66,7 +66,7 @@
 		"cypress": "^3.4.1",
 		"es6-promise": "4.2.8",
 		"ol": "5.3.3",
-		"vee-validate": "2.2.15",
+		"vee-validate": "3.0.11",
 		"vue": "2.6.10",
 		"vue-observe-visibility": "0.4.4",
 		"vue-router": "3.1.2",

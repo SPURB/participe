@@ -501,6 +501,7 @@ export default {
 
 			seq1: {
 				cssBaseId: 'seq1',
+				tipo: 'sequencial',
 				mapW: 1900,
 				mapH: 1125,
 				base: {
@@ -513,9 +514,14 @@ export default {
 				},
 				layers: [{
 					titulo: 'PIU Anhembi',
+					tituloLegendas: 'Densidade demográfica',
 					path: 'arquivos/arco-tiete/img/4-0.png',
 					legendas: [
-						{ path: 'https://placehold.it/16x16', descricao: 'Legenda 1' }
+						{ path: 'https://placehold.it/16x16', descricao: 'Legenda 1' },
+						{ path: 'https://placehold.it/16x16', descricao: 'Legenda 1' },
+						{ path: 'https://placehold.it/16x16', descricao: 'Legenda 1' },
+						{ path: 'https://placehold.it/16x16', descricao: 'Legenda 1' },
+						{ path: 'https://placehold.it/16x16', descricao: 'Legenda 1' },
 					],
 					textos: {
 						'O que é': 'definição de parâmetros e diretrizes urbanísticas para a Zona de Ocupação Especial (ZOE) Anhembi (Sambódromo e Complexo do Anhembi - Perímetro de Abrangência) e de programa de intervenções para o Perímetro Expandido.',
@@ -537,6 +543,56 @@ export default {
 						"Regulações": "Lei Municipal nº 12.349/1997",
 						"Considerações para o PIU Arco Tietê": "Retirar do escopo do PIU Arco Tietê as intervenções presentes no Programa de Intervenções do Perímetro do PIU Setor Central, que serão por ele financiados; Reestudar os perímetros da AIU Apoios Urbanos e da AIU Centralidade da Metrópole em função da sobreposição com o PIU Setor Central.",
 						"Obs": "Projeto em curso, deverá resultar em Projeto de Lei."
+					}
+				}, {
+					titulo: 'PIU Terminal Princesa Isabel',
+					path: 'arquivos/arco-tiete/img/4-3.png',
+					legendas: [],
+					textos: {
+						'O que é': 'indicação de perímetro e diretrizes que orientarão a transformação urbanística pretendida',
+						'Objetivo': 'implantação de melhorias urbanísticas no terminal de ônibus e seu entorno de forma a garantir seu pleno funcionamento, bem como potencializar as atividades comerciais na área; requalificar o uso residencial, acrescentar novos espaços e equipamentos públicos de qualidade, assim como apresentar modelo de financiamento e gestão do projeto',
+						'Motivação': 'redução do custeio dos terminais de ônibus, concedendo-os a agentes privados para operação e exploração econômica, conforme Plano Municipal de Desestatização',
+						'Regulações': 'Lei Municipal nº 16.211/2015, Decreto Municipal nº 58.368/2018',
+						'Considerações para o PIU Arco Tietê': 'Retirar do escopo da revisão a Área de Transformação Condicionada Campos Elíseos, indicada anteriormente no PL nº581/2016'
+					}
+				}, {
+					titulo: 'PIU Parque Minhocão',
+					path: 'arquivos/arco-tiete/img/4-4.png',
+					legendas: [],
+					textos: {
+						'O que é': 'conjunto de estudos técnicos, processos participativos  e discussões públicas para proposição das intervenções urbanas que constituirão a implantação do Parque Minhocão',
+						'Objetivo': 'alteração do uso e formas de apropriação desse espaço',
+						'Motivação': 'gradual restrição ao transporte individual motorizado no Elevado João Goulart, até sua completa desativação como via de tráfego, tendo como possibilidades a sua demolição ou transformação, parcial ou integral, em parque, conforme PDE',
+						'Regulações': 'Lei nº 16.833/2018',
+						'Considerações para o PIU Arco Tietê': 'Retirar do escopo da revisão a Área de Transformação Condicionada Elevado João Goulart, indicada anteriormente no PL nº581/2016',
+						'Obs': 'Projeto em curso'
+					}
+				}, {
+					titulo: 'Resolução da Câmara Técnica De Legislação Urbanística (CTLU)',
+					path: 'arquivos/arco-tiete/img/4-5.png',
+					legendas: [],
+					textos: {
+						'Descrição': 'Trata-se de deliberação da Câmara Técnica de Legislação Urbanística (CTLU) favoravelmente à aplicação do Coeficiente de Aproveitamento máximo igual a 4, dispensa de atendimento ao gabarito máximo de altura e fatores de planejamento igual a 2 para os usos residenciais e não residenciais para os lotes demarcados como ZEM e ZEMP contidos no perímetro do Arco Tietê , nos termos do  §1º, §2º e §3º do Art. 8º da Lei nº 16.402/ 2016; Para as ZEMP, os parâmetros e índices estabelecidos serão aplicados desde que atendidos o Art. 83 da Lei nº 16.050/2014, o qual é responsável por condicionar a liberação dos parâmetros em função da emissão da Ordem de Serviços das obras das infraestruturas do sistema de transporte previsto',
+						'Regulações': 'Resolução SMUL.AOC.CTLU/004/2018',
+						'Considerações para o PIU Arco Tietê': 'Retomar os estudos para as Áreas de Transformação, Qualificação e Preservação do PIU Arco Tietê, de forma a refinar os parâmetros que são fruto de análises detalhadas do território, em especial nos perímetros que recepcionarão os instrumentos urbanísticos'
+					}
+				}, {
+					titulo: 'Código de Obras e Edificações (COE)',
+					path: 'arquivos/arco-tiete/img/4-6.png',
+					legendas: [],
+					textos: {
+						'Descrição': 'Os novos regramentos urbanísticos contidos no Art. 102 e Art. 103 da Lei nº 16.642/2017 e no Art. 97 do Decreto nº 57.776/2017, alteram a validade de uma série de alinhamentos viários necessários para a implantação das diretrizes do PL nº 581/2016, impactando ações relativas à mobilidade urbana do seu Programa de Intervenções. Outra implicação do COE é a possibilidade de utilização do potencial construtivo do lote original, conforme §1º do Art. 107 da Lei nº 16.642/2017. Essa disposição é de grande importância para o PIU Arco Tietê visto que seu plano de melhoramentos viários acarreta em grandes áreas de desapropriações, sobretudo no caso dos principais eixos, como os Apoios Urbanos',
+						'Regulações': 'Lei Municipal nº 16.642 /2017 e Decreto Municipal nº 57.776/2017',
+						'Considerações para o PIU Arco Tietê': 'Incluir na revisão do Arco Tietê os trechos de melhoramentos viários anteriores a 1988 considerados essenciais às estratégias de mobilidade do PIU, bem como dar continuidade às propostas de alteração de trechos da Lei nº 16.541/2016, resultantes do processo de desenvolvimento das AIU no PIU Arco Tietê; Incluir nos estudos de financiamento do PIU Arco Tietê as disposições trazidas pela Lei nº 16.642/2017 e pelo Decreto nº 57.776/ 2017 em relação à possibilidade de utilização do potencial construtivo integral em lotes atingidos por melhoramentos viários'
+					}
+				}, {
+					titulo: 'Parceria Público Privada da Habitação (PPP da Habitação)',
+					path: 'arquivos/arco-tiete/img/4-7.png',
+					legendas: [],
+					textos: {
+						'Descrição': 'Trata-se de seleção de empresas interessadas em participar do programa de Parceria Público-Privada para construção de Habitação de Interesse Social e Mercado Popular em São Paulo, por meio Edital de Concorrência Internacional nº 001/2018, lançado pela COHAB-SP/SEHAB.\nCada lote é composto por um conjunto de áreas públicas, para as quais é especificado um número mínimo de novas unidades habitacionais, prevendo-se a mistura de diversas faixas de renda, além de diretrizes urbanísticas e investimentos em equipamentos e infraestrutura pública.\nO Edital prevê que para cada Lote será realizada uma concessão administrativa pelo prazo de 20 anos à iniciativa privada, responsável pela implantação das unidades habitacionais, das infraestruturas e equipamentos públicos, dos usos não residenciais privados, bem como prestação de serviços de desenvolvimento de trabalho social, de pré e pós-ocupação, de apoio à gestão condominial, apoio a gestão da lista de beneficiários e de manutenção predial e de espaços livres e áreas verdes. O Edital também coloca a possibilidade da modelagem econômica das concessionárias considerarem receitas acessórias decorrentes da comercialização das unidades de HMP e HMC e da exploração das áreas não-residenciais privadas',
+						'Considerações para o PIU Arco Tietê': 'Revisar o Programa Habitacional do PIU Arco Tietê, considerando os imóveis incluídos na PPP de habitação'
+
 					}
 				}]
 			}

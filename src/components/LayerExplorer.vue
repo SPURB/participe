@@ -1,9 +1,15 @@
 <template>
 	<div class="LayerExplorer">
+		<main>
+			<div class="cont" ref="layerStack">
+				<img v-if="data.tipo == 'multi'" :src="src(data.base.path)" class="base">
+				<img v-for="layer in data.layers" class="layer" :class="{ visible: data.tipo == 'sequencial' && data.layers.indexOf(layer) === state }" :src="src(layer.path)" alt="">
+			</div>
+		</main>
 		<aside>
 			<ul class="legendaBase">
 				<li v-for="legenda in data.base.legendas">
-					<img :src="legenda.path" alt="">
+					<img :src="src(legenda.path)" alt="">
 					<span>{{ legenda.descricao }}</span>
 				</li>
 			</ul>
@@ -11,26 +17,31 @@
 				<ul class="layers" ref="layerList">
 					<li v-for="layer in data.layers">
 						<div class="item" @click="colexp($event, layer, data.layers)">
-							<h3 class="layertitle">
-								{{ layer.titulo }}
-								<i class="icon-expandir icon"><span>expandir</span></i>
-							</h3>
 							<label class="switcher">
 								<input type="checkbox" @click="toggleLayerVis(data.cssBaseId, data.layers, layer)">
 								<span class="slider"></span>
 							</label>
+							<h3 class="layertitle">
+								{{ layer.titulo }}
+								<i class="icon-expandir icon"><span>expandir</span></i>
+							</h3>
 						</div>
 						<div class="layerCont">
-							<h4>{{ layer.tituloLegendas }}</h4>
-							<ul class="legendaLayer">
-								<li v-for="legenda in layer.legendas">
-									<img :src="legenda.path" alt="">
-									<span>{{ legenda.descricao }}</span>
-								</li>
+							<ul v-for="group in layer.legendas" class="legendaLayer">
+								<template v-for="(legenda, index) in group">
+									<li v-if="index == 0 && legenda.titulo" class="titLeg">
+										<h4>{{ legenda.titulo }}</h4>
+									</li>
+									<li v-else="">
+										<img v-if="legenda.path" :src="src(legenda.path)" alt="">
+										<span v-if="legenda.char" class="char">{{ legenda.char }}</span>
+										<span>{{ legenda.descricao }}</span>
+									</li>
+								</template>
 							</ul>
 							<ul class="textos">
 								<li v-for="p in peers(layer.textos)">
-									<h4 class="key">{{p[0]}}</h4>
+									<h4 class="key" v-if="p[0].length > 2">{{p[0]}}</h4>
 									<p>{{p[1]}}</p>
 								</li>
 							</ul>
@@ -47,17 +58,22 @@
 				<ul class="steps">
 					<li v-for="(layer, index) in data.layers" :id="cssId(data.cssBaseId, data.layers, layer)" :class="{ visible: state == index }">
 						<div class="layerCont">
-							<h4>{{ layer.tituloLegendas }}</h4>
-							<ul class="legendaLayer">
-								<li v-for="legenda in layer.legendas">
-									<img :src="legenda.path" alt="">
-									<span>{{ legenda.descricao }}</span>
-								</li>
-							</ul>
 							<h3>{{layer.titulo}}</h3>
+							<ul v-for="group in layer.legendas" class="legendaLayer">
+								<template v-for="(legenda, index) in group">
+									<li v-if="index == 0 && legenda.titulo" class="titLeg">
+										<h4>{{ legenda.titulo }}</h4>
+									</li>
+									<li v-else="">
+										<img v-if="legenda.path" :src="src(legenda.path)" alt="">
+										<span v-if="legenda.char" class="char">{{ legenda.char }}</span>
+										<span>{{ legenda.descricao }}</span>
+									</li>
+								</template>
+							</ul>
 							<ul class="textos">
 								<li v-for="p in peers(layer.textos)">
-									<h4 class="key">{{p[0]}}</h4>
+									<h4 class="key" v-if="p[0].length > 2">{{p[0]}}</h4>
 									<p>{{p[1]}}</p>
 								</li>
 							</ul>
@@ -66,12 +82,6 @@
 				</ul>
 			</template>
 		</aside>
-		<main>
-			<div class="cont" ref="layerStack">
-				<img v-if="data.tipo == 'multi'" :src="data.base.path" class="base">
-				<img v-for="(layer, index) in data.layers" class="layer" :class="{ visible: data.tipo == 'sequencial' && data.layers.indexOf(layer) === state }" :src="src(layer.path)" alt="">
-			</div>
-		</main>
 	</div>
 </template>
 <script>
@@ -96,44 +106,34 @@ export default {
 			return `${base}_${arr.indexOf(elem).toString()}`
 		},
 		toggleLayerVis (base, arr, elem) {
-			let id = this.cssId(base, arr, elem)
 			let stack = this.$refs.layerStack
 			let position = arr.indexOf(elem) + 1
 			stack.children[position].classList.toggle('visible')
 		},
 		colexp (event, elem, arr) {
-			if (event.target.nodeName != 'LABEL') {
+			if (event.target.nodeName !== 'LABEL') {
 				let position = arr.indexOf(elem)
 				let layerList = this.$refs.layerList
 				layerList.children[position].classList.toggle('visible')
 			} else { return false }
 		},
 		next (layers) {
-			if (this.state < (layers.length - 1)) {
-				this.state += 1
-			} else {
-				return false
-			}
+			this.state < (layers.length - 1) ? this.state++ : false
 		},
 		prev () {
-			if (this.state > 0) {
-				this.state -= 1
-			} else {
-				return false
-			}
+			this.state > 0 ? this.state-- : false
 		},
 		peers (data) {
 			if (Object.entries) {
 				return Object.entries(data)
 			} else {
-				Object.entries = function(data) {
-					var ownProps = Object.keys(data),
-						i = ownProps.length,
-						resArray = new Array(i);
-					while (i--)
-						resArray[i] = [ownProps[i], obj[ownProps[i]]];
-					return resArray
+				const ownProps = Object.keys(data)
+				let i = ownProps.length
+				let resArray = new Array(i)
+				while (i--) {
+					resArray[i] = [ownProps[i], data[ownProps[i]]]
 				}
+				return resArray
 			}
 		}
 	}
@@ -151,19 +151,18 @@ export default {
 	width: calc(100vw - 8rem);
 	max-width: 1600px;
 	margin: 4rem auto;
-	background-color: #FFF;
-	border: 1px solid $sombra-4;
-	border-radius: 2px;
-	box-shadow: 0 4px 4px $sombra-4;
 	display: flex;
 	flex-flow: row nowrap;
-	overflow: hidden;
 	aside {
 		min-width: 320px;
 		max-width: 30%;
 		padding: 0;
 		overflow-y: scroll;
 		overflow-x: hidden;
+		background-color: #FFF;
+		border: 1px solid $sombra-4;
+		border-radius: 2px;
+		box-shadow: 0 4px 4px $sombra-4;
 		ul.legendaBase {
 			list-style-type: none;
 			padding: 1rem;
@@ -193,14 +192,28 @@ export default {
 					}
 					.legendaLayer {
 						list-style-type: none;
-						margin: 0 0 1rem;
+						margin: 0.25rem 0 1rem;
 						padding: 0;
 						& >	li {
-							display: inline-block;
-							&:not(:last-child) { margin: 0 1rem 0.25rem 0; }
+							display: inline-flex;
+							align-items: flex-start;
+							vertical-align: top;
+							&:not(:last-child) { margin: 0 1rem 0.75rem 0; }
 							img {
+								width: 1rem;
+								height: 1rem;
 								margin-right: 0.25rem;
-								vertical-align: -2px;
+								position: relative;
+								background-color: #FFF;
+							}
+							.char {
+								width: 1rem;
+								height: 1rem;
+								text-align: center;
+								border: 1px solid $sombra-4;
+								color: $preto;
+								font-weight: bold;
+								margin-right: 0.25rem;
 							}
 							span {
 								line-height: 1rem;
@@ -215,11 +228,13 @@ export default {
 						& > li {
 							font-family: $serifada;
 							white-space: pre-line;
+							&:not(:last-child) { margin-bottom: 1rem; }
 							.key {
 								font-family: $grotesca;
 								margin: 1rem 0 0;
 							}
 							p {
+								font-size: 1rem;
 								margin: 0;
 								hyphens: auto;
 								&:first-letter { text-transform: uppercase; }
@@ -250,15 +265,15 @@ export default {
 					padding: 0 1rem;
 					cursor: pointer;
 					& > h3 {
+						width: 100%;
 						margin: 0;
-						padding: 0;
-						max-width: calc(100% - 3rem);
+						padding: 0 0 0 0.75rem;
 						white-space: nowrap;
 						overflow: hidden;
 						text-overflow: ellipsis;
 						.icon {
 							display: inline-block;
-							vertical-align: 4px;
+							vertical-align: middle;
 							cursor: pointer;
 						}
 					}
@@ -302,19 +317,32 @@ export default {
 						}
 					}
 				}
-				&.visible {
-					max-height: 1000vh;
-					transition: max-height ease-in .4s;
-					.item .icon {
-						color: $cinza-2;
-						transform: rotate(0.5turn);
-					}
-				}
 				.layerCont {
 					padding: 0 1rem;
+					max-height: 0;
+					overflow: hidden;
+					.legendaLayer {
+						margin: 1rem 0;
+						& > li.titLeg {
+							display: block;
+							margin: 0;
+							h4 { margin: 0 0 0.25rem; }
+						}
+					}
 					& > h4 {
 						border-top: none;
 						padding: 0;
+					}
+				}
+				&.visible {
+					max-height: 1000vh;
+					transition: max-height ease-in .4s;
+					.layerCont {
+						max-height: 1000vh;
+					}
+					.item .icon {
+						color: $cinza-2;
+						transform: rotate(0.5turn);
 					}
 				}
 			}
@@ -326,6 +354,7 @@ export default {
 			justify-content: space-between;
 			align-items: center;
 			background-color: $cinza-3;
+			border-bottom: 1px solid $sombra-4;
 			.marker {
 				color: $cinza-1;
 				b { color: $preto; }
@@ -355,11 +384,23 @@ export default {
 			& > li {
 				display: none;
 				.layerCont {
-					.legendaLayer { padding: 0 1rem; }
-					& > h3 {
-						margin: 2rem 0 1rem;
+					.legendaLayer {
+						margin: 1rem 0;
 						padding: 0 1rem;
-						font-size: 1.5rem;
+						li.titLeg {
+							margin: 0 0 0.5rem;
+							display: block;
+							h4 {
+								margin: 0;
+							}
+						}
+					}
+					& > h3 {
+						margin: 0 0 1rem;
+						padding: 1rem 1rem 0;
+						font-size: 2rem;
+						@media (max-width: 600px) { font-size: 1.5rem; }
+						line-height: 1.2;
 					}
 					.textos { padding: 0 1rem 0.75rem; }
 				}
@@ -371,7 +412,6 @@ export default {
 	}
 	main {
 		position: relative;
-		background-color: $preto;
 		max-width: 1200px;
 		min-width: 70%;
 		max-height: 80vh;
@@ -379,7 +419,7 @@ export default {
 			width: 100%;
 			height: 100%;
 			img {
-				background-color: #FFF;
+				&.base, &:first-child { background-color: #FFF; }
 				position: absolute;
 				top: 50%;
 				left: 50%;
@@ -388,7 +428,7 @@ export default {
 				max-height: calc(100% - 2rem);
 				opacity: 0;
 				&:first-child {
-					box-shadow: 0 4px 4px $sombra-1;
+					box-shadow: 0 8px 8px $sombra-3;
 					opacity: 1;
 				}
 				&.visible { opacity: 1; }
@@ -397,7 +437,7 @@ export default {
 	}
 	@media (max-width: 900px) {
 		display: flex;
-		flex-direction: column-reverse;
+		flex-direction: column;
 		justify-content: flex-end;
 		width: calc(100vw - 4rem);
 		height: 90vh;
@@ -406,6 +446,7 @@ export default {
 			min-width: unset;
 			max-width: 100%;
 			width: 100%;
+			border-top: 1px solid $sombra-4;
 			flex: 1;
 			ul.legendaBase {
 				overflow-x: auto;
@@ -424,12 +465,18 @@ export default {
 						white-space: pre;
 						width: auto;
 						padding: 0.75rem 1rem;
-						margin: 0 1rem 1rem;
+						margin: 1rem;
 						font-size: 0.75rem;
 						border: 1px solid $sombra-4;
 						border-radius: 4px;
 						background-color: #FFF;
-						& > li img { vertical-align: -4px; }
+						&:first-child { margin-top: 0; }
+						& > li.titLeg {
+							display: inline-block;
+							line-height: 1rem;
+							margin: 0 1rem 0;
+						}
+						& > li:not(:last-child) { margin: 0 1rem 0 0; }
 						& > li:last-child { margin-right: 1rem; }
 					}
 				}
@@ -443,14 +490,18 @@ export default {
 					}
 				}
 			}
+
 		}
 		main {
 			flex: 1;
+			background-color: $cinza-3;
 			.cont {
 				img {
 					max-width: 100%;
 					max-height: 100%;
-					&.base { box-shadow: none; }
+					&.base, &:first-child {
+						box-shadow: none;
+					}
 				}
 			}
 		}
@@ -476,16 +527,6 @@ export default {
 						}
 					}
 					.layerCont {
-					}
-				}
-			}
-			ul.steps {
-				& > li {
-					.layerCont {
-						h4 {
-							font-size: 0.75rem;
-							text-transform: uppercase;
-						}
 					}
 				}
 			}

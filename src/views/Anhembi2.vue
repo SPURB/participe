@@ -965,6 +965,7 @@ export default {
 				]
 			},
 			mapa_attrs: {
+				id: 'map',
 				center: [ -5193050.487352, -2693402.011056 ],
 				zoom: 13.5,
 				layers: [

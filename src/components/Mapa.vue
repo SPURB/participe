@@ -1,6 +1,6 @@
 <template>
 	<div class="Mapa" ref="mapa">
-		<div id="map"></div>
+		<div :id="mapa_attrs.id"></div>
 		<ul class="legenda">
 			<template v-for="layer in mapa_attrs.layers">
 				<li :key="mapa_attrs.layers.indexOf(layer)">
@@ -111,7 +111,7 @@ export default {
 		createMap () {
 			let map = new Map({
 				layers: this.mapLayers,
-				target: 'map',
+				target: this.mapa_attrs.id,
 				view: this.mapView
 				// controls: defaultControls({
 				// 	attributionOptions: {
@@ -144,7 +144,7 @@ export default {
 
 div.Mapa {
 	max-width: 992px;
-	margin: 4rem auto 2rem auto;
+	margin: 4rem auto;
 	border: 1px solid #BDBDBD;
 	border-radius: 2px;
 	overflow: hidden;

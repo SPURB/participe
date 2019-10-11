@@ -154,7 +154,7 @@
 
 <script>
 export default {
-	name: 'MEM',
+	name: 'processo',
 	methods: {
 		imgSrc (caminho) {
 			let url = this.$store.getters.basePath + caminho

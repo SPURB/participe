@@ -1,6 +1,6 @@
 <template>
 	<div class="ArcoTiete" ref="conteudoConsulta">
-		<PageTop background_image_src="arquivos/capas/placeholder_480w.jpg" :esta_consulta="estaConsulta">
+		<PageTop background_image_src="arquivos/capas/arco-tiete_122w.jpg" :esta_consulta="estaConsulta">
 			<template slot="titulo"><div>PIU Arco Tietê</div></template>
 			<template slot="subtitulo"><div>Primeira consulta pública do Projeto de Intervenção Urbana Arco Tietê</div></template>
 		</PageTop>

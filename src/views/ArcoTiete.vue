@@ -854,7 +854,7 @@ export default {
 						title: 'Operação Urbana Consorciada Água Branca',
 						path: this.$store.getters.basePath + 'arquivos/arco-tiete/kml/oucab.kml',
 						stroke_color: 'rgba(0, 0, 0, 0.5)',
-						fill_color: '#b5b5b5',
+						fill_color: 'rgba(181, 181, 181, 0.5)',
 						stroke_width: 2
 					}
 				]
@@ -882,7 +882,7 @@ export default {
 						title: 'PIU Setor Central',
 						path: this.$store.getters.basePath + 'arquivos/arco-tiete/kml/piu-setor-central.kml',
 						stroke_color: 'rgba(0, 0, 0, 0.5)',
-						fill_color: '#b5b5b5',
+						fill_color: 'rgba(181, 181, 181, 0.5)',
 						stroke_width: 1
 					}
 				]

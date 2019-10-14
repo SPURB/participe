@@ -1,22 +1,7 @@
 <template>
 	<div class="Mapa" ref="mapa">
 		<div id="mapDiv" @mousedown="getMouseDown($event)" v-on:click="displayFeatureInfo($event)"></div>
-		<!-- <ul class="legenda">
-			<template v-for="(layer, index) in mapaAttrs.layers">
-				<li :key="index">
-					<div :style="{
-						backgroundColor:layer.fill_color,
-						borderColor: layer.stroke_color,
-						borderWidth: layer.stroke_width + 'px',
-						// borderStyle: layer.stroke_dash.length > 1 ? 'dashed none none' : ''
-						height: layer.fill_color ? '' : '0'
-				}"></div>
-				<a
-					:href="layer.path"
-					:download="layer.title + '.kml'"
-				>{{ layer.title }}</a></li>
-			</template>
-		</ul> -->
+		
 		<div id="info"></div>
 		<!-- <input type="text" name="id_desfile" v-model="id">
 		<button v-on:click="carregarTrajeto(id)">Focar</button> -->

@@ -9,7 +9,7 @@
 		<img widht="1920" height="100%" alt="Carnaval de Rua 2020" class="header__carnaval" :src="src('/arquivos/carnaval-2020/header-carnaval.png')">
 		<Indice :titulos="titulosLimpo"></Indice>
 
-		<section  v-if="!fimForm" ref="apresentacao" class="apresentacao">
+		<section  v-if="false" ref="apresentacao" class="apresentacao">
 			<h2 class="titulo" indent="1">Apresentação</h2>
 				<p>Olá! Bem-vindo(a) ao portal oficial para cadastramento do seu bloco, banda ou cordão carnavalesco. O Carnaval de Rua de São Paulo está consolidado como um dos maiores do Brasil e a intenção da Prefeitura é tornar o processo de inscrição e planejamento mais inclusivo, estruturado e participativo, permitindo uma maior oferta de serviços e melhor experiência para todos para 2020. </p>
 
@@ -20,8 +20,18 @@
 				<p>Dúvidas ou pedidos de esclarecimento devem ser enviados à Comissão de Carnaval através do e-mail <a href="mailto:carnavalderua@prefeitura.sp.gov.br"> carnavalderua@prefeitura.sp.gov.br</a>.</p>
 		</section>
 
+		<!-- Informações apresentadas quando o bloco já foi confirmado -->
+		<div v-if="desfile.confirmado == '1'">
+			<center><h3 v-if="desfile.id">Bloco {{ desfile.nome_do_bloco }} confirmado. Protocolo nº {{ '20'.concat(desfile.cod_distrito.length === 2 ? desfile.cod_distrito : '0'.concat(desfile.cod_distrito), desfile.id.length === 3 ? '0'.concat(desfile.id) : desfile.id ) }}</h3></center>			
+		</div>
+
+		<!-- Informações apresentadas quando a key é inválida -->
+		<div v-if="this.contato.cpf_cnpj_responsavel.length < 1" style="margin: 18%;">
+			<center><h3>URL Inválida. Verifique o endereço digitado.</h3></center>
+		</div>
+
 		<!-- Mapa interativo -->
-		<section class="apresentacao">
+		<section class="apresentacao" :style="'visibility: ' +  (this.contato.cpf_cnpj_responsavel.length > 0 ? 'visible;' : 'hidden; height: 0px')">
 			<h2 class="titulo" indent="1">Mapa</h2>
 			<!-- MAPA -->
 			<MapaCarnaval :mapaAttrs="mapaAttrs" :styleFromKML="false"></MapaCarnaval>
@@ -30,10 +40,12 @@
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 			consequat.</p>
+
+			<center><button v-if="desfile.confirmado == '1'" @click="imprimeMapa()">Imprimir</button></center>
 		</section>
-		
+		 
 		<!-- <template  v-if="parseInt(estaConsulta.ativo)"> -->
-			<div class="form--create">
+			<div v-if="desfile.confirmado === '0' && this.contato.cpf_cnpj_responsavel.length > 0" class="form--create">
 				<!-- <p v-if="!fimForm" class="obrigatorios">Os campos acompanhados de um asterisco (*) são de preenchimento obrigatório.</p> -->
 				<p v-if="!fimForm" class="obrigatorios">Confira os dados da inscrição:</p>
 				<form @submit.prevent="criar" :class="{ hidden: fimForm }" ref="form">
@@ -41,7 +53,7 @@
 						<h2 class="titulo" indent="1">Desfile</h2>
 						<fieldset>
 							<label class="create__label" for="nome_do_bloco">Nome do bloco (até 100 caracteres)*</label>
-							<input
+							<input disabled
 								placeholder="ex. Bloco da Maria"
 								id="nome_do_bloco"
 								type="text"
@@ -59,7 +71,7 @@
 						<!-- concentração -->
 						<fieldset>
 							<label class="create__label" for="endereco_concentracao">Endereço da concentração (até 100 caracteres)*</label>
-							<input
+							<input disabled
 								placeholder="ex. Avenida São João"
 								id="endereco_concentracao"
 								type="text"
@@ -74,7 +86,7 @@
 
 						<fieldset>
 							<label class="create__label" for="complemento_concentracao">Complemento (até 100 caracteres)*</label>
-							<input
+							<input disabled
 								placeholder="ex. nº 1432"
 								id="complemento_concentracao"
 								type="text"
@@ -89,7 +101,7 @@
 
 						<fieldset>
 							<label class="create__label" for="cep_concentracao">CEP*</label>
-							<input
+							<input disabled
 								placeholder="00000-000"
 								id="cep_concentracao"
 								type="text"
@@ -106,7 +118,7 @@
 
 						<fieldset>
 							<label class="create__label" for="bairro_concentracao">Bairro*</label>
-							<input
+							<input disabled
 								placeholder="ex. Santa Cecília"
 								id="bairro_concentracao"
 								type="text"
@@ -137,7 +149,7 @@
 						<!-- dispersão -->
 						<fieldset>
 							<label class="create__label" for="endereco_dispersao">Endereço da dispersão (até 100 caracteres)*</label>
-							<input
+							<input disabled
 								placeholder="ex. R. Oliveira Melo (entre R. Imprensa e R. Debret)"
 								id="endereco_dispersao"
 								type="text"
@@ -152,7 +164,7 @@
 
 						<fieldset>
 							<label class="create__label" for="complemento_dispersao">Complemento (até 100 caracteres)*</label>
-							<input
+							<input disabled
 								placeholder="ex. nº 1432"
 								id="complemento_dispersao"
 								type="text"
@@ -167,7 +179,7 @@
 
 						<fieldset>
 							<label class="create__label" for="cep_dispersao">CEP*</label>
-							<input
+							<input disabled
 								placeholder="00000-000"
 								id="cep_dispersao"
 								type="text"
@@ -187,7 +199,7 @@
 						<!-- ************************************************************** -->
 						<fieldset>
 							<label class="create__label" for="bairro_dispersao">Bairro*</label>
-							<input
+							<input disabled
 								id="bairro_dispersao"
 								type="text"
 								name="bairro_dispersao"
@@ -204,7 +216,7 @@
 						<!-- Data (2019) -->
 						<!-- <fieldset>
 							<label class="create__label" for="data_do_desfile_2019">Data (2019)</label>
-							<input
+							<input disabled
 								id="data_do_desfile_2019"
 								type="date"
 								name="data_do_desfile_2019"
@@ -219,7 +231,7 @@
 						<!-- Data (2019) -->
 						<fieldset>
 							<label class="create__label" for="data_do_desfile_2019">Data em que desfilou em 2019*</label>
-							<select
+							<select disabled
 								id="data_do_desfile_2019"
 								type="text"
 								name="data_do_desfile_2019"
@@ -256,7 +268,7 @@
 						<!-- Data (2020) -->
 						<fieldset>
 							<label class="create__label" for="data_do_desfile_2020">Data pretendida para 2020*</label>
-							<select
+							<select disabled
 								id="data_do_desfile_2020"
 								type="text"
 								name="data_do_desfile_2020"
@@ -292,7 +304,7 @@
 						<!-- Horário da concentração -->
 						<fieldset>
 							<label class="create__label" for="hr_concentracao">Horário da concentração*</label>
-							<select
+							<select disabled
 								id="hr_concentracao"
 								:class="{ erro: errors.has('hr_concentracao') }"
 								class="create__input"
@@ -329,7 +341,7 @@
 						<!-- Horário da desfile -->
 						<fieldset>
 							<label class="create__label" for="hr_desfile">Horário do desfile*</label>
-							<select
+							<select disabled
 								id="hr_desfile"
 								:class="{ erro: errors.has('hr_desfile') }"
 								class="create__input"
@@ -366,7 +378,7 @@
 						<!-- Horário da encerramento -->
 						<fieldset>
 							<label class="create__label" for="hr_encerramento">Horário de encerramento*</label>
-							<select
+							<select disabled
 								id="hr_encerramento"
 								:class="{ erro: errors.has('hr_encerramento') }"
 								class="create__input"
@@ -412,7 +424,7 @@
 						<!-- subprefeitura -->
 						<fieldset>
 							<label class="create__label" for="subprefeitura">Subprefeitura*</label>
-							<select
+							<select disabled
 								id="subprefeitura"
 								:class="{ erro: errors.has('subprefeitura') }"
 								class="create__input"
@@ -462,7 +474,7 @@
 						<!-- publico_2019 -->
 						<fieldset>
 							<label class="create__label" for="publico_2019">Público (2019)</label>
-							<select
+							<select disabled
 								name="publico_2019"
 								id="publico_2019"
 								v-validate="'required:false'"
@@ -489,7 +501,7 @@
 						<!-- publico_estimado -->
 						<fieldset>
 							<label class="create__label" for="publico_estimado">Público estimado*</label>
-							<input
+							<input disabled
 								placeholder="100"
 								id="publico_estimado"
 								name="publico_estimado"
@@ -510,7 +522,7 @@
 						<h4>Responsável</h4>
 						<fieldset>
 							<label class="create__label" for="name">Nome*</label>
-							<input
+							<input disabled
 								id="nome_responsavel"
 								type="text"
 								name="nome_responsavel"
@@ -523,7 +535,7 @@
 						</fieldset>
 						<fieldset>
 							<label class="create__label" for="cpf_cnpj_responsavel">CPF/CNPJ*</label>
-							<input
+							<input disabled
 								id="cpf_cnpj_responsavel"
 								type="text"
 								name="cpf_cnpj_responsavel"
@@ -536,7 +548,7 @@
 						</fieldset>
 						<fieldset>
 							<label class="create__label" for="email_responsavel">E-mail*</label>
-							<input
+							<input disabled
 								id="email_responsavel"
 								name="email_responsavel"
 								v-validate="'required|email'"
@@ -549,7 +561,7 @@
 						</fieldset>
 						<fieldset>
 							<label class="create__label" for="telefone_responsavel">Telefone*</label>
-							<input
+							<input disabled
 								id="telefone_responsavel"
 								name="telefone_responsavel"
 								v-validate="'required'"
@@ -564,7 +576,7 @@
 						<h4>Corresponsável</h4>
 						<fieldset>
 							<label class="create__label" for="name">Nome*</label>
-							<input
+							<input disabled
 								id="nome_coresponsavel"
 								type="text"
 								name="nome_coresponsavel"
@@ -577,7 +589,7 @@
 						</fieldset>
 						<fieldset>
 							<label class="create__label" for="cpf_cnpj_coresponsavel">CPF/CNPJ*</label>
-							<input
+							<input disabled
 								id="cpf_cnpj_coresponsavel"
 								type="text"
 								name="cpf_cnpj_coresponsavel"
@@ -590,7 +602,7 @@
 						</fieldset>
 						<fieldset>
 							<label class="create__label" for="email_coresponsavel">E-mail*</label>
-							<input
+							<input disabled
 								id="email_coresponsavel"
 								name="email_coresponsavel"
 								v-validate="'required'"
@@ -603,7 +615,7 @@
 						</fieldset>
 						<fieldset>
 							<label class="create__label" for="telefone_coresponsavel">Telefone*</label>
-							<input
+							<input disabled
 								id="telefone_coresponsavel"
 								name="telefone_coresponsavel"
 								v-validate="'required: false'"
@@ -622,7 +634,7 @@
 						<!-- ano_fundacao -->
 						<fieldset>
 							<label class="create__label" for="ano_fundacao">Ano Fundação</label>
-							<input
+							<input disabled
 								placeholder="1947"
 								id="ano_fundacao"
 								v-validate="'required'"
@@ -642,18 +654,18 @@
 						>
 							<h5>Perfil do bloco</h5>
 							<ul>
-								<li><input id="perfil-familiar" type="radio" v-model="desfile.perfil_bloco" value="Familiar"><label class="create__label" for="perfil-familiar">Familiar</label></li>
-								<li><input id="perfil-adulto" type="radio" v-model="desfile.perfil_bloco" value="Adulto"><label class="create__label" for="perfil-adulto">Adulto</label></li>
-								<li><input id="perfil-LGBTQI+" type="radio" v-model="desfile.perfil_bloco" value="LGBTQI+"><label class="create__label" for="perfil-LGBTQI+">LGBTQI+</label></li>
-								<li><input id="perfil-infantil" type="radio" v-model="desfile.perfil_bloco" value="Infantil"><label class="create__label" for="perfil-infantil">Infantil</label></li>
-								<li><input id="perfil-religioso" type="radio" v-model="desfile.perfil_bloco" value="Religioso"><label class="create__label" for="perfil-religioso">Religioso</label></li>
-								<li><input id="perfil-tematico" type="radio" v-model="desfile.perfil_bloco" value="Temático"><label class="create__label" for="perfil-tematico">Temático</label></li>
+								<li><input disabled id="perfil-familiar" type="radio" v-model="desfile.perfil_bloco" value="Familiar"><label class="create__label" for="perfil-familiar">Familiar</label></li>
+								<li><input disabled id="perfil-adulto" type="radio" v-model="desfile.perfil_bloco" value="Adulto"><label class="create__label" for="perfil-adulto">Adulto</label></li>
+								<li><input disabled id="perfil-LGBTQI+" type="radio" v-model="desfile.perfil_bloco" value="LGBTQI+"><label class="create__label" for="perfil-LGBTQI+">LGBTQI+</label></li>
+								<li><input disabled id="perfil-infantil" type="radio" v-model="desfile.perfil_bloco" value="Infantil"><label class="create__label" for="perfil-infantil">Infantil</label></li>
+								<li><input disabled id="perfil-religioso" type="radio" v-model="desfile.perfil_bloco" value="Religioso"><label class="create__label" for="perfil-religioso">Religioso</label></li>
+								<li><input disabled id="perfil-tematico" type="radio" v-model="desfile.perfil_bloco" value="Temático"><label class="create__label" for="perfil-tematico">Temático</label></li>
 								<li>
-									<input
+									<input disabled
 										type="radio"
 										@change="setOption('desfile', 'perfil_bloco', $event)"
 										value="opcional" id="perfil-opcional"><label class="create__label" for="perfil-opcional">Outro<template v-if="ui.opcional.perfil_bloco">:</template></label>
-									<input
+									<input disabled
 										v-if="ui.opcional.perfil_bloco"
 										name="perfil_bloco--opcional"
 										id="perfil_bloco--opcional"
@@ -670,18 +682,18 @@
 							>
 							<h5>Estilo musical predominante</h5>
 							<ul>
-								<li><input id="estilo-diversos" type="radio" v-model="desfile.estilo_musical_predominante" value="Diversos"><label class="create__label" for="estilo-diversos">Diversos</label></li>
-								<li><input id="estilo-mpb" type="radio" v-model="desfile.estilo_musical_predominante" value="Música Popular Brasileira"><label class="create__label" for="estilo-mpb">Música Popular Brasileira</label></li>
-								<li><input id="estilo-samba" type="radio" v-model="desfile.estilo_musical_predominante" value="Samba"><label class="create__label" for="estilo-samba">Samba</label></li>
-								<li><input id="estilo-pop" type="radio" v-model="desfile.estilo_musical_predominante" value="Pop"><label class="create__label" for="estilo-pop">Pop</label></li>
-								<li><input id="estilo-axe" type="radio" v-model="desfile.estilo_musical_predominante" value="Axé"><label class="create__label" for="estilo-axe">Axé</label></li>
-								<li><input id="estilo-sertanejo" type="radio" v-model="desfile.estilo_musical_predominante" value="Sertanejo"><label class="create__label" for="estilo-sertanejo">Sertanejo</label></li>
-								<li><input id="estilo-rock" type="radio" v-model="desfile.estilo_musical_predominante" value="Rock"><label class="create__label" for="estilo-rock">Rock</label></li>
-								<li><input id="estilo-eletronico" type="radio" v-model="desfile.estilo_musical_predominante" value="Eletrônico"><label class="create__label" for="estilo-eletronico">Eletrônico</label></li>
+								<li><input disabled id="estilo-diversos" type="radio" v-model="desfile.estilo_musical_predominante" value="Diversos"><label class="create__label" for="estilo-diversos">Diversos</label></li>
+								<li><input disabled id="estilo-mpb" type="radio" v-model="desfile.estilo_musical_predominante" value="Música Popular Brasileira"><label class="create__label" for="estilo-mpb">Música Popular Brasileira</label></li>
+								<li><input disabled id="estilo-samba" type="radio" v-model="desfile.estilo_musical_predominante" value="Samba"><label class="create__label" for="estilo-samba">Samba</label></li>
+								<li><input disabled id="estilo-pop" type="radio" v-model="desfile.estilo_musical_predominante" value="Pop"><label class="create__label" for="estilo-pop">Pop</label></li>
+								<li><input disabled id="estilo-axe" type="radio" v-model="desfile.estilo_musical_predominante" value="Axé"><label class="create__label" for="estilo-axe">Axé</label></li>
+								<li><input disabled id="estilo-sertanejo" type="radio" v-model="desfile.estilo_musical_predominante" value="Sertanejo"><label class="create__label" for="estilo-sertanejo">Sertanejo</label></li>
+								<li><input disabled id="estilo-rock" type="radio" v-model="desfile.estilo_musical_predominante" value="Rock"><label class="create__label" for="estilo-rock">Rock</label></li>
+								<li><input disabled id="estilo-eletronico" type="radio" v-model="desfile.estilo_musical_predominante" value="Eletrônico"><label class="create__label" for="estilo-eletronico">Eletrônico</label></li>
 								<li>
-									<input id="estilo-opcional" type="radio" @change="setOption('desfile', 'estilo_musical_predominante', $event)" value="opcional"><label class="create__label" for="estilo-opcional">Outro
+									<input disabled id="estilo-opcional" type="radio" @change="setOption('desfile', 'estilo_musical_predominante', $event)" value="opcional"><label class="create__label" for="estilo-opcional">Outro
 									<template v-if="ui.opcional.estilo_musical_predominante"><span class="inputComplemento">Descreva:</span></template></label>
-									<input
+									<input disabled
 										v-if="ui.opcional.estilo_musical_predominante"
 										name="estilo_musical_predominante--opcional"
 										id="estilo_musical_predominante--opcional"
@@ -697,8 +709,8 @@
 							:class="{ erro: custom_errors.has('bloco_comunitario') }">
 							<h5>Bloco comunitário?</h5>
 							<ul>
-								<li><input type="radio" v-model.number="desfile.bloco_comunitario" value="1" id="comunitario-sim"><label class="create__label" for="comunitario-sim">Sim</label></li>
-								<li><input type="radio" v-model.number="desfile.bloco_comunitario" value="0" id="comunitario-nao"><label class="create__label" for="comunitario-nao">Não</label></li>
+								<li><input disabled type="radio" v-model.number="desfile.bloco_comunitario" value="1" id="comunitario-sim"><label class="create__label" for="comunitario-sim">Sim</label></li>
+								<li><input disabled type="radio" v-model.number="desfile.bloco_comunitario" value="0" id="comunitario-nao"><label class="create__label" for="comunitario-nao">Não</label></li>
 							</ul>
 							<p>Máximo de 5000 pessoas, ausência de patrocínio.</p>
 						</div>
@@ -710,17 +722,17 @@
 							<h5>Possui artistas convidados?</h5>
 							<ul>
 								<li>
-									<input type="radio" @change="setOption('desfile', 'artistas', $event)" value="opcional" id="artistas-opcional"><label class="create__label" for="artistas-opcional">Sim
+									<input disabled type="radio" @change="setOption('desfile', 'artistas', $event)" value="opcional" id="artistas-opcional"><label class="create__label" for="artistas-opcional">Sim
 									<template v-if="ui.opcional.artistas"><span class="inputComplemento">Quais?</span></template></label>
 									<!-- !!! aumentar área !!!-->
-									<input
+									<input disabled
 										placeholder="Cite os artistas convidados ou músicos de destaque"
 										v-if="ui.opcional.artistas"
 										name="artistas--opcional"
 										id="artistas--opcional"
 										v-model="desfile.artistas">
 								</li>
-								<li><input type="radio" v-model="desfile.artistas" value="Não" id="artistas-nao"><label class="create__label" for="artistas-nao">Não</label></li>
+								<li><input disabled type="radio" v-model="desfile.artistas" value="Não" id="artistas-nao"><label class="create__label" for="artistas-nao">Não</label></li>
 							</ul>
 						</div>
 						<!-- FIM artistas -->
@@ -731,16 +743,16 @@
 							<h5>Possui bateria?</h5>
 							<ul>
 								<li>
-									<input type="radio" @change="setOption('desfile', 'bateria', $event)" value="opcional" id="bateria-opcional"><label class="create__label" for="bateria-opcional">Sim
+									<input disabled type="radio" @change="setOption('desfile', 'bateria', $event)" value="opcional" id="bateria-opcional"><label class="create__label" for="bateria-opcional">Sim
 									<template v-if="ui.opcional.bateria"><span class="inputComplemento">Descreva:</span></template></label>
-									<input
+									<input disabled
 										placeholder="Cite o número de integrantes da bateria"
 										v-if="ui.opcional.bateria"
 										name="bateria--opcional"
 										id="bateria--opcional"
 										v-model="desfile.bateria">
 								</li>
-								<li><input type="radio" v-model="desfile.bateria" value="Não" id="bateria-nao"><label class="create__label" for="bateria-nao">Não</label></li>
+								<li><input disabled type="radio" v-model="desfile.bateria" value="Não" id="bateria-nao"><label class="create__label" for="bateria-nao">Não</label></li>
 							</ul>
 						</div>
 						<!-- FIM bateria -->
@@ -751,7 +763,7 @@
 							<h5>Possui banda em trio ou solo?</h5>
 							<ul>
 								<li>
-									<input
+									<input disabled
 										type="radio"
 										@change="setOption('desfile', 'banda_em_trio_ou_solo', $event)"
 										value="opcional"
@@ -762,14 +774,14 @@
 									<label
 										v-if="ui.opcional.banda_em_trio_ou_solo"
 										for="banda_em_trio_ou_solo--opcional"><span class="inputComplemento">Em trio ou solo?</span></label>
-									<input
+									<input disabled
 										placeholder="Descreva"
 										v-if="ui.opcional.banda_em_trio_ou_solo"
 										name="banda_em_trio_ou_solo--opcional"
 										id="banda_em_trio_ou_solo--opcional"
 										v-model="desfile.banda_em_trio_ou_solo">
 								</li>
-								<li><input
+								<li><input disabled
 									type="radio"
 									v-model="desfile.banda_em_trio_ou_solo"
 									value="Não"
@@ -791,7 +803,7 @@
 							<h5>Possui trio elétrico?*</h5>
 							<ul>
 								<li>
-									<input
+									<input disabled
 										type="radio"
 										@change="setOption('desfile', 'trio_eletrico', $event)"
 										value="opcional" id="trio-sim"
@@ -799,7 +811,7 @@
 									<label
 										v-if="ui.opcional.trio_eletrico"
 										for="trio_eletrico--opcional"><span class="inputComplemento">Informe as dimensões (largura x comprimento x altura) em metros</span></label>
-									<input
+									<input disabled
 										placeholder="Descreva largura x comprimento x altura em metros"
 										v-if="ui.opcional.trio_eletrico"
 										name="trio_eletrico--opcional"
@@ -807,7 +819,7 @@
 										v-model="desfile.trio_eletrico">
 								</li>
 								<li>
-									<input
+									<input disabled
 									type="radio"
 									v-model="desfile.trio_eletrico"
 									value="Não"
@@ -824,7 +836,7 @@
 						<!-- n_brigadistas -->
 						<fieldset>
 							<label class="create__label" for="n_brigadistas">Número de brigadistas*</label>
-							<input
+							<input disabled
 								placeholder="15"
 								id="n_brigadistas"
 								name="n_brigadistas"
@@ -840,7 +852,7 @@
 						<!-- n_ambulancias -->
 						<fieldset>
 							<label class="create__label" for="n_ambulancias">Número de ambulâncias*</label>
-							<input
+							<input disabled
 								placeholder="0"
 								id="n_ambulancias"
 								name="n_ambulancias"
@@ -856,7 +868,7 @@
 						<!-- n_cordeiros -->
 						<fieldset>
 							<label class="create__label" for="n_cordeiros">Número de cordeiros*</label>
-							<input
+							<input disabled
 								placeholder="0"
 								id="n_cordeiros"
 								name="n_cordeiros"
@@ -872,7 +884,7 @@
 						<!-- n_segurancas_habilitados -->
 						<fieldset>
 							<label class="create__label" for="n_segurancas_habilitados">Número de seguranças habilitados*</label>
-							<input
+							<input disabled
 								placeholder="0"
 								id="n_segurancas_habilitados"
 								name="n_segurancas_habilitados"
@@ -888,7 +900,7 @@
 						<!-- n_banheiros_quimicos -->
 						<fieldset>
 							<label class="create__label" for="n_banheiros_quimicos">Número de banheiros químicos*</label>
-							<input
+							<input disabled
 								placeholder="0"
 								id="n_banheiros_quimicos"
 								name="n_banheiros_quimicos"
@@ -904,7 +916,7 @@
 						<!-- n_catadores_de_residuos -->
 						<fieldset>
 							<label class="create__label" for="n_catadores_de_residuos">Número de catadores de resíduos*</label>
-							<input
+							<input disabled
 								placeholder="0"
 								id="n_catadores_de_residuos"
 								name="n_catadores_de_residuos"
@@ -922,8 +934,8 @@
 							:class="{ erro: custom_errors.has('interesse_cadastrar_ambulantes') }">
 							<h5>Tem interesse em cadastrar ambulantes do bloco?*</h5>
 							<ul>
-								<li><input type="radio" v-model.number="desfile.interesse_cadastrar_ambulantes" value="1" id="cadastro-ambulantes-sim"><label class="create__label" for="cadastro-ambulantes-sim">Sim</label></li>
-								<li><input type="radio" v-model.number="desfile.interesse_cadastrar_ambulantes" value="0" id="cadastro-ambulantes-nao"><label class="create__label" for="cadastro-ambulantes-nao">Não</label></li>
+								<li><input disabled type="radio" v-model.number="desfile.interesse_cadastrar_ambulantes" value="1" id="cadastro-ambulantes-sim"><label class="create__label" for="cadastro-ambulantes-sim">Sim</label></li>
+								<li><input disabled type="radio" v-model.number="desfile.interesse_cadastrar_ambulantes" value="0" id="cadastro-ambulantes-nao"><label class="create__label" for="cadastro-ambulantes-nao">Não</label></li>
 							</ul>
 						</div>
 						<!-- FIM interesse_cadastrar_ambulantes -->
@@ -931,7 +943,7 @@
 						<!-- plano_de_operacao -->
 						<fieldset>
 							<label class="create__label" for="plano_de_operacao">Plano de operação e segurança(até 2000 carac.)*</label>
-							<textarea
+							<textarea disabled
 								placeholder="Plano da operação em até 2000 caracteres"
 								id="plano_de_operacao"
 								type="text"
@@ -956,7 +968,7 @@
 							<h5>Tem patrocínio com exposição de marcas?*</h5>
 							<ul>
 								<li>
-									<input
+									<input disabled
 										type="radio"
 										@change="setOption('desfile', 'patrocinio', $event)"
 										value="opcional"
@@ -965,14 +977,14 @@
 									<label
 										v-if="ui.opcional.patrocinio"
 										for="patrocinio--opcional"><span class="inputComplemento">Quais?</span></label>
-									<input
+									<input disabled
 										placeholder="Lista de patrocinadores"
 										v-if="ui.opcional.patrocinio"
 										name="patrocinio--opcional"
 										id="patrocinio--opcional"
 										v-model="desfile.patrocinio">
 								</li>
-								<li><input
+								<li><input disabled
 									type="radio"
 									v-model="desfile.patrocinio"
 									value="Não"
@@ -990,7 +1002,7 @@
 							<h5>Pretende divulgar apoiadores regionais / de bairro?*</h5>
 							<ul>
 								<li>
-									<input
+									<input disabled
 										type="radio"
 										@change="setOption('desfile', 'apoiadores', $event)"
 										value="opcional"
@@ -999,14 +1011,14 @@
 									<label
 										v-if="ui.opcional.apoiadores"
 										for="apoiadores--opcional"><span class="inputComplemento">Quais?</span></label>
-									<input
+									<input disabled
 										placeholder="Lista de patrocinadores"
 										v-if="ui.opcional.patrocinio"
 										name="apoiadores--opcional"
 										id="apoiadores--opcional"
 										v-model="desfile.apoiadores">
 								</li>
-								<li><input
+								<li><input disabled
 									type="radio"
 									v-model="desfile.apoiadores"
 									value="Não"
@@ -1023,8 +1035,8 @@
 							:class="{ erro: custom_errors.has('interesse_contato_empresas') }">
 							<h5>Tem interesse em receber contato de empresas/agências interessadas em patrocinar o bloco?*</h5>
 							<ul>
-								<li><input id="interesse-patrocinio-sim" type="radio" v-model.number="desfile.interesse_contato_empresas" value="1"><label class="create__label" for="interesse-patrocinio-sim">Sim</label></li>
-								<li><input id="interesse-patrocinio-nao" type="radio" v-model.number="desfile.interesse_contato_empresas" value="0"><label class="create__label" for="interesse-patrocinio-nao">Não</label></li>
+								<li><input disabled id="interesse-patrocinio-sim" type="radio" v-model.number="desfile.interesse_contato_empresas" value="1"><label class="create__label" for="interesse-patrocinio-sim">Sim</label></li>
+								<li><input disabled id="interesse-patrocinio-nao" type="radio" v-model.number="desfile.interesse_contato_empresas" value="0"><label class="create__label" for="interesse-patrocinio-nao">Não</label></li>
 							</ul>
 						</div>
 						<!-- FIM interesse_contato_empresas -->
@@ -1034,8 +1046,8 @@
 							:class="{ erro: custom_errors.has('participar_campanhas') }">
 							<h5>Aceita participar das campanhas promovidas pela Prefeitura de SP durante o Carnaval?*</h5>
 							<ul>
-								<li><input id="campanhas-prefeitura-sim" type="radio" v-model.number="desfile.participar_campanhas" value="1"><label class="create__label" for="campanhas-prefeitura-sim">Sim</label></li>
-								<li><input id="campanhas-prefeitura-nao" type="radio" v-model.number="desfile.participar_campanhas" value="0"><label class="create__label" for="campanhas-prefeitura-nao">Não</label></li>
+								<li><input disabled id="campanhas-prefeitura-sim" type="radio" v-model.number="desfile.participar_campanhas" value="1"><label class="create__label" for="campanhas-prefeitura-sim">Sim</label></li>
+								<li><input disabled id="campanhas-prefeitura-nao" type="radio" v-model.number="desfile.participar_campanhas" value="0"><label class="create__label" for="campanhas-prefeitura-nao">Não</label></li>
 							</ul>
 						</div>
 						<!-- FIM participar_campanhas -->
@@ -1046,15 +1058,15 @@
 							<!-- !!! destacar este item -->
 							<h5>Autoriza divulgação no plano de comunicação da Cidade contendo a lista de blocos oficiais do Carnaval de Rua 2020?*</h5>
 							<ul>
-								<li><input id="divulgacao-sim" type="radio" v-model.number="desfile.autoriza_divulgacao" value="1"><label class="create__label" for="divulgacao-sim">Sim</label></li>
-								<li><input id="divulgacao-nao" type="radio" v-model.number="desfile.autoriza_divulgacao" value="0"><label class="create__label" for="divulgacao-nao">Não</label></li>
+								<li><input disabled id="divulgacao-sim" type="radio" v-model.number="desfile.autoriza_divulgacao" value="1"><label class="create__label" for="divulgacao-sim">Sim</label></li>
+								<li><input disabled id="divulgacao-nao" type="radio" v-model.number="desfile.autoriza_divulgacao" value="0"><label class="create__label" for="divulgacao-nao">Não</label></li>
 							</ul>
 						</div>
 						<!-- FIM autoriza_divulgacao -->
 
 						<!-- resenha -->
 						<label class="create__label" for="resenha">Resenha (até 1000 carac.)*</label>
-						<textarea
+						<textarea disabled
 							placeholder="Conte-nos sobre sua proposta artística musical para nos ajudar a divulgar melhor seu trabalho"
 							type="text"
 							name="resenha"
@@ -1069,14 +1081,13 @@
 					</section>
 					<!-- FIM comunicacao -->
 
-					<section ref="regras">
+					<!-- <section ref="regras">
 						<a :href="guiaDeRegrasURL" target="_blank" id="guiaDownload">
 							<i class="icon-pdf icon"><span>pdf</span></i>
 							<span class="titulo" indent="1">Guia de Regras 2020</span>
 						</a>
-						<!-- aceite_das_regras -->
 						<fieldset id="aceite">
-							<input
+							<input disabled
 								type="checkbox"
 								id="aceite_das_regras"
 								name="aceite_das_regras"
@@ -1085,9 +1096,38 @@
 								v-model.number="desfile.aceite_das_regras">
 							<label class="create__label" for="aceite_das_regras">Li e concordo com o conteúdo do Guia de Regras 2020.</label>
 						</fieldset>
-						<!-- aceite_das_regras -->
-					</section>
+					</section> -->
 					<!-- FIM regras -->
+
+					<!-- confirmado SET CUSTOM ERROR -->
+					<hr>
+						<div class="custom-errors"
+							:class="{ erro: custom_errors.has('confirmado') }">
+							<!-- !!! destacar este item -->
+							<h5><strong>Todos</strong> os dados do desfile estão corretos?*</h5>
+							<ul>
+								<li><input id="confirmado-sim" type="radio" v-model.number="dados_corretos" value="1"><label class="create__label" for="confirmado-sim">Sim</label></li>
+								<li><input id="confirmado-nao" type="radio" v-model.number="dados_corretos" value="0"><label class="create__label" for="confirmado-nao">Não</label></li>
+							</ul>
+						</div>
+
+						<fieldset>
+							<label v-if="!dados_corretos" class="create__label" for="observacoes">Observações / correções (até 2000 caracteres)*</label>
+							<textarea
+								placeholder="ex. Tem interesse em receber contato de empresas interessadas em patrocinar o bloco - SIM."
+								id="observacoes"
+								v-if="!dados_corretos"
+								type="text"
+								name="observacoes"
+								v-validate="'required'"
+								:class="{ erro: errors.has('observacoes') }"
+								class="create__input"
+								v-model="desfile.observacoes"
+							></textarea>
+							<span v-if="errors.first('observacoes')" class="errorPointer">{{ errors.first('observacoes') }}</span>
+						</fieldset>
+
+						<!-- FIM confirmado -->
 
 					<div v-if="allErrors.length" class="errors-list">
 						<p>{{allErrors.length}} erros no formulário. Corrija os seguintes campos:</p>
@@ -1098,22 +1138,14 @@
 					</div>
 
 					<nav>
-						<button class="enviar" @click.prevent="criar">Enviar</button>
+						<button class="enviar" @click.prevent="criar">Confirmar</button>
 					</nav>
 					<!-- <p>{{ fetch.mensagem }}</p> -->
 				</form>
 
 				<template v-if="fimForm">
-					<div class="fim sucesso" v-if="!fetch.fazendo && fetch.sucesso">
-						<h3>Suas respostas foram enviadas!</h3>
-
-						<p>Esta inscrição não significa que o desfile desse bloco no Carnaval de Rua 2020 está garantida. A organização entrará em contato por e-mail para continuar o processo de cadastramento.</p>
-
-						<button @click="criarOutro">
-							<i class="icon-adicionar icon"><span>Criar outro</span></i>
-							Criar outro desfile
-						</button>
-
+					<div class="fim sucesso" @click="fimForm != fimForm" v-if="!fetch.fazendo && fetch.sucesso">
+						<h3>Desfile confirmado!</h3>
 					</div>
 					<div class="fim erro" v-if="!fetch.fazendo && !fetch.sucesso">
 						<h3>Ocorreu um erro ao enviar suas respostas.</h3>
@@ -1135,10 +1167,11 @@
 						</ul>
 					</div>
 				</template>
-			</div>
+			</div>			
 		<!-- </template> -->
 	</div>
 </template>
+
 <script>
 import axios from 'axios'
 import fechadura from '@spurb/fechadura'
@@ -1187,10 +1220,7 @@ export default {
 	},
 
 	mounted: function () {
-		// Ajuste pontual no logo superior do participe
-		// window.settimeout(function(){
-		document.getElementsByTagName('h1')[0].innerHTML = ''
-		// }, 1000)
+		document.getElementsByTagName('h1')[0].innerHTML = ''		
 	},
 
 	created () {
@@ -1214,6 +1244,7 @@ export default {
 	data () {
 		return {
 			componentKey: 0,
+			dados_corretos: 1,
 			guiaDeRegrasURL: 'https://carnavalderua.prefeitura.sp.gov.br/wp-content/uploads/2019/09/Carnaval-2020-Guia-de-Regras.pdf',
 			titulosLimpo: [],
 			// comments_atrr: undefined,
@@ -1330,13 +1361,24 @@ export default {
 				patrocinio: '',
 				plano_de_operacao: '',
 				resenha: '',
-				trio_eletrico: ''
+				trio_eletrico: '',
+				confirmado: 0
 			}
 		}
 	},
 	mixins: [ consultasCommons ],
 
 	methods: {
+		imprimeMapa () {			
+			var canvas = document.getElementsByClassName("ol-unselectable")[0]
+			var img = canvas.toDataURL("image/png")
+
+			document.getElementById('mapDiv').innerHTML = '<img crossorigin="anonymous" src="'+img+'"/>'
+			window.setTimeout(function() { 
+				window.print()
+			}, 500)
+		},
+
 		criarOutro () {
 			for (const key in this.desfile) {
 				if (key !== 'sentido_ab' || key !== 'sentido_ab') { this.desfile[key] = '' }
@@ -1402,40 +1444,10 @@ export default {
 							})
 							.then(idContato => {
 								// 1.1 Cria contato
-								if (idContato === 0) {
-									axios.post(apiconfig.base + '/contato/', this.contato, config)
-										.then(res => parseInt(res.data)) // id contato criado
-										.then(idContato => {
-										// 2. Cria desfile com id de contato
-											this.desfile.id_contato = idContato
-											axios.post(apiconfig.base + '/desfile/', this.desfile, config)
-												.then(res => {
-												// 3. criar feedback para usuário (defile criado)
-													console.log('desfile criado')
-													this.fimForm = true
-													this.fetch.sucesso = true
-													this.fetch.mensagem = res.statusText
-													this.fetch.fazendo = false
-												})
-												.catch(err => {
-												// 3. console.log('criar feedback para usuário (contato criado, desfile não foi criado)')
-													console.log('criar feedback para usuário (contato criado, desfile não foi criado)')
-													console.log(err)
-													this.fetch.sucesso = false
-													this.fetch.mensagem = 'Falha para criar desfile.'
-													this.fetch.fazendo = false
-												})
-										})
-										.catch(err => {
-										// 3. criar feedback para usuário (contato não foi criado)
-											console.log(err)
-											this.fetch.sucesso = false
-											this.fetch.mensagem = 'Falha para criar contato.'
-											this.fetch.fazendo = false
-										})
-								} else {
+								if (idContato !== 0) {
 									// 2. Cria desfile com id de contato
 									this.desfile.id_contato = idContato
+									this.desfile.confirmado = 1 // confirma bloco
 									console.log(config);
 									axios.put(apiconfig.base + '/desfile/' + this.desfile.id, this.desfile, config)
 										.then(res => {

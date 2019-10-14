@@ -2,7 +2,24 @@
 	<div class="Imagem">
 		<figure :class="dados.tipo">
 			<div class="imgWrap" :class="{ errata: dados.errata }" :id-erro="dados.id">
-				<img :src="dados.url" :alt="dados.caption" :title="dados.titulo">
+				<img
+					v-if="!isIE"
+					v-observe-visibility="{
+						callback: (isVisible, entry) => visibilityChanged(isVisible, entry, dados.url),
+						once: true
+					}"
+					:class="{ visible:isVisible }"
+					:src="src"
+					:alt="dados.caption" 
+					:title="dados.titulo"
+				>
+				<img
+					v-if="isIE"
+					class="visible"
+					:src="dados.url"
+					:alt="dados.caption"
+					:title="dados.titulo"
+				>
 				<a :href="dados.url" target="_blank"><i class="icon-acessar_url icon"></i></a>
 			</div>
 			<figcaption v-if="dados.caption">
@@ -28,8 +45,17 @@
 </template>
 
 <script>
+import { fallbacks } from '@/mixins/fallbacks'
+
 export default {
 	name: 'Imagem',
+	mixins: [ fallbacks ],
+	data () {
+		return {
+			isVisible: false,
+			src: `${this.$store.getters.basePath}arquivos/img/placeholder_1w.png`
+		}
+	},
 	props: {
 		dados: {
 			type: Object,
@@ -56,6 +82,10 @@ export default {
 		}
 	},
 	methods: {
+		visibilityChanged (isVisible, entry, src) {
+			this.isVisible = isVisible
+			if (isVisible) this.src = src
+		},
 		montaLink () {
 			if (this.$props.dados.externo && this.$props.dados.externo !== '' && this.$props.dados.externo !== ' ') {
 				let app = this
@@ -84,7 +114,16 @@ export default {
 	color: #FFF;
 }
 
-div.Imagem {
+.imgWrap img {
+	opacity: 0;
+	&.visible {
+		opacity: 1;
+		transition-delay: 800;
+		transition: opacity 0.5s ease;
+	}
+}
+
+.Imagem {
 	.errata {
 		position: relative;
 		cursor: pointer;
@@ -499,6 +538,6 @@ div.Imagem {
 			}
 		}
 	}
-	&.link div { cursor: pointer; }
+	&.link div { cursor: pointer }
 }
 </style>

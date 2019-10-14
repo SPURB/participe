@@ -1,15 +1,23 @@
 <template>
-	<div class="Galeria" :class="{ print: toPrint }" :style="{maxWidth: gallery_attrs.width + 'px'}">
+	<div 
+		class="Galeria"
+		:class="{ print: toPrint }"
+		:style="{maxWidth: gallery_attrs.width + 'px'}"
+		v-observe-visibility="{
+			callback: (isVisible, entry) => visibilityChanged(isVisible, entry),
+			once: true
+		}"
+		>
 		<div class="gall" v-if="!toPrint" :style="{maxWidth: gallery_attrs.width + 'px'}">
-			<template v-for="image in gallery_attrs.images">
-				<figure class="item" v-show="image.state">
+			<template v-for="(image, index) in gallery_attrs.images">
+				<figure class="item" v-show="image.state" :key="index">
 					<h3 v-if="image.icon">
 						<img :src="image.icon" :class="{ legenda: gallery_attrs.legendas }">
 						<span :class="{ noIcon:!image.icon }">{{ image.title }}</span>
 					</h3>
 					<h2 v-if="gallery_attrs.galleryTitle">{{ gallery_attrs.galleryTitle }}</h2>
 					<div class="placeholder" v-if="loading" :style="{ maxWidth: gallery_attrs.width + 'px'}" ></div>
-					<img :src="image.url" :width="gallery_attrs.width">
+					<img v-if="loadImages" :src="image.url" :width="gallery_attrs.width">
 					<p class="legenda" v-if="image.legenda"> {{ image.legenda }} </p>
 				</figure>
 			</template>
@@ -60,21 +68,32 @@
 	</div>
 </template>
 <script>
+import { fallbacks } from '@/mixins/fallbacks'
+
 export default {
 	name: 'Galeria',
+	mixins: [ fallbacks ],
 	data () {
 		return {
-			loading: true
+			loading: true,
+			isVisible: false
 		}
 	},
 	props: ['gallery_attrs'],
 	computed: {
 		isFirst () { return this.gallery_attrs.images[0].state },
 		isLast () { return this.gallery_attrs.images[this.gallery_attrs.images.length - 1].state },
-		toPrint () { return this.$store.state.toPrint }
+		toPrint () { return this.$store.state.toPrint },
+		loadImages () {
+			if (!this.isIE && this.isVisible) return true
+			else if (this.isIE) return true
+			else return false
+		}
 	},
-	mounted () {},
 	methods: {
+		visibilityChanged (isVisible, entry) {
+			this.isVisible = isVisible
+		},
 		numberClicked (number) {
 			let app = this
 			app.gallery_attrs.images.map(function (index, elem) {

@@ -4,10 +4,25 @@
 			<button class="prev" @click="prev(data.layers)" :disabled="state == 0" v-if="data.tipo == 'sequencial'">
 				<i class="icon-seta_esquerda icon"><span>seta_esquerda</span></i>
 			</button>
-			<div class="cont" ref="layerStack">
-				<div class="layer" v-if="data.tipo == 'multi'" v-observe-visibility="{ callback: visibilityChanged, once: true }" :style="{ paddingTop: (data.mapH / data.mapW) * 100 + '%', width: '100%', height: '0' }" :data-image-path="data.base.path"></div>
-				<div class="layer" v-for="layer in data.layers" :class="{ visible: data.tipo == 'sequencial' && data.layers.indexOf(layer) === state }" v-observe-visibility="{ callback: visibilityChanged, once: true }" :style="{ paddingTop: (data.mapH / data.mapW) * 100 + '%', width: '100%', height: '0' }" :data-image-path="layer.path"></div>
+			<div  v-if="!isIE" class="cont" ref="layerStack">
+				<div class="layer" v-if="data.tipo === 'multi'" v-observe-visibility="{ callback: visibilityChanged, once: true }" :style="{ paddingTop: (data.mapH / data.mapW) * 100 + '%', width: '100%', height: '0' }" :data-image-path="data.base.path"></div>
+				<div
+					class="layer" 
+					v-for="(layer, index) in data.layers"
+					:class="{ visible: data.tipo == 'sequencial' && data.layers.indexOf(layer) === state }"
+					v-observe-visibility="{
+						callback: visibilityChanged,
+						once: true
+					}"
+					:style="{ paddingTop: (data.mapH / data.mapW) * 100 + '%', width: '100%', height: '0' }"
+					:data-image-path="layer.path"
+					:key="index"></div>
 			</div>
+			<div v-if="isIE" class="cont" ref="layerStack">
+				<img v-if="data.tipo == 'multi'" :src="src(data.base.path)" class="base">
+				<img v-for="layer in data.layers" class="layer" :class="{ visible: data.tipo == 'sequencial' && data.layers.indexOf(layer) === state }" :src="src(layer.path)" alt="">
+			</div>
+
 			<button class="next" @click="next(data.layers)" :disabled="state == data.layers.length - 1" v-if="data.tipo == 'sequencial'">
 				<i class="icon-seta_direita icon"><span>seta_direita</span></i>
 			</button>
@@ -57,7 +72,7 @@
 			</template>
 			<template v-if="data.tipo == 'sequencial'">
 				<ul class="steps">
-					<li v-for="(layer, index) in data.layers" :id="cssId(data.cssBaseId, data.layers, layer)" :class="{ visible: state == index }">
+					<li v-for="(layer, index) in data.layers" :id="cssId(data.cssBaseId, data.layers, layer)" :class="{ visible: state == index }" :key="index">
 						<div class="layerCont">
 							<h3>{{layer.titulo}}</h3>
 							<ul v-for="group in layer.legendas" class="legendaLayer">
@@ -91,8 +106,11 @@
 	</div>
 </template>
 <script>
+import { fallbacks } from '@/mixins/fallbacks'
+
 export default {
 	name: 'LayerExplorer',
+	mixins: [ fallbacks ],
 	data () {
 		return {
 			state: 0
@@ -132,7 +150,6 @@ export default {
 		toPrint () { return this.$store.state.toPrint },
 		basePath () { return this.$store.getters.basePath }
 	},
-	mounted () {},
 	methods: {
 		src (path) {
 			let short = path.slice(0, path.indexOf('.'))
@@ -176,7 +193,7 @@ export default {
 		visibilityChanged (isVisible, entry) {
 			this.isVisible = isVisible
 			let path = this.src(entry.target.getAttribute('data-image-path'))
-			if (entry.isIntersecting) {
+			if (isVisible) {
 				entry.target.style.backgroundImage = 'url("' + path + '")'
 			}
 		}

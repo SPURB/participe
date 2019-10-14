@@ -10,7 +10,7 @@
 
 		<section>
 			<h2 class="titulo" indent="1">Apresentação</h2>
-			<p>Devido a sua localização estratégica e por ser o um dos principais eixos de ligação leste-oeste da cidade, ao longo dos anos, o território da planície fluvial do Rio Tietê tem sido recorrentemente objeto de leitura, análise e proposição pela Prefeitura do Município de São Paulo, como os estudos das Operações Urbanas Diagonal Sul, Diagonal Norte e Carandiru-Vila Maria, Lapa- Brás apoiados nas diretrizes do antigo Plano Diretor Estratégico (Lei Municipal n°13.430/2002) e da Operação Urbana Consorciada Água Branca aprovada pela Lei n° 15.893/2013. Mais recentemente, os conceitos oriundos dos diferentes estudos desenvolvidos contribuíram para a elaboração do chamamento público para elaboração e apresentação de estudos de transformação urbana do Arco Tietê, correspondente ao Processo de Manifestação de Interesse Arco Tietê (PMI Arco Tietê), realizado pela Secretaria de Desenvolvimento Urbano (SMDU), em 2013.</p>
+			<p>Devido à sua localização estratégica e por ser o um dos principais eixos de ligação leste-oeste da cidade, ao longo dos anos, o território da planície fluvial do Rio Tietê tem sido recorrentemente objeto de leitura, análise e proposição pela Prefeitura do Município de São Paulo, apoiados nas diretrizes do antigo Plano Diretor Estratégico (Lei Municipal n°13.430/2002) como a Operação Urbana Consorciada Água Branca aprovada pela Lei n° 15.893/2013. Mais recentemente, os conceitos oriundos dos diferentes estudos desenvolvidos contribuíram para a elaboração do chamamento público para elaboração e apresentação de estudos de transformação urbana do Arco Tietê, correspondente ao Processo de Manifestação de Interesse Arco Tietê (PMI Arco Tietê), realizado pela Secretaria de Desenvolvimento Urbano (SMDU), em 2013.</p>
 			<p>A compreensão da necessidade de intervenções neste território é ratificada pelo atual Plano Diretor Estratégico, Lei Municipal nº 16.050/2014 (PDE) ao definir o perímetro do Subsetor Arco Tietê (ACT), do Setor Orla Ferroviária e Fluvial da Macroárea de Estruturação Metropolitana (MEM), que abrange integralmente a várzea do Rio Tietê, desde Pirituba até Vila Maria a norte e, a sul, da Lapa até o Belém.</p>
 			<Imagem :dados="{
 				tipo: 'mapa',
@@ -121,7 +121,7 @@
 				<section>
 					<h3 class="titulo" indent="2">Atualização do perímetro e Setores de Intervenção</h3>
 					<p>Como resposta à complexidade de situações e dinâmicas emergentes do território, a nova área de em estudo respeita os projetos e planos colocalizados, cujas abordagens são direcionadas às questões de trechos específicos do Arco Tietê. Assim, foram subtraídos os perímetros da OUC Água Branca e PIU Setor Central, resultando em nova área de estudo de 3.594ha, incidindo de oeste a leste sobre 7 Subprefeituras – Lapa, Pirituba-Jaraguá, Freguesia do Ó-Brasilândia, Casa Verde-Limão, Santana-Tucuruvi, Vila Guilherme-Vila Maria e Moóca.</p>
-					<p>Considerando os dados de diagnóstico e a necessidade de estabelecer um leque preliminar de diretrizes de desenvolvimento urbano para o Arco Tietê, foi desenvolvida metodologia para identificação dos <b>Setores de Intervenção</b>, recortes menores e considerados estratégicas para transformação e qualificação urbanística e ambiental. A definição dos Setores parte do desdobramento dos 4 eixos temáticos em <b>8 camadas de interpretação do território</b>, com o objetivo de sintetizar questões que emergiram no diagnóstico sócioterritorial e ambiental.</p>
+					<p>Considerando os dados de diagnóstico e a necessidade de estabelecer um leque preliminar de diretrizes de desenvolvimento urbano para o Arco Tietê, foi desenvolvida metodologia para identificação dos <b>Setores de Intervenção</b>, recortes menores e considerados estratégicos para transformação e qualificação urbanística e ambiental. A definição dos Setores parte do desdobramento dos 4 eixos temáticos em <b>8 camadas de interpretação do território</b>, com o objetivo de sintetizar questões que emergiram no diagnóstico sócioterritorial e ambiental.</p>
 					<p>A sobreposição e recorrência de temas e questões deu origem a <b>6 Setores de Intervenção</b>, áreas consideradas prioritárias para a indução da transformação e o equacionamento dos problemas e potencialidade do Arco Tietê – denominados aqui preliminarmente como Setores <b>Lapa</b>, <b>Limão</b>, <b>Santana</b>, <b>Vila Guilherme-Vila Maria</b>, <b>Jaguara</b> e <b>Belém</b>.</p>
 					<p>Cabe ressaltar que esses Setores não corresponderão, necessariamente, aos perímetros de intervenção futuros, que serão formulados nas próximas etapas do desenvolvimento do trabalho. Devem ser considerados como uma primeira aproximação para o dimensionamento da viabilidade da transformação, do adensamento futuro pretendido, e das diretrizes para o Programa de Interesse Público do Arco Tietê. Além disso, os Setores formam a base territorial para recepcionar os instrumentos de ordenamento e reestruturação urbana, previstos no Art. 134 do PDE.</p>
 					<p>Os Setores resultantes reforçam o foco de aplicação dos instrumentos urbanísticos nas áreas de urbanização incompleta, caracterizadas ao longo do diagnóstico como trechos com pouca infraestrutura urbana, ocupações extensivas e com baixo aproveitamento do solo, próximas ao leito menor do rio Tietê e seus afluentes. Os Setores coincidem também com os territórios classificados no diagnóstico como de base produtiva em transição e grandes glebas públicas, reforçando que o papel estratégico do PIU como ferramenta de organização das dinâmicas de transformação do uso e ocupação do solo na Macroárea de Estruturação Metropolitana.</p>
@@ -189,7 +189,7 @@
 						<li>Requalificação do patrimônio histórico ferroviário e industrial, permitindo-se melhores condições de inserção urbana e integração espacial com o entorno;</li>
 						<li>Busca pela aplicação de conceitos de sustentabilidade no planejamento e implementação das ações, considerando a interdependência de suas esferas econômica, social e ambiental.</li>
 					</ol>
-					<h4>Setores Lapa e Limão</h4>
+					<h4>Polo Oeste: Setores Lapa e Limão</h4>
 					<Mapa :mapa_attrs="mapa2"></Mapa>
 					<Imagem :dados="{
 						tipo: 'mapa',
@@ -240,7 +240,7 @@
 					</ol>
 					<h5>Setor Limão</h5>
 					<p>O Setor Limão faz divisa com a OUC Água Branca, abrigando seus perímetros de integração, onde estão previstas conexões entre as margens norte e sul do rio Tietê. Uma das principais transposições é uma ciclopassarela prevista para ser implantada nas proximidades da Ponte Julio de Mesquita Neto, ancorada nas proximidades do Centro de Tradições Nordestinas. Como continuidade deste eixo, ao longo do córrego Papaterra Limongi, estão localizados diversos terrenos vagos que compõem a oportunidade de transformação urbana com caráter ambiental. Outras conexões com as mesmas características, como o córrego Água Branca, junto à favela do Sapo, e o córrego Quirino dos Santos, podem promover a integração das margens do rio associada ao desenvolvimento urbano e à recuperação dos corpos d´água.</p>
-					<p>Trata-se do Setor com a maior concentração de habitações precárias e problemas de vulnerabilidade social do Arco, com famílias em favelas em diversos conjuntos habitacionais implantados a partir da década de 1990, alguns hoje degradados e carentes de espaços públicos e equipamentos de suporte. Do ponto de vista ambiental, é notável a presença de áreas sujeitas à inundação, principalmente ao longo dos antigos meandros do rio Tietê, onde hoje se encontram os conjuntos habitacionais Minas Gás e Trivelato, e ao longo do Córrego Papaterra Limongi. Já em relação à base produtiva, trata-se de um dos poucos locais do Arco onde a indústria da transformação ainda apresenta inúmeros estabelecimento e empregos.</p>
+					<p>Trata-se do Setor com a maior concentração de habitações precárias e problemas de vulnerabilidade social do Arco, com diversas famílias vivendo em favelas e em conjuntos habitacionais implantados a partir da década de 1990, alguns hoje degradados e carentes de espaços públicos e equipamentos de suporte. Do ponto de vista ambiental, é notável a presença de áreas sujeitas à inundação, principalmente ao longo dos antigos meandros do rio Tietê, onde hoje se encontram os conjuntos habitacionais Minas Gás e Trivelato, e ao longo do Córrego Papaterra Limongi. Já em relação à base produtiva, trata-se de um dos poucos locais do Arco onde a indústria da transformação ainda apresenta inúmeros estabelecimento e empregos.</p>
 					<p>O balanço entre precariedade habitacional e oferta de ZEIS próximas à infraestrutura urbana aponta para um importante papel que pode cumprir o Setor no enfrentamento das questões habitacionais. Tal diretriz deve estar associada às ancoragens e eventuais prolongamentos dos eixos de desenvolvimento urbano previstos pela OUC Água Branca. Devem ser abordados, ainda, os problemas de alagamentos, a forte presença do emprego industrial e a importância do Centro de Tradições Nordestinas como principal equipamento do Setor.</p>
 					<p><b>Diretrizes urbanísticas específicas</b></p>
 					<ol class="romanos">
@@ -250,7 +250,7 @@
 						<li>Realizar intervenção integrada em assentamentos precários e promover Habitação de Interesse Social nas áreas públicas e ZEIS disponíveis, tendo em vista a presença da precariedade habitacional no Setor;</li>
 						<li>Considerar a presença do emprego industrial no Setor, notadamente na indústria química, coibindo o desenvolvimento imobiliário em determinadas áreas onde os estabelecimentos industriais ainda estão ativos;</li>
 					</ol>
-					<h4>Setores Santana e Vila Guilherme-Vila Maria</h4>
+					<h4>Polo Nordeste: Setores Santana e Vila Guilherme-Vila Maria</h4>
 					<Mapa :mapa_attrs="mapa3"></Mapa>
 					<Imagem :dados="{
 						tipo: 'mapa',
@@ -349,7 +349,7 @@
 						url: imgSrc('arquivos/arco-tiete/img/13.jpg'),
 						caption: 'Área útil realizada e estimada (m²)'
 					}"></Imagem>
-					<p>A produção imobiliária pode ser subdividida no território do Arco Tietê segundo subprefeituras e, para cada uma delas, repartindo a seção de dentro e de fora dos seis Setores definidos anteriormente. Observa-se que a subprefeitura da Lapa apresentou o maior volume de lançamentos por metro quadrado de área útil entre os anos de 2000 e 2017, 38,1%, sendo 23,4% fora dos limites do Setor 01 e 14,7% dentro dele. Em seguida, a produção imobiliária é bem distribuída entre as subprefeituras ao norte do Rio Tietê, Casa Verde-Cachoeirinha (17,4%), Vila Maria-Vila Guilherme (14,7%), Pirituba-Jaraguá (13,6%) e Santana-Tucuruvi (13,4%). Ao todo 64,9% do volume de lançamentos ocorreu fora do perímetro assinalado dos Setores, confirmando a atuação do mercado em áreas mais consolidadas que oferecem maiores elementos de urbanidade para famílias e firmas, situadas essas na franja do PIU Arco Tietê.</p>					
+					<p>A produção imobiliária pode ser subdividida no território do Arco Tietê segundo subprefeituras e, para cada uma delas, repartindo a seção de dentro e de fora dos seis Setores definidos anteriormente. Observa-se que a subprefeitura da Lapa apresentou o maior volume de lançamentos por metro quadrado de área útil entre os anos de 2000 e 2017, 38,1%, sendo 23,4% fora dos limites do Setor 01 e 14,7% dentro dele. Em seguida, a produção imobiliária é bem distribuída entre as subprefeituras ao norte do Rio Tietê, Casa Verde-Cachoeirinha (17,4%), Vila Maria-Vila Guilherme (14,7%), Pirituba-Jaraguá (13,6%) e Santana-Tucuruvi (13,4%). Ao todo 64,9% do volume de lançamentos ocorreu fora do perímetro assinalado dos Setores, confirmando a atuação do mercado em áreas mais consolidadas que oferecem maiores elementos de urbanidade para famílias e firmas, situadas essas na franja do PIU Arco Tietê.</p>
 					<div class="tabela">
 						<table>
 							<tr>
@@ -812,14 +812,14 @@ export default {
 						title: 'OUCAB',
 						path: this.$store.getters.basePath + 'arquivos/arco-tiete/kml/oucab.kml',
 						stroke_color: 'rgba(0, 0, 0, 0.2)',
-						fill_color: 'rgba(247, 148, 30, .5)',
+						fill_color: 'rgba(119, 119, 119, .75)',
 						stroke_width: 1
 					},
 					{
 						title: 'PIU Anhembi',
 						path: this.$store.getters.basePath + 'arquivos/arco-tiete/kml/piu-anhembi.kml',
 						stroke_color: 'rgba(0, 0, 0, 0.2)',
-						fill_color: 'rgba(119, 119, 119, .75)',
+						fill_color: 'rgba(247, 148, 30, .5)',
 						stroke_width: 1
 					},
 					{
@@ -833,7 +833,7 @@ export default {
 			},
 			mapa2: {
 				id: 'mapa2',
-				center: [ -5197700, -2694000 ],
+				center: [ -5197200, -2694800 ],
 				zoom: 14,
 				layers: [
 					{
@@ -849,13 +849,20 @@ export default {
 						stroke_color: 'rgba(0, 0, 0, .5)',
 						fill_color: 'rgba(255, 217, 179, .5)',
 						stroke_width: 2
+					},
+					{
+						title: 'Operação Urbana Consorciada Água Branca',
+						path: this.$store.getters.basePath + 'arquivos/arco-tiete/kml/oucab.kml',
+						stroke_color: 'rgba(0, 0, 0, 0.5)',
+						fill_color: '#b5b5b5',
+						stroke_width: 2
 					}
 				]
 			},
 			mapa3: {
 				id: 'mapa3',
-				center: [ -5189500, -2694000 ],
-				zoom: 14,
+				center: [ -5190000, -2696000 ],
+				zoom: 13,
 				layers: [
 					{
 						title: 'Setor 3 - Santana',
@@ -870,6 +877,13 @@ export default {
 						stroke_color: 'rgba(0, 0, 0, .5)',
 						fill_color: 'rgba(255, 217, 179, .5)',
 						stroke_width: 2
+					},
+					{
+						title: 'PIU Setor Central',
+						path: this.$store.getters.basePath + 'arquivos/arco-tiete/kml/piu-setor-central.kml',
+						stroke_color: 'rgba(0, 0, 0, 0.5)',
+						fill_color: '#b5b5b5',
+						stroke_width: 1
 					}
 				]
 			},
@@ -956,7 +970,7 @@ export default {
 						'Obs': 'Projeto em curso'
 					}
 				}, {
-					titulo: 'Resolução da Câmara Técnica De Legislação Urbanística (CTLU)',
+					titulo: 'Resolução da Câmara Técnica de Legislação Urbanística (CTLU)',
 					path: 'arquivos/arco-tiete/img/4-5.png',
 					legendas: [
 						[
@@ -966,7 +980,7 @@ export default {
 						]
 					],
 					textos: {
-						'Descrição': 'Trata-se de deliberação da Câmara Técnica de Legislação Urbanística (CTLU) favoravelmente à aplicação do Coeficiente de Aproveitamento máximo igual a 4, dispensa de atendimento ao gabarito máximo de altura e fatores de planejamento igual a 2 para os usos residenciais e não residenciais para os lotes demarcados como ZEM e ZEMP contidos no perímetro do Arco Tietê , nos termos do  §1º, §2º e §3º do Art. 8º da Lei nº 16.402/ 2016; Para as ZEMP, os parâmetros e índices estabelecidos serão aplicados desde que atendidos o Art. 83 da Lei nº 16.050/2014, o qual é responsável por condicionar a liberação dos parâmetros em função da emissão da Ordem de Serviços das obras das infraestruturas do sistema de transporte previsto',
+						'Descrição': 'Trata-se de deliberação da Câmara Técnica de Legislação Urbanística (CTLU) favoravelmente à aplicação do Coeficiente de Aproveitamento máximo igual a 4, dispensa de atendimento ao gabarito máximo de altura e fatores de planejamento igual a 2 para os usos residenciais e não residenciais para os lotes demarcados como ZEM (Zonas Eixo de Estruturação da Transformação Metropolitana) e ZEMP (Zona Eixo de Estruturação da Transformação Metropolitana Previsto) contidos no perímetro do Arco Tietê , nos termos do  §1º, §2º e §3º do Art. 8º da Lei nº 16.402/ 2016; Para as ZEMP, os parâmetros e índices estabelecidos serão aplicados desde que atendidos o Art. 83 da Lei nº 16.050/2014, o qual é responsável por condicionar a liberação dos parâmetros em função da emissão da Ordem de Serviços das obras das infraestruturas do sistema de transporte previsto',
 						'Regulações': 'Resolução SMUL.AOC.CTLU/004/2018',
 						'Considerações para o PIU Arco Tietê': 'Retomar os estudos para as Áreas de Transformação, Qualificação e Preservação do PIU Arco Tietê, de forma a refinar os parâmetros que são fruto de análises detalhadas do território, em especial nos perímetros que recepcionarão os instrumentos urbanísticos'
 					}
@@ -996,7 +1010,7 @@ export default {
 						]
 					],
 					textos: {
-						'Descrição': 'Trata-se de seleção de empresas interessadas em participar do programa de Parceria Público-Privada para construção de Habitação de Interesse Social e Mercado Popular em São Paulo, por meio Edital de Concorrência Internacional nº 001/2018, lançado pela COHAB-SP/SEHAB.\nCada lote é composto por um conjunto de áreas públicas, para as quais é especificado um número mínimo de novas unidades habitacionais, prevendo-se a mistura de diversas faixas de renda, além de diretrizes urbanísticas e investimentos em equipamentos e infraestrutura pública.\nO Edital prevê que para cada Lote será realizada uma concessão administrativa pelo prazo de 20 anos à iniciativa privada, responsável pela implantação das unidades habitacionais, das infraestruturas e equipamentos públicos, dos usos não residenciais privados, bem como prestação de serviços de desenvolvimento de trabalho social, de pré e pós-ocupação, de apoio à gestão condominial, apoio a gestão da lista de beneficiários e de manutenção predial e de espaços livres e áreas verdes. O Edital também coloca a possibilidade da modelagem econômica das concessionárias considerarem receitas acessórias decorrentes da comercialização das unidades de HMP e HMC e da exploração das áreas não-residenciais privadas',
+						'Descrição': 'Trata-se de seleção de empresas interessadas em participar do programa de Parceria Público-Privada para construção de Habitação de Interesse Social e Mercado Popular em São Paulo, por meio Edital de Concorrência Internacional nº 001/2018, lançado pela COHAB-SP/SEHAB.\nCada lote é composto por um conjunto de áreas públicas, para as quais é especificado um número mínimo de novas unidades habitacionais, prevendo-se a mistura de diversas faixas de renda, além de diretrizes urbanísticas e investimentos em equipamentos e infraestrutura pública.\nO Edital prevê que para cada Lote será realizada uma concessão administrativa pelo prazo de 20 anos à iniciativa privada, responsável pela implantação das unidades habitacionais, das infraestruturas e equipamentos públicos, dos usos não residenciais privados, bem como prestação de serviços de desenvolvimento de trabalho social, de pré e pós-ocupação, de apoio à gestão condominial, apoio a gestão da lista de beneficiários e de manutenção predial e de espaços livres e áreas verdes. O Edital também coloca a possibilidade da modelagem econômica das concessionárias considerarem receitas acessórias decorrentes da comercialização de parte das unidades de HMP e HMC e da exploração das áreas não-residenciais privadas',
 						'Considerações para o PIU Arco Tietê': 'Revisar o Programa Habitacional do PIU Arco Tietê, considerando os imóveis incluídos na PPP de habitação'
 
 					}
@@ -1027,19 +1041,19 @@ export default {
 					legendas: [
 						[{
 							path: 'arquivos/arco-tiete/img/legenda/5-1-1.png',
-							descricao: 'Galeria/trecho de curso d\'água subterrâneo',
+							descricao: 'Galeria/trecho de curso d\'água subterrâneo'
 						}, {
 							path: 'arquivos/arco-tiete/img/legenda/5-1-2.png',
-							descricao: 'Manchas de inundação',
+							descricao: 'Manchas de inundação'
 						}, {
 							path: 'arquivos/arco-tiete/img/legenda/5-1-3.png',
-							descricao: 'Isoterma (31°C)',
+							descricao: 'Isoterma (31°C)'
 						}, {
 							path: 'arquivos/arco-tiete/img/legenda/5-1-4.png',
-							descricao: 'Parques Municipais e Estaduais',
+							descricao: 'Parques Municipais e Estaduais'
 						}, {
 							path: 'arquivos/arco-tiete/img/legenda/5-1-5.png',
-							descricao: 'Raio de influência de 1km de parques',
+							descricao: 'Raio de influência de 1km de parques'
 						}]
 					],
 					textos: {
@@ -1054,19 +1068,19 @@ export default {
 							titulo: 'Ações prioritárias no Sistema de Transporte Público Coletivo (PDE 2014)'
 						}, {
 							path: 'arquivos/arco-tiete/img/legenda/5-2-1.png',
-							descricao: 'Corredor municipal de ônibus existente',
+							descricao: 'Corredor municipal de ônibus existente'
 						}, {
 							path: 'arquivos/arco-tiete/img/legenda/5-2-2.png',
-							descricao: 'Corredor municipal de ônibus planejado (1ª etapa)',
+							descricao: 'Corredor municipal de ônibus planejado (1ª etapa)'
 						}, {
 							path: 'arquivos/arco-tiete/img/legenda/5-2-3.png',
-							descricao: 'Corredor municipal de ônibus planejado (2ª etapa)',
+							descricao: 'Corredor municipal de ônibus planejado (2ª etapa)'
 						}, {
 							path: 'arquivos/arco-tiete/img/legenda/5-2-4.png',
-							descricao: 'Linha Metroviária planejada (1ª etapa)',
+							descricao: 'Linha Metroviária planejada (1ª etapa)'
 						}, {
 							path: 'arquivos/arco-tiete/img/legenda/5-2-5.png',
-							descricao: 'Linha Metroviária planejada (2ª etapa)',
+							descricao: 'Linha Metroviária planejada (2ª etapa)'
 						}],
 						[{
 							titulo: 'Volume de veículos da hora-pico da manhã'
@@ -1088,28 +1102,28 @@ export default {
 							titulo: 'Uso do solo (IPTU 2018)'
 						}, {
 							path: 'arquivos/arco-tiete/img/legenda/5-3-1.png',
-							descricao: 'Oficina/barracão/telheiro/armazém',
+							descricao: 'Oficina/barracão/telheiro/armazém'
 						}, {
 							path: 'arquivos/arco-tiete/img/legenda/5-3-2.png',
-							descricao: 'Comercial horizontal',
+							descricao: 'Comercial horizontal'
 						}, {
 							path: 'arquivos/arco-tiete/img/legenda/5-3-3.png',
-							descricao: 'Comercial vertical',
+							descricao: 'Comercial vertical'
 						}, {
 							path: 'arquivos/arco-tiete/img/legenda/5-3-4.png',
-							descricao: 'Indústria',
+							descricao: 'Indústria'
 						}, {
 							path: 'arquivos/arco-tiete/img/legenda/5-3-5.png',
-							descricao: 'Residencial horizontal',
+							descricao: 'Residencial horizontal'
 						}, {
 							path: 'arquivos/arco-tiete/img/legenda/5-3-6.png',
-							descricao: 'Residencial vertical',
+							descricao: 'Residencial vertical'
 						}, {
 							path: 'arquivos/arco-tiete/img/legenda/5-3-7.png',
-							descricao: 'Templo/clube/ginásio ou estádio',
+							descricao: 'Templo/clube/ginásio ou estádio'
 						}, {
 							path: 'arquivos/arco-tiete/img/legenda/5-3-8.png',
-							descricao: 'Terreno',
+							descricao: 'Terreno'
 						}],
 						[{
 							path: 'arquivos/arco-tiete/img/legenda/5-3-9.png',
@@ -1126,16 +1140,16 @@ export default {
 					legendas: [
 						[{
 							path: 'arquivos/arco-tiete/img/legenda/5-4-1.png',
-							descricao: 'Edificações',
+							descricao: 'Edificações'
 						}, {
 							path: 'arquivos/arco-tiete/img/legenda/5-4-2.png',
-							descricao: 'Conjunto habitacional',
+							descricao: 'Conjunto habitacional'
 						}, {
 							path: 'arquivos/arco-tiete/img/legenda/5-4-3.png',
-							descricao: 'Favela',
+							descricao: 'Favela'
 						}, {
 							path: 'arquivos/arco-tiete/img/legenda/5-4-4.png',
-							descricao: 'Núcleo',
+							descricao: 'Núcleo'
 						}],
 						[{
 							titulo: 'Perímetro das zonas (LPUOS)'
@@ -1168,19 +1182,20 @@ export default {
 				mapW: 1900,
 				mapH: 1125,
 				base: {
-					path: 'arquivos/arco-tiete/img/7-0.png',
+					path: 'arquivos/arco-tiete/img/7-base.png',
 					legendas: [
 						{ path: 'arquivos/arco-tiete/img/legenda/7-0-1.png', descricao: 'Projetos colocalizados' },
 						{ path: 'arquivos/arco-tiete/img/legenda/4-0-3.png', descricao: 'Hidrografia' },
 						{ path: 'arquivos/arco-tiete/img/legenda/4-0-5.png', descricao: 'Ferrovia' },
-						{ path: 'arquivos/arco-tiete/img/legenda/4-0-6.png', descricao: 'Linha Metrô' },
-						{ path: 'arquivos/arco-tiete/img/legenda/4-0-4.png', descricao: 'Lotes consolidados' }
+						{ path: 'arquivos/arco-tiete/img/legenda/4-0-6.png', descricao: 'Linha Metrô' }
 					]
 				},
 				layers: [{
-					titulo: 'Áreas transformáveis',
+					titulo: 'Áreas transformáveis e consolidadas',
 					path: 'arquivos/arco-tiete/img/7-0.png',
-					legendas: [],
+					legendas: [
+						[{ path: 'arquivos/arco-tiete/img/legenda/4-0-4.png', descricao: 'Lotes consolidados' }]
+					],
 					textos: {
 						1: 'As áreas transformáveis, ou seja, lotes e glebas que apresentem maior probabilidade e viabilidade de transformação pelas suas características morfológicas, tipológicas e usos existentes se revelam a partir da identificação do seu inverso, ou seja, das áreas e usos considerados consolidados. A base de dados utilizada foi formada a partir do cruzamento das informações do Imposto Predial e Territorial Urbano (IPTU) de 2018 e da estrutura fundiária disponibilizada na plataforma Geosampa (Julho/2019), contando com informações e geometrias atualizadas pela própria SP-Urbanismo.',
 						2: 'Foram considerados como consolidados os seguintes lotes e glebas: Usos residenciais, comerciais, serviços e uso misto verticais, comércio e serviços horizontais significativos; Equipamentos, usos especiais e usos coletivos correspondentes às escolas, hotéis, hospitais, cartórios, cinemas, teatros, clubes, templos, entre outros; Edifícios nos quais incidem tombamentos e regramentos específicos dos órgãos de patrimônio; Lotes com indicativo de incorporação imobiliária em curso; Lotes com área inferior a 500m.'
@@ -1358,6 +1373,7 @@ p.e { background: $vermelho-tr; padding: 2rem }
 	}
 	@media (max-width: 600px) {
 		.tabela {
+			min-width: unset;
 			max-width: calc(100% - 2rem);
 			padding: 0;
 		}

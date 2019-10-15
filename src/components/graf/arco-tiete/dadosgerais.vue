@@ -58,7 +58,7 @@
 					<p class="g-pstyle4">Estimada a partir de dados do IBGE 2010</p>
 					<p>&nbsp;</p>
 					<p class="g-pstyle5"><span class="g-cstyle0">217.055</span> habitantes</p>
-					<p class="g-pstyle6"><span class="g-cstyle1">2%</span><span class="g-cstyle2"> </span>da população do Município de São Paulo</p>
+					<p class="g-pstyle6"><span class="g-cstyle1">2%</span><span class="g-cstyle2"> </span>da população do Município</p>
 				</div>
 				<div id="g-ai0-17" class="g-Camada_1 g-aiAbs" style="top:20.7544%;left:0.8853%;width:98.125%;">
 					<p class="g-pstyle0">Densidade populacional média</p>
@@ -404,7 +404,7 @@
 					<p class="g-pstyle4">Estimada a partir de dados do IBGE 2010</p>
 					<p>&nbsp;</p>
 					<p class="g-pstyle5"><span class="g-cstyle0">217.055</span> habitantes</p>
-					<p class="g-pstyle6"><span class="g-cstyle1">2%</span><span class="g-cstyle2"> </span>da população do Município de São Paulo</p>
+					<p class="g-pstyle6"><span class="g-cstyle1">2%</span><span class="g-cstyle2"> </span>da população do Município</p>
 				</div>
 				<div id="g-ai0-16" class="g-Camada_1 g-aiAbs" style="top:26.4751%;left:51.2464%;width:45.7143%;">
 					<p class="g-pstyle0">Densidade populacional média</p>
@@ -584,7 +584,7 @@
 					<p class="g-pstyle20">pessoais</p>
 					<p class="g-pstyle29">7,5%</p>
 				</div>
-				<div id="g-ai0-64" class="g-Camada_1 g-aiAbs" style="top:74.4971%;right:32.3575%;width:16.4286%;">
+				<div id="g-ai0-64" class="g-Camada_1 g-aiAbs" style="top:74.4971%;right:32%;width:18%;">
 					<p class="g-pstyle30">Índice de Área Verde</p>
 					<p class="g-pstyle31">m&sup2;/habitante</p>
 				</div>

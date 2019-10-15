@@ -4,7 +4,7 @@
 			<button class="prev" @click="prev(data.layers)" :disabled="state == 0" v-if="data.tipo == 'sequencial'">
 				<i class="icon-seta_esquerda icon"><span>seta_esquerda</span></i>
 			</button>
-			<div  v-if="!isIE" class="cont" ref="layerStack">
+			<div v-if="!isIE" class="cont" ref="layerStack">
 				<div class="layer" v-if="data.tipo === 'multi'" v-observe-visibility="{ callback: visibilityChanged, once: true }" :style="{ paddingTop: (data.mapH / data.mapW) * 100 + '%', width: '100%', height: '0' }" :data-image-path="data.base.path"></div>
 				<div
 					class="layer" 
@@ -22,7 +22,6 @@
 				<img v-if="data.tipo == 'multi'" :src="src(data.base.path)" class="base">
 				<img v-for="layer in data.layers" class="layer" :class="{ visible: data.tipo == 'sequencial' && data.layers.indexOf(layer) === state }" :src="src(layer.path)" alt="">
 			</div>
-
 			<button class="next" @click="next(data.layers)" :disabled="state == data.layers.length - 1" v-if="data.tipo == 'sequencial'">
 				<i class="icon-seta_direita icon"><span>seta_direita</span></i>
 			</button>
@@ -311,6 +310,8 @@ export default {
 			list-style: none;
 			padding: 0;
 			margin: 0;
+			overflow-y: auto;
+			flex: 100%;
 			& > li {
 				max-height: 3rem;
 				overflow: hidden;
@@ -325,7 +326,7 @@ export default {
 					justify-content: space-between;
 					align-items: center;
 					height: 3rem;
-					padding: 0 1rem;
+					padding: 0 1rem 0 0;
 					cursor: pointer;
 					& > h3 {
 						width: 100%;
@@ -343,8 +344,8 @@ export default {
 					.switcher {
 						position: relative;
 						display: inline-block;
-						width: 2rem;
-						height: 1rem;
+						width: 3.5rem;
+						height: 100%;
 						input {
 							opacity: 0;
 							width: 0;
@@ -359,10 +360,10 @@ export default {
 						.slider {
 							position: absolute;
 							cursor: pointer;
-							top: 0;
-							left: 0;
+							top: 1rem;
+							left: 1rem;
 							right: 0;
-							bottom: 0;
+							bottom: 1rem;
 							background-color: $cinza-2;
 							border-radius: 0.5rem;
 							transition: all ease-in-out .8s;
@@ -465,7 +466,7 @@ export default {
 		.cont {
 			width: 100%;
 			height: 100%;
-			.layer {
+			.layer, .base {
 				background-color: transparent;
 				background-size: cover;
 				position: absolute;
@@ -591,6 +592,7 @@ export default {
 			}
 			nav {
 				width: 100%;
+				padding: 0;
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
@@ -634,12 +636,10 @@ export default {
 			border-bottom: none;
 			border-left: 1px solid $sombra-4;
 			.cont {
+				.layer:first-child, .base { box-shadow: none; }
 				img {
 					max-width: 100%;
 					max-height: 100%;
-					&.base, &:first-child {
-						box-shadow: none;
-					}
 				}
 			}
 		}

@@ -1,13 +1,12 @@
 <template>
 	<div class="JockeyClub" ref="conteudoConsulta">
-		<PageTop background_image_src="arquivos/capas/placeholder_480w.jpg" :esta_consulta="estaConsulta">
+		<PageTop background_image_src="arquivos/capas/jockey.jpg" :esta_consulta="estaConsulta">
 			<template slot="titulo"><div>PIU Jockey Club</div></template>
 			<template slot="subtitulo"><div>Subtítulo da Nova Consulta</div></template>
 		</PageTop>
 		<Indice :titulos="titulosLimpo"></Indice>
 
 		<Apoio></Apoio>
-		<!-- Decreto Nº 56.901 inclua este componente caso seja um PIU -->
 
 		<section>
 			<h2 class="titulo" indent="1">Apresentação</h2>
@@ -23,6 +22,13 @@
 			<h2 class="titulo" indent="1">Seção 2</h2>
 			<p>Seção 2</p>
 		</section>
+
+		<section ref="allComments">
+			<h2 v-show="commentsLoaded" class="titulo" indent="1">Contribuições</h2>
+			<CommentsLoader :attr="estaConsulta"></CommentsLoader>
+			<Comments v-if="commentsLoaded && parseInt(estaConsulta.ativo) === 1" :attr="{id:99, context:'Comentarios'}"></Comments>
+		</section>
+
 	</div>
 </template>
 
@@ -30,6 +36,8 @@
 import PageTop from '@/components/PageTop'
 import Indice from '@/components/Indice'
 import Apoio from '@/components/Apoio'
+import CommentsLoader from '@/components/CommentsLoader'
+import Comments from '@/components/Comments'
 import { consultasCommons } from '@/mixins/consultasCommons'
 
 export default {
@@ -44,8 +52,10 @@ export default {
 	},
 	components: {
 		PageTop,
-		Indice
-		// Apoio
+		Indice,
+		Apoio,
+		CommentsLoader,
+		Comments
 	},
 	mixins: [ consultasCommons ]
 }

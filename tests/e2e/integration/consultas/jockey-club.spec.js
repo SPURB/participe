@@ -1,5 +1,13 @@
 describe('Consulta JockeyClub', () => {
-	it('Existe h1 com substring "participe"', () => {
+	it('Testa viewports', () => {
+		cy.visit('/jockey-club')
+			.viewport('macbook-13')
+			.viewport('iphone-6')
+			.viewport('iphone-3')
+				.get('.PageTop')
+				.should('contain','PIU Jockey Club')
+	})
+	it('Vai para consulta do Jockey e checa se título contém "PIU Jockey Club"', () => {
 		cy.visit('/jockey-club')
 			.get('.PageTop')
 			.should('contain','PIU Jockey Club')

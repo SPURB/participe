@@ -1768,13 +1768,6 @@ export default {
 			let url = this.$store.getters.basePath + 'arquivos/pdp-ibirapuera/' + fileName
 			// let url = 'arquivos/pdp-ibirapuera/' + fileName
 			return url.toString()
-		},
-		commentId (isFirst) {
-			if (isFirst) {
-				this.$store.commentsCount = 0
-			}
-			this.$store.commentsCount++
-			return this.$store.commentsCount
 		}
 	}
 }

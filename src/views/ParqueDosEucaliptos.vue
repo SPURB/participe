@@ -211,13 +211,6 @@ export default {
 		fileSrc (fileName) {
 			let url = this.$store.getters.basePath + 'arquivos/parque-dos-eucaliptos/' + fileName
 			return url.toString()
-		},
-		commentId (isFirst) {
-			if (isFirst) {
-				this.$store.commentsCount = 0
-			}
-			this.$store.commentsCount++
-			return this.$store.commentsCount
 		}
 	}
 }

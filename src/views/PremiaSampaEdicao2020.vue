@@ -447,13 +447,6 @@ export default {
 		fileSrc (fileName) {
 			let url = this.$store.getters.basePath + 'arquivos/premia-sampa-edicao-2020/' + fileName
 			return url.toString()
-		},
-		commentId (isFirst) {
-			if (isFirst) {
-				this.$store.commentsCount = 0
-			}
-			this.$store.commentsCount++
-			return this.$store.commentsCount
 		}
 	}
 }

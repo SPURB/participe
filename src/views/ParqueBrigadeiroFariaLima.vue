@@ -10,6 +10,20 @@
 		<!-- Decreto Nº 56.901 inclua este componente caso seja um PIU -->
 
 		<section>
+			<h2 class="titulo" indent="2">Teste pergunta</h2>
+			<p>Et sem mi aliquet tellus. Bibendum nibh eu odio mattis id vulputate consequat. Nisi, sem nullam congue amet facilisi hac ante. Eleifend vestibulum nec viverra amet convallis et semper in id. Volutpat aliquam, etiam eu pharetra. Vulputate tortor cras suspendisse tellus quis at sit blandit sit. Urna mauris sociis justo elementum cursus donec. Eget maecenas enim congue eu velit diam sodales. Ultricies tristique mollis gravida elementum diam proin. Bibendum vitae nam et risus tellus. Leo dui non vestibulum sed sollicitudin mollis luctus convallis etiam. Lorem tortor sagittis feugiat eu laoreet gravida condimentum viverra orci.</p>
+			<Pergunta :attr="{ id: 20, context: 'Ctx1' }">
+				<template #pergunta>
+					Quais atividades de interesse público podem funcionar no Hipódromo de Cidade Jardim fora dos períodos em que ocorrem corridas e treinamentos e preservando o patrimônio histórico e as características da vizinhança?
+				</template>
+				<template #info>
+					Além da participação espontânea, com comentários acerca do conteúdo dos elementos prévios ao desenvolvimento do PIU Jockey Club, os munícipes poderão opinar sobre questões propostas pela SP Urbanismo, auxiliando na formulação de propostas para a sequência do projeto.
+				</template>
+			</Pergunta>
+			<p>Nisl, viverra mauris lacus, placerat laoreet in habitant. A sed molestie malesuada nisi, fermentum dolor, nibh risus sed. Tortor ac ultrices non, suspendisse tortor faucibus. Scelerisque montes, consequat volutpat vestibulum et, orci duis. Eget quam fames viverra habitant sit. Diam augue morbi amet, congue sit iaculis venenatis. Ultrices sodales eget augue ac. Nullam interdum parturient amet quis ornare. Ut fringilla nunc dolor vitae, vel at amet vulputate sagittis. Massa luctus et cum urna et. Sagittis pharetra diam adipiscing vivamus. Nam nunc, dui ultricies dolor lorem. Mauris non adipiscing gravida morbi amet, eget congue molestie nibh. Donec elit ultrices libero enim velit.</p>
+		</section>
+
+		<section>
 			<h2 class="titulo" indent="1">1. APRESENTAÇÃO</h2>
 			<Comments :attr="{id:commentId(true), context:'1. APRESENTAÇÃO'}" v-if="estaConsulta.ativo == 1"></Comments>
 			<p>Este documento se trata do Plano Diretor do Parque Tenente Brigadeiro Faria Lima, fruto das atividades do Grupo de Trabalho instituído pela Portaria Intersecretarial nº 1/SVMA/SGM/2019. Sua elaboração fora determinada na ocasião de um Acordo junto à Promotoria de Justiça do Meio Ambiente da Capital do Ministério Público do Estado de São Paulo, em meio ao processo de concessão pública do 1° Lote de Parques, o qual contempla, além do Tenente Brigadeiro Faria Lima, o Ibirapuera, Lajeado, Jardim Felicidade, Eucaliptos e Jacintho Alberto.</p>
@@ -189,6 +203,7 @@ import PageTop from '@/components/PageTop'
 import Indice from '@/components/Indice'
 import Comments from '@/components/Comments'
 import CommentsLoader from '@/components/CommentsLoader'
+import Pergunta from '@/components/Pergunta'
 import { consultasCommons } from '@/mixins/consultasCommons'
 
 export default {
@@ -205,7 +220,8 @@ export default {
 		PageTop,
 		Indice,
 		Comments,
-		CommentsLoader
+		CommentsLoader,
+		Pergunta
 	},
 	mixins: [ consultasCommons ],
 	methods: {

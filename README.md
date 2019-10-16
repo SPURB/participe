@@ -1,4 +1,5 @@
 # Participe
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fb06bdad-d959-414d-b42d-1891b7862c9f/deploy-status)](https://app.netlify.com/sites/participe-gestaourbana/deploys)
 
 Frontend do [https://participe.gestaourbana.prefeitura.sp.gov.br](https://participe.gestaourbana.prefeitura.sp.gov.br), site de participação social da Secretaria Municipal de Urbanismo e Licenciamento – SMUL - e São Paulo Urbanismo.
 
@@ -27,6 +28,18 @@ npm run serve
 > Observação: Para visualizar a home e gerar e gerar formulários é necessário realizar o setup do [backend](https://github.com/SPURB/consultas-publicas-backend) e criar um arquivo `.env.development.local` com as variáveis configuradas.
 
 Explicações detalhadas deste template no [guia](http://vuejs-templates.github.io/webpack/) e [documentação do vue-loader](http://vuejs.github.io/vue-loader).
+
+
+## Testes
+Inicie testes
+```
+npm run tests
+```
+
+Inicie ambiente para TDD
+```
+npm run serve:e2e
+```
 
 ___
 

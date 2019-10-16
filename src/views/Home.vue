@@ -96,9 +96,11 @@
 
 <script>
 import { consultasMutations } from '@/mixins/consultasMutations'
+import { fallbacks } from '@/mixins/fallbacks'
+
 export default {
 	name: 'Home',
-	mixins: [ consultasMutations ],
+	mixins: [ consultasMutations, fallbacks ],
 	computed: {
 		consultas () { return this.$store.state.consultas === undefined ? false : this.$store.state.consultas.filter(consulta => !parseInt(consulta.ativo)) },
 		consultasAbertas () {
@@ -106,15 +108,7 @@ export default {
 			return Array.from(this.$store.state.consultas).sort(this.parametrosDestaque).filter(consulta => parseInt(consulta.ativo))
 		},
 		basePathImgSrc () { return this.$store.getters.basePath + 'arquivos/capas/' },
-		fetching () { return this.$store.state.fetching },
-		isIE () {
-			let nav = window.navigator.userAgent
-			if (nav.match(/MSIE\s\d\S*;|Trident.*rv:\d*\.\d/)) {
-				return true
-			} else {
-				return false
-			}
-		}
+		fetching () { return this.$store.state.fetching }
 	},
 	created () {
 		this.$store.dispatch('fetchConsultas', { self: this })

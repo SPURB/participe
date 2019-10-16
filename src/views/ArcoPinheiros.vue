@@ -512,6 +512,7 @@ export default {
 			comments_atrr: undefined,
 			// gallery_attrs: {},
 			mapa_attrs: {
+				id: 'map',
 				center: [ -5202550.487352, -2698002.011056 ],
 				zoom: 13,
 				layers: [

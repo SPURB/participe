@@ -1,18 +1,20 @@
 <template>
 	<div class="Mapa" ref="mapa">
-		<div id="map"></div>
+		<div :id="mapa_attrs.id"></div>
 		<ul class="legenda">
-			<template v-for="(index, layer) in mapa_attrs.layers">
-				<li :key="index">
+			<template v-for="layer in mapa_attrs.layers">
+				<li :key="mapa_attrs.layers.indexOf(layer)">
 					<div :style="{
 						backgroundColor:layer.fill_color,
 						borderColor: layer.stroke_color,
-						borderWidth: layer.stroke_width + 'px',
-				}"></div>
-				<a
-					:href="layer.path"
-					:download="layer.title + '.kml'"
-				>{{ layer.title }}</a></li>
+						borderWidth: layer.stroke_width + 'px' }">
+					</div>
+					<a
+						:href="layer.path"
+						:download="layer.title + '.kml'">
+						{{ layer.title }}
+					</a>
+				</li>
 			</template>
 		</ul>
 	</div>
@@ -109,7 +111,7 @@ export default {
 		createMap () {
 			let map = new Map({
 				layers: this.mapLayers,
-				target: 'map',
+				target: this.mapa_attrs.id,
 				view: this.mapView
 				// controls: defaultControls({
 				// 	attributionOptions: {
@@ -142,7 +144,7 @@ export default {
 
 div.Mapa {
 	max-width: 992px;
-	margin: 4rem auto 2rem auto;
+	margin: 4rem auto;
 	border: 1px solid #BDBDBD;
 	border-radius: 2px;
 	overflow: hidden;

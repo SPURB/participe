@@ -47,7 +47,7 @@
 				</div>
 				<div id="g-ai0-14" class="g-Camada_1 g-aiAbs" style="top:10.7549%;left:0.9607%;width:46.5625%;">
 					<p>Área total</p>
-					<p class="g-pstyle2">3.594 ha</p>
+					<p class="g-pstyle2">3.524 ha</p>
 				</div>
 				<div id="g-ai0-15" class="g-Camada_1 g-aiAbs" style="top:10.7549%;left:52.4106%;width:46.5625%;">
 					<p class="g-pstyle3">2,3%</p>
@@ -393,7 +393,7 @@
 				</div>
 				<div id="g-ai0-14" class="g-Camada_1 g-aiAbs" style="top:17.1916%;left:75.2464%;width:21.7143%;">
 					<p>Área total</p>
-					<p class="g-pstyle2">3.594 ha</p>
+					<p class="g-pstyle2">3.524 ha</p>
 					<p>&nbsp;</p>
 					<p class="g-pstyle3">2,3%</p>
 					<p>do Município de </p>

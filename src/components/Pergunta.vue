@@ -1,5 +1,5 @@
 <template>
-	<div class="Pergunta">
+	<div class="Pergunta" :class="{ fetching: enviandoComment, sucesso: sucesso, erro: erro }">
 		<main>
 			<i class="icon-dialogo icon"><span>dialogo</span></i>
 			<p class="text"><slot name="pergunta"></slot></p>
@@ -10,12 +10,12 @@
 			</div>
 		</main>
 		<aside>
-			<button class="formStart">
+			<button class="formStart" :class="{ hidden: step !== 0 }">
 				<i class="icon-responder icon"><span>responder</span></i>
 				<span>Escreva sua resposta</span>
 			</button>
 			<form>
-				<fieldset>
+				<fieldset :class="{ hidden: step !== 1 }">
 					<label for="nome">Nome</label>
 					<input
 						value=""
@@ -56,7 +56,7 @@
 						v-model='form_email'
 					>
 				</fieldset>
-				<fieldset>
+				<fieldset :class="{ hidden: step !== 2 }">
 					<label for="comentario">Comente aqui</label>
 					<textarea
 						value=""
@@ -68,7 +68,7 @@
 					></textarea>
 				</fieldset>
 			</form>
-			<button class="formBtn" @click="formButton">
+			<button class="formBtn" :class="{ hidden: step == 0, prox: step == 1, enviar: step == 2 }" @click="formButton">
 				<span>Enviar</span>
 				<i class="icon-seta_direita icon"><span>seta_direita</span></i>
 			</button>
@@ -147,6 +147,7 @@ div.Pergunta {
 	box-shadow: 0 4px 8px $sombra-3;
 	color: #FFF;
 	position: relative;
+	z-index: 0;
 	main {
 		padding: 1rem;
 		& > .icon-dialogo {
@@ -189,7 +190,7 @@ div.Pergunta {
 			border-radius: 0.25rem;
 			color: $preto;
 			font-size: small;
-			padding: 0.25rem 0.5rem;
+			padding: 0.75rem 1rem;
 			border-left: 4px solid $cinza-2;
 			transform: scale(1);
 			transform-origin: top right;
@@ -214,6 +215,69 @@ div.Pergunta {
 	aside {
 		padding: 1rem;
 		background-color: $sombra-4;
+		z-index: 0;
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: flex-start;
+		height: 6rem;
+		& > button.formStart {
+			height: 100%;
+			border: none;
+			background-color: $vermelho;
+			color: #FFF;
+			font-family: $grotesca;
+			font-size: 1rem;
+			padding: 0;
+			border-radius: 0.25rem;
+			box-shadow: 0 2px 4px $sombra-1;
+			padding: 0 1.5rem 0 0;
+			overflow: hidden;
+			.icon-responder {
+				display: inline-flex;
+				align-items: center;
+				height: 100%;
+				background-color: $sombra-4;
+				padding: 0 1.25rem;
+				margin-right: 1.5rem;
+				vertical-align: middle;
+			}
+			&, & > * { cursor: pointer; }
+		}
+		& > form {
+			fieldset {
+				transform-origin: left center;
+				&.hidden {
+					z-index: -1;
+					display: none;
+				}
+			}
+		}
+		& > button.formBtn {
+			display: none;
+		}
+	}
+	&.fetching {
+		main {
+			.icon-dialogo {
+				@keyframes blink {
+					from {
+						color: #FFF;
+						background-color: $cinza-1;
+					}
+					to {
+						color: $cinza-1;
+						background-color: $cinza-3;
+					}
+				}
+				animation: blink infinite alternate ease-in-out .5s;
+			}
+		}
+	}
+	&.sucesso {
+		background-color: $verde;
+	}
+	&.erro {
+		background-color: $vermelho;
 	}
 }
 

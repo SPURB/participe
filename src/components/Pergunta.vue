@@ -3,58 +3,66 @@
 		<main>
 			<i class="icon-dialogo icon"><span>dialogo</span></i>
 			<p class="text"><slot name="pergunta"></slot></p>
-			<button class="modalBtn" @click="toggleModal">?</button>
+			<button class="modalBtn" @click="toggleModal($event)">?</button>
 			<div class="modal" :class="{ hidden: !modalOpen }">
 				<p><slot name="info"></slot></p>
-				<i class="icon-incorreto icon" @click="toggleModal"><span>incorreto</span></i>
+				<i class="icon-incorreto icon" @click="toggleModal($event)"><span>incorreto</span></i>
 			</div>
 		</main>
 		<aside>
-			<button class="formStart" :class="{ hidden: step !== 0 }">
+			<button class="formStart" :class="{ hidden: step !== 0 }" @click="goStep(1)">
 				<i class="icon-responder icon"><span>responder</span></i>
-				<span>Escreva sua resposta</span>
+				Escreva sua resposta
 			</button>
-			<form>
+			<form :class="{ hidden: step == 0 }">
 				<fieldset :class="{ hidden: step !== 1 }">
-					<label for="nome">Nome</label>
-					<input
-						value=""
-						id="nome"
-						type="text"
-						name="name"
-						v-validate="'required: true'"
-						:class="{ inputErro: errors.has('name') }"
-						v-model='form_name'
-					>
-					<label for="sobrenome">Sobrenome</label>
-					<input
-						value=""
-						id="sobrenome"
-						type="text"
-						name="surname"
-						v-validate="'required: true'"
-						:class="{ inputErro: errors.has('surname') }"
-						v-model='form_surname'
-					>
-					<label for="organizacao">Organização (opcional)</label>
-					<input
-						value=""
-						id="organizacao"
-						type="text"
-						name="organization"
-						v-validate="'required: false'"
-						v-model='form_organization'
-					>
-					<label for="email">E-mail</label>
-					<input
-						value=""
-						id="email"
-						name="email"
-						v-validate="'required|email'"
-						:class="{ inputErro: errors.has('email') }"
-						type="email"
-						v-model='form_email'
-					>
+					<div>
+						<label for="nome">Nome</label>
+						<input
+							value=""
+							id="nome"
+							type="text"
+							name="name"
+							v-validate="'required: true'"
+							:class="{ inputErro: errors.has('name') }"
+							v-model='form_name'
+						>
+					</div>
+					<div>
+						<label for="sobrenome">Sobrenome</label>
+						<input
+							value=""
+							id="sobrenome"
+							type="text"
+							name="surname"
+							v-validate="'required: true'"
+							:class="{ inputErro: errors.has('surname') }"
+							v-model='form_surname'
+						>
+					</div>
+					<div>
+						<label for="organizacao">Organização (opcional)</label>
+						<input
+							value=""
+							id="organizacao"
+							type="text"
+							name="organization"
+							v-validate="'required: false'"
+							v-model='form_organization'
+						>
+					</div>
+					<div>
+						<label for="email">E-mail</label>
+						<input
+							value=""
+							id="email"
+							name="email"
+							v-validate="'required|email'"
+							:class="{ inputErro: errors.has('email') }"
+							type="email"
+							v-model='form_email'
+						>
+					</div>
 				</fieldset>
 				<fieldset :class="{ hidden: step !== 2 }">
 					<label for="comentario">Comente aqui</label>
@@ -125,7 +133,14 @@ export default {
 					app.enviandoComment = false
 				})
 		},
-		toggleModal () {
+		goStep (num) {
+			this.step = num
+		},
+		toggleModal (event) {
+			// event.stopPropagation()
+			// this.$el.addEventListener('click', (event => {
+			// 	console.log(event)
+			// }))
 			!this.modalOpen ? this.modalOpen = true : this.modalOpen = false
 		},
 		formButton () {
@@ -195,7 +210,9 @@ div.Pergunta {
 			transform: scale(1);
 			transform-origin: top right;
 			transition: transform ease-in .2s;
-			p { margin: 0; }
+			p {
+				margin: 0;
+			}
 			& > .icon-incorreto {
 				position: absolute;
 				top: 0.25rem;
@@ -219,9 +236,11 @@ div.Pergunta {
 		display: flex;
 		flex-flow: column nowrap;
 		align-items: flex-start;
+		justify-content: center;
 		height: 6rem;
 		& > button.formStart {
-			height: 100%;
+			min-height: 75%;
+			max-height: 75%;
 			border: none;
 			background-color: $vermelho;
 			color: #FFF;
@@ -242,14 +261,59 @@ div.Pergunta {
 				vertical-align: middle;
 			}
 			&, & > * { cursor: pointer; }
+			&.hidden {
+				transform: translateX(-2rem);
+				min-height: 0;
+				max-height: 0;
+				opacity: 0;
+				user-select: none;
+				z-index: -1;
+			}
 		}
 		& > form {
+			height: 100%;
 			fieldset {
+				height: 100%;
+				padding: 0;
+				margin: 0;
+				border: none;
 				transform-origin: left center;
+				display: flex;
+				flex-flow: row nowrap;
+				align-items: flex-start;
+				& > div {
+					width: calc(50% - 0.5rem);
+					&:not(:first-child) { margin-left: 1rem; }
+					margin-bottom: 1rem;
+					label {
+						display: block;
+						font-size: small;
+						line-height: 1;
+						padding-bottom: 0.25rem;
+						color: $cinza-2;
+					}
+					input {
+						width: 100%;
+						border-radius: 2px;
+						border: none;
+						background-color: rgba(255, 255, 255, .08);
+						border-bottom: 2px solid rgba(255, 255, 255, .16);
+						padding: 0.25rem 0.5rem;
+						font-family: $grotesca;
+						color: #FFF;
+						&:focus {
+							border-color: #FFF;
+						}
+					}
+				}
 				&.hidden {
 					z-index: -1;
 					display: none;
+					max-height: 0;
 				}
+			}
+			&.hidden {
+				max-height: 0;
 			}
 		}
 		& > button.formBtn {

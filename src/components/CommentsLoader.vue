@@ -26,9 +26,9 @@ export default {
 	props: ['attr'],
 	mounted () { this.loadThisComments() },
 	watch: {
-		comments () {
+		comments (val) {
 			this.comments ? this.$store.state.commentsLoaded = true : this.$store.state.commentsLoaded = false
-			this.decodeComments(this.comments)
+			if (val) this.decodeComments(this.comments)
 		}
 	},
 	methods: {

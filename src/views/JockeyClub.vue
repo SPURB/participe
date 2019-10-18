@@ -1,6 +1,6 @@
 <template>
 	<div class="JockeyClub" ref="conteudoConsulta">
-		<PageTop background_image_src="arquivos/capas/jockey.jpg" :esta_consulta="estaConsulta">
+		<PageTop background_image_src="arquivos/capas/jockey_244w.jpg" :esta_consulta="estaConsulta">
 			<template slot="titulo"><div>PIU Jockey Club</div></template>
 			<template slot="subtitulo"><div>1ª Consulta Pública – Elementos prévios</div></template>
 		</PageTop>
@@ -80,7 +80,6 @@
 
 		<section>
 			<h2 class="titulo" indent="1">Diagnóstico Socio territorial</h2>
-
 			<ul class="links">
 				<li>
 					<a :href="src('arquivos/jockey/anexos/PIU_JOCKEY_Diagnostico-Socioterritorial.pdf')" target="_blank">
@@ -169,14 +168,13 @@
 					{ fundo: '#FF7800', descricao: 'Estacionamento' }
 				]
 			}"></Imagem>
-		</section>
 
-		<section>
 			<h2>Diagnóstico socioterritorial</h2>
 			<h4>Unidades de análise</h4>
 			<p>O Hipódromo de Cidade Jardim está localizado na região oeste da cidade de São Paulo, no território da Subprefeitura do Butantã, mais especificamente no distrito Morumbi, no limite deste com o distrito do Butantã (Mapa 1).</p>
 			<p>As análises contidas neste diagnóstico socioterritorial consideram a área da ZOE do Hipódromo de Cidade Jardim como Área Diretamente Afetada (ADA) pelo projeto de intervenção urbana a ser desenvolvido, as áreas das Zonas Origem e Destino (ZOD) da Pesquisa Origem e Destino do Metrô de São Paulo situadas no entorno do hipódromo como Área de Influência Direta (AID) deste PIU e, por fim, as áreas dos distritos municipais situados ao redor do hipódromo, como Área de Influência Indireta (AII) do PIU Jockey (Mapa 2). </p>
 			<p>Considerando as características socioeconômicas e ambientais do contexto urbano em que se insere o hipódromo, as ZODs que compõem a AID estão localizadas nas subprefeituras do Butantã e Pinheiros, englobando Butantã, Pinheiros, Jardim Europa e Jockey Club. Os distritos que compõem a AII também estão localizados em ambas as subprefeituras, englobando Morumbi, Butantã, Vila Sônia, Pinheiros, Alto de Pinheiros e Itaim Bibi.</p>
+
 			<Imagem :dados="{
 				tipo: 'mapa',
 				url: imgSrc('arquivos/jockey/Mapa-2.jpg'),
@@ -222,9 +220,6 @@
 					{ fundo: '#E6E6E6', descricao: 'Quadras Viárias' }
 			]
 			}"></Imagem>
-		</section>
-
-		<section>
 			<h2>Socioeconômica</h2>
 			<p>Segundo dados do Censo  de 2010, os distritos do Morumbi e do Butantã, onde se insere o Hipódromo de Cidade Jardim, continham uma população de, respectivamente, 46.957 e 54.196 habitantes. As retroestimativas e projeções populacionais realizadas pelo GEOINFO  para os mesmos distritos apontam para dinâmicas opostos, com crescimento expressivo no Morumbi e ligeiro decréscimo no Butantã. Em 2020, as populações seriam de, respectivamente, 53.670 e 53.939 habitantes e, em 2040, de 99.283 e 49.951 habitantes. Este quadro tendencial não considera, entre outros fatores, as diretrizes de ocupação do PDE e da LPUOS.</p>
 			<p>Observamos nas projeções do GEOINFO que o Município de São Paulo deve registrar um crescimento populacional da ordem de 8% ao longo dos próximos 20 anos. Os distritos Morumbi e Vila Sônia destacam-se pelas projeções de crescimento populacional mais acentuadas em relação aos demais distritos da AII, o que pode ser explicado, em parte, pelo adensamento populacional esperado para o entorno das novas estações de metrô da linha amarela. O distrito Rio Pequeno é o único com projeção de crescimento populacional negativa na Subprefeitura do Butantã. Nos distritos situados na Subprefeitura de Pinheiros estudados, Alto de Pinheiros e Pinheiros também apresentam projeções de crescimento negativas, enquanto que o Itaim Bibi continuará crescendo no referido período.</p>
@@ -938,9 +933,7 @@
 			<p>Conforme dados da Relação Anual de Informações Sociais  do Ministério do Trabalho e Emprego - RAIS 2016, observamos que em todos os distritos, predominava a faixa de remuneração entre 1 e 5 salários mínimos, sendo que nos distritos Raposo Tavares, Rio Pequeno e Vila Sônia, a maior concentração está na faixa que vai de 1 a 2 salários mínimos e nos distritos Butantã, Morumbi e Pinheiros, na faixa que vai de 2 a 5 salários mínimos. Todavia, o Censo Demográfico 2010 demonstrou que a distribuição dos domicílios por renda não coincide com a remuneração dos empregos no território. Nos distritos Raposo Tavares e Rio Pequeno, existe uma concentração de domicílios nos quais a renda está entre 2 e 5 salários mínimos. No caso do Butantã e da Vila Sônia, os domicílios estão distribuídos de maneira menos absoluta, ocupando faixas a partir de 5 salários mínimos. Isso, posto ao lado da distribuição dos postos de trabalho por faixas de rendimento, nos mostra que, nesses distritos, uma parcela significativa dos postos de trabalho são ocupados por pessoas que não residem ali e, por outro lado, os residentes desses distritos trabalham em outras regiões.</p>
 			<p>No caso do Morumbi, Alto de Pinheiros, Itaim Bibi e Pinheiros, a diferença entre os salários pagos pelos empregos e as rendas das famílias que residem naquela região é altamente significativa. No Morumbi, por exemplo, cerca de 65% dos postos de trabalho remuneram na faixa de 1 a 5 salários mínimos, em cerca de 51% dos domicílios registra-se renda superior a 10 salários mínimos, sendo 17% entre 10 a 20 salários mínimos, e 34% acima de 20 salários mínimos. Considerando a predominância do uso residencial neste distrito, podemos inferir que uma parte significativa desses postos de trabalho está nos serviços domésticos, isto é, são faxineiras, jardineiros, motoristas, agentes de segurança privada, etc.</p>
 			<p>Em suma, o Jockey Club está no centro de uma área altamente privilegiada da cidade, com elevados padrões de renda e escolaridade, dentre outros indicadores, mas está próxima de áreas cujos indicadores revelam realidades socioeconômicas distintas.</p>
-		</section>
 
-		<section>
 			<h3>Uso do solo, patrimônio histórico e mercado imobiliário</h3>
 			<p>Uma análise visual do Cadastro Territorial Predial de Conservação e Limpeza (Mapa 7) permite a identificação dos grandes contrastes quanto ao uso do solo nas áreas de estudo. Tanto na AID quanto na AII há uma presença marcante de quadras ocupadas por uso residencial horizontal de médio ou alto padrão, em especial nos distritos do Morumbi, Alto de Pinheiros e Butantã. </p>
 			<p>O uso residencial vertical de médio ou alto padrão também tem participação relevante na AII, especialmente no Butantã, Vila Sônia, Pinheiros e Itaim Bibi. Enquanto no Butantã o número de domicílios em apartamentos corresponde a 38% do total, mais da metade dos domicílios no Morumbi e em Alto de Pinheiros estão em apartamentos e, em Pinheiros e no Itaim Bibi, esse número chega a 77%.</p>
@@ -1044,7 +1037,6 @@
 			]
 			}"></Imagem>
 
-		<section>
 			<h3>Vulnerabilidade social e habitação</h3>
 			<p>A vulnerabilidade social no entorno imediato do PIU Jockey Club é muito baixa. Para além da baixa densidade demográfica observada, resultante de um zoneamento historicamente restritivo e de alto padrão, as imediações do equipamento não apresentam assentamentos precários.</p>
 			<p>Para a análise mais ampla da vulnerabilidade social do território de influência socioeconômica do PIU Jockey Club, foi analisado perímetro que abrange os distritos Butantã, Morumbi e Vila Sônia, da Subprefeitura Butantã e os distritos Pinheiros, Alto de Pinheiros e Itaim Bibi, da Subprefeitura Pinheiros. De maneira geral, a área analisada é marcada pela baixa densidade populacional, com a presença das maiores concentrações populacionais nos territórios que apresentam precariedade habitacional e urbana. Também conta com algumas áreas demarcadas como Zonas Especiais de Interesse social – ZEIS pelo Plano Diretor Estratégico – PDE (Lei Municipal nº 16.050/2014) e Zoneamento (Lei Municipal nº 16.402/2016).</p>
@@ -1256,9 +1248,7 @@
 					</a>
 				</li>
 			</ul>
-			</section>
 		</section>
-
 		<section>
 			<h2 class="titulo" indent="1">Diagnóstico Ambiental</h2>
 
@@ -1644,79 +1634,76 @@
 				</li>
 			</ul>
 
-			<section>
-				<h3>Introdução</h3>
-				<p>O Programa de Interesse Público considera as informações levantadas na Análise Socioterritorial e Ambiental para apresentar as diretrizes de desenvolvimento e os principais aspectos a serem enfrentados pelo PIU Jockey Club para que se constitua como uma iniciativa que contribua para a utilização mais intensiva do hipódromo e para o desenvolvimento urbano local e da cidade, tendo por base as diretrizes presentes no PDE. Além da participação espontânea, os munícipes poderão opinar sobre questões propostas pela SP Urbanismo, auxiliando na formulação de propostas para a sequência do projeto. O presente produto apresenta também no Anexo I um estudo de casos de projetos similares envolvendo a reestruturação de hipódromos, com o objetivo de auxiliar a população a visualizar as possibilidades de transformação para este PIU.</p>
-			</section>
-			<section>
-				<h3>Programa de Interesse Público</h3>
-				<p>O Programa de Interesse Público precede o desenvolvimento do projeto de intervenção urbana. A partir da identificação de demandas e oportunidades urbanísticas e sociais nos diagnósticos socioterritorial e ambiental, o programa se constitui como uma seleção preliminar de diretrizes para o desenvolvimento do PIU em si. Para tanto, buscar responder por que o projeto interessa à sociedade e quais aspectos urbanísticos serão contemplados.</p>
-				<h4>O interesse público</h4>
-				<p>Os equipamentos classificados como ZOE são áreas públicas ou privadas com funções urbanas excepcionais, que necessitam de uma abordagem específica para que tenham seus parâmetros urbanísticos definidos, dando segurança técnica e jurídica para o funcionamento das atividades neles implantadas e para futuras reformas, ampliações ou transformações. Para terem sido classificados como ZOE, tais equipamentos foram reconhecidos pela Prefeitura de São Paulo como áreas que desempenham um papel relevante para a história, a cultura, o lazer, a acessibilidade ou para serviços essenciais à cidade, sendo, portanto, sua regulação de interesse de toda a sociedade. </p>
-				<p>O Hipódromo de Cidade Jardim, administrado pelo Jockey Club de São Paulo, conforme apresentado no diagnóstico socioterritorial, se enquadra neste reconhecimento, pois é um equipamento único na cidade, com uma rica história associada ao turfe e a eventos sociais e políticos de relevância local e nacional. A definição dos parâmetros urbanísticos aplicados ao local possibilitará a preservação de seus atributos arquitetônicos, urbanísticos e ambientais, ao mesmo tempo em que dará condições para que seu potencial possa ser mais bem explorado e o local possa se converter progressivamente em um equipamento multifuncional, integrando-se à vida urbana e mantendo sua relevância para a população. O PIU é, pois, o processo pelo qual a Prefeitura pode promover um debate transparente com o Jockey Club, com organizações da sociedade civil e cidadãos interessados para definir o futuro deste equipamento, buscando conciliar diferentes visões para atingir de forma mais ampla o interesse do conjunto da sociedade. </p>
+			<h3>Introdução</h3>
+			<p>O Programa de Interesse Público considera as informações levantadas na Análise Socioterritorial e Ambiental para apresentar as diretrizes de desenvolvimento e os principais aspectos a serem enfrentados pelo PIU Jockey Club para que se constitua como uma iniciativa que contribua para a utilização mais intensiva do hipódromo e para o desenvolvimento urbano local e da cidade, tendo por base as diretrizes presentes no PDE. Além da participação espontânea, os munícipes poderão opinar sobre questões propostas pela SP Urbanismo, auxiliando na formulação de propostas para a sequência do projeto. O presente produto apresenta também no Anexo I um estudo de casos de projetos similares envolvendo a reestruturação de hipódromos, com o objetivo de auxiliar a população a visualizar as possibilidades de transformação para este PIU.</p>
+			<h3>Programa de Interesse Público</h3>
+			<p>O Programa de Interesse Público precede o desenvolvimento do projeto de intervenção urbana. A partir da identificação de demandas e oportunidades urbanísticas e sociais nos diagnósticos socioterritorial e ambiental, o programa se constitui como uma seleção preliminar de diretrizes para o desenvolvimento do PIU em si. Para tanto, buscar responder por que o projeto interessa à sociedade e quais aspectos urbanísticos serão contemplados.</p>
+			<h4>O interesse público</h4>
+			<p>Os equipamentos classificados como ZOE são áreas públicas ou privadas com funções urbanas excepcionais, que necessitam de uma abordagem específica para que tenham seus parâmetros urbanísticos definidos, dando segurança técnica e jurídica para o funcionamento das atividades neles implantadas e para futuras reformas, ampliações ou transformações. Para terem sido classificados como ZOE, tais equipamentos foram reconhecidos pela Prefeitura de São Paulo como áreas que desempenham um papel relevante para a história, a cultura, o lazer, a acessibilidade ou para serviços essenciais à cidade, sendo, portanto, sua regulação de interesse de toda a sociedade. </p>
+			<p>O Hipódromo de Cidade Jardim, administrado pelo Jockey Club de São Paulo, conforme apresentado no diagnóstico socioterritorial, se enquadra neste reconhecimento, pois é um equipamento único na cidade, com uma rica história associada ao turfe e a eventos sociais e políticos de relevância local e nacional. A definição dos parâmetros urbanísticos aplicados ao local possibilitará a preservação de seus atributos arquitetônicos, urbanísticos e ambientais, ao mesmo tempo em que dará condições para que seu potencial possa ser mais bem explorado e o local possa se converter progressivamente em um equipamento multifuncional, integrando-se à vida urbana e mantendo sua relevância para a população. O PIU é, pois, o processo pelo qual a Prefeitura pode promover um debate transparente com o Jockey Club, com organizações da sociedade civil e cidadãos interessados para definir o futuro deste equipamento, buscando conciliar diferentes visões para atingir de forma mais ampla o interesse do conjunto da sociedade. </p>
 
-				<h4>Diretrizes Urbanísticas</h4>
-				<p>O Programa de Interesse Público procura traçar diretrizes alinhadas com o Plano Diretor Estratégico do Município de São Paulo - PDE (Lei nº 16.050/2014). De acordo com esta lei, o Jockey Club está na Macroárea de Estruturação Metropolitana – MEM, no setor Orla Ferroviária e Fluvial e no subsetor Arco Faria Lima – Águas Espraiadas – Chucri Zaidan. </p>
-				<p>A Macroárea de Estruturação Metropolitana (MEM) caracteriza-se pela presença de importantes elementos do sistema de transporte, que articulam diferentes municípios e polos econômicos da Região Metropolitana de São Paulo, onde se verifica a necessidade de alcançar o equilíbrio da relação entre postos de trabalho e moradia. São objetivos da MEM, entre outros: aumento de densidades construtiva e demográfica para maior aproveitamento da terra urbana, implantação de novas atividades econômicas, recuperação ambiental, manutenção da população moradora e produção de HIS e HMP (Lei nº 16.050/2014, Seção I, Subseção I).</p>
-				<p>Considerando que o setor Orla Ferroviária e Fluvial da MEM se constitui como um amplo território composto por subsetores com características distintas, o PIU Jockey Club deverá considerar, dentre os 11 objetivos definidos no art. 12, § 1º do PDE e apresentados no diagnóstico socioterritorial, aqueles aplicáveis a seu contexto, como ponto de partida para seu desenvolvimento. Esta identificação está expressa a seguir:</p>
+			<h4>Diretrizes Urbanísticas</h4>
+			<p>O Programa de Interesse Público procura traçar diretrizes alinhadas com o Plano Diretor Estratégico do Município de São Paulo - PDE (Lei nº 16.050/2014). De acordo com esta lei, o Jockey Club está na Macroárea de Estruturação Metropolitana – MEM, no setor Orla Ferroviária e Fluvial e no subsetor Arco Faria Lima – Águas Espraiadas – Chucri Zaidan. </p>
+			<p>A Macroárea de Estruturação Metropolitana (MEM) caracteriza-se pela presença de importantes elementos do sistema de transporte, que articulam diferentes municípios e polos econômicos da Região Metropolitana de São Paulo, onde se verifica a necessidade de alcançar o equilíbrio da relação entre postos de trabalho e moradia. São objetivos da MEM, entre outros: aumento de densidades construtiva e demográfica para maior aproveitamento da terra urbana, implantação de novas atividades econômicas, recuperação ambiental, manutenção da população moradora e produção de HIS e HMP (Lei nº 16.050/2014, Seção I, Subseção I).</p>
+			<p>Considerando que o setor Orla Ferroviária e Fluvial da MEM se constitui como um amplo território composto por subsetores com características distintas, o PIU Jockey Club deverá considerar, dentre os 11 objetivos definidos no art. 12, § 1º do PDE e apresentados no diagnóstico socioterritorial, aqueles aplicáveis a seu contexto, como ponto de partida para seu desenvolvimento. Esta identificação está expressa a seguir:</p>
 
-				<blockquote class="leg">
-					I - promover transformações estruturais orientadas para o maior aproveitamento da terra urbana com o aumento nas densidades construtiva e demográfica e implantação de novas atividades econômicas de abrangência metropolitana, atendendo a critérios de sustentabilidade e garantindo a proteção do patrimônio arquitetônico e cultural; <br><br>
+			<blockquote class="leg">
+				I - promover transformações estruturais orientadas para o maior aproveitamento da terra urbana com o aumento nas densidades construtiva e demográfica e implantação de novas atividades econômicas de abrangência metropolitana, atendendo a critérios de sustentabilidade e garantindo a proteção do patrimônio arquitetônico e cultural; <br><br>
 
-					II - recuperação da qualidade dos sistemas ambientais existentes, com especial atenção à recuperação das planícies fluviais e mitigação das ilhas de calor;<br><br>
-					V - incremento e qualificação da oferta de diferentes sistemas de transporte coletivo, articulando-os aos modos não motorizados de transporte e promovendo melhorias na qualidade urbana e ambiental<br><br>
-					VII - redefinição dos parâmetros de uso e ocupação do solo para qualificação dos espaços públicos e da paisagem urbana;<br><br>
-					IX - compatibilização de usos e tipologias de parcelamento do solo urbano com as condicionantes geológico-geotécnicas e hidrológicas; <br><br>
-					X - recuperação, preservação e proteção de imóveis relacionados ao patrimônio industrial e ferroviário, bem como locais de referência da memória operária, incentivando usos e atividades compatíveis com sua preservação.<br><br>
-				</blockquote>
-				<p>Também é preciso considerar que o Jockey Club está em uma área limítrofe, de divisa entre a MEM e a MUC, sobre a qual incidem os eixos de estruturação e transformação urbana estabelecidos pelo PDE, “definidos pelos elementos estruturais dos sistemas de transporte coletivo de média e alta capacidade, existentes e planejados, determinam áreas de influência potencialmente aptas ao adensamento construtivo e populacional e ao uso misto entre usos residenciais e não residenciais” (Lei nº 16.050/2014, Art. 75).</p>
+				II - recuperação da qualidade dos sistemas ambientais existentes, com especial atenção à recuperação das planícies fluviais e mitigação das ilhas de calor;<br><br>
+				V - incremento e qualificação da oferta de diferentes sistemas de transporte coletivo, articulando-os aos modos não motorizados de transporte e promovendo melhorias na qualidade urbana e ambiental<br><br>
+				VII - redefinição dos parâmetros de uso e ocupação do solo para qualificação dos espaços públicos e da paisagem urbana;<br><br>
+				IX - compatibilização de usos e tipologias de parcelamento do solo urbano com as condicionantes geológico-geotécnicas e hidrológicas; <br><br>
+				X - recuperação, preservação e proteção de imóveis relacionados ao patrimônio industrial e ferroviário, bem como locais de referência da memória operária, incentivando usos e atividades compatíveis com sua preservação.<br><br>
+			</blockquote>
+			<p>Também é preciso considerar que o Jockey Club está em uma área limítrofe, de divisa entre a MEM e a MUC, sobre a qual incidem os eixos de estruturação e transformação urbana estabelecidos pelo PDE, “definidos pelos elementos estruturais dos sistemas de transporte coletivo de média e alta capacidade, existentes e planejados, determinam áreas de influência potencialmente aptas ao adensamento construtivo e populacional e ao uso misto entre usos residenciais e não residenciais” (Lei nº 16.050/2014, Art. 75).</p>
 
-				<p>O patrimônio edificado e os espaços livres do Hipódromo de Cidade Jardim são protegidos pelas resoluções de tombamento do Condephaat e do Conpresp, apresentadas como anexos do Diagnóstico Socioterritorial. A partir do reconhecimento da importância histórica, esportiva e paisagística deste equipamento, tais documentos determinam a preservação de edifícios, a manutenção de espaços livres e a constituição de áreas envoltórias junto às testadas das avenidas Lineu de Paula Machado e Nações Unidas, possibilitando nas áreas remanescentes do lote uma transformação que não interfere no funcionamento do hipódromo e nas perspectivas visuais relevantes para o avistamento da arquitetura local. </p>
+			<p>O patrimônio edificado e os espaços livres do Hipódromo de Cidade Jardim são protegidos pelas resoluções de tombamento do Condephaat e do Conpresp, apresentadas como anexos do Diagnóstico Socioterritorial. A partir do reconhecimento da importância histórica, esportiva e paisagística deste equipamento, tais documentos determinam a preservação de edifícios, a manutenção de espaços livres e a constituição de áreas envoltórias junto às testadas das avenidas Lineu de Paula Machado e Nações Unidas, possibilitando nas áreas remanescentes do lote uma transformação que não interfere no funcionamento do hipódromo e nas perspectivas visuais relevantes para o avistamento da arquitetura local. </p>
 
-				<p>Em vista desses apontamentos, o PIU Jockey Club tem as seguintes diretrizes urbanísticas:</p>
-				<blockquote class="leg diretrizes">
-					1. Garantir a preservação do patrimônio histórico e dos atributos paisagísticos do hipódromo;
-				</blockquote>
+			<p>Em vista desses apontamentos, o PIU Jockey Club tem as seguintes diretrizes urbanísticas:</p>
+			<blockquote class="leg diretrizes">
+				1. Garantir a preservação do patrimônio histórico e dos atributos paisagísticos do hipódromo;
+			</blockquote>
 
-				<blockquote class="leg diretrizes">
-					2.	Preencher as lacunas da regulação urbanística e edilícia para esta ZOE, possibilitando seu melhor aproveitamento;
-				</blockquote>
+			<blockquote class="leg diretrizes">
+				2.	Preencher as lacunas da regulação urbanística e edilícia para esta ZOE, possibilitando seu melhor aproveitamento;
+			</blockquote>
 
-				<blockquote class="leg diretrizes">
-					3.	Preservar o funcionalmente do hipódromo, possibilitando a inserção de novos usos que possam conviver com a atividade principal do turfe e dar maior dinamismo ao equipamento e ao entorno, ampliando sua utilização pela população fora dos períodos de treinamentos e corridas;
-				</blockquote>
+			<blockquote class="leg diretrizes">
+				3.	Preservar o funcionalmente do hipódromo, possibilitando a inserção de novos usos que possam conviver com a atividade principal do turfe e dar maior dinamismo ao equipamento e ao entorno, ampliando sua utilização pela população fora dos períodos de treinamentos e corridas;
+			</blockquote>
 
-				<blockquote class="leg diretrizes">
-					4.	Possibilitar a ampliação dos serviços ambientais relativos a áreas verdes e soluções de drenagem atualmente prestados à cidade;
-				</blockquote>
-				<blockquote class="leg diretrizes">
-					5.	Possibilitar a transformação e o adensamento em áreas dissociadas do hipódromo, situadas no mesmo lote, preservando a qualidade urbana e ambiental do entorno e impedindo o agravamento dos padrões de incomodidade atuais em decorrência de novas atividades;
-				</blockquote>
-				<blockquote class="leg diretrizes">
-					6.	Qualificar a microacessibilidade de pedestres e ciclistas no entorno e nos acessos ao Jockey Club, considerando a necessidade de promover transposições qualificadas sobre o Rio Pinheiros, a partir das estações Hebraica-Rebouças e Cidade Jardim da CPTM, e nos percursos entre o hipódromo, a Estação Butantã do Metrô, o Corredor da Av. Prof. Francisco Morato e os principais equipamentos da região;
-				</blockquote>
-				<blockquote class="leg diretrizes">
-					7.	Promover maior permeabilidade visual entre o hipódromo e o entorno e a ativação de fachadas na Av. Lineu de Paula Machado e na Rua Dr. José Augusto de Queiroz;
-				</blockquote>
-				<blockquote class="leg diretrizes">
-					8.	Buscar contrapartidas para a ampliação da rede de equipamentos públicos e o atendimento habitacional na região.
-				</blockquote>
+			<blockquote class="leg diretrizes">
+				4.	Possibilitar a ampliação dos serviços ambientais relativos a áreas verdes e soluções de drenagem atualmente prestados à cidade;
+			</blockquote>
+			<blockquote class="leg diretrizes">
+				5.	Possibilitar a transformação e o adensamento em áreas dissociadas do hipódromo, situadas no mesmo lote, preservando a qualidade urbana e ambiental do entorno e impedindo o agravamento dos padrões de incomodidade atuais em decorrência de novas atividades;
+			</blockquote>
+			<blockquote class="leg diretrizes">
+				6.	Qualificar a microacessibilidade de pedestres e ciclistas no entorno e nos acessos ao Jockey Club, considerando a necessidade de promover transposições qualificadas sobre o Rio Pinheiros, a partir das estações Hebraica-Rebouças e Cidade Jardim da CPTM, e nos percursos entre o hipódromo, a Estação Butantã do Metrô, o Corredor da Av. Prof. Francisco Morato e os principais equipamentos da região;
+			</blockquote>
+			<blockquote class="leg diretrizes">
+				7.	Promover maior permeabilidade visual entre o hipódromo e o entorno e a ativação de fachadas na Av. Lineu de Paula Machado e na Rua Dr. José Augusto de Queiroz;
+			</blockquote>
+			<blockquote class="leg diretrizes">
+				8.	Buscar contrapartidas para a ampliação da rede de equipamentos públicos e o atendimento habitacional na região.
+			</blockquote>
 
-				<p class="substitua-me">Mapa 1 - Áreas de Transformação segundo Critérios do PDE. Fonte GeoSampa. Elaboração: SP-Urbanismo</p>
+			<p class="substitua-me">Mapa 1 - Áreas de Transformação segundo Critérios do PDE. Fonte GeoSampa. Elaboração: SP-Urbanismo</p>
 
-				<p>Os PIUs devem também considerar a referência para os coeficientes de aproveitamento estabelecidos por macroárea conforme Quadro 2A da Lei nº16.050, de 31 de julho de 2014 – PDE. Esse quadro estabelece, para a MEM, C.A. máximo de 2 vezes a área do terreno. Tais limites podem ser superados mediante proposição de lei específica.</p>
+			<p>Os PIUs devem também considerar a referência para os coeficientes de aproveitamento estabelecidos por macroárea conforme Quadro 2A da Lei nº16.050, de 31 de julho de 2014 – PDE. Esse quadro estabelece, para a MEM, C.A. máximo de 2 vezes a área do terreno. Tais limites podem ser superados mediante proposição de lei específica.</p>
 
-				<h4>Viabilidade da transformação</h4>
-				<p>As diretrizes urbanísticas delineadas indicam que o Hipódromo de Cidade Jardim pode conciliar a preservação de seus atributos históricos e paisagísticos, admitindo transformações controladas que tragam maior dinamismo ao entorno e melhor aproveitamento do lote, sem provocar impactos negativos para a vizinhança de perfil residencial.</p>
-				<p>Dada a amplitude do lote onde se situa o hipódromo e as diferentes possibilidades de acesso, é possível vislumbrar oportunidades de transformação em diferentes graus, respeitando as restrições e disposições das resoluções de tombamento incidentes no equipamento e os requisitos funcionais das atividades do Jockey Club.</p>
-				<p>A fim de conciliar as diferentes condições de uso e ocupação do lote pertencente ao Jockey Club, o lote foi dividido em setores, com as seguintes características:</p>
+			<h4>Viabilidade da transformação</h4>
+			<p>As diretrizes urbanísticas delineadas indicam que o Hipódromo de Cidade Jardim pode conciliar a preservação de seus atributos históricos e paisagísticos, admitindo transformações controladas que tragam maior dinamismo ao entorno e melhor aproveitamento do lote, sem provocar impactos negativos para a vizinhança de perfil residencial.</p>
+			<p>Dada a amplitude do lote onde se situa o hipódromo e as diferentes possibilidades de acesso, é possível vislumbrar oportunidades de transformação em diferentes graus, respeitando as restrições e disposições das resoluções de tombamento incidentes no equipamento e os requisitos funcionais das atividades do Jockey Club.</p>
+			<p>A fim de conciliar as diferentes condições de uso e ocupação do lote pertencente ao Jockey Club, o lote foi dividido em setores, com as seguintes características:</p>
 
-				<ol>
-					<li>Setor Eusébio Matoso, próximo às estações Butantã do Metrô, Hebraica – Rebouças da CPTM e do corredor de ônibus da Av. Prof. Francisco Morato, é uma área inserida em um contexto de maior dinamismo urbano, com presença de usos mistos e maior grau de ocupação dos lotes. Sua diretriz é de transformação com adensamento construtivo;</li>
-					<li>Setor Lineu de Paula, ao longo da Av. Lineu de Paula Machado, no qual há um conjunto de edifícios de interesse histórico que pouco se relaciona com a via, inserido em um contexto urbano de perfil estritamente residencial, sensível a atividades de maior grau de incomodidade. Existem vazios que podem ser preenchidos por novas edificações com programas que atendam tanto ao Jockey Club quanto estejam voltados para a avenida, ativando as fachadas. Sua diretriz é de transformação condicionada;</li>
-					<li>Setor Tajurás, próximo da Av. dos Tajurás e da estação Cidade Jardim da CPTM, com um contexto urbano que mescla áreas estritamente residenciais com um corredor de serviços e lotes com ocupação esparsa. Sua diretriz é de transformação com adensamento construtivo;</li>
-					<li>Setor Preservação Histórica e Ambiental, é composto por áreas livres e edificações associadas ao hipódromo, com maiores restrições a novas construções. Sua diretriz é a preservação dos atributos históricos, ambientais e esportivos, podendo recepcionar novas atividades para intensificar sua utilização;</li>
-				</ol>
+			<ol>
+				<li>Setor Eusébio Matoso, próximo às estações Butantã do Metrô, Hebraica – Rebouças da CPTM e do corredor de ônibus da Av. Prof. Francisco Morato, é uma área inserida em um contexto de maior dinamismo urbano, com presença de usos mistos e maior grau de ocupação dos lotes. Sua diretriz é de transformação com adensamento construtivo;</li>
+				<li>Setor Lineu de Paula, ao longo da Av. Lineu de Paula Machado, no qual há um conjunto de edifícios de interesse histórico que pouco se relaciona com a via, inserido em um contexto urbano de perfil estritamente residencial, sensível a atividades de maior grau de incomodidade. Existem vazios que podem ser preenchidos por novas edificações com programas que atendam tanto ao Jockey Club quanto estejam voltados para a avenida, ativando as fachadas. Sua diretriz é de transformação condicionada;</li>
+				<li>Setor Tajurás, próximo da Av. dos Tajurás e da estação Cidade Jardim da CPTM, com um contexto urbano que mescla áreas estritamente residenciais com um corredor de serviços e lotes com ocupação esparsa. Sua diretriz é de transformação com adensamento construtivo;</li>
+				<li>Setor Preservação Histórica e Ambiental, é composto por áreas livres e edificações associadas ao hipódromo, com maiores restrições a novas construções. Sua diretriz é a preservação dos atributos históricos, ambientais e esportivos, podendo recepcionar novas atividades para intensificar sua utilização;</li>
+			</ol>
 
 			<p>Com isso em vista, propõe-se maior transformação nos setores Eusébio Matoso e Tajurás, situados nos extremos norte e sul do lote, nas proximidades das pontes Eusébio Matoso e Engenheiro Roberto Rossi Zuccolo (Cidade Jardim), onde já existem atividades de uso misto e dinâmicas urbanas mais intensas do que nas demais áreas de perfil estritamente residencial. </p>
 			<p class="substitua-me">Mapa 2 - Setorização do PIU Jockey Club. Elaboração: SP-Urbanismo</p>
@@ -1726,8 +1713,34 @@
 			<p>Em um segundo cenário, esse adensamento acontecerá majoritariamente com o uso residencial. A proximidade de importantes elementos da infraestrutura urbana possibilitaria, para os novos moradores do local, melhores condições de acesso à cidade. Além disso, esse adensamento poderia colaborar com a diversificação de tipologias e rendas no distrito Morumbi, caminhando para uma cidade mais equilibrada territorialmente. Como potenciais efeitos negativos, haveria um aumento no número de viagens com origem naquela região e maior demanda por serviços públicos nos equipamentos existentes.</p>
 			<p>Finalmente, é possível prever um cenário em que os usos residenciais e não residenciais estariam dividindo a área construída de maneira equivalente, em edifícios ou conjuntos de uso misto. Nesse cenário, esse adensamento levaria a um aumento do número de postos de trabalho naquela região, que poderiam, inclusive, ser ocupado, em parte, pelos novos moradores desses conjuntos edificados. Esse tipo de adensamento poderia levar a um aumento tanto das viagens com origem naquela região, quanto das viagens com destino àquela região, mas a convivência de trabalho e moradia no mesmo local pode acabar por diminuir a demanda sobre a infraestrutura urbana próxima. </p>
 
-			<!-- tres perguntas -->
-			<p class="substitua-me">Tres perguntas - Incluir no índice</p>
+			<Pergunta :id="1001" :context='"Pergunta 1"' :postid="1">
+				<template #pergunta>
+					Quais atividades de interesse público podem funcionar no Hipódromo de Cidade Jardim fora dos períodos em que ocorrem corridas e treinamentos e preservando o patrimônio histórico e as características da vizinhança?
+				</template>
+				<template #info>
+					{{ perguntaInfo }}
+				</template>
+			</Pergunta>
+
+			<Pergunta :id="1002" :context='"Pergunta 2"' :postid="1">
+				<template #pergunta>
+					Como você avalia a proposta de setorização do Programa de Interesse Público? A transformação proposta beneficia a região?
+				</template>
+				<template #info>
+					{{ perguntaInfo }}
+				</template>
+			</Pergunta>
+
+			<Pergunta :id="1003" :context='"Pergunta 3"' :postid="1">
+				<template #pergunta>
+					A introdução de fachadas ativas nas interfaces urbanas do Jockey Club contribui para a qualificação do bairro em que está inserido?
+				</template>
+				<template #info>
+					{{ perguntaInfo }}
+				</template>
+			</Pergunta>
+
+			<Comments :attr="{ id:100, commentcontext: 'Context' }"></Comments>
 
 			<h4>Modo de Gestão</h4>
 			<p>O PIU Jockey Club terá assegurada a gestão participativa em todas as etapas, desde seu desenvolvimento até sua implementação, conforme preconiza a Constituição Federal e o Estatuto da Cidade. Conforme a regulamentação do Decreto nº 56.901/2016, está prevista a realização de duas consultas públicas, sendo a primeira constituída pelos elementos prévios ao desenvolvimento do PIU  e a segunda constituída pelas propostas de parâmetros e intervenções eventualmente contidas no PIU. </p>
@@ -1754,8 +1767,6 @@
 			<ol class="notas">
 				<li>MEDAUAR, Odete. Controle da administração pública. 3. ed., rev., atual. e ampl. São Paulo: Ed. RT, 2014. p. 186-187.</li>
 			</ol>
-
-			</section>
 		</section>
 
 		<section ref="allComments">
@@ -1768,8 +1779,10 @@
 					<li>A introdução de fachadas ativas nas interfaces urbanas do Jockey Club contribui para a qualificação do bairro em que está inserido?</li>
 			</ol>
 
-			<CommentsLoader :attr="estaConsulta"></CommentsLoader>
+			<!-- <CommentsLoader :attr="estaConsulta"></CommentsLoader> -->
+			<!-- <Comments v-if="commentsLoaded && parseInt(estaConsulta.ativo) === 1" :attr="{id:99, context:'Comentarios'}"></Comments> -->
 			<Comments v-if="commentsLoaded && parseInt(estaConsulta.ativo) === 1" :attr="{id:99, context:'Comentarios'}"></Comments>
+
 		</section>
 
 	</div>
@@ -1783,12 +1796,14 @@ import CommentsLoader from '@/components/CommentsLoader'
 import Comments from '@/components/Comments'
 import Imagem from '@/components/Imagem'
 import Tabela from '@/components/Tabela'
+import Pergunta from '@/components/Pergunta'
 import { consultasCommons } from '@/mixins/consultasCommons'
 
 export default {
 	name: 'JockeyClub',
 	data () {
 		return {
+			perguntaInfo: 'Além da participação espontânea, com comentários acerca do conteúdo dos elementos prévios ao desenvolvimento do PIU Jockey Club, os munícipes poderão opinar sobre questões propostas pela SP Urbanismo, auxiliando na formulação de propostas para a sequência do projeto.',
 			titulosLimpo: [],
 			comments_atrr: undefined,
 			consultas: false,
@@ -1802,6 +1817,7 @@ export default {
 		CommentsLoader,
 		Comments,
 		Imagem,
+		Pergunta,
 		Tabela
 	},
 	mixins: [ consultasCommons ]

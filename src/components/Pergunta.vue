@@ -3,14 +3,14 @@
 		<main>
 			<i class="icon-dialogo icon"><span>dialogo</span></i>
 			<p class="text"><slot name="pergunta"></slot></p>
-			<button class="modalBtn" @click="toggleModal($event)">?</button>
+			<button class="modalBtn" @click.prevent="toggleModal($event)">?</button>
 			<div class="modal" :class="{ hidden: !modalOpen }">
 				<p><slot name="info"></slot></p>
-				<i class="icon-incorreto icon" @click="toggleModal($event)"><span>incorreto</span></i>
+				<i class="icon-incorreto icon" @click.prevent="toggleModal($event)"><span>incorreto</span></i>
 			</div>
 		</main>
 		<aside :class="{ tosend: step == 2, enviando: enviandoComment }">
-			<button class="formStart" :class="{ hidden: step !== 0 }" @click="goStep(1)">
+			<button class="formStart" :class="{ hidden: step !== 0 }" @click.prevent="goStep(1)">
 				<i class="icon-responder icon"><span>responder</span></i>
 				Escreva sua resposta
 			</button>
@@ -87,7 +87,7 @@
 				</template>
 				<template v-if="erro">
 					<p>Ocorreu um erro ao enviar sua resposta</p>
-					<button @click="send">
+					<button @click.prevent="send">
 						<i class="icon-novamente icon"><span>novamente</span></i>
 						<span>Tentar novamente</span>
 					</button>
@@ -113,15 +113,21 @@ export default {
 		}
 	},
 	props: {
-		attr: {
-			id: Number,
-			context: String
+		id: { 
+			type: Number,
+			required: true 
+		},
+		postid: {
+			type: Number,
+			required: true
+		},
+		context: { 
+			type: String,
+			required: false,
+			default: 'Pergunta'
 		}
 	},
 	mixins: [ commentsCommons ],
-	created () {
-		this.checkStorage()
-	},
 	methods: {
 		send () {
 			let app = this
@@ -135,9 +141,9 @@ export default {
 				'content': app.form_content,
 				'public': '0',
 				'trash': '0',
-				'postid': '1',
-				'commentid': app.attr.id,
-				'commentcontext': 'contexto!' // ADICIONAR CONTEXTOOOO
+				'postid': app.postid,
+				'commentid': app.id,
+				'commentcontext': app.context
 			})
 				.then(function (response) {
 					app.abreComentario = false
@@ -153,6 +159,7 @@ export default {
 				})
 		},
 		goStep (num) {
+			if (this.step === 0) this.checkStorage(['form_name', 'form_surname', 'form_organization', 'form_email'])
 			this.step = num
 		},
 		toggleModal (event) {
@@ -161,7 +168,7 @@ export default {
 		formButton () {
 			let storage = window.localStorage
 			let app = this
-			if (this.step == 1) {
+			if (this.step === 1) {
 				if (app.errors.items.length == 0) {
 					this.goStep(2)
 					storage.setItem('form_name', app.form_name)
@@ -169,19 +176,10 @@ export default {
 					storage.setItem('form_organization', app.form_organization)
 					storage.setItem('form_email', app.form_email)
 				}
-			} else if (this.step == 2) {
+			} else if (this.step === 2) {
 				this.send()
 			}
 		},
-		checkStorage () {
-			let app = this
-			let storage = window.localStorage
-			let keys = ['form_name', 'form_surname', 'form_organization', 'form_email']
-			storage.getItem('form_name') && storage.getItem('form_name') != 'null' ? this.form_name = storage.getItem('form_name') : false
-			storage.getItem('form_surname') && storage.getItem('form_surname') != 'null' ? this.form_surname = storage.getItem('form_surname') : false
-			storage.getItem('form_organization') && storage.getItem('form_organization') != 'null' ? this.form_organization = storage.getItem('form_organization') : false
-			storage.getItem('form_email') && storage.getItem('form_email') != 'null' ? this.form_email = storage.getItem('form_email') : false
-		}
 	}
 }
 
@@ -455,7 +453,6 @@ div.Pergunta {
 					cursor: pointer;
 				}
 			}
-			&.enviando {}
 			&.hidden {
 				opacity: 0;
 				max-width: 0;

@@ -19,11 +19,14 @@ export const commentsCommons = {
 		currentRoute () { return this.$route.name },
 		returnFormNameObject () {
 			if (this.form_organization != null) {
-				return this.form_name + ' ' + this.form_surname + ' (' + this.form_organization + ')'
+				return `${this.form_name} ${this.form_surname} (${this.form_organization})`
 			} else {
-				return this.form_name + ' ' + this.form_surname
+				return `${this.form_name} ${this.form_surname}`
 			}
 		}
+	},
+	created () {
+		this.checkStorage(['form_name', 'form_surname', 'form_organization', 'form_email'])
 	},
 	methods: {
 		checkName () {
@@ -42,12 +45,31 @@ export const commentsCommons = {
 			}
 		},
 		resetForm () {
-			this.form_name = null
-			this.form_surname = null
-			this.form_organization = null
-			this.form_email = null
+			this.setStorage(['form_name', 'form_surname', 'form_organization', 'form_email'])
 			this.form_content = null
 			this.abreComentario = false
+		},
+
+		/**
+		* Checa localStorage e seta parâmetros no 'data' deste componente
+		* @param { Array } keys Array de strings. @example ['form_name', 'form_surname', 'form_organization', 'form_email']
+		* @return { String } Seta valores do local storage nas chaves de mesmo nome neste componente
+		*/
+		checkStorage (keys) {
+			const storage = window.localStorage
+			keys.forEach(key => { if (storage.getItem(key)) this[key] = storage.getItem(key) })
+		},
+		/**
+		* Seta localStorage a partir de chaves do 'data' deste componente
+		* @param { Array } keys Array de strings. @example ['form_name', 'form_surname', 'form_organization', 'form_email']
+		* @return { Object } Seta valores local storage a partir das chaves de mesmo nome neste componente
+		*/
+		setStorage (keys) {
+			const storage = window.localStorage
+			keys.forEach(key => {
+				if (!this[key]) throw new Error(`${key} should be one of "data" keys`)
+				storage.setItem(key, this[key])
+			})
 		}
 	}
 }

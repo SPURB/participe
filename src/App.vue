@@ -1,5 +1,5 @@
 <template>
-<div id="app" @keyup.esc="fechaTudo">
+<div id="app">
 	<div :class="{ desligado: interruptor }" id="interruptor" ref="interruptor" @click="fechaTudo"></div>
 	<Preloader v-if='isHome'></Preloader>
 	<Cabecalho></Cabecalho>
@@ -45,7 +45,7 @@ export default {
 				this.$store.state.menuToggle = false
 				this.$store.state.apoioToggle = false
 				this.$store.state.luzApaga = false
-			};
+			}
 			document.body.style.overflow = document.body.style.overflow === '' ? 'hidden' : ''
 		}
 	}

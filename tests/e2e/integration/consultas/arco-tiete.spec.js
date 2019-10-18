@@ -1,7 +1,5 @@
-// https://docs.cypress.io/api/introduction/api.html
-
-describe('Home', () => {
-	it('Existe h1 com substring "participe"', () => {
+describe('/arco-tietê', () => {
+	it('Testa /arco-tietê', () => {
 		cy.visit('/arco-tiete')
 			.get('.PageTop')
 			.should('contain','PIU Arco Tietê')

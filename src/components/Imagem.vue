@@ -1,6 +1,6 @@
 <template>
 	<div class="Imagem">
-		<figure :class="dados.tipo">
+		<figure :class="dados.tipo" :style="{ maxWidth: maxWidth }">
 			<div class="imgWrap" :class="{ errata: dados.errata }" :id-erro="dados.id">
 				<img
 					v-if="!isIE"
@@ -10,7 +10,7 @@
 					}"
 					:class="{ visible:isVisible }"
 					:src="src"
-					:alt="dados.caption" 
+					:alt="dados.caption"
 					:title="dados.titulo"
 				>
 				<img
@@ -79,6 +79,9 @@ export default {
 			},
 			fonte: String,
 			externo: String
+		},
+		maxWidth: {
+			type: String
 		}
 	},
 	methods: {

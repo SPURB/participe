@@ -98,6 +98,13 @@ export const consultasCommons = {
 					document.body.style.overflow = document.body.style.overflow === '' ? 'hidden' : ''
 				})
 			})
+		},
+		commentId (isFirst) {
+			if (isFirst) {
+				this.$store.commentsCount = 0
+			}
+			this.$store.commentsCount++
+			return this.$store.commentsCount
 		}
 	}
 }

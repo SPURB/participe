@@ -57,7 +57,7 @@
 		"build-local": "vue-cli-service build --mode development",
 		"serve-homolog": "vue-cli-service serve --mode staging",
 		"serve:e2e": "start-server-and-test serve http://localhost:8080 e2e:open",
-		"tests":"start-server-and-test serve http://localhost:8080 e2e",
+		"tests": "start-server-and-test serve http://localhost:8080 e2e",
 		"e2e": "cypress run",
 		"e2e:open": "cypress open"
 	},

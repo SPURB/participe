@@ -220,5 +220,13 @@ export default new Router({
 				id: 57
 			}
 		},
+		{
+			path: '/jockey-club',
+			name: 'jockeyClub',
+			component: () => import(/* webpackChunkName: "JockeyClub" */ '@/views/JockeyClub'),
+			meta: {
+				id: 58
+			}
+		}
 	]
 })

@@ -1,5 +1,5 @@
 <template>
-	<div 
+	<div
 		class="Galeria"
 		:class="{ print: toPrint }"
 		:style="{maxWidth: gallery_attrs.width + 'px'}"

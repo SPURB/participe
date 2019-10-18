@@ -10,7 +10,7 @@
 					}"
 					:class="{ visible:isVisible }"
 					:src="src"
-					:alt="dados.caption" 
+					:alt="dados.caption"
 					:title="dados.titulo"
 				>
 				<img

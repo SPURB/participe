@@ -9,7 +9,7 @@
 				<i class="icon-incorreto icon" @click.prevent="toggleModal($event)"><span>incorreto</span></i>
 			</div>
 		</main>
-		<aside :class="{ tosend: step == 2, enviando: enviandoComment }">
+		<aside :class="{ tosend: step == 2, enviando: enviandoComment, contentError: errors.has('content') }">
 			<button class="formStart" :class="{ hidden: step !== 0 }" @click.prevent="goStep(1)">
 				<i class="icon-responder icon"><span>responder</span></i>
 				Escreva sua resposta
@@ -27,6 +27,8 @@
 							:class="{ inputErro: errors.has('name') }"
 							v-model='form_name'
 							ref="nome"
+							@keyup="setFormBtnState(['form_email', 'form_surname', 'form_name' ])"
+							@blur="setFormBtnState(['form_email', 'form_surname', 'form_name' ])"
 						>
 					</div>
 					<div>
@@ -39,6 +41,8 @@
 							v-validate="'required: true'"
 							:class="{ inputErro: errors.has('surname') }"
 							v-model='form_surname'
+							@keyup="setFormBtnState(['form_email', 'form_surname', 'form_name' ])"
+							@blur="setFormBtnState(['form_email', 'form_surname', 'form_name' ])"
 						>
 					</div>
 					<div>
@@ -62,6 +66,8 @@
 							:class="{ inputErro: errors.has('email') }"
 							type="email"
 							v-model='form_email'
+							@keyup="setFormBtnState(['form_email', 'form_surname', 'form_name' ])"
+							@blur="setFormBtnState(['form_email', 'form_surname', 'form_name' ])"
 						>
 					</div>
 				</fieldset>
@@ -71,13 +77,13 @@
 						id="comentario"
 						name="content"
 						v-validate="'required: true'"
-						:class="{ inputErro: errors.has('content') }"
 						v-model='form_content'
 						placeholder="Escreva sua resposta aqui"
+						@keyup="setFormBtnState(['form_content'])"
 					></textarea>
 				</fieldset>
 			</form>
-			<button class="formBtn" :class="{ hidden: step == 0 || step > 2 || errors.items.length > 0, prox: step == 1, enviar: step == 2 }" @click.prevent="formButton">
+			<button class="formBtn" :class="{ hidden: step == 0 || step > 2, prox: step == 1, enviar: step == 2 }" @click.prevent="formButton" :disabled="formBtnState">
 				<span>Enviar</span>
 				<i class="icon-seta_direita icon"><span>seta_direita</span></i>
 			</button>
@@ -109,7 +115,8 @@ export default {
 	data () {
 		return {
 			step: 0,
-			modalOpen: false
+			modalOpen: false,
+			formBtnState: true
 		}
 	},
 	props: {
@@ -159,7 +166,10 @@ export default {
 				})
 		},
 		goStep (num) {
-			if (this.step === 0) this.checkStorage(['form_name', 'form_surname', 'form_organization', 'form_email'])
+			if (this.step === 0) {
+				this.checkStorage(['form_name', 'form_surname', 'form_organization', 'form_email']) 
+				this.setFormBtnState(['form_email', 'form_surname', 'form_name' ])
+			}
 			this.step = num
 		},
 		toggleModal (event) {
@@ -176,10 +186,20 @@ export default {
 					storage.setItem('form_organization', app.form_organization)
 					storage.setItem('form_email', app.form_email)
 				}
+				this.setFormBtnState(['form_content'])
 			} else if (this.step === 2) {
 				this.send()
 			}
 		},
+		setFormBtnState (requiredKeys) {
+			let errors = 0
+			requiredKeys.forEach(key => {
+				if (this[key] === null || this[key] === '') errors++
+			})
+			if (errors) return this.formBtnState = true
+			else return this.formBtnState = false
+		}
+
 	}
 }
 
@@ -462,6 +482,9 @@ div.Pergunta {
 			background-color: rgba(255, 255, 255, .04);
 			&::after {
 				bottom: 0;
+			}
+			&.contentError::after {
+				background-color: $vermelho;
 			}
 		}
 		&.enviando {

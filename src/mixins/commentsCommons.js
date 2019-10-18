@@ -57,7 +57,7 @@ export const commentsCommons = {
 		*/
 		checkStorage (keys) {
 			const storage = window.localStorage
-			keys.forEach(key => { if (storage.getItem(key)) this[key] = storage.getItem(key) })
+			keys.forEach(key => { if (storage.getItem(key) !== 'null') this[key] = storage.getItem(key) })
 		},
 		/**
 		* Seta localStorage a partir de chaves do 'data' deste componente

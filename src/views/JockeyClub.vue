@@ -60,6 +60,7 @@
 			<p>O Hipódromo de Cidade Jardim é um equipamento privado de grande porte que contém características urbanísticas, paisagísticas e históricas excepcionais, tendo sido assim classificado como uma ZOE – Zona de Ocupação Especial pela Lei de Parcelamento, Uso e Ocupação do Solo – LPUOS (Lei nº 16402/2016).  Nos termos do §1º do art. 15 dessa lei, as áreas classificadas como ZOE – Zona de Ocupação Especial devem necessariamente ser objeto de PIU – Projetos de Intervenção Urbana, contemplando a definição de parâmetros específicos de parcelamento, uso e ocupação do solo adequados às suas especificidades.</p>
 			<p>Em atendimento ao Art. 2° do Decreto Municipal nº 56.901/2016, que regulamenta o desenvolvimento dos Projetos de Intervenção Urbana, os produtos ora apresentados correspondem aos elementos prévios à elaboração do PIU, constituídos pelo Diagnóstico Socioterritorial e Ambiental e pelo Programa de Interesse Público, subsidiando a instrução do presente Projeto de Intervenção Urbana do Hipódromo de Cidade Jardim – PIU Jockey Club, possibilitando à SMDU a realização da Consulta Pública inaugural do processo de desenvolvimento deste projeto no site Gestão Urbana.</p>
 			<p>Considerando que o Hipódromo de Cidade Jardim vem passando nos últimos anos por um processo gradativo de refuncionalização em razão de uma progressiva redução das atividades do turfe e da realização de eventos e novas atividades de cunho cultural, esportivo e de lazer, bem como das tratativas iniciadas entre a Prefeitura e o Jockey Club de São Paulo visando à composição em relação a lançamentos tributários relativos ao  imóvel, envolvendo a prestação de contrapartidas de interesse público, este PIU Jockey Club é uma oportunidade para que se promova publicamente a discussão acerca da destinação urbanística deste equipamento histórico no contexto de desenvolvimento urbano atual da cidade e da estratégia de ordenamento territorial delineada pelo Plano Diretor Estratégico – PDE (Lei nº 16.050/2014).</p>
+			<Comments :attr="{ id: commentId(true), commentcontext: 'Introdução' }"></Comments>
 
 			<h4>Objeto</h4>
 				<p>A presente Consulta Pública, promovida pela Prefeitura do Município de São Paulo por intermédio da Secretaria Municipal de Desenvolvimento Urbano (SMDU) e da São Paulo Urbanismo (SP-URBANISMO), tem como objeto desencadear o processo administrativo tendente a instaurar o Projeto de Intervenção Urbana do Hipódromo de Cidade Jardim – PIU Jockey Club, a ser realizada entre os dias 18 de outubro a 06 de novembro de 2019, apresentando os elementos preliminares ao desenvolvimento do PIU, com vistas a colher contribuições da sociedade civil ao posterior desenvolvimento do projeto. A consulta tem por base a legislação em vigor e os instrumentos urbanísticos que permitem ações específicas no território da cidade.</p>
@@ -151,7 +152,7 @@
 				fonte: 'Figura 8 - Google Earth, 2019'
 			}"></Imagem>
 
-			<Imagem :dados="{
+			<Imagem :maxWidth="mapMaxWidth" :dados="{
 				tipo: 'mapa',
 				url: imgSrc('arquivos/jockey/Mapa-1.gif'),
 				titulo: 'Mapa 1 - Setores do Hipódromo',
@@ -175,7 +176,7 @@
 			<p>As análises contidas neste diagnóstico socioterritorial consideram a área da ZOE do Hipódromo de Cidade Jardim como Área Diretamente Afetada (ADA) pelo projeto de intervenção urbana a ser desenvolvido, as áreas das Zonas Origem e Destino (ZOD) da Pesquisa Origem e Destino do Metrô de São Paulo situadas no entorno do hipódromo como Área de Influência Direta (AID) deste PIU e, por fim, as áreas dos distritos municipais situados ao redor do hipódromo, como Área de Influência Indireta (AII) do PIU Jockey (Mapa 2). </p>
 			<p>Considerando as características socioeconômicas e ambientais do contexto urbano em que se insere o hipódromo, as ZODs que compõem a AID estão localizadas nas subprefeituras do Butantã e Pinheiros, englobando Butantã, Pinheiros, Jardim Europa e Jockey Club. Os distritos que compõem a AII também estão localizados em ambas as subprefeituras, englobando Morumbi, Butantã, Vila Sônia, Pinheiros, Alto de Pinheiros e Itaim Bibi.</p>
 
-			<Imagem :dados="{
+			<Imagem :maxWidth="mapMaxWidth" :dados="{
 				tipo: 'mapa',
 				url: imgSrc('arquivos/jockey/Mapa-2.jpg'),
 				titulo: 'Mapa 2 - Inserção Metropolitana da Área de Intervenção',
@@ -189,7 +190,7 @@
 				]
 			}"></Imagem>
 
-			<Imagem :dados="{
+			<Imagem :maxWidth="mapMaxWidth" :dados="{
 				tipo: 'mapa',
 				url: imgSrc('arquivos/jockey/Mapa-3.jpg'),
 				titulo: 'Mapa 3 - Definição das áreas de análise',
@@ -201,7 +202,7 @@
 				]
 			}"></Imagem>
 
-			<Imagem :dados="{
+			<Imagem :maxWidth="mapMaxWidth" :dados="{
 				tipo: 'mapa',
 				url: imgSrc('arquivos/jockey/Mapa-4.jpg'),
 				titulo: 'Mapa 4 - Limites Administrativos',
@@ -234,9 +235,7 @@
 			<p>Considerando os distritos, as densidades do Morumbi e Alto de Pinheiros refletem o quadro descrito para a AID, com densidades baixas, da ordem de 50 habitantes/ha. Nos demais distritos, onde há maior diversidade dos padrões de ocupação vertical e horizontal e maior diversidades entre usos residenciais e não residenciais, as densidades predominantes variam entre 50 e 200 hab/ha. Densidades acima de 200 hab/ha podem ser observadas em determinadas regiões dos distritos da Vila Sônia, Pinheiros e Itaim Bibi. Já as densidades domiciliares nos distritos da AII são pouco menores que a média da cidade (3,15 pes/dom), variando entre 2,36 pessoas/domicílio no Itaim Bibi e 3,13 pessoas/domicílio na Vila Sônia.</p>
 			<p>Constata-se que o distrito Morumbi, onde se localiza o Hipódromo de Cidade Jardim, é, em suas características econômicas e populacionais, mais semelhante aos distritos vizinhos da margem oposta do Rio Pinheiros do que de os outros distritos sob jurisdição da Subprefeitura do Butantã - Butantã, Raposo Tavares, Rio Pequeno e Vila Sônia.</p>
 
-			<p class="substitua-me">Mapa 5 - Densidade Demográfica (hab/ha) Fonte: IBGE, 2010. Elaboração: SP-Urbanismo</p>
-
-			<Imagem :dados="{
+			<Imagem :maxWidth="mapMaxWidth" :dados="{
 				tipo: 'mapa',
 				url: imgSrc('arquivos/jockey/Mapa-5.jpg'),
 				titulo: 'Mapa 5 - Densidade Demográfica (hab/ha)',
@@ -853,7 +852,7 @@
 				fonte: 'MTE, RAIS, 2016. .Elaboração: SP Urbanismo'
 			}"></Imagem>
 
-			<Imagem :dados="{
+			<Imagem :maxWidth="mapMaxWidth" :dados="{
 				tipo: 'mapa',
 				url: imgSrc('arquivos/jockey/Mapa-6.jpg'),
 				titulo: 'Mapa 6 - Renda Média da População (Salários Mínimos)',
@@ -872,7 +871,7 @@
 			]
 			}"></Imagem>
 
-			<Imagem :dados="{
+			<Imagem :maxWidth="mapMaxWidth" :dados="{
 				tipo: 'mapa',
 				url: imgSrc('arquivos/jockey/Mapa-7.jpg'),
 				titulo: 'Mapa 7 - Renda Média da População (Salários Mínimos)',
@@ -957,7 +956,7 @@
 
 			<p>Em relação à produção imobiliária, conforme dados da Embraesp de 1985 a 2013, é possível identificar no Mapa 10 uma produção robusta e distribuída por praticamente toda a AII, com exceção das áreas de perfil estritamente residencial horizontal, com regulação restrita para esta atividade. Como em toda a cidade, há predomínio absoluto de empreendimentos residenciais, com maior concentração nas regiões da Vila Madalena, Itaim Bibi, Vila Olímpia, Morumbi e Real Parque. Os empreendimentos não residenciais tem participação expressiva da região, em relação ao total da cidade, considerando principalmente os lançamentos localizados dentro das operações urbanas consorciadas Faria Lima e Águas Espraiadas, nas regiões de Pinheiros, Itaim Bibi e Vila Olímpia. </p>
 
-			<Imagem :dados="{
+			<Imagem :maxWidth="mapMaxWidth" :dados="{
 				tipo: 'mapa',
 				url: imgSrc('arquivos/jockey/Mapa-8.jpg'),
 				titulo: 'Mapa 8 - Uso Predominante do Solo',
@@ -984,7 +983,7 @@
 			]
 			}"></Imagem>
 
-			<Imagem :dados="{
+			<Imagem :maxWidth="mapMaxWidth" :dados="{
 				tipo: 'mapa',
 				url: imgSrc('arquivos/jockey/Mapa-9.jpg'),
 				titulo: 'Mapa 9 - Patrimônios Identificados',
@@ -1006,7 +1005,7 @@
 			]
 			}"></Imagem>
 
-			<Imagem :dados="{
+			<Imagem :maxWidth="mapMaxWidth" :dados="{
 				tipo: 'mapa',
 				url: imgSrc('arquivos/jockey/Mapa-10.jpg'),
 				titulo: 'Mapa 10 - Gabarito das Edificações',
@@ -1023,7 +1022,7 @@
 			]
 			}"></Imagem>
 
-			<Imagem :dados="{
+			<Imagem :maxWidth="mapMaxWidth" :dados="{
 				tipo: 'mapa',
 				url: imgSrc('arquivos/jockey/Mapa-11.jpg'),
 				titulo: 'Mapa 11 - Lançamentos Imobiliários 1985-2013',
@@ -1044,7 +1043,7 @@
 			<p>Cerca de 4% das favelas da cidade estão na Subprefeitura do Butantã, distribuídas, sobretudo pelos distritos Raposo Tavares, Rio Pequeno e, em menor número, Vila Sônia onde, por outro lado, está o maior número de domicílios em favelas. O distrito Morumbi também registra uma quantidade relativamente alta de domicílios em favelas. No distrito Pinheiros, por outro lado, estão menos de 0,2% das favelas do município e Alto de Pinheiros não registra favelas.
 			O Jardim Panorama é o assentamento precário mais próximo do Jockey Club, e trata-se de assentamento precário antigo, cuja ocupação data de 1957 e que, segundo as informações coletadas pelo HabitaSAMPA, conta com 576 domicílios.</p>
 
-			<Imagem :dados="{
+			<Imagem :maxWidth="mapMaxWidth" :dados="{
 				tipo: 'mapa',
 				url: imgSrc('arquivos/jockey/Mapa-12.jpg'),
 				titulo: 'Mapa 12 - Índice Paulista de Vulnerabilidade Social 2010',
@@ -1088,7 +1087,7 @@
 			<p>Há ainda loteamento irregular com renda maior do que seis salários mínimos, denominado Jardim Edith, que conta com 406 lotes.</p>
 			<p>Portanto, do ponto de vista da vulnerabilidade social, a subprefeitura de Pinheiros apresenta poucos assentamentos precários, os quais se encontram em perímetros de adesão de operações urbanas consorciadas que contam com recursos da venda de Certificado de Potencial Construtivo Adicional – CEPAC.</p>
 
-			<Imagem :dados="{
+			<Imagem :maxWidth="mapMaxWidth" :dados="{
 				tipo: 'mapa',
 				url: imgSrc('arquivos/jockey/Mapa-13.jpg'),
 				titulo: 'Mapa 13 - Precariedade Habitacional',
@@ -1137,7 +1136,7 @@
 			<p class="fonte">Lei nº 16.402/2016, grifo nosso</p>
 			</blockquote>
 
-			<Imagem :dados="{
+			<Imagem :maxWidth="mapMaxWidth" :dados="{
 				tipo: 'mapa',
 				url: imgSrc('arquivos/jockey/Mapa-14.jpg'),
 				titulo: 'Mapa 14 – Áreas de desenvolvimento estratégico do PDE',
@@ -1152,9 +1151,7 @@
 			]
 			}"></Imagem>
 
-			<p class="substitua-me">Mapa 15 - Zoneamento. Fonte: GeoSampa. Elaboração: SP-Urbanismo.</p>
-
-			<Imagem :dados="{
+			<Imagem :maxWidth="mapMaxWidth" :dados="{
 				tipo: 'mapa',
 				url: imgSrc('arquivos/jockey/Mapa-15.jpg'),
 				titulo: 'Mapa 15 - Zoneamento',
@@ -1199,7 +1196,7 @@
 			<p>Para fins de comparação, observamos que, atualmente, incidem sobre o distrito Butantã diversas zonas de uso. Além da Zona de Ocupação Especial (ZOE) demarcada sobre o campus da USP, há áreas demarcadas como Zona Eixo de Estruturação da Transformação Urbana (ZEU) no entorno da estação Butantã de metrô. Há áreas significativas de Zonas Exclusivamente Residenciais (ZER) e Zonas Predominantemente Residenciais (ZPR), com Coeficiente de aproveitamento (CA) máximo de uma vez a área do lote, e áreas demarcadas como Zona Mista (ZM) e Zona Centralidade (ZC) em eixos viários importantes, com CA máximo de 2 vezes a área do terreno, e nas quais historicamente se concentram os lançamentos imobiliários do distrito, a maioria deles residencial. </p>
 
 			<Imagem :dados="{
-				tipo: 'coluna',
+				tipo: 'coluna',	
 				url: imgSrc('arquivos/jockey/Tabela-11.gif'),
 				caption: 'Tabela 11 - Áreas Ocupadas Por Tipo de Zona em Quadras Fiscais (m²).',
 				fonte: 'Geosampa. Elaboração: SP Urbanismo'
@@ -1211,7 +1208,29 @@
 
 			<p>As demais redes de equipamentos apresentam distribuição mais discreta no território da AII, relacionando-se ora com regiões de maior vulnerabilidade social ou demandas específicas para atendimento de segmentos vulneráveis da população, ora com localizações estratégicas quanto à acessibilidade por transporte público ou conectadas ao sistema viário estrutural. As redes de esportes e assistência social se vinculam principalmente ao primeiro caso, enquanto que as redes de saúde e abastecimento mais com o segundo. </p>
 			<p>A Vila Sônia é o distrito da AII que conta com maior número de equipamentos de esportes e assistência social. Os equipamentos de saúde, muitos de grande porte, estão presentes em maior número em Pinheiros, Itaim Bibi, Butantã e Morumbi.</p>
-			<p class="substitua-me">Mapa 16 – Equipamentos Públicos. Fonte: GeoSampa. Elaboração: SP-Urbanismo</p>
+			
+			<!-- <p class="substitua-me">Salvar ícones a partir deste mapa</p> -->
+
+			<Imagem :maxWidth="mapMaxWidth" :dados="{
+				tipo: 'mapa',
+				url: imgSrc('arquivos/jockey/Mapa-16.jpg'),
+				titulo: 'Mapa 16 – Equipamentos Públicos',
+				fonte:'Geosampa. Elaboração: SP-Urbanismo',
+				legenda: [
+					{ borda: '#FC50D3', espessura: 3, descricao: 'PIU Jockey Club' },
+					{ borda: '#000', espessura: 3, pontilhado: true, descricao: 'AID - Área de Influência Direta' },
+					{ borda: '#000', espessura: 3, descricao: 'AII - Área de Influência Indireta' },
+					{ borda: '#000', espessura: 3, pontilhado: true, descricao: 'Limite do Município de São Paulo' },
+					{ simbolo: imgSrc('arquivos/legendas/icones/assistencia-social.png'), descricao: 'Assistência Social' },
+					{ simbolo: imgSrc('arquivos/legendas/icones/saude.png'), descricao: 'Saúde' },
+					{ simbolo: imgSrc('arquivos/legendas/icones/esporte.png'), descricao: 'Esporte' },
+					{ simbolo: imgSrc('arquivos/legendas/icones/abastecimento.png'), descricao: 'Abastecimento (Feira, Sacolão e Mercado' },
+					{ simbolo: imgSrc('arquivos/legendas/icones/cultura.png'), descricao: 'Cultura' },
+					{ simbolo: imgSrc('arquivos/legendas/icones/eucação-rede-publica.png'), descricao: 'Educação - Rede Pública' },
+					{ simbolo: imgSrc('arquivos/legendas/icones/eucação-rede-privada.png'), descricao: 'Educação - Rede Privada' },
+				]
+			}"></Imagem>
+
 			<h3>Mobilidade</h3>
 			<p>A região onde se situa o Hipódromo de Cidade Jardim possui uma robusta rede de mobilidade composta por diversos modais.</p>
 
@@ -1226,18 +1245,136 @@
 
 			<p>Em relação às dinâmicas de viagens a partir da observação dos dados da Pesquisa Origem e Destino  do Metro de São Paulo (Pesquisa OD 2017),  observa-se que as viagens com origem da AID tem  predomínio de viagens de pequena e média distâncias, tendo como destinos mais relevantes a própria AII, as regiões de Campo Limpo, Lapa e Santo Amaro e a cidade vizinha de Taboão da Serra. Já as viagens com destino à AID tem dinâmica muito semelhante, partindo principalmente do vetor a sudoeste da AII.</p>
 
-			<p class="substitua-me">Mapa 17 – Rede de Transporte Público. Fonte: GeoSampa. Elaboração: SP-Urbanismo.</p>
+			<Imagem :maxWidth="mapMaxWidth" :dados="{
+				tipo: 'mapa',
+				url: imgSrc('arquivos/jockey/Mapa-17.jpg'),
+				titulo: 'Mapa 17 – Rede de Transporte Público',
+				fonte:'Geosampa. Elaboração: SP-Urbanismo',
+				legenda: [
+					{ simbolo: imgSrc('arquivos/legendas/icones/piu-jockey-club.png'), descricao: 'PIU jockey Club' },
+					{ borda: '#000', espessura: 3, pontilhado: true, descricao: 'AID - Área de Influência Direta' },
+					{ borda: '#000', espessura: 3, descricao: 'AII - Área de Influência Indireta' },
+					{ fundo: '#DAE7CE', descricao: 'Praças, parques e canteiros' },
+					{ fundo: '#C2C1BE', descricao: 'Eixo de Estruturação da Transformação Urbana Existente' },
+					{ fundo: '#DDDCDB', descricao: 'Eixo de Estruturação da Transformação Urbana Previstas' },
+					{ simbolo: imgSrc('arquivos/legendas/icones/cptm-estacoes.png'), descricao: 'CPTM - Estações' },
+					{ borda: '#F73700', espessura: 2, descricao: 'CPTM' },
+					{ simbolo: imgSrc('arquivos/legendas/icones/metro-estacoes.png'), descricao: 'Metrô - Estações' },
+					{ borda: '#FF7F00', espessura: 2, descricao: 'Metrô Existente' },
+					{ borda: '#FF7F00', espessura: 2, pontilhado: true, descricao: 'Metrô Existente' },
+					{ borda: '#FA2613', espessura: 2, pontilhado: true, descricao: 'Monotrilho Planejada' },
+					{ simbolo: imgSrc('arquivos/legendas/icones/terminal-onibus-existentes.png'), descricao: 'Terminais de Ônibus Existentes' },
+					{ borda: '#F394F8', espessura: 2, descricao: 'Faixa de Ônibus' },
+					{ borda: '#D433F4', espessura: 3, descricao: 'Corredor de Ônibus' },
+					{ borda: '#CD09FE', espessura: 2, pontilhado: true, descricao: 'Corredor de Ônibus Planejado' },
+					{ simbolo: imgSrc('arquivos/legendas/icones/terminal-onibus-planejados.png'), descricao: 'Terminais de Ônibus Planejados' }
+			]
+			}"></Imagem>
 
-			<p class="substitua-me">Mapa 18 – Rede Cicloviária (CET). Fonte: GeoSampa. Elaboração: SP-Urbanismo.</p>
+			<Imagem :maxWidth="mapMaxWidth" :dados="{
+				tipo: 'mapa',
+				url: imgSrc('arquivos/jockey/Mapa-18.jpg'),
+				titulo: 'Mapa 18 – Rede Cicloviária (CET)',
+				fonte:'Geosampa. Elaboração: SP-Urbanismo',
+				legenda: [
+					{ simbolo: imgSrc('arquivos/legendas/icones/piu-jockey-club.png'), descricao: 'PIU jockey Club' },
+					{ borda: '#000', espessura: 3, pontilhado: true, descricao: 'AID - Área de Influência Direta' },
+					{ borda: '#000', espessura: 3, descricao: 'AII - Área de Influência Indireta' },
+					{ borda: '#9B5DF8', espessura: 2, descricao: 'AII - Plano Emergencial de Calçadas 2019' },
+					{ simbolo: imgSrc('arquivos/legendas/icones/bicicletarios-paraciclos.png'), descricao: 'Bicicletários e Paraciclos' },
+					{ borda: '#F34966', linha: true, espessura: 2, descricao: 'Ciclovia' },
+					{ borda: '#F97638', espessura: 2, descricao: 'Ciclofaixa' },
+					{ borda: '#FEFAA0', espessura: 2, descricao: 'Ciclorrota' },
+					{ borda: '#9F9F9F', espessura: 2, descricao: 'Ciclopassarela' }
+			]
+			}"></Imagem>
 
-			<p class="substitua-me">Mapa 19 - Classificação Viária de Acordo com o PDE 2014. Fonte: GeoSampa. Elaboração: SP-Urbanismo.</p>
+			<Imagem :maxWidth="mapMaxWidth" :dados="{
+				tipo: 'mapa',
+				url: imgSrc('arquivos/jockey/Mapa-19.jpg'),
+				titulo: 'Mapa 19 - Classificação Viária de Acordo com o PDE 2014',
+				fonte:'Geosampa. Elaboração: SP-Urbanismo',
+				legenda: [
+					{ borda: '#FC50D3', linha: true, espessura: 3, descricao: 'PIU Jockey Club' },
+					{ borda: '#000', linha: true, espessura: 3, pontilhado: true, descricao: 'AID - Área de Influência Direta' },
+					{ borda: '#000', linha: true, espessura: 3, descricao: 'AII - Área de Influência Indireta' },
+					{ borda: '#FF0105', linha: true, espessura: 2, descricao: 'Vias Estruturais N1' },
+					{ borda: '#FCC000', linha: true, espessura: 2, descricao: 'Vias Estruturais N2' },
+					{ borda: '#00FF21', linha: true, espessura: 2, descricao: 'Vias Estruturais N3' },
+					{ borda: '#00BEEA', linha: true, espessura: 2, descricao: 'Vias Coletoras' }
+				]
+			}"></Imagem>
 
-			<p class="substitua-me">Mapa 20 - Classificação Viária. Fonte: CET, 2019. Elaboração: SP-Urbanismo</p>
+			<Imagem :maxWidth="mapMaxWidth" :dados="{
+				tipo: 'mapa',
+				url: imgSrc('arquivos/jockey/Mapa-20.jpg'),
+				titulo: 'Mapa 20 - Classificação Viária',
+				fonte:'CET. Elaboração: SP-Urbanismo',
+				legenda: [
+					{ borda: '#FC50D3', linha: true, espessura: 3, descricao: 'PIU Jockey Club' },
+					{ borda: '#000', linha: true, espessura: 3, pontilhado: true, descricao: 'AID - Área de Influência Direta' },
+					{ borda: '#000', linha: true, espessura: 3, descricao: 'AII - Área de Influência Indireta' },
+					{ borda: '#A12C12', linha: true, espessura: 3, descricao: 'Vias de Trânsito Rápido' },
+					{ borda: '#FF4E55', linha: true, espessura: 1, descricao: 'Vias Arteriais' },
+					{ borda: '#FFAC58', linha: true, espessura: 1, descricao: 'Vias Coletoras' }
+			]
+			}"></Imagem>
 
-			<p class="substitua-me">Mapa 21 - Sistema Viário, Equipamentos de Mobilidade, Semáforos e Ocorrências de Atropelamentos. Fonte: GeoSampa Elaboração: SP-Urbanismo</p>
+			<Imagem :maxWidth="mapMaxWidth" :dados="{
+				tipo: 'mapa',
+				url: imgSrc('arquivos/jockey/Mapa-21.jpg'),
+				titulo: 'Mapa 21 - Sistema Viário, Equipamentos de Mobilidade, Semáforos e Ocorrências de Atropelamentos',
+				fonte:'Geosampa. Elaboração: SP-Urbanismo',
+				legenda: [
+					{ borda: '#FC50D3', espessura: 3, descricao: 'PIU Jockey Club' },
+					{ borda: '#000', espessura: 3, pontilhado: true, descricao: 'AID - Área de Influência Direta' },
+					{ borda: '#000', espessura: 3, descricao: 'AII - Área de Influência Indireta' },
+					{ simbolo: imgSrc('arquivos/legendas/icones/bicicletarios-paraciclos.png'), descricao: 'Bicicletários e Paraciclos' },
+					{ borda: '#FF8200', linha: true, espessura: 3, descricao: 'Rede Cicloviária' },
+					{ borda: '#FF0105', linha: true, espessura: 1, descricao: 'Vias Estruturais N1' },
+					{ birda: '#FFDB1B', linha: true, espessura: 1, descricao: 'Corredores de Ônibus' },
+					{ simbolo: imgSrc('arquivos/legendas/icones/semaforos.png'), descricao: 'Semáforos' },
+					{ simbolo: imgSrc('arquivos/legendas/icones/atropelamentos.png'), descricao: 'Atropelamentos' }
+				]
+			}"></Imagem>
 
-			<p class="substitua-me">Mapa 22 - Viagens Com Origem na Área de Influência Direta. Fonte: Metrô: 2017. Elaboração: SP-Urbanismo</p>
-			<p class="substitua-me">Mapa 23 - Viagens Com Destino na Área de Influência Direta. Fonte: Metrô: 2017. Elaboração: SP-Urbanismo</p>
+			<Imagem :maxWidth="mapMaxWidth" :dados="{
+				tipo: 'mapa',
+				url: imgSrc('arquivos/jockey/Mapa-22.jpg'),
+				titulo: 'Mapa 22 - Viagens Com Origem na Área de Influência Direta',
+				fonte:'Geosampa. Elaboração: SP-Urbanismo',
+				legenda: [
+					{ borda: '#FC50D3', espessura: 3, descricao: 'PIU Jockey Club' },
+					{ borda: '#000', espessura: 3, pontilhado: true, descricao: 'AID - Área de Influência Direta' },
+					{ borda: '#000', espessura: 3, descricao: 'AII - Área de Influência Indireta' },
+					{ borda: '#000', espessura: 3, pontilhado: true, descricao: 'Limite do Minicípio de São Paulo' },
+					{ fundo: '#FFFFC9', descricao: '0 - 30' },
+					{ fundo: '#FEDB8C', descricao: '300 - 1000' },
+					{ fundo: '#FDAF76', descricao: '1000 - 3000' },
+					{ fundo: '#F47562', descricao: '3000 - 6000' },
+					{ fundo: '#D04C67', descricao: '> 6000' }
+			]
+			}"></Imagem>
+
+			<Imagem :maxWidth="mapMaxWidth" :dados="{
+				tipo: 'mapa',
+				url: imgSrc('arquivos/jockey/Mapa-23.jpg'),
+				titulo: 'Mapa 23 - Viagens Com Destino na Área de Influência Direta',
+				fonte:'Metrô: 2017. Elaboração: SP-Urbanismo',
+				legenda: [
+					{ borda: '#FC50D3', espessura: 3, descricao: 'PIU Jockey Club' },
+					{ borda: '#000', espessura: 3, pontilhado: true, descricao: 'AID - Área de Influência Direta' },
+					{ borda: '#000', espessura: 3, descricao: 'AII - Área de Influência Indireta' },
+					{ borda: '#000', espessura: 3, pontilhado: true, descricao: 'Limite do Minicípio de São Paulo' },
+					{ fundo: '#FFFFC9', descricao: '0 - 30' },
+					{ fundo: '#FEDB8C', descricao: '300 - 1000' },
+					{ fundo: '#FDAF76', descricao: '1000 - 3000' },
+					{ fundo: '#F47562', descricao: '3000 - 6000' },
+					{ fundo: '#D04C67', descricao: '> 6000' }
+				]
+			}"></Imagem>
+
+
 
 			<ul class="links">
 				<li>
@@ -1267,7 +1404,24 @@
 			<h3>Ilha de calor</h3>
 			<p>A região do MSP era originalmente ocupada pela Mata Atlântica e Floresta das Araucárias, onde predominava o clima tropical úmido. A urbanização, através da impermeabilização do solo e construção de elevados edifícios, promoveu a elevação da temperatura média mensal em 2°C, redução da umidade relativa média mensal de 85% para 80%, os períodos de calor ficaram mais longos, as temperaturas mais amenas só passaram a ser registradas em áreas com cobertura vegetal, junto aos corpos d’água e nas porções com predominância de ocupação residencial horizontal. Na área ocupada pelo Jockey Club, o Mapa das Isotermas das Temperaturas de Superfície, revela predominância de temperaturas de 28°C, que se mantem praticamente constantes, sem grandes variações, ao longo dos Distritos Morumbi e Pinheiros, enquanto que, no mesmo instante, são registradas temperaturas de até 31,5°C na Mooca, onde se constata a formação de ilha de calor.</p>
 
-			<p class="substitua-me">Mapa 18: Temperatura aparente de superfície,  isotermas. Fonte: Atlas Ambiental MSP/2004.</p>
+			<Imagem :maxWidth="mapMaxWidth" :dados="{
+				tipo: 'mapa',
+				url: imgSrc('arquivos/jockey/Mapa-A-18.jpg'),
+				titulo: 'Mapa 18: Temperatura aparente de superfície,  isotermas',
+				fonte:'Atlas Ambiental MSP/2004. Elaboração: SP-Urbanismo',
+				legenda: [
+					{ borda: '#FC50D3', espessura: 3, descricao: 'PIU Jockey Club' },
+					{ borda: '#000', espessura: 3, pontilhado: true, descricao: 'AID - Área de Influência Direta' },
+					{ borda: '#000', espessura: 3, descricao: 'AII - Área de Influência Indireta' },
+					{ fundo: '#f9ffe0', descricao: 'Isotermas 27°C' },
+					{ fundo: '#fcffdb', descricao: 'Isotermas 27,5°C' },
+					{ fundo: '#fff9d6', descricao: 'Isotermas 28°C' },
+					{ fundo: '#ffedd1', descricao: 'Isotermas 28,5°C' },
+					{ fundo: '#ffddcc', descricao: 'Isotermas 29°C' },
+					{ fundo: '#ffcbc7', descricao: 'Isotermas 29,5°C' },
+					{ fundo: '#f8c2c2', descricao: 'Isotermas 30°C' }
+				]
+			}"></Imagem>
 
 			<h3>Qualidade do Ar</h3>
 			<p>A qualidade do ar é impactada diretamente pelas emissões de poluentes atmosféricos. No MSP, a frota de veículos é a responsável por mais de 90% da emissão de CO, hidrocarbonetos e óxidos de nitrogênio (NOx) (CETESB, 2005). A poluição do ar é agravada pelo modelo de transporte com utilização predominante de ônibus movido a diesel, o uso de automóvel particular e motocicleta. Os automóveis, mesmo equipados com sistemas de controle da poluição, devido ao grande volume, acabam se tornando grandes poluidores.</p>
@@ -1463,16 +1617,71 @@
 			<p>A partir de 1930, a Companhia City, responsável pela urbanização do Butantã, objetivando trazer uma opção de lazer atraente para a região, doou o terreno atualmente localizado na margem oeste do Rio Pinheiros ao Jockey Club, cujas instalações foram inauguradas em 1941. O terreno de aproximadamente 600.000m², que ocupa uma largura aproximada de 375m da planície aluvial do Rio Pinheiros, é composto parte por terra mole e solo compressível e outra parte por aluviões argilo-arenosos recentes e solos turfosos de várzea, região da planície aluvial sujeita a inundações periódicas situada entre as cotas 720 e 725. </p>
 			<p>Outro trecho sujeito a inundações anuais é o vale ocupado pela planície aluvial do Córrego Pirajussara, local de inundação que se estende até a foz do Córrego Pirajussara Mirim. O terreno do Jockey Club está inserido na Área de Contribuição Direta de Escoamento Difuso entre os Córregos Pirajussara e Oscar Americano, que apresenta ao norte uma região de antigo meandro do Rio Pinheiros, com solo argiloso escuro, anteriormente permanentemente encharcado, constituindo–se atualmente numa área da planície aluvial sujeita a inundações anuais, situada na cota 720. Fazem parte ainda da Área de Contribuição Direta de Escoamento Difuso entre os Córregos Pirajussara e Oscar Americano o trecho que se eleva da cota 725 até a cota 760, formado por Gnaisse, e outro trecho que se estende da cota 735 até a cota 780, com solo do Sedimento Terciário.</p>
 			<p>Toda a Área de Contribuição Direta de Escoamento Difuso entre os Córregos Pirajussara e Oscar Americano se apresenta densamente urbanizada  e transformada por retificação, canalização dos córregos e aterros que desconfiguraram a paisagem original.</p>
-			<p class="substitua-me">Mapa 19: Aspectos geológicos. Fonte: Geosampa, 2019.</p>
-			<p class="substitua-me">Mapa 20: Relevo. Fonte MDC, 2019.</p>
+
+			<Imagem :maxWidth="mapMaxWidth" :dados="{
+				tipo: 'mapa',
+				url: imgSrc('arquivos/jockey/Mapa-A-20.jpg'),
+				titulo: 'Mapa 20: Relevo',
+				fonte:'MDC, 2019. Elaboração: SP-Urbanismo',
+				legenda: [
+					{ borda: '#FC50D3', espessura: 3, descricao: 'PIU Jockey Club' },
+					{ borda: '#000', espessura: 3, pontilhado: true, descricao: 'AID - Área de Influência Direta' },
+					{ borda: '#000', espessura: 3, descricao: 'AII - Área de Influência Indireta' },
+					{ linha: true, fundo: '#e2d191', descricao: 'Altitude até 750m' },
+					{ linha: true, fundo: '#dea94c', descricao: 'Altitude de 750 a 765m' },
+					{ linha: true, fundo: '#d69e5c', descricao: 'Altitude de 765 a 780m' },
+					{ linha: true, fundo: '#cc5f00', descricao: 'Altitude acima de 780m' }
+				]
+			}"></Imagem>
+
 			<h3>Drenagem</h3>
 			<p>A retificação do Rio Pinheiros, a urbanização de sua várzea, a impermeabilização de sua bacia e a canalização de seus afluentes causam inundações e enchentes. Cabe ao Município as providências para a contenção das águas pluviais ao longo das bacias para conter as inundações que ocorrem nas várzeas. Providências que devem procurar reduzir a vazão de águas pluviais que se dirigem aos córregos através do aumento das áreas permeáveis e implantação de praças alagáveis. O Jockey Club está situado na Área de Contribuição Direta de Escoamento Difuso entre os Córregos Pirajussara e Oscar Americano que, como já mencionado, apresenta ao norte uma região de antigo meandro do Rio Pinheiros sujeita a inundações anuais.</p>
 			<h4>Córrego Pirajussara</h4>
 			<p>O Córrego Pirajussara nasce no Capão Redondo, segue pela divisa do MSP até Campo Limpo, passa por Vila Sonia e Butantã. Em Capão Redondo apresenta trechos canalizados abertos e fechados, em Campo Limpo canal aberto, em Vila Sonia e Butantã, em canal fechado sob a Av. Pirajussara, Av. Eliseu de Almeida e Av. Caxingui, na Cidade Universitária em canal natural aberto até sua foz no Rio Pinheiros. A Bacia do Córrego Pirajussara possui sete piscinões com capacidade total de armazenamento de 1.200.000m³: Nova República (Embu, 110.000m³); Parque Pinheiros (Taboão da Serra, 117.000 m³); Portuguesinha (Taboão da Serra, 120.000 m³); CPTM/Maria Sampaio (MSP, 120.000m³); Eliseu de Almeida (São Paulo/Taboão da Serra, 113.000m³); Sharp (MSP, 500.000m³) e Olaria (MSP, 120.000m³). A instalação dos piscinões tem por função manter a vazão do Córrego Pirajussara constante e reduzir as inundações em Vila Sonia e Butantã, ao longo da planície aluvial do Pirajussara nas Av. Pirajussara, Eliseu de Almeida e Caxingui, no quadrilátero da Av. Magalhães de Castro, Valentin Gentil, Afrânio Peixoto e Prof. Melo Moraes, bem como, na planície aluvial do Córrego Itararé, canalizado sob a Av. Jorge João Saad.</p>
-			<p class="substitua-me">Mapa 21: Bacia hidrográfica do Córrego Pirajussara. Fonte: Geosampa, 2019.</p>
+
+			<Imagem :maxWidth="mapMaxWidth" :dados="{
+				tipo: 'mapa',
+				url: imgSrc('arquivos/jockey/Mapa-A-21.jpg'),
+				titulo: 'Mapa 21: Bacia hidrográfica do Córrego Pirajussara',
+				fonte:'Geosampa. Elaboração: SP-Urbanismo',
+				legenda: [
+					{ borda: '#FC50D3', espessura: 3, descricao: 'PIU Jockey Club' },
+					{ borda: '#000', espessura: 3, pontilhado: true, descricao: 'AID - Área de Influência Direta' },
+					{ borda: '#000', espessura: 3, descricao: 'AII - Área de Influência Indireta' },
+					{ fundo: '#9cc1c7', descricao: 'Hidrografia principal' },
+					{ linha: true, fundo: '#00adc7', descricao: 'Córregos drenantes' },
+					{ fundo: '#9cd8e8', descricao: 'Área sujeita a inundação' },
+					{ fundo: '#ff1601', descricao: 'Reservatórios de amortecimento (piscinões)' },
+					{ fundo: '#f7fcab', descricao: 'Bacia Hidrográfica Córrego Pirajussara' },
+					{ fundo: '#ff844e', descricao: 'Bacia Hidrográfica Córrego Oscar Americano' },
+					{ fundo: '#fed598', descricao: 'Área de Contribuição Direta de Escoamento Difuso - Pirajussara/Oscar Americano' },
+					{ fundo: '#f7be69', descricao: 'Área de Contribuição Direta de Escoamento Difuso - Oscar Americano/Pedro Avancini' }
+				]
+			}"></Imagem>
+
 			<h4>Córrego Oscar Americano</h4>
 			<p>O Córrego Oscar Americano tem aproximadamente 2.100m de extensão, nasce no Distrito Morumbi, próximo à R. Ícaro Sydow, dirigindo-se à Av. Amarilis, Av. Oscar Americano, passando sob a Av. dos Tajurás. R. Severo Dumont, R. Dr. José Augusto de Queiroz, desembocando no Rio Pinheiros. Durante todo o seu percurso, desde a sua nascente até a foz, encontra-se  em canalização fechada. Tem um afluente na sua margem esquerda, que se encontra dentro do  Parque Antonio Volpi, desde a sua nascente até sua foz no Córrego Oscar Americano, se encontra em leito natural e tem aproximadamente 380m de extensão.</p>
-			<p class="substitua-me">Mapa 22: Bacia hidrográfica Cór. Oscar Americano, Áreas Contrib. Esc. Difuso Pirajussara/Oscar Americano/Pedro Avancini. Fonte: Geosampa, 2019.</p>
+
+			<Imagem :maxWidth="mapMaxWidth" :dados="{
+				tipo: 'mapa',
+				url: imgSrc('arquivos/jockey/Mapa-A-22.jpg'),
+				titulo: 'Mapa 22: Bacia hidrográfica Cór. Oscar Americano, Áreas Contrib. Esc. Difuso Pirajussara/Oscar Americano/Pedro Avancini',
+				fonte:'Geosampa. Elaboração: SP-Urbanismo',
+				legenda: [
+					{ borda: '#FC50D3', espessura: 3, descricao: 'PIU Jockey Club' },
+					{ borda: '#000', espessura: 3, pontilhado: true, descricao: 'AID - Área de Influência Direta' },
+					{ borda: '#000', espessura: 3, descricao: 'AII - Área de Influência Indireta' },
+					{ fundo: '#9cc1c7', descricao: 'Hidrografia principal' },
+					{ linha: true, fundo: '#00adc7', descricao: 'Córregos drenantes' },
+					{ fundo: '#9cd8e8', descricao: 'Área sujeita a inundação' },
+					{ fundo: '#ff1601', descricao: 'Reservatórios de amortecimento (piscinões)' },
+					{ fundo: '#f7fcab', descricao: 'Bacia Hidrográfica Córrego Pirajussara' },
+					{ fundo: '#ff844e', descricao: 'Bacia Hidrográfica Córrego Oscar Americano' },
+					{ fundo: '#fed598', descricao: 'Área de Contribuição Direta de Escoamento Difuso - Pirajussara/Oscar Americano' },
+					{ fundo: '#f7be69', descricao: 'Área de Contribuição Direta de Escoamento Difuso - Oscar Americano/Pedro Avancini' }
+			]
+			}"></Imagem>
+
 
 			<h4>Saneamento</h4>
 			<p>A melhoria da qualidade de vida está ligada à oferta de áreas verdes, o atendimento aos padrões de qualidade do ar, dos rios e córregos. No MSP a canalização de diversos córregos e a degradação da bacia Rio Pinheiros gera mau cheiro, inundações e deterioração da paisagem. As principais causas da poluição dos rios e córregos são a poluição difusa, o lançamento de esgoto doméstico, causadas por canalizações que não chegam às estações de tratamento, por residências que não estão conectadas à rede coletora, devido às galerias de águas pluviais lançarem resíduos sólidos diretamente na rede hídrica, sem prévio tratamento e pelo lançamento de resíduos químicos provenientes das indústrias. Após a construção da Represa Billings, o Rio Pinheiros deixou de receber 12 m³/s de água de suas nascentes, passando a ser alimentado por 2,67m³/s provenientes de seus afluentes e por 6,9m³/s de esgoto doméstico e industrial. Os corpos d’água da bacia do Rio Pinheiros devem atender aos padrões Classe IV, que permitem navegação e harmonia paisagística, padrões estes que não são atingidos nas condições atuais em que se encontram.</p>
@@ -1481,15 +1690,69 @@
 			<h4>Córrego Oscar Americano</h4>
 			<p>O Córrego Oscar Americano encontra-se despoluido pelo Programa Córrego Limpo da SABESP. Segundo o Relatório de Monitoramento da Demanda Biológica de Oxigênio (DBO) do Programa Córrego Limpo, a DBO do Córrego Oscar Americano, de maio de 2017 a dezembro de 2018 se manteve entre 01 e 14mg/l.</p>
 
-			<p class="substitua-me">Mapa 23: Programa Córrego Limpo, Bacia hidrográfica Córrego Pirajussara. Fonte: Geosampa. Acesso: 01 out 2019.</p>
+			<Imagem :maxWidth="mapMaxWidth" :dados="{
+				tipo: 'mapa',
+				url: imgSrc('arquivos/jockey/Mapa-A-23.jpg'),
+				titulo: 'Mapa 23: Programa Córrego Limpo, Bacia hidrográfica Córrego Pirajussara',
+				fonte:'Geosampa. Acesso: 01 out 2019',
+				legenda: [
+					{ borda: '#FC50D3', espessura: 3, descricao: 'PIU Jockey Club' },
+					{ borda: '#000', espessura: 3, pontilhado: true, descricao: 'AID - Área de Influência Direta' },
+					{ borda: '#000', espessura: 3, descricao: 'AII - Área de Influência Indireta' },
+					{ fundo: '#9cc1c7', descricao: 'Hidrografia principal' },
+					{ linha: true, borda: '#00adc7', descricao: 'Córregos drenantes' },
+					{ fundo: '#f7fcab', descricao: 'Bacia Hidrográfica Córrego Pirajussara' },
+					{ fundo: '#ff844e', descricao: 'Bacia Hidrográfica Córrego Oscar Americano' },
+					{ fundo: '#fed598', descricao: 'Área de Contribuição Direta de Escoamento Difuso - Pirajussara/Oscar Americano' },
+					{ fundo: '#f7be69', descricao: 'Área de Contribuição Direta de Escoamento Difuso - Oscar Americano/Pedro Avancini' },
+					{ fundo: '#03afff', descricao: 'Programa Córrego Limpo (SABESP)' }
+			]
+			}"></Imagem>
 
-			<p class="substitua-me">Mapa 24: Favelas com precariedade de saneamento básico na Bacia Hidrográfica do Pirajussara. Fonte: Geosampa, 2019.</p>
+			<Imagem :maxWidth="mapMaxWidth" :dados="{
+				tipo: 'mapa',
+				url: imgSrc('arquivos/jockey/Mapa-A24.jpg'),
+				titulo: 'Mapa 24: Favelas com precariedade de saneamento básico na Bacia Hidrográfica do Pirajussara',
+				fonte:'Geosampa. Elaboração: SP-Urbanismo',
+				legenda: [
+					{ borda: '#FC50D3', espessura: 3, descricao: 'PIU Jockey Club' },
+					{ borda: '#000', espessura: 3, pontilhado: true, descricao: 'AID - Área de Influência Direta' },
+					{ borda: '#000', espessura: 3, descricao: 'AII - Área de Influência Indireta' },
+					{ fundo: '#9cc1c7', descricao: 'Hidrografia principal' },
+					{ linha: true, fundo: '#00adc7', descricao: 'Córregos drenantes' },
+					{ fundo: '#f7fcab', descricao: 'Bacia Hidrográfica Córrego Pirajussara' },
+					{ fundo: '#ff844e', descricao: 'Bacia Hidrográfica Córrego Oscar Americano' },
+					{ fundo: '#fed598', descricao: 'Área de Contribuição Direta de Escoamento Difuso - Pirajussara/Oscar Americano' },
+					{ fundo: '#f7be69', descricao: 'Área de Contribuição Direta de Escoamento Difuso - Oscar Americano/Pedro Avancini' },
+					{ borda: '#0000cc', espessura: 3, descricao: 'Favelas' }
+				]
+			}"></Imagem>
 
 			<h4>Áreas contaminadas</h4>
 			<p>Atividades comerciais que manipulam substâncias tóxicas ou inflamáveis, determinadas atividades industriais dependendo das matérias primas, produtos e resíduos gerados são consideradas atividades potencialmente contaminadoras. </p>
 			<p>Na área de influencia direta do PIU Jockey Club foram identificadas áreas contaminadas através do cadastro da Companhia Ambiental do Estado De São Paulo (CETESB – Dezembro/2018).</p>
 
-			<p class="substitua-me">Mapa 25: Áreas contaminadas e reabilitadas na AID. Fonte: CETESB 2018.</p>
+			<!-- <p class="substitua-me">Mapa 25: Áreas contaminadas e reabilitadas na AID. Fonte: CETESB 2018.</p> -->
+
+			<Imagem :maxWidth="mapMaxWidth" :dados="{
+				tipo: 'mapa',
+				url: imgSrc('arquivos/jockey/Mapa-A25.jpg'),
+				titulo: 'Mapa 25: Áreas contaminadas e reabilitadas na AID',
+				fonte:'CETESB 2018. Elaboração: SP-Urbanismo',
+				legenda: [
+					{ borda: '#FC50D3', espessura: 3, descricao: 'PIU Jockey Club' },
+					{ borda: '#000', espessura: 3, pontilhado: true, descricao: 'AID - Área de Influência Direta' },
+					{ borda: '#000', espessura: 3, descricao: 'AII - Área de Influência Indireta' },
+					{ fundo: '#c5e372', descricao: 'Praças e canteiros' },
+					{ fundo: '#69cf47', descricao: 'Parques municipais' },
+					{ fundo: '#377231', descricao: 'Parques estaduais' },
+					{ fundo: '#89c151', descricao: 'Reserva de Mata Atlântica - Mata Obrófila Densa' },
+					{ fundo: '#d2df3e', descricao: 'Reserva de Mata Atlântica - Bosque Heterogêneo' },
+					{ fundo: '#f9cf5c', descricao: 'Reserva de Mata Atlântica - Campos Gerais' },
+					{ fundo: '#1b89e8', descricao: 'Reserva de Mata Atlântica - Campo de Várzea e Vegetação Aquática' }
+			]
+			}"></Imagem>
+
 
 			<ul class="links">
 				<li>
@@ -1527,7 +1790,24 @@
 			<p>É importante destacar que as informações listadas acima e consideradas como áreas verdes para este relatório, em muitos casos se sobrepõem. É o caso de alguns parques que, por definição do PDE, são categorizados como ZEPAM, enquanto os parques lineares não o são. Além disso, no caso específico do Butantã, a presença do Campus Cidade Universitária é um aspecto bastante relevante para o levantamento das áreas verdes deste território. Como a USP é definida pelo Zoneamento como ZOE, ela não seria incorporada ao levantamento das áreas verdes, o que representaria uma distorção, subestimando os valores de áreas verdes da área analisada. Por outro lado, seria superestimado incorporar à análise toda a ZOE Cidade Universitária. Assim, metodologicamente, optou-se por incorporar à análise as reservas de mata atlântica identificadas pelo Plano Municipal de Mata Atlântica. Elas revelam porções importantes do território para a análise das áreas verdes, ainda que muitas delas se sobreponham às ZEPAM, muitas das quais não são pertencentes à classe dos bens de uso comum do povo, mas prestam importantes serviços ambientais ao território.</p>
 			<p>Para fins de cálculo da área verde, foram analisadas as camadas vetoriais referentes às informações consideradas, retiradas do PDE, da LPUOS e do Plano Municipal da Mata Atlântica. Como há sobreposição entre as camadas, foram executadas ações de geoprocessamento a fim de evitar distorções numéricas. O resultado está listado na tabela a seguir, que expressa a relação de áreas verdes em cada um dos distritos da AII e também o índice de área verde por habitante. Vale considerar que a população considerada nesta análise, extraída do Censo Demográfico do IBGE, de 2010, é o dado oficial mais atualizado, ainda que já tenha nove anos. Contudo, para esta análise, as projeções de populações poderiam gerar distorções dado o perímetro recortado do território.</p>
 
-			<p class="substitua-me">Mapa 26: Áreas verdes na AII. Fonte: Plano Municipal da Mata Atlântica - PMMA, PDE/2014, LPUOS/2016. Elaboração: SP Urbanismo, 2019.</p>
+			<Imagem :maxWidth="mapMaxWidth" :dados="{
+				tipo: 'mapa',
+				url: imgSrc('arquivos/jockey/Mapa-A-26.jpg'),
+				titulo: 'Mapa 26: Áreas verdes na AII. Fonte: Plano Municipal da Mata Atlântica - PMMA, PDE/2014, LPUOS/2016',
+				fonte:'Geosampa. Elaboração: SP-Urbanismo',
+				legenda: [
+					{ borda: '#FC50D3', espessura: 3, descricao: 'PIU Jockey Club' },
+					{ borda: '#000', espessura: 3, pontilhado: true, descricao: 'AID - Área de Influência Direta' },
+					{ borda: '#000', espessura: 3, descricao: 'AII - Área de Influência Indireta' },
+					{ fundo: '#c5e372', descricao: 'Praças e canteiros' },
+					{ fundo: '#69cf47', descricao: 'Parques municipais' },
+					{ fundo: '#377231', descricao: 'Parques estaduais' },
+					{ fundo: '#89c151', descricao: 'Reserva de Mata Atlântica - Mata Obrófila Densa' },
+					{ fundo: '#d2df3e', descricao: 'Reserva de Mata Atlântica - Bosque Heterogêneo' },
+					{ fundo: '#f9cf5c', descricao: 'Reserva de Mata Atlântica - Campos Gerais' },
+					{ fundo: '#1b89e8', descricao: 'Reserva de Mata Atlântica - Campo de Várzea e Vegetação Aquática' }
+				]
+			}"></Imagem>
 
 			<p>Assim, a análise permite afirmar que o distrito Morumbi, onde o Jockey Club está inserido, tem 11% de seu território ocupado por áreas verdes. Como sua densidade é baixa, o índice de área verde por habitante é de 27,4 m², muito acima dos índices observados na Macrozona de Estruturação da Qualificação Urbana, que é de 5,8 m² e corresponde a 7% do território. A análise permite afirmar que todos os distritos da AII apresentam índices de área verde por habitante superior à média da macrozona urbana. </p>
 
@@ -1689,7 +1969,19 @@
 				8.	Buscar contrapartidas para a ampliação da rede de equipamentos públicos e o atendimento habitacional na região.
 			</blockquote>
 
-			<p class="substitua-me">Mapa 1 - Áreas de Transformação segundo Critérios do PDE. Fonte GeoSampa. Elaboração: SP-Urbanismo</p>
+			<Imagem :maxWidth="mapMaxWidth" :dados="{
+				tipo: 'mapa',
+				url: imgSrc('arquivos/jockey/Mapa1P.jpg'),
+				titulo: 'Mapa 1 - Áreas de Transformação segundo Critérios do PDE',
+				fonte:'Geosampa. Elaboração: SP-Urbanismo',
+				legenda: [
+					{ borda: '#FC50D3', espessura: 3, descricao: 'PIU Jockey Club' },
+					{ borda: '#000', espessura: 3, pontilhado: true, descricao: 'AID - Área de Influência Direta' },
+					{ borda: '#000', espessura: 3, descricao: 'AII - Área de Influência Indireta' },
+					{ fundo: '#bf7f7f', descricao: 'Perímetro da Macroárea de Estruturação Metropolitana (MEM) (Lei 16.050/2014)' },
+					{ borda: '#e65d3e', espessura: 3, pontilhado: true, descricao: 'Áreas de transformação segundo critérios do PDE' }
+				]
+			}"></Imagem>
 
 			<p>Os PIUs devem também considerar a referência para os coeficientes de aproveitamento estabelecidos por macroárea conforme Quadro 2A da Lei nº16.050, de 31 de julho de 2014 – PDE. Esse quadro estabelece, para a MEM, C.A. máximo de 2 vezes a área do terreno. Tais limites podem ser superados mediante proposição de lei específica.</p>
 
@@ -1706,41 +1998,56 @@
 			</ol>
 
 			<p>Com isso em vista, propõe-se maior transformação nos setores Eusébio Matoso e Tajurás, situados nos extremos norte e sul do lote, nas proximidades das pontes Eusébio Matoso e Engenheiro Roberto Rossi Zuccolo (Cidade Jardim), onde já existem atividades de uso misto e dinâmicas urbanas mais intensas do que nas demais áreas de perfil estritamente residencial. </p>
-			<p class="substitua-me">Mapa 2 - Setorização do PIU Jockey Club. Elaboração: SP-Urbanismo</p>
+
+			<Imagem :maxWidth="mapMaxWidth" :dados="{
+				tipo: 'mapa',
+				url: imgSrc('arquivos/jockey/Mapa-PI-2.jpg'),
+				titulo: 'Mapa 2 - Setorização do PIU Jockey Club',
+				fonte:'Geosampa. Elaboração: SP-Urbanismo',
+				legenda: [
+					{ borda: '#FC50D3', espessura: 3, descricao: 'PIU Jockey Club' },
+					{ borda: '#000', espessura: 3, pontilhado: true, descricao: 'AID - Área de Influência Direta' },
+					{ borda: '#000', espessura: 3, descricao: 'AII - Área de Influência Indireta' },
+					{ fundo: '#bf7f7f', descricao: 'Perímetro da Macroárea de Estruturação Metropolitana (MEM) (Lei 16.050/2014)' },
+					{ borda: '#e65d3e', espessura: 3, pontilhado: true, descricao: 'Áreas de transformação segundo critérios do PDE' }
+				]
+			}"></Imagem>
+
 			<h4>Adensamento Populacional e Impacto da Transformação</h4>
 			<p>O Diagnóstico socioterritorial demonstrou que há uma grande diferença nas relações entre empregos e habitantes nas subprefeituras do Butantã e de Pinheiros e seus distritos. Considerando dados de 2016, havia 0,38 empregos/habitante na Subprefeitura do Butantã contra 2,14 emp/hab na Subprefeitura de Pinheiros. Em relação aos distritos, as diferenças são ainda maiores. Enquanto no Morumbi havia 0, 92 emp/hab e no Butantã 0,99 emp/hab, em Pinheiros havia 1,90 emp/hab e no Itaim Bibi 3,35 emp/hab. Assim, se o equilíbrio da relação emprego/habitante é uma diretriz para os subsetores da MEM, a prioridade para as transformações no lote do Hipódromo de Cidade Jardim deve ser a implantação de atividades não residenciais, contribuindo para a geração de postos de trabalho, ao invés do uso residencial. O uso misto também pode ser uma alternativa adequada, pois também contribuiria para a criação de empregos no distrito do Morumbi e traria maior vitalidade a áreas atualmente vazias. </p>
 			<p>Em um primeiro cenário, a transformação das áreas citadas acontece exclusivamente por usos não residenciais. Nesse cenário, aumentariam as viagens com destino àquela região, devido ao aumento no número de postos de trabalho. Parte destes postos poderia fazer com que uma parcela da população que trabalha na Subprefeitura do Butantã e hoje tem que atravessar o Rio Pinheiros todos os dias, não tenha mais que transpor essa barreira. Seus custos e tempo de deslocamento seriam menores, e isso iria diminuir a demanda sobre a rede de transportes e o sistema viário na região. </p>
 			<p>Em um segundo cenário, esse adensamento acontecerá majoritariamente com o uso residencial. A proximidade de importantes elementos da infraestrutura urbana possibilitaria, para os novos moradores do local, melhores condições de acesso à cidade. Além disso, esse adensamento poderia colaborar com a diversificação de tipologias e rendas no distrito Morumbi, caminhando para uma cidade mais equilibrada territorialmente. Como potenciais efeitos negativos, haveria um aumento no número de viagens com origem naquela região e maior demanda por serviços públicos nos equipamentos existentes.</p>
 			<p>Finalmente, é possível prever um cenário em que os usos residenciais e não residenciais estariam dividindo a área construída de maneira equivalente, em edifícios ou conjuntos de uso misto. Nesse cenário, esse adensamento levaria a um aumento do número de postos de trabalho naquela região, que poderiam, inclusive, ser ocupado, em parte, pelos novos moradores desses conjuntos edificados. Esse tipo de adensamento poderia levar a um aumento tanto das viagens com origem naquela região, quanto das viagens com destino àquela região, mas a convivência de trabalho e moradia no mesmo local pode acabar por diminuir a demanda sobre a infraestrutura urbana próxima. </p>
 
-			<Pergunta :id="1001" :context='"Pergunta 1"' :postid="1">
-				<template #pergunta>
-					Quais atividades de interesse público podem funcionar no Hipódromo de Cidade Jardim fora dos períodos em que ocorrem corridas e treinamentos e preservando o patrimônio histórico e as características da vizinhança?
-				</template>
-				<template #info>
-					{{ perguntaInfo }}
-				</template>
-			</Pergunta>
+			<section>
+			<h3 class="titulo" indent="1">Contribua</h3>
+				<Pergunta :id="1001" :context='"Pergunta 1"' :postid="2">
+					<template #pergunta>
+						Quais atividades de interesse público podem funcionar no Hipódromo de Cidade Jardim fora dos períodos em que ocorrem corridas e treinamentos e preservando o patrimônio histórico e as características da vizinhança?
+					</template>
+					<template #info>
+						{{ perguntaInfo }}
+					</template>
+				</Pergunta>
 
-			<Pergunta :id="1002" :context='"Pergunta 2"' :postid="1">
-				<template #pergunta>
-					Como você avalia a proposta de setorização do Programa de Interesse Público? A transformação proposta beneficia a região?
-				</template>
-				<template #info>
-					{{ perguntaInfo }}
-				</template>
-			</Pergunta>
+				<Pergunta :id="1002" :context='"Pergunta 2"' :postid="1">
+					<template #pergunta>
+						Como você avalia a proposta de setorização do Programa de Interesse Público? A transformação proposta beneficia a região?
+					</template>
+					<template #info>
+						{{ perguntaInfo }}
+					</template>
+				</Pergunta>
 
-			<Pergunta :id="1003" :context='"Pergunta 3"' :postid="1">
-				<template #pergunta>
-					A introdução de fachadas ativas nas interfaces urbanas do Jockey Club contribui para a qualificação do bairro em que está inserido?
-				</template>
-				<template #info>
-					{{ perguntaInfo }}
-				</template>
-			</Pergunta>
-
-			<Comments :attr="{ id:100, commentcontext: 'Context' }"></Comments>
+				<Pergunta :id="1003" :context='"Pergunta 3"' :postid="1">
+					<template #pergunta>
+						A introdução de fachadas ativas nas interfaces urbanas do Jockey Club contribui para a qualificação do bairro em que está inserido?
+					</template>
+					<template #info>
+						{{ perguntaInfo }}
+					</template>
+				</Pergunta>
+			</section>
 
 			<h4>Modo de Gestão</h4>
 			<p>O PIU Jockey Club terá assegurada a gestão participativa em todas as etapas, desde seu desenvolvimento até sua implementação, conforme preconiza a Constituição Federal e o Estatuto da Cidade. Conforme a regulamentação do Decreto nº 56.901/2016, está prevista a realização de duas consultas públicas, sendo a primeira constituída pelos elementos prévios ao desenvolvimento do PIU  e a segunda constituída pelas propostas de parâmetros e intervenções eventualmente contidas no PIU. </p>
@@ -1803,6 +2110,7 @@ export default {
 	name: 'JockeyClub',
 	data () {
 		return {
+			mapMaxWidth: '700px',
 			perguntaInfo: 'Além da participação espontânea, com comentários acerca do conteúdo dos elementos prévios ao desenvolvimento do PIU Jockey Club, os munícipes poderão opinar sobre questões propostas pela SP Urbanismo, auxiliando na formulação de propostas para a sequência do projeto.',
 			titulosLimpo: [],
 			comments_atrr: undefined,

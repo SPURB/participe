@@ -189,7 +189,6 @@ import PageTop from '@/components/PageTop'
 import Indice from '@/components/Indice'
 import Comments from '@/components/Comments'
 import CommentsLoader from '@/components/CommentsLoader'
-import Pergunta from '@/components/Pergunta'
 import { consultasCommons } from '@/mixins/consultasCommons'
 
 export default {
@@ -206,8 +205,7 @@ export default {
 		PageTop,
 		Indice,
 		Comments,
-		CommentsLoader,
-		Pergunta
+		CommentsLoader
 	},
 	mixins: [ consultasCommons ],
 	methods: {

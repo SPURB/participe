@@ -94,7 +94,7 @@ export default {
 				'trash': '0',
 				'postid': '1',
 				'commentid': app.attr.id,
-				'commentcontext': app.attr.context
+				'commentcontext': app.attr.commentcontext
 			})
 				.then(function (response) {
 					console.log(app.attr.id)

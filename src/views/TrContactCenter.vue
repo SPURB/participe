@@ -1,5 +1,5 @@
 <template>
-	<div class="NomeDaConsulta" ref="conteudoConsulta">
+	<div class="TrContactCenter" ref="conteudoConsulta">
 		<PageTop background_image_src="arquivos/capas/placeholder_480w.jpg" :esta_consulta="estaConsulta">
 			<template slot="titulo"><div>Título da Nova Consulta</div></template>
 			<template slot="subtitulo"><div>Subtítulo da Nova Consulta</div></template>
@@ -43,9 +43,8 @@ import { consultasCommons } from '@/mixins/consultasCommons'
 import Comments from '@/components/Comments'
 import CommentsLoader from '@/components/CommentsLoader'
 
-
 export default {
-	name: 'NomeDaConsulta',
+	name: 'TrContactCenter',
 	data () {
 		return {
 			titulosLimpo: [],
@@ -55,8 +54,6 @@ export default {
 		}
 	},
 	components: {
-		Comments,
-		CommentsLoader,
 		PageTop,
 		Indice
 		// Apoio

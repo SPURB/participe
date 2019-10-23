@@ -227,6 +227,14 @@ export default new Router({
 			meta: {
 				id: 58
 			}
+		},
+		{
+			path: '/tr-contact-center',
+			name: 'TrContactCenter',
+			component: () => import(/* webpackChunkName: "TrContactCenter" */ '@/views/TrContactCenter'),
+			meta: {
+				id: 60
+			}
 		}
 	]
 })

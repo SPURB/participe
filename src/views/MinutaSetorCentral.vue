@@ -113,27 +113,27 @@
 				</ol>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 5º, ponto VII'">
-				<ol class="romanos" start="8">
+				<ol class="romanos" start="7">
 					<li><b>Caminhos Verdes:</b> trechos de logradouros demarcados no Mapa 6 e categorizadas no Quadro 1B desta lei, que complementam a rede de espaços públicos e interligam bairros, praças, parques e equipamentos públicos, e nos quais serão implementadas medidas específicas de qualificação ambiental;</li>
 				</ol>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 5º, ponto VIII'">
-				<ol class="romanos" start="9">
+				<ol class="romanos" start="8">
 					<li><b>Proposta de Diretrizes de Investimento - PDI:</b> prospecto elaborado pela São Paulo Urbanismo, subsidiado por demais órgãos da administração municipal participantes da implantação do PIU-SCE e formulado a partir da seleção de ações específicas e territorializadas relacionadas no Programa de Intervenções da AIU-SCE que poderão definir Perímetros de Intervenção com vistas a articular ações no território ou eleger modalidades setoriais de atuação;</li>
 				</ol>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 5º, ponto IX'">
-				<ol class="romanos" start="10">
+				<ol class="romanos" start="9">
 					<li><b>Programa de Intervenções:</b> conjunto de intervenções físico-territoriais de interesse público indicadas no Mapa 6 e Quadro 1B desta Lei, necessárias à obtenção das melhorias urbanísticas, socioeconômicas e ambientais da AIU-SCE;</li>
 				</ol>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 5º, ponto X'">
-				<ol class="romanos" start="1">
+				<ol class="romanos" start="10">
 					<li><b>Projetos Estratégicos:</b> intervenções propostas para áreas compostas predominantemente por imóveis públicos, cujo desenvolvimento dar-se-á em regime de parceria com a iniciativa privada visando à obtenção de contrapartidas urbanísticas definidas segundo programas de interesse público específicos, tais como habitação de interesse social, áreas verdes e equipamentos públicos;</li>
 				</ol>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 5º, ponto XI'">
-				<ol class="romanos" start="1">
+				<ol class="romanos" start="11">
 					<li><b>Projetos Especiais:</b> intervenções de requalificação urbanística propostas para espaços, áreas verdes ou parques públicos, delimitadas no Mapa 7 desta Lei, com a finalidade de promover qualificação ambiental e ampliar sua utilização pela população, desenvolvidas a partir de projetos coordenados pela SP-Urbanismo.</li>
 				</ol>
 			</CommentsContext>
@@ -205,7 +205,7 @@
 				<p><b>Art. 11.</b> Para o licenciamento de projetos de parcelamento do solo localizados na AIU-SCE, as vias de pedestre previstas no §1º do Art. 43 da Lei n. 16.402 de 2016 - LPUOS serão exigidas somente quando puderem conectar ao menos duas vias oficiais de circulação, podendo ser substituídas por áreas de fruição pública, respeitado o limite máximo de 150 m (cento e cinquenta metros) de extensão de face de quadra.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 12'">
-				<p><b>Art. 12.</b> Os empreendimentos localizados no Setor Centro Histórico estão dispensados da oferta de vagas para estacionamento de veículos, com exceção de vagas de bicicletas e, quando exigido pela regulamentação vigente, vagas para carga e descarga.</p>
+				<p><b>Art. 12.</b> Os empreendimentos localizados no Setor Centro Histórico estão dispensados da oferta de vagas para estacionamento de veículos, com exceção de vagas de bicicletas e, quando exigido pela regulamentação vigente, de vagas para carga e descarga.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 12, Parágrafo único'">
 				<p><b>Parágrafo único.</b> Quando ofertadas vagas para estacionamento de veículos, as áreas cobertas destinadas a essa finalidade estarão sujeitas ao limite estabelecido nas alíneas “a” e “b” do inciso I do Art. 62 da Lei n. 16.402 de 2016, independentemente da zona em que se localizem.</p>
@@ -221,7 +221,7 @@
 			<CommentsContext :id="commentId()" context="'Art. 14'">
 				<p><b>Art. 14.</b> Aos novos empreendimentos localizados em lotes confrontantes com os Eixos Estratégicos ou com Áreas Verdes Públicas lindeiras aos referidos Eixos, aplicam-se as seguintes disposições:</p>
 				<ol class="romanos">
-					<li>I -	exigência de fachada ativa em, no mínimo, 25% (vinte e cinco por cento) de todas as testadas  do lote, com limite máximo de 25% (vinte e cinco por cento) de vedação das testadas do lote com muros;</li>
+					<li>exigência de fachada ativa em, no mínimo, 25% (vinte e cinco por cento) de todas as testadas  do lote, com limite máximo de 25% (vinte e cinco por cento) de vedação das testadas do lote com muros;</li>
 					<li>dispensa de atendimento ao gabarito de altura máxima, quando exigido na área lindeira, para a faixa de 50 m (cinquenta metros) medida a partir do alinhamento original dos lotes.</li>
 				</ol>
 			</CommentsContext>
@@ -394,7 +394,7 @@
 			<CommentsContext :id="commentId()" context="'Art. 21, § 3º'">
 				<p><b>§ 3º</b> Com a finalidade de viabilizar o Projeto Estratégico Canindé-Portuguesa, fica o Município autorizado a:</p>
 				<ol class="romanos">
-					<li>I -	permutar imóveis de sua propriedade com imóveis particulares, desde que estejam inseridos no perímetro do projeto, com objetivo de promover a regularização fundiária do Estádio do Canindé;</li>
+					<li>permutar imóveis de sua propriedade com imóveis particulares, desde que estejam inseridos no perímetro do projeto, com objetivo de promover a regularização fundiária do Estádio do Canindé;</li>
 					<li>realizar tratativas de renegociação de eventuais débitos tributários relativos  aos imóveis envolvidos no projeto.</li>
 				</ol>
 			</CommentsContext>
@@ -423,7 +423,7 @@
 				<p><b>Art. 24.</b> Projeto Estratégico Santa Rita corresponde ao lote 0001 da Quadra 003 do Setor 026, que será subdividido em duas parcelas com a implantação do Apoio Urbano Sul, sendo a parcela “A” localizada ao norte do Apoio Urbano Sul e a parcela “B” localizada ao Sul do Apoio Urbano Sul, devendo sua elaboração considerar o seguinte:</p>
 				<ol class="romanos">
 					<li>o projeto de parcelamento deverá avaliar a permanência do uso institucional – Centro de Educação Infantil - CEI Dr. Anis Aidar na parcela “A”;</li>
-					<li>II -	as áreas destinadas a sistema viário que excederem ao mínimo exigido no Quadro 2 da Lei n. 16.402 de 2016 - LPUOS poderão ser consideradas no cálculo do potencial construtivo dos lotes resultantes do parcelamento do solo.</li>
+					<li>as áreas destinadas a sistema viário que excederem ao mínimo exigido no Quadro 2 da Lei n. 16.402 de 2016 - LPUOS poderão ser consideradas no cálculo do potencial construtivo dos lotes resultantes do parcelamento do solo.</li>
 				</ol>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 23, § 1º'">
@@ -1132,7 +1132,7 @@
 				<p><b>§ 1º</b> O potencial construtivo adicional previsto no “caput” poderá ser cedido aos empreendedores de forma onerosa, mediante contrapartida financeira, ou não onerosa.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 78, § 2º'">
-				<p><b>§ 1º</b> Da totalidade de potencial construtivo adicional prevista no “caput”, serão disponibilizados não onerosamente 1.800.000 m² (um milhão e oitocentos mil metros quadrados) nos seguintes casos:</p>
+				<p><b>§ 2º</b> Da totalidade de potencial construtivo adicional prevista no “caput”, serão disponibilizados não onerosamente 1.800.000 m² (um milhão e oitocentos mil metros quadrados) nos seguintes casos:</p>
 				<ol class="romanos">
 					<li>utilização em empreendimentos não sujeitos a cobrança de outorga onerosa do direito de construir, para os quais seja atribuído Fator de Interesse Social igual a 0 (zero) nos termos do Quadro 5 da Lei 16.050 de 2014 – PDE;</li>
 					<li>para o aproveitamento dos benefícios e incentivos previstos nesta Lei.</li>
@@ -1213,8 +1213,8 @@
 					</li>
 				</ol>
 			</CommentsContext>
-			<CommentsContext :id="commentId()" context="'Art. 84, ponto I'">
-				<ol class="romanos" start="1">
+			<CommentsContext :id="commentId()" context="'Art. 84, ponto II'">
+				<ol class="romanos" start="2">
 					<li>
 						11 (onze) representantes de entidades da sociedade civil, incluindo:
 						<ol class="minusculas">

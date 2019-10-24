@@ -1,6 +1,6 @@
 <template>
 	<div class="MinutaSetorCentral" ref="conteudoConsulta">
-		<PageTop background_image_src="arquivos/capas/placeholder_480w.jpg" :esta_consulta="estaConsulta">
+		<PageTop background_image_src="arquivos/capas/minuta-piu-setor-central_244w.jpg" :esta_consulta="estaConsulta">
 			<template slot="titulo"><div>Minuta PIU Setor Central</div></template>
 			<template slot="subtitulo"><div>Subtítulo da Nova Consulta</div></template>
 		</PageTop>
@@ -1444,6 +1444,113 @@
 			<CommentsContext :id="commentId()" context="'Art. 103'">
 				<p><b>Art. 104.</b> Esta Lei entrará em vigor na data de sua publicação.</p>
 			</CommentsContext>
+		</section>
+		<section>
+			<h2 class="titulo" indent="1">Mapas e Quadros</h2>
+			<h3>Mapas</h3>
+			<ul class="links">
+				<li>
+					<a :href="src('')">
+						<i class="icon-pdf icon"><span>pdf</span></i>
+						<div>Mapa I: Plano urbanístico</div>
+						<span>XXXX Mb</span>
+					</a>
+				</li>
+				<li>
+					<a :href="src('')">
+						<i class="icon-pdf icon"><span>pdf</span></i>
+						<div>Mapa II: Perímetro de adesão e perímetros expandidos</div>
+						<span>XXXX Mb</span>
+					</a>
+				</li>
+				<li>
+					<a :href="src('')">
+						<i class="icon-pdf icon"><span>pdf</span></i>
+						<div>Mapa III: Parâmetros urbanísticos</div>
+						<span>XXXX Mb</span>
+					</a>
+				</li>
+				<li>
+					<a :href="src('')">
+						<i class="icon-pdf icon"><span>pdf</span></i>
+						<div>Mapa IV: Compartimentos ambientais e áreas verdes</div>
+						<span>XXXX Mb</span>
+					</a>
+				</li>
+				<li>
+					<a :href="src('')">
+						<i class="icon-pdf icon"><span>pdf</span></i>
+						<div>Mapa V: Assentamentos precários e ZEIS</div>
+						<span>XXXX Mb</span>
+					</a>
+				</li>
+				<li>
+					<a :href="src('')">
+						<i class="icon-pdf icon"><span>pdf</span></i>
+						<div>Mapa VI: Plano de melhoramentos viários</div>
+						<span>XXXX Mb</span>
+					</a>
+				</li>
+				<li>
+					<a :href="src('')">
+						<i class="icon-pdf icon"><span>pdf</span></i>
+						<div>Mapa VII: Programa de intervenções</div>
+						<span>XXXX Mb</span>
+					</a>
+				</li>
+				<li>
+					<a :href="src('')">
+						<i class="icon-pdf icon"><span>pdf</span></i>
+						<div>Mapa VIII: Perímetros especiais</div>
+						<span>XXXX Mb</span>
+					</a>
+				</li>
+			</ul>
+			<h3>Quadros</h3>
+			<ul class="links">
+				<li>
+					<a :href="src('')">
+						<i class="icon-pdf icon"><span>pdf</span></i>
+						<div>Quadro 1A: Eixos Estratégicos</div>
+						<span>XXXX Mb</span>
+					</a>
+				</li>
+				<li>
+					<a :href="src('')">
+						<i class="icon-pdf icon"><span>pdf</span></i>
+						<div>Quadro 1B: Programa de Intervenções</div>
+						<span>XXXX Mb</span>
+					</a>
+				</li>
+				<li>
+					<a :href="src('')">
+						<i class="icon-pdf icon"><span>pdf</span></i>
+						<div>Quadro 1C: Áreas Verdes</div>
+						<span>XXXX Mb</span>
+					</a>
+				</li>
+				<li>
+					<a :href="src('')">
+						<i class="icon-pdf icon"><span>pdf</span></i>
+						<div>Quadro 1A: Eixos Estratégicos</div>
+						<span>XXXX Mb</span>
+					</a>
+				</li>
+				<li>
+					<a :href="src('')">
+						<i class="icon-pdf icon"><span>pdf</span></i>
+						<div>Quadro 2: Parâmetros</div>
+						<span>XXXX Mb</span>
+					</a>
+				</li>
+				<li>
+					<a :href="src('')">
+						<i class="icon-pdf icon"><span>pdf</span></i>
+						<div>Quadro 3: Quota Ambiental</div>
+						<span>XXXX Mb</span>
+					</a>
+				</li>
+			</ul>
 		</section>
 		<section ref="allComments">
 			<h2 v-show="commentsLoaded" class="titulo" indent="1">Contribuições</h2>

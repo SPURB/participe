@@ -551,7 +551,371 @@
 							</ul>
 						</li>	
 						</ul>
-					
+					<p class="s2">4.7.1.2.	Supervisor – Operador Técnico Especialista</p>
+						<ul>
+						<li>
+							Perfil
+							<ul>
+								<li>Formado em Curso Superior de qualquer área de atuação</li>
+								<li>Mínimo de 2 (dois) anos de experiência em sua área de atuação;</li>
+								<li>Capacidade de gerenciar pessoas</li>
+								<li>Possuir conhecimentos intermediários de informática (internet, edição de texto e planilha eletrônica);</li>
+								<li>Demonstrar clareza e objetividade em linguagem oral e escrita, boa dicção e audição, comprovadas em exames médicos correspondentes;</li>
+								<li>Ter iniciativa e capacidade de interpretação;</li>
+								<li>Ter capacidade comportamental para agir com calma e tolerância, mesmo em situações que fujam à rotina de trabalho.</li>
+							</ul>
+						</li>
+						<li>
+							Atribuições
+							<ul>
+								<li>Esclarecer dúvidas dos operadores</li>
+								<li>Acompanhar o desempenho dos operadores</li>
+								<li>Dar feedback aos operadores</li>
+								<li>Gerenciar os resultados e a qualidade dos serviços prestados</li>
+								<li>Gerenciar a satisfação dos munícipes acerca do atendimento prestado pelo seu grupo de operadores</li>
+								<li>Prestar informações sobre os monitoramentos efetuados</li>
+								<li>Planejar e estabelecer pontos de verificação e controle dos serviços</li>
+								<li>Construir clima organizacional sadio, relacionando-se bem com as equipes.</li>
+							</ul>
+						</li>
+						</ul>
+					<p class="s2">4.7.1.3.	Monitor de Qualidade</p>
+						<ul>
+						<li>
+							Perfil
+							<ul>
+								<li>Formado em Curso Superior de qualquer área de atuação</li>
+								<li>Experiência mínima de 1 (um) ano na função de monitor de qualidade ou supervisão em atendimento receptivo</li>
+								<li>Experiência no trato de “softwares” de monitoração e equipamentos de análise e diagnósticos</li>
+								<li>Capacidade de expressar-se com clareza e objetividade, tanto na linguagem escrita como na falada</li>
+								<li>Capacidade de agir com calma e tolerância, frente a situações que fujam dos procedimentos e rotinas normais de trabalho</li>
+								<li>Facilidade para se adaptar às normas e regulamentos estabelecidos</li>
+								<li>Demonstrar engajamento à missão e diretrizes de atendimento</li>
+								<li>Sensibilidade para questões sociais</li>
+							</ul>
+						</li>
+						<li>
+							Atribuições
+							<ul>
+								<li>Monitorar as ligações e diálogos realizados pelos operadores</li>
+								<li>Acompanhar e avaliar o atendimento, intervindo quando necessário</li>
+								<li>Promover a escuta direta (online) e gravada dos atendimentos, objetivando a qualidade do atendimento</li>
+								<li>Comunicar ao supervisor qualquer problema relativo aos atendimentos prestados</li>
+								<li>Realizar o feedback aos operadores quanto ao desempenho e os ajustes necessários</li>
+								<li>Acompanhar o desenvolvimento dos novos operadores</li>
+								<li>Construir clima organizacional sadio, relacionando-se bem com as equipes</li>
+								<li>Elaborar, se necessário, os roteiros de atendimento utilizados pelos operadores durante o atendimento</li>
+							</ul>
+						</li>
+						</ul>
+					<p class="s2">4.7.1.4.	Multiplicador / Instrutor de Treinamento</p>
+						<ul>
+						<li>
+							Perfil
+							<ul>
+								<li>Formado em Curso Superior</li>
+								<li>Domínio da língua portuguesa oral e escrita</li>
+								<li>Experiência comprovada de pelo menos 1 ano na área de qualidade em operações de Telemarketing e/ou aplicação de treinamentos</li>
+								<li>Fluência, clareza e objetividade</li>
+								<li>Sensibilidade social</li>
+								<li>Boa dicção e audição</li>
+								<li>Raciocínio lógico</li>
+								<li>Dinamismo na busca de soluções para melhoria da qualidade dos serviços</li>
+								<li>Cortesia e civilidade</li>
+								<li>Capacidade de agir com calma e tolerância.</li>
+							</ul>
+						</li>
+						<li>
+							Atribuições
+							<ul>
+								<li>Planejar e executar processos de capacitação inicial e de reciclagem periódica, programas de treinamento comportamentais, ações de melhoria do clima organizacional e programas de aprimoramento de qualidade dos serviços prestados</li>
+								<li>Elaborar materiais utilizados nas capacitações, quais sejam: apostilas, manuais de sistemas e outros</li>
+								<li>Construir clima organizacional sadio, relacionando-se bem com as equipes</li>
+							</ul>
+						</li>
+						</ul>
+					<p class="s2">4.7.1.5.	Analista de base de conhecimento</p>
+						<ul>
+						<li>
+							Perfil
+							<ul>
+								<li>Formado em Curso Superior de qualquer área de atuação;</li>
+								<li>Experiência mínima de seis meses em atividades de atendimento</li>
+								<li>Conhecimento básico de métodos, processos e ferramentas de gestão organizacional</li>
+								<li>Fluência, clareza e objetividade na linguagem falada e escrita</li>
+								<li>Sensibilidade social</li>
+								<li>Boa dicção e audição</li>
+								<li>Raciocínio lógico</li>
+								<li>Dinamismo na busca de soluções para melhoria da qualidade dos serviços</li>
+								<li>Capacidade de síntese</li>
+							</ul>
+						</li>
+						<li>
+							Atribuições
+							<ul>
+								<li>Estruturar, implantar e manter continuamente, com apoio e aprovação prévia da PMSP, a base de conhecimento e todos os roteiros de atendimento, contemplando todas as respostas padronizadas.</li>
+								<li>Manter atualizada a base de conhecimento de acordo com as atualizações dos sistemas de informação, se necessário</li>
+								<li>Propor à PMSP alterações métodos, procedimentos ou rotinas existentes na base de conhecimento, com o objetivo de aumentar a assertividade das soluções registradas na base de conhecimento e garantir um elevado nível de satisfação dos usuários.</li>
+							</ul>
+						</li>
+						</ul>
+					<p class="s2">4.7.1.6.	Gestor de Qualidade</p>
+						<ul>
+						<li>
+							Perfil
+							<ul>
+								<li>Formado em Curso Superior de qualquer área de atuação;</li>
+								<li>Experiência comprovada de, pelo menos 2 anos, de controle de qualidade em Contact Center</li>
+								<li>Fluência, clareza e objetividade</li>
+								<li>Sensibilidade social</li>
+								<li>Boa dicção e audição</li>
+								<li>Raciocínio lógico</li>
+								<li>Dinamismo na busca de soluções para melhoria da qualidade dos serviços cortesia e civilidade</li>
+								<li>Capacidade de agir com calma e tolerância</li>
+								<li>Capacidade de comunicar-se e expressar-se corretamente em linguagem falada e escrita</li>
+								<li>Experiência desejável na área de qualidade em central de teleatendimento</li>
+								<li>Habilidades de organização, controle, liderança, solução de problemas</li>
+								<li>Desenvolvimento de equipe e relacionamento interpessoal</li>
+								<li>Habilidades para solução de conflitos interpessoais e melhoria do clima organizacional</li>
+								<li>Habilidade em planejamento e controle</li>
+								<li>Habilidade na elaboração de atividades motivacionais</li>
+								<li>Habilidade em formular, aplicar e interpretar os resultados de Pesquisas de Satisfação dos usuários e Qualidade</li>
+								<li>Condução de grupos</li>
+								<li>Facilidade em aplicar e avaliar conceitos e ferramentas de Qualidade</li>
+								<li>Capacidade de aplicar técnicas e dinâmicas de capacitação organizacional</li>
+								<li>Habilidade em conduzir reuniões</li>
+								<li>Didática</li>
+								<li>Conhecimento de microinformática básica, digitação, Windows, Office (Word, Excel e Access) e Open Office</li>
+								<li>Aprovação em programa de seleção a ser realizado pela CONTRATADA, com critérios validados pelo CONTRATANTE, inclusive treinamento em:</li>
+									<ul class="sqr-ul">
+										<li>Telemarketing</li>
+										<li>Gestão de pessoas</li>
+										<li>Gestão de processos</li>
+										<li>Sistemas de monitoração</li>
+										<li>Utilização de aplicativos para registro e tratamento de ocorrências</li>
+								</ul>
+							</ul>
+						</li>
+						<li>
+							Atribuições
+							<ul>
+								<li>Utilização dos roteiros de atendimento</li>
+								<li>Acompanhar o calendário de eventos, sazonalidade e afins</li>
+								<li>Acompanhar e contingenciar o nível de absenteísmo e “turn over”</li>
+								<li>Realizar pesquisas nos meios de comunicação a respeito dos serviços prestados pela Central de Atendimento 156, 199 e 153</li>
+								<li>Monitorar a frequência e tipo de questionamento para atualizar os scripts</li>
+								<li>Organizar e manter atualizado o manual de qualidade dos serviços</li>
+								<li>Elaborar relatórios, incluindo gravações de atendimento em número suficiente para análise dos serviços prestados pela Central de Atendimento 156</li>
+								<li>Monitorar a frequência e tipo de questionamento para atualizar os scripts</li>
+								<li>Organizar e manter atualizado o manual de qualidade dos serviços</li>
+								<li>Elaborar relatórios, incluindo gravações de atendimento em número suficiente para análise dos serviços prestados pela Central de Atendimento 156</li>
+								<li>Formular, aplicar e interpretar resultados de Pesquisas de Satisfação dos usuários e Qualidade</li>
+								<li>Realizar auditoria de qualidade da de conhecimento e scripts da Central de Atendimento 156</li>
+								<li>Modelar os processos e efetuar o levantamento das informações que irão compor os roteiros de atendimento de novas operações</li>
+								<li>Planejar e coordenar os processos de capacitação organizacional, de reciclagem periódica, de programas de treinamento comportamentais e programas de aprimoramento de qualidade dos serviços prestados</li>
+								<li>Planejar e coordenar a elaboração de materiais utilizados nas capacitações, quais sejam: apostilas, manuais de sistemas e outros</li>
+								<li>Construir clima organizacional sadio, relacionando-se bem com as equipes</li>
+								<li>Interagir com representantes da CONTRATANTE nas questões referentes à gestão da qualidade dos serviços.</li>
+								<li>Analisar mensalmente os dados gerenciais de atendimento e qualidade, propondo melhorias necessárias à garantia da excelência do serviço prestado.</li>
+								<li>Avaliar a qualidade dos serviços prestados utilizando critérios e ferramentas aprovados pela CONTRATANTE.</li>
+								<li>Promover ações objetivas de realinhamento de metas e qualidade dos serviços.</li>
+							</ul>
+						</li>
+						</ul>
+					<p class="s2">4.7.1.7.	Analista de tráfego</p>
+						<ul>
+						<li>
+							Perfil
+							<ul>
+								<li>○	Formado em Curso Superior de qualquer área de atuação;</li>
+								<li>Experiência comprovada de, pelo menos 1 ano, em controle e análise de tráfego de ligações em Contact Center</li>
+								<li>Fluência, clareza e objetividade</li>
+								<li>Raciocínio lógico</li>
+								<li>Dinamismo na busca de soluções para melhoria da qualidade dos serviços </li>
+								<li>Capacidade de agir com calma e tolerância</li>
+								<li>Capacidade de comunicar-se e expressar-se corretamente em linguagem falada e escrita</li>
+								<li>Raciocínio lógico, matemático e nível superior desejável</li>
+								<li>Capacidade de análise/síntese</li>
+								<li>Experiência desejável na área de controle de tráfego em central de atendimento</li>
+								<li>Conhecimentos na área de dimensionamento, organização, controle, sistemas de acompanhamento e avaliação do tráfego, solução de problemas inclusive em situações de emergência/não previstas</li>
+								<li>Conhecimento das ferramentas e “softwares” inerentes à função</li>
+								<li>Capacidade de planejamento e estabelecimento de pontos de verificação e controle dos serviços sob sua responsabilidade</li>
+								<li>Conhecimentos de informática, digitação, Windows, Office (Word, Excel intermediário e Access) e Open Office</li>
+								<li>Aprovação em programa de seleção a ser realizado pela CONTRATADA, com critérios validados pelo CONTRATANTE, inclusive treinamento em:</li>
+									<ul class="sqr-ul">
+										<li>Telemarketing</li>
+										<li>Sistemas de monitoração</li>
+										<li>Uso da Posição de Atendimento - P.A. - (sistema telefônico)</li>
+										<li>Utilização de aplicativos para registro e tratamento de ocorrências</li>
+										<li>Utilização dos scripts/roteiros</li>
+									</ul>
+							</ul>
+						</li>
+						<li>
+							Atribuições
+							<ul>
+								<li>Analisar, dimensionar e controlar o tráfego das ligações</li>
+								<li>Planejar e acompanhar os serviços e resultados da operação</li>
+								<li>Acompanhar e analisar os indicadores de desempenho da operação</li>
+								<li>Comunicar ao coordenador de operação as ocorrências de atendimento</li>
+								<li>Dimensionar e alocar recursos baseado na demanda do atendimento e no perfil dos operadores</li>
+								<li>Otimizar escalas, turnos de trabalho e equipes, buscando ganhos de produtividade</li>
+								<li>Emitir diariamente relatórios de volumetria de atendimento</li>
+								<li>Coletar informações necessários ao controle dos indicadores de desempenho</li>
+								<li>Construir clima organizacional sadio, relacionando-se bem com as equipes</li>
+							</ul>
+						</li>
+						</ul>
+					<p class="s2">4.7.1.8.	Analista de Sistema do Suporte Tecnológico</p>
+						<ul>
+						<li>
+							Perfil
+							<ul>
+								<li>Formado na área de Ciências Computação, Análise de Sistemas</li>
+								<li>Ter amplos conhecimentos nas ferramentas / tecnologias propostas para os Sistemas utilizados na Central de Atendimento</li>
+								<li>Ter conhecimento/experiência em Ferramentas de desenvolvimento de sistemas e páginas web, tais como:</li>
+									<ul class="sqr-ul">
+										<li>JAVA, JAVA SCRIPT, J2EE, HTML, ASP, .NET, XML, Web Services, VB, VBScript</li>
+										<li>KIT MACROMEDIA, ADOBE FLEX, Tecnologia ASTERISK</li>
+										<li>Noções de Gerenciamento de Projetos – PMI, </li>
+										<li>Noções de Engenharia de Software - UML, RUP, Qualidade de Software</li>
+									</ul>
+								<li>Aplicativos do MS-Office (Word, Excel, Power Point, Access)</li>
+								<li>Correio eletrônico (Internet Explorer e Outlook)</li>
+								<li>Bancos de dados, principalmente SQL, Oracle e informix</li>
+								<li>Certificações: OCP, JWD e JAVA</li>
+								<li>Conhecimento em ITIL e COBIT</li>
+								<li>Domínio da língua portuguesa oral e escrita</li>
+								<li>Experiência comprovada de, pelo menos 1 ano, em aplicação de treinamentos</li>
+								<li>Fluência, clareza e objetividade</li>
+								<li>Sensibilidade social</li>
+								<li>Boa dicção e audição</li>
+								<li>Raciocínio lógico</li>
+								<li>Dinamismo na busca de soluções para melhoria da qualidade dos serviços cortesia e civilidade</li>
+								<li>Capacidade de agir com calma e tolerância</li>
+								<li>Pelo menos 1 profissional desta categoria fica obrigado a atender 100% dos requisitos; os demais profissionais deverão atender minimamente 90% dos requisitos aqui descritos</li>
+							</ul>
+						</li>
+						<li>
+							Atribuições
+							<ul>
+								<li>Gerenciar equipamentos tecnológicos e de telefonia do Contact Center</li>
+								<li>Interagir com a PMSP e os gestores dos órgãos participantes do sistema, visando melhorar continuamente a disponibilidade da infra-estrutura tecnológica</li>
+								<li>Receber as demandas e apresentar os relatórios gerenciais solicitados pela PMSP ou órgãos participantes dos sistemas;</li>
+								<li>Demais atividades pertinentes.</li>
+							</ul>
+						</li>
+						</ul>
+					<p class="s2">4.7.1.9.	Coordenador da Operação</p>
+						<ul>
+						<li>
+							Perfil
+							<ul>
+								<li>Ensino Superior completo e pós-graduação nas áreas: gestão de pessoas, administração, recursos humanos e correlatas</li>
+								<li>Conhecimentos avançados de informática e, obrigatoriamente com experiência profissional mínima, de 2 anos em Coordenação de operações de Telemarketing</li>
+								<li>Capacidade de gerenciar pessoas e dinamismo na busca de soluções para melhoria da qualidade dos serviços</li>
+								<li>Domínio dos indicadores e métricas gerenciais de Contact Center</li>
+								<li>Habilidade para solução de conflitos interpessoais e melhoria do clima organizacional</li>
+							</ul>
+						</li>
+						<li>
+							Atribuições
+							<ul>
+								<li>Gerenciar e coordenar a atuação dos supervisores</li>
+								<li>Planejar e executar os serviços da operação</li>
+								<li>Responsabilizar-se operacionalmente pela Central de Atendimento 156 da PMSP</li>
+								<li>Acompanhar e analisar os indicadores de desempenho da operação</li>
+								<li>Dimensionar, alocar recursos e controlar as ausências</li>
+								<li>Organizar e distribuir as tarefas diárias dos supervisores</li>
+								<li>Controlar a alocação de “ilhas” de atendimento na Central</li>
+								<li>Fornecer as informações técnicas necessárias ao Gestor do Contrato para apresentação à equipe de gestão da PMSP</li>
+								<li>Promover campanhas motivacionais</li>
+								<li>Construir clima organizacional sadio, relacionando-se bem com as equipes</li>
+							</ul>
+						</li>
+						</ul>
+					<p class="s2">4.7.1.10.	Gestor de Contrato</p>
+						<ul>
+						<li>
+							Perfil
+							<ul>
+								<li>Formado em Curso Superior de Administração, Direito, Ciências Contábeis, Ciências Econômicas ou correlatas</li>
+								<li>Domínio da língua portuguesa oral e escrita</li>
+								<li>Experiência comprovada de, pelo menos 5 anos, em gestão de contratos de Contact Center</li>
+								<li>Fluência, clareza e objetividade</li>
+								<li>Sensibilidade social</li>
+								<li>Boa dicção e audição</li>
+								<li>Raciocínio lógico e matemático</li>
+								<li>Liderança</li>
+								<li>Dinamismo na busca de soluções para melhoria da qualidade dos serviços cortesia e civilidade</li>
+								<li>Capacidade de agir com calma e tolerância</li>
+								<li>Deter conhecimentos exigidos para o exercício do cargo</li>
+								<li>Capacidade de comunicar-se e expressar-se corretamente em linguagem falada e escrita</li>
+								<li>Amplo conhecimento de técnicas de gerenciamento de Contact Center</li>
+								<li>Domínio técnico de métricas de Contact Center</li>
+								<li>Domínio de sistemas de gestão, processos, pessoas e contratos</li>
+								<li>Habilidade de gerenciar e de administrar conflitos</li>
+								<li>Aprovação em programa de seleção a ser realizado pela CONTRATADA, com critérios validados pelo CONTRATANTE, inclusive treinamento em:</li>
+									<ul class="sqr-ul">
+										<li>Telemarketing</li>
+										<li>Técnicas de gestão de pessoas</li>
+									</ul>
+								<li>Técnicas gerenciais específicas de Contact Center. </li>
+							</ul>
+						</li>
+						<li>
+							Atribuições
+							<ul>
+								<li>Interagir com o fiscal indicado pela CONTRATANTE em questões referentes à gestão operacional dos serviços, envolvendo a qualidade do atendimento, adequações necessárias ao processo de operação, redimensionamento e requalificação do pessoal envolvido.</li>
+								<li>Analisar, em conjunto com a CONTRATANTE, os dados gerenciais de atendimento e propor melhorias, visando garantir à excelência do serviço prestado.</li>
+								<li>Encaminhar mensalmente à CONTRATANTE toda a documentação necessária ao pagamento dos serviços prestados no período.</li>
+								<li>Disponibilizar todos os relatórios e informações relativos à seleção, contratação e capacitação de pessoal, bem como os atinentes aos atendimentos efetuados, conforme a periodicidade estabelecida no presente Termo de Referência ou mediante solicitação da CONTRATANTE.</li>
+							</ul>
+						</li>
+						</ul>
+
+				<p>4.7.2.	A experiência requerida para estes profissionais é considerada a mínima possível para exercer as atividades previstas neste edital com desempenho satisfatório.</p>
+				<p>4.7.3.	Contratação de Pessoal</p>
+					<p class="s2">4.7.3.1.	A CONTRATADA deverá prover a contratação de pessoal necessária, em termos de quantidade e qualidade, para atender de forma adequada aos critérios de qualidade exigidos pela CONTRATANTE para a prestação dos serviços.</p>
+					<p class="s2">4.7.3.2.	A contratação e alocação dos profissionais abaixo relacionados devem obedecer aos seguintes parâmetros:</p>
+
+					<table class="tab-grid">
+
+					<tr class="tab-header">
+
+					<td>Categoria Profissional</td>
+
+					<td>Dimensionamento</td>
+
+					</tr>
+
+					<tr>
+
+					<td>Gerente</td>
+					<td>1 (um) para, no máximo, 3 (três) coordenadores</td>
+
+					</tr>
+					<tr>
+						<td>Coordenador</td>
+						<td>1 (um) para, no máximo, 4 (quatro) supervisores</td>
+					</tr>
+					<tr>
+						<td>Supervisor</td>
+						<td>1 (um) para, no máximo, 20 (vinte) operadores</td>
+					</tr>
+					<tr>
+						<td>Monitor de Qualidade</td>
+						<td>1 (um) para, no máximo, 50 (cinquenta) operadores</td>
+					</tr>
+					<tr>
+						<td>Instrutor de Treinamento</td>
+						<td>1 (um) para, no máximo, 30 (trinta) operadores</td>
+					</tr>
+
+					</table>
+
+
+
 				<Comments :attr="{id:commentId(), context:'4.7.	Recursos Humanos'}" v-if="estaConsulta.ativo == 1"></Comments>
 				
 
@@ -625,6 +989,16 @@ ul > li {
 }
 ul > li > ul > li {
 	list-style-type: circle;
+}
+.sqr-ul li {
+	list-style-type: square;
+	margin-left: 4em;
+}
+.tab-header {
+	background-color: #bbb;
+}
+.tab-grid {
+	font-size: 22px;
 }
 
 </style>

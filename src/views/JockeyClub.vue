@@ -60,7 +60,7 @@
 			<p>O Hipódromo de Cidade Jardim é um equipamento privado de grande porte que contém características urbanísticas, paisagísticas e históricas excepcionais, tendo sido assim classificado como uma ZOE – Zona de Ocupação Especial pela Lei de Parcelamento, Uso e Ocupação do Solo – LPUOS (Lei nº 16402/2016).  Nos termos do §1º do art. 15 dessa lei, as áreas classificadas como ZOE – Zona de Ocupação Especial devem necessariamente ser objeto de PIU – Projetos de Intervenção Urbana, contemplando a definição de parâmetros específicos de parcelamento, uso e ocupação do solo adequados às suas especificidades.</p>
 			<p>Em atendimento ao Art. 2° do Decreto Municipal nº 56.901/2016, que regulamenta o desenvolvimento dos Projetos de Intervenção Urbana, os produtos ora apresentados correspondem aos elementos prévios à elaboração do PIU, constituídos pelo Diagnóstico Socioterritorial e Ambiental e pelo Programa de Interesse Público, subsidiando a instrução do presente Projeto de Intervenção Urbana do Hipódromo de Cidade Jardim – PIU Jockey Club, possibilitando à SMDU a realização da Consulta Pública inaugural do processo de desenvolvimento deste projeto no site Gestão Urbana.</p>
 			<p>Considerando que o Hipódromo de Cidade Jardim vem passando nos últimos anos por um processo gradativo de refuncionalização em razão de uma progressiva redução das atividades do turfe e da realização de eventos e novas atividades de cunho cultural, esportivo e de lazer, bem como das tratativas iniciadas entre a Prefeitura e o Jockey Club de São Paulo visando à composição em relação a lançamentos tributários relativos ao  imóvel, envolvendo a prestação de contrapartidas de interesse público, este PIU Jockey Club é uma oportunidade para que se promova publicamente a discussão acerca da destinação urbanística deste equipamento histórico no contexto de desenvolvimento urbano atual da cidade e da estratégia de ordenamento territorial delineada pelo Plano Diretor Estratégico – PDE (Lei nº 16.050/2014).</p>
-			<Comments v-if="parseInt(estaConsulta.ativo) === 1" :attr="{ id: commentId(true), commentcontext: 'Introdução' }"></Comments>
+			<Comments v-if="parseInt(estaConsulta.ativo) === 1" :attr="{ id: commentId(true), context: 'Introdução' }"></Comments>
 
 			<h4>Objeto</h4>
 				<p>A presente Consulta Pública, promovida pela Prefeitura do Município de São Paulo por intermédio da Secretaria Municipal de Desenvolvimento Urbano (SMDU) e da São Paulo Urbanismo (SP-URBANISMO), tem como objeto desencadear o processo administrativo tendente a instaurar o Projeto de Intervenção Urbana do Hipódromo de Cidade Jardim – PIU Jockey Club, a ser realizada entre os dias 18 de outubro a 09 de novembro de 2019, apresentando os elementos preliminares ao desenvolvimento do PIU, com vistas a colher contribuições da sociedade civil ao posterior desenvolvimento do projeto. A consulta tem por base a legislação em vigor e os instrumentos urbanísticos que permitem ações específicas no território da cidade.</p>
@@ -90,7 +90,7 @@
 					</a>
 				</li>
 			</ul>
-			<Comments v-if="parseInt(estaConsulta.ativo) === 1" :attr="{ id: commentId(), commentcontext: 'Diagnóstico Sócio-territorial' }"></Comments>
+			<Comments v-if="parseInt(estaConsulta.ativo) === 1" :attr="{ id: commentId(), context: 'Diagnóstico Sócio-territorial' }"></Comments>
 
 			<!-- <section>
 				<h3 class="titulo" indent="2">Unidades de análise</h3>
@@ -128,14 +128,6 @@
 				caption: 'Figura 1 – Vista Aérea, 1955',
 				fonte: 'oldsaopaulo.tumblr'
 			}"></Imagem>
-
-			<!-- <Imagem :dados="{
-				tipo: 'coluna',
-				url: imgSrc('arquivos/jockey/Figura-1_vista-aerea.jpg'),
-				caption: 'Figura 1 – Vista Aérea, 1955',
-				fonte: 'oldsaopaulo.tumblr'
-			}"></Imagem> -->
-
 
 			<p>Em 25 de janeiro 1941 foi inaugurado o Hipódromo de Cidade Jardim, concebido por Fábio Prado, prefeito da cidade e presidente do Jockey à época. Ao mesmo tempo, o Jockey doou o terreno na Mooca para o município.</p>
 			<p>O projeto da nova sede foi elaborado em 1937, por Elisiário da Cunha Bahiana, no estilo Art Decó e ficou pronto em 1941. O arquiteto projetou as pistas, arquibancadas e a Vila Hípica da nova sede. Ao todo são quatro pistas de grama ou areia utilizadas para as corridas oficiais, com cerca de 2.000 metros de extensão em volta fechada. As arquibancadas e tribunas tem capacidade para receber até 20.000 pessoas. A Vila Hípica, diretamente ligada às pistas, tem capacidade para abrigar até 1.400 animais.</p>
@@ -1436,7 +1428,7 @@
 				</li>
 			</ul>
 
-			<Comments v-if="parseInt(estaConsulta.ativo) === 1" :attr="{ id: commentId(), commentcontext: 'Diagnóstico Ambiental' }"></Comments>
+			<Comments v-if="parseInt(estaConsulta.ativo) === 1" :attr="{ id: commentId(), context: 'Diagnóstico Ambiental' }"></Comments>
 
 			<h4>Clima</h4>
 			<p>O clima tropical úmido de altitude é o clima natural da região onde está localizada a cidade de São Paulo, que se caracteriza por reduzidas chuvas no inverno e temperatura média de 19°C. Entretanto, a intensa urbanização da região  e a produção de poluentes atmosféricos,  promoveram alterações climáticas e o clima na região passou a ser caracterizado por Unidades Climáticas Urbanas, com características próprias na região central, periférica, nos trechos de urbanização fragmentada e nas regiões não urbanizadas.</p>
@@ -1671,7 +1663,6 @@
 					{ fundo: '#87e5fd', descricao: 'Área sujeita à inundação' }
 				]
 			}"></Imagem>
-
 
 			<Imagem :maxWidth="mapMaxWidth" :dados="{
 				tipo: 'mapa',
@@ -1963,7 +1954,7 @@
 				</li>
 			</ul>
 
-			<Comments v-if="parseInt(estaConsulta.ativo) === 1" :attr="{ id: commentId(), commentcontext: 'Programa de Interesse Público' }"></Comments>
+			<Comments v-if="parseInt(estaConsulta.ativo) === 1" :attr="{ id: commentId(), context: 'Programa de Interesse Público' }"></Comments>
 
 			<h4>Introdução</h4>
 			<p>O Programa de Interesse Público considera as informações levantadas na Análise Socioterritorial e Ambiental para apresentar as diretrizes de desenvolvimento e os principais aspectos a serem enfrentados pelo PIU Jockey Club para que se constitua como uma iniciativa que contribua para a utilização mais intensiva do hipódromo e para o desenvolvimento urbano local e da cidade, tendo por base as diretrizes presentes no PDE. Além da participação espontânea, os munícipes poderão opinar sobre questões propostas pela SP Urbanismo, auxiliando na formulação de propostas para a sequência do projeto. O presente produto apresenta também no Anexo I um estudo de casos de projetos similares envolvendo a reestruturação de hipódromos, com o objetivo de auxiliar a população a visualizar as possibilidades de transformação para este PIU.</p>

@@ -1,8 +1,8 @@
 <template>
 	<div class="MinutaSetorCentral" ref="conteudoConsulta">
 		<PageTop background_image_src="arquivos/capas/minuta-piu-setor-central_244w.jpg" :esta_consulta="estaConsulta">
-			<template slot="titulo"><div>Minuta PIU Setor Central</div></template>
-			<template slot="subtitulo"><div>Subtítulo da Nova Consulta</div></template>
+			<template slot="titulo"><div>PIU Setor Central</div></template>
+			<template slot="subtitulo"><div>Minuta de Projeto de Lei</div></template>
 		</PageTop>
 
 		<Indice :titulos="titulosLimpo"></Indice>
@@ -10,8 +10,8 @@
 		<Apoio></Apoio>
 
 		<section>
-			<h2 class="titulo" indent="1">Minuta de Projeto de Lei: Projeto de Intervenção Urbana do Setor Central</h2>
-			<p><em>Ementa</em>: Institui e regulamenta a Área de Intervenção Urbana do Setor Central – AIU-SCE, estabelece parâmetros de uso e ocupação do solo específicos para o território, define o programa de intervenções do PIU-SCE e revoga a Lei n. 12.349/1997.</p>
+			<h2 class="titulo" indent="1">Minuta de Projeto de Lei PIU Setor Central</h2>
+			<p>Institui e regulamenta a Área de Intervenção Urbana do Setor Central – AIU-SCE, estabelece parâmetros de uso e ocupação do solo específicos para o território, define o programa de intervenções do PIU-SCE e revoga a Lei n. 12.349/1997.</p>
 		</section>
 
 		<section>
@@ -166,7 +166,7 @@
 				<p><b>§ 1º</b> As Áreas de Transformação e Áreas de Qualificação da AIU-SCE deverão observar o regramento urbanístico inscrito nos Quadros 2 e 3, nos Mapas 3 e 4 e nas demais disposições desta Lei.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 7º, § 2º">
-				<p><b>§ 2º</b> Aplicam-se ao perímetro do PIU-SCE as disposições ordinárias da Lei 16.402 de 2016 – LPUOS suplementarmente às disposições desta Lei, sem prejuízo da aplicação da regulamentação administrativa prevista pelos órgãos de preservação do patrimônio.</p>
+				<p><b>§ 2º</b> Aplicam-se ao perímetro do PIU-SCE as disposições ordinárias da Lei 16.050 de 2014 – PDE e da Lei 16.402 de 2016 – LPUOS suplementarmente às disposições desta Lei, sem prejuízo da aplicação da regulamentação administrativa prevista pelos órgãos de preservação do patrimônio.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 8º'">
 				<p><b>Art. 8º</b> Estão sujeitos ao atendimento das disposições estabelecidas nesta Lei os pedidos de licenciamento edilício formulados para imóveis contidos no perímetro da AIU-SCE que tenham por objeto:</p>
@@ -180,7 +180,7 @@
 				<p><b>Art. 9º</b> Para atendimento da Quota Ambiental prevista nos Arts. 74 a 86 da Lei n. 16.402 de 2016 - LPUOS, os empreendimentos sujeitos aos regramentos desta Lei deverão implantar indivíduos arbóreos em, ao menos, 50% (cinquenta por cento) da área permeável do lote na proporção mínima de um espécime arbóreo para cada 25m² (vinte e cinco metros quadrados) de área permeável.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 9º, Parágrafo único">
-				<p><b>Parágrafo único.</b> A arborização mencionada no “caput” deverá estar implantada em área permeável ajardinada no recuo frontal, visível do logradouro público e sem vedação do lote com muros nesse trecho, quando exigido pela Lei n. 16.402 de 2016 - LPUOS.</p>
+				<p><b>Parágrafo único.</b> A arborização mencionada no “caput” deverá ser implantada em área permeável ajardinada no recuo frontal, quando exigido pela Lei n. 16.402 de 2016 - LPUOS, visível do logradouro público e sem vedação do lote com muros nesse trecho.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 10'">
 				<p><b>Art. 10.</b> A emissão de alvarás de edificação nova ou de reforma com ampliação de área para empreendimentos situados no Compartimento Ambiental de Várzea está condicionada à apresentação, pelo interessado, de parecer técnico favorável à execução das obras, considerando:</p>
@@ -219,9 +219,9 @@
 
 			<h3>Seção II - Eixos de Transformação e Eixos Estratégicos</h3>
 			<CommentsContext :id="commentId()" context="'Art. 14'">
-				<p><b>Art. 14.</b> Aos novos empreendimentos localizados em lotes confrontantes com os Eixos Estratégicos ou em Áreas Verdes Públicas lindeiras aos referidos Eixos, aplicam-se as seguintes disposições:</p>
+				<p><b>Art. 14.</b> Aos novos empreendimentos localizados em lotes confrontantes com os Eixos Estratégicos ou com Áreas Verdes Públicas lindeiras aos referidos Eixos, aplicam-se as seguintes disposições:</p>
 				<ol class="romanos">
-					<li>exigência de fachada ativa em, no mínimo, 25% (vinte e cinco por cento) da testada do lote, com limite máximo de 25% (vinte e cinco por cento) de vedação da testada do lote com muros;</li>
+					<li>I -	exigência de fachada ativa em, no mínimo, 25% (vinte e cinco por cento) de todas as testadas  do lote, com limite máximo de 25% (vinte e cinco por cento) de vedação das testadas do lote com muros;</li>
 					<li>dispensa de atendimento ao gabarito de altura máxima, quando exigido na área lindeira, para a faixa de 50 m (cinquenta metros) medida a partir do alinhamento original dos lotes.</li>
 				</ol>
 			</CommentsContext>
@@ -230,28 +230,26 @@
 				<ol class="romanos" start="1">
 					<li>para o Eixo de Transformação Elevado Pres. João Goulart, na hipótese de desativação do elevado como via de tráfego com manutenção de sua estrutura, poderá ser outorgada a cessão de espaço público aéreo para integração dos empreendimentos à estrutura mencionada, aplicando-se, nesse caso, as seguintes disposições:
 						<ol class="minusculas">
-							<li>será obrigatória a fruição pública que integre a fachada ativa exigida no pavimento térreo ao pavimento de acesso ao Elevado;</li>
+							<li>será obrigatória a fruição pública entre o pavimento térreo e o pavimento de acesso ao Elevado, integrando os usos associados à fachada ativa exigida nesses pavimentos; </li>
 							<li>serão consideradas não computáveis as áreas construídas nesses pavimentos, além da circulação vertical entre eles.</li>
 						</ol>
 					</li>
 					<li>para os demais Eixos de Transformação:
 						<ol class="minusculas">
 							<li>exigência de doação de faixa de terreno para que o passeio público lindeiro tenha largura mínima de 8 m (oito metros), ficando o lote dispensado do recuo frontal;</li>
-							<li>exigência de fachada ativa em, no mínimo, 25% (vinte e cinco por cento) da testada do lote, com limite máximo de 25% (vinte e cinco por cento) de vedação da testada do lote com muros, nos termos da Lei n. 16.402 de 2016 - LPUOS;</li>
-							<li>exigência de fruição pública, nos termos da Lei n. 16.402 de 2016 - LPUOS, para lotes com frente para mais de um logradouro.</li>
+							<li>exigência de fachada ativa em, no mínimo, 25% (vinte e cinco por cento) de todas as testadas do lote,  com limite máximo de 25% (vinte e cinco por cento) de vedação da testada do lote com muros, nos termos da Lei n. 16.402 de 2016 - LPUOS;</li>
+							<li>exigência de fruição pública para lotes com frentes para mais de um logradouro, sem prejuízo da aplicação da disciplina de fruição pública trazida pela Lei n. 16.402 de 2016 - LPUOS </li>
+							<li>para os terrenos formados pelo remembramento de três ou mais lotes menores que 500 m² (quinhentos metros quadrados) que atinjam área mínima de 1.000 m² (mil metros quadrados) e a testada mínima de 20 m (vinte metros), área construída adicional computável correspondente a 10% (dez por cento) da área do terreno resultante por lote remembrado até o limite máximo de 100% (cem por cento)</li>
 						</ol>
 					</li>
 				</ol>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 15, § 1º'">
-				<p><b>§ 1º</b> Nos lotes lindeiros ao Eixo de Transformação da Orla Fluvial Tamanduateí, aplicam-se, cumulativamente ao regramento do “caput”, as seguintes disposições:</p>
+				<p><b>Parágrafo único.</b> Nos lotes lindeiros ao Eixo de Transformação da Orla Fluvial Tamanduateí, aplicam-se, cumulativamente ao regramento do “caput”, as seguintes disposições:</p>
 				<ol class="romanos">
-					<li>dispensa de atendimento do recuo frontal, condicionada ao atendimento das restrições referentes à Área de Proteção Permanente do Rio Tamanduateí;</li>
-					<li>faixa permeável ajardinada e arborizada com largura mínima de 3 m (três metros) junto ao alinhamento dos lotes.</li>
+					<li>atendimento das restrições referentes à Área de Proteção Permanente do Rio Tamanduateí; </li>
+					<li>exigência de faixa permeável ajardinada e arborizada com largura mínima de 3 m (três metros), integrada ao passeio público confrontante e mantida livre de fechamentos, podendo ser computada no cálculo da Taxa de Permeabilidade – TP, da Quota Ambiental e da Taxa de Ocupação do lote.</li>
 				</ol>
-			</CommentsContext>
-			<CommentsContext :id="commentId()" context="'Art. 15, § 2º'">
-				<p><b>§ 2º</b> Os parâmetros de projeto e execução do passeio público atenderão ao regramento vigente, sendo que as faixas permeáveis, junto à testada dos lotes, poderão ser computadas no cálculo da Taxa de Permeabilidade – TP, da Quota Ambiental e da Taxa de Ocupação do lote.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 16'">
 				<p><b>Art. 16.</b> Nos lotes confrontantes aos Eixos Estratégicos e aos Eixos de Transformação são consideradas áreas não computáveis, independentemente das zonas em que se situem:</p>
@@ -263,52 +261,46 @@
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 16, ponto II'">
 				<ol class="romanos" start="2">
-					<li>as áreas comuns e de circulação cobertas, incluindo a circulação vertical, nos usos residenciais, atendido o limite de 20% (vinte por cento) da área coberta de cada pavimento;</li>
+					<li>as áreas comuns e de circulação cobertas, incluindo a circulação vertical, nos usos residenciais, até o limite de 20% (vinte por cento) da área coberta de cada pavimento;</li>
 				</ol>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 16, ponto III'">
 				<ol class="romanos" start="3">
-					<li>nos empreendimentos enquadrados na categoria de uso R2v ou de uso misto com R2v, e nos Empreendimentos Habitacionais de Interesse Social - EHIS e de Mercado Popular – EHMP, as áreas cobertas de uso comum de até dois pavimentos, adicionalmente às áreas não computáveis do pavimento térreo;</li>
+					<li>as áreas construídas ao nível da rua, em empreendimentos com fachada ativa mínima de 25% (vinte e cinco por cento) em cada uma das testadas e de no mínimo 3 m (três metros), destinadas a usos da categoria não residencial permitidos nas respectivas zonas até o limite da Taxa de Ocupação fixada no Quadro 2 desta lei, com exceção daqueles enquadrados pela Lei n. 16.402 de 2016 - LPUOS nos grupos de atividade referentes a serviço de armazenamento e guarda de bens móveis;</li>
 				</ol>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 16, ponto IV'">
 				<ol class="romanos" start="4">
-					<li>as áreas construídas ao nível da rua destinadas a usos da categoria não residencial permitidos nas respectivas zonas até o limite da Taxa de Ocupação fixada no Quadro 2 da presente Lei, com exceção daqueles enquadrados nos grupos de atividade referentes a serviço de armazenamento e guarda de bens móveis;</li>
+					<li>em empreendimentos predominantemente residenciais com fachada ativa, as áreas destinadas aos usos não residenciais situadas imediatamente acima do pavimento térreo e  em pavimentos consecutivos, até o limite  de 20% (vinte por cento) da área construída computável;</li>
 				</ol>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 16, ponto V'">
 				<ol class="romanos" start="5">
-					<li>em empreendimentos predominantemente residenciais, as áreas destinadas aos usos não residenciais, situadas nos pavimentos imediatamente acima do pavimento térreo com fachada ativa, até o limite de 20% (vinte por cento) da área construída computável;</li>
+					<li>nos empreendimentos enquadrados na categoria de uso R2v ou de uso misto com R2v, e nos Empreendimentos Habitacionais de Interesse Social - EHIS e de Mercado Popular – EHMP, as áreas cobertas de uso comum de até dois pavimentos, adicionalmente às áreas não computáveis indicadas nos incisos II, III e IV;</li>
 				</ol>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 16, ponto VI'">
 				<ol class="romanos" start="6">
-					<li>as áreas previstas nos incisos X a XVI do Art. 62 da Lei n. 16.402 de 2016.</li>
+					<li>as áreas previstas nos incisos X a XV do Art. 62 da Lei n. 16.402 de 2016;</li>
+				</ol>
+			</CommentsContext>
+			<CommentsContext :id="commentId()" context="'Art. 16, ponto VII'">
+				<ol class="romanos" start="7">
+					<li>as áreas previstas no art. 108 da Lei n. 16.642 de 2017 – COE.</li>
 				</ol>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 16, § 1º'">
 				<p><b>§ 1º</b> O limite estabelecido nas alíneas “a” e “b” do inciso I do Art. 62 da Lei n. 16.402 de 2016 não se aplica aos lotes compreendidos na Área de Transformação T2.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 16, § 2º'">
-				<p><b>§ 2º</b> Para fins de aplicação do inciso V do “caput”, considera-se empreendimentos predominantemente residenciais aqueles que apresentam pelo menos 70% (setenta por cento) de sua área construída computável destinada ao uso residencial.</p>
+				<p><b>§ 2º</b> Para fins de aplicação do inciso IV do “caput ”, considera-se empreendimentos predominantemente residenciais aqueles que apresentam pelo menos 70% (setenta por cento) de sua área construída computável destinada ao uso residencial.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 16, § 3º'">
-				<p><b>§ 3º</b> O somatório das áreas construídas não computáveis previstas nos incisos I e II do “caput” deste artigo, bem como as áreas não computáveis previstas na legislação edilícia, fica sujeita às limitações do Art. 62, § 2º da Lei 16.402 de 2016 - LPUOS.</p>
+				<p><b>§ 3º</b> §3º.	A somatória das áreas construídas não computáveis previstas nos incisos I, II e VII do “caput” deste artigo fica sujeita às limitações do Art. 62, § 2º da Lei 16.402 de 2016 - LPUOS</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 17'">
-				<p><b>Art. 17.</b> Para os empreendimentos localizados nos lotes lindeiros aos Eixos de Transformação serão concedidos os seguintes incentivos:</p>
-				<ol class="romanos">
-					<li>para os terrenos formados pelo remembramento de três ou mais lotes menores que 500 m² (quinhentos metros quadrados) que atinjam o mínimo de 1.000 m² (mil metros quadrados) e a testada mínima de 20 m (vinte metros), área construída adicional computável correspondente a 10% (dez por cento) da área do terreno resultante por lote remembrado até o limite máximo de 100% (cem por cento);</li>
-					<li>desconto de 50% (cinquenta por cento) no valor da contrapartida financeira à outorga onerosa de potencial construtivo adicional, calculada pela aplicação da fórmula prevista no Art. 117 da Lei n. 16.050 de 2014 - PDE, combinada aos Fatores de Planejamento constantes no Quadro 2 desta Lei.</li>
-				</ol>
+				<p><b>Art. 17.</b> Para os empreendimentos localizados nos lotes lindeiros ao Eixo Estratégico do Apoio Urbano Sul será concedido desconto de 50% (cinquenta por cento) no valor da contrapartida financeira à outorga onerosa de potencial construtivo adicional, calculada pela aplicação da fórmula prevista no Art. 117 da Lei n. 16.050 de 2014 - PDE, combinada aos Fatores de Planejamento constantes no Quadro 2 desta Lei. </p>
 			</CommentsContext>
-			<CommentsContext :id="commentId()" context="'Art. 17, § 1º'">
-				<p><b>§ 1º</b> O incentivo previsto no inciso I do “caput” não se aplica ao Eixo de Transformação Elevado Pres. João Goulart.</p>
-			</CommentsContext>
-			<CommentsContext :id="commentId()" context="'Art. 17, § 2º'">
-				<p><b>§ 2º</b> O incentivo previsto no inciso II do “caput” aplica-se aos empreendimentos com frente para o Eixo Estratégico do Apoio Urbano Sul.</p>
-			</CommentsContext>
-
 			<h3>Seção III - Dos Projetos Estratégicos</h3>
 			<CommentsContext :id="commentId()" context="'Art. 18'">
 				<p><b>Art. 18.</b> Ficam instituídos os seguintes perímetros de Projetos Estratégicos, demarcados no Mapa 7 anexo a esta Lei:</p>
@@ -328,7 +320,7 @@
 				<ol class="romanos">
 					<li>os imóveis a serem transferidos ao parceiro privado com seus respectivos laudos de avaliação;</li>
 					<li>a relação entre os valores referentes ao aporte público e às contrapartidas urbanísticas ofertadas por agente econômico privado;</li>
-					<li>os valores unitários máximos referentes a cada contrapartida urbanística projetada;</li>
+					<li>os valores de remuneração máximos referentes a cada contrapartida urbanística projetada;</li>
 					<li>as contrapartidas urbanísticas mínimas, parametrizadas pelo valor do imóvel objeto do Projeto Estratégico e da respectiva outorga onerosa de potencial construtivo adicional;</li>
 					<li>os critérios de qualidade e padrão construtivo estabelecidos pelas normas técnicas vigentes para fins de recebimento das contrapartidas.</li>
 				</ol>
@@ -336,6 +328,11 @@
 			<CommentsContext :id="commentId()" context="'Art. 18, § 3º'">
 				<p><b>§ 3º</b> Poderão ser arrolados nos editais de chamamento outros imóveis públicos localizados na AIU-SCE e não compreendidos nos perímetros indicados no “caput”, para fins de composição das contrapartidas oferecidas nos contratos de parcerias necessários à implantação dos Projetos Estratégicos.</p>
 			</CommentsContext>
+
+			<CommentsContext :id="commentId()" context="'Art. 18, § 4º'">
+				<p><b>§ 4º</b>O parcelamento do solo decorrente da implantação dos Projetos Estratégicos trazidos nesta Lei poderá ser realizado em etapas, conforme a disposição do Art. 55 da Lei n. 16.402 de 2016 - LPUOS, podendo considerar as áreas já ocupadas por equipamentos públicos no cômputo dos percentuais mínimos de destinação de área pública definidos no edital de chamamento. </p>
+			</CommentsContext>
+
 			<CommentsContext :id="commentId()" context="'Art. 19'">
 				<p><b>Art. 19</b> Para subsidiar a elaboração das propostas advindas dos Chamamentos Públicos mencionados no artigo anterior, a SP-Urbanismo desenvolverá estudo preliminar para cada Projeto Estratégico contendo, no mínimo:</p>
 				<ol class="romanos">
@@ -347,21 +344,18 @@
 				</ol>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 19, § 1º'">
-				<p><b>§ 1º</b> O programa de Interesse Público priorizará, na definição de contrapartidas, a construção de Habitações de Interesse Social que comporão o parque público de moradia, podendo abranger a implantação de sistema viário, de áreas verdes equipadas e áreas institucionais, quando houver a obrigatoriedade de parcelamento, conforme disposto na Lei n. 16.402 de 2016 - LPOUS.</p>
+				<p><b>§ 1º</b>O programa de Interesse Público priorizará, na definição de contrapartidas, a construção de Habitações de Interesse Social que comporão o parque público de moradia, podendo abranger a implantação de sistema viário, de áreas verdes equipadas e áreas institucionais.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 19, § 2º'">
 				<p><b>§ 2º</b> Os novos melhoramentos viários propostos para os Projetos Estratégicos deverão promover conexões com o sistema viário existente e com os melhoramentos aprovados em Lei.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 20'">
-				<p>Art. 20. O Projeto Estratégico Detran-SP abrange os lotes 0017, 0038 e 0068 da Quadra 093, Setor 018, e a elaboração do respectivo Estudo Preliminar deverá considerar o seguinte:</p>
+				<p><b>Art. 20.</b> O Projeto Estratégico Detran-SP abrange os lotes 0017, 0038 e 0068 da Quadra 093, Setor 018, e a elaboração do respectivo Estudo Preliminar deverá considerar o seguinte:</p>
 				<ol class="romanos">
 					<li>a conveniência da permanência dos equipamentos públicos existentes;</li>
 					<li>a possibilidade de remembramento dos lotes para melhor utilização da área;</li>
 					<li>o cumprimento das exigências de destinação de áreas públicas, nos termos do Quadro 2 da Lei n. 16.402 de 2016 – LPUOS.</li>
 				</ol>
-			</CommentsContext>
-			<CommentsContext :id="commentId()" context="'Art. 20, Parágrafo único'">
-				<p><b>Parágrafo único.</b> O loteamento poderá ser realizado em etapas, conforme a disposição do Art. 55 da Lei n. 16.402 de 2016 - LPUOS, podendo considerar para o atendimento dos percentuais mínimos de destinação institucional e sem afetação previamente definida, conforme Quadro 2 da referida lei, as áreas já ocupadas por equipamentos públicos.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 21'">
 				<p><b>Art. 21.</b> O Projeto Estratégico Canindé-Portuguesa é composto por imóveis públicos e privados e corresponde à Zona de Ocupação Especial – ZOE - demarcada no Mapa 1 anexo à Lei n. 16.402 de 2016 - LPUOS, coincidente com o perímetro definido no Mapa 3 anexo a esta Lei.</p>
@@ -400,8 +394,8 @@
 			<CommentsContext :id="commentId()" context="'Art. 21, § 3º'">
 				<p><b>§ 3º</b> Com a finalidade de viabilizar o Projeto Estratégico Canindé-Portuguesa, fica o Município autorizado a:</p>
 				<ol class="romanos">
-					<li>permutar imóveis de sua propriedade inseridos no perímetro do projeto com outros que também o sejam, com objetivo de promover a regularização fundiária do Estádio do Canindé;</li>
-					<li>realizar tratativas de renegociação de eventuais débitos tributários pertinentes aos imóveis envolvidos no projeto.</li>
+					<li>I -	permutar imóveis de sua propriedade com imóveis particulares, desde que estejam inseridos no perímetro do projeto, com objetivo de promover a regularização fundiária do Estádio do Canindé;</li>
+					<li>realizar tratativas de renegociação de eventuais débitos tributários relativos  aos imóveis envolvidos no projeto.</li>
 				</ol>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 21, § 4º'">
@@ -413,7 +407,7 @@
 					<li>a conveniência da permanência dos equipamentos públicos existentes;</li>
 					<li>a possibilidade de remembramento dos lotes para melhor utilização da área;</li>
 					<li>o desenvolvimento do Plano de Urbanização da ZEIS 1 – Favela Santo Antônio do Canindé e a constituição do respectivo Conselho Gestor;</li>
-					<li>a melhoria da conectividade viária, prolongando e conectando ruas existentes, nas hipóteses em que houver exigência de parcelamento do solo.</li>
+					<li>a melhoria da conectividade viária, prolongando e conectando ruas existentes.</li>
 				</ol>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 23'">
@@ -425,15 +419,11 @@
 					<li>a abertura de viário no lote 0016 da Quadra 091, Setor 018 quando da implantação do viário disposto no inciso III.</li>
 				</ol>
 			</CommentsContext>
-			<CommentsContext :id="commentId()" context="'Art. 23, Parágrafo único'">
-				<p><b>Parágrafo único.</b> No parcelamento do lote 0017 da Quadra 091, Setor 018, poderão ser consideradas, para fins de atendimento aos percentuais mínimos de destinação institucional e sem afetação previamente definida nos termos do Quadro 2 da Lei n. 16.402 de 2016, as áreas já ocupadas por equipamentos públicos.</p>
-			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 24'">
 				<p><b>Art. 24.</b> Projeto Estratégico Santa Rita corresponde ao lote 0001 da Quadra 003 do Setor 026, que será subdividido em duas parcelas com a implantação do Apoio Urbano Sul, sendo a parcela “A” localizada ao norte do Apoio Urbano Sul e a parcela “B” localizada ao Sul do Apoio Urbano Sul, devendo sua elaboração considerar o seguinte:</p>
 				<ol class="romanos">
 					<li>o projeto de parcelamento deverá avaliar a permanência do uso institucional – Centro de Educação Infantil - CEI Dr. Anis Aidar na parcela “A”;</li>
-					<li>a área de terreno onde se encontra o CEI Dr. Anis Aidar poderá ser considerada no percentual mínimo destinado à área institucional fixado no Quadro 2 da Lei n. 16.402 de 2016 - LPUOS;</li>
-					<li>as áreas destinadas a sistema viário que excederem ao mínimo exigido no Quadro 2 da Lei n. 16.402 de 2016 - LPUOS poderão ser consideradas no cálculo do potencial construtivo dos lotes resultantes do parcelamento do solo.</li>
+					<li>II -	as áreas destinadas a sistema viário que excederem ao mínimo exigido no Quadro 2 da Lei n. 16.402 de 2016 - LPUOS poderão ser consideradas no cálculo do potencial construtivo dos lotes resultantes do parcelamento do solo.</li>
 				</ol>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 23, § 1º'">
@@ -478,8 +468,7 @@
 				<p><b>Art. 27.</b> Aplicam-se às ZOE contidas no perímetro do PIU-SCE:</p>
 				<ol class="romanos">
 					<li>os parâmetros urbanísticos previstos nesta Lei segundo as áreas em que se situam, indicadas nos Mapas 3 e 4 e nos Quadros 2 e 3, complementados pelos parâmetros definidos para a Zona Eixo de Estruturação da Transformação Urbana - ZEU nos Quadros 2A e 3 da Lei n. 16.402 de 2016 - LPUOS.</li>
-					<li>
-						os usos permitidos e condições de instalação definidos nos Quadros 4 e 4A da Lei n. 16.402 de 2016:
+					<li>os usos permitidos e parâmetros de incomodidade  definidos nos Quadros 4 e 4B  da Lei n. 16.402 de 2016:
 						<ol class="minusculas">
 							<li>de Zona Eixo da Estruturação da Transformação Urbana - ZEU para a ZOE Pátio do Brás;</li>
 							<li>de Zona de Centralidade - ZC para às ZOE Júlio Prestes, ZOE Estação Sorocabana e ZOE Teatro Oficina;</li>
@@ -516,12 +505,12 @@
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 29, ponto II'">
 				<ol class="romanos" start="2">
-					<li><p>a aquisição, restauração e reconversão das antigas instalações da Fábrica Orion, correspondente ao lote 0001, da quadra 018 do Setor Fiscal 026, para abrigar equipamento público necessário à qualificação de vizinhanças habitacionais;</p></li>
+					<li><p>a aquisição, restauração e reconversão das antigas instalações da Fábrica Orion, correspondente ao lote 0001, da quadra 018 do Setor Fiscal 026, para abrigar equipamento público social  necessário à qualificação de vizinhanças habitacionais;</p></li>
 				</ol>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 29, ponto III'">
 				<ol class="romanos" start="3">
-					<li><p>a reconversão da Antiga Garagem de Bondes da Light, correspondente aos Lotes 0002-9 e 0044-4, da Quadra 055 do Setor Fiscal 025, para implantação de equipamento público;</p></li>
+					<li><p>a reconversão da Antiga Garagem de Bondes da Light, correspondente aos Lotes 0002-9 e 0044-4, da Quadra 055 do Setor Fiscal 025, para implantação de equipamento público social;</p></li>
 				</ol>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 29, ponto IV'">
@@ -531,7 +520,7 @@
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 29, ponto V'">
 				<ol class="romanos" start="5">
-					<li><p>a aquisição de imóveis, preferencialmente lotes isolados de pequenas dimensões, não passíveis de aproveitamento para as finalidades do PIU-SCE, para ampliação da oferta de áreas verdes e espaços de fruição pública em vizinhanças caracterizadas por precariedade ambiental;</p></li>
+					<li><p>a aquisição de imóveis, preferencialmente lotes isolados de pequenas dimensões, não passíveis de aproveitamento para as finalidades do PIU-SCE, para ampliação da oferta de áreas verdes e espaços de fruição pública, lazer e estar  em vizinhanças caracterizadas por precariedade ambiental;</p></li>
 				</ol>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 29, ponto VI'">
@@ -542,7 +531,7 @@
 							<li>Elaboração do plano de segurança viária para pedestres, considerados os pontos críticos de acidentes;</li>
 							<li>Projeto de gestão do meio-fio para atendimento aos diversos modos de deslocamento, ativos e motorizados, nas áreas de maior circulação de pedestres;</li>
 							<li>Estudos para a definição de critérios e delimitação de áreas de restrição de estacionamento de automóveis no Setor Centro Histórico e para a reorganização da oferta de áreas de estacionamento na área de influência de Polos Comerciais;</li>
-							<li>Estudos para implantação de linha circular para atendimento das áreas de concentração comercial;</li>
+							<li>Estudos para implantação de linha circular para atendimento e interligação  das áreas de concentração comercial;</li>
 							<li>Estudos de viabilidade econômica para a construção e concessão da exploração econômica de edifícios-garagem, com usos associados.</li>
 						</ol>
 					</li>
@@ -579,7 +568,7 @@
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 29, ponto IX'">
 				<ol class="romanos" start="9">
-					<li><p>a desapropriação de imóveis, inclusive para posterior revenda, necessários à implantação dos Projetos Estratégicos e ao Programa de Intervenções previstos nesta Lei.</p></li>
+					<li><p>a desapropriação de imóveis, inclusive para posterior alienação, necessários à implantação dos Projetos Estratégicos e ao Programa de Intervenções previstos nesta Lei.</p></li>
 				</ol>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 29, Parágrafo único'">
@@ -588,8 +577,8 @@
 			<CommentsContext :id="commentId()" context="'Art. 30'">
 				<p><b>Art. 30.</b> As intervenções difusas de gestão dos espaços e serviços públicos disponíveis na AIU-SCE serão viabilizadas por meio de contratos de parceria ou outros ajustes que se façam necessários à cooperação e interação entre a administração pública municipal e interessados privados com a finalidade de garantir a gestão efetiva e eficiente da infraestrutura urbana do PIU-SCE.</p>
 			</CommentsContext>
-			<CommentsContext :id="commentId()" context="'Art. 30, Parágrafo único'">
-				<p><b>Parágrafo único.</b> Para o cumprimento das finalidades previstas no “caput”, deverão ser considerados, dentre outros, os seguintes serviços públicos:</p>
+			<CommentsContext :id="commentId()" context="'Art. 30, § 1º'">
+				<p><b>§ 1º</b> Para o cumprimento das finalidades previstas no “caput”, deverão ser considerados, dentre outros, os seguintes serviços públicos:</p>
 				<ol class="romanos">
 					<li>a conservação de áreas públicas;</li>
 					<li>a limpeza, manutenção e conservação do sistema de drenagem;</li>
@@ -599,6 +588,10 @@
 					<li>a promoção de ações culturais e assistenciais voltadas às populações em situação de vulnerabilidade social.</li>
 				</ol>
 			</CommentsContext>
+			<CommentsContext :id="commentId()" context="'Art. 30, § 2º'">
+				<p><b>§2º</b>As intervenções de que trata o caput não poderão ser custeadas com recursos arrecadados em conta segregada da AIU-SCE, nos termos do art. 339 da Lei n. 16.050 de 2014 – PDE. </p>
+			</CommentsContext>
+
 			<CommentsContext :id="commentId()" context="'Art. 31'">
 				<p><b>Art. 31.</b> Para fins da implantação do Projeto de Intervenção Urbana do Setor Central, integram o Programa de Intervenções as despesas decorrentes da estruturação, gerenciamento e administração de projetos e obras a este relacionados.</p>
 			</CommentsContext>
@@ -652,15 +645,17 @@
 			<CommentsContext :id="commentId()" context="'Art. 37'">
 				<p><b>Art. 37.</b> Os proprietários de imóveis contidos na AIU-SCE poderão apresentar propostas relativas a regularização de construções, reformas ou ampliações executadas em desacordo com a legislação vigente e concluídas até a data de publicação desta Lei, sendo autorizadas:</p>
 				<ol class="romanos">
-					<li>obras de adequação para atendimento às condições de higiene, segurança de uso, acessibilidade, estabilidade, habitabilidade, salubridade e enquadramento da edificação na legislação específica;</li>
-					<li>regularização de parâmetros urbanísticos que apresentemde desconformidade em relação aos limites previstos na legislação vigente.</li>
+					<li>obras de adequação para atendimento às condições de higiene, segurança de uso, acessibilidade, estabilidade, habitabilidade, salubridade e enquadramento da edificação na legislação específica de segurança de uso;</li>
+					<li>regularização de parâmetros urbanísticos que apresentem desconformidade em relação aos limites previstos na legislação vigente.</li>
 				</ol>
 			</CommentsContext>
+
 			<CommentsContext :id="commentId()" context="'Art. 37, Parágrafo único'">
-				<p><b>Parágrafo único.</b> Não se aplicam ao regramento de regularização previsto nesta Lei as disposições trazidas pela Lei Municipal de Anistia das Edificações Irregulares.</p>
+				<p><b>Parágrafo único.</b> Não se aplicam ao regramento de regularização previsto nesta Lei as disposições trazidas pela Lei 17.202 de 2019.</p>
 			</CommentsContext>
+
 			<CommentsContext :id="commentId()" context="'Art. 38'">
-				<p><b>Art. 38.</b> A concessão do benefício previsto no artigo anterior está condicionada à anuência da Secretaria Municipal de Licenciamento – SEL, que indicará as desconformidades e as medidas mitigadoras exigidas para fins da regularização pretendida, considerados os parâmetros de incomodidade, as condições de mobilidade e acessibilidade veicular e a exigências decorrentes de Estudo de Impacto de Vizinhança (EIV) nos casos exigidos pela legislação.</p>
+				<p><b>Art. 38.</b>A concessão do benefício previsto no artigo anterior está condicionada à anuência da Secretaria Municipal de Licenciamento – SEL, que indicará as desconformidades e as medidas mitigadoras exigidas para fins da regularização pretendida, consideradas as condições de instalação, de mobilidade e acessibilidade veicular e as exigências decorrentes de Estudo de Impacto de Vizinhança (EIV) nos casos exigidos pela legislação.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 39'">
 				<p><b>Art. 39.</b> As edificações que descumpriram o percentual de permeabilidade exigido na lei vigente serão passíveis de regularização, desde que atendam, alternativamente, à:</p>
@@ -680,7 +675,7 @@
 				<p><b>Art. 40.</b> A regularização das edificações com área construída computável não declarada será condicionada ao recolhimento de outorga onerosa, que incidirá somente sobre a área construída computável a regularizar.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 40, § 1º'">
-				<p><b>§ 1º</b> A contrapartida financeira relativa à outorga onerosa de potencial construtivo adicional para fins de regularização onerosa será calculada pela fórmula do trazida no art. 117, caput, da Lei 16.050 de 2014 - PDE multiplicada pelo Fator de Regularização (F<sub>R</sub>): <pre class="formula inline">FR = (CA<sub style="font-style: normal;">𝑒𝑓</sub> ∕ CA<sub>max</sub> + 0,2)</pre>, onde:<br>
+				<p><b>§ 1º</b> A contrapartida financeira relativa à outorga onerosa de potencial construtivo adicional para fins de regularização onerosa será calculada pela fórmula do trazida no art. 117, caput, da Lei 16.050 de 2014 - PDE multiplicada pelo Fator de Regularização (F<sub>R</sub>): <pre class="formula inline">FR = (CA<sub style="font-style: normal;">𝑒𝑓</sub> ∕ CA<sub>max</sub>) + 0,2</pre>, onde:<br>
 				<pre class="formula declara">CA<sub style="font-style: normal;">𝑒𝑓</sub></pre> = Coeficiente de Aproveitamento Efetivo do Lote;<br>
 				<pre class="formula declara">CA<sub>max</sub></pre> = Coeficiente de Aproveitamento máximo do lote.</p>
 			</CommentsContext>
@@ -690,8 +685,8 @@
 			<CommentsContext :id="commentId()" context="'Art. 40, § 3º'">
 				<p><b>§ 3º</b> Na hipótese de pedidos de regularização de edificações situadas na Área de Qualificação Q2, aplicam-se as seguintes disposições:</p>
 				<ol class="romanos">
-					<li>I - para edificações de uso misto que atendam às exigências da nota a do Quadro 2 - Fatores de Planejamento, Parâmetros de Ocupação Exceto Quota Ambiental, será adotado o Coeficiente de Aproveitamento máximo igual a 4 (quatro);</li>
-					<li>para edificações de uso misto não enquadradas no inciso I ou para edificações exclusivamente residenciais ou não residenciais, será adotado o Coeficiente de Aproveitamento máximo igual a 2 (dois).</li>
+					<li>para edificações de uso misto que atendam às exigências da nota "a" do Quadro 2 - Fatores de Planejamento, Parâmetros de Ocupação Exceto Quota Ambiental, será adotado o Coeficiente de Aproveitamento máximo igual a 4 (quatro);</li>
+					<li>para edificações de uso misto não enquadradas no inciso I ou para edificações exclusivamente residenciais ou exclusivamente não residenciais , será adotado o Coeficiente de Aproveitamento máximo igual a 2 (dois).</li>
 				</ol>
 			</CommentsContext>
 
@@ -725,7 +720,7 @@
 				<p><b>Art. 42.</b> São considerados passíveis de aplicação dos instrumentos indutores da função social da propriedade os imóveis não edificados, subutilizados, ou não utilizados localizados na AIU-SCE, nos termos estabelecidos pela Lei 16.050 de 2014 - PDE.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 42, § 1º'">
-				<p><b>§ 1º</b> Em função da especificidade do território do PIU-SCE e com a finalidade de incentivar a produção habitacional de interesse social, para os imóveis contidos no Setor Centro Histórico ou em Zonas Especiais de Interesse Social na AIU-SCE, o coeficiente de aproveitamento mínimo para fins de aplicação do PEUC será igual ao Coeficiente de Aproveitamento básico com valor de 1,0 (um) conforme estabelecido no Quadro 3 da Lei Municipal n. 16.402 de 2016.</p>
+				<p><b>§ 1º</b> Em função da especificidade do território do PIU-SCE e com a finalidade de incentivar a produção habitacional de interesse social, para os imóveis contidos no Setor Centro Histórico ou em Zonas Especiais de Interesse Social na AIU-SCE, o coeficiente de aproveitamento mínimo para fins de aplicação do PEUC será igual ao Coeficiente de Aproveitamento básico, com valor de 1,0 (um) conforme estabelecido no Quadro 3 da Lei Municipal n. 16.402 de 2016.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 42, § 2º'">
 				<p><b>§ 2º</b> O Poder Público notificará proprietários de imóveis não edificados, subutilizados, ou não utilizados nos termos e condições do §1º.</p>
@@ -768,7 +763,7 @@
 			<CommentsContext :id="commentId()" context="'Art. 46'">
 				<p><b>Art. 46.</b> O Consórcio Imobiliário, previsto pelo Art. 102 e seguintes da Lei 16.050 de 2014 – PDE, poderá ser usado na implantação do PIU-SCE, observando-se, no mínimo, a:</p>
 				<ol class="romanos">
-					<li>seleção de tipologias edilícias que apresentem viabilidade de adaptação ou edificação para o uso habitacional de interesse social, com base na classificação prevista no Art. 38 desta Lei;</li>
+					<li>seleção de tipologias edilícias que apresentem viabilidade de adaptação ou edificação para o uso habitacional de interesse social, com base na classificação prevista no Art. 41 desta Lei;</li>
 					<li>
 						promoção de Chamamentos Públicos para as seguintes ações:
 						<ol class="minusculas">
@@ -780,9 +775,10 @@
 						definição de índices e fórmulas de cálculo, a serem regulamentados pelo Poder Executivo, contendo no mínimo:
 						<ol class="minusculas">
 							<li>Valor da Unidade Habitacional para fins de cálculo da permuta;</li>
+							<li>Valor da avaliação administrativa do bem do consorciante </li>
 							<li>Valor dos bens imóveis a serem ofertados ao consorciante privado, com previsão de atualização referente ao tempo decorrido desde a disponibilização do imóvel até a entrega da obra;</li>
 							<li>Valor da área não residencial das edificações construídas por intermédio do Consórcio Imobiliário;</li>
-							<li>Indicador para avaliação do custo benefício do empreendimento, que compreenda a relação entre o valor do terreno, o valor do investimento a ser feito pela Admiministração Municipal, quantidade de unidades habitacionais previstas e o valor dos imóveis entregues ao consorciante privado.</li>
+							<li>Indicador para avaliação do custo benefício do empreendimento, que compreenda a relação entre o valor do terreno, o valor do investimento a ser feito pela Administração Municipal, quantidade de unidades habitacionais previstas e o valor dos imóveis entregues ao consorciante privado.</li>
 						</ol>
 					</li>
 				</ol>
@@ -791,7 +787,7 @@
 				<p><b>Art. 47.</b> Fica autorizado ao Poder Público promover chamamentos públicos para fins de operacionalização de consórcios imobiliários, nos termos do Art. 102, § 6º da Lei n. 16.050 de 2014, devendo facilitar a aproximação entre proprietários de imóveis notificados para o PEUC e agentes econômicos interessados em empreendimentos imobiliários, respeitados os princípios que regem a administração pública.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 47, Parágrafo único'">
-				<p><b>Parágrafo único.</b> Os editais de chamamento público para fins de celebração de consórcio imobiliário deverão indicar, no mínimo, a destinação futura dos imóveis, os critérios de elegibilidade destes e a a possibilidade participação de agente econômico privado, quando for o caso.</p>
+				<p><b>Parágrafo único.</b> Os editais de chamamento público para fins de celebração de consórcio imobiliário deverão indicar, no mínimo, a destinação futura dos imóveis, os critérios de elegibilidade destes e a possibilidade de  participação de agente econômico privado, quando for o caso.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 48'">
 				<p><b>Art. 48.</b> Em se tratando da realização de consórcios imobiliários promovidos por iniciativa do Poder Público, deverão ser indicados, previamente ao Chamamento Público, os recursos que comporão os custos do projeto e da obra.</p>
@@ -810,7 +806,7 @@
 				<ol class="romanos">
 					<li>imóveis inscritos na dívida ativa do município para fins de ressarcimento da Administração Pública;</li>
 					<li>imóveis de outros entes públicos, ante a possibilidade de reversão de unidades habitacionais aos programas de habitação de interesse social do Município de São Paulo;</li>
-					<li>imóveis não edificados ou subutilizados que permitam a obtenção de quantidade significativa de unidades habitacionais, nos termos do indicador previsto no inciso III do Art. 43 desta Lei.</li>
+					<li>imóveis não edificados ou subutilizados que permitam a obtenção de quantidade significativa de unidades habitacionais, nos termos do indicador previsto no inciso III do Art. 46 desta Lei.</li>
 				</ol>
 			</CommentsContext>
 
@@ -819,7 +815,7 @@
 				<p><b>Art. 51.</b> Os imóveis urbanos privados abandonados, localizados na área de abrangência do PIU-SCE, cujos proprietários não possuam a intenção de conservá-los em seu patrimônio ficam sujeitos à arrecadação pelo Município, na condição de bem vago, nos termos da regulamentação conferida pelo Art. 108 e seguintes Lei 16.050 de 2014 - PDE.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 51, § 1º'">
-				<p><b>§ 1º</b> A intenção referida no caput deste artigo será presumida quando o proprietário, cessados os atos de posse sobre o imóvel, não adimplir os ônus fiscais instituídos sobre a propriedade predial e territorial urbana, por cinco anos.</p>
+				<p><b>§ 1º</b> A intenção referida no caput deste artigo será presumida quando o proprietário, cessados os atos de posse sobre o imóvel, não adimplir os ônus fiscais instituídos sobre a propriedade predial e territorial urbana, por cinco anos consecutivos.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 51, § 2º'">
 				<p><b>§ 2º</b> Aplicam-se suplementarmente às disposições municipais sobre o tema, as hipóteses previstas na Lei Federal n. 13.465 de 2017 e Lei Federal n. 10.406 de 2002.</p>
@@ -843,7 +839,7 @@
 						Bônus Equivalente concedido em decorrência:
 						<ol class="minusculas">
 							<li>da produção de HIS-1;</li>
-							<li>da requalificação de edificações construídas até o ano de 1980 para novos usos;</li>
+							<li>da requalificação de edificações construídas até o ano de 1980;</li>
 							<li>da execução de ações de preservação e recuperação de edificações de grande porte classificadas como ZEPEC-BIR.</li>
 						</ol>
 					</li>
@@ -882,17 +878,17 @@
 				<p><b>§ 1º</b> Eventual saldo remanescente de Potencial Construtivo Passível de Transferência, deduzido o montante calculado nos termos do “caput”, poderá ser transferido somente a imóveis receptores da AIU-SCE.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 56, § 2º'">
-				<p><b>§ 2º</b> A transferência de potencial construtivo para fora do perímetro da Operação Urbana Centro, já efetivada nos termos da Lei n. 12.349 de 1997, é computada para fins de aplicação do “caput”.</p>
+				<p><b>§ 2º</b>A transferência de potencial construtivo para fora do perímetro da Operação Urbana Centro, já efetivada nos termos da Lei n. 12.349 de 1997, será descontada do potencial construtivo de que trata o “caput”.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 57'">
-				<p><b>Art. 57.</b> Os imóveis enquadrados em ZEPEC–BIR, para os quais já tenha sido emitida Declaração de Potencial Construtivo Passível de Transferência, nos casos de reforma com acréscimo de área construída, deverão observar as seguintes disposições:</p>
+				<p><b>Art. 57.</b> Nos casos de reforma com acréscimo de área construída em imóveis enquadrados em ZEPEC–BIR, para os quais já tenha sido emitida Declaração de Potencial Construtivo Passível de Transferência, deverão ser observadas  as seguintes disposições:</p>
 				<ol class="romanos">
 					<li>caso a Declaração tenha sido emitida nos termos do Art. 7º da Lei nº 12.349, de 1997 ou de legislação anterior à Lei 16.050 de 31 de julho de 2014 - PDE, o acréscimo de área construída deverá ser descontado do potencial construtivo constante na correspondente Declaração;</li>
 					<li>
 						caso a Declaração seja emitida nos termos desta Lei:
 						<ol class="minusculas">
 							<li>o acréscimo de área construída não será descontado do potencial construtivo constante da Declaração quando limitado ao Coeficiente de Aproveitamento básico estabelecido na legislação de uso e ocupação do solo;</li>
-							<li>o acréscimo de área construída acima do CA básico estabelecido na lei nº 16.402, de 2016 poderá ser descontado do potencial construtivo constante da Declaração ou ser adquirido mediante pagamento da contrapartida de Outorga Onerosa do Direito de Construir.</li>
+							<li>o acréscimo de área construída acima do Coeficiente de Aproveitamento básico estabelecido na lei nº 16.402, de 2016 poderá ser descontado do potencial construtivo constante da Declaração ou ser adquirido mediante pagamento da contrapartida de Outorga Onerosa do Direito de Construir.</li>
 						</ol>
 					</li>
 				</ol>
@@ -904,7 +900,7 @@
 				<p><b>§ 2º</b> Para a efetivação dos descontos mencionados neste artigo, o órgão responsável pelo licenciamento da reforma deverá encaminhar o respectivo processo à Coordenadoria de Legislação de Uso e Ocupação do Solo - DEUSO da Secretaria Municipal de desenvolvimento Urbano - SMDU, para que a área acrescida seja descontada do potencial construtivo passível de transferência, por meio da emissão da respectiva Declaração de Saldo de Potencial Construtivo Passível de Transferência.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 58'">
-				<p><b>Art. 58.</b> Para incentivar a preservação de imóveis tombados de pequeno porte, os empreendimentos que adquirirem potencial construtivo adicional gerado a partir da Transferência do Direito de Construir de pelo menos 3 (três) imóveis classificados como ZEPEC-BIR, com área de lote de até 600 m² (seiscentos mil metros quadrados) cada, localizados na AIU-SCE ou nas áreas delimitadas nas resoluções de tombamento dos Bairros da Liberdade e da Bela Vista, terão direito a uma área construída adicional, isenta de contrapartida, calculada nos seguintes termos:</p>
+				<p><b>Art. 58.</b>Para incentivar a preservação de imóveis tombados de pequeno porte, os empreendimentos que adquirirem potencial construtivo adicional gerado a partir da Transferência do Direito de Construir de pelo menos 3 (três) imóveis classificados como ZEPEC-BIR, com área de lote de até 600 m² (seiscentos mil metros quadrados) cada, localizados na AIU-SCE  ou nos perímetros de tombamento do Bairro da Bela Vista e do perímetro do Inventário Geral do Patrimônio Ambiental, Cultural e Urbano de São Paulo do Bairro da Liberdade – IGEPAC-Liberdade,  terão direito a uma área construída adicional, isenta de contrapartida, calculada nos seguintes termos:</p>
 				<ol class="romanos">
 					<li>10% (dez por cento) da área do terreno receptor, para o empreendimento que adquirir, simultaneamente, potencial construtivo de 03 (três) imóveis tombados;</li>
 					<li> 20% (vinte por cento) da área do terreno receptor para o empreendimento que adquirir, simultaneamente, potencial construtivo de 04 (quatro) a 05 (cinco) imóveis tombados;</li>
@@ -919,7 +915,7 @@
 
 			<h4>Subseção II - Bônus Equivalente</h4>
 			<CommentsContext :id="commentId()" context="'Art. 59'">
-				<p><b>Art. 59.</b> Para promover a transformação inicial do território, os empreendimentos que tenham por objeto a preservação de imóveis de grande porte classificados como ZEPEC-BIR, a produção de HIS 1 e a requalificação de edificações existentes serão incentivados por meio de Bônus Equivalente de potencial construtivo adicional, proporcional à área construída destinada ao uso ou aos empreendimentos incentivados.</p>
+				<p><b>Art. 59.</b>Para promover a transformação inicial do território, os empreendimentos que tenham por objeto a preservação de imóveis classificados  como ZEPEC-BIR, a produção de HIS 1 e a requalificação de edificações existentes serão incentivados por meio de Bônus Equivalente de potencial construtivo adicional, proporcional à área construída destinada ao uso ou aos empreendimentos incentivados.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 60'">
 				<p><b>Art. 60.</b> A concessão de Bônus Equivalente será precedida da realização de chamamento público que indique os empreendimentos passíveis da recepção do instrumento, devendo ser apresentadas propostas formuladas nos termos desta Lei.</p>
@@ -928,7 +924,7 @@
 				<p><b>§ 1º</b> Os Bônus Equivalentes serão disponibilizados na forma de Declaração de Potencial Construtivo Adicional que será convertida em uma ou mais Certidões de Potencial Construtivo Adicional para posterior vinculação a lotes localizados na AIU-SCE.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 60, § 2º'">
-				<p><b>§ 2º</b> A concessão das Declarações de Bônus Equivalentes de potencial construtivo adicional está limitada ao montante de 270.000m² (duzentos e setenta mil metros quadrados) de potencial construtivo adicional, debitados do estoque geral de potencial construtivo oneroso definido no Art. 75, § 2º desta Lei, devendo constar do edital de chamamento público.</p>
+				<p><b>§ 2º</b> A concessão das Declarações de Bônus Equivalentes de potencial construtivo adicional está limitada ao montante de 270.000m² (duzentos e setenta mil metros quadrados) de potencial construtivo adicional, debitados do estoque geral de potencial construtivo oneroso definido no Art. 78, § 2º desta Lei, devendo constar do edital de chamamento público.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 60, § 3º'">
 				<p><b>§ 3º</b> Na hipótese de esgotamento do montante de potencial construtivo adicional reservado à concessão de Bônus Equivalentes nos 3 (três) primeiros anos de vigência desta Lei, previsto no parágrafo anterior, fica o Poder Público autorizado a estabelecer novo montante de no máximo 270.000 m² (duzentos e setenta mil metros quadrados) de potencial construtivo adicional a serem debitados do estoque geral de potencial construtivo oneroso.</p>
@@ -954,7 +950,6 @@
 					<pre class="formula declara">AC<sub>C</sub></pre> = Área construída total do imóvel tombado (computável e não computável);<br>
 					<pre class="formula declara">PC<sub>pt</sub></pre> = Potencial construtivo passível de transferência, calculado para fins de Transferência do Direito de Construir, nos termos dos Arts. 50 e seguintes desta lei;<br>
 					<pre class="formula declara">F<sub>PRES</sub></pre> = Fator de Preservação = 0,6</p>
-				</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 62, § 2º'">
 				<p><b>§ 2º</b> A concessão de parte ou da totalidade do Bônus Equivalente de Preservação está condicionada à necessidade de restauração do imóvel preservado, a ser regulada por Termo de Compromisso celebrado entre o proprietário do imóvel e o órgão municipal competente.</p>
@@ -963,19 +958,19 @@
 				<p><b>§ 3º</b> Os imóveis já beneficiados com Declaração de Potencial Construtivo Passível de Transferência emitida nos termos do artigo 7º da Lei nº 12.349, de 1997, não poderão pleitear Bônus Equivalentes de Preservação.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 63'">
-				<p><b>Art. 63.</b> Para incentivar a produção de habitações de interesse social para famílias com renda de até 3 (três) salários mínimos, será concedido Bônus Equivalente de HIS para as áreas construídas computáveis destinadas a HIS 1 em empreendimentos residenciais ou de uso misto localizados na AIU-SCE.</p>
+				<p><b>Art. 63.</b> Para incentivar a produção de Habitações de Interesse Social para famílias com renda de até 3 (três) salários mínimos, será concedido Bônus Equivalente de HIS para as áreas construídas computáveis destinadas a HIS 1 em empreendimentos residenciais ou de uso misto localizados na AIU-SCE.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 63, § 1º'">
 				<p><b>§ 1º</b> O Bônus Equivalente de HIS será calculado pela multiplicação da área construída computável destinada à HIS 1 pelo fator de bonificação igual a 2 (dois).</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 63, § 2º'">
-				<p><b>§ 2º</b> Caberá à SEHAB a indicação da demanda a ser atendida nas HIS-1 viabilizadas por meio de Bônus Equivalente de HIS.</p>
+				<p><b>§ 2º</b> Caberá à SEHAB a indicação da demanda a ser atendida nas unidades de HIS-1 viabilizadas por meio de Bônus Equivalente de HIS.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 64'">
-				<p><b>Art. 64.</b> Para incentivar a requalificação de edificações existentes construídas até o ano de 1980, será concedido Bônus Equivalente de Retrofit 80 calculado em função da área construída requalificada.</p>
+				<p><b>Art. 64.</b> Para incentivar a requalificação de edificações existentes construídas até o ano de 1980, será concedido Bônus Equivalente de <italic>Retrofit 80</italic> calculado em função da área construída requalificada.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 64, Parágrafo único'">
-				<p><b>Parágrafo único.</b> O Bônus Equivalente de Retrofit 80 será calculado pela multiplicação da área construída computável requalificada pelo fator de bonificação igual a 1 (um).</p>
+				<p><b>Parágrafo único.</b> O Bônus Equivalente de <italic>Retrofit 80</italic> será calculado pela multiplicação da área construída computável requalificada pelo fator de bonificação igual a 1 (um).</p>
 			</CommentsContext>
 		</section>
 
@@ -995,7 +990,7 @@
 				</ol>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 66, § 1º'">
-				<p><b>§ 1º</b> O Departamento do Patrimônio Histórico da Secretaria Municipal de Cultura - DPH-SMC publicará o mapa contendo a delimitação dos perímetros previstos no “caput”, bem como eventuais atualizações subsequentes, de forma a consolidar, na AIU-SCE e no âmbito de seus perímetros expandidos, as áreas sujeitas à regulamentação dos órgãos de preservação dos três níveis.</p>
+				<p><b>§ 1º</b> O Departamento do Patrimônio Histórico da Secretaria Municipal de Cultura - DPH-SMC publicará o mapa contendo a delimitação dos perímetros previstos no “caput”, bem como eventuais atualizações subsequentes, de forma a consolidar, na AIU-SCE e no âmbito de seus perímetros expandidos, as áreas sujeitas à regulamentação dos órgãos de preservação.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 66, § 2º'">
 				<p><b>§ 2º</b> As AIPC poderão ser criadas ou revistas a critério dos órgãos de preservação do patrimônio, em função da publicação de Resoluções de Tombamento ou de Regulamentação de Área Envoltória, de alterações em Resoluções existentes ou de alterações nos perímetros propostos para Inventário Ambiental Urbano.</p>
@@ -1004,7 +999,7 @@
 				<p><b>§ 3º</b> As AIPC regulamentadas por resoluções poderão ser objeto de ações e projetos específicos para requalificação de bens e espaços públicos, considerando seu tratamento como unidade territorial integrada, sujeitos à orientação, supervisão e análise do órgão municipal de patrimônio.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 66, § 4º'">
-				<p><b>§ 4º</b> Poderão ser destinados recursos da conta segregada da AIU-SCE a ações e projetos de que trata o parágrafo anterior, bem como em outras ações voltadas à preservação do patrimônio histórico.</p>
+				<p><b>§ 4º</b> Poderão ser destinados recursos da conta segregada da AIU-SCE a ações e projetos de que trata o parágrafo anterior, bem como a outras ações voltadas à preservação do patrimônio histórico.</p>
 			</CommentsContext>
 
 			<h3>Seção II – Das Estratégias de Atendimento Habitacional</h3>
@@ -1037,7 +1032,7 @@
 				<p><b>§ 2º</b> O acesso à provisão de moradia poderá se dar por meio de aquisição da propriedade ou por meio de locação social de parque público ou privado.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 67, § 3º'">
-				<p><b>§ 3º</b> As intervenções nos assentamentos precários priorização, quando possível, a sua consolidação, devendo ser garantida moradia adequada para todas as famílias.</p>
+				<p><b>§ 3º</b> As intervenções nos assentamentos precários priorizarão, quando possível, a sua consolidação, devendo ser garantida moradia adequada para todas as famílias.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 69'">
 				<p><b>Art. 69.</b> A provisão habitacional decorrente dos recursos e incentivos previstos nesta Lei priorizará a população que atenda ao menos um dos seguintes requisitos:</p>
@@ -1050,7 +1045,7 @@
 				</ol>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 70'">
-				<p><b>Art. 70.</b> Eventuais conflitos relativos à política municipal de habitação de interesse social serão dirimidos, preferencialmente, com o emprego de mecanismos extrajudiciais de resolução de conflitos, acompanhado pela Secretaria Municipal de Habitação - SEHAB, conforme atribuição prevista na legislação.</p>
+				<p><b>Art. 70.</b> Eventuais conflitos relativos à Política Municipal de Habitação de interesse social serão dirimidos, preferencialmente, com o emprego de mecanismos extrajudiciais de resolução de conflitos, acompanhado pela Secretaria Municipal de Habitação - SEHAB, conforme atribuição prevista na legislação.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 71'">
 				<p><b>Art. 71.</b> Os Planos de Urbanização, Projetos de Intervenção ou Planos de Reassentamento aprovados anteriormente a esta lei por Conselhos Gestores de ZEIS localizados na AIU-SCE serão considerados na formulação das Propostas de Diretrizes de Investimento – PDI elaboradas por SP-Urbanismo para esses territórios, devendo SEHAB e o Conselho Gestor de ZEIS serem consultados quando da elaboração das propostas.</p>
@@ -1081,10 +1076,10 @@
 				<p><b>§ 2º</b> As famílias impactadas residentes nos perímetros expandidos da AIU-SCE receberão atendimento habitacional definitivo no âmbito do respectivo perímetro expandido ou no perímetro da AIU-SCE.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 73, § 3º'">
-				<p><b>§ 3º</b> As diretrizes e o conteúdo específicos do Plano de Reassentamento deverão ser regulamentados pela Secretaria Municipal de Habitação.</p>
+				<p><b>§ 3º</b> As diretrizes e o conteúdo específicos do Plano de Reassentamento deverão ser regulamentados pela Secretaria Municipal de Habitação - SEHAB.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 73, § 4º'">
-				<p><b>§ 4º</b> O Plano de Reassentamento será submetido à análise e deliberação do Conselho de ZEIS.</p>
+				<p><b>§ 4º</b> O Plano de Reassentamento será submetido à análise e deliberação do Conselho Gestor de ZEIS.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 74'">
 				<p><b>Art. 74.</b> As famílias que sofram deslocamento involuntário deverão ser reassentadas, sempre que possível, diretamente para a solução habitacional definitiva planejada, respeitada a regulamentação de SEHAB para fins de atendimento da demanda.</p>
@@ -1095,7 +1090,7 @@
 
 			<h4>Subseção III - Das estratégias de ação para as ZEIS do PIU-SCE</h4>
 			<CommentsContext :id="commentId()" context="'Art. 75'">
-				<p><b>Art. 75.</b> Deverá ser elaborado Plano de Ação Estratégica para as ZEIS localizadas na AIU-SCE ou no âmbito de seus perímetros expandidos, conjunta ou individualmente, com vistas a estabelecer a atuação coordenada de ações públicas, utilização de recursos financeiros e fundiários para as intervenções planejadas.</p>
+				<p><b>Art. 75.</b> Deverá ser elaborado Plano de Ação Estratégica para as ZEIS localizadas na AIU-SCE ou no âmbito de seus perímetros expandidos, conjunta ou individualmente, com vistas a estabelecer a atuação coordenada de ações públicas e a  utilização de recursos financeiros e fundiários para as intervenções planejadas.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 75, § 1º'">
 				<p><b>§ 1º</b> O Plano de Ação Estratégica para as ZEIS poderá articular a aplicação dos instrumentos previstos nesta Lei, além de garantir a interlocução com outros órgãos setoriais necessários à elaboração dos estudos e levantamentos técnicos.</p>
@@ -1116,7 +1111,7 @@
 		<section>
 			<h2 class="titulo" indent="1">Capítulo VII – Da outorga onerosa de potencial construtivo adicional, da conta segregada no FUNDURB e da destinação dos recursos arrecadados</h2>
 			<CommentsContext :id="commentId()" context="'Art. 77'">
-				<p><b>Art. 77.</b> Fica o Executivo autorizado a aplicar a outorga onerosa de potencial construtivo adicional para os lotes contidos na AIU-SCE na conformidade dos valores, critérios e condições estabelecidos nesta Lei.</p>
+				<p><b>Art. 77.</b> Fica o Executivo autorizado a aplicar a outorga onerosa de potencial construtivo adicional instituída pela Lei n. 16.050 de 2014 - PDE  para os lotes contidos na AIU-SCE na conformidade dos valores, critérios e condições estabelecidos nesta Lei.</p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 77, § 1º'">
 				<p><b>§ 1º</b> Os recursos arrecadados pela venda de potencial construtivo adicional para os lotes contidos na AIU-SCE destinam-se à execução dos elementos do Programa de Intervenções do PIU-SCE e às ações deste decorrentes.</p>
@@ -1269,10 +1264,10 @@
 
 			<h3>Seção II – Dos Conselhos Gestores de ZEIS</h3>
 			<CommentsContext :id="commentId()" context="'Art. 86'">
-				<p><b>Art. 86.</b> A Gestão Participativa das ZEIS 1 e 3 da AIU-SCE e do âmbito de seus perímetros expandidos deverá ocorrer nos termos designados na Lei 16.050 de 2014 e nos demais regramentos sobre o tema, inclusive aqueles de cunho administrativo expedidos por SEHAB.</p>
+				<p><b>Art. 86.</b> A Gestão Participativa das ZEIS 1 e 3 no âmbito da AIU-SCE e de seus  perímetros expandidos deverá ocorrer nos termos designados na Lei 16.050 de 2014 - PDE  e nos demais regramentos sobre o tema, inclusive aqueles de cunho administrativo expedidos por SEHAB. </p>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 86, Parágrafo único'">
-				<p><b>Parágrafo único.</b> Os conselhos gestores das ZEIS 1 e 3 da AIU-SCE deverão participar da elaboração dos Planos de Urbanização ou Projetos de Intervenção de sua competência no âmbito dos respectivos perímetros, bem como deliberar acerca das intervenções destes decorrentes para o território ao qual estão vinculados.</p>
+				<p><b>Parágrafo único.</b> Os Conselhos Gestores das ZEIS 1 e 3 da AIU-SCE deverão participar da elaboração dos Planos de Urbanização ou Projetos de Intervenção de sua competência no âmbito dos respectivos perímetros, bem como deliberar acerca das intervenções destes decorrentes para o território ao qual estão vinculados.</p>
 			</CommentsContext>
 
 			<h3>Seção III – Da atuação da SP-Urbanismo</h3>
@@ -1290,7 +1285,8 @@
 				<ol class="romanos">
 					<li>Os resultados alcançados em relação aos objetivos PIU-SCE;</li>
 					<li>Os avanços da implantação do Programa de Intervenções;</li>
-					<li>O desempenho dos Instrumentos de Qualificação e Transformação do Território.</li>
+					<li>O desempenho dos Instrumentos de Qualificação e Transformação do Território;</li>
+					<li>A alocação dos recursos arrecadados.</li>
 				</ol>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 88, § 2º'">
@@ -1341,10 +1337,10 @@
 				</ol>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 94'">
-				<p><b>Art. 94.</b> Caberá à Secretaria Municipal de Habitação – SEHAB:</p>
+				<p><b>Art. 94.</b> Caberá à Secretaria Municipal de Habitação – SEHAB, sem prejuízo das demais atribuições previstas em lei:</p>
 				<ol class="romanos">
 					<li>participar da elaboração, juntamente com a SP-Urbanismo, das Propostas de Diretrizes de Investimento - PDI que contenham intervenções voltadas ao atendimento habitacional de interesse social e à redução da precariedade urbana;</li>
-					<li>demandar à SP-Urbanismo a elaboração de procedimentos e a realização das ações previstas para o Plano de Ação Estratégica para as ZEIS da AIU-SCE ou de seus perímetros expandidos.</li>
+					<li>demandar a SP-Urbanismo a elaboração de procedimentos e a realização das ações previstas para o Plano de Ação Estratégica para as ZEIS da AIU-SCE ou de seus perímetros expandidos.</li>
 				</ol>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 94, Parágrafo único'">
@@ -1370,7 +1366,7 @@
 		<section>
 			<h2 class="titulo" indent="1">Capítulo IX - Das disposições finais e transitórias</h2>
 			<CommentsContext :id="commentId()" context="'Art. 96'">
-				<p><b>Art. 96.</b> Durante os primeiros 36 (trinta e seis) meses subsequentes à aprovação desta lei, as contrapartidas referentes à concessão de outorga onerosa de potencial construtivo no Setor Centro Histórico, excetuadas as hipóteses de regularização onerosa trazidas nesta Lei, terão um desconto gradativo nos seguintes percentuais:</p>
+				<p><b>Art. 96.</b> Durante os primeiros 36 (trinta e seis) meses subsequentes à aprovação desta lei, as contrapartidas referentes à concessão de outorga onerosa de potencial construtivo no Setor Centro Histórico terão um desconto gradativo nos seguintes percentuais:</p>
 				<ol class="romanos">
 					<li>75% (setenta e cinco por cento) nos primeiros 12 (doze) meses;</li>
 					<li>50% (cinquenta por cento) nos 12 (doze) meses subsequentes ao prazo mencionado no inciso I;</li>
@@ -1415,13 +1411,13 @@
 					<li>a abertura de nova de via de ligação prevista pela Lei Nº 16.541/16, no trecho entre a Av. do Estado e um ponto 110 metros aquém da Av. Santos Dumont, conforme indicado nas plantas 26.999/03 e 26.999/04;</li>
 					<li>a abertura de nova de via de ligação prevista pela Lei Nº 16.541/16, no trecho entre a Av. do Estado e 110 metros aquém da Av. do Estado, conforme indicado na planta 26.999/03;</li>
 					<li>alargamento da Rua Pedro Vicente previsto pela Lei Nº 16.541/16, no trecho entre a Av. Cruzeiro do Sul e a Rua Canindé, conforme indicado na planta 26.999/08;</li>
-					<li>a abertura de nova de via de ligação prevista pela Lei Nº 16.541/16, no trecho entre a Rua Santa Rita e a Rua Catumbi, conforme indicado nas plantas 26.99911 e 26.999/12.</li>
+					<li>a abertura de nova de via de ligação prevista pela Lei Nº 16.541/16, no trecho entre a Rua Santa Rita e a Rua Catumbi, conforme indicado nas plantas 26.999/11 e 26.999/12.</li>
 				</ol>
 			</CommentsContext>
 			<CommentsContext :id="commentId()" context="'Art. 103'">
 				<p><b>Art. 103.</b> Ficam revogados:</p>
 				<ol class="romanos">
-					<li>a Lei n. 12.349, de 06 de junho de 1997</li>
+					<li>a Lei n. 12.349, de 06 de junho de 1997;</li>
 					<li>os incisos IV e XXII do Art. 1º da Lei n. 5.347 de 12 de setembro de 1957;</li>
 					<li>o inciso I do Art. 1º da Lei 7.534 de 9 de outubro de 1970;</li>
 					<li>o inciso II do Art. 1º da Lei 9.938 de 16 de julho de 1985.</li>
@@ -1542,14 +1538,14 @@
 				<li>
 					<a :href="src('arquivos/minuta-piu-setor-central/devolutivas/Devolutiva_Contribuicoes.pdf')">
 						<i class="icon-pdf icon"><span>pdf</span></i>
-						<div>Devolutiva Contribuições I</div>
+						<div>Devolutiva Audiências Públicas</div>
 						<span>17 Mb</span>
 					</a>
 				</li>
 				<li>
 					<a :href="src('arquivos/minuta-piu-setor-central/devolutivas/Devolutiva-Contribuicoes_II.pdf')">
 						<i class="icon-pdf icon"><span>pdf</span></i>
-						<div>Devolutiva Contribuições II</div>
+						<div>Devolutiva Contribuição Instituto Actos</div>
 						<span>329 kb</span>
 					</a>
 				</li>

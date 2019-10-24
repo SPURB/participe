@@ -235,6 +235,14 @@ export default new Router({
 			meta: {
 				id: 60
 			}
+		},
+		{
+			path: '/minuta-lpuos',
+			name: 'MinutaLpuos',
+			component: () => import(/* webpackChunkName: "MinutaLpuos" */ '@/views/MinutaLpuos'),
+			meta: {
+				id: 61
+			}
 		}
 	]
 })

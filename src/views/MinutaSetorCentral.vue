@@ -10,10 +10,6 @@
 		<Apoio></Apoio>
 
 		<section>
-			<PanImageMap :data="{ dir: 'plano-urbanistico', cols: 5, rows: 10, sliceW: 831, sliceH: 495 }"></PanImageMap>
-		</section>
-
-		<section>
 			<h2 class="titulo" indent="1">Minuta de Projeto de Lei: Projeto de Intervenção Urbana do Setor Central</h2>
 			<p><em>Ementa</em>: Institui e regulamenta a Área de Intervenção Urbana do Setor Central – AIU-SCE, estabelece parâmetros de uso e ocupação do solo específicos para o território, define o programa de intervenções do PIU-SCE e revoga a Lei n. 12.349/1997.</p>
 		</section>
@@ -1465,7 +1461,6 @@ import Comments from '@/components/Comments'
 import CommentsContext from '@/components/CommentsContext'
 import CommentsLoader from '@/components/CommentsLoader'
 import Tabela from '@/components/Tabela'
-import PanImageMap from '@/components/PanImageMap'
 import { consultasCommons } from '@/mixins/consultasCommons'
 
 export default {
@@ -1485,8 +1480,7 @@ export default {
 		Comments,
 		CommentsLoader,
 		CommentsContext,
-		Tabela,
-		PanImageMap
+		Tabela
 	},
 	mixins: [ consultasCommons ]
 }

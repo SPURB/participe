@@ -16,7 +16,7 @@
 
 		<section>
 			<h2 class="titulo" indent="1">Capítulo I - Disposições gerais</h2>
-			
+
 			<h3>Seção I - Do conceito</h3>
 			<CommentsContext :id="commentId(1)" context="'Art. 1º'">
 				<p><b>Art. 1º</b> Fica aprovado o Projeto de Intervenção Urbana Setor Central – PIU SCE, compreendendo um programa de intervenções e regramentos urbanísticos específicos, um modelo de gestão financeira e um modelo de gestão participativa, a ser implantado pela Prefeitura do Município de São Paulo, por intermédio da São Paulo Urbanismo – SP-Urbanismo.</p>
@@ -48,7 +48,6 @@
 				<p><b>Art. 2º</b> Para fins de implantação do PIU-SCE fica criada a Área de Intervenção Urbana Setor Central – AIU-SCE do PIU-SCE, delimitada no Mapa 2 anexo a presente Lei.</p>
 			</CommentsContext>
 
-
 			<h3>Seção II - Dos objetivos</h3>
 			<CommentsContext :id="commentId()" context="'Art. 3º'">
 				<p><b>Art. 3º</b> Complementarmente aos objetivos gerais constantes nos §§ 1º e 3º do Art. 12 da Lei Municipal n. 16.050, de 31 de julho de 2014 - Plano Diretor Estratégico - PDE, ficam estabelecidos os seguintes objetivos específicos do PIU-SCE:
@@ -78,7 +77,6 @@
 			<CommentsContext :id="commentId()" context="'Art. 4º, Parágrafo único'">
 				<p><b>Parágrafo único.</b> Para a consecução das estratégias previstas no “caput”, fica o Poder Público autorizado a alienar os imóveis públicos contidos na AIU-SCE ou promover sua concessão para fins de manutenção, conservação e exploração econômica.</p>
 			</CommentsContext>
-
 
 			<h3>Seção III - Das Definições</h3>
 			<CommentsContext :id="commentId()" context="'Art. 5º'">
@@ -219,7 +217,6 @@
 				<p><b>Parágrafo único.</b> Cumulativamente ao benefício previsto no "caput" não será cobrada outorga onerosa do direito de construir relativa ao potencial construtivo adicional da área doada, sem prejuízo da aplicação de demais benefícios previstos nesta Lei.</p>
 			</CommentsContext>
 
-			
 			<h3>Seção II - Eixos de Transformação e Eixos Estratégicos</h3>
 			<CommentsContext :id="commentId()" context="'Art. 14'">
 				<p><b>Art. 14.</b> Aos novos empreendimentos localizados em lotes confrontantes com os Eixos Estratégicos ou em Áreas Verdes Públicas lindeiras aos referidos Eixos, aplicam-se as seguintes disposições:</p>
@@ -311,7 +308,7 @@
 			<CommentsContext :id="commentId()" context="'Art. 17, § 2º'">
 				<p><b>§ 2º</b> O incentivo previsto no inciso II do “caput” aplica-se aos empreendimentos com frente para o Eixo Estratégico do Apoio Urbano Sul.</p>
 			</CommentsContext>
-			
+
 			<h3>Seção III - Dos Projetos Estratégicos</h3>
 			<CommentsContext :id="commentId()" context="'Art. 18'">
 				<p><b>Art. 18.</b> Ficam instituídos os seguintes perímetros de Projetos Estratégicos, demarcados no Mapa 7 anexo a esta Lei:</p>
@@ -465,7 +462,7 @@
 			<CommentsContext :id="commentId()" context="'Art. 25, § 3º'">
 				<p><b>§ 3º</b> A Secretaria Municipal de Desenvolvimento Urbano - SMDU deverá demandar o início do desenvolvimento e da implementação dos Projetos Especiais, podendo prever a realização de chamamentos públicos para a recepção de propostas de intervenção e a possibilidade de utilização de recursos do PIU-SCE.</p>
 			</CommentsContext>
-			
+
 			<h3>Seção V - Das Zonas de Ocupação Especial</h3>
 			<CommentsContext :id="commentId()" context="'Art. 26'">
 				<p><b>Art. 26.</b> As Zonas de Ocupação Especial - ZOE contidas na AIU-SCE são assim denominadas:</p>
@@ -625,9 +622,8 @@
 				<p><b>Parágrafo único.</b> As intervenções na AIU-SCE poderão conjugar a utilização de dois ou mais Instrumentos de Qualificação e Transformação do Território para a consecução das finalidades desta Lei.</p>
 			</CommentsContext>
 
-
 			<h3>Seção I - Dos instrumentos de incentivos urbanísticos e edílicos</h3>
-			
+
 			<h4>Subseção I – Reconstrução</h4>
 			<CommentsContext :id="commentId()" context="'Art. 35'">
 				<p><b>Art. 35.</b> Fica garantido ao proprietário de edificação regular localizada no Setor Centro Histórico da AIU-SCE que venha a ser demolida para a implantação de nova construção, de uso misto com predominância residencial e fachada ativa, o direito de utilização dos parâmetros de uso e ocupação do solo do edifício demolido, inclusive recuos.</p>
@@ -699,7 +695,6 @@
 				</ol>
 			</CommentsContext>
 
-			
 			<h3>Seção II – Dos instrumentos indutores da função social da propriedade</h3>
 			<CommentsContext :id="commentId()" context="'Art. 41'">
 				<p><b>Art. 41.</b> O Executivo, na forma da lei, poderá exigir do proprietário do solo urbano não edificado, subutilizado, ou não utilizado, que promova seu adequado aproveitamento, sob pena de, nos termos estabelecidos na Lei 16.050 de 2014 – PDE e nesta Lei:</p>
@@ -838,7 +833,6 @@
 				<p><b>Art. 52.</b> Poderá o Poder Público valer-se dos instrumentos, objetivos e procedimentos de Regularização Fundiária Urbana (Reurb), inclusive de legitimação fundiária em imóveis públicos ou privados, constantes na Lei Federal n. 13.465 de 2017 para fins de consecução dos objetivos específicos do PIU-SCE.</p>
 			</CommentsContext>
 
-			
 			<h3>Seção IV - Dos instrumentos referentes à utilização do potencial construtivo adicional</h3>
 			<CommentsContext :id="commentId()" context="'Art. 53'">
 				<p><b>Art. 53.</b> O potencial construtivo adicional do PIU SCE será outorgado por meio dos seguintes instrumentos de política urbana:</p>
@@ -856,7 +850,6 @@
 					<li>incentivos concedidos em razão de contrapartidas urbanísticas ofertadas nos termos desta Lei.</li>
 				</ol>
 			</CommentsContext>
-			
 
 			<h4>Subseção I - Da Transferência do Direito de Construir</h4>
 			<CommentsContext :id="commentId()" context="'Art. 54'">
@@ -924,7 +917,6 @@
 				<p><b>Parágrafo único.</b> Para fins da concessão do benefício previsto no “caput”, o potencial construtivo adicional adquirido deverá corresponder, para cada imóvel, à totalidade do potencial adicional constante na respectiva Declaração.</p>
 			</CommentsContext>
 
-			
 			<h4>Subseção II - Bônus Equivalente</h4>
 			<CommentsContext :id="commentId()" context="'Art. 59'">
 				<p><b>Art. 59.</b> Para promover a transformação inicial do território, os empreendimentos que tenham por objeto a preservação de imóveis de grande porte classificados como ZEPEC-BIR, a produção de HIS 1 e a requalificação de edificações existentes serão incentivados por meio de Bônus Equivalente de potencial construtivo adicional, proporcional à área construída destinada ao uso ou aos empreendimentos incentivados.</p>
@@ -1017,7 +1009,6 @@
 
 			<h3>Seção II – Das Estratégias de Atendimento Habitacional</h3>
 
-
 			<h4>Subseção I - Disposições Gerais</h4>
 			<CommentsContext :id="commentId()" context="'Art. 67'">
 				<p><b>Art. 67.</b> As intervenções habitacionais de interesse social previstas nesta lei têm como objetivo específico o enfrentamento das necessidades habitacionais e a promoção do direito à moradia digna na AIU-SCE e no âmbito de seus perímetros expandidos, visando:</p>
@@ -1065,7 +1056,6 @@
 				<p><b>Art. 71.</b> Os Planos de Urbanização, Projetos de Intervenção ou Planos de Reassentamento aprovados anteriormente a esta lei por Conselhos Gestores de ZEIS localizados na AIU-SCE serão considerados na formulação das Propostas de Diretrizes de Investimento – PDI elaboradas por SP-Urbanismo para esses territórios, devendo SEHAB e o Conselho Gestor de ZEIS serem consultados quando da elaboração das propostas.</p>
 			</CommentsContext>
 
-
 			<h4>Subseção II – Do regramento para os deslocamentos involuntários no PIU-SCE</h4>
 			<CommentsContext :id="commentId()" context="'Art. 72'">
 				<p><b>Art. 72.</b> O deslocamento involuntário de população residente no PIU-SCE ou que tenha sua subsistência econômica vinculada aos assentamentos precários objeto de intervenção, quando inevitável, será precedido da elaboração de Plano de Reassentamento.</p>
@@ -1102,7 +1092,6 @@
 			<CommentsContext :id="commentId()" context="'Art. 74, Parágrafo único'">
 				<p><b>Parágrafo único.</b> O atendimento provisório das famílias afetadas pelas intervenções deve ocorrer somente quando demonstrada a necessidade de desocupação imediata da área de intervenção e, simultaneamente, não for possível realizar o reassentamento, devendo o Plano de Reassentamento prever tal alternativa, nos termos dessa Lei.</p>
 			</CommentsContext>
-
 
 			<h4>Subseção III - Das estratégias de ação para as ZEIS do PIU-SCE</h4>
 			<CommentsContext :id="commentId()" context="'Art. 75'">
@@ -1200,7 +1189,6 @@
 				<p><b>Parágrafo único.</b> As ações de cunho procedimental necessários à implantação do PIU-SCE serão regulamentadas pelo Poder Executivo.</p>
 			</CommentsContext>
 
-
 			<h3>Seção I – Do Conselho Gestor da AIU-SCE</h3>
 			<CommentsContext :id="commentId()" context="'Art. 83'">
 				<p><b>Art. 83.</b> A AIU-SCE contará com um Conselho Gestor, coordenado pela SMDU e secretariado por SP-Urbanismo, com participação de órgãos municipais e de entidades representativas da sociedade civil.</p>
@@ -1287,7 +1275,6 @@
 				<p><b>Parágrafo único.</b> Os conselhos gestores das ZEIS 1 e 3 da AIU-SCE deverão participar da elaboração dos Planos de Urbanização ou Projetos de Intervenção de sua competência no âmbito dos respectivos perímetros, bem como deliberar acerca das intervenções destes decorrentes para o território ao qual estão vinculados.</p>
 			</CommentsContext>
 
-			
 			<h3>Seção III – Da atuação da SP-Urbanismo</h3>
 			<CommentsContext :id="commentId()" context="'Art. 87'">
 				<p><b>Art. 87.</b> A SP-Urbanismo é o ente municipal responsável pela gestão das ações públicas necessárias ao desenvolvimento e implantação do Programa de Intervenções do PIU-SCE, devendo elaborar Propostas de Diretrizes de Investimentos - PDI de modo articulado com os demais órgãos da administração pública direta e indireta, promover a gestão dos seus ativos e recursos, bem como a efetivação dos instrumentos, estratégias, benefícios e incentivos previstos nesta Lei.</p>
@@ -1312,7 +1299,7 @@
 			<CommentsContext :id="commentId()" context="'Art. 89'">
 				<p><b>Art. 89.</b> A SP-Urbanismo fica autorizada a receber remuneração, a ser fixada pelo Executivo, para a execução dos serviços e demais ações necessários à implantação do PIU-SCE.</p>
 			</CommentsContext>
-			
+
 			<h4>Subseção I – Dos editais de chamamento</h4>
 			<CommentsContext :id="commentId()" context="'Art. 90'">
 				<p><b>Art. 90.</b> Com a finalidade de operacionalizar a aplicação das estratégias e instrumentos previstos nesta Lei, a SP-Urbanismo poderá elaborar editais de chamamentos públicos destinados a viabilizar, dentre outros:</p>
@@ -1329,7 +1316,6 @@
 				<p><b>§ 2º</b> A SEHAB participará da elaboração de edital de chamamento público para a definição dos aspectos referentes à provisão habitacional de interesse social, bem como para a avaliação das propostas apresentadas sobre os mesmos aspectos.</p>
 			</CommentsContext>
 
-			
 			<h3>Seção IV - Da Atuação Concertada dos Órgãos e Entidades Públicas e Privadas</h3>
 			<CommentsContext :id="commentId()" context="'Art. 91'">
 				<p><b>Art. 91.</b> A implantação do PIU-SCE e do seu Programa de Intervenções se dará mediante ação concertada entre os órgãos e entidades municipais, estaduais e federais e agentes privados, atendendo-se, no mínimo, às disposições desta lei.</p>
@@ -1450,104 +1436,121 @@
 			<h3>Mapas</h3>
 			<ul class="links">
 				<li>
-					<a :href="src('')">
+					<a :href="src('arquivos/minuta-piu-setor-central/mapas/Mapa_1_SCE996U001A.pdf')">
 						<i class="icon-pdf icon"><span>pdf</span></i>
 						<div>Mapa I: Plano urbanístico</div>
-						<span>XXXX Mb</span>
+						<span>2 Mb</span>
 					</a>
 				</li>
 				<li>
-					<a :href="src('')">
+					<a :href="src('arquivos/minuta-piu-setor-central/mapas/Mapa_2_SCE996U002A.pdf')">
 						<i class="icon-pdf icon"><span>pdf</span></i>
 						<div>Mapa II: Perímetro de adesão e perímetros expandidos</div>
-						<span>XXXX Mb</span>
+						<span>10.6 Mb</span>
 					</a>
 				</li>
 				<li>
-					<a :href="src('')">
+					<a :href="src('arquivos/minuta-piu-setor-central/mapas/Mapa_3_SCE996U003A.pdf')">
 						<i class="icon-pdf icon"><span>pdf</span></i>
 						<div>Mapa III: Parâmetros urbanísticos</div>
-						<span>XXXX Mb</span>
+						<span>5 Mb</span>
 					</a>
 				</li>
 				<li>
-					<a :href="src('')">
+					<a :href="src('arquivos/minuta-piu-setor-central/mapas/Mapa_4_SCE996U004A.pdf')">
 						<i class="icon-pdf icon"><span>pdf</span></i>
 						<div>Mapa IV: Compartimentos ambientais e áreas verdes</div>
-						<span>XXXX Mb</span>
+						<span>7.3 Mb</span>
 					</a>
 				</li>
 				<li>
-					<a :href="src('')">
+					<a :href="src('arquivos/minuta-piu-setor-central/mapas/Mapa_5_SCE996U005A.pdf')">
 						<i class="icon-pdf icon"><span>pdf</span></i>
 						<div>Mapa V: Assentamentos precários e ZEIS</div>
-						<span>XXXX Mb</span>
+						<span>7.7 Mb</span>
 					</a>
 				</li>
 				<li>
-					<a :href="src('')">
+					<a :href="src('arquivos/minuta-piu-setor-central/mapas/Mapa_6_SCE996U006A.pdf')">
 						<i class="icon-pdf icon"><span>pdf</span></i>
 						<div>Mapa VI: Plano de melhoramentos viários</div>
-						<span>XXXX Mb</span>
+						<span>7.3 Mb</span>
 					</a>
 				</li>
 				<li>
-					<a :href="src('')">
+					<a :href="src('arquivos/minuta-piu-setor-central/mapas/Mapa_7_SCE996U007A.pdf')">
 						<i class="icon-pdf icon"><span>pdf</span></i>
 						<div>Mapa VII: Programa de intervenções</div>
-						<span>XXXX Mb</span>
+						<span>9.4 Mb</span>
 					</a>
 				</li>
 				<li>
-					<a :href="src('')">
+					<a :href="src('arquivos/minuta-piu-setor-central/mapas/')">
 						<i class="icon-pdf icon"><span>pdf</span></i>
 						<div>Mapa VIII: Perímetros especiais</div>
-						<span>XXXX Mb</span>
+						<span>7.4 Mb</span>
 					</a>
 				</li>
 			</ul>
 			<h3>Quadros</h3>
 			<ul class="links">
 				<li>
-					<a :href="src('')">
+					<a :href="src('arquivos/minuta-piu-setor-central/quadros/Quadro_1A_Eixos_Estrategicos.pdf')">
 						<i class="icon-pdf icon"><span>pdf</span></i>
 						<div>Quadro 1A: Eixos Estratégicos</div>
-						<span>XXXX Mb</span>
+						<span>64 kb</span>
 					</a>
 				</li>
 				<li>
-					<a :href="src('')">
+					<a :href="src('arquivos/minuta-piu-setor-central/quadros/Quadro_1B_Programa_de_Intervencoes.pdf')">
 						<i class="icon-pdf icon"><span>pdf</span></i>
 						<div>Quadro 1B: Programa de Intervenções</div>
-						<span>XXXX Mb</span>
+						<span>81 kb</span>
 					</a>
 				</li>
 				<li>
-					<a :href="src('')">
+					<a :href="src('arquivos/minuta-piu-setor-central/quadros/Quadro_1C_Areas_Verdes.pdf')">
 						<i class="icon-pdf icon"><span>pdf</span></i>
 						<div>Quadro 1C: Áreas Verdes</div>
-						<span>XXXX Mb</span>
+						<span>65 kb</span>
 					</a>
 				</li>
 				<li>
-					<a :href="src('')">
-						<i class="icon-pdf icon"><span>pdf</span></i>
-						<div>Quadro 1A: Eixos Estratégicos</div>
-						<span>XXXX Mb</span>
-					</a>
-				</li>
-				<li>
-					<a :href="src('')">
+					<a :href="src('arquivos/minuta-piu-setor-central/quadros/Quadro_2_Parametros.pdf')">
 						<i class="icon-pdf icon"><span>pdf</span></i>
 						<div>Quadro 2: Parâmetros</div>
-						<span>XXXX Mb</span>
+						<span>73 kb</span>
 					</a>
 				</li>
 				<li>
-					<a :href="src('')">
+					<a :href="src('arquivos/minuta-piu-setor-central/quadros/Quadro_3_Quota_Ambiental.pdf')">
 						<i class="icon-pdf icon"><span>pdf</span></i>
 						<div>Quadro 3: Quota Ambiental</div>
-						<span>XXXX Mb</span>
+						<span>54 kb</span>
+					</a>
+				</li>
+			</ul>
+			<h3>Devolutivas</h3>
+			<ul class="links">
+				<li>
+					<a :href="src('arquivos/minuta-piu-setor-central/devolutivas/Devolutiva_Consulta_Publica.pdf')">
+						<i class="icon-pdf icon"><span>pdf</span></i>
+						<div>Devolutiva Consulta Pública</div>
+						<span>278 kb</span>
+					</a>
+				</li>
+				<li>
+					<a :href="src('arquivos/minuta-piu-setor-central/devolutivas/Devolutiva_Contribuicoes.pdf')">
+						<i class="icon-pdf icon"><span>pdf</span></i>
+						<div>Devolutiva Contribuições I</div>
+						<span>17 Mb</span>
+					</a>
+				</li>
+				<li>
+					<a :href="src('arquivos/minuta-piu-setor-central/devolutivas/Devolutiva-Contribuicoes_II.pdf')">
+						<i class="icon-pdf icon"><span>pdf</span></i>
+						<div>Devolutiva Contribuições II</div>
+						<span>329 kb</span>
 					</a>
 				</li>
 			</ul>

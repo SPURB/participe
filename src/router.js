@@ -227,6 +227,14 @@ export default new Router({
 			meta: {
 				id: 58
 			}
+		},
+		{
+			path: '/minuta-piu-setor-central',
+			name: 'MinutaSetorCentral',
+			component: () => import(/* webpackChunkName: "MinutaSetorCentral" */ '@/views/MinutaSetorCentral'),
+			meta: {
+				id: 59
+			}
 		}
 	]
 })

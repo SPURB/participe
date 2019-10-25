@@ -38,7 +38,8 @@ module.exports = {
 				'/premia-sampa-edicao-2020',
 				'/carnaval-de-rua-2020',
 				'/arco-tiete',
-				'/jockey-club'
+				'/jockey-club',
+				'/minuta-piu-setor-central'
 			],
 			useRenderEvent: true,
 			headless: false,

@@ -26,7 +26,7 @@
 
 Cypress.Commands.add('seedAndVisit', (consultas = 'fixture:consultas') => {
 	cy.server()
-	cy.route('GET', 'http://api.comunicacao.smul.pmsp/v2/consultas', consultas).as(
+	cy.route('GET', 'https://participe.gestaourbana.prefeitura.sp.gov.br/v2/consultas', consultas).as(
 		'consultas'
 	)
 	cy.visit('/')

@@ -373,7 +373,7 @@
 				<!--Figura 2 - Atendimento dedicado-->
 
 				<p class="s3">4.2.9.5.4.	Os assuntos/serviços que serão atendidos nas ilhas multiperfil ou nas especializadas, serão definidas de comum acordo entre a Prefeitura do Município de São Paulo e a CONTRATADA, seguindo os padrões de temas / assuntos / serviços estabelecidos pela CONTRATANTE.</p>
-				4.2.9.5.5.	O histórico e a volumetria das ligações atendidas (Receptivo) no âmbito da Central de Atendimento atual está representada no <strong>ANEXO I</strong> - HISTÓRICO DE LIGAÇÕES E VOLUME - RECEPTIVO.
+				<p class="s3">4.2.9.5.5.	O histórico e a volumetria das ligações atendidas (Receptivo) no âmbito da Central de Atendimento atual está representada no <strong>ANEXO I</strong> - HISTÓRICO DE LIGAÇÕES E VOLUME - RECEPTIVO.</p>
 				<p class="s3">4.2.9.5.6.	O histórico e a volumetria das ligações realizadas (Ativo) no âmbito da Central de Atendimento atual está representada no <strong>ANEXO II</strong> - HISTÓRICO DE LIGAÇÕES E VOLUME - ATIVO.</p>
 				<p class="s3">4.2.9.5.7.	O operador/atendente multiperfil deverá trabalhar com até 3 (três) categorias de assuntos/temas, conforme definidos pela CONTRATANTE, em ordem decrescente de prioridade, em que 80% (oitenta por cento) dos atendimento reflitam no assunto/tema de primeira prioridade.</p>
 				<p class="s3">4.2.9.5.8.	O operador/atendente, tanto multiperfil quanto especialista, deverá estar preparado para efetuar o atendimento receptivo e ativo em uma mesma posição.</p>
@@ -879,7 +879,7 @@
 					<p class="s2">4.7.3.1.	A CONTRATADA deverá prover a contratação de pessoal necessária, em termos de quantidade e qualidade, para atender de forma adequada aos critérios de qualidade exigidos pela CONTRATANTE para a prestação dos serviços.</p>
 					<p class="s2">4.7.3.2.	A contratação e alocação dos profissionais abaixo relacionados devem obedecer aos seguintes parâmetros:</p>
 
-					<table class="tab-grid">
+					<table>
 
 					<tr class="tab-header">
 
@@ -914,31 +914,1502 @@
 
 					</table>
 
-
+					<p class="s2">4.7.3.3.	A contratação de todo o quadro de funcionários da operação da CONTRATANTE deverá ser obrigatoriamente pelo regime CLT (Consolidação das Leis do Trabalho) e deverá adotar, no mínimo, os parâmetros fixados em Acordo e/ou Convenção Coletiva pelo Sindicato dos Trabalhadores em Telemarketing (SINTRATEL) e empresas de telemarketing da cidade de São Paulo e Grande São Paulo.</p>
+					<p class="s2">4.7.3.4.	As ausências dos membros da equipe de operação para a prestação de serviços à CONTRATANTE, decorrentes de faltas, férias, licenças, greve, folgas e outros, deverão ser supridas pela CONTRATADA, sem custos adicionais ou prejuízos à operação da CONTRATANTE, devendo a mesma sempre se antever aos fatos;</p>
+					<p class="s2">4.7.3.5.	A CONTRATADA se compromete a substituir qualquer de seus empregados designados para executar as tarefas que não estejam atendendo aos padrões de qualidade mínimos previsto neste Termo de Referência, no prazo de 05 (cinco) dias úteis, contados do recebimento de notificação emitida pelo fiscal do contrato da CONTRATANTE.</p>
+					<p class="s2">4.7.3.6.	A CONTRATADA deverá manter, no mínimo, 1 (um) responsável pela empresa à disposição do Gestor do Contrato da CONTRATANTE 24 horas/dia, 7 dias na semana, podendo ser este responsável o Gestor do Contrato por parte da CONTRATADA, ou pessoa(s) por ele designada(s).</p>
 
 				<Comments :attr="{id:commentId(), context:'4.7.	Recursos Humanos'}" v-if="estaConsulta.ativo == 1"></Comments>
-				
+				<h3>4.8.	Capacitação e Treinamento</h3>
+				<p>A capacitação de pessoal envolve duas etapas: a primeira, inicial ou de formação, e a segunda, específica.</p>
+				<p>4.8.1.	Capacitação Inicial ou de Formação</p>
+					<p class="s2">4.8.1.1.	A CONTRATADA deverá comunicar e transmitir, com antecedência de 7 (sete) dias, o cronograma para CONTRATANTE.</p>
+					<p class="s2">4.8.1.2.	Será de responsabilidade da CONTRATADA a capacitação para supervisores, analistas de tráfego, monitores de qualidade, multiplicadores e atendentes, versando sobre a natureza técnico-operacional, baseados nos sistemas e recursos tecnológicos disponíveis e utilizados pela Central de Atendimento para o atendimento aos cidadãos. Também se relacionam nesta categoria, as orientações e instruções que versem sobre técnicas e qualidade de atendimento.</p>
+					<p class="s2">4.8.1.3.	A CONTRATADA, sem ônus para a CONTRATANTE, deverá promover a capacitação técnico-operacional, bem como os procedimentos operacionais de “front end”, nas seguintes ocasiões:</p>
+					<ul>
+						<li>Na implantação da operação.</li>
+						<li>Em caso de eventual instalação de nova ferramenta ou recurso tecnológico aplicado ao atendimento.</li>
+						<li>Sempre que houver mudança de atendimento dos produtos ou inclusão de novos temas ou assuntos.</li>
+						<li>Sempre que forem contratados novos operadores, supervisores, monitores de qualidade e instrutores de treinamento, analistas de tráfego;</li>
+						<li>Nos processos de reciclagem (garantindo a participação em, no mínimo, 2 (dois) cursos por ano, de todas as categorias envolvidas na prestação do serviço);</li>
+						<li>Quando solicitada pela CONTRATANTE</li>
+					</ul>
+					<p class="s2">4.8.1.4.	A capacitação deverá contemplar o fornecimento de material didático de apoio necessários ao desenvolvimento dos cursos, como manuais e apostilas.</p>
+					<p class="s2">4.8.1.5.	Carga horária mínima para a capacitação de formação é de 60 (sessenta) horas, independentemente do conteúdo</p>
+					<p class="s2">4.8.1.6.	O conteúdo programático, de responsabilidade da CONTRATADA e da CONTRATANTE deve abordar no mínimo os seguintes assuntos:</p>
+					<ul>
+						<li>Contextualização sobre Central de Atendimento </li>
+						<li>O contexto de atuação no qual se inserem os telefones 156, 199 e 153, aplicado pela CONTRATANTE</li>
+						<li>Comunicação falada e escrita – técnicas e habilidades</li>
+						<li>Padrões de Atendimento Telefônico</li>
+						<li>Técnicas de negociação por telefone</li>
+						<li>Legislação vigente sobre Telemarketing e Código de Ética do setor</li>
+						<li>Sigilo profissional</li>
+						<li>Conhecimentos sobre a CONTRATANTE, seus produtos e suas ferramentas e recursos tecnológicos.</li>
+					</ul>
+					<p class="s2">4.8.1.7.	A capacitação será conduzida por equipe de multiplicadores, qualificada e alocada pela CONTRATADA para essa função  e, também, pela CONTRATANTE.</p>
+					<p class="s2">4.8.1.8.	Esta equipe será responsável pelo planejamento, execução, acompanhamento e avaliação permanente dos treinamentos, mantendo a CONTRATANTE informada, por meio de relatórios, sobre cada ação realizada.</p>
+				<p>4.8.2.	Capacitação Específica</p>
+					<p class="s2">4.8.2.1.	Natureza estrutural, baseada nas informações, assuntos e serviços pertinentes à CONTRATANTE, utilizados como fonte e estrutura para o atendimento realizado pela Central.</p>
+					<p class="s2">4.8.2.2.	A equipe da CONTRATANTE realizará a capacitação para supervisores, monitores de qualidade e multiplicadores, que deverão, por sua vez, capacitar os atendentes, sendo que os custos relativos às instalações, equipamentos, material de apoio, “coffee break” serão de responsabilidade da CONTRATADA.</p>
+						<p class="s3">4.8.2.2.1.	Os Grupos de atendentes a serem capacitados por multiplicadores deverão ser formados com, no máximo, 30 (trinta) pessoas.</p>
+
+				<Comments :attr="{id:commentId(), context:'4.8.	Capacitação e Treinamento'}" v-if="estaConsulta.ativo == 1"></Comments>
+			</section>
+			<section>
+				<h2 class="titulo" indent="1">5.	REMUNERAÇÃO DOS SERVIÇOS </h2>
+				<h3>5.1.	A remuneração mensal dos serviços será efetuada de acordo com o volume de atendimentos ativos e receptivos realizados, incluindo chat.</h3>
+				<p>5.1.1.	Será de responsabilidade da CONTRATADA todos os custos da conta telefônica decorrentes do tráfego de ligações receptivas na linha do tipo discagem direta gratuita 156, bem como os custos relacionados às tarifas telefônicas ativas.</p>
+					
+				<Comments :attr="{id:commentId(), context:'subtitulo'}" v-if="estaConsulta.ativo == 1"></Comments>
+				<h3>5.2.	A remuneração terá como base o "Valor de Atendimento – VA", no qual já deverão estar incluídas todas as despesas necessárias à plena execução do serviço contratado (recursos humanos, recursos técnicos e tecnológicos, sistemas, URAs, relatórios, etc), de administração/gerenciamento, de manutenção, de infraestrutura, todas as obrigações sociais, impostos e taxas incidentes sobre o serviço, inclusive ajuda alimentação, vale transporte, plano de saúde, programa de incentivo e premiação etc.</h3>
+				<p>5.2.1.	Quando uma ligação for efetivamente atendida, ocorrendo ou não transferência de chamada, a CONTRATADA será remunerada uma única vez, isto é, pelo VA da chamada atendida.</p>
+				<p>5.2.2.	Para efeitos de remuneração dos atendimentos realizados através do recurso CHAT, deverá ser considerado como referência 30% do valor realizado pelo atendimento telefônico.</p>
+				<p>5.2.3.	Não será considerada, para fins de remuneração, mais do que uma ligação receptiva em um intervalo de 15 (quinze) minutos de um mesmo munícipe e/ou telefone.</p>
+				<p>5.2.4.	A remuneração do atendimento ativo incidirá sobre o volume de ligações efetuadas e efetivamente concretizadas, isto é, pelo valor do VA da chamada concretizada.</p>
+				<p>5.2.5.	A determinação do valor da remuneração mensal devido será calculada conforme a seguinte metodologia:</p>
+					<p class="s2">5.2.5.1.	Apuração do quantitativo das ligações recebidas e atendidas receptivas concretizadas no período e o valor total correspondente (VAr)</p>	
+					<p class="s2">5.2.5.2.	Apuração do quantitativo das ligações ativas realizadas e concretizadas no período e o valor total correspondente (VAa)</p>
+					<ul>
+						<li><strong>Observação:</strong> Não serão consideradas para fins de remuneração as ligações efetuadas que as ligações efetuadas que não forem atendidas, apresentarem sinal de ocupado, mensagem da operadora, número inválido, sinal de fax, linha muda.</li>
+					</ul>
+					<p class="s2">5.2.5.3.	Aplicação sobre o valor total, obtido no item “5.1”, dos decréscimos resultantes da pontuação conferida, conforme tabela 2 – Conversão de Pontos:</p>
+					<ul>
+						<li>VAm = (VAr + VAa + VAchat)*FD , onde:
+							<ul>
+								<li>VAm = Valor Mensal de Atendimento de operação do Contact Center </li>
+								<li>VAr = Valor Mensal de Atendimento Receptivo</li>
+								<li>VAa = Valor Mensal de Atendimento Ativo</li>
+								<li>VAchat = Valor Mensal de Atendimento via chat</li>
+								<li>VAsms = Valor Mensal de envio de mensagem de texto</li>
+								<li>FD = Fator de Desempenho da Operação do Contact Center </li>
+							</ul>
+						</li>
+					</ul>
+					<p class="s2">5.2.5.4.	Apuração dos indicadores de qualidade do serviço, conforme indicadores da tabela 1 abaixo.</p>
+
+					<table style="text-align: center;">
+					  <tr>
+					    <th colspan="5">Tabela 1 – Indicadores de Qualidade</th>
+					  </tr>
+					  <tr>
+					    <th>Subitem</th>
+					    <th>Meta</th>
+					    <th>Desempenho Obtido</th>
+					    <th>Decréscimo sobre o % do Fator de Desempenho</th>
+					    <th>Reincidência[1]</th>
+					  </tr>
+					  <tr>
+					    <td style="text-align: left" rowspan="3">Índice de Ligações Não Recebidas (INR)</td>
+					    <td>INR ≤ 3%</td>
+					    <td>INR ≤ 3%</td>
+					    <td>-</td>
+					    <td>-</td>
+					  </tr>
+					  <tr>
+					    <td>-</td>
+					    <td>3% &lt; INR ≤5%</td>
+					    <td>1 pts </td>
+					    <td>2 pts</td>
+					  </tr>
+					  <tr>
+					    <td>-</td>
+					    <td>INR &gt; 5%</td>
+					    <td>2 pts</td>
+					    <td>3 pts</td>
+					  </tr>
+					  <tr>
+					    <td style="text-align: left" rowspan="5">Ligações atendidas em até 15 segundos (NS) para o 156</td>
+					    <td>NS ≥ 85%</td>
+					    <td>NS ≥ 85%</td>
+					    <td>-</td>
+					    <td>-</td>
+					  </tr>
+					  <tr>
+					    <td>-</td>
+					    <td>80% ≤ NS ≤ 84%</td>
+					    <td>0,5 pt</td>
+					    <td>1 pt</td>
+					  </tr>
+					  <tr>
+					    <td>-</td>
+					    <td>75% ≤ NS ≤ 79%</td>
+					    <td>1,5 pts</td>
+					    <td>2 pts</td>
+					  </tr>
+					  <tr>
+					    <td>-</td>
+					    <td>70% ≤ NS ≤ 74%</td>
+					    <td>2,5 pts</td>
+					    <td>3 pts</td>
+					  </tr>
+					  <tr>
+					    <td>-</td>
+					    <td>&lt; 70%</td>
+					    <td>3,5 pts</td>
+					    <td>4 pts</td>
+					  </tr>
+					  <tr>
+					    <td style="text-align: left" rowspan="5">Índice de Ligações Abandonadas (ILA) para o 156</td>
+					    <td>ILA ≤ 3%</td>
+					    <td>≤ 5%</td>
+					    <td>-</td>
+					    <td>-</td>
+					  </tr>
+					  <tr>
+					    <td>-</td>
+					    <td>6%&lt; ILA ≤ 8%</td>
+					    <td>0,5 pt</td>
+					    <td>1 pt</td>
+					  </tr>
+					  <tr>
+					    <td>-</td>
+					    <td>8%&lt; ILA ≤ 9%</td>
+					    <td>1 pt</td>
+					    <td>1,5 pts</td>
+					  </tr>
+					  <tr>
+					    <td>-</td>
+					    <td>9%&lt; ILA ≤ 10%</td>
+					    <td>1,5 pts</td>
+					    <td>2 pts</td>
+					  </tr>
+					  <tr>
+					    <td>-</td>
+					    <td>ILA &gt; 10%</td>
+					    <td>2 pts</td>
+					    <td>3,5 pts</td>
+					  </tr>
+					  <tr>
+					    <td style="text-align: left" rowspan="2">Índice de "Call back" (ICB)</td>
+					    <td>≥ 90%</td>
+					    <td>ICB ≥ 90% </td>
+					    <td>-</td>
+					    <td>-</td>
+					  </tr>
+					  <tr>
+					    <td>-</td>
+					    <td>ICB &lt; 90%</td>
+					    <td> 1 pt</td>
+					    <td>3 pts</td>
+					  </tr>
+					  <tr>
+					    <td style="text-align: left" rowspan="2">Índice Atendimento registrado (IAR)</td>
+					    <td>IAR = 100%</td>
+					    <td>IAR = 100%</td>
+					    <td>-</td>
+					    <td>-</td>
+					  </tr>
+					  <tr>
+					    <td>-</td>
+					    <td>IAR ≤ 99%</td>
+					    <td> 1 pt</td>
+					    <td>2 pts</td>
+					  </tr>
+					  <tr>
+					    <td style="text-align: left" rowspan="3">Índice de Satisfação do munícipe (IS)</td>
+					    <td>IS ≥ 90%</td>
+					    <td>IS ≥ 90%</td>
+					    <td>-</td>
+					    <td>-</td>
+					  </tr>
+					  <tr>
+					    <td>-</td>
+					    <td>85% ≤ IS &lt; 90%</td>
+					    <td>1 pts</td>
+					    <td>2 pts</td>
+					  </tr>
+					  <tr>
+					    <td>-</td>
+					    <td>IS &lt; 85%</td>
+					    <td>3 pts</td>
+					    <td>4 pts</td>
+					  </tr>
+					  <tr>
+					    <td style="text-align: left" rowspan="2">Índice de disponibilidade da Solução Tecnológica (IST)</td>
+					    <td>IST ≥ 99,7%</td>
+					    <td>IST ≥ 99,7%</td>
+					    <td>-</td>
+					    <td>-</td>
+					  </tr>
+					  <tr>
+					    <td>-</td>
+					    <td>IST &lt; 99,7%</td>
+					    <td>3 pts</td>
+					    <td>4 pts</td>
+					  </tr>
+					  <tr>
+					    <td style="text-align: left" rowspan="4">Ligações atendidas em até 15 segundos (NS) para 199, 153 e demais serviços a critérios<br>  da CONTRATANTE</td>
+					    <td>NS ≥ 95%</td>
+					    <td>NS ≥ 95%</td>
+					    <td>-</td>
+					    <td>-</td>
+					  </tr>
+					  <tr>
+					    <td>-</td>
+					    <td>95% ≤ NS ≤ 93%</td>
+					    <td>0,5 pt</td>
+					    <td>1 pt</td>
+					  </tr>
+					  <tr>
+					    <td>-</td>
+					    <td>93% ≤ NS ≤ 90%</td>
+					    <td>1 pt</td>
+					    <td>2 pts</td>
+					  </tr>
+					  <tr>
+					    <td>-</td>
+					    <td>&lt; 90%</td>
+					    <td>2 pts</td>
+					    <td>3 pts</td>
+					  </tr>
+					  <tr>
+					    <td style="text-align: left" rowspan="4">Índice de Ligações Abandonadas (ILA) para 199, 153 e demais serviços a critérios da<br>  CONTRATANTE</td>
+					    <td>ILA ≤ 2%</td>
+					    <td>≤ 2%</td>
+					    <td>-</td>
+					    <td>-</td>
+					  </tr>
+					  <tr>
+					    <td>-</td>
+					    <td>2%≤ ILA ≤ 3%</td>
+					    <td>0,5 pt</td>
+					    <td>1 pt</td>
+					  </tr>
+					  <tr>
+					    <td>-</td>
+					    <td>3%≤ ILA ≤ 5%</td>
+					    <td>1 pt</td>
+					    <td>2 pts</td>
+					  </tr>
+					  <tr>
+					    <td>-</td>
+					    <td>9%≤ ILA ≤ 10%</td>
+					    <td>1,5 pts</td>
+					    <td>2 pts</td>
+					  </tr>
+					  <tr>
+					    <td style="text-align: left" rowspan="3">Índice de CHAT atendidos em até 60 segundos para <br>  serviços definidos a critérios da CONTRATANTE</td>
+					    <td>CHT ≥ 90%</td>
+					    <td>CHT ≥ 90%</td>
+					    <td>-</td>
+					    <td>-</td>
+					  </tr>
+					  <tr>
+					    <td>-</td>
+					    <td>85% ≤ CHT ≤ 90%</td>
+					    <td>0,5 pt</td>
+					    <td>0,5 pt</td>
+					  </tr>
+					  <tr>
+					    <td>-</td>
+					    <td>CHT &lt; 90%</td>
+					    <td>1 pt</td>
+					    <td>1 pts</td>
+					  </tr>
+					  <tr>
+					    <td style="text-align: left" rowspan="4">Índice de CHAT Abandonados</td>
+					    <td>WCA ≤ 2%</td>
+					    <td>≤ 2%</td>
+					    <td>-</td>
+					    <td>-</td>
+					  </tr>
+					  <tr>
+					    <td>-</td>
+					    <td>2%&lt; WCA ≤ 3%</td>
+					    <td>0,5 pt</td>
+					    <td>1 pt</td>
+					  </tr>
+					  <tr>
+					    <td>-</td>
+					    <td>3%&lt; WCA ≤ 5%</td>
+					    <td>1 pt</td>
+					    <td>2 pts</td>
+					  </tr>
+					  <tr>
+					    <td>-</td>
+					    <td>9%&lt; WCA ≤ 10%</td>
+					    <td>1,5 pts</td>
+					    <td>2 pts</td>
+					  </tr>
+					</table>
+
+					<table style="text-align: center;">
+					  <tr>
+					    <th colspan="2">Tabela 2 – Conversão de Pontos</th>
+					  </tr>
+					  <tr>
+					    <th>Pontos</th>
+					    <th>FD (% fator de desempenho)</th>
+					  </tr>
+					  <tr>
+					    <td>1</td>
+					    <td>100</td>
+					  </tr>
+					  <tr>
+					    <td>2</td>
+					    <td>99</td>
+					  </tr>
+					  <tr>
+					    <td>3</td>
+					    <td>98</td>
+					  </tr>
+					  <tr>
+					    <td>4</td>
+					    <td>97</td>
+					  </tr>
+					  <tr>
+					    <td>5</td>
+					    <td>96</td>
+					  </tr>
+					  <tr>
+					    <td>6</td>
+					    <td>95</td>
+					  </tr>
+					  <tr>
+					    <td>7</td>
+					    <td>94</td>
+					  </tr>
+					  <tr>
+					    <td>8</td>
+					    <td>93</td>
+					  </tr>
+					  <tr>
+					    <td>9</td>
+					    <td>92</td>
+					  </tr>
+					  <tr>
+					    <td>10</td>
+					    <td>91</td>
+					  </tr>
+					  <tr>
+					    <td>11</td>
+					    <td>90</td>
+					  </tr>
+					  <tr>
+					    <td>12</td>
+					    <td>89</td>
+					  </tr>
+					  <tr>
+					    <td>13</td>
+					    <td>88</td>
+					  </tr>
+					  <tr>
+					    <td>14</td>
+					    <td>87</td>
+					  </tr>
+					  <tr>
+					    <td>15 a 18</td>
+					    <td>86</td>
+					  </tr>
+					  <tr>
+					    <td>19 a 24</td>
+					    <td>85</td>
+					  </tr>
+					  <tr>
+					    <td>25 a 30</td>
+					    <td>80</td>
+					  </tr>
+					  <tr>
+					    <td>Acima de 30</td>
+					    <td>70</td>
+					  </tr>
+					</table>
+
+					<p class="s2">5.2.5.5.	Em casos de contingência pela ocorrência de problemas não controláveis pela CONTRATADA (catástrofes naturais), não haverá aplicação de descontos previstos, sendo que a remuneração se fará pelo atendimento efetivamente prestado.</p>
+					<p class="s2">5.2.5.6.	Para a proposta comercial, a CONTRATADA deverá preencher os seguintes valores:</p>
+
+					<table>
+					  <tr>
+					    <th colspan="3">VALORES DA PROPOSTA</th>
+					  </tr>
+					  <tr>
+					    <th>ITEM</th>
+					    <th>QUANTIDADE (24 MESES)</th>
+					    <th>VALOR GLOBAL</th>
+					  </tr>
+					  <tr>
+					    <td style="text-align: center;">VA</td>
+					    <td style="text-align: right;">32.000.000</td>
+					    <td> </td>
+					  </tr>
+					  <tr>
+					    <td style="text-align: center;">VASMS</td>
+					    <td style="text-align: right;">12.000.000</td>
+					    <td> </td>
+					  </tr>
+					  <tr>
+					    <td style="text-align: center;">VAchat</td>
+					    <td style="text-align: right;">960.000</td>
+					    <td> </td>
+					  </tr>
+					  <tr>
+					    <td colspan="2" style="text-align: center; font-weight: bold;">TOTAL</td>
+					    <td></td>
+					  </tr>
+					  <tr>
+					    <td colspan="3">
+					    <strong>VA</strong> = Valor de Atendimento Receptivo + Valor de Atendimento Ativo (incluso operação do Contact Center e toda estrutura necessária)<br>
+					    <strong>VAsms</strong> = Valor de envio de mensagens de texto<br>
+					    <strong>VAchat</strong> = Valor de Atendimento realizados através canal de Chat (incluso operação do Contact Center e toda estrutura necessária)</td>
+					  </tr>
+					</table>
+
+					<p class="s2">5.2.5.7.	Na apuração dos indicadores de qualidade descritos no item 5.2.5.4, toda vez que os indicadores forem descumpridos em razão de um aumento imprevisível de ligações entregues ao DAC da Contratada, os dias que caracterizarem excepcionalidade poderão ser desconsiderados do cálculo de desempenho obtido para fins de apuração de Remuneração Mensal.</p>
+						<p class="s3">5.2.5.7.1.	Excepcionalidade se caracteriza por volume superior a 15% em relação à média dos dias correspondentes aos últimos 12 meses</p>
+					<p class="s2">5.2.5.8.	Nos casos em que a Contratada desejar fazer uso da cláusula de atipicidade, deverá comprovar a(s) ocorrência(s) conforme item 5.2.5.7.1, via ofício, na mesma oportunidade em que enviar a documentação para faturamento. Nestes casos, a fiscalização designada pela Contratante terá cinco dias úteis para análise, decisão e comunicação à Contratante.</p>
+					<p class="s2">5.2.5.9.	Para que os dias considerados excepcionais sejam desconsiderados do cálculo de desempenho obtido, deverá a CONTRATADA observar as seguintes condições:</p>
+						<p class="s3">5.2.5.9.1.	Se, ao final do período mensal compreendido (de acordo com a data de assinatura do contrato), o desempenho obtido resultar em decréscimo sobre o percentual do fator de desempenho.</p>
+
+					<Comments :attr="{id:commentId(), context:'5.2.	A remuneração terá como base ...'}" v-if="estaConsulta.ativo == 1"></Comments>
+
+				</section>
+
+			<section>
+				<h2 class="titulo" indent="1">6.	JUSTIFICATIVAS TÉCNICAS</h2>
+				<h3>6.1.	Desafios da Administração pública</h3>
+				<p>Um dos grandes desafios da administração pública atualmente é assegurar os direitos de cidadania aos usuários de serviços sob responsabilidade do Estado. Com a média mensal de 600 mil ligações recebidas, 500 mil atendimentos e levando em consideração que a central precisa estar preparada para absorver eventuais novos serviços,, sempre tendo em vista a melhoria do atendimento ao usuário, é mister que a PMSP mantenha e aprimore a central de atendimento 156, 199 e 153, assegurando rapidez e eficiência para o usuário final. O serviço destas centrais de atendimento telefônico se enquadram como de natureza continuada, são um modalidade de atendimento já conhecida e utilizada pelos cidadãos, operando durante 24h por dia, todos os dias do ano. A modalidade de atendimento telefônico é de suma importância para a municipalidade, em que pese o fato de que significativa parcela da população residente em São Paulo ver, nesta modalidade de atendimento, uma alternativa prática, segura e gratuita para solucionar pendências e solicitar serviços cuja natureza não exija atendimento presencial.</p>
+					
+				<Comments :attr="{id:commentId(), context:'subtitulo'}" v-if="estaConsulta.ativo == 1"></Comments>
 
 			</section>
-			
-			
-			
-			
+
+			<h3>6.2.	Índices de qualificação econômico-financeira</h3>
+			<p>6.2.1.	A exigência dos índices para fins de qualificação econômico-financeira decorre da necessidade da demonstração de plena saúde financeira para a execução contratual pretendida, em razão da natureza do serviço, sua imprescindível continuidade e o envolvimento de infraestrutura e pessoal necessários para o pleno cumprimento das obrigações a serem assumidas.</p>
+			<p>6.2.2.	Sem prejuízo, adota-se a possibilidade de demonstração de Patrimônio Líquido compatível com a proposta comercial como sucedâneo à demonstração dos índices mínimos.</p>
+				
+			<Comments :attr="{id:commentId(), context:'6.2.	Índices de qualificação econômico-financeira'}" v-if="estaConsulta.ativo == 1"></Comments>
+
+			<h3>6.3.	Implantação, Operação e Gestão de Centrais de Atendimento</h3>
+			<p>6.3.1.	Considera-se, para a comprovação da capacidade técnica, que a contratada deve demonstrar atender, no mínimo, <strong>8.000.000</strong> (oito milhões) de atendimentos anuais receptivos e/ou ativos.</p>
+				<p class="s2">6.3.1.1.	Por reconhecer o ganho de escala deste serviço, aceita-se a soma dos atestados, no entanto, estes devem ser simultâneos a fim de demonstrar a capacidade instalada da empresa para a sustentação dessa escala.</p>
+				<p class="s2">6.3.1.2.	Os atestados devem ser emitidos por pessoas jurídicas de Direito Público e Privado, indicando o período da prestação de serviço; locais da execução dos serviços, natureza do objeto; quantidades executadas, caracterização do bom desempenho da licitante e outros dados característicos do objeto;</p>
+				<p class="s2">6.3.1.3.	O(s) atestados(s) devem também comprovar a capacidade técnica de gestão de indicadores operacionais e gerenciais para o atendimento de níveis de serviço (SLAs) previamente definidos e operação em regime de 24h por dia, ininterruptas;</p>
+				<p class="s2">6.3.1.4.	Admite-se o somatório dos quantitativos dos atestados para a comprovação do quantitativo mínimo no certame;</p>
+				<p class="s2">6.3.1.5.	Os atestados devem corresponder a uma prestação de serviço simultânea de, pelo menos, um ano;</p>
+				<p class="s2">6.3.1.6.	Em vista das especificidades da intermediação da relação da Administração Pública com os cidadãos, é necessário o montante mínimo de 2,5 milhões (dois milhões e quinhentos mil) de atendimentos comprovados para órgão ou entidade da administração pública direta ou indireta do total mencionado no item 6.3.1.</p>
+				
+			<Comments :attr="{id:commentId(), context:'6.3.	Implantação, Operação e Gestão de Centrais de Atendimento'}" v-if="estaConsulta.ativo == 1"></Comments>
+			<h3>6.4.	Gestão de Indicadores de Desempenho</h3>
+			<p>6.4.1.	Em vista da necessidade de se sedimentar a utilização de indicadores nas atividades de atendimento ao cidadão desenvolvidas pela Prefeitura de São Paulo, considera-se que a CONTRATADA deve demonstrar capacidade técnica para projetar, definir e implantar estrutura de gestão com indicadores de desempenho para a avaliação da operação de atendimento ao usuário/cidadão em escala adequada para a dimensão prevista neste edital.</p>
+				
+			<Comments :attr="{id:commentId(), context:'6.4.	Gestão de Indicadores de Desempenho'}" v-if="estaConsulta.ativo == 1"></Comments>
+								
 		</section>
 
+		<section>
+			<h2 class="titulo" indent="1">7.	GOVERNANÇA E CONDIÇÕES GERAIS DE EXECUÇÃO</h2>
+			<h3>7.1.	Condições Gerais</h3>
+			<p>7.1.1.	A CONTRATADA será responsável pela execução do escopo de trabalho descrito neste Termo de Referência, em conformidade com a qualidade e prazos estabelecidos.</p>
+			<p>7.1.2.	A CONTRATANTE será responsável pelo pagamento dos referidos serviços conforme condições estabelecidas neste documento.</p>
+			<p>7.1.3.	A CONTRATADA deverá dispor de estações de trabalho (computadores), bem como infraestrutura física e lógica, para a prestação do serviço, para cada um dos profissionais a serem alocados.</p>
+			<p>7.1.4.	Os produtos e documentos gerados em meio eletrônico deverão ser compatíveis com as ferramentas Microsoft Office.</p>
+			<p>7.1.5.	A CONTRATANTE será proprietária de todo e qualquer produto e documentação que vierem a ser gerados pela CONTRATADA em função da execução dos serviços e que não for de propriedade intelectual desta.</p>
+			<p>7.1.6.	A CONTRATANTE deverá ter acesso direto às bases de dados da CONTRATADA a qualquer momento e periodicidade.</p>
+				
+			<Comments :attr="{id:commentId(), context:'subtitulo'}" v-if="estaConsulta.ativo == 1"></Comments>
+
+			<h3>7.2.	Período de transição e início da operação</h3>
+			<p>7.2.1.	A CONTRATADA terá o prazo de até 90 dias, a partir da data de emissão da Ordem de Serviço para assumir a completa operação do serviço de atendimento ao cidadão 156, 199 e 153. Entende-se por operação completa todo atendimento telefônico e implantação da solução sistêmica envolvida para o pleno funcionamento da Central de Atendimento.</p>
+				
+			<Comments :attr="{id:commentId(), context:'7.2.	Período de transição e início da operação'}" v-if="estaConsulta.ativo == 1"></Comments>
+			
+			<h3>7.3.	Governança</h3>
+			<p>7.3.1.	Comitê Gestor</p>
+				<p class="s2">7.3.1.1.	O Comitê Gestor é o principal responsável pela coordenação, integração, disciplina e controle dos esforços das Partes voltados à adequada execução dos serviços previstos neste Termo de Referência. O Comitê Gestor terá como principais objetivos.</p>
+					<p class="s3">7.3.1.1.1.	Estabelecer e comunicar o direcionamento estratégico dos Serviços em alinhamento com os objetivos e expectativas da CONTRATANTE, descritos no Contrato.</p>
+					<p class="s3">7.3.1.1.2.	Revisar periodicamente o desempenho e atuação e determinar mudanças aos membros do Comitê Operacional, tanto da CONTRATANTE quanto da CONTRATADA.</p>
+					<p class="s3">7.3.1.1.3.	Revisar os serviços prestados do ponto de vista de qualidade.</p>
+					<p class="s3">7.3.1.1.4.	Resolver em última instância as questões estratégicas e questões escaladas na governança do projeto de forma a não comprometer os custos, esforços e prazos.</p>
+					<p class="s3">7.3.1.1.5.	Acompanhar e avaliar os indicadores de desempenho deste Termo de Referência.</p>
+					<p class="s3">7.3.1.1.6.	Promover a articulação necessária para direcionar e resolver as questões críticas, políticas, organizacionais ou de relacionamento entre as partes.</p>
+					<p class="s3">7.3.1.1.7.	Designar equipe da CONTRATANTE para dar suporte à CONTRATADA ao longo da execução do Contrato.</p>
+					<p class="s3">7.3.1.1.8.	Participantes do Comitê Gestor</p>
+						<p class="s4">7.3.1.1.8.1.	São membros do Comitê Gestor, minimamente</p>
+						<ul style="margin-left: 22em">
+							<li>Diretor (a) da CONTRATADA, ou pessoa por ele(a) indicada.</li>
+							<li>Secretário da pasta gestora deste contrato ou alguém por ele indicado.</li>
+							<li>Responsável pelo Comitê de Operação.</li>
+						</ul>
+					<p class="s3">7.3.1.1.8.2.	Frequência de reuniões:</p>
+					<ul style="margin-left: 22em">
+						<li>O Comitê Gestor terá frequência bimestral de reuniões.</li>
+					</ul>
+			<p>7.3.2.	Comitê Operacional</p>
+				<p class="s2">7.3.2.1.	O Comitê Operacional deve ser indicado via ofício, de ambas as partes, e será responsável por planejar e acompanhar a execução dos Serviços previstos neste Termo de Referência.</p>
+				<p class="s2">7.3.2.2.	Todas as reuniões serão realizadas nas instalações da CONTRATANTE, ou como a CONTRATANTE aconselhar (com participantes remotos via teleconferência ou vídeo conferência).</p>
+				<p class="s2">7.3.2.3.	As partes deverão ser notificadas com a antecedência mínima de 5 (cinco) dias úteis da data de realização da reunião.</p>
+				<p class="s2">7.3.2.4.	As Partes deverão ser notificadas com a antecedência mínima de 3 (três) dias úteis no caso de alterações nas datas desta reunião.</p>
+				<p class="s2">7.3.2.5.	Os representantes que não comparecerem às reuniões previamente agendadas, por motivos previamente justificados, receberão a ata da reunião, via e-mail, e terão até 2 (dois) dias corridos para manifestar seu voto, sob pena de em não o fazendo ser considerado como aceitação tácita do conteúdo sem ressalvas, ou seja, voto a favor do que foi deliberado.</p>
+				<p class="s2">7.3.2.6.	O Comitê Operacional terá como principais objetivos:</p>
+				<ul style="margin-left: 22em">
+					<li>Supervisionar as atividades relacionadas ao cumprimento dos objetivos constantes neste Termo de Referência, gerenciando o comprometimento dos recursos humanos alocados, monitorando o andamento do projeto.</li>
+					<li>Realizar acompanhamento das atividades conforme previstos neste Termo de Referência.</li>
+					<li>Avaliar as prioridades.</li>
+					<li>Realizar o planejamento e execução.</li>
+					<li>Identificar e encaminhar para o Comitê Gestor solicitações de mudança de escopo;</li>
+					<li>Gerenciar as fases do projeto de implantação das centrais de atendimento</li>
+					<li>Gerenciar as atividades operacionais diárias tais como, orçamento, recursos, prazo e qualidade dos serviços;</li>
+					<li>Identificar as questões e riscos do projeto, atribuindo ações, responsáveis e datas para as suas resoluções;</li>
+					<li>Dar suporte à CONTRATADA no planejamento e execução do projeto de implantação da solução de atendimento fornecida pela CONTRATANTE;</li>
+					<li>Identificar situações de emergência;</li>
+					<li>Definir procedimentos a serem adotados em situações de emergência;</li>
+					<li>Acompanhar a execução dos procedimentos em situações de emergência;</li>
+					<li>Reportar ao Comitê Gestor a ocorrência de situações de emergência;</li>
+				</ul>
+				<p class="s2">7.3.2.7.	Participantes do Comitê Operacional</p>
+					<p class="s3">7.3.2.7.1.	São membros efetivos do Comitê de Operação, minimamente:</p>
+					<ul style="margin-left: 22em">
+						<li>Responsável da Secretaria de Municipal de Inovação e Tecnologia, indicado(a) pelo Secretário</li>
+						<li>Gerente experiente da CONTRATADA, ou pessoa por ele indicada;</li>
+						<li>1 Responsável por parte da CONTRATADA;</li>
+						<li>1 Responsável por parte da CONTRATANTE.</li>
+					</ul>
+					<p class="s3">7.3.2.7.2.	Frequência de reuniões</p>
+					<ul style="margin-left: 22em">
+						<li>O Comitê de operação terá frequência quinzenal de reuniões.</li>
+					</ul>
+				
+			<Comments :attr="{id:commentId(), context:'7.3.	Governança'}" v-if="estaConsulta.ativo == 1"></Comments>
+			
+		</section>
 		
+		<section>
+			<h2 class="titulo" indent="1">8.	VIGÊNCIA DO CONTRATO</h2>
+			<h3>8.1.	O contrato será celebrado com duração de 24 (vinte e quatro) meses .</h3>
+			<p>8.1.1.	O prazo poderá ser prorrogado por sucessivo(s) período(s) e nas mesmas condições, observado o limite legal.</p>
+			<p>8.1.2.	As prorrogações de prazo de vigência serão formalizadas mediante celebração dos respectivos termos de aditamento ao contrato, respeitadas as condições prescritas na Lei Federal nº 8.666/1993.</p>
+			<p>8.1.3.	A não prorrogação do prazo de vigência contratual, por conveniência da Administração, não gerará à Contratada o direito a qualquer espécie de indenização.</p>
+			<p>8.1.4.	Não obstante o prazo estipulado no item 8.1, a vigência contratual nos exercícios subsequentes ao da assinatura do contrato estará sujeita à condição resolutiva, consubstanciada na existência de recursos aprovados nas respectivas Leis Orçamentárias de cada exercício, para atender as respectivas despesas.</p>
+			<p>8.1.5.	Caso novo contrato seja assinado antes do termo deste, deverá a CONTRATANTE notificar a CONTRATADA da data final, bem como das condições necessárias para a transição da operação, com, no mínimo, 90 (noventa) dias de antecedência.</p>
+			<p>8.1.6.	À PMSP, demonstrado o interesse público, é assegurado o direito de exigir que a empresa contratada, conforme o caso, prossiga na execução do ajuste mediante aditamento do contrato, pelo período de até 90 (noventa) dias, a fim de evitar brusca interrupção na execução dos serviços.</p>
+			<p>8.1.7.	A CONTRATADA deverá arcar fiel e regularmente com todas as obrigações trabalhistas dos empregados que participem da execução do objeto contratual.</p>
+			<p>8.1.8.	A CONTRATADA deverá enviar e manter atualizado o rol de todos os empregados e prestadores de serviço que participam da execução do objeto contratual.</p>
+			<p>8.1.9.	É vedada a retirada pela Adjudicatária ou o envio pela Administração, do Termo de Contrato para assinatura fora das dependências da Administração.</p>
+				
+			<Comments :attr="{id:commentId(), context:'subtitulo'}" v-if="estaConsulta.ativo == 1"></Comments>
 
+		</section>
 		
+		<section>
+			<h2 class="titulo" indent="1">9.	DO PREÇO, DA DOTAÇÃO E DAS CONDIÇÕES DE PAGAMENTO</h2>
+			<h3>9.1.	Os preços que vigorarão no contrato incluem todos os custos diretos e indiretos necessários à execução dos serviços, inclusive os referentes às despesas trabalhistas, previdenciárias, impostos, taxas, emolumentos e quaisquer outras despesas e encargos, constituindo, a qualquer título, a única e completa remuneração pela adequada e perfeita prestação e entrega dos serviços, de modo que nenhuma outra remuneração será devida, a qualquer título, descartada qualquer hipótese de responsabilidade solidária pelo pagamento de toda e qualquer despesa, direta ou indiretamente relacionada com a prestação dos serviços.</h3>
+				
+			<Comments :attr="{id:commentId(), context:'subtitulo'}" v-if="estaConsulta.ativo == 1"></Comments>
 
+			<h3>9.2.	Os recursos necessários para suporte do contrato, onerará a dotação nº XXXXXXXXXX do orçamento vigente e dotação própria no próximo exercício, em observância ao princípio da anualidade orçamentária.</h3>
+				
+			<Comments :attr="{id:commentId(), context:'9.2.	Os recursos necessários para suporte do contrato, onerará a dotação...'}" v-if="estaConsulta.ativo == 1"></Comments>
+			
+			<h3>9.3.	O prazo de pagamento será de 30 (trinta) dias, a partir da data da emissão do ateste de cada nota fiscal ou nota fiscal fatura.</h3>
+			<p>9.3.1.	O ateste, aprovando ou rejeitando, total ou parcialmente, a prestação dos serviços, ocorrerá em até 5 (cinco) dias úteis, contados a partir da entrega da fatura ou de documento equivalente, inclusive por meio eletrônico, conforme Portaria SF 159/2017.</p>
+			<p>9.3.2.	Caso venha ocorrer a necessidade de providências complementares por parte da CONTRATADA, a fluência do prazo será interrompida, reiniciando-se a sua contagem a partir da data em que estas forem cumpridas.</p>
+			<p>9.3.3.	Caso venha a ocorrer atraso no pagamento dos valores devidos, por culpa exclusiva da Administração, a Contratada terá direito à aplicação de compensação financeira, nos termos da Portaria SF nº 05, de 05/01/2012.</p>
+			<p>9.3.4.	Para fins de cálculo da compensação financeira de que trata o item acima, o valor do principal devido será reajustado utilizando-se o índice oficial de remuneração básica da caderneta de poupança e de juros simples no mesmo percentual de juros incidentes sobre a caderneta de poupança para fins de compensação.</p>
+			<p>9.3.5.	O pagamento da compensação financeira dependerá de requerimento a ser formalizado pela Contratada.</p>
+				
+			<Comments :attr="{id:commentId(), context:'9.3.	O prazo de pagamento será de 30 (trinta) dias, a partir da data da emissão do ateste de cada nota fiscal ou nota fiscal fatura.'}" v-if="estaConsulta.ativo == 1"></Comments>
+			
+			<h3>9.4.	Os pagamentos serão efetuados em conformidade com a execução dos serviços, mediante apresentação da(s) respectiva(s) nota(s) fiscal(is) ou nota(s) fiscal(is)/fatura, bem como de cópia reprográfica da Nota de Empenho, acompanhada, quando for o caso, do recolhimento do ISSQN – Imposto Sobre Serviços de Qualquer Natureza do mês de competência, descontados os eventuais débitos da CONTRATADA, inclusive os decorrentes de multas.</h3>
+				
+			<Comments :attr="{id:commentId(), context:'9.4.	Os pagamentos serão efetuados em conformidade com a execução dos serviços...'}" v-if="estaConsulta.ativo == 1"></Comments>
+			
+			<h3>9.5.	Na hipótese de existir nota de retificação e/ou nota suplementar de empenho, cópia(s) da(s) mesma(s) deverá(ão) acompanhar os demais documentos.</h3>
+				
+			<Comments :attr="{id:commentId(), context:'9.5.	Na hipótese de existir nota de retificação e/ou nota suplementar de empenho, cópia(s) da(s) mesma(s) deverá(ão) acompanhar os demais documentos.'}" v-if="estaConsulta.ativo == 1"></Comments>
 
+			<h3>9.6.	A Contratada deverá apresentar, juntamente com a Nota Fiscal ou Nota Fiscal Fatura, os documentos a seguir discriminados, para verificação de sua regularidade fiscal perante os órgãos competentes:</h3>
+			<p>9.6.1.	Certificado de Regularidade do Fundo de Garantia do Tempo de Serviço – F.G.T.S., fornecido pela Caixa Econômica Federal.</p>
+			<p>9.6.2.	Certidão Negativa de Débitos relativa às Contribuições Previdenciárias e as de Terceiros – CND – ou outra equivalente na forma da lei;</p>
+			<p>9.6.3.	Certidão de Regularidade para com a Fazenda Estadual do domicílio ou sede da proponente, pertinente ao seu ramo de atividade e relativa aos tributos relacionados com o objeto licitado.</p>
+			<p>9.6.4.	Certidão negativa de débitos de tributos mobiliários do Município de São Paulo.</p>
+			<p>9.6.5.	Certidão negativa de débitos trabalhistas (CNDT);</p>
+			<p>9.6.6.	Nota Fiscal ou Nota Fiscal Fatura devidamente atestada;</p>
+			<p>9.6.7.	Folha de Medição dos Serviços;</p>
+			<p>9.6.8.	Relação atualizada dos empregados vinculados à execução contratual;</p>
+			<p>9.6.9.	Folha de frequência dos empregados vinculados à execução contratual;</p>
+			<p>9.6.10.	Folha de pagamento dos empregados vinculados à execução do contrato;</p>
+			<p>9.6.11.	Cópia do Protocolo de envio de arquivos, emitido pela conectividade social (GFIP/SEFIP);</p>
+			<p>9.6.12.	Cópia da Relação dos Trabalhadores constantes do arquivo SEFIP do mês anterior ao pedido de pagamento;</p>
+			<p>9.6.13.	Cópia da Guia quitada do INSS (GPS), correspondente ao mês da última fatura vencida;</p>
+			<p>9.6.14.	Cópia da Guia quitada do FGTS (GRF), correspondente ao mês da última fatura vencida.</p>
+			<p>9.6.15.	OBS.: Serão aceitas como prova de regularidade certidões negativas, positivas com efeito de negativas e certidões positivas que noticiem em seu corpo que os débitos estão judicialmente garantidos ou com sua exigibilidade suspensa.</p>
 
+			<Comments :attr="{id:commentId(), context:'9.6.	A Contratada deverá apresentar, juntamente com a Nota Fiscal ou Nota Fiscal Fatura, os documentos a seguir discriminados, para verificação de sua regularidade fiscal perante os órgãos competentes:'}" v-if="estaConsulta.ativo == 1"></Comments>
+			
+			<h3>9.7.	O pagamento será efetuado por crédito em conta corrente, no BANCO XXXXXXX, conforme estabelecido no Decreto nº XX.XXX/20XX, publicado no DOC do dia XX de XXXXXXXXXX de 20XX.</h3>
+							
+			<Comments :attr="{id:commentId(), context:'9.7.	O pagamento será efetuado por crédito em conta corrente, no BANCO XXXXXXX, conforme estabelecido no Decreto nº XX.XXX/20XX, publicado no DOC do dia XX de XXXXXXXXXX de 20XX.'}" v-if="estaConsulta.ativo == 1"></Comments>
+			
+			<h3>9.8.	Fica ressalvada qualquer alteração por parte da Secretaria da Fazenda, quanto às normas referentes ao pagamento de fornecedores.</h3>
+										
+			<Comments :attr="{id:commentId(), context:'9.8.	Fica ressalvada qualquer alteração por parte da Secretaria da Fazenda, quanto às normas referentes ao pagamento de fornecedores.'}" v-if="estaConsulta.ativo == 1"></Comments>
+															
+		</section>
+		
+		<section>
+			<h2 class="titulo" indent="1">10.	DO REAJUSTE DE PREÇOS</h2>
+			<h3>10.1.	Os preços ofertados somente poderão ser reajustados após 1 (um) ano de sua vigência, contados da data-limite para apresentação das propostas, mediante a utilização do critério definido do artigo 7º no Decreto nº 57.580, de 19 de janeiro de 2017, com interpretação dada pela  Portaria da Secretaria Municipal da Fazenda - SF Nº 389 de 18 de dezembro de 2017, ou seja, aplicação do índice equivalente ao centro da meta de inflação fixada pelo Conselho Monetário Nacional - CMN  ou o Índice de Preços ao Consumidor – IPC, apurado pela Fundação Instituto de Pesquisas Econômicas – FIPE, optando-se, sempre, pelo menor deles</h3>
+				
+			<Comments :attr="{id:commentId(), context:'10.1.	Os preços ofertados somente poderão ser reajustados após 1 (um) ano de sua vigência, contados da data-limite para apresentação das propostas, mediante a utilização do critério definido do artigo 7º...'}" v-if="estaConsulta.ativo == 1"></Comments>
 
+			<h3>10.2.	Fica vedado qualquer novo reajuste pelo prazo de 1 (um) ano.</h3>
+				
+			<Comments :attr="{id:commentId(), context:'10.2.	Fica vedado qualquer novo reajuste pelo prazo de 1 (um) ano.'}" v-if="estaConsulta.ativo == 1"></Comments>
+			
+			<h3>10.3.	As condições de reajustamento ora pactuadas poderão ser alteradas em face da superveniência de normas federais ou municipais aplicáveis à espécie.</h3>
+				
+			<Comments :attr="{id:commentId(), context:'10.3.	As condições de reajustamento ora pactuadas poderão ser alteradas em face da superveniência de normas federais ou municipais aplicáveis à espécie.'}" v-if="estaConsulta.ativo == 1"></Comments>
+			
+			<h3>10.4.	As hipóteses excepcionais ou de revisão de preços serão tratadas de acordo com a legislação vigente e exigirão detida análise econômica para avaliação de eventual desequilíbrio econômico-financeiro do contrato.</h3>
+				
+			<Comments :attr="{id:commentId(), context:'10.4.	As hipóteses excepcionais ou de revisão de preços serão tratadas de acordo com a legislação vigente e exigirão detida análise econômica para avaliação de eventual desequilíbrio econômico-financeiro do contrato.'}" v-if="estaConsulta.ativo == 1"></Comments>
 
+		</section>
+		
+		<section>
+			<h2 class="titulo" indent="1">11.	DA GARANTIA CONTRATUAL</h2>
+			<h3>11.1.	No ato da assinatura do contrato, a adjudicatária deverá prestar a devida garantia, em quantia equivalente a 5% (cinco por cento) do valor contratual, em qualquer das modalidades previstas no artigo 56, § 1º, da Lei Federal nº 8.666/93. A referida garantia será prestada nos termos da Portaria SF nº. 76/2019"</h3>
+				
+			<Comments :attr="{id:commentId(), context:'11.1.	No ato da assinatura do contrato, a adjudicatária deverá prestar a devida garantia, em quantia equivalente a 5% (cinco por cento)...'}" v-if="estaConsulta.ativo == 1"></Comments>
 
+			<h3>11.2.	A não prestação de garantia contratual equivale à recusa injustificada para a contratação, caracterizando descumprimento total da obrigação assumida, ficando a adjudicatária sujeita às penalidades legalmente estabelecidas.</h3>
 
+			<Comments :attr="{id:commentId(), context:'11.2.	A não prestação de garantia contratual equivale à recusa injustificada para a contratação, caracterizando descumprimento total da obrigação assumida, ficando a adjudicatária sujeita às penalidades legalmente estabelecidas.'}" v-if="estaConsulta.ativo == 1"></Comments>
+		
+			<h3>11.3.	A garantia e seus reforços responderão por todas as multas que forem impostas à CONTRATADA e por todas as importâncias que, a qualquer título, forem devidas à Contratante em razão do contrato.</h3>
+							
+			<p>11.3.1.	Caso a garantia não seja suficiente para o pagamento das multas, a CONTRATADA será notificada para, no prazo de 72 (setenta e duas) horas, completar o pagamento, sob pena de rescisão do contrato.</p>
 
+			<Comments :attr="{id:commentId(), context:'11.3.	A garantia e seus reforços responderão por todas as multas que forem impostas à CONTRATADA e por todas as importâncias que, a qualquer título, forem devidas à Contratante em razão do contrato.'}" v-if="estaConsulta.ativo == 1"></Comments>
 
+			<h3>11.4.	O reforço e/ou a regularização da garantia, excetuada a hipótese prevista no item anterior, deverá ser efetuado no prazo máximo de 05 (cinco) dias úteis, contados do recebimento da comunicação, feita por escrito pela contratante, sob pena de incorrer a CONTRATADA nas penalidades previstas no Contrato.</h3>
+			<p>11.4.1.	O prazo acima aludido poderá ser prorrogado uma vez, por igual período, quando solicitado pela CONTRATADA durante o transcurso do prazo, se ocorrer motivo justificado aceito pela Contratante.</p>
+				
+			<Comments :attr="{id:commentId(), context:'11.4.	O reforço e/ou a regularização da garantia, excetuada a hipótese prevista no item anterior...'}" v-if="estaConsulta.ativo == 1"></Comments>
+			
+			<h3>11.5.	Em caso de prorrogação do contrato, a garantia prestada deverá ser substituída automaticamente pela CONTRATADA quando da ocorrência de seu vencimento, independentemente de comunicado da contratante, de modo a manter-se ininterruptamente garantido o contrato celebrado, sob pena de incorrer a CONTRATADA nas penalidades nele previstas.</h3>
+				
+			<Comments :attr="{id:commentId(), context:'11.5.	Em caso de prorrogação do contrato, a garantia prestada deverá ser substituída automaticamente pela...'}" v-if="estaConsulta.ativo == 1"></Comments>
+			
+			<h3>11.6.	Em caso de aditamento contratual prevendo acréscimo de até 25% (vinte e cinco por cento) do valor inicial atualizado do contrato, a garantia deverá ser regularizada proporcionalmente.</h3>
+				
+			<Comments :attr="{id:commentId(), context:'11.6.	Em caso de aditamento contratual prevendo acréscimo de até 25% (vinte e cinco por cento) do valor inicial atualizado do contrato, a garantia deverá ser regularizada proporcionalmente.'}" v-if="estaConsulta.ativo == 1"></Comments>
+			
+			<h3>11.7.	A garantia prestada na modalidade seguro-garantia ou fiança bancária deve explicitar a cobertura integral do contrato, inclusive quanto ao pagamento imediato à Prefeitura do Município de São Paulo em quaisquer das hipóteses previstas neste item.</h3>
+				
+			<Comments :attr="{id:commentId(), context:'11.7.	A garantia prestada na modalidade seguro-garantia ou fiança bancária deve explicitar a cobertura integral do contrato, inclusive quanto ao pagamento imediato à Prefeitura do Município de São Paulo em quaisquer das hipóteses previstas neste item.'}" v-if="estaConsulta.ativo == 1"></Comments>
+			<h3>11.8.	Por ocasião do encerramento do contrato, o que restar da garantia será liberado ou restituído, mediante requerimento da CONTRATADA, após a liquidação das multas aplicadas e dedução de eventual valor devido pela CONTRATADA.</h3>
+				
+			<Comments :attr="{id:commentId(), context:'11.8.	Por ocasião do encerramento do contrato, o que restar da garantia será liberado ou restituído, mediante requerimento da CONTRATADA, após a liquidação das multas aplicadas e dedução de eventual valor devido pela CONTRATADA.'}" v-if="estaConsulta.ativo == 1"></Comments>
+			
+		</section>
+		
+		<section>
+			<h2 class="titulo" indent="1">12.	DAS PENALIDADES</h2>
+			<h3>12.1.	Além das sanções previstas no capítulo IV da Lei Federal nº 8.666/93, Lei Federal no 10.520/02 e demais normas pertinentes, são aplicáveis as penalidades abaixo estipuladas, que só deixarão de ser aplicadas nas seguintes hipóteses:</h3>
+			<p>12.1.1.	Comprovação, anexada aos autos, da ocorrência de força maior impeditiva do cumprimento da obrigação e/ou,</p>
+			<p>12.1.2.	Manifestação da unidade requisitante, informando que o ocorrido derivou de fatos imputáveis à Administração</p>
+				
+			<Comments :attr="{id:commentId(), context:'12.1.	Além das sanções previstas no capítulo IV da Lei Federal nº 8.666/93, Lei Federal no 10.520/02...'}" v-if="estaConsulta.ativo == 1"></Comments>
 
+			<h3>12.2.	A proponente que não mantiver a proposta ou lance, falhar ou fraudar na execução das obrigações assumidas, comportar-se de modo inidôneo, fizer declaração falsa ou cometer fraude fiscal, poderá ser aplicada multa de 20% (vinte por cento) sobre o valor da proposta inicial e a penalidade de impedimento de licitar e contratar com a Administração Pública pelo prazo de até 5 (cinco) anos.</h3>
+				
+			<Comments :attr="{id:commentId(), context:'12.2.	A proponente que não mantiver a proposta ou lance, falhar ou fraudar na execução das obrigações assumidas...'}" v-if="estaConsulta.ativo == 1"></Comments>
+			
+			<h3>12.3.	A recusa da adjudicatária em assinar o contrato e/ou retirar a Nota de Empenho sem justificativa aceita pela Administração, no prazo estabelecido neste Edital, implicará em multa de 30% (trinta por cento) do valor adjudicado e no impedimento de participar de novas licitações pelo prazo de até 05 (cinco) anos.</h3>
+			<p>conteudo</p>
+				
+			<Comments :attr="{id:commentId(), context:'12.3.	A recusa da adjudicatária em assinar o contrato e/ou retirar a Nota de Empenho sem justificativa aceita pela Administração, no prazo estabelecido neste Edital, implicará em multa de 30%...'}" v-if="estaConsulta.ativo == 1"></Comments>
+			
+			<h3>12.4.	O prazo para pagamento das multas será de 05 (cinco) dias úteis a contar da intimação da empresa apenada. A critério da Administração e sendo possível, o valor devido será descontado da importância que a empresa tenha a receber, até os limites apurados, conforme dispõe o Parágrafo Único do Art. 55 do Decreto Municipal nº 44.279/2003. Não havendo pagamento pela empresa, o valor será cobrado em processo judicial de execução.</h3>
+				
+			<Comments :attr="{id:commentId(), context:'12.4.	O prazo para pagamento das multas será de 05 (cinco) dias úteis a contar da intimação da empresa apenada...'}" v-if="estaConsulta.ativo == 1"></Comments>
+			
+			<h3>12.5.	A aplicação de uma penalidade não exclui a aplicação das outras, quando cabíveis.</h3>
+				
+			<Comments :attr="{id:commentId(), context:'12.5.	A aplicação de uma penalidade não exclui a aplicação das outras, quando cabíveis.'}" v-if="estaConsulta.ativo == 1"></Comments>
+			
+			<h3>12.6.	Das decisões de aplicação de penalidade, caberá recurso nos termos do artigo 109 da Lei Federal nº 8.666/93, observados os prazos nele fixados.</h3>
+			<p>12.6.1.	Recursos contra decisões de aplicação de penalidade deverão ser dirigidos à Assessoria Jurídica, e protocolizados nos dias úteis, na Rua Líbero Badaró nº 425, 34º andar, Centro, São Paulo, SP, após o recolhimento em agência bancária dos emolumentos devidos.</p>
+				
+			<Comments :attr="{id:commentId(), context:'12.6.	Das decisões de aplicação de penalidade, caberá recurso nos termos do artigo 109 da Lei Federal nº 8.666/93, observados os prazos nele fixados.'}" v-if="estaConsulta.ativo == 1"></Comments>
+
+			<h3>12.7.	Não serão conhecidos recursos enviados pelo correio, telex, fac-símile, correio eletrônico ou qualquer outro meio de comunicação se, dentro do prazo previsto em lei, a peça inicial original não tiver sido protocolizada.</h3>
+				
+			<Comments :attr="{id:commentId(), context:'12.7.	Não serão conhecidos recursos enviados pelo correio, telex, fac-símile, correio eletrônico ou qualquer outro meio de comunicação...'}" v-if="estaConsulta.ativo == 1"></Comments>
+			
+			<h3>12.8.	Com fundamento nos artigos 86 e 87, incisos I a IV, da Lei nº 8.666, de 1993; e no art. 7º da Lei nº 10.520, de 17/07/2002, nos casos de retardamento, de falha na execução do contrato ou de inexecução total do objeto, observando-se os procedimentos contidos no Capítulo X do Decreto Municipal nº 44.279/03, a contratada poderá ser apenada, isoladamente, ou juntamente com as multas definidas no item 11.2, com as seguintes penalidades:</h3>
+			<p>12.8.1.	Advertência;</p>
+			<p>12.8.2.	Suspensão temporária de participação em licitação e impedimento de contratar com a Administração Municipal, por prazo não superior a dois anos;</p>
+			<p>12.8.3.	Declaração de inidoneidade para licitar ou contratar com a Administração Pública enquanto perdurarem os motivos determinantes da punição ou até que seja promovida a reabilitação perante a própria autoridade que aplicou a penalidade, que será concedida sempre que a CONTRATADA ressarcir a Administração pelos prejuízos resultantes e após decorrido o prazo da sanção aplicada com base no inciso anterior; ou</p>
+			<p>12.8.4.	Impedimento de licitar e contratar com a União, os Estados, o Distrito Federal e os Municípios e descredenciamento nos sistemas de cadastramento de fornecedores a que se refere o inciso XIV do art. 4º da Lei nº 10.520/2002, pelo prazo de até cinco anos.</p>
+				
+			<Comments :attr="{id:commentId(), context:'12.8.	Com fundamento nos artigos 86 e 87, incisos I a IV, da Lei nº 8.666, de 1993; e no art. 7º da Lei nº 10.520, de 17/07/2002...'}" v-if="estaConsulta.ativo == 1"></Comments>
+			
+			<h3>12.9.	A falha na execução do contrato estará configurada quando a CONTRATADA se enquadrar em pelo menos uma das situações previstas na Tabela 3 abaixo, respeitada a graduação de infrações conforme a Tabela 1 deste item, e alcançar o total de 20 (vinte) pontos, cumulativamente.</h3>
+			<table style="text-align: center;">
+			  <tr>
+			    <th colspan="2">TABELA 1</th>
+			  </tr>
+			  <tr>
+			    <th>GRAU DA INFRAÇÃO</th>
+			    <th>PONTOS DA INFRAÇÃO</th>
+			  </tr>
+			  <tr>
+			    <td>1</td>
+			    <td>2</td>
+			  </tr>
+			  <tr>
+			    <td>2</td>
+			    <td>3</td>
+			  </tr>
+			  <tr>
+			    <td>3</td>
+			    <td>4</td>
+			  </tr>
+			  <tr>
+			    <td>4</td>
+			    <td>5</td>
+			  </tr>
+			  <tr>
+			    <td>5</td>
+			    <td>8</td>
+			  </tr>
+			  <tr>
+			    <td>6</td>
+			    <td>10</td>
+			  </tr>
+			</table>
+
+			<p>12.9.1.	Os pontos serão computados a partir da aplicação da penalidade, com prazo de depuração de 12 (doze) meses.</p>
+			<p>12.9.2.	Sendo a infração objeto de recurso administrativo, os pontos correspondentes ficarão suspensos até o seu julgamento e, sendo mantida a penalidade, serão computados, observado o prazo de 12 (doze) meses, a contar da data da aplicação da penalidade.</p>
+				
+			<Comments :attr="{id:commentId(), context:'12.9.	A falha na execução do contrato estará configurada quando a CONTRATADA se enquadrar em pelo menos uma das situações previstas na Tabela...'}" v-if="estaConsulta.ativo == 1"></Comments>
+			
+			<h3>12.10.	A CONTRATADA estará sujeita às seguintes penalidades pecuniárias:</h3>
+			<p>12.10.1.	Multa 1% (um por cento) sobre o valor do Contrato por dia de atraso no início da prestação de serviços, até o máximo de 10 (dez) dias.</p>
+				<p class="s2">12.10.1.1.	No caso de atraso por período superior a 10 (dez) dias, poderá ser promovida, a critério exclusivo da contratante, a rescisão contratual, por culpa da contratada, aplicando-se a pena de multa de 20% (vinte por cento) do valor total do Contrato, além da possibilidade de aplicação da pena de suspensão temporária do direito de licitar e contratar com a Administração Pública, pelo prazo máximo de 02 (dois) anos.</p>
+			<p>12.10.2.	Multa por inexecução parcial do contrato: 20% (vinte por cento), sobre o valor mensal da parcela não executada, além da possibilidade de aplicação da pena de suspensão temporária do direito de licitar e contratar com a Administração Pública, pelo prazo máximo de 05 (cinco) anos.</p>
+			<p>12.10.3.	Multa por inexecução total do contrato: 30% (trinta por cento) sobre o valor total do contrato, além da possibilidade de aplicação da pena de suspensão temporária do direito de licitar e contratar com a Administração Pública, pelo prazo máximo de 02 (dois) anos.</p>
+			<p>12.10.4.	Pelo descumprimento das obrigações contratuais, a Administração aplicará multas conforme a graduação estabelecida na tabela 2, para os casos previstos na tabela 3.</p>
+
+			<table style="text-align: center;">
+			  <tr>
+			    <th colspan="2">TABELA 2</th>
+			  </tr>
+			  <tr>
+			    <th>GRAU</th>
+			    <th>CORRESPONDÊNCIA</th>
+			  </tr>
+			  <tr>
+			    <td>1</td>
+			    <td>0,2% do valor mensal do contrato</td>
+			  </tr>
+			  <tr>
+			    <td>2</td>
+			    <td>0,4% do valor mensal do contrato</td>
+			  </tr>
+			  <tr>
+			    <td>3</td>
+			    <td>0,8% do valor mensal do contrato</td>
+			  </tr>
+			  <tr>
+			    <td>4</td>
+			    <td>1,6% do valor mensal do contrato</td>
+			  </tr>
+			  <tr>
+			    <td>5</td>
+			    <td>3,2% do valor mensal do contrato</td>
+			  </tr>
+			  <tr>
+			    <td>6</td>
+			    <td>4,0% do valor mensal do contrato</td>
+			  </tr>
+			</table>
+
+			<table>
+			  <tr>
+			    <th colspan="4">TABELA 3</th>
+			  </tr>
+			  <tr>
+			    <th>ITEM</th>
+			    <th>DESCRIÇÃO</th>
+			    <th>GRAU</th>
+			    <th>INCIDÊNCIA</th>
+			  </tr>
+			  <tr>
+			    <td>1</td>
+			    <td>Manter empregado sem qualificação para a execução dos serviços.</td>
+			    <td>1</td>
+			    <td>Por empregado e por dia</td>
+			  </tr>
+			  <tr>
+			    <td>2</td>
+			    <td>Executarserviço incompleto, de baixa qualidade, paliativo, substitutivo como por caráter permanente, ou deixar de providenciar recomposição complementar.</td>
+			    <td>2</td>
+			    <td>Por ocorrência</td>
+			  </tr>
+			  <tr>
+			    <td>3</td>
+			    <td>Suspender ou interromper, salvo por motivo de força maior ou caso fortuito, os serviços contratuais.</td>
+			    <td>6</td>
+			    <td>Por dia </td>
+			  </tr>
+			  <tr>
+			    <td>4</td>
+			    <td>Destruir ou danificar documentos por culpa ou dolo de seus agentes.</td>
+			    <td>3</td>
+			    <td>Por ocorrência</td>
+			  </tr>
+			  <tr>
+			    <td>5</td>
+			    <td>Utilizar as dependências da CONTRATANTE para fins diversos do objeto do contrato.</td>
+			    <td>5</td>
+			    <td>Por ocorrência</td>
+			  </tr>
+			  <tr>
+			    <td>6</td>
+			    <td>Recusar-se a executar serviço determinado pela FISCALIZAÇÃO, sem motivo justificado.</td>
+			    <td>5</td>
+			    <td>Por ocorrência</td>
+			  </tr>
+			  <tr>
+			    <td colspan="4" style="font-weight: bold;">Para os itens a seguir: DEIXAR DE</td>
+			  </tr>
+			  <tr>
+			    <td>7</td>
+			    <td>Substituir empregado que tenha conduta inconveniente ou incompatível com suas atribuições.</td>
+			    <td>2</td>
+			    <td>Por empregado e por dia</td>
+			  </tr>
+			  <tr>
+			    <td>8</td>
+			    <td>Manter a documentação de habilitação atualizada.</td>
+			    <td>1</td>
+			    <td>Por item e por ocorrência</td>
+			  </tr>
+			  <tr>
+			    <td>9</td>
+			    <td>Cumprir horário estabelecido pelo contrato ou determinado pela FISCALIZAÇÃO.</td>
+			    <td>1</td>
+			    <td>Por ocorrência</td>
+			  </tr>
+			  <tr>
+			    <td>10</td>
+			    <td>Cumprir determinação formal ou instrução complementar da FISCALIZAÇÃO.</td>
+			    <td>2</td>
+			    <td>Por ocorrência</td>
+			  </tr>
+			  <tr>
+			    <td>11</td>
+			    <td>Efetuar a reposição de empregados faltosos.</td>
+			    <td>3</td>
+			    <td>Por ocorrência</td>
+			  </tr>
+			  <tr>
+			    <td>12</td>
+			    <td>Apresentar, quando solicitado, documentação fiscal, trabalhista, previdenciária e outros documentos necessários à comprovação do cumprimento dos demais encargos trabalhistas.</td>
+			    <td>2</td>
+			    <td>Por ocorrência e por dia</td>
+			  </tr>
+			  <tr>
+			    <td>13</td>
+			    <td>Entregar ou entregar com atraso ou incompleta a documentação exigida na cláusula referente às condições de pagamento.</td>
+			    <td>1</td>
+			    <td>Por ocorrência e por dia</td>
+			  </tr>
+			  <tr>
+			    <td>14</td>
+			    <td>Entregar ou entregar com atraso os esclarecimentos formais solicitados para sanar as inconsistências ou dúvidas suscitadas durante a análise da documentação exigida por força do contrato.</td>
+			    <td>2</td>
+			    <td>Por ocorrência e por dia</td>
+			  </tr>
+			  <tr>
+			    <td>15</td>
+			    <td>Cumprir quaisquer dos itens do contrato e seus anexos não previstos nesta tabela de multas</td>
+			    <td>1</td>
+			    <td>Por item e por ocorrência</td>
+			  </tr>
+			  <tr>
+			    <td>16</td>
+			    <td>Cumprir quaisquer dos itens do contrato e seus anexos não previstos nesta tabela de multas, após reincidência formalmente notificada pela unidade fiscalizadora.</td>
+			    <td>2</td>
+			    <td>Por item e por ocorrência</td>
+			  </tr>
+			  <tr>
+			    <td>17</td>
+			    <td>Atender aos itens constantes do Plano de Contingência</td>
+			    <td>4</td>
+			    <td>Por item e por ocorrência</td>
+			  </tr>
+			  <tr>
+			    <td>18</td>
+			    <td>Cumprir o atendimento de manutenção sistêmica, no prazo de até 4 (quatro) horas, em caso de problemas no sistema de front end</td>
+			    <td>3</td>
+			    <td>Por ocorrência e por hora de atraso</td>
+			  </tr>
+			</table>
+			<p>12.10.5.	Se, por qualquer meio, independentemente da existência de ação judicial, chegar ao conhecimento do gestor do contrato uma situação de inadimplemento com relação às obrigações trabalhistas, tais como salários, vales transporte, vales refeição, seguros, entre outros, previstos em lei ou instrumento normativo da categoria e constantes na planilha de composição de custo, caberá a autoridade apurá-la e, se o caso, garantido o contraditório, aplicar à contratada multa de 20% (vinte por cento), sobre o valor da parcela não executada, pelo descumprimento de obrigação contratual e, persistindo a situação, o contrato será rescindido.</p>
+				
+			<Comments :attr="{id:commentId(), context:'12.10.	A CONTRATADA estará sujeita às seguintes penalidades pecuniárias:'}" v-if="estaConsulta.ativo == 1"></Comments>
+			
+			<h3>12.11.	O valor da multa poderá ser descontado das faturas devidas à CONTRATADA, conforme dispõe o parágrafo único do artigo 55 do Decreto Municipal nº 44.279/2003.</h3>
+			<p>12.11.1.	Se o valor a ser pago à CONTRATADA não for suficiente para cobrir o valor da multa, a diferença será descontada da garantia contratual, quando exigida.</p>
+			<p>12.11.2.	Se os valores das faturas e da garantia forem insuficientes, fica a CONTRATADA obrigada a recolher a importância devida no prazo de 05 (cinco) dias úteis, contados da comunicação oficial.</p>
+			<p>12.11.3.	Esgotados os meios administrativos para cobrança do valor devido pela CONTRATADA à CONTRATANTE, este será encaminhado para inscrição em dívida ativa.</p>
+			<p>12.11.4.	Caso o valor da garantia seja utilizado no todo ou em parte para o pagamento da multa, esta deve ser complementada no prazo de até 10 (dez) dias úteis, contado da solicitação da CONTRATANTE.</p>
+			<p>12.11.5.	Caso haja rescisão, a mesma atrai os efeitos previstos no artigo 80 incisos I e IV da Lei Federal nº 8.666/93.</p>
+			<p>12.11.6.	Das decisões de aplicação de penalidade, caberá recurso nos termos do artigo 109 da Lei Federal 8.666/93 e Decreto Municipal nº 44.279/2003, observado os prazos nele fixados.</p>
+			<p>12.11.7.	No ato do oferecimento de recurso deverá ser recolhido o preço público devido, nos termos do que dispõe o artigo 17 do Decreto nº 51.714/2010.</p>
+				
+			<Comments :attr="{id:commentId(), context:'12.11.	O valor da multa poderá ser descontado das faturas devidas à CONTRATADA, conforme dispõe o parágrafo único do artigo 55 do Decreto Municipal nº 44.279/2003.'}" v-if="estaConsulta.ativo == 1"></Comments>
+
+		</section>
+		
+		<section>
+			<h2 class="titulo" indent="1">13.	DA FISCALIZAÇÃO DO CONTRATO</h2>
+			<h3>13.1.	A fiscalização do presente Contrato será exercida pela Secretaria Municipal de Inovação e Tecnologia - SMIT, por intermédio de servidor(es) designado(s) para tal finalidade, a quem competirá(ão) observar as atividades e os procedimentos necessários ao exercício das atribuições de fiscalização estabelecidas no Decreto nº 54.873 de 25 de Fevereiro de 2014, durante sua vigência.</h3>
+				
+			<Comments :attr="{id:commentId(), context:'13.1.	A fiscalização do presente Contrato será exercida pela Secretaria Municipal de Inovação e Tecnologia - SMIT...'}" v-if="estaConsulta.ativo == 1"></Comments>
+
+			<h3>13.2.	A fiscalização dos serviços pela Contratante não exime, nem diminui a completa responsabilidade da Contratada por qualquer inobservância ou omissão às cláusulas contratuais.</h3>
+			<p style="text-align: center; padding-top: 2em"><strong>ANEXO I</strong> - HISTÓRICO DE LIGAÇÕES E VOLUME - RECEPTIVO</p>
+			<p style="text-align: center;">PERÍODO DE MAIO/2016 À JULHO/2019</p>
+
+			<table>
+  <tr>
+    <th colspan="10">LIGAÇÕES RECEBIDAS POR GRUPO DE SERVIÇOS</th>
+  </tr>
+  <tr>
+    <th colspan="10">NÃO EMERGENCIAIS</th>
+  </tr>
+  <tr>
+    <th colspan="10">ANO 2016</th>
+  </tr>
+  <tr style="font-weight: bold; text-align: center; background-color: #ddd">
+    <td>SERVIÇOS</td>
+    <td>MAI</td>
+    <td>JUN</td>
+    <td>JUL</td>
+    <td>AGO</td>
+    <td>SET</td>
+    <td>OUT</td>
+    <td>NOV</td>
+    <td>DEZ</td>
+    <td>Total Geral</td>
+  </tr>
+  <tr>
+    <td>ASSISTÊNCIA SOCIAL</td>
+    <td>7.444</td>
+    <td>38.560</td>
+    <td>30.482</td>
+    <td>24.131</td>
+    <td>24.477</td>
+    <td>17.052</td>
+    <td>11.480</td>
+    <td>8.189</td>
+    <td>161.815</td>
+  </tr>
+  <tr>
+    <td>BILHETE ÚNICO</td>
+    <td>27.212</td>
+    <td>108.184</td>
+    <td>80.349</td>
+    <td>-  </td>
+    <td>-  </td>
+    <td>18.613</td>
+    <td>146.155</td>
+    <td>108.674</td>
+    <td>489.187</td>
+  </tr>
+  <tr>
+    <td>CET</td>
+    <td>586</td>
+    <td>1.679</td>
+    <td>1.753</td>
+    <td>-  </td>
+    <td>-  </td>
+    <td>-  </td>
+    <td>-  </td>
+    <td>-  </td>
+    <td>4.018</td>
+  </tr>
+  <tr>
+    <td>DEFESA CIVIL</td>
+    <td>1.859</td>
+    <td>6.508</td>
+    <td>4.125</td>
+    <td>-  </td>
+    <td>-  </td>
+    <td>-  </td>
+    <td>-  </td>
+    <td>-  </td>
+    <td>12.492</td>
+  </tr>
+  <tr>
+    <td>FINANÇAS</td>
+    <td>1.987</td>
+    <td>8.294</td>
+    <td>13.305</td>
+    <td>14.810</td>
+    <td>13.031</td>
+    <td>14.178</td>
+    <td>14.043</td>
+    <td>11.533</td>
+    <td>91.181</td>
+  </tr>
+  <tr>
+    <td>GERAL</td>
+    <td>31.425</td>
+    <td>120.817</td>
+    <td>85.792</td>
+    <td>-  </td>
+    <td>-  </td>
+    <td>-  </td>
+    <td>-  </td>
+    <td>-  </td>
+    <td>238.034</td>
+  </tr>
+  <tr>
+    <td>HSPM</td>
+    <td>9.684</td>
+    <td>39.350</td>
+    <td>57.908</td>
+    <td>60.726</td>
+    <td>54.772</td>
+    <td>85.739</td>
+    <td>87.790</td>
+    <td>41.019</td>
+    <td>436.988</td>
+  </tr>
+  <tr>
+    <td>OGM</td>
+    <td>-  </td>
+    <td>-  </td>
+    <td>-  </td>
+    <td>-  </td>
+    <td>-  </td>
+    <td>-  </td>
+    <td>-  </td>
+    <td>9.917</td>
+    <td>9.917</td>
+  </tr>
+  <tr>
+    <td>OUVIDORIA SUS</td>
+    <td>6.582</td>
+    <td>25.671</td>
+    <td>20.346</td>
+    <td>11.957</td>
+    <td>12.332</td>
+    <td>15.372</td>
+    <td>14.985</td>
+    <td>11.430</td>
+    <td>118.675</td>
+  </tr>
+  <tr>
+    <td>PROGRAMAS SOCIAIS</td>
+    <td>5.405</td>
+    <td>19.152</td>
+    <td>23.732</td>
+    <td>24.297</td>
+    <td>24.727</td>
+    <td>27.480</td>
+    <td>31.179</td>
+    <td>22.651</td>
+    <td>178.623</td>
+  </tr>
+  <tr>
+    <td>SERVIÇO FUNERÁRIO</td>
+    <td>1.680</td>
+    <td>6.105</td>
+    <td>3.380</td>
+    <td>-  </td>
+    <td>-  </td>
+    <td>-  </td>
+    <td>-  </td>
+    <td>-  </td>
+    <td>11.165</td>
+  </tr>
+  <tr>
+    <td>SPTRANS</td>
+    <td>16.108</td>
+    <td>64.975</td>
+    <td>49.406</td>
+    <td>-  </td>
+    <td>-  </td>
+    <td>-  </td>
+    <td>-  </td>
+    <td>-  </td>
+    <td>130.489</td>
+  </tr>
+  <tr>
+    <td>SUPORTE PORTAL </td>
+    <td>-  </td>
+    <td>-  </td>
+    <td>-  </td>
+    <td>-  </td>
+    <td>-  </td>
+    <td>-  </td>
+    <td>660</td>
+    <td>5.855</td>
+    <td>6.515</td>
+  </tr>
+  <tr>
+    <td>TRANSPORTE E TRÂNSITO</td>
+    <td>-  </td>
+    <td>-  </td>
+    <td>78.717</td>
+    <td>347.698</td>
+    <td>283.803</td>
+    <td>250.081</td>
+    <td>77.051</td>
+    <td>66.544</td>
+    <td>1.103.894</td>
+  </tr>
+  <tr>
+    <td>VIGILANCIA E SAUDE</td>
+    <td>2.796</td>
+    <td>12.081</td>
+    <td>10.284</td>
+    <td>8.939</td>
+    <td>7.369</td>
+    <td>8.795</td>
+    <td>8.950</td>
+    <td>7.418</td>
+    <td>66.632</td>
+  </tr>
+  <tr>
+    <td>ZELADORIA</td>
+    <td>-  </td>
+    <td>-  </td>
+    <td>38.267</td>
+    <td>152.656</td>
+    <td>138.148</td>
+    <td>157.451</td>
+    <td>148.937</td>
+    <td>133.215</td>
+    <td>768.674</td>
+  </tr>
+  <tr>
+    <td>Total Geral</td>
+    <td>112.768</td>
+    <td>451.376</td>
+    <td>497.846</td>
+    <td>645.214</td>
+    <td>558.659</td>
+    <td>594.761</td>
+    <td>541.230</td>
+    <td>426.445</td>
+    <td>3.828.299</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th colspan="14">LIGAÇÕES RECEBIDAS POR GRUPO DE SERVIÇOS </th>
+  </tr>
+  <tr>
+    <th colspan="14">NÃO EMERGENCIAIS</th>
+  </tr>
+  <tr>
+    <th colspan="14">ANO - 2017</th>
+  </tr>
+  <tr style="font-weight: bold; text-align: center; background-color: #ddd">
+    <td>SERVIÇOS</td>
+    <td>JAN</td>
+    <td>FEV</td>
+    <td>MAR</td>
+    <td>ABR</td>
+    <td>MAI</td>
+    <td>JUN</td>
+    <td>JUL</td>
+    <td>AGO</td>
+    <td>SET</td>
+    <td>OUT</td>
+    <td>NOV</td>
+    <td>DEZ</td>
+    <td>Total Geral</td>
+  </tr>
+  <tr>
+    <td>ASSISTÊNCIA SOCIAL </td>
+    <td>13.265</td>
+    <td>12.274</td>
+    <td>12.725</td>
+    <td>10.265</td>
+    <td>10.021</td>
+    <td>17.178</td>
+    <td>19.259</td>
+    <td>16.769</td>
+    <td>14.941</td>
+    <td>14.754</td>
+    <td>17.103</td>
+    <td>14.591</td>
+    <td>173.145</td>
+  </tr>
+  <tr>
+    <td>BILHETE ÚNICO</td>
+    <td>199.628</td>
+    <td>362.079</td>
+    <td>246.900</td>
+    <td>150.168</td>
+    <td>152.475</td>
+    <td>124.726</td>
+    <td>127.226</td>
+    <td>190.508</td>
+    <td>137.701</td>
+    <td>130.963</td>
+    <td>133.078</td>
+    <td>105.807</td>
+    <td>2.061.259</td>
+  </tr>
+  <tr>
+    <td>DEFESA CIVIL</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>327</td>
+    <td>2.475</td>
+    <td>1.888</td>
+    <td>2.460</td>
+    <td>2.288</td>
+    <td>3.792</td>
+    <td>14.020</td>
+    <td>13.287</td>
+    <td>40.537</td>
+  </tr>
+  <tr>
+    <td>FINANÇAS</td>
+    <td>14.059</td>
+    <td>17.887</td>
+    <td>11.848</td>
+    <td>7.841</td>
+    <td>9.540</td>
+    <td>9.277</td>
+    <td>13.445</td>
+    <td>12.053</td>
+    <td>14.785</td>
+    <td>16.663</td>
+    <td>12.470</td>
+    <td>11.582</td>
+    <td>151.450</td>
+  </tr>
+  <tr>
+    <td>HSPM</td>
+    <td>70.906</td>
+    <td>60.748</td>
+    <td>97.739</td>
+    <td>72.538</td>
+    <td>77.398</td>
+    <td>74.698</td>
+    <td>72.593</td>
+    <td>88.542</td>
+    <td>124.098</td>
+    <td>102.377</td>
+    <td>73.769</td>
+    <td>50.251</td>
+    <td>965.657</td>
+  </tr>
+  <tr>
+    <td>ILUMINAÇÃO</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>2.818</td>
+    <td>3.653</td>
+    <td>6.471</td>
+  </tr>
+  <tr>
+    <td>LOJA VIRTUAL</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>4.163</td>
+    <td>4.163</td>
+  </tr>
+  <tr>
+    <td>OGM</td>
+    <td>7.783</td>
+    <td>6.663</td>
+    <td>8.667</td>
+    <td>5.758</td>
+    <td>6.578</td>
+    <td>5.677</td>
+    <td>4.702</td>
+    <td>4.898</td>
+    <td>4.534</td>
+    <td>4.759</td>
+    <td>8.272</td>
+    <td>3.932</td>
+    <td>72.223</td>
+  </tr>
+  <tr>
+    <td>OUVIDORIA SUS</td>
+    <td>14.285</td>
+    <td>16.019</td>
+    <td>18.582</td>
+    <td>11.832</td>
+    <td>11.999</td>
+    <td>11.968</td>
+    <td>12.492</td>
+    <td>12.576</td>
+    <td>12.395</td>
+    <td>13.614</td>
+    <td>12.481</td>
+    <td>8.937</td>
+    <td>157.180</td>
+  </tr>
+  <tr>
+    <td>PROGRAMAS SOCIAIS</td>
+    <td>27.594</td>
+    <td>33.775</td>
+    <td>31.850</td>
+    <td>21.457</td>
+    <td>26.116</td>
+    <td>21.711</td>
+    <td>22.675</td>
+    <td>24.446</td>
+    <td>20.089</td>
+    <td>21.335</td>
+    <td>23.291</td>
+    <td>18.450</td>
+    <td>292.789</td>
+  </tr>
+  <tr>
+    <td>SPTRANS</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>3.069</td>
+    <td>50.322</td>
+    <td>50.389</td>
+    <td>36.519</td>
+    <td>140.299</td>
+  </tr>
+  <tr>
+    <td>SUPORTE PORTAL </td>
+    <td>9.391</td>
+    <td>8.520</td>
+    <td>8.074</td>
+    <td>5.740</td>
+    <td>6.149</td>
+    <td>4.924</td>
+    <td>4.373</td>
+    <td>5.410</td>
+    <td>4.772</td>
+    <td>31</td>
+    <td>4</td>
+    <td>-  </td>
+    <td>57.388</td>
+  </tr>
+  <tr>
+    <td>TRANSPORTE E TRÂNSITO</td>
+    <td>78.255</td>
+    <td>86.471</td>
+    <td>110.843</td>
+    <td>79.346</td>
+    <td>71.723</td>
+    <td>68.571</td>
+    <td>68.003</td>
+    <td>73.376</td>
+    <td>64.546</td>
+    <td>64.690</td>
+    <td>75.545</td>
+    <td>68.293</td>
+    <td>909.662</td>
+  </tr>
+  <tr>
+    <td>TRIAGEM OUVIDORIAS</td>
+    <td>27.337</td>
+    <td>36.202</td>
+    <td>35.543</td>
+    <td>21.637</td>
+    <td>25.230</td>
+    <td>23.040</td>
+    <td>21.758</td>
+    <td>25.691</td>
+    <td>24.628</td>
+    <td>25.101</td>
+    <td>18.395</td>
+    <td>42.342</td>
+    <td>326.904</td>
+  </tr>
+  <tr>
+    <td>VIGILANCIA E SAUDE</td>
+    <td>10.828</td>
+    <td>9.979</td>
+    <td>9.013</td>
+    <td>5.574</td>
+    <td>5.514</td>
+    <td>4.759</td>
+    <td>4.697</td>
+    <td>6.271</td>
+    <td>6.079</td>
+    <td>7.163</td>
+    <td>6.948</td>
+    <td>6.940</td>
+    <td>83.765</td>
+  </tr>
+  <tr>
+    <td>ZELADORIA</td>
+    <td>154.867</td>
+    <td>160.863</td>
+    <td>153.336</td>
+    <td>100.384</td>
+    <td>114.461</td>
+    <td>94.519</td>
+    <td>94.892</td>
+    <td>112.911</td>
+    <td>105.997</td>
+    <td>110.167</td>
+    <td>107.705</td>
+    <td>102.963</td>
+    <td>1.413.065</td>
+  </tr>
+  <tr>
+    <td>Total Geral</td>
+    <td>628.198</td>
+    <td>811.480</td>
+    <td>745.120</td>
+    <td>492.540</td>
+    <td>517.531</td>
+    <td>463.523</td>
+    <td>468.003</td>
+    <td>575.911</td>
+    <td>539.922</td>
+    <td>565.731</td>
+    <td>556.288</td>
+    <td>491.710</td>
+    <td>6.855.957</td>
+  </tr>
+</table>
+				
+			<Comments :attr="{id:commentId(), context:'13.2.	A fiscalização dos serviços pela Contratante não exime, nem diminui a completa responsabilidade da Contratada por qualquer inobservância ou omissão às cláusulas contratuais.'}" v-if="estaConsulta.ativo == 1"></Comments>
+			
+
+		</section>
+		
 
 
 		<section ref="allComments">
@@ -997,7 +2468,7 @@ ul > li > ul > li {
 .tab-header {
 	background-color: #bbb;
 }
-.tab-grid {
+table {
 	font-size: 22px;
 }
 

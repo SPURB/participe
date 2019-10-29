@@ -1481,7 +1481,7 @@
 					</a>
 				</li>
 				<li>
-					<a :href="src('arquivos/minuta-piu-setor-central/mapas/')">
+					<a :href="src('arquivos/minuta-piu-setor-central/mapas/Mapa_8_SCE996U008A.pdf')">
 						<i class="icon-pdf icon"><span>pdf</span></i>
 						<div>Mapa VIII: Perímetros especiais</div>
 						<span>7.4 Mb</span>

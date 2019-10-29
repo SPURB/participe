@@ -7,7 +7,7 @@
 			<div v-if="!isIE" class="cont" ref="layerStack">
 				<div class="layer" v-if="data.tipo === 'multi'" v-observe-visibility="{ callback: visibilityChanged, once: true }" :style="{ paddingTop: (data.mapH / data.mapW) * 100 + '%', width: '100%', height: '0' }" :data-image-path="data.base.path"></div>
 				<div
-					class="layer" 
+					class="layer"
 					v-for="(layer, index) in data.layers"
 					:class="{ visible: data.tipo == 'sequencial' && data.layers.indexOf(layer) === state }"
 					v-observe-visibility="{

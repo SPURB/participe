@@ -120,15 +120,15 @@ export default {
 		}
 	},
 	props: {
-		id: { 
+		id: {
 			type: Number,
-			required: true 
+			required: true
 		},
 		postid: {
 			type: Number,
 			required: true
 		},
-		context: { 
+		context: {
 			type: String,
 			required: false,
 			default: 'Pergunta'
@@ -167,7 +167,7 @@ export default {
 		},
 		goStep (num) {
 			if (this.step === 0) {
-				this.checkStorage(['form_name', 'form_surname', 'form_organization', 'form_email']) 
+				this.checkStorage(['form_name', 'form_surname', 'form_organization', 'form_email'])
 				this.setFormBtnState(['form_email', 'form_surname', 'form_name' ])
 			}
 			this.step = num

@@ -13,7 +13,7 @@
 		<section>
 			<h2 class="titulo" indent="1">1.	OBJETO</h2>
 			<h3>1.1.	Contratação de serviços de planejamento, implantação, operação, gerenciamento de central de atendimento e gestão de atendimento receptivo e ativo nas formas eletrônica e humana. </h3>
-			<Comments :attr="{id:commentId(true), context:'1.1.	Contratação de serviços de planejamento, implantação, operação, gerenciamento de central de atendimento e gestão de atendimento receptivo e ativo nas formas eletrônica e humana.'}" v-if="estaConsulta.ativo == 1"></Comments>
+			<Comments :attr="{id:commentId(true), context:'1. OBJETO'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section>
@@ -1881,544 +1881,42 @@
 				
 			<Comments :attr="{id:commentId(), context:'13.1.	A fiscalização do presente Contrato será exercida pela Secretaria Municipal de Inovação e Tecnologia - SMIT...'}" v-if="estaConsulta.ativo == 1"></Comments>
 
-			<h3>13.2.	A fiscalização dos serviços pela Contratante não exime, nem diminui a completa responsabilidade da Contratada por qualquer inobservância ou omissão às cláusulas contratuais.</h3>
-			<p style="text-align: center; padding-top: 2em"><strong>ANEXO I</strong> - HISTÓRICO DE LIGAÇÕES E VOLUME - RECEPTIVO</p>
-			<p style="text-align: center;">PERÍODO DE MAIO/2016 À JULHO/2019</p>
-
-			<table>
-			  <tr>
-			    <th colspan="10">LIGAÇÕES RECEBIDAS POR GRUPO DE SERVIÇOS</th>
-			  </tr>
-			  <tr>
-			    <th colspan="10">NÃO EMERGENCIAIS</th>
-			  </tr>
-			  <tr>
-			    <th colspan="10">ANO 2016</th>
-			  </tr>
-			  <tr style="font-weight: bold; text-align: center; background-color: #ddd">
-			    <td>SERVIÇOS</td>
-			    <td>MAI</td>
-			    <td>JUN</td>
-			    <td>JUL</td>
-			    <td>AGO</td>
-			    <td>SET</td>
-			    <td>OUT</td>
-			    <td>NOV</td>
-			    <td>DEZ</td>
-			    <td>Total Geral</td>
-			  </tr>
-			  <tr>
-			    <td>ASSISTÊNCIA SOCIAL</td>
-			    <td>7.444</td>
-			    <td>38.560</td>
-			    <td>30.482</td>
-			    <td>24.131</td>
-			    <td>24.477</td>
-			    <td>17.052</td>
-			    <td>11.480</td>
-			    <td>8.189</td>
-			    <td>161.815</td>
-			  </tr>
-			  <tr>
-			    <td>BILHETE ÚNICO</td>
-			    <td>27.212</td>
-			    <td>108.184</td>
-			    <td>80.349</td>
-			    <td>-  </td>
-			    <td>-  </td>
-			    <td>18.613</td>
-			    <td>146.155</td>
-			    <td>108.674</td>
-			    <td>489.187</td>
-			  </tr>
-			  <tr>
-			    <td>CET</td>
-			    <td>586</td>
-			    <td>1.679</td>
-			    <td>1.753</td>
-			    <td>-  </td>
-			    <td>-  </td>
-			    <td>-  </td>
-			    <td>-  </td>
-			    <td>-  </td>
-			    <td>4.018</td>
-			  </tr>
-			  <tr>
-			    <td>DEFESA CIVIL</td>
-			    <td>1.859</td>
-			    <td>6.508</td>
-			    <td>4.125</td>
-			    <td>-  </td>
-			    <td>-  </td>
-			    <td>-  </td>
-			    <td>-  </td>
-			    <td>-  </td>
-			    <td>12.492</td>
-			  </tr>
-			  <tr>
-			    <td>FINANÇAS</td>
-			    <td>1.987</td>
-			    <td>8.294</td>
-			    <td>13.305</td>
-			    <td>14.810</td>
-			    <td>13.031</td>
-			    <td>14.178</td>
-			    <td>14.043</td>
-			    <td>11.533</td>
-			    <td>91.181</td>
-			  </tr>
-			  <tr>
-			    <td>GERAL</td>
-			    <td>31.425</td>
-			    <td>120.817</td>
-			    <td>85.792</td>
-			    <td>-  </td>
-			    <td>-  </td>
-			    <td>-  </td>
-			    <td>-  </td>
-			    <td>-  </td>
-			    <td>238.034</td>
-			  </tr>
-			  <tr>
-			    <td>HSPM</td>
-			    <td>9.684</td>
-			    <td>39.350</td>
-			    <td>57.908</td>
-			    <td>60.726</td>
-			    <td>54.772</td>
-			    <td>85.739</td>
-			    <td>87.790</td>
-			    <td>41.019</td>
-			    <td>436.988</td>
-			  </tr>
-			  <tr>
-			    <td>OGM</td>
-			    <td>-  </td>
-			    <td>-  </td>
-			    <td>-  </td>
-			    <td>-  </td>
-			    <td>-  </td>
-			    <td>-  </td>
-			    <td>-  </td>
-			    <td>9.917</td>
-			    <td>9.917</td>
-			  </tr>
-			  <tr>
-			    <td>OUVIDORIA SUS</td>
-			    <td>6.582</td>
-			    <td>25.671</td>
-			    <td>20.346</td>
-			    <td>11.957</td>
-			    <td>12.332</td>
-			    <td>15.372</td>
-			    <td>14.985</td>
-			    <td>11.430</td>
-			    <td>118.675</td>
-			  </tr>
-			  <tr>
-			    <td>PROGRAMAS SOCIAIS</td>
-			    <td>5.405</td>
-			    <td>19.152</td>
-			    <td>23.732</td>
-			    <td>24.297</td>
-			    <td>24.727</td>
-			    <td>27.480</td>
-			    <td>31.179</td>
-			    <td>22.651</td>
-			    <td>178.623</td>
-			  </tr>
-			  <tr>
-			    <td>SERVIÇO FUNERÁRIO</td>
-			    <td>1.680</td>
-			    <td>6.105</td>
-			    <td>3.380</td>
-			    <td>-  </td>
-			    <td>-  </td>
-			    <td>-  </td>
-			    <td>-  </td>
-			    <td>-  </td>
-			    <td>11.165</td>
-			  </tr>
-			  <tr>
-			    <td>SPTRANS</td>
-			    <td>16.108</td>
-			    <td>64.975</td>
-			    <td>49.406</td>
-			    <td>-  </td>
-			    <td>-  </td>
-			    <td>-  </td>
-			    <td>-  </td>
-			    <td>-  </td>
-			    <td>130.489</td>
-			  </tr>
-			  <tr>
-			    <td>SUPORTE PORTAL </td>
-			    <td>-  </td>
-			    <td>-  </td>
-			    <td>-  </td>
-			    <td>-  </td>
-			    <td>-  </td>
-			    <td>-  </td>
-			    <td>660</td>
-			    <td>5.855</td>
-			    <td>6.515</td>
-			  </tr>
-			  <tr>
-			    <td>TRANSPORTE E TRÂNSITO</td>
-			    <td>-  </td>
-			    <td>-  </td>
-			    <td>78.717</td>
-			    <td>347.698</td>
-			    <td>283.803</td>
-			    <td>250.081</td>
-			    <td>77.051</td>
-			    <td>66.544</td>
-			    <td>1.103.894</td>
-			  </tr>
-			  <tr>
-			    <td>VIGILANCIA E SAUDE</td>
-			    <td>2.796</td>
-			    <td>12.081</td>
-			    <td>10.284</td>
-			    <td>8.939</td>
-			    <td>7.369</td>
-			    <td>8.795</td>
-			    <td>8.950</td>
-			    <td>7.418</td>
-			    <td>66.632</td>
-			  </tr>
-			  <tr>
-			    <td>ZELADORIA</td>
-			    <td>-  </td>
-			    <td>-  </td>
-			    <td>38.267</td>
-			    <td>152.656</td>
-			    <td>138.148</td>
-			    <td>157.451</td>
-			    <td>148.937</td>
-			    <td>133.215</td>
-			    <td>768.674</td>
-			  </tr>
-			  <tr>
-			    <td>Total Geral</td>
-			    <td>112.768</td>
-			    <td>451.376</td>
-			    <td>497.846</td>
-			    <td>645.214</td>
-			    <td>558.659</td>
-			    <td>594.761</td>
-			    <td>541.230</td>
-			    <td>426.445</td>
-			    <td>3.828.299</td>
-			  </tr>
-			</table>
-
-			<table>
-			  <tr>
-			    <th colspan="14">LIGAÇÕES RECEBIDAS POR GRUPO DE SERVIÇOS </th>
-			  </tr>
-			  <tr>
-			    <th colspan="14">NÃO EMERGENCIAIS</th>
-			  </tr>
-			  <tr>
-			    <th colspan="14">ANO - 2017</th>
-			  </tr>
-			  <tr style="font-weight: bold; text-align: center; background-color: #ddd">
-			    <td>SERVIÇOS</td>
-			    <td>JAN</td>
-			    <td>FEV</td>
-			    <td>MAR</td>
-			    <td>ABR</td>
-			    <td>MAI</td>
-			    <td>JUN</td>
-			    <td>JUL</td>
-			    <td>AGO</td>
-			    <td>SET</td>
-			    <td>OUT</td>
-			    <td>NOV</td>
-			    <td>DEZ</td>
-			    <td>Total Geral</td>
-			  </tr>
-			  <tr>
-			    <td>ASSISTÊNCIA SOCIAL </td>
-			    <td>13.265</td>
-			    <td>12.274</td>
-			    <td>12.725</td>
-			    <td>10.265</td>
-			    <td>10.021</td>
-			    <td>17.178</td>
-			    <td>19.259</td>
-			    <td>16.769</td>
-			    <td>14.941</td>
-			    <td>14.754</td>
-			    <td>17.103</td>
-			    <td>14.591</td>
-			    <td>173.145</td>
-			  </tr>
-			  <tr>
-			    <td>BILHETE ÚNICO</td>
-			    <td>199.628</td>
-			    <td>362.079</td>
-			    <td>246.900</td>
-			    <td>150.168</td>
-			    <td>152.475</td>
-			    <td>124.726</td>
-			    <td>127.226</td>
-			    <td>190.508</td>
-			    <td>137.701</td>
-			    <td>130.963</td>
-			    <td>133.078</td>
-			    <td>105.807</td>
-			    <td>2.061.259</td>
-			  </tr>
-			  <tr>
-			    <td>DEFESA CIVIL</td>
-			    <td>-</td>
-			    <td>-</td>
-			    <td>-</td>
-			    <td>-</td>
-			    <td>327</td>
-			    <td>2.475</td>
-			    <td>1.888</td>
-			    <td>2.460</td>
-			    <td>2.288</td>
-			    <td>3.792</td>
-			    <td>14.020</td>
-			    <td>13.287</td>
-			    <td>40.537</td>
-			  </tr>
-			  <tr>
-			    <td>FINANÇAS</td>
-			    <td>14.059</td>
-			    <td>17.887</td>
-			    <td>11.848</td>
-			    <td>7.841</td>
-			    <td>9.540</td>
-			    <td>9.277</td>
-			    <td>13.445</td>
-			    <td>12.053</td>
-			    <td>14.785</td>
-			    <td>16.663</td>
-			    <td>12.470</td>
-			    <td>11.582</td>
-			    <td>151.450</td>
-			  </tr>
-			  <tr>
-			    <td>HSPM</td>
-			    <td>70.906</td>
-			    <td>60.748</td>
-			    <td>97.739</td>
-			    <td>72.538</td>
-			    <td>77.398</td>
-			    <td>74.698</td>
-			    <td>72.593</td>
-			    <td>88.542</td>
-			    <td>124.098</td>
-			    <td>102.377</td>
-			    <td>73.769</td>
-			    <td>50.251</td>
-			    <td>965.657</td>
-			  </tr>
-			  <tr>
-			    <td>ILUMINAÇÃO</td>
-			    <td>-</td>
-			    <td>-</td>
-			    <td>-</td>
-			    <td>-</td>
-			    <td>-</td>
-			    <td>-</td>
-			    <td>-</td>
-			    <td>-</td>
-			    <td>-</td>
-			    <td>-</td>
-			    <td>2.818</td>
-			    <td>3.653</td>
-			    <td>6.471</td>
-			  </tr>
-			  <tr>
-			    <td>LOJA VIRTUAL</td>
-			    <td>-</td>
-			    <td>-</td>
-			    <td>-</td>
-			    <td>-</td>
-			    <td>-</td>
-			    <td>-</td>
-			    <td>-</td>
-			    <td>-</td>
-			    <td>-</td>
-			    <td>-</td>
-			    <td>-</td>
-			    <td>4.163</td>
-			    <td>4.163</td>
-			  </tr>
-			  <tr>
-			    <td>OGM</td>
-			    <td>7.783</td>
-			    <td>6.663</td>
-			    <td>8.667</td>
-			    <td>5.758</td>
-			    <td>6.578</td>
-			    <td>5.677</td>
-			    <td>4.702</td>
-			    <td>4.898</td>
-			    <td>4.534</td>
-			    <td>4.759</td>
-			    <td>8.272</td>
-			    <td>3.932</td>
-			    <td>72.223</td>
-			  </tr>
-			  <tr>
-			    <td>OUVIDORIA SUS</td>
-			    <td>14.285</td>
-			    <td>16.019</td>
-			    <td>18.582</td>
-			    <td>11.832</td>
-			    <td>11.999</td>
-			    <td>11.968</td>
-			    <td>12.492</td>
-			    <td>12.576</td>
-			    <td>12.395</td>
-			    <td>13.614</td>
-			    <td>12.481</td>
-			    <td>8.937</td>
-			    <td>157.180</td>
-			  </tr>
-			  <tr>
-			    <td>PROGRAMAS SOCIAIS</td>
-			    <td>27.594</td>
-			    <td>33.775</td>
-			    <td>31.850</td>
-			    <td>21.457</td>
-			    <td>26.116</td>
-			    <td>21.711</td>
-			    <td>22.675</td>
-			    <td>24.446</td>
-			    <td>20.089</td>
-			    <td>21.335</td>
-			    <td>23.291</td>
-			    <td>18.450</td>
-			    <td>292.789</td>
-			  </tr>
-			  <tr>
-			    <td>SPTRANS</td>
-			    <td>-</td>
-			    <td>-</td>
-			    <td>-</td>
-			    <td>-</td>
-			    <td>-</td>
-			    <td>-</td>
-			    <td>-</td>
-			    <td>-</td>
-			    <td>3.069</td>
-			    <td>50.322</td>
-			    <td>50.389</td>
-			    <td>36.519</td>
-			    <td>140.299</td>
-			  </tr>
-			  <tr>
-			    <td>SUPORTE PORTAL </td>
-			    <td>9.391</td>
-			    <td>8.520</td>
-			    <td>8.074</td>
-			    <td>5.740</td>
-			    <td>6.149</td>
-			    <td>4.924</td>
-			    <td>4.373</td>
-			    <td>5.410</td>
-			    <td>4.772</td>
-			    <td>31</td>
-			    <td>4</td>
-			    <td>-  </td>
-			    <td>57.388</td>
-			  </tr>
-			  <tr>
-			    <td>TRANSPORTE E TRÂNSITO</td>
-			    <td>78.255</td>
-			    <td>86.471</td>
-			    <td>110.843</td>
-			    <td>79.346</td>
-			    <td>71.723</td>
-			    <td>68.571</td>
-			    <td>68.003</td>
-			    <td>73.376</td>
-			    <td>64.546</td>
-			    <td>64.690</td>
-			    <td>75.545</td>
-			    <td>68.293</td>
-			    <td>909.662</td>
-			  </tr>
-			  <tr>
-			    <td>TRIAGEM OUVIDORIAS</td>
-			    <td>27.337</td>
-			    <td>36.202</td>
-			    <td>35.543</td>
-			    <td>21.637</td>
-			    <td>25.230</td>
-			    <td>23.040</td>
-			    <td>21.758</td>
-			    <td>25.691</td>
-			    <td>24.628</td>
-			    <td>25.101</td>
-			    <td>18.395</td>
-			    <td>42.342</td>
-			    <td>326.904</td>
-			  </tr>
-			  <tr>
-			    <td>VIGILANCIA E SAUDE</td>
-			    <td>10.828</td>
-			    <td>9.979</td>
-			    <td>9.013</td>
-			    <td>5.574</td>
-			    <td>5.514</td>
-			    <td>4.759</td>
-			    <td>4.697</td>
-			    <td>6.271</td>
-			    <td>6.079</td>
-			    <td>7.163</td>
-			    <td>6.948</td>
-			    <td>6.940</td>
-			    <td>83.765</td>
-			  </tr>
-			  <tr>
-			    <td>ZELADORIA</td>
-			    <td>154.867</td>
-			    <td>160.863</td>
-			    <td>153.336</td>
-			    <td>100.384</td>
-			    <td>114.461</td>
-			    <td>94.519</td>
-			    <td>94.892</td>
-			    <td>112.911</td>
-			    <td>105.997</td>
-			    <td>110.167</td>
-			    <td>107.705</td>
-			    <td>102.963</td>
-			    <td>1.413.065</td>
-			  </tr>
-			  <tr>
-			    <td>Total Geral</td>
-			    <td>628.198</td>
-			    <td>811.480</td>
-			    <td>745.120</td>
-			    <td>492.540</td>
-			    <td>517.531</td>
-			    <td>463.523</td>
-			    <td>468.003</td>
-			    <td>575.911</td>
-			    <td>539.922</td>
-			    <td>565.731</td>
-			    <td>556.288</td>
-			    <td>491.710</td>
-			    <td>6.855.957</td>
-			  </tr>
-			</table>
-				
-			<Comments :attr="{id:commentId(), context:'13.2.	A fiscalização dos serviços pela Contratante não exime, nem diminui a completa responsabilidade da Contratada por qualquer inobservância ou omissão às cláusulas contratuais.'}" v-if="estaConsulta.ativo == 1"></Comments>
-			
-
+			<h3>13.2.	A fiscalização dos serviços pela Contratante não exime, nem diminui a completa responsabilidade da Contratada por qualquer inobservância ou omissão às cláusulas contratuais.</h3>				
+			<Comments :attr="{id:commentId(), context:'13.2.	A fiscalização dos serviços pela Contratante...'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
-		
 
+		<section>
+			<h2 class="titulo" indent="1"><a :href="fileSrc('ANEXO_I.pdf')" target="_blank">ANEXO I - HISTÓRICO DE LIGAÇÕES E VOLUME - RECEPTIVO</a></h2>
+			<p>
+				<embed :src="fileSrc('ANEXO_I.pdf')" width="700" height="500" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+			</p>
+			<Comments :attr="{id:commentId(), context:'ANEXO I - HISTÓRICO DE LIGAÇÕES E VOLUME - RECEPTIVO'}" v-if="estaConsulta.ativo == 1"></Comments>
+		</section>
+
+		<section>
+			<h2 class="titulo" indent="1"><a :href="fileSrc('ANEXO_II.pdf')" target="_blank">ANEXO II - HISTÓRICO DE LIGAÇÕES E VOLUME - ATIVO</a></h2>
+			<p>
+				<embed :src="fileSrc('ANEXO_II.pdf')" width="700" height="500" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+			</p>
+			<Comments :attr="{id:commentId(), context:'ANEXO II - HISTÓRICO DE LIGAÇÕES E VOLUME - ATIVO'}" v-if="estaConsulta.ativo == 1"></Comments>
+		</section>
+
+
+		<section>
+			<h2 class="titulo" indent="1"><a :href="fileSrc('ANEXO_III.pdf')" target="_blank">ANEXO III - HISTÓRICO DE VOLUMETRIA DE ATENDIMENTOS VIA CHAT</a></h2>
+			<p>
+				<embed :src="fileSrc('ANEXO_III.pdf')" width="700" height="500" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+			</p>
+			<Comments :attr="{id:commentId(), context:'ANEXO III - HISTÓRICO DE VOLUMETRIA DE ATENDIMENTOS VIA CHAT'}" v-if="estaConsulta.ativo == 1"></Comments>
+		</section>
+
+		<section>
+			<h2 class="titulo" indent="1"><a :href="fileSrc('ANEXO_IV.pdf')" target="_blank">ANEXO IV - MODELO DE ACORDO DE NÍVEL DE SERVIÇO</a></h2>
+			<p>
+				<embed :src="fileSrc('ANEXO_IV.pdf')" width="700" height="500" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+			</p>
+			<Comments :attr="{id:commentId(), context:'ANEXO IV - MODELO DE ACORDO DE NÍVEL DE SERVIÇO'}" v-if="estaConsulta.ativo == 1"></Comments>
+		</section>
 
 		<section ref="allComments">
 			<h2 v-show="commentsLoaded" class="titulo" indent="1">Contribuições</h2>
@@ -2456,7 +1954,13 @@ export default {
 		Imagem
 		// Apoio
 	},
-	mixins: [ consultasCommons ]
+	mixins: [ consultasCommons ],
+	methods: {
+		fileSrc (fileName) {
+			let url = this.$store.getters.basePath + 'arquivos/tr-contact-center/' + fileName
+			return url.toString()
+		}
+	}
 }
 </script>
 
@@ -2487,5 +1991,7 @@ p.s2 {
 p.s3 {
 	padding-left: 4em;
 }
-
+h2.titulo > a {
+	color: black;
+}
 </style>

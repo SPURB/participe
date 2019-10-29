@@ -216,7 +216,7 @@ export default {
 		&.sucesso {
 			margin-bottom: 1em;
 			&::after {
-				content: 'Comentário enviado';
+				content: 'Agradecemos a sua contribuição! O comentário estará disponível em breve, após a aprovação da Prefeitura.';
 				line-height: 1.3;
 				background-color: $verde;
 				padding: .7em;

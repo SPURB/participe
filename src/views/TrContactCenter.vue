@@ -1,6 +1,6 @@
 <template>
 	<div class="TrContactCenter" ref="conteudoConsulta">
-		<PageTop background_image_src="arquivos/capas/placeholder_480w.jpg" :esta_consulta="estaConsulta">
+		<PageTop background_image_src="arquivos/capas/capa_tr_contact_center.jpg" :esta_consulta="estaConsulta">
 			<!-- <template slot="titulo"><div>Termo de Referencia para contratação de serviços de planejamento, implantação, operação, gerenciamento de central de atendimento e gestão de atendimento receptivo e ativo nas formas eletrônica e humana.</div></template> -->
 			<template slot="titulo"><div>Minuta - Termo de Referência para Contact Center</div></template>
 			<template slot="subtitulo"><div>Termo de Referencia para contratação de serviços de planejamento, implantação, operação, gerenciamento de central de atendimento e gestão de atendimento receptivo e ativo nas formas eletrônica e humana.</div></template>
@@ -303,37 +303,38 @@
 				<p class="s2">3.12.5.1.	Disponibilizar e manter a infraestrutura de telecomunicações, incluindo URA – Unidade de Resposta Audível, CTI – Computer Telephony Integration, DAC – Distribuidor Automático de Chamadas, Ramal, sistemas de gravação e licenças necessárias.</p>
 				
 			<Comments :attr="{id:commentId(), context:'3.12.	Plano de Contingência da Central de Atendimento '}" v-if="estaConsulta.ativo == 1"></Comments>
-			<section>
-				<h2 class="titulo" indent="1">4.	Especificação dos serviços</h2>
-				<h3>4.1.	Implantação do Canal de Atendimento – Contact Center</h3>
-				<p>4.1.1.	São responsabilidades da CONTRATADA</p>
-					<p class="s2">4.1.1.1.	Disponibilizar e manter espaço físico em local próprio situado dentro dos limites da cidade de São Paulo que comporte a operação do Contact Center durante o período de contrato (“Instalação da Central de Atendimento”)</p>
-					<p class="s2">4.1.1.2.	Apresentar Plano de Contingência executável quando do impedimento do funcionamento da Instalação da Central de Atendimento, capaz de suportar 50% do volume de chamadas ativas e receptivas previstas neste edital em site no município de São Paulo. Em caso de necessidade de utilização do Plano de Contingência, os atendentes envolvidos no Plano deverão atuar exclusivamente para Prefeitura de São Paulo.</p>
-					<p class="s2">4.1.1.3.	Disponibilizar e manter a infraestrutura tecnológica para suportar a operação do Contact Center</p>
-					<p class="s2">4.1.1.4.	A CONTRATADA deverá disponibilizar os recursos e esforços, humanos e tecnológicos, necessários para promover a integração dos recursos de atendimento eletrônico, quer sejam: URA, DAC ou CTI, que forem responsáveis pela geração de protocolos de atendimento, ao Sistema de Gestão de Atendimento que será disponibilizado pela CONTRATANTE, conforme item 3.10.1.</p>
+		</section>
+		<section>
+			<h2 class="titulo" indent="1">4.	Especificação dos serviços</h2>
+			<h3>4.1.	Implantação do Canal de Atendimento – Contact Center</h3>
+			<p>4.1.1.	São responsabilidades da CONTRATADA</p>
+				<p class="s2">4.1.1.1.	Disponibilizar e manter espaço físico em local próprio situado dentro dos limites da cidade de São Paulo que comporte a operação do Contact Center durante o período de contrato (“Instalação da Central de Atendimento”)</p>
+				<p class="s2">4.1.1.2.	Apresentar Plano de Contingência executável quando do impedimento do funcionamento da Instalação da Central de Atendimento, capaz de suportar 50% do volume de chamadas ativas e receptivas previstas neste edital em site no município de São Paulo. Em caso de necessidade de utilização do Plano de Contingência, os atendentes envolvidos no Plano deverão atuar exclusivamente para Prefeitura de São Paulo.</p>
+				<p class="s2">4.1.1.3.	Disponibilizar e manter a infraestrutura tecnológica para suportar a operação do Contact Center</p>
+				<p class="s2">4.1.1.4.	A CONTRATADA deverá disponibilizar os recursos e esforços, humanos e tecnológicos, necessários para promover a integração dos recursos de atendimento eletrônico, quer sejam: URA, DAC ou CTI, que forem responsáveis pela geração de protocolos de atendimento, ao Sistema de Gestão de Atendimento que será disponibilizado pela CONTRATANTE, conforme item 3.10.1.</p>
 
-					
-				<Comments :attr="{id:commentId(), context:'subtitulo'}" v-if="estaConsulta.ativo == 1"></Comments>
-				<h3>4.2.	Serviços de Operação do Atendimento</h3>
-				<p>4.2.1.	O Serviço de Operação do Atendimento ao munícipe, por meio dos número telefônicos 156, 199 e 153 compreende a utilização de recursos eletrônicos (unidade de resposta audível – URA) e humanos.</p>
-				<p>4.2.2.	A estrutura de árvore de voz da URA será feito em conjunto pela CONTRATADA e a equipe da Prefeitura do Município de São Paulo.</p>
-				<p>4.2.3.	A(s) URA(s) devem contemplar a possibilidade de, em horários determinados pela CONTRATANTE, ser(em) ajustada(s) para possuir menos opções, agilizando o atendimento ao munícipe</p>
-				<p>4.2.4.	Todos os atendimentos relacionados aos diversos serviços pertinentes aos número telefônicos 156, 199 e 153 serão realizados inicialmente pela Unidade de Resposta Audível (URA) e, se for necessário, direcionados para um operador (atendimento humano receptivo), por meio de menu interativo acionado pelo usuário.</p>
-				<p class="s2">4.2.4.1.	No caso de URA inoperante, por qualquer motivo, a ligação deverá ser transferida para o atendimento humano imediatamente, até que o problema seja sanado e o atendimento eletrônico normalizado.</p>
-				<p class="s2">4.2.4.2.	A(s) URA(s) devem contemplar a possibilidade de que informações e/ou solicitações possam ser transmitidas e/ou abertas sem necessidade de direcionamento para um operador (atendimento humano receptivo).</p>
-				<p class="s3">4.2.4.2.1.	Esta atividade pode gerar a necessidade de integração entre sistemas, recursos e esforços, humanos e tecnológicos, com custo de desenvolvimento sob responsabilidade da CONTRATADA</p>
-		<p>4.2.5.	Por meio da URA poderão ser veiculadas mensagens informativas associadas a projetos, políticas, programas e campanhas realizadas pela Prefeitura do Município de São Paulo.</p>
-		<p>4.2.6.	A URA deverá prever a exibição de gravações institucionais durante o período de espera, de acordo com as necessidades da CONTRATANTE.</p>
-		<p>4.2.7.	A URA também deverá registrar pesquisa de satisfação ao final dos atendimentos concluídos pelos operadores.</p>
-		<p>4.2.8.	Fraseologias</p>
-			<p class="s2">4.2.8.1.	A elaboração das fraseologias utilizadas na URA será realizada conjuntamente e de comum acordo entre as partes.</p>
-			<p class="s2">4.2.8.2.	As gravações de fraseologias serão efetuadas pela CONTRATADA e deverão ser submetidas à análise e aprovação da CONTRATANTE, antes de serem programadas, testadas e efetivamente ativadas.</p>
-			<p class="s2">4.2.8.3.	As gravações de fraseologias da URA deverão ser feitas preferencialmente em estúdio, salvo os casos emergenciais, que poderão ser realizadas pela própria empresa, utilizando os recursos disponíveis através de tecnologia TTS (Text-To-Speech).</p>
-			<p class="s2">4.2.8.4.	A Prefeitura do Município de São Paulo poderá especificar novas mensagens a serem implementadas na URA, e deverão estar disponibilizadas e operantes em prazo máximo de 5 dias corridos, contados após o recebimento de comunicação formal.</p>
-				<p class="s3">4.2.8.4.1.	Em caso de fraseologias emergenciais, a serem assim determinadas pela CONTRATANTE, deverão ser implantadas e/ou removidas em até 01h.</p>
-		<p>4.2.9.	Atendimento Humano</p>
-			<p class="s2">4.2.9.1.	Serviço de atendimento telefônico receptivo e ativo a ser realizado por operador alocado em uma mesma posição de atendimento.</p>
-			<p class="s2">4.2.9.2.	O atendimento será efetuado por operador definido como generalista (multiperfil) ou especialista (dedicado), de acordo com as especificidades ou volume de demanda comportado por cada assunto.</p>
+				
+			<Comments :attr="{id:commentId(), context:'subtitulo'}" v-if="estaConsulta.ativo == 1"></Comments>
+			<h3>4.2.	Serviços de Operação do Atendimento</h3>
+			<p>4.2.1.	O Serviço de Operação do Atendimento ao munícipe, por meio dos número telefônicos 156, 199 e 153 compreende a utilização de recursos eletrônicos (unidade de resposta audível – URA) e humanos.</p>
+			<p>4.2.2.	A estrutura de árvore de voz da URA será feito em conjunto pela CONTRATADA e a equipe da Prefeitura do Município de São Paulo.</p>
+			<p>4.2.3.	A(s) URA(s) devem contemplar a possibilidade de, em horários determinados pela CONTRATANTE, ser(em) ajustada(s) para possuir menos opções, agilizando o atendimento ao munícipe</p>
+			<p>4.2.4.	Todos os atendimentos relacionados aos diversos serviços pertinentes aos número telefônicos 156, 199 e 153 serão realizados inicialmente pela Unidade de Resposta Audível (URA) e, se for necessário, direcionados para um operador (atendimento humano receptivo), por meio de menu interativo acionado pelo usuário.</p>
+			<p class="s2">4.2.4.1.	No caso de URA inoperante, por qualquer motivo, a ligação deverá ser transferida para o atendimento humano imediatamente, até que o problema seja sanado e o atendimento eletrônico normalizado.</p>
+			<p class="s2">4.2.4.2.	A(s) URA(s) devem contemplar a possibilidade de que informações e/ou solicitações possam ser transmitidas e/ou abertas sem necessidade de direcionamento para um operador (atendimento humano receptivo).</p>
+			<p class="s3">4.2.4.2.1.	Esta atividade pode gerar a necessidade de integração entre sistemas, recursos e esforços, humanos e tecnológicos, com custo de desenvolvimento sob responsabilidade da CONTRATADA</p>
+			<p>4.2.5.	Por meio da URA poderão ser veiculadas mensagens informativas associadas a projetos, políticas, programas e campanhas realizadas pela Prefeitura do Município de São Paulo.</p>
+			<p>4.2.6.	A URA deverá prever a exibição de gravações institucionais durante o período de espera, de acordo com as necessidades da CONTRATANTE.</p>
+			<p>4.2.7.	A URA também deverá registrar pesquisa de satisfação ao final dos atendimentos concluídos pelos operadores.</p>
+			<p>4.2.8.	Fraseologias</p>
+				<p class="s2">4.2.8.1.	A elaboração das fraseologias utilizadas na URA será realizada conjuntamente e de comum acordo entre as partes.</p>
+				<p class="s2">4.2.8.2.	As gravações de fraseologias serão efetuadas pela CONTRATADA e deverão ser submetidas à análise e aprovação da CONTRATANTE, antes de serem programadas, testadas e efetivamente ativadas.</p>
+				<p class="s2">4.2.8.3.	As gravações de fraseologias da URA deverão ser feitas preferencialmente em estúdio, salvo os casos emergenciais, que poderão ser realizadas pela própria empresa, utilizando os recursos disponíveis através de tecnologia TTS (Text-To-Speech).</p>
+				<p class="s2">4.2.8.4.	A Prefeitura do Município de São Paulo poderá especificar novas mensagens a serem implementadas na URA, e deverão estar disponibilizadas e operantes em prazo máximo de 5 dias corridos, contados após o recebimento de comunicação formal.</p>
+					<p class="s3">4.2.8.4.1.	Em caso de fraseologias emergenciais, a serem assim determinadas pela CONTRATANTE, deverão ser implantadas e/ou removidas em até 01h.</p>
+			<p>4.2.9.	Atendimento Humano</p>
+				<p class="s2">4.2.9.1.	Serviço de atendimento telefônico receptivo e ativo a ser realizado por operador alocado em uma mesma posição de atendimento.</p>
+				<p class="s2">4.2.9.2.	O atendimento será efetuado por operador definido como generalista (multiperfil) ou especialista (dedicado), de acordo com as especificidades ou volume de demanda comportado por cada assunto.</p>
 			<p class="s2">4.2.9.3.	Atendimento Humano Receptivo</p>
 				<p class="s3">4.2.9.3.1.	Compreende o atendimento telefônico por parte do operador de chamadas transferidas por meio da URA.</p>
 				<p class="s3">4.2.9.3.2.	São atividades atribuídas aos operadores:</p>
@@ -365,11 +366,19 @@
 			<p class="s2">4.2.9.5.	Modelo de Atendimento Humano</p>
 				<p class="s3">4.2.9.5.1.	 O atendimento humano receptivo e ativo será realizado por postos de atendimentos agrupados em ilhas de operação voltadas para assuntos/temas genéricos, conforme definição da CONTRATANTE, compreendendo atendimento multiperfil e/ou assuntos/temas exclusivos, envolvendo atendimento dedicado e/ou especializado, conforme definição da CONTRATANTE.</p>
 				<p class="s3">4.2.9.5.2.	 O atendimento multiperfil compreende atendimentos de forma compartilhada em diversos tipos de assuntos/serviços, respeitando o limite de assuntos/serviços por operador definidos pela CONTRATANTE, possibilitando o agrupamento em ilhas de atendimento de serviços que possuem afinidades de informações comuns, sistemas e procedimentos, conforme abaixo ilustrado:</p>
-								<img src="">
+				<Imagem :dados="{
+					tipo: 'coluna',
+					caption: 'Figura 1 - Atendimento multiperfil',
+					url: imgSrc('arquivos/tr-contact-center/figura_1-atendimento_multicanal.png')
+				}"></Imagem>
 				<!--Figura 1 - Atendimento multiperfil-->
 
 				<p class="s3">4.2.9.5.3.	 O atendimento dedicado ou especializado refere-se aos serviços que apresentam conteúdo e informações específicas, assim definidos a critério da CONTRATANTE, englobando ilhas determinadas, conforme abaixo ilustrado:</p>
-								<img src="">
+				<Imagem :dados="{
+					tipo: 'coluna',
+					caption: 'Figura 2 - Atendimento dedicado',
+					url: imgSrc('arquivos/tr-contact-center/figura_2-atendimento_dedicado.png')
+				}"></Imagem>
 				<!--Figura 2 - Atendimento dedicado-->
 
 				<p class="s3">4.2.9.5.4.	Os assuntos/serviços que serão atendidos nas ilhas multiperfil ou nas especializadas, serão definidas de comum acordo entre a Prefeitura do Município de São Paulo e a CONTRATADA, seguindo os padrões de temas / assuntos / serviços estabelecidos pela CONTRATANTE.</p>
@@ -388,7 +397,7 @@
 					
 				<Comments :attr="{id:commentId(), context:'4.2.	Serviços de Operação do Atendimento'}" v-if="estaConsulta.ativo == 1"></Comments>
 
-		<h3>4.3.	Relatórios Gerenciais</h3>
+			<h3>4.3.	Relatórios Gerenciais</h3>
 			<p>4.3.1.	URA - Unidade de Resposta Audível</p>
 				<p class="s2">4.3.1.1.	Deverá possuir recursos para estruturação e extração de relatórios e gráficos baseados na utilização de cada serviço disponível, além de relatórios sobre ocorrências de falhas.</p>
 				<p class="s2">4.3.1.2.	Deverá ser possível extrair os relatórios de forma online, bem como a exportação para formatos eletrônicos de planilhas e/ou documentos quer sejam: </p>
@@ -954,426 +963,425 @@
 					<p class="s2">4.8.2.2.	A equipe da CONTRATANTE realizará a capacitação para supervisores, monitores de qualidade e multiplicadores, que deverão, por sua vez, capacitar os atendentes, sendo que os custos relativos às instalações, equipamentos, material de apoio, “coffee break” serão de responsabilidade da CONTRATADA.</p>
 						<p class="s3">4.8.2.2.1.	Os Grupos de atendentes a serem capacitados por multiplicadores deverão ser formados com, no máximo, 30 (trinta) pessoas.</p>
 
-				<Comments :attr="{id:commentId(), context:'4.8.	Capacitação e Treinamento'}" v-if="estaConsulta.ativo == 1"></Comments>
-			</section>
-			<section>
-				<h2 class="titulo" indent="1">5.	REMUNERAÇÃO DOS SERVIÇOS </h2>
-				<h3>5.1.	A remuneração mensal dos serviços será efetuada de acordo com o volume de atendimentos ativos e receptivos realizados, incluindo chat.</h3>
-				<p>5.1.1.	Será de responsabilidade da CONTRATADA todos os custos da conta telefônica decorrentes do tráfego de ligações receptivas na linha do tipo discagem direta gratuita 156, bem como os custos relacionados às tarifas telefônicas ativas.</p>
-					
-				<Comments :attr="{id:commentId(), context:'subtitulo'}" v-if="estaConsulta.ativo == 1"></Comments>
-				<h3>5.2.	A remuneração terá como base o "Valor de Atendimento – VA", no qual já deverão estar incluídas todas as despesas necessárias à plena execução do serviço contratado (recursos humanos, recursos técnicos e tecnológicos, sistemas, URAs, relatórios, etc), de administração/gerenciamento, de manutenção, de infraestrutura, todas as obrigações sociais, impostos e taxas incidentes sobre o serviço, inclusive ajuda alimentação, vale transporte, plano de saúde, programa de incentivo e premiação etc.</h3>
-				<p>5.2.1.	Quando uma ligação for efetivamente atendida, ocorrendo ou não transferência de chamada, a CONTRATADA será remunerada uma única vez, isto é, pelo VA da chamada atendida.</p>
-				<p>5.2.2.	Para efeitos de remuneração dos atendimentos realizados através do recurso CHAT, deverá ser considerado como referência 30% do valor realizado pelo atendimento telefônico.</p>
-				<p>5.2.3.	Não será considerada, para fins de remuneração, mais do que uma ligação receptiva em um intervalo de 15 (quinze) minutos de um mesmo munícipe e/ou telefone.</p>
-				<p>5.2.4.	A remuneração do atendimento ativo incidirá sobre o volume de ligações efetuadas e efetivamente concretizadas, isto é, pelo valor do VA da chamada concretizada.</p>
-				<p>5.2.5.	A determinação do valor da remuneração mensal devido será calculada conforme a seguinte metodologia:</p>
-					<p class="s2">5.2.5.1.	Apuração do quantitativo das ligações recebidas e atendidas receptivas concretizadas no período e o valor total correspondente (VAr)</p>	
-					<p class="s2">5.2.5.2.	Apuração do quantitativo das ligações ativas realizadas e concretizadas no período e o valor total correspondente (VAa)</p>
-					<ul>
-						<li><strong>Observação:</strong> Não serão consideradas para fins de remuneração as ligações efetuadas que as ligações efetuadas que não forem atendidas, apresentarem sinal de ocupado, mensagem da operadora, número inválido, sinal de fax, linha muda.</li>
-					</ul>
-					<p class="s2">5.2.5.3.	Aplicação sobre o valor total, obtido no item “5.1”, dos decréscimos resultantes da pontuação conferida, conforme tabela 2 – Conversão de Pontos:</p>
-					<ul>
-						<li>VAm = (VAr + VAa + VAchat)*FD , onde:
-							<ul>
-								<li>VAm = Valor Mensal de Atendimento de operação do Contact Center </li>
-								<li>VAr = Valor Mensal de Atendimento Receptivo</li>
-								<li>VAa = Valor Mensal de Atendimento Ativo</li>
-								<li>VAchat = Valor Mensal de Atendimento via chat</li>
-								<li>VAsms = Valor Mensal de envio de mensagem de texto</li>
-								<li>FD = Fator de Desempenho da Operação do Contact Center </li>
-							</ul>
-						</li>
-					</ul>
-					<p class="s2">5.2.5.4.	Apuração dos indicadores de qualidade do serviço, conforme indicadores da tabela 1 abaixo.</p>
+			<Comments :attr="{id:commentId(), context:'4.8.	Capacitação e Treinamento'}" v-if="estaConsulta.ativo == 1"></Comments>
+		</section>
+		<section>
+			<h2 class="titulo" indent="1">5.	REMUNERAÇÃO DOS SERVIÇOS </h2>
+			<h3>5.1.	A remuneração mensal dos serviços será efetuada de acordo com o volume de atendimentos ativos e receptivos realizados, incluindo chat.</h3>
+			<p>5.1.1.	Será de responsabilidade da CONTRATADA todos os custos da conta telefônica decorrentes do tráfego de ligações receptivas na linha do tipo discagem direta gratuita 156, bem como os custos relacionados às tarifas telefônicas ativas.</p>
+				
+			<Comments :attr="{id:commentId(), context:'subtitulo'}" v-if="estaConsulta.ativo == 1"></Comments>
+			<h3>5.2.	A remuneração terá como base o "Valor de Atendimento – VA", no qual já deverão estar incluídas todas as despesas necessárias à plena execução do serviço contratado (recursos humanos, recursos técnicos e tecnológicos, sistemas, URAs, relatórios, etc), de administração/gerenciamento, de manutenção, de infraestrutura, todas as obrigações sociais, impostos e taxas incidentes sobre o serviço, inclusive ajuda alimentação, vale transporte, plano de saúde, programa de incentivo e premiação etc.</h3>
+			<p>5.2.1.	Quando uma ligação for efetivamente atendida, ocorrendo ou não transferência de chamada, a CONTRATADA será remunerada uma única vez, isto é, pelo VA da chamada atendida.</p>
+			<p>5.2.2.	Para efeitos de remuneração dos atendimentos realizados através do recurso CHAT, deverá ser considerado como referência 30% do valor realizado pelo atendimento telefônico.</p>
+			<p>5.2.3.	Não será considerada, para fins de remuneração, mais do que uma ligação receptiva em um intervalo de 15 (quinze) minutos de um mesmo munícipe e/ou telefone.</p>
+			<p>5.2.4.	A remuneração do atendimento ativo incidirá sobre o volume de ligações efetuadas e efetivamente concretizadas, isto é, pelo valor do VA da chamada concretizada.</p>
+			<p>5.2.5.	A determinação do valor da remuneração mensal devido será calculada conforme a seguinte metodologia:</p>
+				<p class="s2">5.2.5.1.	Apuração do quantitativo das ligações recebidas e atendidas receptivas concretizadas no período e o valor total correspondente (VAr)</p>	
+				<p class="s2">5.2.5.2.	Apuração do quantitativo das ligações ativas realizadas e concretizadas no período e o valor total correspondente (VAa)</p>
+				<ul>
+					<li><strong>Observação:</strong> Não serão consideradas para fins de remuneração as ligações efetuadas que as ligações efetuadas que não forem atendidas, apresentarem sinal de ocupado, mensagem da operadora, número inválido, sinal de fax, linha muda.</li>
+				</ul>
+				<p class="s2">5.2.5.3.	Aplicação sobre o valor total, obtido no item “5.1”, dos decréscimos resultantes da pontuação conferida, conforme tabela 2 – Conversão de Pontos:</p>
+				<ul>
+					<li>VAm = (VAr + VAa + VAchat)*FD , onde:
+						<ul>
+							<li>VAm = Valor Mensal de Atendimento de operação do Contact Center </li>
+							<li>VAr = Valor Mensal de Atendimento Receptivo</li>
+							<li>VAa = Valor Mensal de Atendimento Ativo</li>
+							<li>VAchat = Valor Mensal de Atendimento via chat</li>
+							<li>VAsms = Valor Mensal de envio de mensagem de texto</li>
+							<li>FD = Fator de Desempenho da Operação do Contact Center </li>
+						</ul>
+					</li>
+				</ul>
+				<p class="s2">5.2.5.4.	Apuração dos indicadores de qualidade do serviço, conforme indicadores da tabela 1 abaixo.</p>
 
-					<table style="text-align: center;">
-					  <tr>
-					    <th colspan="5">Tabela 1 – Indicadores de Qualidade</th>
-					  </tr>
-					  <tr>
-					    <th>Subitem</th>
-					    <th>Meta</th>
-					    <th>Desempenho Obtido</th>
-					    <th>Decréscimo sobre o % do Fator de Desempenho</th>
-					    <th>Reincidência[1]</th>
-					  </tr>
-					  <tr>
-					    <td style="text-align: left" rowspan="3">Índice de Ligações Não Recebidas (INR)</td>
-					    <td>INR ≤ 3%</td>
-					    <td>INR ≤ 3%</td>
-					    <td>-</td>
-					    <td>-</td>
-					  </tr>
-					  <tr>
-					    <td>-</td>
-					    <td>3% &lt; INR ≤5%</td>
-					    <td>1 pts </td>
-					    <td>2 pts</td>
-					  </tr>
-					  <tr>
-					    <td>-</td>
-					    <td>INR &gt; 5%</td>
-					    <td>2 pts</td>
-					    <td>3 pts</td>
-					  </tr>
-					  <tr>
-					    <td style="text-align: left" rowspan="5">Ligações atendidas em até 15 segundos (NS) para o 156</td>
-					    <td>NS ≥ 85%</td>
-					    <td>NS ≥ 85%</td>
-					    <td>-</td>
-					    <td>-</td>
-					  </tr>
-					  <tr>
-					    <td>-</td>
-					    <td>80% ≤ NS ≤ 84%</td>
-					    <td>0,5 pt</td>
-					    <td>1 pt</td>
-					  </tr>
-					  <tr>
-					    <td>-</td>
-					    <td>75% ≤ NS ≤ 79%</td>
-					    <td>1,5 pts</td>
-					    <td>2 pts</td>
-					  </tr>
-					  <tr>
-					    <td>-</td>
-					    <td>70% ≤ NS ≤ 74%</td>
-					    <td>2,5 pts</td>
-					    <td>3 pts</td>
-					  </tr>
-					  <tr>
-					    <td>-</td>
-					    <td>&lt; 70%</td>
-					    <td>3,5 pts</td>
-					    <td>4 pts</td>
-					  </tr>
-					  <tr>
-					    <td style="text-align: left" rowspan="5">Índice de Ligações Abandonadas (ILA) para o 156</td>
-					    <td>ILA ≤ 3%</td>
-					    <td>≤ 5%</td>
-					    <td>-</td>
-					    <td>-</td>
-					  </tr>
-					  <tr>
-					    <td>-</td>
-					    <td>6%&lt; ILA ≤ 8%</td>
-					    <td>0,5 pt</td>
-					    <td>1 pt</td>
-					  </tr>
-					  <tr>
-					    <td>-</td>
-					    <td>8%&lt; ILA ≤ 9%</td>
-					    <td>1 pt</td>
-					    <td>1,5 pts</td>
-					  </tr>
-					  <tr>
-					    <td>-</td>
-					    <td>9%&lt; ILA ≤ 10%</td>
-					    <td>1,5 pts</td>
-					    <td>2 pts</td>
-					  </tr>
-					  <tr>
-					    <td>-</td>
-					    <td>ILA &gt; 10%</td>
-					    <td>2 pts</td>
-					    <td>3,5 pts</td>
-					  </tr>
-					  <tr>
-					    <td style="text-align: left" rowspan="2">Índice de "Call back" (ICB)</td>
-					    <td>≥ 90%</td>
-					    <td>ICB ≥ 90% </td>
-					    <td>-</td>
-					    <td>-</td>
-					  </tr>
-					  <tr>
-					    <td>-</td>
-					    <td>ICB &lt; 90%</td>
-					    <td> 1 pt</td>
-					    <td>3 pts</td>
-					  </tr>
-					  <tr>
-					    <td style="text-align: left" rowspan="2">Índice Atendimento registrado (IAR)</td>
-					    <td>IAR = 100%</td>
-					    <td>IAR = 100%</td>
-					    <td>-</td>
-					    <td>-</td>
-					  </tr>
-					  <tr>
-					    <td>-</td>
-					    <td>IAR ≤ 99%</td>
-					    <td> 1 pt</td>
-					    <td>2 pts</td>
-					  </tr>
-					  <tr>
-					    <td style="text-align: left" rowspan="3">Índice de Satisfação do munícipe (IS)</td>
-					    <td>IS ≥ 90%</td>
-					    <td>IS ≥ 90%</td>
-					    <td>-</td>
-					    <td>-</td>
-					  </tr>
-					  <tr>
-					    <td>-</td>
-					    <td>85% ≤ IS &lt; 90%</td>
-					    <td>1 pts</td>
-					    <td>2 pts</td>
-					  </tr>
-					  <tr>
-					    <td>-</td>
-					    <td>IS &lt; 85%</td>
-					    <td>3 pts</td>
-					    <td>4 pts</td>
-					  </tr>
-					  <tr>
-					    <td style="text-align: left" rowspan="2">Índice de disponibilidade da Solução Tecnológica (IST)</td>
-					    <td>IST ≥ 99,7%</td>
-					    <td>IST ≥ 99,7%</td>
-					    <td>-</td>
-					    <td>-</td>
-					  </tr>
-					  <tr>
-					    <td>-</td>
-					    <td>IST &lt; 99,7%</td>
-					    <td>3 pts</td>
-					    <td>4 pts</td>
-					  </tr>
-					  <tr>
-					    <td style="text-align: left" rowspan="4">Ligações atendidas em até 15 segundos (NS) para 199, 153 e demais serviços a critérios<br>  da CONTRATANTE</td>
-					    <td>NS ≥ 95%</td>
-					    <td>NS ≥ 95%</td>
-					    <td>-</td>
-					    <td>-</td>
-					  </tr>
-					  <tr>
-					    <td>-</td>
-					    <td>95% ≤ NS ≤ 93%</td>
-					    <td>0,5 pt</td>
-					    <td>1 pt</td>
-					  </tr>
-					  <tr>
-					    <td>-</td>
-					    <td>93% ≤ NS ≤ 90%</td>
-					    <td>1 pt</td>
-					    <td>2 pts</td>
-					  </tr>
-					  <tr>
-					    <td>-</td>
-					    <td>&lt; 90%</td>
-					    <td>2 pts</td>
-					    <td>3 pts</td>
-					  </tr>
-					  <tr>
-					    <td style="text-align: left" rowspan="4">Índice de Ligações Abandonadas (ILA) para 199, 153 e demais serviços a critérios da<br>  CONTRATANTE</td>
-					    <td>ILA ≤ 2%</td>
-					    <td>≤ 2%</td>
-					    <td>-</td>
-					    <td>-</td>
-					  </tr>
-					  <tr>
-					    <td>-</td>
-					    <td>2%≤ ILA ≤ 3%</td>
-					    <td>0,5 pt</td>
-					    <td>1 pt</td>
-					  </tr>
-					  <tr>
-					    <td>-</td>
-					    <td>3%≤ ILA ≤ 5%</td>
-					    <td>1 pt</td>
-					    <td>2 pts</td>
-					  </tr>
-					  <tr>
-					    <td>-</td>
-					    <td>9%≤ ILA ≤ 10%</td>
-					    <td>1,5 pts</td>
-					    <td>2 pts</td>
-					  </tr>
-					  <tr>
-					    <td style="text-align: left" rowspan="3">Índice de CHAT atendidos em até 60 segundos para <br>  serviços definidos a critérios da CONTRATANTE</td>
-					    <td>CHT ≥ 90%</td>
-					    <td>CHT ≥ 90%</td>
-					    <td>-</td>
-					    <td>-</td>
-					  </tr>
-					  <tr>
-					    <td>-</td>
-					    <td>85% ≤ CHT ≤ 90%</td>
-					    <td>0,5 pt</td>
-					    <td>0,5 pt</td>
-					  </tr>
-					  <tr>
-					    <td>-</td>
-					    <td>CHT &lt; 90%</td>
-					    <td>1 pt</td>
-					    <td>1 pts</td>
-					  </tr>
-					  <tr>
-					    <td style="text-align: left" rowspan="4">Índice de CHAT Abandonados</td>
-					    <td>WCA ≤ 2%</td>
-					    <td>≤ 2%</td>
-					    <td>-</td>
-					    <td>-</td>
-					  </tr>
-					  <tr>
-					    <td>-</td>
-					    <td>2%&lt; WCA ≤ 3%</td>
-					    <td>0,5 pt</td>
-					    <td>1 pt</td>
-					  </tr>
-					  <tr>
-					    <td>-</td>
-					    <td>3%&lt; WCA ≤ 5%</td>
-					    <td>1 pt</td>
-					    <td>2 pts</td>
-					  </tr>
-					  <tr>
-					    <td>-</td>
-					    <td>9%&lt; WCA ≤ 10%</td>
-					    <td>1,5 pts</td>
-					    <td>2 pts</td>
-					  </tr>
-					</table>
+				<table style="text-align: center;">
+				  <tr>
+				    <th colspan="5">Tabela 1 – Indicadores de Qualidade</th>
+				  </tr>
+				  <tr>
+				    <th>Subitem</th>
+				    <th>Meta</th>
+				    <th>Desempenho Obtido</th>
+				    <th>Decréscimo sobre o % do Fator de Desempenho</th>
+				    <th>Reincidência[1]</th>
+				  </tr>
+				  <tr>
+				    <td style="text-align: left" rowspan="3">Índice de Ligações Não Recebidas (INR)</td>
+				    <td>INR ≤ 3%</td>
+				    <td>INR ≤ 3%</td>
+				    <td>-</td>
+				    <td>-</td>
+				  </tr>
+				  <tr>
+				    <td>-</td>
+				    <td>3% &lt; INR ≤5%</td>
+				    <td>1 pts </td>
+				    <td>2 pts</td>
+				  </tr>
+				  <tr>
+				    <td>-</td>
+				    <td>INR &gt; 5%</td>
+				    <td>2 pts</td>
+				    <td>3 pts</td>
+				  </tr>
+				  <tr>
+				    <td style="text-align: left" rowspan="5">Ligações atendidas em até 15 segundos (NS) para o 156</td>
+				    <td>NS ≥ 85%</td>
+				    <td>NS ≥ 85%</td>
+				    <td>-</td>
+				    <td>-</td>
+				  </tr>
+				  <tr>
+				    <td>-</td>
+				    <td>80% ≤ NS ≤ 84%</td>
+				    <td>0,5 pt</td>
+				    <td>1 pt</td>
+				  </tr>
+				  <tr>
+				    <td>-</td>
+				    <td>75% ≤ NS ≤ 79%</td>
+				    <td>1,5 pts</td>
+				    <td>2 pts</td>
+				  </tr>
+				  <tr>
+				    <td>-</td>
+				    <td>70% ≤ NS ≤ 74%</td>
+				    <td>2,5 pts</td>
+				    <td>3 pts</td>
+				  </tr>
+				  <tr>
+				    <td>-</td>
+				    <td>&lt; 70%</td>
+				    <td>3,5 pts</td>
+				    <td>4 pts</td>
+				  </tr>
+				  <tr>
+				    <td style="text-align: left" rowspan="5">Índice de Ligações Abandonadas (ILA) para o 156</td>
+				    <td>ILA ≤ 3%</td>
+				    <td>≤ 5%</td>
+				    <td>-</td>
+				    <td>-</td>
+				  </tr>
+				  <tr>
+				    <td>-</td>
+				    <td>6%&lt; ILA ≤ 8%</td>
+				    <td>0,5 pt</td>
+				    <td>1 pt</td>
+				  </tr>
+				  <tr>
+				    <td>-</td>
+				    <td>8%&lt; ILA ≤ 9%</td>
+				    <td>1 pt</td>
+				    <td>1,5 pts</td>
+				  </tr>
+				  <tr>
+				    <td>-</td>
+				    <td>9%&lt; ILA ≤ 10%</td>
+				    <td>1,5 pts</td>
+				    <td>2 pts</td>
+				  </tr>
+				  <tr>
+				    <td>-</td>
+				    <td>ILA &gt; 10%</td>
+				    <td>2 pts</td>
+				    <td>3,5 pts</td>
+				  </tr>
+				  <tr>
+				    <td style="text-align: left" rowspan="2">Índice de "Call back" (ICB)</td>
+				    <td>≥ 90%</td>
+				    <td>ICB ≥ 90% </td>
+				    <td>-</td>
+				    <td>-</td>
+				  </tr>
+				  <tr>
+				    <td>-</td>
+				    <td>ICB &lt; 90%</td>
+				    <td> 1 pt</td>
+				    <td>3 pts</td>
+				  </tr>
+				  <tr>
+				    <td style="text-align: left" rowspan="2">Índice Atendimento registrado (IAR)</td>
+				    <td>IAR = 100%</td>
+				    <td>IAR = 100%</td>
+				    <td>-</td>
+				    <td>-</td>
+				  </tr>
+				  <tr>
+				    <td>-</td>
+				    <td>IAR ≤ 99%</td>
+				    <td> 1 pt</td>
+				    <td>2 pts</td>
+				  </tr>
+				  <tr>
+				    <td style="text-align: left" rowspan="3">Índice de Satisfação do munícipe (IS)</td>
+				    <td>IS ≥ 90%</td>
+				    <td>IS ≥ 90%</td>
+				    <td>-</td>
+				    <td>-</td>
+				  </tr>
+				  <tr>
+				    <td>-</td>
+				    <td>85% ≤ IS &lt; 90%</td>
+				    <td>1 pts</td>
+				    <td>2 pts</td>
+				  </tr>
+				  <tr>
+				    <td>-</td>
+				    <td>IS &lt; 85%</td>
+				    <td>3 pts</td>
+				    <td>4 pts</td>
+				  </tr>
+				  <tr>
+				    <td style="text-align: left" rowspan="2">Índice de disponibilidade da Solução Tecnológica (IST)</td>
+				    <td>IST ≥ 99,7%</td>
+				    <td>IST ≥ 99,7%</td>
+				    <td>-</td>
+				    <td>-</td>
+				  </tr>
+				  <tr>
+				    <td>-</td>
+				    <td>IST &lt; 99,7%</td>
+				    <td>3 pts</td>
+				    <td>4 pts</td>
+				  </tr>
+				  <tr>
+				    <td style="text-align: left" rowspan="4">Ligações atendidas em até 15 segundos (NS) para 199, 153 e demais serviços a critérios<br>  da CONTRATANTE</td>
+				    <td>NS ≥ 95%</td>
+				    <td>NS ≥ 95%</td>
+				    <td>-</td>
+				    <td>-</td>
+				  </tr>
+				  <tr>
+				    <td>-</td>
+				    <td>95% ≤ NS ≤ 93%</td>
+				    <td>0,5 pt</td>
+				    <td>1 pt</td>
+				  </tr>
+				  <tr>
+				    <td>-</td>
+				    <td>93% ≤ NS ≤ 90%</td>
+				    <td>1 pt</td>
+				    <td>2 pts</td>
+				  </tr>
+				  <tr>
+				    <td>-</td>
+				    <td>&lt; 90%</td>
+				    <td>2 pts</td>
+				    <td>3 pts</td>
+				  </tr>
+				  <tr>
+				    <td style="text-align: left" rowspan="4">Índice de Ligações Abandonadas (ILA) para 199, 153 e demais serviços a critérios da<br>  CONTRATANTE</td>
+				    <td>ILA ≤ 2%</td>
+				    <td>≤ 2%</td>
+				    <td>-</td>
+				    <td>-</td>
+				  </tr>
+				  <tr>
+				    <td>-</td>
+				    <td>2%≤ ILA ≤ 3%</td>
+				    <td>0,5 pt</td>
+				    <td>1 pt</td>
+				  </tr>
+				  <tr>
+				    <td>-</td>
+				    <td>3%≤ ILA ≤ 5%</td>
+				    <td>1 pt</td>
+				    <td>2 pts</td>
+				  </tr>
+				  <tr>
+				    <td>-</td>
+				    <td>9%≤ ILA ≤ 10%</td>
+				    <td>1,5 pts</td>
+				    <td>2 pts</td>
+				  </tr>
+				  <tr>
+				    <td style="text-align: left" rowspan="3">Índice de CHAT atendidos em até 60 segundos para <br>  serviços definidos a critérios da CONTRATANTE</td>
+				    <td>CHT ≥ 90%</td>
+				    <td>CHT ≥ 90%</td>
+				    <td>-</td>
+				    <td>-</td>
+				  </tr>
+				  <tr>
+				    <td>-</td>
+				    <td>85% ≤ CHT ≤ 90%</td>
+				    <td>0,5 pt</td>
+				    <td>0,5 pt</td>
+				  </tr>
+				  <tr>
+				    <td>-</td>
+				    <td>CHT &lt; 90%</td>
+				    <td>1 pt</td>
+				    <td>1 pts</td>
+				  </tr>
+				  <tr>
+				    <td style="text-align: left" rowspan="4">Índice de CHAT Abandonados</td>
+				    <td>WCA ≤ 2%</td>
+				    <td>≤ 2%</td>
+				    <td>-</td>
+				    <td>-</td>
+				  </tr>
+				  <tr>
+				    <td>-</td>
+				    <td>2%&lt; WCA ≤ 3%</td>
+				    <td>0,5 pt</td>
+				    <td>1 pt</td>
+				  </tr>
+				  <tr>
+				    <td>-</td>
+				    <td>3%&lt; WCA ≤ 5%</td>
+				    <td>1 pt</td>
+				    <td>2 pts</td>
+				  </tr>
+				  <tr>
+				    <td>-</td>
+				    <td>9%&lt; WCA ≤ 10%</td>
+				    <td>1,5 pts</td>
+				    <td>2 pts</td>
+				  </tr>
+				</table>
 
-					<table style="text-align: center;">
-					  <tr>
-					    <th colspan="2">Tabela 2 – Conversão de Pontos</th>
-					  </tr>
-					  <tr>
-					    <th>Pontos</th>
-					    <th>FD (% fator de desempenho)</th>
-					  </tr>
-					  <tr>
-					    <td>1</td>
-					    <td>100</td>
-					  </tr>
-					  <tr>
-					    <td>2</td>
-					    <td>99</td>
-					  </tr>
-					  <tr>
-					    <td>3</td>
-					    <td>98</td>
-					  </tr>
-					  <tr>
-					    <td>4</td>
-					    <td>97</td>
-					  </tr>
-					  <tr>
-					    <td>5</td>
-					    <td>96</td>
-					  </tr>
-					  <tr>
-					    <td>6</td>
-					    <td>95</td>
-					  </tr>
-					  <tr>
-					    <td>7</td>
-					    <td>94</td>
-					  </tr>
-					  <tr>
-					    <td>8</td>
-					    <td>93</td>
-					  </tr>
-					  <tr>
-					    <td>9</td>
-					    <td>92</td>
-					  </tr>
-					  <tr>
-					    <td>10</td>
-					    <td>91</td>
-					  </tr>
-					  <tr>
-					    <td>11</td>
-					    <td>90</td>
-					  </tr>
-					  <tr>
-					    <td>12</td>
-					    <td>89</td>
-					  </tr>
-					  <tr>
-					    <td>13</td>
-					    <td>88</td>
-					  </tr>
-					  <tr>
-					    <td>14</td>
-					    <td>87</td>
-					  </tr>
-					  <tr>
-					    <td>15 a 18</td>
-					    <td>86</td>
-					  </tr>
-					  <tr>
-					    <td>19 a 24</td>
-					    <td>85</td>
-					  </tr>
-					  <tr>
-					    <td>25 a 30</td>
-					    <td>80</td>
-					  </tr>
-					  <tr>
-					    <td>Acima de 30</td>
-					    <td>70</td>
-					  </tr>
-					</table>
+				<table style="text-align: center;">
+				  <tr>
+				    <th colspan="2">Tabela 2 – Conversão de Pontos</th>
+				  </tr>
+				  <tr>
+				    <th>Pontos</th>
+				    <th>FD (% fator de desempenho)</th>
+				  </tr>
+				  <tr>
+				    <td>1</td>
+				    <td>100</td>
+				  </tr>
+				  <tr>
+				    <td>2</td>
+				    <td>99</td>
+				  </tr>
+				  <tr>
+				    <td>3</td>
+				    <td>98</td>
+				  </tr>
+				  <tr>
+				    <td>4</td>
+				    <td>97</td>
+				  </tr>
+				  <tr>
+				    <td>5</td>
+				    <td>96</td>
+				  </tr>
+				  <tr>
+				    <td>6</td>
+				    <td>95</td>
+				  </tr>
+				  <tr>
+				    <td>7</td>
+				    <td>94</td>
+				  </tr>
+				  <tr>
+				    <td>8</td>
+				    <td>93</td>
+				  </tr>
+				  <tr>
+				    <td>9</td>
+				    <td>92</td>
+				  </tr>
+				  <tr>
+				    <td>10</td>
+				    <td>91</td>
+				  </tr>
+				  <tr>
+				    <td>11</td>
+				    <td>90</td>
+				  </tr>
+				  <tr>
+				    <td>12</td>
+				    <td>89</td>
+				  </tr>
+				  <tr>
+				    <td>13</td>
+				    <td>88</td>
+				  </tr>
+				  <tr>
+				    <td>14</td>
+				    <td>87</td>
+				  </tr>
+				  <tr>
+				    <td>15 a 18</td>
+				    <td>86</td>
+				  </tr>
+				  <tr>
+				    <td>19 a 24</td>
+				    <td>85</td>
+				  </tr>
+				  <tr>
+				    <td>25 a 30</td>
+				    <td>80</td>
+				  </tr>
+				  <tr>
+				    <td>Acima de 30</td>
+				    <td>70</td>
+				  </tr>
+				</table>
 
-					<p class="s2">5.2.5.5.	Em casos de contingência pela ocorrência de problemas não controláveis pela CONTRATADA (catástrofes naturais), não haverá aplicação de descontos previstos, sendo que a remuneração se fará pelo atendimento efetivamente prestado.</p>
-					<p class="s2">5.2.5.6.	Para a proposta comercial, a CONTRATADA deverá preencher os seguintes valores:</p>
+				<p class="s2">5.2.5.5.	Em casos de contingência pela ocorrência de problemas não controláveis pela CONTRATADA (catástrofes naturais), não haverá aplicação de descontos previstos, sendo que a remuneração se fará pelo atendimento efetivamente prestado.</p>
+				<p class="s2">5.2.5.6.	Para a proposta comercial, a CONTRATADA deverá preencher os seguintes valores:</p>
 
-					<table>
-					  <tr>
-					    <th colspan="3">VALORES DA PROPOSTA</th>
-					  </tr>
-					  <tr>
-					    <th>ITEM</th>
-					    <th>QUANTIDADE (24 MESES)</th>
-					    <th>VALOR GLOBAL</th>
-					  </tr>
-					  <tr>
-					    <td style="text-align: center;">VA</td>
-					    <td style="text-align: right;">32.000.000</td>
-					    <td> </td>
-					  </tr>
-					  <tr>
-					    <td style="text-align: center;">VASMS</td>
-					    <td style="text-align: right;">12.000.000</td>
-					    <td> </td>
-					  </tr>
-					  <tr>
-					    <td style="text-align: center;">VAchat</td>
-					    <td style="text-align: right;">960.000</td>
-					    <td> </td>
-					  </tr>
-					  <tr>
-					    <td colspan="2" style="text-align: center; font-weight: bold;">TOTAL</td>
-					    <td></td>
-					  </tr>
-					  <tr>
-					    <td colspan="3">
-					    <strong>VA</strong> = Valor de Atendimento Receptivo + Valor de Atendimento Ativo (incluso operação do Contact Center e toda estrutura necessária)<br>
-					    <strong>VAsms</strong> = Valor de envio de mensagens de texto<br>
-					    <strong>VAchat</strong> = Valor de Atendimento realizados através canal de Chat (incluso operação do Contact Center e toda estrutura necessária)</td>
-					  </tr>
-					</table>
+				<table>
+				  <tr>
+				    <th colspan="3">VALORES DA PROPOSTA</th>
+				  </tr>
+				  <tr>
+				    <th>ITEM</th>
+				    <th>QUANTIDADE (24 MESES)</th>
+				    <th>VALOR GLOBAL</th>
+				  </tr>
+				  <tr>
+				    <td style="text-align: center;">VA</td>
+				    <td style="text-align: right;">32.000.000</td>
+				    <td> </td>
+				  </tr>
+				  <tr>
+				    <td style="text-align: center;">VASMS</td>
+				    <td style="text-align: right;">12.000.000</td>
+				    <td> </td>
+				  </tr>
+				  <tr>
+				    <td style="text-align: center;">VAchat</td>
+				    <td style="text-align: right;">960.000</td>
+				    <td> </td>
+				  </tr>
+				  <tr>
+				    <td colspan="2" style="text-align: center; font-weight: bold;">TOTAL</td>
+				    <td></td>
+				  </tr>
+				  <tr>
+				    <td colspan="3">
+				    <strong>VA</strong> = Valor de Atendimento Receptivo + Valor de Atendimento Ativo (incluso operação do Contact Center e toda estrutura necessária)<br>
+				    <strong>VAsms</strong> = Valor de envio de mensagens de texto<br>
+				    <strong>VAchat</strong> = Valor de Atendimento realizados através canal de Chat (incluso operação do Contact Center e toda estrutura necessária)</td>
+				  </tr>
+				</table>
 
-					<p class="s2">5.2.5.7.	Na apuração dos indicadores de qualidade descritos no item 5.2.5.4, toda vez que os indicadores forem descumpridos em razão de um aumento imprevisível de ligações entregues ao DAC da Contratada, os dias que caracterizarem excepcionalidade poderão ser desconsiderados do cálculo de desempenho obtido para fins de apuração de Remuneração Mensal.</p>
-						<p class="s3">5.2.5.7.1.	Excepcionalidade se caracteriza por volume superior a 15% em relação à média dos dias correspondentes aos últimos 12 meses</p>
-					<p class="s2">5.2.5.8.	Nos casos em que a Contratada desejar fazer uso da cláusula de atipicidade, deverá comprovar a(s) ocorrência(s) conforme item 5.2.5.7.1, via ofício, na mesma oportunidade em que enviar a documentação para faturamento. Nestes casos, a fiscalização designada pela Contratante terá cinco dias úteis para análise, decisão e comunicação à Contratante.</p>
-					<p class="s2">5.2.5.9.	Para que os dias considerados excepcionais sejam desconsiderados do cálculo de desempenho obtido, deverá a CONTRATADA observar as seguintes condições:</p>
-						<p class="s3">5.2.5.9.1.	Se, ao final do período mensal compreendido (de acordo com a data de assinatura do contrato), o desempenho obtido resultar em decréscimo sobre o percentual do fator de desempenho.</p>
+				<p class="s2">5.2.5.7.	Na apuração dos indicadores de qualidade descritos no item 5.2.5.4, toda vez que os indicadores forem descumpridos em razão de um aumento imprevisível de ligações entregues ao DAC da Contratada, os dias que caracterizarem excepcionalidade poderão ser desconsiderados do cálculo de desempenho obtido para fins de apuração de Remuneração Mensal.</p>
+					<p class="s3">5.2.5.7.1.	Excepcionalidade se caracteriza por volume superior a 15% em relação à média dos dias correspondentes aos últimos 12 meses</p>
+				<p class="s2">5.2.5.8.	Nos casos em que a Contratada desejar fazer uso da cláusula de atipicidade, deverá comprovar a(s) ocorrência(s) conforme item 5.2.5.7.1, via ofício, na mesma oportunidade em que enviar a documentação para faturamento. Nestes casos, a fiscalização designada pela Contratante terá cinco dias úteis para análise, decisão e comunicação à Contratante.</p>
+				<p class="s2">5.2.5.9.	Para que os dias considerados excepcionais sejam desconsiderados do cálculo de desempenho obtido, deverá a CONTRATADA observar as seguintes condições:</p>
+					<p class="s3">5.2.5.9.1.	Se, ao final do período mensal compreendido (de acordo com a data de assinatura do contrato), o desempenho obtido resultar em decréscimo sobre o percentual do fator de desempenho.</p>
 
-					<Comments :attr="{id:commentId(), context:'5.2.	A remuneração terá como base ...'}" v-if="estaConsulta.ativo == 1"></Comments>
+				<Comments :attr="{id:commentId(), context:'5.2.	A remuneração terá como base ...'}" v-if="estaConsulta.ativo == 1"></Comments>
 
-				</section>
+		</section>
 
-			<section>
+		<section>
 				<h2 class="titulo" indent="1">6.	JUSTIFICATIVAS TÉCNICAS</h2>
 				<h3>6.1.	Desafios da Administração pública</h3>
 				<p>Um dos grandes desafios da administração pública atualmente é assegurar os direitos de cidadania aos usuários de serviços sob responsabilidade do Estado. Com a média mensal de 600 mil ligações recebidas, 500 mil atendimentos e levando em consideração que a central precisa estar preparada para absorver eventuais novos serviços,, sempre tendo em vista a melhoria do atendimento ao usuário, é mister que a PMSP mantenha e aprimore a central de atendimento 156, 199 e 153, assegurando rapidez e eficiência para o usuário final. O serviço destas centrais de atendimento telefônico se enquadram como de natureza continuada, são um modalidade de atendimento já conhecida e utilizada pelos cidadãos, operando durante 24h por dia, todos os dias do ano. A modalidade de atendimento telefônico é de suma importância para a municipalidade, em que pese o fato de que significativa parcela da população residente em São Paulo ver, nesta modalidade de atendimento, uma alternativa prática, segura e gratuita para solucionar pendências e solicitar serviços cuja natureza não exija atendimento presencial.</p>
 					
 				<Comments :attr="{id:commentId(), context:'subtitulo'}" v-if="estaConsulta.ativo == 1"></Comments>
 
-			</section>
-
+			
 			<h3>6.2.	Índices de qualificação econômico-financeira</h3>
 			<p>6.2.1.	A exigência dos índices para fins de qualificação econômico-financeira decorre da necessidade da demonstração de plena saúde financeira para a execução contratual pretendida, em razão da natureza do serviço, sua imprescindível continuidade e o envolvimento de infraestrutura e pessoal necessários para o pleno cumprimento das obrigações a serem assumidas.</p>
 			<p>6.2.2.	Sem prejuízo, adota-se a possibilidade de demonstração de Patrimônio Líquido compatível com a proposta comercial como sucedâneo à demonstração dos índices mínimos.</p>
@@ -1878,532 +1886,532 @@
 			<p style="text-align: center;">PERÍODO DE MAIO/2016 À JULHO/2019</p>
 
 			<table>
-  <tr>
-    <th colspan="10">LIGAÇÕES RECEBIDAS POR GRUPO DE SERVIÇOS</th>
-  </tr>
-  <tr>
-    <th colspan="10">NÃO EMERGENCIAIS</th>
-  </tr>
-  <tr>
-    <th colspan="10">ANO 2016</th>
-  </tr>
-  <tr style="font-weight: bold; text-align: center; background-color: #ddd">
-    <td>SERVIÇOS</td>
-    <td>MAI</td>
-    <td>JUN</td>
-    <td>JUL</td>
-    <td>AGO</td>
-    <td>SET</td>
-    <td>OUT</td>
-    <td>NOV</td>
-    <td>DEZ</td>
-    <td>Total Geral</td>
-  </tr>
-  <tr>
-    <td>ASSISTÊNCIA SOCIAL</td>
-    <td>7.444</td>
-    <td>38.560</td>
-    <td>30.482</td>
-    <td>24.131</td>
-    <td>24.477</td>
-    <td>17.052</td>
-    <td>11.480</td>
-    <td>8.189</td>
-    <td>161.815</td>
-  </tr>
-  <tr>
-    <td>BILHETE ÚNICO</td>
-    <td>27.212</td>
-    <td>108.184</td>
-    <td>80.349</td>
-    <td>-  </td>
-    <td>-  </td>
-    <td>18.613</td>
-    <td>146.155</td>
-    <td>108.674</td>
-    <td>489.187</td>
-  </tr>
-  <tr>
-    <td>CET</td>
-    <td>586</td>
-    <td>1.679</td>
-    <td>1.753</td>
-    <td>-  </td>
-    <td>-  </td>
-    <td>-  </td>
-    <td>-  </td>
-    <td>-  </td>
-    <td>4.018</td>
-  </tr>
-  <tr>
-    <td>DEFESA CIVIL</td>
-    <td>1.859</td>
-    <td>6.508</td>
-    <td>4.125</td>
-    <td>-  </td>
-    <td>-  </td>
-    <td>-  </td>
-    <td>-  </td>
-    <td>-  </td>
-    <td>12.492</td>
-  </tr>
-  <tr>
-    <td>FINANÇAS</td>
-    <td>1.987</td>
-    <td>8.294</td>
-    <td>13.305</td>
-    <td>14.810</td>
-    <td>13.031</td>
-    <td>14.178</td>
-    <td>14.043</td>
-    <td>11.533</td>
-    <td>91.181</td>
-  </tr>
-  <tr>
-    <td>GERAL</td>
-    <td>31.425</td>
-    <td>120.817</td>
-    <td>85.792</td>
-    <td>-  </td>
-    <td>-  </td>
-    <td>-  </td>
-    <td>-  </td>
-    <td>-  </td>
-    <td>238.034</td>
-  </tr>
-  <tr>
-    <td>HSPM</td>
-    <td>9.684</td>
-    <td>39.350</td>
-    <td>57.908</td>
-    <td>60.726</td>
-    <td>54.772</td>
-    <td>85.739</td>
-    <td>87.790</td>
-    <td>41.019</td>
-    <td>436.988</td>
-  </tr>
-  <tr>
-    <td>OGM</td>
-    <td>-  </td>
-    <td>-  </td>
-    <td>-  </td>
-    <td>-  </td>
-    <td>-  </td>
-    <td>-  </td>
-    <td>-  </td>
-    <td>9.917</td>
-    <td>9.917</td>
-  </tr>
-  <tr>
-    <td>OUVIDORIA SUS</td>
-    <td>6.582</td>
-    <td>25.671</td>
-    <td>20.346</td>
-    <td>11.957</td>
-    <td>12.332</td>
-    <td>15.372</td>
-    <td>14.985</td>
-    <td>11.430</td>
-    <td>118.675</td>
-  </tr>
-  <tr>
-    <td>PROGRAMAS SOCIAIS</td>
-    <td>5.405</td>
-    <td>19.152</td>
-    <td>23.732</td>
-    <td>24.297</td>
-    <td>24.727</td>
-    <td>27.480</td>
-    <td>31.179</td>
-    <td>22.651</td>
-    <td>178.623</td>
-  </tr>
-  <tr>
-    <td>SERVIÇO FUNERÁRIO</td>
-    <td>1.680</td>
-    <td>6.105</td>
-    <td>3.380</td>
-    <td>-  </td>
-    <td>-  </td>
-    <td>-  </td>
-    <td>-  </td>
-    <td>-  </td>
-    <td>11.165</td>
-  </tr>
-  <tr>
-    <td>SPTRANS</td>
-    <td>16.108</td>
-    <td>64.975</td>
-    <td>49.406</td>
-    <td>-  </td>
-    <td>-  </td>
-    <td>-  </td>
-    <td>-  </td>
-    <td>-  </td>
-    <td>130.489</td>
-  </tr>
-  <tr>
-    <td>SUPORTE PORTAL </td>
-    <td>-  </td>
-    <td>-  </td>
-    <td>-  </td>
-    <td>-  </td>
-    <td>-  </td>
-    <td>-  </td>
-    <td>660</td>
-    <td>5.855</td>
-    <td>6.515</td>
-  </tr>
-  <tr>
-    <td>TRANSPORTE E TRÂNSITO</td>
-    <td>-  </td>
-    <td>-  </td>
-    <td>78.717</td>
-    <td>347.698</td>
-    <td>283.803</td>
-    <td>250.081</td>
-    <td>77.051</td>
-    <td>66.544</td>
-    <td>1.103.894</td>
-  </tr>
-  <tr>
-    <td>VIGILANCIA E SAUDE</td>
-    <td>2.796</td>
-    <td>12.081</td>
-    <td>10.284</td>
-    <td>8.939</td>
-    <td>7.369</td>
-    <td>8.795</td>
-    <td>8.950</td>
-    <td>7.418</td>
-    <td>66.632</td>
-  </tr>
-  <tr>
-    <td>ZELADORIA</td>
-    <td>-  </td>
-    <td>-  </td>
-    <td>38.267</td>
-    <td>152.656</td>
-    <td>138.148</td>
-    <td>157.451</td>
-    <td>148.937</td>
-    <td>133.215</td>
-    <td>768.674</td>
-  </tr>
-  <tr>
-    <td>Total Geral</td>
-    <td>112.768</td>
-    <td>451.376</td>
-    <td>497.846</td>
-    <td>645.214</td>
-    <td>558.659</td>
-    <td>594.761</td>
-    <td>541.230</td>
-    <td>426.445</td>
-    <td>3.828.299</td>
-  </tr>
-</table>
+			  <tr>
+			    <th colspan="10">LIGAÇÕES RECEBIDAS POR GRUPO DE SERVIÇOS</th>
+			  </tr>
+			  <tr>
+			    <th colspan="10">NÃO EMERGENCIAIS</th>
+			  </tr>
+			  <tr>
+			    <th colspan="10">ANO 2016</th>
+			  </tr>
+			  <tr style="font-weight: bold; text-align: center; background-color: #ddd">
+			    <td>SERVIÇOS</td>
+			    <td>MAI</td>
+			    <td>JUN</td>
+			    <td>JUL</td>
+			    <td>AGO</td>
+			    <td>SET</td>
+			    <td>OUT</td>
+			    <td>NOV</td>
+			    <td>DEZ</td>
+			    <td>Total Geral</td>
+			  </tr>
+			  <tr>
+			    <td>ASSISTÊNCIA SOCIAL</td>
+			    <td>7.444</td>
+			    <td>38.560</td>
+			    <td>30.482</td>
+			    <td>24.131</td>
+			    <td>24.477</td>
+			    <td>17.052</td>
+			    <td>11.480</td>
+			    <td>8.189</td>
+			    <td>161.815</td>
+			  </tr>
+			  <tr>
+			    <td>BILHETE ÚNICO</td>
+			    <td>27.212</td>
+			    <td>108.184</td>
+			    <td>80.349</td>
+			    <td>-  </td>
+			    <td>-  </td>
+			    <td>18.613</td>
+			    <td>146.155</td>
+			    <td>108.674</td>
+			    <td>489.187</td>
+			  </tr>
+			  <tr>
+			    <td>CET</td>
+			    <td>586</td>
+			    <td>1.679</td>
+			    <td>1.753</td>
+			    <td>-  </td>
+			    <td>-  </td>
+			    <td>-  </td>
+			    <td>-  </td>
+			    <td>-  </td>
+			    <td>4.018</td>
+			  </tr>
+			  <tr>
+			    <td>DEFESA CIVIL</td>
+			    <td>1.859</td>
+			    <td>6.508</td>
+			    <td>4.125</td>
+			    <td>-  </td>
+			    <td>-  </td>
+			    <td>-  </td>
+			    <td>-  </td>
+			    <td>-  </td>
+			    <td>12.492</td>
+			  </tr>
+			  <tr>
+			    <td>FINANÇAS</td>
+			    <td>1.987</td>
+			    <td>8.294</td>
+			    <td>13.305</td>
+			    <td>14.810</td>
+			    <td>13.031</td>
+			    <td>14.178</td>
+			    <td>14.043</td>
+			    <td>11.533</td>
+			    <td>91.181</td>
+			  </tr>
+			  <tr>
+			    <td>GERAL</td>
+			    <td>31.425</td>
+			    <td>120.817</td>
+			    <td>85.792</td>
+			    <td>-  </td>
+			    <td>-  </td>
+			    <td>-  </td>
+			    <td>-  </td>
+			    <td>-  </td>
+			    <td>238.034</td>
+			  </tr>
+			  <tr>
+			    <td>HSPM</td>
+			    <td>9.684</td>
+			    <td>39.350</td>
+			    <td>57.908</td>
+			    <td>60.726</td>
+			    <td>54.772</td>
+			    <td>85.739</td>
+			    <td>87.790</td>
+			    <td>41.019</td>
+			    <td>436.988</td>
+			  </tr>
+			  <tr>
+			    <td>OGM</td>
+			    <td>-  </td>
+			    <td>-  </td>
+			    <td>-  </td>
+			    <td>-  </td>
+			    <td>-  </td>
+			    <td>-  </td>
+			    <td>-  </td>
+			    <td>9.917</td>
+			    <td>9.917</td>
+			  </tr>
+			  <tr>
+			    <td>OUVIDORIA SUS</td>
+			    <td>6.582</td>
+			    <td>25.671</td>
+			    <td>20.346</td>
+			    <td>11.957</td>
+			    <td>12.332</td>
+			    <td>15.372</td>
+			    <td>14.985</td>
+			    <td>11.430</td>
+			    <td>118.675</td>
+			  </tr>
+			  <tr>
+			    <td>PROGRAMAS SOCIAIS</td>
+			    <td>5.405</td>
+			    <td>19.152</td>
+			    <td>23.732</td>
+			    <td>24.297</td>
+			    <td>24.727</td>
+			    <td>27.480</td>
+			    <td>31.179</td>
+			    <td>22.651</td>
+			    <td>178.623</td>
+			  </tr>
+			  <tr>
+			    <td>SERVIÇO FUNERÁRIO</td>
+			    <td>1.680</td>
+			    <td>6.105</td>
+			    <td>3.380</td>
+			    <td>-  </td>
+			    <td>-  </td>
+			    <td>-  </td>
+			    <td>-  </td>
+			    <td>-  </td>
+			    <td>11.165</td>
+			  </tr>
+			  <tr>
+			    <td>SPTRANS</td>
+			    <td>16.108</td>
+			    <td>64.975</td>
+			    <td>49.406</td>
+			    <td>-  </td>
+			    <td>-  </td>
+			    <td>-  </td>
+			    <td>-  </td>
+			    <td>-  </td>
+			    <td>130.489</td>
+			  </tr>
+			  <tr>
+			    <td>SUPORTE PORTAL </td>
+			    <td>-  </td>
+			    <td>-  </td>
+			    <td>-  </td>
+			    <td>-  </td>
+			    <td>-  </td>
+			    <td>-  </td>
+			    <td>660</td>
+			    <td>5.855</td>
+			    <td>6.515</td>
+			  </tr>
+			  <tr>
+			    <td>TRANSPORTE E TRÂNSITO</td>
+			    <td>-  </td>
+			    <td>-  </td>
+			    <td>78.717</td>
+			    <td>347.698</td>
+			    <td>283.803</td>
+			    <td>250.081</td>
+			    <td>77.051</td>
+			    <td>66.544</td>
+			    <td>1.103.894</td>
+			  </tr>
+			  <tr>
+			    <td>VIGILANCIA E SAUDE</td>
+			    <td>2.796</td>
+			    <td>12.081</td>
+			    <td>10.284</td>
+			    <td>8.939</td>
+			    <td>7.369</td>
+			    <td>8.795</td>
+			    <td>8.950</td>
+			    <td>7.418</td>
+			    <td>66.632</td>
+			  </tr>
+			  <tr>
+			    <td>ZELADORIA</td>
+			    <td>-  </td>
+			    <td>-  </td>
+			    <td>38.267</td>
+			    <td>152.656</td>
+			    <td>138.148</td>
+			    <td>157.451</td>
+			    <td>148.937</td>
+			    <td>133.215</td>
+			    <td>768.674</td>
+			  </tr>
+			  <tr>
+			    <td>Total Geral</td>
+			    <td>112.768</td>
+			    <td>451.376</td>
+			    <td>497.846</td>
+			    <td>645.214</td>
+			    <td>558.659</td>
+			    <td>594.761</td>
+			    <td>541.230</td>
+			    <td>426.445</td>
+			    <td>3.828.299</td>
+			  </tr>
+			</table>
 
-<table>
-  <tr>
-    <th colspan="14">LIGAÇÕES RECEBIDAS POR GRUPO DE SERVIÇOS </th>
-  </tr>
-  <tr>
-    <th colspan="14">NÃO EMERGENCIAIS</th>
-  </tr>
-  <tr>
-    <th colspan="14">ANO - 2017</th>
-  </tr>
-  <tr style="font-weight: bold; text-align: center; background-color: #ddd">
-    <td>SERVIÇOS</td>
-    <td>JAN</td>
-    <td>FEV</td>
-    <td>MAR</td>
-    <td>ABR</td>
-    <td>MAI</td>
-    <td>JUN</td>
-    <td>JUL</td>
-    <td>AGO</td>
-    <td>SET</td>
-    <td>OUT</td>
-    <td>NOV</td>
-    <td>DEZ</td>
-    <td>Total Geral</td>
-  </tr>
-  <tr>
-    <td>ASSISTÊNCIA SOCIAL </td>
-    <td>13.265</td>
-    <td>12.274</td>
-    <td>12.725</td>
-    <td>10.265</td>
-    <td>10.021</td>
-    <td>17.178</td>
-    <td>19.259</td>
-    <td>16.769</td>
-    <td>14.941</td>
-    <td>14.754</td>
-    <td>17.103</td>
-    <td>14.591</td>
-    <td>173.145</td>
-  </tr>
-  <tr>
-    <td>BILHETE ÚNICO</td>
-    <td>199.628</td>
-    <td>362.079</td>
-    <td>246.900</td>
-    <td>150.168</td>
-    <td>152.475</td>
-    <td>124.726</td>
-    <td>127.226</td>
-    <td>190.508</td>
-    <td>137.701</td>
-    <td>130.963</td>
-    <td>133.078</td>
-    <td>105.807</td>
-    <td>2.061.259</td>
-  </tr>
-  <tr>
-    <td>DEFESA CIVIL</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>327</td>
-    <td>2.475</td>
-    <td>1.888</td>
-    <td>2.460</td>
-    <td>2.288</td>
-    <td>3.792</td>
-    <td>14.020</td>
-    <td>13.287</td>
-    <td>40.537</td>
-  </tr>
-  <tr>
-    <td>FINANÇAS</td>
-    <td>14.059</td>
-    <td>17.887</td>
-    <td>11.848</td>
-    <td>7.841</td>
-    <td>9.540</td>
-    <td>9.277</td>
-    <td>13.445</td>
-    <td>12.053</td>
-    <td>14.785</td>
-    <td>16.663</td>
-    <td>12.470</td>
-    <td>11.582</td>
-    <td>151.450</td>
-  </tr>
-  <tr>
-    <td>HSPM</td>
-    <td>70.906</td>
-    <td>60.748</td>
-    <td>97.739</td>
-    <td>72.538</td>
-    <td>77.398</td>
-    <td>74.698</td>
-    <td>72.593</td>
-    <td>88.542</td>
-    <td>124.098</td>
-    <td>102.377</td>
-    <td>73.769</td>
-    <td>50.251</td>
-    <td>965.657</td>
-  </tr>
-  <tr>
-    <td>ILUMINAÇÃO</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>2.818</td>
-    <td>3.653</td>
-    <td>6.471</td>
-  </tr>
-  <tr>
-    <td>LOJA VIRTUAL</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>4.163</td>
-    <td>4.163</td>
-  </tr>
-  <tr>
-    <td>OGM</td>
-    <td>7.783</td>
-    <td>6.663</td>
-    <td>8.667</td>
-    <td>5.758</td>
-    <td>6.578</td>
-    <td>5.677</td>
-    <td>4.702</td>
-    <td>4.898</td>
-    <td>4.534</td>
-    <td>4.759</td>
-    <td>8.272</td>
-    <td>3.932</td>
-    <td>72.223</td>
-  </tr>
-  <tr>
-    <td>OUVIDORIA SUS</td>
-    <td>14.285</td>
-    <td>16.019</td>
-    <td>18.582</td>
-    <td>11.832</td>
-    <td>11.999</td>
-    <td>11.968</td>
-    <td>12.492</td>
-    <td>12.576</td>
-    <td>12.395</td>
-    <td>13.614</td>
-    <td>12.481</td>
-    <td>8.937</td>
-    <td>157.180</td>
-  </tr>
-  <tr>
-    <td>PROGRAMAS SOCIAIS</td>
-    <td>27.594</td>
-    <td>33.775</td>
-    <td>31.850</td>
-    <td>21.457</td>
-    <td>26.116</td>
-    <td>21.711</td>
-    <td>22.675</td>
-    <td>24.446</td>
-    <td>20.089</td>
-    <td>21.335</td>
-    <td>23.291</td>
-    <td>18.450</td>
-    <td>292.789</td>
-  </tr>
-  <tr>
-    <td>SPTRANS</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>3.069</td>
-    <td>50.322</td>
-    <td>50.389</td>
-    <td>36.519</td>
-    <td>140.299</td>
-  </tr>
-  <tr>
-    <td>SUPORTE PORTAL </td>
-    <td>9.391</td>
-    <td>8.520</td>
-    <td>8.074</td>
-    <td>5.740</td>
-    <td>6.149</td>
-    <td>4.924</td>
-    <td>4.373</td>
-    <td>5.410</td>
-    <td>4.772</td>
-    <td>31</td>
-    <td>4</td>
-    <td>-  </td>
-    <td>57.388</td>
-  </tr>
-  <tr>
-    <td>TRANSPORTE E TRÂNSITO</td>
-    <td>78.255</td>
-    <td>86.471</td>
-    <td>110.843</td>
-    <td>79.346</td>
-    <td>71.723</td>
-    <td>68.571</td>
-    <td>68.003</td>
-    <td>73.376</td>
-    <td>64.546</td>
-    <td>64.690</td>
-    <td>75.545</td>
-    <td>68.293</td>
-    <td>909.662</td>
-  </tr>
-  <tr>
-    <td>TRIAGEM OUVIDORIAS</td>
-    <td>27.337</td>
-    <td>36.202</td>
-    <td>35.543</td>
-    <td>21.637</td>
-    <td>25.230</td>
-    <td>23.040</td>
-    <td>21.758</td>
-    <td>25.691</td>
-    <td>24.628</td>
-    <td>25.101</td>
-    <td>18.395</td>
-    <td>42.342</td>
-    <td>326.904</td>
-  </tr>
-  <tr>
-    <td>VIGILANCIA E SAUDE</td>
-    <td>10.828</td>
-    <td>9.979</td>
-    <td>9.013</td>
-    <td>5.574</td>
-    <td>5.514</td>
-    <td>4.759</td>
-    <td>4.697</td>
-    <td>6.271</td>
-    <td>6.079</td>
-    <td>7.163</td>
-    <td>6.948</td>
-    <td>6.940</td>
-    <td>83.765</td>
-  </tr>
-  <tr>
-    <td>ZELADORIA</td>
-    <td>154.867</td>
-    <td>160.863</td>
-    <td>153.336</td>
-    <td>100.384</td>
-    <td>114.461</td>
-    <td>94.519</td>
-    <td>94.892</td>
-    <td>112.911</td>
-    <td>105.997</td>
-    <td>110.167</td>
-    <td>107.705</td>
-    <td>102.963</td>
-    <td>1.413.065</td>
-  </tr>
-  <tr>
-    <td>Total Geral</td>
-    <td>628.198</td>
-    <td>811.480</td>
-    <td>745.120</td>
-    <td>492.540</td>
-    <td>517.531</td>
-    <td>463.523</td>
-    <td>468.003</td>
-    <td>575.911</td>
-    <td>539.922</td>
-    <td>565.731</td>
-    <td>556.288</td>
-    <td>491.710</td>
-    <td>6.855.957</td>
-  </tr>
-</table>
+			<table>
+			  <tr>
+			    <th colspan="14">LIGAÇÕES RECEBIDAS POR GRUPO DE SERVIÇOS </th>
+			  </tr>
+			  <tr>
+			    <th colspan="14">NÃO EMERGENCIAIS</th>
+			  </tr>
+			  <tr>
+			    <th colspan="14">ANO - 2017</th>
+			  </tr>
+			  <tr style="font-weight: bold; text-align: center; background-color: #ddd">
+			    <td>SERVIÇOS</td>
+			    <td>JAN</td>
+			    <td>FEV</td>
+			    <td>MAR</td>
+			    <td>ABR</td>
+			    <td>MAI</td>
+			    <td>JUN</td>
+			    <td>JUL</td>
+			    <td>AGO</td>
+			    <td>SET</td>
+			    <td>OUT</td>
+			    <td>NOV</td>
+			    <td>DEZ</td>
+			    <td>Total Geral</td>
+			  </tr>
+			  <tr>
+			    <td>ASSISTÊNCIA SOCIAL </td>
+			    <td>13.265</td>
+			    <td>12.274</td>
+			    <td>12.725</td>
+			    <td>10.265</td>
+			    <td>10.021</td>
+			    <td>17.178</td>
+			    <td>19.259</td>
+			    <td>16.769</td>
+			    <td>14.941</td>
+			    <td>14.754</td>
+			    <td>17.103</td>
+			    <td>14.591</td>
+			    <td>173.145</td>
+			  </tr>
+			  <tr>
+			    <td>BILHETE ÚNICO</td>
+			    <td>199.628</td>
+			    <td>362.079</td>
+			    <td>246.900</td>
+			    <td>150.168</td>
+			    <td>152.475</td>
+			    <td>124.726</td>
+			    <td>127.226</td>
+			    <td>190.508</td>
+			    <td>137.701</td>
+			    <td>130.963</td>
+			    <td>133.078</td>
+			    <td>105.807</td>
+			    <td>2.061.259</td>
+			  </tr>
+			  <tr>
+			    <td>DEFESA CIVIL</td>
+			    <td>-</td>
+			    <td>-</td>
+			    <td>-</td>
+			    <td>-</td>
+			    <td>327</td>
+			    <td>2.475</td>
+			    <td>1.888</td>
+			    <td>2.460</td>
+			    <td>2.288</td>
+			    <td>3.792</td>
+			    <td>14.020</td>
+			    <td>13.287</td>
+			    <td>40.537</td>
+			  </tr>
+			  <tr>
+			    <td>FINANÇAS</td>
+			    <td>14.059</td>
+			    <td>17.887</td>
+			    <td>11.848</td>
+			    <td>7.841</td>
+			    <td>9.540</td>
+			    <td>9.277</td>
+			    <td>13.445</td>
+			    <td>12.053</td>
+			    <td>14.785</td>
+			    <td>16.663</td>
+			    <td>12.470</td>
+			    <td>11.582</td>
+			    <td>151.450</td>
+			  </tr>
+			  <tr>
+			    <td>HSPM</td>
+			    <td>70.906</td>
+			    <td>60.748</td>
+			    <td>97.739</td>
+			    <td>72.538</td>
+			    <td>77.398</td>
+			    <td>74.698</td>
+			    <td>72.593</td>
+			    <td>88.542</td>
+			    <td>124.098</td>
+			    <td>102.377</td>
+			    <td>73.769</td>
+			    <td>50.251</td>
+			    <td>965.657</td>
+			  </tr>
+			  <tr>
+			    <td>ILUMINAÇÃO</td>
+			    <td>-</td>
+			    <td>-</td>
+			    <td>-</td>
+			    <td>-</td>
+			    <td>-</td>
+			    <td>-</td>
+			    <td>-</td>
+			    <td>-</td>
+			    <td>-</td>
+			    <td>-</td>
+			    <td>2.818</td>
+			    <td>3.653</td>
+			    <td>6.471</td>
+			  </tr>
+			  <tr>
+			    <td>LOJA VIRTUAL</td>
+			    <td>-</td>
+			    <td>-</td>
+			    <td>-</td>
+			    <td>-</td>
+			    <td>-</td>
+			    <td>-</td>
+			    <td>-</td>
+			    <td>-</td>
+			    <td>-</td>
+			    <td>-</td>
+			    <td>-</td>
+			    <td>4.163</td>
+			    <td>4.163</td>
+			  </tr>
+			  <tr>
+			    <td>OGM</td>
+			    <td>7.783</td>
+			    <td>6.663</td>
+			    <td>8.667</td>
+			    <td>5.758</td>
+			    <td>6.578</td>
+			    <td>5.677</td>
+			    <td>4.702</td>
+			    <td>4.898</td>
+			    <td>4.534</td>
+			    <td>4.759</td>
+			    <td>8.272</td>
+			    <td>3.932</td>
+			    <td>72.223</td>
+			  </tr>
+			  <tr>
+			    <td>OUVIDORIA SUS</td>
+			    <td>14.285</td>
+			    <td>16.019</td>
+			    <td>18.582</td>
+			    <td>11.832</td>
+			    <td>11.999</td>
+			    <td>11.968</td>
+			    <td>12.492</td>
+			    <td>12.576</td>
+			    <td>12.395</td>
+			    <td>13.614</td>
+			    <td>12.481</td>
+			    <td>8.937</td>
+			    <td>157.180</td>
+			  </tr>
+			  <tr>
+			    <td>PROGRAMAS SOCIAIS</td>
+			    <td>27.594</td>
+			    <td>33.775</td>
+			    <td>31.850</td>
+			    <td>21.457</td>
+			    <td>26.116</td>
+			    <td>21.711</td>
+			    <td>22.675</td>
+			    <td>24.446</td>
+			    <td>20.089</td>
+			    <td>21.335</td>
+			    <td>23.291</td>
+			    <td>18.450</td>
+			    <td>292.789</td>
+			  </tr>
+			  <tr>
+			    <td>SPTRANS</td>
+			    <td>-</td>
+			    <td>-</td>
+			    <td>-</td>
+			    <td>-</td>
+			    <td>-</td>
+			    <td>-</td>
+			    <td>-</td>
+			    <td>-</td>
+			    <td>3.069</td>
+			    <td>50.322</td>
+			    <td>50.389</td>
+			    <td>36.519</td>
+			    <td>140.299</td>
+			  </tr>
+			  <tr>
+			    <td>SUPORTE PORTAL </td>
+			    <td>9.391</td>
+			    <td>8.520</td>
+			    <td>8.074</td>
+			    <td>5.740</td>
+			    <td>6.149</td>
+			    <td>4.924</td>
+			    <td>4.373</td>
+			    <td>5.410</td>
+			    <td>4.772</td>
+			    <td>31</td>
+			    <td>4</td>
+			    <td>-  </td>
+			    <td>57.388</td>
+			  </tr>
+			  <tr>
+			    <td>TRANSPORTE E TRÂNSITO</td>
+			    <td>78.255</td>
+			    <td>86.471</td>
+			    <td>110.843</td>
+			    <td>79.346</td>
+			    <td>71.723</td>
+			    <td>68.571</td>
+			    <td>68.003</td>
+			    <td>73.376</td>
+			    <td>64.546</td>
+			    <td>64.690</td>
+			    <td>75.545</td>
+			    <td>68.293</td>
+			    <td>909.662</td>
+			  </tr>
+			  <tr>
+			    <td>TRIAGEM OUVIDORIAS</td>
+			    <td>27.337</td>
+			    <td>36.202</td>
+			    <td>35.543</td>
+			    <td>21.637</td>
+			    <td>25.230</td>
+			    <td>23.040</td>
+			    <td>21.758</td>
+			    <td>25.691</td>
+			    <td>24.628</td>
+			    <td>25.101</td>
+			    <td>18.395</td>
+			    <td>42.342</td>
+			    <td>326.904</td>
+			  </tr>
+			  <tr>
+			    <td>VIGILANCIA E SAUDE</td>
+			    <td>10.828</td>
+			    <td>9.979</td>
+			    <td>9.013</td>
+			    <td>5.574</td>
+			    <td>5.514</td>
+			    <td>4.759</td>
+			    <td>4.697</td>
+			    <td>6.271</td>
+			    <td>6.079</td>
+			    <td>7.163</td>
+			    <td>6.948</td>
+			    <td>6.940</td>
+			    <td>83.765</td>
+			  </tr>
+			  <tr>
+			    <td>ZELADORIA</td>
+			    <td>154.867</td>
+			    <td>160.863</td>
+			    <td>153.336</td>
+			    <td>100.384</td>
+			    <td>114.461</td>
+			    <td>94.519</td>
+			    <td>94.892</td>
+			    <td>112.911</td>
+			    <td>105.997</td>
+			    <td>110.167</td>
+			    <td>107.705</td>
+			    <td>102.963</td>
+			    <td>1.413.065</td>
+			  </tr>
+			  <tr>
+			    <td>Total Geral</td>
+			    <td>628.198</td>
+			    <td>811.480</td>
+			    <td>745.120</td>
+			    <td>492.540</td>
+			    <td>517.531</td>
+			    <td>463.523</td>
+			    <td>468.003</td>
+			    <td>575.911</td>
+			    <td>539.922</td>
+			    <td>565.731</td>
+			    <td>556.288</td>
+			    <td>491.710</td>
+			    <td>6.855.957</td>
+			  </tr>
+			</table>
 				
 			<Comments :attr="{id:commentId(), context:'13.2.	A fiscalização dos serviços pela Contratante não exime, nem diminui a completa responsabilidade da Contratada por qualquer inobservância ou omissão às cláusulas contratuais.'}" v-if="estaConsulta.ativo == 1"></Comments>
 			
@@ -2428,6 +2436,7 @@ import Indice from '@/components/Indice'
 import { consultasCommons } from '@/mixins/consultasCommons'
 import Comments from '@/components/Comments'
 import CommentsLoader from '@/components/CommentsLoader'
+import Imagem from '@/components/Imagem'
 
 export default {
 	name: 'TrContactCenter',
@@ -2443,7 +2452,8 @@ export default {
 		Comments,
 		CommentsLoader,
 		PageTop,
-		Indice
+		Indice,
+		Imagem
 		// Apoio
 	},
 	mixins: [ consultasCommons ]
@@ -2470,6 +2480,12 @@ ul > li > ul > li {
 }
 table {
 	font-size: 22px;
+}
+p.s2 {
+	padding-left: 3em;
+}
+p.s3 {
+	padding-left: 4em;
 }
 
 </style>

@@ -5,6 +5,7 @@
 				v-for="(titulo, index) in titulos" :key="index"
 				:class="{ ativo: titulo.ativo }"
 				:style="{ paddingLeft: titulo.indent + 'rem'}"
+				v-if="titulo.nome !== 'Contribuições' || $parent.estaConsulta.nContribuicoes > 0"
 				@click="rolar(titulo.offsetObj)">{{ titulo.nome }}</li>
 		</ul>
 		<button @click="rolar()"><i class="icon-seta_cima icon"><span>arrow_upward</span></i></button>
@@ -51,7 +52,12 @@ export default {
 					behavior: 'smooth'
 				})
 			}
-		}
+		}/*,
+		verificaContribuicoes (item) {
+			console.log(item.nome);
+			console.log(this.$parent.estaConsulta);
+			return item.nome !== "Contribuições" || this.$parent.estaConsulta.nContribuicoes > 0;
+		}*/
 	}
 }
 </script>

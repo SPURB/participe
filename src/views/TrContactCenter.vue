@@ -11,6 +11,22 @@
 		<!-- Decreto Nº 56.901 inclua este componente caso seja um PIU -->
 
 		<section>
+			<h2 class="titulo" indent="1">Apresentação</h2>
+			<p>A Prefeitura da Cidade de São Paulo, por meio da Secretaria Municipal de Inovação e Tecnologia - SMIT, disponibiliza Consulta Pública para acolher sugestões sobre o Termo de Referência para contratação de Contact Center/Call Center da solução de atendimento SP156.</p>
+			<p>A Central de atendimento 156 é o principal canal de contato do cidadão com a Prefeitura de São Paulo na solicitação de serviços e informações, responsável por mais de 20.000 atendimentos por dia, recebendo solicitações de cerca de 400 serviços públicos municipais e mais de 1000 serviços informativos. </p>
+			<p>Para facilitar a gestão dos comentários oriundos do processo de consulta pública, solicitamos aos participantes que destaquem o item e/ou subitem com a respectiva proposta de redação, juntamente com sua justificativa.</p>
+			<p>
+				Cronograma:
+				<ol>
+					<li>Recebimento de eventuais sugestões e/ou comentários até 25/11/2019.</li>
+					<li>Divulgação no site da SMIT (<a href="https://www.prefeitura.sp.gov.br/cidade/secretarias/inovacao/">https://www.prefeitura.sp.gov.br/cidade/secretarias/inovacao/</a>) da versão revisada do Termo de Referência considerando eventuais ajustes decorrentes do processo de consulta pública até 09/12/2019</li>
+					<li>Encaminhamento das Propostas contendo as respectivas Estimativas de Preços em conformidade com o Termo de Referência eventualmente ajustado em decorrência da consulta pública até 16/12/2019. As mesmas poderão ser enviadas para o e-mail. <a href="mailto:consultapublica.smit@prefeitura.sp.gov.br">consultapublica.smit@prefeitura.sp.gov.br</a></li>
+				</ol>
+			</p>
+
+		</section>
+
+		<section>
 			<h2 class="titulo" indent="1">1.	OBJETO</h2>
 			<h3>1.1.	Contratação de serviços de planejamento, implantação, operação, gerenciamento de central de atendimento e gestão de atendimento receptivo e ativo nas formas eletrônica e humana. </h3>
 			<Comments :attr="{id:commentId(true), context:'1. OBJETO'}" v-if="estaConsulta.ativo == 1"></Comments>
@@ -1433,16 +1449,18 @@
 					<p class="s3">7.3.1.1.6.	Promover a articulação necessária para direcionar e resolver as questões críticas, políticas, organizacionais ou de relacionamento entre as partes.</p>
 					<p class="s3">7.3.1.1.7.	Designar equipe da CONTRATANTE para dar suporte à CONTRATADA ao longo da execução do Contrato.</p>
 					<p class="s3">7.3.1.1.8.	Participantes do Comitê Gestor</p>
-						<p class="s4">7.3.1.1.8.1.	São membros do Comitê Gestor, minimamente</p>
-						<ul style="margin-left: 22em">
-							<li>Diretor (a) da CONTRATADA, ou pessoa por ele(a) indicada.</li>
-							<li>Secretário da pasta gestora deste contrato ou alguém por ele indicado.</li>
-							<li>Responsável pelo Comitê de Operação.</li>
-						</ul>
-					<p class="s3">7.3.1.1.8.2.	Frequência de reuniões:</p>
-					<ul style="margin-left: 22em">
-						<li>O Comitê Gestor terá frequência bimestral de reuniões.</li>
-					</ul>
+						<p class="s4">7.3.1.1.8.1.	São membros do Comitê Gestor, minimamente
+							<ul>
+								<li>Diretor (a) da CONTRATADA, ou pessoa por ele(a) indicada.</li>
+								<li>Secretário da pasta gestora deste contrato ou alguém por ele indicado.</li>
+								<li>Responsável pelo Comitê de Operação.</li>
+							</ul>
+						</p>						
+						<p class="s4">7.3.1.1.8.2.	Frequência de reuniões:
+							<ul>
+								<li>O Comitê Gestor terá frequência bimestral de reuniões.</li>
+							</ul>
+						</p>					
 			<p>7.3.2.	Comitê Operacional</p>
 				<p class="s2">7.3.2.1.	O Comitê Operacional deve ser indicado via ofício, de ambas as partes, e será responsável por planejar e acompanhar a execução dos Serviços previstos neste Termo de Referência.</p>
 				<p class="s2">7.3.2.2.	Todas as reuniões serão realizadas nas instalações da CONTRATANTE, ou como a CONTRATANTE aconselhar (com participantes remotos via teleconferência ou vídeo conferência).</p>
@@ -1450,7 +1468,7 @@
 				<p class="s2">7.3.2.4.	As Partes deverão ser notificadas com a antecedência mínima de 3 (três) dias úteis no caso de alterações nas datas desta reunião.</p>
 				<p class="s2">7.3.2.5.	Os representantes que não comparecerem às reuniões previamente agendadas, por motivos previamente justificados, receberão a ata da reunião, via e-mail, e terão até 2 (dois) dias corridos para manifestar seu voto, sob pena de em não o fazendo ser considerado como aceitação tácita do conteúdo sem ressalvas, ou seja, voto a favor do que foi deliberado.</p>
 				<p class="s2">7.3.2.6.	O Comitê Operacional terá como principais objetivos:</p>
-				<ul style="margin-left: 22em">
+				<ul>
 					<li>Supervisionar as atividades relacionadas ao cumprimento dos objetivos constantes neste Termo de Referência, gerenciando o comprometimento dos recursos humanos alocados, monitorando o andamento do projeto.</li>
 					<li>Realizar acompanhamento das atividades conforme previstos neste Termo de Referência.</li>
 					<li>Avaliar as prioridades.</li>
@@ -1466,17 +1484,19 @@
 					<li>Reportar ao Comitê Gestor a ocorrência de situações de emergência;</li>
 				</ul>
 				<p class="s2">7.3.2.7.	Participantes do Comitê Operacional</p>
-					<p class="s3">7.3.2.7.1.	São membros efetivos do Comitê de Operação, minimamente:</p>
-					<ul style="margin-left: 22em">
-						<li>Responsável da Secretaria de Municipal de Inovação e Tecnologia, indicado(a) pelo Secretário</li>
-						<li>Gerente experiente da CONTRATADA, ou pessoa por ele indicada;</li>
-						<li>1 Responsável por parte da CONTRATADA;</li>
-						<li>1 Responsável por parte da CONTRATANTE.</li>
-					</ul>
-					<p class="s3">7.3.2.7.2.	Frequência de reuniões</p>
-					<ul style="margin-left: 22em">
-						<li>O Comitê de operação terá frequência quinzenal de reuniões.</li>
-					</ul>
+					<p class="s3">7.3.2.7.1.	São membros efetivos do Comitê de Operação, minimamente:
+						<ul>
+							<li>Responsável da Secretaria de Municipal de Inovação e Tecnologia, indicado(a) pelo Secretário</li>
+							<li>Gerente experiente da CONTRATADA, ou pessoa por ele indicada;</li>
+							<li>1 Responsável por parte da CONTRATADA;</li>
+							<li>1 Responsável por parte da CONTRATANTE.</li>
+						</ul>
+					</p>
+					<p class="s3">7.3.2.7.2.	Frequência de reuniões
+						<ul>
+							<li>O Comitê de operação terá frequência quinzenal de reuniões.</li>
+						</ul>
+					</p>					
 				
 			<Comments :attr="{id:commentId(), context:'7.3.	Governança'}" v-if="estaConsulta.ativo == 1"></Comments>
 			
@@ -1888,7 +1908,14 @@
 		<section>
 			<h2 class="titulo" indent="1"><a :href="fileSrc('ANEXO_I.pdf')" target="_blank">ANEXO I - HISTÓRICO DE LIGAÇÕES E VOLUME - RECEPTIVO</a></h2>
 			<p>
-				<embed :src="fileSrc('ANEXO_I.pdf')" width="700" height="500" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+				<embed
+					v-observe-visibility="visibilityChanged"
+					:class="{ visible:isVisible }"
+					:src="fileSrc('ANEXO_I.pdf')"
+					width="700"
+					height="500"
+					alt="pdf"
+					pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
 			</p>
 			<Comments :attr="{id:commentId(), context:'ANEXO I - HISTÓRICO DE LIGAÇÕES E VOLUME - RECEPTIVO'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
@@ -1896,7 +1923,14 @@
 		<section>
 			<h2 class="titulo" indent="1"><a :href="fileSrc('ANEXO_II.pdf')" target="_blank">ANEXO II - HISTÓRICO DE LIGAÇÕES E VOLUME - ATIVO</a></h2>
 			<p>
-				<embed :src="fileSrc('ANEXO_II.pdf')" width="700" height="500" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+				<embed
+					v-observe-visibility="visibilityChanged"
+					:class="{ visible:isVisible }"
+					:src="fileSrc('ANEXO_II.pdf')"
+					width="700"
+					height="500"
+					alt="pdf"
+					pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
 			</p>
 			<Comments :attr="{id:commentId(), context:'ANEXO II - HISTÓRICO DE LIGAÇÕES E VOLUME - ATIVO'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
@@ -1905,7 +1939,14 @@
 		<section>
 			<h2 class="titulo" indent="1"><a :href="fileSrc('ANEXO_III.pdf')" target="_blank">ANEXO III - HISTÓRICO DE VOLUMETRIA DE ATENDIMENTOS VIA CHAT</a></h2>
 			<p>
-				<embed :src="fileSrc('ANEXO_III.pdf')" width="700" height="500" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+				<embed 
+					v-observe-visibility="visibilityChanged"
+					:class="{ visible:isVisible }"
+					:src="fileSrc('ANEXO_III.pdf')"
+					width="700"
+					height="500"
+					alt="pdf"
+					pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
 			</p>
 			<Comments :attr="{id:commentId(), context:'ANEXO III - HISTÓRICO DE VOLUMETRIA DE ATENDIMENTOS VIA CHAT'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
@@ -1913,7 +1954,14 @@
 		<section>
 			<h2 class="titulo" indent="1"><a :href="fileSrc('ANEXO_IV.pdf')" target="_blank">ANEXO IV - MODELO DE ACORDO DE NÍVEL DE SERVIÇO</a></h2>
 			<p>
-				<embed :src="fileSrc('ANEXO_IV.pdf')" width="700" height="500" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+				<embed
+					v-observe-visibility="visibilityChanged"
+					:class="{ visible:isVisible }"
+					:src="fileSrc('ANEXO_IV.pdf')"
+					width="700"
+					height="500"
+					alt="pdf"
+					pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
 			</p>
 			<Comments :attr="{id:commentId(), context:'ANEXO IV - MODELO DE ACORDO DE NÍVEL DE SERVIÇO'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
@@ -1943,7 +1991,8 @@ export default {
 			titulosLimpo: [],
 			comments_atrr: undefined,
 			consultas: false,
-			estaConsulta: {}
+			estaConsulta: {},
+			isVisible: false
 		}
 	},
 	components: {
@@ -1959,6 +2008,14 @@ export default {
 		fileSrc (fileName) {
 			let url = this.$store.getters.basePath + 'arquivos/tr-contact-center/' + fileName
 			return url.toString()
+		},
+		// visibilityChanged (isVisible, entry, src) {
+		// 	this.isVisible = isVisible
+		// 	if (isVisible) this.src = src
+		// }
+		visibilityChanged (isVisible, entry) {
+			this.isVisible = isVisible
+			console.log(entry)
 		}
 	}
 }
@@ -1988,10 +2045,29 @@ table {
 p.s2 {
 	padding-left: 3em;
 }
+// p.s2 > ul {
+// 	padding-left: 4em;
+// }
 p.s3 {
 	padding-left: 4em;
 }
-h2.titulo > a {
+p.s4 {
+	padding-left: 5em;
+}
+p.s5 {
+	padding-left: 6em;
+}
+// h2.titulo > a {
+a {
 	color: black;
 }
+h3 {
+	font-weight: normal;
+}
+
+.visible {
+		opacity: 1;
+		transition-delay: 800;
+		transition: opacity 0.5s ease;
+	}
 </style>

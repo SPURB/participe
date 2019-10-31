@@ -1905,12 +1905,14 @@
 			<Comments :attr="{id:commentId(), context:'13.2.	A fiscalização dos serviços pela Contratante...'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
-		<section>
+		<section v-observe-visibility="{
+						callback: (isVisible, entry) => visibilityChanged(isVisible, entry, 'anexoI'),
+						once: true
+					}">
 			<h2 class="titulo" indent="1"><a :href="fileSrc('ANEXO_I.pdf')" target="_blank">ANEXO I - HISTÓRICO DE LIGAÇÕES E VOLUME - RECEPTIVO</a></h2>
 			<p>
 				<embed
-					v-observe-visibility="visibilityChanged"
-					:class="{ visible:isVisible }"
+					v-if="isVisible.anexoI"					
 					:src="fileSrc('ANEXO_I.pdf')"
 					width="700"
 					height="500"
@@ -1920,12 +1922,14 @@
 			<Comments :attr="{id:commentId(), context:'ANEXO I - HISTÓRICO DE LIGAÇÕES E VOLUME - RECEPTIVO'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
-		<section>
+		<section v-observe-visibility="{
+						callback: (isVisible, entry) => visibilityChanged(isVisible, entry, 'anexoII'),
+						once: true
+					}">
 			<h2 class="titulo" indent="1"><a :href="fileSrc('ANEXO_II.pdf')" target="_blank">ANEXO II - HISTÓRICO DE LIGAÇÕES E VOLUME - ATIVO</a></h2>
 			<p>
 				<embed
-					v-observe-visibility="visibilityChanged"
-					:class="{ visible:isVisible }"
+					v-if="isVisible.anexoII"
 					:src="fileSrc('ANEXO_II.pdf')"
 					width="700"
 					height="500"
@@ -1936,12 +1940,14 @@
 		</section>
 
 
-		<section>
+		<section v-observe-visibility="{
+						callback: (isVisible, entry) => visibilityChanged(isVisible, entry, 'anexoIII'),
+						once: true
+					}">
 			<h2 class="titulo" indent="1"><a :href="fileSrc('ANEXO_III.pdf')" target="_blank">ANEXO III - HISTÓRICO DE VOLUMETRIA DE ATENDIMENTOS VIA CHAT</a></h2>
 			<p>
 				<embed 
-					v-observe-visibility="visibilityChanged"
-					:class="{ visible:isVisible }"
+					v-if="isVisible.anexoIII"
 					:src="fileSrc('ANEXO_III.pdf')"
 					width="700"
 					height="500"
@@ -1951,12 +1957,14 @@
 			<Comments :attr="{id:commentId(), context:'ANEXO III - HISTÓRICO DE VOLUMETRIA DE ATENDIMENTOS VIA CHAT'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
-		<section>
+		<section v-observe-visibility="{
+						callback: (isVisible, entry) => visibilityChanged(isVisible, entry, 'anexoIV'),
+						once: true
+					}">
 			<h2 class="titulo" indent="1"><a :href="fileSrc('ANEXO_IV.pdf')" target="_blank">ANEXO IV - MODELO DE ACORDO DE NÍVEL DE SERVIÇO</a></h2>
 			<p>
 				<embed
-					v-observe-visibility="visibilityChanged"
-					:class="{ visible:isVisible }"
+					v-if="isVisible.anexoIV"
 					:src="fileSrc('ANEXO_IV.pdf')"
 					width="700"
 					height="500"
@@ -1992,7 +2000,12 @@ export default {
 			comments_atrr: undefined,
 			consultas: false,
 			estaConsulta: {},
-			isVisible: false
+			isVisible: {
+				anexoI: false,
+				anexoII: false,
+				anexoIII: false,
+				anexoIV: false
+			}
 		}
 	},
 	components: {
@@ -2009,14 +2022,9 @@ export default {
 			let url = this.$store.getters.basePath + 'arquivos/tr-contact-center/' + fileName
 			return url.toString()
 		},
-		// visibilityChanged (isVisible, entry, src) {
-		// 	this.isVisible = isVisible
-		// 	if (isVisible) this.src = src
-		// }
-		visibilityChanged (isVisible, entry) {
-			this.isVisible = isVisible
-			console.log(entry)
-		}
+		visibilityChanged (isVisible, entry, itemVisivel) {
+			this.isVisible[itemVisivel] = isVisible
+		},
 	}
 }
 </script>

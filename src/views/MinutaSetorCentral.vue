@@ -7,7 +7,71 @@
 
 		<Indice :titulos="titulosLimpo"></Indice>
 
-		<Apoio></Apoio>
+		<!-- <Apoio></Apoio> -->
+		<Apoio>
+			<template slot="item2">
+				<li>
+					<input type="radio" name="tabs" id="item2">
+					<label for="item2">Apresentação LAC</label>
+					<div class="conteudoTab item2">
+						<h1 class="conteudoTab-title--reset">Minuta Consolidada do Projeto de Lei que aprova o Projeto de Intervenção Urbana do Setor Central – PIU-SCE</h1>
+						<h2 class="conteudoTab-subtitle--reset">Apresentação</h2>
+						<h3 class="conteudoTab-subtitle--reset"><em>Propostas da 2ª Consulta Pública</em></h3>
+						<p>Na Consulta Pública veiculada entre 9 de maio e 16 de agosto de 2019, foram apresentadas as principais propostas da versão consolidada do Projeto de Intervenção Urbana Setor Central - PIU-SCE,  que abrangem Programa de Intervenções, Regramentos Específicos, Estratégias de Intervenção, Modelo de Gestão Financeira, Modelo de Gestão Participativa e a definição de instrumentos de implantação complementares: a OPERAÇÃO URBANA CENTRO revisada e a ÁREA DE INTERVENÇÃO URBANA SETOR CENTRAL.</p>
+						<p>A minuta de Projeto de Lei ora apresentada traz a evolução das propostas iniciais, ajustadas em função de jornadas de discussão do PIU-SCE entre órgãos da administração municipal, de diálogos com associações da sociedade civil e das contribuições colhidas na consulta e nas audiências públicas do projeto.</p>
+
+						<h6><em>Instrumentos de implantação do PIU</em></h6>
+						<h6>Operação Urbana Centro</h6>
+						<p>A manutenção da OU Centro - em perímetro restrito aos distritos Sé e República como em sua formulação técnica original - se justificava na possibilidade, única no município, da concessão de parâmetros urbanísticos específicos para cada empreendimento proposto. Buscava-se favorecer a reprodução da volumetria singular do conjunto edificado dos distritos Sé e República, resultante de parâmetros urbanísticos muito mais generosos de legislações urbanísticas passadas.</p>
+						<p>Contudo, o histórico das solicitações protocoladas desde 1997 não fornece justificativa para a manutenção da discricionaridade de análises específicas para propostas de empreendimentos, a serem validadas pela Comissão Executiva da OU Centro e pela Câmara Técnica de Legislação Urbanística – CTLU, como prevê a Lei nº. 12.349 de 1997. </p>
+						<p>Constata-se que, nos mais de vinte anos de vigência da Operação Urbana, Coeficientes de Aproveitamento do Terreno (CA) superiores a 6 foram adotados em dois empreendimentos, apenas. A expressiva maioria das edificações viabilizadas com base na OU Centro valeu-se das disposições que permitiam análise direta pelo Departamento de Aprovação de Edificações da então SEHAB para solicitações previamente parametrizadas na Lei.</p>
+						<p>Além desse ponto específico da OU Centro, deve-se precisar o lugar que a regulamentação trazida por meio dos Projetos de Intervenção Urbana deve ocupar na regulação urbanística municipal. </p>
+						<p>O Plano Diretor Estratégico – PDE de 2014 fixou objetivos específicos para cada setor da Macroárea de Estruturação Metropolitana – MEM e, para alcançá-los, determinou a elaboração de Projetos de Intervenção Urbana, <em>tratando de disciplina especial de uso e ocupação do solo.</em> </p>
+
+						<p>A disciplina especial mencionada é concebida como uma camada adicional de regulação, operando nos limites autorizados pelo PDE: redefinição dos parâmetros de uso e ocupação do solo, aumento das densidades construtiva e demográfica, transformações estruturais orientadas para o maior aproveitamento da terra urbana e metas específicas de mitigação da precariedade social e urbanística.
+						Vigora o entendimento de que a regulamentação proposta por meio do PIU Setor Central e de outros projetos de intervenção urbana não deve criar áreas de excepcionalidade normativa: combinada ao PDE e à Legislação de Parcelamento, Uso e Ocupação do Solo, integra o marco regulatório da gestão urbanística do território de cada projeto.</p>
+
+						<p>Desta forma, a presente Minuta de Projeto de Lei do PIU-SCE traz a proposta de revogação da Operação Urbana Centro e de criação da Área de Intervenção Urbana Setor Central – AIU-SCE, onde estão demarcados o Setor Centro Histórico, abrangendo os distritos Sé e República, e o Setor Centro Metropolitano, o restante da área de projeto.</p>
+
+						<p>O regramento urbanístico é estabelecido em disposições, quadros e mapas, integrantes da Minuta de PL, cessando a concessão de parâmetros urbanísticos específicos para cada empreendimento, mediante análise caso a caso da solicitação.</p>
+
+						<p>A Comissão Executiva da Operação Urbana Centro é sucedida pelo Conselho Gestor da AIU-SCE, de composição paritária, cujas atribuições estão concentradas no monitoramento da implantação do Programa de Intervenções do PIU-SCE.</p>
+
+						<p>E, considerando que a finalidade do Projeto de Intervenção Urbana é a consecução de objetivos definidos,  o horizonte de implantação do PIU-SCE também é delimitado nesta Minuta de Projeto de Lei, para que não permaneça na legislação urbanística do Município  um instrumento que ou já cumpriu seu papel ou que não foi eficaz para fazê-lo.</p>
+
+						<h6>AEL da Moradia</h6>
+						<p>Com o objetivo de garantir a integração da moradia de interesse social ao tecido envoltório, o PIU-SCE desenvolveu  a proposta de delimitação de Áreas de Estruturação Local – AEL - abrangendo perímetros de ZEIS e vizinhanças habitacionais adjacentes.</p>
+
+						<p>Pretendia-se que a intervenção nas AEL de Moradia não ficasse restrita ao atendimento habitacional de interesse social e se estendesse à requalificação urbanística de áreas adjacentes, numa ação capaz de aproximar populações de faixas de renda diversas.</p>
+
+						<p>Nas discussões com a equipe técnica da SEHAB, prevaleceu o entendimento de que esse perímetro estendido da ação em ZEIS poderia ser fixado posteriormente, no processo de elaboração de cada Projeto de Intervenção ou Plano de Urbanização de ZEIS, a partir de um conhecimento mais apurado da área de intervenção.</p>
+						<p>Desta forma, as AEL da Moradia deixam de comparecer nesta minuta de PL.</p>
+
+						<h6>Estratégias de Implantação do PIU-SCE</h6>
+						<h6>Perímetro de requalificação de imóveis tombados – PRIT</h6>
+
+						<p>A versão consolidada do PIU-SCE trazia a proposta de delimitação do Perímetro de Requalificação de Imóveis Tombados (PRIT), caracterizado pela concentração de imóveis classificados como ZEPEC-BIR ou em processo de tombamento e disciplinado por regramento urbanístico específico para controle da ambiência dos bens tombados.</p>
+
+						<p>Na discussão das estratégias relacionadas à proteção do patrimônio histórico com técnicos dos órgãos de preservação, a partir do conceito de Área de Urbanização Especial (AUE) estabelecido no PDE foram definidas as <strong>Áreas de Interesse de Preservação e Valorização do Patrimônio Cultural (AIPC)</strong> para nomear porções do território com características singulares do ponto de vista da morfologia urbana, arquitetônica, paisagística, simbólica e cultural, dotadas de identidade e memória e que permanecem como documentos representativos do processo de urbanização do município.</p>
+
+						<p>Esse conceito, mais abrangente, absorveu a proposta de criação do PRIT, suprimida da  minuta de PL ora publicada. O criterioso estudo que subsidiou a elaboração  da proposta foi encaminhado ao Departamento do Patrimônio Histórico como contribuição da equipe que desenvolveu o PIU-SCE ao tema da preservação.</p>
+
+						<h6>Plano de Ação Integrada</h6>
+
+						<p>O Plano de Ação Integrada - PAI, apresentado na última Consulta Pública do PIU-SCE, é um instrumento de gestão da implantação do Programa de Intervenções utilizado para organizar o faseamento das ações ali indicadas, segundo unidade territorial ou convergência temática.</p>
+
+						<p>Na minuta de PL aqui apresentada, o PAI recebe outro nome: <strong>Proposta de Diretrizes de Investimento – PDI</strong>, nome que melhor expressa o elenco de intervenções interrelacionadas a ser submetido à priorização pelo Conselho Gestor da AIU. A conversão dessa proposta em plano de ação somente acontecerá após aprovação do Conselho Gestor.</p>
+
+						<h6><em>Em resumo...</em></h6>
+						<p>A Minuta de Projeto de Lei do PIU do Setor Central, ora apresentada, ajustou, integrou e simplificou proposições enunciadas no PIU-SCE consolidado.</p>
+
+						<p>Muitas das propostas recebidas de munícipes, associações e órgãos de classe, na consulta online, nas audiências públicas ou nas discussões setoriais, foram incorporadas ou inspiraram disposições trazidas a esse PL.</p>
+
+						<p>Pelos próximos dois meses, o portal Gestão Urbana permanecerá aberto a contribuições que podem aperfeiçoar o conjunto de propostas de gestão urbanística para o centro de São Paulo que a Secretaria Municipal de Desenvolvimento Urbano e a São Paulo Urbanismo trazem, mais uma vez,  ao debate público.</p>
+					</div>
+				</li>
+			</template>
+		</Apoio>
 
 		<section>
 			<h2 class="titulo" indent="1">Minuta de Projeto de Lei PIU Setor Central</h2>
@@ -1596,5 +1660,15 @@ export default {
 @import '../variables';
 @import '../consulta';
 @import '../oldstylestoprint';
+
+.conteudoTab.item2 p {
+	font-family: $grotesca;
+	font-size: 1rem;
+}
+
+.conteudoTab-subtitle--reset {
+	margin-top: 0;
+	font-size: medium
+}
 
 </style>

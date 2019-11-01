@@ -7,12 +7,11 @@
 
 		<Indice :titulos="titulosLimpo"></Indice>
 
-		<!-- <Apoio></Apoio> -->
 		<Apoio>
 			<template slot="item2">
 				<li>
 					<input type="radio" name="tabs" id="item2">
-					<label for="item2">Apresentação LAC</label>
+					<label for="item2">Apresentação</label>
 					<div class="conteudoTab item2">
 						<h1 class="conteudoTab-title--reset">Minuta Consolidada do Projeto de Lei que aprova o Projeto de Intervenção Urbana do Setor Central – PIU-SCE</h1>
 						<h2 class="conteudoTab-subtitle--reset">Apresentação</h2>

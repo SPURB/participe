@@ -270,7 +270,7 @@
 			<h3>3.10.	Sistema de Gestão de Atendimento</h3>
 			<p>3.10.1.	A Prefeitura do Munícipio de São Paulo disponibilizará uma solução de atendimento ao cidadão que deverá ser utilizada por todos os operadores do CONTACT CENTER (telefonia, chat e redes sociais se houver), para acolhimento de todos as solicitações registradas para a Prefeitura pelos canais 156, 199 e 153.</p>
 			<p>3.10.2.	Esta solução de atendimento deve ser integrada - via Computer Telephony Integration (CTI) - ao Distribuidor Automático de Chamadas (item 3.3) e à Unidade de Resposta Audível (item 3.2) </p>
-			<p>3.10.3.	A solução a ser disponibilizada será apresentada em momento oportuno após processo licitatório em andamento para contratação da solução de atendimento ao cidadão <b style="color: red">(INSERIR NUMERO DO EDITAL)</b>.</p>
+			<p>3.10.3.	A solução a ser disponibilizada será apresentada em momento oportuno após finalização do processo licitatório de contratação da solução de atendimento ao cidadão, onde será publicado no Diário Oficial do Município o número do Edital correspondente.</p>
 				
 			<Comments :attr="{id:commentId(), context:'3.10.	Sistema de Gestão de Atendimento'}" v-if="estaConsulta.ativo == 1"></Comments>
 			
@@ -284,12 +284,20 @@
 			<p>3.11.7.	A CONTRATADA deverá disponibilizar APIs com funcionalidades para o disparo de SMS que poderão ser consumidas pela CONTRATANTE permitindo desta forma, uma melhor integração entre sistemas.</p>
 			<p>3.11.8.	As mensagens deverão ser disparadas sempre que houver campanhas institucionais, mediante solicitação da CONTRATANTE.</p>
 			<p>3.11.9.	O solução de gerenciamento de SMS deverá possibilitar o registro, em banco de dados, de todas as informações acerca das campanhas solicitadas, para recuperação por meio de consultas e relatórios de gestão de mensagem, disponibilizados em tempo real, 24 por 7.</p>
-			<p>3.11.10.	As informações que devem ser registradas e que serão utilizadas para estruturação de relatórios são: órgão emissor, identificador da solicitação, data e hora da emissão da solicitação, data e hora agendada para envio à operadora e informações de metadados cada uma das mensagens incluindo: </p>
+			<p>3.11.10.	As informações que devem ser registradas e que serão utilizadas para estruturação de relatórios são: órgão emissor, identificador da solicitação, data e hora da emissão da solicitação, data e hora agendada para envio à operadora e informações de metadados cada uma das mensagens incluindo:
 				<p class="s2">3.11.10.1.	Identificador da mensagem; </p>
 				<p class="s2">3.11.10.2.	Telefone do destinatário; </p>
 				<p class="s2">3.11.10.3.	Prazo máximo para envio; </p>
 				<p class="s2">3.11.10.4.	Status da solicitação; </p>
 				<p class="s2">3.11.10.5.	Data e horário de envio à operadora.</p>
+			</p>
+			<p>3.11.11. O sistema integrador para envio de SMS e gerenciamento dos serviços será hospedado no ambiente da CONTRATADA.</p>
+			<p>3.11.12. O sistema deve ter disponibilidade 24 (vinte e quatro) horas por dia, 7 (sete) dias por semana.</p>
+			<p>3.11.13. Confidencialidade
+				<p class="s2">3.11.13.1. Todas as informações que forem transmitidas à CONTRATADA ou produzidas por esta com base nas informações recebidas devem ser consideradas protegidas como informações confidenciais por um período indeterminado, exceto se antes da divulgação for esclarecido não se tratarem de informações confidenciais ou estejam disponíveis ao público por outros meios.</p>
+				<p class="s2">3.11.13.2. Quaisquer informações confidenciais devem ser usadas pela CONTRATADA tão somente com o propósito para o qual estas informações foram divulgadas, exceto nos casos de determinação judicial ou expressa disposição prevista em lei.</p>
+				<p class="s2">3.11.13.3. A Contratada formalizará termos de confidencialidade com todos os seus empregados e fornecedores que tiverem acesso às informações confidenciais, em igual teor de suas obrigações.</p>
+			</p>
 				
 			<Comments :attr="{id:commentId(), context:'3.11.	Disparo Eletrônico de Mensagens de Texto Tipo SMS'}" v-if="estaConsulta.ativo == 1"></Comments>
 			<h3>3.12.	Plano de Contingência da Central de Atendimento </h3>
@@ -996,7 +1004,7 @@
 				<p class="s2">5.2.5.1.	Apuração do quantitativo das ligações recebidas e atendidas receptivas concretizadas no período e o valor total correspondente (VAr)</p>	
 				<p class="s2">5.2.5.2.	Apuração do quantitativo das ligações ativas realizadas e concretizadas no período e o valor total correspondente (VAa)</p>
 				<ul>
-					<li><strong>Observação:</strong> Não serão consideradas para fins de remuneração as ligações efetuadas que as ligações efetuadas que não forem atendidas, apresentarem sinal de ocupado, mensagem da operadora, número inválido, sinal de fax, linha muda.</li>
+					<li><strong>Observação:</strong> Não serão consideradas para fins de remuneração as ligações efetuadas que não forem atendidas, apresentarem sinal de ocupado, mensagem da operadora, número inválido, sinal de fax, linha muda.</li>
 				</ul>
 				<p class="s2">5.2.5.3.	Aplicação sobre o valor total, obtido no item “5.1”, dos decréscimos resultantes da pontuação conferida, conforme tabela 2 – Conversão de Pontos:</p>
 				<ul>

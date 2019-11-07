@@ -30,3 +30,6 @@ apiconfig.json
 
 # Package lock
 package-lock.json
+
+# Chaves restritas
+chave.json

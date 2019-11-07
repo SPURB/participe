@@ -5,6 +5,7 @@
 				v-for="(titulo, index) in titulos" :key="index"
 				:class="{ ativo: titulo.ativo }"
 				:style="{ paddingLeft: titulo.indent + 'rem'}"
+				v-if="titulo.nome !== 'Contribuições' || $parent.estaConsulta.nContribuicoes > 0"
 				@click="rolar(titulo.offsetObj)">{{ titulo.nome }}</li>
 		</ul>
 		<button @click="rolar()"><i class="icon-seta_cima icon"><span>arrow_upward</span></i></button>
@@ -25,7 +26,7 @@ export default {
 		if (app.$refs.lista) {
 			if (window.matchMedia('(min-width: 1200px)').matches) {
 				window.addEventListener('scroll', function () {
-					if (app.$refs.lista.style === undefined) { return }
+					if (app.$refs.lista && app.$refs.lista.style === undefined) { return }
 					if (window.scrollY > window.innerHeight / 2) {
 						app.$refs.lista.style.opacity = '1'
 					} else if (window.scrollY < window.innerHeight / 2) {
@@ -51,7 +52,12 @@ export default {
 					behavior: 'smooth'
 				})
 			}
-		}
+		}/*,
+		verificaContribuicoes (item) {
+			console.log(item.nome);
+			console.log(this.$parent.estaConsulta);
+			return item.nome !== "Contribuições" || this.$parent.estaConsulta.nContribuicoes > 0;
+		}*/
 	}
 }
 </script>

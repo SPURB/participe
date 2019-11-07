@@ -39,7 +39,8 @@ module.exports = {
 				'/carnaval-de-rua-2020',
 				'/arco-tiete',
 				'/jockey-club',
-				'/minuta-piu-setor-central'
+				'/minuta-piu-setor-central',
+				'/tr-contact-center'
 			],
 			useRenderEvent: true,
 			headless: false,

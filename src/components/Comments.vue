@@ -167,7 +167,7 @@ div.Comments {
 				color: $verde;
 			}
 
-			&::after { content: 'Comentário enviado'; }
+			&::after { content: 'Agradecemos a sua contribuição! O comentário estará disponível em breve, após a aprovação da Prefeitura.'; }
 		}
 	};
 

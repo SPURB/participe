@@ -1558,68 +1558,68 @@ export default {
 
 				linhas: [
 					[
-						[ { data: '1' }],
+						[{ data: '1' }],
 
-						[ { data: 'Fornecimento de plataforma multicanal integrada para atendimento, gerenciamento do relacionamento com o cidadão, digitalização e automação de serviços públicos em modelo SaaS (Software as a Service).' }],
-						[ { data: 'Perfil Atendimento' } ],
-						[ { data: 'Usuários em uso/mês' } ],
-						[ { data: '1.680' } ]
+						[{ data: 'Fornecimento de plataforma multicanal integrada para atendimento, gerenciamento do relacionamento com o cidadão, digitalização e automação de serviços públicos em modelo SaaS (Software as a Service).' }],
+						[{ data: 'Perfil Atendimento' }],
+						[{ data: 'Usuários em uso/mês' }],
+						[{ data: '1.680' }]
 					],
 					[
-						[ { data: ' ' } ],
-						[ { data: '  ' } ],
-						[ { data: 'Perfil Operacional' } ],
-						[ { data: 'Usuários em uso/mês' }],
-						[ { data: '1.260' } ]
+						[{ data: ' ' }],
+						[{ data: '  ' }],
+						[{ data: 'Perfil Operacional' }],
+						[{ data: 'Usuários em uso/mês' }],
+						[{ data: '1.260' }]
 					],
 					[
-						[ { data: ' ' } ],
-						[ { data: '  ' } ],
-						[ { data: 'Perfil Gerencial' } ],
-						[ { data: 'Usuários em uso/mês' }],
-						[ { data: '212' } ]
+						[{ data: ' ' }],
+						[{ data: '  ' }],
+						[{ data: 'Perfil Gerencial' }],
+						[{ data: 'Usuários em uso/mês' }],
+						[{ data: '212' }]
 					],
 					[
-						[ { data: ' ' } ],
-						[ { data: '  ' } ],
-						[ { data: 'Perfil Configuração' } ],
-						[ { data: 'Usuários em uso/mês' }],
-						[ { data: '56' } ]
+						[{ data: ' ' }],
+						[{ data: '  ' }],
+						[{ data: 'Perfil Configuração' }],
+						[{ data: 'Usuários em uso/mês' }],
+						[{ data: '56' }]
 					],
 					[
-						[ { data: '2' } ],
-						[ { data: 'Fornecimento de Atendente Virtual Inteligente - Chatbot - em modelo SaaS (Software as a Service).' } ],
-						[ { data: ' ' } ],
-						[ { data: 'Pacote de 1000 Interações' }],
-						[ { data: '2.880' } ]
+						[{ data: '2' }],
+						[{ data: 'Fornecimento de Atendente Virtual Inteligente - Chatbot - em modelo SaaS (Software as a Service).' }],
+						[{ data: ' ' }],
+						[{ data: 'Pacote de 1000 Interações' }],
+						[{ data: '2.880' }]
 					],
 					[
-						[ { data: '3' } ],
-						[ { data: 'Suporte Técnico' } ],
-						[ { data: 'Suporte operacional das soluções dos itens 1, 2 e 5' } ],
-						[ { data: 'Serviços/mês' }],
-						[ { data: '1' } ]
+						[{ data: '3' }],
+						[{ data: 'Suporte Técnico' }],
+						[{ data: 'Suporte operacional das soluções dos itens 1, 2 e 5' }],
+						[{ data: 'Serviços/mês' }],
+						[{ data: '1' }]
 					],
 					[
-						[ { data: '4' } ],
-						[ { data: 'Serviços Especializados - Transformação, design e digitalização de serviços públicos digitais com o uso da solução tecnológica' } ],
-						[ { data: 'Configuração, levantamento, melhoria e automação/digitalização de processos; Customização e Integração de sistemas e bases de dados existentes com a solução contratada.' } ],
-						[ { data: 'UST' }],
-						[ { data: '102.960' } ]
+						[{ data: '4' }],
+						[{ data: 'Serviços Especializados - Transformação, design e digitalização de serviços públicos digitais com o uso da solução tecnológica' }],
+						[{ data: 'Configuração, levantamento, melhoria e automação/digitalização de processos; Customização e Integração de sistemas e bases de dados existentes com a solução contratada.' }],
+						[{ data: 'UST' }],
+						[{ data: '102.960' }]
 					],
 					[
-						[ { data: '5' } ],
-						[ { data: 'Fornecimento de plataforma de capacitação permanente em modelo SaaS (Software as a Service) para utilização da solução tecnológica' } ],
-						[ { data: 'Plataforma EAD de Capacitação.' } ],
-						[ { data: 'Serviço/mês' }],
-						[ { data: '1' } ]
+						[{ data: '5' }],
+						[{ data: 'Fornecimento de plataforma de capacitação permanente em modelo SaaS (Software as a Service) para utilização da solução tecnológica' }],
+						[{ data: 'Plataforma EAD de Capacitação.' }],
+						[{ data: 'Serviço/mês' }],
+						[{ data: '1' }]
 					],
 					[
-						[ { data: '6' } ],
-						[ { data: 'Capacitação e Formação de Usuários para utilização da solução tecnológica' } ],
-						[ { data: 'Capacitação para os perfis de Atendimento, Operacional, Gerencial e de Configuração das soluções contratadas' } ],
-						[ { data: 'Hora-aula' }],
-						[ { data: '1.692' } ]
+						[{ data: '6' }],
+						[{ data: 'Capacitação e Formação de Usuários para utilização da solução tecnológica' }],
+						[{ data: 'Capacitação para os perfis de Atendimento, Operacional, Gerencial e de Configuração das soluções contratadas' }],
+						[{ data: 'Hora-aula' }],
+						[{ data: '1.692' }]
 					]
 
 				],
@@ -1640,43 +1640,43 @@ export default {
 				linhas:
 			[
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '600' } ],
-					[ { data: '1.260' } ],
-					[ { data: '420' } ],
-					[ { data: '1.680' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '600' }],
+					[{ data: '1.260' }],
+					[{ data: '420' }],
+					[{ data: '1.680' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: '600' } ],
-					[ { data: '900' } ],
-					[ { data: '360' } ],
-					[ { data: '1.260' } ]
+					[{ data: 'Operacional' }],
+					[{ data: '600' }],
+					[{ data: '900' }],
+					[{ data: '360' }],
+					[{ data: '1.260' }]
 				],
 
 				[
-					[ { data: 'Gerencial' } ],
-					[ { data: '50' } ],
-					[ { data: '132' } ],
-					[ { data: '80' } ],
-					[ { data: '212' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: '50' }],
+					[{ data: '132' }],
+					[{ data: '80' }],
+					[{ data: '212' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '20' } ],
-					[ { data: '26' } ],
-					[ { data: '30' } ],
-					[ { data: '56' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '20' }],
+					[{ data: '26' }],
+					[{ data: '30' }],
+					[{ data: '56' }]
 				],
 
 				[
-					[ { data: 'Total' } ],
-					[ { data: '1.270' } ],
-					[ { data: '2.318' } ],
-					[ { data: '890' } ],
-					[ { data: '3.208' } ]
+					[{ data: 'Total' }],
+					[{ data: '1.270' }],
+					[{ data: '2.318' }],
+					[{ data: '890' }],
+					[{ data: '3.208' }]
 				]
 			],
 				tabelaListrada: false
@@ -1694,33 +1694,33 @@ export default {
 				linhas:
 				[
 					[
-						[ { data: 'Perfil Atendimento' } ],
-						[ { data: '8 horas-aula a cada 30 usuários' } ],
-						[ { data: '172' } ]
+						[{ data: 'Perfil Atendimento' }],
+						[{ data: '8 horas-aula a cada 30 usuários' }],
+						[{ data: '172' }]
 					],
 
 					[
-						[ { data: 'Perfil Operacional' } ],
-						[ { data: '8 horas-aula a cada 30 usuários' } ],
-						[ { data: '516' } ]
+						[{ data: 'Perfil Operacional' }],
+						[{ data: '8 horas-aula a cada 30 usuários' }],
+						[{ data: '516' }]
 					],
 
 					[
-						[ { data: 'Perfil Gerencial' } ],
-						[ { data: '8 horas-aula a cada 30 usuários' } ],
-						[ { data: '203' } ]
+						[{ data: 'Perfil Gerencial' }],
+						[{ data: '8 horas-aula a cada 30 usuários' }],
+						[{ data: '203' }]
 					],
 
 					[
-						[ { data: 'Perfil Configurador' } ],
-						[ { data: '24 horas-aula a cada 30 usuários' } ],
-						[ { data: '466' } ]
+						[{ data: 'Perfil Configurador' }],
+						[{ data: '24 horas-aula a cada 30 usuários' }],
+						[{ data: '466' }]
 					],
 
 					[
-						[ { data: 'Total' } ],
-						[ { data: '' } ],
-						[ { data: '1.357' } ]
+						[{ data: 'Total' }],
+						[{ data: '' }],
+						[{ data: '1.357' }]
 					]
 				],
 
@@ -1741,46 +1741,46 @@ export default {
 				linhas:
 			[
 				[
-					[ { data: 'Padrão' } ],
-					[ { data: 'Padrão' } ],
-					[ { data: '-' } ],
-					[ { data: '200' } ],
-					[ { data: '22.519,8' } ]
+					[{ data: 'Padrão' }],
+					[{ data: 'Padrão' }],
+					[{ data: '-' }],
+					[{ data: '200' }],
+					[{ data: '22.519,8' }]
 				],
 
 				[
 
-					[ { data: 'EncaminhamentoDefesaCivil' } ],
-					[ { data: 'Regionalizado' } ],
-					[ { data: '-' } ],
-					[ { data: '24' } ],
-					[ { data: '3.768,8' } ]
+					[{ data: 'EncaminhamentoDefesaCivil' }],
+					[{ data: 'Regionalizado' }],
+					[{ data: '-' }],
+					[{ data: '24' }],
+					[{ data: '3.768,8' }]
 				],
 
 				[
 
-					[ { data: 'EncaminhamentoSTLP' } ],
-					[ { data: 'Regionalizado' } ],
-					[ { data: '-' } ],
-					[ { data: '5' } ],
-					[ { data: '587,5' } ]
+					[{ data: 'EncaminhamentoSTLP' }],
+					[{ data: 'Regionalizado' }],
+					[{ data: '-' }],
+					[{ data: '5' }],
+					[{ data: '587,5' }]
 				],
 
 				[
 
-					[ { data: 'EncaminhamentoSTM' } ],
-					[ { data: 'Regionalizado' } ],
-					[ { data: '-' } ],
-					[ { data: '1' } ],
-					[ { data: '112,5' } ]
+					[{ data: 'EncaminhamentoSTM' }],
+					[{ data: 'Regionalizado' }],
+					[{ data: '-' }],
+					[{ data: '1' }],
+					[{ data: '112,5' }]
 				],
 
 				[
-					[ { data: 'EncaminhamentoSUVIS' } ],
-					[ { data: 'Regionalizado' } ],
-					[ { data: '-' } ],
-					[ { data: '8' } ],
-					[ { data: '5.643,7' } ]
+					[{ data: 'EncaminhamentoSUVIS' }],
+					[{ data: 'Regionalizado' }],
+					[{ data: '-' }],
+					[{ data: '8' }],
+					[{ data: '5.643,7' }]
 
 				]
 			],
@@ -1803,115 +1803,115 @@ export default {
 			[
 				[
 
-					[ { data: 'EncaminharChamadoAmlurb' } ],
-					[ { data: 'Integração' } ],
-					[ { data: 'ECOURBIS/LOGA' } ],
-					[ { data: '16' } ],
-					[ { data: '1.130,8' } ]
-				],
-
-				   [
-					[ { data: 'EncaminharChamadoCET' } ],
-					[ { data: 'Integração' } ],
-					[ { data: 'CET/CS' } ],
-					[ { data: '35' } ],
-					[ { data: '1.926,8' } ]
+					[{ data: 'EncaminharChamadoAmlurb' }],
+					[{ data: 'Integração' }],
+					[{ data: 'ECOURBIS/LOGA' }],
+					[{ data: '16' }],
+					[{ data: '1.130,8' }]
 				],
 
 				[
-					[ { data: 'EncaminharChamadoFlip' } ],
-					[ { data: 'Integração' } ],
-					[ { data: 'FLIP' } ],
-					[ { data: '21' } ],
-					[ { data: '14.600,3' } ]
+					[{ data: 'EncaminharChamadoCET' }],
+					[{ data: 'Integração' }],
+					[{ data: 'CET/CS' }],
+					[{ data: '35' }],
+					[{ data: '1.926,8' }]
 				],
 
 				[
-					[ { data: 'EncaminharChamadoGCM' } ],
-					[ { data: 'Integração' } ],
-					[ { data: 'HEXAGON' } ],
-					[ { data: '38' } ],
-					[ { data: '12,2' } ]
+					[{ data: 'EncaminharChamadoFlip' }],
+					[{ data: 'Integração' }],
+					[{ data: 'FLIP' }],
+					[{ data: '21' }],
+					[{ data: '14.600,3' }]
 				],
 
 				[
-					[ { data: 'EncaminharChamadoSGF' } ],
-					[ { data: 'Integração' } ],
-					[ { data: 'SGF' } ],
-					[ { data: '65' } ],
-					[ { data: '16.935,8' } ]
+					[{ data: 'EncaminharChamadoGCM' }],
+					[{ data: 'Integração' }],
+					[{ data: 'HEXAGON' }],
+					[{ data: '38' }],
+					[{ data: '12,2' }]
 				],
 
 				[
-					[ { data: 'EncaminharChamadoSGTP' } ],
-					[ { data: 'Integração' } ],
-					[ { data: 'SGTP' } ],
-					[ { data: '22' } ],
-					[ { data: '508,3' } ]
+					[{ data: 'EncaminharChamadoSGF' }],
+					[{ data: 'Integração' }],
+					[{ data: 'SGF' }],
+					[{ data: '65' }],
+					[{ data: '16.935,8' }]
 				],
 
 				[
-					[ { data: 'EncaminharChamadoSMGI_CET' } ],
-					[ { data: 'Integração' } ],
-					[ { data: 'SMGI-CET' } ],
-					[ { data: '8' } ],
-					[ { data: '50,8' } ]
+					[{ data: 'EncaminharChamadoSGTP' }],
+					[{ data: 'Integração' }],
+					[{ data: 'SGTP' }],
+					[{ data: '22' }],
+					[{ data: '508,3' }]
 				],
 
 				[
-					[ { data: 'EncaminharChamadoSMGIInterno' } ],
-					[ { data: 'Integração' } ],
-					[ { data: 'SMGI-SGZ' } ],
-					[ { data: '2' } ],
-					[ { data: '0,2' } ]
+					[{ data: 'EncaminharChamadoSMGI_CET' }],
+					[{ data: 'Integração' }],
+					[{ data: 'SMGI-CET' }],
+					[{ data: '8' }],
+					[{ data: '50,8' }]
 				],
 
 				[
-					[ { data: 'EncaminharChamadoSMGIPadrão' } ],
-					[ { data: 'Integração' } ],
-					[ { data: 'SMGI-SGZ' } ],
-					[ { data: '21' } ],
-					[ { data: '31.843,7' } ]
+					[{ data: 'EncaminharChamadoSMGIInterno' }],
+					[{ data: 'Integração' }],
+					[{ data: 'SMGI-SGZ' }],
+					[{ data: '2' }],
+					[{ data: '0,2' }]
 				],
 
 				[
-					[ { data: 'EncaminharChamadoSMGISptrans' } ],
-					[ { data: 'Integração' } ],
-					[ { data: 'SPTRANS' } ],
-					[ { data: '45' } ],
-					[ { data: '6.502' } ]
+					[{ data: 'EncaminharChamadoSMGIPadrão' }],
+					[{ data: 'Integração' }],
+					[{ data: 'SMGI-SGZ' }],
+					[{ data: '21' }],
+					[{ data: '31.843,7' }]
 				],
 
 				[
-					[ { data: 'EncaminharChamadoSMGIZoonoses' } ],
-					[ { data: 'Integração' } ],
-					[ { data: 'SISCOZ' } ],
-					[ { data: '6' } ],
-					[ { data: '500' } ]
+					[{ data: 'EncaminharChamadoSMGISptrans' }],
+					[{ data: 'Integração' }],
+					[{ data: 'SPTRANS' }],
+					[{ data: '45' }],
+					[{ data: '6.502' }]
 				],
 
 				[
-					[ { data: 'EncaminharChamadoSMGISEI' } ],
-					[ { data: 'Integração' } ],
-					[ { data: 'SEI' } ],
-					[ { data: '4' } ],
-					[ { data: 'Em implantação' } ]
+					[{ data: 'EncaminharChamadoSMGIZoonoses' }],
+					[{ data: 'Integração' }],
+					[{ data: 'SISCOZ' }],
+					[{ data: '6' }],
+					[{ data: '500' }]
 				],
 
 				[
-					[ { data: 'PadraoDeficiente' } ],
-					[ { data: 'Integração' } ],
-					[ { data: 'SUAE' } ],
-					[ { data: '2' } ],
-					[ { data: '1.413,8' } ]
+					[{ data: 'EncaminharChamadoSMGISEI' }],
+					[{ data: 'Integração' }],
+					[{ data: 'SEI' }],
+					[{ data: '4' }],
+					[{ data: 'Em implantação' }]
 				],
 
 				[
-					[ { data: 'PadraoIdoso' } ],
-					[ { data: 'Integração' } ],
-					[ { data: 'SUAE' } ],
-					[ { data: '2' } ],
-					[ { data: '6.326,3' } ]
+					[{ data: 'PadraoDeficiente' }],
+					[{ data: 'Integração' }],
+					[{ data: 'SUAE' }],
+					[{ data: '2' }],
+					[{ data: '1.413,8' }]
+				],
+
+				[
+					[{ data: 'PadraoIdoso' }],
+					[{ data: 'Integração' }],
+					[{ data: 'SUAE' }],
+					[{ data: '2' }],
+					[{ data: '6.326,3' }]
 				]
 			],
 
@@ -1930,23 +1930,23 @@ export default {
 				linhas:
 				[
 					[
-						[ { data: '1' } ],
-						[ { data: 'Advertência escrita' } ]
+						[{ data: '1' }],
+						[{ data: 'Advertência escrita' }]
 					],
 
 					[
-						[ { data: '2' } ],
-						[ { data: 'Multa de até 5% sobre o valor a ser pago no mês de correspondência' } ]
+						[{ data: '2' }],
+						[{ data: 'Multa de até 5% sobre o valor a ser pago no mês de correspondência' }]
 					],
 
 					[
-						[ { data: '3' } ],
-						[ { data: 'Multa de até 10% sobre o valor a ser pago no mês de correspondência' } ]
+						[{ data: '3' }],
+						[{ data: 'Multa de até 10% sobre o valor a ser pago no mês de correspondência' }]
 					],
 
 					[
-						[ { data: '4' } ],
-						[ { data: 'Multa de até 20% sobre o valor a ser pago no mês de correspondência' } ]
+						[{ data: '4' }],
+						[{ data: 'Multa de até 20% sobre o valor a ser pago no mês de correspondência' }]
 					]
 				],
 
@@ -1968,122 +1968,122 @@ export default {
 			[
 				[
 
-					[ { data: 'Ultrapassar o limite de 5 dias úteis para informar cronograma de execução de serviços após o recebimento da OS.' } ],
-					[ { data: 'Por ocorrência' } ],
-					[ { data: '1' } ]
+					[{ data: 'Ultrapassar o limite de 5 dias úteis para informar cronograma de execução de serviços após o recebimento da OS.' }],
+					[{ data: 'Por ocorrência' }],
+					[{ data: '1' }]
 				],
 
 				[
-					[ { data: 'Suspender ou interromper, salvo motivo de força maior ou caso fortuito, os serviços solicitados.' } ],
-					[ { data: 'Por ocorrência' } ],
-					[ { data: '3' } ]
+					[{ data: 'Suspender ou interromper, salvo motivo de força maior ou caso fortuito, os serviços solicitados.' }],
+					[{ data: 'Por ocorrência' }],
+					[{ data: '3' }]
 				],
 				[
-					[ { data: 'Indicação de função de preposto de forma cumulativa com atribuições de execução do serviço.' } ],
-					[ { data: 'Por ocorrência' } ],
-					[ { data: '2' } ]
-				],
-
-				[
-					[ { data: 'Não substituir em até 5 dias úteis o profissional que seja considerado inapto para os serviços a serem prestados, seja por incapacidade técnica, atitude inconveniente, falta de urbanidade ou que venha a transgredir as Normas disciplinares da CONTRATANTE' } ],
-					[ { data: 'Por dia de atraso' } ],
-					[ { data: '2' } ]
+					[{ data: 'Indicação de função de preposto de forma cumulativa com atribuições de execução do serviço.' }],
+					[{ data: 'Por ocorrência' }],
+					[{ data: '2' }]
 				],
 
 				[
-					[ { data: 'Acumular 3 (três) advertências no período de 6 (seis) meses' } ],
-					[ { data: 'Por ocorrência' } ],
-					[ { data: '2' } ]
+					[{ data: 'Não substituir em até 5 dias úteis o profissional que seja considerado inapto para os serviços a serem prestados, seja por incapacidade técnica, atitude inconveniente, falta de urbanidade ou que venha a transgredir as Normas disciplinares da CONTRATANTE' }],
+					[{ data: 'Por dia de atraso' }],
+					[{ data: '2' }]
 				],
 
 				[
-					[ { data: 'Acumular 5 (cinco) advertências no período de 12 (doze) meses' } ],
-					[ { data: 'Por ocorrência' } ],
-					[ { data: '3' } ]
+					[{ data: 'Acumular 3 (três) advertências no período de 6 (seis) meses' }],
+					[{ data: 'Por ocorrência' }],
+					[{ data: '2' }]
 				],
 
 				[
-					[ { data: 'Não zelar pelas instalações da CONTRATANTE' } ],
-					[ { data: 'Por ocorrência' } ],
-					[ { data: '1' } ]
+					[{ data: 'Acumular 5 (cinco) advertências no período de 12 (doze) meses' }],
+					[{ data: 'Por ocorrência' }],
+					[{ data: '3' }]
 				],
 
 				[
-					[ { data: 'Não efetuar o pagamento de salários, seguros, encargos fiscais e sociais, bem como quaisquer despesas diretas e/ou indiretas relacionadas à execução deste CONTRATO' } ],
-					[ { data: 'Por ocorrência' } ],
-					[ { data: '3' } ]
+					[{ data: 'Não zelar pelas instalações da CONTRATANTE' }],
+					[{ data: 'Por ocorrência' }],
+					[{ data: '1' }]
 				],
 
 				[
-					[ { data: 'Na hipótese de rescisão contratual por inexecução total do CONTRATO' } ],
-					[ { data: '' } ],
-					[ { data: '4' } ]
+					[{ data: 'Não efetuar o pagamento de salários, seguros, encargos fiscais e sociais, bem como quaisquer despesas diretas e/ou indiretas relacionadas à execução deste CONTRATO' }],
+					[{ data: 'Por ocorrência' }],
+					[{ data: '3' }]
 				],
 
 				[
-					[ { data: 'Na hipótese de descumprimento da Garantia de serviços' } ],
-					[ { data: 'Por ocorrência' } ],
-					[ { data: '3' } ]
+					[{ data: 'Na hipótese de rescisão contratual por inexecução total do CONTRATO' }],
+					[{ data: '' }],
+					[{ data: '4' }]
 				],
 
 				[
-					[ { data: 'Não apresentar documentação exigida da empresa ou dos profissionais' } ],
-					[ { data: 'Por documento' } ],
-					[ { data: '1' } ]
+					[{ data: 'Na hipótese de descumprimento da Garantia de serviços' }],
+					[{ data: 'Por ocorrência' }],
+					[{ data: '3' }]
 				],
 
 				[
-					[ { data: 'Deixar de prestar quaisquer informações solicitadas no prazo estipulado' } ],
-					[ { data: 'Por ocorrência' } ],
-					[ { data: '1' } ]
+					[{ data: 'Não apresentar documentação exigida da empresa ou dos profissionais' }],
+					[{ data: 'Por documento' }],
+					[{ data: '1' }]
 				],
 
 				[
-					[ { data: 'Deixar de realizar transferência completa dos conhecimentos empregados na realização dos serviços contratados' } ],
-					[ { data: 'Por ocorrência' } ],
-					[ { data: '2' } ]
+					[{ data: 'Deixar de prestar quaisquer informações solicitadas no prazo estipulado' }],
+					[{ data: 'Por ocorrência' }],
+					[{ data: '1' }]
 				],
 
 				[
-					[ { data: 'Deixar de realizar transição plena do CONTRATO, com total transferência de conhecimento' } ],
-					[ { data: 'Por ocorrência' } ],
-					[ { data: '3' } ]
+					[{ data: 'Deixar de realizar transferência completa dos conhecimentos empregados na realização dos serviços contratados' }],
+					[{ data: 'Por ocorrência' }],
+					[{ data: '2' }]
 				],
 
 				[
-					[ { data: 'Omitir da fiscalização qualquer anormalidade verificada na execução dos serviços.' } ],
-					[ { data: 'Por ocorrência' } ],
-					[ { data: '2' } ]
+					[{ data: 'Deixar de realizar transição plena do CONTRATO, com total transferência de conhecimento' }],
+					[{ data: 'Por ocorrência' }],
+					[{ data: '3' }]
 				],
 
 				[
-					[ { data: 'Dificultar a ação da fiscalização ou o cumprimento de orientações e atendimento a solicitações da CONTRATANTE.' } ],
-					[ { data: 'Por ocorrência' } ],
-					[ { data: '2' } ]
+					[{ data: 'Omitir da fiscalização qualquer anormalidade verificada na execução dos serviços.' }],
+					[{ data: 'Por ocorrência' }],
+					[{ data: '2' }]
 				],
 
 				[
-					[ { data: 'Prestar serviço com baixa qualidade, desrespeitando os acordos de nível de serviço de forma recorrente' } ],
-					[ { data: 'Por ocorrência' } ],
-					[ { data: '1' } ]
+					[{ data: 'Dificultar a ação da fiscalização ou o cumprimento de orientações e atendimento a solicitações da CONTRATANTE.' }],
+					[{ data: 'Por ocorrência' }],
+					[{ data: '2' }]
 				],
 
 				[
-					[ { data: 'Deixar de cumprir cláusula contratual' } ],
-					[ { data: 'Por ocorrência' } ],
-					[ { data: '1' } ]
+					[{ data: 'Prestar serviço com baixa qualidade, desrespeitando os acordos de nível de serviço de forma recorrente' }],
+					[{ data: 'Por ocorrência' }],
+					[{ data: '1' }]
 				],
 
 				[
-					[ { data: 'Atraso para o início e conclusão da execução do plano de implantação' } ],
-					[ { data: 'Por ocorrência' } ],
-					[ { data: '2' } ]
+					[{ data: 'Deixar de cumprir cláusula contratual' }],
+					[{ data: 'Por ocorrência' }],
+					[{ data: '1' }]
 				],
 
 				[
-					[ { data: 'Indisponibilidade da solução tecnológica' } ],
-					[ { data: '' } ],
-					[ { data: '' } ]
+					[{ data: 'Atraso para o início e conclusão da execução do plano de implantação' }],
+					[{ data: 'Por ocorrência' }],
+					[{ data: '2' }]
+				],
+
+				[
+					[{ data: 'Indisponibilidade da solução tecnológica' }],
+					[{ data: '' }],
+					[{ data: '' }]
 				]
 			],
 				tabelaListrada: false
@@ -2100,13 +2100,13 @@ export default {
 				linhas:
 			[
 				[
-					[ { data: 'Gerente' } ],
-					[ { data: 'R$ 14.009,16' } ]
+					[{ data: 'Gerente' }],
+					[{ data: 'R$ 14.009,16' }]
 				],
 
 				[
-					[ { data: 'Analista/Especialista' } ],
-					[ { data: 'R$ 11.082,30' } ]
+					[{ data: 'Analista/Especialista' }],
+					[{ data: 'R$ 11.082,30' }]
 				]
 			],
 				tabelaListrada: false,
@@ -2126,105 +2126,105 @@ export default {
 			[
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '1.1.2.   Permite que o munícipe se cadastre na solução via Portal de Atendimento WEB como pessoa física ou pessoa jurídica.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '1.1.2.   Permite que o munícipe se cadastre na solução via Portal de Atendimento WEB como pessoa física ou pessoa jurídica.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '1.1.3.   Permite que o munícipe, previamente cadastrado e ativo na solução, consiga realizar login no Portal de Atendimento WEB utilizando usuário e senha cadastrados.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '1.1.3.   Permite que o munícipe, previamente cadastrado e ativo na solução, consiga realizar login no Portal de Atendimento WEB utilizando usuário e senha cadastrados.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '1.1.4.   Permite que o munícipe realize solicitações de serviços públicos, elogios, sugestões, denúncias e reclamações, por meio do preenchimento de formulário do respectivo serviço.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '1.1.4.   Permite que o munícipe realize solicitações de serviços públicos, elogios, sugestões, denúncias e reclamações, por meio do preenchimento de formulário do respectivo serviço.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '1.1.5.   Permite que o munícipe, antes de criar uma nova solicitação, visualize em um mapa as solicitações similares já abertas em um endereço indicado por ele e possa optar por reforçar uma solicitação existente ao invés de abrir uma nova.' } ],
-					[ { data: 'D3' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '1.1.5.   Permite que o munícipe, antes de criar uma nova solicitação, visualize em um mapa as solicitações similares já abertas em um endereço indicado por ele e possa optar por reforçar uma solicitação existente ao invés de abrir uma nova.' }],
+					[{ data: 'D3' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '1.1.6.   Permite que o munícipe que reforçou uma solicitação já existente, conforme item 1.1.5, receba as atualizações da solicitação correspondente e possa acompanhar o andamento do atendimento da mesma forma que o solicitante original.' } ],
-					[ { data: 'D3' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '1.1.6.   Permite que o munícipe que reforçou uma solicitação já existente, conforme item 1.1.5, receba as atualizações da solicitação correspondente e possa acompanhar o andamento do atendimento da mesma forma que o solicitante original.' }],
+					[{ data: 'D3' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '1.1.7.   Permite que o munícipe realize solicitações anônimas ou identificadas (não anônimas).' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '1.1.7.   Permite que o munícipe realize solicitações anônimas ou identificadas (não anônimas).' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '1.1.8.   Permite que o munícipe que realizou a solicitação anonimamente consiga consultar o andamento da solicitação (pelo número de protocolo, por exemplo), sem precisar realizar nenhuma autenticação na solução.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '1.1.8.   Permite que o munícipe que realizou a solicitação anonimamente consiga consultar o andamento da solicitação (pelo número de protocolo, por exemplo), sem precisar realizar nenhuma autenticação na solução.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '1.1.9.   Permite que o munícipe aceite ou recuse a utilização do tour guiado para navegação do Portal de Atendimento WEB.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '1.1.9.   Permite que o munícipe aceite ou recuse a utilização do tour guiado para navegação do Portal de Atendimento WEB.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '1.1.10.   Permite que o munícipe edite suas informações cadastrais e senha.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '1.1.10.   Permite que o munícipe edite suas informações cadastrais e senha.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '1.1.11.   Permite que o munícipe avalie o Portal de Atendimento WEB como um todo, bem como suas páginas de forma unitária, com a possibilidade de inserção de comentários.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '1.1.11.   Permite que o munícipe avalie o Portal de Atendimento WEB como um todo, bem como suas páginas de forma unitária, com a possibilidade de inserção de comentários.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: 'N/A' } ],
-					[ { data: '' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: 'N/A' }],
+					[{ data: '' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: 'N/A' } ],
-					[ { data: '' } ]
+					[{ data: 'Operacional' }],
+					[{ data: 'N/A' }],
+					[{ data: '' }]
 				],
 
 				[
-					[ { data: 'Gerencial' } ],
-					[ { data: 'N/A' } ],
-					[ { data: '' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: 'N/A' }],
+					[{ data: '' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '1.1.12.   Permite configurar o Portal de Atendimento WEB ao munícipe, sem a necessidade de escrever código de programação, possibilitando a criação, edição, exclusão de componentes. Tais componentes podem ser, mas não se limitando a páginas HTML, menus de navegação, imagens, URLs, vídeos, áreas de texto, formulários, avisos (pop-ups), relatórios, gráficos, dashboards e tabelas.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '1.1.12.   Permite configurar o Portal de Atendimento WEB ao munícipe, sem a necessidade de escrever código de programação, possibilitando a criação, edição, exclusão de componentes. Tais componentes podem ser, mas não se limitando a páginas HTML, menus de navegação, imagens, URLs, vídeos, áreas de texto, formulários, avisos (pop-ups), relatórios, gráficos, dashboards e tabelas.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '1.1.13.   Permite configurar a obrigatoriedade e a ordem de preenchimento dos campos de cadastro do munícipe.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '1.1.13.   Permite configurar a obrigatoriedade e a ordem de preenchimento dos campos de cadastro do munícipe.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '1.1.14.   Permite criar e configurar um tour guiado para auxiliar o munícipe durante a navegação do Portal de Atendimento WEB.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '1.1.14.   Permite criar e configurar um tour guiado para auxiliar o munícipe durante a navegação do Portal de Atendimento WEB.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '1.1.15.   Permite configurar a política de controle de cache das páginas do Portal de Atendimento WEB para otimizar e validar a entrega de conteúdo atualizado aos usuários finais.' } ],
-					[ { data: 'D3' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '1.1.15.   Permite configurar a política de controle de cache das páginas do Portal de Atendimento WEB para otimizar e validar a entrega de conteúdo atualizado aos usuários finais.' }],
+					[{ data: 'D3' }]
 				]
 			],
 				tabelaListrada: false,
@@ -2243,99 +2243,99 @@ export default {
 				linhas:
 			[
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '1.2.2.   Permite que o munícipe se cadastre na solução via Aplicativo Móvel como pessoa física ou pessoa jurídica.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '1.2.2.   Permite que o munícipe se cadastre na solução via Aplicativo Móvel como pessoa física ou pessoa jurídica.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '1.2.3.   Permite que o munícipe, previamente cadastrado e ativo na solução, consiga entrar no Aplicativo Móvel utilizando usuário e senha cadastrados.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '1.2.3.   Permite que o munícipe, previamente cadastrado e ativo na solução, consiga entrar no Aplicativo Móvel utilizando usuário e senha cadastrados.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '1.2.4.   Permite que o munícipe realize solicitações de serviços públicos, elogios, sugestões, denúncias e reclamações por meio do preenchimento de formulário do respectivo serviço.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '1.2.4.   Permite que o munícipe realize solicitações de serviços públicos, elogios, sugestões, denúncias e reclamações por meio do preenchimento de formulário do respectivo serviço.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '1.2.5.   Permite que o munícipe, antes de criar uma nova solicitação, visualize em um mapa as solicitações similares já abertas em um endereço indicado por ele e possa optar por reforçar uma solicitação existente ao invés de abrir uma nova.' } ],
-					[ { data: 'D3' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '1.2.5.   Permite que o munícipe, antes de criar uma nova solicitação, visualize em um mapa as solicitações similares já abertas em um endereço indicado por ele e possa optar por reforçar uma solicitação existente ao invés de abrir uma nova.' }],
+					[{ data: 'D3' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '1.2.6.   Permite que o munícipe que reforçou uma solicitação já existente, conforme item 1.2.5, receba todas as atualizações da solicitação correspondente e possa acompanhar o andamento do atendimento da mesma forma que o solicitante original.' } ],
-					[ { data: 'D3' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '1.2.6.   Permite que o munícipe que reforçou uma solicitação já existente, conforme item 1.2.5, receba todas as atualizações da solicitação correspondente e possa acompanhar o andamento do atendimento da mesma forma que o solicitante original.' }],
+					[{ data: 'D3' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '1.2.7.   Permite que o munícipe realize solicitações anônimas ou identificadas (não anônimas).' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '1.2.7.   Permite que o munícipe realize solicitações anônimas ou identificadas (não anônimas).' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '1.2.8.   Permite que o munícipe que realizou a solicitação anonimamente consiga consultar o andamento da solicitação por critérios definidos pela CONTRATANTE (pelo número de protocolo, por exemplo), sem precisar realizar nenhuma autenticação na solução.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '1.2.8.   Permite que o munícipe que realizou a solicitação anonimamente consiga consultar o andamento da solicitação por critérios definidos pela CONTRATANTE (pelo número de protocolo, por exemplo), sem precisar realizar nenhuma autenticação na solução.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '1.2.9.   Permite que o munícipe previamente cadastrado e ativo na solução consiga dar andamento à solicitação no Aplicativo Móvel, independente do canal utilizado para fazer a abertura e demais interações com a solução.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '1.2.9.   Permite que o munícipe previamente cadastrado e ativo na solução consiga dar andamento à solicitação no Aplicativo Móvel, independente do canal utilizado para fazer a abertura e demais interações com a solução.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '1.2.10.   Permite que o munícipe edite suas informações cadastrais e senha.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '1.2.10.   Permite que o munícipe edite suas informações cadastrais e senha.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '1.2.11.   Permite que o munícipe avalie o Aplicativo Móvel.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '1.2.11.   Permite que o munícipe avalie o Aplicativo Móvel.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: 'N/A' } ],
-					[ { data: '' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: 'N/A' }],
+					[{ data: '' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: 'N/A' } ],
-					[ { data: '' } ]
+					[{ data: 'Operacional' }],
+					[{ data: 'N/A' }],
+					[{ data: '' }]
 				],
 
 				[
-					[ { data: 'Gerencial' } ],
-					[ { data: 'N/A' } ],
-					[ { data: '' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: 'N/A' }],
+					[{ data: '' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '1.2.12.   Permite gerenciar o conteúdo exibido no Aplicativo Móvel, possibilitando a criação, edição, exclusão de componentes,  sem a necessidade de escrever código de programação. Tais componentes podem ser, mas não se limitando a páginas HTML, menus de navegação, imagens, URLs, vídeos, áreas de texto, formulários, avisos (pop-ups), relatórios, gráficos, dashboards e tabelas.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '1.2.12.   Permite gerenciar o conteúdo exibido no Aplicativo Móvel, possibilitando a criação, edição, exclusão de componentes,  sem a necessidade de escrever código de programação. Tais componentes podem ser, mas não se limitando a páginas HTML, menus de navegação, imagens, URLs, vídeos, áreas de texto, formulários, avisos (pop-ups), relatórios, gráficos, dashboards e tabelas.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '1.2.13.   Permite configurar a obrigatoriedade e a ordem dos campos de cadastro do munícipe.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '1.2.13.   Permite configurar a obrigatoriedade e a ordem dos campos de cadastro do munícipe.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '1.2.14.   Permite implementar mecanismos de atualização obrigatória da solução para uso do aplicativo móvel, permitindo alertar o munícipe sobre a nova versão disponível.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '1.2.14.   Permite implementar mecanismos de atualização obrigatória da solução para uso do aplicativo móvel, permitindo alertar o munícipe sobre a nova versão disponível.' }],
+					[{ data: 'O' }]
 				]
 			],
 				tabelaListrada: false,
@@ -2354,93 +2354,93 @@ export default {
 				linhas:
 			[
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: 'N/A' } ],
-					[ { data: '' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: 'N/A' }],
+					[{ data: '' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '1.3.3.   Permite que o atendente registre todas as solicitações do munícipe em uma interface de atendimento, em nome do munícipe ou anonimamente, por meio do preenchimento de formulário do respectivo serviço, com a opção de upload e download de arquivos.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '1.3.3.   Permite que o atendente registre todas as solicitações do munícipe em uma interface de atendimento, em nome do munícipe ou anonimamente, por meio do preenchimento de formulário do respectivo serviço, com a opção de upload e download de arquivos.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '1.3.4.   Permite que o atendente crie um novo cadastro para o munícipe ainda não cadastrado na solução.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '1.3.4.   Permite que o atendente crie um novo cadastro para o munícipe ainda não cadastrado na solução.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '1.3.5.   Permite que o atendente solicite a reinicialização de senha de um munícipe e que, automaticamente, seja enviado um e-mail ao munícipe com as instruções para recuperação da senha.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '1.3.5.   Permite que o atendente solicite a reinicialização de senha de um munícipe e que, automaticamente, seja enviado um e-mail ao munícipe com as instruções para recuperação da senha.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '1.3.6.   Permite que o atendente consulte o histórico de solicitações de um munícipe, visualizando as informações relativas ao andamento do tratamento das solicitações.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '1.3.6.   Permite que o atendente consulte o histórico de solicitações de um munícipe, visualizando as informações relativas ao andamento do tratamento das solicitações.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '1.3.7.   Permite que o atendente consulte o andamento de uma solicitação anônima (pelo número de protocolo, por exemplo), visualizando as informações relativas ao andamento do tratamento das solicitações.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '1.3.7.   Permite que o atendente consulte o andamento de uma solicitação anônima (pelo número de protocolo, por exemplo), visualizando as informações relativas ao andamento do tratamento das solicitações.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '1.3.8.   Permite que o atendente, antes de criar uma nova solicitação pelo munícipe, visualize em um mapa as solicitações similares já abertas em um endereço indicado e possa optar por reforçar uma solicitação existente ao invés de abrir uma nova.' } ],
-					[ { data: 'D3' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '1.3.8.   Permite que o atendente, antes de criar uma nova solicitação pelo munícipe, visualize em um mapa as solicitações similares já abertas em um endereço indicado e possa optar por reforçar uma solicitação existente ao invés de abrir uma nova.' }],
+					[{ data: 'D3' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '1.3.9.   Permite que o atendente utilize um roteiro de atendimento (script), executando um fluxo de atendimento passo a passo.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '1.3.9.   Permite que o atendente utilize um roteiro de atendimento (script), executando um fluxo de atendimento passo a passo.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '1.3.10.   Permite que o atendente sugira alterações nos roteiros de atendimento (scripts) que passarão por um fluxo de aprovação, conforme regras definidas.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '1.3.10.   Permite que o atendente sugira alterações nos roteiros de atendimento (scripts) que passarão por um fluxo de aprovação, conforme regras definidas.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '1.3.11.   Permite que o atendente possa registrar informações pertinentes a uma solicitação em um campo de texto específico.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '1.3.11.   Permite que o atendente possa registrar informações pertinentes a uma solicitação em um campo de texto específico.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: 'N/A' } ],
-					[ { data: '' } ]
+					[{ data: 'Operacional' }],
+					[{ data: 'N/A' }],
+					[{ data: '' }]
 				],
 
 				[
-					[ { data: 'Gerencial' } ],
-					[ { data: 'N/A' } ],
-					[ { data: '' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: 'N/A' }],
+					[{ data: '' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '1.3.12.   Permite configurar as informações a serem apresentadas na interface do canal assistido, sem a necessidade de escrever código de programação, possibilitando a criação, edição, exclusão de componentes. Tais componentes podem ser, mas não se limitando a páginas HTML, menus de navegação, imagens, URLs, vídeos, áreas de texto, formulários, avisos (pop-ups), relatórios, gráficos, dashboards e tabelas.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '1.3.12.   Permite configurar as informações a serem apresentadas na interface do canal assistido, sem a necessidade de escrever código de programação, possibilitando a criação, edição, exclusão de componentes. Tais componentes podem ser, mas não se limitando a páginas HTML, menus de navegação, imagens, URLs, vídeos, áreas de texto, formulários, avisos (pop-ups), relatórios, gráficos, dashboards e tabelas.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '1.3.13.   Permite criar, editar e excluir scripts de atendimento no formato de fluxos executáveis para guiar os atendentes durante o atendimento ao munícipe.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '1.3.13.   Permite criar, editar e excluir scripts de atendimento no formato de fluxos executáveis para guiar os atendentes durante o atendimento ao munícipe.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '1.3.14.   Permite configurar fluxos de aprovação para criação, edição e exclusão dos roteiros de atendimento (scripts).' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '1.3.14.   Permite configurar fluxos de aprovação para criação, edição e exclusão dos roteiros de atendimento (scripts).' }],
+					[{ data: 'O' }]
 				]
 			],
 				tabelaListrada: false,
@@ -2459,93 +2459,93 @@ export default {
 				linhas:
 			[
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '1.4.4.   Permite que o muní solicite informações ou realize uma solicitação por meio de chat on-line no Portal de Atendimento WEB, podendo realizar upload e download de arquivos.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '1.4.4.   Permite que o muní solicite informações ou realize uma solicitação por meio de chat on-line no Portal de Atendimento WEB, podendo realizar upload e download de arquivos.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '1.4.5.   Permite que o munícipe veja sua posição na fila de atendimento em tempo real e a estimativa de tempo para ser atendido.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '1.4.5.   Permite que o munícipe veja sua posição na fila de atendimento em tempo real e a estimativa de tempo para ser atendido.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '1.4.6.   Permite que o munícipe visualize todo o histórico de comunicação na interface do atendimento.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '1.4.6.   Permite que o munícipe visualize todo o histórico de comunicação na interface do atendimento.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '1.4.7.   Permite que o munícipe envie a conversa do chat para um e-mail.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '1.4.7.   Permite que o munícipe envie a conversa do chat para um e-mail.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '1.4.8.   Permite que munícipe avalie o atendimento após o seu encerramento.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '1.4.8.   Permite que munícipe avalie o atendimento após o seu encerramento.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '1.4.9.   Permite que o atendente interaja com os munícipes por meio de chat on- line, na mesma interface do canal assistido.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '1.4.9.   Permite que o atendente interaja com os munícipes por meio de chat on- line, na mesma interface do canal assistido.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '1.4.10.   Permite que o atendente registre solicitações, podendo realizar upload e download de arquivos, bem como compartilhá-los com outros usuários da solução.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '1.4.10.   Permite que o atendente registre solicitações, podendo realizar upload e download de arquivos, bem como compartilhá-los com outros usuários da solução.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '1.4.11.   Permite que o atendente envolva outros usuários no chat com o munícipe.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '1.4.11.   Permite que o atendente envolva outros usuários no chat com o munícipe.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '1.4.12.   Permite que o atendente interaja via chat com outros usuários da solução.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '1.4.12.   Permite que o atendente interaja via chat com outros usuários da solução.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '1.4.13.   Permite que o atendente visualize o histórico de informações de uma interação com o munícipe, como por exemplo dados já fornecidos pelo munícipe, interação prévia com outro atendente ou com chatbot.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '1.4.13.   Permite que o atendente visualize o histórico de informações de uma interação com o munícipe, como por exemplo dados já fornecidos pelo munícipe, interação prévia com outro atendente ou com chatbot.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: 'N/A' } ],
-					[ { data: '' } ]
+					[{ data: 'Operacional' }],
+					[{ data: 'N/A' }],
+					[{ data: '' }]
 				],
 
 				[
-					[ { data: 'Gerencial' } ],
-					[ { data: 'N/A' } ],
-					[ { data: '' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: 'N/A' }],
+					[{ data: '' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '1.4.14.   Permite configurar o permissionamento do uso do chat por serviço e grupo de atendimento.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '1.4.14.   Permite configurar o permissionamento do uso do chat por serviço e grupo de atendimento.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '1.4.15.   Permite configurar respostas-padrão.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '1.4.15.   Permite configurar respostas-padrão.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '1.4.16.   Permite visualizar, em tempo real, indicadores do chat, tais como fila, número de interações, resultados da avaliação dos atendimentos, dentre outros.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '1.4.16.   Permite visualizar, em tempo real, indicadores do chat, tais como fila, número de interações, resultados da avaliação dos atendimentos, dentre outros.' }],
+					[{ data: 'O' }]
 				]
 			],
 				estreita: false,
@@ -2564,57 +2564,57 @@ export default {
 				linhas:
 			[
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '1.5.4.   Permite que o munícipe consulte a fase de atendimento de um protocolo já aberto' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '1.5.4.   Permite que o munícipe consulte a fase de atendimento de um protocolo já aberto' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '1.5.5.   Permite que o munícipe solicite informações ou realize a solicitação por meio do fornecimento de informações sobre o serviço.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '1.5.5.   Permite que o munícipe solicite informações ou realize a solicitação por meio do fornecimento de informações sobre o serviço.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '1.5.6.   Permite que o munícipe realize upload de arquivos.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '1.5.6.   Permite que o munícipe realize upload de arquivos.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '1.5.7.   Permite que o atendente interaja com o munícipe por meio do chat das redes sociais, a partir de uma interface única integrada à solução.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '1.5.7.   Permite que o atendente interaja com o munícipe por meio do chat das redes sociais, a partir de uma interface única integrada à solução.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: 'N/A' } ],
-					[ { data: '' } ]
+					[{ data: 'Operacional' }],
+					[{ data: 'N/A' }],
+					[{ data: '' }]
 				],
 
 				[
-					[ { data: 'Gerencial' } ],
-					[ { data: 'N/A' } ],
-					[ { data: '' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: 'N/A' }],
+					[{ data: '' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '1.5.8.   Permite habilitar o registro de solicitações de serviços e a consulta da fase de atendimento por rede social.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '1.5.8.   Permite habilitar o registro de solicitações de serviços e a consulta da fase de atendimento por rede social.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '1.5.9.   Permite configurar respostas-padrão.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '1.5.9.   Permite configurar respostas-padrão.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '1.5.10.   Permite criar relatórios estatísticos e analíticos das redes sociais, conforme necessidade da CONTRATANTE, informando, por exemplo, dados como número de fãs ou seguidores, retweets, menções, curtidas, comentários e compartilhamentos.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '1.5.10.   Permite criar relatórios estatísticos e analíticos das redes sociais, conforme necessidade da CONTRATANTE, informando, por exemplo, dados como número de fãs ou seguidores, retweets, menções, curtidas, comentários e compartilhamentos.' }],
+					[{ data: 'O' }]
 				]
 			],
 				estreita: false,
@@ -2632,154 +2632,154 @@ export default {
 				linhas:
 			[
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '2.1.5.   Permite que os dados preenchidos no formulário pelo munícipe sejam validados, conforme regras definidas.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '2.1.5.   Permite que os dados preenchidos no formulário pelo munícipe sejam validados, conforme regras definidas.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '2.1.6.   Permite que o munícipe visualize textos de ajuda na forma de dicas (hints) nos campos dos formulários, conforme regras definidas.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '2.1.6.   Permite que o munícipe visualize textos de ajuda na forma de dicas (hints) nos campos dos formulários, conforme regras definidas.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '2.1.7.   Permite que o munícipe ajuste o conteúdo de um campo de endereço, inserindo manualmente ou localizando o endereço correto no mapa.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '2.1.7.   Permite que o munícipe ajuste o conteúdo de um campo de endereço, inserindo manualmente ou localizando o endereço correto no mapa.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '2.1.8.   Permite que o munícipe reutilize arquivos previamente carregados na solução em uma nova solicitação, como documentos de identificação, CPF, comprovante de endereço etc.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '2.1.8.   Permite que o munícipe reutilize arquivos previamente carregados na solução em uma nova solicitação, como documentos de identificação, CPF, comprovante de endereço etc.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '2.1.9.   Permite que os dados preenchidos no formulário pelos atendentes sejam validados, conforme regras definidas.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '2.1.9.   Permite que os dados preenchidos no formulário pelos atendentes sejam validados, conforme regras definidas.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '2.1.10.   Permite que o atendente visualize textos de ajuda na forma de dicas (hints ) nos campos dos formulários conforme regras definidas.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '2.1.10.   Permite que o atendente visualize textos de ajuda na forma de dicas (hints ) nos campos dos formulários conforme regras definidas.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '2.1.11.   Permite que o atendente ajuste o conteúdo de um campo de endereço, inserindo manualmente ou localizando o endereço correto no mapa.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '2.1.11.   Permite que o atendente ajuste o conteúdo de um campo de endereço, inserindo manualmente ou localizando o endereço correto no mapa.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '2.1.12.   Permite que o atendente reutilize um arquivo previamente carregado na solução em uma nova solicitação.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '2.1.12.   Permite que o atendente reutilize um arquivo previamente carregado na solução em uma nova solicitação.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: '2.1.13.   Permite que o servidor visualize e edite as informações contidas nos formulários preenchidos durante a solicitação pelo munícipe ou atendente, conforme regras definidas.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Operacional' }],
+					[{ data: '2.1.13.   Permite que o servidor visualize e edite as informações contidas nos formulários preenchidos durante a solicitação pelo munícipe ou atendente, conforme regras definidas.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Gerencial' } ],
-					[ { data: 'N/A' } ],
-					[ { data: '' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: 'N/A' }],
+					[{ data: '' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.1.14.   Permite configurar o uso de diversos tipos de campos nos formulários como: caixa de texto, caixa de combinação, caixa de seleção, caixa de listagem, caixa de listagem suspensa, botão de comando, barra de rolagem, botão de opção, rótulo, imagem, dentre outros.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.1.14.   Permite configurar o uso de diversos tipos de campos nos formulários como: caixa de texto, caixa de combinação, caixa de seleção, caixa de listagem, caixa de listagem suspensa, botão de comando, barra de rolagem, botão de opção, rótulo, imagem, dentre outros.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.1.15.   Permite configurar formulários com campos de upload e download de arquivos, possibilitando limitar extensões e tamanho dos arquivos a serem anexados.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.1.15.   Permite configurar formulários com campos de upload e download de arquivos, possibilitando limitar extensões e tamanho dos arquivos a serem anexados.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.1.16.   Permite configurar formulários com apresentação dinâmica de campos com base em condições (na medida em que itens do formulário são selecionados ou preenchidos, por exemplo), sem necessidade de programação.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.1.16.   Permite configurar formulários com apresentação dinâmica de campos com base em condições (na medida em que itens do formulário são selecionados ou preenchidos, por exemplo), sem necessidade de programação.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.1.17.   Permite configurar a obrigatoriedade e a ordem de preenchimento dos campos dos formulários.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.1.17.   Permite configurar a obrigatoriedade e a ordem de preenchimento dos campos dos formulários.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.1.18.   Permite configurar o permissionamento de visibilidade de campos e seus valores, conforme regras definidas.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.1.18.   Permite configurar o permissionamento de visibilidade de campos e seus valores, conforme regras definidas.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.1.19.   Permite configurar o permissionamento de edição dos campos do formulário, mantendo o histórico de alterações realizadas, a data e o usuário que realizou a ação.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.1.19.   Permite configurar o permissionamento de edição dos campos do formulário, mantendo o histórico de alterações realizadas, a data e o usuário que realizou a ação.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.1.20.   Permite configurar o reuso do valor de um campo em outros campos do formulário.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.1.20.   Permite configurar o reuso do valor de um campo em outros campos do formulário.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.1.21.   Permite criar e gerenciar modelos de formulários para reutilização.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.1.21.   Permite criar e gerenciar modelos de formulários para reutilização.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.1.22.   Permite criar banco de campos frequentes, facilitando a criação de novos formulários e garantindo a padronização.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.1.22.   Permite criar banco de campos frequentes, facilitando a criação de novos formulários e garantindo a padronização.' }],
+					[{ data: 'O' }]
 				],
 
 				[
 
-					[ { data: 'Configuração' } ],
-					[ { data: '2.1.23.   Permite implementar validação nos campos dos formulários de acordo com formato, tipo do conteúdo, tamanho, máscaras de entrada de dados para campos específico (pelo menos CPF, CNPJ, CEP, telefone e e-mail), consulta em tabelas e bases de dados externas, scripts etc.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.1.23.   Permite implementar validação nos campos dos formulários de acordo com formato, tipo do conteúdo, tamanho, máscaras de entrada de dados para campos específico (pelo menos CPF, CNPJ, CEP, telefone e e-mail), consulta em tabelas e bases de dados externas, scripts etc.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.1.24.   Permite inserir e configurar dicas (hints)nos campos dos formulários.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.1.24.   Permite inserir e configurar dicas (hints)nos campos dos formulários.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.1.25.   Permite inserir e configurar imagens ou cores como opções selecionáveis de formulário (por exemplo, configurar um formulário cujas opções de seleção sejam imagens de diferentes tipos de árvores).' } ],
-					[ { data: 'D2' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.1.25.   Permite inserir e configurar imagens ou cores como opções selecionáveis de formulário (por exemplo, configurar um formulário cujas opções de seleção sejam imagens de diferentes tipos de árvores).' }],
+					[{ data: 'D2' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.1.26.   Permite atribuir peso aos campos e aos valores do formulário, possibilitando configurações de priorização e criticidade de serviços.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.1.26.   Permite atribuir peso aos campos e aos valores do formulário, possibilitando configurações de priorização e criticidade de serviços.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.1.27.   Permite configurar formulários distintos para um mesmo serviço por canal de atendimento.' } ],
-					[ { data: 'D3' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.1.27.   Permite configurar formulários distintos para um mesmo serviço por canal de atendimento.' }],
+					[{ data: 'D3' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.1.28.   Permite extrair relatórios, visualizar gráficos e dashboards sobre todos os itens do formulário, sem necessidade de programação.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.1.28.   Permite extrair relatórios, visualizar gráficos e dashboards sobre todos os itens do formulário, sem necessidade de programação.' }],
+					[{ data: 'O' }]
 				]
 			],
 				tabelaListrada: false,
@@ -2798,75 +2798,75 @@ export default {
 				linhas:
 			[
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '2.2.1.   Permite que o munícipe receba um número de protocolo único para cada nova solicitação, independente do canal utilizado.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '2.2.1.   Permite que o munícipe receba um número de protocolo único para cada nova solicitação, independente do canal utilizado.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '2.2.2.   Permite que o munícipe visualize  no Portal de atendimento WEB e no Aplicativo Móvel o andamento atualizado da prestação do serviço e os respectivos prazos de atendimento por fase, conforme execução das etapas do fluxo de trabalho interno, graficamente em uma timeline (linha do tempo) com a duração da fase atual.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '2.2.2.   Permite que o munícipe visualize  no Portal de atendimento WEB e no Aplicativo Móvel o andamento atualizado da prestação do serviço e os respectivos prazos de atendimento por fase, conforme execução das etapas do fluxo de trabalho interno, graficamente em uma timeline (linha do tempo) com a duração da fase atual.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '2.2.3.   Permite que o munícipe visualize de forma gráfica, em uma área restrita ao seu login, nos diversos canais de atendimento, os dados históricos de todas as suas solicitações, incluindo pelo menos o número do protocolo, categoria do serviço, descrição do serviço, fase no fluxo de atendimento e o prazo de atendimento, com a possibilidade de aplicação de filtros por protocolo, status, data, serviço, entre outros.' } ],
-					[ { data: 'D3' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '2.2.3.   Permite que o munícipe visualize de forma gráfica, em uma área restrita ao seu login, nos diversos canais de atendimento, os dados históricos de todas as suas solicitações, incluindo pelo menos o número do protocolo, categoria do serviço, descrição do serviço, fase no fluxo de atendimento e o prazo de atendimento, com a possibilidade de aplicação de filtros por protocolo, status, data, serviço, entre outros.' }],
+					[{ data: 'D3' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '2.2.4.   Permite que o munícipe acrescente informações para complementar ou cancelar uma solicitação nos diversos canais de atendimento.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '2.2.4.   Permite que o munícipe acrescente informações para complementar ou cancelar uma solicitação nos diversos canais de atendimento.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '2.2.5.   Permite que o munícipe retorne por e-mail as informações necessárias para resolver as pendências de uma solicitação. Qualquer retorno (reply) via e-mail deve ser inserido na respectiva solicitação original, bem como seus anexos.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '2.2.5.   Permite que o munícipe retorne por e-mail as informações necessárias para resolver as pendências de uma solicitação. Qualquer retorno (reply) via e-mail deve ser inserido na respectiva solicitação original, bem como seus anexos.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '2.2.6.   Permite que o munícipe visualize, faça o download de títulos e boletos, realize upload de comprovantes e acompanhe o status de pagamento de títulos e boletos associados à prestação de serviços.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '2.2.6.   Permite que o munícipe visualize, faça o download de títulos e boletos, realize upload de comprovantes e acompanhe o status de pagamento de títulos e boletos associados à prestação de serviços.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '2.2.7.   Permite que o atendente acompanhe o andamento atualizado dos serviços solicitados pelo munícipe com o detalhamento de todas as informações referentes à prestação do serviço, incluindo a execução das fases de atendimento (Visão Munícipe) e de etapas do fluxo de trabalho interno (Visão Prefeitura).' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '2.2.7.   Permite que o atendente acompanhe o andamento atualizado dos serviços solicitados pelo munícipe com o detalhamento de todas as informações referentes à prestação do serviço, incluindo a execução das fases de atendimento (Visão Munícipe) e de etapas do fluxo de trabalho interno (Visão Prefeitura).' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '2.2.8.   Permite que o atendente acrescente informações para complementar ou cancelar uma solicitação a pedido do munícipe no canal assistido.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '2.2.8.   Permite que o atendente acrescente informações para complementar ou cancelar uma solicitação a pedido do munícipe no canal assistido.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '2.2.9.   Permite que o atendente, a pedido do munícipe no canal assistido, visualize, faça o download de títulos e boletos, realize upload de comprovantes e acompanhe o status de pagamento de títulos e boletos associados à prestação de serviços.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '2.2.9.   Permite que o atendente, a pedido do munícipe no canal assistido, visualize, faça o download de títulos e boletos, realize upload de comprovantes e acompanhe o status de pagamento de títulos e boletos associados à prestação de serviços.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: 'N/A' } ],
-					[ { data: '' } ]
+					[{ data: 'Operacional' }],
+					[{ data: 'N/A' }],
+					[{ data: '' }]
 				],
 
 				[
-					[ { data: 'Gerencial' } ],
-					[ { data: 'N/A' } ],
-					[ { data: '' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: 'N/A' }],
+					[{ data: '' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.2.10.   Permite criar fases de atendimento que serão exibidas por serviço e por perfil de usuário.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.2.10.   Permite criar fases de atendimento que serão exibidas por serviço e por perfil de usuário.' }],
+					[{ data: 'O' }]
 				]
 			],
 				tabelaListrada: false,
@@ -2885,189 +2885,189 @@ export default {
 				linhas:
 			[
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: 'N/A' } ],
-					[ { data: '' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: 'N/A' }],
+					[{ data: '' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: 'N/A' } ],
-					[ { data: '' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: 'N/A' }],
+					[{ data: '' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: '2.3.3.   Permite que o servidor acompanhe o andamento atualizado dos serviços solicitados pelo munícipe com o detalhamento de todas as informações referentes à prestação do serviço, incluindo a execução das fases de atendimento (Visão Munícipe) e de etapas do fluxo de trabalho interno (Visão Prefeitura).' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Operacional' }],
+					[{ data: '2.3.3.   Permite que o servidor acompanhe o andamento atualizado dos serviços solicitados pelo munícipe com o detalhamento de todas as informações referentes à prestação do serviço, incluindo a execução das fases de atendimento (Visão Munícipe) e de etapas do fluxo de trabalho interno (Visão Prefeitura).' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: '2.3.4.   Permite que o servidor receba a solicitação do serviço e realize as atividades relacionadas a sua etapa do fluxo de trabalho, de acordo com regras definidas, dando andamento à solicitação para as etapas seguintes.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Operacional' }],
+					[{ data: '2.3.4.   Permite que o servidor receba a solicitação do serviço e realize as atividades relacionadas a sua etapa do fluxo de trabalho, de acordo com regras definidas, dando andamento à solicitação para as etapas seguintes.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: '2.3.5.   Permite que o servidor assuma a responsabilidade pelo tratamento de um protocolo de solicitação de serviço.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Operacional' }],
+					[{ data: '2.3.5.   Permite que o servidor assuma a responsabilidade pelo tratamento de um protocolo de solicitação de serviço.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: '2.3.6.   Permite que o servidor analise as solicitações com o auxílio de formulários e checklists (listas de verificação) para marcar ou descrever as atividades realizadas durante uma etapa do fluxo de trabalho interno.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Operacional' }],
+					[{ data: '2.3.6.   Permite que o servidor analise as solicitações com o auxílio de formulários e checklists (listas de verificação) para marcar ou descrever as atividades realizadas durante uma etapa do fluxo de trabalho interno.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: '2.3.7.   Permite que o servidor encaminhe uma solicitação de serviço para outra unidade de atendimento, grupo de atendimento ou para outro usuário, de acordo com as regras definidas para o fluxo de trabalho.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Operacional' }],
+					[{ data: '2.3.7.   Permite que o servidor encaminhe uma solicitação de serviço para outra unidade de atendimento, grupo de atendimento ou para outro usuário, de acordo com as regras definidas para o fluxo de trabalho.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: '2.3.8.   Permite que o servidor envie e receba uma solicitação por e-mail para execução de etapas do serviço. Qualquer retorno (reply) via e-mail deve ser inserido na respectiva solicitação original, bem como seus anexos, e fornecer algum alerta para o servidor.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Operacional' }],
+					[{ data: '2.3.8.   Permite que o servidor envie e receba uma solicitação por e-mail para execução de etapas do serviço. Qualquer retorno (reply) via e-mail deve ser inserido na respectiva solicitação original, bem como seus anexos, e fornecer algum alerta para o servidor.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: '2.3.9.   Permite que o servidor altere o tipo de serviço de uma solicitação, fazendo com que a solicitação vá para outra etapa ou unidade de atendimento, de acordo com as regras definidas para o fluxo de trabalho.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Operacional' }],
+					[{ data: '2.3.9.   Permite que o servidor altere o tipo de serviço de uma solicitação, fazendo com que a solicitação vá para outra etapa ou unidade de atendimento, de acordo com as regras definidas para o fluxo de trabalho.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: '2.3.10.   Permite que o servidor utilize respostas-padrão editáveis em etapas definidas pelo fluxo de trabalho.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Operacional' }],
+					[{ data: '2.3.10.   Permite que o servidor utilize respostas-padrão editáveis em etapas definidas pelo fluxo de trabalho.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Gerencial' } ],
-					[ { data: '2.3.11.   Permite que o servidor acompanhe o andamento atualizado dos serviços solicitados pelo munícipe com o detalhamento de todas as informações referentes à prestação do serviço, incluindo a execução das fases de atendimento (Visão Munícipe) e de etapas do fluxo de trabalho interno (Visão Prefeitura).' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: '2.3.11.   Permite que o servidor acompanhe o andamento atualizado dos serviços solicitados pelo munícipe com o detalhamento de todas as informações referentes à prestação do serviço, incluindo a execução das fases de atendimento (Visão Munícipe) e de etapas do fluxo de trabalho interno (Visão Prefeitura).' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Gerencial' } ],
-					[ { data: '2.3.12.   Permite que o servidor distribua as solicitações entre os servidores da unidade de atendimento.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: '2.3.12.   Permite que o servidor distribua as solicitações entre os servidores da unidade de atendimento.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Gerencial' } ],
-					[ { data: '2.3.13.   Permite que o servidor encaminhe uma solicitação de serviço para outra unidade de atendimento, grupo de atendimento ou para outro usuário, de acordo com as regras definidas para o fluxo de trabalho.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: '2.3.13.   Permite que o servidor encaminhe uma solicitação de serviço para outra unidade de atendimento, grupo de atendimento ou para outro usuário, de acordo com as regras definidas para o fluxo de trabalho.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.3.14.   Permite a criação do fluxo de trabalho interno do serviço em notação BPMN ou notação similar com auxílio de modelador gráfico, sem necessidade de programação.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.3.14.   Permite a criação do fluxo de trabalho interno do serviço em notação BPMN ou notação similar com auxílio de modelador gráfico, sem necessidade de programação.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.3.15.   Permite organizar os serviços em uma taxonomia de pelo menos três níveis (tema, assunto, serviço, por exemplo).' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.3.15.   Permite organizar os serviços em uma taxonomia de pelo menos três níveis (tema, assunto, serviço, por exemplo).' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.3.16.   Permite configurar o fluxo de trabalho interno do serviço, estabelecendo prazos por etapa e alçadas de aprovação.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.3.16.   Permite configurar o fluxo de trabalho interno do serviço, estabelecendo prazos por etapa e alçadas de aprovação.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.3.17.   Permite configurar o tipo de serviço, canal de atendimento,  unidade de atendimento, grupo de atendimento, agendamento para atendimento presencial, solicitação anônima sem autenticação na solução, período de expiração e outros atributos do serviço.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.3.17.   Permite configurar o tipo de serviço, canal de atendimento,  unidade de atendimento, grupo de atendimento, agendamento para atendimento presencial, solicitação anônima sem autenticação na solução, período de expiração e outros atributos do serviço.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.3.18.   Permite associar o fluxo de trabalho interno com as fases de atendimento ao munícipe.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.3.18.   Permite associar o fluxo de trabalho interno com as fases de atendimento ao munícipe.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.3.19.   Permite associar formulários a etapas do fluxo de trabalho interno.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.3.19.   Permite associar formulários a etapas do fluxo de trabalho interno.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.3.20.   Permite realizar o versionamento automático dos fluxos que estão sendo utilizados para prestação de serviços e, caso necessário, o rollback para versões anteriores, sempre mantendo a integridade dos dados.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.3.20.   Permite realizar o versionamento automático dos fluxos que estão sendo utilizados para prestação de serviços e, caso necessário, o rollback para versões anteriores, sempre mantendo a integridade dos dados.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.3.21.   Permite a configuração da reabertura de serviço finalizado por serviço, canal de atendimento e perfil de usuário, podendo iniciar um fluxo de trabalho diferenciado.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.3.21.   Permite a configuração da reabertura de serviço finalizado por serviço, canal de atendimento e perfil de usuário, podendo iniciar um fluxo de trabalho diferenciado.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.3.22.   Permite configurar a possibilidade de reuso de arquivos armazenados na solução.' } ],
-					[ { data: 'D3' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.3.22.   Permite configurar a possibilidade de reuso de arquivos armazenados na solução.' }],
+					[{ data: 'D3' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.3.23.   Permite criar níveis de prioridade de atendimento das solicitações a partir de classificação de criticidade considerando itens do formulário ou outros parâmetros (por exemplo, é a segunda solicitação da mesma pessoa, é uma região específica da cidade, etc.).' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.3.23.   Permite criar níveis de prioridade de atendimento das solicitações a partir de classificação de criticidade considerando itens do formulário ou outros parâmetros (por exemplo, é a segunda solicitação da mesma pessoa, é uma região específica da cidade, etc.).' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.3.24.   Permite configurar hierarquias para suportar a criação, alteração, exclusão, junção e separação em lote de unidades de atendimento e grupos de atendimento, mantendo a integridade dos dados e o histórico das alterações.' } ],
-					[ { data: 'D3' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.3.24.   Permite configurar hierarquias para suportar a criação, alteração, exclusão, junção e separação em lote de unidades de atendimento e grupos de atendimento, mantendo a integridade dos dados e o histórico das alterações.' }],
+					[{ data: 'D3' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.3.25.   Permite transferir as solicitações entre as unidades de atendimento e grupos de atendimento reestruturados, de acordo com regras definidas.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.3.25.   Permite transferir as solicitações entre as unidades de atendimento e grupos de atendimento reestruturados, de acordo com regras definidas.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.3.26.   Permite a criação de regras de encaminhamento das solicitações de acordo com um atributo ou conjunto específico de atributos da solicitação (por exemplo, item preenchido do formulário ou localização).' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.3.26.   Permite a criação de regras de encaminhamento das solicitações de acordo com um atributo ou conjunto específico de atributos da solicitação (por exemplo, item preenchido do formulário ou localização).' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.3.27.   Permite configurar respostas-padrão editáveis para cada tipo de serviço, sobre as quais os responsáveis pelo atendimento poderão trabalhar.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.3.27.   Permite configurar respostas-padrão editáveis para cada tipo de serviço, sobre as quais os responsáveis pelo atendimento poderão trabalhar.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.3.28.   Permite o encerramento automático de solicitações, conforme regras definidas.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.3.28.   Permite o encerramento automático de solicitações, conforme regras definidas.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.3.29.   Permite configurar a possibilidade de visualização de serviços por endereço ou região em um mapa de modo que usuários da solução possam reforçar uma solicitação de serviço já aberta.' } ],
-					[ { data: 'D3' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.3.29.   Permite configurar a possibilidade de visualização de serviços por endereço ou região em um mapa de modo que usuários da solução possam reforçar uma solicitação de serviço já aberta.' }],
+					[{ data: 'D3' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.3.30.   Permite configurar em quais fases do atendimento o munícipe pode complementar ou cancelar uma solicitação.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.3.30.   Permite configurar em quais fases do atendimento o munícipe pode complementar ou cancelar uma solicitação.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.3.31.   Permite configurar serviços vinculados a operações financeiras como emissão de primeira e segunda via de boletos e títulos, cobrança de títulos atrasados, recebimento de comprovante de pagamento com encaminhamento para baixa na unidade financeira, entre outros.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.3.31.   Permite configurar serviços vinculados a operações financeiras como emissão de primeira e segunda via de boletos e títulos, cobrança de títulos atrasados, recebimento de comprovante de pagamento com encaminhamento para baixa na unidade financeira, entre outros.' }],
+					[{ data: 'O' }]
 				]
 			],
 				tabelaListrada: false,
@@ -3087,63 +3087,63 @@ export default {
 				linhas:
 			[
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: 'N/A' } ],
-					[ { data: '' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: 'N/A' }],
+					[{ data: '' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: 'N/A' } ],
-					[ { data: '' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: 'N/A' }],
+					[{ data: '' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: '2.4.3.   Permite que o servidor visualize as solicitações de sua responsabilidade em uma interface específica.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Operacional' }],
+					[{ data: '2.4.3.   Permite que o servidor visualize as solicitações de sua responsabilidade em uma interface específica.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: '2.4.4.   Permite que o servidor pesquise os protocolos de serviços atendidos por ele e pela unidade de atendimento da qual faz parte, inclusive os que estão em outra etapa de atendimento, dentro ou fora da sua unidade de atendimento, detalhando as informações das solicitações, conforme critérios do item 2.4.2.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Operacional' }],
+					[{ data: '2.4.4.   Permite que o servidor pesquise os protocolos de serviços atendidos por ele e pela unidade de atendimento da qual faz parte, inclusive os que estão em outra etapa de atendimento, dentro ou fora da sua unidade de atendimento, detalhando as informações das solicitações, conforme critérios do item 2.4.2.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: '2.4.5.   Permite associar várias solicitações a uma solicitação principal, de acordo com determinados critérios (solicitações do mesmo tipo e mesmo endereço, por exemplo). Nesse caso, as ações realizadas em uma solicitação devem ser refletidas nas outras solicitações associadas.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Operacional' }],
+					[{ data: '2.4.5.   Permite associar várias solicitações a uma solicitação principal, de acordo com determinados critérios (solicitações do mesmo tipo e mesmo endereço, por exemplo). Nesse caso, as ações realizadas em uma solicitação devem ser refletidas nas outras solicitações associadas.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Gerencial' } ],
-					[ { data: '2.4.6.   Permite que o servidor visualize as solicitações de sua unidade de atendimento em uma interface específica.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: '2.4.6.   Permite que o servidor visualize as solicitações de sua unidade de atendimento em uma interface específica.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Gerencial' } ],
-					[ { data: '2.4.7.   Permite que o servidor pesquise os protocolos de serviços atendidos pela unidade de atendimento, inclusive os que estão em outra etapa de atendimento dentro ou fora da sua unidade de atendimento, detalhando as informações das solicitações, conforme critérios do item 2.4.2.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: '2.4.7.   Permite que o servidor pesquise os protocolos de serviços atendidos pela unidade de atendimento, inclusive os que estão em outra etapa de atendimento dentro ou fora da sua unidade de atendimento, detalhando as informações das solicitações, conforme critérios do item 2.4.2.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Gerencial' } ],
-					[ { data: '2.4.8.   Permite visualizar, na mesma interface, de forma agregada em gráficos e tabelas, e com possibilidade de drill down, informações sobre filas de atendimentos, backlog de solicitações sem tratamento, compreendendo o quantitativo de serviços solicitados por período, por tipo, por prazos, desempenho por grupo de atendimento, por servidor, por unidade e grupo de atendimento, por etapa e fase, dentre outros.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: '2.4.8.   Permite visualizar, na mesma interface, de forma agregada em gráficos e tabelas, e com possibilidade de drill down, informações sobre filas de atendimentos, backlog de solicitações sem tratamento, compreendendo o quantitativo de serviços solicitados por período, por tipo, por prazos, desempenho por grupo de atendimento, por servidor, por unidade e grupo de atendimento, por etapa e fase, dentre outros.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.4.9.   Permite configurar a pesquisa de solicitações nas interfaces dos usuários da solução, a partir de parâmetros fornecidos na solução, podendo incluir, mas não se limitando ao número de protocolo, nome, RG, CPF e endereço da solicitação.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.4.9.   Permite configurar a pesquisa de solicitações nas interfaces dos usuários da solução, a partir de parâmetros fornecidos na solução, podendo incluir, mas não se limitando ao número de protocolo, nome, RG, CPF e endereço da solicitação.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.4.10.   Permite configurar calendário e horário útil de trabalho da CONTRATANTE e de suas unidades e grupos de atendimento.' } ],
-					[ { data: 'D3' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.4.10.   Permite configurar calendário e horário útil de trabalho da CONTRATANTE e de suas unidades e grupos de atendimento.' }],
+					[{ data: 'D3' }]
 				]
 			],
 				tabelaListrada: false,
@@ -3163,45 +3163,45 @@ export default {
 			[
 				[
 
-					[ { data: 'Munícipe' } ],
-					[ { data: 'N/A' } ],
-					[ { data: '' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: 'N/A' }],
+					[{ data: '' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: 'N/A' } ],
-					[ { data: '' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: 'N/A' }],
+					[{ data: '' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: 'N/A' } ],
-					[ { data: '' } ]
+					[{ data: 'Operacional' }],
+					[{ data: 'N/A' }],
+					[{ data: '' }]
 				],
 
 				[
-					[ { data: 'Gerencial' } ],
-					[ { data: 'N/A' } ],
-					[ { data: '' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: 'N/A' }],
+					[{ data: '' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.5.3.   Permite realizar a gestão do ciclo de vida de um serviço, possibilitando o agendamento da publicação e a retirada de um serviço no ambiente de produção, automaticamente de acordo com o período de vigência do serviço.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.5.3.   Permite realizar a gestão do ciclo de vida de um serviço, possibilitando o agendamento da publicação e a retirada de um serviço no ambiente de produção, automaticamente de acordo com o período de vigência do serviço.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.5.4.   Permite o retorno da configuração de um serviço para uma situação anterior (rollback), contendo o devido controle de versões e integridade dos dados.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.5.4.   Permite o retorno da configuração de um serviço para uma situação anterior (rollback), contendo o devido controle de versões e integridade dos dados.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '2.5.5.   Permite acessar o detalhamento do fluxo do serviço para avaliação quanto à autorização de mudança.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.5.5.   Permite acessar o detalhamento do fluxo do serviço para avaliação quanto à autorização de mudança.' }],
+					[{ data: 'O' }]
 				]
 			],
 				tabelaListrada: false,
@@ -3220,116 +3220,116 @@ export default {
 				linhas:
 			[
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: 'N/A' } ],
-					[ { data: '' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: 'N/A' }],
+					[{ data: '' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '2.6.1.   Permite que o atendente visualize o seu perfil de acesso.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '2.6.1.   Permite que o atendente visualize o seu perfil de acesso.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: '2.6.2.   Permite que o servidor visualize o seu perfil de acesso.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Operacional' }],
+					[{ data: '2.6.2.   Permite que o servidor visualize o seu perfil de acesso.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Gerencial' } ],
-					[ { data: '2.6.3.   Permite que o servidor visualize o seu perfil de acesso.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: '2.6.3.   Permite que o servidor visualize o seu perfil de acesso.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Gerencial' } ],
-					[ { data: '2.6.4.   Permite que o servidor ative e desative usuários da solução de sua unidade e grupo de atendimento.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: '2.6.4.   Permite que o servidor ative e desative usuários da solução de sua unidade e grupo de atendimento.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Gerencial' } ],
-					[ { data: '2.6.5.   Permite que o servidor edite informações dos usuários da sua unidade e grupo de atendimento.' } ],
-					[ { data: 'O' } ]
-				],
-
-				[
-
-					[ { data: 'Gerencial' } ],
-					[ { data: '2.6.6.   Permite que o servidor associe os usuários de sua unidade e grupo de atendimento aos perfis de acesso e serviços existentes.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: '2.6.5.   Permite que o servidor edite informações dos usuários da sua unidade e grupo de atendimento.' }],
+					[{ data: 'O' }]
 				],
 
 				[
 
-					[ { data: 'Gerencial' } ],
-					[ { data: '2.6.7.   Permite que o servidor visualize as ações realizadas pelos usuários da sua unidade ou grupo de atendimento na solução, bem como as datas de acesso, seções acessadas da solução, dentre outras.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: '2.6.6.   Permite que o servidor associe os usuários de sua unidade e grupo de atendimento aos perfis de acesso e serviços existentes.' }],
+					[{ data: 'O' }]
 				],
 
 				[
 
-					[ { data: 'Configuração' } ],
-					[ { data: '2.6.8.   Permite cadastrar, alterar e excluir usuários, unidades de atendimento e grupos de atendimento da solução.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: '2.6.7.   Permite que o servidor visualize as ações realizadas pelos usuários da sua unidade ou grupo de atendimento na solução, bem como as datas de acesso, seções acessadas da solução, dentre outras.' }],
+					[{ data: 'O' }]
 				],
 
 				[
 
-					[ { data: 'Configuração' } ],
-					[ { data: '2.6.9.   Permite configurar o permissionamento dos acessos de cada perfil em nível de módulo, menu, tela, componente da tela etc.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.6.8.   Permite cadastrar, alterar e excluir usuários, unidades de atendimento e grupos de atendimento da solução.' }],
+					[{ data: 'O' }]
 				],
 
 				[
 
-					[ { data: 'Configuração' } ],
-					[ { data: '2.6.10.   Permite associar os usuários aos perfis de acesso (atendentes, servidores ou configuradores), às unidades, grupos de atendimento e aos serviços.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.6.9.   Permite configurar o permissionamento dos acessos de cada perfil em nível de módulo, menu, tela, componente da tela etc.' }],
+					[{ data: 'O' }]
 				],
 
 				[
 
-					[ { data: 'Configuração' } ],
-					[ { data: '2.6.11.   Permite associar a um usuário vários perfis, unidades de atendimento, grupos de atendimento e serviços.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.6.10.   Permite associar os usuários aos perfis de acesso (atendentes, servidores ou configuradores), às unidades, grupos de atendimento e aos serviços.' }],
+					[{ data: 'O' }]
 				],
 
 				[
 
-					[ { data: 'Configuração' } ],
-					[ { data: '2.6.12.   Permite a criação de novos perfis atribuindo-lhes funções específicas, de acordo com as necessidades da CONTRATANTE, tais como permissão para executar funções de ouvidoria, configurar itens de negócio, configurar itens técnicos, mudar informações da FAQ, Carta de Serviços e Base do atendimento, dentre outros.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.6.11.   Permite associar a um usuário vários perfis, unidades de atendimento, grupos de atendimento e serviços.' }],
+					[{ data: 'O' }]
 				],
 
 				[
 
-					[ { data: 'Configuração' } ],
-					[ { data: '2.6.13.   Permite descentralizar a gestão de usuários para o perfil gerencial, o qual recebe uma cota para gerenciar a criação e exclusão de usuários de sua unidade de atendimento, bem como para associá-los aos perfis de usuários e aos serviços existentes.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.6.12.   Permite a criação de novos perfis atribuindo-lhes funções específicas, de acordo com as necessidades da CONTRATANTE, tais como permissão para executar funções de ouvidoria, configurar itens de negócio, configurar itens técnicos, mudar informações da FAQ, Carta de Serviços e Base do atendimento, dentre outros.' }],
+					[{ data: 'O' }]
 				],
 
 				[
 
-					[ { data: 'Configuração' } ],
-					[ { data: '2.6.14.   Permite definir quais tipos de acesso o perfil gerencial pode distribuir para os usuários de sua unidade, os quais poderão variar de acordo com as unidades.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.6.13.   Permite descentralizar a gestão de usuários para o perfil gerencial, o qual recebe uma cota para gerenciar a criação e exclusão de usuários de sua unidade de atendimento, bem como para associá-los aos perfis de usuários e aos serviços existentes.' }],
+					[{ data: 'O' }]
 				],
 
 				[
 
-					[ { data: 'Configuração' } ],
-					[ { data: '2.6.15.   Permite recuperar o histórico das ações realizadas em relação ao cadastro, alteração e exclusão de usuários, contendo data, horário e usuário que realizou a ação.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.6.14.   Permite definir quais tipos de acesso o perfil gerencial pode distribuir para os usuários de sua unidade, os quais poderão variar de acordo com as unidades.' }],
+					[{ data: 'O' }]
 				],
 
 				[
 
-					[ { data: 'Configuração' } ],
-					[ { data: '2.6.16.   Permite visualizar e extrair relatórios, gráficos e dashboards dos dados dos usuários da solução, sem necessidade de escrever código de programação, incluindo pelo menos os dados cadastrais do usuário, login, perfil, níveis de acesso, unidade de atendimento, grupo de atendimento, com a possibilidade de aplicação de filtros para análise dos dados.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '2.6.15.   Permite recuperar o histórico das ações realizadas em relação ao cadastro, alteração e exclusão de usuários, contendo data, horário e usuário que realizou a ação.' }],
+					[{ data: 'O' }]
+				],
+
+				[
+
+					[{ data: 'Configuração' }],
+					[{ data: '2.6.16.   Permite visualizar e extrair relatórios, gráficos e dashboards dos dados dos usuários da solução, sem necessidade de escrever código de programação, incluindo pelo menos os dados cadastrais do usuário, login, perfil, níveis de acesso, unidade de atendimento, grupo de atendimento, com a possibilidade de aplicação de filtros para análise dos dados.' }],
+					[{ data: 'O' }]
 				]
 			],
 				tabelaListrada: false,
@@ -3348,227 +3348,227 @@ export default {
 				linhas:
 			[
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '3.1.1.   Permite que o munícipe, sem necessidade de realizar login, busque um serviço pertencente à Carta de Serviços pelo campo de busca, pela navegação entre os níveis de taxonomia dos serviços ou por filtros de temas/assunto, unidade de atendimento, canal de atendimento, serviços mais solicitados, dentre outros.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '3.1.1.   Permite que o munícipe, sem necessidade de realizar login, busque um serviço pertencente à Carta de Serviços pelo campo de busca, pela navegação entre os níveis de taxonomia dos serviços ou por filtros de temas/assunto, unidade de atendimento, canal de atendimento, serviços mais solicitados, dentre outros.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '3.1.2.   Permite que o munícipe visualize os serviços mais solicitados.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '3.1.2.   Permite que o munícipe visualize os serviços mais solicitados.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '3.1.3.   Permite que o munícipe realize download, envie por e-mail ou imprima a Carta de Serviços completa ou a Carta de Serviços de um serviço específico, indicando a versão, data e horário da publicação da Carta de Serviços.' } ],
-					[ { data: 'D3' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '3.1.3.   Permite que o munícipe realize download, envie por e-mail ou imprima a Carta de Serviços completa ou a Carta de Serviços de um serviço específico, indicando a versão, data e horário da publicação da Carta de Serviços.' }],
+					[{ data: 'D3' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '3.1.4.   Permite que o munícipe faça avaliação sobre o conteúdo da Carta de Serviços,  possibilitando a inserção de comentários.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '3.1.4.   Permite que o munícipe faça avaliação sobre o conteúdo da Carta de Serviços,  possibilitando a inserção de comentários.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '3.1.5.   Permite que o munícipe visualize os serviços relacionados a um serviço.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '3.1.5.   Permite que o munícipe visualize os serviços relacionados a um serviço.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '3.1.6.   Permite que o munícipe receba notificações relacionadas ao cadastro, alteração e exclusão de Cartas de Serviços.' } ],
-					[ { data: 'D3' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '3.1.6.   Permite que o munícipe receba notificações relacionadas ao cadastro, alteração e exclusão de Cartas de Serviços.' }],
+					[{ data: 'D3' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '3.1.7.   Permite que o atendente busque um serviço pertencente à Carta de Serviços pelo campo de busca, pela navegação entre os níveis de taxonomia dos serviços ou por filtros de temas/assunto, unidade de atendimento, canal de atendimento, serviços mais solicitados, dentre outros.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '3.1.7.   Permite que o atendente busque um serviço pertencente à Carta de Serviços pelo campo de busca, pela navegação entre os níveis de taxonomia dos serviços ou por filtros de temas/assunto, unidade de atendimento, canal de atendimento, serviços mais solicitados, dentre outros.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '3.1.8.   Permite que o atendente visualize os serviços mais solicitados.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '3.1.8.   Permite que o atendente visualize os serviços mais solicitados.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '3.1.9.   Permite que o atendente realize o download, envie por e-mail ou imprima a Carta de Serviços completa ou a Carta de Serviços de um serviço específico, indicando a versão, data e horário da publicação da Carta de Serviços.' } ],
-					[ { data: 'D3' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '3.1.9.   Permite que o atendente realize o download, envie por e-mail ou imprima a Carta de Serviços completa ou a Carta de Serviços de um serviço específico, indicando a versão, data e horário da publicação da Carta de Serviços.' }],
+					[{ data: 'D3' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '3.1.10.   Permite que o atendente sugira alterações nas Cartas de Serviço que passarão por um fluxo de aprovação, conforme regras definidas.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '3.1.10.   Permite que o atendente sugira alterações nas Cartas de Serviço que passarão por um fluxo de aprovação, conforme regras definidas.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '3.1.11.   Permite que o atendente visualize serviços relacionados a um serviço.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '3.1.11.   Permite que o atendente visualize serviços relacionados a um serviço.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '3.1.12.   Permite que o atendente confirme a leitura das Cartas de Serviços e suas atualizações.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '3.1.12.   Permite que o atendente confirme a leitura das Cartas de Serviços e suas atualizações.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '3.1.13.   Permite que o atendente receba notificações relacionadas ao cadastro, alteração e exclusão de Cartas de Serviços.' } ],
-					[ { data: 'O' } ]
-				],
-
-				[
-
-					[ { data: 'Operacional' } ],
-					[ { data: '3.1.14.   Permite que o servidor visualize a Carta de Serviços correspondente à solicitação recebida.' } ],
-					[ { data: 'O' } ]
-				],
-
-				[
-					[ { data: 'Operacional' } ],
-					[ { data: '3.1.15.   Permite que o servidor sugira alterações nas Cartas de Serviço que passarão por um fluxo de aprovação, conforme regras definidas.' } ],
-					[ { data: 'D3' } ]
-				],
-
-				[
-					[ { data: 'Operacional' } ],
-					[ { data: '3.1.16.   Permite que o servidor confirme a leitura das Cartas de Serviços e suas atualizações.' } ],
-					[ { data: 'O' } ]
-				],
-
-				[
-					[ { data: 'Operacional' } ],
-					[ { data: '3.1.17.   Permite que o servidor receba notificações relacionadas ao cadastro, alteração e exclusão de Cartas de Serviços.' } ],
-					[ { data: 'O' } ]
-				],
-
-				[
-					[ { data: 'Gerencial' } ],
-					[ { data: '3.1.18.   Permite visualizar as informações das Cartas dos serviços atendidos pela sua unidade.' } ],
-					[ { data: 'O' } ]
-				],
-
-				[
-					[ { data: 'Gerencial' } ],
-					[ { data: '3.1.19.   Permite que o servidor sugira alterações nas Cartas de Serviço que passarão por um fluxo de aprovação, conforme regras definidas.' } ],
-					[ { data: 'O' } ]
-				],
-
-				[
-					[ { data: 'Gerencial' } ],
-					[ { data: '3.1.20.   Permite que o servidor receba notificações relacionadas ao cadastro, alteração e exclusão de Cartas de Serviços.' } ],
-					[ { data: 'O' } ]
-				],
-
-				[
-					[ { data: 'Gerencial' } ],
-					[ { data: '3.1.21.   Permite que o dono do serviço forneça, valide e publique as informações da Carta sobre um determinado serviço, que passarão por um fluxo de aprovação, conforme regras definidas.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '3.1.13.   Permite que o atendente receba notificações relacionadas ao cadastro, alteração e exclusão de Cartas de Serviços.' }],
+					[{ data: 'O' }]
 				],
 
 				[
 
-					[ { data: 'Configuração' } ],
-					[ { data: '3.1.22.   Permite cadastrar, alterar, excluir, publicar e gerenciar as Cartas de Serviços de forma autônoma pela CONTRATANTE, sem necessidade de programação.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Operacional' }],
+					[{ data: '3.1.14.   Permite que o servidor visualize a Carta de Serviços correspondente à solicitação recebida.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '3.1.23.   Permite associar uma Carta de Serviço ao respectivo fluxo de atendimento do serviço.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Operacional' }],
+					[{ data: '3.1.15.   Permite que o servidor sugira alterações nas Cartas de Serviço que passarão por um fluxo de aprovação, conforme regras definidas.' }],
+					[{ data: 'D3' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '3.1.24.   Permite publicar uma Carta de Serviço sem associá-la a um fluxo de atendimento.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Operacional' }],
+					[{ data: '3.1.16.   Permite que o servidor confirme a leitura das Cartas de Serviços e suas atualizações.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '3.1.25.   Permite configurar o permissionamento do dono do serviço responsável por visualizar as avaliações, fornecer, validar e publicar as informações das Cartas de Serviço.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Operacional' }],
+					[{ data: '3.1.17.   Permite que o servidor receba notificações relacionadas ao cadastro, alteração e exclusão de Cartas de Serviços.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '3.1.26.   Permite configurar fluxos de aprovação para criação, edição e exclusão das informações das Cartas de Serviço.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: '3.1.18.   Permite visualizar as informações das Cartas dos serviços atendidos pela sua unidade.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '3.1.27.   Permite cadastrar as informações das Cartas com personalização, utilizando recursos comuns de editores de texto (fonte, tamanho, cores, etc.),  etiquetas (tags), HTML e CSS.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: '3.1.19.   Permite que o servidor sugira alterações nas Cartas de Serviço que passarão por um fluxo de aprovação, conforme regras definidas.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '3.1.28.   Permite gerenciar as Cartas de Serviços, possibilitando criar, alterar, excluir, ativar ou desativar campos (títulos, subtítulos, seções) e conteúdos que se repetem em uma ou mais Cartas de Serviço simultaneamente de forma automática e padronizada.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: '3.1.20.   Permite que o servidor receba notificações relacionadas ao cadastro, alteração e exclusão de Cartas de Serviços.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '3.1.29.   Permite que as  alterações realizadas nas Cartas sejam refletidas em todos os canais de atendimento selecionados, sem redundância.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: '3.1.21.   Permite que o dono do serviço forneça, valide e publique as informações da Carta sobre um determinado serviço, que passarão por um fluxo de aprovação, conforme regras definidas.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '3.1.30.   Permite importar conteúdo externo para a Carta por meio de arquivos em formatos previamente definidos (preferencialmente XLSX ou DOCX) para criação automática de Cartas de Serviço.' } ],
-					[ { data: 'O' } ]
+
+					[{ data: 'Configuração' }],
+					[{ data: '3.1.22.   Permite cadastrar, alterar, excluir, publicar e gerenciar as Cartas de Serviços de forma autônoma pela CONTRATANTE, sem necessidade de programação.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '3.1.31.   Permite combinar conteúdo externo importado com campos e conteúdos padronizados do item 3.1.28.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '3.1.23.   Permite associar uma Carta de Serviço ao respectivo fluxo de atendimento do serviço.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '3.1.32.   Permite recuperar o histórico das ações realizadas em todas as Cartas de Serviços, contendo data, horário e usuário que realizou a ação.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '3.1.24.   Permite publicar uma Carta de Serviço sem associá-la a um fluxo de atendimento.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '3.1.33.   Realiza o versionamento automático das Cartas de Serviço e, caso necessário, permite o rollback para versões anteriores, mantendo a integridade dos dados.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '3.1.25.   Permite configurar o permissionamento do dono do serviço responsável por visualizar as avaliações, fornecer, validar e publicar as informações das Cartas de Serviço.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '3.1.34.   Permite configurar os canais de atendimento pelos quais serão feitas avaliações da Carta de Serviços.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '3.1.26.   Permite configurar fluxos de aprovação para criação, edição e exclusão das informações das Cartas de Serviço.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '3.1.35.   Permite configurar regras de envio de notificações relacionadas ao cadastro, alteração e exclusão de Cartas de Serviços no formato de e-mail, notificação push, SMS e alerta visual.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '3.1.27.   Permite cadastrar as informações das Cartas com personalização, utilizando recursos comuns de editores de texto (fonte, tamanho, cores, etc.),  etiquetas (tags), HTML e CSS.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '3.1.36.   Permite configurar as regras de confirmação de leitura das Cartas de Serviços.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '3.1.28.   Permite gerenciar as Cartas de Serviços, possibilitando criar, alterar, excluir, ativar ou desativar campos (títulos, subtítulos, seções) e conteúdos que se repetem em uma ou mais Cartas de Serviço simultaneamente de forma automática e padronizada.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '3.1.37.   Permite criar gráficos, relatórios e dashboards personalizados sobre as Cartas de Serviços pelos seguintes critérios, mas não se limitando a eles: \na) Tag (Etiqueta), \nb) Tipo de serviço, \nc) Canal de atendimento, \nd) Data e horário de criação e atualização das Cartas, \ne) Quantidade de acessos às Cartas por canal, \nf) Pendência de análise das sugestões de alteração,\n g) Avaliação realizada sobre a Cartas' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '3.1.29.   Permite que as  alterações realizadas nas Cartas sejam refletidas em todos os canais de atendimento selecionados, sem redundância.' }],
+					[{ data: 'O' }]
+				],
+
+				[
+					[{ data: 'Configuração' }],
+					[{ data: '3.1.30.   Permite importar conteúdo externo para a Carta por meio de arquivos em formatos previamente definidos (preferencialmente XLSX ou DOCX) para criação automática de Cartas de Serviço.' }],
+					[{ data: 'O' }]
+				],
+
+				[
+					[{ data: 'Configuração' }],
+					[{ data: '3.1.31.   Permite combinar conteúdo externo importado com campos e conteúdos padronizados do item 3.1.28.' }],
+					[{ data: 'O' }]
+				],
+
+				[
+					[{ data: 'Configuração' }],
+					[{ data: '3.1.32.   Permite recuperar o histórico das ações realizadas em todas as Cartas de Serviços, contendo data, horário e usuário que realizou a ação.' }],
+					[{ data: 'O' }]
+				],
+
+				[
+					[{ data: 'Configuração' }],
+					[{ data: '3.1.33.   Realiza o versionamento automático das Cartas de Serviço e, caso necessário, permite o rollback para versões anteriores, mantendo a integridade dos dados.' }],
+					[{ data: 'O' }]
+				],
+
+				[
+					[{ data: 'Configuração' }],
+					[{ data: '3.1.34.   Permite configurar os canais de atendimento pelos quais serão feitas avaliações da Carta de Serviços.' }],
+					[{ data: 'O' }]
+				],
+
+				[
+					[{ data: 'Configuração' }],
+					[{ data: '3.1.35.   Permite configurar regras de envio de notificações relacionadas ao cadastro, alteração e exclusão de Cartas de Serviços no formato de e-mail, notificação push, SMS e alerta visual.' }],
+					[{ data: 'O' }]
+				],
+
+				[
+					[{ data: 'Configuração' }],
+					[{ data: '3.1.36.   Permite configurar as regras de confirmação de leitura das Cartas de Serviços.' }],
+					[{ data: 'O' }]
+				],
+
+				[
+					[{ data: 'Configuração' }],
+					[{ data: '3.1.37.   Permite criar gráficos, relatórios e dashboards personalizados sobre as Cartas de Serviços pelos seguintes critérios, mas não se limitando a eles: \na) Tag (Etiqueta), \nb) Tipo de serviço, \nc) Canal de atendimento, \nd) Data e horário de criação e atualização das Cartas, \ne) Quantidade de acessos às Cartas por canal, \nf) Pendência de análise das sugestões de alteração,\n g) Avaliação realizada sobre a Cartas' }],
+					[{ data: 'O' }]
 				]
 			],
 				tabelaListrada: false,
@@ -3587,147 +3587,147 @@ export default {
 				linhas:
 			[
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '3.2.1.   Permite que o munícipe pesquise Perguntas Mais Frequentes pelo campo de busca, pela navegação entre os níveis de taxonomia dos serviços ou por filtros de temas/assunto, unidade de atendimento, canal de atendimento, serviços mais solicitados, dentre outros.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '3.2.1.   Permite que o munícipe pesquise Perguntas Mais Frequentes pelo campo de busca, pela navegação entre os níveis de taxonomia dos serviços ou por filtros de temas/assunto, unidade de atendimento, canal de atendimento, serviços mais solicitados, dentre outros.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '3.2.2.   Permite que o munícipe avalie as Perguntas Mais Frequentes, com a possibilidade de inserção de comentários.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '3.2.2.   Permite que o munícipe avalie as Perguntas Mais Frequentes, com a possibilidade de inserção de comentários.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '3.2.3.   Permite que o atendente  pesquise Perguntas Mais Frequentes pelo campo de busca, pela navegação entre os níveis de taxonomia dos serviços ou por filtros de temas/assunto, unidade de atendimento, canal de atendimento, serviços mais solicitados, dentre outros.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '3.2.3.   Permite que o atendente  pesquise Perguntas Mais Frequentes pelo campo de busca, pela navegação entre os níveis de taxonomia dos serviços ou por filtros de temas/assunto, unidade de atendimento, canal de atendimento, serviços mais solicitados, dentre outros.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '3.2.4.   Permite que o atendente avalie as Perguntas Mais Frequentes, com a possibilidade de inserção de comentários.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '3.2.4.   Permite que o atendente avalie as Perguntas Mais Frequentes, com a possibilidade de inserção de comentários.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '3.2.5.   Permite a confirmação da leitura de Perguntas Mais Frequentes e suas atualizações pelo atendente.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '3.2.5.   Permite a confirmação da leitura de Perguntas Mais Frequentes e suas atualizações pelo atendente.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '3.2.6.   Permite que o atendente sugira alterações nas Perguntas Mais Frequentes, que passarão por um fluxo de aprovação, conforme regras definidas.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '3.2.6.   Permite que o atendente sugira alterações nas Perguntas Mais Frequentes, que passarão por um fluxo de aprovação, conforme regras definidas.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: '3.2.7.   Permite que o servidor visualize as Perguntas Mais Frequentes correspondentes à solicitação recebida.' } ],
-					[ { data: 'D3' } ]
+					[{ data: 'Operacional' }],
+					[{ data: '3.2.7.   Permite que o servidor visualize as Perguntas Mais Frequentes correspondentes à solicitação recebida.' }],
+					[{ data: 'D3' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: '3.2.8.   Permite que o servidor sugira alterações nas Perguntas Mais Frequentes, que passarão por um fluxo de aprovação, conforme regras definidas.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Operacional' }],
+					[{ data: '3.2.8.   Permite que o servidor sugira alterações nas Perguntas Mais Frequentes, que passarão por um fluxo de aprovação, conforme regras definidas.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Gerencial' } ],
-					[ { data: '3.2.9.   Permite visualizar as Perguntas Mais Frequentes dos serviços prestados pela sua unidade.' } ],
-					[ { data: 'D3' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: '3.2.9.   Permite visualizar as Perguntas Mais Frequentes dos serviços prestados pela sua unidade.' }],
+					[{ data: 'D3' }]
 				],
 
 				[
-					[ { data: 'Gerencial' } ],
-					[ { data: '3.2.10.   Permite que o servidor sugira alterações nas Perguntas Mais Frequentes dos serviços prestados pela sua unidade, que passarão por um fluxo de aprovação, conforme regras definidas.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: '3.2.10.   Permite que o servidor sugira alterações nas Perguntas Mais Frequentes dos serviços prestados pela sua unidade, que passarão por um fluxo de aprovação, conforme regras definidas.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Gerencial' } ],
-					[ { data: '3.2.11.   Permite que o dono do serviço forneça, valide e publique as Perguntas Mais Frequentes sobre um determinado serviço, que passarão por um fluxo de aprovação, conforme regras definidas.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: '3.2.11.   Permite que o dono do serviço forneça, valide e publique as Perguntas Mais Frequentes sobre um determinado serviço, que passarão por um fluxo de aprovação, conforme regras definidas.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '3.2.12.   Permite a gestão do banco de Perguntas Mais Frequentes e a sua organização em uma taxonomia de pelo menos três níveis (serviço, tema, assunto, por exemplo) nos diversos canais de atendimento.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '3.2.12.   Permite a gestão do banco de Perguntas Mais Frequentes e a sua organização em uma taxonomia de pelo menos três níveis (serviço, tema, assunto, por exemplo) nos diversos canais de atendimento.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '3.2.13.   Permite que as alterações realizadas no banco de Perguntas Mais Frequentes se reflitam em todos os canais de atendimento selecionados, sem necessidade de redundância.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '3.2.13.   Permite que as alterações realizadas no banco de Perguntas Mais Frequentes se reflitam em todos os canais de atendimento selecionados, sem necessidade de redundância.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '3.2.14.   Permite configurar o permissionamento do dono do serviço responsável por visualizar as avaliações, fornecer, validar e publicar Perguntas Mais Frequentes.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '3.2.14.   Permite configurar o permissionamento do dono do serviço responsável por visualizar as avaliações, fornecer, validar e publicar Perguntas Mais Frequentes.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '3.2.15.   Permite configurar fluxos de aprovação para criação, edição e exclusão das informações das Perguntas Mais Frequentes.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '3.2.15.   Permite configurar fluxos de aprovação para criação, edição e exclusão das informações das Perguntas Mais Frequentes.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '3.2.16.   Permite publicar as perguntas com personalização, utilizando recursos comuns de editores de texto (fonte, tamanho, cores, etc.), etiquetas (tags), HTML e CSS.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '3.2.16.   Permite publicar as perguntas com personalização, utilizando recursos comuns de editores de texto (fonte, tamanho, cores, etc.), etiquetas (tags), HTML e CSS.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '3.2.17.   Permite importar conteúdo externo de perguntas por meio de  arquivos em formatos previamente definidos (preferencialmente XLSX ou DOCX) para criação automática do banco de Perguntas Mais Frequentes.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '3.2.17.   Permite importar conteúdo externo de perguntas por meio de  arquivos em formatos previamente definidos (preferencialmente XLSX ou DOCX) para criação automática do banco de Perguntas Mais Frequentes.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '3.2.18.   Permite associar as Perguntas Mais Frequentes a um ou mais serviços ou mantê-las independentes.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '3.2.18.   Permite associar as Perguntas Mais Frequentes a um ou mais serviços ou mantê-las independentes.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '3.2.19.   Permite gerenciar as Perguntas Mais Frequentes, possibilitando criar, alterar, excluir, ativar ou desativar o título, subtítulo e conteúdo de uma ou mais perguntas simultaneamente de forma automática e padronizada.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '3.2.19.   Permite gerenciar as Perguntas Mais Frequentes, possibilitando criar, alterar, excluir, ativar ou desativar o título, subtítulo e conteúdo de uma ou mais perguntas simultaneamente de forma automática e padronizada.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '3.2.20.   Permite recuperar o histórico das ações realizadas sobre as Perguntas Mais Frequentes, contendo data, horário e usuário que realizou a ação.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '3.2.20.   Permite recuperar o histórico das ações realizadas sobre as Perguntas Mais Frequentes, contendo data, horário e usuário que realizou a ação.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '3.2.21.   Permite realizar o versionamento automático das Perguntas Mais Frequentes e, caso necessário, permite o rollback para versões anteriores, sempre mantendo a integridade dos dados.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '3.2.21.   Permite realizar o versionamento automático das Perguntas Mais Frequentes e, caso necessário, permite o rollback para versões anteriores, sempre mantendo a integridade dos dados.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '3.2.22.   Permite configurar os canais de atendimento pelos quais serão feitas avaliações do conteúdo das Perguntas Mais Frequentes.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '3.2.22.   Permite configurar os canais de atendimento pelos quais serão feitas avaliações do conteúdo das Perguntas Mais Frequentes.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '3.2.23.   Permite configurar as regras de confirmação de leitura das Perguntas Mais Frequentes.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '3.2.23.   Permite configurar as regras de confirmação de leitura das Perguntas Mais Frequentes.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '3.2.24.   Permite criar gráficos, relatórios e dashboards personalizados sobre as Perguntas Mais Frequentes pelos seguintes critérios, mas não se limitando a eles: \na) Tag (Etiqueta), \nb) Serviço, \nc) Tipo de serviço, \nd) Canal de atendimento, \ne) Data e horário de criação e atualização das FAQs, \nf) Quantidade de acessos às FAQs por canal, \ng) Pendência de análise das sugestões de alteração, \nh) Avaliação realizada sobre as FAQs, \ni) FAQs vinculadas a serviços e FAQs independentes' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '3.2.24.   Permite criar gráficos, relatórios e dashboards personalizados sobre as Perguntas Mais Frequentes pelos seguintes critérios, mas não se limitando a eles: \na) Tag (Etiqueta), \nb) Serviço, \nc) Tipo de serviço, \nd) Canal de atendimento, \ne) Data e horário de criação e atualização das FAQs, \nf) Quantidade de acessos às FAQs por canal, \ng) Pendência de análise das sugestões de alteração, \nh) Avaliação realizada sobre as FAQs, \ni) FAQs vinculadas a serviços e FAQs independentes' }],
+					[{ data: 'O' }]
 				]
 			],
 				tabelaListrada: false,
@@ -3744,141 +3744,141 @@ export default {
 				linhas:
 			[
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: 'N/A' } ],
-					[ { data: '' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: 'N/A' }],
+					[{ data: '' }]
 				],
 
 				[
-					[ { data: 'Atedimento' } ],
-					[ { data: '3.3.1. Permite que o atendente acesse, pesquise e avalie o conteúdo da Base do atendimento.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atedimento' }],
+					[{ data: '3.3.1. Permite que o atendente acesse, pesquise e avalie o conteúdo da Base do atendimento.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atedimento' } ],
-					[ { data: '3.3.2. Permite que o atendente compartilhe com o munícipe, pelo chat e por e-mail, o conteúdo da Base de Atendimento referente à informação solicitada.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atedimento' }],
+					[{ data: '3.3.2. Permite que o atendente compartilhe com o munícipe, pelo chat e por e-mail, o conteúdo da Base de Atendimento referente à informação solicitada.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atedimento' } ],
-					[ { data: '3.3.3. Permite que o atendente confirme a leitura do conteúdo da Base do atendimento e de suas atualizações.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atedimento' }],
+					[{ data: '3.3.3. Permite que o atendente confirme a leitura do conteúdo da Base do atendimento e de suas atualizações.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atedimento' } ],
-					[ { data: '3.3.4. Permite que o atendente sugira a criação, alteração e/ou exclusão de conteúdo da Base do atendimento, que passará por um fluxo de aprovação, conforme regras definidas.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atedimento' }],
+					[{ data: '3.3.4. Permite que o atendente sugira a criação, alteração e/ou exclusão de conteúdo da Base do atendimento, que passará por um fluxo de aprovação, conforme regras definidas.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atedimento' } ],
-					[ { data: '3.3.5. Permite que o atendente rastreie as alterações de um ou mais itens da Base do atendimento que ele deseja seguir, visualizando as respectivas atualizações.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atedimento' }],
+					[{ data: '3.3.5. Permite que o atendente rastreie as alterações de um ou mais itens da Base do atendimento que ele deseja seguir, visualizando as respectivas atualizações.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atedimento' } ],
-					[ { data: '3.3.6. Permite que o atendente visualize as avaliações realizadas sobre o conteúdo da Base do atendimento.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atedimento' }],
+					[{ data: '3.3.6. Permite que o atendente visualize as avaliações realizadas sobre o conteúdo da Base do atendimento.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: '3.3.7. Permite que o servidor acesse o conteúdo da Base do atendimento referente ao serviço solicitado.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Operacional' }],
+					[{ data: '3.3.7. Permite que o servidor acesse o conteúdo da Base do atendimento referente ao serviço solicitado.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: '3.3.8. Permite que o servidor sugira a criação, alteração e/ou exclusão de conteúdo da Base do atendimento, que passará por um fluxo de aprovação, conforme regras definidas.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Operacional' }],
+					[{ data: '3.3.8. Permite que o servidor sugira a criação, alteração e/ou exclusão de conteúdo da Base do atendimento, que passará por um fluxo de aprovação, conforme regras definidas.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: '3.3.9. Permite que o servidor visualize as avaliações realizadas sobre o conteúdo da Base do atendimento.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Operacional' }],
+					[{ data: '3.3.9. Permite que o servidor visualize as avaliações realizadas sobre o conteúdo da Base do atendimento.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Gerencial' } ],
-					[ { data: '3.3.10. Permite que o servidor acesse o conteúdo da Base do atendimento referente ao serviço solicitado.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: '3.3.10. Permite que o servidor acesse o conteúdo da Base do atendimento referente ao serviço solicitado.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Gerencial' } ],
-					[ { data: '3.3.11. Permite que o servidor sugira a criação, alteração e/ou exclusão de conteúdo da Base do atendimento, que passará por um fluxo de aprovação, conforme regras definidas.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: '3.3.11. Permite que o servidor sugira a criação, alteração e/ou exclusão de conteúdo da Base do atendimento, que passará por um fluxo de aprovação, conforme regras definidas.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Gerencial' } ],
-					[ { data: '3.3.12. Permite que o dono do serviço forneça, valide e publique as informações da Base do atendimento sobre um determinado serviço, que passarão por um fluxo de aprovação, conforme regras definidas.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: '3.3.12. Permite que o dono do serviço forneça, valide e publique as informações da Base do atendimento sobre um determinado serviço, que passarão por um fluxo de aprovação, conforme regras definidas.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '3.3.13. Permite a criação, alteração, exclusão, importação e publicação de conteúdos diversos (páginas HTML, documentos, imagens, vídeos etc) na Base do atendimento para disponibilização nas interfaces dos canais assistidos e da prestação dos serviços.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '3.3.13. Permite a criação, alteração, exclusão, importação e publicação de conteúdos diversos (páginas HTML, documentos, imagens, vídeos etc) na Base do atendimento para disponibilização nas interfaces dos canais assistidos e da prestação dos serviços.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '3.3.14. Permite que todas as informações cadastradas na Base do atendimento possam ser disponibilizadas nas interfaces do atendimento assistido por grupo de atendimento, possibilitando ainda reduzir o tamanho da base consultada por atendentes específicos.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '3.3.14. Permite que todas as informações cadastradas na Base do atendimento possam ser disponibilizadas nas interfaces do atendimento assistido por grupo de atendimento, possibilitando ainda reduzir o tamanho da base consultada por atendentes específicos.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '3.3.15. Permite configurar o permissionamento do dono do serviço responsável por visualizar as avaliações, fornecer, validar e publicar conteúdo da Base do atendimento sobre um determinado serviço.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '3.3.15. Permite configurar o permissionamento do dono do serviço responsável por visualizar as avaliações, fornecer, validar e publicar conteúdo da Base do atendimento sobre um determinado serviço.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '3.3.16. Permite configurar o fluxo de aprovação para gerenciar a criação e publicação do conteúdo da Base do atendimento.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '3.3.16. Permite configurar o fluxo de aprovação para gerenciar a criação e publicação do conteúdo da Base do atendimento.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '3.3.17. Permite configurar as regras de confirmação de leitura da Base do Atendimento.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '3.3.17. Permite configurar as regras de confirmação de leitura da Base do Atendimento.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '3.3.18. Permite organizar os itens da Base do atendimento por categorias.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '3.3.18. Permite organizar os itens da Base do atendimento por categorias.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '3.3.19. Permite configurar a visibilidade dos conteúdos por um conjunto de permissões ou perfis.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '3.3.19. Permite configurar a visibilidade dos conteúdos por um conjunto de permissões ou perfis.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[{ data: 'Configuração' } ],
-					[{ data: '3.3.20. Permite configurar o tempo de vida de um item da Base do atendimento, notificando o dono do serviço sobre a necessidade de revisão do conteúdo quando o tempo expirar.' } ],
-					[{ data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '3.3.20. Permite configurar o tempo de vida de um item da Base do atendimento, notificando o dono do serviço sobre a necessidade de revisão do conteúdo quando o tempo expirar.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[{ data: 'Configuração' } ],
-					[{ data: '3.3.21. Permite recuperar o histórico das ações realizadas sobre a Base do atendimento, contendo data, horário e usuário que realizou a ação.' } ],
-					[{ data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '3.3.21. Permite recuperar o histórico das ações realizadas sobre a Base do atendimento, contendo data, horário e usuário que realizou a ação.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[{ data: 'Configuração' } ],
-					[{ data: '3.3.22. Permite criar gráficos, relatórios e dashboards personalizados sobre os dados da Base de Conhecimento pelos seguintes critérios, mas não se limitando a eles: \na) Categoria do item da base, \nb) Período de criação e atualização dos itens da base, \nc) Usuário (criador e modificador de conteúdo), \nd) Avaliação do conteúdo, \ne) Quantidade de acessos, \nf) Pendência de análise das sugestões de alteração' } ],
-					[{ data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '3.3.22. Permite criar gráficos, relatórios e dashboards personalizados sobre os dados da Base de Conhecimento pelos seguintes critérios, mas não se limitando a eles: \na) Categoria do item da base, \nb) Período de criação e atualização dos itens da base, \nc) Usuário (criador e modificador de conteúdo), \nd) Avaliação do conteúdo, \ne) Quantidade de acessos, \nf) Pendência de análise das sugestões de alteração' }],
+					[{ data: 'O' }]
 				]
 			],
 				tabelaListrada: false,
@@ -3898,159 +3898,159 @@ export default {
 			[
 				[
 
-					[ { data: 'Munícipe' } ],
-					[ { data: '4.1.5.   Permite que o munícipe visualize dados agregados das solicitações por meio de uma interface gráfica com, pelo menos, filtros, gráficos, tabelas e mapas, como forma de transparência.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '4.1.5.   Permite que o munícipe visualize dados agregados das solicitações por meio de uma interface gráfica com, pelo menos, filtros, gráficos, tabelas e mapas, como forma de transparência.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: 'N/A' } ],
-					[ { data: '' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: 'N/A' }],
+					[{ data: '' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: '4.1.6.   Permite que o servidor, a partir de uma interface gráfica, crie, visualize e extraia, a qualquer momento, sem a necessidade de escrever código de programação, relatórios, gráficos e dashboards com informações da base de dados da solução, com a possibilidade de aplicação de filtros para análise dos dados, de acordo com a permissão de acesso concedida ao servidor.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Operacional' }],
+					[{ data: '4.1.6.   Permite que o servidor, a partir de uma interface gráfica, crie, visualize e extraia, a qualquer momento, sem a necessidade de escrever código de programação, relatórios, gráficos e dashboards com informações da base de dados da solução, com a possibilidade de aplicação de filtros para análise dos dados, de acordo com a permissão de acesso concedida ao servidor.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: '4.1.7.   Permite que o servidor, a partir de uma interface gráfica, visualize e extraia, a qualquer momento, sem a necessidade de escrever código de programação, mapas de calor das solicitações, com a possibilidade de aplicação de filtros por período, pelos níveis de taxonomia da solicitação (serviço, tema, assunto, por exemplo), distrito e subprefeitura; bem como salvar os filtros aplicados.' } ],
-					[ { data: 'D2' } ]
+					[{ data: 'Operacional' }],
+					[{ data: '4.1.7.   Permite que o servidor, a partir de uma interface gráfica, visualize e extraia, a qualquer momento, sem a necessidade de escrever código de programação, mapas de calor das solicitações, com a possibilidade de aplicação de filtros por período, pelos níveis de taxonomia da solicitação (serviço, tema, assunto, por exemplo), distrito e subprefeitura; bem como salvar os filtros aplicados.' }],
+					[{ data: 'D2' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: '4.1.8.   Permite que o servidor escolha os campos e as informações que deverão estar presentes relatórios, gráficos e dashboards, possibilitando a formatação, seleção, agrupamento (drill up), detalhamento (drill down) e totalização, sem a necessidade de escrever código de programação, de acordo com a permissão de acesso concedida ao servidor.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Operacional' }],
+					[{ data: '4.1.8.   Permite que o servidor escolha os campos e as informações que deverão estar presentes relatórios, gráficos e dashboards, possibilitando a formatação, seleção, agrupamento (drill up), detalhamento (drill down) e totalização, sem a necessidade de escrever código de programação, de acordo com a permissão de acesso concedida ao servidor.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Gerencial' } ],
-					[ { data: '4.1.9.   Permite que o servidor, a partir de uma interface gráfica, crie, visualize e extraia, a qualquer momento, sem a necessidade de escrever código de programação, relatórios, gráficos e dashboards com informações da base de dados da solução, com a possibilidade de aplicação de filtros para análise dos dados, de acordo com a permissão de acesso concedida ao servidor.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: '4.1.9.   Permite que o servidor, a partir de uma interface gráfica, crie, visualize e extraia, a qualquer momento, sem a necessidade de escrever código de programação, relatórios, gráficos e dashboards com informações da base de dados da solução, com a possibilidade de aplicação de filtros para análise dos dados, de acordo com a permissão de acesso concedida ao servidor.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Gerencial' } ],
-					[ { data: '4.1.10.   Permite que o servidor, a partir de uma interface gráfica, visualize e extraia, a qualquer momento, sem a necessidade de escrever código de programação, mapas de calor das solicitações, com a possibilidade de aplicação de filtros por período, pelos níveis de taxonomia da solicitação (serviço, tema, assunto, por exemplo), distrito e subprefeitura; bem como salvar os filtros aplicados.' } ],
-					[ { data: 'D2' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: '4.1.10.   Permite que o servidor, a partir de uma interface gráfica, visualize e extraia, a qualquer momento, sem a necessidade de escrever código de programação, mapas de calor das solicitações, com a possibilidade de aplicação de filtros por período, pelos níveis de taxonomia da solicitação (serviço, tema, assunto, por exemplo), distrito e subprefeitura; bem como salvar os filtros aplicados.' }],
+					[{ data: 'D2' }]
 				],
 
 				[
-					[ { data: 'Gerencial' } ],
-					[ { data: '4.1.11.   Permite que o servidor escolha os campos e as informações que deverão estar presentes relatórios, gráficos e dashboards, possibilitando a formatação, seleção, agrupamento (drill up), detalhamento (drill down) e totalização, sem a necessidade de escrever código de programação, de acordo com a permissão de acesso concedida ao servidor.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: '4.1.11.   Permite que o servidor escolha os campos e as informações que deverão estar presentes relatórios, gráficos e dashboards, possibilitando a formatação, seleção, agrupamento (drill up), detalhamento (drill down) e totalização, sem a necessidade de escrever código de programação, de acordo com a permissão de acesso concedida ao servidor.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '4.1.12.   A solução deverá permitir selecionar os campos e as informações que estarão presentes nos relatórios, gráficos e dashboards, sem a necessidade de escrever código de programação, possibilitando a formatação, agrupamento (drill up), detalhamento (drill down) e totalização dos dados da solução.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '4.1.12.   A solução deverá permitir selecionar os campos e as informações que estarão presentes nos relatórios, gráficos e dashboards, sem a necessidade de escrever código de programação, possibilitando a formatação, agrupamento (drill up), detalhamento (drill down) e totalização dos dados da solução.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '4.1.13.   A solução deverá permitir criar relatórios analíticos de forma gráfica, sem a necessidade de escrever código de programação, possibilitando, de forma intuitiva, escolher as colunas que deverão estar presentes no relatório, os relacionamentos entre as colunas, os agrupamentos por campos e os filtros.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '4.1.13.   A solução deverá permitir criar relatórios analíticos de forma gráfica, sem a necessidade de escrever código de programação, possibilitando, de forma intuitiva, escolher as colunas que deverão estar presentes no relatório, os relacionamentos entre as colunas, os agrupamentos por campos e os filtros.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '4.1.14.   A solução deverá disponibilizar os seguintes indicadores de atendimento e gestão da prestação dos serviços, a pedido da CONTRATANTE, sem se limitar a apenas estes: \na) Solicitações por canal de atendimento, inclusive pelos canais assistidos (Central Telefônica e Presencial) de forma segregada; \nb) Solicitações por tipo de serviço; \nc) Solicitações por fase do fluxo de atendimento; \nd) Solicitações por etapa do fluxo de atendimento; \ne) Solicitações pelas taxonomias definidas, como tema e assunto, por exemplo; \nf) Solicitações por tipo de solicitante (pessoa física e pessoa jurídica); \ng) Relatórios demográficos (gênero, idade, faixa etária, escolaridade, dados territoriais, entre outros) de solicitações e de solicitantes. Entende-se por dados territoriais: logradouro, número, CEP, região, subprefeitura, distrito, setor, quadra, lote, latitude, longitude ou outro critério de georreferenciamento; \nh) Solicitações prestes a vencer (em um período de tempo configurável); \ni) Solicitações atrasadas; \nj) Tempo médio de atendimento das solicitações, incluindo tempo por fase e etapa do fluxo de atendimento; \nk) Solicitações por solicitante; \nl) Solicitações por atendente; \nm) Solicitações por usuário responsável por prestar o serviço;\n n) Solicitações por unidade de atendimento responsável por prestar o serviço; \no) Solicitações reabertas; \np) Solicitações encaminhadas; \nq) Solicitações por nível de criticidade ou outra categorização atribuída ao serviço.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '4.1.14.   A solução deverá disponibilizar os seguintes indicadores de atendimento e gestão da prestação dos serviços, a pedido da CONTRATANTE, sem se limitar a apenas estes: \na) Solicitações por canal de atendimento, inclusive pelos canais assistidos (Central Telefônica e Presencial) de forma segregada; \nb) Solicitações por tipo de serviço; \nc) Solicitações por fase do fluxo de atendimento; \nd) Solicitações por etapa do fluxo de atendimento; \ne) Solicitações pelas taxonomias definidas, como tema e assunto, por exemplo; \nf) Solicitações por tipo de solicitante (pessoa física e pessoa jurídica); \ng) Relatórios demográficos (gênero, idade, faixa etária, escolaridade, dados territoriais, entre outros) de solicitações e de solicitantes. Entende-se por dados territoriais: logradouro, número, CEP, região, subprefeitura, distrito, setor, quadra, lote, latitude, longitude ou outro critério de georreferenciamento; \nh) Solicitações prestes a vencer (em um período de tempo configurável); \ni) Solicitações atrasadas; \nj) Tempo médio de atendimento das solicitações, incluindo tempo por fase e etapa do fluxo de atendimento; \nk) Solicitações por solicitante; \nl) Solicitações por atendente; \nm) Solicitações por usuário responsável por prestar o serviço;\n n) Solicitações por unidade de atendimento responsável por prestar o serviço; \no) Solicitações reabertas; \np) Solicitações encaminhadas; \nq) Solicitações por nível de criticidade ou outra categorização atribuída ao serviço.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '4.1.15.   Sem prejuízo dos dados elencados acima, a solução deverá disponibilizar outros tipos de dados por componente (menus de navegação, interfaces, páginas HTML, módulos), por sessão etc, a pedido da CONTRATANTE, sem se limitar a apenas estes: \na) Número de visitantes únicos (quantidade de usuários que visitaram o site, independente da quantidade de visitas); \nb) Número de visitas (quantidade vezes o site foi acessado, sem considerar a quantidade de usuários); \nc) Quantidade de visualizações de página (Pageviews); \nd) Quantidade de Páginas/Visita; \ne) Taxa de saída; \nf) Taxa de rejeição (Bounce Rate); \ng) Número de novas visitas e recorrentes; \nh) Usuários ativos (pessoas que estão navegando na solução em tempo real); \ni) Origem do acesso (tráfego direto, links, busca orgânica, campanhas, etc.); \nj) Origem geográfica do acesso; \nk) Histórico de navegação (data/hora de acesso, usuário, etc.); \nl) Tempo de navegação;\nm) Dispositivos e plataformas utilizados para o acesso à solução; \nn) Termos de pesquisa retornados e não retornados momento do agendamento; \no) Quantidade de instalações e desinstalações do Aplicativo Móvel;' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '4.1.15.   Sem prejuízo dos dados elencados acima, a solução deverá disponibilizar outros tipos de dados por componente (menus de navegação, interfaces, páginas HTML, módulos), por sessão etc, a pedido da CONTRATANTE, sem se limitar a apenas estes: \na) Número de visitantes únicos (quantidade de usuários que visitaram o site, independente da quantidade de visitas); \nb) Número de visitas (quantidade vezes o site foi acessado, sem considerar a quantidade de usuários); \nc) Quantidade de visualizações de página (Pageviews); \nd) Quantidade de Páginas/Visita; \ne) Taxa de saída; \nf) Taxa de rejeição (Bounce Rate); \ng) Número de novas visitas e recorrentes; \nh) Usuários ativos (pessoas que estão navegando na solução em tempo real); \ni) Origem do acesso (tráfego direto, links, busca orgânica, campanhas, etc.); \nj) Origem geográfica do acesso; \nk) Histórico de navegação (data/hora de acesso, usuário, etc.); \nl) Tempo de navegação;\nm) Dispositivos e plataformas utilizados para o acesso à solução; \nn) Termos de pesquisa retornados e não retornados momento do agendamento; \no) Quantidade de instalações e desinstalações do Aplicativo Móvel;' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '4.1.16.   Sem prejuízo dos dados elencados acima, a solução deverá disponibilizar os dados das ligações telefônicas oriundos da integração com a solução de CTI por serviço, por atendente, por protocolo, por grupo de atendimento, por data e hora da ligação, etc., a pedido da CONTRATANTE, sem se limitar a apenas estes: \na) Tempo de atendimento (médio, total e por atendimento); \nb) Tempo de espera (médio, total e por atendimento); \nc) Taxa de abandono; \nd) Quantidade de rechamadas; \ne) Quantidade de transferências; \nf) Resultados da avaliação de satisfação; \ng) Taxa de ocorrência de ligações longas (long call); \nh) Taxa de ocorrência de ligações curtas (short call);' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '4.1.16.   Sem prejuízo dos dados elencados acima, a solução deverá disponibilizar os dados das ligações telefônicas oriundos da integração com a solução de CTI por serviço, por atendente, por protocolo, por grupo de atendimento, por data e hora da ligação, etc., a pedido da CONTRATANTE, sem se limitar a apenas estes: \na) Tempo de atendimento (médio, total e por atendimento); \nb) Tempo de espera (médio, total e por atendimento); \nc) Taxa de abandono; \nd) Quantidade de rechamadas; \ne) Quantidade de transferências; \nf) Resultados da avaliação de satisfação; \ng) Taxa de ocorrência de ligações longas (long call); \nh) Taxa de ocorrência de ligações curtas (short call);' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '4.1.17.   Sem prejuízo dos dados elencados acima, a solução deverá disponibilizar os dados do chat por serviço, por atendente, por protocolo, por fila de atendimento, por data e hora do atendimento, etc., a pedido da CONTRATANTE, sem se limitar a apenas estes: \na) Tempo de atendimento (médio, total e por atendimento); \nb) Tempo de espera (médio, total e por atendimento);' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '4.1.17.   Sem prejuízo dos dados elencados acima, a solução deverá disponibilizar os dados do chat por serviço, por atendente, por protocolo, por fila de atendimento, por data e hora do atendimento, etc., a pedido da CONTRATANTE, sem se limitar a apenas estes: \na) Tempo de atendimento (médio, total e por atendimento); \nb) Tempo de espera (médio, total e por atendimento);' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '4.1.18.   Sem prejuízo dos dados elencados acima, a solução deverá disponibilizar os dados de avaliação de satisfação por serviço, por atendente, por protocolo, por grupo de atendimento, por data e hora, etc., a pedido da CONTRATANTE, sem se limitar a apenas estes: \na) Avaliação dos serviços concluídos; \nb) Avaliação do Portal de Atendimento WEB; \nc) Avaliação do Aplicativo Móvel; \nd) Avaliação do Chat; \ne) Avaliação da URA;' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '4.1.18.   Sem prejuízo dos dados elencados acima, a solução deverá disponibilizar os dados de avaliação de satisfação por serviço, por atendente, por protocolo, por grupo de atendimento, por data e hora, etc., a pedido da CONTRATANTE, sem se limitar a apenas estes: \na) Avaliação dos serviços concluídos; \nb) Avaliação do Portal de Atendimento WEB; \nc) Avaliação do Aplicativo Móvel; \nd) Avaliação do Chat; \ne) Avaliação da URA;' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '4.1.19.   Permite configurar a disposição de relatórios, gráficos e dashboards nos canais de atendimento.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '4.1.19.   Permite configurar a disposição de relatórios, gráficos e dashboards nos canais de atendimento.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '4.1.20.   Permite configurar os níveis de acesso que os usuários possuem para acesso a dados, de acordo com as necessidades da CONTRATANTE.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '4.1.20.   Permite configurar os níveis de acesso que os usuários possuem para acesso a dados, de acordo com as necessidades da CONTRATANTE.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '4.1.21.   Permite a criação de dashboards com suporte aos seguintes tipos de visualizações, mas sem se limitar a apenas estes: mapas, gráficos, tabelas estáticas e dinâmicas, gráfico do tipo linha, do tipo barra, do tipo coluna, do tipo pizza, do tipo rosca, do tipo área, do tipo dispersão, do tipo treemap, do tipo radar, nuvem de palavras, dentre outros formatos de gráficos.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '4.1.21.   Permite a criação de dashboards com suporte aos seguintes tipos de visualizações, mas sem se limitar a apenas estes: mapas, gráficos, tabelas estáticas e dinâmicas, gráfico do tipo linha, do tipo barra, do tipo coluna, do tipo pizza, do tipo rosca, do tipo área, do tipo dispersão, do tipo treemap, do tipo radar, nuvem de palavras, dentre outros formatos de gráficos.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '4.1.22.   Permite a representação das solicitações em um mapa de calor, correspondente ao território do município de São Paulo, dos tipos mancha térmica e escala de cor, com a possibilidade de filtros por período, pelos níveis de taxonomia da solicitação (serviço, tema, assunto, por exemplo), distrito e subprefeitura; bem como gravar os filtros aplicados.' } ],
-					[ { data: 'D2' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '4.1.22.   Permite a representação das solicitações em um mapa de calor, correspondente ao território do município de São Paulo, dos tipos mancha térmica e escala de cor, com a possibilidade de filtros por período, pelos níveis de taxonomia da solicitação (serviço, tema, assunto, por exemplo), distrito e subprefeitura; bem como gravar os filtros aplicados.' }],
+					[{ data: 'D2' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '4.1.23.   Permite o zoom-in e zoom-out no mapa de calor, com a possibilidade de visualizar mais informações sobre a solicitação de acordo com o nível de zoom aplicado, exibindo pelo menos o número do protocolo (com link para a interface de prestação do serviço), a etapa ou fase da prestação do serviço, a data de abertura, distrito e subprefeitura, a taxonomia da solicitação (serviço, tema e assunto, por exemplo).' } ],
-					[ { data: 'D2' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '4.1.23.   Permite o zoom-in e zoom-out no mapa de calor, com a possibilidade de visualizar mais informações sobre a solicitação de acordo com o nível de zoom aplicado, exibindo pelo menos o número do protocolo (com link para a interface de prestação do serviço), a etapa ou fase da prestação do serviço, a data de abertura, distrito e subprefeitura, a taxonomia da solicitação (serviço, tema e assunto, por exemplo).' }],
+					[{ data: 'D2' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '4.1.24.   Permite a exportação dos mapas de calor em diferentes formatos de arquivo, tais como PDF, PNG, HTML, JPEG e JPG.' } ],
-					[ { data: 'D2' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '4.1.24.   Permite a exportação dos mapas de calor em diferentes formatos de arquivo, tais como PDF, PNG, HTML, JPEG e JPG.' }],
+					[{ data: 'D2' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '4.1.25.   Permite a exibição de informações referentes ao processamento do mapa de calor (por exemplo, data atualizada do último processamento).' } ],
-					[ { data: 'D2' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '4.1.25.   Permite a exibição de informações referentes ao processamento do mapa de calor (por exemplo, data atualizada do último processamento).' }],
+					[{ data: 'D2' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '4.1.26.   Permite a criação modelos de relatórios ou alterar os já existentes.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '4.1.26.   Permite a criação modelos de relatórios ou alterar os já existentes.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '4.1.27.   Permite que os relatórios, gráficos e dashboards criados sejam salvos e compartilhados para grupos específicos de usuários, permitindo que os mesmos consigam alterar as formas de visualização e os filtros usados, criando a partir daí novas análises.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '4.1.27.   Permite que os relatórios, gráficos e dashboards criados sejam salvos e compartilhados para grupos específicos de usuários, permitindo que os mesmos consigam alterar as formas de visualização e os filtros usados, criando a partir daí novas análises.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '4.1.28.   Permite a extração automatizada dos dados brutos para datalake com outros dados públicos.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '4.1.28.   Permite a extração automatizada dos dados brutos para datalake com outros dados públicos.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '4.1.29.   Permite acesso a todo o banco de dados, para uso em ferramentas de BI utilizadas pela CONTRATANTE.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '4.1.29.   Permite acesso a todo o banco de dados, para uso em ferramentas de BI utilizadas pela CONTRATANTE.' }],
+					[{ data: 'O' }]
 				]
 			],
 				tabelaListrada: false,
@@ -4069,123 +4069,123 @@ export default {
 				linhas:
 			[
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '5.1.1.   Permite que o munícipe cadastre um agendamento para o atendimento presencial do serviço contendo data, hora e local de comparecimento conforme disponibilidade da agenda da unidade e grupo de atendimento.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '5.1.1.   Permite que o munícipe cadastre um agendamento para o atendimento presencial do serviço contendo data, hora e local de comparecimento conforme disponibilidade da agenda da unidade e grupo de atendimento.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '5.1.2.   Permite que o munícipe consulte o histórico dos agendamentos realizados.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '5.1.2.   Permite que o munícipe consulte o histórico dos agendamentos realizados.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '5.1.3.   Permite que o munícipe receba informações do agendamento por e-mail, SMS ou Redes Sociais.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '5.1.3.   Permite que o munícipe receba informações do agendamento por e-mail, SMS ou Redes Sociais.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '5.1.4.   Permite que o munícipe confirme o agendamento ou realize o cancelamento do atendimento presencial do serviço pelos canais de atendimento e por SMS.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '5.1.4.   Permite que o munícipe confirme o agendamento ou realize o cancelamento do atendimento presencial do serviço pelos canais de atendimento e por SMS.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '5.1.5.   Permite que o munícipe altere os dados do agendamento (data, hora ou local de comparecimento), conforme disponibilidade da agenda da unidade e grupo responsável pelo atendimento.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '5.1.5.   Permite que o munícipe altere os dados do agendamento (data, hora ou local de comparecimento), conforme disponibilidade da agenda da unidade e grupo responsável pelo atendimento.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '5.1.6.   Permite que o munícipe consiga visualizar os locais de atendimento próximos a sua residência ou ao local no qual o munícipe se encontra no momento do agendamento.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '5.1.6.   Permite que o munícipe consiga visualizar os locais de atendimento próximos a sua residência ou ao local no qual o munícipe se encontra no momento do agendamento.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '5.1.7.   Permite que o atendente cadastre um agendamento para o atendimento presencial do serviço contendo data, hora e local de comparecimento, conforme disponibilidade da agenda da unidade responsável pelo atendimento.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '5.1.7.   Permite que o atendente cadastre um agendamento para o atendimento presencial do serviço contendo data, hora e local de comparecimento, conforme disponibilidade da agenda da unidade responsável pelo atendimento.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '5.1.8.   Permite que o atendente consulte o histórico dos agendamentos realizados.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '5.1.8.   Permite que o atendente consulte o histórico dos agendamentos realizados.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '5.1.9.   Permite que o atendente altere os dados do agendamento (data, hora ou local de comparecimento), conforme disponibilidade da agenda da unidade responsável pelo atendimento.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '5.1.9.   Permite que o atendente altere os dados do agendamento (data, hora ou local de comparecimento), conforme disponibilidade da agenda da unidade responsável pelo atendimento.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '5.1.10.   Permite que o atendente consiga visualizar os locais de atendimento próximos à residência do munícipe ou próximos ao local no qual o munícipe se encontra no momento do agendamento.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '5.1.10.   Permite que o atendente consiga visualizar os locais de atendimento próximos à residência do munícipe ou próximos ao local no qual o munícipe se encontra no momento do agendamento.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '5.1.11.   Permite que o atendente cancele o agendamento do atendimento presencial.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '5.1.11.   Permite que o atendente cancele o agendamento do atendimento presencial.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: '5.1.12.   Permite que o servidor operacional consiga visualizar todos os agendamentos da sua unidade, com seus respectivos dados, bem como os agendamentos vinculados a cada servidor operacional.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Operacional' }],
+					[{ data: '5.1.12.   Permite que o servidor operacional consiga visualizar todos os agendamentos da sua unidade, com seus respectivos dados, bem como os agendamentos vinculados a cada servidor operacional.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: '5.1.13.   Permite que o servidor operacional registre o comparecimento e ausência do munícipe no atendimento presencial.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Operacional' }],
+					[{ data: '5.1.13.   Permite que o servidor operacional registre o comparecimento e ausência do munícipe no atendimento presencial.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Gerencial' } ],
-					[ { data: '5.1.14.   Permite gerenciar a agenda da unidade e grupo de atendimento presencial, considerando os dias, horários, localidades e servidores disponíveis.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: '5.1.14.   Permite gerenciar a agenda da unidade e grupo de atendimento presencial, considerando os dias, horários, localidades e servidores disponíveis.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '5.1.15.   Permite configurar a opção de agendamento para atendimento presencial nos diversos canais de atendimento.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '5.1.15.   Permite configurar a opção de agendamento para atendimento presencial nos diversos canais de atendimento.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '5.1.16.   Permite parametrizar para cada serviço a opção de agendamento, reagendamento e cancelamento do agendamento do atendimento presencial.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '5.1.16.   Permite parametrizar para cada serviço a opção de agendamento, reagendamento e cancelamento do agendamento do atendimento presencial.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '5.1.17.   Permite a configuração de georreferenciamento para auxiliar o usuário na localização de local mais próximo para agendamento.' } ],
-					[ { data: 'D3' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '5.1.17.   Permite a configuração de georreferenciamento para auxiliar o usuário na localização de local mais próximo para agendamento.' }],
+					[{ data: 'D3' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '5.1.18.   Permite configurar as regras de negócio da etapa de agendamento para atendimento presencial, sem necessidade de programação.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '5.1.18.   Permite configurar as regras de negócio da etapa de agendamento para atendimento presencial, sem necessidade de programação.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '5.1.19.   Permite configurar os locais, dias e horários disponíveis para o atendimento ao serviço de acordo com as características da unidade de atendimento.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '5.1.19.   Permite configurar os locais, dias e horários disponíveis para o atendimento ao serviço de acordo com as características da unidade de atendimento.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '5.1.20.   Permite configurar o permissionamento dos usuários responsáveis pelo gerenciamento da agenda da unidade e grupo de atendimento presencial, considerando os dias, horários, localidades e servidores disponíveis.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '5.1.20.   Permite configurar o permissionamento dos usuários responsáveis pelo gerenciamento da agenda da unidade e grupo de atendimento presencial, considerando os dias, horários, localidades e servidores disponíveis.' }],
+					[{ data: 'O' }]
 				]
 			],
 				tabelaListrada: false,
@@ -4204,69 +4204,69 @@ export default {
 				linhas:
 			[
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '6.1.1.   Permite que o munícipe receba notificações acerca das fases relacionadas ao atendimento e pendências do serviço por diversos canais, tais como e-mail, SMS e notificações push no Aplicativo Móvel e alerta visual no Portal de Atendimento WEB.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '6.1.1.   Permite que o munícipe receba notificações acerca das fases relacionadas ao atendimento e pendências do serviço por diversos canais, tais como e-mail, SMS e notificações push no Aplicativo Móvel e alerta visual no Portal de Atendimento WEB.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '6.1.2.   Permite que o munícipe receba notificação sobre a necessidade de marcação de agendamento presencial do serviço.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '6.1.2.   Permite que o munícipe receba notificação sobre a necessidade de marcação de agendamento presencial do serviço.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '6.1.3.   Permite que o munícipe receba notificação com lembrete de comparecimento ao atendimento presencial agendado.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '6.1.3.   Permite que o munícipe receba notificação com lembrete de comparecimento ao atendimento presencial agendado.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '6.1.4.   Permite que o munícipe receba notificação sobre a necessidade de complementar informações sobre um serviço.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '6.1.4.   Permite que o munícipe receba notificação sobre a necessidade de complementar informações sobre um serviço.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '6.1.5.   Permite que o atendente receba e visualize avisos e ocorrências em tempo real nas interfaces do canal assistido.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '6.1.5.   Permite que o atendente receba e visualize avisos e ocorrências em tempo real nas interfaces do canal assistido.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '6.1.6.   Permite que o atendente visualize as notificações enviadas ao munícipe para conseguir informá-lo.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '6.1.6.   Permite que o atendente visualize as notificações enviadas ao munícipe para conseguir informá-lo.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: '6.1.7.   Permite que o servidor receba notificações sobre ajuste de pendência, complemento de informações e término de prazos de etapas de uma solicitação.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Operacional' }],
+					[{ data: '6.1.7.   Permite que o servidor receba notificações sobre ajuste de pendência, complemento de informações e término de prazos de etapas de uma solicitação.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: '6.1.8.   Permite que o servidor receba notificação quando uma nova solicitação de serviço é recebida, de acordo com as regras definidas.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Operacional' }],
+					[{ data: '6.1.8.   Permite que o servidor receba notificação quando uma nova solicitação de serviço é recebida, de acordo com as regras definidas.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Gerencial' } ],
-					[ { data: '6.1.9.   Permite que o servidor visualize as notificações associadas aos serviços e servidores de sua unidade.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: '6.1.9.   Permite que o servidor visualize as notificações associadas aos serviços e servidores de sua unidade.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '6.1.10.   Permite configurar as regras de envio de notificações aos usuários da solução durante a execução do fluxo de trabalho sobre o progresso e pendências.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '6.1.10.   Permite configurar as regras de envio de notificações aos usuários da solução durante a execução do fluxo de trabalho sobre o progresso e pendências.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '6.1.11.   Permite configurar as notificações por serviço e por canais de atendimento, tais como e-mail, SMS e notificações push no Aplicativo Móvel e alerta visual no Portal de Atendimento WEB, etc.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '6.1.11.   Permite configurar as notificações por serviço e por canais de atendimento, tais como e-mail, SMS e notificações push no Aplicativo Móvel e alerta visual no Portal de Atendimento WEB, etc.' }],
+					[{ data: 'O' }]
 				]
 			],
 				tabelaListrada: false,
@@ -4284,59 +4284,59 @@ export default {
 				linhas:
 			[
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '7.1.1.   Permite que o munícipe realize a avaliação de satisfação do serviço prestado pelos diversos canais de atendimento.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '7.1.1.   Permite que o munícipe realize a avaliação de satisfação do serviço prestado pelos diversos canais de atendimento.' }],
+					[{ data: 'O' }]
 				],
 
 				[
 
-					[ { data: 'Munícipe' } ],
-					[ { data: '7.1.2.   Permite que o munícipe receba notificação ao final da prestação do serviço com a opção de avaliação do serviço.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '7.1.2.   Permite que o munícipe receba notificação ao final da prestação do serviço com a opção de avaliação do serviço.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '7.1.3.   Permite que o munícipe consulte seu histórico de avaliações, visualizando as avaliações realizadas e pendentes.' } ],
-					[ { data: 'D2' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '7.1.3.   Permite que o munícipe consulte seu histórico de avaliações, visualizando as avaliações realizadas e pendentes.' }],
+					[{ data: 'D2' }]
 				],
 
 				[
 
-					[ { data: 'Atendimento' } ],
-					[ { data: '7.1.4.   Permite que o atendente avalie a prestação de um serviço a pedido do munícipe.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '7.1.4.   Permite que o atendente avalie a prestação de um serviço a pedido do munícipe.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: '7.1.5.   Permite que o servidor visualize as avaliações dos serviços prestados por ele, de forma individual por protocolo ou de forma conjunta por serviço ou unidade, por meio de medidas como uma média, por exemplo.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Operacional' }],
+					[{ data: '7.1.5.   Permite que o servidor visualize as avaliações dos serviços prestados por ele, de forma individual por protocolo ou de forma conjunta por serviço ou unidade, por meio de medidas como uma média, por exemplo.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Gerencial' } ],
-					[ { data: '7.1.6.   Permite que o servidor visualize as avaliações dos serviços prestados pela sua unidade de atendimento, de forma individual por protocolo ou de forma conjunta por serviço, grupo ou unidade de atendimento, por meio de medidas como uma média, por exemplo.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: '7.1.6.   Permite que o servidor visualize as avaliações dos serviços prestados pela sua unidade de atendimento, de forma individual por protocolo ou de forma conjunta por serviço, grupo ou unidade de atendimento, por meio de medidas como uma média, por exemplo.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '7.1.7.   Define fases e etapas de avaliação do serviço.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '7.1.7.   Define fases e etapas de avaliação do serviço.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '7.1.8.   Permite configurar os formatos e os critérios de avaliação do serviço.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '7.1.8.   Permite configurar os formatos e os critérios de avaliação do serviço.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '7.1.9.   Permite configurar os canais de atendimento para coleta das avaliações dos serviços.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '7.1.9.   Permite configurar os canais de atendimento para coleta das avaliações dos serviços.' }],
+					[{ data: 'O' }]
 				]
 			],
 				tabelaListrada: false,
@@ -4355,69 +4355,69 @@ export default {
 				linhas:
 			[
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '8.1.1.   Permite que o munícipe cadastrado seja notificado sobre as pesquisas temáticas ou de opinião por e-mail, notificações push e SMS no Aplicativo Móvel e alerta visual no Portal de Atendimento WEB.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '8.1.1.   Permite que o munícipe cadastrado seja notificado sobre as pesquisas temáticas ou de opinião por e-mail, notificações push e SMS no Aplicativo Móvel e alerta visual no Portal de Atendimento WEB.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '8.1.2.   Permite que o munícipe cadastrado responda a pesquisa temática ou de opinião pelos diversos canais de atendimento e por SMS.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '8.1.2.   Permite que o munícipe cadastrado responda a pesquisa temática ou de opinião pelos diversos canais de atendimento e por SMS.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: '8.1.3.   Permite que o atendente responda a pesquisa em nome do munícipe para o caso dos canais de atendimento assistido (Central Telefônica ou Atendimento Presencial).' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: '8.1.3.   Permite que o atendente responda a pesquisa em nome do munícipe para o caso dos canais de atendimento assistido (Central Telefônica ou Atendimento Presencial).' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: 'N/A' } ],
-					[ { data: '' } ]
+					[{ data: 'Operacional' }],
+					[{ data: 'N/A' }],
+					[{ data: '' }]
 				],
 
 				[
-					[ { data: 'Gerencial' } ],
-					[ { data: 'N/A' } ],
-					[ { data: '' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: 'N/A' }],
+					[{ data: '' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '8.1.4.   Permite a criação de pesquisa temática ou de opinião com banco de perguntas objetivas, subjetivas ou mistas.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '8.1.4.   Permite a criação de pesquisa temática ou de opinião com banco de perguntas objetivas, subjetivas ou mistas.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '\n8.1.5.   Permite configurar as perguntas e os seguintes formatos de exibição, não se limitando a apenas estes: \na) Caixa de seleção; \nb) Múltipla escolha; \nc) Seleção de data em calendário; \nd) Seleção de hora, minuto e segundo; \ne) Lista de opções; \nf) Classificação de itens; \ng) Pontuação; \nh) Texto livre.<p>' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '\n8.1.5.   Permite configurar as perguntas e os seguintes formatos de exibição, não se limitando a apenas estes: \na) Caixa de seleção; \nb) Múltipla escolha; \nc) Seleção de data em calendário; \nd) Seleção de hora, minuto e segundo; \ne) Lista de opções; \nf) Classificação de itens; \ng) Pontuação; \nh) Texto livre.<p>' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '8.1.6.   Permite o envio das perguntas e a coleta das respostas das pesquisas pelos canais de atendimento, SMS e e-mail.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '8.1.6.   Permite o envio das perguntas e a coleta das respostas das pesquisas pelos canais de atendimento, SMS e e-mail.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '8.1.7.   Permite o envio de notificação a determinado grupo de usuários solicitando que responda a pesquisa, conforme requisitos presente no item 9. CAMPANHA.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '8.1.7.   Permite o envio de notificação a determinado grupo de usuários solicitando que responda a pesquisa, conforme requisitos presente no item 9. CAMPANHA.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '8.1.8.   Permite vincular a resposta da pesquisa ao cadastro do respondente, ainda que tenha sido registrada por um atendente.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '8.1.8.   Permite vincular a resposta da pesquisa ao cadastro do respondente, ainda que tenha sido registrada por um atendente.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '8.1.9.   Permite a geração de relatórios a partir dos dados das pesquisas e dos perfis dos respondentes.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '8.1.9.   Permite a geração de relatórios a partir dos dados das pesquisas e dos perfis dos respondentes.' }],
+					[{ data: 'O' }]
 				]
 			],
 				tabelaListrada: false,
@@ -4436,106 +4436,106 @@ export default {
 				linhas:
 			[
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '9.1.2.   Permite ao munícipe cadastrado receba uma campanha de marketing e comunicação pelos diversos canais de atendimento.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '9.1.2.   Permite ao munícipe cadastrado receba uma campanha de marketing e comunicação pelos diversos canais de atendimento.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: 'N/A' } ],
-					[ { data: '' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: 'N/A' }],
+					[{ data: '' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: 'N/A' } ],
-					[ { data: '' } ]
+					[{ data: 'Operacional' }],
+					[{ data: 'N/A' }],
+					[{ data: '' }]
 				],
 
 				[
-					[ { data: 'Gerencial' } ],
-					[ { data: 'N/A' } ],
-					[ { data: '' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: 'N/A' }],
+					[{ data: '' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '\n9.1.3.   Permite a utilização das informações do histórico de serviços solicitados; campos de cadastro, perfil, preferências dos munícipes, palavras-chave de busca, entre outros, para determinar a lista de destinatários e personalizar mensagens para realização de campanhas através de e-mail, notificações push e SMS no Aplicativo Móvel e alerta visual no Portal de Atendimento WEB. Exemplos de campanha: \na) Envio de e-mail com um link para uma pesquisa para todos os munícipes que solicitaram um determinado serviço. \nb) Envio de uma notificação push para uma pesquisa no Aplicativo Móvel para todos os munícipes acima de sessenta anos que registraram elogios no último mês. \nc) Envio de SMS com um link para uma pesquisa para munícipes que registraram solicitações sobre um determinado serviço em maio deste ano.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '\n9.1.3.   Permite a utilização das informações do histórico de serviços solicitados; campos de cadastro, perfil, preferências dos munícipes, palavras-chave de busca, entre outros, para determinar a lista de destinatários e personalizar mensagens para realização de campanhas através de e-mail, notificações push e SMS no Aplicativo Móvel e alerta visual no Portal de Atendimento WEB. Exemplos de campanha: \na) Envio de e-mail com um link para uma pesquisa para todos os munícipes que solicitaram um determinado serviço. \nb) Envio de uma notificação push para uma pesquisa no Aplicativo Móvel para todos os munícipes acima de sessenta anos que registraram elogios no último mês. \nc) Envio de SMS com um link para uma pesquisa para munícipes que registraram solicitações sobre um determinado serviço em maio deste ano.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '9.1.4.   Permite a publicação de campanhas de marketing e comunicação nas principais redes sociais, no mínimo, Facebook, Facebook Messenger, Instagram, Twitter, Linkedin, Whatsapp, Telegram, conforme a necessidade da CONTRATANTE.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '9.1.4.   Permite a publicação de campanhas de marketing e comunicação nas principais redes sociais, no mínimo, Facebook, Facebook Messenger, Instagram, Twitter, Linkedin, Whatsapp, Telegram, conforme a necessidade da CONTRATANTE.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '9.1.5.   Permite o cadastro e gerenciamento das campanhas por meio de uma interface gráfica, em que se desenha e executa a régua de relacionamento, define o fluxo de comunicação, período da campanha (eventual ou recorrente), objetivo, mensagem, canal, público alvo e demais regras definidas.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '9.1.5.   Permite o cadastro e gerenciamento das campanhas por meio de uma interface gráfica, em que se desenha e executa a régua de relacionamento, define o fluxo de comunicação, período da campanha (eventual ou recorrente), objetivo, mensagem, canal, público alvo e demais regras definidas.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '9.1.6.   Permite a execução de comunicações após algum evento comportamental do usuário (por exemplo: abandono de navegação, preenchimento de formulário).' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '9.1.6.   Permite a execução de comunicações após algum evento comportamental do usuário (por exemplo: abandono de navegação, preenchimento de formulário).' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '9.1.7.   Permite a gestão da base de contatos para envio de comunicações a partir de mecanismos opt-in e opt-out por canal (e-mail, notificações push e SMS).' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '9.1.7.   Permite a gestão da base de contatos para envio de comunicações a partir de mecanismos opt-in e opt-out por canal (e-mail, notificações push e SMS).' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '9.1.8.   Permite a criação de regras que controlem o número de comunicações recebidas por um usuário em um determinado período de tempo.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '9.1.8.   Permite a criação de regras que controlem o número de comunicações recebidas por um usuário em um determinado período de tempo.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '9.1.9.   Permite a criação, armazenamento e manutenção de modelos (templates) para as comunicações com os usuários.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '9.1.9.   Permite a criação, armazenamento e manutenção de modelos (templates) para as comunicações com os usuários.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '9.1.10.   Permite o uso de tags nas campanhas enviadas por e-mail, com capacidade de detecção de abertura, cliques em links no conteúdo e deleção do e-mail.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '9.1.10.   Permite o uso de tags nas campanhas enviadas por e-mail, com capacidade de detecção de abertura, cliques em links no conteúdo e deleção do e-mail.' }],
+					[{ data: 'O' }]
 				],
 
 				[
 
-					[ { data: 'Configuração' } ],
-					[ { data: '9.1.11.   Permite a edição do nome do responsável pela mensagem (“PMSP”, por exemplo) e conteúdo da campanha, suportando hyperlinks, texto, imagens e anexos no e-mail.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '9.1.11.   Permite a edição do nome do responsável pela mensagem (“PMSP”, por exemplo) e conteúdo da campanha, suportando hyperlinks, texto, imagens e anexos no e-mail.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '9.1.12.   Permite a realização de testes A/B de e-mails, com possibilidade de testar variáveis diferentes no mesmo e-mail, como assunto, remetente, data e hora de entrega, conteúdo, etc.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '9.1.12.   Permite a realização de testes A/B de e-mails, com possibilidade de testar variáveis diferentes no mesmo e-mail, como assunto, remetente, data e hora de entrega, conteúdo, etc.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '9.1.13.   Permite a visualização prévia do conteúdo da campanha antes da publicação.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '9.1.13.   Permite a visualização prévia do conteúdo da campanha antes da publicação.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '9.1.14.   Permite a geração de relatórios, gráficos e dashboards customizados para o acompanhamento do desempenho de cada campanha executada, de acordo com as necessidades da CONTRATANTE.  ' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '9.1.14.   Permite a geração de relatórios, gráficos e dashboards customizados para o acompanhamento do desempenho de cada campanha executada, de acordo com as necessidades da CONTRATANTE.  ' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '9.1.15.   A solução deverá disponibilizar relatórios e todas as campanhas enviadas com seus respectivos retornos.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '9.1.15.   A solução deverá disponibilizar relatórios e todas as campanhas enviadas com seus respectivos retornos.' }],
+					[{ data: 'O' }]
 				]
 			],
 				tabelaListrada: false,
@@ -4554,93 +4554,93 @@ export default {
 				linhas:
 			[
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '1.1.1.      Permite que o munícipe pergunte e interaja com o Assistente Virtual Inteligente utilizando linguagem natural e coloquial, em língua portuguesa brasileira, como se estivesse falando com um humano, para: \na) Solicitar serviço público e consultar status de atendimento; \nb) Realizar reclamação, denúncia, elogio, sugestão, etc; \nc) Avaliar serviços prestados; \nd) Avaliar o atendimento do Assistente Virtual Inteligente; \ne) Buscar orientações gerais e esclarecer dúvidas sobre os serviços; \nf) Responder pesquisas temáticas e de opinião; \ng) Buscar informações gerais, como notícias, leis, decretos e portarias municipais, eventos, telefones úteis, horários de funcionamento das unidades de atendimento.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '1.1.1.      Permite que o munícipe pergunte e interaja com o Assistente Virtual Inteligente utilizando linguagem natural e coloquial, em língua portuguesa brasileira, como se estivesse falando com um humano, para: \na) Solicitar serviço público e consultar status de atendimento; \nb) Realizar reclamação, denúncia, elogio, sugestão, etc; \nc) Avaliar serviços prestados; \nd) Avaliar o atendimento do Assistente Virtual Inteligente; \ne) Buscar orientações gerais e esclarecer dúvidas sobre os serviços; \nf) Responder pesquisas temáticas e de opinião; \ng) Buscar informações gerais, como notícias, leis, decretos e portarias municipais, eventos, telefones úteis, horários de funcionamento das unidades de atendimento.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '1.1.2.      Permite que o munícipe utilize neologismos, gírias, termos regionais, variações sintáticas e variações na disposição dos termos integrantes de uma oração ou de uma frase ou de um período de forma a entender sua real intenção ao efetuar uma pergunta ou buscar por um conteúdo.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '1.1.2.      Permite que o munícipe utilize neologismos, gírias, termos regionais, variações sintáticas e variações na disposição dos termos integrantes de uma oração ou de uma frase ou de um período de forma a entender sua real intenção ao efetuar uma pergunta ou buscar por um conteúdo.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '1.1.3.      Permite que o munícipe seja atendido de acordo com o contexto de onde partem as perguntas ou interações dos usuários (web, redes sociais, dispositivos móveis, etc.), possibilitando tratar de forma diferente as mesmas perguntas dependendo do canal ou área/página do site em que estas estão sendo feitas.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '1.1.3.      Permite que o munícipe seja atendido de acordo com o contexto de onde partem as perguntas ou interações dos usuários (web, redes sociais, dispositivos móveis, etc.), possibilitando tratar de forma diferente as mesmas perguntas dependendo do canal ou área/página do site em que estas estão sendo feitas.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '1.1.4.      Permite que o munícipe seja atendido de forma personalizada, possibilitando tratá-lo de forma individualizada, trazendo informações específicas ao usuário e contexto em questão, sempre que aplicável.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '1.1.4.      Permite que o munícipe seja atendido de forma personalizada, possibilitando tratá-lo de forma individualizada, trazendo informações específicas ao usuário e contexto em questão, sempre que aplicável.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '1.1.5.      Permite que o munícipe utilize recurso de autonavegação, levando-o para determinada página web ou área de conteúdo relacionado a sua pergunta.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '1.1.5.      Permite que o munícipe utilize recurso de autonavegação, levando-o para determinada página web ou área de conteúdo relacionado a sua pergunta.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '1.1.6.      Permite que o munícipe responda a pesquisas on-line sobre os serviços oferecidos em sua própria interface.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '1.1.6.      Permite que o munícipe responda a pesquisas on-line sobre os serviços oferecidos em sua própria interface.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Munícipe' } ],
-					[ { data: '1.1.7.      Permite que o munícipe receba respostas de voz. Esta função deverá poder ser desabilitada pelo usuário na própria interface do Assistente Virtual Inteligente.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Munícipe' }],
+					[{ data: '1.1.7.      Permite que o munícipe receba respostas de voz. Esta função deverá poder ser desabilitada pelo usuário na própria interface do Assistente Virtual Inteligente.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Atendimento' } ],
-					[ { data: 'N/A' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Atendimento' }],
+					[{ data: 'N/A' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Operacional' } ],
-					[ { data: 'N/A' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Operacional' }],
+					[{ data: 'N/A' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Gerencial' } ],
-					[ { data: 'N/A' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Gerencial' }],
+					[{ data: 'N/A' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '1.1.8.      Permite parametrizar o Modelo de Linguagem Natural - MLN para contemplar vocabulário, conceitos e termos específicos para emular a atividade humana de atendimento ao usuário e permite a customização de vocabulário específico, garantindo o entendimento de termos aplicáveis ao atendimento da diversidade de perfis de munícipes da cidade de São Paulo.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '1.1.8.      Permite parametrizar o Modelo de Linguagem Natural - MLN para contemplar vocabulário, conceitos e termos específicos para emular a atividade humana de atendimento ao usuário e permite a customização de vocabulário específico, garantindo o entendimento de termos aplicáveis ao atendimento da diversidade de perfis de munícipes da cidade de São Paulo.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '1.1.9.      Permite desenhar fluxos de atendimento, por meio de programação de árvores de decisões e perguntas de esclarecimento e de direcionamento dos usuários.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '1.1.9.      Permite desenhar fluxos de atendimento, por meio de programação de árvores de decisões e perguntas de esclarecimento e de direcionamento dos usuários.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '1.1.10.      Permite acompanhar em tempo real os atendimentos executados pelo Assistente Virtual Inteligente, permitindo a tomada de decisões para correção de percurso, gestão de crises, ou inclusão de novas áreas de conhecimento.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '1.1.10.      Permite acompanhar em tempo real os atendimentos executados pelo Assistente Virtual Inteligente, permitindo a tomada de decisões para correção de percurso, gestão de crises, ou inclusão de novas áreas de conhecimento.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '1.1.11.      Permite a extração de relatórios sobre pesquisas realizadas possibilitando a consolidação dos resultados.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '1.1.11.      Permite a extração de relatórios sobre pesquisas realizadas possibilitando a consolidação dos resultados.' }],
+					[{ data: 'O' }]
 				],
 
 				[
-					[ { data: 'Configuração' } ],
-					[ { data: '1.1.12.      Permite a visão analítica e cruzamento de informações referentes à atuação do Assistente Virtual Inteligente, sendo possível: \na) Avaliar o desempenho da solução tomando como base as informações oriundas dos atendimentos realizados pelo Assistente Virtual Inteligente, incluindo o total de atendimentos, principais tópicos de interesse dos munícipes, total de perguntas que não soube responder, total de falhas na autonavegação, tempo de resposta, tempo em que ficou desativado (off-line), dentre outros; \nb) Emitir relatórios estatísticos de acesso por canal (rede social, portal WEB), por dispositivo, por unidade de conhecimento, por período, por índice de satisfação, por localização, etc); \nc) Realizar auditoria de utilização da solução possibilitando o rastreamento dos diálogos mantidos entre o Assistente Virtual Inteligente e os usuários.' } ],
-					[ { data: 'O' } ]
+					[{ data: 'Configuração' }],
+					[{ data: '1.1.12.      Permite a visão analítica e cruzamento de informações referentes à atuação do Assistente Virtual Inteligente, sendo possível: \na) Avaliar o desempenho da solução tomando como base as informações oriundas dos atendimentos realizados pelo Assistente Virtual Inteligente, incluindo o total de atendimentos, principais tópicos de interesse dos munícipes, total de perguntas que não soube responder, total de falhas na autonavegação, tempo de resposta, tempo em que ficou desativado (off-line), dentre outros; \nb) Emitir relatórios estatísticos de acesso por canal (rede social, portal WEB), por dispositivo, por unidade de conhecimento, por período, por índice de satisfação, por localização, etc); \nc) Realizar auditoria de utilização da solução possibilitando o rastreamento dos diálogos mantidos entre o Assistente Virtual Inteligente e os usuários.' }],
+					[{ data: 'O' }]
 				]
 			],
 				tabelaListrada: false,
@@ -4660,23 +4660,23 @@ export default {
 				linhas:
 			[
 				[
-					[ { data: 'Disponibilidade Total do serviço de no mínimo 99,741%.' } ],
-					[ { data: '\nAferição mensal de acordo com as seguintes variáveis: \nQtd. Horas/Mês (HM): Quantidade de horas de cada mês. \nQtd. Horas/Indisponível (HI): Quantidade de horas que o sistema esteve indisponível durante o mês.' } ],
-					[ { data: 'Disponibilidade= (HM-HI)/HM x 100' } ],
-					[ { data: 'Verificada a disponibilidade menor ao mínimo contratado, desconto de 10% do valor da Nota Fiscal/Fatura do mês correspondente referente ao itens 1, 2 e 3 por hora, até o limite de 100%. No caso de fração de hora, a glosa será calculada de forma proporcional.' } ]
+					[{ data: 'Disponibilidade Total do serviço de no mínimo 99,741%.' }],
+					[{ data: '\nAferição mensal de acordo com as seguintes variáveis: \nQtd. Horas/Mês (HM): Quantidade de horas de cada mês. \nQtd. Horas/Indisponível (HI): Quantidade de horas que o sistema esteve indisponível durante o mês.' }],
+					[{ data: 'Disponibilidade= (HM-HI)/HM x 100' }],
+					[{ data: 'Verificada a disponibilidade menor ao mínimo contratado, desconto de 10% do valor da Nota Fiscal/Fatura do mês correspondente referente ao itens 1, 2 e 3 por hora, até o limite de 100%. No caso de fração de hora, a glosa será calculada de forma proporcional.' }]
 				],
 
 				[
-					[ { data: 'Resolução de solicitações no Prazo (RSP): 95%' } ],
-					[ { data: '\nAferição mensal de acordo com as seguintes variáveis: \nEntregas no Prazo: total de entregas que foram realizadas no período de acordo com quadro de serviços de suporte técnico abaixo. \nTotal de Entregas: total de entregas do catálogo de serviços realizadas no período.' } ],
-					[ { data: 'RSP = Entregas no prazo/Total de entregas x 100' } ],
-					[ { data: 'Verificada a disponibilidade menor ao mínimo contratado, desconto de 10% do valor da Nota Fiscal/Fatura do mês correspondente referente aos itens I, II e III por percentual de solicitações fora do prazo, até o limite de 100%.' } ]
+					[{ data: 'Resolução de solicitações no Prazo (RSP): 95%' }],
+					[{ data: '\nAferição mensal de acordo com as seguintes variáveis: \nEntregas no Prazo: total de entregas que foram realizadas no período de acordo com quadro de serviços de suporte técnico abaixo. \nTotal de Entregas: total de entregas do catálogo de serviços realizadas no período.' }],
+					[{ data: 'RSP = Entregas no prazo/Total de entregas x 100' }],
+					[{ data: 'Verificada a disponibilidade menor ao mínimo contratado, desconto de 10% do valor da Nota Fiscal/Fatura do mês correspondente referente aos itens I, II e III por percentual de solicitações fora do prazo, até o limite de 100%.' }]
 				],
 				[
-					[ { data: 'Resolução de solicitações de forma correta na primeira vez (RSCP): 95%' } ],
-					[ { data: '\nAferição mensal de acordo com as seguintes variáveis: \nEntregas Perfeitas: total de entregas que foram realizadas sem retrabalho no período de acordo com quadro de serviços de suporte técnico abaixo. \nTotal de Entregas: total de entregas do catálogo de serviços realizadas no período.' } ],
-					[ { data: 'RSCP = Entregas perfeitas/Total de entregas x 100' } ],
-					[ { data: 'Verificada a disponibilidade menor ao mínimo contratado, desconto de 10% do valor da Nota Fiscal/Fatura do mês correspondente referente ao aos itens I, II e III por percentual de solicitações não corretas na primeira vez, até o limite de 100%.' } ]
+					[{ data: 'Resolução de solicitações de forma correta na primeira vez (RSCP): 95%' }],
+					[{ data: '\nAferição mensal de acordo com as seguintes variáveis: \nEntregas Perfeitas: total de entregas que foram realizadas sem retrabalho no período de acordo com quadro de serviços de suporte técnico abaixo. \nTotal de Entregas: total de entregas do catálogo de serviços realizadas no período.' }],
+					[{ data: 'RSCP = Entregas perfeitas/Total de entregas x 100' }],
+					[{ data: 'Verificada a disponibilidade menor ao mínimo contratado, desconto de 10% do valor da Nota Fiscal/Fatura do mês correspondente referente ao aos itens I, II e III por percentual de solicitações não corretas na primeira vez, até o limite de 100%.' }]
 				]
 			],
 				tabelaListrada: false,
@@ -4694,33 +4694,33 @@ export default {
 				linhas:
 			[
 				[
-					[ { data: 'Solicitação de Suporte' } ],
-					[ { data: 'Até 2 (duas) horas úteis a partir do registro da solicitação na ferramenta de Service Desk.' }, { ref: 'Por horas úteis, entende-se o período compreendido no horário comercial definido em comum acordo entre CONTRATADA e CONTRATANTE.' } ]
+					[{ data: 'Solicitação de Suporte' }],
+					[{ data: 'Até 2 (duas) horas úteis a partir do registro da solicitação na ferramenta de Service Desk.' }, { ref: 'Por horas úteis, entende-se o período compreendido no horário comercial definido em comum acordo entre CONTRATADA e CONTRATANTE.' }]
 				],
 
 				[
-					[ { data: 'Requisição de Serviço' } ],
-					[ { data: 'Até 16 (dezesseis) horas úteis a partir do registro da solicitação na ferramenta de Service Desk.' } ]
+					[{ data: 'Requisição de Serviço' }],
+					[{ data: 'Até 16 (dezesseis) horas úteis a partir do registro da solicitação na ferramenta de Service Desk.' }]
 				],
 
 				[
-					[ { data: 'Incidente – Alto Impacto' } ],
-					[ { data: 'Até 1 (uma) hora corrida a partir do registro da solicitação na ferramenta de Service Desk.' } ]
+					[{ data: 'Incidente – Alto Impacto' }],
+					[{ data: 'Até 1 (uma) hora corrida a partir do registro da solicitação na ferramenta de Service Desk.' }]
 				],
 
 				[
-					[ { data: 'Incidente – Médio Impacto' } ],
-					[ { data: 'Até 4 (quatro) horas corrida a partir do registro da solicitação na ferramenta de Service Desk.' } ]
+					[{ data: 'Incidente – Médio Impacto' }],
+					[{ data: 'Até 4 (quatro) horas corrida a partir do registro da solicitação na ferramenta de Service Desk.' }]
 				],
 
 				[
-					[ { data: 'Incidente – Baixo Impacto' } ],
-					[ { data: 'Até 8 (oito) horas úteis a partir do registro da solicitação na ferramenta de Service Desk.' } ]
+					[{ data: 'Incidente – Baixo Impacto' }],
+					[{ data: 'Até 8 (oito) horas úteis a partir do registro da solicitação na ferramenta de Service Desk.' }]
 				],
 
 				[
-					[ { data: 'Problemas' } ],
-					[ { data: 'Enviar planejamento com prazo para implantação da solução até 12 (doze) horas úteis após a estabilização da solução.' } ]
+					[{ data: 'Problemas' }],
+					[{ data: 'Enviar planejamento com prazo para implantação da solução até 12 (doze) horas úteis após a estabilização da solução.' }]
 				]
 			],
 				tabelaListrada: false,
@@ -4739,16 +4739,16 @@ export default {
 
 				linhas: [
 					[
-						[ { data: 'Ciclos de entrega (ex. Sprints) disponibilizados no Prazo (EP): 95%' } ],
-						[ { data: '\nAferição mensal, a cada conjunto de 20 ciclos, de acordo com as seguintes variáveis: \nEntregas no Prazo: total de ciclos entregues no prazo.</p>' } ],
-						[ { data: 'EP = (Entregas no prazo / 20) x 100' } ],
-						[ { data: 'Verificado indicador menor ao mínimo contratado, desconto de 5% do valor do conjunto de 20 ciclos por dia de atraso, até o limite de 40%. No caso de fração de dia, a glosa será calculada de forma proporcional.' } ]
+						[{ data: 'Ciclos de entrega (ex. Sprints) disponibilizados no Prazo (EP): 95%' }],
+						[{ data: '\nAferição mensal, a cada conjunto de 20 ciclos, de acordo com as seguintes variáveis: \nEntregas no Prazo: total de ciclos entregues no prazo.</p>' }],
+						[{ data: 'EP = (Entregas no prazo / 20) x 100' }],
+						[{ data: 'Verificado indicador menor ao mínimo contratado, desconto de 5% do valor do conjunto de 20 ciclos por dia de atraso, até o limite de 40%. No caso de fração de dia, a glosa será calculada de forma proporcional.' }]
 					],
 					[
-						[ { data: 'Entregas sem erro (EE): 90%' } ],
-						[ { data: '\nAferição mensal, a cada conjunto de 20 ciclos, de acordo com as seguintes variáveis: \nEntregas sem erros: total de entregas que não apresentam erros de código ou erros de negócios (em desacordo com funcionalidades especificadas).' } ],
-						[ { data: 'EE = (Entregas sem erros / 20) x 100' } ],
-						[ { data: 'Verificado indicador menor ao mínimo contratado, desconto de 5% do valor do conjunto de 20 ciclos por erro, até o limite de 40%. No caso de fração de dia, a glosa será calculada de forma proporcional.' } ]
+						[{ data: 'Entregas sem erro (EE): 90%' }],
+						[{ data: '\nAferição mensal, a cada conjunto de 20 ciclos, de acordo com as seguintes variáveis: \nEntregas sem erros: total de entregas que não apresentam erros de código ou erros de negócios (em desacordo com funcionalidades especificadas).' }],
+						[{ data: 'EE = (Entregas sem erros / 20) x 100' }],
+						[{ data: 'Verificado indicador menor ao mínimo contratado, desconto de 5% do valor do conjunto de 20 ciclos por erro, até o limite de 40%. No caso de fração de dia, a glosa será calculada de forma proporcional.' }]
 					]
 				],
 				tabelaListrada: false,
@@ -4765,19 +4765,19 @@ export default {
 				linhas:
 			[
 				[
-					[ { data: 'Apresentação do programa do treinamento para aprovação' } ],
-					[ { data: 'Em, no mínimo, 10 (dez) dias corridos antes do início do treinamento' } ],
-					[ { data: 'Desconto de 2% do valor referente ao treinamento, por dia corrido de atraso, até o limite de 60%' } ]
+					[{ data: 'Apresentação do programa do treinamento para aprovação' }],
+					[{ data: 'Em, no mínimo, 10 (dez) dias corridos antes do início do treinamento' }],
+					[{ data: 'Desconto de 2% do valor referente ao treinamento, por dia corrido de atraso, até o limite de 60%' }]
 				],
 				[
-					[ { data: 'Início de turma' } ],
-					[ { data: 'Em até 20 (vinte) dias corridos contados a partir da abertura da Ordem de Serviço' } ],
-					[ { data: 'Desconto de 2% do valor referente ao treinamento, por dia corrido de atraso, até o limite de 20%' } ]
+					[{ data: 'Início de turma' }],
+					[{ data: 'Em até 20 (vinte) dias corridos contados a partir da abertura da Ordem de Serviço' }],
+					[{ data: 'Desconto de 2% do valor referente ao treinamento, por dia corrido de atraso, até o limite de 20%' }]
 				],
 				[
-					[ { data: 'Avaliação do curso' } ],
-					[ { data: 'Avaliação positiva do curso (ótimo ou bom) de pelo menos 50% da turma' } ],
-					[ { data: 'Desconto de 10% do valor referente ao treinamento, a cada 5 pontos percentuais além do mínimo estabelecida, até o limite de 20%' } ]
+					[{ data: 'Avaliação do curso' }],
+					[{ data: 'Avaliação positiva do curso (ótimo ou bom) de pelo menos 50% da turma' }],
+					[{ data: 'Desconto de 10% do valor referente ao treinamento, a cada 5 pontos percentuais além do mínimo estabelecida, até o limite de 20%' }]
 				]
 			],
 				tabelaListrada: false,
@@ -4797,172 +4797,172 @@ export default {
 				linhas:
 			[
 				[
-					[ { data: 'Design e digitalização de novos serviços públicos' } ],
-					[ { data: '' } ],
-					[ { data: '' } ],
-					[ { data: '' } ]
+					[{ data: 'Design e digitalização de novos serviços públicos' }],
+					[{ data: '' }],
+					[{ data: '' }],
+					[{ data: '' }]
 				],
 				[
-					[ { data: 'D1' } ],
-					[ { data: 'Diagnóstico sobre digitalização de serviço \n Atividades: \n- Visitar órgão responsável pelo serviço para entender a viabilidade, necessidades, sistemas envolvidos, macroetapas, complexidade etc. \n- Preparar e facilitar de reuniões e oficinas \n- Elaborar proposta preliminar para transformação do serviço \n- Elaborar Plano Ágil e cronograma de implantação \n- Apresentar produtos, quando necessário em reunião \n Perfis profissionais: \n- Analista de design de serviços \n- Especialista na solução tecnológica' } ],
-					[ { data: 'a) Plano ágil de implantação: análise de viabilidade, arquitetura preliminar do serviço público e cronograma de trabalho.' } ],
-					[ { data: '40 UST' } ]
+					[{ data: 'D1' }],
+					[{ data: 'Diagnóstico sobre digitalização de serviço \n Atividades: \n- Visitar órgão responsável pelo serviço para entender a viabilidade, necessidades, sistemas envolvidos, macroetapas, complexidade etc. \n- Preparar e facilitar de reuniões e oficinas \n- Elaborar proposta preliminar para transformação do serviço \n- Elaborar Plano Ágil e cronograma de implantação \n- Apresentar produtos, quando necessário em reunião \n Perfis profissionais: \n- Analista de design de serviços \n- Especialista na solução tecnológica' }],
+					[{ data: 'a) Plano ágil de implantação: análise de viabilidade, arquitetura preliminar do serviço público e cronograma de trabalho.' }],
+					[{ data: '40 UST' }]
 				],
 				[
-					[ { data: 'D2' } ],
-					[ { data: 'Pesquisa de usuário \n Atividades: \n- Preparar e facilitar oficinas com servidores e cidadãos \n- Preparar e executar ferramentas, tais como “sombra”, “blueprint”, “jornada do usuário”, “entrevistas”, para levantamento de dados sobre a jornada do usuário \n- Sistematizar os dados levantados \n- Apresentar produtos, quando necessário em reunião \nPerfis profissionais: \n- Analista de design de serviços \n- Especialista na solução tecnológica' } ],
-					[ { data: 'a) Relatório contendo resultados da pesquisa de usuário' } ],
-					[ { data: '40 UST' } ]
+					[{ data: 'D2' }],
+					[{ data: 'Pesquisa de usuário \n Atividades: \n- Preparar e facilitar oficinas com servidores e cidadãos \n- Preparar e executar ferramentas, tais como “sombra”, “blueprint”, “jornada do usuário”, “entrevistas”, para levantamento de dados sobre a jornada do usuário \n- Sistematizar os dados levantados \n- Apresentar produtos, quando necessário em reunião \nPerfis profissionais: \n- Analista de design de serviços \n- Especialista na solução tecnológica' }],
+					[{ data: 'a) Relatório contendo resultados da pesquisa de usuário' }],
+					[{ data: '40 UST' }]
 				],
 				[
-					[ { data: 'D3' } ],
-					[ { data: 'Mapear e propor redesenho de serviço \n Atividades: \n- Entender o fluxo do serviço com órgãos envolvidos, utilizando ferramentas de design de serviços; \n- Realizar visitas onde os serviços são prestados para mapear etapas do serviço; \n- Identificar gargalos e oportunidades de melhorias, sempre pensando em melhorias do serviço para o cidadão e não somente do processo interno; \n- Preparar, sistematizar e conduzir oficinas; \n- Apresentar serviço redesenhado, incluindo a arquitetura na solução tecnológica; \n Perfis profissionais: \n- Analista de design de serviços \n- Especialista na solução tecnológica.' } ],
-					[ { data: 'a) Modelo de serviço público redesenhado' } ],
-					[ { data: '80 UST' } ]
+					[{ data: 'D3' }],
+					[{ data: 'Mapear e propor redesenho de serviço \n Atividades: \n- Entender o fluxo do serviço com órgãos envolvidos, utilizando ferramentas de design de serviços; \n- Realizar visitas onde os serviços são prestados para mapear etapas do serviço; \n- Identificar gargalos e oportunidades de melhorias, sempre pensando em melhorias do serviço para o cidadão e não somente do processo interno; \n- Preparar, sistematizar e conduzir oficinas; \n- Apresentar serviço redesenhado, incluindo a arquitetura na solução tecnológica; \n Perfis profissionais: \n- Analista de design de serviços \n- Especialista na solução tecnológica.' }],
+					[{ data: 'a) Modelo de serviço público redesenhado' }],
+					[{ data: '80 UST' }]
 				],
 				[
-					[ { data: 'D4' } ],
-					[ { data: 'Prototipação do serviço público em alfa \n Atividades: \n- Preparar e facilitar oficinas de ideação de produtos; \n- Elaborar protótipos de baixa e média fidelidade, se possível navegáveis;  \n- Validar com dono do serviço versão em alfa \n Perfis profissionais: \n- Analista de design de serviços \n- Especialista na solução tecnológica.' } ],
-					[ { data: 'a) Protótipo navegável do serviço em versão alfa' } ],
-					[ { data: '60 UST' } ]
+					[{ data: 'D4' }],
+					[{ data: 'Prototipação do serviço público em alfa \n Atividades: \n- Preparar e facilitar oficinas de ideação de produtos; \n- Elaborar protótipos de baixa e média fidelidade, se possível navegáveis;  \n- Validar com dono do serviço versão em alfa \n Perfis profissionais: \n- Analista de design de serviços \n- Especialista na solução tecnológica.' }],
+					[{ data: 'a) Protótipo navegável do serviço em versão alfa' }],
+					[{ data: '60 UST' }]
 				],
 				[
-					[ { data: 'D5' } ],
-					[ { data: 'Parametrização do serviço na solução tecnológica sem integração \n Atividades:\n- Criar e testar forulário \n- Criar e testar fluo interno \n- Criar e testar fases de atendimento \n- Testar ciclo completo na solução tecnológica \n Perfis profissionais: \n- Analista de design de serviços \n- Especialista na solução tecnológica' } ],
-					[ { data: 'a) Serviço em homologação' } ],
-					[ { data: '24 UST' } ]
+					[{ data: 'D5' }],
+					[{ data: 'Parametrização do serviço na solução tecnológica sem integração \n Atividades:\n- Criar e testar forulário \n- Criar e testar fluo interno \n- Criar e testar fases de atendimento \n- Testar ciclo completo na solução tecnológica \n Perfis profissionais: \n- Analista de design de serviços \n- Especialista na solução tecnológica' }],
+					[{ data: 'a) Serviço em homologação' }],
+					[{ data: '24 UST' }]
 				],
 				[
-					[ { data: 'D6' } ],
-					[ { data: 'Parametrização do serviço na solução tecnológica com integração \n Atividades: \n- Criar e testar formulário \n- Criar e testar integração de sistemas \n- Criar e testar fluxo contemplando as etapas na solução tecnológica e as etapas no sistema legado \n- Criar e testar fases de atendimento \n- Testar ciclo completo na solução tecnológica \n Perfis profissionais: \n- Analista de design de serviços \n- Especialista na solução tecnológica \n- Analista de tecnologia da informação' } ],
-					[ { data: 'a) Serviço em homologação' } ],
-					[ { data: '72 UST' } ]
+					[{ data: 'D6' }],
+					[{ data: 'Parametrização do serviço na solução tecnológica com integração \n Atividades: \n- Criar e testar formulário \n- Criar e testar integração de sistemas \n- Criar e testar fluxo contemplando as etapas na solução tecnológica e as etapas no sistema legado \n- Criar e testar fases de atendimento \n- Testar ciclo completo na solução tecnológica \n Perfis profissionais: \n- Analista de design de serviços \n- Especialista na solução tecnológica \n- Analista de tecnologia da informação' }],
+					[{ data: 'a) Serviço em homologação' }],
+					[{ data: '72 UST' }]
 				],
 				[
-					[ { data: 'D7' } ],
-					[ { data: 'Disponibilização do serviço em versão beta \n Atividades \n- Testar com dono do serviço \n- Disponibilizar serviço em versão beta para teste com pequeno grupo de usuários reais \n- Avaliar utilização do serviço em beta \n- Sistematizar aprendizados \n Perfis profissionais: \n- Analista de design de serviços \n- Especialista na solução tecnológica' } ],
-					[ { data: 'a) Serviço disponibilizado e testado em pequena escala' } ],
-					[ { data: '72 UST' } ]
+					[{ data: 'D7' }],
+					[{ data: 'Disponibilização do serviço em versão beta \n Atividades \n- Testar com dono do serviço \n- Disponibilizar serviço em versão beta para teste com pequeno grupo de usuários reais \n- Avaliar utilização do serviço em beta \n- Sistematizar aprendizados \n Perfis profissionais: \n- Analista de design de serviços \n- Especialista na solução tecnológica' }],
+					[{ data: 'a) Serviço disponibilizado e testado em pequena escala' }],
+					[{ data: '72 UST' }]
 				],
 				[
-					[ { data: 'D8' } ],
-					[ { data: 'Melhorias do serviço para disponibilização em produção \n Atividades: \n- Identificar melhorias \n- Realizar melhorias \n- Testar melhorias \n- Elaborar manuais e vídeos interativos sobre o serviço \n- Avaliar economia do serviço digital utilizando modelo de custos \n Perfis profissionais: \n- Analista de design de serviços \n- Especialista na solução tecnológica' } ],
-					[ { data: 'a) Plano de melhorias b) Manual e vídeos interativos do serviço' } ],
-					[ { data: '30 UST' } ]
+					[{ data: 'D8' }],
+					[{ data: 'Melhorias do serviço para disponibilização em produção \n Atividades: \n- Identificar melhorias \n- Realizar melhorias \n- Testar melhorias \n- Elaborar manuais e vídeos interativos sobre o serviço \n- Avaliar economia do serviço digital utilizando modelo de custos \n Perfis profissionais: \n- Analista de design de serviços \n- Especialista na solução tecnológica' }],
+					[{ data: 'a) Plano de melhorias b) Manual e vídeos interativos do serviço' }],
+					[{ data: '30 UST' }]
 				],
 				[
-					[ { data: 'D9' } ],
-					[ { data: 'Operação assistida \n Atividades: \n- Acompanhar e monitorar serviço \n- Prestar suporte a usuários da solução \n- Elaborar melhorias de script de atendimento conforme aprendizados da operação \n Perfis profissionais: \n- Analista de design de serviços \n- Especialista na solução tecnológica' } ],
-					[ { data: 'a) Relatório de uso do serviço' } ],
-					[ { data: '20 UST' } ]
+					[{ data: 'D9' }],
+					[{ data: 'Operação assistida \n Atividades: \n- Acompanhar e monitorar serviço \n- Prestar suporte a usuários da solução \n- Elaborar melhorias de script de atendimento conforme aprendizados da operação \n Perfis profissionais: \n- Analista de design de serviços \n- Especialista na solução tecnológica' }],
+					[{ data: 'a) Relatório de uso do serviço' }],
+					[{ data: '20 UST' }]
 				],
 				[
-					[ { data: 'Melhorias' } ],
-					[ { data: '' } ],
-					[ { data: '' } ],
-					[ { data: '' } ]
+					[{ data: 'Melhorias' }],
+					[{ data: '' }],
+					[{ data: '' }],
+					[{ data: '' }]
 				],
 				[
-					[ { data: 'M1' } ],
-					[ { data: 'Atividades: Ajustes e melhorias em integrações já existentes \n Perfis profissionais: Analista de Tecnologia da informação' } ],
-					[ { data: 'Integração ajustada em homologação' } ],
-					[ { data: '8 UST por ajuste' } ]
+					[{ data: 'M1' }],
+					[{ data: 'Atividades: Ajustes e melhorias em integrações já existentes \n Perfis profissionais: Analista de Tecnologia da informação' }],
+					[{ data: 'Integração ajustada em homologação' }],
+					[{ data: '8 UST por ajuste' }]
 				],
 				[
-					[ { data: 'M2' } ],
-					[ { data: 'Atividades: Ajustes e melhorias em formulários já existentes \n Perfis profissionais: Analista de Tecnologia da informação' } ],
-					[ { data: 'Formulário ajustado em homologação' } ],
-					[ { data: '1 UST a cada 10 campos' } ]
+					[{ data: 'M2' }],
+					[{ data: 'Atividades: Ajustes e melhorias em formulários já existentes \n Perfis profissionais: Analista de Tecnologia da informação' }],
+					[{ data: 'Formulário ajustado em homologação' }],
+					[{ data: '1 UST a cada 10 campos' }]
 				],
 				[
-					[ { data: 'M3' } ],
-					[ { data: 'Atividades: Ajustes e melhorias em fluxos já existentes \n Perfis profissionais: Analista de Tecnologia da informação' } ],
-					[ { data: 'Fluxo ajustado em homologação' } ],
-					[ { data: '8 UST por etapa' } ]
+					[{ data: 'M3' }],
+					[{ data: 'Atividades: Ajustes e melhorias em fluxos já existentes \n Perfis profissionais: Analista de Tecnologia da informação' }],
+					[{ data: 'Fluxo ajustado em homologação' }],
+					[{ data: '8 UST por etapa' }]
 				],
 				[
-					[ { data: 'M4' } ],
-					[ { data: 'Atividades: Ajustes e melhorias em dashboards já existentes \n Perfis profissionais: Analista de Tecnologia da informação' } ],
-					[ { data: 'Dashboard ajustado em homologação' } ],
-					[ { data: '3 UST por item (gráficos, filtros, tabelas, etc)' } ]
+					[{ data: 'M4' }],
+					[{ data: 'Atividades: Ajustes e melhorias em dashboards já existentes \n Perfis profissionais: Analista de Tecnologia da informação' }],
+					[{ data: 'Dashboard ajustado em homologação' }],
+					[{ data: '3 UST por item (gráficos, filtros, tabelas, etc)' }]
 				],
 				[
-					[ { data: 'M5' } ],
-					[ { data: 'Atividades: Ajustes e melhorias em relatórios já existentes \n Perfis profissionais: Analista de Tecnologia da informação' } ],
-					[ { data: 'Relatório ajustado em homologação' } ],
-					[ { data: '3 UST por item (colunas, filtros, regras, etc)' } ]
+					[{ data: 'M5' }],
+					[{ data: 'Atividades: Ajustes e melhorias em relatórios já existentes \n Perfis profissionais: Analista de Tecnologia da informação' }],
+					[{ data: 'Relatório ajustado em homologação' }],
+					[{ data: '3 UST por item (colunas, filtros, regras, etc)' }]
 				],
 				[
-					[ { data: 'M7' } ],
-					[ { data: 'Atividades: Ações para melhorar a assertividade do georreferenciamento \n Perfis profissionais: Analista de Tecnologia da informação' } ],
-					[ { data: 'Georreferenciamento ajustado em homologação' } ],
-					[ { data: '8 UST por ação' } ]
+					[{ data: 'M7' }],
+					[{ data: 'Atividades: Ações para melhorar a assertividade do georreferenciamento \n Perfis profissionais: Analista de Tecnologia da informação' }],
+					[{ data: 'Georreferenciamento ajustado em homologação' }],
+					[{ data: '8 UST por ação' }]
 				],
 				[
-					[ { data: 'M8' } ],
-					[ { data: 'Atividades: Incluir serviço novo em integração já existente. \n Perfis profissionais: Analista de Tecnologia da informação' } ],
-					[ { data: 'Novo serviço homologado' } ],
-					[ { data: '8 UST por serviço' } ]
+					[{ data: 'M8' }],
+					[{ data: 'Atividades: Incluir serviço novo em integração já existente. \n Perfis profissionais: Analista de Tecnologia da informação' }],
+					[{ data: 'Novo serviço homologado' }],
+					[{ data: '8 UST por serviço' }]
 				],
 				[
-					[ { data: 'Customizações da plataforma' } ],
-					[ { data: '' } ],
-					[ { data: '' } ],
-					[ { data: '' } ]
+					[{ data: 'Customizações da plataforma' }],
+					[{ data: '' }],
+					[{ data: '' }],
+					[{ data: '' }]
 				],
 				[
-					[ { data: 'CP1' } ],
-					[ { data: 'Atividades: Alterações de design e layout na solução \n Perfis profissionais: Analista de Tecnologia da informação' } ],
-					[ { data: 'Design e layout alterados' } ],
-					[ { data: '16 UST' } ]
+					[{ data: 'CP1' }],
+					[{ data: 'Atividades: Alterações de design e layout na solução \n Perfis profissionais: Analista de Tecnologia da informação' }],
+					[{ data: 'Design e layout alterados' }],
+					[{ data: '16 UST' }]
 				],
 				[
-					[ { data: 'CP2' } ],
-					[ { data: 'Atividades: Alterações para melhorar responsividade ou usabilidade na solução \n Perfis profissionais: Analista de Tecnologia da informação' } ],
-					[ { data: 'Responsividade ou usabilidade ajustadas' } ],
-					[ { data: '12 UST' } ]
+					[{ data: 'CP2' }],
+					[{ data: 'Atividades: Alterações para melhorar responsividade ou usabilidade na solução \n Perfis profissionais: Analista de Tecnologia da informação' }],
+					[{ data: 'Responsividade ou usabilidade ajustadas' }],
+					[{ data: '12 UST' }]
 				],
 				[
-					[ { data: 'CP3' } ],
-					[ { data: 'Atividades: Disponibilização de novos relatórios na plataforma \n Perfis profissionais: Analista de Tecnologia da informação' } ],
-					[ { data: 'Relatório disponibilizado em homologação' } ],
-					[ { data: '16 UST' } ]
+					[{ data: 'CP3' }],
+					[{ data: 'Atividades: Disponibilização de novos relatórios na plataforma \n Perfis profissionais: Analista de Tecnologia da informação' }],
+					[{ data: 'Relatório disponibilizado em homologação' }],
+					[{ data: '16 UST' }]
 				],
 				[
-					[ { data: 'CP4' } ],
-					[ { data: 'Atividades: Disponibilização de novos dashboards na plataforma \n Perfis profissionais: Analista de Tecnologia da informação' } ],
-					[ { data: 'Dashboard disponibilizado em homologação' } ],
-					[ { data: '16 UST' } ]
+					[{ data: 'CP4' }],
+					[{ data: 'Atividades: Disponibilização de novos dashboards na plataforma \n Perfis profissionais: Analista de Tecnologia da informação' }],
+					[{ data: 'Dashboard disponibilizado em homologação' }],
+					[{ data: '16 UST' }]
 				],
 				[
-					[ { data: 'CP5' } ],
-					[ { data: 'Atividades: Inclusão ou edição de componentes na solução, como campos, botões, etc. \n Perfis profissionais: Analista de Tecnologia da informação' } ],
-					[ { data: 'Componentes disponibilizados em homologação' } ],
-					[ { data: '8 UST' } ]
+					[{ data: 'CP5' }],
+					[{ data: 'Atividades: Inclusão ou edição de componentes na solução, como campos, botões, etc. \n Perfis profissionais: Analista de Tecnologia da informação' }],
+					[{ data: 'Componentes disponibilizados em homologação' }],
+					[{ data: '8 UST' }]
 				],
 				[
-					[ { data: 'Configuração e treinamento de Assistente Virtual Inteligente' } ],
-					[ { data: '' } ],
-					[ { data: '' } ],
-					[ { data: '' } ]
+					[{ data: 'Configuração e treinamento de Assistente Virtual Inteligente' }],
+					[{ data: '' }],
+					[{ data: '' }],
+					[{ data: '' }]
 				],
 				[
-					[ { data: 'CB1' } ],
-					[ { data: 'Diagnóstico e Análises preliminares de necessidades, bases de dados existentes e definição do nível de interação com clientes específicos para implementação do CHATBOT. \n Atividades: \n- Visitar órgão responsável pelo serviço para entender a viabilidade, necessidades, sistemas envolvidos, macroetapas, complexidade etc. \n- Preparar e facilitar de reuniões e oficinas \n- Elaborar proposta preliminar para transformação do serviço \n- Elaborar Plano Ágil e cronograma de implantação \n- Apresentar produtos, quando necessário em reunião \n Perfis profissionais: Analista de Design de Serviços Especialista de Chatbot Analista de Tecnologia da informação' } ],
-					[ { data: 'a) Plano ágil de implantação: análise de viabilidade, arquitetura preliminar do serviço público e cronograma de trabalho.' } ],
-					[ { data: '40 UST' } ]
+					[{ data: 'CB1' }],
+					[{ data: 'Diagnóstico e Análises preliminares de necessidades, bases de dados existentes e definição do nível de interação com clientes específicos para implementação do CHATBOT. \n Atividades: \n- Visitar órgão responsável pelo serviço para entender a viabilidade, necessidades, sistemas envolvidos, macroetapas, complexidade etc. \n- Preparar e facilitar de reuniões e oficinas \n- Elaborar proposta preliminar para transformação do serviço \n- Elaborar Plano Ágil e cronograma de implantação \n- Apresentar produtos, quando necessário em reunião \n Perfis profissionais: Analista de Design de Serviços Especialista de Chatbot Analista de Tecnologia da informação' }],
+					[{ data: 'a) Plano ágil de implantação: análise de viabilidade, arquitetura preliminar do serviço público e cronograma de trabalho.' }],
+					[{ data: '40 UST' }]
 				],
 				[
-					[ { data: 'CB2' } ],
-					[ { data: 'Realizar configuração da ferramenta de CHATBOT: desenvolvimento do conteúdo, configuração do portal do sistema, validação e homologação pelos CONTRATANTE e clientes do portal. \n Atividades: \n- Criar e testar fluxo de comunicação \n- Criar e testar integração de sistemas \n- Criar e testar fases de atendimento \n- Treinar assistente para atendimento \n- Testar ciclo completo na solução tecnológica \n Perfis profissionais: Analista de Design de Serviços Especialista de Chatbot Analista de Tecnologia da informação' } ],
-					[ { data: 'Versão beta em funcionamento e relatório de teste' } ],
-					[ { data: '80 UST' } ]
+					[{ data: 'CB2' }],
+					[{ data: 'Realizar configuração da ferramenta de CHATBOT: desenvolvimento do conteúdo, configuração do portal do sistema, validação e homologação pelos CONTRATANTE e clientes do portal. \n Atividades: \n- Criar e testar fluxo de comunicação \n- Criar e testar integração de sistemas \n- Criar e testar fases de atendimento \n- Treinar assistente para atendimento \n- Testar ciclo completo na solução tecnológica \n Perfis profissionais: Analista de Design de Serviços Especialista de Chatbot Analista de Tecnologia da informação' }],
+					[{ data: 'Versão beta em funcionamento e relatório de teste' }],
+					[{ data: '80 UST' }]
 				],
 				[
-					[ { data: 'CB3' } ],
-					[ { data: 'Transferência de conhecimento e operação supervisionada (go live) do serviço de CHATBOT; \n Atividades: \n - Acompanhar e monitorar serviço \n - Prestar suporte a usuários da solução \n- Elaborar melhorias conforme aprendizados da operação \n Perfis profissionais: Analista de Design de Serviços Especialista de Chatbot Analista de Tecnologia da informação' } ],
-					[ { data: 'Versão produção no ar e relatório de avaliação' } ],
-					[ { data: '40 UST' } ]
+					[{ data: 'CB3' }],
+					[{ data: 'Transferência de conhecimento e operação supervisionada (go live) do serviço de CHATBOT; \n Atividades: \n - Acompanhar e monitorar serviço \n - Prestar suporte a usuários da solução \n- Elaborar melhorias conforme aprendizados da operação \n Perfis profissionais: Analista de Design de Serviços Especialista de Chatbot Analista de Tecnologia da informação' }],
+					[{ data: 'Versão produção no ar e relatório de avaliação' }],
+					[{ data: '40 UST' }]
 				]
 			],
 				tabelaListrada: false,
@@ -4996,7 +4996,7 @@ export default {
 @import '../oldstylestoprint';
 
 div.Tabela > table > tbody > tr > td > span {
-	 white-space: pre-line;
+	white-space: pre-line;
 }
 
 </style>

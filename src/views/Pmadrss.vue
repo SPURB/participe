@@ -15,7 +15,7 @@
 			<p>Desta forma, como componente da Política Pública de Desenvolvimento Urbano, o Plano Municipal de Agroecologia e Desenvolvimento Rural Sustentável e Solidário tem a responsabilidade de buscar o entrelaçamento das diversas políticas públicas existentes, buscando o aprimoramento no que tange a zona rural e agricultura urbana, formando um conjunto de ações para a promoção da segurança alimentar e nutricional, da soberania alimentar, do desenvolvimento rural e urbano e do direito humano à alimentação adequada (DHAA). Sendo também de sua responsabilidade apontar novas e necessárias políticas públicas com vistas ao  fortalecimento das práticas agropecuárias de forma compatível com a conservação ambiental, considerando a ecologia urbana e possibilitando a melhoria da qualidade de vida para os cidadãos e cidadãs da cidade. </p>
 			<p>Os apontamentos e recomendações de ações que integram esse Plano  servirão para guiar a atuação do Poder Público, tanto do Executivo, quanto do Legislativo e do Judiciário, para garantir os objetivos previstos no Plano Diretor Estratégico (PDE) em relação ao território rural, principalmente, mas também ao território urbano, onde há imóveis rurais e agricultura urbana e periurbana. A  promoção do desenvolvimento rural e da agroecologia se dá a partir de ações complementares, integradas e transdisciplinares, apontando para a necessidade de uma articulação entre secretarias municipais, entre órgãos públicos estaduais e federais, entre espaços colegiados de participação social e entre a atuação pública e privada. Nenhuma ação descrita neste Plano  está isolada, pelo contrário: todas estão conectadas e deverão ser implantadas de forma articulada, mediante a avaliação de prioridade e arranjos institucionais necessários. O Plano Municipal de Agroecologia e Desenvolvimento Rural Solidário e Sustentável de São Paulo está estruturado de forma a impulsionar o desenvolvimento relacionado às zonas rurais e às áreas urbanas que possuem atividades de produção agropecuária. Desta forma, a partir de eixos temáticos, foram elaboradas diretrizes norteadoras que estruturam as ações elencadas no plano e as direcionam para o atendimento maior da política pública: garantir a qualidade de vida da população e proporcionar o desenvolvimento rural no município de São Paulo.</p>
 
-			<Comments :attr="{id:commentId(), context:'Introdução'}" v-if="estaConsulta.ativo == 1"></Comments>
+			<Comments :attr="{id:commentId(true), context:'Introdução'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section>
@@ -195,7 +195,7 @@
 
 		<section>
 			<h3 class="titulo" indent="2">EIXO TURISMO</h3>
-			<div class="acao">
+			<div class="acao">				
 				<h4>AÇÃO - Turismo Sustentável 1</h4>
 				<h5>OBJETIVO</h5>
 				<p>Apoiar o desenvolvimento do Turismo Rural no Pólo de Ecoturismo de Parelheiros, conforme Plano de Desenvolvimento do Turismo Sustentável aprovado</p>
@@ -221,81 +221,48 @@
 				<Comments :attr="{id:commentId(), context:'AÇÃO - Turismo Sustentável 1'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
 
-			<div class="acao">
-				<h4>AÇÃO - Turismo Sustentável 1</h4>
+			<div class="acao">				
+				<h4>AÇÃO – Turismo Sustentável 2</h4>
 				<h5>OBJETIVO</h5>
-				<p>Apoiar o desenvolvimento do Turismo Rural no Pólo de Ecoturismo de Parelheiros, conforme Plano de Desenvolvimento do Turismo Sustentável aprovado</p>
+				<p>Desenvolvimento do turismo rural na Zona Leste e Norte</p>
 				<h5>ATIVIDADES ESTRATÉGICAS</h5>
 				<p>
-					. articulação do CMDRSS com o CONGETUR e parceiros do Polo;<br>
-					. criação de programas de estruturação do turismo em propriedades rurais;<br>
-					. criação de roteiros de turismo rural, integrando roteiro em atrativos naturais e culturais;<br>
-					. aprimoramento do PAT/Parelheiros com profissionais com conhecimento regional e melhor estrutura;<br>
-					. desenvolvimento de cursos de formação em monitoria;<br>
-					. regulamentar a lei do polo de ecoturismo de Parelheiros;<br>
-					. conciliar o Plano Municipal do Polo de Ecoturismo de Parelheiros com os planos de manejo das Unidades de Conservação do território;<br>
-					. utilização de identificação de origem dos produtos produzidos na cidade;<br>
-					. reconhecimento e respeito ao plano de visitação da Terra Índigena Tenonde Porã e suas diretrizes.<br>
+					. mapeamento participativo dos atrativos naturais e culturais da região <br>
+					. desenvolvimento de roteiros turísticos integrando os atrativos <br>
+					. formação e capacitação em monitoria e turismo; <br>
 				</p>
 				<p><strong>META</strong></p>
 				<p>
-					. 30 propriedades estruturadas e aptas para recepção de turistas e com atividades voltadas ao turismo rural;<br>
-					. realização de um Fórum de integração dos conselhos no território, pelo menos uma vez ao ano;
+					. 10 propriedades estruturadas e aptas para recepção de turistas e com atividades voltadas ao turismo rural
 				</p>
 				<p><strong>PRIORIDADE</strong></p>
-				<p>Urgente</p>
-				<Comments :attr="{id:commentId(), context:'AÇÃO - Turismo Sustentável 1'}" v-if="estaConsulta.ativo == 1"></Comments>
+				<p>Média</p>
+				<Comments :attr="{id:commentId(), context:'AÇÃO – Turismo Sustentável 2'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
 
-			<div class="acao">
-				<h4>AÇÃO - Turismo Sustentável 1</h4>
+			<div class="acao">				
+				<h4>AÇÃO – Turismo Sustentável 3</h4>
 				<h5>OBJETIVO</h5>
-				<p>Apoiar o desenvolvimento do Turismo Rural no Pólo de Ecoturismo de Parelheiros, conforme Plano de Desenvolvimento do Turismo Sustentável aprovado</p>
+				<p>Polo de Ecoturismo Cantareira (Lei 16.823/2018)</p>
 				<h5>ATIVIDADES ESTRATÉGICAS</h5>
 				<p>
-					. articulação do CMDRSS com o CONGETUR e parceiros do Polo;<br>
-					. criação de programas de estruturação do turismo em propriedades rurais;<br>
-					. criação de roteiros de turismo rural, integrando roteiro em atrativos naturais e culturais;<br>
-					. aprimoramento do PAT/Parelheiros com profissionais com conhecimento regional e melhor estrutura;<br>
-					. desenvolvimento de cursos de formação em monitoria;<br>
-					. regulamentar a lei do polo de ecoturismo de Parelheiros;<br>
-					. conciliar o Plano Municipal do Polo de Ecoturismo de Parelheiros com os planos de manejo das Unidades de Conservação do território;<br>
-					. utilização de identificação de origem dos produtos produzidos na cidade;<br>
-					. reconhecimento e respeito ao plano de visitação da Terra Índigena Tenonde Porã e suas diretrizes.<br>
-				</p>
-				<p><strong>META</strong></p>
-				<p>
-					. 30 propriedades estruturadas e aptas para recepção de turistas e com atividades voltadas ao turismo rural;<br>
-					. realização de um Fórum de integração dos conselhos no território, pelo menos uma vez ao ano;
-				</p>
-				<p><strong>PRIORIDADE</strong></p>
-				<p>Urgente</p>
-				<Comments :attr="{id:commentId(), context:'AÇÃO - Turismo Sustentável 1'}" v-if="estaConsulta.ativo == 1"></Comments>
-			</div>
+					. implantar o Polo de Ecoturismo da Cantareira Regulamentar a Lei Municipal 16.832/2018)<br>
+					. mapeamento participativo dos atrativos naturais e culturais da região<br>
+					. desenvolvimento de roteiros turisticos integrando os atrativos; <br>
+					. criação de um roteiros pilotos na estrada do Vista Alegre; <br>
+					. formação e capacitação em monitoria e turismo ecológico;<br>
+					. implantar o Território de Cultura e Paisagem (Perus- Anhanguera) conforme Plano Diretor<br>
+					. incentivar um roteiro de turismo nas Terras Indígenas do Jaraguá, com protagonismo indígena;<br>
+					. criação do Conselho de Turismo do Polo de Ecoturismo da Cantareira<br>
 
-			<div class="acao">
-				<CommentsContext :id="commentId()" :context="getContext($event)">
-				<h4>AÇÃO - Turismo Sustentável 1</h4>
-				<h5>OBJETIVO</h5>
-				<p>Apoiar o desenvolvimento do Turismo Rural no Pólo de Ecoturismo de Parelheiros, conforme Plano de Desenvolvimento do Turismo Sustentável aprovado</p>
-				<h5>ATIVIDADES ESTRATÉGICAS</h5>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 				</p>
 				<p><strong>META</strong></p>
 				<p>
-					. 30 propriedades estruturadas e aptas para recepção de turistas e com atividades voltadas ao turismo rural;<br>
-					. realização de um Fórum de integração dos conselhos no território, pelo menos uma vez ao ano;
+					. Desenvolver um Plano de Desenvolvimento Sustentável do Polo de Ecoturismo da Cantareira
 				</p>
 				<p><strong>PRIORIDADE</strong></p>
-				<p>Urgente</p>
-				<!-- <Comments :attr="{id:commentId(), context:'AÇÃO - Turismo Sustentável 1'}" v-if="estaConsulta.ativo == 1"></Comments> -->
-				</CommentsContext>
+				<p>Média</p>
+				<Comments :attr="{id:commentId(), context:'AÇÃO – Turismo Sustentável 3'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
 		</section>
 
@@ -325,7 +292,8 @@ export default {
 			titulosLimpo: [],
 			comments_atrr: undefined,
 			consultas: false,
-			estaConsulta: {}
+			estaConsulta: {},
+			contextosPreenchidos: 0
 		}
 	},
 	components: {
@@ -335,17 +303,6 @@ export default {
 		PageTop,
 		Indice
 		// Apoio
-	},
-	mounted: function () {
-		console.log("COMPUTED");
-		console.log(this.estaConsulta);
-	},
-	methods: {
-		getContext (elemento) {
-			console.log("GET CONTEXT -------->")
-			console.log(elemento)
-			return 'ok'
-		}
 	},
 	mixins: [ consultasCommons ]
 }
@@ -360,6 +317,6 @@ h4, h5 {
 	margin-top: 1em !important;
 }
 .acao:nth-of-type(odd) {
-	background-color: gray;
+	background-color: #FAFAFA;
 }
 </style>

@@ -5,6 +5,9 @@ node_modules
 /tests/e2e/videos/
 /tests/e2e/screenshots/
 
+# documentos
+*.pdf
+
 # local env files
 .env.local
 .env.*.local

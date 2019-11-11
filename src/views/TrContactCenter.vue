@@ -11,6 +11,22 @@
 		<!-- Decreto Nº 56.901 inclua este componente caso seja um PIU -->
 
 		<section>
+			<h2 class="titulo" indent="1">Apresentação</h2>
+			<p>A Prefeitura da Cidade de São Paulo, por meio da Secretaria Municipal de Inovação e Tecnologia - SMIT, disponibiliza Consulta Pública para acolher sugestões sobre o Termo de Referência para contratação de Contact Center/Call Center da solução de atendimento SP156.</p>
+			<p>A Central de atendimento 156 é o principal canal de contato do cidadão com a Prefeitura de São Paulo na solicitação de serviços e informações, responsável por mais de 20.000 atendimentos por dia, recebendo solicitações de cerca de 400 serviços públicos municipais e mais de 1000 serviços informativos. </p>
+			<p>Para facilitar a gestão dos comentários oriundos do processo de consulta pública, solicitamos aos participantes que destaquem o item e/ou subitem com a respectiva proposta de redação, juntamente com sua justificativa.</p>
+			<p>
+				Cronograma:
+				<ol>
+					<li>Recebimento de eventuais sugestões e/ou comentários até 25/11/2019.</li>
+					<li>Divulgação no site da SMIT (<a href="https://www.prefeitura.sp.gov.br/cidade/secretarias/inovacao/">https://www.prefeitura.sp.gov.br/cidade/secretarias/inovacao/</a>) da versão revisada do Termo de Referência considerando eventuais ajustes decorrentes do processo de consulta pública até 09/12/2019</li>
+					<li>Encaminhamento das Propostas contendo as respectivas Estimativas de Preços em conformidade com o Termo de Referência eventualmente ajustado em decorrência da consulta pública até 16/12/2019. As mesmas poderão ser enviadas para o e-mail. <a href="mailto:consultapublica.smit@prefeitura.sp.gov.br">consultapublica.smit@prefeitura.sp.gov.br</a></li>
+				</ol>
+			</p>
+
+		</section>
+
+		<section>
 			<h2 class="titulo" indent="1">1.	OBJETO</h2>
 			<h3>1.1.	Contratação de serviços de planejamento, implantação, operação, gerenciamento de central de atendimento e gestão de atendimento receptivo e ativo nas formas eletrônica e humana. </h3>
 			<Comments :attr="{id:commentId(true), context:'1. OBJETO'}" v-if="estaConsulta.ativo == 1"></Comments>
@@ -254,7 +270,7 @@
 			<h3>3.10.	Sistema de Gestão de Atendimento</h3>
 			<p>3.10.1.	A Prefeitura do Munícipio de São Paulo disponibilizará uma solução de atendimento ao cidadão que deverá ser utilizada por todos os operadores do CONTACT CENTER (telefonia, chat e redes sociais se houver), para acolhimento de todos as solicitações registradas para a Prefeitura pelos canais 156, 199 e 153.</p>
 			<p>3.10.2.	Esta solução de atendimento deve ser integrada - via Computer Telephony Integration (CTI) - ao Distribuidor Automático de Chamadas (item 3.3) e à Unidade de Resposta Audível (item 3.2) </p>
-			<p>3.10.3.	A solução a ser disponibilizada será apresentada em momento oportuno após processo licitatório em andamento para contratação da solução de atendimento ao cidadão <b style="color: red">(INSERIR NUMERO DO EDITAL)</b>.</p>
+			<p>3.10.3.	A solução a ser disponibilizada será apresentada em momento oportuno após finalização do processo licitatório de contratação da solução de atendimento ao cidadão, onde será publicado no Diário Oficial do Município o número do Edital correspondente.</p>
 				
 			<Comments :attr="{id:commentId(), context:'3.10.	Sistema de Gestão de Atendimento'}" v-if="estaConsulta.ativo == 1"></Comments>
 			
@@ -268,12 +284,20 @@
 			<p>3.11.7.	A CONTRATADA deverá disponibilizar APIs com funcionalidades para o disparo de SMS que poderão ser consumidas pela CONTRATANTE permitindo desta forma, uma melhor integração entre sistemas.</p>
 			<p>3.11.8.	As mensagens deverão ser disparadas sempre que houver campanhas institucionais, mediante solicitação da CONTRATANTE.</p>
 			<p>3.11.9.	O solução de gerenciamento de SMS deverá possibilitar o registro, em banco de dados, de todas as informações acerca das campanhas solicitadas, para recuperação por meio de consultas e relatórios de gestão de mensagem, disponibilizados em tempo real, 24 por 7.</p>
-			<p>3.11.10.	As informações que devem ser registradas e que serão utilizadas para estruturação de relatórios são: órgão emissor, identificador da solicitação, data e hora da emissão da solicitação, data e hora agendada para envio à operadora e informações de metadados cada uma das mensagens incluindo: </p>
+			<p>3.11.10.	As informações que devem ser registradas e que serão utilizadas para estruturação de relatórios são: órgão emissor, identificador da solicitação, data e hora da emissão da solicitação, data e hora agendada para envio à operadora e informações de metadados cada uma das mensagens incluindo:
 				<p class="s2">3.11.10.1.	Identificador da mensagem; </p>
 				<p class="s2">3.11.10.2.	Telefone do destinatário; </p>
 				<p class="s2">3.11.10.3.	Prazo máximo para envio; </p>
 				<p class="s2">3.11.10.4.	Status da solicitação; </p>
 				<p class="s2">3.11.10.5.	Data e horário de envio à operadora.</p>
+			</p>
+			<p>3.11.11. O sistema integrador para envio de SMS e gerenciamento dos serviços será hospedado no ambiente da CONTRATADA.</p>
+			<p>3.11.12. O sistema deve ter disponibilidade 24 (vinte e quatro) horas por dia, 7 (sete) dias por semana.</p>
+			<p>3.11.13. Confidencialidade
+				<p class="s2">3.11.13.1. Todas as informações que forem transmitidas à CONTRATADA ou produzidas por esta com base nas informações recebidas devem ser consideradas protegidas como informações confidenciais por um período indeterminado, exceto se antes da divulgação for esclarecido não se tratarem de informações confidenciais ou estejam disponíveis ao público por outros meios.</p>
+				<p class="s2">3.11.13.2. Quaisquer informações confidenciais devem ser usadas pela CONTRATADA tão somente com o propósito para o qual estas informações foram divulgadas, exceto nos casos de determinação judicial ou expressa disposição prevista em lei.</p>
+				<p class="s2">3.11.13.3. A Contratada formalizará termos de confidencialidade com todos os seus empregados e fornecedores que tiverem acesso às informações confidenciais, em igual teor de suas obrigações.</p>
+			</p>
 				
 			<Comments :attr="{id:commentId(), context:'3.11.	Disparo Eletrônico de Mensagens de Texto Tipo SMS'}" v-if="estaConsulta.ativo == 1"></Comments>
 			<h3>3.12.	Plano de Contingência da Central de Atendimento </h3>
@@ -980,7 +1004,7 @@
 				<p class="s2">5.2.5.1.	Apuração do quantitativo das ligações recebidas e atendidas receptivas concretizadas no período e o valor total correspondente (VAr)</p>	
 				<p class="s2">5.2.5.2.	Apuração do quantitativo das ligações ativas realizadas e concretizadas no período e o valor total correspondente (VAa)</p>
 				<ul>
-					<li><strong>Observação:</strong> Não serão consideradas para fins de remuneração as ligações efetuadas que as ligações efetuadas que não forem atendidas, apresentarem sinal de ocupado, mensagem da operadora, número inválido, sinal de fax, linha muda.</li>
+					<li><strong>Observação:</strong> Não serão consideradas para fins de remuneração as ligações efetuadas que não forem atendidas, apresentarem sinal de ocupado, mensagem da operadora, número inválido, sinal de fax, linha muda.</li>
 				</ul>
 				<p class="s2">5.2.5.3.	Aplicação sobre o valor total, obtido no item “5.1”, dos decréscimos resultantes da pontuação conferida, conforme tabela 2 – Conversão de Pontos:</p>
 				<ul>
@@ -1433,16 +1457,18 @@
 					<p class="s3">7.3.1.1.6.	Promover a articulação necessária para direcionar e resolver as questões críticas, políticas, organizacionais ou de relacionamento entre as partes.</p>
 					<p class="s3">7.3.1.1.7.	Designar equipe da CONTRATANTE para dar suporte à CONTRATADA ao longo da execução do Contrato.</p>
 					<p class="s3">7.3.1.1.8.	Participantes do Comitê Gestor</p>
-						<p class="s4">7.3.1.1.8.1.	São membros do Comitê Gestor, minimamente</p>
-						<ul style="margin-left: 22em">
-							<li>Diretor (a) da CONTRATADA, ou pessoa por ele(a) indicada.</li>
-							<li>Secretário da pasta gestora deste contrato ou alguém por ele indicado.</li>
-							<li>Responsável pelo Comitê de Operação.</li>
-						</ul>
-					<p class="s3">7.3.1.1.8.2.	Frequência de reuniões:</p>
-					<ul style="margin-left: 22em">
-						<li>O Comitê Gestor terá frequência bimestral de reuniões.</li>
-					</ul>
+						<p class="s4">7.3.1.1.8.1.	São membros do Comitê Gestor, minimamente
+							<ul>
+								<li>Diretor (a) da CONTRATADA, ou pessoa por ele(a) indicada.</li>
+								<li>Secretário da pasta gestora deste contrato ou alguém por ele indicado.</li>
+								<li>Responsável pelo Comitê de Operação.</li>
+							</ul>
+						</p>						
+						<p class="s4">7.3.1.1.8.2.	Frequência de reuniões:
+							<ul>
+								<li>O Comitê Gestor terá frequência bimestral de reuniões.</li>
+							</ul>
+						</p>					
 			<p>7.3.2.	Comitê Operacional</p>
 				<p class="s2">7.3.2.1.	O Comitê Operacional deve ser indicado via ofício, de ambas as partes, e será responsável por planejar e acompanhar a execução dos Serviços previstos neste Termo de Referência.</p>
 				<p class="s2">7.3.2.2.	Todas as reuniões serão realizadas nas instalações da CONTRATANTE, ou como a CONTRATANTE aconselhar (com participantes remotos via teleconferência ou vídeo conferência).</p>
@@ -1450,7 +1476,7 @@
 				<p class="s2">7.3.2.4.	As Partes deverão ser notificadas com a antecedência mínima de 3 (três) dias úteis no caso de alterações nas datas desta reunião.</p>
 				<p class="s2">7.3.2.5.	Os representantes que não comparecerem às reuniões previamente agendadas, por motivos previamente justificados, receberão a ata da reunião, via e-mail, e terão até 2 (dois) dias corridos para manifestar seu voto, sob pena de em não o fazendo ser considerado como aceitação tácita do conteúdo sem ressalvas, ou seja, voto a favor do que foi deliberado.</p>
 				<p class="s2">7.3.2.6.	O Comitê Operacional terá como principais objetivos:</p>
-				<ul style="margin-left: 22em">
+				<ul>
 					<li>Supervisionar as atividades relacionadas ao cumprimento dos objetivos constantes neste Termo de Referência, gerenciando o comprometimento dos recursos humanos alocados, monitorando o andamento do projeto.</li>
 					<li>Realizar acompanhamento das atividades conforme previstos neste Termo de Referência.</li>
 					<li>Avaliar as prioridades.</li>
@@ -1466,17 +1492,19 @@
 					<li>Reportar ao Comitê Gestor a ocorrência de situações de emergência;</li>
 				</ul>
 				<p class="s2">7.3.2.7.	Participantes do Comitê Operacional</p>
-					<p class="s3">7.3.2.7.1.	São membros efetivos do Comitê de Operação, minimamente:</p>
-					<ul style="margin-left: 22em">
-						<li>Responsável da Secretaria de Municipal de Inovação e Tecnologia, indicado(a) pelo Secretário</li>
-						<li>Gerente experiente da CONTRATADA, ou pessoa por ele indicada;</li>
-						<li>1 Responsável por parte da CONTRATADA;</li>
-						<li>1 Responsável por parte da CONTRATANTE.</li>
-					</ul>
-					<p class="s3">7.3.2.7.2.	Frequência de reuniões</p>
-					<ul style="margin-left: 22em">
-						<li>O Comitê de operação terá frequência quinzenal de reuniões.</li>
-					</ul>
+					<p class="s3">7.3.2.7.1.	São membros efetivos do Comitê de Operação, minimamente:
+						<ul>
+							<li>Responsável da Secretaria de Municipal de Inovação e Tecnologia, indicado(a) pelo Secretário</li>
+							<li>Gerente experiente da CONTRATADA, ou pessoa por ele indicada;</li>
+							<li>1 Responsável por parte da CONTRATADA;</li>
+							<li>1 Responsável por parte da CONTRATANTE.</li>
+						</ul>
+					</p>
+					<p class="s3">7.3.2.7.2.	Frequência de reuniões
+						<ul>
+							<li>O Comitê de operação terá frequência quinzenal de reuniões.</li>
+						</ul>
+					</p>					
 				
 			<Comments :attr="{id:commentId(), context:'7.3.	Governança'}" v-if="estaConsulta.ativo == 1"></Comments>
 			
@@ -1885,35 +1913,71 @@
 			<Comments :attr="{id:commentId(), context:'13.2.	A fiscalização dos serviços pela Contratante...'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
-		<section>
+		<section v-observe-visibility="{
+						callback: (isVisible, entry) => visibilityChanged(isVisible, entry, 'anexoI'),
+						once: true
+					}">
 			<h2 class="titulo" indent="1"><a :href="fileSrc('ANEXO_I.pdf')" target="_blank">ANEXO I - HISTÓRICO DE LIGAÇÕES E VOLUME - RECEPTIVO</a></h2>
 			<p>
-				<embed :src="fileSrc('ANEXO_I.pdf')" width="700" height="500" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+				<embed
+					v-if="isVisible.anexoI"					
+					:src="fileSrc('ANEXO_I.pdf')"
+					width="700"
+					height="500"
+					alt="pdf"
+					pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
 			</p>
 			<Comments :attr="{id:commentId(), context:'ANEXO I - HISTÓRICO DE LIGAÇÕES E VOLUME - RECEPTIVO'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
-		<section>
+		<section v-observe-visibility="{
+						callback: (isVisible, entry) => visibilityChanged(isVisible, entry, 'anexoII'),
+						once: true
+					}">
 			<h2 class="titulo" indent="1"><a :href="fileSrc('ANEXO_II.pdf')" target="_blank">ANEXO II - HISTÓRICO DE LIGAÇÕES E VOLUME - ATIVO</a></h2>
 			<p>
-				<embed :src="fileSrc('ANEXO_II.pdf')" width="700" height="500" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+				<embed
+					v-if="isVisible.anexoII"
+					:src="fileSrc('ANEXO_II.pdf')"
+					width="700"
+					height="500"
+					alt="pdf"
+					pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
 			</p>
 			<Comments :attr="{id:commentId(), context:'ANEXO II - HISTÓRICO DE LIGAÇÕES E VOLUME - ATIVO'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 
-		<section>
+		<section v-observe-visibility="{
+						callback: (isVisible, entry) => visibilityChanged(isVisible, entry, 'anexoIII'),
+						once: true
+					}">
 			<h2 class="titulo" indent="1"><a :href="fileSrc('ANEXO_III.pdf')" target="_blank">ANEXO III - HISTÓRICO DE VOLUMETRIA DE ATENDIMENTOS VIA CHAT</a></h2>
 			<p>
-				<embed :src="fileSrc('ANEXO_III.pdf')" width="700" height="500" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+				<embed 
+					v-if="isVisible.anexoIII"
+					:src="fileSrc('ANEXO_III.pdf')"
+					width="700"
+					height="500"
+					alt="pdf"
+					pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
 			</p>
 			<Comments :attr="{id:commentId(), context:'ANEXO III - HISTÓRICO DE VOLUMETRIA DE ATENDIMENTOS VIA CHAT'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
-		<section>
+		<section v-observe-visibility="{
+						callback: (isVisible, entry) => visibilityChanged(isVisible, entry, 'anexoIV'),
+						once: true
+					}">
 			<h2 class="titulo" indent="1"><a :href="fileSrc('ANEXO_IV.pdf')" target="_blank">ANEXO IV - MODELO DE ACORDO DE NÍVEL DE SERVIÇO</a></h2>
 			<p>
-				<embed :src="fileSrc('ANEXO_IV.pdf')" width="700" height="500" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+				<embed
+					v-if="isVisible.anexoIV"
+					:src="fileSrc('ANEXO_IV.pdf')"
+					width="700"
+					height="500"
+					alt="pdf"
+					pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
 			</p>
 			<Comments :attr="{id:commentId(), context:'ANEXO IV - MODELO DE ACORDO DE NÍVEL DE SERVIÇO'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
@@ -1943,7 +2007,13 @@ export default {
 			titulosLimpo: [],
 			comments_atrr: undefined,
 			consultas: false,
-			estaConsulta: {}
+			estaConsulta: {},
+			isVisible: {
+				anexoI: false,
+				anexoII: false,
+				anexoIII: false,
+				anexoIV: false
+			}
 		}
 	},
 	components: {
@@ -1959,7 +2029,10 @@ export default {
 		fileSrc (fileName) {
 			let url = this.$store.getters.basePath + 'arquivos/tr-contact-center/' + fileName
 			return url.toString()
-		}
+		},
+		visibilityChanged (isVisible, entry, itemVisivel) {
+			this.isVisible[itemVisivel] = isVisible
+		},
 	}
 }
 </script>
@@ -1988,10 +2061,29 @@ table {
 p.s2 {
 	padding-left: 3em;
 }
+// p.s2 > ul {
+// 	padding-left: 4em;
+// }
 p.s3 {
 	padding-left: 4em;
 }
-h2.titulo > a {
+p.s4 {
+	padding-left: 5em;
+}
+p.s5 {
+	padding-left: 6em;
+}
+// h2.titulo > a {
+a {
 	color: black;
 }
+h3 {
+	font-weight: normal;
+}
+
+.visible {
+		opacity: 1;
+		transition-delay: 800;
+		transition: opacity 0.5s ease;
+	}
 </style>

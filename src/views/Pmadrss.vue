@@ -1,7 +1,8 @@
 <template>
 	<div class="Pmadrss" ref="conteudoConsulta">
 		<PageTop background_image_src="arquivos/capas/pmadrss.jpg" :esta_consulta="estaConsulta">
-			<template slot="titulo"><div>1º Plano Municipal de Agroecologia e Desenvolvimento Rural Sustentável e Solidário PMADRSS</div></template>
+			<template slot="titulo"><div>1º Plano Municipal de Agroecologia e Desenvolvimento Rural Sustentável e Solidário</div></template>
+			<!-- PMADRSS -->
 			<!-- <template slot="subtitulo"><div>Subtítulo da Nova Consulta</div></template> -->
 		</PageTop>
 		<Indice :titulos="titulosLimpo"></Indice>
@@ -9,7 +10,10 @@
 		<section>			
 			<h2 class="titulo" indent="1">Introdução</h2>
 			<br>
-			<p>A criação do “1º Plano Municipal de Agroecologia e Desenvolvimento Rural Sustentável e Solidário” ocorre por determinação estabelecida pela Lei nº 16.050, de 31 de julho de 2014 que aprova a Política de Desenvolvimento Urbano e o Plano Diretor Estratégico do Município de São Paulo.</p>
+			<p>A criação do 1º Plano Municipal de Agroecologia e Desenvolvimento Rural Sustentável e Solidário (PMADRSS) ocorre por determinação estabelecida pela Lei nº 16.050, de 31 de julho de 2014 que aprova a Política de Desenvolvimento Urbano e o Plano Diretor Estratégico do Município de São Paulo.</p>
+			<p>
+				A Secretaria Municipal de Desenvolvimento Econômico e Trabalho (SMDET), por meio de suas competências, apoiou a construção do PAMDRSS desenvolvido pelo Conselho Municipal de Desenvolvimento Rural Sustentável e Solidário (CMDRSS), através dos seus integrantes da sociedade civil e de técnicos multidisciplinares do poder público, e também com a participação social e de servidores de todas as esferas de governo mediante oficinas colaborativas.
+			</p>
 			<p>
 				A construção do PAMDRSS contou com a participação da sociedade civil e de técnicos multidisciplinares da esfera pública ligados ao CMDRSS além da participação social e de técnicos de todas as esferas de governo por meio de oficinas, com o apoio da Secretaria Municipal de Desenvolvimento Econômico e Trabalho (SMDET), secretaria da qual o CMDRSS está ligado.
 			</p>

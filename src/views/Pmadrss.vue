@@ -10,6 +10,9 @@
 			<h2 class="titulo" indent="1">Introdução</h2>
 			<br>
 			<p>A criação do “1º Plano Municipal de Agroecologia e Desenvolvimento Rural Sustentável e Solidário” ocorre por determinação estabelecida pela Lei nº 16.050, de 31 de julho de 2014 que aprova a Política de Desenvolvimento Urbano e o Plano Diretor Estratégico do Município de São Paulo.</p>
+			<p>
+				A construção do PAMDRSS contou com a participação da sociedade civil e de técnicos multidisciplinares da esfera pública ligados ao CMDRSS além da participação social e de técnicos de todas as esferas de governo por meio de oficinas, com o apoio da Secretaria Municipal de Desenvolvimento Econômico e Trabalho (SMDET), secretaria da qual o CMDRSS está ligado.
+			</p>
 			<p>Idealizado para compor o conjunto da Politica de Desenvolvimento Urbano municipal, é a primeira vez que o estimulo a agricultura urbana, a agroecologia e o desenvolvimento rural sustentável surge como importante componente da busca pela sustentabilidade na cidade, da utilização harmoniosa dos recursos naturais e a conservação ambientalmente saudável da paisagem urbana; dando reconhecimento a Zona Rural e as diretrizes que nortearão a estruturação dos territórios rurais e das suas atividades correlatas.</p>
 			<p>A mesma Lei n 16.050, em seu artigo 192 cria a figura do Conselho Municipal Desenvolvimento Rural Solidário e Sustentável, regulado pelo Decreto Municipal nº 57.058 de 14/06/2016, e que fora oficialmente constituido em virtude da realização da 1ª Conferência Municipal de Desenvolvimento Rural Solidário e Sustentável em 15 de Junho de 2016 onde ocorreu a eleição dos seus conselheiros. Nesta 1ª Conferência também foram discutidas e aprovadas diretrizes, definidas prioridades e elencadas propostas para a construção do PMADRSS, a partir de um amplo processo participativo.</p>
 			<p>Desta forma, como componente da Política Pública de Desenvolvimento Urbano, o Plano Municipal de Agroecologia e Desenvolvimento Rural Sustentável e Solidário tem a responsabilidade de buscar o entrelaçamento das diversas políticas públicas existentes, buscando o aprimoramento no que tange a zona rural e agricultura urbana, formando um conjunto de ações para a promoção da segurança alimentar e nutricional, da soberania alimentar, do desenvolvimento rural e urbano e do direito humano à alimentação adequada (DHAA). Sendo também de sua responsabilidade apontar novas e necessárias políticas públicas com vistas ao  fortalecimento das práticas agropecuárias de forma compatível com a conservação ambiental, considerando a ecologia urbana e possibilitando a melhoria da qualidade de vida para os cidadãos e cidadãs da cidade. </p>
@@ -58,10 +61,7 @@
 			
 			<p>
 				Para fins da presente Consulta Pública, serão recebidas considerações da população acerca do ponto V. DIRETRIZES PARA ORIENTAR AS AÇÕES DOS ÓRGÃOS PÚBLICOS E DE SUAS PARCERIAS, uma vez que é o principal capítulo onde estão descritas as ações, atividades estratégicas e metas previstas para atuações do Poder Público de forma a fomentar o desenvolvimento rural de forma solidária e sustentável e promover a agroecologia em todo o território municipal.
-			</p>
-			<p>
-				Para melhor visualização do todo, segue abaixo a tabela onde estão descritas e estruturadas as diretrizes previstas no Plano. Sua estrutura consiste em eixos temáticos, ações, objetivos de cada ação, atividades estratégicas para atendimento dos objetivos, metas, órgãos públicos e secretarias responsáveis e parceiras e prioridade.
-			</p>
+			</p>			
 		</section>
 
 		
@@ -70,27 +70,7 @@
 						callback: (isVisible, entry) => visibilityChanged(isVisible, entry, 'tabela'),
 						once: true
 					}">
-			<h3 class="titulo" indent="2">Tabela PMADRSS</h3>
-			<p style="transform: translateX(-30px);">
-				<embed
-					v-if="isVisible.tabela"
-					:src="fileSrc('PMDRSS-2019_10_30-Final.pdf')"
-					width="700"
-					height="500"
-					alt="pdf"
-					pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
-			</p>
-			<ul class="links">
-				<li>
-					<a :href="fileSrc('PMDRSS-2019_10_30-Final.pdf')" download>
-						<i class="icon-pdf icon"><span>icon_pdf</span></i>
-						<div>Tabela PMDRSS</div>
-						<span>112 KB</span>
-					</a>
-				</li>
-			</ul>
-			<p>Se tiver alguma observação sobre a organização geral do plano, comente no botão abaixo:</p>
-			<Comments :attr="{id:commentId(true), context:'Introdução'}" v-if="estaConsulta.ativo == 1"></Comments>
+
 			<p>As diretrizes para a atuação do Poder Público contidas no plano estão divididas em 17 eixos temáticos, conforme quadro a seguir:</p>
 			<table id="table-diretrizes">
 				<colgroup>
@@ -211,10 +191,41 @@
 				</tr>
 			</table>
 			<p>O principal objeto desta Consulta Pública é a colheita de contribuições da população, de entidades e movimentos sociais e dos demais órgãos públicos e privados a respeito das ações, metas, atividades e prazos descritos no plano. Com essas contribuições, iremos aprimorar o trabalho já realizado de forma a atender diretamente as demandas dos cidadãos e cidadãs paulistanos. Você poderá fazer contribuições em cada ação do plano. Contribuições para redação, modificação de textos das propostas, novas atividades estratégicas e metas, alteração da prioridade da ação e inclusão de novas ações são bem-vindas e serão analisadas pelo Conselho Municipal de Desenvolvimento Rural Solidário e Sustentável (CMDRSS). Caso deseje visualizar as secretarias responsáveis e parceiras de cada ação, consulte a tabela anexada em pdf com as ações do Plano.</p>
-			<p>A seguir, todas as ações do Plano estarão listadas de acordo com cada eixo. Para contribuir, basta clicar na ação desejada ou rolar para baixo para ver todas as ações. As contribuições serão realizadas para cada ação. Seja objetivo e faça contribuições diretas na ação apresentada, buscando justificar cada alteração proposta e, se necessário, sugerindo nova redação.</p>
-			<p>Sua participação é muito importante para nós!</p>			
-		</section>
 
+			<h3 class="titulo" indent="2">Tabela PMADRSS</h3>
+			<p>
+				Para melhor visualização do todo, segue abaixo a tabela onde estão descritas e estruturadas as diretrizes previstas no Plano. Sua estrutura consiste em eixos temáticos, ações, objetivos de cada ação, atividades estratégicas para atendimento dos objetivos, metas, órgãos públicos e secretarias responsáveis e parceiras e prioridade.
+			</p>
+			<p style="transform: translateX(-30px);">
+				<embed
+					v-if="isVisible.tabela"
+					:src="fileSrc('PMDRSS-2019_10_30-Final.pdf')"
+					width="700"
+					height="500"
+					alt="pdf"
+					pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+			</p>
+			<ul class="links">
+				<li>
+					<a :href="fileSrc('PMDRSS-2019_10_30-Final.pdf')" download>
+						<i class="icon-pdf icon"><span>icon_pdf</span></i>
+						<div>Tabela PMDRSS</div>
+						<span>112 KB</span>
+					</a>
+				</li>
+			</ul>
+			<p>As contribuições serão realizadas para cada ação. No entanto, caso tenha alguma observação sobre a organização geral do plano, sua estrutura ou comentários mais gerais que concernem o plano como um todo, comente no botão abaixo. Caso sua contribuição seja específica para alguma ação, continue navegando para baixo para contribuir diretamente em seu texto.</p>
+			<Comments :attr="{id:commentId(true), context:'Introdução'}" v-if="estaConsulta.ativo == 1"></Comments>
+
+			<p>
+				<strong>
+					A seguir, todas as ações do Plano estarão listadas de acordo com cada eixo. Para contribuir, basta clicar na ação desejada ou rolar para baixo para ver todas as ações. As contribuições serão realizadas para cada ação. Seja objetivo e faça contribuições diretas na ação apresentada, buscando justificar cada alteração proposta e, se necessário, sugerindo nova redação.
+				</strong>
+			</p>
+			<p>
+				<strong>Sua participação é muito importante para nós!</strong>
+			</p>
+		</section>
 		<section>
 			<h2 class="titulo" indent="1">Ações do Plano</h2>
 			<br>

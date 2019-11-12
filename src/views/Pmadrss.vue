@@ -1,12 +1,12 @@
 <template>
 	<div class="Pmadrss" ref="conteudoConsulta">
-		<PageTop background_image_src="arquivos/capas/placeholder_480w.jpg" :esta_consulta="estaConsulta">
+		<PageTop background_image_src="arquivos/capas/pmadrss.jpg" :esta_consulta="estaConsulta">
 			<template slot="titulo"><div>1º Plano Municipal de Agroecologia e Desenvolvimento Rural Sustentável e Solidário PMADRSS</div></template>
 			<!-- <template slot="subtitulo"><div>Subtítulo da Nova Consulta</div></template> -->
 		</PageTop>
 		<Indice :titulos="titulosLimpo"></Indice>
 
-		<section>
+		<section>			
 			<h2 class="titulo" indent="1">Introdução</h2>
 			<br>
 			<p>A criação do “1º Plano Municipal de Agroecologia e Desenvolvimento Rural Sustentável e Solidário” ocorre por determinação estabelecida pela Lei nº 16.050, de 31 de julho de 2014 que aprova a Política de Desenvolvimento Urbano e o Plano Diretor Estratégico do Município de São Paulo.</p>
@@ -14,8 +14,15 @@
 			<p>A mesma Lei n 16.050, em seu artigo 192 cria a figura do Conselho Municipal Desenvolvimento Rural Solidário e Sustentável, regulado pelo Decreto Municipal nº 57.058 de 14/06/2016, e que fora oficialmente constituido em virtude da realização da 1ª Conferência Municipal de Desenvolvimento Rural Solidário e Sustentável em 15 de Junho de 2016 onde ocorreu a eleição dos seus conselheiros. Nesta 1ª Conferência também foram discutidas e aprovadas diretrizes, definidas prioridades e elencadas propostas para a construção do PMADRSS, a partir de um amplo processo participativo.</p>
 			<p>Desta forma, como componente da Política Pública de Desenvolvimento Urbano, o Plano Municipal de Agroecologia e Desenvolvimento Rural Sustentável e Solidário tem a responsabilidade de buscar o entrelaçamento das diversas políticas públicas existentes, buscando o aprimoramento no que tange a zona rural e agricultura urbana, formando um conjunto de ações para a promoção da segurança alimentar e nutricional, da soberania alimentar, do desenvolvimento rural e urbano e do direito humano à alimentação adequada (DHAA). Sendo também de sua responsabilidade apontar novas e necessárias políticas públicas com vistas ao  fortalecimento das práticas agropecuárias de forma compatível com a conservação ambiental, considerando a ecologia urbana e possibilitando a melhoria da qualidade de vida para os cidadãos e cidadãs da cidade. </p>
 			<p>Os apontamentos e recomendações de ações que integram esse Plano  servirão para guiar a atuação do Poder Público, tanto do Executivo, quanto do Legislativo e do Judiciário, para garantir os objetivos previstos no Plano Diretor Estratégico (PDE) em relação ao território rural, principalmente, mas também ao território urbano, onde há imóveis rurais e agricultura urbana e periurbana. A  promoção do desenvolvimento rural e da agroecologia se dá a partir de ações complementares, integradas e transdisciplinares, apontando para a necessidade de uma articulação entre secretarias municipais, entre órgãos públicos estaduais e federais, entre espaços colegiados de participação social e entre a atuação pública e privada. Nenhuma ação descrita neste Plano  está isolada, pelo contrário: todas estão conectadas e deverão ser implantadas de forma articulada, mediante a avaliação de prioridade e arranjos institucionais necessários. O Plano Municipal de Agroecologia e Desenvolvimento Rural Solidário e Sustentável de São Paulo está estruturado de forma a impulsionar o desenvolvimento relacionado às zonas rurais e às áreas urbanas que possuem atividades de produção agropecuária. Desta forma, a partir de eixos temáticos, foram elaboradas diretrizes norteadoras que estruturam as ações elencadas no plano e as direcionam para o atendimento maior da política pública: garantir a qualidade de vida da população e proporcionar o desenvolvimento rural no município de São Paulo.</p>
-
-			<Comments :attr="{id:commentId(true), context:'Introdução'}" v-if="estaConsulta.ativo == 1"></Comments>
+			<!-- <Imagem :dados="{
+				tipo: 'coluna',
+				caption: 'Imagem EMBRAPA, Instrumentação/São Carlos',
+				url: imgSrc('arquivos/capas/pmadrss.jpg')
+			}"></Imagem> -->
+			<Imagem :dados="{
+				tipo: 'coluna',
+				url: imgSrc('arquivos/pmadrss/zona-sul-03.jpg')
+			}"></Imagem>			
 		</section>
 
 		<section>
@@ -55,15 +62,35 @@
 			<p>
 				Para melhor visualização do todo, segue abaixo a tabela onde estão descritas e estruturadas as diretrizes previstas no Plano. Sua estrutura consiste em eixos temáticos, ações, objetivos de cada ação, atividades estratégicas para atendimento dos objetivos, metas, órgãos públicos e secretarias responsáveis e parceiras e prioridade.
 			</p>
+		</section>
+
+		
+
+		<section v-observe-visibility="{
+						callback: (isVisible, entry) => visibilityChanged(isVisible, entry, 'tabela'),
+						once: true
+					}">
+			<h3 class="titulo" indent="2">Tabela PMADRSS</h3>
+			<p style="transform: translateX(-30px);">
+				<embed
+					v-if="isVisible.tabela"
+					:src="fileSrc('PMDRSS-2019_10_30-Final.pdf')"
+					width="700"
+					height="500"
+					alt="pdf"
+					pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+			</p>
 			<ul class="links">
 				<li>
-					<a :href="src('arquivos/pmadrss/PMDRSS-2019_10_30-Final.pdf')" download>
+					<a :href="fileSrc('PMDRSS-2019_10_30-Final.pdf')" download>
 						<i class="icon-pdf icon"><span>icon_pdf</span></i>
 						<div>Tabela PMDRSS</div>
 						<span>112 KB</span>
 					</a>
 				</li>
 			</ul>
+			<p>Se tiver alguma observação sobre a organização geral do plano, comente no botão abaixo:</p>
+			<Comments :attr="{id:commentId(true), context:'Introdução'}" v-if="estaConsulta.ativo == 1"></Comments>
 			<p>As diretrizes para a atuação do Poder Público contidas no plano estão divididas em 17 eixos temáticos, conforme quadro a seguir:</p>
 			<table id="table-diretrizes">
 				<colgroup>
@@ -190,7 +217,19 @@
 
 		<section>
 			<h2 class="titulo" indent="1">Ações do Plano</h2>
-			<!-- <Comments :attr="{id:commentId(), context:'Ações do Plano'}" v-if="estaConsulta.ativo == 1"></Comments> -->
+			<br>
+			<div id="indice-eixos">
+				<ul>
+					<li v-for="eixo in eixos">
+						<span>{{ eixo.innerText }}</span>						
+						<ul>
+							<li v-for="div in eixo.parentElement.getElementsByClassName('acao')">
+								<a :href="'#' + div.querySelector('h4').id">{{div.querySelector('h4').innerText}}</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
 		</section>
 
 		<section>
@@ -265,7 +304,7 @@
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Turismo Sustentável 3'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
 		</section>
-
+		<hr>
 		<section>
 			<h3 class="titulo" indent="2">EIXO SEGURANÇA E fiscalização</h3>
 			<div class="acao">				
@@ -319,9 +358,9 @@
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Fiscalização ambiental'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
 		</section>
-
+		<hr>
 		<section>
-			<h3 class="titulo" indent="1">EIXO SAÚDE E PROTEÇÃO SOCIAL</h3>
+			<h3 class="titulo" indent="2">EIXO SAÚDE E PROTEÇÃO SOCIAL</h3>
 			<div class="acao">				
 				<h4>AÇÃO – Cultivo de Plantas Medicinais</h4>
 				<h5>OBJETIVO</h5>
@@ -436,9 +475,9 @@
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Previdência'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
 		</section>
-
+		<hr>
 		<section>
-			<h3 class="titulo" indent="1">EIXO CONSERVAÇÃO AMBIENTAL</h3>
+			<h3 class="titulo" indent="2">EIXO CONSERVAÇÃO AMBIENTAL</h3>
 			<div class="acao">				
 				<h4>AÇÃO – Pagamento por Serviços Ambientais (PSA)</h4>
 				<h5>OBJETIVO</h5>
@@ -518,9 +557,9 @@
 				<Comments :attr="{id:commentId(), context:'AÇÃO – PMMA'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
 		</section>
-
+		<hr>
 		<section>
-			<h3 class="titulo" indent="1">EIXO ENSINO E EDUCAÇÃO</h3>
+			<h3 class="titulo" indent="2">EIXO ENSINO E EDUCAÇÃO</h3>
 			<div class="acao">				
 				<h4>AÇÃO – Hortas Escolares Agroecológicas</h4>
 				<h5>OBJETIVO</h5>
@@ -623,8 +662,9 @@
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Criação de Cursos na Área de Agroecologia'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
 		</section>
+		<hr>
 		<section>
-			<h3 class="titulo" indent="1">EIXO PRODUÇÃO ANIMAL</h3>
+			<h3 class="titulo" indent="2">EIXO PRODUÇÃO ANIMAL</h3>
 			<div class="acao">				
 				<h4>AÇÃO – Pesca artesanal</h4>
 				<h5>OBJETIVO</h5>
@@ -696,8 +736,9 @@
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Sistema de Inspeção Municipal (SIM)'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
 		</section>
+		<hr>
 		<section>
-			<h3 class="titulo" indent="1">EIXO CULTURA</h3>
+			<h3 class="titulo" indent="2">EIXO CULTURA</h3>
 			<div class="acao">				
 				<h4>AÇÃO – Cultura rural</h4>
 				<h5>OBJETIVO</h5>
@@ -742,8 +783,9 @@
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Artesanato'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
 		</section>
+		<hr>
 		<section>
-			<h3 class="titulo" indent="1">EIXO INFRAESTRUTURA BÁSICA</h3>
+			<h3 class="titulo" indent="2">EIXO INFRAESTRUTURA BÁSICA</h3>
 			<div class="acao">				
 				<h4>AÇÃO – Educação para Saneamento Ambiental na Zona Rural</h4>
 				<h5>OBJETIVO</h5>
@@ -805,8 +847,9 @@
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Comunicação Rural'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
 		</section>
+		<hr>
 		<section>
-			<h3 class="titulo" indent="1">EIXO FORTALECIMENTO INSTITUCIONAL </h3>
+			<h3 class="titulo" indent="2">EIXO FORTALECIMENTO INSTITUCIONAL </h3>
 			<div class="acao">				
 				<h4>AÇÃO – Fortalecer a CAISAN</h4>
 				<h5>OBJETIVO</h5>
@@ -920,8 +963,9 @@
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Subprefeituras'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
 		</section>
+		<hr>
 		<section>
-			<h3 class="titulo" indent="1">EIXO ASSISTÊNCIA TÉCNICA E EXTENSÃO RURAL (ATER) </h3>
+			<h3 class="titulo" indent="2">EIXO ASSISTÊNCIA TÉCNICA E EXTENSÃO RURAL (ATER) </h3>
 			<div class="acao">				
 				<h4>AÇÃO – Patrulha Mecanizada Agrocológica</h4>
 				<h5>OBJETIVO</h5>
@@ -1060,8 +1104,9 @@
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Agroindústrias'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
 		</section>
+		<hr>
 		<section>
-			<h3 class="titulo" indent="1">EIXO REGULARIZAÇÃO </h3>
+			<h3 class="titulo" indent="2">EIXO REGULARIZAÇÃO </h3>
 			<div class="acao">				
 				<h4>AÇÃO – Regularização Fundiária</h4>
 				<h5>OBJETIVO</h5>
@@ -1123,8 +1168,9 @@
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Atividades produtivas nas áreas da SABESP e ENEL'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
 		</section>
+		<hr>
 		<section>
-			<h3 class="titulo" indent="1">EIXO FINANCIAMENTO </h3>
+			<h3 class="titulo" indent="2">EIXO FINANCIAMENTO </h3>
 			<div class="acao">				
 				<h4>AÇÃO – TACs e TCAs para o programa de agricultura urbana</h4>
 				<h5>OBJETIVO</h5>
@@ -1196,8 +1242,9 @@
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Dotação Orçamentária própria'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
 		</section>
+		<hr>
 		<section>
-			<h3 class="titulo" indent="1">EIXO INDÍGENAS, JOVENS E MULHERES </h3>
+			<h3 class="titulo" indent="2">EIXO INDÍGENAS, JOVENS E MULHERES </h3>
 			<div class="acao">				
 				<h4>AÇÃO – Fortalecimento das populações indígenas 1</h4>
 				<h5>OBJETIVO</h5>
@@ -1329,8 +1376,9 @@
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Mulheres rurais'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
 		</section>
+		<hr>
 		<section>
-			<h3 class="titulo" indent="1">EIXO AGRICULTURA URBANA </h3>
+			<h3 class="titulo" indent="2">EIXO AGRICULTURA URBANA </h3>
 			<div class="acao">				
 				<h4>AÇÃO – Hortas Urbanas</h4>
 				<h5>OBJETIVO</h5>
@@ -1457,8 +1505,9 @@
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Escolas Estufas'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
 		</section>
+		<hr>
 		<section>
-			<h3 class="titulo" indent="1">EIXO COMERCIALIZAÇÃO </h3>
+			<h3 class="titulo" indent="2">EIXO COMERCIALIZAÇÃO </h3>
 			<div class="acao">				
 					<h4>AÇÃO – Boxes da Agricultura Familiar em Mercados e Sacolões</h4>
 					<h5>OBJETIVO</h5>
@@ -1560,8 +1609,9 @@
 					<Comments :attr="{id:commentId(), context:'AÇÃO – Compras Públicas'}" v-if="estaConsulta.ativo == 1"></Comments>
 				</div>
 		</section>
+		<hr>
 		<section>
-			<h3 class="titulo" indent="1">EIXO ORDENAMENTO TERRITORIAL </h3>
+			<h3 class="titulo" indent="2">EIXO ORDENAMENTO TERRITORIAL </h3>
 			<div class="acao">				
 					<h4>AÇÃO – Monitoramento das ferramentas do PDE para a Zona Rural</h4>
 					<h5>OBJETIVO</h5>
@@ -1624,7 +1674,7 @@
 		
 
 		<section ref="allComments">
-			<h2 v-show="commentsLoaded" class="titulo" indent="1">Contribuições</h2>
+			<h2 v-show="commentsLoaded" class="titulo" indent="2">Contribuições</h2>
 			<CommentsLoader :attr="estaConsulta"></CommentsLoader>
 			<Comments v-if="commentsLoaded && parseInt(estaConsulta.ativo) === 1" :attr="{id:commentId(), context:'Comentarios'}"></Comments>
 
@@ -1640,7 +1690,7 @@ import { consultasCommons } from '@/mixins/consultasCommons'
 import Comments from '@/components/Comments'
 import CommentsContext from '@/components/CommentsContext'
 import CommentsLoader from '@/components/CommentsLoader'
-
+import Imagem from '@/components/Imagem'
 
 export default {
 	name: 'Pmadrss',
@@ -1650,7 +1700,12 @@ export default {
 			comments_atrr: undefined,
 			consultas: false,
 			estaConsulta: {},
-			contextosPreenchidos: 0
+			contextosPreenchidos: 0,
+			isVisible: {
+				tabela: false
+			},
+			acoes: [],
+			eixos: []
 		}
 	},
 	components: {
@@ -1658,8 +1713,35 @@ export default {
 		CommentsContext,
 		CommentsLoader,
 		PageTop,
-		Indice
-		// Apoio
+		Indice,
+		Imagem
+	},
+	mounted: function () {
+		// Popula array de eixos
+		for (var i = 1; i < document.getElementsByTagName('h3').length; i++){
+			if(typeof(this.eixos.push(document.getElementsByTagName('h3')[i])) === 'object') {
+				this.eixos.push(document.getElementsByTagName('h3')[i])
+		    }
+		}
+		// Popula array de ações
+		var acaoDivs = document.getElementsByClassName('acao')
+		for (var div in acaoDivs) {
+			if (typeof(acaoDivs[div]) !== 'object') {
+				return
+			}
+			acaoDivs[div].querySelector('h4').id = 'a' + div
+			this.acoes.push(acaoDivs[div].querySelector('h4'))
+		}
+		
+	},
+	methods: {
+		fileSrc (fileName) {
+			let url = this.$store.getters.basePath + 'arquivos/pmadrss/' + fileName
+			return url.toString()
+		},
+		visibilityChanged (isVisible, entry, itemVisivel) {
+			this.isVisible[itemVisivel] = isVisible
+		},
 	},
 	mixins: [ consultasCommons ]
 }
@@ -1673,7 +1755,26 @@ export default {
 h4, h5 {
 	margin-top: 1em !important;
 }
-.acao:nth-of-type(odd) {
+.acao:nth-of-type(even) {
 	background-color: #FAFAFA;
+}
+#indice-eixos li {
+	font-size: 16px;
+	font-family: sans-serif;
+	font-style: italic;
+	margin: 0;
+	list-style-type: none;
+}
+#indice-eixos li>ul {
+	margin: 0;
+}
+#indice-eixos>ul>li {
+	margin: 10px 0;
+	padding: 0;
+}
+#indice-eixos a {
+	font-size: 14px;
+	font-style: normal;
+	color: #000000;
 }
 </style>

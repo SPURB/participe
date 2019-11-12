@@ -268,14 +268,15 @@
 			<Comments :attr="{id:commentId(), context:'3.9.	Infraestrutura Física'}" v-if="estaConsulta.ativo == 1"></Comments>
 
 			<h3>3.10.	Sistema de Gestão de Atendimento</h3>
-			<p>3.10.1.	A Prefeitura do Munícipio de São Paulo disponibilizará uma solução de atendimento ao cidadão que deverá ser utilizada por todos os operadores do CONTACT CENTER (telefonia, chat e redes sociais se houver), para acolhimento de todos as solicitações registradas para a Prefeitura pelos canais 156, 199 e 153.</p>
+			<p>3.10.1.	A Prefeitura do Munícipio de São Paulo disponibilizará uma solução de atendimento ao cidadão que deverá ser utilizada por todos os operadores do CONTACT CENTER (telefonia, chat e redes sociais se houver), para acolhimento de todas as solicitações registradas para a Prefeitura pelos canais 156, 199 e 153.</p>
 			<p>3.10.2.	Esta solução de atendimento deve ser integrada - via Computer Telephony Integration (CTI) - ao Distribuidor Automático de Chamadas (item 3.3) e à Unidade de Resposta Audível (item 3.2) </p>
-			<p>3.10.3.	A solução a ser disponibilizada será apresentada em momento oportuno após finalização do processo licitatório de contratação da solução de atendimento ao cidadão, onde será publicado no Diário Oficial do Município o número do Edital correspondente.</p>
+			<p>3.10.3.	<u>A solução a ser disponibilizada será apresentada em momento oportuno após finalização do processo licitatório de contratação da solução de atendimento ao cidadão, onde será publicado no Diário Oficial do Município o número do Edital correspondente.</u></p>
 				
 			<Comments :attr="{id:commentId(), context:'3.10.	Sistema de Gestão de Atendimento'}" v-if="estaConsulta.ativo == 1"></Comments>
 			
 			<h3>3.11.	Disparo Eletrônico de Mensagens de Texto Tipo SMS</h3>
 			<p>3.11.1.	A CONTRATADA deverá disponibilizar o serviço “Disparo Eletrônico de Mensagens de Texto”, para envio de mensagens do tipo SMS para os telefones móveis cadastrados na base de dados da PMSP, utilizando plataforma automática, de sua responsabilidade.</p>
+				<p class="s2">3.11.1.1. O histórico e a volumetria das mensagens enviadas por SMS no âmbito da Central de Atendimento atual está representada no <strong>ANEXO IV</strong> - HISTÓRICO DE VOLUMETRIA DE ENVIO DE SMS.</p>
 			<p>3.11.2.	A mensagem deverá ser gravada em um arquivo texto. Sendo assim, a mensagem deverá ser redigida, sempre mediante a solicitação prévia, com conteúdos exclusivamente fornecidos pela CONTRATANTE.</p>
 			<p>3.11.3.	A CONTRATADA deverá manter sempre o sigilo absoluto de todas e quaisquer informações prestadas pela CONTRATANTE.</p>
 			<p>3.11.4.	A CONTRATADA deverá efetuar até 3 (três) tentativas de envio para um mesmo número de telefone, salvo quando definido de forma distinta pela CONTRATANTE.</p>
@@ -383,7 +384,7 @@
 				<p class="s3">4.2.9.4.1.	Consiste na execução de chamadas de saída ou retorno aos munícipes.</p>
 				<p class="s3">4.2.9.4.2.	São atividades atribuídas aos operadores:</p>
 					<p class="s4">4.2.9.4.2.1.	Retornar chamadas referentes a solicitações e pedidos de informações que não foram respondidas no momento do teleatendimento receptivo (“call back”).</p>
-					<p class="s4">4.2.9.4.2.2.	Realizar ligações informativas acerca de serviços, projetos, programas, campanhas e políticas estabelecidas pela Prefeitura do Município de São Paulo, de acordo com o solicitado, mediante roteiros pré determinados.</p>
+					<p class="s4">4.2.9.4.2.2.	Realizar ligações informativas acerca de serviços, projetos, programas, campanhas e políticas estabelecidas pela Prefeitura do Município de São Paulo, de acordo com o solicitado, mediante roteiros pré-determinados.</p>
 					<p class="s4">4.2.9.4.2.3.	Realizar, a critério da CONTRATANTE, pesquisas de satisfação do cidadão.</p>
 					<p class="s4">4.2.9.4.2.4.	Contatar munícipes, sob demanda da CONTRATANTE, para complementar as informações de um chamado já aberto.</p>
 					<p class="s4">4.2.9.4.2.5.	Não serão consideradas para fins de remuneração as ligações efetuadas que não forem atendidas, apresentarem sinal de ocupado, mensagem da operadora, número inválido, sinal de fax, linha muda.</p>
@@ -412,6 +413,7 @@
 				<p class="s3">4.2.9.5.8.	O operador/atendente, tanto multiperfil quanto especialista, deverá estar preparado para efetuar o atendimento receptivo e ativo em uma mesma posição.</p>
 				<p class="s3">4.2.9.5.9.	A adoção do atendimento multiperfil ou dedicado obedecerá a critérios definidos exclusivamente pela CONTRATANTE, de acordo com a complexidade e/ou segurança dos procedimentos de atendimento de cada ilha de atendimento.</p>
 				<p class="s3">4.2.9.5.10.	O atendimento também será realizado via CHAT, sendo que cada operador/atendente pode atender até 4 cidadãos simultaneamente.</p>
+					<p class="s4">O histórico e a volumetria das ligações realizadas (Ativo) no âmbito da Central de Atendimento atual estão representados no <strong>ANEXO III</strong> HISTÓRICO DE VOLUMETRIA DE ATENDIMENTOS VIA CHAT.</p>
 				<p class="s3">4.2.9.5.11.	O atendimento também deve prever a possibilidade de interação através de outros meios de atendimento - aplicativos de mensagens e outros canais de comunicação que possam vir a surgir.</p>
 					<p class="s4">4.2.9.5.11.1.	Os prazos serão pactuados quando houver necessidade de implantação destes novos meios de atendimento.</p>
 			<p class="s2">4.2.9.6.	Respostas-padrão e roteiros de atendimento</p>
@@ -541,10 +543,10 @@
 					<p class="s3">4.5.6.7.3.	A parametrização da pesquisa é de responsabilidade da CONTRATANTE e será elaborada com a participação da CONTRATADA.</p>
 					<p class="s3">4.5.6.7.4.	A meta corresponde ao percentual do universo de munícipes entrevistados que avaliaram o atendimento prestado pela Central de Atendimento com os conceitos “bom” e “ótimo” em pelo menos ⅔ da quantidade de perguntas feitas</p>
 					<p class="s3">4.5.6.7.5.	Caso não seja atingida a meta prevista, o índice é apurado pelo percentual médio de conceitos “bom” e “ótimo” obtidos nas perguntas nas quais a CONTRATADA obtiver os menores percentuais destes conceitos.</p>
-				<p class="s2">4.5.6.8.	Índice de disponibilidade da Solução Tecnológica de Gestão  de Atendimento no Contact Center</p>
+				<p class="s2">4.5.6.8.	Índice de disponibilidade da Solução Tecnológica de Gestão de Atendimento no Contact Center</p>
 					<p class="s3">4.5.6.8.1.	Meta >= 99,7% (noventa e nove e sete décimos por cento) mensal</p>
 					<p class="s3">4.5.6.8.2.	Entende-se por “disponibilidade” o percentual do tempo total em que a solução esteve disponível para uso no mês em relação ao total de horas que a solução estava programada para estar disponível no mês.</p>
-					<p class="s3">4.5.6.8.3.	Embora a solução sistêmica de gestão de atendimento será um produto a ser utilizado na Central de Atendimento pelos diversos operadores e supervisores, o ambiente de infraestrutura tecnológica deverá manter o índice de operação da solução em  99,7%.</p>
+					<p class="s3">4.5.6.8.3.	Embora a solução sistêmica de gestão de atendimento será um produto a ser utilizado na Central de Atendimento pelos diversos operadores e supervisores, o ambiente de infraestrutura tecnológica deverá manter o índice de operação da solução em 99,7%.</p>
 					<p class="s3">4.5.6.8.4.	Não serão consideradas na apuração do indicador de disponibilidade da solução tecnológica as horas de manutenção programada previamente pela fornecedora da solução de gestão de atendimento, desde que informada à CONTRATADA com antecedência mínima de 5 dias.</p>
 					
 				<Comments :attr="{id:commentId(), context:'4.5.	Indicadores de Qualidade'}"v-if="estaConsulta.ativo == 1"></Comments>
@@ -760,7 +762,7 @@
 						<li>
 							Perfil
 							<ul>
-								<li>○	Formado em Curso Superior de qualquer área de atuação;</li>
+								<li>Formado em Curso Superior de qualquer área de atuação;</li>
 								<li>Experiência comprovada de, pelo menos 1 ano, em controle e análise de tráfego de ligações em Contact Center</li>
 								<li>Fluência, clareza e objetividade</li>
 								<li>Raciocínio lógico</li>
@@ -980,7 +982,7 @@
 						<li>Sigilo profissional</li>
 						<li>Conhecimentos sobre a CONTRATANTE, seus produtos e suas ferramentas e recursos tecnológicos.</li>
 					</ul>
-					<p class="s2">4.8.1.7.	A capacitação será conduzida por equipe de multiplicadores, qualificada e alocada pela CONTRATADA para essa função  e, também, pela CONTRATANTE.</p>
+					<p class="s2">4.8.1.7.	A capacitação será conduzida por equipe de multiplicadores, qualificada e alocada pela CONTRATADA para essa função e, também, pela CONTRATANTE.</p>
 					<p class="s2">4.8.1.8.	Esta equipe será responsável pelo planejamento, execução, acompanhamento e avaliação permanente dos treinamentos, mantendo a CONTRATANTE informada, por meio de relatórios, sobre cada ação realizada.</p>
 				<p>4.8.2.	Capacitação Específica</p>
 					<p class="s2">4.8.2.1.	Natureza estrutural, baseada nas informações, assuntos e serviços pertinentes à CONTRATANTE, utilizados como fonte e estrutura para o atendimento realizado pela Central.</p>

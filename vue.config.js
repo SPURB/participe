@@ -40,7 +40,8 @@ module.exports = {
 				'/arco-tiete',
 				'/jockey-club',
 				'/minuta-piu-setor-central',
-				'/tr-contact-center'
+				'/tr-contact-center',
+				'/pmadrss'
 			],
 			useRenderEvent: true,
 			headless: false,

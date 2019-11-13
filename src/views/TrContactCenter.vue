@@ -1403,25 +1403,648 @@
 		<section>
 				<h2 class="titulo" indent="1">6.	JUSTIFICATIVAS TÉCNICAS</h2>
 				<h3>6.1.	Desafios da Administração pública</h3>
-				<p>Um dos grandes desafios da administração pública atualmente é assegurar os direitos de cidadania aos usuários de serviços sob responsabilidade do Estado. Com a média mensal de 600 mil ligações recebidas, 500 mil atendimentos e levando em consideração que a central precisa estar preparada para absorver eventuais novos serviços,, sempre tendo em vista a melhoria do atendimento ao usuário, é mister que a PMSP mantenha e aprimore a central de atendimento 156, 199 e 153, assegurando rapidez e eficiência para o usuário final. O serviço destas centrais de atendimento telefônico se enquadram como de natureza continuada, são um modalidade de atendimento já conhecida e utilizada pelos cidadãos, operando durante 24h por dia, todos os dias do ano. A modalidade de atendimento telefônico é de suma importância para a municipalidade, em que pese o fato de que significativa parcela da população residente em São Paulo ver, nesta modalidade de atendimento, uma alternativa prática, segura e gratuita para solucionar pendências e solicitar serviços cuja natureza não exija atendimento presencial.</p>
+				<p>Um dos grandes desafios da administração pública atualmente é assegurar os direitos de cidadania aos usuários de serviços sob responsabilidade do Estado. Com a média mensal de 600 mil ligações recebidas, 500 mil atendimentos e levando em consideração que a central precisa estar preparada para absorver eventuais novos serviços,, sempre tendo em vista a melhoria do atendimento ao usuário, é mister que a PMSP mantenha e aprimore a central de atendimento 156, 199 e 153, assegurando rapidez e eficiência para o usuário final. O serviço destas centrais de atendimento telefônico se enquadra como de natureza continuada, são uma modalidade de atendimento já conhecida e utilizada pelos cidadãos, operando durante 24h por dia, todos os dias do ano. A modalidade de atendimento telefônico é de suma importância para a municipalidade, em que pese o fato de que significativa parcela da população residente em São Paulo ver, nesta modalidade de atendimento, uma alternativa prática, segura e gratuita para solucionar pendências e solicitar serviços cuja natureza não exija atendimento presencial.</p>
 					
 				<Comments :attr="{id:commentId(), context:'subtitulo'}" v-if="estaConsulta.ativo == 1"></Comments>
 
 			
 			<h3>6.2.	Índices de qualificação econômico-financeira</h3>
-			<p>6.2.1.	A exigência dos índices para fins de qualificação econômico-financeira decorre da necessidade da demonstração de plena saúde financeira para a execução contratual pretendida, em razão da natureza do serviço, sua imprescindível continuidade e o envolvimento de infraestrutura e pessoal necessários para o pleno cumprimento das obrigações a serem assumidas.</p>
-			<p>6.2.2.	Sem prejuízo, adota-se a possibilidade de demonstração de Patrimônio Líquido compatível com a proposta comercial como sucedâneo à demonstração dos índices mínimos.</p>
+			<p>6.2.1.	Para fins de qualificação econômico-financeira exige-se, apenas, o mínimo previsto em lei, a fim de não reduzir a competitividade do certame.</p>
+			<p>6.2.2.	Exige-se a demonstração do balanço patrimonial a fim de conhecer a situação econômica da empresa vencedora.</p>
+			<p>6.2.3. Qualificação econômico-financeira:</p>
+			<p class="s2">
+				6.2.3.1. Certidão negativa de pedido de falência, expedida pelo distribuidor da sede da pessoa jurídica em data não superior a 60 dias da data da abertura do certame, se outro prazo não constar do documento.
+			</p>
+				<p class="s3">
+					6.2.3.1.1. Se a licitante não for sujeita ao regime falimentar, a certidão mencionada deverá ser substituída por certidão negativa de ações de insolvência civil, ou documento equivalente.
+				</p>
+			<p class="s2">
+				6.2.3.2. Balanço patrimonial e demonstrações contábeis do último exercício social, já exigíveis e apresentados na forma da lei, que comprovem a situação financeira da empresa, vedada sua substituição por balanço ou balancetes provisórios, podendo ser atualizados por índices oficiais quando encerrados há mais de três meses da data da apresentação da proposta;
+			</p>
+				<p class="s3">
+					6.2.3.2.1. Somente empresas que ainda não tenham completado seu primeiro exercício fiscal poderão comprovar sua capacidade econômico-financeira por meio de	balancetes mensais, conforme disposto na Lei Federal nº 8.541, de 23 de	dezembro de 1992;
+				</p>
+			<p class="s2">
+				6.2.3.3. No caso de sociedade simples, a proponente deverá apresentar certidão dos processos cíveis em andamento relativos à solvência ou não da licitante, expedido pelo distribuidor da sede de pessoa jurídica, em data não superior a 60 (sessenta) dias da data da abertura do certame, se outro prazo não constar do documento.
+			</p>
 				
 			<Comments :attr="{id:commentId(), context:'6.2.	Índices de qualificação econômico-financeira'}" v-if="estaConsulta.ativo == 1"></Comments>
 
 			<h3>6.3.	Implantação, Operação e Gestão de Centrais de Atendimento</h3>
-			<p>6.3.1.	Considera-se, para a comprovação da capacidade técnica, que a contratada deve demonstrar atender, no mínimo, <strong>8.000.000</strong> (oito milhões) de atendimentos anuais receptivos e/ou ativos.</p>
-				<p class="s2">6.3.1.1.	Por reconhecer o ganho de escala deste serviço, aceita-se a soma dos atestados, no entanto, estes devem ser simultâneos a fim de demonstrar a capacidade instalada da empresa para a sustentação dessa escala.</p>
-				<p class="s2">6.3.1.2.	Os atestados devem ser emitidos por pessoas jurídicas de Direito Público e Privado, indicando o período da prestação de serviço; locais da execução dos serviços, natureza do objeto; quantidades executadas, caracterização do bom desempenho da licitante e outros dados característicos do objeto;</p>
-				<p class="s2">6.3.1.3.	O(s) atestados(s) devem também comprovar a capacidade técnica de gestão de indicadores operacionais e gerenciais para o atendimento de níveis de serviço (SLAs) previamente definidos e operação em regime de 24h por dia, ininterruptas;</p>
-				<p class="s2">6.3.1.4.	Admite-se o somatório dos quantitativos dos atestados para a comprovação do quantitativo mínimo no certame;</p>
-				<p class="s2">6.3.1.5.	Os atestados devem corresponder a uma prestação de serviço simultânea de, pelo menos, um ano;</p>
-				<p class="s2">6.3.1.6.	Em vista das especificidades da intermediação da relação da Administração Pública com os cidadãos, é necessário o montante mínimo de 2,5 milhões (dois milhões e quinhentos mil) de atendimentos comprovados para órgão ou entidade da administração pública direta ou indireta do total mencionado no item 6.3.1.</p>
+			<p>6.3.1. Volumetria de atendimento (receptivo e ativo)</p>
+				<p class="s2">
+					6.3.1.1. Para o cálculo da estimativa de volumetria de 32.000.000 de ligações bianuais foram utilizados os seguintes dados referentes aos anos de 2017, 2018 e 2019:
+				</p>
+			<p><strong>TABELA 1:</strong> volumetria receptiva</p>
+			<table>
+			  <tr>
+			    <th colspan="6">CONSOLIDADO GERAL DE RECEPTIVOS</th>
+			  </tr>
+			  <tr>
+			    <th>MÊS </th>
+			    <th>*2016 </th>
+			    <th>2017 </th>
+			    <th>2018 </th>
+			    <th>2019 </th>
+			    <th>Total Geral</th>
+			  </tr>
+			  <tr>
+			    <td>Janeiro </td>
+			    <td></td>
+			    <td>582.245</td>
+			    <td>731.843</td>
+			    <td>633.893</td>
+			    <td>1.947.981</td>
+			  </tr>
+			  <tr>
+			    <td>Fevereiro </td>
+			    <td></td>
+			    <td>767.221</td>
+			    <td>732.622</td>
+			    <td>792.640</td>
+			    <td>2.292.483</td>
+			  </tr>
+			  <tr>
+			    <td>Março </td>
+			    <td></td>
+			    <td>677.481</td>
+			    <td>717.507</td>
+			    <td>593.303</td>
+			    <td>1.988.291</td>
+			  </tr>
+			  <tr>
+			    <td>Abril </td>
+			    <td></td>
+			    <td>447.049</td>
+			    <td>670.549</td>
+			    <td>652.737</td>
+			    <td>1.770.335</td>
+			  </tr>
+			  <tr>
+			    <td>Maio * </td>
+			    <td>112.802 </td>
+			    <td>474.527 </td>
+			    <td>579.172 </td>
+			    <td>652.092 </td>
+			    <td>1.818.593</td>
+			  </tr>
+			  <tr>
+			    <td>Junho ** </td>
+			    <td>451.586 </td>
+			    <td>417.551 </td>
+			    <td>533.341 </td>
+			    <td>491.683 </td>
+			    <td>1.894.161</td>
+			  </tr>
+			  <tr>
+			    <td>Julho </td>
+			    <td>498.028 </td>
+			    <td>426.014 </td>
+			    <td>508.032 </td>
+			    <td>603.678 </td>
+			    <td>2.035.752</td>
+			  </tr>
+			  <tr>
+			    <td>Agosto </td>
+			    <td>644.354 </td>
+			    <td>522.870 </td>
+			    <td>608.505 </td>
+			    <td>727.389 </td>
+			    <td>2.503.118</td>
+			  </tr>
+			  <tr>
+			    <td>Setembro </td>
+			    <td>558.068 </td>
+			    <td>439.360 </td>
+			    <td>523.737 </td>
+			    <td>694.362 </td>
+			    <td>2.215.527</td>
+			  </tr>
+			  <tr>
+			    <td>Outubro </td>
+			    <td>594.761 </td>
+			    <td>497.022 </td>
+			    <td>522.623 </td>
+			    <td></td>
+			    <td>1.614.406</td>
+			  </tr>
+			  <tr>
+			    <td>Novembro </td>
+			    <td>541.247 </td>
+			    <td>508.057 </td>
+			    <td>473.818 </td>
+			    <td></td>
+			    <td>1.523.122</td>
+			  </tr>
+			  <tr>
+			    <td>Dezembro </td>
+			    <td>426.445 </td>
+			    <td>458.718 </td>
+			    <td>398.522 </td>
+			    <td></td>
+			    <td>1.283.685</td>
+			  </tr>
+			  <tr>
+			    <th>Total Geral</th>
+			    <th>3.827.291 </th>
+			    <th>6.218.115 </th>
+			    <th>7.000.271 </th>
+			    <th>5.841.777 </th>
+			    <th>22.887.454</th>
+			  </tr>
+			</table>
+			<p>* No mês de Maio/2016 teve o início do contrato nº 007/2016/SMG
+			<br>* * No mês de Junho/2016 teve início da operação de Call Center
+			<br><strong>Fonte:</strong> sistema de gerenciamento de demandas da então prestadora do serviço de Call Center</p>
+			<br>
+			<p><strong>TABELA 2:</strong> volumetria ativa</p>
+			<table>
+			  <tr>
+			    <th colspan="6">CONSOLIDADO GERAL DE ATIVOS RECEBIDOS</th>
+			  </tr>
+			  <tr>
+			    <th>MÊS </th>
+			    <th>2016 </th>
+			    <th>2017 </th>
+			    <th>2018 </th>
+			    <th>2019 </th>
+			    <th>Total Geral</th>
+			  </tr>
+			  <tr>
+			    <td>Janeiro </td>
+			    <td>118.136 </td>
+			    <td>275.516 </td>
+			    <td>168.735 </td>
+			    <td>608.222 </td>
+			    <td>1.170.609</td>
+			  </tr>
+			  <tr>
+			    <td>Fevereiro </td>
+			    <td>207.484 </td>
+			    <td>217.183 </td>
+			    <td>182.878 </td>
+			    <td>613.088 </td>
+			    <td>1.220.633</td>
+			  </tr>
+			  <tr>
+			    <td>Março </td>
+			    <td>318.813 </td>
+			    <td>181.951 </td>
+			    <td>81.812 </td>
+			    <td>647.378 </td>
+			    <td>1.229.954</td>
+			  </tr>
+			  <tr>
+			    <td>Abril </td>
+			    <td>206.438 </td>
+			    <td>204.041 </td>
+			    <td>163.319 </td>
+			    <td>609.836 </td>
+			    <td>1.183.634</td>
+			  </tr>
+			  <tr>
+			    <td>Maio </td>
+			    <td>219.571 </td>
+			    <td>195.072 </td>
+			    <td>253.849 </td>
+			    <td>626.351 </td>
+			    <td>1.294.843</td>
+			  </tr>
+			  <tr>
+			    <td>Junho </td>
+			    <td>220.325 </td>
+			    <td>167.367 </td>
+			    <td>90.012 </td>
+			    <td>476.509 </td>
+			    <td>954.213</td>
+			  </tr>
+			  <tr>
+			    <td>Julho </td>
+			    <td>209.053 </td>
+			    <td>186.814 </td>
+			    <td>340.821 </td>
+			    <td>533.521 </td>
+			    <td>1.270.209</td>
+			  </tr>
+			  <tr>
+			    <td>Agosto </td>
+			    <td>209.931 </td>
+			    <td>162.609 </td>
+			    <td>214.025 </td>
+			    <td>517.075 </td>
+			    <td>1.103.640</td>
+			  </tr>
+			  <tr>
+			    <td>Setembro </td>
+			    <td>237.497 </td>
+			    <td>170.691 </td>
+			    <td>246.423 </td>
+			    <td>461.349 </td>
+			    <td>1.115.960</td>
+			  </tr>
+			  <tr>
+			    <td>Outubro </td>
+			    <td>225.553 </td>
+			    <td>151.025 </td>
+			    <td>539.439 </td>
+			    <td></td>
+			    <td>916.017</td>
+			  </tr>
+			  <tr>
+			    <td>Novembro </td>
+			    <td>215.298 </td>
+			    <td>121.066 </td>
+			    <td>452.761 </td>
+			    <td></td>
+			    <td>789.125</td>
+			  </tr>
+			  <tr>
+			    <td>Dezembro </td>
+			    <td>182.274 </td>
+			    <td>209.794 </td>
+			    <td>491.014 </td>
+			    <td></td>
+			    <td>883.082</td>
+			  </tr>
+			  <tr>
+			    <th>Total Geral </th>
+			    <th>2.570.373 </th>
+			    <th>2.243.129 </th>
+			    <th>3.225.088 </th>
+			    <th>5.093.329 </th>
+			    <th>13.131.919</th>
+			  </tr>
+			</table>
+			<p><strong>Fonte:</strong> sistema de gerenciamento de demandas da então prestadora do serviço de Call Center.</p>
+			<br>
+				<p class="s2">
+					6.3.1.2. Percebe-se um aumento da volumetria ao longo dos anos de 2017 a 2019:
+					<ul>
+						<li>Aumento de 21% de 2017 para 2018</li>
+						<li>Aumento de 43% de 2018 para 2019</li>
+					</ul>
+				</p>
+				<p class="s2">6.3.1.3. Desse modo, temos os seguintes dados:</p>
+			<p><strong>TABELA 3:</strong>Volumetria consolidada</p>
+			<Imagem :dados="{
+					tipo: 'coluna',
+					caption: 'Figura 3 - Volumetria consolidada',
+					url: imgSrc('arquivos/tr-contact-center/figura_3-volumetria_consolidada.png')
+				}"></Imagem>
+			<p><strong>Fonte:</strong> sistema de gerenciamento da então prestadora do serviço de Call Center</p>
+			<p class="s2">6.3.1.4. A volumetria da central telefônica 156 também varia em função da sazonalidade inerente ao cotidiano e é impactada em diversas ocorrências da cidade de São Paulo. Exemplos:</p>
+				<p class="s3">6.3.1.4.1. Greves do transporte coletivo: em junho/19, Greve afeta transporte público e escolas de SP. <a href="https://noticias.r7.com/sao-paulo/greve-afeta-transporte-publico-e-escolas-de-sp-rodizio-esta-mantido-14062019" target="_blank">https://noticias.r7.com/sao-paulo/greve-afeta-transporte-publico-e-escolas-de-sp-rodizio-esta-mantido-14062019</a>. Fonte R7 14/06/2019. Conforme gráfico abaixo, observa-se que o volume de ligações recebidas foi 246% superior ao da semana anterior:</p>
+				<Imagem :dados="{
+					tipo: 'coluna',
+					caption: 'Figura 4 - Gráfico sazonalidade',
+					url: imgSrc('arquivos/tr-contact-center/figura_4-grafico_sazonalidade.png')
+				}"></Imagem>
+				<p><strong>Fonte:</strong> sistema de gerenciamento da então prestadora do serviço de Call Center.</p>
+				<p>
+					6.3.1.4.2. Alterações em tarifas de transportes: no mês de maio/19, houve a notícia de prorrogação do prazo de créditos do Bilhete Único. <a href="https://noticias.r7.com/sao-paulo/prefeitura-de-sao-paulo-prorroga-prazo-de-creditos-do-bilhete-unico-23052019" target="_blank">https://noticias.r7.com/sao-paulo/prefeitura-de-sao-paulo-prorroga-prazo-de-creditos-do-bilhete-unico-23052019</a> - Fonte: R7 em 23/05/2019. Conforme gráfico abaixo, observa-se que o volume de ligações recebidas cresceu nas duas últimas semanas do mês, principalmente a partir de 27/05, o que gerou impactos no Nível de Serviço do atendimento, com um aumento de 27% na quantidade de ligações:
+				</p>
+			<Imagem :dados="{
+					tipo: 'coluna',
+					caption: 'Figura 5 – Gráfico Transportes',
+					url: imgSrc('arquivos/tr-contact-center/figura_5-grafico_transportes.png')
+				}"></Imagem>
+				<p><strong>Fonte:</strong> sistema de gerenciamento da então prestadora do serviço de Call Center</p>
+				<p class="s3">
+					6.3.1.4.3. Operação Baixas Temperaturas: em Agosto/2019, a Prefeitura de SP intensificou ações para acolher moradores de rua. <a href="https://www.noticiasaominuto.com.br/brasil/1000611/prefeitura-de-sp-intensificaacoes-para-acolher-moradores-de-rua" target="_blank">https://www.noticiasaominuto.com.br/brasil/1000611/prefeitura-de-sp-intensificaacoes-para-acolher-moradores-de-rua</a> Fonte: Notícias ao Minuto, em 05/08/2019. Com as baixas temperaturas apresentadas no período de 03 a 05 de agosto, houve alteração no volume de ligações recebidas nos canais da Solução de Atendimento SP156, com aumento de, em média, 64% no volume de ligações:
+				</p>
+				<Imagem :dados="{
+					tipo: 'coluna',
+					caption: 'Figura 6 - Gráfico Baixas Temperaturas',
+					url: imgSrc('arquivos/tr-contact-center/figura_6-grafico_baixas_temperaturas.png')
+				}"></Imagem>
+				<p><strong>Fonte: </strong> sistema de gerenciamento da então prestadora do serviço de call center.</p>
+
+				<p class="s3">
+					6.3.1.4.4. Campanhas de vacinação: em agosto/19, a vacinação contra o sarampo em escolas de São Paulo começou. <a href="https://www.metrojornal.com.br/foco/2019/08/05/vacinacao-sarampo-escolas-sp-comeca.html" target="_blank">https://www.metrojornal.com.br/foco/2019/08/05/vacinacao-sarampo-escolas-sp-comeca.html</a> Fonte: Metro Jornal, em 05/08/2019. Conforme gráfico abaixo, verifica-se, em agosto, um grande volume de ligações no serviço “Geral - Saúde”. A quantidade de ligações recebidas foi, em média, 45% superior, índice reflexo do tema tratado na matéria veiculada, visto que, normalmente, esse serviço recebe cerca de 600 ligações/dia:
+				</p>
+				<Imagem :dados="{
+					tipo: 'coluna',
+					caption: 'Figura 7 - Gráfico campanhas vacinação',
+					url: imgSrc('arquivos/tr-contact-center/figura_7-grafico_campanhas_vacinacao.png')
+				}"></Imagem>
+				<p><strong>Fonte: </strong> sistema de gerenciamento da então prestadora do serviço de Call Center</p>
+
+			<p class="s2">6.3.1.5. Também impacta na volumetria a expansão de serviços atendidos na modalidade receptiva, em função da centralização do atendimento municipal na central telefônica 156 e, para a modalidade ativa, no aumento de secretarias que usam esta modalidade para contatar diretamente os cidadãos.</p>
+			<p class="s2">6.3.1.6. Dadas às variações de volumetria possíveis, explicadas acima, optou-se por utilizar a medida estatística de desvio-padrão.</p>
+			<p class="s2">6.3.1.7. Aplicando o indicador de 2 desvios-padrão à media global apresentada na Tabela 3, obtém-se o seguinte resultado:</p>
+
+			<p><strong>TABELA 4:</strong> Volumetria estimada</p>
+			<table>
+				<tr>
+					<td>A = Média Global</td>
+					<td>924.076</td>
+				</tr>
+				<tr>
+					<td>B = Desvio Padrão</td>
+					<td>193.957</td>					
+				</tr>
+				<tr>
+					<td>C = 2x desvio padrão</td>
+					<td>387.914</td>
+				</tr>
+				<tr>
+					<td>Valor mensal = A+C</td>
+					<td>1.311.990</td>
+				</tr>
+				<tr>
+					<td><strong>24 meses</strong></td>
+					<td><strong>31.487.760</strong></td>
+				</tr>
+			</table>
+			<p class="s2">6.3.1.8. Assim, após arredondamento, foi considerado para o teto deste contrato o total de 32.000.000 de ligações (receptivo e ativo)</p>
+		<p>6.3.2. Volumetria de mensagens de texto</p>
+			<p class="s2">6.3.2.1. A quantidade de mensagens de texto encaminhadas sofreu um aumento expressivo de 2017 a 2019, pois foi identificado pela municipalidade que este recurso é vital para transmissão de orientações e avisos de natureza pública, tais como lembrete com as datas de consultas médicas agendadas na rede municipal, avisos sobre o início de campanhas de vacinação ou mesmo envio do protocolo de solicitação de serviços demandados pela população, de modo que esta possa acompanhar o andamento em um dos canais de atendimento disponibilizados pela prefeitura.</p>
+			<p class="s2">6.3.2.2. Assim, registrou-se um aumento de 59% de 2017 para 2018 e de 923% de 2018 para 2019. Seguem os dados:</p>
+			<p><strong>TABELA 5: </strong>Volumetria de envios de SMS</p>
+			<table>
+			  <tr>
+			    <th>MÊS </th>
+			    <th>2.016 </th>
+			    <th>2.017 </th>
+			    <th>2.018 </th>
+			    <th>2.019 </th>
+			    <th>Total Geral</th>
+			  </tr>
+			  <tr>
+			    <td>Janeiro </td>
+			    <td></td>
+			    <td>1.850</td>
+			    <td>26.499</td>
+			    <td>96.897</td>
+			    <td>125.246</td>
+			  </tr>
+			  <tr>
+			    <td>Fevereiro </td>
+			    <td></td>
+			    <td>11.810</td>
+			    <td>25.893</td>
+			    <td>294.066</td>
+			    <td>331.769</td>
+			  </tr>
+			  <tr>
+			    <td>Março </td>
+			    <td></td>
+			    <td>9.805</td>
+			    <td>29.455</td>
+			    <td>400.562</td>
+			    <td>439.822</td>
+			  </tr>
+			  <tr>
+			    <td>Abril </td>
+			    <td></td>
+			    <td>11.532</td>
+			    <td>28.109</td>
+			    <td>524.897</td>
+			    <td>564.538</td>
+			  </tr>
+			  <tr>
+			    <td>Maio </td>
+			    <td></td>
+			    <td>27.943</td>
+			    <td>32.462</td>
+			    <td>336.496</td>
+			    <td>396.901</td>
+			  </tr>
+			  <tr>
+			    <td>Junho </td>
+			    <td></td>
+			    <td>24.725</td>
+			    <td>9.420</td>
+			    <td>493.518</td>
+			    <td>527.663</td>
+			  </tr>
+			  <tr>
+			    <td>Julho </td>
+			    <td></td>
+			    <td>22.315</td>
+			    <td>12.961</td>
+			    <td>538.725</td>
+			    <td>574.001</td>
+			  </tr>
+			  <tr>
+			    <td>Agosto </td>
+			    <td>5.914 </td>
+			    <td>22.705 </td>
+			    <td>37.665 </td>
+			    <td>580.628 </td>
+			    <td>646.912</td>
+			  </tr>
+			  <tr>
+			    <td>Setembro </td>
+			    <td>5.953 </td>
+			    <td>19.519 </td>
+			    <td>29.216 </td>
+			    <td>355.166 </td>
+			    <td>409.854</td>
+			  </tr>
+			  <tr>
+			    <td>Outubro </td>
+			    <td>5.215 </td>
+			    <td>18.831 </td>
+			    <td>39.161 </td>
+			    <td></td>
+			    <td>63.207</td>
+			  </tr>
+			  <tr>
+			    <td>Novembro </td>
+			    <td>5.351 </td>
+			    <td>22.978 </td>
+			    <td>32.014 </td>
+			    <td></td>
+			    <td>60.343</td>
+			  </tr>
+			  <tr>
+			    <td>Dezembro </td>
+			    <td>5.451 </td>
+			    <td>29.015 </td>
+			    <td>51.016 </td>
+			    <td></td>
+			    <td>85.482</td>
+			  </tr>
+			  <tr>
+			    <th>Total Geral </th>
+			    <th>27.884 </th>
+			    <th>223.028 </th>
+			    <th>353.871 </th>
+			    <th>3.620.955 </th>
+			    <th>4.225.738</th>
+			  </tr>
+			</table>
+			<p><strong>Fonte: </strong>sistema de gerenciamento da então prestadora do serviço de Call Center</p>
+			<p class="s2">6.3.2.3. Dadas às variações de volumetria possíveis, explicadas acima, optou-se por utilizar a medida estatística de desvio-padrão.</p>
+			<p class="s2">6.3.2.4. Aplicando o indicador de 1 desvio-padrão à media de out/2018 a set/2019 apresentada na Tabela 5, apresenta-se o seguinte resultado:</p>
+
+			<p><strong>TABELA 6: </strong>quantidade estimada de encaminhamentos</p>
+			<table>
+			  <tr>
+			    <th>A = Média Out/2018 a Set/2019 </th>
+			    <th>311.929</th>
+			  </tr>
+			  <tr>
+			    <td>B = Desvio Padrão </td>
+			    <td>167.211</td>
+			  </tr>
+			  <tr>
+			    <td>Valor mensal = A+B </td>
+			    <td>479.140</td>
+			  </tr>
+			  <tr>
+			    <td>24 meses </td>
+			    <td>11.499.363</td>
+			  </tr>
+			</table>
+			<p class="s2">6.3.2.5. Assim, após arredondamento, foi considerado para o teto deste contrato o total de 12.000.00 de mensagens.</p>
+		<p>6.3.3. Volumetria de atendimento via chat</p>
+			<p class="s2">
+				6.3.3.1. Com a divulgação do portal de atendimento 156 (<a href="www.sp156.sp.gov.br">www.sp156.sp.gov.br</a>) e consequente disseminação deste canal perante a população como mais uma forma rápida de solicitar serviços municipais, a quantidade de interações via chat sofreu um aumento expressivo de 2017 a 2019.
+			</p>
+			<p class="s2">6.3.3.2. Este aumento foi de 43% (de 2017 para 2018) e 79% (de 2018 para 2019), vide tabela abaixo:</p>
+			<p><strong>TABELA 7:</strong> Interações realizadas</p>
+			<table>
+			  <tr>
+			    <th rowspan="2">MÊS</th>
+			    <th colspan="3">ANO</th>
+			    <th rowspan="2">Total</th>
+			  </tr>
+			  <tr>
+			    <th>2017</th>
+			    <th>2018</th>
+			    <th>2019</th>
+			  </tr>
+			  <tr>
+			    <td>Janeiro</td>
+			    <td>3.252</td>
+			    <td>8.592</td>
+			    <td>11.057</td>
+			    <td>22.901</td>
+			  </tr>
+			  <tr>
+			    <td>Fevereiro</td>
+			    <td>3.215</td>
+			    <td>11.681</td>
+			    <td>18.941</td>
+			    <td>33.837</td>
+			  </tr>
+			  <tr>
+			    <td>Março</td>
+			    <td>2.262</td>
+			    <td>11.321</td>
+			    <td>14.968</td>
+			    <td>28.551</td>
+			  </tr>
+			  <tr>
+			    <td>Abril</td>
+			    <td>5.133</td>
+			    <td>10.064</td>
+			    <td>29.215</td>
+			    <td>44.412</td>
+			  </tr>
+			  <tr>
+			    <td>Maio</td>
+			    <td>9.419</td>
+			    <td>9.849</td>
+			    <td>28.184</td>
+			    <td>47.452</td>
+			  </tr>
+			  <tr>
+			    <td>Junho</td>
+			    <td>9.003</td>
+			    <td>12.464</td>
+			    <td>24.726</td>
+			    <td>46.193</td>
+			  </tr>
+			  <tr>
+			    <td>Julho</td>
+			    <td>9.829</td>
+			    <td>11.668</td>
+			    <td>33.237</td>
+			    <td>54.734</td>
+			  </tr>
+			  <tr>
+			    <td>Agosto</td>
+			    <td>11.381</td>
+			    <td>13.473</td>
+			    <td>35.129</td>
+			    <td>59.983</td>
+			  </tr>
+			  <tr>
+			    <td>Setembro</td>
+			    <td>11.909</td>
+			    <td>11.700</td>
+			    <td>36.856</td>
+			    <td>60.465</td>
+			  </tr>
+			  <tr>
+			    <td>Outubro</td>
+			    <td>9.063</td>
+			    <td>12.575</td>
+			    <td></td>
+			    <td>21.638</td>
+			  </tr>
+			  <tr>
+			    <td>Novembro</td>
+			    <td>8.937</td>
+			    <td>7.979</td>
+			    <td></td>
+			    <td>16.916</td>
+			  </tr>
+			  <tr>
+			    <td>Dezembro</td>
+			    <td>7.442</td>
+			    <td>8.551</td>
+			    <td></td>
+			    <td>15.993</td>
+			  </tr>
+			  <tr>
+			    <th>Total Geral</th>
+			    <th>90.845</th>
+			    <th>129.917</th>
+			    <th>232.313</th>
+			    <th>453.075</th>
+			  </tr>
+			  <tr>
+			  	<th colspan="5">Fonte: Sistema de gerenciamento da então prestadora do serviço de Call Center</th>
+			  </tr>
+			</table>
+			<p class="s2">6.3.3.3. Dadas às variações de volumetria possíveis, explicadas acima, optou-se por utilizar a medida estatística de desvio-padrão.</p>
+			<p class="s2">6.3.3.4. Aplicando o indicador de 1,5 desvios-padrão a media de out/2018 a set/2019 na Tabela 7,
+apresenta-se o seguinte resultado:</p>
+			<p><strong>TABELA 8:</strong> interações estimadas</p>
+			<table>
+			  <tr>
+			    <td>A = Média Out/2018 a Set/2019 </td>
+			    <td>21.785</td>
+			  </tr>
+			  <tr>
+			    <td>B = Desvio Padrão </td>
+			    <td>7.384</td>
+			  </tr>
+			  <tr>
+			    <td>C = 1,5x desvio padrão </td>
+			    <td>11.076</td>
+			  </tr>
+			  <tr>
+			    <td>Valor mensal = A+C </td>
+			    <td>32.861</td>
+			  </tr>
+			  <tr>
+			    <td>24 meses </td>
+			    <td>788.662</td>
+			  </tr>
+			</table>
+				<p class="s2">6.3.3.5. Assim, após arrendamento, foi considerado para o teto para esta modalidade de atendimento de 800.000 interações.</p>
+			<p>6.3.4. Considera-se, para a comprovação da capacidade técnica, que a contratada deve demonstrar atender, no mínimo, 8.000.000 (oito milhões) de atendimentos anuais receptivos e/ou ativos.</p>
+				<p class="s2">6.3.4.1. Por reconhecer o ganho de escala deste serviço, se aceita a soma dos atestados, no entanto, estes devem ser simultâneos a fim de demonstrar a capacidade instalada da empresa para a sustentação dessa escala.</p>
+				<p class="s2">6.3.4.2. Os atestados devem ser emitidos por pessoas jurídicas de Direito Público e Privado, indicando o período da prestação de serviço; locais da execução dos serviços, natureza do objeto; quantidades executadas, caracterização do bom desempenho da licitante e outros dados característicos do objeto;</p>
+				<p class="s2">6.3.4.3. O(s) atestados(s) devem também comprovar a capacidade técnica de gestão de indicadores operacionais e gerenciais para o atendimento de níveis de serviço (SLAs) previamente definidos e operação em regime de 24h por dia, ininterruptas;</p>
+				<p class="s2">6.3.4.4. Admite-se o somatório dos quantitativos dos atestados para a comprovação do quantitativo mínimo no certame;</p>
+				<p class="s2">6.3.4.5. Os atestados devem corresponder a uma prestação de serviço simultânea de, pelo menos, um ano;</p>
+				<p class="s2">6.3.4.6. Em vista das especificidades da intermediação da relação da Administração Pública com os cidadãos, é necessário o montante mínimo de 2,5 milhões (dois milhões e quinhentos mil) de atendimentos comprovados para órgão ou entidade da administração pública direta ou indireta do total mencionado no item 6.3.4.</p>
 				
 			<Comments :attr="{id:commentId(), context:'6.3.	Implantação, Operação e Gestão de Centrais de Atendimento'}" v-if="estaConsulta.ativo == 1"></Comments>
 			<h3>6.4.	Gestão de Indicadores de Desempenho</h3>
@@ -1514,7 +2137,7 @@
 		
 		<section>
 			<h2 class="titulo" indent="1">8.	VIGÊNCIA DO CONTRATO</h2>
-			<h3>8.1.	O contrato será celebrado com duração de 24 (vinte e quatro) meses .</h3>
+			<h3>8.1.	O contrato será celebrado com duração de 24 (vinte e quatro) meses.</h3>
 			<p>8.1.1.	O prazo poderá ser prorrogado por sucessivo(s) período(s) e nas mesmas condições, observado o limite legal.</p>
 			<p>8.1.2.	As prorrogações de prazo de vigência serão formalizadas mediante celebração dos respectivos termos de aditamento ao contrato, respeitadas as condições prescritas na Lei Federal nº 8.666/1993.</p>
 			<p>8.1.3.	A não prorrogação do prazo de vigência contratual, por conveniência da Administração, não gerará à Contratada o direito a qualquer espécie de indenização.</p>
@@ -1535,7 +2158,7 @@
 				
 			<Comments :attr="{id:commentId(), context:'subtitulo'}" v-if="estaConsulta.ativo == 1"></Comments>
 
-			<h3>9.2.	Os recursos necessários para suporte do contrato, onerará a dotação nº XXXXXXXXXX do orçamento vigente e dotação própria no próximo exercício, em observância ao princípio da anualidade orçamentária.</h3>
+			<h3>Os recursos necessários para suporte do contrato onerará a <mark style="background-color: #ddd">dotação nº XXXXXXXXXX</mark> do orçamento vigente e dotação própria no próximo exercício, em observância ao princípio da anualidade orçamentária.</h3>
 				
 			<Comments :attr="{id:commentId(), context:'9.2.	Os recursos necessários para suporte do contrato, onerará a dotação...'}" v-if="estaConsulta.ativo == 1"></Comments>
 			
@@ -1971,7 +2594,7 @@
 						callback: (isVisible, entry) => visibilityChanged(isVisible, entry, 'anexoIV'),
 						once: true
 					}">
-			<h2 class="titulo" indent="1"><a :href="fileSrc('ANEXO_IV.pdf')" target="_blank">ANEXO IV - MODELO DE ACORDO DE NÍVEL DE SERVIÇO</a></h2>
+			<h2 class="titulo" indent="1"><a :href="fileSrc('ANEXO_IV.pdf')" target="_blank">ANEXO IV - HISTÓRICO DE VOLUMETRIA DE ENVIOS DE SMS PERÍODO DE 2016 À 2019</a></h2>
 			<p>
 				<embed
 					v-if="isVisible.anexoIV"
@@ -1981,7 +2604,24 @@
 					alt="pdf"
 					pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
 			</p>
-			<Comments :attr="{id:commentId(), context:'ANEXO IV - MODELO DE ACORDO DE NÍVEL DE SERVIÇO'}" v-if="estaConsulta.ativo == 1"></Comments>
+			<Comments :attr="{id:commentId(), context:'ANEXO IV - HISTÓRICO DE VOLUMETRIA DE ENVIOS DE SMS'}" v-if="estaConsulta.ativo == 1"></Comments>
+		</section>
+
+		<section v-observe-visibility="{
+						callback: (isVisible, entry) => visibilityChanged(isVisible, entry, 'anexoV'),
+						once: true
+					}">
+			<h2 class="titulo" indent="1"><a :href="fileSrc('ANEXO_V.pdf')" target="_blank">ANEXO V - MODELO DE ACORDO DE NÍVEL DE SERVIÇO</a></h2>
+			<p>
+				<embed
+					v-if="isVisible.anexoV"
+					:src="fileSrc('ANEXO_V.pdf')"
+					width="700"
+					height="500"
+					alt="pdf"
+					pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+			</p>
+			<Comments :attr="{id:commentId(), context:'ANEXO V - MODELO DE ACORDO DE NÍVEL DE SERVIÇO'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section ref="allComments">

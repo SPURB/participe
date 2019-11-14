@@ -22,9 +22,6 @@
 					<li>
 						Após a consolidação das análises recebidas, considerando os eventuais ajustes decorrentes do processo de consulta pública, a versão final do Termo de Referência será divulgada no site da SMIT <a href="https://www.prefeitura.sp.gov.br/cidade/secretarias/inovacao" target="_blank">https://www.prefeitura.sp.gov.br/cidade/secretarias/inovacao</a>. 
 					</li>
-					<li>
-						Após a consolidação das análises recebidas, considerando os eventuais ajustes decorrentes do processo de consulta pública, a versão final do Termo de Referência será divulgada no site da SMIT https://www.prefeitura.sp.gov.br/cidade/secretarias/inovacao.
-					</li>
 					<li>Encaminhamento das Propostas contendo as respectivas estimativas de preços em conformidade com o Termo de Referência eventualmente ajustado em decorrência da consulta pública até 10 dias uteis após a divulgação da versão final. As mesmas poderão ser enviadas para o e-mail <a href="mailto:consultapublica.smit@prefeitura.sp.gov.br">consultapublica.smit@prefeitura.sp.gov.br</a></li>
 				</ol>
 			</p>

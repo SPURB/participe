@@ -243,6 +243,14 @@ export default new Router({
 			meta: {
 				id: 60
 			}
+		},
+		{
+			path: '/pmadrss',
+			name: 'Pmadrss',
+			component: () => import(/* webpackChunkName: "Pmadrss" */ '@/views/Pmadrss'),
+			meta: {
+				id: 61
+			}
 		}
 	]
 })

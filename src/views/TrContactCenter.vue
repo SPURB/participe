@@ -18,9 +18,14 @@
 			<p>
 				Cronograma:
 				<ol>
-					<li>Recebimento de eventuais sugestões e/ou comentários até 25/11/2019.</li>
-					<li>Divulgação no site da SMIT (<a href="https://www.prefeitura.sp.gov.br/cidade/secretarias/inovacao/">https://www.prefeitura.sp.gov.br/cidade/secretarias/inovacao/</a>) da versão revisada do Termo de Referência considerando eventuais ajustes decorrentes do processo de consulta pública até 09/12/2019</li>
-					<li>Encaminhamento das Propostas contendo as respectivas Estimativas de Preços em conformidade com o Termo de Referência eventualmente ajustado em decorrência da consulta pública até 16/12/2019. As mesmas poderão ser enviadas para o e-mail. <a href="mailto:consultapublica.smit@prefeitura.sp.gov.br">consultapublica.smit@prefeitura.sp.gov.br</a></li>
+					<li>Recebimento de eventuais sugestões e/ou comentários a partir de 19/11/2019 até 04/12/2019.</li>
+					<li>
+						Após a consolidação das análises recebidas, considerando os eventuais ajustes decorrentes do processo de consulta pública, a versão final do Termo de Referência será divulgada no site da SMIT <a href="https://www.prefeitura.sp.gov.br/cidade/secretarias/inovacao" target="_blank">https://www.prefeitura.sp.gov.br/cidade/secretarias/inovacao</a>. 
+					</li>
+					<li>
+						Após a consolidação das análises recebidas, considerando os eventuais ajustes decorrentes do processo de consulta pública, a versão final do Termo de Referência será divulgada no site da SMIT https://www.prefeitura.sp.gov.br/cidade/secretarias/inovacao.
+					</li>
+					<li>Encaminhamento das Propostas contendo as respectivas estimativas de preços em conformidade com o Termo de Referência eventualmente ajustado em decorrência da consulta pública até 10 dias uteis após a divulgação da versão final. As mesmas poderão ser enviadas para o e-mail <a href="mailto:consultapublica.smit@prefeitura.sp.gov.br">consultapublica.smit@prefeitura.sp.gov.br</a></li>
 				</ol>
 			</p>
 
@@ -1451,98 +1456,98 @@
 			  <tr>
 			    <td>Janeiro </td>
 			    <td></td>
-			    <td>582.245</td>
-			    <td>731.843</td>
-			    <td>633.893</td>
-			    <td>1.947.981</td>
+			    <td style="text-align: right">582.245</td>
+			    <td style="text-align: right">731.843</td>
+			    <td style="text-align: right">633.893</td>
+			    <td style="text-align: right">1.947.981</td>
 			  </tr>
 			  <tr>
 			    <td>Fevereiro </td>
 			    <td></td>
-			    <td>767.221</td>
-			    <td>732.622</td>
-			    <td>792.640</td>
-			    <td>2.292.483</td>
+			    <td style="text-align: right">767.221</td>
+			    <td style="text-align: right">732.622</td>
+			    <td style="text-align: right">792.640</td>
+			    <td style="text-align: right">2.292.483</td>
 			  </tr>
 			  <tr>
 			    <td>Março </td>
 			    <td></td>
-			    <td>677.481</td>
-			    <td>717.507</td>
-			    <td>593.303</td>
-			    <td>1.988.291</td>
+			    <td style="text-align: right">677.481</td>
+			    <td style="text-align: right">717.507</td>
+			    <td style="text-align: right">593.303</td>
+			    <td style="text-align: right">1.988.291</td>
 			  </tr>
 			  <tr>
 			    <td>Abril </td>
 			    <td></td>
-			    <td>447.049</td>
-			    <td>670.549</td>
-			    <td>652.737</td>
-			    <td>1.770.335</td>
+			    <td style="text-align: right">447.049</td>
+			    <td style="text-align: right">670.549</td>
+			    <td style="text-align: right">652.737</td>
+			    <td style="text-align: right">1.770.335</td>
 			  </tr>
 			  <tr>
 			    <td>Maio * </td>
-			    <td>112.802 </td>
-			    <td>474.527 </td>
-			    <td>579.172 </td>
-			    <td>652.092 </td>
-			    <td>1.818.593</td>
+			    <td style="text-align: right">112.802 </td>
+			    <td style="text-align: right">474.527 </td>
+			    <td style="text-align: right">579.172 </td>
+			    <td style="text-align: right">652.092 </td>
+			    <td style="text-align: right">1.818.593</td>
 			  </tr>
 			  <tr>
 			    <td>Junho ** </td>
-			    <td>451.586 </td>
-			    <td>417.551 </td>
-			    <td>533.341 </td>
-			    <td>491.683 </td>
-			    <td>1.894.161</td>
+			    <td style="text-align: right">451.586 </td>
+			    <td style="text-align: right">417.551 </td>
+			    <td style="text-align: right">533.341 </td>
+			    <td style="text-align: right">491.683 </td>
+			    <td style="text-align: right">1.894.161</td>
 			  </tr>
 			  <tr>
 			    <td>Julho </td>
-			    <td>498.028 </td>
-			    <td>426.014 </td>
-			    <td>508.032 </td>
-			    <td>603.678 </td>
-			    <td>2.035.752</td>
+			    <td style="text-align: right">498.028 </td>
+			    <td style="text-align: right">426.014 </td>
+			    <td style="text-align: right">508.032 </td>
+			    <td style="text-align: right">603.678 </td>
+			    <td style="text-align: right">2.035.752</td>
 			  </tr>
 			  <tr>
 			    <td>Agosto </td>
-			    <td>644.354 </td>
-			    <td>522.870 </td>
-			    <td>608.505 </td>
-			    <td>727.389 </td>
-			    <td>2.503.118</td>
+			    <td style="text-align: right">644.354 </td>
+			    <td style="text-align: right">522.870 </td>
+			    <td style="text-align: right">608.505 </td>
+			    <td style="text-align: right">727.389 </td>
+			    <td style="text-align: right">2.503.118</td>
 			  </tr>
 			  <tr>
 			    <td>Setembro </td>
-			    <td>558.068 </td>
-			    <td>439.360 </td>
-			    <td>523.737 </td>
-			    <td>694.362 </td>
-			    <td>2.215.527</td>
+			    <td style="text-align: right">558.068 </td>
+			    <td style="text-align: right">439.360 </td>
+			    <td style="text-align: right">523.737 </td>
+			    <td style="text-align: right">694.362 </td>
+			    <td style="text-align: right">2.215.527</td>
 			  </tr>
 			  <tr>
 			    <td>Outubro </td>
-			    <td>594.761 </td>
-			    <td>497.022 </td>
-			    <td>522.623 </td>
-			    <td></td>
-			    <td>1.614.406</td>
+			    <td style="text-align: right">594.761 </td>
+			    <td style="text-align: right">497.022 </td>
+			    <td style="text-align: right">522.623 </td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">1.614.406</td>
 			  </tr>
 			  <tr>
 			    <td>Novembro </td>
-			    <td>541.247 </td>
-			    <td>508.057 </td>
-			    <td>473.818 </td>
-			    <td></td>
-			    <td>1.523.122</td>
+			    <td style="text-align: right">541.247 </td>
+			    <td style="text-align: right">508.057 </td>
+			    <td style="text-align: right">473.818 </td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">1.523.122</td>
 			  </tr>
 			  <tr>
 			    <td>Dezembro </td>
-			    <td>426.445 </td>
-			    <td>458.718 </td>
-			    <td>398.522 </td>
-			    <td></td>
-			    <td>1.283.685</td>
+			    <td style="text-align: right">426.445 </td>
+			    <td style="text-align: right">458.718 </td>
+			    <td style="text-align: right">398.522 </td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">1.283.685</td>
 			  </tr>
 			  <tr>
 			    <th>Total Geral</th>
@@ -1572,107 +1577,107 @@
 			  </tr>
 			  <tr>
 			    <td>Janeiro </td>
-			    <td>118.136 </td>
-			    <td>275.516 </td>
-			    <td>168.735 </td>
-			    <td>608.222 </td>
-			    <td>1.170.609</td>
+			    <td style="text-align: right">118.136 </td>
+			    <td style="text-align: right">275.516 </td>
+			    <td style="text-align: right">168.735 </td>
+			    <td style="text-align: right">608.222 </td>
+			    <td style="text-align: right">1.170.609</td>
 			  </tr>
 			  <tr>
 			    <td>Fevereiro </td>
-			    <td>207.484 </td>
-			    <td>217.183 </td>
-			    <td>182.878 </td>
-			    <td>613.088 </td>
-			    <td>1.220.633</td>
+			    <td style="text-align: right">207.484 </td>
+			    <td style="text-align: right">217.183 </td>
+			    <td style="text-align: right">182.878 </td>
+			    <td style="text-align: right">613.088 </td>
+			    <td style="text-align: right">1.220.633</td>
 			  </tr>
 			  <tr>
 			    <td>Março </td>
-			    <td>318.813 </td>
-			    <td>181.951 </td>
-			    <td>81.812 </td>
-			    <td>647.378 </td>
-			    <td>1.229.954</td>
+			    <td style="text-align: right">318.813 </td>
+			    <td style="text-align: right">181.951 </td>
+			    <td style="text-align: right">81.812 </td>
+			    <td style="text-align: right">647.378 </td>
+			    <td style="text-align: right">1.229.954</td>
 			  </tr>
 			  <tr>
 			    <td>Abril </td>
-			    <td>206.438 </td>
-			    <td>204.041 </td>
-			    <td>163.319 </td>
-			    <td>609.836 </td>
-			    <td>1.183.634</td>
+			    <td style="text-align: right">206.438 </td>
+			    <td style="text-align: right">204.041 </td>
+			    <td style="text-align: right">163.319 </td>
+			    <td style="text-align: right">609.836 </td>
+			    <td style="text-align: right">1.183.634</td>
 			  </tr>
 			  <tr>
 			    <td>Maio </td>
-			    <td>219.571 </td>
-			    <td>195.072 </td>
-			    <td>253.849 </td>
-			    <td>626.351 </td>
-			    <td>1.294.843</td>
+			    <td style="text-align: right">219.571 </td>
+			    <td style="text-align: right">195.072 </td>
+			    <td style="text-align: right">253.849 </td>
+			    <td style="text-align: right">626.351 </td>
+			    <td style="text-align: right">1.294.843</td>
 			  </tr>
 			  <tr>
 			    <td>Junho </td>
-			    <td>220.325 </td>
-			    <td>167.367 </td>
-			    <td>90.012 </td>
-			    <td>476.509 </td>
-			    <td>954.213</td>
+			    <td style="text-align: right">220.325 </td>
+			    <td style="text-align: right">167.367 </td>
+			    <td style="text-align: right">90.012 </td>
+			    <td style="text-align: right">476.509 </td>
+			    <td style="text-align: right">954.213</td>
 			  </tr>
 			  <tr>
 			    <td>Julho </td>
-			    <td>209.053 </td>
-			    <td>186.814 </td>
-			    <td>340.821 </td>
-			    <td>533.521 </td>
-			    <td>1.270.209</td>
+			    <td style="text-align: right">209.053 </td>
+			    <td style="text-align: right">186.814 </td>
+			    <td style="text-align: right">340.821 </td>
+			    <td style="text-align: right">533.521 </td>
+			    <td style="text-align: right">1.270.209</td>
 			  </tr>
 			  <tr>
 			    <td>Agosto </td>
-			    <td>209.931 </td>
-			    <td>162.609 </td>
-			    <td>214.025 </td>
-			    <td>517.075 </td>
-			    <td>1.103.640</td>
+			    <td style="text-align: right">209.931 </td>
+			    <td style="text-align: right">162.609 </td>
+			    <td style="text-align: right">214.025 </td>
+			    <td style="text-align: right">517.075 </td>
+			    <td style="text-align: right">1.103.640</td>
 			  </tr>
 			  <tr>
 			    <td>Setembro </td>
-			    <td>237.497 </td>
-			    <td>170.691 </td>
-			    <td>246.423 </td>
-			    <td>461.349 </td>
-			    <td>1.115.960</td>
+			    <td style="text-align: right">237.497 </td>
+			    <td style="text-align: right">170.691 </td>
+			    <td style="text-align: right">246.423 </td>
+			    <td style="text-align: right">461.349 </td>
+			    <td style="text-align: right">1.115.960</td>
 			  </tr>
 			  <tr>
 			    <td>Outubro </td>
-			    <td>225.553 </td>
-			    <td>151.025 </td>
-			    <td>539.439 </td>
-			    <td></td>
-			    <td>916.017</td>
+			    <td style="text-align: right">225.553 </td>
+			    <td style="text-align: right">151.025 </td>
+			    <td style="text-align: right">539.439 </td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">916.017</td>
 			  </tr>
 			  <tr>
 			    <td>Novembro </td>
-			    <td>215.298 </td>
-			    <td>121.066 </td>
-			    <td>452.761 </td>
-			    <td></td>
-			    <td>789.125</td>
+			    <td style="text-align: right">215.298 </td>
+			    <td style="text-align: right">121.066 </td>
+			    <td style="text-align: right">452.761 </td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">789.125</td>
 			  </tr>
 			  <tr>
 			    <td>Dezembro </td>
-			    <td>182.274 </td>
-			    <td>209.794 </td>
-			    <td>491.014 </td>
-			    <td></td>
-			    <td>883.082</td>
+			    <td style="text-align: right">182.274 </td>
+			    <td style="text-align: right">209.794 </td>
+			    <td style="text-align: right">491.014 </td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">883.082</td>
 			  </tr>
 			  <tr>
-			    <th>Total Geral </th>
-			    <th>2.570.373 </th>
-			    <th>2.243.129 </th>
-			    <th>3.225.088 </th>
-			    <th>5.093.329 </th>
-			    <th>13.131.919</th>
+			    <th style="text-align: left">Total Geral </th>
+			    <th style="text-align: right">2.570.373 </th>
+			    <th style="text-align: right">2.243.129 </th>
+			    <th style="text-align: right">3.225.088 </th>
+			    <th style="text-align: right">5.093.329 </th>
+			    <th style="text-align: right">13.131.919</th>
 			  </tr>
 			</table>
 			<p><strong>Fonte:</strong> sistema de gerenciamento de demandas da então prestadora do serviço de Call Center.</p>
@@ -1734,26 +1739,26 @@
 			<p class="s2">6.3.1.7. Aplicando o indicador de 2 desvios-padrão à media global apresentada na Tabela 3, obtém-se o seguinte resultado:</p>
 
 			<p><strong>TABELA 4:</strong> Volumetria estimada</p>
-			<table>
+			<table style="max-width: 400px">
 				<tr>
 					<td>A = Média Global</td>
-					<td>924.076</td>
+					<td style="text-align: right">924.076</td>
 				</tr>
 				<tr>
 					<td>B = Desvio Padrão</td>
-					<td>193.957</td>					
+					<td style="text-align: right">193.957</td>					
 				</tr>
 				<tr>
 					<td>C = 2x desvio padrão</td>
-					<td>387.914</td>
+					<td style="text-align: right">387.914</td>
 				</tr>
 				<tr>
 					<td>Valor mensal = A+C</td>
-					<td>1.311.990</td>
+					<td style="text-align: right">1.311.990</td>
 				</tr>
 				<tr>
 					<td><strong>24 meses</strong></td>
-					<td><strong>31.487.760</strong></td>
+					<td style="text-align: right"><strong>31.487.760</strong></td>
 				</tr>
 			</table>
 			<p class="s2">6.3.1.8. Assim, após arredondamento, foi considerado para o teto deste contrato o total de 32.000.000 de ligações (receptivo e ativo)</p>
@@ -1772,107 +1777,107 @@
 			  </tr>
 			  <tr>
 			    <td>Janeiro </td>
-			    <td></td>
-			    <td>1.850</td>
-			    <td>26.499</td>
-			    <td>96.897</td>
-			    <td>125.246</td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">1.850</td>
+			    <td style="text-align: right">26.499</td>
+			    <td style="text-align: right">96.897</td>
+			    <td style="text-align: right">125.246</td>
 			  </tr>
 			  <tr>
 			    <td>Fevereiro </td>
-			    <td></td>
-			    <td>11.810</td>
-			    <td>25.893</td>
-			    <td>294.066</td>
-			    <td>331.769</td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">11.810</td>
+			    <td style="text-align: right">25.893</td>
+			    <td style="text-align: right">294.066</td>
+			    <td style="text-align: right">331.769</td>
 			  </tr>
 			  <tr>
 			    <td>Março </td>
-			    <td></td>
-			    <td>9.805</td>
-			    <td>29.455</td>
-			    <td>400.562</td>
-			    <td>439.822</td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">9.805</td>
+			    <td style="text-align: right">29.455</td>
+			    <td style="text-align: right">400.562</td>
+			    <td style="text-align: right">439.822</td>
 			  </tr>
 			  <tr>
 			    <td>Abril </td>
-			    <td></td>
-			    <td>11.532</td>
-			    <td>28.109</td>
-			    <td>524.897</td>
-			    <td>564.538</td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">11.532</td>
+			    <td style="text-align: right">28.109</td>
+			    <td style="text-align: right">524.897</td>
+			    <td style="text-align: right">564.538</td>
 			  </tr>
 			  <tr>
 			    <td>Maio </td>
-			    <td></td>
-			    <td>27.943</td>
-			    <td>32.462</td>
-			    <td>336.496</td>
-			    <td>396.901</td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">27.943</td>
+			    <td style="text-align: right">32.462</td>
+			    <td style="text-align: right">336.496</td>
+			    <td style="text-align: right">396.901</td>
 			  </tr>
 			  <tr>
 			    <td>Junho </td>
-			    <td></td>
-			    <td>24.725</td>
-			    <td>9.420</td>
-			    <td>493.518</td>
-			    <td>527.663</td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">24.725</td>
+			    <td style="text-align: right">9.420</td>
+			    <td style="text-align: right">493.518</td>
+			    <td style="text-align: right">527.663</td>
 			  </tr>
 			  <tr>
 			    <td>Julho </td>
-			    <td></td>
-			    <td>22.315</td>
-			    <td>12.961</td>
-			    <td>538.725</td>
-			    <td>574.001</td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">22.315</td>
+			    <td style="text-align: right">12.961</td>
+			    <td style="text-align: right">538.725</td>
+			    <td style="text-align: right">574.001</td>
 			  </tr>
 			  <tr>
 			    <td>Agosto </td>
-			    <td>5.914 </td>
-			    <td>22.705 </td>
-			    <td>37.665 </td>
-			    <td>580.628 </td>
-			    <td>646.912</td>
+			    <td style="text-align: right">5.914 </td>
+			    <td style="text-align: right">22.705 </td>
+			    <td style="text-align: right">37.665 </td>
+			    <td style="text-align: right">580.628 </td>
+			    <td style="text-align: right">646.912</td>
 			  </tr>
 			  <tr>
 			    <td>Setembro </td>
-			    <td>5.953 </td>
-			    <td>19.519 </td>
-			    <td>29.216 </td>
-			    <td>355.166 </td>
-			    <td>409.854</td>
+			    <td style="text-align: right">5.953 </td>
+			    <td style="text-align: right">19.519 </td>
+			    <td style="text-align: right">29.216 </td>
+			    <td style="text-align: right">355.166 </td>
+			    <td style="text-align: right">409.854</td>
 			  </tr>
 			  <tr>
 			    <td>Outubro </td>
-			    <td>5.215 </td>
-			    <td>18.831 </td>
-			    <td>39.161 </td>
-			    <td></td>
-			    <td>63.207</td>
+			    <td style="text-align: right">5.215 </td>
+			    <td style="text-align: right">18.831 </td>
+			    <td style="text-align: right">39.161 </td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">63.207</td>
 			  </tr>
 			  <tr>
 			    <td>Novembro </td>
-			    <td>5.351 </td>
-			    <td>22.978 </td>
-			    <td>32.014 </td>
-			    <td></td>
-			    <td>60.343</td>
+			    <td style="text-align: right">5.351 </td>
+			    <td style="text-align: right">22.978 </td>
+			    <td style="text-align: right">32.014 </td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">60.343</td>
 			  </tr>
 			  <tr>
 			    <td>Dezembro </td>
-			    <td>5.451 </td>
-			    <td>29.015 </td>
-			    <td>51.016 </td>
-			    <td></td>
-			    <td>85.482</td>
+			    <td style="text-align: right">5.451 </td>
+			    <td style="text-align: right">29.015 </td>
+			    <td style="text-align: right">51.016 </td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">85.482</td>
 			  </tr>
 			  <tr>
 			    <th>Total Geral </th>
-			    <th>27.884 </th>
-			    <th>223.028 </th>
-			    <th>353.871 </th>
-			    <th>3.620.955 </th>
-			    <th>4.225.738</th>
+			    <th style="text-align: right">27.884 </th>
+			    <th style="text-align: right">223.028 </th>
+			    <th style="text-align: right">353.871 </th>
+			    <th style="text-align: right">3.620.955 </th>
+			    <th style="text-align: right">4.225.738</th>
 			  </tr>
 			</table>
 			<p><strong>Fonte: </strong>sistema de gerenciamento da então prestadora do serviço de Call Center</p>
@@ -1880,22 +1885,22 @@
 			<p class="s2">6.3.2.4. Aplicando o indicador de 1 desvio-padrão à media de out/2018 a set/2019 apresentada na Tabela 5, apresenta-se o seguinte resultado:</p>
 
 			<p><strong>TABELA 6: </strong>quantidade estimada de encaminhamentos</p>
-			<table>
+			<table style="max-width: 400px">
 			  <tr>
-			    <th>A = Média Out/2018 a Set/2019 </th>
-			    <th>311.929</th>
+			    <td>A = Média Out/2018 a Set/2019 </td>
+			    <td style="text-align: right">311.929</td>
 			  </tr>
 			  <tr>
 			    <td>B = Desvio Padrão </td>
-			    <td>167.211</td>
+			    <td style="text-align: right">167.211</td>
 			  </tr>
 			  <tr>
 			    <td>Valor mensal = A+B </td>
-			    <td>479.140</td>
+			    <td style="text-align: right">479.140</td>
 			  </tr>
 			  <tr>
 			    <td>24 meses </td>
-			    <td>11.499.363</td>
+			    <td style="text-align: right">11.499.363</td>
 			  </tr>
 			</table>
 			<p class="s2">6.3.2.5. Assim, após arredondamento, foi considerado para o teto deste contrato o total de 12.000.00 de mensagens.</p>
@@ -1918,94 +1923,94 @@
 			  </tr>
 			  <tr>
 			    <td>Janeiro</td>
-			    <td>3.252</td>
-			    <td>8.592</td>
-			    <td>11.057</td>
-			    <td>22.901</td>
+			    <td style="text-align: right">3.252</td>
+			    <td style="text-align: right">8.592</td>
+			    <td style="text-align: right">11.057</td>
+			    <td style="text-align: right">22.901</td>
 			  </tr>
 			  <tr>
 			    <td>Fevereiro</td>
-			    <td>3.215</td>
-			    <td>11.681</td>
-			    <td>18.941</td>
-			    <td>33.837</td>
+			    <td style="text-align: right">3.215</td>
+			    <td style="text-align: right">11.681</td>
+			    <td style="text-align: right">18.941</td>
+			    <td style="text-align: right">33.837</td>
 			  </tr>
 			  <tr>
 			    <td>Março</td>
-			    <td>2.262</td>
-			    <td>11.321</td>
-			    <td>14.968</td>
-			    <td>28.551</td>
+			    <td style="text-align: right">2.262</td>
+			    <td style="text-align: right">11.321</td>
+			    <td style="text-align: right">14.968</td>
+			    <td style="text-align: right">28.551</td>
 			  </tr>
 			  <tr>
 			    <td>Abril</td>
-			    <td>5.133</td>
-			    <td>10.064</td>
-			    <td>29.215</td>
-			    <td>44.412</td>
+			    <td style="text-align: right">5.133</td>
+			    <td style="text-align: right">10.064</td>
+			    <td style="text-align: right">29.215</td>
+			    <td style="text-align: right">44.412</td>
 			  </tr>
 			  <tr>
 			    <td>Maio</td>
-			    <td>9.419</td>
-			    <td>9.849</td>
-			    <td>28.184</td>
-			    <td>47.452</td>
+			    <td style="text-align: right">9.419</td>
+			    <td style="text-align: right">9.849</td>
+			    <td style="text-align: right">28.184</td>
+			    <td style="text-align: right">47.452</td>
 			  </tr>
 			  <tr>
 			    <td>Junho</td>
-			    <td>9.003</td>
-			    <td>12.464</td>
-			    <td>24.726</td>
-			    <td>46.193</td>
+			    <td style="text-align: right">9.003</td>
+			    <td style="text-align: right">12.464</td>
+			    <td style="text-align: right">24.726</td>
+			    <td style="text-align: right">46.193</td>
 			  </tr>
 			  <tr>
 			    <td>Julho</td>
-			    <td>9.829</td>
-			    <td>11.668</td>
-			    <td>33.237</td>
-			    <td>54.734</td>
+			    <td style="text-align: right">9.829</td>
+			    <td style="text-align: right">11.668</td>
+			    <td style="text-align: right">33.237</td>
+			    <td style="text-align: right">54.734</td>
 			  </tr>
 			  <tr>
 			    <td>Agosto</td>
-			    <td>11.381</td>
-			    <td>13.473</td>
-			    <td>35.129</td>
-			    <td>59.983</td>
+			    <td style="text-align: right">11.381</td>
+			    <td style="text-align: right">13.473</td>
+			    <td style="text-align: right">35.129</td>
+			    <td style="text-align: right">59.983</td>
 			  </tr>
 			  <tr>
 			    <td>Setembro</td>
-			    <td>11.909</td>
-			    <td>11.700</td>
-			    <td>36.856</td>
-			    <td>60.465</td>
+			    <td style="text-align: right">11.909</td>
+			    <td style="text-align: right">11.700</td>
+			    <td style="text-align: right">36.856</td>
+			    <td style="text-align: right">60.465</td>
 			  </tr>
 			  <tr>
 			    <td>Outubro</td>
-			    <td>9.063</td>
-			    <td>12.575</td>
-			    <td></td>
-			    <td>21.638</td>
+			    <td style="text-align: right">9.063</td>
+			    <td style="text-align: right">12.575</td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">21.638</td>
 			  </tr>
 			  <tr>
 			    <td>Novembro</td>
-			    <td>8.937</td>
-			    <td>7.979</td>
-			    <td></td>
-			    <td>16.916</td>
+			    <td style="text-align: right">8.937</td>
+			    <td style="text-align: right">7.979</td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">16.916</td>
 			  </tr>
 			  <tr>
 			    <td>Dezembro</td>
-			    <td>7.442</td>
-			    <td>8.551</td>
-			    <td></td>
-			    <td>15.993</td>
+			    <td style="text-align: right">7.442</td>
+			    <td style="text-align: right">8.551</td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">15.993</td>
 			  </tr>
 			  <tr>
 			    <th>Total Geral</th>
-			    <th>90.845</th>
-			    <th>129.917</th>
-			    <th>232.313</th>
-			    <th>453.075</th>
+			    <th style="text-align: right">90.845</th>
+			    <th style="text-align: right">129.917</th>
+			    <th style="text-align: right">232.313</th>
+			    <th style="text-align: right">453.075</th>
 			  </tr>
 			  <tr>
 			  	<th colspan="5">Fonte: Sistema de gerenciamento da então prestadora do serviço de Call Center</th>
@@ -2015,30 +2020,30 @@
 			<p class="s2">6.3.3.4. Aplicando o indicador de 1,5 desvios-padrão a media de out/2018 a set/2019 na Tabela 7,
 apresenta-se o seguinte resultado:</p>
 			<p><strong>TABELA 8:</strong> interações estimadas</p>
-			<table>
+			<table style="max-width: 400px">
 			  <tr>
 			    <td>A = Média Out/2018 a Set/2019 </td>
-			    <td>21.785</td>
+			    <td style="text-align: right">21.785</td>
 			  </tr>
 			  <tr>
 			    <td>B = Desvio Padrão </td>
-			    <td>7.384</td>
+			    <td style="text-align: right">7.384</td>
 			  </tr>
 			  <tr>
 			    <td>C = 1,5x desvio padrão </td>
-			    <td>11.076</td>
+			    <td style="text-align: right">11.076</td>
 			  </tr>
 			  <tr>
 			    <td>Valor mensal = A+C </td>
-			    <td>32.861</td>
+			    <td style="text-align: right">32.861</td>
 			  </tr>
 			  <tr>
 			    <td>24 meses </td>
-			    <td>788.662</td>
+			    <td style="text-align: right">788.662</td>
 			  </tr>
 			</table>
 				<p class="s2">6.3.3.5. Assim, após arrendamento, foi considerado para o teto para esta modalidade de atendimento de 800.000 interações.</p>
-			<p>6.3.4. Considera-se, para a comprovação da capacidade técnica, que a contratada deve demonstrar atender, no mínimo, 8.000.000 (oito milhões) de atendimentos anuais receptivos e/ou ativos.</p>
+			<p>6.3.4. Considera-se, para a comprovação da capacidade técnica, que a contratada deve demonstrar atender, no mínimo, <strong>8.000.000</strong> (oito milhões) de atendimentos anuais receptivos e/ou ativos.</p>
 				<p class="s2">6.3.4.1. Por reconhecer o ganho de escala deste serviço, se aceita a soma dos atestados, no entanto, estes devem ser simultâneos a fim de demonstrar a capacidade instalada da empresa para a sustentação dessa escala.</p>
 				<p class="s2">6.3.4.2. Os atestados devem ser emitidos por pessoas jurídicas de Direito Público e Privado, indicando o período da prestação de serviço; locais da execução dos serviços, natureza do objeto; quantidades executadas, caracterização do bom desempenho da licitante e outros dados característicos do objeto;</p>
 				<p class="s2">6.3.4.3. O(s) atestados(s) devem também comprovar a capacidade técnica de gestão de indicadores operacionais e gerenciais para o atendimento de níveis de serviço (SLAs) previamente definidos e operação em regime de 24h por dia, ininterruptas;</p>
@@ -2654,7 +2659,8 @@ export default {
 				anexoI: false,
 				anexoII: false,
 				anexoIII: false,
-				anexoIV: false
+				anexoIV: false,
+				anexoV: false
 			}
 		}
 	},

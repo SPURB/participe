@@ -34,6 +34,370 @@
 		</section>
 
 		<section>
+			<h2 class="titulo" indent="1">EDITAL DE PREGÃO ELETRÔNICO nº 35/SMIT/2019</h2>
+		</section>
+		<section>
+				<h3 class="titulo" indent="2">1. EMBASAMENTO LEGAL</h3>
+				<p>O procedimento licitatório e os atos dele decorrentes observarão as disposições da Lei Municipal nº 13.278, de 07 de janeiro de 2002, dos Decretos Municipais n.º 43.406/2003 (com a redação que lhe atribuiu o Decreto 55.427/2014), 44.279/2003, 46.662/2005, 54.102/2013, 56.475/2015 e 56.633/2015, e, das Leis Federais nº. 8.666, de 21 de junho de 1993 e 10.520 de 17 de julho de 2002, a Lei Complementar Federal nº 123, de 14 de dezembro de 2006, alterada pela Lei Complementar nº 147/2014 e das demais normas complementares aplicáveis.</p>
+			<Comments :attr="{id:commentId(true), context:'1. EMBASAMENTO LEGAL'}" v-if="estaConsulta.ativo == 1"></Comments>
+		</section>
+
+			<section>
+				<h3 class="titulo" indent="2">2. DO OBJETO</h3>
+				<p>2.1	A presente licitação tem por objeto contratação de empresa especializada em serviços de planejamento, implantação, operação, gerenciamento de central de atendimento humano e gestão de atendimento receptivo e ativo nas formas eletrônica e humana (contact center) conforme especificações constantes do Termo de Referência, Anexo I deste Edital e seus anexos.</p>
+				<p>2.2.	Deverão ser observadas as descrições, características e especificações técnicas constantes do Termo de Referência Anexo I deste Edital.</p>
+				<Comments :attr="{id:commentId(true), context:'2. DO OBJETO'}" v-if="estaConsulta.ativo == 1"></Comments>
+			</section>
+			<section>
+				<h3 class="titulo" indent="2">3.	DAS CONDIÇÕES DE PARTICIPAÇÃO</h3>
+				<p>3.1.	Poderão participar da licitação as empresas que:</p>
+					<p class="s2">a)	Atenderem a todas as exigências deste Edital e de seus Anexos, desde que sejam credenciadas, com cadastro, no Cadastro Unificado de Fornecedores do Estado de São Paulo – CAUFESP.</p>
+						<p class="s3"> a.1)  O registro no CAUFESP, o credenciamento de representantes que atuarão em nome da licitante no sistema de pregão eletrônico e a senha de acesso deverão ser obtidos anteriormente à abertura da sessão pública, observando os prazos e condições ali estabelecidos.</p>
+				<p>3.2	Como requisito para a participação no pregão, a licitante deverá manifestar, em campo próprio do sistema eletrônico, que inexiste qualquer fato superveniente que impede a sua participação no certame ou de sua contratação e que conhece e aceita os regulamentos do Sistema BEC/SP. </p>
+				<p>3.3	Ao encaminhar sua proposta, a licitante declara que cumpre integralmente os requisitos de habilitação previstos neste Edital e seus anexos. </p>
+				<p>3.4	A participação neste Pregão implica o reconhecimento pela Licitante de que conhece, atende e se submete a todas as cláusulas e condições do presente Edital, bem como as disposições contidas na legislação indicada na cláusula “1” deste Edital, que disciplinam a presente licitação e integrarão o ajuste correspondente, no que lhe for pertinente.</p>
+
+				<Comments :attr="{id:commentId(true), context:'3.	DAS CONDIÇÕES DE PARTICIPAÇÃO'}" v-if="estaConsulta.ativo == 1"></Comments>
+			</section>
+
+			<section>
+				<h3 class="titulo" indent="2">4.   ACESSO A INFORMAÇÕES</h3>
+				<p>4.1. Qualquer pessoa poderá solicitar esclarecimento(s) ou informação(ões) relativas a esta licitação, em campo próprio do sistema, encontrado na opção Edital, até 02 (dois) dias úteis anteriores à data fixada para abertura da sessão pública. </p>
+				<p>4.2. Os esclarecimentos e as informações serão prestados pela Pregoeira, no prazo de até 01 (um) dia útil anterior à data fixada para abertura da sessão pública deste Pregão.</p>
+					
+				<Comments :attr="{id:commentId(), context:'4.   ACESSO A INFORMAÇÕES'}" v-if="estaConsulta.ativo == 1"></Comments>
+			</section>
+
+			<section>
+				<h3 class="titulo" indent="2">5.   IMPUGNAÇÃO AO EDITAL</h3>
+				<p>5.1. 	Qualquer pessoa, física ou jurídica, poderá formular impugnações contra o ato convocatório, sendo que eventuais impugnações ao Edital deverão ser relatadas diretamente no sistema eletrônico, em campo especifico, no endereço constante do preâmbulo deste Instrumento, no prazo de até 2 (dois) dias úteis anteriores à data marcada para a realização da sessão pública de abertura do pregão, sob pena de decadência do direito.</p>
+					<p class="s2">5.1.1.  Caberá ao Pregoeiro decidir acerca da (s) impugnação (ões) apresentada (s), até a data prevista para a abertura do certame.</p>
+						<p class="s3">5.1.1.1. Caso não seja possível decidir a impugnação no prazo estabelecido, o pregão eletrônico deverá ser suspenso, e, após, se o caso, reagendado.</p>
+					<p class="s2">5.1.2.  Quando o acolhimento da impugnação implicar alteração do Edital, capaz de afetar a formulação das propostas, será definida e publicada nova data para a realização do certame.</p>
+					<p class="s2">5.1.3.  A impugnação, feita tempestivamente pela licitante, não a impedirá de participar deste Pregão.</p>
+				<p>5.2.  As decisões das impugnações serão divulgadas pelo pregoeiro no sistema eletrônico para visualização dos interessados. </p>
+					
+				<Comments :attr="{id:commentId(), context:'5.   IMPUGNAÇÃO AO EDITAL'}" v-if="estaConsulta.ativo == 1"></Comments>
+			</section>
+
+			<section>
+				<h3 class="titulo" indent="2">6. CREDENCIAMENTO</h3>
+				<p>6.1	As licitantes deverão estar previamente credenciadas junto ao órgão provedor – <strong>Cadastrou Unificado de Fornecedores do Estado de São Paulo – CAUFESP – BEC/SP.</strong></p>
+				<p>6.2	O credenciamento dar-se-á pela atribuição, pelo órgão provedor, de chave de identificação e de senha, pessoal e intransferível, para acesso ao sistema eletrônico – BEC/SP.</p>
+					<p class="s2">6.2.1	As informações a respeito das condições exigidas e dos procedimentos a serem cumpridos para o registro no CAUFESP, estão disponíveis no endereço eletrônico www.bec.sp.gov.br.</p>
+				<p>6.3	O credenciamento da licitante dependerá de registro cadastral ativo no Cadastro Unificado de Fornecedores do Estado de São Paulo - CAUFESP.</p>
+				<p>6.4	O credenciamento junto ao provedor do sistema implica em responsabilidade legal da licitante ou de seu representante legalmente constituído e presunção de sua capacidade técnica para realização das transações inerentes ao pregão eletrônico.</p>
+					<p class="s2">6.4.1	Cada representante credenciado poderá representar apenas uma licitante em cada pregão eletrônico.</p>
+				<p>6.5	O uso da senha de acesso pela licitante é de sua responsabilidade exclusiva, incluindo qualquer transação efetuada diretamente ou por seu representante, não cabendo ao provedor do sistema ou à Prefeitura do Município de São Paulo, promotora da licitação, responsabilidade por eventuais danos decorrentes do uso indevido da senha, ainda que por terceiros.</p>
+					<p class="s2">6.5.1	Deverá a licitante comunicar imediatamente ao provedor do sistema qualquer acontecimento que possa comprometer o sigilo ou que resulte na inviabilidade do uso da senha, para imediato bloqueio de acesso.</p>
+					
+				<Comments :attr="{id:commentId(), context:'6. CREDENCIAMENTO'}" v-if="estaConsulta.ativo == 1"></Comments>
+			</section>
+
+			<section>
+				<h3 class="titulo" indent="2">7. APRESENTAÇÃO DA PROPOSTA DE PREÇOS</h3>
+				<p>7.1. As propostas deverão ser enviadas por meio eletrônico disponível no endereço www.bec.sp.gov.br na opção “PREGÃO - ENTREGAR PROPOSTA”, com o valor total ANUAL desde a divulgação na íntegra do Edital no referido endereço eletrônico, até o dia e horário previstos no preâmbulo para a abertura da sessão pública.</p>
+					<p class="s2">7.1.1. Até a abertura da sessão, a licitante poderá retirar ou substituir a proposta anteriormente apresentada. </p>
+				<p>7.2. A licitante será responsável por todas as transações que forem efetuadas em seu nome no sistema eletrônico, assumindo como firmes e verdadeiros sua proposta e lances.</p>
+				<p>7.3. À licitante caberá acompanhar as operações no sistema eletrônico, durante a sessão pública, respondendo pelo ônus decorrente de sua desconexão ou da inobservância de quaisquer mensagens emitidas pelo sistema.</p>
+					<p class="s2">            7.3.1. A desconexão do sistema eletrônico com qualquer licitante não prejudicará a conclusão válida da sessão pública ou do certame.</p>
+				<p>7.4. À desconexão do sistema eletrônico com o pregoeiro, durante a sessão pública, implicará:</p>
+					<p class="s2">a)	fora da etapa de lances, a sua suspensão e o seu reinício, desde o ponto em que foi interrompida. Neste caso, se a desconexão persistir por tempo superior a 15 (quinze) minutos, a sessão pública deverá ser suspensa e reiniciada somente após comunicação expressa às licitantes de nova data e horário para a sua continuidade;</p>
+					<p class="s2">b)	durante a etapa de lances, a continuidade da apresentação de lances pelas licitantes, até o término do período estabelecido no Edital.   </p>
+				<p>7.5.  A apresentação da proposta de preços implicará em plena aceitação, por parte da licitante, das condições estabelecidas neste Edital e em seus Anexos.</p>
+					<p class="s2">7.5.1. A proposta deve conter oferta firme e precisa, sem alternativa de serviços, preços ou qualquer outra condição que induza o julgamento a ter mais de um resultado.</p>
+					<p class="s2">7.5.2. Os preços deverão ser cotados em moeda corrente nacional, em algarismos e ser equivalentes aos praticados no mercado na data de sua apresentação, sem inclusão de qualquer encargo financeiro ou previsão inflacionária, incluindo todos os custos diretos, indiretos e despesas, necessários a execução dos serviços. O preço ofertado será irreajustável e constituirá a única e completa remuneração pelo cumprimento do objeto deste certame, não sendo aceitos pleitos de acréscimos a qualquer título.</p>
+						<p class="s3">7.5.2.1. Quaisquer tributos, custos e despesas diretos ou indiretos, não considerados na proposta ou incorretamente cotados, serão considerados como inclusos nos preços, não sendo aceitos pleitos de acréscimo, a qualquer título.</p>
+				<p>  7.6.  A licitante declarada vencedora do certame deverá enviar a proposta de preços, conforme disposto no subitem 10.3.1 deste Edital, de acordo com o formulário que segue como Anexo II deste Edital, com todas as informações, declarações e garantias ali constantes, devendo ser redigida em língua portuguesa, com clareza, perfeitamente legível, sem emendas, rasuras, borrões, acréscimos ou entrelinhas, ser datada, rubricada em todas as folhas e assinada por seu representante legal ou procurador, devidamente identificado com números de CPF e RG, e respectivo cargo na licitante.</p>
+					<p class="s2">7.6.1.   A proposta deverá ter validade de 60 (sessenta) dias corridos, contados a partir da data da abertura da sessão, não podendo haver aumento de preços se ocorrer, com anuência da proponente, dilação de seu prazo de validade. </p>
+					
+				<Comments :attr="{id:commentId(), context:'7. APRESENTAÇÃO DA PROPOSTA DE PREÇOS'}" v-if="estaConsulta.ativo == 1"></Comments>
+			</section>
+
+			<section>
+				<h3 class="titulo" indent="2">8.  DIVULGAÇÃO E CLASSIFICAÇÃO INICIAL DAS PROPOSTAS DE PREÇOS</h3>
+				<p>8.1.	Na data e horário indicado no preâmbulo deste Edital terá início a sessão pública do pregão eletrônico, com a divulgação das propostas de preços recebidas.</p>
+				<p>8.2.	A Análise das propostas pelo Pregoeiro visará ao atendimento das condições estabelecidas neste Edital e seus anexos. </p>
+				<p>8.3.	Serão desclassificadas as propostas: </p>
+					<p class="s2"> a) cujo objeto não atenda as especificações, prazos e condições fixados neste edital e seus anexos;</p>
+					<p class="s2">                  b) que por ação da licitante ofertante contenham elementos que permitam a sua   identificação. </p>
+				<p>8.4.	A desclassificação se dará por decisão motivada do Pregoeiro.</p>
+				<p>8.5.	Serão desconsideradas ofertas ou vantagens baseadas nas propostas das demais licitantes.</p>
+				<p>8.6.	O sistema ordenará novamente as propostas analisadas e classificadas pelo Pregoeiro, por estarem em perfeita consonância com as especificações e condições de fornecimento detalhadas neste instrumento convocatório, sendo que somente estas participarão da fase de lances.</p>
+					<p class="s2">          8.6.1 Eventual desempate de propostas de mesmo valor será promovido pelo sistema. </p>
+					
+				<Comments :attr="{id:commentId(), context:'8.  DIVULGAÇÃO E CLASSIFICAÇÃO INICIAL DAS PROPOSTAS DE PREÇOS'}" v-if="estaConsulta.ativo == 1"></Comments>				
+			</section>
+
+			<section>
+				<h3 class="titulo" indent="2">9.   ETAPA DE LANCES</h3>
+				<p>9.1. Iniciada a etapa competitiva, as licitantes poderão encaminhar lances exclusivamente por meio do sistema eletrônico, sendo a licitante imediatamente informada do seu recebimento e respectivos horários de registro e valor.</p>
+					<p class="s2">9.1.1.   Os lances deverão ser formulados em valores distintos e decrescentes, inferiores à proposta de menor preço, ou em valores distintos e decrescentes inferiores ao do último valor apresentado pela própria licitante ofertante, observada, em ambos os casos, a redução mínima entre eles de <strong>R$ XX.XXX,XX</strong> (nnnnnnnnnn) aplicável, inclusive, em relação ao primeiro formulado, prevalecendo o primeiro lance recebido, quando ocorrerem 2 (dois) ou mais lances do mesmo valor.</p>
+						<p class="s3"> 9.1.1.1. A aplicação do valor de redução mínima entre os lances incidirá sobre o <strong>valor TOTAL BIENAL.</strong></p>
+				<p>9.2.   As licitantes poderão oferecer lances sucessivos, observado o horário fixado e as regras para sua aceitação.</p>
+					<p class="s2"> 9.2.1. A desistência em apresentar lance implicará na manutenção do último preço apresentado pela licitante, para efeito de ordenação das propostas.</p>
+				<p>9.3.   A etapa de lances terá a duração de 15 (quinze) minutos.</p>
+					<p class="s2">9.3.1.  A duração da etapa de lances será prorrogada automaticamente pelo sistema, visando à continuidade da disputa, quando houver lance admissível ofertado nos últimos 3 (três) minutos do período de que trata o subitem “9.3. ” ou nos sucessivos períodos de prorrogação automática.</p>
+						<p class="s3"> 9.3.1.1.  Não havendo novos lances ofertados nas condições estabelecidas no subitem 9.3.1, a duração da prorrogação encerrar-se-á, automaticamente quando atingido o terceiro minuto contado a partir do registro no sistema, do último lance que ensejar prorrogação.</p>
+				<p>9.4.  No decorrer da etapa de lances, as licitantes serão informadas pelo sistema eletrônico:</p>
+					<p class="s2">a)	dos lances admitidos e dos inválidos, horários de seus registros no sistema e respectivos valores;</p>
+					<p class="s2">b)	  do tempo restante para o encerramento da etapa de lances.</p>
+				<p>9.5.   A etapa de lances será considerada encerrada, findos os períodos de duração indicados no subitem 9.3.1.</p>
+				<p>9.6.  Encerrada a etapa de lances, o sistema divulgará a nova grade ordenatória, contendo a classificação final, em ordem crescente de valores.</p>
+					<p class="s2">9.6.1. Para essa classificação será considerado o último preço admitido de cada licitante.</p>
+					
+				<Comments :attr="{id:commentId(), context:'9.   ETAPA DE LANCES'}" v-if="estaConsulta.ativo == 1"></Comments>
+			</section>
+			<section>
+				<h3 class="titulo" indent="2">10.    JULGAMENTO, NEGOCIAÇÃO E ACEITABILIDADE DAS PROPOSTAS</h3>
+				<p>10.1. Para julgamento e classificação das propostas será adotado o critério do <strong>menor preço total global bienal,</strong> observados os requisitos, as especificações técnicas e os parâmetros definidos neste Edital e em seus Anexos quanto ao objeto.</p>
+				<p>10.2.  Encerrada a etapa de lances da sessão pública, definida a licitante vencedora, o pregoeiro deverá com ela negociar, mediante troca de mensagens no sistema eletrônico, com vistas à redução do preço.</p>
+					<p class="s2">10.2.1.  Visando à celeridade do procedimento licitatório, ao ser convocada a licitante deverá se manifestar no prazo estabelecido pelo pregoeiro, sob pena de desclassificação.</p>
+				<p>10.3. Após a negociação, o pregoeiro fará o exame da aceitabilidade da oferta da licitante primeira classificada, devendo esta apresentar, <u><strong>no momento da entrega dos documentos de habilitação,</strong></u> de acordo com o exigido neste Edital, a proposta de preço, conforme Anexo II, com valor do preço final alcançado, pelo próprio sistema BEC por meio da opção anexar arquivo via chat, ou por correio eletrônico smitcpl01@prefeitura.sp.gov.br, sob pena de desclassificação. </p>
+					<p class="s2"> 10.3.1.  A proposta original deverá ser encaminhada juntamente com os documentos de habilitação, conforme subitem 11.4.</p>
+					<p class="s2">  10.3.2.  O Pregoeiro deverá verificar, como critério de aceitabilidade da proposta sua compatibilidade com os preços de mercado, aferidos mediante pesquisa, que instrui o processo administrativo pertinente a esta licitação:</p>
+					<p class="s2">10.3.3.   Se o preço alcançado ensejar dúvidas quanto a sua exequibilidade, poderá o pregoeiro determinar à licitante que demonstre a sua viabilidade, por meio de documentação que comprove a sua capacidade em executar o objeto licitado pelo preço ofertado e nas condições propostas no Edital.</p>
+						<p class="s3">10.3.3.1.  O descritivo técnico ou a documentação comprobatória de preços deverão ser encaminhados no prazo estipulado pelo Pregoeiro em língua portuguesa, sob pena de desclassificação.</p>
+					<p class="s2">10.3.4.  Se a oferta não for aceitável ou se a licitante não atender à exigência estabelecida no item supra, o pregoeiro desclassificará, motivadamente, a proposta e examinará as ofertas subsequentes, na ordem de classificação, até a apuração de uma proposta que atenda a todas as exigências, podendo, também, negociar diretamente com a proponente, para que seja obtido preço melhor.</p>
+				<p>10.4.  Considerada aceitável a oferta de menor preço, passará o pregoeiro ao julgamento da habilitação. </p>
+					
+				<Comments :attr="{id:commentId(), context:'10.    JULGAMENTO, NEGOCIAÇÃO E ACEITABILIDADE DAS PROPOSTAS'}" v-if="estaConsulta.ativo == 1"></Comments>
+			</section>
+			
+			<section>
+				<h3 class="titulo" indent="2">11.     HABILITAÇÃO</h3>
+				<p>11.1. Divulgado o julgamento das propostas de preços na forma prescrita neste Edital, proceder-se-á à análise dos documentos de habilitação da licitante primeira classificada do objeto do certame. </p>
+				<p>11.2.  Sob pena de inabilitação, a licitante, cuja oferta foi aceita, deverá encaminhar de imediato, para os endereços citados no subitem 10.3. a documentação exigida no subitem 11.6. deste Edital, com exceção daqueles constantes do cadastro da licitante no CAUFESP, desde que válidos.</p>
+					<p class="s2">11.2.1.  A documentação relativa à Habilitação Jurídica (subitem 11.6.1.), sempre deverá ser encaminhada pela licitante, para identificar os sócios/representantes que subscrevem a proposta e demais documentos por ela emitidos.</p>
+						<p class="s3">  11.2.1.1. Caso os documentos não sejam subscritos por seus sócios ou diretores, assim indicados nos respectivos atos constitutivos, a licitante deverá apresentar, também, os instrumentos de mandato outorgando poderes aos subscritores. </p>
+					<p class="s2"> 11.2.2. Entende-se por “imediato” o prazo de até 30 (trinta) minutos após a notificação pelo Sistema, da licitante vencedora, sendo que o pregoeiro poderá, a seu critério, prorrogar este prazo.</p>
+					<p class="s2">11.2.3.	 O pregoeiro verificará os dados e informações da autora da oferta aceita, constantes  do CAUFESP e extraídos dos documentos indicados no subitem 11.6 deste Edital. </p>
+					<p class="s2">11.2.4.  Caso os dados e informações constantes do CAUFESP não atendam aos requisitos exigidos no subitem 10.6 deste Edital, o Pregoeiro verificará a possibilidade de alcançar os documentos por meio eletrônico, salvo impossibilidade devidamente certificada e justificada, imprimindo-os para análise e juntada ao processo administrativo pertinente a licitação.</p>
+				<p>11.3.   A Administração não se responsabilizará pela eventual indisponibilidade dos meios eletrônicos hábeis de informações no momento da verificação a que se refere ao subitem 11.2.4., ou dos meios para a transmissão de cópias de documentos a que se referem ao subitem 11.2., ressalvada a indisponibilidade de seus próprios meios. Na hipótese de ocorrerem essas indisponibilidades a licitante deverá encaminhar os documentos solicitados, por outros meios, dentro do prazo estabelecido, sob pena de inabilitação, mediante decisão motivada.</p>
+				<p>11.4.    Posteriormente deverão ser encaminhados, no original a proposta de preços exigida no subitem 10.3.1., e, nos originais ou cópias autenticadas por tabelião de notas, ou mediante publicação de órgão de Imprensa Oficial os documentos a que se referem a cláusula 11.6., salvo os que possam ser emitidos e/ou conferidos pela internet pelo próprio pregoeiro, dentro do prazo máximo de 02 (dois) dias úteis a contar da habilitação, para o endereço indicado no preâmbulo com a identificação de sua razão social e número do Pregão Eletrônico, endereçado à Comissão Permanente de Licitação nº 01 Portaria n° 75/SMIT/2019.</p>
+				<p>11.5.	Por meio de aviso lançado no sistema, o Pregoeiro informará às demais licitantes que poderão consultar as informações cadastrais da licitante vencedora utilizando opção disponibilizada no próprio sistema para tanto. Deverá, ainda, informar o teor dos documentos recebidos por fax ou por meio eletrônico.</p>
+				<p>11.6.     Além do registro cadastral no Cadastro Unificado de Fornecedores do Estado de São Paulo – CAUFESP, cuja regularidade da documentação é verificada automaticamente pelo sistema quando do credenciamento da licitante, a sua habilitação se dará mediante o exame dos documentos a seguir relacionados, relativos a:</p>
+					<p class="s2">11.6.1.   Habilitação jurídica:</p>
+						<p class="s3">a) Registro empresarial no Registro Público de Empresas Mercantis da respectiva sede.</p>
+						<p class="s3">b)  Certidão simplificada expedida pela Junta Comercial do Estado onde se situa a sede da licitante ou ato constitutivo e alterações subsequentes, devidamente registrados em se tratando de sociedade empresária, e no caso de sociedade por ações, acompanhado de documentos de eleição de seus administradores.</p>
+						<p class="s3">c)	Decreto de autorização, em se tratando de empresa ou sociedade estrangeira em funcionamento no país, e ato de registro ou autorização para funcionamento expedido pelo órgão competente, quando a atividade assim o exigir.</p>
+						<p class="s3">d) Ato constitutivo, estatuto ou contrato social em vigor, com as devidas alterações, se o caso, devidamente registrado no Registro de Empresas Mercantis ou Registro Civil de Pessoas Jurídicas, conforme o caso, da sociedade empresária, sociedade simples, empresa individual de responsabilidade limitada ou empresário a que se refere o art. 966  da Lei nº 10.406, de 10 de janeiro de 2002 (Código Civil), consideradas  microempresas ou empresas de pequeno porte nos termos da Lei Complementar 123/2006 com a redação que lhe atribuiu a Lei Complementar 147/2014.</p>
+					<p class="s2">       11.6.2	Regularidade fiscal e trabalhista: </p>
+						<p class="s3">a)	Prova de inscrição no Cadastro Nacional de Pessoa Jurídica – CNPJ.</p>
+						<p class="s3">b)	Prova de inscrição no Cadastro de Contribuintes Estadual ou Municipal, se houver, relativo à sede da licitante, pertinente ao seu ramo de atividade e compatível com o objeto licitado.</p>
+						<p class="s3">c)	Prova de regularidade para com as Fazendas Federal, Estadual e Municipal, como segue:</p>
+							<p class="s4"> c.1) Certidão unificada negativa de débitos relativos a tributos federais, à dívida ativa da União e previdenciários (para com o Sistema de Seguridade Social – INSS), expedida pela Receita Federal do Brasil/PGFN, nos termos da Portaria MF n° 358, de 05 de outubro de 2014, alterada pela Portaria MF n° 443, de 17 de outubro de 2014.</p>
+							<p class="s4">c.2) Certidão negativa de débitos referentes a tributos estaduais relacionados com a prestação licitada, expedida por meio de unidade administrativa competente da sede da licitante.</p>
+								<p class="s5">c.2.1)  No caso da licitante ter domicílio ou sede no Estado de São Paulo, a prova de regularidade para com a Fazenda Estadual se dará através da certidão negativa de débitos tributários da Dívida Ativa do Estado de São Paulo, expedida pela Procuradoria Geral do Estado, conforme Portaria CAT 20/98, observada a resolução SF/PGE n° 3/2010 e nos termos da portaria Intersecretarial n° 02/2014-SNJ/SEMPLA, publicada no DOC de 05 de Fevereiro de 2014.</p>
+							<p class="s4">c.3)   Certidão Negativa Unificada de Tributos emitida pela Secretaria da Fazenda do Município de São Paulo (antiga Certidão de Tributos Mobiliários). </p>
+								<p class="s5">c.3.1)  Caso a licitante não esteja cadastrada como contribuinte neste Município, deverá apresentar declaração firmada pelo seu representante legal/procurador, sob as penas da lei, do não cadastramento e de que nada deve à Fazenda do Município de São Paulo, relativamente aos tributos relacionados com a prestação licitada, conforme modelo do <strong>Anexo III.</strong></p>
+								<p class="s5">c.3.2) Caso a licitante possua mais de um C.C.M. neste Município de São Paulo deverá apresentar certidão negativa de débitos tributários mobiliários relativa a cada cadastro que possua.</p>
+						<p class="s3">d) Certificado de Regularidade de Situação para com o Fundo de Garantia de Tempo de Serviço (FGTS).</p>
+						<p class="s3">e) Certidão Negativa de Débitos Trabalhistas (CNDT), conforme Lei Federal nº 12.440, de 07 de julho de 2011. </p>
+						<p class="s3">11.6.2.1. Serão aceitas como prova de regularidade, certidões positivas com efeito de negativas e certidões positivas que noticiem em seu corpo que os débitos estão judicialmente garantidos ou com sua exigibilidade suspensa.</p>
+					<p class="s2">11.6.3. Qualificação econômico-financeira:</p>
+						<p class="s3">a.)  Certidão negativa de pedido de falência, expedida pelo distribuidor da sede da pessoa jurídica em data não superior a 60 dias da data da abertura do certame, se outro prazo não constar do documento.</p>
+							<p class="s4">a.1) Se a licitante não for sujeita ao regime falimentar, a certidão mencionada deverá ser substituída por certidão negativa de ações de insolvência civil, ou documento equivalente.</p>
+						<p class="s3">    b.) Balanço patrimonial e demonstrações contábeis do último exercício social, já exigíveis e apresentados na forma da lei, que comprovem a situação financeira da empresa, vedada sua substituição por balanço ou balancetes provisórios, podendo ser atualizados por índices oficiais quando encerrados há mais de três meses da data da apresentação da proposta;</p>
+							<p class="s4">b.1) Somente empresas que ainda não tenham completado seu primeiro exercício fiscal poderão comprovar sua capacidade econômico-financeira por meio de balancetes mensais, conforme disposto na Lei Federal nº 8.541, de 23 de dezembro de 1992;</p>
+						<p class="s3">c)  No caso de sociedade simples, a proponente deverá apresentar certidão dos processos cíveis em andamento relativos à solvência ou não da licitante, expedido pelo distribuidor da sede de pessoa jurídica, em data não superior a 60 (sessenta) dias da data da abertura do certame, se outro prazo não constar do documento.</p>
+					<p class="s2">11.6.4. Habilitação Técnica:</p>
+						<p class="s3">a)	Atestado(s) de desempenho anterior, fornecido(s) por pessoas jurídicas de direito público ou privado, que comprove a prestação de serviços similares (Prestação de Serviço Telefônico Fixo Comutado (STFC)), objeto da licitação. </p>
+					<p class="s2">11.6.5.	Outros Documentos:</p>
+						<p class="s3">a)	CUMPRIMENTO AO DISPOSTO NO ART. 7, INCISO XXXIII DA CONSTITUIÇÃO FEDERAL: Declaração firmada pelo representante legal/procurador da licitante de que não emprega menor de 18 anos em trabalho noturno, perigoso ou insalubre e não emprega menor de 16 anos, salvo na condição de aprendiz, a partir de 14 anos, sob as penas da Lei, conforme o disposto no artigo. 7º, inciso XXXIII da Constituição Federal e inciso V, do artigo 27 da Lei Federal nº 8.666/93, consoante modelo do Anexo IV deste Edital.</p>
+						<p class="s3">b)	Declaração de inexistência de fato superveniente impeditivo de sua habilitação, assinada por sócio, dirigente, proprietário ou procurador, com o número da Cédula de Identidade do declarante, nos termos do modelo constante do Anexo V deste Edital.</p>
+						<p class="s3">c)	Declaração de que a licitante não foi apenada com as sanções previstas na Lei Federal 8.666/1993, artigo 87, incisos III e IV, e/ou na Lei Federal 10.520/2002, artigo 7º, seja isoladamente, seja em conjunto, aplicada por qualquer esfera da Administração Pública, nos termos do modelo constante do Anexo VI deste Edital;</p>
+				<p>11.7. A licitante para fins de habilitação deverá observar as disposições Gerais que seguem: </p>
+					<p class="s2">11.7.1.	Todos os documentos devem estar com seu prazo de validade em vigor. Se este prazo não constar de item específico deste Edital, do próprio documento ou de lei específica, será considerado o prazo de validade de 06 (seis) meses, a contar da data de sua expedição, salvo os atestados/certidões de qualificação técnica, para os quais não se exige validade.</p>
+					<p class="s2">11.7.2.   Todos os documentos expedidos pela empresa deverão estar subscritos por seu representante legal ou procurador, com identificação clara do subscritor.</p>
+					<p class="s2">11.7.3. 	Os documentos emitidos via Internet serão conferidos pelo Pregoeiro ou sua equipe de apoio.</p>
+					<p class="s2">11.7.4.	Todos os documentos apresentados deverão estar em nome da licitante e preferencialmente com número do CNPJ e endereço respectivo.</p>
+						<p class="s3">a)	 se a licitante for a matriz, todos os documentos deverão estar em nome da matriz;</p>
+						<p class="s3">b)	se a licitante for a filial, todos os documentos deverão estar em nome da filial, exceto aqueles que pela própria natureza, forem comprovadamente emitidos apenas em nome da matriz; </p>
+						<p class="s3">c)	se  a licitante for a matriz e a fornecedora for a filial, os documentos deverão ser apresentados em nome da matriz e da filial simultaneamente;</p>
+						<p class="s3">                            d) Independentemente de a licitante ser matriz ou filial, caso a empresa possua C.C.M. neste Município de São Paulo deverá apresentar certidão negativa de débitos tributários mobiliários relativa a cada cadastro que possua.</p>
+					<p class="s2">11.7.5.	Todo e qualquer documento apresentado em língua estrangeira deverá estar acompanhado da respectiva tradução para o idioma pátrio, feita por tradutor público juramentado.</p>
+					<p class="s2">11.7.6.  Não serão aceitos documentos cujas datas e caracteres estejam ilegíveis ou rasurados de tal forma que não possam ser entendidos.</p>
+					<p class="s2">11.7.7. Os documentos exigidos para habilitação não poderão, em hipótese alguma, ser substituídos por protocolos, que apenas configurem o seu requerimento, não podendo, ainda, ser remetidos posteriormente ao prazo fixado.</p>
+				<p>11.8.	O Pregoeiro e sua Equipe de Apoio verificarão eventual descumprimento das vedações de participação na licitação, mediante consulta aos: </p>
+					<p class="s2">a)	Cadastro Nacional de Condenações Cíveis por Atos de Improbidade Administrativa, mantido pelo Conselho Nacional de Justiça – CNJ, no endereço eletrônico www.cnj.jus.br/improbidade_adm/consultar_requerido.php;</p>
+					<p class="s2">b)	Cadastro Nacional das Empresas Inidôneas e Suspensas – CEIS, no endereço eletrônico www.portaldatransparencia.gov.br/ceis;</p>
+					<p class="s2">c)	Portal de Sanções Administrativas, no endereço eletrônico http://www.esancoes.sp.gov.br/index.asp;</p>
+					<p class="s2">d)	Cadastro de empresas apenadas do Tribunal de Contas  do Estado de São Paulo -TCE, no endereço eletrônico https://www4.tce.sp.gov.br/publicacoes/apenados/apenados.shtm;</p>
+					<p class="s2">e)	Rol de Empresas Punidas, disponível no endereço eletrônico  http://www.prefeitura.sp.gov.br/cidade/secretarias/gestao/suprimentos_e_servicos/empresas_punidas/index.php?p=9255</p>
+					<p class="s2">f)	Cadastro Integrado de Condenações por Ilícitos Administrativos, no endereço eletrônico https://contas.tcu.gov.br/ords/f?p=1660:3:0;</p>
+					<p class="s2">g)	Sistema de Cadastramento Unificado de Fornecedores, disponível no endereço eletrônico  https://www3.comprasnet.gov.br/sicaf-web/public/pages/consultas/consultarCRC.jsf.</p>
+					<p class="s2">              11.8.1. As consultas realizar-se-ão em nome da licitante e também de eventual matriz ou filial e de seus sócios majoritário e administrador.</p>
+				<p>11.9.	Os documentos serão analisados pelo Pregoeiro e sua Equipe de Apoio quanto a sua conformidade com os solicitados e serão anexados ao processo administrativo eletrônico pertinente a esta licitação. </p>
+					<p class="s2"></p>
+					<p class="s2">     11.9.2. Sendo inabilitada a proponente cuja proposta tenha sido classificada em primeiro lugar, o Pregoeiro examinará a proposta ou lance subsequente, verificando sua aceitabilidade e procedendo à habilitação da licitante, na ordem de classificação, e assim sucessivamente até a apuração de uma proposta ou lance e proponente que atendam ao Edital.</p>
+						<p class="s3">     11.9.2.1. Na situação a que se refere este item, o pregoeiro deverá negociar com a licitante para que seja obtido preço melhor.</p>
+					<p class="s2">     11.9.3. Estando a documentação de habilitação da licitante completa, correta, com observância de todos os dispositivos deste Edital e seus Anexos o Pregoeiro considerará a proponente habilitada e vencedora do certame.</p>
+					
+				<Comments :attr="{id:commentId(), context:'11.     HABILITAÇÃO'}" v-if="estaConsulta.ativo == 1"></Comments>
+			</section>
+
+			<section>
+				<h3 class="titulo" indent="2">12.   FASE RECURSAL</h3>
+				<p>12.1.     Após encerrar totalmente a fase de habilitação, o pregoeiro informará às licitantes, por meio de mensagem lançada no sistema, que poderão interpor recurso, imediata e motivadamente, por meio eletrônico, utilizando para tanto, exclusivamente, campo próprio disponibilizado no sistema.</p>
+					<p class="s2">   12.1.1. A falta de manifestação da licitante acarretará a decadência do direito de recurso e a adjudicação, pelo Pregoeiro, do objeto licitado a vencedora.</p>
+					<p>12.2.	Havendo interposição de recurso, na forma indicada no subitem 12.1., o Pregoeiro, por mensagem lançada no sistema, informará aos recorrentes que poderão apresentar memoriais contendo as razões de recurso, no prazo de 3 (três) dias após o encerramento da sessão pública, e às demais licitantes que poderão apresentar contrarrazões, em igual número de dias, os quais começarão a correr do término do prazo para apresentação de memoriais, sendo-lhes assegurada vista imediata dos autos, no endereço da unidade promotora da licitação, constante do preâmbulo deste EDITAL, das 9:00 às 18:00 horas. </p>
+						<p class="s2">12.2.1.	Os memoriais de recurso e as contrarrazões serão oferecidos exclusivamente por meio eletrônico, no sítio www.bec.sp.gov. ou www.bec.fazenda.sp.gov.br, e a apresentação de documentos comprobatórios das alegações, se for o caso, será efetuada mediante protocolo, no endereço da unidade promotora da licitação, constante do preâmbulo deste Edital, das 9:00 às 18:00 horas, observados os prazos estabelecidos no subitem 12.2.</p>
+					<p>12.3.	O recurso terá efeito suspensivo e o seu acolhimento importará a invalidação dos atos insuscetíveis de aproveitamento. </p>
+
+				<Comments :attr="{id:commentId(), context:'12.   FASE RECURSAL'}" v-if="estaConsulta.ativo == 1"></Comments>
+			</section>
+
+			<section>
+				<h3 class="titulo" indent="2">13.   ADJUDICAÇÃO</h3>
+				<p>13.1.   Constatando-se o atendimento das exigências fixadas no Edital, a licitante classificada e habilitada, será declarada vencedora para fins de adjudicação do objeto da licitação, pelo próprio pregoeiro, ou, em havendo recurso, pela autoridade competente.</p>
+					
+				<Comments :attr="{id:commentId(), context:'13.   ADJUDICAÇÃO'}" v-if="estaConsulta.ativo == 1"></Comments>
+			</section>	
+				
+			<section>
+				<h3 class="titulo" indent="2">14.    HOMOLOGAÇÃO</h3>
+				<p>14.1.	Decorridas as fases anteriores, a decisão será submetida à autoridade competente, para homologação.</p>
+					<p class="s2">          14.1.1.	 A adjudicação do objeto e a homologação da licitação não obrigam a Administração à contratação do objeto licitado. </p>
+					
+				<Comments :attr="{id:commentId(), context:'14.    HOMOLOGAÇÃO'}" v-if="estaConsulta.ativo == 1"></Comments>
+			</section>
+
+			<section>
+				<h3 class="titulo" indent="2">15.   PREÇO, REAJUSTE E DOTAÇÃO</h3>
+				<p>15.1.	O preço que vigorará para o fornecimento do objeto do certame será o ofertado pela licitante a quem for o mesmo adjudicado.</p>
+				<p>15.2. Este preço inclui todos os custos diretos e indiretos, impostos, taxas, benefícios, encargos sociais, trabalhistas e fiscais que recaiam sobre o objeto, frete, transporte, e constituirá, a qualquer título, a única e completa remuneração pela execução dos serviços, e seu adequado e perfeito cumprimento, de modo que nenhuma outra remuneração será devida.</p>
+				<p>15.3.	Os recursos necessários onerarão a dotação nº n° XX.XX.XX.XXX.XXXX.XXXX.XXXXXXX.XX - Manutenção e Operação da central de atendimento telefônico - 156, para atender o pleito no corrente exercício.</p>
+					
+				<Comments :attr="{id:commentId(), context:'15.   PREÇO, REAJUSTE E DOTAÇÃO'}" v-if="estaConsulta.ativo == 1"></Comments>
+			</section>
+
+			<section>
+				<h3 class="titulo" indent="2">16.   CONDIÇÕES DO AJUSTE</h3>
+				<p>16.1.  A contratação decorrente desta licitação será formalizada em Contrato da qual deverão constar todas as condições contratuais, de acordo com este Edital.</p>
+					<p class="s2">           16.1.1.  Para a formalização do ajuste a empresa adjudicatária deverá apresentar os documentos já exigíveis por ocasião da habilitação, aqueles necessários à contratação, atualizados, caso solicitados.</p>
+					<p class="s2">           16.1.2.   Como condição à contratação, ainda, deverá restar comprovado que a empresa a ser contratada não possui pendências junto ao Cadastro Informativo Municipal – CADIN MUNICIPAL, por força da Lei Municipal nº 14.094/2005 e Decreto nº 47.096/2006, que disciplinam que a inclusão no CADIN impedirá a empresa de contratar com a Administração Municipal.</p>
+					<p class="s2"> 16.1.3.	 A licitante adjudicatária do objeto deverá ter registro atualizado no Cadastro de Credores junto à Secretaria Municipal de Finanças e Desenvolvimento Social (SF), caso não possua deverá providenciá-lo no prazo de 02 (dois) dias úteis, inclusive mediante indicação da conta corrente no Banco do Brasil S/A, a partir da homologação do certame, junto ao setor de contabilidade da contratante, sob pena de configurar recusa na contratação para fins de aplicação das penalidades previstas neste Edital.</p>
+					<p class="s2"> 16.1.4.  Os documentos mencionados nesta cláusula deverão ser apresentados em cópias autenticadas ou no original, com prazo de validade em vigor na data da apresentação e serão retidos para oportuna juntada no processo administrativo pertinente à contratação.</p>
+				<p>16.2. A formalização do ajuste se dará com o recebimento da nota de empenho pela adjudicatária do objeto da licitação, que poderá se dar por qualquer meio devidamente comprovado.</p>
+					<p class="s2"> 16.2.1.  Caso haja convocação para a adjudicatária retirar a nota de empenho, pelo   Diário Oficial da Cidade, a empresa terá 05 (cinco) dias úteis, para tanto.</p>
+					<p class="s2">16.2.2.   Caso a nota de empenho seja encaminhada por fax ou e-mail a empresa adjudicatária terá 02 (dois) dias úteis, para acusar seu recebimento da mesma forma, data em que iniciará o prazo de 05 (cinco) dias úteis para retirada da nota de empenho.</p>
+					<p class="s2">16.2.3.   O prazo para formalização do ajuste, poderá ser prorrogado uma vez, por igual período, desde que solicitado por escrito, durante seu transcurso e ocorra motivo justificado e aceito pela Administração.</p>
+						<p class="s3">16.2.3.1.  A não formalização do ajuste, ou seja, a não retirada da nota de empenho ou o seu não recebimento no prazo estabelecido configurará recusa na contratação, incidindo as penalidades previstas neste Edital.</p>
+				<p> 16.3. É facultado à Administração, quando o convocado não formalizar o ajuste no prazo e condições estabelecidos, inclusive na hipótese de impedimento da contratação, sem embargo da aplicação das penalidades cabíveis, retomar o procedimento, mediante agendamento de nova Sessão Pública, ou revogar a licitação.</p>
+					<p class="s2">16.3.1.  Na hipótese de retomada do procedimento, as demais licitantes classificadas serão convocadas para participar da nova sessão pública do pregão, com vistas a celebração da contratação.</p>
+					<p class="s2">16.3.2. O aviso da nova sessão pública será publicado no Diário Oficial da Cidade e divulgado nos endereços eletrônicos www.bec.sp.gov.br e http://e-negocioscidadesp.prefeitura.sp.gov.br</p>
+					<p class="s2">16.3.3.   Na sessão o pregoeiro convocará as licitantes classificadas remanescentes, na ordem de classificação, promovendo a averiguação das condições de aceitabilidade de preços e de habilitação, procedendo-se conforme especificações deste Edital, até o encontro de uma proposta e licitante que atendam a todas as exigências estabelecidas, sendo a respectiva licitante declarada vencedora e a ela adjudicado o objeto da licitação.</p>
+				<p>16.4. Para a execução do ajuste, nenhuma das partes poderá oferecer, dar ou se comprometer a dar a quem quer que seja, ou aceitar ou se comprometer a aceitar de quem quer que seja, tanto por conta própria quanto por intermédio de outrem, qualquer pagamento, doação, compensação, vantagens financeiras ou não financeiras ou benefícios de qualquer espécie que constituam prática ilegal ou de corrupção, seja de forma direta ou indireta quanto ao objeto deste Edital, ou de outra forma a ele não relacionada, devendo garantir, ainda, que seus prepostos e colaboradores ajam da mesma forma, conforme disposto no Decreto 44.279/03, com redação que lhe atribuiu o Decreto 56.633/2015.</p>
+					
+				<Comments :attr="{id:commentId(), context:'16.   CONDIÇÕES DO AJUSTE'}" v-if="estaConsulta.ativo == 1"></Comments>
+			</section>
+
+			<section>
+				<h3 class="titulo" indent="2">17.    PRAZOS, CONDIÇÕES E LOCAL DE ENTREGA</h3>
+				<p>17.1.  A Administração estabelecerá data certa para início da execução do serviço, conforme constar na Minuta de Contrato (Anexo I) ou, excepcionalmente, por meio de Ordem de Início dos Serviços.</p>
+					<p class="s2">17.1.1. O serviço deverá ser prestado de acordo com o ofertado na proposta, no local e horário discriminados no Anexo II deste Edital, correndo por conta da contratada todas as despesas decorrentes da execução do objeto contratual.</p>
+					<p class="s2">17.1.4. A execução dos serviços terá validade de 12 (doze) meses, a partir da assinatura do contrato, prorrogável de acordo com legislação vigente, nos termo do item 4.1 do Termo de Referência. </p>
+				<p>17.2. Somente serão analisados pela Administração os pedidos de prorrogação de prazo(s) de entrega do objeto que se apresente com as condições seguintes:</p>
+					<p class="s2">a)	até a data final prevista para a entrega; e,</p>
+					<p class="s2">b)	instruídos com justificativas, nos termos do disposto no parágrafo 1º do artigo 57 da Lei Federal nº 8.666/93, e respectiva comprovação.</p>
+					<p class="s2">  17.2.1. Os pedidos instruídos em condições diversas das previstas no subitem anterior serão indeferidos de pronto.</p>
+				<p>17.3. O prazo de garantia dos serviços executados será de 12 (doze) meses, podendo ser prorrogado por até 60 (sessenta) meses.  </p>
+				<p>17.4.  A documentação a ser entregue pelo fornecedor é a seguinte:</p>
+					<p class="s2">17.4.1.  Primeira Via da Nota Fiscal.</p>
+					<p class="s2">17.4.2. Nota Fiscal Fatura.</p>
+					<p class="s2">17.4.3. Cópia reprográfica da Nota de Empenho. </p>
+						<p class="s3"> 17.4.3.1.   Na hipótese de existir Nota de retificação e/ou Nota Suplementar de Empenho, cópia(s) da(s) mesma(s) deverá(ão) acompanhar os demais documentos citados.</p>
+					<p class="s2">17.4.4. Demais documentos elencados na Portaria 92/2014 da Secretaria de Finanças do Município de São Paulo, alterada pela Portaria SF 8/2016, exigíveis na espécie.</p>
+					
+				<Comments :attr="{id:commentId(), context:'17.    PRAZOS, CONDIÇÕES E LOCAL DE ENTREGA'}" v-if="estaConsulta.ativo == 1"></Comments>
+			</section>
+
+			<section>
+				<h3 class="titulo" indent="2">18.     DO PREÇO, DA DOTAÇÃO E DAS CONDIÇÕES DE PAGAMENTO</h3>
+				<p>18.1.	O objeto deste Pregão será recebido pela Contratante, consoante o disposto no artigo 73, inciso II, alíneas “a” e “b” da Lei Federal nº  8.666/93 e demais normas pertinentes.</p>
+					<p class="s2">18.1.2. Caso seja identificada qualquer inconformidade, a partir da notificação, a empresa responsável pela instalação da infraestrutura terá até 20 (vinte) dias úteis para efetuar as correções.</p>
+						<p class="s3">              18.1.5. O recebimento e aceite do objeto pela Administração não exclui a responsabilidade civil da Contratada por qualquer inconformidades  ou disparidades com as especificações estabelecidas no Edital, verificadas posteriormente.</p>
+					<p>18.2. O prazo para pagamento será de 30 (trinta) dias, contados da execução dos serviços por localidade que será feita através de Ordem de Serviço. </p>
+						<p class="s2"> 18.2.1. A Nota Fiscal / Nota Fiscal Fatura que apresentar incorreções, quando necessário, será devolvida e seu vencimento ocorrerá em até 30 (trinta) dias após a data de sua reapresentação válida.</p>
+						<p class="s2">18.2.2. Caso ocorra a necessidade de providências complementares por parte da Contratada, a fluência do prazo de pagamento será interrompida, reiniciando-se a contagem a partir da data em que estas forem cumpridas. </p>
+					<p>18.3. O pagamento será efetuado por crédito em conta corrente no Banco do Brasil S/A, nos termos do disposto no Decreto Municipal nº 51.197/2010.</p>
+						<p class="s2">          18.3.1. A proponente deverá indicar na proposta comercial o nome e número da agência, bem como o número da conta corrente, se já a tiver.</p>
+					<p>18.4.  Será aplicada compensação financeira, nos termos da Portaria SF nº 05/2012, quando houver atraso no pagamento dos valores devidos, por culpa exclusiva da Administração, observada a necessidade de se apurar a responsabilidade do servidor que deu causa ao atraso no pagamento, nos termos legais.</p>
+						<p class="s2">18.4.1. Para fins de cálculo da compensação financeira de que trata o item acima, o valor do principal devido será reajustado utilizando-se o índice oficial de remuneração básica da caderneta de poupança e de juros simples no mesmo percentual de juros incidentes sobre a caderneta de poupança para fins de compensação da mora (TR + 0,5% “pro-rata tempore”), observando-se, para tanto o período correspondente à data prevista para o pagamento e aquela data em que o pagamento efetivamente ocorreu.</p>
+						<p class="s2">18.4.2. O pagamento da compensação financeira dependerá de requerimento a ser formalizado pela Contratada.</p>
+					<p>18.5.	Quaisquer pagamentos não isentarão a Contratada das responsabilidades contratuais, nem implicarão na aceitação do material.</p>
+					<p>18.6. 	Os pagamentos obedecerão ao disposto nas Portarias da Secretaria Municipal de Finanças e Desenvolvimento Social (SF) em vigor, notadamente a Portaria SF nº 92, de 16/05/2014, alterada pela Portaria SF 8/2016 e pela Portaria SF 159/2017, ficando ressalvada qualquer alteração quanto às normas referentes a pagamento, em face da superveniência de normas federais ou municipais sobre a matéria.</p>
+					
+				<Comments :attr="{id:commentId(), context:'18.     DO PREÇO, DA DOTAÇÃO E DAS CONDIÇÕES DE PAGAMENTO'}" v-if="estaConsulta.ativo == 1"></Comments>
+			</section>
+
+			<section>
+				<h3 class="titulo" indent="2">19. DA FISCALIZAÇÃO</h3>
+				<p>19.1. A Fiscalização do ajuste caberá ao servidor e seu substituto nominalmente designados pela autoridade competente, em regular despacho, nos termos do Decreto Municipal nº 54.873/14.</p>
+				<p>19.2. A ação ou omissão total ou parcial da fiscalização, não eximirá a Contratada das responsabilidades contratuais.</p>
+					
+				<Comments :attr="{id:commentId(), context:'19. DA FISCALIZAÇÃO'}" v-if="estaConsulta.ativo == 1"></Comments>
+			</section>
+
+			<section>
+				<h3 class="titulo" indent="2">20. PENALIDADES</h3>
+				<p>20.1.	São aplicáveis as sanções previstas na Lei Federal nº 8.666/93, na Lei Federal no 10.520/02 e na Lei Municipal nº. 12.378/02, devendo ser observados os procedimentos contidos no Decreto Municipal nº 44.279/03.</p>
+					<p class="s2">    20.1.1. As penalidades só deixarão de ser aplicadas nas seguintes hipóteses:</p>
+						<p class="s3">a)	comprovação, anexada aos autos, da ocorrência de força maior impeditiva do cumprimento da obrigação e/ou,</p>
+						<p class="s3">b)	manifestação da unidade requisitante, informando que o ocorrido derivou de fatos imputáveis à Administração.</p>
+				<p>20.2.	Ocorrendo recusa da adjudicatária em assinar e/ou retirar/receber a nota de empenho, dentro do prazo estabelecido neste Edital, sem justificativa aceita pela Administração, garantido o direito prévio de citação e da ampla defesa, serão aplicadas:</p>
+					<p class="s2">20.2.1.	Multa no valor de 20% (vinte por cento) do valor do ajuste se firmado fosse; e</p>
+					<p class="s2">20.2.2. Pena de suspensão temporária do direito de licitar e contratar pelo prazo de até 02 (dois) anos com a Administração Pública, a critério da Administração.</p>
+					<p class="s2">20.2.3.	Incidirá nas mesmas penas previstas neste subitem a empresa que estiver impedida de firmar o ajuste pela não apresentação dos documentos necessários para tanto.</p>
+				<p>20.3.	À licitante que ensejar o retardamento da execução do certame, inclusive em razão de comportamento inadequado de seus representantes, deixar de entregar ou apresentar documentação falsa exigida neste Edital, não mantiver a proposta/lance, comportar-se de modo inidôneo, fizer declaração falsa ou cometer fraude fiscal, garantido o direito prévio de citação e da ampla defesa, serão aplicadas as penalidades referidas nos subitens 20.2.1. e 20.2.2., a critério da Administração.</p>
+				<p>20.4. A Contratada estará sujeita às penalidades previstas no item “12. Das Penalidades” do Termo de Referência, Anexo I deste Edital, bem como às glosas previstas pelo descumprimento do acordo de nível de serviços constantes no Anexo V do Termo de Referência, Anexo I deste Edital.  :</p>
+				<p>20.5.	As sanções são independentes e a aplicação de uma não exclui a das outras, quando cabíveis.</p>
+				<p>20.6. O valor das multas será atualizado monetariamente, nos termos da Lei Municipal nº 10.734/89, com a redação que lhe atribuiu a Lei Municipal nº 13.275/2002 e alterações subsequentes.</p>
+				<p>20.7. Das decisões de aplicação de penalidades, caberá recurso nos termos do Decreto Municipal nº 44.279/03, observados os prazos nele fixados, que deverá ser dirigido à Comissão Permanente de Licitação nº 01 da Secretaria Municipal de Inovação e Tecnologia, e protocolizado nos dias úteis, das 09:00 às 18:00 horas, na Rua Libero Badaró, 425, 34º andar, São Paulo – SP, após o recolhimento em agência bancária dos emolumentos devidos.</p>
+					<p class="s2">20.7.1. Não serão conhecidos recursos enviados pelo correio, fac-símile, correio eletrônico ou qualquer outro meio de comunicação, se, dentro do prazo previsto em lei, a peça inicial original não tiver sido protocolizada.</p>
+					<p class="s2">20.7.2. Caso a CONTRATANTE releve justificadamente a aplicação da multa ou de qualquer outra penalidade, essa tolerância não poderá ser considerada como modificadora de qualquer condição contratual, permanecendo em pleno vigor todas as condições deste Edital e do ajuste dele decorrente.</p>
+				<p>20.8.	O prazo para pagamento das multas será de 05 (cinco) dias úteis a contar da intimação da empresa apenada. A critério da Administração e em sendo possível o valor devido será descontado da importância que a mesma tenha a receber. Não havendo pagamento pela empresa, o valor será inscrito como dívida ativa, sujeitando-se ao processo executivo.</p>
+				<p>20.9.  São aplicáveis à presente licitação e ao ajuste dela decorrente no que cabível for, inclusive, as sanções penais estabelecidas na Lei Federal nº 8.666/93.</p>
+					
+				<Comments :attr="{id:commentId(), context:'20. PENALIDADES'}" v-if="estaConsulta.ativo == 1"></Comments>
+			</section>
+
+			<section>
+				<h3 class="titulo" indent="2">21. DISPOSIÇÕES FINAIS</h3>
+				<p>21.1. No julgamento da habilitação e das propostas, o pregoeiro poderá sanar erros ou falhas que não alterem a substância das propostas, dos documentos e sua validade jurídica, mediante despacho fundamentado, registrado em ata e acessível a todos, atribuindo-lhes validade e eficácia para fins de habilitação e classificação. </p>
+				<p>21.2. As normas disciplinadoras desta licitação serão interpretadas em favor da ampliação da disputa, respeitada a igualdade de oportunidade entre as licitantes e desde que não comprometam o interesse público, a finalidade e a segurança da contratação.</p>
+				<p>21.3. As licitantes assumem todos os custos de preparação e apresentação de suas propostas e a PMSP não será, em nenhum caso, responsável por esses custos, independentemente da condução ou do resultado do processo licitatório.</p>
+				<p>21.4. As licitantes são responsáveis pela fidelidade e legitimidade das informações e dos documentos apresentados em qualquer fase do certame. </p>
+					<p class="s2">21.4.1 A falsidade de qualquer declaração prestada, notadamente objetivando os benefícios da Lei Complementar 123/06, alterada pela Lei Complementar 147/14, poderá caracterizar o crime de que trata o art. 299 do Código Penal, sem prejuízo do enquadramento em outras figuras penais e das sanções administrativas previstas na legislação pertinente, mediante o devido processo legal, e implicará, também, a inabilitação da licitante se o fato vier a ser constatado durante o trâmite da licitação.</p>
+				<p>21.5.  A contratada deverá comunicar à Administração toda e qualquer alteração nos dados cadastrais, para atualização, devendo manter, durante toda a execução do contrato,  em compatibilidade com as obrigações assumidas, todas as condições de habilitação e qualificação exigidas na licitação. </p>
+				<p>21.6.	O ajuste, suas alterações e rescisão obedecerão à Lei Municipal nº 13.278/02, à Lei Federal nº 8.666/93, demais normas complementares e disposições deste Edital, aplicáveis à execução dos contratos e especialmente os casos omissos.</p>
+				<p>21.7.	A PMSP, no interesse da Administração, poderá, a qualquer tempo e a seu exclusivo critério, por despacho motivado, revogar ou anular, no todo ou em parte a licitação, sem que tenham as licitantes direito a qualquer indenização, conforme artigo 49 da Lei Federal nº 8.666/93.</p>
+				<p>21.8. Com base no parágrafo 3º do artigo 43, da Lei Federal nº 8.666/93, é facultado ao Pregoeiro, em qualquer fase da licitação, promover diligência destinada a esclarecer ou a complementar a instrução do processo.</p>
+				<p>21.9.	Os casos omissos e as dúvidas surgidas serão resolvidos pelo Pregoeiro ouvidas, se for o caso, as Unidades competentes.</p>
+				<p>21.10. Integrarão o ajuste a ser firmado, para todos os fins, a proposta da Contratada, a Ata da licitação e o Edital da Licitação, com seus Anexos, que o precederam, independentemente de transcrição.</p>
+				<p>21.11. Nenhuma tolerância das partes quanto à falta de cumprimento de quaisquer dos itens do ajuste poderá ser entendida como aceitação, novação ou precedente.</p>
+				<p>21.12. A Contratada não poderá subcontratar, ceder ou transferir o objeto do ajuste, no todo ou em parte, a terceiros, sob pena de rescisão.</p>
+				<p>21.13. Fica ressalvada a possibilidade de alteração das condições contratuais em face da superveniência de normas federais e municipais disciplinando a matéria.</p>
+				<p>21.14.	Na contagem dos prazos estabelecidos neste Edital e seus Anexos, excluir-se-á o dia do início e incluir-se-á o do vencimento. Só se iniciam e vencem os prazos em dias de expediente na PMSP. Considerar-se-ão os dias consecutivos, exceto quando for explicitamente disposto em contrário.</p>
+				<p>21.15. Não havendo expediente ou ocorrendo qualquer fato superveniente que impeça a realização do certame na data marcada, o pregoeiro agendará nova data para a abertura da sessão.</p>
+				<p>21.16. Fica desde logo eleito o Foro da Comarca da Capital – Vara da Fazenda Pública - para dirimir quaisquer controvérsias decorrentes do presente certame ou de ajuste dele decorrente.</p>
+				<p>21.17. Os atos relativos à licitação efetuados por meio do sistema eletrônico serão formalizados e registrados no processo administrativo pertinente ao certame. </p>
+				<p>21.18. O resultado deste Pregão e os demais atos pertinentes a esta licitação, sujeitos a  publicação, serão divulgados no Diário Oficial da Cidade e no sítio eletrônico http://e-negocioscidadesp.prefeitura.sp.gov.br – Secretaria Municipal de Inovação e Tecnologia.</p>
+				<p>21.19. Qualquer divergência entre as especificações contidas no Edital e as constantes no catálogo de materiais afeto ao sistema BEC/SP, prevalecerão para todos os efeitos as contidas no Edital.</p>
+				<p>21.20. O pregoeiro e a equipe de apoio que atuarão neste pregão eletrônico foram designados nos autos do processo administrativo a ele pertinente e indicados no sistema.</p>
+				<p>21.21 Na hipótese de as normas do Edital contradizerem as disposições do Termo de Referência, as últimas prevalecerão sobre as primeiras.  </p>
+
+				<p style="text-align: center">São Paulo, XXX de Outubro de 2019 <br>
+				<strong>XXXXXXXXXXXXXXXXXXXX</strong> <br>
+				Pregoeiro (a) <br>
+				<strong>Comissão de Licitação Permanente nº 01</strong></p>
+
+				<Comments :attr="{id:commentId(), context:'21. DISPOSIÇÕES FINAIS'}" v-if="estaConsulta.ativo == 1"></Comments>				
+			</section>
+
+
+		<section>
 			<h2 class="titulo" indent="1">1.	OBJETO</h2>
 			<h3>1.1.	Contratação de serviços de planejamento, implantação, operação, gerenciamento de central de atendimento e gestão de atendimento receptivo e ativo nas formas eletrônica e humana. </h3>
 			<Comments :attr="{id:commentId(true), context:'1. OBJETO'}" v-if="estaConsulta.ativo == 1"></Comments>
@@ -2154,6 +2518,7 @@ apresenta-se o seguinte resultado:</p>
 			<p>8.1.7.	A CONTRATADA deverá arcar fiel e regularmente com todas as obrigações trabalhistas dos empregados que participem da execução do objeto contratual.</p>
 			<p>8.1.8.	A CONTRATADA deverá enviar e manter atualizado o rol de todos os empregados e prestadores de serviço que participam da execução do objeto contratual.</p>
 			<p>8.1.9.	É vedada a retirada pela Adjudicatária ou o envio pela Administração, do Termo de Contrato para assinatura fora das dependências da Administração.</p>
+			<p>8.1.10.	A eficácia do presente Contrato está sujeita à celebração do contrato que tem por objeto a prestação de serviços compreendendo a disponibilização de solução tecnológica para atendimento, gerenciamento do relacionamento com o cidadão e digitalização de serviços públicos (processo administrativo nº. xxx / pregão eletrônico nº. xxx). Dessa forma, até que haja a implementação da referida condição, a presente contratação não produzirá seus efeitos jurídicos típicos.</p>
 				
 			<Comments :attr="{id:commentId(), context:'subtitulo'}" v-if="estaConsulta.ativo == 1"></Comments>
 

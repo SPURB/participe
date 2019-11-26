@@ -14,22 +14,22 @@
 				O presente Plano Municipal de Agroecologia e Desenvolvimento Rural Sustentável e Solidário – PMADRSS é fruto da Lei nº 16.050, de 31 de julho de 2014 que aprova a Política de Desenvolvimento Urbano e o Plano Diretor Estratégico do Município de São Paulo.
 			</p>
 			<p>
-				A Secretaria Municipal de Desenvolvimento Econômico e Trabalho (SMDET), é articuladora deste trabalho e criou condições para que a construção do PAMDRSS fosse desenvolvida em estreita cooperação com o Conselho Municipal de Desenvolvimento Rural Sustentável e Solidário (CMDRSS). Este Conselho é formado por representantes da agricultura urbana e peri-urbana, entidades da sociedade civil e técnicos das mais diversas esferas do poder público, cujas contribuições foram organizadas e sistematizadas por meio de oficinas e reuniões colaborativas.
+				A Secretaria Municipal de Desenvolvimento Econômico e Trabalho (SMDET) é articuladora deste trabalho e criou condições para que a construção do PAMDRSS fosse desenvolvida em estreita cooperação com o Conselho Municipal de Desenvolvimento Rural Sustentável e Solidário (CMDRSS). Este Conselho é formado por representantes da agricultura urbana e peri-urbana, entidades da sociedade civil e técnicos das mais diversas esferas do poder público, cujas contribuições foram organizadas e sistematizadas por meio de oficinas e reuniões colaborativas.
 			</p>
 			<p>
-				Idealizado para compor o conjunto da Politica de Desenvolvimento Urbano desta capital esta será a primeira vez que políticas de estimulo a agricultura urbana, a agroecologia e o desenvolvimento rural sustentável surgem como importante componente norteador da busca pela sustentabilidade na cidade, de forma a considerar a utilização harmoniosa dos recursos naturais e o estimulo à destinação ambiental saudável da paisagem urbana.
+				Idealizado para compor o conjunto da Política de Desenvolvimento Urbano desta capital, esta será a primeira vez que políticas de estímulo à agricultura urbana, à agroecologia e ao desenvolvimento rural sustentável surgem como importante componente norteador da busca pela sustentabilidade na cidade, de forma a considerar a utilização harmoniosa dos recursos naturais e o estímulo à destinação ambiental saudável da paisagem urbana.
 			</p>
 			<p>
-				O Plano Municipal de Agroecologia e Desenvolvimento Rural Sustentável e Solidário tem por responsabilidade buscar o entrelaçamento das diversas políticas públicas existentes que tratam deste tema. Integrando e aprimorando na perspectiva da zona rural e da agricultura urbana o conjunto de ações para a promoção da segurança alimentar e nutricional, da soberania alimentar, do desenvolvimento territorial estratégico e do direito humano à alimentação adequada (DHAA).
+				O Plano Municipal de Agroecologia e Desenvolvimento Rural Sustentável e Solidário tem por objetivo buscar o entrelaçamento das diversas políticas públicas existentes que tratam deste tema, integrando e aprimorando na perspectiva da zona rural e da agricultura urbana o conjunto de ações para a promoção da segurança alimentar e nutricional, da soberania alimentar, do desenvolvimento territorial estratégico e do direito humano à alimentação adequada (DHAA).
 			</p>
 			<p>
-				É também de sua responsabilidade indicar novas e necessárias políticas públicas com vistas ao fortalecimento das práticas agropecuárias de forma compatível com a conservação ambiental, considerando a complexa ecologia urbana, e possibilitando a melhoria da qualidade de vida de agricultores urbanos e peri-urbanos da cidade. Reconhecendo assim as necessidades intrínsecas a Zona Rural e dispondo diretrizes que nortearão a estruturação destes territórios e do conjunto das atividades correlatas a agricultura urbana em suas mais diversas formas.
+				É também seu objetivo indicar novas e necessárias políticas públicas com vistas ao fortalecimento das práticas agropecuárias de forma compatível com a conservação ambiental considerando a complexa ecologia urbana e possibilitando a melhoria da qualidade de vida de agricultores urbanos e peri-urbanos da cidade. 
 			</p>
 			<p>
-				Os apontamentos e recomendações para ações que integram esse Plano servirão para guiar a atuação do Poder Público nas diversas instâncias num cenário para os próximos 8 anos, a fim de garantir os objetivos previstos no Plano Diretor Estratégico (PDE) em relação ao território rural e ao conjunto das políticas de fomento a agroecologia urbana e adoção de práticas sustentáveis no cotidiano dos cidadãos.
+				A fim de garantir os objetivos previstos no Plano Diretor Estratégico (PDE) em relação ao território rural e ao conjunto das políticas de fomento à agroecologia urbana e adoção de práticas sustentáveis no cotidiano dos cidadãos, este plano traz apontamentos e recomendações para guiar a atuação do Poder Público nas diversas instâncias num cenário para os próximos 8 anos.
 			</p>
 			<p>
-				A promoção do desenvolvimento rural e da agroecologia se dá a partir de ações complementares, integradas e transdisciplinares, apontando para a necessidade de articulação entre secretarias municipais, entre órgãos públicos estaduais e federais, entre espaços colegiados de participação social e entre a atuação pública e privada. Nenhuma ação descrita neste Plano está isolada, todas estão conectadas e deverão ser implantadas de forma transversal, mediante a hierarquia de prioridades apontadas e os arranjos institucionais e orçamentários necessários. 
+				A promoção do desenvolvimento rural e da agroecologia se dá a partir de ações integradas e transdisciplinares, apontando para a necessidade de articulação entre secretarias municipais, órgãos públicos estaduais e federais, espaços colegiados de participação social e a atuação pública e privada. Nenhuma ação descrita neste Plano está isolada, todas estão conectadas e deverão ser implantadas de forma transversal, mediante a hierarquia de prioridades apontadas e os arranjos institucionais e orçamentários necessários.
 			</p>
 			<p>
 				O Plano Municipal de Agroecologia e Desenvolvimento Rural Solidário e Sustentável de São Paulo está estruturado de forma a impulsionar o desenvolvimento relacionado às zonas rurais e às áreas urbanas onde são praticadas estas atividades produtivas. Desta forma, a partir de eixos temáticos, foram elaboradas diretrizes norteadoras que estruturam as ações elencadas no plano e as direcionam para o atendimento maior da política pública: garantir a qualidade de vida da população e proporcionar o desenvolvimento rural no município de São Paulo.
@@ -57,7 +57,7 @@
 						<li>Histórico De Construção Do Plano</li>
 					</ol>
 				</li>
-				<li>DIAGNÓSTICO SOCIOAMBIENTAL, ECONÔMICO E CULTURAL DA AGROECOLOGIA E DA  ZONA RURAL NA CIDADE DE SÃO PAULO
+				<li>DIAGNÓSTICO SOCIOAMBIENTAL, ECONÔMICO E CULTURAL DA AGROECOLOGIA E DA ZONA RURAL NA CIDADE DE SÃO PAULO
 					<ol type="1.1">
 						<li>Considerações Gerais</li>
 						<li>Caracterização do Território Rural no Município
@@ -77,7 +77,7 @@
 			</ol>
 			
 			<p>
-				Para fins da presente Consulta Pública, serão recebidas considerações da população acerca do ponto V. DIRETRIZES PARA ORIENTAR AS AÇÕES DOS ÓRGÃOS PÚBLICOS E DE SUAS PARCERIAS, uma vez que é o principal capítulo onde estão descritas as ações, atividades estratégicas e metas previstas para atuações do Poder Público de forma a fomentar o desenvolvimento rural de forma solidária e sustentável e promover a agroecologia em todo o território municipal.
+				Para fins da presente Consulta Pública, serão recebidas considerações da população acerca da seção: “V. DIRETRIZES PARA ORIENTAR AS AÇÕES DOS ÓRGÃOS PÚBLICOS E DE SUAS PARCERIAS”, uma vez que é o principal capítulo onde estão descritas as ações, atividades estratégicas e metas previstas para atuações do Poder Público de forma a fomentar o desenvolvimento rural de forma solidária e sustentável e promover a agroecologia em todo o território municipal.
 			</p>			
 		</section>
 
@@ -182,8 +182,8 @@
 				</tr>
 			</table>
 
-			<p>Os eixos auxiliam na organização geral das ações, porém não devem ser vistos de forma setorializada, uma vez que as ações contidas em cada categoria estão integradas e, em muitos casos, dependem de outras ações descritas no plano para que possam ser efetivadas. Mais uma vez, a integração entre ações, a intersetorialidade e a ação intersecretarial são fundamentais para o desenvolvimento integrado da Zona Rural do município e das práticas agropecuárias distribuídas pelo território municipal.</p>
-			<p>	O plano é um exercício de planejamento para um período de 8 anos, contando a partir da publicação do plano, devendo ter suas metas e prazos revistos a cada 4 anos. Foram listadas secretarias e órgãos responsáveis por cada ação, o que não impede de envolver outras instituições e órgãos conforme a implantação da ação e as demandas que dela surgirem. De forma similar, estão descritas atividades estratégicas e metas que devem ser cumpridas, a fim de garantir a efetividade do plano. O monitoramento da execução do plano deverá ser realizado mediante a criação de indicadores de gestão e de resultado, a serem acompanhados pelo CMDRSS com o apoio e a estrutura da Secretaria Municipal do Desenvolvimento Econômico e Trabalho (SMDET) e  da Secretaria Municipal de Subprefeituras (SMSUB).</p>
+			<p>Os eixos auxiliam na organização geral das ações, porém não devem ser vistos de forma setorializada, uma vez que as ações contidas em cada categoria estão integradas e, em muitos casos, dependem de outras ações descritas no plano para que possam ser efetivadas. Mais uma vez, a integração entre ações, a intersetorialidade e a ação intersecretarial são fundamentais para o desenvolvimento integrado da Zona Rural do município.</p>
+			<p>O plano é um exercício de planejamento para um período de 8 anos, contando a partir da publicação do Plano, devendo ter suas metas e prazos revistos a cada 4 anos. Foram listadas secretarias e órgãos responsáveis por cada ação, o que não impede de envolver outras instituições e órgãos conforme a implantação da ação e as demandas que dela surgirem. De forma similar, estão descritas atividades estratégicas e metas que devem ser cumpridas, a fim de garantir a efetividade do plano. O monitoramento da execução do plano deverá ser realizado mediante a criação de indicadores de gestão e de resultado, a serem acompanhados pelo CMDRSS com o apoio e a estrutura da Secretaria Municipal do Desenvolvimento Econômico e Trabalho (SMDET) e da Secretaria Municipal de Subprefeituras (SMSUB).</p>
 			<p>	Dessa forma, a priorização das ações e do tempo previsto para a realização das metas e ações estratégicas está organizada da seguinte forma:</p>
 			<table style="max-width: 18em;">
 				<tr>
@@ -1691,15 +1691,6 @@
 					<Comments :attr="{id:commentId(), context:'AÇÃO – Sistema de Informações da Zona Rural de SP'}" v-if="estaConsulta.ativo == 1"></Comments>
 				</div>
 		</section>
-		
-		
-		
-		
-
-		
-		
-		
-		
 
 		<section ref="allComments">
 			<h2 v-show="commentsLoaded" class="titulo" indent="2">Contribuições</h2>

@@ -18,9 +18,16 @@
 			<p>
 				Cronograma:
 				<ol>
-					<li>Recebimento de eventuais sugestões e/ou comentários até 25/11/2019.</li>
-					<li>Divulgação no site da SMIT (<a href="https://www.prefeitura.sp.gov.br/cidade/secretarias/inovacao/">https://www.prefeitura.sp.gov.br/cidade/secretarias/inovacao/</a>) da versão revisada do Termo de Referência considerando eventuais ajustes decorrentes do processo de consulta pública até 09/12/2019</li>
-					<li>Encaminhamento das Propostas contendo as respectivas Estimativas de Preços em conformidade com o Termo de Referência eventualmente ajustado em decorrência da consulta pública até 16/12/2019. As mesmas poderão ser enviadas para o e-mail. <a href="mailto:consultapublica.smit@prefeitura.sp.gov.br">consultapublica.smit@prefeitura.sp.gov.br</a></li>
+					<li>
+						Recebimento de eventuais sugestões e/ou comentários a partir de 19/11/2019 até 04/12/2019.
+					</li>
+					<li>
+						Adequações no Termo de Referência com as considerações publicadas no processo de consulta pública: de 05/12/2019 até 18/12/2019.
+					</li>
+					<li>
+						Após a consolidação das análises recebidas, considerando os eventuais ajustes decorrentes do processo de consulta pública, a versão final do Termo de Referência será divulgada no site da SMIT <a href="https://www.prefeitura.sp.gov.br/cidade/secretarias/inovacao" target="_blank">https://www.prefeitura.sp.gov.br/cidade/secretarias/inovacao</a>. 
+					</li>
+					<li>Encaminhamento das Propostas contendo as respectivas estimativas de preços em conformidade com o Termo de Referência eventualmente ajustado em decorrência da consulta pública até 10 dias uteis após a divulgação da versão final. As mesmas poderão ser enviadas para o e-mail <a href="mailto:consultapublica.smit@prefeitura.sp.gov.br">consultapublica.smit@prefeitura.sp.gov.br</a></li>
 				</ol>
 			</p>
 
@@ -268,14 +275,15 @@
 			<Comments :attr="{id:commentId(), context:'3.9.	Infraestrutura Física'}" v-if="estaConsulta.ativo == 1"></Comments>
 
 			<h3>3.10.	Sistema de Gestão de Atendimento</h3>
-			<p>3.10.1.	A Prefeitura do Munícipio de São Paulo disponibilizará uma solução de atendimento ao cidadão que deverá ser utilizada por todos os operadores do CONTACT CENTER (telefonia, chat e redes sociais se houver), para acolhimento de todos as solicitações registradas para a Prefeitura pelos canais 156, 199 e 153.</p>
+			<p>3.10.1.	A Prefeitura do Munícipio de São Paulo disponibilizará uma solução de atendimento ao cidadão que deverá ser utilizada por todos os operadores do CONTACT CENTER (telefonia, chat e redes sociais se houver), para acolhimento de todas as solicitações registradas para a Prefeitura pelos canais 156, 199 e 153.</p>
 			<p>3.10.2.	Esta solução de atendimento deve ser integrada - via Computer Telephony Integration (CTI) - ao Distribuidor Automático de Chamadas (item 3.3) e à Unidade de Resposta Audível (item 3.2) </p>
-			<p>3.10.3.	A solução a ser disponibilizada será apresentada em momento oportuno após finalização do processo licitatório de contratação da solução de atendimento ao cidadão, onde será publicado no Diário Oficial do Município o número do Edital correspondente.</p>
+			<p>3.10.3.	<u>A solução a ser disponibilizada será apresentada em momento oportuno após finalização do processo licitatório de contratação da solução de atendimento ao cidadão, onde será publicado no Diário Oficial do Município o número do Edital correspondente.</u></p>
 				
 			<Comments :attr="{id:commentId(), context:'3.10.	Sistema de Gestão de Atendimento'}" v-if="estaConsulta.ativo == 1"></Comments>
 			
 			<h3>3.11.	Disparo Eletrônico de Mensagens de Texto Tipo SMS</h3>
 			<p>3.11.1.	A CONTRATADA deverá disponibilizar o serviço “Disparo Eletrônico de Mensagens de Texto”, para envio de mensagens do tipo SMS para os telefones móveis cadastrados na base de dados da PMSP, utilizando plataforma automática, de sua responsabilidade.</p>
+				<p class="s2">3.11.1.1. O histórico e a volumetria das mensagens enviadas por SMS no âmbito da Central de Atendimento atual está representada no <strong>ANEXO IV</strong> - HISTÓRICO DE VOLUMETRIA DE ENVIO DE SMS.</p>
 			<p>3.11.2.	A mensagem deverá ser gravada em um arquivo texto. Sendo assim, a mensagem deverá ser redigida, sempre mediante a solicitação prévia, com conteúdos exclusivamente fornecidos pela CONTRATANTE.</p>
 			<p>3.11.3.	A CONTRATADA deverá manter sempre o sigilo absoluto de todas e quaisquer informações prestadas pela CONTRATANTE.</p>
 			<p>3.11.4.	A CONTRATADA deverá efetuar até 3 (três) tentativas de envio para um mesmo número de telefone, salvo quando definido de forma distinta pela CONTRATANTE.</p>
@@ -383,7 +391,7 @@
 				<p class="s3">4.2.9.4.1.	Consiste na execução de chamadas de saída ou retorno aos munícipes.</p>
 				<p class="s3">4.2.9.4.2.	São atividades atribuídas aos operadores:</p>
 					<p class="s4">4.2.9.4.2.1.	Retornar chamadas referentes a solicitações e pedidos de informações que não foram respondidas no momento do teleatendimento receptivo (“call back”).</p>
-					<p class="s4">4.2.9.4.2.2.	Realizar ligações informativas acerca de serviços, projetos, programas, campanhas e políticas estabelecidas pela Prefeitura do Município de São Paulo, de acordo com o solicitado, mediante roteiros pré determinados.</p>
+					<p class="s4">4.2.9.4.2.2.	Realizar ligações informativas acerca de serviços, projetos, programas, campanhas e políticas estabelecidas pela Prefeitura do Município de São Paulo, de acordo com o solicitado, mediante roteiros pré-determinados.</p>
 					<p class="s4">4.2.9.4.2.3.	Realizar, a critério da CONTRATANTE, pesquisas de satisfação do cidadão.</p>
 					<p class="s4">4.2.9.4.2.4.	Contatar munícipes, sob demanda da CONTRATANTE, para complementar as informações de um chamado já aberto.</p>
 					<p class="s4">4.2.9.4.2.5.	Não serão consideradas para fins de remuneração as ligações efetuadas que não forem atendidas, apresentarem sinal de ocupado, mensagem da operadora, número inválido, sinal de fax, linha muda.</p>
@@ -412,6 +420,7 @@
 				<p class="s3">4.2.9.5.8.	O operador/atendente, tanto multiperfil quanto especialista, deverá estar preparado para efetuar o atendimento receptivo e ativo em uma mesma posição.</p>
 				<p class="s3">4.2.9.5.9.	A adoção do atendimento multiperfil ou dedicado obedecerá a critérios definidos exclusivamente pela CONTRATANTE, de acordo com a complexidade e/ou segurança dos procedimentos de atendimento de cada ilha de atendimento.</p>
 				<p class="s3">4.2.9.5.10.	O atendimento também será realizado via CHAT, sendo que cada operador/atendente pode atender até 4 cidadãos simultaneamente.</p>
+					<p class="s4">O histórico e a volumetria das ligações realizadas (Ativo) no âmbito da Central de Atendimento atual estão representados no <strong>ANEXO III</strong> HISTÓRICO DE VOLUMETRIA DE ATENDIMENTOS VIA CHAT.</p>
 				<p class="s3">4.2.9.5.11.	O atendimento também deve prever a possibilidade de interação através de outros meios de atendimento - aplicativos de mensagens e outros canais de comunicação que possam vir a surgir.</p>
 					<p class="s4">4.2.9.5.11.1.	Os prazos serão pactuados quando houver necessidade de implantação destes novos meios de atendimento.</p>
 			<p class="s2">4.2.9.6.	Respostas-padrão e roteiros de atendimento</p>
@@ -541,10 +550,10 @@
 					<p class="s3">4.5.6.7.3.	A parametrização da pesquisa é de responsabilidade da CONTRATANTE e será elaborada com a participação da CONTRATADA.</p>
 					<p class="s3">4.5.6.7.4.	A meta corresponde ao percentual do universo de munícipes entrevistados que avaliaram o atendimento prestado pela Central de Atendimento com os conceitos “bom” e “ótimo” em pelo menos ⅔ da quantidade de perguntas feitas</p>
 					<p class="s3">4.5.6.7.5.	Caso não seja atingida a meta prevista, o índice é apurado pelo percentual médio de conceitos “bom” e “ótimo” obtidos nas perguntas nas quais a CONTRATADA obtiver os menores percentuais destes conceitos.</p>
-				<p class="s2">4.5.6.8.	Índice de disponibilidade da Solução Tecnológica de Gestão  de Atendimento no Contact Center</p>
+				<p class="s2">4.5.6.8.	Índice de disponibilidade da Solução Tecnológica de Gestão de Atendimento no Contact Center</p>
 					<p class="s3">4.5.6.8.1.	Meta >= 99,7% (noventa e nove e sete décimos por cento) mensal</p>
 					<p class="s3">4.5.6.8.2.	Entende-se por “disponibilidade” o percentual do tempo total em que a solução esteve disponível para uso no mês em relação ao total de horas que a solução estava programada para estar disponível no mês.</p>
-					<p class="s3">4.5.6.8.3.	Embora a solução sistêmica de gestão de atendimento será um produto a ser utilizado na Central de Atendimento pelos diversos operadores e supervisores, o ambiente de infraestrutura tecnológica deverá manter o índice de operação da solução em  99,7%.</p>
+					<p class="s3">4.5.6.8.3.	Embora a solução sistêmica de gestão de atendimento será um produto a ser utilizado na Central de Atendimento pelos diversos operadores e supervisores, o ambiente de infraestrutura tecnológica deverá manter o índice de operação da solução em 99,7%.</p>
 					<p class="s3">4.5.6.8.4.	Não serão consideradas na apuração do indicador de disponibilidade da solução tecnológica as horas de manutenção programada previamente pela fornecedora da solução de gestão de atendimento, desde que informada à CONTRATADA com antecedência mínima de 5 dias.</p>
 					
 				<Comments :attr="{id:commentId(), context:'4.5.	Indicadores de Qualidade'}"v-if="estaConsulta.ativo == 1"></Comments>
@@ -760,7 +769,7 @@
 						<li>
 							Perfil
 							<ul>
-								<li>○	Formado em Curso Superior de qualquer área de atuação;</li>
+								<li>Formado em Curso Superior de qualquer área de atuação;</li>
 								<li>Experiência comprovada de, pelo menos 1 ano, em controle e análise de tráfego de ligações em Contact Center</li>
 								<li>Fluência, clareza e objetividade</li>
 								<li>Raciocínio lógico</li>
@@ -980,7 +989,7 @@
 						<li>Sigilo profissional</li>
 						<li>Conhecimentos sobre a CONTRATANTE, seus produtos e suas ferramentas e recursos tecnológicos.</li>
 					</ul>
-					<p class="s2">4.8.1.7.	A capacitação será conduzida por equipe de multiplicadores, qualificada e alocada pela CONTRATADA para essa função  e, também, pela CONTRATANTE.</p>
+					<p class="s2">4.8.1.7.	A capacitação será conduzida por equipe de multiplicadores, qualificada e alocada pela CONTRATADA para essa função e, também, pela CONTRATANTE.</p>
 					<p class="s2">4.8.1.8.	Esta equipe será responsável pelo planejamento, execução, acompanhamento e avaliação permanente dos treinamentos, mantendo a CONTRATANTE informada, por meio de relatórios, sobre cada ação realizada.</p>
 				<p>4.8.2.	Capacitação Específica</p>
 					<p class="s2">4.8.2.1.	Natureza estrutural, baseada nas informações, assuntos e serviços pertinentes à CONTRATANTE, utilizados como fonte e estrutura para o atendimento realizado pela Central.</p>
@@ -1401,25 +1410,648 @@
 		<section>
 				<h2 class="titulo" indent="1">6.	JUSTIFICATIVAS TÉCNICAS</h2>
 				<h3>6.1.	Desafios da Administração pública</h3>
-				<p>Um dos grandes desafios da administração pública atualmente é assegurar os direitos de cidadania aos usuários de serviços sob responsabilidade do Estado. Com a média mensal de 600 mil ligações recebidas, 500 mil atendimentos e levando em consideração que a central precisa estar preparada para absorver eventuais novos serviços,, sempre tendo em vista a melhoria do atendimento ao usuário, é mister que a PMSP mantenha e aprimore a central de atendimento 156, 199 e 153, assegurando rapidez e eficiência para o usuário final. O serviço destas centrais de atendimento telefônico se enquadram como de natureza continuada, são um modalidade de atendimento já conhecida e utilizada pelos cidadãos, operando durante 24h por dia, todos os dias do ano. A modalidade de atendimento telefônico é de suma importância para a municipalidade, em que pese o fato de que significativa parcela da população residente em São Paulo ver, nesta modalidade de atendimento, uma alternativa prática, segura e gratuita para solucionar pendências e solicitar serviços cuja natureza não exija atendimento presencial.</p>
+				<p>Um dos grandes desafios da administração pública atualmente é assegurar os direitos de cidadania aos usuários de serviços sob responsabilidade do Estado. Com a média mensal de 600 mil ligações recebidas, 500 mil atendimentos e levando em consideração que a central precisa estar preparada para absorver eventuais novos serviços,, sempre tendo em vista a melhoria do atendimento ao usuário, é mister que a PMSP mantenha e aprimore a central de atendimento 156, 199 e 153, assegurando rapidez e eficiência para o usuário final. O serviço destas centrais de atendimento telefônico se enquadra como de natureza continuada, são uma modalidade de atendimento já conhecida e utilizada pelos cidadãos, operando durante 24h por dia, todos os dias do ano. A modalidade de atendimento telefônico é de suma importância para a municipalidade, em que pese o fato de que significativa parcela da população residente em São Paulo ver, nesta modalidade de atendimento, uma alternativa prática, segura e gratuita para solucionar pendências e solicitar serviços cuja natureza não exija atendimento presencial.</p>
 					
 				<Comments :attr="{id:commentId(), context:'subtitulo'}" v-if="estaConsulta.ativo == 1"></Comments>
 
 			
 			<h3>6.2.	Índices de qualificação econômico-financeira</h3>
-			<p>6.2.1.	A exigência dos índices para fins de qualificação econômico-financeira decorre da necessidade da demonstração de plena saúde financeira para a execução contratual pretendida, em razão da natureza do serviço, sua imprescindível continuidade e o envolvimento de infraestrutura e pessoal necessários para o pleno cumprimento das obrigações a serem assumidas.</p>
-			<p>6.2.2.	Sem prejuízo, adota-se a possibilidade de demonstração de Patrimônio Líquido compatível com a proposta comercial como sucedâneo à demonstração dos índices mínimos.</p>
+			<p>6.2.1.	Para fins de qualificação econômico-financeira exige-se, apenas, o mínimo previsto em lei, a fim de não reduzir a competitividade do certame.</p>
+			<p>6.2.2.	Exige-se a demonstração do balanço patrimonial a fim de conhecer a situação econômica da empresa vencedora.</p>
+			<p>6.2.3. Qualificação econômico-financeira:</p>
+			<p class="s2">
+				6.2.3.1. Certidão negativa de pedido de falência, expedida pelo distribuidor da sede da pessoa jurídica em data não superior a 60 dias da data da abertura do certame, se outro prazo não constar do documento.
+			</p>
+				<p class="s3">
+					6.2.3.1.1. Se a licitante não for sujeita ao regime falimentar, a certidão mencionada deverá ser substituída por certidão negativa de ações de insolvência civil, ou documento equivalente.
+				</p>
+			<p class="s2">
+				6.2.3.2. Balanço patrimonial e demonstrações contábeis do último exercício social, já exigíveis e apresentados na forma da lei, que comprovem a situação financeira da empresa, vedada sua substituição por balanço ou balancetes provisórios, podendo ser atualizados por índices oficiais quando encerrados há mais de três meses da data da apresentação da proposta;
+			</p>
+				<p class="s3">
+					6.2.3.2.1. Somente empresas que ainda não tenham completado seu primeiro exercício fiscal poderão comprovar sua capacidade econômico-financeira por meio de	balancetes mensais, conforme disposto na Lei Federal nº 8.541, de 23 de	dezembro de 1992;
+				</p>
+			<p class="s2">
+				6.2.3.3. No caso de sociedade simples, a proponente deverá apresentar certidão dos processos cíveis em andamento relativos à solvência ou não da licitante, expedido pelo distribuidor da sede de pessoa jurídica, em data não superior a 60 (sessenta) dias da data da abertura do certame, se outro prazo não constar do documento.
+			</p>
 				
 			<Comments :attr="{id:commentId(), context:'6.2.	Índices de qualificação econômico-financeira'}" v-if="estaConsulta.ativo == 1"></Comments>
 
 			<h3>6.3.	Implantação, Operação e Gestão de Centrais de Atendimento</h3>
-			<p>6.3.1.	Considera-se, para a comprovação da capacidade técnica, que a contratada deve demonstrar atender, no mínimo, <strong>8.000.000</strong> (oito milhões) de atendimentos anuais receptivos e/ou ativos.</p>
-				<p class="s2">6.3.1.1.	Por reconhecer o ganho de escala deste serviço, aceita-se a soma dos atestados, no entanto, estes devem ser simultâneos a fim de demonstrar a capacidade instalada da empresa para a sustentação dessa escala.</p>
-				<p class="s2">6.3.1.2.	Os atestados devem ser emitidos por pessoas jurídicas de Direito Público e Privado, indicando o período da prestação de serviço; locais da execução dos serviços, natureza do objeto; quantidades executadas, caracterização do bom desempenho da licitante e outros dados característicos do objeto;</p>
-				<p class="s2">6.3.1.3.	O(s) atestados(s) devem também comprovar a capacidade técnica de gestão de indicadores operacionais e gerenciais para o atendimento de níveis de serviço (SLAs) previamente definidos e operação em regime de 24h por dia, ininterruptas;</p>
-				<p class="s2">6.3.1.4.	Admite-se o somatório dos quantitativos dos atestados para a comprovação do quantitativo mínimo no certame;</p>
-				<p class="s2">6.3.1.5.	Os atestados devem corresponder a uma prestação de serviço simultânea de, pelo menos, um ano;</p>
-				<p class="s2">6.3.1.6.	Em vista das especificidades da intermediação da relação da Administração Pública com os cidadãos, é necessário o montante mínimo de 2,5 milhões (dois milhões e quinhentos mil) de atendimentos comprovados para órgão ou entidade da administração pública direta ou indireta do total mencionado no item 6.3.1.</p>
+			<p>6.3.1. Volumetria de atendimento (receptivo e ativo)</p>
+				<p class="s2">
+					6.3.1.1. Para o cálculo da estimativa de volumetria de 32.000.000 de ligações bianuais foram utilizados os seguintes dados referentes aos anos de 2017, 2018 e 2019:
+				</p>
+			<p><strong>TABELA 1:</strong> volumetria receptiva</p>
+			<table>
+			  <tr>
+			    <th colspan="6">CONSOLIDADO GERAL DE RECEPTIVOS</th>
+			  </tr>
+			  <tr>
+			    <th>MÊS </th>
+			    <th>*2016 </th>
+			    <th>2017 </th>
+			    <th>2018 </th>
+			    <th>2019 </th>
+			    <th>Total Geral</th>
+			  </tr>
+			  <tr>
+			    <td>Janeiro </td>
+			    <td></td>
+			    <td style="text-align: right">582.245</td>
+			    <td style="text-align: right">731.843</td>
+			    <td style="text-align: right">633.893</td>
+			    <td style="text-align: right">1.947.981</td>
+			  </tr>
+			  <tr>
+			    <td>Fevereiro </td>
+			    <td></td>
+			    <td style="text-align: right">767.221</td>
+			    <td style="text-align: right">732.622</td>
+			    <td style="text-align: right">792.640</td>
+			    <td style="text-align: right">2.292.483</td>
+			  </tr>
+			  <tr>
+			    <td>Março </td>
+			    <td></td>
+			    <td style="text-align: right">677.481</td>
+			    <td style="text-align: right">717.507</td>
+			    <td style="text-align: right">593.303</td>
+			    <td style="text-align: right">1.988.291</td>
+			  </tr>
+			  <tr>
+			    <td>Abril </td>
+			    <td></td>
+			    <td style="text-align: right">447.049</td>
+			    <td style="text-align: right">670.549</td>
+			    <td style="text-align: right">652.737</td>
+			    <td style="text-align: right">1.770.335</td>
+			  </tr>
+			  <tr>
+			    <td>Maio * </td>
+			    <td style="text-align: right">112.802 </td>
+			    <td style="text-align: right">474.527 </td>
+			    <td style="text-align: right">579.172 </td>
+			    <td style="text-align: right">652.092 </td>
+			    <td style="text-align: right">1.818.593</td>
+			  </tr>
+			  <tr>
+			    <td>Junho ** </td>
+			    <td style="text-align: right">451.586 </td>
+			    <td style="text-align: right">417.551 </td>
+			    <td style="text-align: right">533.341 </td>
+			    <td style="text-align: right">491.683 </td>
+			    <td style="text-align: right">1.894.161</td>
+			  </tr>
+			  <tr>
+			    <td>Julho </td>
+			    <td style="text-align: right">498.028 </td>
+			    <td style="text-align: right">426.014 </td>
+			    <td style="text-align: right">508.032 </td>
+			    <td style="text-align: right">603.678 </td>
+			    <td style="text-align: right">2.035.752</td>
+			  </tr>
+			  <tr>
+			    <td>Agosto </td>
+			    <td style="text-align: right">644.354 </td>
+			    <td style="text-align: right">522.870 </td>
+			    <td style="text-align: right">608.505 </td>
+			    <td style="text-align: right">727.389 </td>
+			    <td style="text-align: right">2.503.118</td>
+			  </tr>
+			  <tr>
+			    <td>Setembro </td>
+			    <td style="text-align: right">558.068 </td>
+			    <td style="text-align: right">439.360 </td>
+			    <td style="text-align: right">523.737 </td>
+			    <td style="text-align: right">694.362 </td>
+			    <td style="text-align: right">2.215.527</td>
+			  </tr>
+			  <tr>
+			    <td>Outubro </td>
+			    <td style="text-align: right">594.761 </td>
+			    <td style="text-align: right">497.022 </td>
+			    <td style="text-align: right">522.623 </td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">1.614.406</td>
+			  </tr>
+			  <tr>
+			    <td>Novembro </td>
+			    <td style="text-align: right">541.247 </td>
+			    <td style="text-align: right">508.057 </td>
+			    <td style="text-align: right">473.818 </td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">1.523.122</td>
+			  </tr>
+			  <tr>
+			    <td>Dezembro </td>
+			    <td style="text-align: right">426.445 </td>
+			    <td style="text-align: right">458.718 </td>
+			    <td style="text-align: right">398.522 </td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">1.283.685</td>
+			  </tr>
+			  <tr>
+			    <th>Total Geral</th>
+			    <th>3.827.291 </th>
+			    <th>6.218.115 </th>
+			    <th>7.000.271 </th>
+			    <th>5.841.777 </th>
+			    <th>22.887.454</th>
+			  </tr>
+			</table>
+			<p>* No mês de Maio/2016 teve o início do contrato nº 007/2016/SMG
+			<br>* * No mês de Junho/2016 teve início da operação de Call Center
+			<br><strong>Fonte:</strong> sistema de gerenciamento de demandas da então prestadora do serviço de Call Center</p>
+			<br>
+			<p><strong>TABELA 2:</strong> volumetria ativa</p>
+			<table>
+			  <tr>
+			    <th colspan="6">CONSOLIDADO GERAL DE ATIVOS RECEBIDOS</th>
+			  </tr>
+			  <tr>
+			    <th>MÊS </th>
+			    <th>2016 </th>
+			    <th>2017 </th>
+			    <th>2018 </th>
+			    <th>2019 </th>
+			    <th>Total Geral</th>
+			  </tr>
+			  <tr>
+			    <td>Janeiro </td>
+			    <td style="text-align: right">118.136 </td>
+			    <td style="text-align: right">275.516 </td>
+			    <td style="text-align: right">168.735 </td>
+			    <td style="text-align: right">608.222 </td>
+			    <td style="text-align: right">1.170.609</td>
+			  </tr>
+			  <tr>
+			    <td>Fevereiro </td>
+			    <td style="text-align: right">207.484 </td>
+			    <td style="text-align: right">217.183 </td>
+			    <td style="text-align: right">182.878 </td>
+			    <td style="text-align: right">613.088 </td>
+			    <td style="text-align: right">1.220.633</td>
+			  </tr>
+			  <tr>
+			    <td>Março </td>
+			    <td style="text-align: right">318.813 </td>
+			    <td style="text-align: right">181.951 </td>
+			    <td style="text-align: right">81.812 </td>
+			    <td style="text-align: right">647.378 </td>
+			    <td style="text-align: right">1.229.954</td>
+			  </tr>
+			  <tr>
+			    <td>Abril </td>
+			    <td style="text-align: right">206.438 </td>
+			    <td style="text-align: right">204.041 </td>
+			    <td style="text-align: right">163.319 </td>
+			    <td style="text-align: right">609.836 </td>
+			    <td style="text-align: right">1.183.634</td>
+			  </tr>
+			  <tr>
+			    <td>Maio </td>
+			    <td style="text-align: right">219.571 </td>
+			    <td style="text-align: right">195.072 </td>
+			    <td style="text-align: right">253.849 </td>
+			    <td style="text-align: right">626.351 </td>
+			    <td style="text-align: right">1.294.843</td>
+			  </tr>
+			  <tr>
+			    <td>Junho </td>
+			    <td style="text-align: right">220.325 </td>
+			    <td style="text-align: right">167.367 </td>
+			    <td style="text-align: right">90.012 </td>
+			    <td style="text-align: right">476.509 </td>
+			    <td style="text-align: right">954.213</td>
+			  </tr>
+			  <tr>
+			    <td>Julho </td>
+			    <td style="text-align: right">209.053 </td>
+			    <td style="text-align: right">186.814 </td>
+			    <td style="text-align: right">340.821 </td>
+			    <td style="text-align: right">533.521 </td>
+			    <td style="text-align: right">1.270.209</td>
+			  </tr>
+			  <tr>
+			    <td>Agosto </td>
+			    <td style="text-align: right">209.931 </td>
+			    <td style="text-align: right">162.609 </td>
+			    <td style="text-align: right">214.025 </td>
+			    <td style="text-align: right">517.075 </td>
+			    <td style="text-align: right">1.103.640</td>
+			  </tr>
+			  <tr>
+			    <td>Setembro </td>
+			    <td style="text-align: right">237.497 </td>
+			    <td style="text-align: right">170.691 </td>
+			    <td style="text-align: right">246.423 </td>
+			    <td style="text-align: right">461.349 </td>
+			    <td style="text-align: right">1.115.960</td>
+			  </tr>
+			  <tr>
+			    <td>Outubro </td>
+			    <td style="text-align: right">225.553 </td>
+			    <td style="text-align: right">151.025 </td>
+			    <td style="text-align: right">539.439 </td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">916.017</td>
+			  </tr>
+			  <tr>
+			    <td>Novembro </td>
+			    <td style="text-align: right">215.298 </td>
+			    <td style="text-align: right">121.066 </td>
+			    <td style="text-align: right">452.761 </td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">789.125</td>
+			  </tr>
+			  <tr>
+			    <td>Dezembro </td>
+			    <td style="text-align: right">182.274 </td>
+			    <td style="text-align: right">209.794 </td>
+			    <td style="text-align: right">491.014 </td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">883.082</td>
+			  </tr>
+			  <tr>
+			    <th style="text-align: left">Total Geral </th>
+			    <th style="text-align: right">2.570.373 </th>
+			    <th style="text-align: right">2.243.129 </th>
+			    <th style="text-align: right">3.225.088 </th>
+			    <th style="text-align: right">5.093.329 </th>
+			    <th style="text-align: right">13.131.919</th>
+			  </tr>
+			</table>
+			<p><strong>Fonte:</strong> sistema de gerenciamento de demandas da então prestadora do serviço de Call Center.</p>
+			<br>
+				<p class="s2">
+					6.3.1.2. Percebe-se um aumento da volumetria ao longo dos anos de 2017 a 2019:
+					<ul>
+						<li>Aumento de 21% de 2017 para 2018</li>
+						<li>Aumento de 43% de 2018 para 2019</li>
+					</ul>
+				</p>
+				<p class="s2">6.3.1.3. Desse modo, temos os seguintes dados:</p>
+			<p><strong>TABELA 3:</strong>Volumetria consolidada</p>
+			<Imagem :dados="{
+					tipo: 'coluna',
+					caption: 'Figura 3 - Volumetria consolidada',
+					url: imgSrc('arquivos/tr-contact-center/figura_3-volumetria_consolidada.png')
+				}"></Imagem>
+			<p><strong>Fonte:</strong> sistema de gerenciamento da então prestadora do serviço de Call Center</p>
+			<p class="s2">6.3.1.4. A volumetria da central telefônica 156 também varia em função da sazonalidade inerente ao cotidiano e é impactada em diversas ocorrências da cidade de São Paulo. Exemplos:</p>
+				<p class="s3">6.3.1.4.1. Greves do transporte coletivo: em junho/19, Greve afeta transporte público e escolas de SP. <a href="https://noticias.r7.com/sao-paulo/greve-afeta-transporte-publico-e-escolas-de-sp-rodizio-esta-mantido-14062019" target="_blank">https://noticias.r7.com/sao-paulo/greve-afeta-transporte-publico-e-escolas-de-sp-rodizio-esta-mantido-14062019</a>. Fonte R7 14/06/2019. Conforme gráfico abaixo, observa-se que o volume de ligações recebidas foi 246% superior ao da semana anterior:</p>
+				<Imagem :dados="{
+					tipo: 'coluna',
+					caption: 'Figura 4 - Gráfico sazonalidade',
+					url: imgSrc('arquivos/tr-contact-center/figura_4-grafico_sazonalidade.png')
+				}"></Imagem>
+				<p><strong>Fonte:</strong> sistema de gerenciamento da então prestadora do serviço de Call Center.</p>
+				<p>
+					6.3.1.4.2. Alterações em tarifas de transportes: no mês de maio/19, houve a notícia de prorrogação do prazo de créditos do Bilhete Único. <a href="https://noticias.r7.com/sao-paulo/prefeitura-de-sao-paulo-prorroga-prazo-de-creditos-do-bilhete-unico-23052019" target="_blank">https://noticias.r7.com/sao-paulo/prefeitura-de-sao-paulo-prorroga-prazo-de-creditos-do-bilhete-unico-23052019</a> - Fonte: R7 em 23/05/2019. Conforme gráfico abaixo, observa-se que o volume de ligações recebidas cresceu nas duas últimas semanas do mês, principalmente a partir de 27/05, o que gerou impactos no Nível de Serviço do atendimento, com um aumento de 27% na quantidade de ligações:
+				</p>
+			<Imagem :dados="{
+					tipo: 'coluna',
+					caption: 'Figura 5 – Gráfico Transportes',
+					url: imgSrc('arquivos/tr-contact-center/figura_5-grafico_transportes.png')
+				}"></Imagem>
+				<p><strong>Fonte:</strong> sistema de gerenciamento da então prestadora do serviço de Call Center</p>
+				<p class="s3">
+					6.3.1.4.3. Operação Baixas Temperaturas: em Agosto/2019, a Prefeitura de SP intensificou ações para acolher moradores de rua. <a href="https://www.noticiasaominuto.com.br/brasil/1000611/prefeitura-de-sp-intensificaacoes-para-acolher-moradores-de-rua" target="_blank">https://www.noticiasaominuto.com.br/brasil/1000611/prefeitura-de-sp-intensificaacoes-para-acolher-moradores-de-rua</a> Fonte: Notícias ao Minuto, em 05/08/2019. Com as baixas temperaturas apresentadas no período de 03 a 05 de agosto, houve alteração no volume de ligações recebidas nos canais da Solução de Atendimento SP156, com aumento de, em média, 64% no volume de ligações:
+				</p>
+				<Imagem :dados="{
+					tipo: 'coluna',
+					caption: 'Figura 6 - Gráfico Baixas Temperaturas',
+					url: imgSrc('arquivos/tr-contact-center/figura_6-grafico_baixas_temperaturas.png')
+				}"></Imagem>
+				<p><strong>Fonte: </strong> sistema de gerenciamento da então prestadora do serviço de call center.</p>
+
+				<p class="s3">
+					6.3.1.4.4. Campanhas de vacinação: em agosto/19, a vacinação contra o sarampo em escolas de São Paulo começou. <a href="https://www.metrojornal.com.br/foco/2019/08/05/vacinacao-sarampo-escolas-sp-comeca.html" target="_blank">https://www.metrojornal.com.br/foco/2019/08/05/vacinacao-sarampo-escolas-sp-comeca.html</a> Fonte: Metro Jornal, em 05/08/2019. Conforme gráfico abaixo, verifica-se, em agosto, um grande volume de ligações no serviço “Geral - Saúde”. A quantidade de ligações recebidas foi, em média, 45% superior, índice reflexo do tema tratado na matéria veiculada, visto que, normalmente, esse serviço recebe cerca de 600 ligações/dia:
+				</p>
+				<Imagem :dados="{
+					tipo: 'coluna',
+					caption: 'Figura 7 - Gráfico campanhas vacinação',
+					url: imgSrc('arquivos/tr-contact-center/figura_7-grafico_campanhas_vacinacao.png')
+				}"></Imagem>
+				<p><strong>Fonte: </strong> sistema de gerenciamento da então prestadora do serviço de Call Center</p>
+
+			<p class="s2">6.3.1.5. Também impacta na volumetria a expansão de serviços atendidos na modalidade receptiva, em função da centralização do atendimento municipal na central telefônica 156 e, para a modalidade ativa, no aumento de secretarias que usam esta modalidade para contatar diretamente os cidadãos.</p>
+			<p class="s2">6.3.1.6. Dadas às variações de volumetria possíveis, explicadas acima, optou-se por utilizar a medida estatística de desvio-padrão.</p>
+			<p class="s2">6.3.1.7. Aplicando o indicador de 2 desvios-padrão à media global apresentada na Tabela 3, obtém-se o seguinte resultado:</p>
+
+			<p><strong>TABELA 4:</strong> Volumetria estimada</p>
+			<table style="max-width: 400px">
+				<tr>
+					<td>A = Média Global</td>
+					<td style="text-align: right">924.076</td>
+				</tr>
+				<tr>
+					<td>B = Desvio Padrão</td>
+					<td style="text-align: right">193.957</td>					
+				</tr>
+				<tr>
+					<td>C = 2x desvio padrão</td>
+					<td style="text-align: right">387.914</td>
+				</tr>
+				<tr>
+					<td>Valor mensal = A+C</td>
+					<td style="text-align: right">1.311.990</td>
+				</tr>
+				<tr>
+					<td><strong>24 meses</strong></td>
+					<td style="text-align: right"><strong>31.487.760</strong></td>
+				</tr>
+			</table>
+			<p class="s2">6.3.1.8. Assim, após arredondamento, foi considerado para o teto deste contrato o total de 32.000.000 de ligações (receptivo e ativo)</p>
+		<p>6.3.2. Volumetria de mensagens de texto</p>
+			<p class="s2">6.3.2.1. A quantidade de mensagens de texto encaminhadas sofreu um aumento expressivo de 2017 a 2019, pois foi identificado pela municipalidade que este recurso é vital para transmissão de orientações e avisos de natureza pública, tais como lembrete com as datas de consultas médicas agendadas na rede municipal, avisos sobre o início de campanhas de vacinação ou mesmo envio do protocolo de solicitação de serviços demandados pela população, de modo que esta possa acompanhar o andamento em um dos canais de atendimento disponibilizados pela prefeitura.</p>
+			<p class="s2">6.3.2.2. Assim, registrou-se um aumento de 59% de 2017 para 2018 e de 923% de 2018 para 2019. Seguem os dados:</p>
+			<p><strong>TABELA 5: </strong>Volumetria de envios de SMS</p>
+			<table>
+			  <tr>
+			    <th>MÊS </th>
+			    <th>2.016 </th>
+			    <th>2.017 </th>
+			    <th>2.018 </th>
+			    <th>2.019 </th>
+			    <th>Total Geral</th>
+			  </tr>
+			  <tr>
+			    <td>Janeiro </td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">1.850</td>
+			    <td style="text-align: right">26.499</td>
+			    <td style="text-align: right">96.897</td>
+			    <td style="text-align: right">125.246</td>
+			  </tr>
+			  <tr>
+			    <td>Fevereiro </td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">11.810</td>
+			    <td style="text-align: right">25.893</td>
+			    <td style="text-align: right">294.066</td>
+			    <td style="text-align: right">331.769</td>
+			  </tr>
+			  <tr>
+			    <td>Março </td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">9.805</td>
+			    <td style="text-align: right">29.455</td>
+			    <td style="text-align: right">400.562</td>
+			    <td style="text-align: right">439.822</td>
+			  </tr>
+			  <tr>
+			    <td>Abril </td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">11.532</td>
+			    <td style="text-align: right">28.109</td>
+			    <td style="text-align: right">524.897</td>
+			    <td style="text-align: right">564.538</td>
+			  </tr>
+			  <tr>
+			    <td>Maio </td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">27.943</td>
+			    <td style="text-align: right">32.462</td>
+			    <td style="text-align: right">336.496</td>
+			    <td style="text-align: right">396.901</td>
+			  </tr>
+			  <tr>
+			    <td>Junho </td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">24.725</td>
+			    <td style="text-align: right">9.420</td>
+			    <td style="text-align: right">493.518</td>
+			    <td style="text-align: right">527.663</td>
+			  </tr>
+			  <tr>
+			    <td>Julho </td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">22.315</td>
+			    <td style="text-align: right">12.961</td>
+			    <td style="text-align: right">538.725</td>
+			    <td style="text-align: right">574.001</td>
+			  </tr>
+			  <tr>
+			    <td>Agosto </td>
+			    <td style="text-align: right">5.914 </td>
+			    <td style="text-align: right">22.705 </td>
+			    <td style="text-align: right">37.665 </td>
+			    <td style="text-align: right">580.628 </td>
+			    <td style="text-align: right">646.912</td>
+			  </tr>
+			  <tr>
+			    <td>Setembro </td>
+			    <td style="text-align: right">5.953 </td>
+			    <td style="text-align: right">19.519 </td>
+			    <td style="text-align: right">29.216 </td>
+			    <td style="text-align: right">355.166 </td>
+			    <td style="text-align: right">409.854</td>
+			  </tr>
+			  <tr>
+			    <td>Outubro </td>
+			    <td style="text-align: right">5.215 </td>
+			    <td style="text-align: right">18.831 </td>
+			    <td style="text-align: right">39.161 </td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">63.207</td>
+			  </tr>
+			  <tr>
+			    <td>Novembro </td>
+			    <td style="text-align: right">5.351 </td>
+			    <td style="text-align: right">22.978 </td>
+			    <td style="text-align: right">32.014 </td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">60.343</td>
+			  </tr>
+			  <tr>
+			    <td>Dezembro </td>
+			    <td style="text-align: right">5.451 </td>
+			    <td style="text-align: right">29.015 </td>
+			    <td style="text-align: right">51.016 </td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">85.482</td>
+			  </tr>
+			  <tr>
+			    <th>Total Geral </th>
+			    <th style="text-align: right">27.884 </th>
+			    <th style="text-align: right">223.028 </th>
+			    <th style="text-align: right">353.871 </th>
+			    <th style="text-align: right">3.620.955 </th>
+			    <th style="text-align: right">4.225.738</th>
+			  </tr>
+			</table>
+			<p><strong>Fonte: </strong>sistema de gerenciamento da então prestadora do serviço de Call Center</p>
+			<p class="s2">6.3.2.3. Dadas às variações de volumetria possíveis, explicadas acima, optou-se por utilizar a medida estatística de desvio-padrão.</p>
+			<p class="s2">6.3.2.4. Aplicando o indicador de 1 desvio-padrão à media de out/2018 a set/2019 apresentada na Tabela 5, apresenta-se o seguinte resultado:</p>
+
+			<p><strong>TABELA 6: </strong>quantidade estimada de encaminhamentos</p>
+			<table style="max-width: 400px">
+			  <tr>
+			    <td>A = Média Out/2018 a Set/2019 </td>
+			    <td style="text-align: right">311.929</td>
+			  </tr>
+			  <tr>
+			    <td>B = Desvio Padrão </td>
+			    <td style="text-align: right">167.211</td>
+			  </tr>
+			  <tr>
+			    <td>Valor mensal = A+B </td>
+			    <td style="text-align: right">479.140</td>
+			  </tr>
+			  <tr>
+			    <td>24 meses </td>
+			    <td style="text-align: right">11.499.363</td>
+			  </tr>
+			</table>
+			<p class="s2">6.3.2.5. Assim, após arredondamento, foi considerado para o teto deste contrato o total de 12.000.00 de mensagens.</p>
+		<p>6.3.3. Volumetria de atendimento via chat</p>
+			<p class="s2">
+				6.3.3.1. Com a divulgação do portal de atendimento 156 (<a href="www.sp156.sp.gov.br">www.sp156.sp.gov.br</a>) e consequente disseminação deste canal perante a população como mais uma forma rápida de solicitar serviços municipais, a quantidade de interações via chat sofreu um aumento expressivo de 2017 a 2019.
+			</p>
+			<p class="s2">6.3.3.2. Este aumento foi de 43% (de 2017 para 2018) e 79% (de 2018 para 2019), vide tabela abaixo:</p>
+			<p><strong>TABELA 7:</strong> Interações realizadas</p>
+			<table>
+			  <tr>
+			    <th rowspan="2">MÊS</th>
+			    <th colspan="3">ANO</th>
+			    <th rowspan="2">Total</th>
+			  </tr>
+			  <tr>
+			    <th>2017</th>
+			    <th>2018</th>
+			    <th>2019</th>
+			  </tr>
+			  <tr>
+			    <td>Janeiro</td>
+			    <td style="text-align: right">3.252</td>
+			    <td style="text-align: right">8.592</td>
+			    <td style="text-align: right">11.057</td>
+			    <td style="text-align: right">22.901</td>
+			  </tr>
+			  <tr>
+			    <td>Fevereiro</td>
+			    <td style="text-align: right">3.215</td>
+			    <td style="text-align: right">11.681</td>
+			    <td style="text-align: right">18.941</td>
+			    <td style="text-align: right">33.837</td>
+			  </tr>
+			  <tr>
+			    <td>Março</td>
+			    <td style="text-align: right">2.262</td>
+			    <td style="text-align: right">11.321</td>
+			    <td style="text-align: right">14.968</td>
+			    <td style="text-align: right">28.551</td>
+			  </tr>
+			  <tr>
+			    <td>Abril</td>
+			    <td style="text-align: right">5.133</td>
+			    <td style="text-align: right">10.064</td>
+			    <td style="text-align: right">29.215</td>
+			    <td style="text-align: right">44.412</td>
+			  </tr>
+			  <tr>
+			    <td>Maio</td>
+			    <td style="text-align: right">9.419</td>
+			    <td style="text-align: right">9.849</td>
+			    <td style="text-align: right">28.184</td>
+			    <td style="text-align: right">47.452</td>
+			  </tr>
+			  <tr>
+			    <td>Junho</td>
+			    <td style="text-align: right">9.003</td>
+			    <td style="text-align: right">12.464</td>
+			    <td style="text-align: right">24.726</td>
+			    <td style="text-align: right">46.193</td>
+			  </tr>
+			  <tr>
+			    <td>Julho</td>
+			    <td style="text-align: right">9.829</td>
+			    <td style="text-align: right">11.668</td>
+			    <td style="text-align: right">33.237</td>
+			    <td style="text-align: right">54.734</td>
+			  </tr>
+			  <tr>
+			    <td>Agosto</td>
+			    <td style="text-align: right">11.381</td>
+			    <td style="text-align: right">13.473</td>
+			    <td style="text-align: right">35.129</td>
+			    <td style="text-align: right">59.983</td>
+			  </tr>
+			  <tr>
+			    <td>Setembro</td>
+			    <td style="text-align: right">11.909</td>
+			    <td style="text-align: right">11.700</td>
+			    <td style="text-align: right">36.856</td>
+			    <td style="text-align: right">60.465</td>
+			  </tr>
+			  <tr>
+			    <td>Outubro</td>
+			    <td style="text-align: right">9.063</td>
+			    <td style="text-align: right">12.575</td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">21.638</td>
+			  </tr>
+			  <tr>
+			    <td>Novembro</td>
+			    <td style="text-align: right">8.937</td>
+			    <td style="text-align: right">7.979</td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">16.916</td>
+			  </tr>
+			  <tr>
+			    <td>Dezembro</td>
+			    <td style="text-align: right">7.442</td>
+			    <td style="text-align: right">8.551</td>
+			    <td style="text-align: right"></td>
+			    <td style="text-align: right">15.993</td>
+			  </tr>
+			  <tr>
+			    <th>Total Geral</th>
+			    <th style="text-align: right">90.845</th>
+			    <th style="text-align: right">129.917</th>
+			    <th style="text-align: right">232.313</th>
+			    <th style="text-align: right">453.075</th>
+			  </tr>
+			  <tr>
+			  	<th colspan="5">Fonte: Sistema de gerenciamento da então prestadora do serviço de Call Center</th>
+			  </tr>
+			</table>
+			<p class="s2">6.3.3.3. Dadas às variações de volumetria possíveis, explicadas acima, optou-se por utilizar a medida estatística de desvio-padrão.</p>
+			<p class="s2">6.3.3.4. Aplicando o indicador de 1,5 desvios-padrão a media de out/2018 a set/2019 na Tabela 7,
+apresenta-se o seguinte resultado:</p>
+			<p><strong>TABELA 8:</strong> interações estimadas</p>
+			<table style="max-width: 400px">
+			  <tr>
+			    <td>A = Média Out/2018 a Set/2019 </td>
+			    <td style="text-align: right">21.785</td>
+			  </tr>
+			  <tr>
+			    <td>B = Desvio Padrão </td>
+			    <td style="text-align: right">7.384</td>
+			  </tr>
+			  <tr>
+			    <td>C = 1,5x desvio padrão </td>
+			    <td style="text-align: right">11.076</td>
+			  </tr>
+			  <tr>
+			    <td>Valor mensal = A+C </td>
+			    <td style="text-align: right">32.861</td>
+			  </tr>
+			  <tr>
+			    <td>24 meses </td>
+			    <td style="text-align: right">788.662</td>
+			  </tr>
+			</table>
+				<p class="s2">6.3.3.5. Assim, após arrendamento, foi considerado para o teto para esta modalidade de atendimento de 800.000 interações.</p>
+			<p>6.3.4. Considera-se, para a comprovação da capacidade técnica, que a contratada deve demonstrar atender, no mínimo, <strong>8.000.000</strong> (oito milhões) de atendimentos anuais receptivos e/ou ativos.</p>
+				<p class="s2">6.3.4.1. Por reconhecer o ganho de escala deste serviço, se aceita a soma dos atestados, no entanto, estes devem ser simultâneos a fim de demonstrar a capacidade instalada da empresa para a sustentação dessa escala.</p>
+				<p class="s2">6.3.4.2. Os atestados devem ser emitidos por pessoas jurídicas de Direito Público e Privado, indicando o período da prestação de serviço; locais da execução dos serviços, natureza do objeto; quantidades executadas, caracterização do bom desempenho da licitante e outros dados característicos do objeto;</p>
+				<p class="s2">6.3.4.3. O(s) atestados(s) devem também comprovar a capacidade técnica de gestão de indicadores operacionais e gerenciais para o atendimento de níveis de serviço (SLAs) previamente definidos e operação em regime de 24h por dia, ininterruptas;</p>
+				<p class="s2">6.3.4.4. Admite-se o somatório dos quantitativos dos atestados para a comprovação do quantitativo mínimo no certame;</p>
+				<p class="s2">6.3.4.5. Os atestados devem corresponder a uma prestação de serviço simultânea de, pelo menos, um ano;</p>
+				<p class="s2">6.3.4.6. Em vista das especificidades da intermediação da relação da Administração Pública com os cidadãos, é necessário o montante mínimo de 2,5 milhões (dois milhões e quinhentos mil) de atendimentos comprovados para órgão ou entidade da administração pública direta ou indireta do total mencionado no item 6.3.4.</p>
 				
 			<Comments :attr="{id:commentId(), context:'6.3.	Implantação, Operação e Gestão de Centrais de Atendimento'}" v-if="estaConsulta.ativo == 1"></Comments>
 			<h3>6.4.	Gestão de Indicadores de Desempenho</h3>
@@ -1512,7 +2144,7 @@
 		
 		<section>
 			<h2 class="titulo" indent="1">8.	VIGÊNCIA DO CONTRATO</h2>
-			<h3>8.1.	O contrato será celebrado com duração de 24 (vinte e quatro) meses .</h3>
+			<h3>8.1.	O contrato será celebrado com duração de 24 (vinte e quatro) meses.</h3>
 			<p>8.1.1.	O prazo poderá ser prorrogado por sucessivo(s) período(s) e nas mesmas condições, observado o limite legal.</p>
 			<p>8.1.2.	As prorrogações de prazo de vigência serão formalizadas mediante celebração dos respectivos termos de aditamento ao contrato, respeitadas as condições prescritas na Lei Federal nº 8.666/1993.</p>
 			<p>8.1.3.	A não prorrogação do prazo de vigência contratual, por conveniência da Administração, não gerará à Contratada o direito a qualquer espécie de indenização.</p>
@@ -1533,7 +2165,7 @@
 				
 			<Comments :attr="{id:commentId(), context:'subtitulo'}" v-if="estaConsulta.ativo == 1"></Comments>
 
-			<h3>9.2.	Os recursos necessários para suporte do contrato, onerará a dotação nº XXXXXXXXXX do orçamento vigente e dotação própria no próximo exercício, em observância ao princípio da anualidade orçamentária.</h3>
+			<h3>Os recursos necessários para suporte do contrato onerará a <mark style="background-color: #ddd">dotação nº XXXXXXXXXX</mark> do orçamento vigente e dotação própria no próximo exercício, em observância ao princípio da anualidade orçamentária.</h3>
 				
 			<Comments :attr="{id:commentId(), context:'9.2.	Os recursos necessários para suporte do contrato, onerará a dotação...'}" v-if="estaConsulta.ativo == 1"></Comments>
 			
@@ -1969,7 +2601,7 @@
 						callback: (isVisible, entry) => visibilityChanged(isVisible, entry, 'anexoIV'),
 						once: true
 					}">
-			<h2 class="titulo" indent="1"><a :href="fileSrc('ANEXO_IV.pdf')" target="_blank">ANEXO IV - MODELO DE ACORDO DE NÍVEL DE SERVIÇO</a></h2>
+			<h2 class="titulo" indent="1"><a :href="fileSrc('ANEXO_IV.pdf')" target="_blank">ANEXO IV - HISTÓRICO DE VOLUMETRIA DE ENVIOS DE SMS PERÍODO DE 2016 À 2019</a></h2>
 			<p>
 				<embed
 					v-if="isVisible.anexoIV"
@@ -1979,7 +2611,24 @@
 					alt="pdf"
 					pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
 			</p>
-			<Comments :attr="{id:commentId(), context:'ANEXO IV - MODELO DE ACORDO DE NÍVEL DE SERVIÇO'}" v-if="estaConsulta.ativo == 1"></Comments>
+			<Comments :attr="{id:commentId(), context:'ANEXO IV - HISTÓRICO DE VOLUMETRIA DE ENVIOS DE SMS'}" v-if="estaConsulta.ativo == 1"></Comments>
+		</section>
+
+		<section v-observe-visibility="{
+						callback: (isVisible, entry) => visibilityChanged(isVisible, entry, 'anexoV'),
+						once: true
+					}">
+			<h2 class="titulo" indent="1"><a :href="fileSrc('ANEXO_V.pdf')" target="_blank">ANEXO V - MODELO DE ACORDO DE NÍVEL DE SERVIÇO</a></h2>
+			<p>
+				<embed
+					v-if="isVisible.anexoV"
+					:src="fileSrc('ANEXO_V.pdf')"
+					width="700"
+					height="500"
+					alt="pdf"
+					pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+			</p>
+			<Comments :attr="{id:commentId(), context:'ANEXO V - MODELO DE ACORDO DE NÍVEL DE SERVIÇO'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section ref="allComments">
@@ -2012,7 +2661,8 @@ export default {
 				anexoI: false,
 				anexoII: false,
 				anexoIII: false,
-				anexoIV: false
+				anexoIV: false,
+				anexoV: false
 			}
 		}
 	},

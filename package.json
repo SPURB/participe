@@ -80,7 +80,7 @@
 		"@vue/eslint-config-standard": "^4.0.0",
 		"chai": "4.2.0",
 		"eslint": "5.16.0",
-		"node-sass": "4.12.0",
+		"node-sass": "4.13.0",
 		"prerender-spa-plugin": "3.4.0",
 		"sass-loader": "8.0.0",
 		"start-server-and-test": "1.10.6",

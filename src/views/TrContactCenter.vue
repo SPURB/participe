@@ -396,15 +396,17 @@
 				<Comments :attr="{id:commentId(), context:'21. DISPOSIÇÕES FINAIS'}" v-if="estaConsulta.ativo == 1"></Comments>				
 			</section>
 
-
 		<section>
-			<h2 class="titulo" indent="1">1.	OBJETO</h2>
+			<h2 class="titulo" indent="1">Termo de Referência</h2>
+		</section>
+		<section>
+			<h2 class="titulo" indent="2">1.	OBJETO</h2>
 			<h3>1.1.	Contratação de serviços de planejamento, implantação, operação, gerenciamento de central de atendimento e gestão de atendimento receptivo e ativo nas formas eletrônica e humana. </h3>
 			<Comments :attr="{id:commentId(true), context:'1. OBJETO'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 
 		<section>
-			<h2 class="titulo" indent="1">2.	DETALHAMENTO DO OBJETO</h2>
+			<h2 class="titulo" indent="2">2.	DETALHAMENTO DO OBJETO</h2>
 			<h3>2.1.	A contratação engloba:</h3>
 			<p>2.1.1.	A prestação de serviços técnicos em: Gestão da Operação e da Qualidade, Planejamento, Operação, Administração, Projeto, Implantação e Implementação, Treinamento, Suporte Técnico e Operacional.</p>
 			<p>2.1.2.	O fornecimento de linhas telefônicas, bem como toda a infraestrutura física e lógica necessárias, para o número 156 para tele atendimento ativo e receptivo.</p>
@@ -418,7 +420,7 @@
 		</section>
 
 		<section>
-			<h2 class="titulo" indent="1">3.	DESCRIÇÃO GERAL DOS SERVIÇOS A SEREM CONTRATADOS</h2>
+			<h2 class="titulo" indent="2">3.	DESCRIÇÃO GERAL DOS SERVIÇOS A SEREM CONTRATADOS</h2>
 			<h3>3.1.	Link Telefônico</h3>
 			<p>3.1.1.	A Central de Atendimento da Prefeitura do Município de São Paulo utiliza os números 156, 199 (Defesa Civil) e 153 (Guarda Civil Metropolitana) enquanto telefones públicos municipais, conforme Resolução da Anatel, nº 357, de 15 de março de 2004, estando apto a receber ligações de todo o município de São Paulo. Para os municípios da Grande São Paulo com DDD 11 ou telefones móveis DDD 11 em outras unidades da federação, o acesso aos serviços do número 156 pode ser realizado pelo número 0800 011 0156.</p>
 			<p>3.1.2.	A CONTRATANTE disponibilizará as linhas telefônicas, bem como toda a infraestrutura física e lógica, para os tridígitos 199 e 153 no endereço de instalação da CONTRATADA, após a assinatura do contrato.</p>
@@ -701,7 +703,7 @@
 			<Comments :attr="{id:commentId(), context:'3.12.	Plano de Contingência da Central de Atendimento '}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 		<section>
-			<h2 class="titulo" indent="1">4.	Especificação dos serviços</h2>
+			<h2 class="titulo" indent="2">4.	Especificação dos serviços</h2>
 			<h3>4.1.	Implantação do Canal de Atendimento – Contact Center</h3>
 			<p>4.1.1.	São responsabilidades da CONTRATADA</p>
 				<p class="s2">4.1.1.1.	Disponibilizar e manter espaço físico em local próprio situado dentro dos limites da cidade de São Paulo que comporte a operação do Contact Center durante o período de contrato (“Instalação da Central de Atendimento”)</p>
@@ -1363,7 +1365,7 @@
 			<Comments :attr="{id:commentId(), context:'4.8.	Capacitação e Treinamento'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
 		<section>
-			<h2 class="titulo" indent="1">5.	REMUNERAÇÃO DOS SERVIÇOS </h2>
+			<h2 class="titulo" indent="2">5.	REMUNERAÇÃO DOS SERVIÇOS </h2>
 			<h3>5.1.	A remuneração mensal dos serviços será efetuada de acordo com o volume de atendimentos ativos e receptivos realizados, incluindo chat.</h3>
 			<p>5.1.1.	Será de responsabilidade da CONTRATADA todos os custos da conta telefônica decorrentes do tráfego de ligações receptivas na linha do tipo discagem direta gratuita 156, bem como os custos relacionados às tarifas telefônicas ativas.</p>
 				
@@ -1772,7 +1774,7 @@
 		</section>
 
 		<section>
-				<h2 class="titulo" indent="1">6.	JUSTIFICATIVAS TÉCNICAS</h2>
+				<h2 class="titulo" indent="2">6.	JUSTIFICATIVAS TÉCNICAS</h2>
 				<h3>6.1.	Desafios da Administração pública</h3>
 				<p>Um dos grandes desafios da administração pública atualmente é assegurar os direitos de cidadania aos usuários de serviços sob responsabilidade do Estado. Com a média mensal de 600 mil ligações recebidas, 500 mil atendimentos e levando em consideração que a central precisa estar preparada para absorver eventuais novos serviços,, sempre tendo em vista a melhoria do atendimento ao usuário, é mister que a PMSP mantenha e aprimore a central de atendimento 156, 199 e 153, assegurando rapidez e eficiência para o usuário final. O serviço destas centrais de atendimento telefônico se enquadra como de natureza continuada, são uma modalidade de atendimento já conhecida e utilizada pelos cidadãos, operando durante 24h por dia, todos os dias do ano. A modalidade de atendimento telefônico é de suma importância para a municipalidade, em que pese o fato de que significativa parcela da população residente em São Paulo ver, nesta modalidade de atendimento, uma alternativa prática, segura e gratuita para solucionar pendências e solicitar serviços cuja natureza não exija atendimento presencial.</p>
 					
@@ -2426,7 +2428,7 @@ apresenta-se o seguinte resultado:</p>
 		</section>
 
 		<section>
-			<h2 class="titulo" indent="1">7.	GOVERNANÇA E CONDIÇÕES GERAIS DE EXECUÇÃO</h2>
+			<h2 class="titulo" indent="2">7.	GOVERNANÇA E CONDIÇÕES GERAIS DE EXECUÇÃO</h2>
 			<h3>7.1.	Condições Gerais</h3>
 			<p>7.1.1.	A CONTRATADA será responsável pela execução do escopo de trabalho descrito neste Termo de Referência, em conformidade com a qualidade e prazos estabelecidos.</p>
 			<p>7.1.2.	A CONTRATANTE será responsável pelo pagamento dos referidos serviços conforme condições estabelecidas neste documento.</p>
@@ -2507,7 +2509,7 @@ apresenta-se o seguinte resultado:</p>
 		</section>
 		
 		<section>
-			<h2 class="titulo" indent="1">8.	VIGÊNCIA DO CONTRATO</h2>
+			<h2 class="titulo" indent="2">8.	VIGÊNCIA DO CONTRATO</h2>
 			<h3>8.1.	O contrato será celebrado com duração de 24 (vinte e quatro) meses.</h3>
 			<p>8.1.1.	O prazo poderá ser prorrogado por sucessivo(s) período(s) e nas mesmas condições, observado o limite legal.</p>
 			<p>8.1.2.	As prorrogações de prazo de vigência serão formalizadas mediante celebração dos respectivos termos de aditamento ao contrato, respeitadas as condições prescritas na Lei Federal nº 8.666/1993.</p>
@@ -2525,7 +2527,7 @@ apresenta-se o seguinte resultado:</p>
 		</section>
 		
 		<section>
-			<h2 class="titulo" indent="1">9.	DO PREÇO, DA DOTAÇÃO E DAS CONDIÇÕES DE PAGAMENTO</h2>
+			<h2 class="titulo" indent="2">9.	DO PREÇO, DA DOTAÇÃO E DAS CONDIÇÕES DE PAGAMENTO</h2>
 			<h3>9.1.	Os preços que vigorarão no contrato incluem todos os custos diretos e indiretos necessários à execução dos serviços, inclusive os referentes às despesas trabalhistas, previdenciárias, impostos, taxas, emolumentos e quaisquer outras despesas e encargos, constituindo, a qualquer título, a única e completa remuneração pela adequada e perfeita prestação e entrega dos serviços, de modo que nenhuma outra remuneração será devida, a qualquer título, descartada qualquer hipótese de responsabilidade solidária pelo pagamento de toda e qualquer despesa, direta ou indiretamente relacionada com a prestação dos serviços.</h3>
 				
 			<Comments :attr="{id:commentId(), context:'subtitulo'}" v-if="estaConsulta.ativo == 1"></Comments>
@@ -2581,7 +2583,7 @@ apresenta-se o seguinte resultado:</p>
 		</section>
 		
 		<section>
-			<h2 class="titulo" indent="1">10.	DO REAJUSTE DE PREÇOS</h2>
+			<h2 class="titulo" indent="2">10.	DO REAJUSTE DE PREÇOS</h2>
 			<h3>10.1.	Os preços ofertados somente poderão ser reajustados após 1 (um) ano de sua vigência, contados da data-limite para apresentação das propostas, mediante a utilização do critério definido do artigo 7º no Decreto nº 57.580, de 19 de janeiro de 2017, com interpretação dada pela  Portaria da Secretaria Municipal da Fazenda - SF Nº 389 de 18 de dezembro de 2017, ou seja, aplicação do índice equivalente ao centro da meta de inflação fixada pelo Conselho Monetário Nacional - CMN  ou o Índice de Preços ao Consumidor – IPC, apurado pela Fundação Instituto de Pesquisas Econômicas – FIPE, optando-se, sempre, pelo menor deles</h3>
 				
 			<Comments :attr="{id:commentId(), context:'10.1.	Os preços ofertados somente poderão ser reajustados após 1 (um) ano de sua vigência, contados da data-limite para apresentação das propostas, mediante a utilização do critério definido do artigo 7º...'}" v-if="estaConsulta.ativo == 1"></Comments>
@@ -2601,7 +2603,7 @@ apresenta-se o seguinte resultado:</p>
 		</section>
 		
 		<section>
-			<h2 class="titulo" indent="1">11.	DA GARANTIA CONTRATUAL</h2>
+			<h2 class="titulo" indent="2">11.	DA GARANTIA CONTRATUAL</h2>
 			<h3>11.1.	No ato da assinatura do contrato, a adjudicatária deverá prestar a devida garantia, em quantia equivalente a 5% (cinco por cento) do valor contratual, em qualquer das modalidades previstas no artigo 56, § 1º, da Lei Federal nº 8.666/93. A referida garantia será prestada nos termos da Portaria SF nº. 76/2019"</h3>
 				
 			<Comments :attr="{id:commentId(), context:'11.1.	No ato da assinatura do contrato, a adjudicatária deverá prestar a devida garantia, em quantia equivalente a 5% (cinco por cento)...'}" v-if="estaConsulta.ativo == 1"></Comments>
@@ -2639,7 +2641,7 @@ apresenta-se o seguinte resultado:</p>
 		</section>
 		
 		<section>
-			<h2 class="titulo" indent="1">12.	DAS PENALIDADES</h2>
+			<h2 class="titulo" indent="2">12.	DAS PENALIDADES</h2>
 			<h3>12.1.	Além das sanções previstas no capítulo IV da Lei Federal nº 8.666/93, Lei Federal no 10.520/02 e demais normas pertinentes, são aplicáveis as penalidades abaixo estipuladas, que só deixarão de ser aplicadas nas seguintes hipóteses:</h3>
 			<p>12.1.1.	Comprovação, anexada aos autos, da ocorrência de força maior impeditiva do cumprimento da obrigação e/ou,</p>
 			<p>12.1.2.	Manifestação da unidade requisitante, informando que o ocorrido derivou de fatos imputáveis à Administração</p>
@@ -2901,7 +2903,7 @@ apresenta-se o seguinte resultado:</p>
 		</section>
 		
 		<section>
-			<h2 class="titulo" indent="1">13.	DA FISCALIZAÇÃO DO CONTRATO</h2>
+			<h2 class="titulo" indent="2">13.	DA FISCALIZAÇÃO DO CONTRATO</h2>
 			<h3>13.1.	A fiscalização do presente Contrato será exercida pela Secretaria Municipal de Inovação e Tecnologia - SMIT, por intermédio de servidor(es) designado(s) para tal finalidade, a quem competirá(ão) observar as atividades e os procedimentos necessários ao exercício das atribuições de fiscalização estabelecidas no Decreto nº 54.873 de 25 de Fevereiro de 2014, durante sua vigência.</h3>
 				
 			<Comments :attr="{id:commentId(), context:'13.1.	A fiscalização do presente Contrato será exercida pela Secretaria Municipal de Inovação e Tecnologia - SMIT...'}" v-if="estaConsulta.ativo == 1"></Comments>
@@ -2914,7 +2916,7 @@ apresenta-se o seguinte resultado:</p>
 						callback: (isVisible, entry) => visibilityChanged(isVisible, entry, 'anexoI'),
 						once: true
 					}">
-			<h2 class="titulo" indent="1"><a :href="fileSrc('ANEXO_I.pdf')" target="_blank">ANEXO I - HISTÓRICO DE LIGAÇÕES E VOLUME - RECEPTIVO</a></h2>
+			<h2 class="titulo" indent="2"><a :href="fileSrc('ANEXO_I.pdf')" target="_blank">ANEXO I - HISTÓRICO DE LIGAÇÕES E VOLUME - RECEPTIVO</a></h2>
 			<p>
 				<embed
 					v-if="isVisible.anexoI"					
@@ -2931,7 +2933,7 @@ apresenta-se o seguinte resultado:</p>
 						callback: (isVisible, entry) => visibilityChanged(isVisible, entry, 'anexoII'),
 						once: true
 					}">
-			<h2 class="titulo" indent="1"><a :href="fileSrc('ANEXO_II.pdf')" target="_blank">ANEXO II - HISTÓRICO DE LIGAÇÕES E VOLUME - ATIVO</a></h2>
+			<h2 class="titulo" indent="2"><a :href="fileSrc('ANEXO_II.pdf')" target="_blank">ANEXO II - HISTÓRICO DE LIGAÇÕES E VOLUME - ATIVO</a></h2>
 			<p>
 				<embed
 					v-if="isVisible.anexoII"
@@ -2949,7 +2951,7 @@ apresenta-se o seguinte resultado:</p>
 						callback: (isVisible, entry) => visibilityChanged(isVisible, entry, 'anexoIII'),
 						once: true
 					}">
-			<h2 class="titulo" indent="1"><a :href="fileSrc('ANEXO_III.pdf')" target="_blank">ANEXO III - HISTÓRICO DE VOLUMETRIA DE ATENDIMENTOS VIA CHAT</a></h2>
+			<h2 class="titulo" indent="2"><a :href="fileSrc('ANEXO_III.pdf')" target="_blank">ANEXO III - HISTÓRICO DE VOLUMETRIA DE ATENDIMENTOS VIA CHAT</a></h2>
 			<p>
 				<embed 
 					v-if="isVisible.anexoIII"
@@ -2966,7 +2968,7 @@ apresenta-se o seguinte resultado:</p>
 						callback: (isVisible, entry) => visibilityChanged(isVisible, entry, 'anexoIV'),
 						once: true
 					}">
-			<h2 class="titulo" indent="1"><a :href="fileSrc('ANEXO_IV.pdf')" target="_blank">ANEXO IV - HISTÓRICO DE VOLUMETRIA DE ENVIOS DE SMS PERÍODO DE 2016 À 2019</a></h2>
+			<h2 class="titulo" indent="2"><a :href="fileSrc('ANEXO_IV.pdf')" target="_blank">ANEXO IV - HISTÓRICO DE VOLUMETRIA DE ENVIOS DE SMS PERÍODO DE 2016 À 2019</a></h2>
 			<p>
 				<embed
 					v-if="isVisible.anexoIV"
@@ -2983,7 +2985,7 @@ apresenta-se o seguinte resultado:</p>
 						callback: (isVisible, entry) => visibilityChanged(isVisible, entry, 'anexoV'),
 						once: true
 					}">
-			<h2 class="titulo" indent="1"><a :href="fileSrc('ANEXO_V.pdf')" target="_blank">ANEXO V - MODELO DE ACORDO DE NÍVEL DE SERVIÇO</a></h2>
+			<h2 class="titulo" indent="2"><a :href="fileSrc('ANEXO_V.pdf')" target="_blank">ANEXO V - MODELO DE ACORDO DE NÍVEL DE SERVIÇO</a></h2>
 			<p>
 				<embed
 					v-if="isVisible.anexoV"
@@ -2995,6 +2997,115 @@ apresenta-se o seguinte resultado:</p>
 			</p>
 			<Comments :attr="{id:commentId(), context:'ANEXO V - MODELO DE ACORDO DE NÍVEL DE SERVIÇO'}" v-if="estaConsulta.ativo == 1"></Comments>
 		</section>
+		<!-- FIM DOS ANEXOS DO TR -->
+		<hr>
+		<!-- <section>
+			<h2 class="titulo" indent="1" style="margin-top: 2rem;">Anexos do Edital</h2>
+		</section> -->
+		<!-- ANEXOS DO EDITAL -->
+		<div v-observe-visibility="{
+						callback: (isVisible, entry) => visibilityChanged(isVisible, entry, 'anexoEdII'),
+						once: true
+					}">
+			<!-- <h2 class="titulo" indent="2"><a :href="fileSrc('ANEXO_EDITAL_II.pdf')" target="_blank">ANEXO II – MODELO DE PROPOSTA DE PREÇOS</a></h2> -->
+			<h2><a :href="fileSrc('ANEXO_EDITAL_II.pdf')" target="_blank">ANEXO II – MODELO DE PROPOSTA DE PREÇOS</a></h2>
+			<p>
+				<embed
+					v-if="isVisible.anexoEdII"
+					:src="fileSrc('ANEXO_EDITAL_II.pdf')"
+					width="700"
+					height="500"
+					alt="pdf"
+					pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+			</p>
+			<Comments :attr="{id:commentId(), context:'ANEXO II – MODELO DE PROPOSTA DE PREÇOS'}" v-if="estaConsulta.ativo == 1"></Comments>
+		</div>
+
+		<div v-observe-visibility="{
+						callback: (isVisible, entry) => visibilityChanged(isVisible, entry, 'anexoEdIII'),
+						once: true
+					}">
+			<h2><a :href="fileSrc('ANEXO_EDITAL_III.pdf')" target="_blank">ANEXO III – DECLARAÇÃO DE QUE NADA DEVE AO MUNICÍPIO DE SÃO PAULO</a></h2>
+			<p>
+				<embed
+					v-if="isVisible.anexoEdIII"
+					:src="fileSrc('ANEXO_EDITAL_III.pdf')"
+					width="700"
+					height="500"
+					alt="pdf"
+					pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+			</p>
+			<Comments :attr="{id:commentId(), context:'ANEXO III – DECLARAÇÃO DE QUE NADA DEVE AO MUNICÍPIO DE SÃO PAULO'}" v-if="estaConsulta.ativo == 1"></Comments>
+		</div>
+		
+		<div v-observe-visibility="{
+						callback: (isVisible, entry) => visibilityChanged(isVisible, entry, 'anexoEdIV'),
+						once: true
+					}">
+			<h2><a :href="fileSrc('ANEXO_EDITAL_IV.pdf')" target="_blank">ANEXO IV - MODELO REFERENCIAL DE DECLARAÇÃO ART. 7º, INC.  XXXIII DA CONSTITUIÇÃO FEDERAL</a></h2>
+			<p>
+				<embed
+					v-if="isVisible.anexoEdIV"
+					:src="fileSrc('ANEXO_EDITAL_IV.pdf')"
+					width="700"
+					height="500"
+					alt="pdf"
+					pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+			</p>
+			<Comments :attr="{id:commentId(), context:'ANEXO IV - MODELO REFERENCIAL DE DECLARAÇÃO ART. 7º, INC.  XXXIII DA CONSTITUIÇÃO FEDERAL'}" v-if="estaConsulta.ativo == 1"></Comments>
+		</div>
+		
+		<div v-observe-visibility="{
+						callback: (isVisible, entry) => visibilityChanged(isVisible, entry, 'anexoEdV'),
+						once: true
+					}">
+			<h2><a :href="fileSrc('ANEXO_EDITAL_V.pdf')" target="_blank">ANEXO V - MODELO REFERENCIAL DE DECLARAÇÃO DE INEXISTÊNCIA DE FATOS IMPEDITIVOS</a></h2>
+			<p>
+				<embed
+					v-if="isVisible.anexoEdV"
+					:src="fileSrc('ANEXO_EDITAL_V.pdf')"
+					width="700"
+					height="500"
+					alt="pdf"
+					pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+			</p>
+			<Comments :attr="{id:commentId(), context:'ANEXO V - MODELO REFERENCIAL DE DECLARAÇÃO DE INEXISTÊNCIA DE FATOS IMPEDITIVOS'}" v-if="estaConsulta.ativo == 1"></Comments>
+		</div>
+		
+		<div v-observe-visibility="{
+						callback: (isVisible, entry) => visibilityChanged(isVisible, entry, 'anexoEdVI'),
+						once: true
+					}">
+			<h2><a :href="fileSrc('ANEXO_EDITAL_VI.pdf')" target="_blank">ANEXO VI - MODELO DE DECLARAÇÃO DE NÃO INCURSÃO NAS PENAS DA LEI </a></h2>
+			<p>
+				<embed
+					v-if="isVisible.anexoEdVI"
+					:src="fileSrc('ANEXO_EDITAL_VI.pdf')"
+					width="700"
+					height="500"
+					alt="pdf"
+					pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+			</p>
+			<Comments :attr="{id:commentId(), context:'ANEXO VI - MODELO DE DECLARAÇÃO DE NÃO INCURSÃO NAS PENAS DA LEI'}" v-if="estaConsulta.ativo == 1"></Comments>
+		</div>
+		
+		<div v-observe-visibility="{
+						callback: (isVisible, entry) => visibilityChanged(isVisible, entry, 'anexoEdVII'),
+						once: true
+					}">
+			<h2><a :href="fileSrc('ANEXO_EDITAL_VII.pdf')" target="_blank">ANEXO VII – MINUTA DE CONTRATO</a></h2>
+			<p>
+				<embed
+					v-if="isVisible.anexoEdVII"
+					:src="fileSrc('ANEXO_EDITAL_VII.pdf')"
+					width="700"
+					height="500"
+					alt="pdf"
+					pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+			</p>
+			<Comments :attr="{id:commentId(), context:'ANEXO VII – MINUTA DE CONTRATO'}" v-if="estaConsulta.ativo == 1"></Comments>
+		</div>
+		
 
 		<section ref="allComments">
 			<h2 v-show="commentsLoaded" class="titulo" indent="1">Contribuições</h2>
@@ -3027,7 +3138,13 @@ export default {
 				anexoII: false,
 				anexoIII: false,
 				anexoIV: false,
-				anexoV: false
+				anexoV: false,
+				anexoEdII: false,
+				anexoEdIII: false,
+				anexoEdIV: false,
+				anexoEdV: false,
+				anexoEdVI: false,
+				anexoEdVII: false
 			}
 		}
 	},

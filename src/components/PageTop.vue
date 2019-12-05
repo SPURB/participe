@@ -11,6 +11,13 @@
 			<div class="periodo" v-if="esta_consulta.dataFinal">
 				<i class="icon-data icon"><span>período</span></i> {{ data(esta_consulta.dataCadastro) }}–{{ data(esta_consulta.dataFinal) }}
 			</div>
+
+			<!-- Devolutiva -->
+			<div class="devolutiva" v-if="esta_consulta.urlDevolutiva">
+				<a :href="esta_consulta.urlDevolutiva" target="_blank">
+				<i class="icon-responder icon pointer">Ver devolutiva </i></a>
+			</div>
+
 			<div class="publicacao" v-if="esta_consulta.dataCadastro">
 				Publicado em {{ data(esta_consulta.dataCadastro)}}
 			</div>
@@ -330,6 +337,9 @@ div.PageTop {
 			h2 { font-size: 12pt; }
 		}
 		ul.share { display: none; }
+	}
+	.pointer {
+		cursor: pointer;
 	}
 };
 </style>

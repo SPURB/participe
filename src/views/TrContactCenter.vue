@@ -19,10 +19,10 @@
 				Cronograma:
 				<ol>
 					<li>
-						Recebimento de eventuais sugestões e/ou comentários a partir de 19/11/2019 até 04/12/2019.
+						Recebimento de eventuais sugestões e/ou comentários a partir de 29/11/2019 até 13/12/2019.
 					</li>
 					<li>
-						Adequações no Termo de Referência com as considerações publicadas no processo de consulta pública: de 05/12/2019 até 18/12/2019.
+						Adequações no Termo de Referência com as considerações publicadas no processo de consulta pública: de 16/12/2019 até 13/01/2020.
 					</li>
 					<li>
 						Após a consolidação das análises recebidas, considerando os eventuais ajustes decorrentes do processo de consulta pública, a versão final do Termo de Referência será divulgada no site da SMIT <a href="https://www.prefeitura.sp.gov.br/cidade/secretarias/inovacao" target="_blank">https://www.prefeitura.sp.gov.br/cidade/secretarias/inovacao</a>. 

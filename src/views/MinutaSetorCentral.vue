@@ -1589,7 +1589,9 @@
 					</a>
 				</li>
 			</ul>
-			<h3>Devolutivas</h3>
+		</section>
+		<section>
+			<h2 class="titulo" indent="1">Devolutivas</h2>
 			<ul class="links">
 				<li>
 					<a :href="src('arquivos/minuta-piu-setor-central/devolutivas/Devolutiva_Consulta_Publica.pdf')">

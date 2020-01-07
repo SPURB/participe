@@ -49,9 +49,26 @@ Antes de desenvolver uma nova consulta veja a documentação dos [padrões de in
 ## Issues
 Toda contribuição é bem vinda. Crie uma [issue](https://github.com/SPURB/participe/issues).
 
+
+## Colaboradores
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/alexboccia"><img src="https://avatars3.githubusercontent.com/u/32138082?s=460&v=4" width="100px;" alt="Alex Boscia"/><br /><sub><b>Alex Boscia</b></sub></a><br /><a href="https://github.com/spurb/participe/commits?author=alexboccia" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/davimh"><img src="https://avatars1.githubusercontent.com/u/32531840?s=460&v=4" width="100px;" alt="Thomas Yuba"/><br /><sub><b>Davi Masayuki</b></sub></a><br /><a href="https://github.com/spurb/participe/commits?author=davimh" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/educkf"><img src="https://avatars2.githubusercontent.com/u/2439707?s=460&v=4" width="100px;" alt="Eduardo Camillo"/><br /><sub><b>Eduardo Camillo</b></sub></a><br /><a href="https://github.com/spurb/participe/commits?author=educkf" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/flavinhalopes"><img src="https://avatars1.githubusercontent.com/u/39636035?s=460&v=4
+    " width="100px;" alt="Flávia Lopes"/><br /><sub><b>Flávia Lopes</b></sub></a><br /><a href="https://github.com/spurb/participe/commits?author=flavinhalopes" title="Code">💻</a></td>
+ </tr>
+ <tr>
+    <td align="center"><a href="https://github.com/lordscorp"><img src="https://avatars1.githubusercontent.com/u/40305353?s=460&v=4" width="100px;" alt="Renan Moreira Gomes"/><br /><sub><b>Renan Gomes</b></sub></a><br /><a href="https://github.com/spurb/participe/commits?author=lordscorp" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/ricardoivanov"><img src="https://avatars1.githubusercontent.com/u/56939042?s=460&v=4" width="100px;" alt="Ricardo Henrique Ivanov"/><br /><sub><b>Ricardo Ivanov</b></sub></a><br /><a href="https://github.com/spurb/participe/commits?author=X478816@rede.sp" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/rogerioloboBR"><img src="https://avatars0.githubusercontent.com/u/10540741?s=460&v=4" width="100px;" alt="Rogério Lobo"/><br /><sub><b>Rogério Lobo</b></sub></a><br /><a href="https://github.com/spurb/participe/commits?author=rogerioloboBR" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/yubathom"><img src="https://avatars3.githubusercontent.com/u/4117768?v=4" width="100px;" alt="Thomas Yuba"/><br /><sub><b>Thomas Yuba</b></sub></a><br /><a href="https://github.com/spurb/participe/commits?author=yubathom" title="Code">💻</a></td>
+ </tr>
+</table>
+
 ## Licença 
 [GPL-v3](https://github.com/SPURB/participe/blob/master/LICENSE)
-
 
 ## Contato
 Em caso de dúvida de implementação e desenvolvimento envie um email para <desenvolvimento@spurbanismo.sp.gov.br>.

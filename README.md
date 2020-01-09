@@ -1,5 +1,6 @@
 # Participe
 [![Netlify Status](https://api.netlify.com/api/v1/badges/fb06bdad-d959-414d-b42d-1891b7862c9f/deploy-status)](https://app.netlify.com/sites/participe-gestaourbana/deploys)
+[![Build Status](https://travis-ci.org/SPURB/participe.svg?branch=master)](https://travis-ci.org/SPURB/participe)
 
 Frontend do [https://participe.gestaourbana.prefeitura.sp.gov.br](https://participe.gestaourbana.prefeitura.sp.gov.br), site de participação social da Secretaria Municipal de Urbanismo e Licenciamento – SMUL - e São Paulo Urbanismo.
 
@@ -56,8 +57,7 @@ Toda contribuição é bem vinda. Crie uma [issue](https://github.com/SPURB/part
     <td align="center"><a href="https://github.com/alexboccia"><img src="https://avatars3.githubusercontent.com/u/32138082?s=460&v=4" width="100px;" alt="Alex Boscia"/><br /><sub><b>Alex Boscia</b></sub></a><br /><a href="https://github.com/spurb/participe/commits?author=alexboccia" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/davimh"><img src="https://avatars1.githubusercontent.com/u/32531840?s=460&v=4" width="100px;" alt="Thomas Yuba"/><br /><sub><b>Davi Masayuki</b></sub></a><br /><a href="https://github.com/spurb/participe/commits?author=davimh" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/educkf"><img src="https://avatars2.githubusercontent.com/u/2439707?s=460&v=4" width="100px;" alt="Eduardo Camillo"/><br /><sub><b>Eduardo Camillo</b></sub></a><br /><a href="https://github.com/spurb/participe/commits?author=educkf" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/flavinhalopes"><img src="https://avatars1.githubusercontent.com/u/39636035?s=460&v=4
-    " width="100px;" alt="Flávia Lopes"/><br /><sub><b>Flávia Lopes</b></sub></a><br /><a href="https://github.com/spurb/participe/commits?author=flavinhalopes" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/flavinhalopes"><img src="https://avatars1.githubusercontent.com/u/39636035?s=460&v=4" width="100px;" alt="Flávia Lopes"/><br /><sub><b>Flávia Lopes</b></sub></a><br /><a href="https://github.com/spurb/participe/commits?author=flavinhalopes" title="Code">💻</a></td>
  </tr>
  <tr>
     <td align="center"><a href="https://github.com/lordscorp"><img src="https://avatars1.githubusercontent.com/u/40305353?s=460&v=4" width="100px;" alt="Renan Moreira Gomes"/><br /><sub><b>Renan Gomes</b></sub></a><br /><a href="https://github.com/spurb/participe/commits?author=lordscorp" title="Code">💻</a></td>

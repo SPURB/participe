@@ -36,7 +36,9 @@ export default {
 			let app = this
 			const url = process.env.VUE_APP_API_URL + 'v3/members/?idConsulta=' + this.$route.meta.id + '&public=1'
 			api.get(url)
-				.then(response => { app.comments = response.data[0] })
+				.then(response => { 
+					app.comments = response.data
+				})
 				.catch(error => console.error(error))
 		},
 		filterDate (dataString) {

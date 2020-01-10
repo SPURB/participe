@@ -48,5 +48,7 @@ module.exports = {
 			onlyProduction: true,
 			maxConcurrentRoutes: 1
 		}
-	}
+	},
+	
+	runtimeCompiler: true
 }

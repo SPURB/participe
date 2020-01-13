@@ -26,20 +26,31 @@ npm run serve
 * [http://localhost:8080/anhembi2](http://localhost:8080/anhembi2)
 * [http://localhost:8080/vida-segura](http://localhost:8080/vida-segura)
 
-> Observação: Para visualizar a home e gerar e gerar formulários é necessário realizar o setup do [backend](https://github.com/SPURB/consultas-publicas-backend) e criar um arquivo `.env.development.local` com as variáveis configuradas.
+> Observação: Para visualizar a home e utilizar os formulários é necessário realizar o setup do [backend](https://github.com/SPURB/consultas-publicas-backend) e criar um arquivo `.env.development.local` com as variáveis configuradas.
 
 Explicações detalhadas deste template no [guia](http://vuejs-templates.github.io/webpack/) e [documentação do vue-loader](http://vuejs.github.io/vue-loader).
 
 
 ## Testes
-Inicie testes
+Inicie testes unitários
 ```
-npm run tests
+npm run test:unit
 ```
 
-Inicie ambiente para TDD
+Inicie testes e2e
+```
+npm run test:e2e
+```
+
+Inicie ambiente TDD com testes e2e
 ```
 npm run serve:e2e
+```
+
+## Publicar
+Crie os arquivos no diretório dist.
+```
+npm run build
 ```
 
 ___

@@ -53,15 +53,19 @@ export default {
 					var comId = function() {
 						cId++
 						return cId
-					}					
+					}
 					let processedHtml = response.data[0].conteudo_html.replace(/<hr class="commentbox fa fa-comments" title="(.*?)">/g, function(x){
 						let context = x.replace(/<hr class="commentbox fa fa-comments" title="(.*?)">/g, "$1");
 						return '<Comments :attr="{id:\'' + cId++ + '\', context:\''+context+'\'}" v-if="'+estaConsulta.ativo+'"></Comments>'
 					})
 					// Corrige títulos
+					processedHtml = processedHtml.replace(/<h1([\s\S]*?)>/g, '<h1>').replace(/<h2([\s\S]*?)>/g, '<h2>')
+
 					processedHtml = processedHtml.replace(/<h1>(.*?)<\/h1>/g, '<section><h2 class="titulo" indent="1">$1</h2></section>')
 					processedHtml = processedHtml.replace(/<h2>(.*?)<\/h2>/g, '<section><h3 class="titulo" indent="2">$1</h3></section>')
-					const h1 = '<section><h1 class="titulo" indent="1">'+estaConsulta.nomePublico+'</h1></section>'
+					// processedHtml = processedHtml.replace(/<h1>(.*?)<\/h1>/g, '<section><h2 class="titulo" indent="1">$1</h2></section>')
+					// processedHtml = processedHtml.replace(/<h2>(.*?)<\/h2>/g, '<section><h3 class="titulo" indent="2">$1</h3></section>')
+					const h1 = '<section><h1 id="tituloH1" class="titulo" indent="1">'+estaConsulta.nomePublico+'</h1></section>'
 					
 					// Limpa tag <o:p> do Word (para evitar tentativa frustrada de conversão em custom components)
 					processedHtml = processedHtml.replace(/<o:p>|<\/o:p>/g, '').replace(/w:sdt/g, 'span').replace(/spanpr/g, 'span')
@@ -71,7 +75,7 @@ export default {
 					
 					// Atualiza índice lateral (h2 e h3)
 					window.setTimeout(function() {
-						app.titulosLimpo = app.listaTitulos()						
+						app.titulosLimpo = app.listaTitulos()
 						// Se houver muitos títulos, remove os de nível 2 (ou mais) para não extrapolar o índice
 						if (app.titulosLimpo.length > 30) {
 							for (var i = app.titulosLimpo.length - 1; i >= 0; i--) {
@@ -80,7 +84,8 @@ export default {
 								}
 							}
 						}
-					}, 100)
+						console.log(app.titulosLimpo)
+					}, 1000)
 				})
 			})
 			.catch(error => console.error(error))
@@ -132,13 +137,27 @@ export default {
 #autocontent {
 	margin: auto;
 	max-width: 700px;
+	overflow: auto;
 }
 img {
 	max-width: 100%;
 }
+p {
+	word-wrap: break-word;	
+}
 .titulo {
 	padding-top: 35px;
 	margin-top: 30px;
+}
+#tituloH1 {
+	height: 0px;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	overflow: hidden;
+}
+table {
+	margin-left: 0px !important;
 }
 </style>
 <style lang="scss" scoped>

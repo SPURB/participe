@@ -65,7 +65,11 @@ const store = new Vuex.Store({
 	},
 	actions: {
 		fetchConsultas ({ commit }, { self }) {
+<<<<<<< HEAD
 			api.get(process.env.VUE_APP_API_URL + 'v2/' + 'consultas')
+=======
+			api.get(`v3/consultas`)
+>>>>>>> chore(api): finaliza arco-tiete-2 e altera tudo para apiv3
 				.then(response => {
 					commit('FETCH_CONSULTAS', response.data.slice().reverse())
 					commit('FETCH_CONSULTAS_DECODE', store.state.consultas)

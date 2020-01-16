@@ -20,7 +20,12 @@
 			</div>
 			<div v-if="isIE" class="cont" ref="layerStack">
 				<img v-if="data.tipo == 'multi'" :src="src(data.base.path)" class="base">
-				<img v-for="layer in data.layers" class="layer" :class="{ visible: data.tipo == 'sequencial' && data.layers.indexOf(layer) === state }" :src="src(layer.path)" alt="">
+				<img
+					v-for="(layer, index) in data.layers"
+					class="layer"
+					:class="{ visible: data.tipo == 'sequencial' && data.layers.indexOf(layer) === state }"
+					:src="src(layer.path)"
+					:key="index">
 			</div>
 			<button class="next" @click="next(data.layers)" :disabled="state == data.layers.length - 1" v-if="data.tipo == 'sequencial'">
 				<i class="icon-seta_direita icon"><span>seta_direita</span></i>
@@ -28,14 +33,14 @@
 		</main>
 		<aside>
 			<ul class="legendaBase">
-				<li v-for="legenda in data.base.legendas">
-					<img :src="src(legenda.path)" alt="">
+				<li v-for="(legenda, index) in data.base.legendas" :key="index">
+					<img :src="src(legenda.path)">
 					<span>{{ legenda.descricao }}</span>
 				</li>
 			</ul>
 			<template v-if="data.tipo == 'multi'">
 				<ul class="layers" ref="layerList">
-					<li v-for="layer in data.layers">
+					<li v-for="(layer, index) in data.layers" :key="index">
 						<div class="item" @click="colexp($event, layer, data.layers)">
 							<label class="switcher">
 								<input type="checkbox" @click="toggleLayerVis(data.cssBaseId, data.layers, layer)">
@@ -52,7 +57,7 @@
 									<li v-if="index == 0 && legenda.titulo" class="titLeg">
 										<h4>{{ legenda.titulo }}</h4>
 									</li>
-									<li v-else="">
+									<li v-else>
 										<img v-if="legenda.path" :src="src(legenda.path)" alt="">
 										<span v-if="legenda.char" class="char">{{ legenda.char }}</span>
 										<span>{{ legenda.descricao }}</span>
@@ -60,7 +65,7 @@
 								</template>
 							</ul>
 							<ul class="textos">
-								<li v-for="p in peers(layer.textos)">
+								<li v-for="(p, index) in peers(layer.textos)" :key="index">
 									<h4 class="key" v-if="p[0].length > 2">{{p[0]}}</h4>
 									<p>{{p[1]}}</p>
 								</li>
@@ -79,7 +84,7 @@
 									<li v-if="index == 0 && legenda.titulo" class="titLeg">
 										<h4>{{ legenda.titulo }}</h4>
 									</li>
-									<li v-else="">
+									<li v-else>
 										<img v-if="legenda.path" :src="src(legenda.path)" alt="">
 										<span v-if="legenda.char" class="char">{{ legenda.char }}</span>
 										<span>{{ legenda.descricao }}</span>
@@ -87,7 +92,7 @@
 								</template>
 							</ul>
 							<ul class="textos">
-								<li v-for="p in peers(layer.textos)">
+								<li v-for="(p, index) in peers(layer.textos)" :key="index">
 									<h4 class="key" v-if="p[0].length > 2">{{p[0]}}</h4>
 									<p>{{p[1]}}</p>
 								</li>
@@ -171,10 +176,10 @@ export default {
 			} else { return false }
 		},
 		next (layers) {
-			this.state < (layers.length - 1) ? this.state++ : false
+			return this.state < (layers.length - 1) ? this.state++ : false
 		},
 		prev () {
-			this.state > 0 ? this.state-- : false
+			return this.state > 0 ? this.state-- : false
 		},
 		peers (data) {
 			if (Object.entries) {

@@ -64,6 +64,7 @@
 
 <script>
 import api from '@/utils/api'
+import fechadura from '@spurb/fechadura'
 import { commentsCommons } from '@/mixins/commentsCommons'
 
 export default {
@@ -73,26 +74,28 @@ export default {
 			required: true,
 			type: Object
 		}
-  },
-  mixins: [ commentsCommons ],
+	},
+	mixins: [ commentsCommons ],
 	methods: {
 		send () {
 			let app = this
-			app.erro = false
-			app.enviandoComment = true
-			api.post(process.env.VUE_APP_API_URL + 'members', {
+			this.erro = false
+			this.enviandoComment = true
+			const key = fechadura(JSON.parse(process.env.VUE_APP_API_TOKEN), 'bicho').encript
+			api.defaults.headers.common['Current'] = key
+
+			api.post('/members', {
 				'idConsulta': app.$route.meta.id,
 				'name': app.returnFormNameObject,
 				'email': app.form_email,
 				'content': app.form_content,
-				'public': '0',
-				'trash': '0',
-				'postid': '1',
+				'public': 0,
+				'trash': 0,
+				'postid': 1,
 				'commentid': app.attr.id,
 				'commentcontext': app.attr.context
 			})
 				.then(function (response) {
-					console.log(app.attr.id)
 					app.abreComentario = false
 					app.sucesso = true
 					app.resetForm()

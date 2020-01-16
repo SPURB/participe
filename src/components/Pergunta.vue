@@ -108,6 +108,7 @@
 
 <script>
 import api from '@/utils/api'
+import fechadura from '@spurb/fechadura'
 import { commentsCommons } from '@/mixins/commentsCommons'
 
 export default {
@@ -141,7 +142,11 @@ export default {
 			this.step++
 			app.erro = false
 			app.enviandoComment = true
-			api.post(process.env.VUE_APP_API_URL + 'members', {
+
+			const key = fechadura(JSON.parse(process.env.VUE_APP_API_TOKEN), 'bicho').encript
+			api.defaults.headers.common['Current'] = key
+
+			api.post('/members', {
 				'idConsulta': app.$route.meta.id,
 				'name': app.returnFormNameObject,
 				'email': app.form_email,
@@ -168,7 +173,7 @@ export default {
 		goStep (num) {
 			if (this.step === 0) {
 				this.checkStorage(['form_name', 'form_surname', 'form_organization', 'form_email'])
-				this.setFormBtnState(['form_email', 'form_surname', 'form_name' ])
+				this.setFormBtnState(['form_email', 'form_surname', 'form_name'])
 			}
 			this.step = num
 		},
@@ -179,7 +184,7 @@ export default {
 			let storage = window.localStorage
 			let app = this
 			if (this.step === 1) {
-				if (app.errors.items.length == 0) {
+				if (!app.errors.items.length) {
 					this.goStep(2)
 					storage.setItem('form_name', app.form_name)
 					storage.setItem('form_surname', app.form_surname)
@@ -196,8 +201,8 @@ export default {
 			requiredKeys.forEach(key => {
 				if (this[key] === null || this[key] === '') errors++
 			})
-			if (errors) return this.formBtnState = true
-			else return this.formBtnState = false
+			if (errors) this.formBtnState = true
+			else this.formBtnState = false
 		}
 
 	}

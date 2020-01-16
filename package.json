@@ -12,6 +12,7 @@
     "build": "vue-cli-service build",
     "e2e": "cypress run",
     "lint": "vue-cli-service lint",
+    "lint:fix": "vue-cli-service lint --fix",
     "build-homolog": "vue-cli-service build --mode staging",
     "build-local": "vue-cli-service build --mode development",
     "e2e:open": "cypress open",

@@ -81,6 +81,7 @@
 
 <script>
 import api from '@/utils/api'
+import fechadura from '@spurb/fechadura'
 import { commentsCommons } from '@/mixins/commentsCommons'
 
 export default {
@@ -127,7 +128,11 @@ export default {
 			let app = this
 			app.erro = false
 			app.enviandoComment = true
-			api.post(process.env.VUE_APP_API_URL + 'members', {
+
+			const key = fechadura(JSON.parse(process.env.VUE_APP_API_TOKEN), 'bicho').encript
+			api.defaults.headers.common['Current'] = key
+
+			api.post('/members', {
 				'idConsulta': app.$route.meta.id,
 				'name': app.returnFormNameObject,
 				'email': app.form_email,

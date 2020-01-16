@@ -41,7 +41,8 @@ module.exports = {
 				'/jockey-club',
 				'/minuta-piu-setor-central',
 				'/tr-contact-center',
-				'/pmadrss'
+				'/pmadrss',
+				'/arco-tiete-2'
 			],
 			useRenderEvent: true,
 			headless: false,
@@ -49,6 +50,5 @@ module.exports = {
 			maxConcurrentRoutes: 1
 		}
 	},
-	
 	runtimeCompiler: true
 }

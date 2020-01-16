@@ -6,7 +6,6 @@
 				<label for="nome">Nome</label>
 				<input
 					value=""
-					id="nome"
 					type="text"
 					name="name"
 					v-validate="'required: true'"
@@ -16,7 +15,6 @@
 				<label for="sobrenome">Sobrenome</label>
 				<input
 					value=""
-					id="sobrenome"
 					type="text"
 					name="surname"
 					v-validate="'required: true'"
@@ -26,7 +24,6 @@
 				<label for="organizacao">Organização (opcional)</label>
 				<input
 					value=""
-					id="organizacao"
 					type="text"
 					name="organization"
 					v-validate="'required: false'"
@@ -35,7 +32,6 @@
 				<label for="email">E-mail</label>
 				<input
 					value=""
-					id="email"
 					name="email"
 					v-validate="'required|email'"
 					:class="{ inputErro: errors.has('email') }"
@@ -47,7 +43,6 @@
 				<label for="comentario">Comente aqui</label>
 				<textarea
 					value=""
-					id="comentario"
 					name="content"
 					v-validate="'required: true'"
 					:class="{ inputErro: errors.has('content') }"

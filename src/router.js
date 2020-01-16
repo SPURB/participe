@@ -251,6 +251,14 @@ export default new Router({
 			meta: {
 				id: 61
 			}
+		},
+		{
+			path: '/consulta/:nome',
+			name: 'ConsultaAuto',
+			component: () => import(/* webpackChunkName: "ConsultaAuto" */ '@/views/ConsultaAuto'),
+			meta: {
+				id: 0
+			}
 		}
 	]
 })

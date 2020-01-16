@@ -10,6 +10,8 @@
 
 		<section>
 			<h2 class="titulo" indent="1">Apresentação</h2>
+			<Comments :attr="{ id:commentId(true), context:'Apresentação' }" v-if="parseInt(estaConsulta.ativo) === 1"></Comments>
+
 			<p>A Prefeitura do Município de São Paulo, por intermédio da Secretaria Municipal de Desenvolvimento Urbano (SMDU) e da São Paulo Urbanismo (SPUrbanismo) apresenta proposta de Projeto de Intervenção Urbana (PIU) para o subsetor Arco Tietê, da Orla Ferroviária e Fluvial da Macroárea de Estruturação Metropolitana (MEM), o qual estabelece objetivos, diretrizes, estratégias e mecanismos para a implantação das intervenções. </p>
 
 			<p>Nos estudos iniciais do Projeto de Intervenção Urbana Arco Tietê (PIU Arco Tietê) apresentados na Primeira Consulta Pública – Diagnóstico e Programa de Interesse Público – foram analisados os dados de todo território originalmente definido pelo Plano Diretor Estratégico (PDE) – Lei Municipal nº 16.050/2014 - como Subsetor Arco Tietê (5.380ha). No decorrer dos estudos, a constatação da sobreposição de perímetros de projetos, como a Operação Urbana Consorciada Água Branca, o PIU Anhembi, o PIU Setor Central e o PIU Parque Minhocão, e da existência de novos marcos regulatórios conduziram à adoção de uma nova estratégia de abordagem para o território. Esta nova abordagem tem como estratégia ações concentradas em porções do novo território do Arco Tietê, agora com 3.524 ha.</p>
@@ -41,7 +43,7 @@
 					{ simbolo: src('arquivos/legendas/icones/metro.png'), descricao: 'Estação Metrô' },
 					{ simbolo: src('arquivos/legendas/icones/metro-prevista.png'), descricao: 'Estação Metrô Prevista' },
 					{ simbolo: src('arquivos/legendas/icones/terminais-urbanis-municipais.png'), descricao: 'Terminais Urbanos Municipais' },
-					{ linha: '#535353', espessura: 3, descricao: 'Ferrovia' },
+					{ borda: '#535353', linha: true, espessura: 3, descricao: 'Ferrovia' },
 					{ simbolo: src('arquivos/legendas/icones/linha-de-metro.png'), descricao: 'Linha Metrô' }
 				],
 				fonte: 'Elaboração: SP-Urbanismo, 2020'
@@ -77,17 +79,17 @@
 					{ simbolo: src('arquivos/legendas/icones/metro.png'), descricao: 'Estação Metrô' },
 					{ simbolo: src('arquivos/legendas/icones/metro-prevista.png'), descricao: 'Estação Metrô Prevista' },
 					{ simbolo: src('arquivos/legendas/icones/terminais-urbanis-municipais.png'), descricao: 'Terminais Urbanos Municipais' },
-					{ linha: '#535353', espessura: 3, descricao: 'Ferrovia' },
+					{ simbolo: src('arquivos/legendas/icones/ferrovia.png'), descricao: 'Ferrovia' },
 					{ simbolo: src('arquivos/legendas/icones/linha-de-metro.png'), descricao: 'Linha Metrô' },
 					{ borda: '#92445C', linha: true, espessura: 3, descricao: 'Apoios Urbanos' },
 					{ simbolo: src('arquivos/legendas/icones/Apoios-Urbanos-fase-1e2.png'), descricao: 'Apoios Urbanos (Implantação fase 1 e 2' },
 					{ borda: '#92445C', linha: true, espessura: 2, descricao: 'Vias Estruturais' },
-					{ simbolo: src('arquivos/legendas/icones/Conexoes.png'), descricao: 'Conexões' },
+					{ simbolo: src('arquivos/legendas/icones/conexoes.png'), descricao: 'Conexões' },
 					{ borda: '#FF3300', linha: true, espessura: 3, descricao: 'Transposições' },
 					{ borda: '#E3F1F7', linha: true, espessura: 2, descricao: 'Cursos d’Água' },
 					{ fundo: '#B2E5B2', descricao: 'Áreas Verdes Existentes' },
-					{ simbolo: src('arquivos/legendas/icones/Areas-Verdes-propostas.png'), descricao: 'Áreas Verdes Propostas' },
-					{ simbolo: src('arquivos/legendas/icones/Eixos-de-Integracao-Local-1.png'), descricao: 'Eixos de Integração Local' }
+					{ simbolo: src('arquivos/legendas/icones/areas-verdes-propostas.png'), descricao: 'Áreas Verdes Propostas' },
+					{ simbolo: src('arquivos/legendas/icones/eixos-de-integracao-local-1.png'), descricao: 'Eixos de Integração Local' }
 				],
 				fonte: 'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019'
 			}"></Imagem>
@@ -123,8 +125,6 @@
 			<h2 class="titulo" indent="1">Localização estratégica</h2>
 			<p>A planície do Rio Tietê teve um papel relevante no processo de urbanização do território metropolitano ao acolher um conjunto de infraestruturas de transporte que modificou estruturalmente o meio físico, qualificando-o para recepcionar, inicialmente, a atividade industrial e, posteriormente, a instalação de grandes centros comerciais horizontais associados às mudanças na localização da indústria em escala macrometropolitana. Tanto a chegada das rodovias, como as ocupações extensivas resultaram em um território com grandes quadras, deficitário do ponto de vista da mobilidade, carente de drenagem e de saneamento, definido como um território de urbanização incompleta.</p>
 			<p>Nesse contexto, a ausência de diversidade de usos, a possibilidade de adensamento populacional, a degradação física ambiental da área de várzea e o isolamento das margens direita e esquerda do Rio Tietê configuram os principais desafios do PIU em desenvolvimento. Por outro lado, o reconhecimento do Arco Tietê como um território estratégico de transição entre a cidade urbanizada e o Rio Tietê, integrando a área de várzea ao tecido urbano consolidado e, ao mesmo tempo, promovendo a conexão de eixos estruturadores de mobilidade,, definem os objetivos a serem alcançados.</p>
-			<!-- <p class="todo">todo Desafios e objetivos do Arco Tietê. Elaboração: SP-Urbanismo, 2020.</p> -->
-
 			<desafios-objetivos :bgSrc320="src('arquivos/arco-tiete-2/DesafiosObjetivos-320.png')" :bgSrc700="src('arquivos/arco-tiete-2/DesafiosObjetivos-700.png')" />
 
 			<h3 class="titulo" indent="2">Estrutura do plano urbanístico</h3>
@@ -140,10 +140,10 @@
 						{ path: 'arquivos/arco-tiete-2/mapas/lg_zde.png', descricao: 'ZDE' },
 						{ path: 'arquivos/legendas/icones/melhoramento-viario-proposto-fas1.png', descricao: 'Melhoramento Viário Proposto (Fase1)' },
 						{ path: 'arquivos/legendas/icones/melhoramento-viario-proposto-fas2.png', descricao: 'Melhoramento Viário Proposto (Fase2)' },
-						{ path: 'arquivos/legendas/icones/Transposicoes.png', descricao: 'Transposições' },
-						{ path: 'arquivos/legendas/icones/Rede-Ambiental.png', descricao: 'Rede Ambiental' },
-						{ path: 'arquivos/legendas/icones/Eixos-de-Integracao-Local-1.png', descricao: 'Eixos de Integração Local' },
-						{ path: 'arquivos/legendas/icones/Projetos-Estrategicos.png', descricao: 'Projetos Estratégicos' }
+						{ path: 'arquivos/legendas/icones/transposicoes.png', descricao: 'Transposições' },
+						{ path: 'arquivos/legendas/icones/rede-ambiental.png', descricao: 'Rede Ambiental' },
+						{ path: 'arquivos/legendas/icones/eixos-de-integracao-local-1.png', descricao: 'Eixos de Integração Local' },
+						{ path: 'arquivos/legendas/icones/projetos-estrategicos.png', descricao: 'Projetos Estratégicos' }
 					]
 				},
 				layers: [
@@ -742,7 +742,7 @@
 					{ simbolo: src('arquivos/legendas/icones/metro-estacoes.png'), descricao: 'Estação Metrô' },
 					{ simbolo: src('arquivos/legendas/icones/terminal-onibus-existentes.png'), descricao: 'Terminal de Ônibus' },
 					{ borda: '#000', espessura: 3, pontilhado: true, descricao: 'Perímetro de Intervenção' },
-					{ simbolo: src('arquivos/legendas/icones/lançamentos_embraesp.png'), descricao: 'Lançamentos Embraesp' },
+					{ simbolo: src('arquivos/legendas/icones/ponto-laranja.png'), descricao: 'Lançamentos Embraesp' },
 					{ borda: '#DA5050', espessura: 3, pontilhado: true, descricao: 'Perímetro de Abrangência (1km)' }
 				],
 				fonte: 'Embraesp. Elaboração: SP-Urbanismo.'
@@ -863,7 +863,7 @@
 				legenda: [
 					{ fundo: '#BACCA8', descricao: 'Parque, praças e canteiros' },
 					{ fundo: '#6CB5D5', descricao: 'Hidrografia' },
-					{ linha: '#535353', espessura: 3, descricao: 'Ferrovia' },
+					{ simbolo: src('arquivos/legendas/icones/ferrovia.png'), descricao: 'Ferrovia' },
 					{ simbolo: src('arquivos/legendas/icones/linha-de-metro.png'), descricao: 'Linha Metrô' },
 					{ simbolo: src('arquivos/legendas/icones/cptm-estacoes.png'), descricao: 'Estação CPTM' },
 					{ simbolo: src('arquivos/legendas/icones/metro-estacoes.png'), descricao: 'Estação Metrô' },
@@ -995,7 +995,7 @@
 				legenda: [
 					{ fundo: '#BACCA8', descricao: 'Parque, praças e canteiros' },
 					{ fundo: '#6CB5D5', descricao: 'Hidrografia' },
-					{ linha: '#535353', espessura: 3, descricao: 'Ferrovia' },
+					{ simbolo: src('arquivos/legendas/icones/ferrovia.png'), descricao: 'Ferrovia' },
 					{ simbolo: imgSrc('arquivos/legendas/icones/linha-de-metro.png'), descricao: 'Linha Metrô' },
 					{ simbolo: imgSrc('arquivos/legendas/icones/cptm-estacoes.png'), descricao: 'Estação CPTM' },
 					{ simbolo: imgSrc('arquivos/legendas/icones/metro-estacoes.png'), descricao: 'Estação Metrô' },
@@ -1108,7 +1108,7 @@
 		</section>
 
 		<section>
-			<h2 class="titulo" indent="1">9 Modelo de Gestão Democrática e Plano de Implantação</h2>
+			<h2 class="titulo" indent="1">Modelo de Gestão Democrática e Plano de Implantação</h2>
 			<h3>Modelo de Gestão Democrática</h3>
 			<imagem
 				:dados="{
@@ -1227,6 +1227,7 @@ import PageTop from '@/components/PageTop'
 import Indice from '@/components/Indice'
 import Apoio from '@/components/Apoio'
 import { consultasCommons } from '@/mixins/consultasCommons'
+import { fallbacks } from '@/mixins/fallbacks'
 import Comments from '@/components/Comments'
 import CommentsContext from '@/components/CommentsContext'
 import CommentsOption from '@/components/CommentsOption'
@@ -1450,7 +1451,7 @@ export default {
 		Galeria,
 		Tabela
 	},
-	mixins: [ consultasCommons ]
+	mixins: [ consultasCommons, fallbacks ]
 }
 </script>
 
@@ -1458,11 +1459,6 @@ export default {
 @import '../variables';
 @import '../consulta';
 @import '../oldstylestoprint';
-
-.todo {
-	background-color: red;
-	padding: 2rem
-}
 
 table {
 	margin-bottom: 0

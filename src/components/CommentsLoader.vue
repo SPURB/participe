@@ -33,20 +33,9 @@ export default {
 	},
 	methods: {
 		loadThisComments () {
-<<<<<<< HEAD
-			let app = this
-			// const url = process.env.VUE_APP_API_URL + 'v3/members/?idConsulta=' + this.$route.meta.id + '&public=1'
-			const url = process.env.VUE_APP_API_URL + 'v2/members/?id_consulta=' + this.$route.meta.id + '&public=1'
-			api.get(url)
-				.then(response => { 
-					// app.comments = response.data
-					app.comments = response.data[0]
-				})
-=======
 			const url = `${process.env.VUE_APP_API_URL}v3/members/?idConsulta=${this.$route.meta.id}&public=1`
 			api.get(url)
 				.then(response => { this.comments = response.data })
->>>>>>> chore(api): finaliza arco-tiete-2 e altera tudo para apiv3
 				.catch(error => console.error(error))
 		},
 		filterDate (dataString) {

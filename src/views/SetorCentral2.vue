@@ -80,9 +80,7 @@
 				</li>
 			</template>
 		</Apoio>
-		<div class="linkMapaInterativo">
-			<a :href="imgSrc('mapas/piu-setor-central-2/')" target="_blank">MAPA INTERATIVO <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
-		</div>
+		<btn-fixed-url :url="src('mapas/piu-setor-central-2/')" :text="'MAPA INTERATIVO'"/>
 		<section>
 			<Comments :attr="{ id:1001, context:'A revisão da Operação Urbana Centro e o PIU Setor Central'}" v-if="estaConsulta.ativo == 1"></Comments>
 
@@ -2271,6 +2269,7 @@ import AntesDepois from '@/components/AntesDepois'
 import Infografico from '@/components/graf/setor-central-2/infografico'
 import Pai from '@/components/graf/setor-central-2/pai'
 import Errata from '@/components/Errata'
+import BtnFixedUrl from '@/components/BtnFixedUrl'
 import { consultasCommons } from '@/mixins/consultasCommons'
 
 export default {
@@ -3567,7 +3566,8 @@ export default {
 		AntesDepois,
 		Infografico,
 		Pai,
-		Errata
+		Errata,
+		BtnFixedUrl
 	},
 	methods: {
 		print () {
@@ -3600,42 +3600,6 @@ div.SetorCentral2 {
 				line-height: 1.2;
 				margin: 1rem 0 0;
 			}
-		}
-	}
-	div.linkMapaInterativo {
-		position: fixed;
-		right: 2rem;
-		top: 2rem;
-		font-size: 1rem;
-		background-color: $vermelho;
-		padding: 0 1rem;
-		border-radius: 2rem;
-		box-shadow: 0 4px 4px $sombra-3;
-		cursor: pointer;
-		z-index: 1;
-		transition: all ease-in .1s;
-		a {
-			line-height: 3rem;
-			color: #FFF;
-			i {
-				line-height: inherit;
-			}
-		}
-		&:hover {
-			background-color: $vermelho-escuro;
-			a {
-				border: none;
-			}
-		}
-		@media screen and (max-width: 992px) {
-			a {
-				line-height: 2rem;
-				font-size: smaller;
-			}
-		}
-		@media screen and (max-width: 600px) {
-			top: 1rem;
-			right: 1rem;
 		}
 	}
 	a.button {

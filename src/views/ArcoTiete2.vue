@@ -7,7 +7,7 @@
 		<Indice :titulos="titulosLimpo"></Indice>
 
 		<Apoio></Apoio>
-
+		<btn-fixed-url :url="src('mapas/piu-arco-tiete-2/')" :text="'MAPA INTERATIVO'"/>
 		<section>
 			<h2 class="titulo" indent="1">Apresentação</h2>
 			<Comments :attr="{ id:commentId(true), context:'Apresentação' }" v-if="parseInt(estaConsulta.ativo) === 1"></Comments>
@@ -43,7 +43,7 @@
 					{ simbolo: src('arquivos/legendas/icones/metro.png'), descricao: 'Estação Metrô' },
 					{ simbolo: src('arquivos/legendas/icones/metro-prevista.png'), descricao: 'Estação Metrô Prevista' },
 					{ simbolo: src('arquivos/legendas/icones/terminais-urbanis-municipais.png'), descricao: 'Terminais Urbanos Municipais' },
-					{ borda: '#535353', linha: true, espessura: 3, descricao: 'Ferrovia' },
+					{ simbolo: src('arquivos/legendas/icones/ferrovia.png'), descricao: 'Ferrovia' },
 					{ simbolo: src('arquivos/legendas/icones/linha-de-metro.png'), descricao: 'Linha Metrô' }
 				],
 				fonte: 'Elaboração: SP-Urbanismo, 2020'
@@ -71,7 +71,7 @@
 				legenda: [
 					{ borda: '#D6D6D6', espessura: 1, fundo: '#FFEBC2', descricao: 'PIU Arco Tietê' },
 					{ fundo: '#CCCCCC', descricao: 'O.U.C. Água Branca / PIU Setor Central' },
-					{ fundo: '#FFCC99', descricao: 'Perímetro de Intervenção' },
+					{ fundo: '#FFCC99', descricao: 'Perímetro PIU Arco Tietê' },
 					{ char: '1', descricao: 'Lapa/Freguesia' },
 					{ char: '2', descricao: 'Limão/Casa Verde' },
 					{ char: '3', descricao: 'Santana/Vila Guilherme' },
@@ -91,7 +91,7 @@
 					{ simbolo: src('arquivos/legendas/icones/areas-verdes-propostas.png'), descricao: 'Áreas Verdes Propostas' },
 					{ simbolo: src('arquivos/legendas/icones/eixos-de-integracao-local-1.png'), descricao: 'Eixos de Integração Local' }
 				],
-				fonte: 'Imagem de base: Google Earth, 2018. Elaboração: SP Urbanismo, 2019'
+				fonte: 'Elaboração SP Urbanismo, 2020'
 			}"></Imagem>
 
 			<!-- Grafico_area_ACT_320px.png -->
@@ -573,7 +573,7 @@
 			</ul>
 			<galeria :gallery_attrs="galeriaProjetosEstrategicos2" class="single-item"/>
 
-			<h4>Perímetro Santana-Vila Guilherme</h4>
+			<h4 class="titulo" indent="2">Perímetro Santana-Vila Guilherme</h4>
 			<layer-explorer :data="{
 				cssBaseId: 'seq4',
 				tipo: 'sequencial',
@@ -719,7 +719,7 @@
 		</section>
 
 		<section>
-			<h2 class="titulo" indent="1">Modelos de gestão democrática e plano de intervenção</h2>
+			<h2 class="titulo" indent="1">Financiamento da Intervenção</h2>
 			<p>O estudo de viabilidade econômica da 2ª Consulta Pública do PIU apresenta as estimativas de produção de demanda imobiliária e uma estimativa preliminar de receita num horizonte de planejamento de 20 anos para os 3 perímetros de intervenção: Lapa-Freguesia, Limão-Casa Verde e Santana-Vila Guilherme.</p>
 			<p>Primeiramente, a demanda é avaliada por meio do comportamento pregresso da produção imobiliária bem como sua projeção futura nos perímetros e respectivas áreas do entorno. Os resultados são traduzidos em termos de área privativa e de potencial adicional de construção, sendo confrontados e distribuídos no território em função da oferta de terrenos transformáveis e da disposição dos parâmetros urbanísticos nos respectivos perímetros de intervenção.</p>
 			<p>Posteriormente, procura-se avaliar o preço estabelecido para o potencial construtivo adicional. Para isso, foram elaboradas diversas simulações de viabilidade de empreendimentos imobiliários de referência, que incluem informações de despesas, taxas de retorno e, em particular, o custo da Outorga Onerosa do Direito de construir calculado a partir do Cadastro de Valor de Terrenos (Quadro 14 do PDE). Mensuradas as quantidades e a distribuição do potencial adicional de construção e seu preço, chega-se na projeção de receita em dois cenários, um conservador e outro otimista.</p>
@@ -1233,6 +1233,7 @@ import CommentsContext from '@/components/CommentsContext'
 import CommentsOption from '@/components/CommentsOption'
 import Pergunta from '@/components/Pergunta'
 import CommentsLoader from '@/components/CommentsLoader'
+import BtnFixedUrl from '@/components/BtnFixedUrl'
 import Processo2 from '@/components/graf/arco-tiete-2/Processo2'
 import Escalas from '@/components/graf/arco-tiete-2/Escalas'
 import PerimetroInfoLapa from '@/components/graf/arco-tiete-2/PerimetroInfoLapa'
@@ -1430,6 +1431,7 @@ export default {
 		CommentsLoader,
 		CommentsContext,
 		CommentsOption,
+		BtnFixedUrl,
 		Pergunta,
 		PageTop,
 		Indice,

@@ -8,7 +8,7 @@
 					<p class="g-pstyle0">Área e localização</p>
 				</div>
 				<div id="g-ai0-2" class="g-Camada_1 g-aiAbs" style="top:2.8426%;left:74.1343%;width:21.2857%;">
-					<p class="g-pstyle1">1. LAPA / FREGUESIA DO Ó</p>
+					<p class="g-pstyle1">1. LAPA / FREGUESIA</p>
 					<p class="g-pstyle2">510 ha</p>
 				</div>
 				<div id="g-ai0-3" class="g-Camada_1 g-aiAbs" style="top:4.7716%;left:74.1342%;width:21.2857%;">
@@ -88,7 +88,7 @@
 					<p class="g-pstyle0">População</p>
 					<p class="g-pstyle8">Estimada a partir de projeções do Infocidade (2017*)</p>
 					<p>&nbsp;</p>
-					<p class="g-pstyle1">1. LAPA / FREGUESIA DO Ó</p>
+					<p class="g-pstyle1">1. LAPA / FREGUESIA</p>
 					<p class="g-pstyle9"><span class="g-cstyle0">30.773</span> habitantes</p>
 					<p class="g-pstyle10"><span class="g-cstyle1">0,27%</span><span class="g-cstyle2"> </span>da população do Município de São Paulo</p>
 					<p>&nbsp;</p>
@@ -124,9 +124,9 @@
 					<p class="g-pstyle12">Santa Cecília</p>
 					<p class="g-pstyle12"><span class="g-cstyle1">243 </span>hab/ha</p>
 				</div>
-				<div id="g-ai0-33" class="g-Camada_1 g-aiAbs g-aiPointText" style="top:36.1774%;margin-top:-18.7px;left:75.0068%;margin-left:-48px;width:96px;">
+				<div id="g-ai0-33" class="g-Camada_1 g-aiAbs g-aiPointText" style="top:36.1774%;margin-top:-18.7px;left:75.0386%;margin-left:-36.5px;width:73px;">
 					<p class="g-pstyle13">Lapa/</p>
-					<p class="g-pstyle13">Freguesia do Ó</p>
+					<p class="g-pstyle13">Freguesia</p>
 					<p class="g-pstyle13"><span class="g-cstyle1">60 </span>hab/ha</p>
 				</div>
 				<div id="g-ai0-34" class="g-Camada_1 g-aiAbs g-aiPointText" style="top:36.1774%;margin-top:-18.7px;left:90.2545%;margin-left:-47px;width:94px;">
@@ -145,13 +145,13 @@
 				</div>
 				<div id="g-ai0-37" class="g-Camada_1 g-aiAbs" style="top:41.4213%;left:51.2472%;width:45.7143%;">
 					<p class="g-pstyle0">Assentamentos precários</p>
-					<p class="g-pstyle8">Dados do HABISP/SEHAB</p>
+					<p class="g-pstyle8">Dados do HabitaSampa/SEHAB</p>
 				</div>
 				<div id="g-ai0-38" class="g-Camada_1 g-aiAbs" style="top:42.4365%;left:5.1825%;width:41.5714%;">
 					<p>* Os dados apresentados nos Diagnósticos e na primeira Consulta Pública tinham por base o Censo 2010.</p>
 				</div>
-				<div id="g-ai0-39" class="g-Camada_1 g-aiAbs g-aiPointText" style="top:44.8238%;margin-top:-9px;left:51.2472%;width:170px;">
-					<p class="g-pstyle15">1. LAPA / FREGUESIA DO Ó</p>
+				<div id="g-ai0-39" class="g-Camada_1 g-aiAbs g-aiPointText" style="top:44.8101%;margin-top:-8.8px;left:51.2472%;width:139px;">
+					<p class="g-pstyle15">1. LAPA / FREGUESIA</p>
 				</div>
 				<div id="g-ai0-40" class="g-Camada_1 g-aiAbs" style="top:45.8376%;right:40.7766%;width:7.5714%;">
 					<p class="g-pstyle16">370</p>
@@ -176,8 +176,8 @@
 				<div id="g-ai0-46" class="g-Camada_1 g-aiAbs" style="top:48.4264%;left:60.7126%;width:44.8571%;">
 					<p class="g-pstyle1">Unidades Hab. em Conjuntos Habitacionais</p>
 				</div>
-				<div id="g-ai0-47" class="g-Camada_1 g-aiAbs g-aiPointText" style="top:50.4076%;margin-top:-9px;left:3.2674%;width:170px;">
-					<p class="g-pstyle15">1. LAPA / FREGUESIA DO Ó</p>
+				<div id="g-ai0-47" class="g-Camada_1 g-aiAbs g-aiPointText" style="top:50.4446%;margin-top:-8.8px;left:3.2674%;width:139px;">
+					<p class="g-pstyle15">1. LAPA / FREGUESIA</p>
 				</div>
 				<div id="g-ai0-48" class="g-Camada_1 g-aiAbs g-aiPointText" style="top:50.6657%;margin-top:-9.1px;left:51.2472%;width:154px;">
 					<p class="g-pstyle15">2. LIMÃO / CASA VERDE</p>
@@ -320,7 +320,7 @@
 				</div>
 				<div id="g-ai0-90" class="g-Camada_1 g-aiAbs" style="top:73.8578%;left:74.017%;margin-left:-42.5px;width:12.1429%;">
 					<p class="g-pstyle27">Lapa /</p>
-					<p class="g-pstyle27">Freguesia do Ó</p>
+					<p class="g-pstyle27">Freguesia</p>
 				</div>
 				<div id="g-ai0-91" class="g-Camada_1 g-aiAbs" style="top:75.4822%;left:74.017%;margin-left:-42.5px;width:12.1429%;">
 					<p class="g-pstyle27">Limão /</p>
@@ -335,10 +335,10 @@
 					<p class="g-pstyle27">Santana /</p>
 					<p class="g-pstyle27">Vila Guilherme</p>
 				</div>
-				<div id="g-ai0-94" class="g-Camada_1 g-aiAbs g-aiPointText" style="top:79.9015%;margin-top:-20.1px;left:33.887%;width:101px;">
+				<div id="g-ai0-94" class="g-Camada_1 g-aiAbs g-aiPointText" style="top:79.9015%;margin-top:-20.1px;left:33.887%;width:77px;">
 					<p class="g-pstyle30">72,4%</p>
 					<p class="g-pstyle31">Lapa /</p>
-					<p class="g-pstyle31">Freguesia do Ó</p>
+					<p class="g-pstyle31">Freguesia </p>
 				</div>
 				<div id="g-ai0-95" class="g-Camada_1 g-aiAbs" style="top:79.1878%;left:53.3013%;width:41.5714%;">
 					<p>1. Percentuais de áreas verdes públicas (PAV) por perímetro de projeto em relação à área do perímetro.</p>
@@ -419,7 +419,7 @@
 					<p class="g-pstyle6">do Município de São Paulo</p>
 				</div>
 				<div id="g-ai1-20" class="g-Camada_1 g-aiAbs" style="top:9.5833%;left:0.9607%;width:46.5625%;">
-					<p class="g-pstyle6">1. LAPA / FREGUESIA DO Ó</p>
+					<p class="g-pstyle6">1. LAPA / FREGUESIA</p>
 					<p class="g-pstyle7">510 ha</p>
 				</div>
 				<div id="g-ai1-21" class="g-Camada_1 g-aiAbs" style="top:11.1218%;left:0.9607%;width:46.5625%;">
@@ -442,7 +442,7 @@
 					<p class="g-pstyle0">População </p>
 					<p class="g-pstyle8">Estimada a partir de projeções do Infocidade (2017*)</p>
 					<p>&nbsp;</p>
-					<p class="g-pstyle6">1. LAPA / FREGUESIA DO Ó</p>
+					<p class="g-pstyle6">1. LAPA / FREGUESIA</p>
 					<p class="g-pstyle9"><span class="g-cstyle0">30.773</span> habitantes</p>
 					<p class="g-pstyle10"><span class="g-cstyle1">0,27%</span><span class="g-cstyle2"> </span>da população do Município de São Paulo</p>
 					<p>&nbsp;</p>
@@ -480,9 +480,9 @@
 					<p class="g-pstyle12">Santa Cecília</p>
 					<p class="g-pstyle12"><span class="g-cstyle1">243 </span>hab/ha</p>
 				</div>
-				<div id="g-ai1-34" class="g-Camada_1 g-aiAbs g-aiPointText" style="top:36.4646%;margin-top:-18.7px;left:52.2025%;margin-left:-48px;width:96px;">
+				<div id="g-ai1-34" class="g-Camada_1 g-aiAbs g-aiPointText" style="top:36.4646%;margin-top:-18.7px;left:52.272%;margin-left:-36.5px;width:73px;">
 					<p class="g-pstyle13">Lapa/</p>
-					<p class="g-pstyle13">Freguesia do Ó</p>
+					<p class="g-pstyle13">Freguesia</p>
 					<p class="g-pstyle13"><span class="g-cstyle1">60 </span>hab/ha</p>
 				</div>
 				<div id="g-ai1-35" class="g-Camada_1 g-aiAbs g-aiPointText" style="top:36.4646%;margin-top:-18.7px;left:85.5566%;margin-left:-47px;width:94px;">
@@ -504,8 +504,8 @@
 					<p class="g-pstyle8">Dados da EMBRAESP e Infocidade</p>
 					<p class="g-pstyle8">(2010 - 2017)</p>
 				</div>
-				<div id="g-ai1-39" class="g-Camada_1 g-aiAbs g-aiPointText" style="top:42.3362%;margin-top:-8.9px;left:0.8853%;width:167px;">
-					<p class="g-pstyle15">1. LAPA / FREGUESIA DO Ó</p>
+				<div id="g-ai1-39" class="g-Camada_1 g-aiAbs g-aiPointText" style="top:42.3597%;margin-top:-8.6px;left:0.8853%;width:137px;">
+					<p class="g-pstyle15">1. LAPA / FREGUESIA</p>
 				</div>
 				<div id="g-ai1-40" class="g-Camada_1 g-aiAbs" style="top:42.9487%;left:16.0382%;width:65%;">
 					<p class="g-pstyle16">238.827 m&sup2;</p>
@@ -558,10 +558,10 @@
 					<p class="g-pstyle20">Limão / </p>
 					<p class="g-pstyle20">Casa Verde</p>
 				</div>
-				<div id="g-ai1-53" class="g-Camada_1 g-aiAbs g-aiPointText" style="top:60.2904%;margin-top:-20.1px;left:67.8656%;width:101px;">
+				<div id="g-ai1-53" class="g-Camada_1 g-aiAbs g-aiPointText" style="top:60.2904%;margin-top:-20.1px;left:67.8656%;width:74px;">
 					<p class="g-pstyle21">72,4%</p>
 					<p class="g-pstyle22">Lapa /</p>
-					<p class="g-pstyle22">Freguesia do Ó</p>
+					<p class="g-pstyle22">Freguesia</p>
 				</div>
 				<div id="g-ai1-54" class="g-Camada_1 g-aiAbs g-aiPointText" style="top:60.6109%;margin-top:-20.1px;right:68.6304%;width:99px;">
 					<p class="g-pstyle19">16,7%</p>
@@ -572,8 +572,8 @@
 					<p class="g-pstyle0">Assentamentos precários</p>
 					<p class="g-pstyle8">Dados do HABISP/SEHAB</p>
 				</div>
-				<div id="g-ai1-56" class="g-Camada_1 g-aiAbs g-aiPointText" style="top:65.317%;margin-top:-8.9px;left:0%;width:167px;">
-					<p class="g-pstyle15">1. LAPA / FREGUESIA DO Ó</p>
+				<div id="g-ai1-56" class="g-Camada_1 g-aiAbs g-aiPointText" style="top:65.3085%;margin-top:-8.6px;left:0%;width:137px;">
+					<p class="g-pstyle15">1. LAPA / FREGUESIA</p>
 				</div>
 				<div id="g-ai1-57" class="g-Camada_1 g-aiAbs" style="top:65.9295%;right:82.5522%;width:16.5625%;">
 					<p class="g-pstyle23">370</p>
@@ -688,7 +688,7 @@
 				</div>
 				<div id="g-ai1-93" class="g-Camada_1 g-aiAbs" style="top:83.6538%;left:49.7321%;margin-left:-42.5px;width:26.5625%;">
 					<p class="g-pstyle31">Lapa /</p>
-					<p class="g-pstyle31">Freguesia do Ó</p>
+					<p class="g-pstyle31">Freguesia</p>
 				</div>
 				<div id="g-ai1-94" class="g-Camada_1 g-aiAbs" style="top:84.6795%;left:49.7321%;margin-left:-42.5px;width:26.5625%;">
 					<p class="g-pstyle31">Limão /</p>
@@ -708,6 +708,7 @@
 				</div>
 			</div>
 		</div>
+		<!-- End ai2html - 2020-01-20 11:55 -->
 	</div>
 </template>
 

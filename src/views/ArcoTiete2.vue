@@ -49,6 +49,15 @@
 				fonte: 'Elaboração: SP-Urbanismo, 2020'
 			}" />
 
+			<p>A estruturação destes perímetros tem como diretriz a construção de um território de transição entre a cidade consolidada e o Rio Tietê, apoiada na implantação de Eixos de Integração Local, cujo papel é “costurar” os bairros. Estes Eixos reúnem ações associadas à qualificação ambiental e conectam os eixos estruturais de transporte público, de forma a incentivar a mobilidade ativa e atrair a diversidade de usos.</p>
+
+			<imagem :dados="{
+				titulo: 'Perímetros de Intervenção',
+				tipo: 'default',
+				url: src('arquivos/arco-tiete-2/eixos-de-integracao-local.png'),
+				fonte: 'Elaboração: SP-Urbanismo, 2020'
+			}" />
+
 			<p>O processo de planejamento se desenvolveu através de abordagens em <strong>diferentes escalas</strong>, resultando em graus de detalhamento, aplicação e gestão.</p>
 			<p>A <strong>primeira escala</strong> apoia-se nos principais elementos estruturadores que articulam polos e municípios da Região Metropolitana de São Paulo, como os eixos de mobilidade e a rede hídrica e ambiental.</p>
 			<p>No primeiro caso, tem destaque as vias marginais que conectam importantes rodovias em seus extremos: a oeste, as Rodovias Presidente Castelo Branco, Anhanguera e Bandeirantes e a leste, as Rodovias Presidente Dutra e Fernão Dias. Somam-se a estes eixos as linhas férreas (Linha 7 – Rubi e Linha 8 – Diamante da CPTM) e os Apoios Urbanos Norte e Sul, propostos pelo PDE e detalhados pela Lei nº 16.541/2016, formando um anel perimetral que se conectará a corredores, estações e terminais, articulando diferentes territórios em destaque os bairros.</p>
@@ -62,7 +71,7 @@
 		</section>
 
 		<section>
-			<h2 class="titulo" indent="1">Perímetros de Intervenção</h2>
+			<h2 class="titulo" indent="1">Perímetros de intervenção</h2>
 
 			<Imagem :dados="{
 				tipo: 'mapa',
@@ -92,18 +101,11 @@
 					{ simbolo: src('arquivos/legendas/icones/eixos-de-integracao-local-1.png'), descricao: 'Eixos de Integração Local' }
 				],
 				fonte: 'Elaboração SP Urbanismo, 2020'
-			}"></Imagem>
-
-			<!-- Grafico_area_ACT_320px.png -->
-			<imagem
-				:dados="{
-					tipo: 'default',
-					url: src('arquivos/arco-tiete-2/Grafico_area_ACT_320px.png'),
-					caption: 'Estrutura Plano urbanístico – Perspectiva. Elaboração: SP-Urbanismo 2020',
-					fonte: 'SP-Urbanismo'
-				}"
-				maxWidth="'320px'"
-			/>
+			}">
+				<div slot='extra'>
+					<img :src="src('arquivos/arco-tiete-2/Grafico_area_ACT_320px.png')" alt="Gráfico de áreas Arco Tietê">
+				</div>
+			</Imagem>
 
 			<p>Com o aprofundamento dos estudos, em consonância com a definição do programa de intervenções e, novamente, com a viabilidade de implantação das infraestruturas e de transformação do território, novos perímetros surgem no processo de desenvolvimento do projeto a partir dos setores delimitados no Diagnóstico e Programa de Interesse Público. O Polo Oeste permaneceu com a mesma divisão de setores, renomeados <strong>como perímetro Lapa/Freguesia e perímetro Limão/Casa Verde</strong>. Já o Polo Nordeste foi reduzido, e resume-se ao território da centralidade do distrito de Santana e porção da Vila Guilherme, denominado perímetro Santana/Vila Guilherme. </p>
 			<p>Compreende-se que a transformação na área correspondente às quadras do complexo Anhembi e à gleba ocupada pelo Campo de Marte, hoje classificados como Zonas de Ocupação Especial (ZOE) pela LPUOS, depende da atualização da atividade hoje instalada – caso do Anhembi – ou de sua completa substituição, caso do Campo de Marte, área sob governança federal. Portanto, acredita-se que as duas áreas têm dimensão e importância suficiente para mobilizarem projetos independentes da regulação dos demais perímetros do Arco Tietê, alinhados aos momentos de transformação de cada área. No primeiro caso, para a ZOE Anhembi, como já apresentado no Diagnóstico, o regramento e condições específicas de desenvolvimento já ocorreram mediante aprovação da Lei nº 16.886/2018 e do Decreto nº 58.623/2019, cabendo ao PIU Arco Tietê a compatibilização e a definição de alternativas para compartilhamento dos recursos, visando à implantação efetiva das intervenções, bem como alternativas para gestão integrada entre ambos. Para o Campo de Marte, ainda é central a necessidade de desenvolvimento de um PIU específico, considerando que a atividade aeroportuária continua ativa, sem perspectivas de alteração em curto e médio prazo.</p>
@@ -111,13 +113,14 @@
 			<p>Desde a etapa anterior, de Diagnóstico e Programa de Interesse Público, verificou-se que os perímetros Jaguara e Belém, apesar de apresentarem elementos que justificam a inclusão desses territórios em ações de projeto urbano, deveriam ser foco de estudos futuros, permanecendo este entendimento.</p>
 			<p>As análises urbanísticas realizadas na etapa de Diagnóstico e o desenvolvimento do Programa de Interesse Público revelaram que os Perímetros de Intervenção têm clara identificação com as áreas de urbanização incompleta. Considerando os débitos ambientais acumulados ao longo de décadas de degradação física e ambiental, a proposta urbanística aqui apresentada buscou assegurar a interação entre viabilidade econômica, desenvolvimento social e regeneração ambiental, aspectos fundamentais para um projeto urbano com foco na sustentabilidade. Em termos urbanísticos, somam-se à tríade os aspectos relativos à mobilidade urbana, elemento central na Política Urbana construída pelo PDE. </p>
 			<dados-gerais :bgSrc320="src('arquivos/arco-tiete-2/Dados-320.jpg')" :bgSrc700="src('arquivos/arco-tiete-2/Dados-700.jpg')" />
-			<h3>Lapa/Freguesia</h3>
+
+			<h3 class="titulo--grafico">Perímetro Lapa/Freguesia</h3>
 			<perimetro-info-lapa :bgSrc="src('arquivos/arco-tiete-2/Infograficos_perimetros-lapa.jpg')" />
 
-			<h3>Perímetro Limão/Casa Verde</h3>
+			<h3 class="titulo--grafico">Perímetro Santana/Vila Guilherme</h3>
 			<perimetro-info-santana :bgSrc="src('arquivos/arco-tiete-2/Infograficos_perimetros-santana.jpg')" />
 
-			<h3>Perímetro Santana/Vila Guilherme</h3>
+			<h3 class="titulo--grafico">Perímetro Limão/Casa Verde</h3>
 			<perimetro-info-limao :bgSrc="src('arquivos/arco-tiete-2/Infograficos_perimetros-limao.jpg')" />
 		</section>
 
@@ -142,7 +145,7 @@
 						{ path: 'arquivos/legendas/icones/melhoramento-viario-proposto-fas2.png', descricao: 'Melhoramento Viário Proposto (Fase2)' },
 						{ path: 'arquivos/legendas/icones/transposicoes.png', descricao: 'Transposições' },
 						{ path: 'arquivos/legendas/icones/rede-ambiental.png', descricao: 'Rede Ambiental' },
-						{ path: 'arquivos/legendas/icones/eixos-de-integracao-local-1.png', descricao: 'Eixos de Integração Local' },
+						{ path: 'arquivos/legendas/icones/seta-verde-pontilhada.png', descricao: 'Eixos de Integração Local' },
 						{ path: 'arquivos/legendas/icones/projetos-estrategicos.png', descricao: 'Projetos Estratégicos' }
 					]
 				},
@@ -195,18 +198,17 @@
 			<p>O Plano Urbanístico para os Perímetros de Intervenção destaca 4 elementos básicos de estruturação espacial: (i) os Anéis formados pelas vias estruturais, (ii) os Eixos de Integração Local, (iii) as Áreas de Estruturação e (iv) os Projetos Estratégicos. Combinados, esses elementos buscam responder aos problemas e potencialidades características de cada perímetro, bem como articular o Plano aos PIU e Operações Urbanas colocalizados.</p>
 			<p>Os <strong>Anéis</strong> consistem na implantação de segmentos dos Apoios Urbanos, justamente os trechos mais viáveis de serem realizados em médio prazo, com menor grau de complexidade técnica e que estejam diretamente associados aos territórios com maior probabilidade de transformação. Tem como objetivo realizar importantes conexões entre os bairros e estabelecer etapas intermediárias para implantação dos Apoios Urbanos em sua versão completa, conforme previsto na Lei nº 16.541/2016, aprovada durante o desenvolvimento da versão anterior do PIU Arco Tietê.</p>
 			<p>Os Apoios Urbanos partem de diretrizes do PDE e buscam melhorar a integração entre os bairros, a promoção de adensamento populacional em região com grande número de oferta de empregos ao sul do rio e de aumento das atividades econômicas e sociais a norte. Os trechos que conformam os Anéis se apoiam em vias já existentes – como as Av. Marques de São Vicente e Ermano Marchetti na Lapa, ou então a Av. Braz Leme em Santana – e também na previsão de alargamento e abertura de novos eixos viários seguindo as propostas para o Apoio Urbano Norte e o Apoio Urbano Sul, esse último a ser viabilizado no contexto no PIU Setor Central.</p>
-			<p>Os <strong>Eixos de Integração Local</strong>, por sua vez, estabelecem novas conexões transversais no território da várzea, de forma a superar as barreiras físicas existentes, “costurar” novos tecidos urbanos de bairro e ampliar as continuidades entre o norte e o sul do Arco Tietê, redefinindo, assim, os territórios de urbanização incompleta. Para tanto, os Eixos somam um conjunto de ferramentas de intervenção, contando com soluções de drenagem urbana, melhorias de passeios e áreas livres, bem como propostas de novas ciclopassarelas.  Os Eixos selecionados seguem, na Lapa-Freguesia, o curso dos córregos do Tiburtino e Curtume, no Limão-Casa Verde, os córregos Papaterra Limongi e Mandaqui e, em Santana-Vila Guilherme, os córregos do Carandiru e Divisa. Conectados aos Anéis anteriormente citados, os Eixos buscam oferecer um novo padrão de urbanização, baseados na mobilidade ativa associada à qualificação ambiental.</p>
+			<p>Os <strong>Eixos de Integração Local</strong>, por sua vez, estabelecem novas conexões transversais no território da várzea, de forma a superar as barreiras físicas existentes, “costurar” novos tecidos urbanos de bairro e ampliar as continuidades entre o norte e o sul do Arco Tietê, redefinindo, assim, os territórios de urbanização incompleta. Para tanto, os Eixos somam um conjunto de ferramentas de intervenção, contando com soluções de drenagem urbana, melhorias de passeios e áreas livres, bem como propostas de novas ciclopassarelas.  Os Eixos selecionados seguem, na Lapa/Freguesia, o curso dos córregos do Tiburtino e Curtume, no Limão-Casa Verde, os córregos Papaterra Limongi e Mandaqui e, em Santana-Vila Guilherme, os córregos do Carandiru e Divisa. Conectados aos Anéis anteriormente citados, os Eixos buscam oferecer um novo padrão de urbanização, baseados na mobilidade ativa associada à qualificação ambiental.</p>
 			<p>Por fim, as <strong>Áreas de Estruturação</strong> e os <strong>Projetos Estratégicos</strong> definem o território que conduzirá a urbanização, sendo diretamente associados aos Apoios Urbanos e aos Eixos de Integração Local.  O primeiro caso consiste em áreas de alta densidade e que recepcionam os mesmos incentivos e exigências dos Eixos de Estruturação da Transformação Urbana do PDE. Já o segundo diz respeito às áreas consideradas estratégicas para catalisar as transformações pretendidas.</p>
 			<imagem
 				:dados="{
 					tipo: 'destaque',
 					url: src('arquivos/arco-tiete-2/mobilidade.jpg'),
 					caption: 'Estrutura Plano urbanístico – Perspectiva. Elaboração: SP-Urbanismo 2020',
-					fonte: 'SP-Urbanismo'
 				}"
 				:maxWidth="'1920px'"
 			/>
-			<p>Ao observarmos como os 4 elementos se associam, é possível perceber que as propostas complementam a estrutura urbana existente de diferentes formas: nos perímetros Lapa-Freguesia e Limão-Casa Verde, eles estabelecem costuras na direção Nortes-Sul, aproximando as margens direita e esquerda do Rio Tietê. Já no perímetro Santana-Vila Guilherme, as costuras na direção Leste-Oeste respondem às principais demandas de integração entre os bairros.</p>
+			<p>Ao observarmos como os 4 elementos se associam, é possível perceber que as propostas complementam a estrutura urbana existente de diferentes formas: nos perímetros Lapa/Freguesia e Limão-Casa Verde, eles estabelecem costuras na direção Nortes-Sul, aproximando as margens direita e esquerda do Rio Tietê. Já no perímetro Santana-Vila Guilherme, as costuras na direção Leste-Oeste respondem às principais demandas de integração entre os bairros.</p>
 			<p>Entende-se os perímetros de intervenção como porções prioritárias do território do Arco Tietê destinadas à reestruturação, transformação, recuperação e melhoria ambiental, onde se promova: uma ocupação mais intensa, qualificada, inclusiva do espaço urbano; o desenvolvimento econômico, a racionalização da infraestrutura; a preservação dos sistemas ambientais e soluções para as necessidades habitacionais tanto em relação à precariedade habitacional e urbana quanto as dinâmicas econômicas e de crescimento demográfico.</p>
 			<p>A partir deste contexto, dentre os instrumentos urbanísticos, definidos pelo PDE (§5°, Art. 134 - PDE) - Operações Urbanas Consorciadas (OUC), Concessão Urbanística, Áreas de Intervenção Urbana (AIU) e Áreas de Estruturação Local (AEL) - os instrumentos urbanísticos AIU e  OUC  apresentam maior aderência à implementação das propostas do PIU Arco Tietê. Caberá ao modelo de financiamento da intervenção validar a adoção dos instrumentos e, consequentemente, qual o mecanismo de gestão ambiental necessário para sua realização.</p>
 		</section>
@@ -216,7 +218,7 @@
 			<p>A definição de um Programa de Intervenções preliminar tem por objetivo apresentar ações capazes de assegurar o saneamento das fragilidades presentes no território, bem como a implantação de infraestrutura de suporte à transformação pretendida, de modo a consolidar em ações de projeto os conceitos almejados pelo PIU e assim garantir a qualidade de vida nos bairros e potencializar o papel do território por meio do melhor aproveitamento da terra.</p>
 			<p>Desta forma, as ações propostas constituirão redes estruturadoras da transformação classificadas nos diferentes sistemas:</p>
 			<ul>
-				<li><strong>Ambiental</strong>, composto pelas redes hídrica e de espaços públicos;
+				<li><b>Ambiental, composto pelas redes hídrica e de espaços públicos</b>;
 				<p>A presença do Rio Tietê e todos os seus córregos tributários, tamponados ou não, configura em conjunto com a linha férrea a “espinha dorsal” do perímetro do Arco Tietê, condicionando ao projeto a busca pela aplicação dos conceitos de sustentabilidade no planejamento e na implementação das ações, considerando a interdependência de suas esferas econômica, social e ambiental.</p>
 				<p>As redes hídrica e de espaços públicos têm como objetivo a atenuação das alterações microclimáticas, a melhoria da drenagem, a proteção da biodiversidade, ampliação da oferta de áreas livres de lazer e a contribuição para preservação, qualificação e recuperação das áreas de várzea, respondendo às necessidades evidenciadas no diagnóstico de maneira intersetorial, associando-se dispositivos que buscam, além do lazer, o controle de escoamento superficial das águas pluviais.</p>
 				</li>
@@ -228,12 +230,11 @@
 				legenda: [
 					{ fundo: '#BACCA8', descricao: 'Parque, praças e canteiros' },
 					{ fundo: '#6CB5D5', descricao: 'Hidrografia' },
-					{ borda: '#535353', espessura: 3, linha: true, descricao: 'Ferrovia' },
+					{ simbolo: src('arquivos/legendas/icones/ferrovia.png'), descricao: 'Ferovia' },
 					{ simbolo: src('arquivos/legendas/icones/linha-de-metro.png'), descricao: 'Linha Metrô' },
 					{ simbolo: src('arquivos/legendas/icones/cptm.png'), descricao: 'Estação CPTM' },
 					{ simbolo: src('arquivos/legendas/icones/metro.png'), descricao: 'Estação Metrô' },
 					{ simbolo: src('arquivos/legendas/icones/terminais-urbanos-municipais.png'), descricao: 'Terminais Urbanos Municipais' },
-					{ borda: '#000000', espessura: 3, pontilhado: true, descricao: 'Perímetro de Intervenção' },
 					{ fundo: '#7AA555', descricao: 'Áreas verdes novas' },
 					{ simbolo: src('arquivos/legendas/icones/Requalificacao-areas-verdes-existentes.png'), descricao: 'Requalificação de áreas verdes existentes' },
 					{ simbolo: src('arquivos/legendas/icones/Caminhos-verdes.png'), descricao: 'Caminhos Verdes' },
@@ -244,7 +245,7 @@
 				fonte: 'Elaboração: SP-Urbanismo, 2020'
 			}" />
 			<ul>
-				<li><strong>Mobilidade urbana</strong>;
+				<li><b>Mobilidade urbana</b>;
 					<p>O Programa de Intervenções do Arco Tietê deverá conter ações na área de mobilidade que auxiliem a inserção da transformação urbanística pretendida tanto do ponto de vista da superação das grandes barreiras territoriais, notadamente para os deslocamentos não motorizados, quanto do apoio à ampliação da rede de transporte coletivo, para suporte às novas demandas oriundas do adensamento populacional e construtivo para melhorar o aproveitamento da terra.</p>
 					<p>As medidas propostas são centradas em cinco pontos-chave: garantir os territórios necessários à ampliação das redes de infraestrutura de mobilidade urbana (abertura de novas vias e alargamento de vias existentes), melhoria do sistema existente (requalificação de vias), incentivo ao transporte não motorizado (requalificação de passeios e implantação de ciclovias) e transposição de barreiras urbanas.</p>
 				</li>
@@ -271,7 +272,7 @@
 				fonte: 'Elaboração: SP-Urbanismo, 2020'
 			}" />
 			<ul>
-				<li><strong>Produção e qualificação do habitat</strong>, subdividido em habitação, equipamentos públicos e infraestrutura;
+				<li><b>Produção e qualificação do habitat, subdividido em habitação, equipamentos públicos e infraestrutura</b>;
 					<p>No perímetro definido como Subsetor Arco Tietê há o predomínio de baixas densidades populacionais, combinado com a presença de grandes infraestruturas de mobilidade, revelando a alta acessibilidade urbana potencial dessa porção do território. Portanto, podemos considerar de antemão que o aumento da oferta de moradia, combinada à ampliação da oferta de equipamentos e a expansão da eficiência e a dinâmica de setores produtivos são temas a serem aprofundados no desenvolvimento do PIU.</p>
 					<p>Nesse contexto, o debate acerca da precariedade habitacional existente no perímetro é fundamental, pois parte do papel da política habitacional a ser formulada para o Arco Tietê deverá considerar a necessidade de se ampliar o acesso à Habitação de Interesse Social, bem como a possibilidade de se urbanizar, qualificar e regularizar os assentamentos precários identificados.</p>
 				</li>
@@ -291,14 +292,89 @@
 					{ fundo: '#9E71AB', descricao: 'Equipamentos em edifícios de valor histórico' },
 					{ simbolo: src('arquivos/legendas/icones/Novos-equipamentos.png'), descricao: 'Novos Equipamentos' },
 					{ simbolo: src('arquivos/legendas/icones/intervencao-assetamento-precario.png'), descricao: 'Intervenção integrada em assentamentos precários' },
-					{ simbolo: src('arquivos/legendas/icones/provisao-moradia.png'), descricao: 'Áreas para provisão de moradia' },
-					{ simbolo: src('arquivos/legendas/icones/cota-solidariedade.png'), descricao: 'Áreas potenciais de cota de solidariedade' },
+					{ simbolo: src('arquivos/legendas/icones/provisao-moradia.png'), descricao: 'Áreas potenciais de cota de solidariedade' },
+					{ simbolo: src('arquivos/legendas/icones/cota-solidariedade.png'), descricao: 'Áreas para provisão de moradia' },
 					{ simbolo: src('arquivos/legendas/icones/linha-alta-tensao.png'), descricao: 'Remanejamento de linha de alta tensão' }
 			],
 				fonte: 'Elaboração: SP-Urbanismo, 2020'
 			}" />
 
-			<h3>Especificidades dos Perímetros no Programa de Intervenções</h3>
+			<!-- ferramentas -->
+			<h3>Ferramentas</h3>
+			<p>A metodologia utilizada pela SP-Urbanismo, já abordada em outros projetos desenvolvidos no âmbito dessa empresa para elaboração do Programa de Intervenções, parte da construção de ferramentas padronizadas passíveis de adaptação às especificidades locais, correspondentes a “ações-tipo”, capazes de responder às demandas apontadas nos estudos, em consonância com os objetivos e diretrizes apontados no Programa de Interesse Público. </p>
+			<p>As ferramentas são classificadas de acordo com os eixos temáticos:</p>
+			<ul>
+				<li><b>Rede hídrica</b> proposta de novas áreas de absorção e acumulação nas áreas de várzea, contribuindo para redução do volume e a da velocidade da água que se direciona aos rios e córregos nos dias de chuvas com grandes volumes;</li>
+				<li><b>Rede de espaços públicos</b> consiste na implantação de novas áreas verdes, na requalificação de áreas verdes existentes e na arborização e implantação de mobiliário urbano associado ao sistema viário;<br>
+				A Rede de Espaços Públicos não se resume a conexão de áreas verdes, ela também promove a conexão de equipamentos, corredores de ônibus e estações e terminais de transporte público, através de percursos com conforto e segurança, que incentivam a forma mais sustentável de mobilidade, o caminhar, promovem sobreamento e criam caminhos ecológicos para a fauna.</li>
+				<li><b>Rede de mobilidade</b>: inclui propostas de abertura de novas vias e alargamento de vias existentes, somando-se alinhamentos viários novos às leis que permanecerão em vigor.<br>
+				Algumas vias também passarão por requalificação utilizando-se a caixa existente, que consiste na reestruturação do espaço, modificando-se a largura ou número de faixas, existência ou posição do canteiro central, alteração do meio fio e largura das calçadas, etc.<br>
+				Outras vias, ainda, poderão ter intervenções específicas de requalificação dos passeios públicos ou de implantação de infraestrutura cicloviária, visando o incentivo ao transporte não motorizado, aproveitando-se a existência da rede de transporte público coletivo existente e planejada, bem como a topografia razoavelmente plana na área de várzea.<br>
+				O quinto ponto chave do Programa de Intervenções de mobilidade do PIU Arco Tietê são as novas transposições ou requalificação de transposições existentes, que podem ser transposições sobre a linha férrea, transposições sob a linha férrea, transposições sobre a marginal e o Rio Tietê ou pontilhões sobre rios e córregos.
+				</li>
+				<li><b>Habitação de Interesse Social</b>: inclui destinação de recursos para intervenção integrada em assentamentos precários e provisão de moradias[;
+					<p>O Programa de Intervenções parte de uma fotografia do território, que deverá ser atualizada no momento da intervenção, com a participação da SEHAB. Entende-se que, embora o atendimento da futura demanda impactada pela intervenção urbanística no perímetro seja prioritário, deve receber atendimento pelo PIU, igualmente, a demanda em atendimento provisório, com compromisso habitacional e originária do perímetro e cadastrada pela SEHAB. Além disto, identifica-se que a precariedade habitacional é mais premente nos territórios periféricos ao Arco Tietê, bem como nas extensas concentrações de ZEIS-1 e localizadas em áreas municipais historicamente destinadas nos processos de parcelamento do solo, sobretudo os fundos de vale e as áreas não edificantes.  Assim entende-se que o território do Arco Tietê configura-se como território de produção habitacional, capaz de atender à população dos territórios externos ao seu perímetro.</p>
+					<p>Na área da habitação, o Programa de Intervenções considera:</p>
+					<ul>
+						<li>Previsão de localização das famílias a serem reassentadas, conforme o cumprimento do direito à moradia digna e o acesso à cidade, de modo a garantir, no mínimo, as mesmas condições de acesso aos serviços e equipamentos públicos, visando à manutenção das redes sociais e de solidariedade estabelecidas;</li>
+						<li>Viabilização de terras para a provisão habitacional dentro do perímetro do Arco Tietê, garantindo o reassentamento de famílias removidas e que as áreas sejam suficientes também para o impacto no déficit habitacional acumulado, utilizando de estratégias variadas para viabilizar terra para produção das unidades habitacionais, tais como: utilização de imóveis públicos municipais ou de outros entes federativos e órgãos públicos, demarcados ou não como ZEIS e utilização do solo criado das áreas institucionais oriundas de destinações de áreas públicas em parcelamentos ou loteamentos do perímetro, para a construção de empreendimentos de uso misto contendo equipamentos sociais no térreo e habitação de interesse social nos andares superiores.</li>
+						<li>Estratégias para que a Cota de Solidariedade seja aplicada dentro do perímetro e que garanta o atendimento habitacional à demanda de SEHAB.</li>
+					</ul>
+				</li>
+				<li><b>Equipamentos públicos</b>: prevê a destinação de recursos para implantação de novos equipamentos, podendo ser implantados em áreas públicas bem como em áreas institucionais derivadas do processo de parcelamento do solo; <br>
+				Considerando que o PIU Arco Tietê seja um projeto que tenha previsão de realização em longo prazo, característica esta inerente aos projetos urbanos, cabe ao Programa de Intervenções considerar a implantação futura de novos equipamentos, reservando áreas e prevendo sua edificação, sendo a definição futura do equipamento resultante de construção junto com as demais secretarias, levando em conta demanda atual e futura.<br>
+				Considerando também a presença de imóveis representantes da memória fabril, tombados ou não, sobretudo no perímetro Lapa/Freguesia, o PIU Arco Tietê poderá destinar recursos para compra destes imóveis capazes de recepcionar novos equipamentos públicos.
+				</li>
+				<li><b>Infraestrutura</b>: consiste na implantação de rede de infraestrutura capaz de potencializar atividades econômicas presentes no território e/ou atrair novas atividades econômicas.</li>
+			</ul>
+
+			<imagem :dados="{
+				externo: 'mapas/piu-arco-tiete-2/#2',
+				titulo: 'Programa de Intervenções',
+				tipo: 'mapa',
+				url: src('arquivos/arco-tiete-2/mapas/mapa11_programa-intervencoes.jpg'),
+				legenda: [
+					{ fundo: '#BACCA8', descricao: 'Parque, praças e canteiros' },
+					{ fundo: '#6CB5D5', descricao: 'Hidrografia' },
+					{ linha: '#535353', espessura: 3, descricao: 'Ferrovia' },
+					{ simbolo: src('arquivos/legendas/icones/linha-de-metro.png'), descricao: 'Linha Metrô' },
+					{ simbolo: src('arquivos/legendas/icones/cptm.png'), descricao: 'Estação CPTM' },
+					{ simbolo: src('arquivos/legendas/icones/metro.png'), descricao: 'Estação Metrô' },
+					{ simbolo: src('arquivos/legendas/icones/terminais-urbanos-municipais.png'), descricao: 'Terminais Urbanos Municipais' },
+					{ borda: '#000000', espessura: 3, pontilhado: true, descricao: 'Perímetro de Intervenção' },
+					{ simbolo: src('arquivos/legendas/icones/Abertura-novo-viario.png'), descricao: 'Abertura de Novo Viário' },
+					{ simbolo: src('arquivos/legendas/icones/Alargamento-Viario-Existente.png'), descricao: 'Alargamento de viário existente' },
+					{ borda: '#E2B79F', linha: true, espessura: 4, descricao: 'Requalificação de viário existente' },
+					{ simbolo: src('arquivos/legendas/icones/Melhorias-passeios-existentes.png'), descricao: 'Melhorias dos passeios existentes' },
+					{ borda: '#FF4711', linha: true, espessura: 4, descricao: 'Transposições' },
+					{ borda: '#DC0037', linha: true, espessura: 1, pontilhado: true, descricao: 'Ciclovias e Ciclofaixas' },
+					{ fundo: '#7AA555', descricao: 'Áreas verdes novas' },
+					{ simbolo: src('arquivos/legendas/icones/Requalificacao-areas-verdes-existentes.png'), descricao: 'Requalificação de áreas verdes existentes' },
+					{ simbolo: src('arquivos/legendas/icones/Caminhos-verdes.png'), descricao: 'Caminhos Verdes' },
+					{ simbolo: src('arquivos/legendas/icones/Areas-absorcao.png'), descricao: 'Áreas de Absorção' },
+					{ borda: '#00D5CF', espessura: 1, descricao: 'Áreas de acumulação' },
+					{ borda: '#00D5CF', linha: true, espessura: 1, pontilhado: true, descricao: 'Canteiros drenantes' },
+					{ fundo: '#9E71AB', descricao: 'Equipamentos em edifícios de valor histórico' },
+					{ simbolo: src('arquivos/legendas/icones/Novos-equipamentos.png'), descricao: 'Novos Equipamentos' },
+					{ simbolo: src('arquivos/legendas/icones/Intervencao-assentamento-precario.png'), descricao: 'Intervenção integrada em assentamentos precários' },
+					{ simbolo: src('arquivos/legendas/icones/provisao-moradia.png'), descricao: 'Áreas para provisão de moradia' },
+					{ simbolo: src('arquivos/legendas/icones/cota-solidariedade.png'), descricao: 'Áreas potenciais de cota de solidariedade' },
+					{ simbolo: src('arquivos/legendas/icones/linha-alta-tensao.png'), descricao: 'Remanejamento de linha de alta tensão' },
+					{ simbolo: src('arquivos/legendas/icones/ZEIS-1_proj.png'), descricao: 'ZEIS-1' },
+					{ simbolo: src('arquivos/legendas/icones/ZEIS-2_proj.png'), descricao: 'ZEIS-2' },
+					{ simbolo: src('arquivos/legendas/icones/ZEIS-3_proj.png'), descricao: 'ZEIS-3' },
+					{ simbolo: src('arquivos/legendas/icones/ZEIS-5_proj.png'), descricao: 'ZEIS-5' },
+			],
+				fonte: 'Elaboração: SP-Urbanismo, 2020'
+			}">
+				<a
+					:href="this.$store.getters.basePath + 'mapas/piu-arco-tiete-2/#2'"
+					class="button"
+					slot="extra"
+					>Acesse o mapa interativo <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
+			</imagem>
+
+			<h3>Especificidades dos perímetros no programa de intervenções</h3>
 			<p>No território do Perímetro de Intervenção <strong>Lapa/Freguesia</strong>, as principais estruturas de mobilidade atualmente existentes são ligações no sentido Leste-Oeste: Rua da Balsa, Marginal Tietê, Av. Ermano Marchetti, Linha 6 e Linha 7 da CPTM e R. Guaicurus. Assim, o programa de intervenções do Arco Tietê nesse perímetro propõe intervenções principalmente no sentido Norte-Sul, incluindo transposições da ferrovia e do Rio Tietê.</p>
 			<p>Também se desenvolvem no sentido Norte-Sul os principais caminhos verdes propostos para o perímetro Lapa/Freguesia, ao longo dos córregos, embora canalizados, do Curtume e Tiburtino (Rua Luís Gatti/ Antônio Nagib Ibrahim, Rua Cenno Sbrighi, Rua Emílio Goeldi, Rua Tenente Landy, Rua do Curtume, Rua José Maria de Faria), alcançando a norte a região da Freguesia do Ó e, a sul, conectando as estações e terminais dos diferentes modos de transporte público dispostos no sentido leste – oeste.</p>
 			<p>Para responder ao desequilíbrio na distribuição de áreas verdes demonstrado no diagnóstico, nos trechos dos Distritos da Freguesia do Ó e Lapa as novas áreas verdes propostas deverão se localizar principalmente a mais de 1.000 dos parques existentes.</p>
@@ -319,7 +395,7 @@
 			<p>A segunda ação diz respeito ao desenho do Programa de Intervenções, que identificou áreas potenciais para recepcionar adensamentos construtivos e populacionais em função das melhores conexões com o transporte público, da abertura de novas vias, da qualificação dos passeios e oferta de novas áreas verdes e equipamentos públicos. Essas propostas, majoritariamente de promoção pública, deverão ser financiadas principalmente a partir da captura da valorização imobiliária no perímetro do projeto, construindo um vínculo direto entre oferta de potencial construtivo e incremento da infraestrutura.</p>
 			<p>Por fim, a última ação consiste na busca do reequilíbrio dos índices de adensamento construtivo no interior do perímetro em função dos potenciais construtivos já dispostos na Lei de Parcelamento, Uso e Ocupação do Solo (LPUOS, Lei nº 16.402/2016), de forma que algumas áreas sofreram redução em seu potencial máximo em relação à LPUOS, enquanto outras tiveram seus índices majorados.</p>
 
-			<h3>Áreas de Transformação, Qualificação e Preservação</h3>
+			<h3>Áreas de transformação, qualificação e preservação</h3>
 			<p>O conjunto de zonas de uso e ocupação do solo disposto no zoneamento vigente na cidade de São Paulo está organizado em 3 agrupamentos básicos: os territórios de Transformação, Qualificação e Preservação.  De maneira similar à LPUOS, a proposta de organização dos parâmetros para o Arco Tietê parte da definição de perímetros de intervenção categorizados em Áreas de Transformação, Áreas de Qualificação e Áreas de Preservação, a partir da identificação de potencialidades e condicionantes do território. Essa forma de organização foi adotada para os demais PIU já desenvolvidos para os Setores da Macroárea de Estruturação Metropolitana (MEM).</p>
 			<p>Os territórios de <strong>Transformação</strong> objetivam a promoção do adensamento construtivo e populacional das atividades econômicas e dos serviços públicos, a diversificação de atividades e a qualificação paisagística dos espaços públicos de forma a adequar o uso do solo à oferta de transporte público coletivo. Fazem parte desse território as zonas de adensamento associadas aos eixos de transporte, como ZEU, ZEUP, ZEM e ZEMP.</p>
 			<p>As <strong>Áreas de Transformação</strong> do PIU Arco Tietê caracterizam-se pela baixa consolidação dos usos e ocupação do solo e por sua articulação à rede de transporte coletivo existente e planejada, condições que permitem intensificar as densidades construtivas e populacionais. Objetiva-se, além do adensamento, a promoção do uso misto e da qualidade dos espaços públicos, de forma a adequar o uso do solo à oferta de transporte público coletivo.</p>
@@ -342,46 +418,40 @@
 				<tr>
 					<td rowspan="2">Área de transformação</td>
 					<td style="background-color: #984806">T2</td>
-					<td>4</td>
-					<td>NA</td>
-					<td>20</td>
+					<td class="centralizado">4</td>
+					<td class="centralizado">NA</td>
+					<td class="centralizado">20</td>
 				</tr>
 				<tr>
 					<td style="background-color: #d7ae85">T3</td>
-					<td>4</td>
-					<td>48m</td>
-					<td>NA</td>
+					<td class="centralizado">4</td>
+					<td class="centralizado">48m</td>
+					<td class="centralizado">NA</td>
 				</tr>
 				<tr>
-					<td rowspan="3">Área de qualificação</td>
+					<td rowspan="2">Área de qualificação</td>
 					<td style="background-color: #ffc000">Q1</td>
-					<td>4</td>
-					<td>48m</td>
-					<td>NA</td>
+					<td class="centralizado">4</td>
+					<td class="centralizado">48m</td>
+					<td class="centralizado">NA</td>
 				</tr>
 				<tr>
 					<td style="background-color: #ffff00">Q2</td>
-					<td>2</td>
-					<td>28m</td>
-					<td>NA</td>
-				</tr>
-				<tr>
-					<td style="background-color: #ffff99">Q3</td>
-					<td>1,5</td>
-					<td>28m</td>
-					<td>NA</td>
+					<td class="centralizado">2</td>
+					<td class="centralizado">28m</td>
+					<td class="centralizado">NA</td>
 				</tr>
 				<tr>
 					<td>Área de preservação</td>
 					<td style="background-color: #ff6699">P3</td>
-					<td>1</td>
-					<td>15m</td>
-					<td>NA</td>
+					<td class="centralizado">1</td>
+					<td class="centralizado">15m</td>
+					<td class="centralizado">NA</td>
 				</tr>
 			</table>
 			<p>Portanto, a definição das Áreas no PIU Arco Tietê deve ser entendida como uma sobrecamada em relação às Zonas de uso e ocupação do solo vigentes, sendo os parâmetros urbanísticos de ambas aplicados conjuntamente. Combinados, os parâmetros, incentivos e exigências são responsáveis por conformar o desenho de paisagem previsto para os perímetros de intervenção no Arco Tietê, bem como distribuir o potencial construtivo e o adensamento populacional priorizando as áreas com alto grau de transformação e vinculadas à infraestrutura de transporte de massa – premissa fundamental do Plano Diretor Estratégico.</p>
 
-			<h3>Projetos Estratégicos</h3>
+			<h3>Projetos estratégicos</h3>
 			<p>Os Projetos Estratégicos consistem na delimitação de novos perímetros internos ao perímetro geral de intervenção, com o objetivo de mobilizar o setor público ou o privado, associados ou não, visando à implantação de projetos urbanísticos.</p>
 			<p>Sabemos que o principal objetivo do PIU, como ferramenta, é promover um processo de planejamento de forma que o percurso de elaboração e debate revele os instrumentos e as intervenções necessárias à área objeto de estudo. Ou seja, o PIU pode mobilizar instrumentos e intervenções em escalas muito diversas, a depender dos problemas e potencialidades identificados ao longo da elaboração das propostas.</p>
 			<p>Pela abrangência territorial, os três perímetros identificados no Arco Tietê – Lapa/Freguesia, Limão/Casa Verde e Santana/Vila Guilherme – configuram intervenções na escala de plano urbano. Já os Projetos Estratégicos dizem respeito à demarcação de áreas cuja transformação deverá ser apoiada na escala do projeto urbano. Ou seja, são perímetros inseridos em instrumento urbanístico mais amplo e, portanto, compartilham seus objetivos, bem como mecanismos de financiamento e gestão, mas buscam estratégias de desenho urbano no âmbito local.</p>
@@ -400,6 +470,7 @@
 				base: {
 					legendas: [
 						{ path: 'arquivos/legendas/icones/pontilhado-preto.png', descricao: 'Perímetro de intervenção' },
+						{ path: 'arquivos/legendas/icones/pontilhado-vinho.png', descricao: 'Projetos Estratégicos' },
 						{ path: 'arquivos/legendas/cores/BACCA8.png', descricao: 'Parque, praças e canteiros' },
 						{ path: 'arquivos/legendas/cores/6CB5D5.png', descricao: 'Hidrografia' },
 						{ path: 'arquivos/legendas/icones/ferrovia.png', descricao: 'Ferrovia' },
@@ -412,7 +483,7 @@
 				},
 				layers: [
 					{
-						titulo: 'Parâmetros Urbanísticos - Lapa-Freguesia',
+						titulo: 'Parâmetros Urbanísticos - Lapa/Freguesia',
 						path: 'arquivos/arco-tiete-2/mapas/mapa5-1_parametros.jpg',
 						legendas: [
 							[
@@ -468,25 +539,25 @@
 				:dados="{
 					tipo: 'coluna',
 					url: src('arquivos/arco-tiete-2/vista-aerea-lapa-freguesia.jpg'),
-					caption: 'Vista aérea do perímetro Lapa-Freguesia. Elaboração: SP-Urbanismo, 2020',
+					caption: 'Vista aérea do perímetro Lapa/Freguesia. Elaboração: SP-Urbanismo, 2020',
 					fonte: 'Google, 2019'
 				}"
 			/>
 
-			<h4>Áreas de Transformação </h4>
+			<h4>Áreas de transformação </h4>
 			<p>Adensamento construtivo e populacional com Indução do desenvolvimento da atividade imobiliária de uso misto com alta densidade, fachada ativa.</p>
 			<ul>
 				<li>T2 - sem limite de gabarito: localização nos dois novos Eixos de Integração Local, no sentido norte-sul, conectando o Bairro da Lapa com a Freguesia do Ó, associado a novo alinhamento viário, a soluções de drenagem e de paisagismo, conformando novos espaços públicos lineares junto aos córregos tamponados do Curtume e Tiburtino, que estruturam o setor; Também no lado sul da Rua Guaicurus, no sentido leste-oeste, reafirmando o disposto no Zoneamento, que o definiu como ZEM devido a presença das estações Lapa e Água Branca do trem e do terminal de ônibus da Lapa e considerando uma série de investimentos em mobilidade previstos.</li>
 				<li>T3 - com gabarito máximo de 48m de altura, com intuito de promover uma transição gradual, condizente com a paisagem histórica: localização nas quadras lindeiras à Av. Ermano Marchetti, provida de corredor de ônibus com acesso direto ao centro da cidade e que se relacionada com o bairro de uso residencial horizontal da Lapa de Baixo, importante área histórica definida como Área de Preservação pelo plano; também no trecho entre a Rua da Balsa e o alinhamento viário do Apoio Norte, associado à implantação do corredor da Av. Inajar de Souza e à futura implantação da linha 6 do Metrô; ainda, no restante da área de influência desta linha do metrô, se estendendo até a ponta sudeste do setor, onde encontra-se a gleba da Santa Marina (alvo de projeto estratégico, descrito adiante), garantindo um adensamento com gabaritos médios. </li>
 			</ul>
-			<h4>Áreas de Qualificação</h4>
+			<h4>Áreas de qualificação</h4>
 			<p>Índices de adensamento mais baixos que as Áreas de Transformação e gabaritos baixos, contemplando a qualificação dos espaços públicos de forma a dar suporte, principalmente, aos usos existentes</p>
 			<ul>
 				<li>Q1- gabaritos médios (48m) devido à proximidade com bairros horizontais faz transição com as áreas próximas aos eixos de transporte público: localização a oeste do pátio ferroviário da Lapa, no prolongamento da Rua Jorge Nunes Kehdi para norte e para sul, estendendo-se desde a Rua Fortunato Ferraz (com previsão de alargamento) até o Rio Tietê e trechos ao sul da ferrovia.</li>
 				<li>Q2 - gabaritos baixos (28m): localização nas quadras lindeiras à rua Ricardo Cavatton, que parte da Praça Sebastião Jaime Pinto, junto à Av. Ermano Marchetti em direção à marginal Tietê; também a norte da Rua da Balsa, na parte inferior da encosta do morro da Freguesia do Ó. Apesar de associada ao buffer do Apoio Norte, a verticalização dessa área pode comprometer as visuais da Paróquia Nossa Senhora do Ó a partir da Lapa e da Marginal Tietê, de onde ainda se guarda importante perspectiva desse edifício que marca o centro comercial da Freguesia do Ó. </li>
 			</ul>
 
-			<h4>Áreas de Preservação</h4>
+			<h4>Áreas de preservação</h4>
 			<p>Coeficiente de aproveitamento 1 e gabarito máximo de 15m  de forma a inibir a verticalização e o adensamento e preservar as características culturais e morfológicas da LAPA, que contém diversas casas e galpões construídos no início do século XX</p>
 			<ul>
 				<li>P3: localização entre a Rua Guaicurus e a ferrovia e na Lapa de baixo, considerando o Projeto Estratégico Guaicurus, com o objetivo de integrar os equipamentos existentes, muitos deles tombados e implantar novas áreas verdes e transposições em seus espaços livres, de modo a construir uma nova orla ferroviária integrada ao tecido urbano, conforme detalhado adiante no item referente aos Projetos Estratégicos.</li>
@@ -502,7 +573,8 @@
 				mapH: 575,
 				base: {
 					legendas: [
-						{ path: 'arquivos/legendas/icones/pontilhado-preto.png', descricao: 'Perímetro de intervenção' },
+						{ path: 'arquivos/legendas/icones/pontilhado-preto.png', descricao: 'Perímetro de Intervenção' },
+						{ path: 'arquivos/legendas/icones/pontilhado-vinho.png', descricao: 'Projetos Estratégicos' },
 						{ path: 'arquivos/legendas/cores/BACCA8.png', descricao: 'Parque, praças e canteiros' },
 						{ path: 'arquivos/legendas/cores/6CB5D5.png', descricao: 'Hidrografia' },
 						{ path: 'arquivos/legendas/icones/ferrovia.png', descricao: 'Ferrovia' },
@@ -524,7 +596,7 @@
 								{ path: 'arquivos/legendas/cores/E0B700.png', descricao: 'Q1' },
 								{ path: 'arquivos/legendas/cores/F5D422.png', descricao: 'Q2' },
 								{ path: 'arquivos/legendas/cores/E793BE.png', descricao: 'P3' },
-								{ char: '10', descricao: 'Lapa' },
+								{ char: '10', descricao: 'Iapó' },
 							]
 						],
 						textos: {
@@ -563,11 +635,11 @@
 					caption: 'Vista aérea do perímetro Limão-Casa Verde',
 				}"
 			/>
-			<h4>Áreas de Transformação</h4>
+			<h4>Áreas de transformação</h4>
 			<ul>
 				<li>T2 e T3: localização predominante associada às ruas Nélson Francisco e José Fiúza Guimarães, além das ZEIS, que mantêm equivalência aos parâmetros originais da zona. O objetivo é incentivar a transformação desses lotes de forma que sejam destinadas as áreas necessárias ao alargamento das vias em questão, completando um importante anel viário interno ao setor, composto também pelas avenidas Caetano Álvares, Marginal Tietê e Inajar de Souza. A restrição de altura no caso do T3 decorre da necessidade de adequação ao entorno e à infraestrutura proposta.</li>
 			</ul>
-			<h4>Áreas de Qualificação</h4>
+			<h4>Áreas de qualificação</h4>
 			<ul>
 				<li>Q2 - índices médios de adensamento e gabarito máximo de 28m: consistem nas quadras localizadas entre a área de influência do Apoio Norte e a Marginal Tietê, junto aos eixos de integração local e quadras onde ainda existe uma atividade produtiva importante, associada às indústrias, principalmente de produção de plástico. </li>
 			</ul>
@@ -582,6 +654,7 @@
 				base: {
 					legendas: [
 						{ path: 'arquivos/legendas/icones/pontilhado-preto.png', descricao: 'Perímetro de intervenção' },
+						{ path: 'arquivos/legendas/icones/pontilhado-vinho.png', descricao: 'Projetos Estratégicos' },
 						{ path: 'arquivos/legendas/cores/BACCA8.png', descricao: 'Parque, praças e canteiros' },
 						{ path: 'arquivos/legendas/cores/6CB5D5.png', descricao: 'Hidrografia' },
 						{ path: 'arquivos/legendas/icones/ferrovia.png', descricao: 'Ferrovia' },
@@ -651,7 +724,7 @@
 				}"
 			/>
 
-			<h4>Áreas De Transformação</h4>
+			<h4>Áreas de transformação</h4>
 			<p>As áreas de transformação demarcadas no perímetro seguem fundamentalmente aquelas indicadas como Eixos de Estruturação da Transformação Urbana – ZEM e ZEMP na LPUOS. A esse conjunto foram adicionadas novas quadras até então demarcadas pelo zoneamento como Zonas de Centralidade (ZC) ou como Zonas Especiais de Interesse Social (ZEIS). As primeiras considerando critérios de unidade de paisagem ou potencial de transformação e adensamento em função do transporte coletivo e do comércio existente e as últimas, considerando a equivalência aos parâmetros originais da zona.</p>
 			<p>Fundamentalmente, o eixo metropolitano – Av. Cruzeiro do Sul – e o eixo da Av. Joaquina Ramalho concentrarão os incentivos para as transformações pioneiras no perímetro geral de intervenção. Os recursos capturados a partir da valorização desses territórios suportarão a implantação dos trechos do Apoio Norte no perímetro, ativando novas áreas de adensamento.</p>
 			<ul>
@@ -659,14 +732,14 @@
 				<li>T3 - restrição de gabarito de altura, limitado a 48m: quadras incluídas entre a Av. Cruzeiro do Sul e o Córrego do Carandiru, estabelecendo uma transição de alturas em direção ao futuro parque. A única exceção se dá na quadra identificada como Projeto Estratégico Carandiru, pois a ZEIS-2 já libera o gabarito; já na Vila Guilherme, todas as Áreas de Transformação foram classificadas como T3, pois a limitação do gabarito ocorre devido às restrições da estrutura fundiária, sobretudo ao longo do Apoio Urbano Norte, apresentando vias perpendiculares estreitas. No caso das quadras ao longo da Av. Joaquina Ramalho, entende-se que a ausência de corredor futuro é condição de limitação à capacidade de suporte para o adensamento, mediante restrição do gabarito.</li>
 			</ul>
 
-			<h4>Áreas De Qualificação</h4>
+			<h4>Áreas de qualificação</h4>
 			<p>Áreas de transição em relação aos eixos de transporte e apresentando adensamento moderado e gabaritos limitados entre 48m e 28m. Tais quadras estão localizadas ao longo da orla do Rio Tietê, nas grandes glebas privadas e nos miolos de bairro.</p>
 
 			<ul>
 				<li>Q1 - espera-se a continuidade de um processo de transformação e substituição de usos de forma orgânica, impulsionado a partir da implantação dos eixos de mobilidade e do desenvolvimento imobiliário das áreas mais densas no entorno: correspondem fundamentalmente às quadras entre a Rua Miguel Mentem, a leste, e a Rua João Veloso Filho, o oeste. Consiste no tecido urbano mais desenvolvido em todo o perímetro inserido na Vila Guilherme, com lotes e quadras de médio e pequeno porte e boa conectividade viária.  São nestas áreas também que se encontram boa parte dos lançamentos imobiliários dos últimos anos, com predominância de condomínios residenciais verticais que utilizam grandes lotes disponíveis. </li>
 				<li>Q2 - definição de uma orla fluvial com baixa intensidade de ocupação do solo e da reserva de glebas passíveis de parcelamento do solo: engloba praticamente todo o território definido como ZPI-1, entre as quadras localizadas entre a Rua da Coroa e a Marginal Tietê. Boa parte da área apresenta glebas e lotes de grande dimensão, ocupados por equipamentos comerciais horizontais e serviços de logística, denotando que a saída da atividade industrial é um processo consolidado; situação semelhante também é encontrada nas quadras entre o Córrego do Carandiru, a Av. Otto Baumgart e a Rua Miguel Mentem, que abrigam o complexo do Shopping Center Norte, Shopping Lar Center e as áreas de feiras e eventos; finalmente, as áreas demarcadas como ZM próximas ao Parque da Juventude também foram classificadas como Q2. Trata-se de quadras ocupadas por residências unifamiliares, com lotes de pequeno porte e com baixo potencial de transformação.  A área também é envolvida pelo Parque da Juventude, apresentando um conjunto de vias locais conectadas unicamente à outra via local –a Rua Antônio dos Santos Neto, paralelo à Av. Zaki Narchi. Tais características indicam que se trata e uma área que poderá recepcionar adensamento mediano, sem grandes impactos locais. O entorno imediato do Parque do Trote, por sua vez, é formado por grandes glebas de praticamente dois proprietários, com destaque para a área que abriga o Mart Center, com cerca de 16 ha. As áreas são classificadas pela LPUOS como Zonas Eixo de Transformação Metropolitano (ZEMP) e a conversão dessas áreas em Q2 alinha-se com as diretrizes de tombamento do Parque do Trote (Resolução 15/CONPRESP/2013). De acordo com a Resolução, o lote localizado na esquina da Av. Nadir Dias de Figueiredo e Rua São Quirino terá gabarito máximo de 7 metros, taxa de permeabilidade de 30% e a exigência de implantação de pelo menos um elemento arbóreo a cada 25 metros quadrados de área permeável. Em relação à área envoltória, a Resolução estabelece uma faixa de proteção visando à recuperação/manutenção do ecossistema da área que anteriormente abrigou a Sede da Sociedade Paulista de Trote, com as seguintes diretrizes: gabarito máximo de 25 metros e, para os lotes com área maior de 300m², taxa de permeabilidade de 30% e previsão de implantação de pelo menos um elemento arbóreo a cada 25 metros quadrados de área permeável.</li>
 			</ul>
-			<h4>Áreas De Preservação</h4>
+			<h4>Áreas de preservação</h4>
 			<p>Correspondem ao entorno imediato do Parque da Juventude, sua delimitação tem por objetivo preservar a manutenção do maciço arbóreo e garantir a desobstrução à visual do parque em relação às áreas de adensamento mais vigoroso no entorno.</p>
 
 			<ul>
@@ -682,12 +755,12 @@
 			<p>Outra importante contribuição do PIU, do ponto de vista ambiental, será a oportunidade de remediação dos terrenos contaminados pela atividade industrial, uma vez que a revitalização das áreas degradadas e o reaproveitamento de terrenos subutilizados resultará em ações parcelamento em todas as suas modalidades: loteamento; desmembramento; remembramento; reparcelamento e parcelamento de interesse social (art. 49, LPUOS).</p>
 			<p>Os parâmetros urbanísticos propostos pelo PIU Arco Tietê para as Áreas de Transformação, Qualificação e Preservação buscam o equilíbrio do potencial construtivo originalmente previsto no zoneamento para a totalidade dos lotes contidos nos Perímetros de Intervenção, não diferenciando ou subtraindo áreas consolidadas. De modo que os Coeficientes de Aproveitamento a serem determinados por lei, promovam o equilíbrio entre as áreas e não agravem o potencial construtivo definido originariamente pelo zoneamento.</p>
 			<p>Busca-se, assim, reafirmar o compromisso de adequar as densidades propostas em função do programa de intervenções e da perspectiva de uma transformação concentrada, mais coerente com a diretriz de se construir uma cidade mais compacta.</p>
-			<p>De modo geral, a expectativa é que a densidade, que antes era considerada baixa nos três Perímetros de Intervenção, inferior inclusive à média do Município – em torno de 74 hab/ha – convirja para a média no caso de Santana-Vila Guilherme (de 58 para 79 hab/ha). Nos casos da Lapa-Freguesia (60 hab/ha em 2017) e do Limão-Casa Verde (67 hab/ha em 2017), o incremento populacional praticamente dobrará a densidade, que ficará em torno de 127 e 136 hab/ha,  respectivamente.</p>
+			<p>De modo geral, a expectativa é que a densidade, que antes era considerada baixa nos três Perímetros de Intervenção, inferior inclusive à média do Município – em torno de 74 hab/ha – convirja para a média no caso de Santana-Vila Guilherme (de 58 para 79 hab/ha). Nos casos da Lapa/Freguesia (60 hab/ha em 2017) e do Limão-Casa Verde (67 hab/ha em 2017), o incremento populacional praticamente dobrará a densidade, que ficará em torno de 127 e 136 hab/ha,  respectivamente.</p>
 			<p>O reequilíbrio da oferta de potencial construtivo adicional, que passa a estar associado às melhorias de infraestrutura urbana, busca promover a chegada de novos moradores em áreas bem servidas de infraestrutura urbana, correspondendo a um aumento das respectivas densidades populacionais.  Ou seja, o incremento de cerca de 81 mil novos moradores estimado pelo PIU para os três Perímetros de Intervenção é um movimento que acompanha a implantação de novas infraestruturas urbanas que darão suporte a intensificação do uso do solo.</p>
 		</section>
 
 		<section>
-			<h2 class="titulo" indent="1">Custos da Intervenção</h2>
+			<h2 class="titulo" indent="1">Custos da intervenção</h2>
 			<p>A estimativa geral dos custos para implantação do Programa de Intervenções do PIU Arco Tietê é obtida a partir do levantamento das principais quantidades necessárias ao detalhamento dos custos estimados para cada uma das Ferramentas Urbanísticas apresentadas no Programa de Intervenções.</p>
 			<p>Os custos baseiam-se em orçamentos de projetos com características técnicas similares, elaborados para a SP Urbanismo e em composições de custos obtidas a partir das Tabelas de Custos Unitários da SIURB – Secretaria Municipal de Infraestrutura Urbana e Obras. É importante ressaltar que os custos apresentados não contemplam os valores referentes à aquisição de terrenos.</p>
 			<p>Além disto, para a elaboração da estimativa de custos das ferramentas adotadas no PIU Arco Tietê, como em projetos anteriores, foram estabelecidas algumas premissas de projeto:</p>
@@ -719,13 +792,13 @@
 		</section>
 
 		<section>
-			<h2 class="titulo" indent="1">Financiamento da Intervenção</h2>
-			<p>O estudo de viabilidade econômica da 2ª Consulta Pública do PIU apresenta as estimativas de produção de demanda imobiliária e uma estimativa preliminar de receita num horizonte de planejamento de 20 anos para os 3 perímetros de intervenção: Lapa-Freguesia, Limão-Casa Verde e Santana-Vila Guilherme.</p>
+			<h2 class="titulo" indent="1">Financiamento da intervenção</h2>
+			<p>O estudo de viabilidade econômica da 2ª Consulta Pública do PIU apresenta as estimativas de produção de demanda imobiliária e uma estimativa preliminar de receita num horizonte de planejamento de 20 anos para os 3 perímetros de intervenção: Lapa/Freguesia, Limão-Casa Verde e Santana-Vila Guilherme.</p>
 			<p>Primeiramente, a demanda é avaliada por meio do comportamento pregresso da produção imobiliária bem como sua projeção futura nos perímetros e respectivas áreas do entorno. Os resultados são traduzidos em termos de área privativa e de potencial adicional de construção, sendo confrontados e distribuídos no território em função da oferta de terrenos transformáveis e da disposição dos parâmetros urbanísticos nos respectivos perímetros de intervenção.</p>
 			<p>Posteriormente, procura-se avaliar o preço estabelecido para o potencial construtivo adicional. Para isso, foram elaboradas diversas simulações de viabilidade de empreendimentos imobiliários de referência, que incluem informações de despesas, taxas de retorno e, em particular, o custo da Outorga Onerosa do Direito de construir calculado a partir do Cadastro de Valor de Terrenos (Quadro 14 do PDE). Mensuradas as quantidades e a distribuição do potencial adicional de construção e seu preço, chega-se na projeção de receita em dois cenários, um conservador e outro otimista.</p>
-			<p>Por fim, considerando as especificidades dos perímetros e dos instrumentos de ordenamento e reestruturação urbana do PDE, foi realizado um estudo específico que buscou estabelecer critérios para a classificação do perímetro Lapa-Freguesia como uma Operação Urbana Consorciada (OUC).</p>
+			<p>Por fim, considerando as especificidades dos perímetros e dos instrumentos de ordenamento e reestruturação urbana do PDE, foi realizado um estudo específico que buscou estabelecer critérios para a classificação do perímetro Lapa/Freguesia como uma Operação Urbana Consorciada (OUC).</p>
 
-			<h4>Estimativas Da Demanda Da Produção Imobiliária</h4>
+			<h4>Estimativas da Demanda da Produção Imobiliária</h4>
 			<p>Nesta primeira etapa de análise, foram contabilizados os dados de lançamento imobiliário da EMBRAESP, entre 2010 e 2017, para os três perímetros de intervenção e também para uma área de influência de 1 Km em relação a cada perímetro, considerando a possibilidade de atração de parte do mercado para o interior das áreas objeto de intervenção, em função das externalidades positivas promovidas pela implantação do projeto urbanístico.</p>
 			<p>Em linhas gerais, ao longo do período analisado foram lançados cerca de 1,6 milhões m², considerando a produção imobiliária nos perímetros e respectivas áreas de influência, o que equivale a uma produção anual média 208 mil m² de área privativa, . Apesar da produção relativamente modesta dentro dos Perímetros de Intervenção, a produção imobiliária considerando parte da atividade das áreas de influência chega a 9,9% do total do Município, reiterando o fato do mercado se concentrar junto aos bairros mais consolidados, nas bordas do Arco Tietê.</p>
 
@@ -736,8 +809,8 @@
 				legenda: [
 					{ fundo: '#BACCA8', descricao: 'Parque, praças e canteiros' },
 					{ fundo: '#6CB5D5', descricao: 'Hidrografia' },
-					{ linha: '#535353', espessura: 3, descricao: 'Ferrovia' },
-					{ linha: '#535353', espessura: 3, descricao: 'Linha Metrô' },
+					{ simbolo: src('arquivos/legendas/icones/ferrovia.png'), descricao: 'Ferrovia' },
+					{ simbolo: src('arquivos/legendas/icones/linha-de-metro.png'), descricao: 'Linha Metrô' },
 					{ simbolo: src('arquivos/legendas/icones/cptm-estacoes.png'), descricao: 'Estação CPTM' },
 					{ simbolo: src('arquivos/legendas/icones/metro-estacoes.png'), descricao: 'Estação Metrô' },
 					{ simbolo: src('arquivos/legendas/icones/terminal-onibus-existentes.png'), descricao: 'Terminal de Ônibus' },
@@ -757,7 +830,7 @@
 				],
 				linhas: [
 					[
-						[ { data: 'Lapa-Freguesia' }],
+						[ { data: 'Lapa/Freguesia' }],
 						[ { data: '1.210.855' } ],
 						[ { data: '7,2' } ],
 					],
@@ -788,9 +861,9 @@
 
 			<p>A partir da observação do comportamento da produção imobiliária, foram realizadas projeções da área privativa futura. Para estimar essa capacidade de absorção nos próximos 20 anos, foi considerada uma metodologia padrão em estudos econométricos, baseada em modelos autoregressivos e de média móvel (ARIMA).</p>
 			<p>Foram definidas duas séries para cada perímetro de intervenção. A primeira, correspondente a um Cenário Conservador, considera apenas a série histórica de produção no interior do perímetro. Entretanto, avalia-se que a produção deverá migrar paulatinamente das regiões mais consolidadas, atraentes da perspectiva da demanda, mas limitada em termos de oferta de terrenos transformáveis. Assim, foi construído um Cenário Otimista, que captura parte da produção das áreas de influência ao longo do tempo.</p>
-			<p>O perímetro Lapa-Freguesia e arredores apresentou forte crescimento de lançamentos, sobretudo, a partir de meados dos anos 2000, crescimento localizado na área de influência. Assim, as projeções apresentam uma distancia entre os dois cenários: o primeiro reflete o quadro relativamente estável de produção na área de várzea, enquanto o segundo mostra o aquecimento do mercado em localidades como a Vila Romana. Assim, estima-se uma produção entre 30 mil m² e 89 mil m² de área privativa para o perímetro. No perímetro Limão-Casa Verde, a série histórica de lançamentos foi mais intermitente. Considerando os cenários conservador e otimista, projeta-se uma produção mínima anual de 10 mil m² e máxima de 21 mil m² de área privativa. Já no perímetro Santana-Vila Guilherme, o volume assemelha-se aquele observado no Limão-Casa Verde. A produção mínima estimada para o setor é de 9 mil m² de área privativa e a máxima de 27 mil m².</p>
+			<p>O perímetro Lapa/Freguesia e arredores apresentou forte crescimento de lançamentos, sobretudo, a partir de meados dos anos 2000, crescimento localizado na área de influência. Assim, as projeções apresentam uma distancia entre os dois cenários: o primeiro reflete o quadro relativamente estável de produção na área de várzea, enquanto o segundo mostra o aquecimento do mercado em localidades como a Vila Romana. Assim, estima-se uma produção entre 30 mil m² e 89 mil m² de área privativa para o perímetro. No perímetro Limão-Casa Verde, a série histórica de lançamentos foi mais intermitente. Considerando os cenários conservador e otimista, projeta-se uma produção mínima anual de 10 mil m² e máxima de 21 mil m² de área privativa. Já no perímetro Santana-Vila Guilherme, o volume assemelha-se aquele observado no Limão-Casa Verde. A produção mínima estimada para o setor é de 9 mil m² de área privativa e a máxima de 27 mil m².</p>
 
-			<h6>Lançamentos imobiliários e projeção no perímetro Lapa-Freguesia, 1992 – 2017, + 20 anos </h6>
+			<h6>Lançamentos imobiliários e projeção no perímetro Lapa/Freguesia, 1992 – 2017, + 20 anos </h6>
 			<lancamentos2 :bgSrc="src('arquivos/arco-tiete-2/LancamentosImobiliarios-Prancheta_2.png')" />
 			<p class="grafico__nota">Fonte: Embraesp. Elaboração: SP-Urbanismo.</p>
 
@@ -812,7 +885,7 @@
 					<td colspan="2"><br>Otimista</td>
 				</tr>
 				<tr>
-					<td>Lapa-Freguesia</td>
+					<td>Lapa/Freguesia</td>
 					<td>29.808</td>
 					<td>89.365</td>
 					<td>596.161</td>
@@ -849,16 +922,16 @@
 				</tr>
 			</table>
 			<p class="grafico__nota">Fonte: Embraesp. Elaboração: SP-Urbanismo.</p>
-			<p>Ou seja, o resultado da produção imobiliária projetada para os próximos 20 anos corresponde, num Cenário Conservador, a cerca de <strong>0,99 milhões m² de área privativa</strong> e, no Cenário Otimista, considerando a atração de parte da produção imobiliária do entorno, aproximadamente <strong>2,74 milhões m² de área privativa</strong>. Pela metodologia utilizada, os dados revelam a alta participação do perímetro Lapa-Freguesia, que corresponde entre 60% a 65% da produção imobiliária estimada para os três perímetros de intervenção no Arco Tietê. Nesse caso, abre-se a possibilidade de utilização de instrumentos urbanísticos capazes de gerar maior absorção da valorização imobiliária, como a Operação Urbana Consorciada.</p>
+			<p>Ou seja, o resultado da produção imobiliária projetada para os próximos 20 anos corresponde, num Cenário Conservador, a cerca de <strong>0,99 milhões m² de área privativa</strong> e, no Cenário Otimista, considerando a atração de parte da produção imobiliária do entorno, aproximadamente <strong>2,74 milhões m² de área privativa</strong>. Pela metodologia utilizada, os dados revelam a alta participação do perímetro Lapa/Freguesia, que corresponde entre 60% a 65% da produção imobiliária estimada para os três perímetros de intervenção no Arco Tietê. Nesse caso, abre-se a possibilidade de utilização de instrumentos urbanísticos capazes de gerar maior absorção da valorização imobiliária, como a Operação Urbana Consorciada.</p>
 
-			<h3>8.2 Estimativa De Oferta De Potencial Construtivo Adicional</h3>
+			<h3>Estimativa De Oferta De Potencial Construtivo Adicional</h3>
 			<p>A estimativa de oferta de potencial construtivo adicional parte da identificação das áreas com maior probabilidade de transformação, ou seja, a partir do uso observado, imputam-se aqueles mais passíveis de transformação, considerando a disponibilidade do mercado imobiliário em alterar as tipologias existentes. Foram considerados como transformáveis os terrenos com uso comercial ou residencial horizontal (com lotes maiores que 500m²), galpões, indústrias inativas, estacionamentos e lotes vagos. Não computam como terrenos transformáveis os usos comercial e residencial vertical, além de usos especiais, como espaços culturais, educacionais entre outros.</p>
 			<p>O potencial construtivo adicional foi calculado basicamente a partir do cruzamento entre a área dos lotes transformáveis e o estoque total de potencial construtivo estabelecido pelas Áreas de Transformação, Qualificação e Preservação dos perímetros de intervenção, como pode ser analisado nos mapas e tabela a seguir.</p>
-			<p>Como resultado, temos uma taxa de transformação média de 68% dos lotes, sendo o perímetro Santana-Vila Guilherme aquele que concentra maior disponibilidade de lotes passíveis de transformação, na ordem de 72%. Portanto, dentro das probabilidades de transformação analisadas, o <strong>potencial construtivo adicional ofertado</strong> é de <strong>5.635.681 m²</strong> na Lapa-Freguesia, <strong>3.042.060 m²</strong> no Limão-Casa Verde e <strong>6.769.482 m²</strong> em Santana-Vila Guilherme.</p>
+			<p>Como resultado, temos uma taxa de transformação média de 68% dos lotes, sendo o perímetro Santana-Vila Guilherme aquele que concentra maior disponibilidade de lotes passíveis de transformação, na ordem de 72%. Portanto, dentro das probabilidades de transformação analisadas, o <strong>potencial construtivo adicional ofertado</strong> é de <strong>5.635.681 m²</strong> na Lapa/Freguesia, <strong>3.042.060 m²</strong> no Limão-Casa Verde e <strong>6.769.482 m²</strong> em Santana-Vila Guilherme.</p>
 
 			<imagem :dados="{
 				tipo: 'mapa',
-				titulo: 'Taxa de transformação no perímetro do Arco Tietê',
+				titulo: 'Taxa de transformação no perímetro do Arco Tietê (Tr/At)',
 				url: src('arquivos/arco-tiete-2/mapas/mapa9.jpg'),
 				legenda: [
 					{ fundo: '#BACCA8', descricao: 'Parque, praças e canteiros' },
@@ -880,84 +953,74 @@
 
 			<table>
 				<tr>
-					<th colspan="7">Área transformável e taxa de transformação por setor</th>
+					<th colspan="5">Área transformável e taxa de transformação por setor</th>
 				</tr>
-				<tr>
+				<tr class="row--dark">
 					<td>Perímetro</td>
-					<td colspan="2">Área de terreno transformável (m²)</td>
-					<td colspan="2">Conservador</td>
-					<td colspan="2"><br>Otimista</td>
-				</tr>
-				<tr>
-					<td>(m²)</td>
+					<td>Área de terreno transformável (m²)</td>
+					<td>Área total (m²)</td>
 					<td>Taxa de transformação (%)</td>
 					<td>Potencial construtivo adicional das áreas transformáveis(m²)</td>
-					<td>596.161</td>
-					<td>1.787.291</td>
-					<td>60</td>
-					<td>65</td>
 				</tr>
 				<tr>
-					<td>Lapa-Freguesia</td>
+					<td>Lapa/Freguesia</td>
 					<td>2.164.140</td>
 					<td>3.289.235</td>
 					<td>66</td>
 					<td>5.635.681</td>
-					<td>21</td>
-					<td>15</td>
 				</tr>
 				<tr>
 					<td>Limão-Casa Verde</td>
 					<td>998.915</td>
 					<td>1.381.078</td>
 					<td>72</td>
-					<td>3.042.060</td>
-					<td>19</td>
-					<td>20</td>
+					<td>3.042.060 </td>
 				</tr>
 				<tr>
 					<td>Santana-Vila Guilherme</td>
 					<td>2.855.269</td>
 					<td>4.200.986</td>
 					<td>68</td>
-					<td>6.769.482</td>
-					<td>100</td>
-					<td>100</td>
+					<td>6.769.482 </td>
+				</tr>
+				<tr class="row--dark">
+					<td>Total</td>
+					<td>6.018.324</td>
+					<td>8.871.300</td>
+					<td>68</td>
+					<td>15.447.223</td>
 				</tr>
 			</table>
 			<p class="grafico__nota">Fonte: Geoinfo/SMDU. Elaboração: SP-Urbanismo.</p>
 
-			<h3>Distribuição Espacial da Produção Imobiliária</h3>
+			<h3>Distribuição espacial da produção imobiliária</h3>
 			<p>Com base nos dados de oferta e demanda, foi possível estimar qual a proporção de área privativa seria onerosa, ou seja, qual área poderia compor o potencial construtivo adicional demandado pelo mercado em cada perímetro. Sabe-se que a razão entre área privativa e área computável é da ordem de 1,2 e que o potencial construtivo adicional será distribuído de forma distinta entre as Áreas de Transformação, Qualificação e Preservação. Assim, os valores apresentados na tabela a seguir correspondem a uma estimativa geral da área considerada onerosa em cada perímetro de intervenção, tanto em função da distribuição das áreas transformáveis e quanto dos parâmetros urbanísticos propostos pelo PIU.</p>
-			<p>Em linhas gerais, a demanda por terrenos e por área computável com base nas projeções do comportamento do mercado imobiliário é inferior à oferta de potencial construtivo adicional, mesmo considerando uma perspectiva de 20 anos. Pelas estimativas, seriam demandados entre 0,7 e 2,0 milhões de m² de potencial construtivo adicional em todo Arco Tietê, enquanto a oferta é de 15,4 milhões. A Lapa-Freguesia deve ser a região com maior consumo de potencial construtivo adicional, entre 59 e 64% do total do PIU Arco Tietê.</p>
+			<p>Em linhas gerais, a demanda por terrenos e por área computável com base nas projeções do comportamento do mercado imobiliário é inferior à oferta de potencial construtivo adicional, mesmo considerando uma perspectiva de 20 anos. Pelas estimativas, seriam demandados entre 0,7 e 2,0 milhões de m² de potencial construtivo adicional em todo Arco Tietê, enquanto a oferta é de 15,4 milhões. A Lapa/Freguesia deve ser a região com maior consumo de potencial construtivo adicional, entre 59 e 64% do total do PIU Arco Tietê.</p>
 
 			<table>
 				<tr>
-					<th colspan="7">Demanda e oferta por Potencial Construtivo Adicional e participação no consumo</th>
+					<th colspan="6">Demanda e oferta por Potencial Construtivo Adicional e participação no consumo</th>
 				</tr>
-				<tr>
-					<td>Perímetro</td>
+				<tr class="row--dark">
+					<td rowspan="2">Perímetro</td>
 					<td colspan="2">Demanda (m²)</td>
+					<td>Oferta (%)</td>
 					<td colspan="2">Consumo (%)</td>
-					<td colspan="2"><br>Otimista</td>
 				</tr>
-				<tr>
+				<tr class="row--dark">
 					<td>Conservador</td>
 					<td>Otimista</td>
+					<td></td>
 					<td>Conservador</td>
 					<td>Otimista</td>
-					<td>1.787.291</td>
-					<td>60</td>
-					<td>65</td>
 				</tr>
 				<tr>
-					<td>Lapa-Freguesia</td>
+					<td>Lapa/Freguesia</td>
 					<td>420.303</td>
 					<td>1.260.071</td>
 					<td>5.635.681</td>
 					<td>59</td>
 					<td>64</td>
-					<td>15</td>
 				</tr>
 				<tr>
 					<td>Limão-Casa Verde</td>
@@ -966,7 +1029,6 @@
 					<td>3.042.060</td>
 					<td>23</td>
 					<td>16</td>
-					<td>20</td>
 				</tr>
 				<tr>
 					<td>Santana-Vila Guilherme</td>
@@ -975,12 +1037,19 @@
 					<td>6.769.482</td>
 					<td>18</td>
 					<td>19</td>
+				</tr>
+				<tr class="row--dark">
+					<td>Total</td>
+					<td>712.154</td>
+					<td>1.961.998</td>
+					<td>15.447.223</td>
+					<td>100</td>
 					<td>100</td>
 				</tr>
 			</table>
 			<p class="grafico__nota">Fonte: Embraesp e Geoinfo/SMDU. Elaboração: SP-Urbanismo.</p>
 
-			<h3>8.4 Projeção de Receita dos Perímetros de Intervenção</h3>
+			<h3>Projeção de receita dos perímetros de intervenção</h3>
 			<p>Concluído os estudos de oferta e demanda de potencial adicional de construção, o cálculo da receita é relativamente simples. Tomando a fórmula da outorga como:</p>
 
 			<p class="formula">R = (V/Ca).(AC–AT). Fs . Fp</p>
@@ -990,16 +1059,16 @@
 
 			<imagem :dados="{
 				tipo: 'mapa',
-				titulo: 'Valor de cadastro médio por quadra no perímetro do Arco Tietê',
+				titulo: 'Valor de cadastro médio por quadra no perímetro do Arco Tietê (R$)',
 				url: src('arquivos/arco-tiete-2/mapas/mapa10.jpg'),
 				legenda: [
 					{ fundo: '#BACCA8', descricao: 'Parque, praças e canteiros' },
 					{ fundo: '#6CB5D5', descricao: 'Hidrografia' },
 					{ simbolo: src('arquivos/legendas/icones/ferrovia.png'), descricao: 'Ferrovia' },
-					{ simbolo: imgSrc('arquivos/legendas/icones/linha-de-metro.png'), descricao: 'Linha Metrô' },
-					{ simbolo: imgSrc('arquivos/legendas/icones/cptm-estacoes.png'), descricao: 'Estação CPTM' },
-					{ simbolo: imgSrc('arquivos/legendas/icones/metro-estacoes.png'), descricao: 'Estação Metrô' },
-					{ simbolo: imgSrc('arquivos/legendas/icones/terminal-onibus-existentes.png'), descricao: 'Terminal de Ônibus' },
+					{ simbolo: src('arquivos/legendas/icones/linha-de-metro.png'), descricao: 'Linha Metrô' },
+					{ simbolo: src('arquivos/legendas/icones/cptm-estacoes.png'), descricao: 'Estação CPTM' },
+					{ simbolo: src('arquivos/legendas/icones/metro-estacoes.png'), descricao: 'Estação Metrô' },
+					{ simbolo: src('arquivos/legendas/icones/terminal-onibus-existentes.png'), descricao: 'Terminal de Ônibus' },
 					{ borda: '#000', espessura: 3, pontilhado: true, descricao: 'Perímetro de Intervenção' },
 					{ fundo: '#E4D9C5', descricao: '0 - 400' },
 					{ fundo: '#D2BEB7', descricao: '400 - 800' },
@@ -1023,7 +1092,7 @@
 					<td>Preço do potencial construtivo adicional</td>
 				</tr>
 				<tr>
-					<td>Lapa-Freguesia</td>
+					<td>Lapa/Freguesia</td>
 					<td>1.572</td>
 					<td>479</td>
 				</tr>
@@ -1059,7 +1128,7 @@
 					<td>Conservador</td>
 				</tr>
 				<tr>
-					<td>Lapa-Freguesia</td>
+					<td>Lapa/Freguesia</td>
 					<td>420.303</td>
 					<td>1.260.071</td>
 					<td>479</td>
@@ -1094,22 +1163,22 @@
 			<p class="grafico__nota">Fonte: Geoinfo/SMDU. Elaboração: SP-Urbanismo.</p>
 
 			<p>Para compreendermos se os valores de terreno para fins de Outorga Onerosa e o preço do potencial construtivo adicional não estejam subdimensionados, ou seja, compatíveis com as realidades de mercado, foi realizado um estudo comparando o preço do Potencial Construtivo Adicional com o preço de venda da unidade e os demais custos enfrentados pelo incorporador imobiliário.</p>
-			<p>Para essa avaliação, foram elaboradas simulações de 15 empreendimentos-tipo residenciais e não residenciais, seguindo os parâmetros urbanísticos das Áreas de Transformação, Qualificação e Preservação e preços médios de venda do metro quadrado praticados na região, que variam de R$8750,00/m² na Lapa-Freguesia até R$7.500,00/m².</p>
+			<p>Para essa avaliação, foram elaboradas simulações de 15 empreendimentos-tipo residenciais e não residenciais, seguindo os parâmetros urbanísticos das Áreas de Transformação, Qualificação e Preservação e preços médios de venda do metro quadrado praticados na região, que variam de R$8750,00/m² na Lapa/Freguesia até R$7.500,00/m².</p>
 			<p>Os resultados demonstram que dentro de Taxas Internas de Retorno praticadas pelo marcado imobiliário paulistano, a relação Outorga Onerosa/VGV não chegou a atingir 2% em nenhum dos empreendimentos simulados, ficando bem abaixo da linha referencial dos 5%, o que pode ser explicado pela adoção de uma base de cálculo de preços de terreno bastante defasada.</p>
 			<p>Portanto, frente aos resultados financeiros apresentados, considerando o preço de venda observado na região e as margens de viabilidade reveladas pelas simulações dos empreendimentos, conclui-se que o preço do potencial construtivo adicional tem ampla margem para ser majorado, melhorando os resultados para os perímetros de intervenção. Tais atualizações deverão ser alvo do desdobramento dos estudos técnicos do PIU Arco Tietê nas próximas etapas.</p>
 
-			<h3>Oportunidades de Utilização do Instrumento Operação Urbana Consorciada</h3>
+			<h3>Oportunidades de utilização do instrumento operação urbana consorciada</h3>
 			<p>Apesar da modelagem econômico-financeira realizada até esta etapa de desenvolvimento do PIU Arco Tietê basear-se na utilização da Outorga Onerosa como ferramenta de acesso ao potencial construtivo adicional, dentro de Áreas de Intervenção Urbana (AIU), uma das questões reveladas ao longo dos estudos foi a possibilidade de alienação do estoque via leilões de CEPAC, os Certificados de Potencial Adicional de Construção. Se assim for, o instrumento de reordenamento urbanístico a ser utilizado, de acordo com as definições do Art. 134 do PDE, passa a ser a Operação Urbana Consorciada (OUC). Para tanto, é necessário estabelecer premissas que uma região precisaria ter, necessariamente, para apresentar um ambiente favorável ao surgimento de uma OUC.</p>
 			<p>Foram escolhidas três premissas para apresentação de condições necessárias para instalação de uma OUC: (i) a existência de áreas transformáveis no perímetro de desenvolvimento, (ii) a possibilidade de majoração do potencial construtivo e, por fim, (iii) a existência de atratividade do mercado imobiliário para atuação na região.</p>
 			<p>No primeiro caso, trata-se do conceito de áreas transformáveis para instalação de novos empreendimentos, que consomem potencial construtivo além do básico. Os estudos urbanísticos e os dados de oferta demonstraram que existe uma ampla margem para transformação nos três perímetros de intervenção e, considerando a valorização da região promovida por uma OUC, novos terrenos poderão também ser vistos como possibilidades de incorporação, mesmo que seu uso seja valorizado.</p>
 			<p>No segundo caso, a majoração do potencial construtivo pode também ser interpretada como a intensificação do uso do solo urbano, possibilitada a partir da provisão de novas infraestruturas o que, por sua vez, possibilitaria o aumento do suporte para maiores densidades. Nos três perímetros de intervenção foi proposto o incremento de áreas verdes e da rede de mobilidade urbana, com destaque para a Lapa, que também receberá novas estações de Metrô planejadas. Esse conjunto de melhorias associado ao aumento do potencial construtivo traria uma nova frente de expansão com terrenos que apresentariam melhor eficiência na produção imobiliária.</p>
 			<p>Por fim, a existência de atratividade do mercado imobiliário corresponde tanto ao comportamento da produção imobiliária interna ao perímetro e no seu entorno, mas também diz respeito às condições urbanísticas, como a qualidade urbana e o interesse da população em morar na região e a possibilidade de desenvolvimento de novos polos comerciais e de serviço. Embora as duas premissas anteriores também devam ser verificadas, com diferentes intensidades, para a implantação de uma AIU, a alta atratividade ao mercado imobiliário cria condições excepcionais para a alienação de potencial construtivo via CEPAC, uma vez que os leilões podem capturar esse interesse já existente, antecipando os recursos que serão investidos em melhorias públicas no território.</p>
-			<p>Dentro os três Perímetros de Intervenção apresentados, os estudos atualmente em curso apontam que o perímetro Lapa-Freguesia é aquele com maior potencial para implantação de uma OUC, definição que será apresentada e debatida publicamente nas próximas etapas do PIU Arco Tietê.</p>
+			<p>Dentro os três Perímetros de Intervenção apresentados, os estudos atualmente em curso apontam que o perímetro Lapa/Freguesia é aquele com maior potencial para implantação de uma OUC, definição que será apresentada e debatida publicamente nas próximas etapas do PIU Arco Tietê.</p>
 		</section>
 
 		<section>
-			<h2 class="titulo" indent="1">Modelo de Gestão Democrática e Plano de Implantação</h2>
-			<h3>Modelo de Gestão Democrática</h3>
+			<h2 class="titulo" indent="1">Modelo de gestão democrática e plano de implantação</h2>
+			<h3>Modelo de gestão democrática</h3>
 			<imagem
 				:dados="{
 					tipo: 'coluna',
@@ -1131,9 +1200,9 @@
 			<p>Adicionalmente aos representantes desses órgãos consti¬tuídos, poderão integrar o Grupo Gestor entidades da so¬ciedade civil apontadas nas audiências públicas no curso da discussão do projeto.</p>
 			<p>A atuação do Conselho Gestor deverá prever a articulação com os Conselhos Gestores de ZEIS, cuja constituição será exigida, por meio de atuação da SEHAB, na etapa de elaboração dos Planos de Urbanização ou Projetos de Intervenção de sua competência no âmbito dos respectivos perímetros, bem como deliberar acerca das intervenções destes decorrentes para o território ao qual estão vinculados em momento futuro, quando regu¬lamentada a intervenção.</p>
 
-			<h3>9.1 Modelo de Gestão Democrática</h3>
-			<p>Para faseamento da implantação das intervenções definidas pelo PIU Arco Tietê, deverão ser elaboradas Propostas de Diretrizes de Investimento - PDI, correspondentes a grupos de intervenções públicas específicas territorializadas, sele¬cionadas do Programa de Intervenções, abrangendo um conjunto orgânico de ações previstas para uma parcela de¬finida do território de projeto ou a solução de um problema específico no âmbito do PIU – por exemplo, provisão de creches.</p>
-			<p>As Propostas de Diretrizes de Investimento- PDI serão elaboradas pela SP-Urbanismo, responsável pela implantação do PIU Arco Tietê, e serão submetidas ao Conselho Gestor, a quem caberá acompanhar e deliberar sobre as prioridades de implantação desses planos.</p>
+			<h3>Plano de implantação</h3>
+			<p>Para faseamento da implantação das intervenções definidas pelo PIU Arco Tietê, deverão ser elaboradas Propostas de Diretrizes de Investimento - PDI, correspondentes a grupos de intervenções públicas específicas territorializadas, selecionadas do Programa de Intervenções, abrangendo um conjunto orgânico de ações previstas para uma parcela definida do território de projeto ou a solução de um problema específico no âmbito do PIU – por exemplo, provisão de creches.</p>
+			<p>As Propostas de Diretrizes de Investimento - PDI serão elaboradas pela SP-Urbanismo, responsável pela implantação do PIU Arco Tietê, e serão submetidas ao Conselho Gestor, a quem caberá acompanhar e deliberar sobre as prioridades de implantação desses planos.</p>
 		</section>
 
 		<section>
@@ -1164,7 +1233,7 @@
 			</p>
 			<p>
 				<b>Modelagem Econômica</b><br>
-				Alan Americo da Silva (estágio)<br>
+				Alan Americo da Silva<br>
 				Allan Martino Matos<br>
 				Bruno Martins Hermann<br>
 				Gabriel Vasquez Rodriguez<br>
@@ -1463,7 +1532,7 @@ export default {
 @import '../oldstylestoprint';
 
 table {
-	margin-bottom: 0
+	margin-bottom: 1rem;
 }
 
 .formula {
@@ -1477,5 +1546,17 @@ table {
 	font-family: $grotesca;
 	padding: 1rem 0 0;
 	text-align: center;
+}
+
+.titulo--grafico {
+	padding: 0
+}
+
+.centralizado {
+	text-align: center
+}
+
+.row--dark {
+	background-color: $cinza-3;
 }
 </style>

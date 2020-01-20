@@ -21,7 +21,7 @@
 					<p>Transformação do uso e ocupação do solo, com perda da relevância da atividade industrial em direção ao uso residencial e comercial vertical, resultando na disponibilidade de lotes e glebas para o desenvolvimento urbano;</p>
 				</div>
 				<div id="g-ai0-4" class="g-Textos g-aiAbs" style="top:25.1295%;left:51.714%;width:21.2857%;">
-					<p>Oferta de infraestrutura de transporte público de alta e média capacidade (estações Água Branca e Lapa da CPTM; corredor de ônibus Pirituba/Lapa/Centro;terminal de ônibus; futura Linha 6 do Metrô, em obras) em contraste com a baixa densidade populacional;</p>
+					<p>Oferta de infraestrutura de transporte público de alta e média capacidade (estações Água Branca e Lapa da CPTM; corredor de ônibus Pirituba/Lapa/Centro; terminal de ônibus; futura Linha 6 do Metrô, em obras) em contraste com a baixa densidade populacional;</p>
 				</div>
 				<div id="g-ai0-5" class="g-Textos g-aiAbs" style="top:25.1295%;left:76.814%;width:21.2857%;">
 					<p>Presença de um importante polo de equipamentos públicos de porte regional (Terminal Rodoviário, Poupatempo, Mercado da Lapa, Subprefeitura da Lapa, Tendal da Lapa e Junta Comercial do Estado de São Paulo, sendo muitos deles edifícios tombados).</p>

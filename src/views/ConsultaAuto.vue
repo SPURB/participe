@@ -54,10 +54,19 @@ export default {
 						cId++
 						return cId
 					}
-					let processedHtml = response.data[0].conteudo_html.replace(/<hr class="commentbox fa fa-comments" title="(.*?)">/g, function(x){
+					let maisRecente = 0;
+					for(let i = 0; i < response.data.length; i++) {						
+						if(new Date(response.data[i].data_alteracao) > new Date(response.data[maisRecente].data_alteracao)) {
+							maisRecente = i;
+						}
+					}					
+
+					let processedHtml = response.data[maisRecente].conteudo_html.replace(/<hr class="commentbox fa fa-comments" title="(.*?)">/g, function(x){
 						let context = x.replace(/<hr class="commentbox fa fa-comments" title="(.*?)">/g, "$1");
 						return '<Comments :attr="{id:\'' + cId++ + '\', context:\''+context+'\'}" v-if="'+estaConsulta.ativo+'"></Comments>'
 					})
+					// Formata itens de anexo
+					processedHtml = processedHtml.replace(/class="anexo"><span class="fa fa-paperclip">/g, 'class="anexo"><span class="fa fa-paperclip"><i class="icon icon-pdf"></i>')
 					// Corrige títulos
 					processedHtml = processedHtml.replace(/<h1([\s\S]*?)>/g, '<h1>').replace(/<h2([\s\S]*?)>/g, '<h2>')
 
@@ -71,7 +80,7 @@ export default {
 					processedHtml = processedHtml.replace(/<o:p>|<\/o:p>/g, '').replace(/w:sdt/g, 'span').replace(/spanpr/g, 'span')
 
 					app.htmlContent	= {template: '<div id="autocontent">'+h1+processedHtml+'</div>'}
-					app.ultimaAlteracao	= response.data[0].data_alteracao
+					app.ultimaAlteracao	= response.data[maisRecente].data_alteracao
 					
 					// Atualiza índice lateral (h2 e h3)
 					window.setTimeout(function() {
@@ -84,7 +93,6 @@ export default {
 								}
 							}
 						}
-						console.log(app.titulosLimpo)
 					}, 1000)
 				})
 			})
@@ -158,6 +166,21 @@ p {
 }
 table {
 	margin-left: 0px !important;
+}
+a.anexo:hover {
+    background-color: #EB5757;
+    text-decoration: none;
+    color: white;
+    box-shadow: none;
+}
+a.anexo {
+    border: 1px solid #ccc;
+    display: block;
+    padding: 1em;
+    border-radius: 5px;
+    color: black;
+    box-shadow: 2px 2px 5px #ccc;
+    width: calc(100% - 5px);
 }
 </style>
 <style lang="scss" scoped>

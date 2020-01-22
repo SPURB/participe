@@ -257,7 +257,7 @@ export default new Router({
 			name: 'ArcoTiete2',
 			component: () => import(/* webpackChunkName: "ArcoTiete2" */ '@/views/ArcoTiete2'),
 			meta: {
-				id: 62
+				id: 64
 			}
 		},
 		{

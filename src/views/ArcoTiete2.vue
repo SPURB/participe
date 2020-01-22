@@ -16,7 +16,7 @@
 
 			<p>Nos estudos iniciais do Projeto de Intervenção Urbana Arco Tietê (PIU Arco Tietê) apresentados na Primeira Consulta Pública – Diagnóstico e Programa de Interesse Público – foram analisados os dados de todo território originalmente definido pelo Plano Diretor Estratégico (PDE) – Lei Municipal nº 16.050/2014 - como Subsetor Arco Tietê (5.380ha). No decorrer dos estudos, a constatação da sobreposição de perímetros de projetos, como a Operação Urbana Consorciada Água Branca, o PIU Anhembi, o PIU Setor Central e o PIU Parque Minhocão, e da existência de novos marcos regulatórios conduziram à adoção de uma nova estratégia de abordagem para o território. Esta nova abordagem tem como estratégia ações concentradas em porções do novo território do Arco Tietê, agora com 3.524 ha.</p>
 
-			<p>Esta Segunda Consulta Pública, que se inicia em <mark>00 de janeiro de 2019</mark> com término previsto para o dia <mark>00 de fevereiro de 2019</mark>, apresenta a proposição preliminar dos <strong>Perímetros de Intervenção, de um Programa de Intervenções e Parâmetros Urbanísticos convergentes com a modelagem econômica e considerando um modelo de gestão democrática.</strong></p>
+			<p>Esta Segunda Consulta Pública, que se inicia em 22 de janeiro de 2019 com término previsto para o dia 20 de março de 2019, apresenta a proposição preliminar dos <strong>Perímetros de Intervenção, de um Programa de Intervenções e Parâmetros Urbanísticos convergentes com a modelagem econômica e considerando um modelo de gestão democrática.</strong></p>
 
 			<p>O Processo de elaboração do PIU Arco Tietê segue os passos dispostos no Decreto Municipal n° 56.901/2016 e, desta forma, as contribuições a serem colhidas nesta consulta irão colaborar para o seu aperfeiçoamento. Após consolidação, o conteúdo final do PIU e o Projeto de Lei dele resultante serão objeto de debate com a sociedade em audiências públicas, para posteriormente serem encaminhados ao Legislativo.</p>
 
@@ -259,6 +259,7 @@
 					{ borda: '#E2B79F', linha: true, espessura: 4, descricao: 'Requalificação de viário existente' },
 					{ simbolo: src('arquivos/legendas/icones/Melhorias-passeios-existentes.png'), descricao: 'Melhorias dos passeios existentes' },
 					{ borda: '#FF4711', linha: true, espessura: 4, descricao: 'Transposições não motorizadas' },
+					{ borda: '#711912', linha: true, espessura: 4, descricao: 'Transposições motorizadas' },
 					{ borda: '#DC0037', espessura: 1, pontilhado: true, descricao: 'Ciclovias e Ciclofaixas' }
 				],
 				fonte: 'Elaboração: SP-Urbanismo, 2020'
@@ -338,7 +339,8 @@
 					{ simbolo: src('arquivos/legendas/icones/Alargamento-Viario-Existente.png'), descricao: 'Alargamento de viário existente' },
 					{ borda: '#E2B79F', linha: true, espessura: 4, descricao: 'Requalificação de viário existente' },
 					{ simbolo: src('arquivos/legendas/icones/Melhorias-passeios-existentes.png'), descricao: 'Melhorias dos passeios existentes' },
-					{ borda: '#FF4711', linha: true, espessura: 4, descricao: 'Transposições' },
+					{ borda: '#FF4711', linha: true, espessura: 4, descricao: 'Transposições não motorizadas' },
+					{ borda: '#711912', linha: true, espessura: 4, descricao: 'Transposições motorizadas' },
 					{ borda: '#DC0037', espessura: 1, pontilhado: true, descricao: 'Ciclovias e Ciclofaixas' },
 					{ fundo: '#7AA555', descricao: 'Áreas verdes novas' },
 					{ simbolo: src('arquivos/legendas/icones/Requalificacao-areas-verdes-existentes.png'), descricao: 'Requalificação de áreas verdes existentes' },
@@ -348,7 +350,7 @@
 					{ borda: '#00D5CF', espessura: 1, pontilhado: true, descricao: 'Canteiros drenantes' },
 					{ fundo: '#9E71AB', descricao: 'Equipamentos em edifícios de valor histórico' },
 					{ simbolo: src('arquivos/legendas/icones/Novos-equipamentos.png'), descricao: 'Novos Equipamentos' },
-					{ simbolo: src('arquivos/legendas/icones/Intervencao-assentamento-precario.png'), descricao: 'Intervenção integrada em assentamentos precários' },
+					{ simbolo: src('arquivos/legendas/icones/intervencao-assentamento-precario.png'), descricao: 'Intervenção integrada em assentamentos precários' },
 					{ simbolo: src('arquivos/legendas/icones/provisao-moradia.png'), descricao: 'Áreas potenciais de cota de solidariedade' },
 					{ simbolo: src('arquivos/legendas/icones/cota-solidariedade.png'), descricao: 'Áreas para provisão de moradia' },
 					{ simbolo: src('arquivos/legendas/icones/linha-alta-tensao.png'), descricao: 'Remanejamento de linha de alta tensão' },
@@ -453,7 +455,42 @@
 			<p>Nos imóveis enquadrados como Zonas Especiais de Interesse Social (ZEIS 1 e 3) pelo zoneamento, inseridos nos perímetros de Projetos Estratégicos, aplicam-se os parâmetros e disposições instituídos para as referidas zonas de uso pelo PDE, tais como destinação de percentuais mínimos de área construída total para HIS e necessidade de constituição de Conselhos Gestores, no momento de elaboração dos Planos de Urbanização ou Projetos de Intervenção.</p>
 			<p>Abaixo, são identificados os Projetos Estratégicos (18), distribuídos da seguinte forma: Lapa/Freguesia (9), Limão/Casa Verde (1) e Santana/Vila Guilherme (8), e na sequência junto aos respectivos Perímetros de Intervenção as questões que justificaram sua demarcação, objetivos, incentivos e contrapartidas.</p>
 
-			<p class="todo">MAPA projetos estratégicos</p>
+			<imagem :dados="{
+				tipo: 'mapa',
+				titulo: 'Projetos Estratégicos',
+				url: src('arquivos/arco-tiete-2/mapas/mapa12_projetos-estrategicos.jpg'),
+				legenda: [
+					{ fundo: '#BACCA8', descricao: 'Parque, praças e canteiros' },
+					{ fundo: '#6CB5D5', descricao: 'Hidrografia' },
+					{ simbolo: src('arquivos/legendas/icones/ferrovia.png'), descricao: 'Ferrovia' },
+					{ simbolo: src('arquivos/legendas/icones/linha-de-metro.png'), descricao: 'Linha Metrô' },
+					{ simbolo: src('arquivos/legendas/icones/cptm-estacoes.png'), descricao: 'Estação CPTM' },
+					{ simbolo: src('arquivos/legendas/icones/metro-estacoes.png'), descricao: 'Estação Metrô' },
+					{ simbolo: src('arquivos/legendas/icones/terminal-onibus-existentes.png'), descricao: 'Terminal de Ônibus' },
+					{ borda: '#000', espessura: 3, pontilhado: true, descricao: 'Perímetro de Intervenção' },
+					{ borda: '#B2000E', espessura: 3, pontilhado: true, descricao: 'Projetos Estratégicos' },
+					{ char: '1', descricao: 'Abril' },
+					{ char: '2', descricao: 'Rua da Balsa' },
+					{ char: '3', descricao: 'Trivelato' },
+					{ char: '4', descricao: 'Bento Bicudo' },
+					{ char: '5', descricao: 'Engenheiro Fox' },
+					{ char: '6', descricao: 'CDC Mauro Bezerra' },
+					{ char: '7', descricao: 'Santa Marina' },
+					{ char: '8', descricao: 'Guaicurus' },
+					{ char: '9', descricao: 'Patio da Lapa' },
+					{ char: '10', descricao: 'Lapo' },
+					{ char: '11', descricao: 'Carandiru' },
+					{ char: '12', descricao: 'DEIC' },
+					{ char: '13', descricao: 'IPREM' },
+					{ char: '14', descricao: 'Mart Center' },
+					{ char: '15', descricao: 'São Quirino' },
+					{ char: '16', descricao: 'João Veloso' },
+					{ char: '17', descricao: 'Nadir Figueiredo' },
+					{ char: '18', descricao: 'Morvan' },
+					{ char: '19', descricao: 'Morvan II' }
+				],
+				fonte: 'Embraesp. Elaboração: SP-Urbanismo.'
+			}"></imagem>
 
 			<h3 class="titulo" indent="2">Perímetro Lapa/Freguesia</h3>
 			<layer-explorer :data="{
@@ -873,11 +910,19 @@
 				<tr>
 					<th colspan="7">Projeção de área privativa média anual e acumulado de 20 anos (m²)</th>
 				</tr>
-				<tr>
-					<td>Perímetro</td>
+				<tr class="row--dark">
+					<td rowspan="2">Perímetro</td>
 					<td colspan="2">Média anual</td>
-					<td colspan="2">Conservador</td>
-					<td colspan="2"><br>Otimista</td>
+					<td colspan="2">Acumulado 20 anos</td>
+					<td colspan="2">Participação (%)</td>
+				</tr>
+				<tr class="row--dark">
+					<td>Conservador</td>
+					<td>Otimista</td>
+					<td>Conservador</td>
+					<td>Otimista</td>
+					<td>Conservador</td>
+					<td>Otimista</td>
 				</tr>
 				<tr>
 					<td>Lapa/Freguesia</td>
@@ -898,7 +943,7 @@
 					<td>15</td>
 				</tr>
 				<tr>
-					<td>Santana-V ila Guilherme</td>
+					<td>Santana-Vila Guilherme</td>
 					<td>9.279</td>
 					<td>26.987</td>
 					<td>185.572</td>
@@ -906,7 +951,7 @@
 					<td>19</td>
 					<td>20</td>
 				</tr>
-				<tr>
+				<tr class="row--dark">
 					<td>Total</td>
 					<td>49.552</td>
 					<td>137.280</td>
@@ -999,13 +1044,12 @@
 				<tr class="row--dark">
 					<td rowspan="2">Perímetro</td>
 					<td colspan="2">Demanda (m²)</td>
-					<td>Oferta (%)</td>
+					<td rowspan="2">Oferta (%)</td>
 					<td colspan="2">Consumo (%)</td>
 				</tr>
 				<tr class="row--dark">
 					<td>Conservador</td>
 					<td>Otimista</td>
-					<td></td>
 					<td>Conservador</td>
 					<td>Otimista</td>
 				</tr>
@@ -1081,7 +1125,7 @@
 				<tr>
 					<th colspan="3">Valor de cadastro de terreno e preço do potencial construtivo adicional</th>
 				</tr>
-				<tr>
+				<tr class="row--dark">
 					<td>Perímetro</td>
 					<td>Cadastro de valor de terreno para fins de Outorga Onerosa (R$/m²)</td>
 					<td>Preço do potencial construtivo adicional</td>
@@ -1110,17 +1154,17 @@
 				<tr>
 					<th colspan="6">Projeção inicial de receita segundo perímetros e cenários</th>
 				</tr>
-				<tr>
+				<tr class="row--dark">
 					<td rowspan="2">Perímetro</td>
 					<td colspan="2">Potencial construtivo adicional (m²)</td>
 					<td rowspan="2">Preço do PCA (R$/m²)</td>
 					<td colspan="2">Receita (R$)</td>
 				</tr>
-				<tr>
-					<td>Otimista</td>
+				<tr class="row--dark">
 					<td>Conservador</td>
 					<td>Otimista</td>
 					<td>Conservador</td>
+					<td>Otimista</td>
 				</tr>
 				<tr>
 					<td>Lapa/Freguesia</td>
@@ -1146,7 +1190,7 @@
 					<td>46.730.755</td>
 					<td>135.916.512</td>
 				</tr>
-				<tr>
+				<tr class="row--dark">
 					<td>Total</td>
 					<td>712.154</td>
 					<td>1.961.998</td>

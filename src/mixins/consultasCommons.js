@@ -1,5 +1,8 @@
 export const consultasCommons = {
-	computed: { commentsLoaded () { return this.$store.state.commentsLoaded } },
+	computed: {
+		commentsLoaded () { return this.$store.state.commentsLoaded },
+		consultaAtiva () { return parseInt(this.estaConsulta.ativo) === 1 }
+	},
 	created () {
 		this.$store.dispatch('fetchConsultas', { self: this })
 		this.consultas = this.$store.state.consultas

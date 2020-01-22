@@ -10,7 +10,7 @@
 		<btn-fixed-url :url="src('mapas/piu-arco-tiete-2/')" :text="'MAPA INTERATIVO'"/>
 		<section>
 			<h2 class="titulo" indent="1">Apresentação</h2>
-			<Comments :attr="{ id:commentId(true), context:'Apresentação' }" v-if="parseInt(estaConsulta.ativo) === 1"></Comments>
+			<Comments :attr="{ id:commentId(true), context:'Apresentação' }" v-if="consultaAtiva"></Comments>
 
 			<p>A Prefeitura do Município de São Paulo, por intermédio da Secretaria Municipal de Desenvolvimento Urbano (SMDU) e da São Paulo Urbanismo (SPUrbanismo) apresenta proposta de Projeto de Intervenção Urbana (PIU) para o subsetor Arco Tietê, da Orla Ferroviária e Fluvial da Macroárea de Estruturação Metropolitana (MEM), o qual estabelece objetivos, diretrizes, estratégias e mecanismos para a implantação das intervenções. </p>
 
@@ -68,6 +68,7 @@
 
 			<escalas :bgSrc320="src('arquivos/arco-tiete-2/Escalas-320.jpg')" :bgSrc700="src('arquivos/arco-tiete-2/Escalas-700.jpg')"/>
 
+			<Comments :attr="{ id:commentId(), context:'Uma nova abordagem para o Arco Tietê' }" v-if="consultaAtiva"></Comments>
 		</section>
 
 		<section>
@@ -121,10 +122,12 @@
 
 			<h3 class="titulo--grafico">Perímetro Limão/Casa Verde</h3>
 			<perimetro-info-limao :bgSrc="src('arquivos/arco-tiete-2/Infograficos_perimetros-limao.jpg')" />
+			<Comments :attr="{ id:commentId(), context:'Perímetros de intervenção' }" v-if="consultaAtiva"></Comments>
 		</section>
 
 		<section>
 			<h2 class="titulo" indent="1">Localização estratégica</h2>
+
 			<p>A planície do Rio Tietê teve um papel relevante no processo de urbanização do território metropolitano ao acolher um conjunto de infraestruturas de transporte que modificou estruturalmente o meio físico, qualificando-o para recepcionar, inicialmente, a atividade industrial e, posteriormente, a instalação de grandes centros comerciais horizontais associados às mudanças na localização da indústria em escala macrometropolitana. Tanto a chegada das rodovias, como as ocupações extensivas resultaram em um território com glebas com baixos índices de ocupação e grandes quadras com extensas áreas impermeabilizadas, deficitário do ponto de vista da mobilidade, carente de drenagem e de saneamento, definido como um território de urbanização incompleta.</p>
 			<p>Nesse contexto, a ausência de diversidade de usos, a possibilidade de adensamento populacional, a degradação física ambiental da área de várzea e o isolamento das margens direita e esquerda do Rio Tietê configuram os principais desafios do PIU em desenvolvimento. Por outro lado, o reconhecimento do Arco Tietê como um território estratégico de transição entre a cidade urbanizada e o Rio Tietê, integrando a área de várzea ao tecido urbano consolidado e, ao mesmo tempo, promovendo a conexão de eixos estruturadores de mobilidade, definem os objetivos a serem alcançados.</p>
 			<p>Considerando um processo de recuperação gradual e multidisciplinar, o PIU Arco Tietê adota a  estratégia de preparar o território para que no futuro a cidade possa se aproximar de forma integrada e qualitativa do rio. A proposta de construção de novas vias internas aos bairros, como os apoios urbanos, somada a outros melhoramentos implantados na região da macrometrópole,como o rodoanel, contribuirão para reconquista das margens do rio em longo prazo.</p>
@@ -203,10 +206,12 @@
 			<p>Ao observarmos como os 4 elementos se associam, é possível perceber que as propostas complementam a estrutura urbana existente de diferentes formas: nos perímetros Lapa/Freguesia e Limão-Casa Verde, eles estabelecem costuras na direção Nortes-Sul, aproximando as margens direita e esquerda do Rio Tietê. Já no perímetro Santana-Vila Guilherme, as costuras na direção Leste-Oeste respondem às principais demandas de integração entre os bairros.</p>
 			<p>Entende-se os perímetros de intervenção como porções prioritárias do território do Arco Tietê destinadas à reestruturação, transformação, recuperação e melhoria ambiental, onde se promova: uma ocupação mais intensa, qualificada, inclusiva do espaço urbano; o desenvolvimento econômico, a racionalização da infraestrutura; a preservação dos sistemas ambientais e soluções para as necessidades habitacionais tanto em relação à precariedade habitacional e urbana quanto as dinâmicas econômicas e de crescimento demográfico.</p>
 			<p>A partir deste contexto, dentre os instrumentos urbanísticos, definidos pelo PDE (§5°, Art. 134 - PDE) - Operações Urbanas Consorciadas (OUC), Concessão Urbanística, Áreas de Intervenção Urbana (AIU) e Áreas de Estruturação Local (AEL) - os instrumentos urbanísticos AIU e  OUC  apresentam maior aderência à implementação das propostas do PIU Arco Tietê. Caberá ao modelo de financiamento da intervenção validar a adoção dos instrumentos e, consequentemente, qual o mecanismo de gestão ambiental necessário para sua realização.</p>
+			<Comments :attr="{ id:commentId(), context:'Localização estratégica' }" v-if="consultaAtiva"></Comments>
 		</section>
 
 		<section>
 			<h2 class="titulo" indent="1">Programa de intervenções</h2>
+
 			<p>A definição de um Programa de Intervenções preliminar tem por objetivo apresentar ações capazes de assegurar o saneamento das fragilidades presentes no território, bem como a implantação de infraestrutura de suporte à transformação pretendida, de modo a consolidar em ações de projeto os conceitos almejados pelo PIU e assim garantir a qualidade de vida nos bairros e potencializar o papel do território por meio do melhor aproveitamento da terra.</p>
 			<p>Desta forma, as ações propostas constituirão redes estruturadoras da transformação classificadas nos diferentes sistemas:</p>
 			<ul>
@@ -380,6 +385,7 @@
 			<p>Desta forma, a implantação de caminhos verdes que proporcionarão a conexão e formarão uma rede, também são propostos no sentido leste-oeste nas seguintes vias: Rua Santa Eulália e Av. Zakii Narchi, Rua Gal. Pedro Leon Schneider e Gal. Ataliba Leonel; Rua José Duran e Rua São Querino (trecho Apoio Urbano Norte); Travessa Simis e Rua Santo Basílico, Rua José Bernardo Pinto.</p>
 			<p>Como o Córrego da Divisa está despoluído, no trecho aberto da Av. Nadir Dias de Figueiredo, tem-se como objetivo sua integração à paisagem urbana permitindo a aproximação da população ao córrego e integrando-o à rede ambiental. Desta forma, mantendo-se a largura atual do fundo do canal, remanejando a área destinada a estacionamento de veículos do viário existente poderá ser implantada faixa para arborização, integrando-o à nova área verde a ser implantada na área lindeira.</p>
 			<p>O Córrego Carandiru/Carajás está canalizado e fechado a partir de sua nascente até o Parque da Juventude, a partir de onde se encontra canalizado em seção aberta, até sua foz no Rio Tietê.  Como forma de mitigar problemas de drenagem o PIU Arco Tietê propõe a implantação de uma nova área verde junto ao Córrego Carandiru, que consiste em uma intervenção intersetorial, envolvendo a provisão de moradias, novos eixos viários e alargamentos que ocorrem na Rua R. Urupiara com Zachi Narchi e nas proximidades das R. Palmeia e Cel. Antonio de Carvalho, e a oferta de novas áreas verdes, incluindo uma praça de absorção, essencial para drenagem urbana.</p>
+			<Comments :attr="{ id:commentId(), context:'Programa de intervenções' }" v-if="consultaAtiva"></Comments>
 		</section>
 
 		<section>
@@ -778,9 +784,11 @@
 				<li>P3 - As áreas ao redor do Parque da Juventude são classificadas pela LPUOS como Zonas de Ocupação Especial (ZOE). São áreas basicamente ocupadas por grandes equipamentos públicos, de ocupação horizontal, sem impacto da paisagem. O que se pretende, no PIU, é atribuir parâmetros à ZOE, de forma a garantir a unidade de paisagem do Parque da Juventude e seus lotes e glebas confrontantes; </li>
 			</ul>
 			<galeria :gallery_attrs="galeriaProjetosEstrategicos3" />
+			<Comments :attr="{ id:commentId(), context:'Regramento urbanístico e projetos estratégicos' }" v-if="consultaAtiva"></Comments>
 		</section>
 		<section>
 			<h2 class="titulo" indent="1">Instrumentos de gestão ambiental</h2>
+
 			<p>O PIU tem o papel de promover o ordenamento e a reestruturação urbana em áreas subutilizadas e com potencial de transformação, preferencialmente localizadas na MEM, para melhor aproveitamento da terra urbana e consequente aumento nas densidades construtivas e demográficas, implantação de novas atividades econômicas e emprego e atendimento às necessidades de habitação e de equipamentos às necessidades da população (Art. 134 – PDE).</p>
 			<p>Uma vez que os Perímetros de Intervenção propostos pelo PIU Arco Tietê incidem sobre as áreas que compõem a várzea do Rio Tietê, o grande desafio deste PIU é interromper o processo de degradação físico e ambiental da área e promover uma transformação urbana que garanta a recuperação da qualidade ambiental, através da compatibilização de usos e tipologias de parcelamento do solo urbanos com condicionantes geológica-geotécnicas e hidrológicas, em consonância com os objetivos específicos propostos pelo PDE para o Setor Orla Ferroviária e Fluvial da Macroárea de Estruturação Metropolitana- MEM.</p>
 			<p>Como anteriormente mencionado, a área da várzea do rio, inicialmente ocupada por loteamentos industriais, apresenta quadras de grandes dimensões e extensas áreas impermeabilizadas, atividade que ao longo dos anos provocou a contaminação do solo, como demonstrado no Diagnóstico através das informações de cadastro da CETESB.  Neste sentido, busca-se que o processo de transformação orientado pelo regramento proposto pelo PIU Arco Tietê seja capaz de qualificar o território mitigando problemas ambientais decorrentes deste modelo de ocupação: alagamentos, inundações e ilhas de calor.</p>
@@ -789,6 +797,7 @@
 			<p>Busca-se, assim, reafirmar o compromisso de adequar as densidades propostas em função do programa de intervenções e da perspectiva de uma transformação concentrada, mais coerente com a diretriz de se construir uma cidade mais compacta.</p>
 			<p>De modo geral, a expectativa é que a densidade, que antes era considerada baixa nos três Perímetros de Intervenção, inferior inclusive à média do Município – em torno de 74 hab/ha – convirja para a média no caso de Santana-Vila Guilherme (de 58 para 79 hab/ha). Nos casos da Lapa/Freguesia (60 hab/ha em 2017) e do Limão-Casa Verde (67 hab/ha em 2017), o incremento populacional praticamente dobrará a densidade, que ficará em torno de 127 e 136 hab/ha,  respectivamente.</p>
 			<p>O reequilíbrio da oferta de potencial construtivo adicional, que passa a estar associado às melhorias de infraestrutura urbana, busca promover a chegada de novos moradores em áreas bem servidas de infraestrutura urbana, correspondendo a um aumento das respectivas densidades populacionais.  Ou seja, o incremento de cerca de 81 mil novos moradores estimado pelo PIU para os três Perímetros de Intervenção é um movimento que acompanha a implantação de novas infraestruturas urbanas que darão suporte a intensificação do uso do solo.</p>
+			<Comments :attr="{ id:commentId(), context:'Instrumentos de gestão ambiental' }" v-if="consultaAtiva"></Comments>
 		</section>
 
 		<section>
@@ -821,6 +830,7 @@
 					caption: 'Programa de Intervenções – Estimativa de Custos. Elaboração: SP-Urbanismo 2020'
 				}"
 			/>
+			<Comments :attr="{ id:commentId(), context:'Custos da intervenção' }" v-if="consultaAtiva"></Comments>
 		</section>
 
 		<section>
@@ -1213,6 +1223,7 @@
 			<p>No segundo caso, a majoração do potencial construtivo pode também ser interpretada como a intensificação do uso do solo urbano, possibilitada a partir da provisão de novas infraestruturas o que, por sua vez, possibilitaria o aumento do suporte para maiores densidades. Nos três perímetros de intervenção foi proposto o incremento de áreas verdes e da rede de mobilidade urbana, com destaque para a Lapa, que também receberá novas estações de Metrô planejadas. Esse conjunto de melhorias associado ao aumento do potencial construtivo traria uma nova frente de expansão com terrenos que apresentariam melhor eficiência na produção imobiliária.</p>
 			<p>Por fim, a existência de atratividade do mercado imobiliário corresponde tanto ao comportamento da produção imobiliária interna ao perímetro e no seu entorno, mas também diz respeito às condições urbanísticas, como a qualidade urbana e o interesse da população em morar na região e a possibilidade de desenvolvimento de novos polos comerciais e de serviço. Embora as duas premissas anteriores também devam ser verificadas, com diferentes intensidades, para a implantação de uma AIU, a alta atratividade ao mercado imobiliário cria condições excepcionais para a alienação de potencial construtivo via CEPAC, uma vez que os leilões podem capturar esse interesse já existente, antecipando os recursos que serão investidos em melhorias públicas no território.</p>
 			<p>Dentro os três Perímetros de Intervenção apresentados, os estudos atualmente em curso apontam que o perímetro Lapa/Freguesia é aquele com maior potencial para implantação de uma OUC, definição que será apresentada e debatida publicamente nas próximas etapas do PIU Arco Tietê.</p>
+			<Comments :attr="{ id:commentId(), context:'Financiamento da intervenção' }" v-if="consultaAtiva"></Comments>
 		</section>
 
 		<section>
@@ -1240,6 +1251,7 @@
 
 			<p>Para faseamento da implantação das intervenções definidas pelo PIU Arco Tietê, deverão ser elaboradas Propostas de Diretrizes de Investimento - PDI, correspondentes a grupos de intervenções públicas específicas territorializadas, selecionadas do Programa de Intervenções, abrangendo um conjunto orgânico de ações previstas para uma parcela definida do território de projeto ou a solução de um problema específico no âmbito do PIU – por exemplo, provisão de creches.</p>
 			<p>As Propostas de Diretrizes de Investimento - PDI serão elaboradas pela SP-Urbanismo, responsável pela implantação do PIU Arco Tietê, e serão submetidas ao Conselho Gestor, a quem caberá acompanhar e deliberar sobre as prioridades de implantação desses planos.</p>
+			<Comments :attr="{ id:commentId(), context:'Modelo de gestão democrática e plano de implantação' }" v-if="consultaAtiva"></Comments>
 		</section>
 
 		<section>
@@ -1285,45 +1297,10 @@
 				Thomas Len Yuba<br>
 			</p>
 		</section>
-		<!-- <section>
-			<h2 class="titulo" indent="1">Comments</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magnam soluta nisi illum temporibus maiores? Fuga obcaecati cumque eos? Repudiandae minus accusamus mollitia blanditiis saepe non, eveniet sit sapiente eum.</p>
-			<Comments :attr="{id:commentId(true), context:'Apresentação'}" v-if="parseInt(estaConsulta.ativo) === 1"></Comments>
-		</section>
-
-		<section>
-			<h2 class="titulo" indent="1">CommentsContext</h2>
-			<CommentsContext :attr="{ context: 'test' }" :id="commentId()">
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident deleniti quae iure, quia recusandae eos! Recusandae culpa quod dolorum excepturi amet voluptatum perferendis doloribus, minus commodi. Dignissimos odit ipsam nam?</p>
-			</CommentsContext>
-		</section>
-
-		<section>
-			<h2 class="titulo" indent="1">CommmentsOption </h2>
-			<CommentsOption v-if="estaConsulta.ativo == 1" :options="[
-				{ id: commentId(), context: 'Edital' },
-				{ id: commentId(), context: 'Termo de referência' },
-				{ id: commentId(), context: 'Anexo I do Termo de Referência' }
-			]">
-			</CommentsOption>
-		</section> -->
-
-		<!-- <section>
-			<h3 class="titulo" indent="1">Contribua</h3>
-			<Pergunta :id="commentId()" :context='"Pergunta 1"' :postid="1">
-				<template #pergunta>
-					Quais atividades de interesse público podem funcionar no Hipódromo de Cidade Jardim fora dos períodos em que ocorrem corridas e treinamentos e preservando o patrimônio histórico e as características da vizinhança?
-				</template>
-				<template #info>
-					Info
-				</template>
-			</Pergunta>
-		</section> -->
-
 		<section ref="allComments">
 			<h2 v-show="commentsLoaded" class="titulo" indent="1">Contribuições</h2>
 			<CommentsLoader :attr="estaConsulta"></CommentsLoader>
-			<Comments v-if="commentsLoaded && parseInt(estaConsulta.ativo) === 1" :attr="{id:commentId(), context:'Comentarios'}"></Comments>
+			<Comments v-if="consultaAtiva" :attr="{id:commentId(), context:'Comentarios'}"></Comments>
 		</section>
 	</div>
 </template>
@@ -1335,9 +1312,6 @@ import Apoio from '@/components/Apoio'
 import { consultasCommons } from '@/mixins/consultasCommons'
 import { fallbacks } from '@/mixins/fallbacks'
 import Comments from '@/components/Comments'
-import CommentsContext from '@/components/CommentsContext'
-import CommentsOption from '@/components/CommentsOption'
-import Pergunta from '@/components/Pergunta'
 import CommentsLoader from '@/components/CommentsLoader'
 import BtnFixedUrl from '@/components/BtnFixedUrl'
 import Processo2 from '@/components/graf/arco-tiete-2/Processo2'
@@ -1535,10 +1509,7 @@ export default {
 	components: {
 		Comments,
 		CommentsLoader,
-		CommentsContext,
-		CommentsOption,
 		BtnFixedUrl,
-		Pergunta,
 		PageTop,
 		Indice,
 		Apoio,

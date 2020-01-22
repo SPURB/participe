@@ -71,7 +71,7 @@
 					<p class="g-pstyle7">VERSÃO COMPLETA DO PIU</p>
 				</div>
 				<div id="g-ai0-20" class="g-Camada_1 g-aiAbs" style="top:72.5024%;left:59.0186%;margin-left:-23px;width:14.375%;">
-					<p class="g-pstyle11">JAN/FEV <span class="g-cstyle0">2020</span></p>
+					<p class="g-pstyle11">JAN/MAR<span class="g-cstyle0">2020</span></p>
 				</div>
 				<div id="g-ai0-21" class="g-Camada_1 g-aiAbs" style="top:72.6266%;left:86.8805%;margin-left:-63px;width:39.375%;">
 					<p class="g-pstyle10">EM CURSO!</p>
@@ -164,7 +164,7 @@
 					<p class="g-pstyle12">EM CURSO!</p>
 				</div>
 				<div id="g-ai0-20" class="g-Camada_1 g-aiAbs" style="top:71.7377%;left:57.4876%;margin-left:-33px;width:9.4286%;">
-					<p class="g-pstyle13">JAN/FEV</p>
+					<p class="g-pstyle13">JAN/MAR</p>
 					<p class="g-pstyle14">2020</p>
 				</div>
 				<div id="g-ai0-21" class="g-Camada_1 g-aiAbs" style="top:79.3152%;left:49.8443%;margin-left:-120.5px;width:34.4286%;">

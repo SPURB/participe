@@ -22,7 +22,7 @@
     "test:e2e": "start-server-and-test serve http://localhost:8080 e2e"
   },
   "dependencies": {
-    "@spurb/fechadura": "1.0.1",
+    "@spurb/fechadura": "1.0.2",
     "axios": "0.19.1",
     "cypress": "3.8.2",
     "es6-promise": "4.2.8",

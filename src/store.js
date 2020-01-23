@@ -65,7 +65,7 @@ const store = new Vuex.Store({
 	},
 	actions: {
 		fetchConsultas ({ commit }, { self }) {
-			api.get(process.env.VUE_APP_API_URL + 'v2/' + 'consultas')
+			api.get('consultas')
 				.then(response => {
 					commit('FETCH_CONSULTAS', response.data.slice().reverse())
 					commit('FETCH_CONSULTAS_DECODE', store.state.consultas)

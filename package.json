@@ -12,6 +12,7 @@
     "build": "vue-cli-service build",
     "e2e": "cypress run",
     "lint": "vue-cli-service lint",
+    "lint:fix": "vue-cli-service lint --fix",
     "build-homolog": "vue-cli-service build --mode staging",
     "build-local": "vue-cli-service build --mode development",
     "e2e:open": "cypress open",
@@ -21,7 +22,7 @@
     "test:e2e": "start-server-and-test serve http://localhost:8080 e2e"
   },
   "dependencies": {
-    "@spurb/fechadura": "1.0.1",
+    "@spurb/fechadura": "1.0.2",
     "axios": "0.19.1",
     "cypress": "3.8.2",
     "es6-promise": "4.2.8",

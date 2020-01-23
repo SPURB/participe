@@ -33,14 +33,9 @@ export default {
 	},
 	methods: {
 		loadThisComments () {
-			let app = this
-			// const url = process.env.VUE_APP_API_URL + 'v3/members/?idConsulta=' + this.$route.meta.id + '&public=1'
-			const url = process.env.VUE_APP_API_URL + 'v2/members/?id_consulta=' + this.$route.meta.id + '&public=1'
+			const url = `${process.env.VUE_APP_API_URL}v3/members/?idConsulta=${this.$route.meta.id}&public=1`
 			api.get(url)
-				.then(response => { 
-					// app.comments = response.data
-					app.comments = response.data[0]
-				})
+				.then(response => { this.comments = response.data })
 				.catch(error => console.error(error))
 		},
 		filterDate (dataString) {

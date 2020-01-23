@@ -41,7 +41,7 @@
 			role="navigation"
 			aria-label="pagination"
 			:style="{maxWidth: gallery_attrs.width + 'px'}"
-			v-if="!toPrint"
+			v-if="displayNav"
 			>
 
 			<ul>
@@ -81,6 +81,7 @@ export default {
 	},
 	props: ['gallery_attrs'],
 	computed: {
+		displayNav () { return this.gallery_attrs.images.length > 1 && !this.toPrint },
 		isFirst () { return this.gallery_attrs.images[0].state },
 		isLast () { return this.gallery_attrs.images[this.gallery_attrs.images.length - 1].state },
 		toPrint () { return this.$store.state.toPrint },
@@ -138,7 +139,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '../variables';
-.Galeria{
+.Galeria {
 	margin: 4rem auto;
 	max-width: 992px;
 	border: 1px solid #BDBDBD;

@@ -8,9 +8,10 @@
 		<Indice :titulos="titulosLimpo"></Indice>
 		<Apoio></Apoio>
 
-		<div class="linkMapaInterativo">
+		<!-- <div class="linkMapaInterativo">
 			<a @click="abrePath('mapas/piu-arco-pinheiros-2/')">MAPA INTERATIVO <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
-		</div>
+		</div> -->
+		<btn-fixed-url :url="src('mapas/piu-arco-pinheiros-2/')" :text="'MAPA INTERATIVO'" />
 
 		<section>
 			<h2 class="titulo" indent="1">Apresentação</h2>
@@ -975,6 +976,7 @@ import Apoio from '@/components/Apoio'
 import Tabela from '@/components/Tabela'
 import Imagem from '@/components/Imagem'
 import Galeria from '@/components/Galeria'
+import BtnFixedUrl from '@/components/BtnFixedUrl'
 import Processo from '@/components/graf/arco-pinheiros-2/processo'
 import MEM from '@/components/graf/arco-pinheiros-2/mem'
 import Caracterizacao from '@/components/graf/arco-pinheiros-2/caracterizacao'
@@ -1925,7 +1927,8 @@ export default {
 		Processo,
 		MEM,
 		Caracterizacao,
-		GestaoDemocratica
+		GestaoDemocratica,
+		BtnFixedUrl
 	},
 	methods: {
 		rolar (refName) {
@@ -1951,42 +1954,6 @@ export default {
 @import '../consulta';
 
 div.ArcoPinheiros2 {
-	div.linkMapaInterativo {
-		position: fixed;
-		right: 2rem;
-		top: 2rem;
-		font-size: 1rem;
-		background-color: $vermelho;
-		padding: 0 1rem;
-		border-radius: 2rem;
-		box-shadow: 0 4px 4px $sombra-3;
-		cursor: pointer;
-		z-index: 1;
-		transition: all ease-in .1s;
-		a {
-			line-height: 3rem;
-			color: #FFF;
-			i {
-				line-height: inherit;
-			}
-		}
-		&:hover {
-			background-color: $vermelho-escuro;
-			a {
-				border: none;
-			}
-		}
-		@media screen and (max-width: 992px) {
-			a {
-				line-height: 2rem;
-				font-size: smaller;
-			}
-		}
-		@media screen and (max-width: 600px) {
-			top: 1rem;
-			right: 1rem;
-		}
-	}
 	a.button {
 		&, & > i { font-size: 1.2rem !important; }
 	}

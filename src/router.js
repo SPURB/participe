@@ -253,6 +253,14 @@ export default new Router({
 			}
 		},
 		{
+			path: '/arco-tiete-2',
+			name: 'ArcoTiete2',
+			component: () => import(/* webpackChunkName: "ArcoTiete2" */ '@/views/ArcoTiete2'),
+			meta: {
+				id: 64
+			}
+		},
+		{
 			path: '/consulta/:nome',
 			name: 'ConsultaAuto',
 			component: () => import(/* webpackChunkName: "ConsultaAuto" */ '@/views/ConsultaAuto'),

@@ -6,7 +6,17 @@
 		</PageTop>
 		<Indice :titulos="titulosLimpo"></Indice>
 
-		<Apoio></Apoio>
+		<Apoio>
+			<template slot="item2">
+				<li>
+					<input type="radio" name="tabs" id="item2">
+					<label for="item2">Errata</label>
+					<div class="conteudoTab" style="overflow-y: scroll">
+						<Errata></Errata>
+					</div>
+				</li>
+			</template>
+		</Apoio>
 		<btn-fixed-url :url="src('mapas/piu-arco-tiete-2/')" :text="'MAPA INTERATIVO'"/>
 		<section>
 			<h2 class="titulo" indent="1">Apresentação</h2>
@@ -117,11 +127,12 @@
 			<h3 class="titulo--grafico">Perímetro Lapa/Freguesia</h3>
 			<perimetro-info-lapa :bgSrc="src('arquivos/arco-tiete-2/Infograficos_perimetros-lapa.jpg')" />
 
+			<h3 class="titulo--grafico">Perímetro Limão/Casa Verde</h3>
+			<perimetro-info-limao :bgSrc="src('arquivos/arco-tiete-2/Infograficos_perimetros-limao.jpg')" />
+
 			<h3 class="titulo--grafico">Perímetro Santana/Vila Guilherme</h3>
 			<perimetro-info-santana :bgSrc="src('arquivos/arco-tiete-2/Infograficos_perimetros-santana.jpg')" />
 
-			<h3 class="titulo--grafico">Perímetro Limão/Casa Verde</h3>
-			<perimetro-info-limao :bgSrc="src('arquivos/arco-tiete-2/Infograficos_perimetros-limao.jpg')" />
 			<Comments :attr="{ id:commentId(), context:'Perímetros de intervenção' }" v-if="consultaAtiva"></Comments>
 		</section>
 
@@ -431,7 +442,7 @@
 				<tr>
 					<td rowspan="2">Área de qualificação</td>
 					<td style="background-color: #ffc000">Q1</td>
-					<td class="centralizado">4</td>
+					<td class="centralizado errata" id-erro="1">2</td> <!-- errata -->
 					<td class="centralizado">48m</td>
 					<td class="centralizado">NA</td>
 				</tr>
@@ -1330,6 +1341,7 @@ import Imagem from '@/components/Imagem'
 import LayerExplorer from '@/components/LayerExplorer'
 import Galeria from '@/components/Galeria'
 import Tabela from '@/components/Tabela'
+import Errata from '@/components/Errata'
 
 export default {
 	name: 'ArcoTiete2',
@@ -1528,7 +1540,8 @@ export default {
 		Imagem,
 		LayerExplorer,
 		Galeria,
-		Tabela
+		Tabela,
+		Errata
 	},
 	mixins: [ consultasCommons, fallbacks ]
 }
@@ -1538,12 +1551,7 @@ export default {
 @import '../variables';
 @import '../consulta';
 @import '../oldstylestoprint';
-
-.todo {
-	color: #fff;
-	background: red;
-	padding: 1rem
-}
+@import '../errata';
 
 table {
 	margin-bottom: 1rem;

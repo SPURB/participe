@@ -68,7 +68,8 @@ const store = new Vuex.Store({
 			api.get('consultas')
 				.then(response => {
 					commit('FETCH_CONSULTAS', response.data.slice().reverse())
-					commit('FETCH_CONSULTAS_DECODE', store.state.consultas)
+					// Descomentar linha seguinte caso seja necessário decodificar retorno da API
+					// commit('FETCH_CONSULTAS_DECODE', store.state.consultas)
 					commit('FETCHING_STATE', true)
 					if (self.estaConsulta !== undefined) {
 						self.filterConsultas()

@@ -44,15 +44,6 @@ const store = new Vuex.Store({
 					if (a.ativo > b.ativo) { return -1 }
 				})
 		},
-		FETCH_CONSULTAS_DECODE (state, consultas) {
-			for (var key in consultas) {
-				for (var key2 in consultas[key]) {
-					if (key2 === 'textoIntro' || key2 === 'nomePublico') {
-						consultas[key][key2] = decodeURIComponent(escape(consultas[key][key2]))
-					}
-				}
-			}
-		},
 		DISPATCH_PRINT (state) {
 			state.toPrint = !state.toPrint
 			return state.toPrint
@@ -68,7 +59,6 @@ const store = new Vuex.Store({
 			api.get('consultas')
 				.then(response => {
 					commit('FETCH_CONSULTAS', response.data.slice().reverse())
-					commit('FETCH_CONSULTAS_DECODE', store.state.consultas)
 					commit('FETCHING_STATE', true)
 					if (self.estaConsulta !== undefined) {
 						self.filterConsultas()

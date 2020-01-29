@@ -279,6 +279,14 @@ export default new Router({
 			}
 		},
 		{
+			path: '/jockey-club-2',
+			name: 'JockeyClub2',
+			component: () => import(/* webpackChunkName: "JockeyClub2" */ '@/views/JockeyClub2'),
+			meta: {
+				id: 101
+			}
+		},
+		{
 			path: '/consulta/:nome',
 			name: 'ConsultaAuto',
 			component: () => import(/* webpackChunkName: "ConsultaAuto" */ '@/views/ConsultaAuto'),

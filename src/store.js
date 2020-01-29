@@ -27,7 +27,7 @@ const store = new Vuex.Store({
 		basePath () { return process.env.VUE_APP_ASSETS_BASE_URL },
 		consultasClicada (state) {
 			if (state.consultas !== undefined) {
-				return state.consultas.find(consulta => parseInt(consulta.idConsulta) === state.routeId)
+				return state.consultas.find(consulta => consulta.idConsulta === state.routeId)
 			} else { return 'not Clicked' }
 		}
 	},
@@ -36,22 +36,18 @@ const store = new Vuex.Store({
 		FETCHING_STATE (state, fetchState) { state.fetching = fetchState },
 		FETCHING_ERROR (state, errorState) { state.errors = errorState },
 		FETCH_CONSULTAS (state, consultas) {
-			state.consultas = consultas.sort(function (a, b) {
-				return new Date(b.dataCadastro) - new Date(a.dataCadastro)
-			})
-				.sort(function (a, b) {
+			state.consultas = consultas
+				.sort((a, b) => new Date(b.dataCadastro) - new Date(a.dataCadastro))
+				.sort((a, b) => {
 					if (a.ativo < b.ativo) { return 1 }
 					if (a.ativo > b.ativo) { return -1 }
 				})
-		},
-		FETCH_CONSULTAS_DECODE (state, consultas) {
-			for (var key in consultas) {
-				for (var key2 in consultas[key]) {
-					if (key2 === 'textoIntro' || key2 === 'nomePublico') {
-						consultas[key][key2] = decodeURIComponent(escape(consultas[key][key2]))
-					}
-				}
-			}
+				.map(consulta => {
+					let parsedConsulta = consulta
+					parsedConsulta.idConsulta = parseInt(consulta.idConsulta)
+					parsedConsulta.ativo = parseInt(consulta.ativo)
+					return parsedConsulta
+				})
 		},
 		DISPATCH_PRINT (state) {
 			state.toPrint = !state.toPrint
@@ -68,8 +64,6 @@ const store = new Vuex.Store({
 			api.get('consultas')
 				.then(response => {
 					commit('FETCH_CONSULTAS', response.data.slice().reverse())
-					// Descomentar linha seguinte caso seja necessário decodificar retorno da API
-					// commit('FETCH_CONSULTAS_DECODE', store.state.consultas)
 					commit('FETCHING_STATE', true)
 					if (self.estaConsulta !== undefined) {
 						self.filterConsultas()

@@ -27,8 +27,7 @@ export default {
 	mounted () { this.loadThisComments() },
 	watch: {
 		comments (val) {
-			this.comments ? this.$store.state.commentsLoaded = true : this.$store.state.commentsLoaded = false
-			if (val) this.decodeComments(this.comments)
+			this.comments ? this.$store.state.commentsLoaded = true : this.$store.state.commentsLoaded = false			
 		}
 	},
 	methods: {

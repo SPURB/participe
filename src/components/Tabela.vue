@@ -1,26 +1,35 @@
 <template>
-	<div class="Tabela" :class="{ larga: dados.colunas.length > 6, estreita: dados.colunas.length <= 3 && dados.estreita != false }">
+	<div class="Tabela" :class="{ larga, estreita }">
 		<table :class="{ listrada: dados.tabelaListrada }">
 			<caption v-if="dados.titulo">{{ dados.titulo }}</caption>
 			<thead>
 				<tr>
-					<th v-for="coluna in dados.colunas">{{ coluna.titulo }}</th>
+					<th v-for="(coluna, index) in dados.colunas" :key="index">{{ coluna.titulo }}</th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr v-for="linha in dados.linhas">
-					<template v-for="celula in linha">
-						<td :data-coluna="dados.colunas[col(celula, linha)].titulo" :class="{ destaque: celula[0].destaque, cor: celula[0].cor, vazio: celula[0].vazio, centralizado: celula[0].centro }" :colspan="celula[0].nCol" :rowspan="celula[0].nLin">
-							<span>{{ celula[0].data }}<sup class="nota" v-if="celula[1]">{{ numeraNotas(celula[1].ref) }}</sup></span>
-						</td>
-					</template>
+				<tr v-for="(linha, index) in dados.linhas" :key="index">
+					<td v-for="(celula, key) in linha"
+						:data-coluna="dados.colunas[col(celula, linha)].titulo"
+						:class="{
+							destaque: celula[0].destaque,
+							cor: celula[0].cor, vazio:
+							celula[0].vazio,
+							centralizado: celula[0].centro
+						}"
+						:colspan="celula[0].nCol"
+						:rowspan="celula[0].nLin"
+						:key="key"
+						>
+						<span>{{ celula[0].data }}<sup class="nota" v-if="celula[1]">{{ numeraNotas(celula[1].ref) }}</sup></span>
+					</td>
 				</tr>
 			</tbody>
 		</table>
 		<div class="notas" v-if="notas.length > 0">
 			<h1>Notas</h1>
 			<ul>
-				<li v-for="nota in notas">
+				<li v-for="(nota, index) in notas" :key="index">
 					<span>{{ nota.num }}.</span> {{ nota.nota }}
 				</li>
 			</ul>
@@ -39,7 +48,10 @@ export default {
 			notas: []
 		}
 	},
-	computed: {},
+	computed: {
+		estreita () { return this.dados.colunas.length <= 3 && this.dados.estreita !== false },
+		larga () { return this.dados.colunas.length > 6 }
+	},
 	props: {
 		dados: {
 			type: Object,
@@ -150,7 +162,7 @@ export default {
 	color: #FFF;
 }
 
-div.Tabela {
+.Tabela {
 	max-width: 700px;
 	overflow-x: auto;
 	margin: 2rem auto;

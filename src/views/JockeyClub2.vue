@@ -408,10 +408,21 @@
 				<li><b>Estacionamentos:</b> avalia-se que a concentração de vagas em um grande bolsão amplia os distúrbios causados à vizinhança em função de filas e em decorrência do excesso de veículos estacionados nas vias locais. Assim, propõe-se a criação de três bolsões de estacionamento no interior do lote, com acessos pela Avenida Lineu de Paula Machado, nos setores Eusébio matoso, Lineu de Paula Machado, mantendo-se o atual no setor José Augusto de Queiroz.</li>
 				<li><b>Permeabilidade visual do perímetro:</b> substituição dos muros existentes em até 75% do perímetro por fechamentos visualmente permeáveis, como gradis, vidros, etc.</li>
 			</ul>
-			<p><img src="11.png" alt="PIUJC_Mobilidadeape.png" /></p>
-			<p><b>Mapa 3 - Acessibilidade a pé. Distâncias e tempos a partir das estações de trem e metrô. Elaboração: SP     Urbanismo, 2019.</b></p>
-			<p><img src="12.png" alt="Intervenções.png" /></p>
-			<p>Mapa 4- Intervenções Propostas. Elaboração: SP Urbanismo, 2019.</p>
+
+			<Imagem :dados="{
+				tipo: 'coluna',
+				url: src('arquivos/jockey-2/11.jpg'),
+				caption: 'Mapa 3 - Acessibilidade a pé. Distâncias e tempos a partir das estações de trem e metrô',
+				fonte: 'Elaboração SP Urbanismo, 2019'
+			}"/>
+
+			<Imagem :dados="{
+				tipo: 'coluna',
+				url: src('arquivos/jockey-2/12.jpg'),
+				caption: 'Mapa 4 - Intervenções Propostas',
+				fonte: 'Elaboração SP Urbanismo, 2019'
+			}"/>
+
 			<p><a id="_Toc28627194"></a>4.1 ESTIMATIVA DE CUSTOS DAS INTERVENÇÕES</p>
 
 			<Comments :attr="{ id:commentId(), context:'Programa de intervenções' }" v-if="consultaAtiva"></Comments>
@@ -422,160 +433,73 @@
 			<p>A metodologia para estimativa de custos de intervenções em projetos de intervenção urbana utilizada pela SP Urbanismo considera ferramentas padronizadas como intervenções-tipo, dimensionadas com custos unitários a partir da composição de custos das tabelas SIURB de materiais e serviços vigentes. Esta metodologia é compatível com o grau de especificidade alcançado pelos PIU, não se constituindo em orçamentos das obras, que demandam definições de projeto incompatíveis com a natureza destes projetos.</p>
 			<p>As estimativas deverão ser avaliadas em conjunto com a estimativa de receitas na Modelagem econômica (P08), possibilitando eventual revisão e priorização conforme as diretrizes estabelecidas no projeto. </p>
 
-			<table>
-				<tr>
-					<td>
-						<p><b>Intervenção</b></p>
-					</td>
-					<td>
-						<p><b>Custo Unitário</b></p>
-					</td>
-					<td>
-						<p><b>Dimensão</b></p>
-					</td>
-					<td>
-						<p><b>Custo Total</b></p>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<p>Implantação do Parque</p>
-					</td>
-					<td>
-						<p>R$292,00/m²</p>
-					</td>
-					<td>
-						<p>110.972 m²</p>
-					</td>
-					<td>
-						<p>R$32.403.824,00</p>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<p>Infraestrutura de drenagem do parque</p>
-					</td>
-					<td>
-						<p>R$506,00/ m²</p>
-					</td>
-					<td>
-						<p>22.194 m²</p>
-					</td>
-					<td>
-						<p>R$11.230.366,00</p>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<p>Acessibilidade ao parque (qualificação dos percursos)</p>
-					</td>
-					<td>
-						<p>R$565,00/m²</p>
-					</td>
-					<td>
-						<p>22.250 m²</p>
-					</td>
-					<td>
-						<p>R$12.571.250,00</p>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<p>Extensão da Ciclopassarela Cidade Jardim</p>
-					</td>
-					<td>
-						<p>R$9.775,00/m²</p>
-					</td>
-					<td>
-						<p>575 m²</p>
-					</td>
-					<td>
-						<p>R$5.620.625,00</p>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<p>Melhoramento Viário R. José Augusto de Queiroz</p>
-					</td>
-					<td>
-						<p>R$995,00/m²</p>
-					</td>
-					<td>
-						<p>6.960 m²</p>
-					</td>
-					<td>
-						<p>R$6.925.200,00</p>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<p>Acesso ao Rio Pinheiros</p>
-					</td>
-					<td>
-						<p>R$9.775,00/m²</p>
-					</td>
-					<td>
-						<p>2.240 m²</p>
-					</td>
-					<td>
-						<p>R$21.896.000,00</p>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<p>Readequação da infraestrutura do Setor Vila Hípica</p>
-					</td>
-					<td>
-						<p>R$600,00</p>
-					</td>
-					<td>
-						<p>37.000 m²</p>
-					</td>
-					<td>
-						<p>R$22.145.400,00</p>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<p>Estacionamentos</p>
-					</td>
-					<td>
-						<p>R$1.500,00</p>
-					</td>
-					<td>
-						<p>12.500 m²</p>
-					</td>
-					<td>
-						<p>R$18.750.000,00</p>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<p>Permeabilidade visual do perímetro</p>
-					</td>
-					<td>
-						<p>R$1.300,00</p>
-					</td>
-					<td>
-						<p>2.500 m</p>
-					</td>
-					<td>
-						<p>R$3.250.000,00</p>
-					</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td>
-						<p><b>TOTAL</b></p>
-					</td>
-					<td>
-						<p><b>R$134.792.665,00</b></p>
-					</td>
-				</tr>
-			</table>
-
-			<p>Quadro 3 – Estimativa de Custos das intervenções. Elaboração: SP Urbanismo, 2019.</p>
+			<tabela :dados="{
+				titulo: 'Quadro 3 – Estimativa de Custos das intervenções',
+				colunas: [
+					{ titulo: 'Intervenção' },
+					{ titulo: 'Custo Unitário' },
+					{ titulo: 'Dimensão' },
+					{ titulo: 'Custo Total' }
+				],
+				linhas: [
+					[
+						[ { data: 'Implantação do Parque' } ],
+						[ { data: 'R$292,00/m²' } ],
+						[ { data: '110.972 m²' } ],
+						[ { data: 'R$32.403.824,00' } ]
+					],
+					[
+						[ { data: 'Infraestrutura de drenagem do parque' } ],
+						[ { data: 'R$506,00/ m²' } ],
+						[ { data: '22.194 m²' } ],
+						[ { data: 'R$11.230.366,00' } ]
+					],
+					[
+						[ { data: 'Acessibilidade ao parque (qualificação dos percursos)' } ],
+						[ { data: 'R$565,00/m²' } ],
+						[ { data: '22.250 m²' } ],
+						[ { data: 'R$12.571.250,00' } ]
+					],
+					[
+						[ { data: 'Extensão da Ciclopassarela Cidade Jardim' } ],
+						[ { data: 'R$9.775,00/m²' } ],
+						[ { data: '575 m²' } ],
+						[ { data: 'R$5.620.625,00' } ]
+					],
+					[
+						[ { data: 'Melhoramento Viário R. José Augusto de Queiroz' } ],
+						[ { data: 'R$995,00/m²' } ],
+						[ { data: '6.960 m²' } ],
+						[ { data: 'R$6.925.200,00' } ]
+					],
+					[
+						[ { data: 'Acesso ao Rio Pinheiros' } ],
+						[ { data: 'R$9.775,00/m²' } ],
+						[ { data: '2.240 m²' } ],
+						[ { data: 'R$21.896.000,00' } ]
+					],
+					[
+						[ { data: 'Readequação da infraestrutura do Setor Vila Hípica' } ],
+						[ { data: 'R$600,00' } ],
+						[ { data: '37.000 m²' } ],
+						[ { data: 'R$22.145.400,00' } ]
+					],
+					[
+						[ { data: 'Estacionamentos' } ],
+						[ { data: 'R$1.500,00' } ],
+						[ { data: '12.500 m²' } ],
+						[ { data: 'R$18.750.000,00' } ]
+					],
+					[
+						[ { data: 'Permeabilidade visual do perímetro' } ],
+						[ { data: 'R$1.300,00' } ],
+						[ { data: '2.500 m' } ],
+						[ { data: 'R$3.250.000,00' } ]
+					]
+				],
+				fonte: 'SPUrbanismo, 2018',
+				tabelaListrada: false
+			}" />
 			<Comments :attr="{ id:commentId(), context:'Estimativa de custos das intervenções' }" v-if="consultaAtiva"></Comments>
 		</section>
 
@@ -598,7 +522,21 @@
 			<h3>Conselho Gestor do PIU Jockey Club</h3>
 			<p>O PIU Jockey Club deverá instituir um Conselho Gestor sob a coordenação da Secretaria Municipal de Desenvolvimento Urbano (SMDU), de caráter consultivo, fiscalizatório e propositivo, com a participação de órgãos municipais e de entidades representativas da sociedade civil, tendo a competência de instruir e auxiliar a implantação do Programa de Intervenções no Perímetro Expandido, monitorar o desenvolvimento e propor programas e estratégias que possam aprimorar o projeto, enquanto que a São Paulo Urbanismo ficará a cargo de promover a implantação dos projetos no Perímetro Expandido e avaliar a evolução dos processos, podendo contar com a colaboração dos órgãos e entidades municipais para o desempenho de suas funções específicas. A implantação do programa, por sua vez, é decorrente da definição do instrumento urbanístico, das fontes de financiamento e do cenário de propriedade e gestão a área, que ainda não foram definidos. O programa somente será executado caso o cenário que prevaleça seja de transformação dos setores Eusébio Matoso e José Augusto de Queiroz e implantação do parque público.</p>
 			<p>O Conselho Gestor do PIU Jockey Club deverá ter como atribuições principais:</p>
-			<ol><li>Proposição de diretrizes, disposições e responsabilidades relativas à gestão compartilhada do conjunto da ZOE pelo Jockey Club e Prefeitura;</li><li>Monitoramento da utilização do conjunto pela população, considerando os diferentes públicos e funcionalidades, identificando conflitos e potencialidades e propondo formas de regulação compatíveis com os parâmetros e diretrizes deste projeto;</li><li>Proposição da ordem de prioridades das obras do programa de intervenções; </li><li>Acompanhamento e fiscalização da execução do programa de intervenções; </li><li>Monitoramento da aplicação dos recursos provenientes da venda de potencial construtivo das áreas transformáveis no programa de intervenções; </li></ol><p> </p><p>A composição proposta para o Conselho Gestor do PIU Jockey Club é a seguinte:</p><ol><li>Representante indicado pelo Jockey Club de São Paulo.</li></ol><p><strong>Setor público (1 representante indicado por entidade):</strong></p><ol><li>SMDU – Secretaria Municipal de Desenvolvimento Urbano (Presidência);</li><li>SP Urbanismo (execução do Programa de Intervenções e gerenciamento dos recursos específicos do projeto);</li><li>SP-BT – Subprefeitura do Butantã (Vice-presidência);</li><li>SP-PI – Subprefeitura de Pinheiros;</li><li>SVMA – Secretaria Municipal do Verde e do Meio Ambiente;</li><li>SMT – Secretaria Municipal de Transportes (ou, por delegação, a CET – Companhia de Engenharia de tráfego);</li><li>Representação do Governo do Estado de São Paulo com governança sobre o uso das margens do Rio Pinheiros.</li></ol><p><strong>Órgãos Colegiados (1 representante eleito por colegiado):</strong></p><ol><li>CPM – Conselho Participativo Municipal ou CADES – Conselho Municipal do Meio Ambiente e Desenvolvimento Sustentável do Butantã;</li><li>CPM – Conselho Participativo Municipal ou CADES – Conselho Municipal do Meio Ambiente e Desenvolvimento Sustentável de Pinheiros;</li><li>Conselho Gestor do Parque Municipal do Jockey Club (se implantado);</li></ol><p><strong>Sociedade Civil (1 representante eleito por setor):</strong></p><ol><li>Associação de bairro atuante na AID – Área de Influência Direta do PIU;</li><li>Entidade comunitária ou social com sede e atuante nas Subprefeituras do Butantã ou de Pinheiros;</li><li>Entidade empresarial com sede e atuante na Subprefeitura do Butantã ou de Pinheiros;</li><li>Entidade de trabalhadores com sede e atuante na Subprefeitura do Butantã ou de Pinheiros;</li><li>Entidade ambientalista com sede e atuante na sub-bacia do Rio Pinheiros.</li>
+			<ol class="romanos"><li>Proposição de diretrizes, disposições e responsabilidades relativas à gestão compartilhada do conjunto da ZOE pelo Jockey Club e Prefeitura;</li><li>Monitoramento da utilização do conjunto pela população, considerando os diferentes públicos e funcionalidades, identificando conflitos e potencialidades e propondo formas de regulação compatíveis com os parâmetros e diretrizes deste projeto;</li><li>Proposição da ordem de prioridades das obras do programa de intervenções; </li><li>Acompanhamento e fiscalização da execução do programa de intervenções; </li><li>Monitoramento da aplicação dos recursos provenientes da venda de potencial construtivo das áreas transformáveis no programa de intervenções; </li></ol><p> </p><p>A composição proposta para o Conselho Gestor do PIU Jockey Club é a seguinte:</p><ol><li>Representante indicado pelo Jockey Club de São Paulo.</li>
+			</ol>
+
+			<h4>Setor público (1 representante indicado por entidade):</h4>
+			<ol><li>SMDU – Secretaria Municipal de Desenvolvimento Urbano (Presidência);</li><li>SP Urbanismo (execução do Programa de Intervenções e gerenciamento dos recursos específicos do projeto);</li><li>SP-BT – Subprefeitura do Butantã (Vice-presidência);</li><li>SP-PI – Subprefeitura de Pinheiros;</li><li>SVMA – Secretaria Municipal do Verde e do Meio Ambiente;</li><li>SMT – Secretaria Municipal de Transportes (ou, por delegação, a CET – Companhia de Engenharia de tráfego);</li><li>Representação do Governo do Estado de São Paulo com governança sobre o uso das margens do Rio Pinheiros.</li></ol>
+
+			<h4>Órgãos Colegiados (1 representante eleito por colegiado):</h4>
+			<ol><li>CPM – Conselho Participativo Municipal ou CADES – Conselho Municipal do Meio Ambiente e Desenvolvimento Sustentável do Butantã;</li><li>CPM – Conselho Participativo Municipal ou CADES – Conselho Municipal do Meio Ambiente e Desenvolvimento Sustentável de Pinheiros;</li><li>Conselho Gestor do Parque Municipal do Jockey Club (se implantado);</li>
+			</ol>
+
+			<h4>Sociedade Civil (1 representante eleito por setor):</h4>
+			<ol>
+				<li>Associação de bairro atuante na AID – Área de Influência Direta do PIU;</li>
+				<li>Entidade comunitária ou social com sede e atuante nas Subprefeituras do Butantã ou de Pinheiros;</li>
+				<li>Entidade empresarial com sede e atuante na Subprefeitura do Butantã ou de Pinheiros;</li><li>Entidade de trabalhadores com sede e atuante na Subprefeitura do Butantã ou de Pinheiros;</li><li>Entidade ambientalista com sede e atuante na sub-bacia do Rio Pinheiros.</li>
 			</ol>
 
 			<h3>Conselho Gestor do PARQUE MUNICIPAL DO Jockey Club</h3>
@@ -619,9 +557,97 @@
 			<p>Conforme explicado no Produto 06 (Proposta de Ordenamento Urbanístico), o PIU Jockey Club tem como escopo a regulação de uma ZOE (Zona de Ocupação Especial) incidente no local. Entre seus objetivos está: i) a intensificação de utilização dos equipamentos do hipódromo, que ocupam uma gleba de 600 mil metros quadrados e, atualmente, não apresentam a mesma atratividade que no passado, tornando o conjunto parcialmente ocioso; e ii) reduzir as dívidas do Jockey Club com a Prefeitura Municipal de São Paulo.</p>
 			<p>Neste sentido, a gleba foi setorizada e algumas unidades selecionadas para o desenvolvimento de negócios imobiliários. A produção de imóveis servirá para a geração de renda que, em parte, será destinada ao financiamento das intervenções previstas (ver P06 - Proposta de Ordenamento Urbanístico), por meio do instrumento de OODC, e possibilitará a venda ou permuta dos terrenos assinalados, que ajudará na recomposição do modelo de propriedade e gestão do conjunto.</p>
 			<p>De acordo com o Programa de Interesse Público, a gleba atual foi dividida em sete grandes setores: i) Eusébio Matoso, ii) Vila Hípica, iii) Lineu de Paula Machado, iv) Conjunto Histórico, v) Pistas de Corrida, vi) José Augusto de Queiroz e vii) Peão de Prado (ver Mapa abaixo).</p>
-			<p><img src="3.png" alt="Jockey setores legenda.jpg" /></p>
+			<imagem
+				:max-width="'550px'"
+				:dados="{
+				titulo: 'Proposta de Setorização para o conjunto do Jockey Club',
+				tipo: 'mapa',
+				url: src('arquivos/jockey-2/mapas/2.jpg'),
+				legenda: [
+					{ char: '1',  fundo: '#A793BD', descricao: 'Eusébio Matoso' },
+					{ char: '2',  fundo: '#DCA2C3', descricao: 'Vila Hípica' },
+					{ char: '3',  fundo: '#E5B455', descricao: 'Lineu de Paula Machado' },
+					{ char: '4',  fundo: '#924F6C', descricao: 'Conjunto Histórico' },
+					{ char: '5',  fundo: '#FEF571', descricao: 'Pistas de Corrida' },
+					{ char: '6',  fundo: '#FC4850', descricao: 'José Augusto de Queiroz' },
+					{ char: '7',  fundo: '#50B17E', descricao: 'Peão do Prado' }
+				],
+				fonte: 'Elaboração: SP-Urbanismo, 2020'
+			}" />
+
 			<p>Os setores indicados para o desenvolvimento imobiliário são: Eusébio Matoso (1), José Augusto de Queiroz (6) e Lineu de Paula Machado (3). Nos dois primeiros, pretende-se uma utilização mais intensa do território com coeficiente de aproveitamento quatro vezes o tamanho do terreno e gabarito máximo de 60 e 82 metros respectivamente. O setor Lineu de Paula Machado apresenta condições mais restritivas de desenvolvimento, com coeficiente de aproveitamento duas vezes o tamanho do terreno e gabarito máximo de 15 metros. Para fins de negócios imobiliários, pode-se considerar esse setor em dois lotes separados, em face da presença de uma unidade de preservação no meio da unidade. Os parâmetros concedidos a cada setor encontram-se na Tabela abaixo.</p>
-			<p><img src="4.x-emf" /></p>
+
+			<tabela :dados="{
+				titulo: 'Tabela: Ordenamento urbanístico - lotes transformáveis',
+				colunas: [
+					{ titulo: 'Resumo de áreas e projeto' },
+					{ titulo: 'Eusébio Matoso' },
+					{ titulo: 'José Augusto de Queiroz' },
+					{ titulo: 'Lineu de Paula Machado 1' },
+					{ titulo: 'Lineu de Paula Machado 2' },
+					{ titulo: 'Total' }
+				],
+				linhas: [
+					[
+						[ { data: 'Área de terreno (m²)'} ],
+						[ { data: '15.551'} ],
+						[ { data: '27.376'} ],
+						[ { data: '9.351'} ],
+						[ { data: '20.311'} ],
+						[ { data: '72.589'} ]
+					],
+					[
+						[ { data: 'CA máx'} ],
+						[ { data: '4,0'} ],
+						[ { data: '4,0'} ],
+						[ { data: '2,0'} ],
+						[ { data: '2,0'} ],
+						[ { data: ''} ],
+					],
+					[
+						[ { data: 'Gab máx'} ],
+						[ { data: '60'} ],
+						[ { data: '82'} ],
+						[ { data: '15'} ],
+						[ { data: '15'} ],
+						[ { data: ''} ]
+					],
+					[
+						[ { data: 'TO máx'} ],
+						[ { data: '70%'} ],
+						[ { data: '70%'} ],
+						[ { data: '70%'} ],
+						[ { data: '70%'} ],
+						[ { data: ''} ]
+					],
+					[
+						[ { data: 'Uso'} ],
+						[ { data: 'misto'} ],
+						[ { data: 'misto'} ],
+						[ { data: 'não residencial'} ],
+						[ { data: 'não residencial'} ],
+						[ { data: ''} ]
+					],
+					[
+						[ { data: 'Área computável (m²)'} ],
+						[ { data: '62.204'} ],
+						[ { data: '109.504'} ],
+						[ { data: '18.702'} ],
+						[ { data: '40.622'} ],
+						[ { data: '231.032'} ]
+					],
+					[
+						[ { data: 'Potencial const. adicional (m²)'} ],
+						[ { data: '46.653'} ],
+						[ { data: '82.128'} ],
+						[ { data: '9.351'} ],
+						[ { data: '20.311'} ],
+						[ { data: '158.443'} ]
+					]
+				],
+				tabelaListrada: true
+			}" />
+
 			<p>Diante do tamanho dos lotes e do aproveitamento concedido, é possível a construção de 231 mil metros quadrados de área computável, o que equivale a cerca de 158 mil metros quadrados de potencial construtivo adicional. O novo ordenamento determina o uso estritamente não residencial no setor Lineu de Paula Machado com o objetivo de atender com comércio e serviços uma região preponderantemente residencial. Nos demais setores, concede-se o desenvolvimento de unidades mistas. No setor Eusébio Matoso, a proximidade com a linha 4 do metrô confere ao terreno vocação tanto para construção pequenos apartamentos residenciais, como salas comerciais. No setor José Augusto de Queiroz, entende-se que, dada a proximidade com a Avenida Cidade Jardim e o baixo Itaim Bibi, o terreno serve tanto ao desenvolvimento de plantas residenciais maiores, como também o investimento em lajes corporativas.</p>
 			<p>O estudo vocacional dos terrenos é aprofundado na seção seguinte, com a definição do tamanho das plantas, do uso e dos preços de venda, de maneira a subsidiar a elaboração dos empreendimentos-paradigma na etapa final.</p>
 
@@ -630,20 +656,383 @@
 
 			<h3>Uso e tipologia</h3>
 			<p>No período indicado, foram lançadas 4.957 unidades imobiliárias, sendo 2.069 de uso comercial e 2.888 de uso residencial. Isso demonstra um grande equilíbrio entre unidades residenciais (58%) e unidades comerciais (48%). No Butantã, região de referência primária para o estudo vocacional do setor Eusébio Matoso, prevaleceram unidades comerciais (95%). Já no baixo Itaim região de referência para o estudo vocacional do setor José Augusto de Queiroz, existe uma grande proporção de lançamentos de unidades residenciais (76%) (ver tabelas abaixo).</p>
-			<p><img src="5.x-emf" /></p>
-			<p><img src="6.x-emf" /></p>
+			<!-- <p><img src="5.x-emf" /></p> -->
+
+			<tabela :dados="{
+				titulo: 'Tabela: Total de unidades lançadas por localização e uso, 2008 a 2017',
+				colunas: [
+					{ titulo: 'Localização' },
+					{ titulo: 'Total' },
+					{ titulo: 'Comercial' },
+					{ titulo: 'Residencial' }
+				],
+				linhas: [
+					[
+						[ { data: 'Butanta'} ],
+						[ { data: '288 '} ],
+						[ { data: '274 '} ],
+						[ { data: '14 '} ]
+					],
+					[
+						[ { data: 'Itaim Bibi'} ],
+						[ { data: '686 '} ],
+						[ { data: '164 '} ],
+						[ { data: '522 '} ]
+					],
+					[
+						[ { data: 'Morumbi'} ],
+						[ { data: '469 '} ],
+						[ { data: '176 '} ],
+						[ { data: '293 '} ]
+					],
+					[
+						[ { data: 'Pinheiros'} ],
+						[ { data: '3.514 '} ],
+						[ { data: '1.455 '} ],
+						[ { data: '2.059 '} ],
+					],
+					[
+						[ { data: 'Total', destaque: true } ],
+						[ { data: '4.957', destaque: true } ],
+						[ { data: '2.069', destaque: true } ],
+						[ { data: '2.888', destaque: true } ],
+					]
+				]
+			}" />
+
+			<!-- <p><img src="6.x-emf" /></p> -->
+			<tabela :dados="{
+				titulo: 'Tabela: Participação de unidades lançadas por localização e uso, 2008 a 2017 (%)',
+				colunas: [
+					{ titulo: 'Localização' },
+					{ titulo: 'Total' },
+					{ titulo: 'Comercial' },
+					{ titulo: 'Residencial' }
+				],
+				linhas: [
+					[
+						[ { data: 'Butanta'} ],
+						[ { data: '100'} ],
+						[ { data: '95'} ],
+						[ { data: '5'} ]
+					],
+					[
+						[ { data: 'Itaim Bibi'} ],
+						[ { data: '100'} ],
+						[ { data: '24'} ],
+						[ { data: '76'} ]
+					],
+					[
+						[ { data: 'Morumbi'} ],
+						[ { data: '100'} ],
+						[ { data: '38'} ],
+						[ { data: '62'} ]
+					],
+					[
+						[ { data: 'Pinheiros'} ],
+						[ { data: '100'} ],
+						[ { data: '41'} ],
+						[ { data: '59'} ]
+					],
+					[
+						[ { data: 'Total', destaque: true} ],
+						[ { data: '100', destaque: true} ],
+						[ { data: '42', destaque: true} ],
+						[ { data: '58', destaque: true} ]
+					]
+				]
+			}"/>
+
 			<p>Em relação à produção comercial, predomina o lançamento de salas sobre andares livres. Nos dez anos pesquisados, foram lançadas 1.904 salas, 92% do total, contra 165 andares livres (8%). A região do Itaim Bibi se diferencia desse padrão com o lançamento de 101 unidades de lajes corporativas, 62% do total da região.</p>
-			<p><img src="7.x-emf" /></p>
-			<p><img src="8.x-emf" /></p>
+
+			<!-- <p><img src="7.x-emf" /></p> -->
+			<tabela :dados="{
+				titulo: 'Tabela: Total de unidades lançadas comerciais por localização e tipologia, 2008 a 2017',
+				colunas: [
+					{ titulo: 'Localização' },
+					{ titulo: 'Total' },
+					{ titulo: 'Comercial' },
+					{ titulo: 'Residencial' }
+				],
+				linhas: [
+					[
+						[ { data: 'Butanta'} ],
+						[ { data: '274'} ],
+						[ { data: '4'} ],
+						[ { data: '270'} ]
+					],
+					[
+						[ { data: 'Itaim Bibi'} ],
+						[ { data: '164'} ],
+						[ { data: '101'} ],
+						[ { data: '63'} ]
+					],
+					[
+						[ { data: 'Morumbi'} ],
+						[ { data: '176'} ],
+						[ { data: ''} ],
+						[ { data: '176'} ]
+					],
+					[
+						[ { data: 'Pinheiros'} ],
+						[ { data: '1.455'} ],
+						[ { data: '60'} ],
+						[ { data: '1.395'} ]
+					],
+					[
+						[ { data: 'Total'} ],
+						[ { data: '2.069'} ],
+						[ { data: '165'} ],
+						[ { data: '1.904'} ]
+					]
+				]
+			}"/>
+
+			<!-- <p><img src="8.x-emf" /></p> -->
+			<tabela :dados="{
+				titulo: 'Tabela: Participação de unidades lançadas comerciais por localização e tipologia, 2008 a 2017 (%)',
+				colunas: [
+					{ titulo: 'Localização' },
+					{ titulo: 'Total' },
+					{ titulo: 'Comercial' },
+					{ titulo: 'Residencial' }
+				],
+				linhas: [
+					[
+						[ { data: 'Butanta'} ],
+						[ { data: '100'} ],
+						[ { data: '1'} ],
+						[ { data: '99'} ],
+					],
+					[
+						[ { data: 'Itaim Bibi'} ],
+						[ { data: '100'} ],
+						[ { data: '62'} ],
+						[ { data: '38'} ],
+					],
+					[
+						[ { data: 'Morumbi'} ],
+						[ { data: '100'} ],
+						[ { data: '-'} ],
+						[ { data: '100'} ],
+					],
+					[
+						[ { data: 'Pinheiros'} ],
+						[ { data: '100'} ],
+						[ { data: '4'} ],
+						[ { data: '96'} ],
+					],
+					[
+						[ { data: 'Total'} ],
+						[ { data: '100'} ],
+						[ { data: '8'} ],
+						[ { data: '92'} ]
+					]
+				]
+			}"/>
+
 			<p>Em relação às unidades residenciais, prevaleceu o lançamento de plantas menores, de um ou dois dormitórios, equivalendo a 36 e 33% da produção no entorno do Jockey respectivamente. Esse resultado foi fortemente influenciado pelo comportamento do mercado no baixo Pinheiros, que serve de referência secundária para o perfil do setor Eusébio Matoso. Nessa região, foram lançadas 47% de unidades de um dormitório e 40% de unidades de dois dormitórios.</p>
-			<p><img src="9.x-emf" /></p>
-			<p><img src="10.x-emf" /></p>
+			<!-- <p><img src="9.x-emf" /></p> -->
+			<tabela :dados="{
+				titulo: 'Tabela: Total de unidades lançadas residenciais por localização e tipologia, 2008 a 2017',
+				colunas: [
+					{ titulo: 'Localização' },
+					{ titulo: 'Total' },
+					{ titulo: '1' },
+					{ titulo: '2' },
+					{ titulo: '3' },
+					{ titulo: '4 ou +' }
+				],
+				linhas: [
+					[
+						[ { data: 'Butanta' } ],
+						[ { data: '14 ' } ],
+						[ { data: '-' } ],
+						[ { data: '-' } ],
+						[ { data: '-' } ],
+						[ { data: '14' } ],
+					],
+					[
+						[ { data: 'Itaim Bibi' } ],
+						[ { data: '522' } ],
+						[ { data: '42' } ],
+						[ { data: '39' } ],
+						[ { data: '241' } ],
+						[ { data: '200' } ],
+					],
+					[
+						[ { data: 'Morumbi' } ],
+						[ { data: '293' } ],
+						[ { data: '20' } ],
+						[ { data: '92' } ],
+						[ { data: '137 ' } ],
+						[ { data: '44 ' } ],
+					],
+					[
+						[ { data: 'Pinheiros' } ],
+						[ { data: '2.059 ' } ],
+						[ { data: '976 ' } ],
+						[ { data: '828 ' } ],
+						[ { data: '125 ' } ],
+						[ { data: '130 ' } ],
+					],
+					[
+						[ { data: 'Total' } ],
+						[ { data: '2.888' } ],
+						[ { data: '1.038' } ],
+						[ { data: '959' } ],
+						[ { data: '503' } ],
+						[ { data: '388' } ],
+					]
+				],
+				tabelaListrada: false
+			}" />
+
+			<!-- <p><img src="10.x-emf" /></p> -->
+			<tabela :dados="{
+				titulo: 'Tabela: Total de unidades lançadas residenciais por localização e tipologia, 2008 a 2017',
+				colunas: [
+					{ titulo: 'Localização' },
+					{ titulo: 'Total' },
+					{ titulo: '1' },
+					{ titulo: '2' },
+					{ titulo: '3' },
+					{ titulo: '4 ou +' }
+				],
+				linhas: [
+					[
+						[ { data: 'Butanta' } ],
+						[ { data: '100 ' } ],
+						[ { data: '-' } ],
+						[ { data: '-' } ],
+						[ { data: '-' } ],
+						[ { data: '100 ' } ],
+					],
+					[
+						[ { data: 'Itaim Bibi' } ],
+						[ { data: '100 ' } ],
+						[ { data: '8 ' } ],
+						[ { data: '7 ' } ],
+						[ { data: '46 ' } ],
+						[ { data: '38 ' } ],
+					],
+					[
+						[ { data: 'Morumbi' } ],
+						[ { data: '100 ' } ],
+						[ { data: '7 ' } ],
+						[ { data: '31 ' } ],
+						[ { data: '47 ' } ],
+						[ { data: '15 ' } ],
+					],
+					[
+						[ { data: 'Pinheiros' } ],
+						[ { data: '100 ' } ],
+						[ { data: '47 ' } ],
+						[ { data: '40 ' } ],
+						[ { data: '6 ' } ],
+						[ { data: '6 ' } ],
+					],
+					[
+						[ { data: 'Total' } ],
+						[ { data: '100 ' } ],
+						[ { data: '36 ' } ],
+						[ { data: '33 ' } ],
+						[ { data: '17 ' } ],
+						[ { data: '13 ' } ],
+					]
+				],
+				tabelaListrada: false
+			}" />
+
 			<p>No sentido contrário desta tendência, no setor Itaim Bibi e Morumbi dominaram unidades maiores de três ou quatro dormitórios. No Itaim foram produzidas 46 e 38% de unidades de três e quatro dormitórios e, no Morumbi, 47 e 15% respectivamente.</p>
 
 			<h3>Preço</h3>
 			<p>Os dados disponíveis de preços das unidades são baseados nas tabelas originais de venda. Geralmente, o preço de negociação é um pouco inferior à tabela de oferta. Nesse sentido, foram calculados os preços médios de tabela por região e tipologia, e sobre esses valores aplicado um fator de oferta que reduz o preço médio em 10%. Os resultados encontram-se nas tabelas abaixo.</p>
-			<p><img src="11.x-emf" /></p>
-			<p><img src="12.x-emf" /></p>
+			<!-- <p><img src="11.x-emf" /></p> -->
+			<tabela :dados="{
+				titulo: 'Tabela: Preço médio de unidades lançadas comerciais por localização e tipologia, 2008 a 2017 (R$/m²)',
+				colunas: [
+					{ titulo: 'Localização' },
+					{ titulo: 'Total' },
+					{ titulo: 'Comercial' },
+					{ titulo: 'Residencial' }
+				],
+				linhas: [
+					[
+						[ { data: 'Butanta'} ],
+						[ { data: '14.655'} ],
+						[ { data: '14.258'} ],
+						[ { data: '14.721'} ]
+					],
+					[
+						[ { data: 'Itaim Bibi'} ],
+						[ { data: '27.073'} ],
+						[ { data: '-'} ],
+						[ { data: '27.073'} ]
+					],
+					[
+						[ { data: 'Morumbi'} ],
+						[ { data: '11.674'} ],
+						[ { data: '-'} ],
+						[ { data: '11.674'} ]
+					],
+					[
+						[ { data: 'Pinheiros'} ],
+						[ { data: '17.372'} ],
+						[ { data: '-'} ],
+						[ { data: '17.372'} ]
+					]
+				]
+			}"/>
+
+			<!-- <p><img src="12.x-emf" /></p> -->
+			<tabela :dados="{
+				titulo: 'Tabela: Preço médio de unidades lançadas residenciais por localização e tipologia, 2008 a 2017 (R$/m²)',
+				colunas: [
+					{ titulo: 'Localização' },
+					{ titulo: 'Total' },
+					{ titulo: '1' },
+					{ titulo: '2' },
+					{ titulo: '3' },
+					{ titulo: '4 ou +' }
+				],
+				linhas: [
+					[
+						[ { data: 'Butanta' } ],
+						[ { data: '11.780 ' } ],
+						[ { data: '-   ' } ],
+						[ { data: '-   ' } ],
+						[ { data: '-   ' } ],
+						[ { data: '11.780 ' } ]
+					],
+					[
+						[ { data: 'Itaim Bibi' } ],
+						[ { data: '23.642 ' } ],
+						[ { data: '24.260 ' } ],
+						[ { data: '24.267 ' } ],
+						[ { data: '16.466 ' } ],
+						[ { data: '29.278 ' } ]
+					],
+					[
+						[ { data: 'Morumbi' } ],
+						[ { data: '10.845 ' } ],
+						[ { data: '12.123 ' } ],
+						[ { data: '10.683 ' } ],
+						[ { data: '10.334 ' } ],
+						[ { data: '10.777 ' } ]
+					],
+					[
+						[ { data: 'Pinheiros' } ],
+						[ { data: '14.264 ' } ],
+						[ { data: '15.718 ' } ],
+						[ { data: '13.413 ' } ],
+						[ { data: '11.535 ' } ],
+						[ { data: '16.912 ' } ]
+					]
+				],
+				tabelaListrada: false
+			}" />
+
 			<p>Como pode se observar, os preços mais elevados são praticados no baixo Itaim R$ 27 mil para o metro quadrado de unidades comerciais e R$ 24 mil para unidades residenciais. Em seguida, vem a região do baixo Pinheiros, R$ 17 mil e R$ 14 mil, Butantã, R$ 15 mil e R$ 12 mil, e Morumbi R$ 12 e R$ 11 mil respectivamente.</p>
 			<p>Os preços dos imóveis residenciais variam conforme a tipologia e determinam um gráfico em forma de “U”, sendo as tipologias de um e quatro ou mais dormitórios as mais caras. Esse resultado é bastante usual. As plantas menores oferecem ao incorporador a estratégia de elevar o preço por metro quadrado, pois representa pouco impacto no preço total. Já as unidades de quatro ou mais dormitórios, embora extensivas em metragem, geralmente, localizam-se nos melhores pontos das regiões avaliadas e, assim, o ponto agrega valor ao produto.</p>
 
@@ -654,18 +1043,339 @@
 
 			<h3>Cenário de uso comercial</h3>
 			<p>No cenário de uso estritamente comercial, optou-se por avaliar a implantação de um empreendimento de salas no setor Eusébio Matoso, seguido de empreendimentos com andares livres com uma ou duas unidades por pavimento. Nos lotes com área computável superior a 20 mil metros quadrados, foi considerada a cota de solidariedade, o que aumenta o coeficiente de aproveitamento, bem como as despesas com a própria cota e com a compra de potencial construtivo adicional. Os resultados encontram-se na Tabela abaixo.</p>
-			<p><img src="13.x-emf" /></p>
+
+			<!-- <p><img src="13.x-emf" /></p> -->
+			<tabela :dados="{
+				titulo: 'Tabela: Estudo de massa por terreno - cenário comercial',
+				colunas: [
+					{ titulo: 'Resumo de áreas e projeto' },
+					{ titulo: 'Eusébio Matoso' },
+					{ titulo: 'José Augusto de Queiroz' },
+					{ titulo: 'Lineu de Paula Machado 1' },
+					{ titulo: 'Lineu de Paula Machado 2' }
+				],
+				linhas: [
+					[
+						[ { data: 'Área (m²)' } ],
+						[ { data: '15.551 ' } ],
+						[ { data: '27.376 ' } ],
+						[ { data: '9.351 ' } ],
+						[ { data: '20.311 ' } ]
+					],
+					[
+						[ { data: 'CA efetivo' } ],
+						[ { data: '4,4 ' } ],
+						[ { data: '4,4 ' } ],
+						[ { data: '2,0 ' } ],
+						[ { data: '2,2 ' } ],
+					],
+					[
+						[ { data: 'Gab efetivo' } ],
+						[ { data: '59 ' } ],
+						[ { data: '82 ' } ],
+						[ { data: '14 ' } ],
+						[ { data: '14 ' } ],
+					],
+					[
+						[ { data: 'Torres' } ],
+						[ { data: '4 ' } ],
+						[ { data: '4 ' } ],
+						[ { data: '4 ' } ],
+						[ { data: '8 ' } ],
+					],
+					[
+						[ { data: 'TO - tipo' } ],
+						[ { data: '27%' } ],
+						[ { data: '21%' } ],
+						[ { data: '50%' } ],
+						[ { data: '58%' } ],
+					],
+					[
+						[ { data: 'Tipologia' } ],
+						[ { data: 'sala c/ fachada ativa ' } ],
+						[ { data: 'andar livre c/ fachada ativa ' } ],
+						[ { data: 'andar livre c/ fachada ativa ' } ],
+						[ { data: 'andar livre c/ fachada ativa ' } ],
+					],
+					[
+						[ { data: 'Planta' } ],
+						[ { data: '74 ' } ],
+						[ { data: '1.359 ' } ],
+						[ { data: '558 ' } ],
+						[ { data: '700 ' } ],
+					],
+					[
+						[ { data: 'Unidades' } ],
+						[ { data: '817 ' } ],
+						[ { data: '85 ' } ],
+						[ { data: '25 ' } ],
+						[ { data: '49 ' } ],
+					],
+					[
+						[ { data: 'Vagas' } ],
+						[ { data: '816 ' } ],
+						[ { data: '2.100 ' } ],
+						[ { data: '384 ' } ],
+						[ { data: '864 ' } ],
+					]
+				]
+			}"/>
+
 			<p>Como pode se observar, os coeficientes de aproveitamento foram obtidos, mesmo nos terrenos com severa restrição de gabarito. Nesses casos, a área computável foi atingida com o aumento da taxa de ocupação. Nos empreendimentos com área computável acima de 20 mil metros, foi acrescido o coeficiente de aproveitamento em 10% em função da cota solidariedade. O número de vagas de garagem foi calculado para atender as exigências legais, mas no setor José Augusto de Queiroz foram criadas 588 vagas adicionais para atender às necessidades do hipódromo.</p>
 			<p>Analise financeira partiu da determinação dos preços de venda por metro quadrado das unidades. A partir de cada faixa de preço foi determinado o padrão construtivo de cada empreendimento. O preço do terreno também foi atrelado ao preço de venda. Na impossibilidade de execução de pesquisa de campo em tempo hábil, o preço considerado reflete uma fração do VGV – 20,0 e 22,5% nos empreendimentos com preço de venda de R$ 15 mil e 18 mil respectivamente. Os demais elementos de despesa foram definidos seguindo o padrão da indústria – outros custos de aquisição de terreno (3,3%), desenvolvimento (1,5%), despesas comerciais e marketing (6,5%), taxa de administração (4%), despesas financeiras (2%), impostos (4%).</p>
-			<p><img src="14.x-emf" /></p>
+			<!-- <p><img src="14.x-emf" /></p> -->
+			<table>
+				<caption>Tabela: Estudo de massa por terreno - cenário comercial</caption>
+				<thead>
+					<tr>
+						<th colspan="2">Demonstrativo financeiro - resumo</th>
+						<th>Eusébio Matoso</th>
+						<th>José Augusto de Queiroz</th>
+						<th>Lineu de Paula Machado 1</th>
+						<th>Lineu de Paula Machado 2</th>
+						<th>Total</th>
+					</tr>
+				</thead>
+				<tbody style="text-align: right">
+					<tr>
+						<td rowspan="2">VGV</td>
+						<td> R$/m² </td>
+						<td> 15.000 </td>
+						<td> 18.000 </td>
+						<td> 15.000 </td>
+						<td> 15.000 </td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td> R$ </td>
+						<td> 1.022.392.500 </td>
+						<td> 2.354.112.000 </td>
+						<td> 228.933.000 </td>
+						<td> 564.933.000 </td>
+						<td> 4.170.370.500 </td>
+					</tr>
+					<tr>
+						<td rowspan="2">Terreno</td>
+						<td> R$/m² </td>
+						<td> 13.149 </td>
+						<td> 19.348 </td>
+						<td> 4.835 </td>
+						<td> 5.563 </td>
+						<td></td>
+					</tr>
+					<tr>
+						<td> R$ </td>
+						<td> 204.478.500 </td>
+						<td> 529.675.200 </td>
+						<td> 45.210.600 </td>
+						<td> 112.986.600 </td>
+						<td> 892.350.900 </td>
+					</tr>
+					<tr>
+						<td rowspan="2">Outorga</td>
+						<td>Fp</td>
+						<td> 1,3 </td>
+						<td> 1,3 </td>
+						<td> 1,0 </td>
+						<td> 1,0 </td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>R$</td>
+						<td> 27.588.372 </td>
+						<td> 48.614.928 </td>
+						<td> 8.057.605 </td>
+						<td> 19.372.273 </td>
+						<td> 103.633.178 </td>
+					</tr>
+					<tr>
+						<td>ML</td>
+						<td>(%)</td>
+						<td> 22,8 </td>
+						<td> 22,9 </td>
+						<td> 20,5 </td>
+						<td> 21,4 </td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>TIR</td>
+						<td>(%)</td>
+						<td> 29,8 </td>
+						<td> 30,6 </td>
+						<td> 25,1 </td>
+						<td> 27,4 </td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
 			<p>De acordo com o estudo, todos os empreendimentos, no cenário de uso comercial, apresentam viabilidade econômica. Todos apresentam margem líquida e taxa interna de retorno (TIR) acima de 20%. A TIR foi bem influenciada positivamente pela premissa na modelagem de considerar o pagamento de 15% do valor terreno em dinheiro e o restante em permuta.</p>
 			<p>Nesse cenário, o VGV total seria de R$ 4,2 bilhões, a venda ou permuta dos terrenos geraria um ganho de R$ 892 milhões e a receita de OODC chegaria a R$ 104 milhões. Para tanto os fatores de planejamento foram ajustados para 1,3 – o mesmo valor indicado no PDE/2014 para o uso comercial nessa localidade, à exceção dos empreendimentos no setor Lineu de Paula Machado, nos quais os resultados financeiros demonstraram a incapacidade de majoração dos fatores.</p>
 
 			<h3>Cenário de uso misto</h3>
 			<p>No cenário de uso misto, os empreendimentos comerciais nos setores Eusébio Matoso e José Augusto de Queiroz foram substituídos por empreendimentos residenciais. No primeiro, foi desenvolvido um estudo de massa para um residencial de dois dormitórios e uma vaga e no segundo uma planta generosa de 4 ou mais dormitórios. Os resultados de implantação referentes ao número de torres, gabarito e taxa de ocupação variam muito pouco. Por outro lado, a utilização de varandas acresceu a área privativa proporcionalmente a área computável. Assim, se o preço de venda de unidades residenciais é menor, a área privativa adicional compensa parcialmente o valor geral de vendas.</p>
-			<p><img src="15.x-emf" /></p>
+			<!-- <p><img src="15.x-emf" /></p> -->
+
+			<tabela :dados="{
+				titulo: 'Tabela: Estudo de massa por terreno - cenário misto',
+				colunas: [
+					{ titulo: 'Resumo de áreas e projeto' },
+					{ titulo: 'Eusébio Matoso' },
+					{ titulo: 'José Augusto de Queiroz' },
+					{ titulo: 'Lineu de Paula Machado 1' },
+					{ titulo: 'Lineu de Paula Machado 2' }
+				],
+				linhas: [
+					[
+						[ { data:'Área (m²)'} ],
+						[ { data:'15.551 '} ],
+						[ { data:'27.376 '} ],
+						[ { data:'9.351 '} ],
+						[ { data:'20.311 '} ]
+					],
+					[
+						[ { data:'CA efetivo'} ],
+						[ { data:'4,4 '} ],
+						[ { data:'4,4 '} ],
+						[ { data:'2,0 '} ],
+						[ { data:'2,2 '} ]
+					],
+					[
+						[ { data:'Gab efetivo'} ],
+						[ { data:'59 '} ],
+						[ { data:'82 '} ],
+						[ { data:'14 '} ],
+						[ { data:'14 '} ]
+					],
+					[
+						[ { data:'Torres'} ],
+						[ { data:'4 '} ],
+						[ { data:'4 '} ],
+						[ { data:'4 '} ],
+						[ { data:'8 '} ]
+					],
+					[
+						[ { data:'TO - tipo'} ],
+						[ { data:'26%'} ],
+						[ { data:'21%'} ],
+						[ { data:'50%'} ],
+						[ { data:'58%'} ]
+					],
+					[
+						[ { data:'Tipologia'} ],
+						[ { data:'2 dorm c/ fachada ativa '} ],
+						[ { data:'4 dorm c/ fachada ativa '} ],
+						[ { data:'andar livre c/ fachada ativa '} ],
+						[ { data:'andar livre c/ fachada ativa '} ]
+					],
+					[
+						[ { data:'Planta'} ],
+						[ { data:'74 '} ],
+						[ { data:'336 '} ],
+						[ { data:'558 '} ],
+						[ { data:'700 '} ]
+					],
+					[
+						[ { data:'Unidades'} ],
+						[ { data:'913 '} ],
+						[ { data:'385 '} ],
+						[ { data:'25 '} ],
+						[ { data:'49 '} ]
+					],
+					[
+						[ { data:'Vagas'} ],
+						[ { data:'912 '} ],
+						[ { data:'1.536 '} ],
+						[ { data:'384 '} ],
+						[ { data:'864 '} ]
+					]
+				]
+			}"/>
 			<p>Neste cenário, todos os empreendimentos também apresentam viabilidade financeira. O VGV alcança R$ 3,8 bilhões, um pouco inferior ao cenário de uso comercial. O ganho com venda ou permuta dos terrenos atinge R$ 820 milhões, também um pouco inferior ao cenário anterior, bem como a arrecadação com OODC que chega a R$ 86 milhões. No caso de uso residencial o PDE/2014 aponta a utilização do fator de planejamento 0,7 nessa localidade. Como se trata de um projeto de intervenção urbana, com autonomia para definição de seus próprios fatores, entende-se que a aplicação do fator 1,0 é condizente com a disponibilidade financeira dos empreendimentos.</p>
 
+			<table>
+				<caption>Tabela: Estudo de viabilidade por terreno - cenário misto</caption>
+				<thead>
+					<tr>
+						<th colspan="2">Demonstrativo financeiro - resumo</th>
+						<th>Eusébio Matoso</th>
+						<th>José Augusto de Queiroz</th>
+						<th>Lineu de Paula Machado 1</th>
+						<th>Lineu de Paula Machado 2</th>
+						<th>Total</th>
+					</tr>
+				</thead>
+				<tbody style="text-align: right">
+					<tr>
+						<td rowspan="2">VGV</td>
+						<td> R$/m² </td>
+						<td>12.000</td>
+						<td>15.000</td>
+						<td>15.000</td>
+						<td>15.000</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td> R$ </td>
+						<td>856.509.000</td>
+						<td>2.181.744.000</td>
+						<td>228.933.000</td>
+						<td>564.933.000</td>
+						<td>3.832.119.000</td>
+					</tr>
+					<tr>
+						<td rowspan="2">Terreno</td>
+						<td> R$/m² </td>
+						<td>11.015</td>
+						<td>17.931</td>
+						<td>4.835</td>
+						<td>5.563</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td> R$ </td>
+						<td>171.301.800</td>
+						<td>490.892.400</td>
+						<td>45.210.600</td>
+						<td>112.986.600</td>
+						<td>820.391.400</td>
+					</tr>
+					<tr>
+						<td rowspan="2">Outorga</td>
+						<td>Fp</td>
+						<td>1,0</td>
+						<td>1,0</td>
+						<td>1,0</td>
+						<td>1,0</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>R$</td>
+						<td>21.222.358</td>
+						<td>37.394.161</td>
+						<td>8.057.605</td>
+						<td>19.372.273</td>
+						<td>86.046.397</td>
+					</tr>
+					<tr>
+						<td>ML</td>
+						<td>(%)</td>
+						<td>21,1</td>
+						<td>23,7</td>
+						<td>20,5</td>
+						<td>21,4</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>TIR</td>
+						<td>(%)</td>
+						<td>26,6</td>
+						<td>32,7</td>
+						<td>25,1</td>
+						<td>27,4</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
 			<h3>Considerações finais</h3>
 			<p>A localização do Jockey Club apresenta grande atratividade execução de negócios imobiliários. A destinação de parte de sua gleba para esta finalidade permitiria a geração de receita considerável para a execução das intervenções publicas, bem como para o abatimento da dívida da instituição com a Prefeitura Municipal de São Paulo.</p>
 			<p>A região tem forte vocação comercial, mas também se pode considerar o ordenamento para fins residenciais. A implantação estritamente comercial geraria uma arrecadação com OODC em torno de R$ 18 milhões superior àquela de uso misto. Dada a atratividade do mercado, a velocidade de vendas não deve prejudicar os resultados financeiros no caso da escolha por empreendimento comerciais.</p>
@@ -675,7 +1385,57 @@
 
 		<section>
 			<h2 class="titulo" indent="1">Ficha técnica</h2>
-			<p>Lorem ipsum</p>
+			<p>
+				<b>José Armênio de Brito Cruz</b><br>
+				Presidência da São Paulo Urbanismo
+			</p>
+			<p>
+				<b>Leonardo Amaral Castro</b><br>
+				Diretoria de Desenvolvimento
+			</p>
+			<p>
+				<b>Marcelo Fonseca Ignatios</b><br>
+				Superintendência de Estruturação de Projetos
+			</p>
+			<p>
+				<b>Modelagem Econômica</b><br>
+				Bruno Martins Hermann<br>
+				Allan Martino Matos<br>
+			</p>
+			<p>
+				<b>Modelagem Urbanística</b><br>
+				Adriano Meiken Morelli (estagiário)<br>
+				Allan Martino Matos  (desenvolvimento)<br>
+				Danilo Bocchini Rodrigues Alves<br>
+				Eduardo Tavares de Carvalho<br>
+				Fernando Henrique Gasperini (Coordenação)<br>
+				Mayara Rodrigues de Alcântara (estagiária)<br>
+			</p>
+			<p>
+				<b>Estimativa de custos</b><br>
+				Maria Cristina Fernandes<br>
+			</p>
+			<p>
+				<b>Modelagem Jurídica</b><br>
+				Daniel Wasem Quesada<br>
+				Marília Formoso Camargo<br>
+				Thaís Fernanda Lopes<br>
+			</p>
+			<p>
+				<b>Participação Social</b><br>
+				Francila Natalia dos Santos<br>
+				Maria Fernanda Willy Fabro<br>
+				Patricia Saran<br>
+				Paulo de Moraes Junior<br>
+				Tais Sertorio Milanez<br>
+				Patricia Saran<br>
+				Daniela Tunes Zilio
+			</p>
+			<p>
+				<b>Desenvolvimento web</b><br>
+				Davi Masayuki Hosogiri (estágio)<br>
+				Thomas Len Yuba
+			</p>
 		</section>
 
 		<section ref="allComments">

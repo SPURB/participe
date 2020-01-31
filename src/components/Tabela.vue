@@ -13,8 +13,8 @@
 						:data-coluna="dados.colunas[col(celula, linha)].titulo"
 						:class="{
 							destaque: celula[0].destaque,
-							cor: celula[0].cor, vazio:
-							celula[0].vazio,
+							cor: celula[0].cor,
+							vazio: celula[0].vazio,
 							centralizado: celula[0].centro
 						}"
 						:colspan="celula[0].nCol"

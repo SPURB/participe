@@ -1,12 +1,20 @@
 <template>
 	<div class="ConsultaAuto" ref="conteudoConsulta">
-		<PageTop :background_image_src="typeof(estaConsulta.urlCapa) == 'undefined' ? 'arquivos/capas/placeholder.png' : 'arquivos/capas/'+estaConsulta.urlCapa" :esta_consulta="estaConsulta">
+		<PageTop :background_image_src="typeof(estaConsulta) == 'undefined' ? 'arquivos/capas/placeholder.png' : 'arquivos/capas/'+estaConsulta.urlCapa" :esta_consulta="estaConsulta">
 			<!-- <template slot="titulo"><div>Título da Nova Consulta</div></template> -->
-			<template slot="titulo"><div>{{ estaConsulta.nomePublico }}</div></template>
+			<template slot="titulo"><div>{{ estaConsulta ? estaConsulta.nomePublico : '' }}</div></template>
 			<!-- <template slot="subtitulo"><div>Subtítulo da Nova Consulta</div></template> -->
 		</PageTop>
-		<Indice :titulos="titulosLimpo"></Indice>		
-	
+		<Indice :titulos="titulosLimpo"></Indice>
+		
+		<!-- Modal de Alerta (mensagem urgente) -->
+		<div v-if="mostraModal" class="modalBG" @click.self="mostraModal = false">			
+			<div class="fechaModal" title="Fechar" @click="mostraModal = false">X</div>
+			<div class="innerModal">
+				<component v-bind:is="msgAlerta"></component>
+			</div>
+		</div>
+
 		<component v-bind:is="htmlContent"></component>
 		
 		<section v-if="ready" ref="allComments">
@@ -81,6 +89,11 @@ export default {
 
 					app.htmlContent	= {template: '<div id="autocontent">'+h1+processedHtml+'</div>'}
 					app.ultimaAlteracao	= response.data[maisRecente].data_alteracao
+
+					// Exibe mensagem de alerta, caso consulta possua
+					if (response.data[maisRecente].msg_alerta) {
+						app.exibeAlerta(response.data[maisRecente].msg_alerta)
+					}
 					
 					// Atualiza índice lateral (h2 e h3)
 					window.setTimeout(function() {
@@ -109,7 +122,9 @@ export default {
 			estaConsulta: {},
 			ready: false,
 			htmlContent: '',
-			ultimaAlteracao: ''
+			ultimaAlteracao: '',
+			msgAlerta: '',
+			mostraModal: false
 		}
 	},
 	components: {
@@ -131,6 +146,13 @@ export default {
 				}
 			})
 			return app.estaConsulta.idConsulta
+		},
+		exibeAlerta: function(mensagem) {
+			// window.alert(mensagem);
+			// app.htmlContent	= {template: '<div id="autocontent">'+h1+processedHtml+'</div>'}
+			// this.msgAlerta = mensagem;
+			this.msgAlerta = {template: '<div id="msgAlerta">'+mensagem+'</div>'}
+			this.mostraModal = true;
 		},
 		insereComentarios: function() {
 			let rawHtml = this.htmlContent
@@ -181,6 +203,46 @@ a.anexo {
     color: black;
     box-shadow: 2px 2px 5px #ccc;
     width: calc(100% - 5px);
+}
+.modalBG {
+	background-color: rgba(0,0,0, 0.4);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+}
+.fechaModal {
+	border: 2px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+  width: 2em;
+  height: 2em;
+  background-color: #dd4040;
+  color: white;
+  right: 10%;
+  top: calc(50% - 100px);
+  margin-right: -1em;
+  margin-top: -1em;
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+}
+.innerModal {
+	background-color: white;
+  border-radius: 1em;
+  font-size: larger;
+  position: relative;
+  min-width: 100px;
+  max-width: 80%;
+  max-height: 70%;
+  top: calc(50% - 100px);
+  min-height: 200px;
+  margin: auto;
+  box-shadow: 1px 1px 10px black;
+  padding: 2em;
+  overflow: auto;
 }
 </style>
 <style lang="scss" scoped>

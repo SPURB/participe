@@ -32,6 +32,7 @@ import { consultasCommons } from '@/mixins/consultasCommons'
 import Comments from '@/components/Comments'
 import CommentsLoader from '@/components/CommentsLoader'
 import axios from 'axios'
+import api from '@/utils/api'
 import Vue from 'vue'
 Vue.component('Comments', Comments)
 
@@ -44,17 +45,21 @@ export default {
 		axios
 			.get(process.env.VUE_APP_ASSETS_BASE_URL + 'painel/conteudo-consulta.php?url_consulta=' + this.$route.params.nome)
 			.then(response => {
-				app.$route.meta.id = response.data
+				const idConsulta = parseInt(response.data)
+				app.$route.meta.id = idConsulta
+				// this.$store.commit('SET_ROUTE_ID', idConsulta)
+
 				app.ready = true
+				// console.log(response.data)
 
 				// Carrega dados da consulta
-				axios
-					.get(process.env.VUE_APP_API_URL + 'v3/consultas/' + app.$route.meta.id)
+				api
+					.get(process.env.VUE_APP_API_URL + 'v3/consultas/' + idConsulta)
 					.then(response => {
 						let estaConsulta = response.data
 						// Carrega conteúdo HTML
 						axios
-							.get(process.env.VUE_APP_ASSETS_BASE_URL + 'painel/conteudo-consulta.php?id=' + app.$route.meta.id)
+							.get(process.env.VUE_APP_ASSETS_BASE_URL + 'painel/conteudo-consulta.php?id=' + idConsulta)
 							.then(response => {
 								// Substitui tags por componentes de comentários
 								var cId = 0
@@ -134,13 +139,12 @@ export default {
 		Indice
 	},
 	methods: {
-		encontraConsulta: function () {
+		encontraConsulta: () => {
 			let consultaUrl = 'consulta/' + this.$route.params.nome
 			this.consultas = this.$store.state.consultas
 			this.estaConsulta = this.consultas.find(consulta => consulta.urlConsulta === consultaUrl)
 
-			let app = this
-			this.consultas.map(function (index) {
+			this.consultas.map((index) => {
 				if (parseInt(index.idConsulta) === parseInt(app.$route.meta.id)) {
 					app.estaConsulta = index
 				}

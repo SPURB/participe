@@ -1164,7 +1164,7 @@ export default {
 	mounted: function () {
 		// Ajuste pontual no logo superior do participe
 		// window.settimeout(function(){
-			document.getElementsByTagName("h1")[0].innerHTML = ''
+		document.getElementsByTagName('h1')[0].innerHTML = ''
 		// }, 1000)
 	},
 

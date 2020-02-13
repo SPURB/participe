@@ -1,9 +1,7 @@
 <template>
 	<div class="ConsultaAuto" ref="conteudoConsulta">
 		<PageTop :background_image_src="typeof(estaConsulta) == 'undefined' ? 'arquivos/capas/placeholder.png' : 'arquivos/capas/'+estaConsulta.urlCapa" :esta_consulta="estaConsulta">
-			<!-- <template slot="titulo"><div>Título da Nova Consulta</div></template> -->
 			<template slot="titulo"><div>{{ estaConsulta ? estaConsulta.nomePublico : '' }}</div></template>
-			<!-- <template slot="subtitulo"><div>Subtítulo da Nova Consulta</div></template> -->
 		</PageTop>
 		<Indice :titulos="titulosLimpo"></Indice>
 
@@ -40,17 +38,13 @@ export default {
 	name: 'ConsultaAuto',
 	created () {
 		// Carrega ID e comentários da consulta
-		var app = this
 
 		axios
 			.get(process.env.VUE_APP_ASSETS_BASE_URL + 'painel/conteudo-consulta.php?url_consulta=' + this.$route.params.nome)
 			.then(response => {
 				const idConsulta = parseInt(response.data)
-				app.$route.meta.id = idConsulta
-				// this.$store.commit('SET_ROUTE_ID', idConsulta)
-
-				app.ready = true
-				// console.log(response.data)
+				this.$route.meta.id = idConsulta
+				this.ready = true
 
 				// Carrega dados da consulta
 				api
@@ -62,11 +56,7 @@ export default {
 							.get(process.env.VUE_APP_ASSETS_BASE_URL + 'painel/conteudo-consulta.php?id=' + idConsulta)
 							.then(response => {
 								// Substitui tags por componentes de comentários
-								var cId = 0
-								var comId = function () {
-									cId++
-									return cId
-								}
+								let cId = 0
 								let maisRecente = 0
 								for (let i = 0; i < response.data.length; i++) {
 									if (new Date(response.data[i].data_alteracao) > new Date(response.data[maisRecente].data_alteracao)) {
@@ -80,29 +70,29 @@ export default {
 								})
 								// Formata itens de anexo
 								processedHtml = processedHtml.replace(/class="anexo"><span class="fa fa-paperclip">/g, 'class="anexo"><span class="fa fa-paperclip"><i class="icon icon-pdf"></i>')
+
 								// Corrige títulos
 								processedHtml = processedHtml.replace(/<h1([\s\S]*?)>/g, '<h1>').replace(/<h2([\s\S]*?)>/g, '<h2>')
-
 								processedHtml = processedHtml.replace(/<h1>(.*?)<\/h1>/g, '<section><h2 class="titulo" indent="1">$1</h2></section>')
 								processedHtml = processedHtml.replace(/<h2>(.*?)<\/h2>/g, '<section><h3 class="titulo" indent="2">$1</h3></section>')
-								// processedHtml = processedHtml.replace(/<h1>(.*?)<\/h1>/g, '<section><h2 class="titulo" indent="1">$1</h2></section>')
-								// processedHtml = processedHtml.replace(/<h2>(.*?)<\/h2>/g, '<section><h3 class="titulo" indent="2">$1</h3></section>')
 								const h1 = '<section><h1 id="tituloH1" class="titulo" indent="1">' + estaConsulta.nomePublico + '</h1></section>'
 
 								// Limpa tag <o:p> do Word (para evitar tentativa frustrada de conversão em custom components)
 								processedHtml = processedHtml.replace(/<o:p>|<\/o:p>/g, '').replace(/w:sdt/g, 'span').replace(/spanpr/g, 'span')
 
-								app.htmlContent	= { template: '<div id="autocontent">' + h1 + processedHtml + '</div>' }
-								app.ultimaAlteracao	= response.data[maisRecente].data_alteracao
+								this.htmlContent	= { template: '<div id="autocontent">' + h1 + processedHtml + '</div>' }
+								this.ultimaAlteracao	= response.data[maisRecente].data_alteracao
 
 								// Exibe mensagem de alerta, caso consulta possua
 								if (response.data[maisRecente].msg_alerta) {
-									app.exibeAlerta(response.data[maisRecente].msg_alerta)
+									this.exibeAlerta(response.data[maisRecente].msg_alerta)
 								}
 
 								// Atualiza índice lateral (h2 e h3)
+								const app = this
 								window.setTimeout(function () {
 									app.titulosLimpo = app.listaTitulos()
+
 									// Se houver muitos títulos, remove os de nível 2 (ou mais) para não extrapolar o índice
 									if (app.titulosLimpo.length > 30) {
 										for (var i = app.titulosLimpo.length - 1; i >= 0; i--) {
@@ -145,16 +135,13 @@ export default {
 			this.estaConsulta = this.consultas.find(consulta => consulta.urlConsulta === consultaUrl)
 
 			this.consultas.map((index) => {
-				if (parseInt(index.idConsulta) === parseInt(app.$route.meta.id)) {
-					app.estaConsulta = index
+				if (parseInt(index.idConsulta) === parseInt(this.$route.meta.id)) {
+					this.estaConsulta = index
 				}
 			})
-			return app.estaConsulta.idConsulta
+			return this.estaConsulta.idConsulta
 		},
 		exibeAlerta: function (mensagem) {
-			// window.alert(mensagem);
-			// app.htmlContent	= {template: '<div id="autocontent">'+h1+processedHtml+'</div>'}
-			// this.msgAlerta = mensagem;
 			this.msgAlerta = { template: '<div id="msgAlerta">' + mensagem + '</div>' }
 			this.mostraModal = true
 		},

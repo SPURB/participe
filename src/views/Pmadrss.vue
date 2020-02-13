@@ -7,7 +7,7 @@
 		</PageTop>
 		<Indice :titulos="titulosLimpo"></Indice>
 
-		<section>			
+		<section>
 			<h2 class="titulo" indent="1">Introdução</h2>
 			<br>
 			<p>
@@ -23,7 +23,7 @@
 				O Plano Municipal de Agroecologia e Desenvolvimento Rural Sustentável e Solidário tem por objetivo buscar o entrelaçamento das diversas políticas públicas existentes que tratam deste tema, integrando e aprimorando na perspectiva da zona rural e da agricultura urbana o conjunto de ações para a promoção da segurança alimentar e nutricional, da soberania alimentar, do desenvolvimento territorial estratégico e do direito humano à alimentação adequada (DHAA).
 			</p>
 			<p>
-				É também seu objetivo indicar novas e necessárias políticas públicas com vistas ao fortalecimento das práticas agropecuárias de forma compatível com a conservação ambiental considerando a complexa ecologia urbana e possibilitando a melhoria da qualidade de vida de agricultores urbanos e peri-urbanos da cidade. 
+				É também seu objetivo indicar novas e necessárias políticas públicas com vistas ao fortalecimento das práticas agropecuárias de forma compatível com a conservação ambiental considerando a complexa ecologia urbana e possibilitando a melhoria da qualidade de vida de agricultores urbanos e peri-urbanos da cidade.
 			</p>
 			<p>
 				A fim de garantir os objetivos previstos no Plano Diretor Estratégico (PDE) em relação ao território rural e ao conjunto das políticas de fomento à agroecologia urbana e adoção de práticas sustentáveis no cotidiano dos cidadãos, este plano traz apontamentos e recomendações para guiar a atuação do Poder Público nas diversas instâncias num cenário para os próximos 8 anos.
@@ -42,7 +42,7 @@
 			<Imagem :dados="{
 				tipo: 'coluna',
 				url: imgSrc('arquivos/pmadrss/zona-sul-03.jpg')
-			}"></Imagem>			
+			}"></Imagem>
 		</section>
 
 		<section>
@@ -75,13 +75,11 @@
 				<li>DIRETRIZES PARA ORIENTAR AS AÇÕES DOS ÓRGÃOS PÚBLICOS E DE SUAS PARCERIAS</li>
 				<li>CONSIDERAÇÕES FINAIS E RECOMENDAÇÕES</li>
 			</ol>
-			
+
 			<p>
 				Para fins da presente Consulta Pública, serão recebidas considerações da população acerca da seção: “V. DIRETRIZES PARA ORIENTAR AS AÇÕES DOS ÓRGÃOS PÚBLICOS E DE SUAS PARCERIAS”, uma vez que é o principal capítulo onde estão descritas as ações, atividades estratégicas e metas previstas para atuações do Poder Público de forma a fomentar o desenvolvimento rural de forma solidária e sustentável e promover a agroecologia em todo o território municipal.
-			</p>			
+			</p>
 		</section>
-
-		
 
 		<section v-observe-visibility="{
 						callback: (isVisible, entry) => visibilityChanged(isVisible, entry, 'tabela'),
@@ -197,11 +195,11 @@
 				<tr>
 					<td>Alta</td>
 					<td>Entre 2 e 4 anos</td>
-				</tr>	
+				</tr>
 				<tr>
 					<td>Média</td>
 					<td>Entre 4 e 6 anos</td>
-				</tr>	
+				</tr>
 				<tr>
 					<td>Baixa</td>
 					<td>Entre 6 e 8 anos</td>
@@ -249,7 +247,7 @@
 			<div id="indice-eixos">
 				<ul>
 					<li v-for="eixo in eixos">
-						<span>{{ eixo.innerText }}</span>						
+						<span>{{ eixo.innerText }}</span>
 						<ul>
 							<li v-for="div in eixo.parentElement.getElementsByClassName('acao')">
 								<a :href="'#' + div.querySelector('h4').id">{{div.querySelector('h4').innerText}}</a>
@@ -262,7 +260,7 @@
 
 		<section>
 			<h3 class="titulo" indent="2">EIXO TURISMO</h3>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO - Turismo Sustentável 1</h4>
 				<h5>OBJETIVO</h5>
 				<p>Apoiar o desenvolvimento do Turismo Rural no Pólo de Ecoturismo de Parelheiros, conforme Plano de Desenvolvimento do Turismo Sustentável aprovado</p>
@@ -288,7 +286,7 @@
 				<Comments :attr="{id:commentId(), context:'AÇÃO - Turismo Sustentável 1'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
 
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Turismo Sustentável 2</h4>
 				<h5>OBJETIVO</h5>
 				<p>Desenvolvimento do turismo rural na Zona Leste e Norte</p>
@@ -307,7 +305,7 @@
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Turismo Sustentável 2'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
 
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Turismo Sustentável 3</h4>
 				<h5>OBJETIVO</h5>
 				<p>Polo de Ecoturismo Cantareira (Lei 16.823/2018)</p>
@@ -335,7 +333,7 @@
 		<hr>
 		<section>
 			<h3 class="titulo" indent="2">EIXO SEGURANÇA E fiscalização</h3>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Segurança em áreas rurais</h4>
 				<h5>OBJETIVO</h5>
 				<p>Estruturar a segurança pública descentralizada em áreas rurais</p>
@@ -345,7 +343,7 @@
 					. criar a Inspertoria Regional de Defesa Ambiental (Irdam) Cantareira, para atendimento das áreas rurais e de proteção ambiental, além de dar todas as condições de proteção e segurança as áreas afetas ao Polo de Ecoturismo da Cantareira;<br>
 					. aumento de efetivo de guardas ambientais locais; <br>
 					. manter a articulação e aprimorar os procedimentos com os tradicionais parceiros, Subprefeituras e SVMA, a fim de promover a ampliação da fiscalização em todas as áreas rurais;<br>
-					. manter a parceria com os demais orgãos de segurança, a fim ampliar o patrulhamento e a segurança das áreas rurais. 
+					. manter a parceria com os demais orgãos de segurança, a fim ampliar o patrulhamento e a segurança das áreas rurais.
 
 				</p>
 				<p><strong>META</strong></p>
@@ -359,7 +357,7 @@
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Segurança em áreas rurais'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
 
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Fiscalização ambiental</h4>
 				<h5>OBJETIVO</h5>
 				<p>Estruturar a fiscalização ambiental nos territórios rurais.</p>
@@ -371,7 +369,7 @@
 					, aprimorar o corpo técnico da fiscalização nos territórios nas zonas rurais do município, de forma articulada à execução do Plano de Trabalho da OIDA.<br>
 					. estimular nos técnicos da fiscalização ambiental a conduta de orientação e advertência, sem prejuízo no cumprimento da legislação.<br>
 					. reativar e ampliar o monitoramento aéreo na zona rural, das APAs e do entorno das unidades de conservação;<br>
-					. adotar novas tecnologias de monitoramento, com drones, câmeras e imagens aéreas por satélite entre outras. 
+					. adotar novas tecnologias de monitoramento, com drones, câmeras e imagens aéreas por satélite entre outras.
 
 				</p>
 				<p><strong>META</strong></p>
@@ -389,7 +387,7 @@
 		<hr>
 		<section>
 			<h3 class="titulo" indent="2">EIXO SAÚDE E PROTEÇÃO SOCIAL</h3>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Cultivo de Plantas Medicinais</h4>
 				<h5>OBJETIVO</h5>
 				<p>Possibilitar a produção de plantas medicinais para contribuir com a saúde dos cidadãos</p>
@@ -413,7 +411,7 @@
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Cultivo de Plantas Medicinais'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
 
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Saúde para Agricultores 1</h4>
 				<h5>OBJETIVO</h5>
 				<p>Reduzir a contaminação humana e ambiental dos agricultores por uso indevido de agrotóxicos. </p>
@@ -423,7 +421,7 @@
 					. criação de banco de dados em saúde para casos de contaminação por agrotóxicos; <br>
 					. articular o monitoramento e fiscalização da venda de agrotóxicos com o órgão federal responsável.
 					. estruturar as Unidades de Vigilância em Saúde (Sul - Parelheiros, Norte - Perus, Leste - Itaim Paulista) mais próximos da região rural com capacidade técnica e operacional para realizar as ações de controle; <br>
-					. criar o programa de redução de uso de agrotóxicos na Zona Rural, com análise de resíduos de agrotóxicos nos alimentos.          
+					. criar o programa de redução de uso de agrotóxicos na Zona Rural, com análise de resíduos de agrotóxicos nos alimentos.
 
 				</p>
 				<p><strong>META</strong></p>
@@ -438,7 +436,7 @@
 				<p>Alta</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Saúde para Agricultores 1'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Saúde para Agricultores 2</h4>
 				<h5>OBJETIVO</h5>
 				<p>Implantar programa de prevenção e assistência relacionado a acidentes com animais </p>
@@ -459,7 +457,7 @@
 				<p>Média</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Saúde para Agricultores 2'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Saúde para Agricultores 3</h4>
 				<h5>OBJETIVO</h5>
 				<p>Instituir Práticas Integrativas Complementares em Saúde (PICS) para evitar lesões devido ao esforço no trabalho com agricultura </p>
@@ -482,7 +480,7 @@
 				<p>Alta</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Saúde para Agricultores 3'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Previdência</h4>
 				<h5>OBJETIVO</h5>
 				<p>Criar atendimento e assistência específica para INSS de agricultor </p>
@@ -506,7 +504,7 @@
 		<hr>
 		<section>
 			<h3 class="titulo" indent="2">EIXO CONSERVAÇÃO AMBIENTAL</h3>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Pagamento por Serviços Ambientais (PSA)</h4>
 				<h5>OBJETIVO</h5>
 				<p>Implantar o Pagamento por Serviços Ambientais aos agricultores do município de São Paulo que contribuam na preservação ambiental conforme Plano Diretor Estratégico (PDE).</p>
@@ -528,13 +526,13 @@
 				<p>Urgente</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Pagamento por Serviços Ambientais (PSA)'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Silvicultura e manejo sustentável de fragmentos florestais</h4>
 				<h5>OBJETIVO</h5>
 				<p>Viabilizar a silvicultura e manejo sustentável de fragmentos florestais como atividades produtivas.</p>
 				<h5>ATIVIDADES ESTRATÉGICAS</h5>
 				<p>
-					. articular, junto à Câmara Municipal, legislação para viabilizar a silvicultura, o manejo florestal e sistemas agroflorestais (como o PL 503/2016).          
+					. articular, junto à Câmara Municipal, legislação para viabilizar a silvicultura, o manejo florestal e sistemas agroflorestais (como o PL 503/2016).
 				</p>
 				<p><strong>META</strong></p>
 				<p>
@@ -544,14 +542,14 @@
 				<p>Urgente</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Silvicultura e manejo sustentável de fragmentos florestais'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Sistemas Agroflorestais</h4>
 				<h5>OBJETIVO</h5>
 				<p>Criar alternativas de renda e gerar conhecimento de manejo das espécies nativas de Mata Atlântica</p>
 				<h5>ATIVIDADES ESTRATÉGICAS</h5>
 				<p>
 					. realizar curso de capacitação e visitação em áreas de SAF;<br>
-					. implantar unidades demonstrativas de sistemas agroflorestais e áreas com manejo sustentável de fragmentos florestais.          
+					. implantar unidades demonstrativas de sistemas agroflorestais e áreas com manejo sustentável de fragmentos florestais.
 
 				</p>
 				<p><strong>META</strong></p>
@@ -564,7 +562,7 @@
 				<p>Alta</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Sistemas Agroflorestais'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – PMMA</h4>
 				<h5>OBJETIVO</h5>
 				<p>Implementar o PMMA</p>
@@ -573,7 +571,7 @@
 					. articular produtores para conectar fragmentos florestais e corredores ecolõgicos<br>
 					. incentivar a implantação de RPPNs <br>
 					. apoiar projetos de reflorestamento e recuperação florestal, com prioridade em terras indígenas<br>
-					. Implementar instrumentos de incentivo para conservação da Mata Atlântica (como o PSA)          
+					. Implementar instrumentos de incentivo para conservação da Mata Atlântica (como o PSA)
 
 				</p>
 				<p><strong>META</strong></p>
@@ -588,7 +586,7 @@
 		<hr>
 		<section>
 			<h3 class="titulo" indent="2">EIXO ENSINO E EDUCAÇÃO</h3>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Hortas Escolares Agroecológicas</h4>
 				<h5>OBJETIVO</h5>
 				<p>Fortalecer a formação de hortas escolares apoiando as ações definidas na Lei nº 16.140/2015.</p>
@@ -599,7 +597,7 @@
 					. orientar as escolas e facilitar a articulação para viabilizar insumos e técnicos para o desenvolvimento das hortas. <br>
 					. promover encontros para trocas de experiências entre as escolas. <br>
 					. fomentar a formação da comunidade escolar para questões relacionadas ao sistema alimentar e agroecologia, envolvendo agricultores/as, merendeiras/os, nutricionistas e jardineiros/as nas atividades pedagógicas e promovendo a troca de experiências entre esses atores;<br>
-					. associar hortas escolares a atividades de compostagem, conforme preconizado no PGIRS.          
+					. associar hortas escolares a atividades de compostagem, conforme preconizado no PGIRS.
 
 				</p>
 				<p><strong>META</strong></p>
@@ -612,14 +610,14 @@
 				<p>Alta</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Hortas Escolares Agroecológicas'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Educação ambiental agroecológica</h4>
 				<h5>OBJETIVO</h5>
 				<p>Promover ações de educação ambiental para o desenvolvimento de atividades relacionadas aos eixos agricultura urbana e periurbana, meio ambiente, agroecologia, permacultura e segurança alimentar e nutricional.</p>
 				<h5>ATIVIDADES ESTRATÉGICAS</h5>
 				<p>
 					. realizar ações para a população em geral sobre alimentação, educação ambiental e agroecologia.<br>
-					. elaborar cartilha informativa sobre alimentação, educação ambiental e agroecologia.          
+					. elaborar cartilha informativa sobre alimentação, educação ambiental e agroecologia.
 
 				</p>
 				<p><strong>META</strong></p>
@@ -632,7 +630,7 @@
 				<p>Alta</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Educação ambiental agroecológica'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Articulação com Instituições de Ensino</h4>
 				<h5>OBJETIVO</h5>
 				<p>Apoiar a realização de projetos de pesquisa e extensão universitários e técnicos voltados para o desenvolvimento rural sustentável e agroecologia.</p>
@@ -640,8 +638,8 @@
 				<p>
 					. estabelecer diálogos com instituições de ensino e pesquisa que tenham cursos em áeras correlatas com as questões relacionadas ao desenvolvimento rural;<br>
 					. fomentar a realização de estudos, projetos de pesquisa e extensão que deem suporte às ações de desenvolvimento rural e agroecologia, assim como às ações relacionadas ao manejo adequado dos resíduos gerados e a reciclagem “in loco” do resíduo orgânico;<br>
-					. definir o escopo dos projetos de forma conjunta com CMDRSS; 
-					. estabelecer parceria com universidades e escolas técnicas para realização de estágio nas áreas de produção.          
+					. definir o escopo dos projetos de forma conjunta com CMDRSS;
+					. estabelecer parceria com universidades e escolas técnicas para realização de estágio nas áreas de produção.
 
 				</p>
 				<p><strong>META</strong></p>
@@ -652,13 +650,13 @@
 				<p>Média</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Articulação com Instituições de Ensino'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Criação de Escola Técnica de Agroecologia em Parelheiros</h4>
 				<h5>OBJETIVO</h5>
 				<p>- Estruturar um espaço educativo de formação e capacitação de agricultores para incrementar a produção agrícola do município, gerar renda e viabilizar a agricultura como atividade econômica.</p>
 				<h5>ATIVIDADES ESTRATÉGICAS</h5>
 				<p>
-					. articular e formar parcerias para a criação de uma Escola Técnica de Agroecologia no município;          
+					. articular e formar parcerias para a criação de uma Escola Técnica de Agroecologia no município;
 				</p>
 				<p><strong>META</strong></p>
 				<p>
@@ -668,7 +666,7 @@
 				<p>Média</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Criação de Escola Técnica de Agroecologia em Parelheiros'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Criação de Cursos na Área de Agroecologia</h4>
 				<h5>OBJETIVO</h5>
 				<p>Formar e capacitar agricultores para incrementar a produção agrícola do município, gerar renda e viabilizar a agricultura como atividade econômica.</p>
@@ -676,7 +674,7 @@
 				<p>
 					. promover cursos de qualificação profissional nas áreas de agricultura de base ecológica, agricultura biodinâmica e afins;<br>
 					. possibilitar que esses cursos sejam realizados nos Centros Educacionais Unificados (CEUs) das regiões com maior demanda;<br>
-					. propor parceria com a Escola Tabor para a disponibilidade de vagas gratuítas para Curso Técnico em Agroecologia. 
+					. propor parceria com a Escola Tabor para a disponibilidade de vagas gratuítas para Curso Técnico em Agroecologia.
 
 				</p>
 				<p><strong>META</strong></p>
@@ -693,7 +691,7 @@
 		<hr>
 		<section>
 			<h3 class="titulo" indent="2">EIXO PRODUÇÃO ANIMAL</h3>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Pesca artesanal</h4>
 				<h5>OBJETIVO</h5>
 				<p>Garantir a atividade de pesca artesanal e pesque pagues ajustadas a legislação ambiental.</p>
@@ -702,10 +700,10 @@
 					. firmar parceria para levantamento de espécies pescadas e quantidade e qualidade de pescado;<br>
 					. articulação de parceria para monitoramento da atividade de pesca; <br>
 					. garantir uma cadeira no CMDRSS para os pescadores artesanais;<br>
-					. articular a promoção da assistência técnica especializada para os pescadores 
+					. articular a promoção da assistência técnica especializada para os pescadores
 					.  capacitação pescadores artesanais;<br>
 					. articular a possibilitar que os pescadores possam utilizar a agroindústria do CEASA para o processamento do pescado;<br>
-					. contemplar a gestão adequada de resíduos de forma associada a gestão ambiental e sanitária.          
+					. contemplar a gestão adequada de resíduos de forma associada a gestão ambiental e sanitária.
 
 				</p>
 				<p><strong>META</strong></p>
@@ -719,7 +717,7 @@
 				<p>Alta</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Pesca artesanal'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Pecuária (Avicultura, Suinocultura,  Apicultura, Caprinocultura, Bovinocultura, entre outros)</h4>
 				<h5>OBJETIVO</h5>
 				<p>Garantir a atividade da pecuária ajustada à legislação ambiental e sanitária.</p>
@@ -728,7 +726,7 @@
 					. articular parceria para levantamento de quantidade e qualidade de produtos pecuários produzidos;<br>
 					. articular parceria para monitoramento da atividade pecuária;<br>
 					. articular assistência técnica especializada para os produtores; <br>
-					. contemplar a gestão adequada de resíduos de forma associada a gestão ambiental e sanitária.          
+					. contemplar a gestão adequada de resíduos de forma associada a gestão ambiental e sanitária.
 
 				</p>
 				<p><strong>META</strong></p>
@@ -741,7 +739,7 @@
 				<p>Média</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Pecuária (Avicultura, Suinocultura,  Apicultura, Caprinocultura, Bovinocultura, entre outros)'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Sistema de Inspeção Municipal (SIM)</h4>
 				<h5>OBJETIVO</h5>
 				<p>Revisão de normas sanitárias focando a criação animal e de produtos de origem animal.</p>
@@ -752,7 +750,7 @@
 					. criar GT para avaliar adesão ao SUASA na cidade de São Paulo,<br>
 					. designar 1 médico veterinário para cuidar da orientação aos empreendimentos agroindustriais do municipio;<br>
 					. fortalecer a estrutura da COVISA;<br>
-					. contemplar a gestão adequada de resíduos de forma associada a gestão ambiental e sanitária.          
+					. contemplar a gestão adequada de resíduos de forma associada a gestão ambiental e sanitária.
 
 				</p>
 				<p><strong>META</strong></p>
@@ -767,7 +765,7 @@
 		<hr>
 		<section>
 			<h3 class="titulo" indent="2">EIXO CULTURA</h3>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Cultura rural</h4>
 				<h5>OBJETIVO</h5>
 				<p>Promover ações culturais junto a unidades de produção agrícola de São Paulo.</p>
@@ -775,7 +773,7 @@
 				<p>
 					. Preservar a memória, identidade e herança cultural dos agricultores e agricultoras e povos indígenas para valorização da sociobiodiversidade.<br>
 					. Fortalecer e valorizar a cultura da juventude inserida nas atividades da agricultura.<br>
-					. Articular a identificação e reconhecimento do patrimônio cultural rural’ com a regulamentação do Territórios de Interesse da Cultura e da Paisagem - TICP .          
+					. Articular a identificação e reconhecimento do patrimônio cultural rural’ com a regulamentação do Territórios de Interesse da Cultura e da Paisagem - TICP .
 
 				</p>
 				<p><strong>META</strong></p>
@@ -788,7 +786,7 @@
 				<p>Média</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Cultura rural'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Artesanato</h4>
 				<h5>OBJETIVO</h5>
 				<p>Viabilizar capacitação e geração de renda por meio do artesanato.</p>
@@ -797,7 +795,7 @@
 					. promover oficinas de capacitação;<br>
 					. criar pontos de comercialização de artesanato local na cidade, priorizando o artesanato indígena, mulheres e grupos vulneraveis.<br>
 					. cadastrar os artesãos e manualidades.<br>
-					. estímulo à produção de artesanato utilizando produtos florestais madeireiros ou não madeireiros, e demais produtos da socibiodiversidade de acordo com a Lei 16.573/2016.          
+					. estímulo à produção de artesanato utilizando produtos florestais madeireiros ou não madeireiros, e demais produtos da socibiodiversidade de acordo com a Lei 16.573/2016.
 
 				</p>
 				<p><strong>META</strong></p>
@@ -814,7 +812,7 @@
 		<hr>
 		<section>
 			<h3 class="titulo" indent="2">EIXO INFRAESTRUTURA BÁSICA</h3>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Educação para Saneamento Ambiental na Zona Rural</h4>
 				<h5>OBJETIVO</h5>
 				<p>Proteger os corpos d´água e garantir a qualidade de vida dos agricultores familiares.</p>
@@ -823,7 +821,7 @@
 					. incentivar a instalação de fossas ecológicas e banheiro seco nas propriedades da zona rural e assentamentos urbanos isolados;  <br>
 					. articular com a SABESP para instalação de saneamento em áreas rurais, como Irma Alberta, Jd Antartica, Jd Damasceno, TI Jaraguá entre outras regiões e áreas próximas a agricultores;<br>
 					. orientar sobre o manejo dos resíduos sólidos em zona rural; <br>
-					. criar programas de proteção e monitoramento das aguás nas áreas de proteção e recuperação de mananciais, Terras Indígenas e demais corpos d´água utilizados para irrigação de áreas produtivas.          
+					. criar programas de proteção e monitoramento das aguás nas áreas de proteção e recuperação de mananciais, Terras Indígenas e demais corpos d´água utilizados para irrigação de áreas produtivas.
 
 				</p>
 				<p><strong>META</strong></p>
@@ -837,7 +835,7 @@
 				<p>Alta</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Educação para Saneamento Ambiental na Zona Rural'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Serviços Básicos</h4>
 				<h5>OBJETIVO</h5>
 				<p>Apoiar a instalação de infraestrutura e serviços básicos na zona rural e outras áreas de produção agrícola.</p>
@@ -845,7 +843,7 @@
 				<p>
 					. qualificar a demanda e estudar viabilidade para promover a coleta de resíduos de pequenos geradores em áreas rurais, buscando estimular ações que minimizem a geração de resíduo e ações para tratamento do resíduo gerado “in loco”;<br>
 					. estabelecer periodicidade para manutenção das estradas rurais e criar um calendário de manutenção e tapa buracos, incluindo a possibilidade de pavimentação ecológica;<br>
-					. qualificar a demanda e estudar viabilidade para iluminação pública nas áreas rurais.          
+					. qualificar a demanda e estudar viabilidade para iluminação pública nas áreas rurais.
 
 				</p>
 				<p><strong>META</strong></p>
@@ -856,14 +854,14 @@
 				<p>Alta</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Serviços Básicos'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Comunicação Rural</h4>
 				<h5>OBJETIVO</h5>
 				<p>Ampliação do sinal de Internet nas áreas rurais de São Paulo</p>
 				<h5>ATIVIDADES ESTRATÉGICAS</h5>
 				<p>
 					. ampliação do sinal de internet e modernização das redes existentes;<br>
-					. estabelecer parcerias com operadoras de rede de internet e telefonia.           
+					. estabelecer parcerias com operadoras de rede de internet e telefonia.
 
 				</p>
 				<p><strong>META</strong></p>
@@ -878,7 +876,7 @@
 		<hr>
 		<section>
 			<h3 class="titulo" indent="2">EIXO FORTALECIMENTO INSTITUCIONAL </h3>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Fortalecer a CAISAN</h4>
 				<h5>OBJETIVO</h5>
 				<p>Garantir o fortalecimento e integração das políticas públicas voltadas para desenvolvimento rural sustentável e das ações das diferentes secretarias.</p>
@@ -897,7 +895,7 @@
 				<p>Alta</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Fortalecer a CAISAN'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Fortalecer o CMDRSS</h4>
 				<h5>OBJETIVO</h5>
 				<p>Fortalecer conselho, garantindo o controle social das políticas públicas e a gestão participativa de políticas, programas e orçamentos.</p>
@@ -918,7 +916,7 @@
 				<p>Alta</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Fortalecer o CMDRSS'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Estrutura institucional específica para Agricultura e Segurança Alimentar e Nutricional</h4>
 				<h5>OBJETIVO</h5>
 				<p>Ampliar a estrutura técnica e o orçamento da máquina pública para o desenvolvimento de políticas públicas relacionadas à segurança alimentar e nutricional, abastecimento, agricultura nas suas diversas tipologias , desenvolvimento rural sustentável e outros temas correlatos.</p>
@@ -936,7 +934,7 @@
 				<p>Baixa</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Estrutura institucional específica para Agricultura e Segurança Alimentar e Nutricional'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Observatório do Desenvolvimento Rural no município</h4>
 				<h5>OBJETIVO</h5>
 				<p>Realizar estudos periódicos com dados da atividade agrícola no município.</p>
@@ -954,7 +952,7 @@
 				<p>Média</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Observatório do Desenvolvimento Rural no município'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – PDUI</h4>
 				<h5>OBJETIVO</h5>
 				<p>Articular as ações previstas neste plano com demais municípios da Região Metropolitana de São Paulo (RMSP).</p>
@@ -970,7 +968,7 @@
 				<p>Média</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – PDUI'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Subprefeituras</h4>
 				<h5>OBJETIVO</h5>
 				<p>Promover ações de desenvolvimento rural, agricultura urbana e agroecologia nas subprefeituras.</p>
@@ -994,7 +992,7 @@
 		<hr>
 		<section>
 			<h3 class="titulo" indent="2">EIXO ASSISTÊNCIA TÉCNICA E EXTENSÃO RURAL (ATER) </h3>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Patrulha Mecanizada Agrocológica</h4>
 				<h5>OBJETIVO</h5>
 				<p>Fortalecer as ações e atividades da Patrulha Mecanizada Agroecológica, ampliando a quantidade de horas de utilização mensal, a abrangência das áreas.</p>
@@ -1018,7 +1016,7 @@
 				<p>Alta</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Patrulha Mecanizada Agrocológica'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Assistência Técnica e Extensão Rural</h4>
 				<h5>OBJETIVO</h5>
 				<p>Ampliar o número de agricultores atendidos e acompanhados pela ATER, priorizando mulheres, jovens e comunidades tradicionais</p>
@@ -1039,7 +1037,7 @@
 				<p>Alta</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Assistência Técnica e Extensão Rural'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Crédito Rural</h4>
 				<h5>OBJETIVO</h5>
 				<p>Articular com os órgãos responsáveis a viabilização do Crédito Rural para os agricultores</p>
@@ -1057,7 +1055,7 @@
 				<p>Média</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Crédito Rural'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Transição Agroecológica</h4>
 				<h5>OBJETIVO</h5>
 				<p>Garantir a sustentabilidade da prática agrícola em consonância com a conservação ambiental, coibindo a adoção de práticas que impactem negativamente a produção de água e a qualidade ambiental do território.</p>
@@ -1077,7 +1075,7 @@
 				<p>Alta</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Transição Agroecológica'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Sala da Cidadania</h4>
 				<h5>OBJETIVO</h5>
 				<p>Ter uma Sala da Cidadania ativa e em funcionamento no município.</p>
@@ -1093,13 +1091,13 @@
 				<p>Média</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Sala da Cidadania'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Formação continuada para técnicos de ATER</h4>
 				<h5>OBJETIVO</h5>
 				<p>Garantir a qualidade da assistência técnica agroecológica prestada aos agricultores.</p>
 				<h5>ATIVIDADES ESTRATÉGICAS</h5>
 				<p>
-					. garantir metodologias agroecológicas para a ATER, com protagonismo do agricultor; 
+					. garantir metodologias agroecológicas para a ATER, com protagonismo do agricultor;
 					. promover cursos e oficinas para os Técnicos de ATER do município em diversos temas.
 
 				</p>
@@ -1111,7 +1109,7 @@
 				<p>Média</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Formação continuada para técnicos de ATER'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Agroindústrias</h4>
 				<h5>OBJETIVO</h5>
 				<p>Estimular o beneficiamento de produtos da agricultura local.</p>
@@ -1135,7 +1133,7 @@
 		<hr>
 		<section>
 			<h3 class="titulo" indent="2">EIXO REGULARIZAÇÃO </h3>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Regularização Fundiária</h4>
 				<h5>OBJETIVO</h5>
 				<p>Regularizar a situação fundiária das propriedades existentes no município de São Paulo.</p>
@@ -1157,7 +1155,7 @@
 				<p>Alta</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Regularização Fundiária'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Regularização de hortas comunitárias urbanas em áreas públicas</h4>
 				<h5>OBJETIVO</h5>
 				<p>Implantação e acompanhamento das hortas comunitárias urbanas em espaços públicos municipais.</p>
@@ -1176,7 +1174,7 @@
 				<p>Média</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Regularização de hortas comunitárias urbanas em áreas públicas'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Atividades produtivas nas áreas da SABESP e ENEL</h4>
 				<h5>OBJETIVO</h5>
 				<p>Apoiar a instalação e condução de hortas nas áreas da SABESP e ENEL.</p>
@@ -1199,7 +1197,7 @@
 		<hr>
 		<section>
 			<h3 class="titulo" indent="2">EIXO FINANCIAMENTO </h3>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – TACs e TCAs para o programa de agricultura urbana</h4>
 				<h5>OBJETIVO</h5>
 				<p>Direcionar recursos oriundos de TACs e TCAs às ações, objetivos e atividades estratégicas previstas neste Plano.</p>
@@ -1217,7 +1215,7 @@
 				<p>Média</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – TACs e TCAs para o programa de agricultura urbana'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Fundo Municipal de Agroecologia e Desenvolvimento Rural Sustentável e Solidário</h4>
 				<h5>OBJETIVO</h5>
 				<p>Criar um fundo para tornar permanente o fluxo de dotação orçamentária para a realização de programas e ações de Agroecologia e Desenvolvimento Rural Sustentável e Solidário.</p>
@@ -1229,13 +1227,13 @@
 				</p>
 				<p><strong>META</strong></p>
 				<p>
-					Criar o Fundo Municipal de Agroecologia e Desenvolvimento Rural Sustentável e Solidário. 
+					Criar o Fundo Municipal de Agroecologia e Desenvolvimento Rural Sustentável e Solidário.
 				</p>
 				<p><strong>PRIORIDADE</strong></p>
 				<p>Média</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Fundo Municipal de Agroecologia e Desenvolvimento Rural Sustentável e Solidário'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Recursos dos Fundos Municipais</h4>
 				<h5>OBJETIVO</h5>
 				<p>Destinar recursos dos Fundos Municipais para ações de Desenvolvimento Rural</p>
@@ -1251,7 +1249,7 @@
 				<p>Baixa</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Recursos dos Fundos Municipais'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Dotação Orçamentária própria</h4>
 				<h5>OBJETIVO</h5>
 				<p>Criar dotação orçamentária específica para as ações desse plano.</p>
@@ -1273,7 +1271,7 @@
 		<hr>
 		<section>
 			<h3 class="titulo" indent="2">EIXO INDÍGENAS, JOVENS E MULHERES </h3>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Fortalecimento das populações indígenas 1</h4>
 				<h5>OBJETIVO</h5>
 				<p>Fortalecer o cultivo Guarani em quintais produtivos com manejo de animais de pequeno porte.</p>
@@ -1297,7 +1295,7 @@
 				<p>Alta</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Fortalecimento das populações indígenas 1'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Fortalecimento das populações indígenas 2</h4>
 				<h5>OBJETIVO</h5>
 				<p>Promover a formação de indígenas para possibilitar a geração de renda, a gestão territorial e a manutenção da cultura Guarani</p>
@@ -1316,7 +1314,7 @@
 				<p>Média</p>
 				<Comments :attr="{id:commentId(), context:'acao'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Fortalecimento das populações indígenas 3</h4>
 				<h5>OBJETIVO</h5>
 				<p>Garantir o acesso e políticas públicas específicas para a população indígena. </p>
@@ -1337,7 +1335,7 @@
 				<p>Alta</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Fortalecimento das populações indígenas 3'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Fortalecimento das populações indígenas 4</h4>
 				<h5>OBJETIVO</h5>
 				<p>Contribuir para o acesso à terra, apoiando a demarcação das terras indígenas, bem como provendo a infraestrutura necessária para garantir a qualidade de vida.</p>
@@ -1358,7 +1356,7 @@
 				<p>Média</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Fortalecimento das populações indígenas 4'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Juventude rural</h4>
 				<h5>OBJETIVO</h5>
 				<p>Incentivar os jovens a continuar a atividade rural e agricultura familiar.</p>
@@ -1380,7 +1378,7 @@
 				<p>Média</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Juventude rural'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Mulheres rurais</h4>
 				<h5>OBJETIVO</h5>
 				<p>Fortalecer a auto-organização das mulheres</p>
@@ -1407,7 +1405,7 @@
 		<hr>
 		<section>
 			<h3 class="titulo" indent="2">EIXO AGRICULTURA URBANA </h3>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Hortas Urbanas</h4>
 				<h5>OBJETIVO</h5>
 				<p>Promover a agricultura urbana agroecológica conforme o PROAURP.</p>
@@ -1431,7 +1429,7 @@
 				<p>Alta</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Hortas Urbanas'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Pátios de Compostagem</h4>
 				<h5>OBJETIVO</h5>
 				<p>Fomentar a produção e distribuição de composto para os agricultores.</p>
@@ -1451,7 +1449,7 @@
 				<p>Alta</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Pátios de Compostagem'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – PROAURP</h4>
 				<h5>OBJETIVO</h5>
 				<p>Consolidar o PROAURP no município de São Paulo.</p>
@@ -1473,7 +1471,7 @@
 				<p>Urgente/Alta</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – PROAURP'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Programa Operação Trabalho (POT)</h4>
 				<h5>OBJETIVO</h5>
 				<p>Incentivar a qualificação para a agricultura por meio de bolsas do POT Hortas e Viveiro.</p>
@@ -1491,7 +1489,7 @@
 				<p>Urgente</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – Programa Operação Trabalho (POT)'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – VAI na Horta</h4>
 				<h5>OBJETIVO</h5>
 				<p>Possibilitar o acesso a recursos para viabilizar hortas urbanas.</p>
@@ -1510,7 +1508,7 @@
 				<p>Média</p>
 				<Comments :attr="{id:commentId(), context:'AÇÃO – VAI na Horta'}" v-if="estaConsulta.ativo == 1"></Comments>
 			</div>
-			<div class="acao">				
+			<div class="acao">
 				<h4>AÇÃO – Escolas Estufas</h4>
 				<h5>OBJETIVO</h5>
 				<p>Fomentar a produção para autoconsumo, hábitos alimentares saudáveis e preservação ambiental por meio do Programa Escola Estufa.</p>
@@ -1525,7 +1523,7 @@
 				<p><strong>META</strong></p>
 				<p>
 					. Reativar e readequar o Programa Escola Estufa em no mínimo 5 regiões de maior demanda.<br>
-					. Realizar 1 curso por ano em estufas diversas do programa. 
+					. Realizar 1 curso por ano em estufas diversas do programa.
 
 				</p>
 				<p><strong>PRIORIDADE</strong></p>
@@ -1536,7 +1534,7 @@
 		<hr>
 		<section>
 			<h3 class="titulo" indent="2">EIXO COMERCIALIZAÇÃO </h3>
-			<div class="acao">				
+			<div class="acao">
 					<h4>AÇÃO – Boxes da Agricultura Familiar em Mercados e Sacolões</h4>
 					<h5>OBJETIVO</h5>
 					<p>Priorizar aos agricultores familiares na concessão de uso dos boxes em mercados e sacolões públicos do município.</p>
@@ -1553,8 +1551,8 @@
 					<p><strong>PRIORIDADE</strong></p>
 					<p>Alta</p>
 					<Comments :attr="{id:commentId(), context:'AÇÃO – Boxes da Agricultura Familiar em Mercados e Sacolões'}" v-if="estaConsulta.ativo == 1"></Comments>
-				</div>	
-				<div class="acao">				
+				</div>
+				<div class="acao">
 					<h4>AÇÃO – Feiras Orgânicas</h4>
 					<h5>OBJETIVO</h5>
 					<p>Implementar feiras orgânicas na cidade de São Paulo.</p>
@@ -1573,7 +1571,7 @@
 					<p>Urgente</p>
 					<Comments :attr="{id:commentId(), context:'AÇÃO – Feiras Orgânicas'}" v-if="estaConsulta.ativo == 1"></Comments>
 				</div>
-				<div class="acao">				
+				<div class="acao">
 					<h4>AÇÃO – Centros de Distribuição Regional de Produtos Agrícolas</h4>
 					<h5>OBJETIVO</h5>
 					<p>Criar Centros de Distribuição Regional de Produtos Agrícolas para estreitar relação entre mercado consumidor e agricultores.</p>
@@ -1592,7 +1590,7 @@
 					<p>Baixa</p>
 					<Comments :attr="{id:commentId(), context:'AÇÃO – Centros de Distribuição Regional de Produtos Agrícolas'}" v-if="estaConsulta.ativo == 1"></Comments>
 				</div>
-				<div class="acao">				
+				<div class="acao">
 					<h4>AÇÃO – Grupos de Consumo Responsável</h4>
 					<h5>OBJETIVO</h5>
 					<p>Promover e incentivar a comercialização dos agricultores do município por meio de formas alternativas de acesso aos consumidores.</p>
@@ -1613,7 +1611,7 @@
 					<p>Média</p>
 					<Comments :attr="{id:commentId(), context:'AÇÃO – Grupos de Consumo Responsável'}" v-if="estaConsulta.ativo == 1"></Comments>
 				</div>
-				<div class="acao">				
+				<div class="acao">
 					<h4>AÇÃO – Compras Públicas</h4>
 					<h5>OBJETIVO</h5>
 					<p>Garantir a priorização de agricultores familiares agroecológicos nas compras públicas da Prefeitura.</p>
@@ -1640,7 +1638,7 @@
 		<hr>
 		<section>
 			<h3 class="titulo" indent="2">EIXO ORDENAMENTO TERRITORIAL </h3>
-			<div class="acao">				
+			<div class="acao">
 					<h4>AÇÃO – Monitoramento das ferramentas do PDE para a Zona Rural</h4>
 					<h5>OBJETIVO</h5>
 					<p>Avaliar o desempenho das políticas públicas, instrumentos, planos e programas previstos no PDE abordando sua eficiência, eficácia e efetividade.</p>
@@ -1655,8 +1653,8 @@
 					<p><strong>PRIORIDADE</strong></p>
 					<p>Alta</p>
 					<Comments :attr="{id:commentId(), context:'AÇÃO – Monitoramento das ferramentas do PDE para a Zona Rural'}" v-if="estaConsulta.ativo == 1"></Comments>
-				</div>	
-				<div class="acao">				
+				</div>
+				<div class="acao">
 					<h4>AÇÃO – Planos Regionais, Planos de Bairro e PIUs das subprefeituras com ZR e/ou atividade agropecuária.</h4>
 					<h5>OBJETIVO</h5>
 					<p>Compatibilizar as ações previstas no PDRSS com os Planos Regionais, Planos de Bairro e PIUs (Perímetros de intervenção urbana) das Subprefeituras com ZR ou atividades agropecuárias.</p>
@@ -1672,7 +1670,7 @@
 					<p>Médio</p>
 					<Comments :attr="{id:commentId(), context:'AÇÃO – Planos Regionais, Planos de Bairro e PIUs das subprefeituras com ZR e/ou atividade agropecuária.'}" v-if="estaConsulta.ativo == 1"></Comments>
 				</div>
-				<div class="acao">				
+				<div class="acao">
 					<h4>AÇÃO – Sistema de Informações da Zona Rural de SP</h4>
 					<h5>OBJETIVO</h5>
 					<p>Coletar, sistematizar e disponibilizar um conjunto de informações fundiárias, sociais, econômicas e ambientais referentes aos territórios rurais da cidade.</p>
@@ -1737,21 +1735,20 @@ export default {
 	},
 	mounted: function () {
 		// Popula array de eixos
-		for (var i = 1; i < document.getElementsByTagName('h3').length; i++){
-			if(typeof(this.eixos.push(document.getElementsByTagName('h3')[i])) === 'object') {
+		for (var i = 1; i < document.getElementsByTagName('h3').length; i++) {
+			if (typeof (this.eixos.push(document.getElementsByTagName('h3')[i])) === 'object') {
 				this.eixos.push(document.getElementsByTagName('h3')[i])
 		    }
 		}
 		// Popula array de ações
 		var acaoDivs = document.getElementsByClassName('acao')
 		for (var div in acaoDivs) {
-			if (typeof(acaoDivs[div]) !== 'object') {
+			if (typeof (acaoDivs[div]) !== 'object') {
 				return
 			}
 			acaoDivs[div].querySelector('h4').id = 'a' + div
 			this.acoes.push(acaoDivs[div].querySelector('h4'))
 		}
-		
 	},
 	methods: {
 		fileSrc (fileName) {
@@ -1760,7 +1757,7 @@ export default {
 		},
 		visibilityChanged (isVisible, entry, itemVisivel) {
 			this.isVisible[itemVisivel] = isVisible
-		},
+		}
 	},
 	mixins: [ consultasCommons ]
 }

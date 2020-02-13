@@ -57,7 +57,7 @@ export default {
 			console.log(item.nome);
 			console.log(this.$parent.estaConsulta);
 			return item.nome !== "Contribuições" || this.$parent.estaConsulta.nContribuicoes > 0;
-		}*/
+		} */
 	}
 }
 </script>

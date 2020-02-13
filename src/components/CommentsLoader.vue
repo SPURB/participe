@@ -13,11 +13,9 @@
 
 <script>
 import api from '@/utils/api'
-import { commentsMutations } from '@/mixins/commentsMutations'
 
 export default {
 	name: 'CommentsLoader',
-	mixins: [ commentsMutations ],
 	data () {
 		return {
 			comments: false
@@ -28,13 +26,11 @@ export default {
 	watch: {
 		comments (val) {
 			this.comments ? this.$store.state.commentsLoaded = true : this.$store.state.commentsLoaded = false
-			if (val) this.decodeComments(this.comments)
 		}
 	},
 	methods: {
 		loadThisComments () {
-			const url = `${process.env.VUE_APP_API_URL}v3/members/?idConsulta=${this.$route.meta.id}&public=1`
-			api.get(url)
+			api.get(`members/?idConsulta=${this.$route.meta.id}&public=1`)
 				.then(response => { this.comments = response.data })
 				.catch(error => console.error(error))
 		},

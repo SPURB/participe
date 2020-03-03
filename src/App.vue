@@ -1,6 +1,7 @@
 <template>
 <div id="app">
 	<div :class="{ desligado: interruptor }" id="interruptor" ref="interruptor" @click="fechaTudo"></div>
+	<Alert></Alert>
 	<Preloader v-if='isHome'></Preloader>
 	<Cabecalho></Cabecalho>
 	<MenuLateral></MenuLateral>
@@ -15,6 +16,7 @@ import Cabecalho from '@/components/Cabecalho'
 import MenuLateral from '@/components/MenuLateral'
 import Rodape from '@/components/Rodape'
 import Preloader from '@/components/Preloader'
+import Alert from '@/components/Alert'
 
 export default {
 	name: 'Participe',
@@ -22,7 +24,8 @@ export default {
 		Cabecalho,
 		MenuLateral,
 		Rodape,
-		Preloader
+		Preloader,
+		Alert
 	},
 	computed: {
 		footerMail () { return this.$route.meta.email ? this.$route.meta.email : 'imprensadu@prefeitura.sp.gov.br' },

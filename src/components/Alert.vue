@@ -27,7 +27,7 @@ export default {
         this.message = payload.message
         this.icon = payload.icon
         this.border = payload.border
-        setTimeout(() => { this.close() }, payload.timeout || 10000) })
+        setTimeout(() => { this.close() }, payload.timeout || 2000) })
     },
     methods: {
         close () {
@@ -40,6 +40,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../variables';
+
 #alert {
     background-color: rgba(0, 0, 0, 0.747);
     display: flex;
@@ -65,14 +67,14 @@ export default {
     }
 }
 .alert-accept {
-    color: rgb(8, 214, 8);
+    color: $verde;
 }
 .alert-error, .icon-incorreto {
-    color: red;
+    color: $vermelho;
 }
 
 .border-error {
-    border: 2px solid red;
+    border: 2px solid $vermelho;
 }
 
 </style>

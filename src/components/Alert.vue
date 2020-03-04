@@ -4,7 +4,7 @@
         <i :class="`${icon} icon`">
             <span>chat</span>
         </i>
-        <div :class="`alert-${type}`">        
+        <div :class="`alert-${type}`" data-cy="alert_component">        
             {{message}}
         </div>
     </div>

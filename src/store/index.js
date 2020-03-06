@@ -2,7 +2,8 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import Es6Promise from 'es6-promise'
 import api from '@/utils/api'
-import erratas from '@/modules/erratas'
+import erratas from './modules/erratas'
+import alert from './modules/alert'
 
 Es6Promise.polyfill()
 
@@ -10,7 +11,8 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
 	modules: {
-		erratas: erratas
+		erratas,
+		alert
 	},
 	state: {
 		menuToggle: false,

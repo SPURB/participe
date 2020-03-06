@@ -31,31 +31,36 @@ export const commentsCommons = {
 	methods: {
 		checkName () {
 			if (!this.fields.name.valid && !this.fields.email.valid && !this.fields.surname.valid) {
-				this.$root.$emit('Notification::show', {
+				this.$store.commit('alert/SET', {
+					show: true,
 					type: 'error',
 					icon: 'icon-incorreto',
 					message: 'Preencha corretamente os campos Nome e Email'
 				})
 			} else if (!this.fields.name.valid) {
-				this.$root.$emit('Notification::show', {
+				this.$store.commit('alert/SET', {
+					show: true,
 					type: 'error',
 					icon: 'icon-incorreto',
 					message: 'Inclua seu nome'
 				})
 			} else if (!this.fields.surname.valid) {
-				this.$root.$emit('Notification::show', {
+				this.$store.commit('alert/SET', {
+					show: true,
 					type: 'error',
 					icon: 'icon-incorreto',
 					message: 'Inclua seu sobrenome'
 				})
 			} else if (!this.fields.email.valid) {
-				this.$root.$emit('Notification::show', {
+				this.$store.commit('alert/SET', {
+					show: true,
 					type: 'error',
 					icon: 'icon-incorreto',
 					message: 'Corrija seu e-mail'
 				})
 			} else if (!this.fields.content.valid) {
-				this.$root.$emit('Notification::show', {
+				this.$store.commit('alert/SET', {
+					show: true,
 					type: 'error',
 					icon: 'icon-incorreto',
 					message: 'Inclua seu comentário'

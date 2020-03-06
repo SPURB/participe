@@ -1,7 +1,7 @@
 <template>
 <div id="app">
 	<div :class="{ desligado: interruptor }" id="interruptor" ref="interruptor" @click="fechaTudo"></div>
-	<Alert></Alert>
+	<Alert v-if="showAlert"></Alert>
 	<Preloader v-if='isHome'></Preloader>
 	<Cabecalho></Cabecalho>
 	<MenuLateral></MenuLateral>
@@ -30,7 +30,8 @@ export default {
 	computed: {
 		footerMail () { return this.$route.meta.email ? this.$route.meta.email : 'imprensadu@prefeitura.sp.gov.br' },
 		interruptor () { return this.$store.state.luzApaga },
-		isHome () { return this.$route.name === 'Home' }
+		isHome () { return this.$route.name === 'Home' },
+		showAlert () { return this.$store.state.alert.show }
 	},
 	created () {
 		let app = this

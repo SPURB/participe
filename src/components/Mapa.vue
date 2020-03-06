@@ -109,21 +109,13 @@ export default {
 	},
 	methods: {
 		createMap () {
-			let map = new Map({
+			/*eslint-disable */
+			new Map({
 				layers: this.mapLayers,
 				target: this.mapa_attrs.id,
 				view: this.mapView
-				// controls: defaultControls({
-				// 	attributionOptions: {
-				// 		collapsible: true,
-				// 		collapsed: true
-				// 		label:'some Label'
-				// 	}
-				// })
-				// .extend([
-				// 	new ScaleLine(),
-				// ])
 			})
+			/* eslint-enable */
 			if (this.$refs.mapa.clientHeight < 500) {
 				this.mapView.setZoom(12)
 			} else {

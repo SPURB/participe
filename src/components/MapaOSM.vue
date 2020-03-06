@@ -8,7 +8,6 @@
 						backgroundColor:layer.fill_color,
 						borderColor: layer.stroke_color,
 						borderWidth: layer.stroke_width + 'px',
-						// borderStyle: layer.stroke_dash.length > 1 ? 'dashed none none' : ''
 						height: layer.fill_color ? '' : '0'
 				}"></div>
 				<a
@@ -30,10 +29,6 @@ import Fill 			from 'ol/style/Fill'
 import KML 				from 'ol/format/KML'
 import VectorSource 	from 'ol/source/Vector'
 import OSM				from 'ol/source/OSM'
-// import {defaults as defaultControls, Attribution } from 'ol/control.js';
-// import ScaleLine 		from 'ol/control/ScaleLine';
-
-// import { chavesExternas } from '../../apiconfig.json'
 
 export default {
 	name: 'MapaOSM',
@@ -110,17 +105,13 @@ export default {
 	},
 	methods: {
 		createMap () {
-			const map = new Map({
+			/*eslint-disable */
+			new Map({
 				target: 'map',
 				layers: this.mapLayers,
-				// layers: [
-				// 	new TileLayer({
-				// 		source: new OSM()
-				// 	})
-				// ],
 				view: this.mapView
 			})
-			// map.getView().fit(vectorLayerInformacoes.getSource().getExtent(), mapInformacoes.getSize());
+			/* eslint-enable */
 		}
 	}
 }

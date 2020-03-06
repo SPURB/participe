@@ -2,8 +2,6 @@
 	<div class="Pmadrss" ref="conteudoConsulta">
 		<PageTop background_image_src="arquivos/capas/pmadrss.jpg" :esta_consulta="estaConsulta">
 			<template slot="titulo"><div>1º Plano Municipal de Agroecologia e Desenvolvimento Rural Sustentável e Solidário</div></template>
-			<!-- PMADRSS -->
-			<!-- <template slot="subtitulo"><div>Subtítulo da Nova Consulta</div></template> -->
 		</PageTop>
 		<Indice :titulos="titulosLimpo"></Indice>
 
@@ -34,11 +32,6 @@
 			<p>
 				O Plano Municipal de Agroecologia e Desenvolvimento Rural Solidário e Sustentável de São Paulo está estruturado de forma a impulsionar o desenvolvimento relacionado às zonas rurais e às áreas urbanas onde são praticadas estas atividades produtivas. Desta forma, a partir de eixos temáticos, foram elaboradas diretrizes norteadoras que estruturam as ações elencadas no plano e as direcionam para o atendimento maior da política pública: garantir a qualidade de vida da população e proporcionar o desenvolvimento rural no município de São Paulo.
 			</p>
-			<!-- <Imagem :dados="{
-				tipo: 'coluna',
-				caption: 'Imagem EMBRAPA, Instrumentação/São Carlos',
-				url: imgSrc('arquivos/capas/pmadrss.jpg')
-			}"></Imagem> -->
 			<Imagem :dados="{
 				tipo: 'coluna',
 				url: imgSrc('arquivos/pmadrss/zona-sul-03.jpg')
@@ -1598,8 +1591,8 @@
 					<p>
 						. formação de técnicos da Subprefeituras para criação e gestão de GCRs em parceria com sociedade civil organizada<br>
 						. dar apoio e orientação para os empreendimentos coletivos sobre a importância da participação social em fóruns e espaços de discussão.<br>
-						 . auxiliar a articulação com os agricultores para abastecimento dos produtos<br>
-						 . divulgar para funcionários da Subprefeituras e moradores dos bairros<br>
+						. auxiliar a articulação com os agricultores para abastecimento dos produtos<br>
+						. divulgar para funcionários da Subprefeituras e moradores dos bairros<br>
 						. fortalecer o Fórum de Economia Solidária
 
 					</p>
@@ -1702,7 +1695,6 @@
 <script>
 import PageTop from '@/components/PageTop'
 import Indice from '@/components/Indice'
-// import Apoio from '@/components/Apoio'
 import { consultasCommons } from '@/mixins/consultasCommons'
 import Comments from '@/components/Comments'
 import CommentsContext from '@/components/CommentsContext'
@@ -1738,7 +1730,7 @@ export default {
 		for (var i = 1; i < document.getElementsByTagName('h3').length; i++) {
 			if (typeof (this.eixos.push(document.getElementsByTagName('h3')[i])) === 'object') {
 				this.eixos.push(document.getElementsByTagName('h3')[i])
-		    }
+			}
 		}
 		// Popula array de ações
 		var acaoDivs = document.getElementsByClassName('acao')

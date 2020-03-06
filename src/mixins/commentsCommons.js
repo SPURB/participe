@@ -31,35 +31,30 @@ export const commentsCommons = {
 	methods: {
 		checkName () {
 			if (!this.fields.name.valid && !this.fields.email.valid && !this.fields.surname.valid) {
-				// alert('Preencha corretamente os campos Nome e Email')
 				this.$root.$emit('Notification::show', {
 					type: 'error',
 					icon: 'icon-incorreto',
 					message: 'Preencha corretamente os campos Nome e Email'
 				})
 			} else if (!this.fields.name.valid) {
-				// alert('Inclua seu nome')
 				this.$root.$emit('Notification::show', {
 					type: 'error',
 					icon: 'icon-incorreto',
 					message: 'Inclua seu nome'
 				})
 			} else if (!this.fields.surname.valid) {
-				// alert('Inclua seu sobrenome')
 				this.$root.$emit('Notification::show', {
 					type: 'error',
 					icon: 'icon-incorreto',
 					message: 'Inclua seu sobrenome'
 				})
 			} else if (!this.fields.email.valid) {
-				// alert('Corrija seu e-mail')
 				this.$root.$emit('Notification::show', {
 					type: 'error',
 					icon: 'icon-incorreto',
 					message: 'Corrija seu e-mail'
 				})
 			} else if (!this.fields.content.valid) {
-				// alert('Inclua seu comentário')
 				this.$root.$emit('Notification::show', {
 					type: 'error',
 					icon: 'icon-incorreto',

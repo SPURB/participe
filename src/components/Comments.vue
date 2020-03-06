@@ -1,7 +1,7 @@
 <template>
 	<div class="Comments" :class="{ aberto: abreComentario }">
-		<div 
-			@click="abreComentario = !abreComentario" 
+		<div
+			@click="abreComentario = !abreComentario"
 			:class="{ sucesso: sucesso }"
 			data-cy="open_coment">
 			<i class="icon-comentario icon">
@@ -68,10 +68,10 @@
 					<circle class="bolinha2" cx="80" cy="14.9" r="3.4"/>
 					<path class="bolinha3" d="M92.9 15a3.4 3.4 0 1 1-3.4-3.5c1.8 0 3.4 1.5 3.4 3.4z"/>
 				</svg>
-				<a 
+				<a
 					@click="checkName"
 					class="action__button"
-					:class="{ enviando: enviandoComment, erro: erro }" 
+					:class="{ enviando: enviandoComment, erro: erro }"
 					data-cy="submit_coment">
 				</a>
 			</div>

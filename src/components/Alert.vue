@@ -1,41 +1,31 @@
 <template>
-   <div id="alert" v-if="show" @click="close">
-    <div class="content-alert" :class="`border-${type}`">
-        <i :class="`${icon} icon`">
-            <span>chat</span>
-        </i>
-        <div :class="`alert-${type}`" data-cy="alert_component">
-            {{message}}
-        </div>
-    </div>
-  </div>
+<div id="alert" @click="RESET">
+	<div class="content-alert" :class="`border-${type}`">
+		<i :class="`${icon} icon`">
+			<span>chat</span>
+		</i>
+		<div :class="`alert-${type}`" data-cy="alert_component">
+			{{ message }}
+		</div>
+	</div>
+</div>
 </template>
 
 <script>
+import { mapMutations, mapState } from 'vuex'
+
 export default {
 	name: 'alert-component',
-	data: () => ({
-		show: false,
-		type: 'error',
-		message: '',
-		icon: ''
-	}),
-	created () {
-		this.$root.$on('Notification::show', payload => {
-			this.show = true
-			this.type = payload.type
-			this.message = payload.message
-			this.icon = payload.icon
-			this.border = payload.border
-			setTimeout(() => { this.close() }, payload.timeout || 2000)
+	computed: {
+		...mapState({
+			type: state => state.alert.type,
+			message: state => state.alert.message,
+			icon: state => state.alert.icon
 		})
 	},
+	created () { setTimeout(() => this.RESET(), 2000) },
 	methods: {
-		close () {
-			this.message = ''
-			this.type = 'error'
-			this.show = false
-		}
+		...mapMutations('alert', [ 'RESET' ])
 	}
 }
 </script>
@@ -44,38 +34,38 @@ export default {
 @import '../variables';
 
 #alert {
-    background-color: rgba(0, 0, 0, 0.747);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    overflow: auto;
-    z-index: 3;
+	background-color: rgba(0, 0, 0, 0.747);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	overflow: auto;
+	z-index: 3;
 
-    .content-alert {
-        background-color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        padding: 15px;
-        width: 350px;
-        height: 150px;
-    }
+	.content-alert {
+		background-color: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		padding: 15px;
+		width: 350px;
+		height: 150px;
+	}
 }
 .alert-accept {
-    color: $verde;
+	color: $verde;
 }
 .alert-error, .icon-incorreto {
-    color: $vermelho;
+	color: $vermelho;
 }
 
 .border-error {
-    border: 2px solid $vermelho;
+	border: 2px solid $vermelho;
 }
 
 </style>

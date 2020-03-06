@@ -4,7 +4,7 @@
         <i :class="`${icon} icon`">
             <span>chat</span>
         </i>
-        <div :class="`alert-${type}`" data-cy="alert_component">        
+        <div :class="`alert-${type}`" data-cy="alert_component">
             {{message}}
         </div>
     </div>
@@ -13,29 +13,30 @@
 
 <script>
 export default {
-    name: "alert-component",
-    data: () => ({
-        show: false,
-        type: 'error',
-        message: '',
-        icon: ''
-    }),
-    created () {
-        this.$root.$on('Notification::show', payload => {
-        this.show = true
-        this.type = payload.type
-        this.message = payload.message
-        this.icon = payload.icon
-        this.border = payload.border
-        setTimeout(() => { this.close() }, payload.timeout || 2000) })
-    },
-    methods: {
-        close () {
-            this.message = ''
-            this.type = 'error'
-            this.show = false
-        }
-    }
+	name: 'alert-component',
+	data: () => ({
+		show: false,
+		type: 'error',
+		message: '',
+		icon: ''
+	}),
+	created () {
+		this.$root.$on('Notification::show', payload => {
+			this.show = true
+			this.type = payload.type
+			this.message = payload.message
+			this.icon = payload.icon
+			this.border = payload.border
+			setTimeout(() => { this.close() }, payload.timeout || 2000)
+		})
+	},
+	methods: {
+		close () {
+			this.message = ''
+			this.type = 'error'
+			this.show = false
+		}
+	}
 }
 </script>
 

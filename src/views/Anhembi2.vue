@@ -971,14 +971,14 @@ export default {
 				layers: [
 					{
 						title: 'Perímetro expandido',
-						path: './static/kml/ANH_PerimetroExpandido.kml',
+						path: this.src('arquivos/piu-anhembi-2/kml/ANH_PerimetroExpandido.kml'),
 						stroke_color: 'rgba(237, 192, 192, 1)',
 						fill_color: 'rgba(237, 192, 192, .4)',
 						stroke_width: 1
 					},
 					{
 						title: 'Perímetro de abrangência',
-						path: './static/kml/ANH_PerimetroAbrangencia.kml',
+						path: this.src('arquivos/piu-anhembi-2/kml/ANH_PerimetroAbrangencia.kml'),
 						stroke_color: 'rgba(235, 87, 87, 1)',
 						fill_color: 'rgba(235, 87, 87, .8)',
 						stroke_width: 1

@@ -45,7 +45,7 @@
     "node-sass": "4.13.1",
     "prerender-spa-plugin": "3.4.0",
     "sass-loader": "8.0.2",
-    "start-server-and-test": "1.10.8",
+    "start-server-and-test": "1.10.10",
     "vue-cli-plugin-prerender-spa": "1.1.6",
     "vue-template-compiler": "2.6.11"
   },

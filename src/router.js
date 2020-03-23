@@ -261,6 +261,14 @@ export default new Router({
 			}
 		},
 		{
+			path: '/ginasio-ibirapuera',
+			name: 'GinasioIbirapuera',
+			component: () => import(/* webpackChunkName: "GinasioIbirapuera" */ '@/views/GinasioIbirapuera'),
+			meta: {
+				id: 16
+			}
+		},
+		{
 			path: '/consulta/:nome',
 			name: 'ConsultaAuto',
 			component: () => import(/* webpackChunkName: "ConsultaAuto" */ '@/views/ConsultaAuto'),

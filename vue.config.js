@@ -42,7 +42,8 @@ module.exports = {
 				'/minuta-piu-setor-central',
 				'/tr-contact-center',
 				'/pmadrss',
-				'/arco-tiete-2'
+				'/arco-tiete-2',
+				'/ginasio-ibirapuera'
 			],
 			useRenderEvent: true,
 			headless: false,

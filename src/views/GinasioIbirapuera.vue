@@ -1,0 +1,137 @@
+<template>
+	<div class="GinasioIbirapuera" ref="conteudoConsulta">
+		<PageTop background_image_src="arquivos/capas/ginasio-ibirapuera_122w.jpg" :esta_consulta="estaConsulta">
+			<template slot="titulo"><div>Modelagem da concessão de uso do complexo desportivo Constâncio Vaz Guimarães e construção de arena multiuso</div></template>
+			<template slot="subtitulo"><div>Avaliação urbanística</div></template>
+		</PageTop>
+		<!-- <Indice :titulos="titulosLimpo"></Indice> -->
+
+		<div class="horizontal">
+			<section>
+				<h2 class="titulo" indent="1">Resumo</h2>
+				<p>O Governo do Estado de São Paulo, por meio da Secretaria de Governo, contratou a Fipe para a execução de estudos especializados em modelagem técnico-operacional e econômico-financeira da concessão onerosa do Complexo Desportivo Constâncio Vaz Guimarães e construção de uma Arena Multiuso. </p>
+
+				<p>O presente documento consiste no relatório técnico <i>“Avaliação Urbanística | Diagnóstico: Relatório Técnico Para Consulta Pública para o Projeto de Intervenção Urbanística (PIU)”</i> e tem como objetivo principal apresentar os insumos necessários para a realização da primeira consulta pública do projeto pela Prefeitura Municipal de São Paulo (PMSP).</p>
+				<!-- <Comments :attr="{id:commentId(), context:'Apresentação'}" v-if="consultaAtiva"></Comments> -->
+			</section>
+			<section class="capitulos">
+				<p>
+					<ul class="links compacto" style="margin: 0 0;">
+						<li>
+							<a :href="src('#')" target="_blank">
+								<i class="icon-pdf icon"><span>pdf</span></i>
+								<div>Introdução</div>
+								<!-- <span>55,8 Mb</span> -->
+							</a>
+						</li>
+						<li>
+							<a :href="src('#')" target="_blank">
+								<i class="icon-pdf icon"><span>pdf</span></i>
+								<div>Diagnóstico Sócio Territorial</div>
+							</a>
+						</li>
+						<li>
+							<a :href="src('#')" target="_blank">
+								<i class="icon-pdf icon"><span>pdf</span></i>
+								<div>Programa de interesse Público</div>
+							</a>
+						</li>
+						<li>
+							<a :href="src('#')" target="_blank">
+								<i class="icon-pdf icon"><span>pdf</span></i>
+								<div>Anexos</div>
+							</a>
+						</li>
+							<li class="compacto__ultimo-item">
+							<a :href="src('#')" target="_blank">
+								<i class="icon-pdf icon"><span>pdf</span></i>
+								<div>Caderno completo</div>
+							</a>
+						</li>
+					</ul>
+				</p>
+			</section>
+		</div>
+
+		<section>
+			<CommentsOption v-if="consultaAtiva" :options="[
+					{ id: 1, context: 'Introdução' },
+					{ id: 2, context: 'Diagnóstico Sócio Territorial' },
+					{ id: 3, context: 'Programa de Interesse público' },
+					{ id: 3, context: 'Anexos' }
+				]"
+				:alwaysOpen="false">
+			</CommentsOption>
+		</section>
+
+		<section ref="allComments">
+			<h2 v-show="commentsLoaded" class="titulo">Contribuições</h2>
+			<CommentsLoader :attr="estaConsulta"></CommentsLoader>
+			<Comments v-if="commentsLoaded && consultaAtiva" :attr="{id:commentId(), context:'Comentarios'}"></Comments>
+		</section>
+	</div>
+</template>
+
+<script>
+import PageTop from '@/components/PageTop'
+import Indice from '@/components/Indice'
+import { consultasCommons } from '@/mixins/consultasCommons'
+import CommentsOption from '@/components/CommentsOption'
+import Comments from '@/components/Comments'
+import CommentsLoader from '@/components/CommentsLoader'
+
+export default {
+	name: 'GinasioIbirapuera',
+	data () {
+		return {
+			titulosLimpo: [],
+			comments_atrr: undefined,
+			consultas: false,
+			estaConsulta: {}
+		}
+	},
+	components: {
+		Comments,
+		CommentsOption,
+		CommentsLoader,
+		PageTop,
+		Indice
+	},
+	mixins: [ consultasCommons ]
+}
+</script>
+
+<style lang="scss" scoped>
+@import '../variables';
+@import '../consulta';
+@import '../oldstylestoprint';
+.horizontal {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+@supports(display: grid) {
+	.horizontal {
+		max-width: 1200px;
+		margin: auto;
+	}
+	.horizontal .titulo {
+		margin-top: 0
+	}
+	@media (max-width: 800px) {
+		.horizontal {
+			display: block;
+			grid-template-columns: unset;
+			max-width: unset;
+		}
+	}
+}
+
+.links.compacto li {
+	margin: 1px
+}
+
+.links.compacto .compacto__ultimo-item {
+	margin-top: 2rem
+}
+</style>

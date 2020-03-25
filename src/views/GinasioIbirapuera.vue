@@ -18,34 +18,31 @@
 				<p>
 					<ul class="links compacto" style="margin: 0 0;">
 						<li>
-							<a :href="src('#')" target="_blank">
+							<a :href="src('arquivos/ginasio-ibirapuera/piu-ibirapuera_diagnostico-socio-territorial.pdf')" target="_blank">
 								<i class="icon-pdf icon"><span>pdf</span></i>
-								<div>Introdução</div>
-								<!-- <span>55,8 Mb</span> -->
+								<div>Diagnóstico socio territorial</div>
+								<span>5 Mb</span>
 							</a>
 						</li>
 						<li>
-							<a :href="src('#')" target="_blank">
+							<a :href="src('arquivos/ginasio-ibirapuera/piu-ibirapuera_diagnostico-ambiental.pdf')" target="_blank">
 								<i class="icon-pdf icon"><span>pdf</span></i>
-								<div>Diagnóstico Sócio Territorial</div>
+								<div>Diagnóstico ambiental</div>
+								<span>1,3 Mb</span>
 							</a>
 						</li>
 						<li>
-							<a :href="src('#')" target="_blank">
+							<a :href="src('arquivos/ginasio-ibirapuera/piu-ibirapuera_projeto-de-interesse-publico.pdf')" target="_blank">
 								<i class="icon-pdf icon"><span>pdf</span></i>
-								<div>Programa de interesse Público</div>
+								<div>Programa de Interesse Público</div>
+								<span>760 Kb</span>
 							</a>
 						</li>
-						<li>
-							<a :href="src('#')" target="_blank">
-								<i class="icon-pdf icon"><span>pdf</span></i>
-								<div>Anexos</div>
-							</a>
-						</li>
-							<li class="compacto__ultimo-item">
-							<a :href="src('#')" target="_blank">
-								<i class="icon-pdf icon"><span>pdf</span></i>
-								<div>Caderno completo</div>
+						<li class="compacto__ultimo-item">
+							<a :href="src('arquivos/ginasio-ibirapuera/piu-ginasio-ibirapuera.zip')" target="_blank">
+								<i class="icon-download icon"><span>pdf</span></i>
+								<div>Consulta completa</div>
+								<span>7 Mb</span>
 							</a>
 						</li>
 					</ul>
@@ -55,10 +52,9 @@
 
 		<section>
 			<CommentsOption v-if="consultaAtiva" :options="[
-					{ id: 1, context: 'Introdução' },
-					{ id: 2, context: 'Diagnóstico Sócio Territorial' },
-					{ id: 3, context: 'Programa de Interesse público' },
-					{ id: 3, context: 'Anexos' }
+					{ id: 1, context: 'Diagnóstico socio territorial' },
+					{ id: 2, context: 'Diagnóstico ambiental' },
+					{ id: 3, context: 'Programa de Interesse público' }
 				]"
 				:alwaysOpen="false">
 			</CommentsOption>

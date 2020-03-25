@@ -1,18 +1,16 @@
 <template>
 	<div class="GinasioIbirapuera" ref="conteudoConsulta">
 		<PageTop background_image_src="arquivos/capas/ginasio-ibirapuera_122w.jpg" :esta_consulta="estaConsulta">
-			<template slot="titulo"><div>Modelagem da concessão de uso do complexo desportivo Constâncio Vaz Guimarães e construção de arena multiuso</div></template>
-			<template slot="subtitulo"><div>Avaliação urbanística</div></template>
+			<template slot="titulo"><div>PIU Ginásio Ibirapuera</div></template>
+			<template slot="subtitulo"><div>1ª Consulta Pública – Elementos prévios</div></template>
 		</PageTop>
-		<!-- <Indice :titulos="titulosLimpo"></Indice> -->
-
+		<Apoio></Apoio>
 		<div class="horizontal">
 			<section>
 				<h2 class="titulo" indent="1">Resumo</h2>
 				<p>O Governo do Estado de São Paulo, por meio da Secretaria de Governo, contratou a Fipe para a execução de estudos especializados em modelagem técnico-operacional e econômico-financeira da concessão onerosa do Complexo Desportivo Constâncio Vaz Guimarães e construção de uma Arena Multiuso. </p>
 
 				<p>O presente documento consiste no relatório técnico <i>“Avaliação Urbanística | Diagnóstico: Relatório Técnico Para Consulta Pública para o Projeto de Intervenção Urbanística (PIU)”</i> e tem como objetivo principal apresentar os insumos necessários para a realização da primeira consulta pública do projeto pela Prefeitura Municipal de São Paulo (PMSP).</p>
-				<!-- <Comments :attr="{id:commentId(), context:'Apresentação'}" v-if="consultaAtiva"></Comments> -->
 			</section>
 			<section class="capitulos">
 				<p>
@@ -69,8 +67,8 @@
 </template>
 
 <script>
+import Apoio from '@/components/Apoio'
 import PageTop from '@/components/PageTop'
-import Indice from '@/components/Indice'
 import { consultasCommons } from '@/mixins/consultasCommons'
 import CommentsOption from '@/components/CommentsOption'
 import Comments from '@/components/Comments'
@@ -87,11 +85,11 @@ export default {
 		}
 	},
 	components: {
+		Apoio,
 		Comments,
 		CommentsOption,
 		CommentsLoader,
-		PageTop,
-		Indice
+		PageTop
 	},
 	mixins: [ consultasCommons ]
 }

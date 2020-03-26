@@ -148,6 +148,7 @@ export default {
 @import '../variables';
 
 div.Comments {
+	font-family: $grotesca;
 	margin: 2rem auto 4rem auto;
 	max-width: 700px;
 	background: $cinza-3;

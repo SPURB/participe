@@ -1,7 +1,7 @@
 <template>
 	<div class="GinasioIbirapuera" ref="conteudoConsulta">
 		<PageTop background_image_src="arquivos/capas/ginasio-ibirapuera_122w.jpg" :esta_consulta="estaConsulta">
-			<template slot="titulo"><div>Projeto de Intervenção Urbana do complexo desportivo Constâncio Vaz Guimarães</div></template>
+			<template slot="titulo"><div>PIU Ibirapuera</div></template>
 			<template slot="subtitulo"><div> 1ª Consulta Pública – Elementos prévios ao desenvolvimento do projeto</div></template>
 		</PageTop>
 		<indice :titulos="titulosLimpo"/>

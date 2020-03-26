@@ -44,10 +44,10 @@
 				>
 			</fieldset>
 			<fieldset>
-				<label for="id">Comentar sobre</label>
+				<label for="comments__options">Comentar sobre</label>
 				<select @change="alteraContexto($event)"
-					id="id"
-					name="id"
+					id="comments__options"
+					name="comments__options"
 					v-validate="'required: true'"
 					v-model="form_id"
 				>

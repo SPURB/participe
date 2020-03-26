@@ -1,7 +1,7 @@
 <template>
 	<div class="GinasioIbirapuera" ref="conteudoConsulta">
 		<PageTop background_image_src="arquivos/capas/ginasio-ibirapuera_122w.jpg" :esta_consulta="estaConsulta">
-			<template slot="titulo"><div>PIU Ibirapuera</div></template>
+			<template slot="titulo"><div>PIU Ginásio Ibirapuera</div></template>
 			<template slot="subtitulo"><div> 1ª Consulta Pública – Elementos prévios ao desenvolvimento do projeto</div></template>
 		</PageTop>
 		<indice :titulos="titulosLimpo"/>
@@ -14,24 +14,10 @@
 					<div class="conteudoTab">
 						<ul class="links" style="margin: 0 0;">
 							<li>
-								<a :href="src('arquivos/ginasio-ibirapuera/piu-ibirapuera_introducao.pdf')" target="_blank">
+								<a :href="src('arquivos/ginasio-ibirapuera/piu-ibirapuera_diagnostico.pdf')" target="_blank">
 									<i class="icon-pdf icon"><span>pdf</span></i>
-									<div>Introdução</div>
-									<span>212kb Kb</span>
-								</a>
-							</li>
-							<li>
-								<a :href="src('arquivos/ginasio-ibirapuera/piu-ibirapuera_diagnostico-socio-territorial.pdf')" target="_blank">
-									<i class="icon-pdf icon"><span>pdf</span></i>
-									<div>Diagnóstico socio territorial</div>
-									<span>5 Mb</span>
-								</a>
-							</li>
-							<li>
-								<a :href="src('arquivos/ginasio-ibirapuera/piu-ibirapuera_diagnostico-ambiental.pdf')" target="_blank">
-									<i class="icon-pdf icon"><span>pdf</span></i>
-									<div>Diagnóstico ambiental</div>
-									<span>1,3 Mb</span>
+									<div>Diagnóstico Socioterritorial e Ambiental</div>
+									<span>7 Mb</span>
 								</a>
 							</li>
 							<li>
@@ -56,7 +42,7 @@
 		<div class="horizontal">
 			<section>
 				<section>
-					<h2 class="titulo" indent="1">Saiba como participar</h2>
+					<h2 class="titulo" indent="1">Apresentação</h2>
 					<p>O Complexo Desportivo Constâncio Vaz Guimarães, conhecido como “Complexo Ginásio do Ibirapuera”, é um equipamento público de grande porte gerido pelo Governo do Estado de São Paulo (GESP) que contém características urbanísticas excepcionais, tendo sido assim classificado como uma ZOE – Zona de Ocupação Especial pela Lei de Parcelamento, Uso e Ocupação do Solo – LPUOS (Lei nº 16.402/2016).</p>
 
 					<p>As Zonas Especiais são porções do território com diferentes características ou com destinação específica que requerem normas próprias de uso e ocupação do solo, podendo estar situadas em qualquer macrozona do Município, e visam a promoção de políticas públicas setoriais, ou ainda, o estímulo ao desenvolvimento de áreas vocacionadas à diversas atividades econômicas, nos termos do Art. 39 do PDE – Plano Diretor Estratégico ( Lei 16.050/14).</p>
@@ -71,24 +57,10 @@
 					<p>
 						<ul class="links compacto">
 							<li>
-								<a :href="src('arquivos/ginasio-ibirapuera/piu-ibirapuera_introducao.pdf')" target="_blank">
+								<a :href="src('arquivos/ginasio-ibirapuera/piu-ibirapuera_diagnostico.pdf')" target="_blank">
 									<i class="icon-pdf icon"><span>pdf</span></i>
-									<div>Introdução</div>
-									<span>212 Kb</span>
-								</a>
-							</li>
-							<li>
-								<a :href="src('arquivos/ginasio-ibirapuera/piu-ibirapuera_diagnostico-socio-territorial.pdf')" target="_blank">
-									<i class="icon-pdf icon"><span>pdf</span></i>
-									<div>Diagnóstico socio territorial</div>
-									<span>5 Mb</span>
-								</a>
-							</li>
-							<li>
-								<a :href="src('arquivos/ginasio-ibirapuera/piu-ibirapuera_diagnostico-ambiental.pdf')" target="_blank">
-									<i class="icon-pdf icon"><span>pdf</span></i>
-									<div>Diagnóstico ambiental</div>
-									<span>1,3 Mb</span>
+									<div>Diagnóstico Socioterritorial e Ambiental</div>
+									<span>7 Mb</span>
 								</a>
 							</li>
 							<li>
@@ -107,12 +79,12 @@
 							</li>
 						</ul>
 						<comments-option v-if="consultaAtiva" :options="[
-								{ id: 1, context: 'Introdução' },
+								{ id: 1, context: 'Comentários gerais' },
 								{ id: 2, context: 'Diagnóstico socio territorial' },
 								{ id: 3, context: 'Diagnóstico ambiental' },
 								{ id: 4, context: 'Programa de Interesse público' }
 							]"
-							:alwaysOpen="false">
+							:alwaysOpen="true">
 						</comments-option>
 					</p>
 				</section>

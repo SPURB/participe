@@ -1,5 +1,5 @@
 <template>
-  <div id="table-csv">
+  <div class="table-csv">
     <table>
       <caption>{{ titulo }}</caption>
       <thead>
@@ -25,6 +25,9 @@
         </tr>
       </tbody>
     </table>
+    <div class="fonte">
+      fonte: <span>{{ fonte }}</span>
+    </div>
   </div>
 </template>
 
@@ -44,6 +47,10 @@ export default {
     linhas: {
       type: Array,
       required: true
+    },
+    fonte: {
+      type: String,
+      default: 'Não especificada'
     }
   },
   computed: {
@@ -72,11 +79,18 @@ export default {
 
 <style lang="scss" scoped>
 @import '../variables';
-#table-csv {
+.table-csv {
   align-items: center;
   display: flex;
   flex-direction: column;
   width: 100%;
+
+  .fonte {
+    font-size: 13pt;
+    color: $preto;
+    opacity: 0.8;
+    width: 90%;
+  }
 
   table {
     border-collapse: collapse;

@@ -25,7 +25,7 @@
         </tr>
       </tbody>
     </table>
-    <div class="fonte">
+    <div class="fonte" v-if="fonte !== ''">
       fonte: <span>{{ fonte }}</span>
     </div>
   </div>
@@ -50,7 +50,7 @@ export default {
     },
     fonte: {
       type: String,
-      default: 'Não especificada'
+      default: ''
     }
   },
   computed: {

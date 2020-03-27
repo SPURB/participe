@@ -265,7 +265,7 @@ export default new Router({
 			name: 'GinasioIbirapuera',
 			component: () => import(/* webpackChunkName: "GinasioIbirapuera" */ '@/views/GinasioIbirapuera'),
 			meta: {
-				id: 16
+				id: 66
 			}
 		},
 		{

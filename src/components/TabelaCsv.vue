@@ -13,15 +13,18 @@
         </tr>
       </thead>
       <tbody>
-        <tr :key="`tr-`+index" v-for="(item, index) in totalLinhas">
-          <td
-            :data-label="colunas[indexLinha]"
-            :key="`td-`+indexLinha"
-            :colspan="countColspan(linhasValues[index].length, totalColunas)"
-            v-for="(linha, indexLinha) in linhasValues[index]"
-          >
-            {{ linha }}
-          </td>
+        <tr
+          :key="`tr-`+index"
+          :class="index%2 === 0 ? 'linha-default' : 'linha-escura'"
+          v-for="(item, index) in totalLinhas">
+            <td
+              :data-label="colunas[indexLinha]"
+              :key="`td-`+indexLinha"
+              :colspan="countColspan(linhasValues[index].length, totalColunas)"
+              v-for="(linha, indexLinha) in linhasValues[index]"
+            >
+              {{ linha }}
+            </td>
         </tr>
       </tbody>
     </table>
@@ -111,9 +114,13 @@ export default {
       position: relative;
     }
 
-    thead tr th {
-      background-color: $cinza-3;
+    thead tr {
+      background-color: $sombra-4;
     }
+  }
+
+  .linha-escura {
+    background-color: $cinza-3;
   }
 }
 @media screen and (max-width: 600px) {
@@ -152,12 +159,13 @@ export default {
       text-align: right;
 
       &::before {
-        content: attr(data-label);
+				content: attr(data-label);
+				font-weight: bold;
         float: left;
-        font-weight: bold;
-        color: $cinza-1;
-        text-transform: uppercase;
-      }
+				hyphens: auto;
+				padding-right: 4px;
+				text-align: left;
+			}
     }
   }
 }

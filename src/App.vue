@@ -125,6 +125,10 @@ div#interruptor {
 	}
 }
 
+.quill-editor {
+	background-color: #FFF;
+}
+
 @media print {
 	body { background-color: $preto; }
 	div#app { background-color: white; width: 210mm; }

@@ -76,6 +76,10 @@
 			</form>
 			<p class="consulta-encerrada" v-if="!consultaAtiva">Desculpe, mas o período de participação já foi encerrado.</p>
 		</transition>
+		<share-buttons
+			:titulo="context"
+			:conteudo="valueSlot"
+		/>
 	</div>
 </template>
 
@@ -83,9 +87,13 @@
 import api from '@/utils/api'
 import fechadura from '@spurb/fechadura'
 import { commentsCommons } from '@/mixins/commentsCommons'
+import ShareButtons from './ShareButtons'
 
 export default {
 	name: 'CommentsContext',
+	components: {
+		ShareButtons
+	},
 	props: {
 		id: {
 			required: true,
@@ -105,7 +113,8 @@ export default {
 	mixins: [ commentsCommons ],
 	data () {
 		return {
-			form_context: null
+			form_context: null,
+			valueSlot: ''
 		}
 	},
 
@@ -122,8 +131,13 @@ export default {
 			return (this.abreComentario && this.consultaAtiva)
 		}
 	},
-
+	mounted () {
+		this.valorSlot()
+	},
 	methods: {
+		valorSlot () {
+			this.valueSlot = this.$slots.default[0].elm.innerText
+		},
 		send () {
 			let app = this
 			app.erro = false

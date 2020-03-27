@@ -10,6 +10,14 @@ export default new Router({
 	mode: 'history',
 	routes: [
 		{
+			path: '/view-teste',
+			name: 'ViewTeste',
+			meta: {
+				id: 16
+			},
+			component: () => import(/* webpackChunkName: "ViewTeste" */'@/views/ViewTeste.vue')
+		},
+		{
 			path: '/',
 			name: 'Home',
 			component: () => import(/* webpackChunkName: "home" */'./views/Home.vue')

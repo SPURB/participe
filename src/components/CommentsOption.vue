@@ -1,7 +1,13 @@
 <template>
-	<div class="Comments" :class="{ aberto: abreComentario, sempreAberto: alwaysOpen }">
-		<div @click="abreComentario = !abreComentario" :class="{ sucesso: sucesso }"><i class="icon-comentario icon"><span>chat</span></i></div>
-		<form>
+	<div class="comments" :class="{ aberto: abreComentario }">
+		<div @click="abreComentario = !abreComentario" class="comments-options" :class="{ sucesso: sucesso, aberto: abreComentario  }">
+			<i class="icon-comentario icon"><span>chat</span></i>
+			<p v-if="sucesso">Agradecemos a sua contribuição! O comentário estará disponível em breve, após a aprovação da Prefeitura</p>
+			<p v-else-if="erro" class="error">Algo deu errado. Tente novamente.</p>
+			<p v-else>Comente aqui</p>
+		</div>
+		<transition name="fade">
+		<form v-if="abreComentario">
 			<fieldset>
 				<label for="nome">Nome</label>
 				<input
@@ -66,7 +72,7 @@
 				></textarea>
 			</fieldset>
 			<div class="action">
-				<svg v-if="enviandoComment" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="60 0 40 40">
+				<svg v-if="enviandoComment" width="40" height="40" viewBox="60 0 40 40">
 					<path fill="#E3E3E3" d="M60 4v24a4 4 0 0 0 4 4h28l8 8V4a4 4 0 0 0-4-4H64a4 4 0 0 0-4 4z"/>
 					<circle class="bolinha1" cx="70.5" cy="14.9" r="3.4"/>
 					<circle class="bolinha2" cx="80" cy="14.9" r="3.4"/>
@@ -75,6 +81,7 @@
 				<a @click="checkName" :class="{ enviando: enviandoComment, erro: erro }"></a>
 			</div>
 		</form>
+		</transition>
 	</div>
 </template>
 
@@ -92,7 +99,6 @@ export default {
 		},
 		alwaysOpen: {
 			type: Boolean,
-			required: false,
 			default: false
 		}
 	},
@@ -100,8 +106,12 @@ export default {
 	data () {
 		return {
 			form_context: null,
-			form_id: null
+			form_id: null,
+			formOpen: false
 		}
+	},
+	created () {
+		this.abreComentario = this.alwaysOpen ? this.alwaysOpen : false
 	},
 	methods: {
 		send () {
@@ -126,6 +136,7 @@ export default {
 				.then(function (response) {
 					app.abreComentario = false
 					app.sucesso = true
+					app.formOpen = false
 					app.resetForm()
 				})
 				.catch(function (error) {
@@ -147,59 +158,73 @@ export default {
 <style lang="scss" scoped>
 @import '../variables';
 
-div.Comments {
+.comments-options {
+	display: flex;
+	align-items: center;
+	padding: 2rem;
+	margin-bottom: 1rem;
+	transition: all ease-in-out .4s;
+	span {
+		margin-top: 1rem;
+	}
+	i {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		vertical-align: -8px;
+		width: 25px;
+		height: 25px;
+		font-size: 1em;
+		background: $preto;
+		border-radius: 100%;
+		color: #FFF;
+		margin: 0px 20px 0 0;
+		box-shadow: 0 2px 2px $sombra-3;
+	};
+
+	p {
+		margin: 0;
+	}
+	&.aberto {
+		padding: 1.5rem 2rem;
+	}
+
+	&:hover {
+		background: $cinza-2;
+		color: #FFF;
+		cursor: pointer;
+	};
+
+	&.sucesso {
+		background: $verde;
+		color: #FFF;
+		i {
+			background: #FFF;
+			color: $verde;
+		}
+	}
+}
+
+.fade-enter-active, .fade-leave-active {
+	transition: opacity .2s;
+	height: 100%;
+}
+.fade-enter, .fade-leave-to {
+	opacity: 0;
+	height: 0;
+}
+
+.comments {
 	font-family: $grotesca;
+	font-size: 1rem;
 	margin: 2rem auto 4rem auto;
 	max-width: 700px;
 	background: $cinza-3;
 	border-radius: 2px;
 	font-weight: 700;
-	max-height: calc(4rem + 40px);
-	overflow: hidden;
 	transition: all ease-in-out .4s;
 	position: relative;
 	z-index: 0;
-
-	& > div {
-		margin-bottom: 2rem;
-		padding: 2rem;
-		transition: all ease-in-out .4s;
-
-		&::after { content: 'Comente aqui'; }
-
-		i {
-			display: inline-flex;
-			align-items: center;
-			justify-content: center;
-			vertical-align: -8px;
-			width: 40px;
-			height: 40px;
-			font-size: 1.1em;
-			background: $preto;
-			border-radius: 100%;
-			color: #FFF;
-			margin: 0px 20px 0 0;
-			box-shadow: 0 2px 2px $sombra-3;
-		};
-
-		&:hover {
-			background: $cinza-2;
-			color: #FFF;
-			cursor: pointer;
-		};
-
-		&.sucesso {
-			background: $verde;
-			color: #FFF;
-
-			i {
-				background: #FFF;
-				color: $verde;
-			}
-
-			&::after { content: 'Agradecemos a sua contribuição! O comentário estará disponível em breve, após a aprovação da Prefeitura.'; }
-		}
-	};
 
 	form {
 		display: block;
@@ -348,7 +373,7 @@ div.Comments {
 		};
 	};
 
-	&.aberto, &.sempreAberto { max-height: 1000px; };
+	&.aberto { max-height: 1000px; };
 
 	@media (max-width: 600px) { font-size: 20px; }
 };

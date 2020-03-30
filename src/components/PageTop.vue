@@ -1,36 +1,36 @@
 <template>
 	<div class="PageTop">
-		<div class="bg"><img :src="bgImg"></div>
+		<div class="bg"><img :src="bgImg" :alt="backgroundAlt"></div>
 		<aside>
-			<div class="statusConsulta" :class="consultaState(esta_consulta.ativo)" v-if="esta_consulta.ativo">
-				<span></span>
-			</div>
-			<div class="contribuicoes" v-if="esta_consulta.nContribuicoes">
-				<i class="icon-comentario icon"><span>chat</span></i> {{ esta_consulta.nContribuicoes }} <span v-if="esta_consulta.nContribuicoes < 2">contribuição</span><span v-else>contribuições</span>
-			</div>
-			<div class="periodo" v-if="esta_consulta.dataFinal">
-				<i class="icon-data icon"><span>período</span></i> {{ data(esta_consulta.dataCadastro) }}–{{ data(esta_consulta.dataFinal) }}
-			</div>
+			<template v-if="esta_consulta">
+				<div class="statusConsulta" :class="consultaState(esta_consulta.ativo)">
+					<span></span>
+				</div>
+				<div class="contribuicoes">
+					<i class="icon-comentario icon"><span>chat</span></i> {{ esta_consulta.nContribuicoes }} <span v-if="esta_consulta.nContribuicoes < 2">contribuição</span><span v-else>contribuições</span>
+				</div>
+				<div class="periodo">
+					<i class="icon-data icon"><span>período</span></i> {{ datas(esta_consulta.dataCadastro) }}–{{ datas(esta_consulta.dataFinal) }}
+				</div>
+				<div class="devolutiva" v-if="esta_consulta.urlDevolutiva">
+					<a :href="esta_consulta.urlDevolutiva" target="_blank">
+					<i class="icon-responder icon pointer">Ver devolutiva </i></a>
+				</div>
 
-			<!-- Devolutiva -->
-			<div class="devolutiva" v-if="esta_consulta.urlDevolutiva">
-				<a :href="esta_consulta.urlDevolutiva" target="_blank">
-				<i class="icon-responder icon pointer">Ver devolutiva </i></a>
-			</div>
-
-			<div class="publicacao" v-if="esta_consulta.dataCadastro">
-				Publicado em {{ data(esta_consulta.dataCadastro)}}
-			</div>
+				<div class="publicacao">
+					Publicado em {{ datas(esta_consulta.dataCadastro)}}
+				</div>
+			</template>
 		</aside>
 		<main>
 			<h1><slot name="titulo"></slot></h1>
 			<h2><slot name="subtitulo"></slot></h2>
 		</main>
-		<ul class="share" :class="{ social: esta_consulta.social }"> <!-- mudar para esta_consulta.social true -->
+		<ul class="share" :class="{ social: esta_consulta.social }">
 			<li @click="imprime" class="print">
 				<i class="icon-imprimir icon"><span>imprimir</span></i>
 			</li>
-			<template v-if="esta_consulta.ativo == 1">
+			<template v-if="esta_consulta.ativo">
 				<li>
 					<a :href="socialMediaRedirect('whatsapp')" data-action="share/whatsapp/share"><img :src="imgsrc('share_whatsapp.svg')" alt=""></a>
 				</li>
@@ -60,38 +60,33 @@ export default {
 	computed: {
 		basePath () { return this.$store.getters.basePath },
 		bgImg () { return this.$store.getters.basePath + this.background_image_src },
-		rota () { return this.$route.name }
+		backgroundAlt () { return this.esta_consulta.nomePublico ? this.esta_consulta.nomePublico : this.$route.name }
 	},
 	methods: {
 		socialMediaRedirect (net) {
-			let consulta = this.esta_consulta
-			let retStr = ''
-			let text = encodeURIComponent((`"${consulta.nomePublico}" está em consulta pública. Acesse e contribua!`).toString())
-			let url = encodeURIComponent((this.basePath + consulta.urlConsulta).toString())
-			switch (net) {
-			case 'whatsapp':
-				retStr = `https://api.whatsapp.com/send?text=${text}%20${url}`
-				break
-			case 'twitter':
-				retStr = `https://twitter.com/intent/tweet?text=${text}%20${url}`
-				break
-			case 'facebook':
-				retStr = `https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${text}`
+			const consulta = this.esta_consulta
+			const text = encodeURIComponent((`"${consulta.nomePublico}" está em consulta pública. Acesse e contribua!`).toString())
+			const url = encodeURIComponent((this.basePath + consulta.urlConsulta).toString())
+
+			const share = {
+				'whatsapp': `https://api.whatsapp.com/send?text=${text}%20${url}`,
+				'twitter': `https://twitter.com/intent/tweet?text=${text}%20${url}`,
+				'facebook': `https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${text}`
 			}
-			return retStr
+
+			return share[net] ? share[net] : ''
 		},
 		consultaState (par) {
-			if (parseInt(par) === 1) {
+			if (par === 1) {
 				return 'aberta'
-			} else {
-				return 'fechada'
 			}
+			return 'fechada'
 		},
-		data (full) {
-			let dd = full.substring(8, 10)
-			let mm = full.substring(5, 7)
-			let aa = full.substring(0, 4)
-			return dd + '/' + mm + '/' + aa
+		datas (dataString) {
+			if (dataString) {
+				return dataString.replace(/-/g, '/')
+			}
+			return ''
 		},
 		imgsrc (name) { return this.basePath + 'arquivos/img/' + name },
 		imprime () { this.$store.dispatch('imprime') }

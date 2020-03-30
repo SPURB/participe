@@ -15,7 +15,7 @@
 			<tbody>
 				<tr
 					:key="`tr-`+index"
-					:class="index%2 === 0 ? 'linha-default' : 'linha-escura'"
+					:class="setLinhaClass(index, tabelaListrada)"
 					v-for="(item, index) in totalLinhas">
 						<td
 							:data-label="colunas[indexLinha]"
@@ -29,7 +29,7 @@
 			</tbody>
 		</table>
 		<div class="fonte" v-if="fonte !== ''">
-			fonte: <span>{{ fonte }}</span>
+			Fonte: <span>{{ fonte }}</span>
 		</div>
 	</div>
 </template>
@@ -53,6 +53,10 @@ export default {
 		fonte: {
 			type: String,
 			default: ''
+		},
+		tabelaListrada: {
+			type: Boolean,
+			default: false
 		}
 	},
 	computed: {
@@ -74,6 +78,10 @@ export default {
 		countColspan (linha, total) {
 			if (linha === 1) return total
 			if (linha < total) return linha
+		},
+		setLinhaClass (index, tabelaListrada) {
+			if (!tabelaListrada) return 'linha-default'
+			else return index % 2 === 0 ? 'linha-default' : 'linha-escura'
 		}
 	}
 }
@@ -82,27 +90,32 @@ export default {
 <style lang="scss" scoped>
 @import '../variables';
 .table-csv {
-	align-items: center;
 	display: flex;
+	align-items: center;
 	flex-direction: column;
-	width: 100%;
+	padding: 0 1.5rem;
+	font-family: $grotesca;
+	background-color: $cinza-3;
 
 	.fonte {
-		font-size: 13pt;
 		color: $preto;
 		opacity: 0.8;
-		width: 90%;
+		font-size: x-small;
+		align-self: flex-start;
+		margin: 0 0 1.5rem;
+		span { font-weight: bolder; }
 	}
 
 	table {
 		border-collapse: collapse;
 		background-color: #FFF;
-		margin: 0;
-		width: 90%;
+		width: 100%;
+		margin-bottom:  1.5rem;
 
 		caption {
-			font-size: 1.5rem;
-			margin-bottom: 3px;
+			font-size: inherit;
+			font-weight: 700;
+			margin: 2rem 0 1rem;
 		}
 
 		th, td {

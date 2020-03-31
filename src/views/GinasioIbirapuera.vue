@@ -1,53 +1,249 @@
 <template>
 	<div class="GinasioIbirapuera" ref="conteudoConsulta">
-		<PageTop background_image_src="arquivos/capas/ginasio-ibirapuera_122w.jpg" :esta_consulta="estaConsulta">
+		<page-top background_image_src="arquivos/capas/ginasio-ibirapuera_122w.jpg" :esta_consulta="estaConsulta">
 			<template slot="titulo"><div>PIU Ginásio do Ibirapuera</div></template>
 			<template slot="subtitulo"><div>1ª Consulta Pública – Elementos prévios</div></template>
-		</PageTop>
-		<Indice :titulos="titulosLimpo"></Indice>
+		</page-top>
+		<indice :titulos="titulosLimpo" />
+		<apoio>
+			<template slot="item2">
+				<li>
+					<input type="radio" name="tabs" id="item2">
+					<label for="item2">Arquivos</label>
+					<div class="conteudoTab">
+						<ul class="links" style="margin: 0 0;">
+							<li>
+								<a :href="src('arquivos/ginasio-ibirapuera/piu-ibirapuera_diagnostico.pdf')" target="_blank">
+									<i class="icon-pdf icon"><span>pdf</span></i>
+									<div>Diagnóstico Socioterritorial e Ambiental</div>
+									<span>7 Mb</span>
+								</a>
+							</li>
+							<li>
+								<a :href="src('arquivos/ginasio-ibirapuera/piu-ibirapuera_projeto-de-interesse-publico.pdf')" target="_blank">
+									<i class="icon-pdf icon"><span>pdf</span></i>
+									<div>Programa de Interesse Público</div>
+									<span>760 Kb</span>
+								</a>
+							</li>
+							<li class="compacto__ultimo-item">
+								<a :href="src('arquivos/ginasio-ibirapuera/piu-ginasio-ibirapuera.zip')" target="_blank">
+									<i class="icon-download icon"><span>pdf</span></i>
+									<div>Consulta completa</div>
+									<span>7 Mb</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</template>
+		</apoio>
 
-		<Apoio></Apoio>
-		<!-- Decreto Nº 56.901 inclua este componente caso seja um PIU -->
+		<section class="horizontal">
+			<div>
+				<div>
+					<h2 class="titulo" indent="1">Apresentação</h2>
+					<p>O Complexo Desportivo Constâncio Vaz Guimarães, conhecido como “Complexo Ginásio do Ibirapuera”, é um equipamento público de grande porte gerido pelo Governo do Estado de São Paulo (GESP) que contém características urbanísticas excepcionais, tendo sido assim classificado como uma ZOE – Zona de Ocupação Especial pela Lei de Parcelamento, Uso e Ocupação do Solo – LPUOS (Lei nº 16.402/2016).</p>
+
+					<p>As Zonas Especiais são porções do território com diferentes características ou com destinação específica que requerem normas próprias de uso e ocupação do solo, podendo estar situadas em qualquer macrozona do Município, e visam a promoção de políticas públicas setoriais, ou ainda, o estímulo ao desenvolvimento de áreas vocacionadas à diversas atividades econômicas, nos termos do Art. 39 do PDE – Plano Diretor Estratégico ( Lei 16.050/14).</p>
+
+					<p>Conforme disposto no §1º do Art. 15 da Lei 16.402/2016, as áreas classificadas como ZOE – Zona de Ocupação Especial devem necessariamente ser objeto de PIU – Projetos de Intervenção Urbana, contemplando a definição de parâmetros específicos de parcelamento, uso e ocupação do solo adequados às suas especificidades.</p>
+
+					<p>Este complexo desportivo, tão conhecido pela população paulistana e palco de memoráveis eventos, passa atualmente, segundo informa o Governo do Estado de São Paulo por um processo de deterioração face à obsolescência de suas instalações e a progressiva redução das atividades esportivas e programas de cunho cultural, esportivo e de lazer. Com a perspectiva de sua transformação em um moderno Centro Esportivo e Cultural para a cidade, o Projeto de Intervenção Urbana do Complexo Desportivo Constâncio Vaz Guimarães - PIU Ginásio Ibirapuera, a ser desenvolvido, buscará também uma maior integração do conjunto com seu contexto urbano, identificando novas oportunidades de requalificação urbana.</p>
+				</div>
+			</div>
+			<div class="capitulos">
+				<h2 class="titulos">Arquivos</h2>
+				<p>
+					<ul class="links compacto">
+						<li>
+							<a :href="src('arquivos/ginasio-ibirapuera/piu-ibirapuera_diagnostico.pdf')" target="_blank">
+								<i class="icon-pdf icon"><span>pdf</span></i>
+								<div>Diagnóstico Socioterritorial e Ambiental</div>
+								<span>7 Mb</span>
+							</a>
+						</li>
+						<li>
+							<a :href="src('arquivos/ginasio-ibirapuera/piu-ibirapuera_projeto-de-interesse-publico.pdf')" target="_blank">
+								<i class="icon-pdf icon"><span>pdf</span></i>
+								<div>Programa de Interesse Público</div>
+								<span>760 Kb</span>
+							</a>
+						</li>
+						<li class="compacto__ultimo-item">
+							<a :href="src('arquivos/ginasio-ibirapuera/piu-ginasio-ibirapuera.zip')" target="_blank">
+								<i class="icon-download icon"><span>pdf</span></i>
+								<div>Consulta completa</div>
+								<span>7 Mb</span>
+							</a>
+						</li>
+					</ul>
+					<comments-option v-if="consultaAtiva" :options="[
+							{ id: 1, context: 'Comentários gerais' },
+							{ id: 2, context: 'Diagnóstico socio territorial' },
+							{ id: 3, context: 'Diagnóstico ambiental' },
+							{ id: 4, context: 'Programa de Interesse público' }
+						]"
+						:alwaysOpen="true">
+					</comments-option>
+				</p>
+			</div>
+		</section>
 
 		<section>
-			<imagem :dados="{
-				caption: 'Mapa 01: Planta da Cidade de São Paulo, 1924',
-				tipo: 'default',
-				url: src('arquivos/ginasio-ibirapuera/img/image2.jpg'),
-				fonte: 'SMDU/ SEMPLA. Elaboração: LEVISKY, 2020'
-			}" />
+			<h2 class="titulo" indent="1"> Diagnóstico Socioterritorial e Ambiental</h2>
+			<section>
+				<h3 class="titulo" indent="2">Diagnóstico Socio Territorial</h3>
 
-			<imagem :dados="{
-				caption: 'Imagem 01: Primeiro projeto para o Parque do Ibirapuera de 1950',
-				tipo: 'default',
-				url: src('arquivos/ginasio-ibirapuera/img/image3.jpg'),
-				fonte: 'Divisão do Arquivo Histórico Municipal.'
-			}" />
+				<h4>Histórico</h4>
+				<p>A várzea do Ibirapuera, onde se insere o Conjunto Desportivo Constâncio Vaz, era uma área charcosa e alagadiça em bacia de fundo de vale formada pelos córregos Sapa-teiro, Caguaçú e Uberaba, ocupada por pastos e favelas, a qual foi incorporada ao patri-mônio municipal em 1916. Esses terrenos devolutos situados na Várzea do Ibirapuera se constituíram em parque público pelo Decreto Estadual nº 2.669 de 17/05/1916.</p>
+				<imagem :dados="{
+					caption: 'Mapa 01: Planta da Cidade de São Paulo, 1924',
+					tipo: 'default',
+					url: src('arquivos/ginasio-ibirapuera/img/image2.jpg'),
+					fonte: 'SMDU/ SEMPLA. Elaboração: LEVISKY, 2020'
+				}" />
+				<p>No bojo do IV Centenário da Cidade de São Paulo, momento em que a cidade ensejava demonstrar traços de modernização ao mundo, a região do Ibirapuera foi escolhida para aportar os projetos mais ambiciosos, envolvendo a urbanização da área, como também a construção de diversos equipamentos.</p>
+				<imagem :dados="{
+					caption: 'Imagem 01: Primeiro projeto para o Parque do Ibirapuera de 1950',
+					tipo: 'default',
+					url: src('arquivos/ginasio-ibirapuera/img/image3.jpg'),
+					fonte: 'Divisão do Arquivo Histórico Municipal.'
+				}" />
 
-			<imagem :dados="{
-				caption: 'Imagem 02: Vista aérea do Ibirapuera – Autor: Edilson Pacheco Aquino',
-				tipo: 'default',
-				url: src('arquivos/ginasio-ibirapuera/img/imagem1.jpg'),
-				fonte: 'http://www.acervosdacidade.prefeitura.sp.gov.br/-acessado-em-13/09/2019'
-			}" />
-			<imagem :dados="{
-				caption: 'Imagem 03: Término da construção da piscina – Autor: José Moscardi',
-				tipo: 'default',
-				url: src('arquivos/ginasio-ibirapuera/img/imagem2.jpg'),
-				fonte: 'https://www.arquivo.arq.br/ginsio-do-ibirapuera-acessado-em-13/09/2019'
-			}" />
-			<imagem :dados="{
-				caption: 'Imagem 04: Construção do Ginásio do Ibirapuera – Autor: Hans Gunter Flieg ',
-				tipo: 'default',
-				url: src('arquivos/ginasio-ibirapuera/img/imagem3.jpg'),
-				fonte: 'https://www.arquivo.arq.br/ginsio-do-ibirapuera-acessado-em-13/09/2019'
-			}" />
-			<imagem :dados="{
-				caption: 'Imagem 05: Estudo sobre o desmembramento territorial da antiga invernada para os animais do corpo dos bombeiros',
-				tipo: 'default',
-				url: src('arquivos/ginasio-ibirapuera/img/imagem6.jpg'),
-				fonte: 'Relatório desenvolvido pela Procuradoria Geral do Estado, Procuradoria do Patrimônio, Volume II da Pasta Especial “PE 998”'
-			}" />
+				<p>Nesse contexto, deu-se início à construção do Complexo Constâncio Vaz Guimarães, cujo nome homenageia um dos mais respeitados homens do esporte nacional, advogado, decatleta e profundo conhecedor do atletismo, que, entre outros feitos, foi nomeado presidente da delegação Olímpica nos jogos de Berlim, em 1936.</p>
+
+				<imagem :dados="{
+					caption: 'Imagem 02: Vista aérea do Ibirapuera – Autor: Edilson Pacheco Aquino',
+					tipo: 'default',
+					url: src('arquivos/ginasio-ibirapuera/img/imagem1.jpg'),
+					fonte: 'http://www.acervosdacidade.prefeitura.sp.gov.br/-acessado-em-13/09/2019'
+				}" />
+
+				<p>Em 1952, o projeto do Ginásio Geraldo José de Almeida, popularmente conhecido como Ginásio do Ibirapuera – concebido com base em padrões internacionais – foi elaborado pelo arquiteto Ícaro de Castro Melo e antecedeu a construção efetiva do Parque do Ibi-rapuera, vindo a ser concluído em 1957, juntamente com suas quadras anexas.  </p>
+
+				<p>Originalmente, o Ginásio do Ibirapuera possuía capacidade para até 20.000 pessoas, po-rém, após recente obra de readequação às normas de ergonomia, segurança e acessibili-dade (2010-2011), sua capacidade sofreu redução para 11.000 pessoas. </p>
+
+				<p>Posteriormente, em 1958, a pedido do Centro Acadêmico Ruy Barbosa, o governador Jânio Quadros ordenou que as quadras de vôlei localizadas entre a piscina e o ginásio fossem cobertas, com o intuito de abrigar as aulas do curso de Educação Física da Universidade de São Paulo.</p>
+
+				<imagem :dados="{
+					caption: 'Imagem 03: Término da construção da piscina – Autor: José Moscardi',
+					tipo: 'default',
+					url: src('arquivos/ginasio-ibirapuera/img/imagem2.jpg'),
+					fonte: 'https://www.arquivo.arq.br/ginsio-do-ibirapuera-acessado-em-13/09/2019'
+				}" />
+
+				<p>Em 1968, enquanto as obras do velódromo estavam em andamento, foi concluído o se-gundo bloco – Complexo Aquático Caio Pompeu. Neste mesmo ano, realizou-se a inau-guração oficial do Complexo Desportivo Constâncio Vaz Guimarães.</p>
+
+				<p>Apenas em 1974, o terceiro bloco que compreendia o estádio Ícaro de Castro Mello – também projetado pelo arquiteto Ícaro de Castro Mello foi concluído. Por fim, o último bloco a ser edificado foi o Ginásio Mauro Pinheiro, finalizado em 1982. </p>
+
+				<p>Ao longo dos anos o Complexo ganhou notoriedade no campo esportivo, tornando-se referência no treinamento de confederações e atletas olímpicos, além de ter sediado va-riados eventos esportivos e culturais desde sua inauguração.</p>
+				<imagem :dados="{
+					caption: 'Imagem 04: Construção do Ginásio do Ibirapuera – Autor: Hans Gunter Flieg ',
+					tipo: 'default',
+					url: src('arquivos/ginasio-ibirapuera/img/imagem3.jpg'),
+					fonte: 'https://www.arquivo.arq.br/ginsio-do-ibirapuera-acessado-em-13/09/2019'
+				}" />
+
+				<p>Em 1963, ano em que os jogos Panamericanos foram sediados na cidade de São Paulo, muitas competições ocorreram no Ginásio do Ibirapuera, a exemplo das competições de basquete, um dos esportes de maior importância do país à época.</p>
+
+				<p>Além dos jogos Panamericanos, outros grandes eventos foram sediados no local como: o Mundial de Baquete Feminino de 1971, lutas de boxe com Muhammad Ali (1971), final da Liga Mundial Masculina de 1993, Mundial de Vôlei Feminino de 1994, show dos Rolling Stones e Bob Dylan (1998), Mundial de Handbol Feminino de 2011, campeona-to de UFC (2013), show de André Rieu (2012), Gilette Federer Tour (2012),  League of Legends (2016), entre outros.</p>
+
+				<p>Atualmente o Complexo vivencia o declínio das atividades relacionadas ao programa esportivo, em grande parte, em razão da insuficiência de investimentos na atualização e modernização das infraestruturas existentes, o que reflete, por fim, em maiores dificul-dades na gestão do equipamento.</p>
+
+				<p>Como atividade acessória, o Complexo recepciona atrações diversas, tendo sido palco de grandes shows, campeonatos, eventos educacionais e culturais variados. Vale ressal-tar que a alta demanda deste mercado face às restrições e deficiências apresentadas pelas instalações e espaços físicos existentes decorre na exclusão da cidade de São Paulo da escala de programação de diversos eventos e turnês mundiais que visam espaços moder-nos, que garantam a oferta de equipamentos de tecnologia adequada e níveis de desem-penho satisfatórios do ponto de vista termoacústico, da acessibilidade, do desenho uni-versal, da tecnologia da informação, dentre outros, que ofertem flexibilidade e facilida-des operacionais e estruturais para a produção de eventos de padrão internacional de diversos tipos e tamanhos. </p>
+
+				<h4>Caracterização e utilização do complexo</h4>
+				<h5>Estrutura Fundiária</h5>
+
+				<p>A ZOE Ginásio do Ibirapuera engloba parte da Quadra 138 do Setor Fiscal 036, com área real, aferida através de levantamento perimetral por profissional habilitado, de 91.861,34m².</p>
+
+				<p>Por meio de Escritura de Cessão e Transferência lavrada no 5º Tabelião da Capital em 07/06/1944 no 5º Tabelião da Capital, e objeto da Transcrição nº 35.293 do 1º Registro de Imóveis (RI), o Governo do Estado de São Paulo transferiu ao Município área de 248.240,00m², destacado de área maior de 1.457.711,00m², adquirida do Banco Real de Crédito do Estado de São Paulo em 1905, conforme Transcrição nº 40.140 do 1º RI. Abaixo segue transcrição de Relatório desenvolvido pela Procuradoria Geral do Estado,
+				<em>Procuradoria do Patrimônio, Volume II da Pasta Especial “PE 998”.</em></p>
+
+				<blockquote>
+					<p>O terreno onde foi implantado Complexo Desportivo Constâncio Vaz Guimarães tem origem na área denominada ‘antiga Invernada dos Bombeiros’, com 1.457.711,00m², adquirida pela Fazenda do Estado do Banco de Crédito Real do Estado de São Paulo em 07 de janeiro de 1905 pelas notas do 6º Tabelionato de Notas da Capital e transcrita sob o nº 40.410 pelo 1º Cartório de Registro de Imóveis de São Paulo.</p>
+					<p class="fonte">PE 998, vol. II, p. 28, certidões às fls.18 e 204/205</p>
+				</blockquote>
+
+				<blockquote>
+					<p>Autorizado pelo Decreto-lei 13.291/43, o Estado cedeu e transferiu ao Município o do-mínio de uma parte da área maior acima mencionada, com 256.650,00m²</p>
+					<p class="fonte">Escritura de cessão e transferência de 07 de junho de 1944, lavrada nas notas do 5º Tabelionato da Capital e transcrita sob o nº 35.293, no 1º Oficial de Registro de Imóveis da Capital, cf<sup>1</sup>. fls. 288/293, vol II PE 998).</p>
+				</blockquote>
+
+				<blockquote>
+					<p>No artigo 2º, do mesmo Decreto-lei consta reserva de área para ‘instalação escolar e esportiva da Diretoria de Esportes’, com 105.304m²</p>
+					<p class="fonte">PE 998, vol. II, p. 191<sup>2</sup></p>
+				</blockquote>
+
+				<p>A Lei 17.099, de 27 de junho de 2019, considerou, para o Complexo Constâncio Vaz Guimarães, a área indicada no ato normativo e reproduzida na escritura de alienação lavrada com o Município. </p>
+
+				<p>Sabe-se, no entanto, que foram promovidas supressões de área em razão da implantação de viário pelo Município, em extensão de 8.634,00m². Ao que tudo indica, também teria havido ocupação de 2.363,00m² pelo Exército. </p>
+
+				<p>Essas intervenções ensejaram redução da área originalmente reservada ao Complexo Constâncio Vaz Guimarães, inferior aos 105.304,00m² que originalmente lhe teriam sido destinados. </p>
+
+				<p>Não há, contudo, descrição perimétrica da área originalmente destinada, sendo que da porção atualmente ocupada consta o memorial descritivo copiado dos autos do processo PGE 28579/67” (FLS. 306/307, vol II, PE 998).</p>
+
+				<p>Chancelando este raciocínio, foi expedido em 14 de abril de 2003 pelo Departamento Patrimonial da Procuradoria Geral do Município Certidão que atesta a reserva de área destinada ao Estado correspondente a 91.870,00m², parte de área maior de 248.240,00m²</p>
+
+				<imagem :dados="{
+					caption: 'Imagem 05: Estudo sobre o desmembramento territorial da antiga invernada para os animais do corpo dos bombeiros',
+					tipo: 'default',
+					url: src('arquivos/ginasio-ibirapuera/img/imagem6.jpg'),
+					fonte: 'Relatório desenvolvido pela Procuradoria Geral do Estado, Procuradoria do Patrimônio, Volume II da Pasta Especial “PE 998”'
+				}" />
+				
+				<ol class="notas">
+					<li>Do referido Decreto-lei 13.291, de 31 de março de 1943, constou autorização para a Fazenda do Estado transferir ao Município a “área sita no Ibirapuera remanescente da antiga invernada dos Bombeiros, limitada pela Rua Manoel da Nóbrega, pelo terreno anexo ao Quartel do Esquadrão da Cavalaria (terreno este definido pelo decreto-lei 13.009, de 24 de outubro de 1942), Rua Abílio Soares, primeiro córrego que atravessa esta rua logo abaixo do terreno anterior, e autoestrada até o entroncamento com a Rua Manoel da Nobrega, ponto onde fecha o perímetro”.</li>
+					<li>Art. 2º.§1º “ Da área referida na alínea III, supra, será reservada para a instalação escolar esportiva da Diretoria de Es-portes, uma fração, sita na sua extremidade superior, medindo 105.340m2 (cento e cinco mi trezentos e quarenta metros quadrados), podendo o Estado construir e fazer funcionar na mesma a citada instalação, sem outra restrição que a de manter o aspecto do parque e apresentar os seus projetos à aprovação arquitetônica e paisagística da Prefeitura para harmonização do Complexo.” §2º Não poderá ser dado aos imóveis referidos neste artigo destino diverso dos ora pres-critos, devendo a Prefeitura Municipal, desde logo, promover os trabalhos necessários ao aproveitamento deles, sendo que, da mesma forma a fração reservada à Diretoria de Esportes, reverterá à Prefeitura Municipal, incorporando-se ao parque, caso não seja aproveitada no fim previsto.”</li>
+				</ol>
+
+
+				<h4>Ocupação Atual</h4>
+				<h4>O perímetro de intervenção e contexto urbano | unidades de análise</h4>
+				<h4>Limites Administrativos</h4>
+				<h4>Contexto Legal</h4>
+				<h4>Marcos Urbanos</h4>
+				<h4>Dados Socioeconômicos</h4>
+				<h4>Vulnerabilidade Social e Habitação</h4>
+				<h4>Tipologia Construtiva e Uso do Solo Predominantes</h4>
+				<h4>Equipamentos Urbanos</h4>
+				<h4>Equipamentos de Comércio e Serviços</h4>
+				<h4>Rede de Mobilidade</h4>
+				<h4>Sistema Viário - Rede Viária Estrutural</h4>
+				<h4>Rede de Transporte Coletivo</h4>
+				<h4>Micro acessibilidade</h4>
+				<h4>Sistema Cicloviário</h4>
+				<h4>Patrimônio Histórico e Cultural</h4>
+				<h4>Comando da Aeronáutica ─ COMAER: Altura máxima permitida</h4>
+
+			</section>
+
+			<section>
+				<h3 class="titulo" indent="2">Diagnóstico Ambiental</h3>
+				<h4>Meio Físico</h4>
+				<h4>Áreas Verdes</h4>
+				<h4>Parque do Ibirapuera</h4>
+				<h4>Arborização Viária</h4>
+				<h4>Áreas Contaminadas</h4>
+			</section>
+		</section>
+
+		<section>
+			<h2 class="titulo" indent="1"> Programa de Interesse Público</h2>
+			<section>
+				<h3 class="titulo" indent="2">Diagnóstico Socio Territorial</h3>
+			</section>
+			<section>
+				<h3 class="titulo" indent="2">Estudo de vocação de mercado e benchmarking</h3>
+			</section>
+		</section>
+
+		<section>
+			<h3 class="titulo" indent="1">Ficha técnica</h3>
+		</section>
+
+		<section>
 			<imagem :dados="{
 				caption: 'Mapa 02: Complexo Desportivo Constâncio Vaz Guimarães',
 				tipo: 'coluna',
@@ -1544,12 +1740,13 @@ import Imagem from '@/components/Imagem'
 import { consultasCommons } from '@/mixins/consultasCommons'
 import Comments from '@/components/Comments'
 import CommentsLoader from '@/components/CommentsLoader'
+import CommentsOption from '@/components/CommentsOption'
 import Tabela from '@/components/Tabela'
 import TabelaCsv from '@/components/TabelaCsv'
 import VePie from 'v-charts/lib/pie.common'
 import VeLine from 'v-charts/lib/line.common'
 import VeBar from 'v-charts/lib/bar.common'
-import veHistogram from 'v-charts/lib/histogram.common'
+import VeHistogram from 'v-charts/lib/histogram.common'
 
 export default {
 	name: 'GinasioIbirapuera',
@@ -1564,6 +1761,7 @@ export default {
 	components: {
 		Comments,
 		CommentsLoader,
+		CommentsOption,
 		PageTop,
 		Indice,
 		Tabela,
@@ -1573,7 +1771,7 @@ export default {
 		VePie,
 		VeLine,
 		VeBar,
-		veHistogram
+		VeHistogram
 	},
 	mixins: [ consultasCommons ]
 }
@@ -1583,6 +1781,10 @@ export default {
 @import '../variables';
 @import '../consulta';
 @import '../oldstylestoprint';
+
+.capitulos > .titulos {
+	margin-top: 0
+}
 
 .grafico {
 	border: 1px $cinza-2 solid;
@@ -1672,4 +1874,45 @@ export default {
 	max-width: 700px;
 	margin: auto;
 }
+
+.horizontal {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 1fr 100%
+}
+
+@supports(display: grid) {
+	.horizontal {
+		max-width: 1200px;
+		margin: auto;
+	}
+	.horizontal .titulo {
+		margin-top: 0
+	}
+	@media (max-width: 800px) {
+		.horizontal {
+			display: block;
+			grid-template-columns: unset;
+			max-width: unset;
+		}
+	}
+}
+
+.horizontal h2 {
+	margin-top:0
+}
+
+.coluna-content {
+	margin-top: 3rem;
+	grid-area: 2 / 1 / 3 / 3;
+}
+
+.links.compacto li {
+	margin: 1px
+}
+
+.links.compacto .compacto__ultimo-item {
+	margin-top: 2rem
+}
+
 </style>

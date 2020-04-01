@@ -6,6 +6,8 @@
 
 		<Indice :titulos="titulosLimpo"></Indice>
 
+		<router-view />
+
 		<section>
 			<h2 class="titulo" indent="1">Introdução</h2>
 			<p>A Consulta Pública irá acolher sugestões sobre o Edital do Programa Agentes de Governo Aberto de 2019, promovido pela Prefeitura de São Paulo, por meio da Secretaria do Governo Municipal e Controladoria Geral do Município.

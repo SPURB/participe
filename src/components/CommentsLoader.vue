@@ -13,6 +13,7 @@
 
 <script>
 import api from '@/utils/api'
+import { mapGetters } from 'vuex'
 
 export default {
 	name: 'CommentsLoader',
@@ -22,15 +23,28 @@ export default {
 		}
 	},
 	props: ['attr'],
-	mounted () { this.loadThisComments() },
+	mounted () {
+		this.loadThisComments()
+	},
 	watch: {
 		comments (val) {
 			this.comments ? this.$store.state.commentsLoaded = true : this.$store.state.commentsLoaded = false
 		}
 	},
+	computed: {
+		...mapGetters('threadComments', ['showThread', 'threadContent'])
+	},
 	methods: {
 		loadThisComments () {
-			api.get(`members/?idConsulta=${this.$route.meta.id}&public=1`)
+			// verifica se o commentid existe para filtrar os comentários
+			// utiliza nas rotas que possuem children
+			let url = ''
+			if (this.threadContent.id !== null && this.showThread !== false) {
+				url = `?idConsulta=${this.$route.meta.id}&commentid=${this.threadContent.id}`
+			} else {
+				url = `?idConsulta=${this.$route.meta.id}`
+			}
+			api.get(`members/${url}&public=1`)
 				.then(response => { this.comments = response.data })
 				.catch(error => console.error(error))
 		},

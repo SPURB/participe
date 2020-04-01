@@ -84,6 +84,7 @@ import api from '@/utils/api'
 import fechadura from '@spurb/fechadura'
 import { commentsCommons } from '@/mixins/commentsCommons'
 // import ShareButtons from './ShareButtons'
+import { mapActions } from 'vuex'
 
 export default {
 	name: 'CommentsContext',
@@ -124,24 +125,26 @@ export default {
 		},
 		toggleFormOrMessage () {
 			return (this.abreComentario && this.consultaAtiva)
-		},
-		valorSlot () {
-			if (this.$props.id === +this.$route.params.idc) {
-				/* const contentM = {
-					id: this.id,
-					titulo: this.context,
-					conteudo: this.$slots.default[0].elm.innerText
-				} */
-				return this.$slots.default[0].elm.innerText
-			} else {
-				return false
-			}
 		}
 	},
 	mounted () {
-		console.log(this.$store)
+		this.valorSlot()
 	},
 	methods: {
+		...mapActions('threadComments', ['setThread']),
+		valorSlot () {
+			if (this.$props.id === +this.$route.params.idc) {
+				const contentM = {
+					id: this.id,
+					titulo: this.context,
+					conteudo: this.$slots.default[0].elm.innerText
+				}
+				this.setThread(contentM)
+				this.valueSlot = this.$slots.default[0].elm.innerText
+			} else {
+				this.valueSlot = this.$slots.default[0].elm.innerText
+			}
+		},
 		send () {
 			let app = this
 			app.erro = false

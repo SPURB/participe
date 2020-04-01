@@ -1,26 +1,49 @@
 <template>
-	<div class="thread-comments">
+	<div class="thread-comments" :class="showThread ? 'open' : 'close'">
 		<div class="modal">
-			<section class="modal-header">
-				Proposta urbanística Perímetros de atuação especial Territórios de integração
-				<div class="modal-close">
-					<i class="icon-incorreto icon"></i>
-				</div>
-			</section>
-			<section class="modal-body">
-				<p>Uma importante proposta do PIU para viabilizar a vocação de ambiente de inovação consiste na demarcação dos chamados <b>Territórios de Integração</b>, formado pelas quadras lindeiras ao Rio Pinheiros, que deverão acomodar as novas travessias previstas no Programa de Intervenções, e por grandes áreas transformáveis que exigem projetos urbanos específicos, como é o caso da Ceagesp.</p>
-			</section>
-			<section class="modal-comentarios">
-			</section>
-			<section class="modal-footer">
-			</section>
+			<div class="modal-content">
+				<section class="modal-header">
+					{{ threadContent.titulo }}
+					<div class="modal-close" @click="close">
+						<i class="icon-incorreto icon"></i>
+					</div>
+				</section>
+				<section class="modal-body">
+					<p>{{ threadContent.conteudo }}</p>
+				</section>
+				<section class="modal-comentarios">
+					<CommentsLoader :attr="{}" />
+				</section>
+				<section class="modal-footer">
+					<Comments :attr="{ id: threadContent.id, context: threadContent.titulo }" />
+				</section>
+			</div>
 		</div>
 	</div>
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
+import CommentsLoader from '@/components/CommentsLoader'
+import Comments from '@/components/Comments'
 export default {
-	name: 'ThreadComments'
+	name: 'ThreadComments',
+	components: {
+		CommentsLoader,
+		Comments
+	},
+	computed: {
+		...mapGetters('threadComments', ['threadContent', 'showThread'])
+	},
+	mounted () {
+		this.setShowThread(true)
+	},
+	methods: {
+		...mapActions('threadComments', ['setShowThread']),
+		close () {
+			this.setShowThread(false)
+		}
+	}
 }
 </script>
 
@@ -31,46 +54,70 @@ export default {
 	color: $preto;
     display: flex;
     justify-content: center;
-    top: 0;
-    left: 0;
-	width: 96%;
+    top: 0px;
+    right: 0px;
+	width: 100%;
 	height: 100%;
-    position: fixed;
+	margin: 0px;
+	overflow-y: auto;
 	padding: 10px;
-    overflow: auto;
+    position: fixed;
     z-index: 30;
 
 	.modal {
-		background-color: #FFF;
-		border-radius: 7px;
-		height: auto !important;
+		position: relative;
 
-		.modal-header, .modal-body {
-			padding: 10px;
-		}
+		.modal-content {
+			height: auto;
+			background-color: #FFF;
+			border-radius: 7px;
 
-		.modal-header {
-			background-color: $cinza-2;
-			border-radius: 7px 7px 0px 0px;
-			color: #FFF;
-			display: flex;
-			flex-direction: column-reverse;
+			.modal-header, .modal-body {
+				padding: 10px;
+			}
 
-			.modal-close {
-				align-self: flex-end;
-				justify-content: flex-end;
-				align-items: center;
-				background-color: $vermelho;
-				border-radius: 50%;
+			.modal-header {
+				background-color: $cinza-2;
+				border-radius: 7px 7px 0px 0px;
+				color: #FFF;
 				display: flex;
-				justify-content: center;
-				width: 25px;
-				height: 25px;
-				position: absolute;
-				top: 3px;
-				right: 3px;
+				flex-direction: column-reverse;
+
+				.modal-close {
+					align-self: flex-end;
+					align-items: center;
+					background-color: $vermelho;
+					border-radius: 50%;
+					display: flex;
+					justify-content: center;
+					position: absolute;
+					right: -7px;
+					top: -7px;
+					height: 25px;
+					width: 25px;
+
+					& i {
+						cursor: pointer;
+					}
+				}
+			}
+
+			.modal-comentarios {
+				width: 100%;
+
+				.Commentsloader {
+					width: 100%;
+					padding: 0px;
+					margin: 0px;
+				}
 			}
 		}
 	}
+}
+.open {
+	display: flex;
+}
+.close {
+	display: none;
 }
 </style>

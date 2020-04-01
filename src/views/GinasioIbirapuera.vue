@@ -394,17 +394,27 @@
 
 				<div class="grafico">
 					<h3 class="grafico__titulo">Gráfico 01: População</h3>
-					<h4 class="grafico__subtitulo">Distritos Vila Mariana</h4>
+					<h4 class="grafico__subtitulo">Distritos Vila Mariana (%)</h4>
 					<ve-pie :data="{
 							columns: ['distrito', 'porcentagem' ],
 							rows: [
 								{ 'distrito': 'Moema - 25%', 'porcentagem': 25 },
-								{ 'distrito': 'Saúde - 38%', 'porcentagem': 38 },
-								{ 'distrito': 'Vila Mariana - 37%', 'porcentagem': 37 },
+								{ 'distrito': 'Saúde - 25%', 'porcentagem': 38 },
+								{ 'distrito': 'Vila Mariana - 25%', 'porcentagem': 37 },
 							]
 						}"
 						:colors="[ '#9a9a9a', '#ee947c','#d4d2d3' ]"
+						:legend-visible="false"
+						:settings="{
+							selectedMode: 'single',
+							hoverAnimation: false,
+						}"
 					/>
+					<div class="grafico__legendas">
+						<div class="grafico__legenda"><div style="background:#9a9a9a"></div>Moema - 25%</div>
+						<div class="grafico__legenda"><div style="background:#ee947c"></div>Saúde - 25%</div>
+						<div class="grafico__legenda"><div style="background:#d4d2d3"></div>Vila Mariana - 25%</div>
+					</div>
 					<p class="grafico__fonte">Fonte: SEADE / Observa Sampa. Elaboração: LEVISKY, 2020</p>
 				</div>
 
@@ -656,7 +666,7 @@
 
 				<div class="grafico" style="padding:0 1rem">
 					<h3 class="grafico__titulo">Gráfico 05: Domicílios Taxa de analfabetismo </h3>
-					<h4 class="grafico__subtitulo">(%) 2010</h4>
+					<h4 class="grafico__subtitulo">2010(%)</h4>
 					<ve-bar :data="{
 							columns: ['distrito', '%' ],
 							rows: [
@@ -671,6 +681,7 @@
 							]
 						}"
 						:colors="[ '#2e75b6', '#b4c7e7' ]"
+						:legend-visible="false"
 					/>
 					<p class="grafico__fonte">Fonte: IBGE. Elaboração: LEVISKY, 2020.</p>
 				</div>
@@ -753,8 +764,11 @@
 										{ 'Grau de instrução': '5. Sup. Completo', 'população': 2067158 },
 									]
 								}"
+								:legend-visible="false"
 								:settings="{
 									radius: 70,
+									selectedMode: 'single',
+									hoverAnimation: false
 								}"
 								:colors="[ '#b35d22', '#d26e2a','#ed7d31', '#f1a78a', '#f5c7b8' ]"
 							></ve-pie>
@@ -772,20 +786,23 @@
 										{ 'Grau de instrução': '5. Sup. Completo', 'população': 194085 }
 									]
 								}"
+								:legend-visible="false"
 								:settings="{
-									radius: 50,
+									radius: 60,
+									selectedMode: 'single',
+									hoverAnimation: false
 								}"
 								:colors="[ '#b35d22', '#d26e2a','#ed7d31', '#f1a78a', '#f5c7b8' ]"
 							></ve-pie>
 						</div>
 					</div>
-					<p class="grafico__fonte notas">
-						1. Não Alfabetizado/ Fundamental I Incompleto<br>
-						2. Fundamental I Completo/ Fundamental II Incompleto<br>
-						3. Fundamental II Completo/ Médio Incompleto<br>
-						4. Médio Completo/ Superior Incompleto<br>
-						5. Superior Completo<br>
-					</p>
+					<div class="grafico__legendas">
+						<div class="grafico__legenda"><div style="background:#b35d22"></div>1. Não Alfabetizado/ Fundamental I Incompleto</div>
+						<div class="grafico__legenda"><div style="background:#d26e2a"></div>2. Fundamental I Completo/ Fundamental II Incompleto</div>
+						<div class="grafico__legenda"><div style="background:#ed7d31"></div>3. Fundamental II Completo/ Médio Incompleto</div>
+						<div class="grafico__legenda"><div style="background:#f1a78a"></div>4. Médio Completo/ Superior Incompleto</div>
+						<div class="grafico__legenda"><div style="background:#f5c7b8"></div>5. Superior Completo</div>
+					</div>
 					<p class="grafico__fonte">Fonte: IBGE. Elaboração: LEVISKY, 2020</p>
 				</div>
 
@@ -998,8 +1015,13 @@
 										{ 'categoria': 'Sem Rendimento', 'domicílios': 202016 }
 									]
 								}"
-								:settings="{ radius: 70 }"
+								:settings="{
+									radius: 80,
+									selectedMode: 'single',
+									hoverAnimation: false
+								}"
 								:colors="[ '#a6561f', '#be6325', '#d26e2a', '#e4782f', '#ee8c58', '#f1a78a', '#f4bda9', '#f7d1c4' ]"
+								:legend-visible="false"
 							></ve-pie>
 						</div>
 						<div class="grafico__grupo--entrecoluna" />
@@ -1009,19 +1031,35 @@
 									columns: ['categoria', 'domicílios'],
 									rows: [
 										{ 'categoria': 'Até 1/2', 'domicílios': 445 },
-										{ 'categoria': '1/2 A 1', 'domicílios': 1754 },
-										{ 'categoria': '1 A 2', 'domicílios': 4822 },
-										{ 'categoria': '2 A 5', 'domicílios': 18788 },
-										{ 'categoria': '5 A 10', 'domicílios': 28926 },
-										{ 'categoria': '10 A 20', 'domicílios': 35298 },
-										{ 'categoria': 'Mais De 20', 'domicílios': 37438 },
-										{ 'categoria': 'Sem Rendimento', 'domicílios': 7045 }
+										{ 'categoria': '1/2 a 1', 'domicílios': 1754 },
+										{ 'categoria': '1 a 2', 'domicílios': 4822 },
+										{ 'categoria': '2 a 5', 'domicílios': 18788 },
+										{ 'categoria': '5 a 10', 'domicílios': 28926 },
+										{ 'categoria': '10 a 20', 'domicílios': 35298 },
+										{ 'categoria': 'Mais de 20', 'domicílios': 37438 },
+										{ 'categoria': 'Sem rendimento', 'domicílios': 7045 }
 									]
 								}"
 								:colors="[ '#a6561f', '#be6325', '#d26e2a', '#e4782f', '#ee8c58', '#f1a78a', '#f4bda9', '#f7d1c4' ]"
-								:settings="{ radius: 50 }"
+								:settings="{
+									radius: 65,
+									selectedMode: 'single',
+									hoverAnimation: false
+								}"
+								:legend-visible="false"
+								:height="'400px'"
 							></ve-pie>
 						</div>
+					</div>
+					<div class="grafico__legendas">
+						<div class="grafico__legenda"><div style="background:#a6561f"></div>Até 1/2</div>
+						<div class="grafico__legenda"><div style="background:#be6325"></div>1/2 a 1</div>
+						<div class="grafico__legenda"><div style="background:#d26e2a"></div>1 a 2</div>
+						<div class="grafico__legenda"><div style="background:#e4782f"></div>2 a 5</div>
+						<div class="grafico__legenda"><div style="background:#ee8c58"></div>5 a 10</div>
+						<div class="grafico__legenda"><div style="background:#f1a78a"></div>10 a 20</div>
+						<div class="grafico__legenda"><div style="background:#f4bda9"></div>Mais de 20</div>
+						<div class="grafico__legenda"><div style="background:#f7d1c4"></div>Sem Rendimento</div>
 					</div>
 					<p class="grafico__fonte">Fonte: IBGE. Elaboração: LEVISKY, 2020.</p>
 				</div>
@@ -1223,6 +1261,11 @@
 							]
 						}"
 						:colors="[ '#f5c7b8', '#f1a78a', '#ed7d31', '#d26e2a', '#a04507' ]"
+						:settings="{
+							selectedMode: 'single',
+							hoverAnimation: false
+						}"
+						:legend-visible="false"
 					/>
 					<div class="grafico__grupos">
 						<div class="grafico__grupo grafico__grupo">
@@ -1237,7 +1280,12 @@
 									]
 								}"
 								:colors="[ '#f5c7b8', '#f1a78a', '#ed7d31', '#d26e2a', '#a04507' ]"
-								:settings="{ radius: 50 }"
+								:settings="{
+									radius: 60,
+									selectedMode: 'single',
+									hoverAnimation: false
+								}"
+								:legend-visible="false"
 							/>
 						</div>
 						<div class="grafico__grupo--entrecoluna" />
@@ -1253,9 +1301,20 @@
 									]
 								}"
 								:colors="[ '#f5c7b8', '#f1a78a', '#ed7d31', '#d26e2a', '#a04507' ]"
-								:settings="{ radius: 50 }"
+								:settings="{
+									radius: 60,
+									selectedMode: 'single',
+									hoverAnimation: false
+								}"
+								:legend-visible="false"
 							/>
 						</div>
+					</div>
+					<div class="grafico__legendas">
+						<div class="grafico__legenda"><div style="background:#f5c7b8"></div>Casa</div>
+						<div class="grafico__legenda"><div style="background:#f1a78a"></div>Casa de Vila ou em Condomínio</div>
+						<div class="grafico__legenda"><div style="background:#ed7d31"></div>Apartamento</div>
+						<div class="grafico__legenda"><div style="background:#d26e2a"></div>Habitação em: Casa de Cômodos, Cortiço ou Cabeça de Porco</div>
 					</div>
 					<p class="grafico__fonte">Fonte: IBGE. Elaboração: LEVISKY, 2020</p>
 				</div>
@@ -1333,6 +1392,7 @@
 						}"
 						:height="'800px'"
 						:colors="[ '#2e75b6' ]"
+						:legend-visible="false"
 						:settings="{
 							dataOrder: {
 								label: 'order',
@@ -1354,7 +1414,6 @@
 				<p>Essa dissonância se dá, sobretudo, pela relevância econômica da Avenida Paulista e das excelentes condições de acesso em suas imediações.</p>
 				<p>Quanto aos equipamentos de saúde, nos mapas e tabela abaixo pode-se observar grande disponibilidade de equipamentos na região, principalmente hospitais e ambulatórios especializados.</p>
 				<p>Segundo dados do IBGE de 2018, no Distrito de Moema constam 1.592 leitos hospitalares disponíveis (públicos e privados), sendo 17,99 o número de leitos hospitalares para cada 1.000 (mil) habitantes. Considerando as subprefeituras de Vila Mariana e Pinheiros, cujos coeficientes são 11,62 e 11,60 respectivamente, elas se sobressaem quando comparadas ao coeficiente do município de 2,49.</p>
-
 
 				<div class="table-container">
 					<tabela-csv
@@ -1883,7 +1942,7 @@
 				<p>Vale destacar, que o relatório supracitado apontou também que os maciços/ aglomerados identificados apresentam vegetação heterogênea, incluindo espécies nativas e exóticas, sendo algumas delas exemplares significativos para o órgão ambiental como: Pau-ferro, Canafistula, Sibipiruna e Ipês. Entretanto, destes avaliados, mais de 50% apresentam problemas fitossanitários, como grandes lesões na sua estrutura, presença de parasitas, principalmente cupim, entre outras ocorrências, e serão tratados como diretrizes ambientais prioritárias neste PIU.</p>
 
 				<ol class="notas" start="18">
-					<li>Caderno de Proposta dos Planos Regionais das Subprefeituras – Quadro Analítico Vila Mariana. Disponível em: <https://gestaourbana.prefeitura.sp.gov.br/> Acesso em: 10 outubro  de 2019.</li>
+					<li>Caderno de Proposta dos Planos Regionais das Subprefeituras – Quadro Analítico Vila Mariana. Disponível em: <a href="https://gestaourbana.prefeitura.sp.gov.br/">https://gestaourbana.prefeitura.sp.gov.br</a> Acesso em: 10 outubro  de 2019.</li>
 					<li>A vegetação arbórea dos bairros-jardim é considerada Patrimônio Ambiental e é protegida pelo Decreto Estadual 30.443/89</li>
 					<li>Este indicador é obtido a partir da somatória das áreas verdes de propriedade pública, criadas e geridas pelo Poder Público Municipal e Estadual. Estão incluídos neste indicador todos os parques públicos urbanos municipais, parques estaduais urbanos, praças e todas as Unidades de Conservação de Proteção Integral definidas pelo Sistema Nacional de Unidades de Conservação – SNUC, efetivamente implantadas na cidade. </li>
 					<li>Grupo com no mínimo 15 árvores de espécies nativas ou exóticas, que vivem em determinada área, tendo área mínima de 500m² de projeção contínua de copa.</li>
@@ -1927,7 +1986,6 @@
 				<p>Haja vista a proximidade entre o Parque do Ibirapuera e o Complexo e, entre estes e o grande conjunto de praças e áreas verdes das imediações, sobre tudo do Bairro Universitário da Vila Mariana e os bairros Jardim e ainda a Avenida Paulista, onde estão concentrados espaços de lazer e cultura, prevê-se a consolidação de um novo eixo cultural-esportivo-lazer na cidade de São Paulo.</p>
 				<p>Embora os conceitos de esporte e lazer se apresentem como termos distintos, segundo o Plano Municipal de Esportes e Lazer (2028-2025), entende-se que <i>"o esporte se vincula ao conceito de lazer, ao poder ser vivenciado em um tempo e espaço conjunto, como uma das possibilidades do conteúdo físico-esportivo, apresentando-se como o Esporte de Participação ou Esporte Lazer (...)</i>".</p>
 				<p><b>Deste modo, o novo eixo a ser formado, se tornará um elemento de integração e conexão social, de desenvolvimento humano, na promoção de saúde, fomentando melhores condições para o exercício da cidadania esportiva e de lazer e convivência da população paulistana.</b></p>
-
 
 				<ol class="notas" start="22">
 					<li>Em 2015, o jornal britânico The Guardian fez um ranking com os “10 melhores parques” urbanos do mundo, no qual o Parque do Ibirapuera aparece entre os listados. <a href="http://www.saopauloinfoco.com.br/ibirapuera-esta-entre-os-10-melhores-parques-do-mundo/">http://www.saopauloinfoco.com.br/ibirapuera-esta-entre-os-10-melhores-parques-do-mundo</a>. Acesso em novembro 2019.</li>
@@ -1985,7 +2043,7 @@
 
 		<section>
 			<h2 class="titulo" indent="1">Programa de Interesse Público</h2>
-			<comments v-if="onsultaAtiva" :attr="{id: 3, context:'Programa de Interesse público'}" />
+			<comments v-if="consultaAtiva" :attr="{id: 3, context:'Programa de Interesse público'}" />
 			<p>O modo como vivemos nas cidades se redesenha dia a dia através de transformações políticas, sociais, econômicas, culturais, ambientais e tecnológicas. O dinamismo dessas transfigurações, e das articulações entre políticas setoriais e território, se dá no espaço público ─ local onde as questões sociais, econômicas, culturais, políticas e ambientais se desenvolvem e se materializam como resultado das relações do Estado com a sociedade civil. </p>
 
 			<p>A função do espaço público é organizar a vida na cidade<sup>1</sup>, e, em meio a transformações constantes, monitorar e garantir a qualidade de vida urbana para a formação e expressão da cidadania. </p>
@@ -2345,6 +2403,8 @@ export default {
 .grafico__fonte {
 	font-family: $grotesca;
 	font-size: x-small;
+	text-align: left;
+	margin-left: unset;
 }
 
 .grafico__grupos {
@@ -2451,4 +2511,30 @@ export default {
 	padding: 0
 }
 
+.grafico__legendas {
+	display: flex;
+	font-size: small;
+	flex-wrap:wrap;
+	padding: 1rem 1rem 1rem 2rem;
+	@media(max-width: 400px) {
+		flex-direction: column;
+	}
+}
+
+.grafico__legenda {
+	display: flex;
+	align-items: center;
+	line-height: 1.2;
+	text-align: left;
+	margin-bottom: 0.5rem;
+	margin-right: 1rem;
+}
+
+.grafico__legenda > div {
+	background: rgb(240, 240, 240);
+	height: 100%;
+	height: 15px;
+	width: 20px;
+	margin-right: 0.25rem;
+}
 </style>

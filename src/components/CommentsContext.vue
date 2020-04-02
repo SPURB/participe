@@ -76,6 +76,10 @@
 			</form>
 			<p class="consulta-encerrada" v-if="!consultaAtiva">Desculpe, mas o período de participação já foi encerrado.</p>
 		</transition>
+		<share-buttons
+			:titulo="context"
+			:conteudo="valueSlot"
+		/>
 	</div>
 </template>
 
@@ -83,13 +87,13 @@
 import api from '@/utils/api'
 import fechadura from '@spurb/fechadura'
 import { commentsCommons } from '@/mixins/commentsCommons'
-// import ShareButtons from './ShareButtons'
+import ShareButtons from './ShareButtons'
 import { mapActions } from 'vuex'
 
 export default {
 	name: 'CommentsContext',
 	components: {
-		// ShareButtons
+		ShareButtons
 	},
 	props: {
 		id: {
@@ -136,7 +140,7 @@ export default {
 			if (this.$props.id === +this.$route.params.idc) {
 				const contentM = {
 					id: this.id,
-					titulo: this.context,
+					context: this.context,
 					conteudo: this.$slots.default[0].elm.innerText
 				}
 				this.setThread(contentM)

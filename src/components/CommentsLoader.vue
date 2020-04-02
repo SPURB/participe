@@ -1,6 +1,6 @@
 <template>
 	<div class="Commentsloader">
-		<template v-if="comments">
+		<template v-if="comments && comments.length > 0">
 			<div v-for="(comment, index) in comments" class="comment" :key="index">
 				<div class="name"><i class="icon-pessoa-outline icon"><span>person_outline</span></i>{{ comment.name }}</div>
 				<div class="comment_info"><i class="icon-tempo icon"><span>schedule</span></i>{{ filterDate(comment.commentdate) }}</div>
@@ -8,46 +8,29 @@
 				<p class="content">{{comment.content}}</p>
 			</div>
 		</template>
+		<template v-else>
+			<h3>Nenhum comentário encontrado.</h3>
+		</template>
 	</div>
 </template>
 
 <script>
-import api from '@/utils/api'
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
 	name: 'CommentsLoader',
-	data () {
-		return {
-			comments: false
-		}
-	},
 	props: ['attr'],
-	mounted () {
-		this.loadThisComments()
-	},
+	mounted () { this.loadThisComments() },
 	watch: {
 		comments (val) {
 			this.comments ? this.$store.state.commentsLoaded = true : this.$store.state.commentsLoaded = false
 		}
 	},
 	computed: {
-		...mapGetters('threadComments', ['showThread', 'threadContent'])
+		...mapGetters('commentsLoader', ['comments'])
 	},
 	methods: {
-		loadThisComments () {
-			// verifica se o commentid existe para filtrar os comentários
-			// utiliza nas rotas que possuem children
-			let url = ''
-			if (this.threadContent.id !== null && this.showThread !== false) {
-				url = `?idConsulta=${this.$route.meta.id}&commentid=${this.threadContent.id}`
-			} else {
-				url = `?idConsulta=${this.$route.meta.id}`
-			}
-			api.get(`members/${url}&public=1`)
-				.then(response => { this.comments = response.data })
-				.catch(error => console.error(error))
-		},
+		...mapActions('commentsLoader', ['loadThisComments']),
 		filterDate (dataString) {
 			let d = dataString.slice(8, 10)
 			let m = dataString.slice(5, 7)

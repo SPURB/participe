@@ -3,8 +3,8 @@
 		<div class="modal">
 			<div class="modal-content">
 				<section class="modal-header">
-					{{ threadContent.titulo }}
-					<div class="modal-close" @click="close">
+					{{ threadContent.context }}
+					<div class="modal-close" @click.prevent="close">
 						<i class="icon-incorreto icon"></i>
 					</div>
 				</section>
@@ -12,10 +12,11 @@
 					<p>{{ threadContent.conteudo }}</p>
 				</section>
 				<section class="modal-comentarios">
+					<h2>Contribuições</h2>
 					<CommentsLoader :attr="{}" />
 				</section>
 				<section class="modal-footer">
-					<Comments :attr="{ id: threadContent.id, context: threadContent.titulo }" />
+					<Comments :attr="{ id: threadContent.id, context: threadContent.context }" :opening="true"/>
 				</section>
 			</div>
 		</div>
@@ -40,8 +41,10 @@ export default {
 	},
 	methods: {
 		...mapActions('threadComments', ['setShowThread']),
+		...mapActions('commentsLoader', ['loadThisComments']),
 		close () {
 			this.setShowThread(false)
+			this.loadThisComments()
 		}
 	}
 }
@@ -102,14 +105,25 @@ export default {
 				}
 			}
 
-			.modal-comentarios {
+			.modal-comentarios, .modal-footer {
 				width: 100%;
+				margin-top: 0;
 
 				.Commentsloader {
 					width: 100%;
-					padding: 0px;
-					margin: 0px;
+					max-width: 100%;
+					margin: 1rem auto;
+					padding: 0 0.5rem;
 				}
+			}
+
+			.modal-comentarios h2 {
+				font-size: 20pt;
+				margin: 0 0.5rem;
+			}
+			.modal-footer .Comments {
+				max-width: 100%;
+				margin: 0 0.5rem;
 			}
 		}
 	}
@@ -119,5 +133,11 @@ export default {
 }
 .close {
 	display: none;
+}
+
+@media (min-width: 1025px) {
+	.thread-comments .modal {
+		width: 50%;
+	}
 }
 </style>

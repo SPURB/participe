@@ -1,7 +1,7 @@
 const state = {
 	thread: {
 		id: null,
-		titulo: null,
+		context: null,
 		conteudo: null
 	},
 	showThread: false

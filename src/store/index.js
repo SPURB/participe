@@ -5,6 +5,7 @@ import api from '@/utils/api'
 import erratas from './modules/erratas'
 import alert from './modules/alert'
 import threadComments from './modules/thread-comments'
+import commentsLoader from './modules/comments-loader'
 
 Es6Promise.polyfill()
 
@@ -14,7 +15,8 @@ const store = new Vuex.Store({
 	modules: {
 		erratas,
 		alert,
-		threadComments
+		threadComments,
+		commentsLoader
 	},
 	state: {
 		menuToggle: false,

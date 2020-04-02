@@ -1,5 +1,5 @@
 <template>
-	<div class="Comments" :class="{ aberto: abreComentario }">
+	<div class="Comments" :class="abreComentario || opening ? 'aberto' : ''">
 		<div
 			@click="abreComentario = !abreComentario"
 			:class="{ sucesso: sucesso }"
@@ -90,6 +90,10 @@ export default {
 		attr: {
 			required: true,
 			type: Object
+		},
+		opening: {
+			type: Boolean,
+			default: false
 		}
 	},
 	mixins: [ commentsCommons ],

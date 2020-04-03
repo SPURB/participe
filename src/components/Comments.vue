@@ -52,14 +52,14 @@
 			</fieldset>
 			<fieldset>
 				<label for="comentario">Comente aqui</label>
-				<quill-editor
-					ref="content"
+				<textarea
+					value=""
 					name="content"
-					v-model="form_content"
 					v-validate="'required: true'"
 					:class="{ inputErro: errors.has('content') }"
+					v-model='form_content'
 					data-cy="input_coment"
-				/>
+				></textarea>
 			</fieldset>
 			<div class="action">
 				<svg v-if="enviandoComment" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="60 0 40 40">

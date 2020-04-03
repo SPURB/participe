@@ -10,14 +10,6 @@ export default new Router({
 	mode: 'history',
 	routes: [
 		{
-			path: '/view-teste',
-			name: 'ViewTeste',
-			meta: {
-				id: 16
-			},
-			component: () => import(/* webpackChunkName: "ViewTeste" */'@/views/ViewTeste.vue')
-		},
-		{
 			path: '/',
 			name: 'Home',
 			component: () => import(/* webpackChunkName: "home" */'./views/Home.vue')
@@ -93,7 +85,8 @@ export default new Router({
 				{
 					path: '/governo-aberto/comentarios/:idc',
 					meta: {
-						id: 39
+						id: 39,
+						pathPai: '/governo-aberto'
 					},
 					component: () => import(/* webpackChunkName: "threadcomments" */ '@/views/ThreadComments')
 				}

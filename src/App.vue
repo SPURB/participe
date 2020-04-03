@@ -141,10 +141,6 @@ div#interruptor {
 	}
 }
 
-.quill-editor {
-	background-color: #FFF;
-}
-
 .thread-open {
 	overflow: hidden;
 }

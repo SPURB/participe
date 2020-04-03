@@ -77,6 +77,7 @@
 			<p class="consulta-encerrada" v-if="!consultaAtiva">Desculpe, mas o período de participação já foi encerrado.</p>
 		</transition>
 		<share-buttons
+			:id="id"
 			:titulo="context"
 			:conteudo="valueSlot"
 		/>

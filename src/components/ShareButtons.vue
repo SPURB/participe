@@ -31,6 +31,10 @@ export default {
 		TwitterIcon
 	},
 	props: {
+		id: {
+			type: Number,
+			required: true
+		},
 		titulo: {
 			type: String,
 			required: true
@@ -42,13 +46,22 @@ export default {
 	},
 	computed: {
 		url () {
-			return window.location.href
+			let path = window.location.pathname
+			let proto = window.location.protocol + '//'
+			let host = window.location.host
+
+			if (path.match('comentarios') !== null) {
+				path = `${this.$route.meta.pathPai}/comentarios/${this.id}`
+			} else {
+				path = `${this.$route.path}/comentarios/${this.id}`
+			}
+			return proto + host + path
 		},
 		formataConteudo () {
-			return this.conteudo.substring(0, 300) + '...'
+			return this.conteudo.substring(0, 130) + '... '
 		},
 		whatsappSend () {
-			let msg = this.formataConteudo + `\n \n \n Veja mais: ${this.url}`
+			let msg = this.conteudo + `Veja mais: ${this.url}`
 			msg = `https://api.whatsapp.com/send?text=${msg}`
 			return msg
 		},
@@ -57,7 +70,7 @@ export default {
 			return msg
 		},
 		twitterSend () {
-			let msg = this.formataConteudo + `\n \n \n Veja mais: `
+			let msg = this.formataConteudo + `Veja mais: `
 			msg = `https://twitter.com/intent/tweet?url=${this.url}&text=${msg}`
 			return msg
 		}

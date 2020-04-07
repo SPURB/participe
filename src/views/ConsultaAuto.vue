@@ -13,6 +13,19 @@
 			</div>
 		</div>
 
+		<section class="horizontal">
+			<div>
+				<div>
+					<h2>Introdução</h2>
+					<p>
+						{{ estaConsulta.textoIntro }}
+					</p>
+				</div>
+			</div>
+			<comments-option v-if="consultaAtiva" :options="topicosComentaveis"
+			:alwaysOpen="true">
+		</comments-option>
+		</section>
 		<component v-bind:is="htmlContent"></component>
 
 		<section v-if="ready" ref="allComments">
@@ -29,6 +42,7 @@ import Indice from '@/components/Indice'
 import { consultasCommons } from '@/mixins/consultasCommons'
 import Comments from '@/components/Comments'
 import CommentsLoader from '@/components/CommentsLoader'
+import CommentsOption from '@/components/CommentsOption'
 import axios from 'axios'
 import api from '@/utils/api'
 import Vue from 'vue'
@@ -64,8 +78,10 @@ export default {
 									}
 								}
 
+								var tempApp = this
 								let processedHtml = response.data[maisRecente].conteudo_html.replace(/<hr class="commentbox fa fa-comments" title="(.*?)">/g, function (x) {
 									let context = x.replace(/<hr class="commentbox fa fa-comments" title="(.*?)">/g, '$1')
+									tempApp.topicosComentaveis.push({ id: cId, context: context })
 									return '<Comments :attr="{id:\'' + cId++ + '\', context:\'' + context + '\'}" v-if="' + estaConsulta.ativo + '"></Comments>'
 								})
 								// Formata itens de anexo
@@ -119,12 +135,14 @@ export default {
 			htmlContent: '',
 			ultimaAlteracao: '',
 			msgAlerta: '',
-			mostraModal: false
+			mostraModal: false,
+			topicosComentaveis: []
 		}
 	},
 	components: {
 		Comments,
 		CommentsLoader,
+		CommentsOption,
 		PageTop,
 		Indice
 	},
@@ -235,10 +253,36 @@ a.anexo {
   padding: 2em;
   overflow: auto;
 }
+
 </style>
 <style lang="scss" scoped>
 @import '../variables';
 @import '../consulta';
 @import '../oldstylestoprint';
+.horizontal {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 1fr 100%
+}
 
+@supports(display: grid) {
+	.horizontal {
+		max-width: 1200px;
+		margin: auto;
+	}
+	.horizontal .titulo {
+		margin-top: 0
+	}
+	@media (max-width: 800px) {
+		.horizontal {
+			display: block;
+			grid-template-columns: unset;
+			max-width: unset;
+		}
+	}
+}
+
+.horizontal h2 {
+	margin-top:0
+}
 </style>

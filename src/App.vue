@@ -1,6 +1,7 @@
 <template>
 <div id="app">
 	<div :class="{ desligado: interruptor }" id="interruptor" ref="interruptor" @click="fechaTudo"></div>
+	<Alert v-if="showAlert"></Alert>
 	<Preloader v-if='isHome'></Preloader>
 	<Cabecalho></Cabecalho>
 	<MenuLateral></MenuLateral>
@@ -15,6 +16,7 @@ import Cabecalho from '@/components/Cabecalho'
 import MenuLateral from '@/components/MenuLateral'
 import Rodape from '@/components/Rodape'
 import Preloader from '@/components/Preloader'
+import Alert from '@/components/Alert'
 
 export default {
 	name: 'Participe',
@@ -22,12 +24,14 @@ export default {
 		Cabecalho,
 		MenuLateral,
 		Rodape,
-		Preloader
+		Preloader,
+		Alert
 	},
 	computed: {
 		footerMail () { return this.$route.meta.email ? this.$route.meta.email : 'imprensadu@prefeitura.sp.gov.br' },
 		interruptor () { return this.$store.state.luzApaga },
-		isHome () { return this.$route.name === 'Home' }
+		isHome () { return this.$route.name === 'Home' },
+		showAlert () { return this.$store.state.alert.show }
 	},
 	created () {
 		let app = this

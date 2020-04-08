@@ -1,6 +1,13 @@
 <template>
 	<div class="Comments" :class="{ aberto: abreComentario }">
-		<div @click="abreComentario = !abreComentario" :class="{ sucesso: sucesso }"><i class="icon-comentario icon"><span>chat</span></i></div>
+		<div
+			@click="abreComentario = !abreComentario"
+			:class="{ sucesso: sucesso }"
+			data-cy="open_coment">
+			<i class="icon-comentario icon">
+				<span>chat</span>
+			</i>
+		</div>
 		<form>
 			<fieldset>
 				<label for="nome">Nome</label>
@@ -11,6 +18,7 @@
 					v-validate="'required: true'"
 					:class="{ inputErro: errors.has('name') }"
 					v-model='form_name'
+					data-cy="input_name"
 				>
 				<label for="sobrenome">Sobrenome</label>
 				<input
@@ -20,6 +28,7 @@
 					v-validate="'required: true'"
 					:class="{ inputErro: errors.has('surname') }"
 					v-model='form_surname'
+					data-cy="input_surname"
 				>
 				<label for="organizacao">Organização (opcional)</label>
 				<input
@@ -28,6 +37,7 @@
 					name="organization"
 					v-validate="'required: false'"
 					v-model='form_organization'
+					data-cy="input_organization"
 				>
 				<label for="email">E-mail</label>
 				<input
@@ -37,6 +47,7 @@
 					:class="{ inputErro: errors.has('email') }"
 					type="email"
 					v-model='form_email'
+					data-cy="input_email"
 				>
 			</fieldset>
 			<fieldset>
@@ -47,6 +58,7 @@
 					v-validate="'required: true'"
 					:class="{ inputErro: errors.has('content') }"
 					v-model='form_content'
+					data-cy="input_coment"
 				></textarea>
 			</fieldset>
 			<div class="action">
@@ -56,7 +68,12 @@
 					<circle class="bolinha2" cx="80" cy="14.9" r="3.4"/>
 					<path class="bolinha3" d="M92.9 15a3.4 3.4 0 1 1-3.4-3.5c1.8 0 3.4 1.5 3.4 3.4z"/>
 				</svg>
-				<a @click="checkName" class="action__button" :class="{ enviando: enviandoComment, erro: erro }"></a>
+				<a
+					@click="checkName"
+					class="action__button"
+					:class="{ enviando: enviandoComment, erro: erro }"
+					data-cy="submit_coment">
+				</a>
 			</div>
 		</form>
 	</div>

@@ -253,6 +253,10 @@ a.anexo {
   padding: 2em;
   overflow: auto;
 }
+/* Altera texto do botão de comentários conforme atributo 'customattr' */
+.customCommentTerm::after {
+	content: attr(customattr) !important;
+}
 
 </style>
 <style lang="scss" scoped>

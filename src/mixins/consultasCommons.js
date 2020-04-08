@@ -1,7 +1,7 @@
 export const consultasCommons = {
 	computed: {
 		commentsLoaded () { return this.$store.state.commentsLoaded },
-		consultaAtiva () { return this.estaConsulta.ativo === 1 }
+		consultaAtiva () { return parseInt(this.estaConsulta.ativo) === 1 }
 	},
 	created () {
 		this.$store.dispatch('fetchConsultas', { self: this })
@@ -39,8 +39,14 @@ export const consultasCommons = {
 		},
 		filterConsultas () {
 			this.consultas = this.$store.state.consultas
-			this.estaConsulta = this.consultas
-				.find(consulta => consulta.idConsulta === this.$route.meta.id)
+			this.estaConsulta = this.consultas.find(consulta => consulta.idConsulta === this.$route.meta.id)
+
+			let app = this
+			this.consultas.map(function (index) {
+				if (parseInt(index.idConsulta) === parseInt(app.$route.meta.id)) {
+					app.estaConsulta = index
+				}
+			})
 		},
 		consultaState () { return (this.estaConsulta.ativo === '1' ? 'aberta' : 'fechada') },
 		listaTitulos () {

@@ -43,7 +43,6 @@ import { consultasCommons } from '@/mixins/consultasCommons'
 import Comments from '@/components/Comments'
 import CommentsLoader from '@/components/CommentsLoader'
 
-
 export default {
 	name: 'NomeDaConsulta',
 	data () {

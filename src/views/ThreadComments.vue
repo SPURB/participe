@@ -4,7 +4,7 @@
 			<div class="modal-content">
 				<section class="modal-header">
 					{{ threadContent.context }}
-					<div class="modal-close" @click.prevent="close">
+					<div class="modal-close" data-cy="close_modal" @click.prevent="close">
 						<i class="icon-incorreto icon"></i>
 					</div>
 				</section>

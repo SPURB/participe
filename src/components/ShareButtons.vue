@@ -1,34 +1,28 @@
 <template>
   <div class="share-group">
-    <div class="share-icon">
-      <share-icon />
+	<div class="share-icon">
+		<share-icon />
     </div>
     <div class="share-buttons">
-      <a :href="whatsappSend" target="_blank">
-        <whatsapp-icon />
-      </a>
-      <a :href="twitterSend" class="botao-wpp" target="_blank">
-        <twitter-icon />
-      </a>
-      <a :href="facebookSend" class="botao-wpp" target="_blank">
-        <facebook-icon />
-      </a>
+		<a :href="whatsappSend" target="_blank" data-cy="share_whatsapp">
+			<img :src="imgsrc('share_whatsapp.svg')" alt="Logo do Whatsapp">
+		</a>
+		<a :href="twitterSend" target="_blank" data-cy="share_twitter">
+			<img :src="imgsrc('share_twitter.svg')" alt="Logo do Twitter">
+		</a>
+		<a :href="facebookSend" target="_blank" data-cy="share_facebook">
+			<img :src="imgsrc('share_facebook.svg')" alt="Logo do Facebook">
+		</a>
     </div>
   </div>
 </template>
 
 <script>
 import ShareIcon from './share-icons/ShareIcon'
-import WhatsappIcon from './share-icons/WhatsappIcon'
-import FacebookIcon from './share-icons/FacebookIcon'
-import TwitterIcon from './share-icons/TwitterIcon'
 export default {
 	name: 'ShareButtons',
 	components: {
-		ShareIcon,
-		WhatsappIcon,
-		FacebookIcon,
-		TwitterIcon
+		ShareIcon
 	},
 	props: {
 		id: {
@@ -45,6 +39,7 @@ export default {
 		}
 	},
 	computed: {
+		basePath () { return this.$store.getters.basePath },
 		url () {
 			let path = window.location.pathname
 			let proto = window.location.protocol + '//'
@@ -74,6 +69,9 @@ export default {
 			msg = `https://twitter.com/intent/tweet?url=${this.url}&text=${msg}`
 			return msg
 		}
+	},
+	methods: {
+		imgsrc (name) { return this.basePath + 'arquivos/img/' + name }
 	}
 }
 </script>

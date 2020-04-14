@@ -16,7 +16,7 @@
 					<CommentsLoader :attr="{}" />
 				</section>
 				<section class="modal-footer">
-					<Comments :attr="{ id: threadContent.id, context: threadContent.context }" :opening="true"/>
+					<comments :attr="{ id: threadContent.id, context: threadContent.context }" :open="true"/>
 				</section>
 			</div>
 		</div>
@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
+import { mapGetters, mapActions, mapMutations } from 'vuex'
 import CommentsLoader from '@/components/CommentsLoader'
 import Comments from '@/components/Comments'
 export default {
@@ -34,17 +34,21 @@ export default {
 		Comments
 	},
 	computed: {
+		consultaAtiva () { return this.$store.getters.consultasClicada.ativo === '1' },
 		...mapGetters('threadComments', ['threadContent', 'showThread'])
 	},
 	mounted () {
 		this.setShowThread(true)
 	},
 	methods: {
-		...mapActions('threadComments', ['setShowThread']),
-		...mapActions('commentsLoader', ['loadThisComments']),
+		...mapActions('threadComments', [ 'setShowThread' ]),
+		...mapActions('commentsLoader', [ 'loadThisComments' ]),
+		...mapMutations('commentsLoader', [ 'IS_THREAD' ]),
 		close () {
 			this.setShowThread(false)
+			this.IS_THREAD(false)
 			this.loadThisComments()
+			this.$router.push({ path: this.$route.meta.pathPai })
 		}
 	}
 }
@@ -55,17 +59,17 @@ export default {
 .thread-comments {
 	background-color: $sombra-2;
 	color: $preto;
-    display: flex;
-    justify-content: center;
-    top: 0px;
-    right: 0px;
+	display: flex;
+	justify-content: center;
+	top: 0px;
+	right: 0px;
 	width: 100%;
 	height: 100%;
 	margin: 0px;
 	overflow-y: auto;
 	padding: 10px;
-    position: fixed;
-    z-index: 30;
+	position: fixed;
+	z-index: 30;
 
 	.modal {
 		position: relative;
@@ -109,9 +113,7 @@ export default {
 				width: 100%;
 				margin-top: 0;
 
-				.Commentsloader {
-					width: 100%;
-					max-width: 100%;
+				.commentsloader {
 					margin: 1rem auto;
 					padding: 0 0.5rem;
 				}
@@ -121,13 +123,13 @@ export default {
 				font-size: 20pt;
 				margin: 0 0.5rem;
 			}
-			.modal-footer .Comments {
+			.modal-footer .comments {
 				max-width: 100%;
-				margin: 0 0.5rem;
 			}
 		}
 	}
 }
+
 .open {
 	display: flex;
 }

@@ -1,29 +1,25 @@
 <template>
-  <div class="share-group">
-	<div class="share-icon">
-		<share-icon />
-    </div>
-    <div class="share-buttons">
-		<a :href="whatsappSend" target="_blank" data-cy="share_whatsapp">
-			<img :src="imgsrc('share_whatsapp.svg')" alt="Logo do Whatsapp">
-		</a>
-		<a :href="twitterSend" target="_blank" data-cy="share_twitter">
-			<img :src="imgsrc('share_twitter.svg')" alt="Logo do Twitter">
-		</a>
-		<a :href="facebookSend" target="_blank" data-cy="share_facebook">
-			<img :src="imgsrc('share_facebook.svg')" alt="Logo do Facebook">
-		</a>
-    </div>
-  </div>
+	<div class="share-group">
+		<div class="share-icon">
+			<i class="icon-compartilhar icon"></i>
+			</div>
+			<div class="share-buttons">
+			<a class="share-buttons__sharer" :href="whatsappSend" target="_blank" data-cy="share_whatsapp">
+				<i class="icon-whatsapp icon"></i>
+			</a>
+			<a class="share-buttons__sharer" :href="twitterSend" target="_blank" data-cy="share_twitter">
+				<i class="icon-twitter icon"></i>
+			</a>
+			<a class="share-buttons__sharer" :href="facebookSend" target="_blank" data-cy="share_facebook">
+				<i class="icon-facebook icon"></i>
+			</a>
+			</div>
+	</div>
 </template>
 
 <script>
-import ShareIcon from './share-icons/ShareIcon'
 export default {
 	name: 'ShareButtons',
-	components: {
-		ShareIcon
-	},
 	props: {
 		id: {
 			type: Number,
@@ -78,29 +74,39 @@ export default {
 
 <style lang="scss" scoped>
 @import '../variables';
-.comentavel:hover > .share-group {
-	.share-icon > svg {
-		animation: surge ease-in .28s;
-		fill: $preto;
-	}
-}
-.share-group {
-	.share-buttons {
-    display: flex;
-		margin-bottom: 8px;
 
-		a {
-			color: #FFF;
-			text-decoration: none;
-      margin: 3px;
-		}
-	}
-	.share-icon {
-    display: flex;
-    justify-content: center;
-    margin: 3px;
-  }
+.icon-compartilhar{
+	color: $cinza-2;
+	margin-left: 0.25rem;
 }
+
+.comentavel:hover {
+	.icon-compartilhar {
+		animation: surge ease-in-out .28s;
+		color: $preto;
+	}
+}
+.share-buttons {
+	display: flex;
+	flex-direction: row;
+}
+.share-buttons__sharer {
+	width: 22px ;
+	height: 22px;
+	color: #FFF;
+	text-decoration: none;
+	margin-right: 3px;
+	background-color: $cinza-2;
+	border-radius: 3px;
+	.icon {
+		cursor: pointer;
+	};
+	transition: background-color 0.14s ease-in-out;
+	&:hover {
+		background-color: $preto;
+	}
+}
+
 @keyframes surge {
 	from { opacity: 0 }
 	to { opacity: 1 }

@@ -1,6 +1,6 @@
 <template>
 	<div class="comentavel" :class="{ aberto: abreComentario }">
-		<div @click="abreComentario = !abreComentario" :class="{ sucesso: sucesso }">
+		<div @click="abreComentario = !abreComentario" :class="{ sucesso: sucesso }" data-cy="comments_context">
 			<div class="icon-counter">
 				<i class="icon-comentario icon"><span>chat</span></i>
 				<!-- filtrar numero (será refatorar CommentsLoader e vuex)-->
@@ -77,6 +77,7 @@
 			<p class="consulta-encerrada" v-if="!consultaAtiva">Desculpe, mas o período de participação já foi encerrado.</p>
 		</transition>
 		<share-buttons
+			v-show="abreComentario"
 			:id="id"
 			:titulo="context"
 			:conteudo="valueSlot"
@@ -198,6 +199,7 @@ export default {
 	transition: all ease-in-out .2s;
 	position: relative;
 	z-index: 0;
+	padding-bottom: 1rem;
 
 	.consulta-encerrada{
 		display: none;

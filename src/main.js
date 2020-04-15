@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import VeeValidate, { Validator } from 'vee-validate'
+
 import ptbr from 'vee-validate/dist/locale/pt_BR'
 
 import { ObserveVisibility } from 'vue-observe-visibility'

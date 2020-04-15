@@ -1,6 +1,7 @@
 <template>
-	<div class="Comments" :class="{ aberto: abreComentario }">
+	<div class="comments" :class="abreComentario || open ? 'aberto' : ''">
 		<div
+			v-if="consultaAtiva"
 			@click="abreComentario = !abreComentario"
 			:class="{ sucesso: sucesso }"
 			data-cy="open_coment">
@@ -8,7 +9,7 @@
 				<span>chat</span>
 			</i>
 		</div>
-		<form>
+		<form v-if="consultaAtiva">
 			<fieldset>
 				<label for="nome">Nome</label>
 				<input
@@ -76,6 +77,7 @@
 				</a>
 			</div>
 		</form>
+		<p class="consulta-encerrada" v-if="!consultaAtiva">Desculpe, mas o período de participação já foi encerrado.</p>
 	</div>
 </template>
 
@@ -90,7 +92,14 @@ export default {
 		attr: {
 			required: true,
 			type: Object
+		},
+		open: {
+			type: Boolean,
+			default: false
 		}
+	},
+	computed: {
+		consultaAtiva () { return this.$store.getters.consultasClicada.ativo === '1' }
 	},
 	mixins: [ commentsCommons ],
 	methods: {
@@ -133,7 +142,11 @@ export default {
 <style lang="scss" scoped>
 @import '../variables';
 
-div.Comments {
+.consulta-encerrada{
+	padding: 1em;
+}
+
+.comments {
 	margin: 2rem auto 4rem auto;
 	max-width: 700px;
 	background: $cinza-3;

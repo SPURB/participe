@@ -77,10 +77,20 @@ export default new Router({
 		{
 			path: '/governo-aberto',
 			name: 'GovernoAberto',
-			component: () => import(/* webpackChunkName: "governoaberto" */ '@/views/GovernoAberto'),
 			meta: {
 				id: 39
-			}
+			},
+			component: () => import(/* webpackChunkName: "governoaberto" */ '@/views/GovernoAberto'),
+			children: [
+				{
+					path: '/governo-aberto/comentarios/:idc',
+					meta: {
+						id: 39,
+						pathPai: '/governo-aberto'
+					},
+					component: () => import(/* webpackChunkName: "threadcomments" */ '@/views/ThreadComments')
+				}
+			]
 		},
 		{
 			path: '/concessao-martinelli',

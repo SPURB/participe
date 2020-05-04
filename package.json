@@ -19,7 +19,8 @@
     "serve-homolog": "vue-cli-service serve --mode staging",
     "serve:e2e": "start-server-and-test serve http://localhost:8080 e2e:open",
     "test:unit": "vue-cli-service test:unit",
-    "test:e2e": "start-server-and-test serve http://localhost:8080 e2e"
+    "test:e2e": "start-server-and-test serve http://localhost:8080 e2e",
+    "content:pdf": "node ./buildScripts/pdfGen"
   },
   "dependencies": {
     "@spurb/fechadura": "1.0.2",
@@ -45,7 +46,9 @@
     "chai": "4.2.0",
     "eslint": "5.16.0",
     "node-sass": "4.13.1",
+    "ora": "^4.0.4",
     "prerender-spa-plugin": "3.4.0",
+    "puppeteer": "^3.0.2",
     "sass-loader": "8.0.2",
     "start-server-and-test": "1.10.11",
     "vue-cli-plugin-prerender-spa": "1.1.6",

@@ -21,7 +21,7 @@ if (!consulta) { throw Error('Inclua a path da consulta.') }
 
 	try {
 		await page.goto(`https://participe.gestaourbana.prefeitura.sp.gov.br${consulta}`, {
-			waituntill: 'domcontentloaded'
+			waitUntil: 'domcontentloaded'
 		})
 
 		await autoScroll(page)

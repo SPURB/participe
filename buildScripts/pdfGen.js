@@ -10,10 +10,9 @@ if (!consulta) { throw Error('Inclua a path da consulta.') }
 
 	const date = new Date()
 	const now = {
-		date: new Date(),
-		day: date.getDay(),
 		year: date.getFullYear(),
-		month: date.getMonth(),
+		month: date.getMonth() + 1,
+		day: date.getDate(),
 		hour: date.getHours(),
 		minutes: date.getMinutes()
 	}

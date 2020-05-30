@@ -52,6 +52,16 @@ Crie os arquivos no diretório dist.
 ```
 npm run build
 ```
+___
+
+### Pdfs de consulta
+Pode-se gerar pdf de consulta (com comentários e formatação em A4)
+```
+npm run content:pdf /rota-da-consulta
+
+npm run content:pdf /rota-da-consulta http:localhost:8080
+```
+> para gerar o pdf de uma rota diferente de participe.gestaourbana passe a base da url no segundo argumento
 
 ___
 

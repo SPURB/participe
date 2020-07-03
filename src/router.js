@@ -285,6 +285,16 @@ export default new Router({
 			meta: {
 				id: 0
 			}
+		},
+		{
+			path: '/consulta-publica/:id',
+			name: 'ConsultaAuto',
+			component: () => import(/* webpackChunkName: "ConsultaEditorial" */ '@/views/ConsultaEditorial'),
+			meta: {
+				id: 0,
+				editorial: true
+			}
 		}
+
 	]
 })

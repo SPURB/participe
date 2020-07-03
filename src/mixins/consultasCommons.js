@@ -4,12 +4,14 @@ export const consultasCommons = {
 		consultaAtiva () { return parseInt(this.estaConsulta.ativo) === 1 }
 	},
 	created () {
-		this.$store.dispatch('fetchConsultas', { self: this })
+		const { editorial } = this.$route.meta
+		if (!editorial) this.$store.dispatch('fetchConsultas', { self: this })
 		this.consultas = this.$store.state.consultas
 	},
 	mounted () {
+		const { id } = this.$route.meta
+		if (id) this.$store.commit('SET_ROUTE_ID', id)
 		this.titulosLimpo = this.listaTitulos()
-		this.$store.commit('SET_ROUTE_ID', this.$route.meta.id)
 		this.listaErros()
 	},
 	updated () { this.alteraIndice() },

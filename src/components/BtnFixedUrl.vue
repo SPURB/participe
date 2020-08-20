@@ -1,6 +1,6 @@
 <template>
-	<div class="btn-fixed-url">
-		<a :href="url" target="_blank">{{ text }} <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
+	<div class="btn-fixed-url" :style="`top:${top}`">
+		<a :href="url" :target="target">{{ text }} <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
 	</div>
 </template>
 <script>
@@ -14,6 +14,14 @@ export default {
 		text: {
 			type: String,
 			required: true
+		},
+		top: {
+			type: String,
+			default: '2rem'
+		},
+		target: {
+			type: String,
+			default: '_blank'
 		}
 	}
 }
@@ -23,7 +31,6 @@ export default {
 .btn-fixed-url {
 	position: fixed;
 	right: 2rem;
-	top: 2rem;
 	font-size: 1rem;
 	background-color: $vermelho;
 	padding: 0 1rem;

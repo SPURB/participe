@@ -44,7 +44,8 @@ module.exports = {
 				'/pmadrss',
 				'/arco-tiete-2',
 				'/ginasio-ibirapuera',
-				'/jockey-club-2'
+				'/jockey-club-2',
+				'/jockey-club-2/minuta'
 			],
 			useRenderEvent: true,
 			headless: false,

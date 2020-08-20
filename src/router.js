@@ -280,11 +280,22 @@ export default new Router({
 		},
 		{
 			path: '/jockey-club-2',
-			name: 'JockeyClub2',
 			component: () => import(/* webpackChunkName: "JockeyClub2" */ '@/views/JockeyClub2'),
 			meta: {
 				id: 101
-			}
+			},
+			children: [
+				{
+					path: 'minuta',
+					name: 'JockeyClub2Minuta',
+					component: () => import(/* webpackChunkName: "JockeyClub2Minuta" */ '@/views/JockeyClub2Minuta')
+				},
+				{
+					path: '',
+					name: 'JockeyClub2',
+					component: () => import(/* webpackChunkName: "JockeyClub2Consulta" */ '@/views/JockeyClub2Consulta')
+				}
+			]
 		},
 		{
 			path: '/consulta/:nome',

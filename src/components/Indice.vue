@@ -23,9 +23,9 @@ export default {
 	},
 	mounted () {
 		let app = this
-		if (app.$refs.lista) {
+		if (this.$refs.lista) {
 			if (window.matchMedia('(min-width: 1200px)').matches) {
-				window.addEventListener('scroll', function () {
+				window.addEventListener('scroll', () => {
 					if (app.$refs.lista && app.$refs.lista.style === undefined) { return }
 					if (window.scrollY > window.innerHeight / 2) {
 						app.$refs.lista.style.opacity = '1'

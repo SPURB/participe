@@ -280,20 +280,29 @@ export default new Router({
 		},
 		{
 			path: '/jockey-club-2',
-			component: () => import(/* webpackChunkName: "JockeyClub2" */ '@/views/JockeyClub2'),
-			meta: {
-				id: 101
-			},
+			component: () => import(/* webpackChunkName: "JockeyClub2" */ '@/views/jockey-club-2/JockeyClub2'),
 			children: [
 				{
 					path: 'minuta',
 					name: 'JockeyClub2Minuta',
-					component: () => import(/* webpackChunkName: "JockeyClub2Minuta" */ '@/views/JockeyClub2Minuta')
+					component: () => import(/* webpackChunkName: "JockeyClub2Minuta" */ '@/views/jockey-club-2/JockeyClub2Minuta'),
+					meta: { id: 102 },
+					children: [
+						{
+							path: '/jockey-club-2/minuta/comentarios/:idc',
+							meta: {
+								id: 102,
+								pathPai: '/jockey-club-2/minuta'
+							},
+							component: () => import(/* webpackChunkName: "threadcomments" */ '@/views/ThreadComments')
+						}
+					]
 				},
 				{
 					path: '',
 					name: 'JockeyClub2',
-					component: () => import(/* webpackChunkName: "JockeyClub2Consulta" */ '@/views/JockeyClub2Consulta')
+					component: () => import(/* webpackChunkName: "JockeyClub2Consulta" */ '@/views/jockey-club-2/JockeyClub2Consulta'),
+					meta: { id: 102 }
 				}
 			]
 		},

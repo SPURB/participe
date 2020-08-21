@@ -13,7 +13,7 @@
 				</section>
 				<section class="modal-comentarios">
 					<h2>Contribuições</h2>
-					<CommentsLoader :attr="{}" />
+					<CommentsLoader :attr="consultasClicada" />
 				</section>
 				<section class="modal-footer">
 					<comments :attr="{ id: threadContent.id, context: threadContent.context }" :open="true"/>
@@ -34,8 +34,9 @@ export default {
 		Comments
 	},
 	computed: {
-		consultaAtiva () { return this.$store.getters.consultasClicada.ativo === '1' },
-		...mapGetters('threadComments', ['threadContent', 'showThread'])
+		consultaAtiva () { return this.consultasClicada.ativo === '1' },
+		...mapGetters('threadComments', ['threadContent', 'showThread']),
+		...mapGetters(['consultasClicada'])
 	},
 	mounted () {
 		this.setShowThread(true)

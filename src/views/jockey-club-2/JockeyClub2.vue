@@ -25,8 +25,8 @@ export default {
 </script>
 <style lang="scss">
 div.JockeyClub2 {
-	@import '../variables';
-	@import '../consulta';
-	@import '../oldstylestoprint';
+	@import '../../variables';
+	@import '../../consulta';
+	@import '../../oldstylestoprint';
 }
 </style>

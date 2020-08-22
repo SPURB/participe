@@ -4,7 +4,7 @@
 			<template slot="titulo"><div>PIU Jockey Club 2</div></template>
 			<template slot="subtitulo"><div>Segunda consulta pública</div></template>
 		</PageTop>
-		<btn-fixed-url url="/jockey-club-2/minuta" text="MINUTA" target="_self" />
+		<btn-fixed-url url="/jockey-club-2/minuta" text="MINUTA" target="_self" :isRouteLink="true" />
 		<Indice :titulos="titulosLimpo"></Indice>
 		<section>
 			<h2 class="titulo" indent="1">Apresentação</h2>

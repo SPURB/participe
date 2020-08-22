@@ -1,6 +1,7 @@
 <template>
 	<div class="btn-fixed-url" :style="`top:${top}`">
-		<a :href="url" :target="target">{{ text }} <i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
+		<router-link v-if="isRouteLink" tag="a" :to="url">{{ text }}<i class="icon-acessar_url icon"><span>acessar_url</span></i></router-link>
+		<a v-else :href="url" :target="target">{{ text }}<i class="icon-acessar_url icon"><span>acessar_url</span></i></a>
 	</div>
 </template>
 <script>
@@ -22,6 +23,10 @@ export default {
 		target: {
 			type: String,
 			default: '_blank'
+		},
+		isRouteLink: {
+			type: Boolean,
+			default: false
 		}
 	}
 }

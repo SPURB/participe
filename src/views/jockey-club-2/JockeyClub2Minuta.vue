@@ -93,7 +93,7 @@
 			},
 		]" />
 		<router-view />
-		<btn-fixed-url url="/jockey-club-2" text="CONSULTA" target="_self" />
+		<btn-fixed-url class="jockey-club2-minuta__btn-consulta" url="/jockey-club-2" text="CONSULTA" target="_self" />
 			<section id="jockey-club2-minuta__0">
 					<h2>Minuta de Decreto</h2>
 					<h6 class="intro-lei">Aprova o Projeto de Intervenção Urbana para a Zona de Ocupação Especial do Jockey Club – PIU-Jockey Club, e dá outras providências.</h6>
@@ -303,16 +303,16 @@ export default {
 	}
 }
 </script>
-<style lang="scss">
-.rodape.error {
-	display: none;
-}
-.cabecalho.negativo {
-	a {
-		display: none
-	}
-}
+<style lang="scss" scoped>
+@import '../../variables';
+@import '../../consulta';
+@import '../../oldstylestoprint';
+
 .jockey-club2-minuta {
+	&__btn-consulta {
+		z-index: 3;
+	}
+
 	.form_title {
 		padding: 0
 	}

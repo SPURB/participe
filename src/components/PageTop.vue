@@ -3,7 +3,7 @@
 		<div class="bg"><img :src="bgImg" :alt="backgroundAlt"></div>
 		<aside>
 			<template v-if="esta_consulta">
-				<div class="statusConsulta" :class="consultaState(esta_consulta.ativo)">
+				<div class="statusConsulta" :class="consultaState(parseInt(esta_consulta.ativo))">
 					<span></span>
 				</div>
 				<div class="contribuicoes">

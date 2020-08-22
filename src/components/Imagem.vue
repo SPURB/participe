@@ -24,7 +24,7 @@
 			</div>
 			<figcaption v-if="dados.caption">
 				{{ dados.caption }}
-				<span class="captionFonte" v-if="dados.fonte"> (Fonte: {{ dados.fonte }})</span>
+				<span class="captionFonte" v-if="dados.fonte"> (<span v-if="!elaboracaoOnly">Fonte: </span>{{ dados.fonte }})</span>
 			</figcaption>
 			<div class="legenda">
 				<h1 v-if="dados.titulo">{{ dados.titulo }}</h1>
@@ -50,7 +50,7 @@
 			<div class="extra">
 				<slot name="extra"></slot>
 			</div>
-			<div class="fonte" v-if="dados.fonte">Fonte: <span>{{ dados.fonte }}</span></div>
+			<div class="fonte" v-if="dados.fonte"><span v-if="!elaboracaoOnly">Fonte: </span><span>{{ dados.fonte }}</span></div>
 		</figure>
 	</div>
 </template>
@@ -94,6 +94,10 @@ export default {
 		},
 		maxWidth: {
 			type: String
+		},
+		elaboracaoOnly: {
+			type: Boolean,
+			default: false
 		}
 	},
 	methods: {

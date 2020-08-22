@@ -303,6 +303,12 @@ export default new Router({
 					name: 'JockeyClub2',
 					component: () => import(/* webpackChunkName: "JockeyClub2Consulta" */ '@/views/jockey-club-2/JockeyClub2Consulta'),
 					meta: { id: 102 }
+				},
+				{
+					path: 'ref',
+					name: 'REFJockeyClub2',
+					component: () => import(/* webpackChunkName: "REFJockeyClub2Consulta" */ '@/views/jockey-club-2/REFJockeyClub2Consulta'),
+					meta: { id: 102 }
 				}
 			]
 		},

@@ -97,7 +97,7 @@ export default {
 		setIndent (scrollTo, indent) {
 			const refs = this.$refs
 			const menuElement = refs[`menu--${scrollTo}`][0]
-			const paddingLeft = indent > 1 ? (indent * 8) + 24 : 24
+			const paddingLeft = indent > 1 ? (indent * 2) + 8 : 8
 			menuElement.setAttribute('style', `padding-left: ${paddingLeft}px`)
 		},
 
@@ -122,7 +122,7 @@ export default {
 	flex: direction;
 	flex-direction: column;
 	justify-content: space-around;
-	z-index: 10;
+	z-index: 4;
 	height: calc(100vh - 60px);
 	@media (max-width: 1000px) {
 		justify-content: flex-end;
@@ -130,8 +130,11 @@ export default {
 	}
 	.menu-container {
 		display: flex;
+		position: fixed;
+		right: 35px;
+		bottom: 155px;
 		background: white;
-		box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.05), 0px 3px 4px rgba(0, 0, 0, 0.05);
+		box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12)
 	}
 	.menu {
 		display: flex;
@@ -145,11 +148,12 @@ export default {
 			cursor: pointer;
 			border: 0;
 			height: 40px;
-			background: $cinza-3;
-			align-self: flex-start;
+			background: white;
+			border: solid 1px $cinza-2;
+			align-self: flex-end;
 			i {
 				cursor: pointer;
-				color: $cinza-2;
+				color: $preto;
 				transition: all 0.15s ease-in-out;
 				@media (max-width: 1000px) {
 					color: $preto;
@@ -161,17 +165,11 @@ export default {
 					color: $preto;
 				}
 			}
-			@media (max-width: 1000px) {
-				&--active {
-					border-color: $cinza-3
-				}
-			}
 		}
 		&__item {
 			margin: 0;
 			font-family: $grotesca;
 			font-size: small;
-			border-left: solid 1px $cinza-1;
 			transition: border-left 0.15s ease-in-out;
 			&--ativo {
 				border-left: solid 10px $cinza-1;
@@ -240,9 +238,6 @@ export default {
 			font-size: small;
 			border: 1px solid $cinza-3;
 			border-left: 0
-		}
-		@media (max-width: 1000px) {
-			line-height: 2;
 		}
 	}
 }

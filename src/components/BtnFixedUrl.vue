@@ -41,7 +41,6 @@ export default {
 	padding: 0 1rem;
 	border-radius: 2rem;
 	box-shadow: 0 4px 4px $sombra-3;
-	cursor: pointer;
 	z-index: 1;
 	transition: all ease-in .1s;
 	a {

@@ -12,11 +12,20 @@
 	caption  {
 		border-top: unset
 	}
-	th {
+	th, tfoot td, td.escuro, tr.escuro td {
 		background-color: rgba(0, 0, 0, 0.12);
+	}
+	tr.negrito td, td.negrito {
+		font-weight: 700;
+	}
+	tfoot td {
+		font-weight: 700;
 	}
 	td {
 		background-color: #fff;
+		&.align-rigth {
+			text-align: right;
+		}
 	}
 	.fonte {
 		margin: 0;

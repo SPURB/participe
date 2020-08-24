@@ -5,7 +5,7 @@
 			<template slot="subtitulo"><div>Segunda consulta pública</div></template>
 		</PageTop>
 		<btn-fixed-url url="/jockey-club-2/minuta" text="MINUTA" target="_self" :isRouteLink="true" />
-		<Indice :titulos="titulosLimpo"></Indice>
+		<!-- <Indice :titulos="titulosLimpo"></Indice> -->
 		<section>
 			<h2 class="titulo" indent="1">Apresentação</h2>
 				<p>O lote onde est&aacute; situado o Hip&oacute;dromo de Cidade Jardim foi classificado como uma Zona de Ocupa&ccedil;&atilde;o Especial &ndash; ZOE pela Lei de Zoneamento (Lei de Parcelamento, Uso e Ocupa&ccedil;&atilde;o do Solo &ndash; LPUOS - n&ordm; 16.402/2016). As Zonas de Ocupa&ccedil;&atilde;o Especial s&atilde;o por&ccedil;&otilde;es do territ&oacute;rio destinadas a abrigar predominantemente atividades que, por suas caracter&iacute;sticas &uacute;nicas, necessitem de par&acirc;metros especiais de parcelamento, uso e ocupa&ccedil;&atilde;o do solo, como aeroportos, centros de conven&ccedil;&atilde;o, grandes &aacute;reas de lazer, recrea&ccedil;&atilde;o e esportes.</p>
@@ -787,10 +787,2861 @@
 
 		<section>
 			<h2 class="titulo" indent=1>5. Modelagem Econômica</h2>
+			<h3>Apresentação</h3>
+			<p>Esta modelagem econ&ocirc;mica tem dois objetivos fundamentais: o primeiro &eacute; precificar o Potencial Construtivo Adicional a ser alienado em eventuais empreendimentos imobili&aacute;rios no &acirc;mbito do PIU Jockey Club e, o segundo, avaliar o potencial m&aacute;ximo de receita a partir da utiliza&ccedil;&atilde;o da Outorga Onerosa do Direito de Construir, que se destinar&aacute; ao FUNDURB ao longo dos anos.</p>
+			<p>Para tanto, foram elaboradas simula&ccedil;&otilde;es de empreendimentos imobili&aacute;rios nos terrenos assinalados como pass&iacute;veis de transforma&ccedil;&atilde;o urban&iacute;stica, de maneira a (i) prever as implanta&ccedil;&otilde;es poss&iacute;veis de acordo com o ordenamento indicado no PIU (estudo de massas) e (ii) simular seu fluxo de caixa e calcular seus indicadores financeiros (estudo de viabilidade econ&ocirc;mica e financeira). Tais procedimentos permitem calibrar a equa&ccedil;&atilde;o da Outorga Onerosa de acordo com a disponibilidade de pagamento dos empreendimentos, adequando os pre&ccedil;os do potencial construtivo adicional ao pre&ccedil;o de venda e aos demais elementos de composi&ccedil;&atilde;o de custo.</p>
+			<p>A modelagem est&aacute; dividida em 6 se&ccedil;&otilde;es. Na primeira &eacute; apresentado resumidamente o potencial construtivo adicional no per&iacute;metro PIU, considerando os Setores de Transforma&ccedil;&atilde;o e os par&acirc;metros urban&iacute;sticos propostos. Na segunda e terceira partes, foi realizada uma pesquisa lan&ccedil;amentos imobili&aacute;rios em uma determinada &aacute;rea de influ&ecirc;ncia do PIU, que servir&aacute; de apoio tanto &agrave; defini&ccedil;&atilde;o das premissas e voca&ccedil;&otilde;es nos estudos de viabilidade &ndash; seus usos e tipologias mais demandados e pre&ccedil;os praticados &ndash; quanto &agrave; capacidade de absor&ccedil;&atilde;o do potencial construtivo.</p>
+			<p>Na quarta se&ccedil;&atilde;o s&atilde;o demonstrados os resultados dos estudos de viabilidade, a precifica&ccedil;&atilde;o do Potencial Construtivo Adicional e a receita de Outorga Onerosa. Na sequ&ecirc;ncia s&atilde;o demonstradas tamb&eacute;m fontes alternativas de receita no per&iacute;metro, como a venda de Potencial Construtivo mediante Transfer&ecirc;ncia do Direito de Construir (TDC). Ao final, ambas as receitas e estudos s&atilde;o colocados na perspectiva da demanda imobili&aacute;ria no entorno, demonstrando o tempo poss&iacute;vel de captura de recursos para o FUNDURB.</p>
+
+			<h3>5.1. Potencial construtivo adicional no PIU</h3>
+			<p>Como demonstrado nos estudos urbanísticos do PIU, o perímetro objeto de estudo foi dividido em Setores de Preservação e de Transformação. Os estudos de viabilidade consideram esses últimos para o desenvolvimento de negócios imobiliários, visto que são as áreas com vocação para recepção de novos usos. A produção de imóveis servirá para a geração de renda mediante alienação do chamado Potencial Construtivo Adicional – ou seja, aquele potencial calculado acima do Coeficiente de Aproveitamento Básico dos terrenos.</p>
+			<p>A Tabela 1 a seguir resume a quantidade de Potencial Construtivo Adicional considerada na modelagem dos três Setores de Transformação. Para tanto, foram adotadas como base as áreas líquidas de terreno, decorrentes de possíveis destinações de área pública em processos de parcelamento do solo, conforme parâmetros indicados pelo PIU.</p>
+
+			<div class="tabela-container">
+				<table width="640">
+					<caption>Tabela 1: &Aacute;reas l&iacute;quidas de terreno e Potencial Construtivo Adicional dos Setores de Transforma&ccedil;&atilde;o</caption>
+						<thead>
+							<tr>
+								<th width="178">
+									Resumo de &aacute;reas e projeto
+								</th>
+								<th width="126">
+									Eus&eacute;bio Matoso
+								</th>
+								<th width="126">
+									Jos&eacute; Augusto de Queiroz
+								</th>
+								<th width="126">
+									Lineu de Paula Machado
+								</th>
+								<th width="84">
+									Total
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td width="178">
+										&Aacute;rea l&iacute;quida de terreno (m&sup2;)
+								</td>
+								<td width="126">
+										9.973
+								</td>
+								<td width="126">
+										28.745
+								</td>
+								<td width="126">
+										35.198
+								</td>
+								<td width="84">
+										73.916
+								</td>
+							</tr>
+							<tr>
+								<td width="178">
+										CA m&aacute;ximo
+								</td>
+								<td width="126">
+										4,4
+								</td>
+								<td width="126">
+										2,2
+								</td>
+								<td width="126">
+										2,2
+								</td>
+								<td width="84">
+										-
+								</td>
+							</tr>
+							<tr>
+								<td width="178">
+									Gabarito m&aacute;ximo
+								</td>
+								<td width="126">
+									Sem limite
+								</td>
+								<td width="126">
+									60m
+								</td>
+								<td width="126">
+									15m
+								</td>
+								<td width="84">
+									-
+								</td>
+							</tr>
+							<tr>
+								<td width="178">
+									Taxa de Ocupa&ccedil;&atilde;o
+								</td>
+								<td width="126">
+									70%
+								</td>
+								<td width="126">
+									70%
+								</td>
+								<td width="126">
+									70%
+								</td>
+								<td width="84">
+									-
+								</td>
+							</tr>
+							<tr>
+								<td width="178">
+									&Aacute;rea comput&aacute;vel (m&sup2;)
+								</td>
+								<td width="126">
+									43.880
+								</td>
+								<td width="126">
+									63.239
+								</td>
+								<td width="126">
+									77.436
+								</td>
+								<td width="84">
+									184.555
+								</td>
+							</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td width="178">
+								Potencial Construtivo Adicional m&aacute;ximo (m&sup2;)
+							</td>
+							<td width="126">
+								33.907
+							</td>
+							<td width="126">
+								34.494
+							</td>
+							<td width="126">
+								42.238
+							</td>
+							<td width="84">
+								110.639
+							</td>
+						</tr>
+					</tfoot>
+				</table>
+				<div class="fonte">Fonte: SP-Urbanismo, 2020.</div>
+			</div>
+			<p>Diante do tamanho dos Setores e do aproveitamento concedido, é possível a construção de cerca de <b>184 mil m² de Área Computável</b>, o que equivale a <b>110 mil m² de Potencial Construtivo Adicional</b> a ser consumido em novos empreendimentos imobiliários. Para os cálculos foram considerados o incremento de 10% do Potencial Construtivo Adicional relativo à Cota de Solidariedade, conforme Art. 112 do PDE.</p>
+
+			<p>Como observado, no Setor Eusébio Matoso pretende-se uma utilização mais intensa do solo, com Coeficiente de Aproveitamento alto e sem restrição de gabarito. Já os Setores Lineu de Paula Machado e José Augusto de Queiroz apresentam condições mais restritivas de desenvolvimento, com Coeficiente de Aproveitamento duas vezes menor e gabarito máximo de 15 e 60 metros. Ainda assim, a dimensão dos Setores e suas condições privilegiadas de localização permitem a adoção de tipologias bastante viáveis, como será demonstrando nas seções seguintes.</p>
+
+			<h3>5.2.	Oferta e demanda de áreas transformáveis</h3>
+			<p>Considerando o grande volume de Potencial Construtivo Adicional ofertado no âmbito do PIU, coube inicialmente à modelagem econômica mensurar a capacidade dos Setores de Transformação em atrair demanda por terras para produção imobiliária. Essa capacidade de atração será utilizada mais adiante, para alocação no tempo dos recursos provenientes da alienação do Potencial Construtivo Adicional.</p>
+			<p>Para expressar o comportamento da produção imobiliária no entorno foi definida, primeiramente, uma Área de Influência Imobiliária, um perímetro que alcança as franjas dos principais vetores de transformação do entorno, a saber: a Av. Faria Lima, o entorno das Estações Faria Lima, Butantã e Morumbi da Linha 4-Amarela do Metrô e o baixo Itaim Bibi.</p>
+			<p>O estudo considerou, então, dois movimentos: (i) a oferta de terrenos transformáveis dentro dessa Área de Influência – dado que comporta os Setores de Transformação do PIU, e (ii) a demanda por produção imobiliária, considerando o histórico de lançamentos nessa mesma Área.</p>
+
+			<h4>5.2.1. Oferta de áreas transformáveis na área de influência imobiliária</h4>
+			<imagem :dados="{
+				tipo: 'coluna',
+				url: src('arquivos/jockey-club-2/mapas/mapa10.jpg'),
+				caption: 'Mapa 10 - Área de Influência Imobiliária e áreas transformáveis.',
+				fonte: 'Elaboração: SP Urbanismo, 2019'
+			}" />
+
+			<p>O levantamento das áreas que apresentam maior probabilidade e viabilidade de transformação partiu da identificação de seu inverso, ou seja, das áreas e usos considerados consolidados. A base de dados utilizada foi formada a partir do cruzamento das informações do Imposto Predial e Territorial Urbano (IPTU) de 2018 e da estrutura fundiária disponibilizada na plataforma Geosampa (Julho/2019), contando com informações e geometrias atualizadas pela própria SP-Urbanismo.</p>
+
+			<p>Foram considerados como consolidados lotes e glebas com verticalizados ( usos residenciais, comerciais, serviços e misto), comércio e serviços horizontais significativos, equipamentos e usos especiais e coletivos; lotes com indicativo de incorporação imobiliária; lotes com área inferior a 500m²; e lotes em Zonas com Coeficiente de Aproveitamento menor ou igual a 1 (ZER, ZPR, ZCOR, ZEPAM). A Zona de Ocupação Especial correspondente à Subprefeitura de Pinheiros foi considerada transformável, uma vez que vem sendo estudada em um PIU específico. O dimensionamento da oferta considera os parâmetros da legislação em vigor para cada lote transformável.</p>
+
+			<div class="tabela-container">
+				<table width="644">
+					<caption>Tabela 2: Áreas Transformáveis na Área de Influência Imobiliária</caption>
+						<thead>
+							<tr>
+								<th colspan="2" width="181">
+									&nbsp;&nbsp;Per&iacute;metro
+								</th>
+								<th width="116">
+									&Aacute;rea dos lotes (m&sup2;)
+								</th>
+								<th width="116">
+									&Aacute;rea total <br /> dos lotes transform&aacute;veis (m&sup2;)
+								</th>
+								<th width="116">
+									&Aacute;rea <br /> Comput&aacute;vel <br /> (m&sup2;)
+								</th>
+								<th width="116">
+									Potencial Construtivo Adicional <br /> (m&sup2;)
+								</th>
+							</tr>
+						</thead>
+					<tbody>
+					<tr>
+						<td class="escuro" rowspan="5" width="96">
+							&Aacute;rea de Influ&ecirc;ncia Imobili&aacute;ria (exclu&iacute;do PIU)
+						</td>
+						<td class="escuro" width="85">
+							Butant&atilde;
+						</td>
+						<td class="align-rigth">
+							1.363.254
+						</td>
+						<td class="align-rigth">
+							148.548
+						</td>
+						<td class="align-rigth">
+							587.436
+						</td>
+						<td class="align-rigth">
+							438.888
+						</td>
+					</tr>
+					<tr>
+						<td class="escuro" width="85">
+							Itaim Bibi
+						</td>
+						<td class="align-rigth">
+							1.375.957
+						</td>
+						<td class="align-rigth">
+							136.884
+						</td>
+						<td class="align-rigth">
+							515.304
+						</td>
+						<td class="align-rigth">
+							378.420
+						</td>
+					</tr>
+					<tr>
+						<td class="escuro" width="85">
+							Morumbi
+						</td>
+						<td class="align-rigth">
+							3.906.695
+						</td>
+						<td class="align-rigth">
+							137.840
+						</td>
+						<td class="align-rigth">
+							978.540
+						</td>
+						<td class="align-rigth">
+							711.359
+						</td>
+					</tr>
+					<tr>
+						<td class="escuro" width="85">
+							Pinheiros
+						</td>
+						<td class="align-rigth">
+							2.115.272
+						</td>
+						<td class="align-rigth">
+							252.873
+						</td>
+						<td class="align-rigth">
+							300.700
+						</td>
+						<td class="align-rigth">
+							217.783
+						</td>
+					</tr>
+					<tr class="escuro">
+						<td width="85">
+							Total
+						</td>
+						<td class="align-rigth">
+							8.761.178
+						</td>
+						<td class="align-rigth">
+							676.145
+						</td>
+						<td class="align-rigth">
+							2.381.980
+						</td>
+						<td class="align-rigth">
+							1.746.450
+						</td>
+					</tr>
+					<tr>
+						<td class="escuro" colspan="2" width="181">
+							<strong>PIU Jockey Club</strong>
+						</td>
+						<td class="align-rigth">
+							<strong>586.635 </strong>
+						</td>
+						<td class="align-rigth">
+							<strong>73.916 </strong>
+						</td>
+						<td class="align-rigth">
+							<strong>184.555 </strong>
+						</td>
+						<td class="align-rigth">
+							<strong>110.639 </strong>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" class="escuro" width="181">
+							Participa&ccedil;&atilde;o do PIU no total
+						</td>
+						<td class="align-rigth">
+							7%
+						</td>
+						<td class="align-rigth">
+							11%
+						</td>
+						<td class="align-rigth">
+							8%
+						</td>
+						<td class="align-rigth">
+							6%
+						</td>
+					</tr>
+					</tbody>
+				</table>
+				<div class="fonte">Fonte: SP-Urbanismo, SMDU, 2020.</div>
+			</div>
+
+			<p>O levantamento apontou para a escassez de terras disponíveis para desenvolvimento imobiliário no perímetro, somando apenas 7% da área de lotes, concentrados no entorno das estações Butantã e Morumbi do Metrô e, de forma mais esparsa e com lotes menores, no baixo Itaim e no baixo Pinheiros. À exceção da Gleba do Jockey Club, apenas três terrenos na Área de Influência Imobiliária são maiores que 15 mil m², o que aumenta ainda mais a atratividade imobiliária dos Setores de Transformação do PIU, que oferecem 11% dos terrenos transformáveis da área de influência analisada.</p>
+
+			<h4>5.2.2 Demanda do mercado imobiliário na área de influência imobiliária</h4>
+			<p>A demanda do mercado imobiliário é fundamental para compreendermos sua capacidade de consumo de Potencial Construtivo Adicional ofertado a partir do levantamento das áreas transformáveis.</p>
+			<p>Os dados de produção imobiliária correspondem ao levantamento dos lançamentos da EMBRAESP, de 1995 a 2017, de forma que seja possível observar o comportamento do consumo histórico nas diversas regiões da Áreas de Influência Imobiliária. Os resultados foram sistematizados no mapa e gráficos a seguir, todos colocados em termos de Área Útil ou Privativa.</p>
+			<imagem :dados="{
+				tipo: 'coluna',
+				url: src('arquivos/jockey-club-2/mapas/mapa11.jpg'),
+				caption: 'Mapa 11 - Área de Influência Imobiliária e áreas transformáveis.',
+				fonte: 'Elaboração: SP Urbanismo, 2020'
+			}"
+			:elaboracaoOnly="true"
+			/>
 		</section>
+
+			<imagem :dados="{
+				tipo: 'coluna',
+				url: src('arquivos/jockey-club-2/graficos/grafico-1.gif'),
+				caption: 'Gráfico 1: Consumo de Área Útil - Morumbi',
+				fonte: 'EMBRAESP, Elaboração: SP Urbanismo, 2020'
+			}" />
+
+			<imagem :dados="{
+				tipo: 'coluna',
+				url: src('arquivos/jockey-club-2/graficos/grafico-2.gif'),
+				caption: 'Gráfico 2: Consumo de Área Útil - Itaim Bibi',
+				fonte: 'EMBRAESP, Elaboração: SP Urbanismo, 2020'
+			}" />
+
+			<imagem :dados="{
+				tipo: 'coluna',
+				url: src('arquivos/jockey-club-2/graficos/grafico-3.gif'),
+				caption: 'Gráfico 3: Consumo de Área Útil - Pinheiros',
+				fonte: 'EMBRAESP, Elaboração: SP Urbanismo, 2020'
+			}" />
+
+			<imagem :dados="{
+				tipo: 'coluna',
+				url: src('arquivos/jockey-club-2/graficos/grafico-4.gif'),
+				caption: 'Gráfico 4: Consumo de Área Útil - Butantã',
+				fonte: 'EMBRAESP, Elaboração: SP Urbanismo, 2020'
+			}" />
+
+			<p>Para projeção anual da demanda foi levado em consideração o ciclo de lançamentos imobiliários, colocando os dados em perspectiva de uma média móvel de 3 anos. A primeira projeção realizada corresponde à média dos últimos 2 ciclos e, na ausência de produção imobiliária, os resultados mais recentes com produção positiva.</p>
+			<p>Contudo, os dados demonstram movimentos variados do mercado ao longo dos anos, com picos anteriores a 2015, que poderiam também informar a projeção da demanda. Essa variação é influenciada tanto pela disponibilidade de estoque de Potencial Construtivo Adicional, em diferentes marcos regulatórios, quanto pelo comportamento do setor da construção civil na cidade de São Paulo.</p>
+			<p>Tendo em vista as boas condições locacionais e fundiárias nos Setores de Transformação do PIU, bem como seus parâmetros urbanísticos, foi possível incrementar a projeção da demanda, incluindo no cálculo os últimos picos de produção imobiliária em ciclos anteriores (portanto, antes de 2015). O resultado para a Área de Influência Imobiliária é demonstrado a seguir:</p>
+
+		<div class="tabela-container">
+			<table>
+				<caption>Tabela 3: Estimativa da produção imobiliária anual na Área de Influência</caption>
+				<thead>
+					<tr>
+						<th width="145">
+							Regi&atilde;o
+						</th>
+						<th colspan="2" width="211">
+							&Aacute;rea &uacute;til Residencial
+						</th>
+						<th colspan="2" width="191">
+							&Aacute;rea &uacute;til Comercial
+						</th>
+						<th width="100">
+							Total
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td width="145">
+							Morumbi
+						</td>
+						<td width="154">
+							7.477 m&sup2;
+						</td>
+						<td width="57">
+							90%
+						</td>
+						<td width="144">
+							822 m&sup2;
+						</td>
+						<td width="47">
+							10%
+						</td>
+						<td width="100">
+							8.299 m&sup2;
+						</td>
+					</tr>
+					<tr>
+						<td width="145">
+							Itaim Bibi
+						</td>
+						<td width="154">
+							30.945 m&sup2;
+						</td>
+						<td width="57">
+							94%
+						</td>
+						<td width="144">
+							2.148 m&sup2;
+						</td>
+						<td width="47">
+							6%
+						</td>
+						<td width="100">
+							33.093 m&sup2;
+						</td>
+					</tr>
+					<tr>
+						<td width="145">
+							Pinheiros
+						</td>
+						<td width="154">
+							14.666 m&sup2;
+						</td>
+						<td width="57">
+							72%
+						</td>
+						<td width="144">
+							5.602 m&sup2;
+						</td>
+						<td width="47">
+							28%
+						</td>
+						<td width="100">
+							20.268 m&sup2;
+						</td>
+					</tr>
+					<tr>
+						<td width="145">
+							Butant&atilde;
+						</td>
+						<td width="154">
+							607 m&sup2;
+						</td>
+						<td width="57">
+							36%
+						</td>
+						<td width="144">
+							1.094 m&sup2;
+						</td>
+						<td width="47">
+							64%
+						</td>
+						<td width="100">
+							1.700 m&sup2;
+						</td>
+					</tr>
+					<tr class="escuro negrito">
+						<td width="145">
+							Total
+						</td>
+						<td width="154">
+							53.695 m&sup2;
+						</td>
+						<td width="57">
+							85%
+						</td>
+						<td width="144">
+							9.666 m&sup2;
+						</td>
+						<td width="47">
+							15%
+						</td>
+						<td width="100">
+							63.361 m&sup2;
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="fonte">Fonte: EMBRAESP, SPUrbanismo, 2020</div>
+		</div>
+
+		<p>Trata-se, como demonstrado, de uma região com produção imobiliária intensa, muito demandada e bastante sensível às mudanças no regramento urbanístico. Sabendo-se que a produção imobiliária seria absorvida prioritariamente pelos terrenos que apresentem as melhores condições de viabilidade, pode-se dizer que apesar dos Setores de Transformação corresponderem à somente 7% de toda a área computável ofertada no recorte de análise, eles apresentam condições urbanísticas bastante atraentes para absorção dos 63 mil m² anuais de área útil ou privativa projetados.</p>
+
+		<h3>5.3 Estudo vocacional dos setores de transformação</h3>
+		<p>Para alimentar os estudos de viabilidade, foram prospectados os dados de lançamento de acordo com as regiões da Área de Influência Imobiliária. Cada trecho – Morumbi, Itaim Bibi, Pinheiros e Butantã – corresponde a um possível vetor de produção imobiliária que informa as condições de incorporação a serem utilizadas pelos 3 diferentes Setores de Transformação do PIU. A seguir foram sistematizados os dados em termos de uso, tipologia e preços de lançamento.</p>
+
+		<h4>5.3.1 Uso e tipologia</h4>
+		<p>No período indicado, foram mapeados 197 lançamentos, com uma oferta de 14.962 unidades imobiliárias, com uma prevalência de dois terços de unidades residenciais. Já em termos de área privativa lançada, os usos residenciais correspondem a cerca de 70% do total.</p>
+
+		<div class="tabela-container">
+			<table width="644">
+				<caption>Tabela 4: Unidades lançadas na Área de Influência Imobiliária, por localização e uso, 1995-2017</caption>
+				<tbody>
+					<tr class="escuro negrito">
+						<td width="209">
+							Localiza&ccedil;&atilde;o
+						</td>
+						<td width="113">
+							Total
+						</td>
+						<td colspan="2" width="170">
+							Comercial
+						</td>
+						<td colspan="2" width="152">
+							Residencial
+						</td>
+					</tr>
+					<tr>
+						<td width="209">
+							Morumbi
+						</td>
+						<td width="113">
+							1.399
+						</td>
+						<td width="123">
+							397
+						</td>
+						<td width="47">
+							28%
+						</td>
+						<td width="104">
+							1.002
+						</td>
+						<td width="48">
+							72%
+						</td>
+					</tr>
+					<tr>
+						<td width="209">
+							Itaim Bibi
+						</td>
+						<td width="113">
+							7.755
+						</td>
+						<td width="123">
+							2.759
+						</td>
+						<td width="47">
+							36%
+						</td>
+						<td width="104">
+							4.996
+						</td>
+						<td width="48">
+							64%
+						</td>
+					</tr>
+					<tr>
+						<td width="209">
+							Pinheiros
+						</td>
+						<td width="113">
+							5.273
+						</td>
+						<td width="123">
+							1.660
+						</td>
+						<td width="47">
+							31%
+						</td>
+						<td width="104">
+							3.613
+						</td>
+						<td width="48">
+							69%
+						</td>
+					</tr>
+					<tr>
+						<td width="209">
+							Butant&atilde;
+						</td>
+						<td width="113">
+							535
+						</td>
+						<td width="123">
+							274
+						</td>
+						<td width="47">
+							51%
+						</td>
+						<td width="104">
+							261
+						</td>
+						<td width="48">
+							49%
+						</td>
+					</tr>
+					<tr class="escuro">
+						<td>
+							Total
+						</td>
+						<td width="113">
+							14.962
+						</td>
+						<td width="123">
+							5.090
+						</td>
+						<td width="47">
+							34%
+						</td>
+						<td width="104">
+							9.872
+						</td>
+						<td width="48">
+							66%
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="fonte">Fonte: EMBRAESP, 1995-2017</div>
+		</div>
+		<div class="tabela-container">
+			<table width="644">
+				<caption>Tabela 5: Metragem lançada na Área de Influência Imobiliária, por localização e uso, 1995-2017</caption>
+				<tbody>
+					<tr class="escuro negrito">
+						<td width="209">
+							Localiza&ccedil;&atilde;o
+						</td>
+						<td width="113">
+							Total
+						</td>
+						<td colspan="2" width="170">
+							Comercial
+						</td>
+						<td colspan="2" width="152">
+							Residencial
+						</td>
+					</tr>
+					<tr>
+						<td width="209">
+							Morumbi
+						</td>
+						<td width="113">
+							155.008 m&sup2;
+						</td>
+						<td width="123">
+							14.904 m&sup2;
+						</td>
+						<td width="47">
+							10%
+						</td>
+						<td width="104">
+							140.104 m&sup2;
+						</td>
+						<td width="48">
+							90%
+						</td>
+					</tr>
+					<tr>
+						<td width="209">
+							Itaim Bibi
+						</td>
+						<td width="113">
+							749.469 m&sup2;
+						</td>
+						<td width="123">
+							253.521 m&sup2;
+						</td>
+						<td width="47">
+							34%
+						</td>
+						<td width="104">
+							495.948 m&sup2;
+						</td>
+						<td width="48">
+							66%
+						</td>
+					</tr>
+					<tr>
+						<td width="209">
+							Pinheiros
+						</td>
+						<td width="113">
+							521.634 m&sup2;
+						</td>
+						<td width="123">
+							143.799 m&sup2;
+						</td>
+						<td width="47">
+							28%
+						</td>
+						<td width="104">
+							377.835 m&sup2;
+						</td>
+						<td width="48">
+							72%
+						</td>
+					</tr>
+					<tr>
+						<td width="209">
+							Butant&atilde;
+						</td>
+						<td width="113">
+							28.452 m&sup2;
+						</td>
+						<td width="123">
+							11.553 m&sup2;
+						</td>
+						<td width="47">
+							41%
+						</td>
+						<td width="104">
+							16.899 m&sup2;
+						</td>
+						<td width="48">
+							59%
+						</td>
+					</tr>
+					<tr class="escuro">
+						<td width="209">
+							Total
+						</td>
+						<td width="113">
+							1.454.564 m&sup2;
+						</td>
+						<td width="123">
+							423.777 m&sup2;
+						</td>
+						<td width="47">
+							29%
+						</td>
+						<td width="104">
+							1.030.787 m&sup2;
+						</td>
+						<td width="48">
+							71%
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="fonte">Fonte: EMBRAESP, 1995-2017.</div>
+		</div>
+		<p>Observa-se também nos lançamentos a manutenção da proporção entre o uso residencial e comercial, relação esta que altera-se significativamente apenas no caso do Morumbi, que detêm 28% de suas unidades lançadas como comerciais, mas apenas 10% da área lançada como tal, o que indica que suas unidades comerciais são relativamente menores que as residenciais em comparação às outras regiões. Cabe, portanto, analisar o tamanho médio das unidades lançadas, bem como a suas características tipológicas básicas – a quantidade de dormitórios, no caso residencial, ou se as unidades comerciais correspondem às lajes corporativas (área livre) ou salas comerciais.</p>
+
+		<div class="tabela-container">
+			<table>
+				<caption>Tabela 6: Área útil lançada na Área de Influência Imobiliária, por tipologia e uso, 1995-2017</caption>
+				<tbody>
+					<tr class="escuro">
+						<td rowspan="2" width="81">
+							Localiza&ccedil;&atilde;o
+						</td>
+						<td colspan="6" width="372">
+							Residencial
+						</td>
+						<td colspan="3" width="198">
+							Comercial
+						</td>
+					</tr>
+					<tr tr class="escuro">
+						<td width="54">
+							Flat
+						</td>
+						<td width="61">
+							1 dorm
+						</td>
+						<td width="61">
+							2 dorm
+						</td>
+						<td width="61">
+							3 dorm
+						</td>
+						<td width="64">
+							4+ dorm
+						</td>
+						<td width="71">
+							Total
+						</td>
+						<td width="72">
+							Sala
+						</td>
+						<td width="61">
+							&Aacute;rea Livre
+						</td>
+						<td width="66">
+							Total
+						</td>
+					</tr>
+					<tr>
+						<td width="81">
+							Morumbi
+						</td>
+						<td width="54">
+							0
+						</td>
+						<td width="61">
+							8.350
+						</td>
+						<td width="61">
+							17.663
+						</td>
+						<td width="61">
+							41.646
+						</td>
+						<td width="64">
+							72.445
+						</td>
+						<td width="71">
+							140.104
+						</td>
+						<td width="72">
+							14.904
+						</td>
+						<td width="61">
+							0
+						</td>
+						<td width="66">
+							14.904
+						</td>
+					</tr>
+					<tr>
+						<td width="81">
+							Itaim Bibi
+						</td>
+						<td width="54">
+							38.620
+						</td>
+						<td width="61">
+							51.857
+						</td>
+						<td width="61">
+							64.140
+						</td>
+						<td width="61">
+							63.790
+						</td>
+						<td width="64">
+							277.540
+						</td>
+						<td width="71">
+							495.948
+						</td>
+						<td width="72">
+							143.436
+						</td>
+						<td width="61">
+							110.085
+						</td>
+						<td width="66">
+							253.521
+						</td>
+					</tr>
+					<tr>
+						<td width="81">
+							Pinheiros
+						</td>
+						<td width="54">
+							6.038
+						</td>
+						<td width="61">
+							52.868
+						</td>
+						<td width="61">
+							81.932
+						</td>
+						<td width="61">
+							23.578
+						</td>
+						<td width="64">
+							213.419
+						</td>
+						<td width="71">
+							377.835
+						</td>
+						<td width="72">
+							74.244
+						</td>
+						<td width="61">
+							69.555
+						</td>
+						<td width="66">
+							143.799
+						</td>
+					</tr>
+					<tr>
+						<td width="81">
+							Butant&atilde;
+						</td>
+						<td width="54">
+							0
+						</td>
+						<td width="61">
+							0
+						</td>
+						<td width="61">
+							0
+						</td>
+						<td width="61">
+							15.079
+						</td>
+						<td width="64">
+							1.820
+						</td>
+						<td width="71">
+							16.899
+						</td>
+						<td width="72">
+							10.755
+						</td>
+						<td width="61">
+							799
+						</td>
+						<td width="66">
+							11.553
+						</td>
+					</tr>
+					<tr class="escuro">
+						<td width="81">
+							Total
+						</td>
+						<td width="54">
+							44.659
+						</td>
+						<td width="61">
+							113.075
+						</td>
+						<td width="61">
+							163.735
+						</td>
+						<td width="61">
+							144.094
+						</td>
+						<td width="64">
+							565.224
+						</td>
+						<td width="71">
+							1.030.787
+						</td>
+						<td width="72">
+							243.338
+						</td>
+						<td width="61">
+							180.439
+						</td>
+						<td width="66">
+							423.777
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="fonte">Fonte: EMBRAESP, 1995-2017.</div>
+		</div>
+
+		<div class="tabela-container">
+			<table width="643">
+				<caption>Tabela 7: Área útil média das unidades lançadas na Área de Influência Imobiliária, 1995-2017</caption>
+				<tbody>
+					<tr class="escuro">
+						<td rowspan="2" width="85">
+							Localiza&ccedil;&atilde;o
+						</td>
+						<td colspan="6" width="373">
+							Residencial
+						</td>
+						<td colspan="3" width="184">
+							Comercial
+						</td>
+					</tr>
+					<tr class="escuro">
+						<td width="57">
+							Flat
+						</td>
+						<td width="57">
+							1 dorm
+						</td>
+						<td width="58">
+							2 dorm
+						</td>
+						<td width="65">
+							3 dorm
+						</td>
+						<td width="66">
+							4+ dorm
+						</td>
+						<td width="71">
+							Geral R
+						</td>
+						<td width="62">
+							Sala
+						</td>
+						<td width="62">
+							&Aacute;rea Livre
+						</td>
+						<td width="61">
+							Geral NR
+						</td>
+					</tr>
+					<tr>
+						<td width="85">
+							Morumbi
+						</td>
+						<td width="57">
+							-
+						</td>
+						<td width="57">
+							93 m&sup2;
+						</td>
+						<td width="58">
+							81 m&sup2;
+						</td>
+						<td width="65">
+							102 m&sup2;
+						</td>
+						<td width="66">
+							254 m&sup2;
+						</td>
+						<td width="71">
+							140 m&sup2;
+						</td>
+						<td width="62">
+							38 m&sup2;
+						</td>
+						<td width="62">
+							-
+						</td>
+						<td width="61">
+							38 m&sup2;
+						</td>
+					</tr>
+					<tr>
+						<td width="85">
+							Itaim Bibi
+						</td>
+						<td width="57">
+							31 m&sup2;
+						</td>
+						<td width="57">
+							44 m&sup2;
+						</td>
+						<td width="58">
+							65 m&sup2;
+						</td>
+						<td width="65">
+							100 m&sup2;
+						</td>
+						<td width="66">
+							294 m&sup2;
+						</td>
+						<td width="71">
+							99 m&sup2;
+						</td>
+						<td width="62">
+							58 m&sup2;
+						</td>
+						<td width="62">
+							408 m&sup2;
+						</td>
+						<td width="61">
+							92 m&sup2;
+						</td>
+					</tr>
+					<tr>
+						<td width="85">
+							Pinheiros
+						</td>
+						<td width="57">
+							23 m&sup2;
+						</td>
+						<td width="57">
+							41 m&sup2;
+						</td>
+						<td width="58">
+							67 m&sup2;
+						</td>
+						<td width="65">
+							100 m&sup2;
+						</td>
+						<td width="66">
+							359 m&sup2;
+						</td>
+						<td width="71">
+							105 m&sup2;
+						</td>
+						<td width="62">
+							47 m&sup2;
+						</td>
+						<td width="62">
+							953 m&sup2;
+						</td>
+						<td width="61">
+							87 m&sup2;
+						</td>
+					</tr>
+					<tr>
+						<td width="85">
+							Butant&atilde;
+						</td>
+						<td width="57">
+							-
+						</td>
+						<td width="57">
+							-
+						</td>
+						<td width="58">
+							-
+						</td>
+						<td width="65">
+							61 m&sup2;
+						</td>
+						<td width="66">
+							130 m&sup2;
+						</td>
+						<td width="71">
+							65 m&sup2;
+						</td>
+						<td width="62">
+							40 m&sup2;
+						</td>
+						<td width="62">
+							200 m&sup2;
+						</td>
+						<td width="61">
+							42 m&sup2;
+						</td>
+					</tr>
+					<tr class="escuro">
+						<td width="85">
+							M&eacute;dia total
+						</td>
+						<td width="57">
+							30 m&sup2;
+						</td>
+						<td width="57">
+							44 m&sup2;
+						</td>
+						<td width="58">
+							67 m&sup2;
+						</td>
+						<td width="65">
+							94 m&sup2;
+						</td>
+						<td width="66">
+							308 m&sup2;
+						</td>
+						<td width="71">
+							104 m&sup2;
+						</td>
+						<td width="62">
+							51 m&sup2;
+						</td>
+						<td width="62">
+							520 m&sup2;
+						</td>
+						<td width="61">
+							83 m&sup2;
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="fonte">Fonte: EMBRAESP, 1995-2017.</div>
+		</div>
+		<p>A análise tipológica demonstra que, no uso Residencial, predomina a preferência por apartamentos grandes, com 3 ou mais dormitórios. Cabe ressaltar, por outro lado, novas tendências, como demonstra o volume significativo de oferta de unidades com 2 dormitórios em Pinheiros e movimentos recentes no Butantã, ainda não identificados na base de dados, com o lançamento de tipologias menores, sobretudo após a inauguração da Estação da Linha 4 do Metrô.</p>
+
+		<p>Considerando a proximidade dos quatro vetores de análise com os três Setores de Transformação, os estudos de viabilidade desenvolvidos a seguir estabeleceram as seguintes vocações: no Setor Eusébio Matoso, a proximidade com a Linha 4 do Metrô confere ao terreno vocação tanto para construção pequenos apartamentos residenciais, como salas comerciais. No Setor José Augusto de Queiroz, entende-se que, dada a proximidade com a Avenida Cidade Jardim e o Itaim Bibi, o terreno serve tanto ao desenvolvimento de plantas residenciais maiores, como também o investimento em lajes corporativas. Já o Setor Lineu de Paula Machado, considerando os parâmetros dispostos e o diagnóstico do PIU que apontou a necessidade de dinamização de usos na avenida, apostará exclusivamente nos usos não residenciais.</p>
+
+		<h4> 5.3.2 Análise de preços</h4>
+		<p>Os preços de lançamentos praticados atualmente foram extraídos da mesma base de dados e atualizados pelo INCC, considerando o último lançamento para a tipologia específica e localidade desde 2006.</p>
+
+		<div class="tabela-container">
+			<table width="643">
+				<caption>Tabela 8: Preço médio por metro quadrado de área útil residencial</caption>
+				<tbody>
+					<tr class="escuro">
+						<td width="113">
+							Localiza&ccedil;&atilde;o
+						</td>
+						<td width="88">
+							Flat
+						</td>
+						<td width="88">
+							1 dorm
+						</td>
+						<td width="88">
+							2 dorm
+						</td>
+						<td width="88">
+							3 dorm
+						</td>
+						<td width="88">
+							4+ dorm
+						</td>
+						<td width="88">
+							M&eacute;dia
+						</td>
+					</tr>
+					<tr>
+						<td width="113">
+							Morumbi
+						</td>
+						<td width="88">
+							-
+						</td>
+						<td width="88">
+							R$ 14.154
+						</td>
+						<td width="88">
+							R$ 12.788
+						</td>
+						<td width="88">
+							R$ 14.113
+						</td>
+						<td width="88">
+							R$ 7.326
+						</td>
+						<td width="88">
+							R$ 10.964
+						</td>
+					</tr>
+					<tr>
+						<td width="113">
+							Itaim Bibi
+						</td>
+						<td width="88">
+							R$ 28.009
+						</td>
+						<td width="88">
+							R$ 29.898
+						</td>
+						<td width="88">
+							R$ 25.903
+						</td>
+						<td width="88">
+							R$ 26.687
+						</td>
+						<td width="88">
+							R$ 35.083
+						</td>
+						<td width="88">
+							R$ 31.484
+						</td>
+					</tr>
+					<tr>
+						<td width="113">
+							Pinheiros
+						</td>
+						<td width="88">
+							R$ 16.175
+						</td>
+						<td width="88">
+							R$ 15.641
+						</td>
+						<td width="88">
+							R$ 13.914
+						</td>
+						<td width="88">
+							R$ 19.619
+						</td>
+						<td width="88">
+							R$ 18.127
+						</td>
+						<td width="88">
+							R$ 16.823
+						</td>
+					</tr>
+					<tr>
+						<td width="113">
+							Butant&atilde;
+						</td>
+						<td width="88">
+							-
+						</td>
+						<td width="88">
+							-
+						</td>
+						<td width="88">
+							-
+						</td>
+						<td width="88">
+							-
+						</td>
+						<td width="88">
+							R$ 8.416
+						</td>
+						<td width="88">
+							R$ 8.416
+						</td>
+					</tr>
+					<tr class="escuro">
+						<td width="113">
+							Pre&ccedil;os m&eacute;dios
+						</td>
+						<td width="88">
+							R$ 25.793
+						</td>
+						<td width="88">
+							R$ 16.905
+						</td>
+						<td width="88">
+							R$ 15.119
+						</td>
+						<td width="88">
+							R$ 22.626
+						</td>
+						<td width="88">
+							R$ 21.396
+						</td>
+						<td width="88">
+							R$ 20.094
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="fonte">Fonte: EMBRAESP, 1995-2017.</div>
+		</div>
+		&nbsp;
+		<div class="tabela-container">
+			<table width="643">
+				<caption>Tabela 9: Preço médio por metro quadrado de área útil não residencial</caption>
+				<tbody>
+					<tr class="escuro">
+						<td width="113">
+							Localiza&ccedil;&atilde;o
+						</td>
+						<td width="176">
+							Sala
+						</td>
+						<td width="176">
+							&Aacute;rea Livre
+						</td>
+						<td width="176">
+							M&eacute;dia
+						</td>
+					</tr>
+					<tr>
+						<td width="113">
+							Morumbi
+						</td>
+						<td width="176">
+							R$ 15.106
+						</td>
+						<td width="176">
+							-
+						</td>
+						<td width="176">
+							R$ 15.106
+						</td>
+					</tr>
+					<tr>
+						<td width="113">
+							Itaim Bibi
+						</td>
+						<td width="176">
+							R$ 28.924
+						</td>
+						<td width="176">
+							R$ 25.238
+						</td>
+						<td width="176">
+							R$ 25.667
+						</td>
+					</tr>
+					<tr>
+						<td width="113">
+							Pinheiros
+						</td>
+						<td width="176">
+							R$ 26.708
+						</td>
+						<td width="176">
+							R$ 16.149
+						</td>
+						<td width="176">
+							R$ 17.441
+						</td>
+					</tr>
+					<tr>
+						<td width="113">
+							Butant&atilde;
+						</td>
+						<td width="176">
+							R$ 19.015
+						</td>
+						<td width="176">
+							R$ 17.171
+						</td>
+						<td width="176">
+							R$ 17.990
+						</td>
+					</tr>
+					<tr class="escuro">
+						<td width="113">
+							Pre&ccedil;os m&eacute;dios
+						</td>
+						<td width="176">
+							R$ 23.619
+						</td>
+						<td width="176">
+							R$ 17.277
+						</td>
+						<td width="176">
+							R$ 18.367
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="fonte">Fonte: EMBRAESP, 1995-2017.</div>
+		</div>
+		<p>Como pode se observar, os preços mais elevados são praticados no recorte corresponde ao Itaim Bibi e, em seguida, Pinheiros, ambos com grande influência da Av. Faria Lima.</p>
+		<p>Os preços dos imóveis residenciais variam conforme a tipologia e determinam um gráfico em forma de “U”, sendo as tipologias de dois dormitórios (demanda que foi observada principalmente em Pinheiros) as mais baratas. Esse resultado é bastante usual: as plantas menores oferecem ao incorporador a estratégia de elevar o preço por metro quadrado, pois representa pouco impacto no preço total. Já as unidades de três ou mais dormitórios, embora extensivas em metragem, geralmente, localizam-se nos melhores pontos das regiões avaliadas e, assim, o ponto agrega valor ao produto.</p>
+		<p>Quanto aos aluguéis, foi utilizado como variável o <em>rental yield</em> disponível na base de dados da FipeZap, referente a Maio/2020. Em relação aos usos não residenciais, importante destacar que a base não distingue as tipologias entre Área Livre e Sala comercial. Assim, uma vez que a calibragem do dado se ampara principalmente nas maiores áreas – a tipologia Área Livre – considerou-se o dado para estimar o aluguel da primeira tipologia, e um mesmo acréscimo em 40% para a segunda.</p>
+
+		<p>Multiplicando-se o <em>rental yield</em> pelo preço do metro quadrado considerado anteriormente, obtemos o preço do aluguel mensal de cada metro quadrado, disposto abaixo:</p>
+
+		<div class="tabela-container">
+			<table width="652">
+				<caption>Tabela 10: Aluguel médio por metro quadrado (por mês)</caption>
+				<tbody>
+					<tr class="escuro">
+						<td rowspan="2" width="84">
+							Localiza&ccedil;&atilde;o
+						</td>
+						<td colspan="6" width="385">
+							Residencial
+						</td>
+						<td colspan="3" width="183">
+							Comercial
+						</td>
+					</tr>
+					<tr class="escuro">
+						<td width="55">
+							Flat
+						</td>
+						<td width="66">
+							1 dorm
+						</td>
+						<td width="66">
+							2 dorm
+						</td>
+						<td width="67">
+							3 dorm
+						</td>
+						<td width="65">
+							4+ dorm
+						</td>
+						<td width="66">
+							Geral &nbsp;R
+						</td>
+						<td width="65">
+							Sala
+						</td>
+						<td width="48">
+							&Aacute;rea Livre
+						</td>
+						<td width="70">
+							Geral NR
+						</td>
+					</tr>
+					<tr>
+						<td width="84">
+							Morumbi
+						</td>
+						<td width="55">
+							-
+						</td>
+						<td width="66">
+							R$ 76
+						</td>
+						<td width="66">
+							R$ 59
+						</td>
+						<td width="67">
+							R$ 55
+						</td>
+						<td width="65">
+							R$ 24
+						</td>
+						<td width="66">
+							R$ 50
+						</td>
+						<td width="65">
+							R$ 101
+						</td>
+						<td width="48">
+							-
+						</td>
+						<td width="70">
+							R$ 98
+						</td>
+					</tr>
+					<tr>
+						<td width="84">
+							Itaim Bibi
+						</td>
+						<td width="55">
+							R$ 151
+						</td>
+						<td width="66">
+							R$ 161
+						</td>
+						<td width="66">
+							R$ 120
+						</td>
+						<td width="67">
+							R$ 104
+						</td>
+						<td width="65">
+							R$ 116
+						</td>
+						<td width="66">
+							R$ 143
+						</td>
+						<td width="65">
+							R$ 194
+						</td>
+						<td width="48">
+							R$ 121
+						</td>
+						<td width="70">
+							R$ 167
+						</td>
+					</tr>
+					<tr>
+						<td width="84">
+							Pinheiros
+						</td>
+						<td width="55">
+							R$ 87
+						</td>
+						<td width="66">
+							R$ 84
+						</td>
+						<td width="66">
+							R$ 64
+						</td>
+						<td width="67">
+							R$ 76
+						</td>
+						<td width="65">
+							R$ 60
+						</td>
+						<td width="66">
+							R$ 76
+						</td>
+						<td width="65">
+							R$ 179
+						</td>
+						<td width="48">
+							R$ 77
+						</td>
+						<td width="70">
+							R$ 113
+						</td>
+					</tr>
+					<tr>
+						<td width="84">
+							Butant&atilde;
+						</td>
+						<td width="55">
+							-
+						</td>
+						<td width="66">
+							-
+						</td>
+						<td width="66">
+							-
+						</td>
+						<td width="67">
+							-
+						</td>
+						<td width="65">
+							R$ 28
+						</td>
+						<td width="66">
+							R$ 38
+						</td>
+						<td width="65">
+							R$ 128
+						</td>
+						<td width="48">
+							R$ 82
+						</td>
+						<td width="70">
+							R$ 117
+						</td>
+					</tr>
+					<tr class="escuro">
+						<td>
+							M&eacute;dia total
+						</td>
+						<td width="55">
+							R$ 139
+						</td>
+						<td width="66">
+							R$ 91
+						</td>
+						<td width="66">
+							R$ 70
+						</td>
+						<td width="67">
+							R$ 88
+						</td>
+						<td width="65">
+							R$ 71
+						</td>
+						<td width="66">
+							R$ 91
+						</td>
+						<td width="65">
+							R$ 159
+						</td>
+						<td width="48">
+							R$ 83
+						</td>
+						<td width="70">
+							R$ 119
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="fonte">Fonte: EMBRAESP, 1995-2017.</div>
+		</div>
+		<h4>5.4 Estudo de viabilidade</h4>
+		<p>O estudo de viabilidade econômica e financeira de empreendimentos imobiliários é dividido em duas partes. Na primeira, o estudo de massa, são avaliadas implantações nos terrenos de acordo com o regramento urbanístico, considerando o máximo aproveitamento do lote, resultando no cálculo do quadro de áreas de cada empreendimento. Na segunda parte, a análise financeira, essas áreas são precificadas e dispostas num fluxo de caixa como receitas e despesas, incluindo nos cálculos o fator “tempo da transformação”, obtido pelas estimativas da demanda imobiliária dos próximos anos na região e da capacidade de atração desse mercado pelos Setores de Transformação do PIU.</p>
+		<p>Esse exercício foi efetuado nos 3 Setores de Transformação – Eusébio Matoso, José Augusto de Queiroz e Lineu de Paula Machado. Seguindo o estudo de vocação dos terrenos, nos dois primeiros Setores considerou-se o desenvolvimento de empreendimentos de uso misto, com fachada ativa: no Setor Eusébio, optou-se por unidades residenciais de 2 dormitórios e salas comerciais, próximo do que se espera para Pinheiros e Butantã; já no Setor José Augusto de Queiroz, foram adotadas unidades residenciais de três dormitórios e andar livre, na mesma perspectiva do Itaim Bibi e Morumbi. Por fim, no Setor Lineu de Paula Machado foi realizada modelagem de desenvolvimento imobiliário exclusivamente comercial, também com fachada ativa, coerente com as expectativas do PIU de atração de novas dinâmicas para a Av. Lineu de Paula Machado.</p>
+
+		<div class="tabela-container">
+			<table width="654">
+				<caption>Tabela 11: Resultado dos Estudos de massa por Setor</caption>
+				<tbody>
+					<tr class="escuro">
+						<td width="77">
+							Setor
+						</td>
+						<td width="38">
+							Gab.
+							(m)
+						</td>
+						<td width="57">
+							&Aacute;rea Comp.<br /> (m&sup2;)
+						</td>
+						<td width="76">
+							Pot. Const. Adicional
+							(m&sup2;)
+						</td>
+						<td width="38">
+							CA
+						</td>
+						<td width="94">
+							Uso
+						</td>
+						<td width="47">
+							Torres
+						</td>
+						<td width="57">
+							&Aacute;rea <br /> &Uacute;til (m&sup2;)
+						</td>
+						<td width="57">
+							Planta (m&sup2;)
+						</td>
+						<td width="47">
+							Unid.
+						</td>
+						<td width="67">
+							Vagas Garagem
+						</td>
+					</tr>
+					<tr>
+						<td rowspan="3" class="negrito">
+							Eus&eacute;bio Matoso
+						</td>
+						<td rowspan="3" width="38">
+							67
+						</td>
+						<td rowspan="3" width="57">
+							43.880
+						</td>
+						<td rowspan="3" width="76">
+							33.907
+						</td>
+						<td rowspan="3" width="38">
+							&nbsp;4,4
+						</td>
+						<td width="94">
+							Residencial
+						</td>
+						<td width="47">
+							4
+						</td>
+						<td width="57">
+							45.539
+						</td>
+						<td width="57">
+							65
+						</td>
+						<td width="47">
+							704
+						</td>
+						<td rowspan="3" width="67">
+							884
+						</td>
+					</tr>
+					<tr>
+						<td width="94">
+							Salas Comerciais
+						</td>
+						<td width="47">
+							1
+						</td>
+						<td width="57">
+							8.100
+						</td>
+						<td width="57">
+							45
+						</td>
+						<td width="47">
+							180
+						</td>
+					</tr>
+					<tr>
+						<td width="94">
+							Fachada ativa
+						</td>
+						<td width="47">
+							-
+						</td>
+						<td width="57">
+							4.986
+						</td>
+						<td width="57">
+							-
+						</td>
+						<td width="47">
+							-
+						</td>
+					</tr>
+					<tr>
+						<td rowspan="3" class="negrito">
+							Jos&eacute; Augusto de Queiroz
+						</td>
+						<td rowspan="3" width="38">
+							59
+						</td>
+						<td rowspan="3" width="57">
+							63.232
+						</td>
+						<td rowspan="3" width="76">
+							34.487
+						</td>
+						<td rowspan="3" width="38">
+							&nbsp;2,2
+						</td>
+						<td width="94">
+							Residencial
+						</td>
+						<td width="47">
+							5
+						</td>
+						<td width="57">
+							57.600
+						</td>
+						<td width="57">
+							120
+						</td>
+						<td width="47">
+							480
+						</td>
+						<td rowspan="3" width="67">
+							1.216
+						</td>
+					</tr>
+					<tr>
+						<td width="94">
+							Andar livre
+						</td>
+						<td width="47">
+							1
+						</td>
+						<td width="57">
+							14.528
+						</td>
+						<td width="57">
+							454
+						</td>
+						<td width="47">
+							32
+						</td>
+					</tr>
+					<tr>
+						<td width="94">
+							Fachada ativa
+						</td>
+						<td width="47">
+							-
+						</td>
+						<td width="57">
+							5.749
+						</td>
+						<td width="57">
+							-
+						</td>
+						<td width="47">
+							-
+						</td>
+					</tr>
+					<tr>
+						<td rowspan="2" class="negrito">
+							Lineu de Paula Machado
+						</td>
+						<td rowspan="2" width="38">
+							15
+						</td>
+						<td rowspan="2" width="57">
+							77.331
+						</td>
+						<td rowspan="2" width="76">
+							42.133
+						</td>
+						<td rowspan="2" width="38">
+							&nbsp;2,2
+						</td>
+						<td width="94">
+							Andar livre
+						</td>
+						<td width="47">
+							4
+						</td>
+						<td width="57">
+							59.520
+						</td>
+						<td width="57">
+							1.240
+						</td>
+						<td width="47">
+							48
+						</td>
+						<td rowspan="2" width="67">
+							960
+						</td>
+					</tr>
+					<tr>
+						<td width="94">
+							Fachada ativa + Servi&ccedil;os
+						</td>
+						<td width="47">
+							-
+						</td>
+						<td width="57">
+							19.141
+						</td>
+						<td width="57">
+							-
+						</td>
+						<td width="47">
+							-
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="fonte">Fonte:  SP-Urbanismo, 2020</div>
+		</div>
+		<p>Os resultados da modelagem demonstraram que todos os empreendimentos apresentam viabilidade financeira. O VGV alcança, ao todo, <b>R$ 3,76 bilhões</b> e o ganho com venda ou permuta dos terrenos atinge cerca de <b>R$ 828 milhões</b>. Importante destacar que todos os Setores têm potencial para atingir Margens Líquidas maiores que 20% e Taxas Internas de Retorno bem expressivas, em torno de 30%, resultado da composição entre as condições de localização - com preços/m² de lançamento elevados - e parâmetros urbanísticos vantajosos do ponto de vista imobiliário.</p>
+		<div class="tabela-container">
+			<table width="642">
+				<caption>Tabela 12: Resultado dos Estudos de viabilidade por Setor</caption>
+				<tbody>
+					<tr class="escuro">
+						<td colspan="2" width="188">
+							Setores de Transforma&ccedil;&atilde;o:
+						</td>
+						<td width="161">
+							Eus&eacute;bio Matoso
+						</td>
+						<td width="151">
+							Jos&eacute; Augusto de Queiroz
+						</td>
+						<td width="142">
+							Lineu de Paula Machado
+						</td>
+					</tr>
+					<tr>
+						<td rowspan="2" width="112">
+							VGV
+						</td>
+						<td width="76">
+							&nbsp;R$/m&sup2;
+						</td>
+						<td width="161">
+							15.872
+						</td>
+						<td width="151">
+							20.341
+						</td>
+						<td width="142">
+							15.836
+						</td>
+					</tr>
+					<tr>
+						<td width="76">
+							&nbsp;R$
+						</td>
+						<td width="161">
+							930,5 mi
+						</td>
+						<td width="151">
+							1.584 mi
+						</td>
+						<td width="142">
+							1.248 mi
+						</td>
+					</tr>
+					<tr>
+						<td rowspan="3" width="112">
+							Terreno
+						</td>
+						<td width="76">
+							&nbsp;R$/m&sup2;
+						</td>
+						<td width="161">
+							20.527
+						</td>
+						<td width="151">
+							12.124
+						</td>
+						<td width="142">
+							7.801
+						</td>
+					</tr>
+					<tr>
+						<td width="76">
+							%VGV
+						</td>
+						<td width="161">
+							22%
+						</td>
+						<td width="151">
+							22%
+						</td>
+						<td width="142">
+							22%
+						</td>
+					</tr>
+					<tr>
+						<td width="76">
+							&nbsp;R$
+						</td>
+						<td width="161">
+							204,7 mi
+						</td>
+						<td width="151">
+							348,5 mi
+						</td>
+						<td width="142">
+							274,6 mi
+						</td>
+					</tr>
+					<tr class="escuro">
+						<td rowspan="4" width="112">
+							Outorga
+						</td>
+						<td width="76">
+							Fp
+						</td>
+						<td width="161">
+							2,4
+						</td>
+						<td width="151">
+							2,4
+						</td>
+						<td width="142">
+							2,2
+						</td>
+					</tr>
+					<tr class="escuro">
+						<td width="76">
+							R$/m&sup2;
+						</td>
+						<td width="161">
+							984
+						</td>
+						<td width="151">
+							1.969
+						</td>
+						<td width="142">
+							1.807
+						</td>
+					</tr>
+					<tr class="escuro">
+						<td width="76">
+							%VGV
+						</td>
+						<td width="161">
+							3,6%
+						</td>
+						<td width="151">
+							4,3%
+						</td>
+						<td width="142">
+							6,1%
+						</td>
+					</tr>
+					<tr class="escuro">
+						<td width="76">
+							R$
+						</td>
+						<td width="161">
+							33,4 mi
+						</td>
+						<td width="151">
+							67.9 mi
+						</td>
+						<td width="142">
+							76,1 mi
+						</td>
+					</tr>
+					<tr>
+						<td width="112">
+							Cota de Solidariedade
+						</td>
+						<td width="76">
+							R$
+						</td>
+						<td width="161">
+							1,79 mi
+						</td>
+						<td width="151">
+							5,18 mi
+						</td>
+						<td width="142">
+							6,35 mi
+						</td>
+					</tr>
+					<tr>
+						<td width="112">
+							ML
+						</td>
+						<td width="76">
+							(%)
+						</td>
+						<td width="161">
+							25,6
+						</td>
+						<td width="151">
+							23,5
+						</td>
+						<td width="142">
+							23,8
+						</td>
+					</tr>
+					<tr>
+						<td width="112">
+							TIR
+						</td>
+						<td width="76">
+							(%)
+						</td>
+						<td width="161">
+							33,2
+						</td>
+						<td width="151">
+							31,1
+						</td>
+						<td width="142">
+							29,8
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="fonte">Fonte:  SP-Urbanismo, 2020</div>
+		</div>
+		&nbsp;
+		<div class="tabela-container">
+			<table width="644">
+				<caption>Tabela 13: Resultado geral dos Estudos de viabilidade </caption>
+				<tbody>
+					<tr class="escuro">
+						<td rowspan="2" width="114">
+							VGV
+						</td>
+						<td colspan="2" width="151">
+							Terreno
+						</td>
+						<td colspan="3" width="274">
+							Outorga Onerosa
+						</td>
+						<td rowspan="2" width="104">
+							Cota de Solidariedade
+						</td>
+					</tr>
+					<tr class="escuro">
+						<td width="76">
+							Total
+						</td>
+						<td width="76">
+							%VGV
+						</td>
+						<td width="104">
+							Pre&ccedil;o m&eacute;dio
+						</td>
+						<td width="94">
+							R$
+						</td>
+						<td width="76">
+							%VGV
+						</td>
+					</tr>
+					<tr>
+						<td width="114">
+							R$ 3,76 bi
+						</td>
+						<td width="76">
+							R$ 828 mi
+						</td>
+						<td width="76">
+							22%
+						</td>
+						<td width="104">
+							R$ 1.584/m&sup2;
+						</td>
+						<td width="94">
+							R$ 177,4 mi
+						</td>
+						<td width="76">
+							4,7%
+						</td>
+						<td width="104">
+							R$ 13,3 mi
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="fonte">Fonte:  SP-Urbanismo, 2020</div>
+		</div>
+		<p>Os estudos de viabilidade demonstram que existe disponibilidade financeira para que os empreendimentos contribuam com a Outorga Onerosa e para a Cota de Solidariedade, essa última exigida para empreendimentos com mais de 20.000m² de área computável (Art. 111 e 112 do PDE). No caso da Outorga, foram considerados preços médios de Potencial Construtivo Adicional praticados em outras áreas com perfil similar, em termos de valorização imobiliária e parâmetros urbanísticos.</p>
+		<p>Tal como previsto pelo PDE, os preços decrescem de acordo com o CA máximo, perfazendo uma média de <b>R$1.584/m²</b> (considerando CA=2,2, e 4,4) e uma receita de aproximadamente <b>R$ 177,4 milhões</b>, correspondente a cerca de 4,7% do VGV, em média, para os estudos realizados. Tais valores consideram Fatores de Planejamento (Fp) de 2,4 para os Setores Eusébio Matoso e José Augusto de Queiroz, e 2,2 para o Setor Lineu de Paula Machado, portanto, maiores que aqueles indicados no PDE.</p>
+		<p>Em relação à Cota de Solidariedade, a estimativa de R$13,3 milhões deriva de uma das modalidades de pagamento, no caso, a destinação de 10% do valor do terreno para o FUNDURB (inciso III do Art.112 do PDE).</p>
+
+		<h4>5.5. Potencial Construtivo Passível de Transferência</h4>
+
+		<p>Por se tratar de um imóvel tombado, o Jockey Club teve acesso ao instrumento de Transferência do Direito de Construir (TDC), tendo emitido em Março de 2015 uma Declaração de Potencial Construtivo Passível de Transferência (<span class="formula">PC<sub>pt</sub></span>), calculada de acordo com as regras constantes no Art. 125 do PDE.</p>
+		<p>Como se trata de uma declaração já emitida pelo Município, não convém ao PIU em curso alterar qualquer disposição em relação ao montante de potencial construtivo disponível. Ainda assim, e sobretudo pelo volume de <span class="formula">PC<sub>pt</sub></span>, trata-se de um importante ativo que, ao longo dos anos, também será observado em relação às decisões de se levar adiante ou não novos empreendimentos imobiliários no perímetro do PIU.</p>
+
+		<p>O cálculo do potencial seguiu a fórmula: </p>
+		<p class="formula destaque">PC<sub>pt</sub> = At<sub>c</sub> × CA<sub>bas</sub>× F<sub>i</sub></p>
+
+		<p>onde <span class="formula">At<sub>c</sub></span> é área do terreno cedente, <span class="formula">CA<sub>bas</sub></span> é o coeficiente de aproveitamento básico do terreno cedente, vigente na data de referência e <span class="formula">F<sub>i</sub></span> é o fator de incentivo igual a 1.</p>
+
+		<p>No cálculo realizado em 2015, foram apresentados os seguintes valores:</p>
+
+		<p class="formula destaque">
+		At<sub>c</sub> = 586.635 m²<br>
+		CA<sub>bas</sub> = 0,6<br>
+		∴ PC<sub>pt</sub> = 586.635 × 0,6 × 1 = 351.981 m²<br>
+		</p>
+
+		<p>De acordo com os dados da PMSP, desde a emissão da Declaração, em 2015, foram transferidos 50.000m², resultando em um <span class="formula">PC<sub>pt</sub></span> disponível atualmente de <b class="formula">301.981m².</b></p>
+		<p>Ainda que não tenhamos certeza do fluxo futuro de transferência desse potencial, é possível estimarmos com precisão a receita máxima a ser atingida pelo <span class="formula">PC<sub>pt</sub></span> disponível.</p>
+		<p>No modelo da TDC, o <span class="formula">PC<sub>pt</sub></span> é convertido em Potencial Construtivo Equivalente ao imóvel receptor (<span class="formula">PC<sub>r</sub></span>), seguindo a fórmula do Art. 128 do PDE:</p>
+
+		<div class="formula svg-container"><img :src="src('arquivos/jockey-club-2/figuras/pde-art-128.svg')" alt="Fórmula artigo 128 PDE"></div>
+
+		<p>onde <span class="formula">VT<sub>cd</sub></span> é valor unitário/m² do terreno cedente ou doado de acordo com o Cadastro de Valor de Terreno para fins de Outorga Onerosa vigente na data de expedição da Declaração (03/2015), <span class="formula">C<sub>r</sub></span> é valor unitário/ m² da contrapartida da Outorga Onerosa no imóvel receptor e <span class="formula">CA<sub>maxcd</sub></span> é coeficiente de aproveitamento máximo do imóvel cedente, com valor fixo de 4,0 para as hipóteses de transferência de potencial sem doação.</p>
+
+		<p>Sabemos que o os preços máximos a serem atingidos por cada m² de <span class="formula">PC<sub>pt</sub></span> equivale à razão entre a receita de Outorga Onerosa praticada no imóvel receptor (ou seja <span class="formula">PC<sub>r</sub> × PC<sub>r</sub></span>) e o <span class="formula">PC<sub>pt</sub></span> disponível. Podemos, então, concluir que o teto do preço/m² do <span class="formula">PC<sub>pt</sub></span> a ser negociado entre o detentor da Declaração e o imóvel receptor será sempre <span class="formula">VT<sub>cd</sub> / 4</span>.</p>
+
+		<p>Na Declaração emitida em Março de 2015, o <span class="formula destaque">VT<sub>cd</sub> = R$1.769/m²</span>. Como o VT<sub>cd</sub> deve ser corrigido pelo IPCA (IBGE) acumulado até o mês anterior à data de transferência ao imóvel receptor, atualmente o VT<sub>cd</sub> seria igual a R$2.267,16/m², resultando em <span class="formula destaque"><b>R$566,79/m² de PC<sub>pt</sub></b></span>.</p>
+
+		<p>Dessa forma, considerando os <b>301.981m²</b> disponíveis, o instrumento de TDC ainda tem potencial para gerar cerca de <b>R$171 milhões ao Jockey Club</b>, em valores de Abril/2020, receita que provavelmente não será desprezada.</p>
+		<p>Vale ressaltar também que, de acordo com as regras vigentes, após os 50.000m² transferidos inicialmente, o saldo só poderá ser transferido gradualmente por meio de 10 parcelas anuais.  Ou seja, os 301.981m² disponíveis resultariam, em termos de receita, no máximo, <b>R$17,1 milhões ao ano ao Jockey Club</b>, pelos próximos 10 anos.</p>
+
+		<p>Uma outra hipótese a ser destacada é a possibilidade da emissão de uma nova Declaração de Potencial Construtivo Passível de Transferência, que seria possível a partir do parcelamento da gleba. Considerando que essa nova Declaração seria calculada à luz do regramento estabelecido pelo PIU e pelo zoneamento, estima-se que seriam produzidos <span class="formula destaque"><b>17.151 m²</b> de PC<sub>pt</sub></span> a um preço máximo de <b>R$451/m²</b>, dados os valores constantes na atualização do Quadro 14 do PDE em 2020. Como o potencial já transferido supera consideravelmente o potencial de uma nova Declaração, conclui-se que, apesar da possibilidade dessa nova emissão cumprir exigências do ponto de vista regulatório, ela não será capaz de efetivar novas receitas ao Jockey Club.</p>
+
+		<h4>5.6. Fluxo de lançamentos e Outorga Onerosa no tempo</h4>
+		<p>O leque de composi&ccedil;&atilde;o de neg&oacute;cios permitidos pelo PIU Jockey Club &eacute; bastante amplo: &eacute; poss&iacute;vel optar pelo parcelamento dos Setores de Transforma&ccedil;&atilde;o, o que permitiria um poss&iacute;vel cen&aacute;rio de aliena&ccedil;&atilde;o de im&oacute;veis, ou ent&atilde;o trabalhar cen&aacute;rios de rentabilidade baseados exclusivamente em alugu&eacute;is dos im&oacute;veis n&atilde;o residenciais. Ainda, seria poss&iacute;vel pensar em um modelo que combinasse ambos os cen&aacute;rios, de forma a dinamizar os ativos no tempo.</p>
+		<p>A simula&ccedil;&atilde;o aqui realizada considera um modelo h&iacute;brido, tendo como teto de lan&ccedil;amentos aquele definido pela proje&ccedil;&atilde;o anual da demanda. Tomamos como base um cen&aacute;rio otimista, no qual os Setores de Transforma&ccedil;&atilde;o, por suas caracter&iacute;sticas end&oacute;genas, fossem capazes de consumir cerca de 60% da produ&ccedil;&atilde;o imobili&aacute;ria anual identificada na &Aacute;rea de Influ&ecirc;ncia Imobili&aacute;ria, ou seja, algo em torno de 38 mil m&sup2; de &aacute;rea privativa ao ano.</p>
+		<p>Em rela&ccedil;&atilde;o a propor&ccedil;&atilde;o de usos residenciais e n&atilde;o residenciais, optou-se por adotar a mesma propor&ccedil;&atilde;o identificada na demanda, resultando em um consumo anual de, no m&aacute;ximo, 5.800 m&sup2; de &aacute;rea privativa para usos comerciais e servi&ccedil;os &ndash; o que inclui &aacute;reas de fachada ativa, torres com salas comerciais e andares livres &ndash; al&eacute;m &nbsp;de uma &aacute;rea privativa residencial anual de pouco mais de 32 mil m&sup2;.</p>
+		<p>O cen&aacute;rio adotado considera a possibilidade de empreendimentos para venda nos Setores Eus&eacute;bio Matoso e Jos&eacute; Augusto de Queiroz e empreendimentos comerciais para renda no Setor Lineu de Paula Machado. Al&eacute;m disso, sabe-se que nos pr&oacute;ximos 10 anos ainda seria poss&iacute;vel usufruir as receitas de TDC, ou seja, qualquer aliena&ccedil;&atilde;o (residencial ou comercial) ocorreria, em tese, ap&oacute;s esse per&iacute;odo. Dessa forma optou-se pela prioriza&ccedil;&atilde;o no lan&ccedil;amento dos im&oacute;veis de aluguel no Setor Lineu de Paula Machado na primeira d&eacute;cada, seguido dos lan&ccedil;amentos de im&oacute;veis para venda no Setor Eus&eacute;bio Matoso &ndash; completando a nova frente da Avenida &ndash; e, por fim, Jos&eacute; Augusto de Queiroz.</p>
+		<p>O fluxo de lan&ccedil;amentos considera a possibilidade de faseamento de cada empreendimento, sendo que o volume de &aacute;rea lan&ccedil;ada ao ano corresponde sempre a uma ou mais torres (residencial ou n&atilde;o residencial) ofertadas. Caso a oferta ultrapasse a demanda, acumulam-se alguns anos para novos lan&ccedil;amentos, at&eacute; o esgotamento das &aacute;reas privativas estimadas nos estudos de viabilidade. Tamb&eacute;m foi considerada uma vac&acirc;ncia m&eacute;dia de 5% para as loca&ccedil;&otilde;es.</p>
+
+		<div class="tabela-container">
+			<table>
+				<caption>Tabela 13: fluxo de lançamentos e financeiro ao longo do tempo</caption>
+				<tbody>
+					<tr class="escuro">
+						<td rowspan="2" width="57">
+							Ano
+						</td>
+						<td rowspan="2" width="57">
+							Pot. Const. Adic. (m&sup2;)
+						</td>
+						<td colspan="3" width="198">
+							&Aacute;rea &Uacute;til (m&sup2;)
+						</td>
+						<td rowspan="2" width="85">
+							OODC recebida<br /> (R$)
+						</td>
+						<td rowspan="2" width="123">
+							Proje&ccedil;&atilde;o alugu&eacute;is nos empreendimentos de renda<br /> (R$)
+						</td>
+						<td rowspan="2" width="123">
+							VGV dos empreendimentos de uso misto<br /> (R$)
+						</td>
+					</tr>
+					<tr class="escuro">
+						<td width="66">
+							Jos&eacute; Augusto de Queiroz
+						</td>
+						<td width="66">
+							Lineu de Paula Machado
+						</td>
+						<td width="66">
+							Eus&eacute;bio Matoso
+						</td>
+					</tr>
+					<tr class="negrito escuro">
+						<td width="57">
+							Total
+						</td>
+						<td width="57">
+							110.527
+						</td>
+						<td width="66">
+							77.877
+						</td>
+						<td width="66">
+							78.817
+						</td>
+						<td width="66">
+							58.625
+						</td>
+						<td width="85">
+							177.390.982
+						</td>
+						<td width="123">
+							1.351.240.022
+						</td>
+						<td width="123">
+							2.514.571.501
+						</td>
+					</tr>
+					<tr>
+						<td width="57">
+							Ano 1
+						</td>
+						<td width="57">
+							10.533
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="66">
+							19.704
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="85">
+							19.031.709
+						</td>
+						<td width="123">
+							0
+						</td>
+						<td width="123">
+							0
+						</td>
+					</tr>
+					<tr>
+						<td width="57">
+							Ano 2
+						</td>
+						<td width="57">
+							3.511
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="85">
+							6.343.903
+						</td>
+						<td width="123">
+							18.510.137
+						</td>
+						<td width="123">
+							0
+						</td>
+					</tr>
+					<tr>
+						<td width="57">
+							Ano 3
+						</td>
+						<td width="57">
+							3.511
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="85">
+							6.343.903
+						</td>
+						<td width="123">
+							18.510.137
+						</td>
+						<td width="123">
+							0
+						</td>
+					</tr>
+					<tr>
+						<td width="57">
+							Ano 4
+						</td>
+						<td width="57">
+							3.511
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="66">
+							19.704
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="85">
+							6.343.903
+						</td>
+						<td width="123">
+							37.020.275
+						</td>
+						<td width="123">
+							0
+						</td>
+					</tr>
+					<tr>
+						<td width="57">
+							Ano 5
+						</td>
+						<td width="57">
+							3.511
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="85">
+							6.343.903
+						</td>
+						<td width="123">
+							37.020.275
+						</td>
+						<td width="123">
+							0
+						</td>
+					</tr>
+					<tr>
+						<td width="57">
+							Ano 6
+						</td>
+						<td width="57">
+							3.511
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="85">
+							6.343.903
+						</td>
+						<td width="123">
+							37.020.275
+						</td>
+						<td width="123">
+							0
+						</td>
+					</tr>
+					<tr>
+						<td width="57">
+							Ano 7
+						</td>
+						<td width="57">
+							3.511
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="66">
+							19.704
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="85">
+							6.343.903
+						</td>
+						<td width="123">
+							55.530.412
+						</td>
+						<td width="123">
+							0
+						</td>
+					</tr>
+					<tr>
+						<td width="57">
+							Ano 8
+						</td>
+						<td width="57">
+							3.511
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="85">
+							6.343.903
+						</td>
+						<td width="123">
+							55.530.412
+						</td>
+						<td width="123">
+							0
+						</td>
+					</tr>
+					<tr>
+						<td width="57">
+							Ano 9
+						</td>
+						<td width="57">
+							10.096
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="85">
+							12.824.549
+						</td>
+						<td width="123">
+							55.530.412
+						</td>
+						<td width="123">
+							0
+						</td>
+					</tr>
+					<tr>
+						<td width="57">
+							Ano 10
+						</td>
+						<td width="57">
+							10.096
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="66">
+							19.704
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="85">
+							12.824.549
+						</td>
+						<td width="123">
+							74.040.549
+						</td>
+						<td width="123">
+							0
+						</td>
+					</tr>
+					<tr>
+						<td width="57">
+							Ano 11
+						</td>
+						<td width="57">
+							7.306
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="85">
+							7.190.259
+						</td>
+						<td width="123">
+							74.040.549
+						</td>
+						<td width="123">
+							0
+						</td>
+					</tr>
+					<tr>
+						<td width="57">
+							Ano 12
+						</td>
+						<td width="57">
+							7.306
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="66">
+							25.263
+						</td>
+						<td width="85">
+							7.190.259
+						</td>
+						<td width="123">
+							74.040.549
+						</td>
+						<td width="123">
+							145.869.496
+						</td>
+					</tr>
+					<tr>
+						<td width="57">
+							Ano 13
+						</td>
+						<td width="57">
+							1.442
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="66">
+							25.263
+						</td>
+						<td width="85">
+							1.419.227
+						</td>
+						<td width="123">
+							74.040.549
+						</td>
+						<td width="123">
+							251.476.124
+						</td>
+					</tr>
+					<tr>
+						<td width="57">
+							Ano 14
+						</td>
+						<td width="57">
+							6.273
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="85">
+							11.195.711
+						</td>
+						<td width="123">
+							74.040.549
+						</td>
+						<td width="123">
+							211.213.256
+						</td>
+					</tr>
+					<tr>
+						<td width="57">
+							Ano 15
+						</td>
+						<td width="57">
+							6.273
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="66">
+							4.050
+						</td>
+						<td width="85">
+							11.195.711
+						</td>
+						<td width="123">
+							74.040.549
+						</td>
+						<td width="123">
+							213.775.601
+						</td>
+					</tr>
+					<tr>
+						<td width="57">
+							Ano 16
+						</td>
+						<td width="57">
+							8.462
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="66">
+							4.050
+						</td>
+						<td width="85">
+							14.353.193
+						</td>
+						<td width="123">
+							74.040.549
+						</td>
+						<td width="123">
+							108.168.973
+						</td>
+					</tr>
+					<tr>
+						<td width="57">
+							Ano 17
+						</td>
+						<td width="57">
+							6.120
+						</td>
+						<td width="66">
+							25.340
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="85">
+							12.047.771
+						</td>
+						<td width="123">
+							74.040.549
+						</td>
+						<td width="123">
+							203.059.694
+						</td>
+					</tr>
+					<tr>
+						<td width="57">
+							Ano 18
+						</td>
+						<td width="57">
+							5.611
+						</td>
+						<td width="66">
+							25.340
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="85">
+							11.045.386
+						</td>
+						<td width="123">
+							74.040.549
+						</td>
+						<td width="123">
+							359.731.694
+						</td>
+					</tr>
+					<tr>
+						<td width="57">
+							Ano 19
+						</td>
+						<td width="57">
+							1.072
+						</td>
+						<td width="66">
+							12.670
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="85">
+							2.110.890
+						</td>
+						<td width="123">
+							74.040.549
+						</td>
+						<td width="123">
+							414.873.847
+						</td>
+					</tr>
+					<tr>
+						<td width="57">
+							Ano 20
+						</td>
+						<td width="57">
+							1.072
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="85">
+							2.110.890
+						</td>
+						<td width="123">
+							74.040.549
+						</td>
+						<td width="123">
+							235.008.000
+						</td>
+					</tr>
+					<tr>
+						<td width="57">
+							Ano 21
+						</td>
+						<td width="57">
+							2.145
+						</td>
+						<td width="66">
+							4.843
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="85">
+							4.221.780
+						</td>
+						<td width="123">
+							74.040.549
+						</td>
+						<td width="123">
+							176.022.272
+						</td>
+					</tr>
+					<tr>
+						<td width="57">
+							Ano 22
+						</td>
+						<td width="57">
+							2.145
+						</td>
+						<td width="66">
+							4.843
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="85">
+							4.221.780
+						</td>
+						<td width="123">
+							74.040.549
+						</td>
+						<td width="123">
+							97.686.272
+						</td>
+					</tr>
+					<tr>
+						<td width="57">
+							Ano 23
+						</td>
+						<td width="57">
+							0
+						</td>
+						<td width="66">
+							4.843
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="66">
+							0
+						</td>
+						<td width="85">
+							0
+						</td>
+						<td width="123">
+							74.040.549
+						</td>
+						<td width="123">
+							97.686.272
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="fonte">Fonte:  SP-Urbanismo, 2020</div>
+		</div>
+
+		<p>De acordo com as projeções, seria possível realizar todos os lançamentos imobiliários nos Setores de Transformação em pouco mais de 20 anos, prazo portanto referencial para o recebimento integral dos 177,4 milhões de Outorga Onerosa. Nesse período, a receita com aluguéis se aproxima do VGV desenhado nos estudos de viabilidade para o Setor Lineu de Paula Machado, demonstrando a pertinência dos preços de potencial construtivo adicional ali praticados.</p>
+		<p>Os resultados reiteram que a localização do Jockey Club e as disposições do PIU dão margem a grande atratividade de negócios imobiliários. A região tem forte vocação comercial, mas também deve-se considerar o ordenamento para fins residenciais, muito demandado. Dada a atratividade do mercado, a velocidade de vendas não deve prejudicar os resultados financeiros no caso da escolha dos usos e modelos de negócio.</p>
+		<p>Os estudos demonstram também que, independente do modelo de negócio a ser adotado, os Fatores de Planejamento propostos são sensíveis aos indicadores financeiros correntes. Em consequência, a destinação de parte do perímetro do PIU para transformação urbanística e imobiliária permite a geração de receita considerável ao FUNDURB – recursos que poderão ser utilizados na execução das intervenções públicas em outras regiões da cidade, equalizando-se, portanto, os ganhos privados com os ganhos públicos proporcionados no âmbito do PIU Jockey Club.</p>
 
 		<section>
 			<h2 class="titulo" indent=1>6. Modelo de Gestão democrática</h2>
+			<p>Dentre as estrat&eacute;gias do Plano Diretor Estrat&eacute;gico (PDE), tem destaque o fortalecimento da participa&ccedil;&atilde;o popular nas decis&otilde;es dos rumos da cidade, considerando as diversas inst&acirc;ncias e por meio de diferentes instrumentos de participa&ccedil;&atilde;o e controle social. Tais estrat&eacute;gias garantem a participa&ccedil;&atilde;o de representantes dos diferentes segmentos da popula&ccedil;&atilde;o de forma direta ou por interm&eacute;dio de associa&ccedil;&otilde;es representativas, nos processos de planejamento e gest&atilde;o da cidade, de realiza&ccedil;&atilde;o de investimentos p&uacute;blicos e na elabora&ccedil;&atilde;o, implementa&ccedil;&atilde;o e avalia&ccedil;&atilde;o de planos, programas e projetos de desenvolvimento urbano.</p>
+			<p>O PDE definiu, no artigo 136, que os PIUs elaborados pelo Poder P&uacute;blico dever&atilde;o apresentar propostas de transforma&ccedil;&otilde;es urban&iacute;sticas, econ&ocirc;micas e ambientais no per&iacute;metro onde for aplicado o instrumento, cabendo ao PIU indicar os objetivos priorit&aacute;rios da interven&ccedil;&atilde;o, as propostas relativas a aspectos urban&iacute;sticos, ambientais, sociais, econ&ocirc;mico-financeiros e modelo de gest&atilde;o democr&aacute;tica que contemple mecanismos de participa&ccedil;&atilde;o e controle social e instrumentos para monitoramento e avalia&ccedil;&atilde;o das a&ccedil;&otilde;es.</p>
+			<p>O Modelo de Gest&atilde;o Democr&aacute;tica, de modo geral, considera informa&ccedil;&otilde;es como as diretrizes de desenvolvimento urbano, os par&acirc;metros urban&iacute;sticos e o programa de interven&ccedil;&otilde;es previsto para propor os mecanismos de controle social e monitoramento dos resultados do projeto para o equipamento e a regi&atilde;o em que est&aacute; inserido.</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Neste projeto em particular, o PIU estabelece diretrizes e par&acirc;metros para uma &aacute;rea privada de propriedade do Jockey Club de S&atilde;o Paulo, que ser&aacute; transformada conforme as prioridades e disponibilidade de recursos desta organiza&ccedil;&atilde;o. Tampouco h&aacute; neste projeto um programa de interven&ccedil;&otilde;es, que demande a defini&ccedil;&atilde;o de prioridades e a fiscaliza&ccedil;&atilde;o da implanta&ccedil;&atilde;o de obras relacionadas ao projeto. Em consequ&ecirc;ncia dessas caracter&iacute;sticas, o PIU Jockey n&atilde;o define nenhum Instrumento de Ordenamento e Reestrutura&ccedil;&atilde;o Urbana espec&iacute;fico para veicular suas disposi&ccedil;&otilde;es, sendo estas diretamente aplic&aacute;veis ap&oacute;s a edi&ccedil;&atilde;o do decreto. Nestas condi&ccedil;&otilde;es, n&atilde;o h&aacute; previs&atilde;o no PIU Jockey para constitui&ccedil;&atilde;o de um Conselho Gestor, pois n&atilde;o existem elementos t&iacute;picos da natureza e compet&ecirc;ncia deste tipo de colegiado.</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tal caracter&iacute;stica, no entanto, n&atilde;o impede que a sociedade civil organizada cumpra seu papel de monitoramento dos resultados do projeto em rela&ccedil;&atilde;o ao desenvolvimento urbano e ambiental da regi&atilde;o, pois permanecem ativas as demais inst&acirc;ncias da democracia participativa que atuam em n&iacute;vel local e municipal com atribui&ccedil;&otilde;es associadas &agrave; pol&iacute;tica urbana municipal, sendo estes canais preferenciais para o acompanhamento das transforma&ccedil;&otilde;es pretendidas pelo projeto e, eventualmente, para a proposi&ccedil;&atilde;o de corre&ccedil;&otilde;es e ajustes para que os objetivos do PIU sejam alcan&ccedil;ados. Dentre estas inst&acirc;ncias, podemos destacar:</p>
+
+			<ul>
+				<li>Conselho Municipal de Política Urbana – CMPU;</li>
+				<li>Conselho do Fundo Municipal de Desenvolvimento Urbano – FUNDURB;</li>
+				<li>Conselho Municipal de Meio Ambiente e Desenvolvimento Sustentável – CADES (constituído em nível municipal e em cada subprefeitura);</li>
+				<li>Conselho Participativo Municipal – CPM.</li>
+			</ul>
+			<p>As contribuições da sociedade civil, recebidas durante o processo de desenvolvimento deste PIU através do processo participativo (consultas públicas, apresentações no CPM e CADES Butantã e no CMPU) revelaram diversas organizações atuando na região, que ajudaram a modelar a presente proposta e que certamente continuarão ativas e vigilantes após a edição do decreto regulamentador da ZOE Jockey Club.</p>
 		</section>
 
 		<section ref="allComments">
@@ -803,7 +3654,7 @@
 
 <script>
 import PageTop from '@/components/PageTop'
-import Indice from '@/components/Indice'
+// import Indice from '@/components/Indice'
 import Apoio from '@/components/Apoio'
 import { consultasCommons } from '@/mixins/consultasCommons'
 import Comments from '@/components/Comments'
@@ -820,14 +3671,15 @@ export default {
 			titulosLimpo: [],
 			comments_atrr: undefined,
 			consultas: false,
-			estaConsulta: {}
+			estaConsulta: {},
+			novoIndice: true
 		}
 	},
 	components: {
 		Comments,
 		CommentsLoader,
 		PageTop,
-		Indice,
+		// Indice,
 		Apoio,
 		Imagem,
 		Tabela,
@@ -858,6 +3710,29 @@ export default {
 			font-size: small;
 			font-family: $grotesca;
 			margin: 0 auto;
+		}
+	}
+	.formula {
+		font-family: $grotesca;
+		font-size: small;
+		font-style: italic;
+		padding: 0.25rem;
+		background-color: $cinza-3;
+		border-radius: 2px;
+		&.destaque {
+			font-size: medium;
+			text-align: center;
+			padding: 0.5rem;
+		}
+		&.svg-container {
+			display: flex;
+			max-width: 700px;
+			margin: 1rem auto;
+			padding: 1rem 0;
+			img {
+				margin: auto;
+				min-width: 165px;
+			}
 		}
 	}
 }

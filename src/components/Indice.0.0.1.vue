@@ -128,7 +128,7 @@ export default {
 		setIndent (selector, indent) {
 			const refs = this.$refs
 			const menuElement = refs[`menu--${selector}`][0]
-			const paddingLeft = indent > 1 ? (indent * 2) + 8 : 12
+			const paddingLeft = indent > 1 ? (indent * 2) + 12 : 12
 			menuElement.setAttribute('style', `padding-left: ${paddingLeft}px`)
 		},
 

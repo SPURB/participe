@@ -310,7 +310,6 @@ export default {
 			left: 1rem;
 			li:first-child { display: none; }
 			li {
-				background-color: #FFF;
 				padding: 12px;
 				border-radius: 100%;
 				box-shadow: 0px 0px 8px $sombra-3;

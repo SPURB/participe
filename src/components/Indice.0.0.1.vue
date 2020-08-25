@@ -174,9 +174,9 @@ export default {
 	background: white;
 	border: 1px solid $cinza-3;
 	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12);
-	opacity: 0.1;
 	transition: all 0.25s ease-in-out;
 	@media (min-width: 1200px) {
+		opacity: 0.1;
 		right: unset;
 		left: calc(2rem -20px);
 		bottom: unset;

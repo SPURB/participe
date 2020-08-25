@@ -1,6 +1,14 @@
 <template>
-	<nav id='indice' class='indice'>
-		<div class='menu-container' v-if='menuItems.length'>
+	<nav
+	id='indice'
+	class='indice'
+	:style="`height: ${height}`">
+		<div
+			class='menu-container'
+			:class="{
+			active: menuActive,
+			visible
+			}" v-if='menuItems.length'>
 			<ul class='menu' v-show="menuActive">
 				<li
 					class='menu__item'
@@ -9,6 +17,15 @@
 					:ref="`menu--${scrollTo}`"
 				>
 					<a href='' v-scroll-to="scrollTo">{{ title }}</a>
+				</li>
+				<li
+					v-show="routerLinks.length > 0"
+					class="menu__item"
+					v-for="({ title, to }, indexRouter) in routerLinks"
+					:key="indexRouter + menuItems.length"
+					:ref="`menu--route-${indexRouter}`"
+				>
+					<router-link :to="to" tag="a">{{ title }}</router-link>
 				</li>
 			</ul>
 			<button
@@ -27,21 +44,12 @@
 	</nav>
 </template>
 <script>
-import Vue from 'vue'
-import VueScrollTo from 'vue-scrollto'
-
-Vue.use(VueScrollTo)
-
-Vue.use(VueScrollTo, {
-	container: '#app',
-	duration: 500
-})
-
 export default {
 	name: 'indice-0-0-1',
 	data () {
 		return {
-			menuActive: true
+			menuActive: true,
+			visible: false
 		}
 	},
 	props: {
@@ -57,27 +65,50 @@ export default {
 		menuItems: {
 			type: Array,
 			required: true
+		},
+		routerLinks: {
+			type: Array,
+			default: () => []
+		},
+		height: {
+			type: String,
+			default: 'auto'
 		}
 	},
 	watch: {
 		menuItems (items) {
 			if (items.length) {
-				this.setupMenu(items)
+				this.setupMenuItems(items)
 			}
 		}
 	},
 	mounted () {
 		if (this.menuItems.length) {
-			this.setupMenu(this.menuItems)
+			this.setupMenuItems(this.menuItems)
+		}
+
+		if (this.routerLinks.length) {
+			this.setupMenuRouteItems(this.routerLinks)
+		}
+
+		try {
+			const cabecalho = document.querySelector('.cabecalho')
+
+			new IntersectionObserver((entries) => {
+				entries.forEach(({ isIntersecting }) => {
+					this.visible = !isIntersecting
+				})
+			}).observe(cabecalho)
+		} catch {
+			this.visible = true
 		}
 	},
 	methods: {
 		setObsever (scrollTo) {
 			const refs = this.$refs
-			let observer
 			const boxElement = document.querySelector(scrollTo)
 
-			observer = new IntersectionObserver((entries, observer) => {
+			const observer = new IntersectionObserver((entries) => {
 				entries.forEach(entry => {
 					const { id } = entry.target
 					const { isIntersecting } = entry
@@ -88,23 +119,30 @@ export default {
 						: menuElement.classList.remove('menu__item--ativo')
 				})
 			}, {
-				root: null,
 				rootMargin: '0px'
 			})
+
 			observer.observe(boxElement)
 		},
 
-		setIndent (scrollTo, indent) {
+		setIndent (selector, indent) {
 			const refs = this.$refs
-			const menuElement = refs[`menu--${scrollTo}`][0]
-			const paddingLeft = indent > 1 ? (indent * 2) + 8 : 8
+			const menuElement = refs[`menu--${selector}`][0]
+			const paddingLeft = indent > 1 ? (indent * 2) + 8 : 12
 			menuElement.setAttribute('style', `padding-left: ${paddingLeft}px`)
 		},
 
-		setupMenu (menuItems) {
+		setupMenuItems (menuItems) {
 			menuItems.forEach(({ scrollTo, indent }) => {
 				this.setObsever(scrollTo)
 				this.setIndent(scrollTo, indent)
+			})
+		},
+
+		setupMenuRouteItems (routes) {
+			routes.forEach(({ indent }, index) => {
+				const selector = `route-${index}`
+				this.setIndent(selector, indent)
 			})
 		},
 
@@ -123,122 +161,149 @@ export default {
 	flex-direction: column;
 	justify-content: space-around;
 	z-index: 4;
-	height: calc(100vh - 60px);
-	@media (max-width: 1000px) {
-		justify-content: flex-end;
-		padding-bottom: 1rem;
+	@media (min-width: 1200px) {
+		z-index: 0;
 	}
-	.menu-container {
-		display: flex;
-		position: fixed;
-		right: 35px;
-		bottom: 155px;
-		background: white;
-		box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12)
-	}
-	.menu {
-		display: flex;
+}
+
+.menu-container {
+	display: flex;
+	position: fixed;
+	right: 35px;
+	bottom: 165px;
+	background: white;
+	border: 1px solid $cinza-3;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12);
+	opacity: 0.1;
+	transition: all 0.25s ease-in-out;
+	@media (min-width: 1200px) {
+		right: unset;
+		left: calc(2rem -20px);
+		bottom: unset;
+		box-shadow: unset;
 		flex-direction: column;
-		padding: 0.5rem 0;
-		margin: 0;
-		margin-right: 6px;
-		list-style-type: none;
-		a { color: $preto }
-		&__toggler {
+		border: 0;
+		&.active {
+			left: 0;
+		}
+		&.visible {
+			opacity: 1;
+		}
+	}
+}
+
+.menu {
+	display: flex;
+	flex-direction: column;
+	padding: 0.5rem 0;
+	margin: 0;
+	margin-right: 6px;
+	list-style-type: none;
+	line-height: 1.7;
+	a { color: $preto }
+
+	&__toggler {
+		cursor: pointer;
+		border: 0;
+		height: 40px;
+		min-width: 40px;
+		background: white;
+		border: solid 1px $cinza-2;
+		transition: all 0.15s ease-in-out;
+		i {
 			cursor: pointer;
-			border: 0;
-			height: 40px;
-			background: white;
-			border: solid 1px $cinza-2;
-			align-self: flex-end;
-			i {
-				cursor: pointer;
-				color: $preto;
-				transition: all 0.15s ease-in-out;
-				@media (max-width: 1000px) {
-					color: $preto;
-				}
-			}
+			color: $preto;
+			transition: all 0.15s ease-in-out;
+		}
 
-			&:hover {
-				i {
-					color: $preto;
-				}
+		&:hover {
+			i {
+				color: $preto;
 			}
 		}
-		&__item {
-			margin: 0;
-			font-family: $grotesca;
-			font-size: small;
+		@media (min-width: 1200px) {
+			background: $cinza-3;
+			border: solid 1px $cinza-3;
+			margin-left: 20px;
+			i {
+				color: $cinza-2
+			}
+			&:hover {
+				box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12);
+			}
+		}
+	}
+	&__item {
+		margin: 0;
+		font-family: $grotesca;
+		font-size: small;
+		transition: border-left 0.15s ease-in-out;
+		&--ativo {
+			border-left: solid 10px $cinza-1;
 			transition: border-left 0.15s ease-in-out;
-			&--ativo {
-				border-left: solid 10px $cinza-1;
-				transition: border-left 0.15s ease-in-out;
-				font-weight: 700;
-				a {
-					color: $preto;
-					transition: color 0.15s ease-in-out;
-				}
+			font-weight: 700;
+			a {
+				color: $preto;
+				transition: color 0.15s ease-in-out;
 			}
 		}
-		&__btn-go-top {
-			position: fixed;
-			padding: 0;
-			bottom: 2rem;
-			right: 2rem;
-			background: #FFF;
-			border-radius: 100%;
-			border: 1px solid $cinza-2;
-			box-shadow: 0 4px 4px $sombra-4;
-			transition: all .1s;
-			display: block;
-			font-family: inherit;
-			z-index: 1;
+	}
+	&__btn-go-top {
+		position: fixed;
+		padding: 0;
+		bottom: 2rem;
+		right: 2rem;
+		background: #FFF;
+		border-radius: 100%;
+		border: 1px solid $cinza-2;
+		box-shadow: 0 4px 4px $sombra-4;
+		transition: all .1s;
+		display: block;
+		font-family: inherit;
+		z-index: 1;
+		width: 42px;
+		height: 42px;
+		&:active {
+			background: $vermelho;
+			color: #FFF;
+			border-color: $vermelho;
+		};
+
+		&:hover {
+			cursor: pointer;
+			&::before { opacity: 1; };
+		};
+
+		i {
+			line-height: 40px;
+			font-size: 22px;
+			height: 50px;
 			width: 42px;
-			height: 42px;
-			&:active {
-				background: $vermelho;
-				color: #FFF;
-				border-color: $vermelho;
-			};
+		};
 
-			&:hover {
-				cursor: pointer;
+		&::before {
+			content: 'Voltar ao topo';
+			position: absolute;
+			margin: 4px 0 0 -108px;
+			line-height: 32px;
+			padding: 0 8px;
+			border-radius: 10px;
+			opacity: 0;
+			transition: all ease-in .1s;
+			font-size: 14px;
+			color: $preto;
+		};
 
-				&::before { opacity: 1; };
-			};
-
-			i {
-				line-height: 40px;
-				font-size: 22px;
-				height: 50px;
-				width: 42px;
-			};
-
-			&::before {
-				content: 'Voltar ao topo';
-				position: absolute;
-				margin: 4px 0 0 -108px;
-				line-height: 32px;
-				padding: 0 8px;
-				border-radius: 10px;
-				opacity: 0;
-				transition: all ease-in .1s;
-				font-size: 14px;
-				color: $preto;
-			};
-
-			@media screen and (max-width: 1200px) {
-				&::before { display: none; };
-			};
-		}
-		&__preloader {
-			padding-left: 1rem;
-			background: white;
-			font-size: small;
-			border: 1px solid $cinza-3;
-			border-left: 0
-		}
+		@media screen and (max-width: 1200px) {
+			&::before { display: none; };
+		};
+	}
+	&__preloader {
+		padding-left: 1rem;
+		background: white;
+		font-size: small;
+		border: 1px solid $cinza-3;
+		border-left: 0
 	}
 }
 </style>

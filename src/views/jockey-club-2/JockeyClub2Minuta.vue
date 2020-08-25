@@ -2,96 +2,100 @@
 	<div class="jockey-club2-minuta" ref="conteudoConsulta">
 		<indice :menuItems="[
 			{
-				title: 'Minuta',
-				scrollTo: '#jockey-club2-minuta__0',
-				indent: 1
-			},
-			{
-				title: 'Art. 1',
+				title: 'Artigo 1',
 				scrollTo: '#art-1',
 				indent: 1
 			},
 			{
-				title: 'Art. 2',
+				title: 'Artigo 2',
 				scrollTo: '#art-2',
 				indent: 1
 			},
 			{
-				title: 'Art. 3',
+				title: 'Artigo 3',
 				scrollTo: '#art-3',
 				indent: 1
 			},
 			{
-				title: 'Art. 4',
+				title: 'Artigo 4',
 				scrollTo: '#art-4',
 				indent: 1
 			},
 			{
-				title: 'Art. 5',
+				title: 'Artigo 5',
 				scrollTo: '#art-5',
 				indent: 1
 			},
 			{
-				title: 'Art. 6',
+				title: 'Artigo 6',
 				scrollTo: '#art-6',
 				indent: 1
 			},
 			{
-				title: 'Art. 7',
+				title: 'Artigo 7',
 				scrollTo: '#art-7',
 				indent: 1
 			},
 			{
-				title: 'Art. 8',
+				title: 'Artigo 8',
 				scrollTo: '#art-8',
 				indent: 1
 			},
 			{
-				title: 'Art. 9',
+				title: 'Artigo 9',
 				scrollTo: '#art-9',
 				indent: 1
 			},
 			{
-				title: 'Art. 10',
+				title: 'Artigo 10',
 				scrollTo: '#art-10',
 				indent: 1
 			},
 			{
-				title: 'Art. 11',
+				title: 'Artigo 11',
 				scrollTo: '#art-11',
 				indent: 1
 			},
 			{
-				title: 'Art. 12',
+				title: 'Artigo 12',
 				scrollTo: '#art-12',
 				indent: 1
 			},
 			{
-				title: 'Art. 13',
+				title: 'Artigo 13',
 				scrollTo: '#art-13',
 				indent: 1
 			},
 			{
-				title: 'Art. 14',
+				title: 'Artigo 14',
 				scrollTo: '#art-14',
 				indent: 1
 			},
 			{
-				title: 'Art. 15',
+				title: 'Artigo 15',
 				scrollTo: '#art-15',
 				indent: 1
 			},
 			{
-				title: 'Art. 16',
+				title: 'Artigo 16',
 				scrollTo: '#art-16',
 				indent: 1
 			},
 			{
-				title: 'Art. 17',
+				title: 'Artigo 17',
 				scrollTo: '#art-17',
 				indent: 1
 			},
-		]" />
+		]"
+		:router-links="[
+			{
+				to: '/jockey-club-2',
+				title: 'Ver consulta',
+				indent: 1
+			}
+		]"
+		:height="'100vh'"
+		/>
 		<router-view />
 		<btn-fixed-url class="jockey-club2-minuta__btn-consulta" url="/jockey-club-2" text="CONSULTA" target="_self" :isRouteLink="true" />
 			<section id="jockey-club2-minuta__0">
@@ -300,6 +304,9 @@ export default {
 		BtnFixedUrl,
 		Indice,
 		CommentsContext
+	},
+	mounted () {
+		this.$scrollTo('#app', 500)
 	}
 }
 </script>

@@ -72,7 +72,7 @@
 			</ul>
 		</aside>
 		<button @click="abreApoio" :class="{ aberto: apoioToggle }">
-			<i class="icon-abrir_esquerda icon"><span>abrir_apoio</span></i>
+			<i class="icon-material icon"><span>material</span></i>
 		</button>
 		</div>
 </template>
@@ -202,7 +202,7 @@ div.Apoio {
 			height: 1rem;
 			width: 1rem;
 			font-weight: normal;
-			font-size: 22px;
+			font-size: 18px;
 		};
 		&:active {
 			background: $vermelho;

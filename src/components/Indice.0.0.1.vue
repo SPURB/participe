@@ -8,7 +8,10 @@
 			:class="{
 			active: menuActive,
 			visible
-			}" v-if='menuItems.length'>
+			}"
+			:style="mobileMenu"
+			v-if='menuItems.length'
+		>
 			<ul class='menu' v-show="menuActive">
 				<li
 					class='menu__item'
@@ -75,6 +78,15 @@ export default {
 			default: 'auto'
 		}
 	},
+	computed: {
+		mobileMenu () {
+			if (window.screen.width < 1200 && this.menuActive) {
+				return 'left: 15px; overflow: auto; height: 50%;'
+			} else {
+				return ''
+			}
+		}
+	},
 	watch: {
 		menuItems (items) {
 			if (items.length) {
@@ -85,6 +97,10 @@ export default {
 	mounted () {
 		if (this.menuItems.length) {
 			this.setupMenuItems(this.menuItems)
+		}
+
+		if (window.screen.width < 1200) {
+			this.menuActive = false
 		}
 
 		if (this.routerLinks.length) {
@@ -156,12 +172,25 @@ export default {
 @import '../variables';
 #indice.indice {
 	position: fixed;
+	width: 60vw;
+	min-width: 300px;
+	max-width: 700px;
+	height: 100vh;
+	min-width: 280px;
+	margin: 0;
+	background: $cinza-3;
+	transition: transform ease-in .2s;
+	&.aberto { transform: translateX(0); box-shadow: -8px 0 8px $sombra-2; };
+
 	display: flex;
 	flex: direction;
 	flex-direction: column;
 	justify-content: space-around;
 	z-index: 4;
 	@media (min-width: 1200px) {
+		position: absolute;
+		height: 100vh;
+    top: 14px;
 		z-index: 0;
 	}
 }
@@ -179,7 +208,8 @@ export default {
 		opacity: 0.1;
 		right: unset;
 		left: calc(2rem -20px);
-		bottom: unset;
+		bottom: 0;
+    height: 100%;
 		box-shadow: unset;
 		flex-direction: column;
 		border: 0;

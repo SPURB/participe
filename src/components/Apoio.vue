@@ -185,7 +185,7 @@ div.Apoio {
 		position: fixed;
 		padding: 0;
 		top: unset;
-		bottom: 6rem;
+		bottom: 9rem;
 		right: 2rem;
 		width: 42px;
 		max-height: 42px;
@@ -202,6 +202,7 @@ div.Apoio {
 			height: 1rem;
 			width: 1rem;
 			font-weight: normal;
+			cursor: pointer;
 			font-size: 18px;
 		};
 		&:active {

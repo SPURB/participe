@@ -1,6 +1,6 @@
 <template>
 	<div class="jockey-club2-minuta" ref="conteudoConsulta">
-		<indice :menuItems="[
+		<indice title="PIU Jockey: Proposta de Regulação Urbanística" :menuItems="[
 			{
 				title: 'Artigo 1',
 				scrollTo: '#art-1',

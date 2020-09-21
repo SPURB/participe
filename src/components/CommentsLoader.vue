@@ -50,6 +50,9 @@ export default {
 	max-width: 700px;
 	margin: 2rem auto;
 	padding: 0;
+
+	h3 { padding: 0 2rem; }
+
 	.comment{
 		background: #F5F5F5;
 		padding: 1rem 1.2rem 0.8rem 1.2rem;

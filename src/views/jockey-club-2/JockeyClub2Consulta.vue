@@ -3893,7 +3893,7 @@
 			<p>As contribuições da sociedade civil, recebidas durante o processo de desenvolvimento deste PIU através do processo participativo (consultas públicas, apresentações no CPM e CADES Butantã e no CMPU) revelaram diversas organizações atuando na região, que ajudaram a modelar a presente proposta e que certamente continuarão ativas e vigilantes após a edição do decreto regulamentador da ZOE Jockey Club.</p>
 		</section>
 
-		<section ref="allComments">
+		<section id="commentsLoader" ref="allComments">
 			<h2 v-show="commentsLoaded" class="titulo" indent="1">Contribuições</h2>
 			<CommentsLoader :attr="estaConsulta"></CommentsLoader>
 			<Comments v-if="commentsLoaded && consultaAtiva" :attr="{ id:commentId(),context:'Comentarios' }"></Comments>

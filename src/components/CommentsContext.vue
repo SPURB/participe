@@ -237,6 +237,7 @@ export default {
 			}
 			.icon-comentario{
 				margin-top: .5rem;
+				font-size: 1.3rem;
 			}
 		}
 		&:hover {

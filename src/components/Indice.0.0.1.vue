@@ -13,6 +13,7 @@
 			v-if='menuItems.length'
 		>
 			<ul class='menu' v-show="menuActive">
+				<li>{{ title }}</li>
 				<li
 					class='menu__item'
 					v-for="({ title, scrollTo }, index) in menuItems"
@@ -43,7 +44,12 @@
 			</button>
 		</div>
 		<div v-else class="menu__preloader">Carregando...</div>
-		<button class="menu__btn-go-top" v-scroll-to="'#app'"><i class="icon-seta_cima icon"><span>arrow_upward</span></i></button>
+		<button class="menu__btn-go-top" v-scroll-to="'#app'">
+			<i class="icon-seta_cima icon"><span>arrow_upward</span></i>
+		</button>
+		<button class="menu__btn-go-contrib" v-scroll-to="'#commentsLoader'">
+			<i class="icon-dialogo icon"><span>dialogo</span></i>
+		</button>
 	</nav>
 </template>
 <script>
@@ -76,12 +82,16 @@ export default {
 		height: {
 			type: String,
 			default: 'auto'
+		},
+		title: {
+			type: String,
+			default: ''
 		}
 	},
 	computed: {
 		mobileMenu () {
 			if (window.screen.width < 1200 && this.menuActive) {
-				return 'left: 15px; overflow: auto; height: 50%;'
+				return 'left: 15px; overflow: auto; height: 50%; background: #FFFFFF;'
 			} else {
 				return ''
 			}
@@ -112,6 +122,7 @@ export default {
 
 			new IntersectionObserver((entries) => {
 				entries.forEach(({ isIntersecting }) => {
+					console.log(!isIntersecting)
 					this.visible = !isIntersecting
 				})
 			}).observe(cabecalho)
@@ -175,12 +186,10 @@ export default {
 	width: 60vw;
 	min-width: 300px;
 	max-width: 700px;
-	height: 100vh;
 	min-width: 280px;
 	margin: 0;
-	background: $cinza-3;
+	// background: $cinza-3;
 	transition: transform ease-in .2s;
-	&.aberto { transform: translateX(0); box-shadow: -8px 0 8px $sombra-2; };
 
 	display: flex;
 	flex: direction;
@@ -198,9 +207,9 @@ export default {
 .menu-container {
 	display: flex;
 	position: fixed;
-	right: 35px;
-	bottom: 165px;
-	background: white;
+	right: 32px;
+  bottom: 200px;
+	// background: white;
 	border: 1px solid $cinza-3;
 	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12);
 	transition: all 0.25s ease-in-out;
@@ -227,10 +236,38 @@ export default {
 	flex-direction: column;
 	padding: 0.5rem 0;
 	margin: 0;
+	width: 85%;
 	margin-right: 6px;
 	list-style-type: none;
 	line-height: 1.7;
+
+	@media (min-width: 1200px) {
+		overflow: auto;
+		padding-right: 5px;
+		&::-webkit-scrollbar-track¨{
+			-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+			border-radius: 10px;
+			background-color: #F5F5F5;
+		}
+
+		&::-webkit-scrollbar {
+			width: 7px;
+			background-color: #F5F5F5;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			border-radius: 10px;
+			-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+			background-color: #555;
+		}
+	}
+
 	a { color: $preto }
+
+	li:first-child {
+		font-weight: 700;
+		padding-left: 10px;
+	}
 
 	&__toggler {
 		cursor: pointer;
@@ -252,6 +289,7 @@ export default {
 			}
 		}
 		@media (min-width: 1200px) {
+			display: none;
 			background: $cinza-3;
 			border: solid 1px $cinza-3;
 			margin-left: 20px;
@@ -278,10 +316,10 @@ export default {
 			}
 		}
 	}
-	&__btn-go-top {
+
+	&__btn-go-top, &__btn-go-contrib {
 		position: fixed;
 		padding: 0;
-		bottom: 2rem;
 		right: 2rem;
 		background: #FFF;
 		border-radius: 100%;
@@ -297,20 +335,27 @@ export default {
 			background: $vermelho;
 			color: #FFF;
 			border-color: $vermelho;
-		};
+		}
 
 		&:hover {
 			cursor: pointer;
 			&::before { opacity: 1; };
-		};
+		}
 
 		i {
 			line-height: 40px;
 			font-size: 22px;
 			height: 50px;
 			width: 42px;
-		};
+		}
 
+		@media screen and (max-width: 1200px) {
+			&::before { display: none; }
+		}
+	}
+
+	&__btn-go-top {
+		bottom: 5rem;
 		&::before {
 			content: 'Voltar ao topo';
 			position: absolute;
@@ -322,10 +367,21 @@ export default {
 			transition: all ease-in .1s;
 			font-size: 14px;
 			color: $preto;
-		};
-
-		@media screen and (max-width: 1200px) {
-			&::before { display: none; };
+		}
+	}
+	&__btn-go-contrib {
+		bottom: 1.5rem;
+		&::before {
+			content: 'Ver contribuições';
+			position: absolute;
+			margin: 4px 0 0 -126px;
+			line-height: 32px;
+			padding: 0 8px;
+			border-radius: 10px;
+			opacity: 0;
+			transition: all ease-in .1s;
+			font-size: 14px;
+			color: $preto;
 		};
 	}
 	&__preloader {

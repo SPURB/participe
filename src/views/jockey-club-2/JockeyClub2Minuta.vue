@@ -1,103 +1,111 @@
 <template>
 	<div class="jockey-club2-minuta" ref="conteudoConsulta">
-		<indice title="PIU Jockey: Proposta de Regulação Urbanística" :menuItems="[
-			{
-				title: 'Artigo 1',
-				scrollTo: '#art-1',
-				indent: 1
-			},
-			{
-				title: 'Artigo 2',
-				scrollTo: '#art-2',
-				indent: 1
-			},
-			{
-				title: 'Artigo 3',
-				scrollTo: '#art-3',
-				indent: 1
-			},
-			{
-				title: 'Artigo 4',
-				scrollTo: '#art-4',
-				indent: 1
-			},
-			{
-				title: 'Artigo 5',
-				scrollTo: '#art-5',
-				indent: 1
-			},
-			{
-				title: 'Artigo 6',
-				scrollTo: '#art-6',
-				indent: 1
-			},
-			{
-				title: 'Artigo 7',
-				scrollTo: '#art-7',
-				indent: 1
-			},
-			{
-				title: 'Artigo 8',
-				scrollTo: '#art-8',
-				indent: 1
-			},
-			{
-				title: 'Artigo 9',
-				scrollTo: '#art-9',
-				indent: 1
-			},
-			{
-				title: 'Artigo 10',
-				scrollTo: '#art-10',
-				indent: 1
-			},
-			{
-				title: 'Artigo 11',
-				scrollTo: '#art-11',
-				indent: 1
-			},
-			{
-				title: 'Artigo 12',
-				scrollTo: '#art-12',
-				indent: 1
-			},
-			{
-				title: 'Artigo 13',
-				scrollTo: '#art-13',
-				indent: 1
-			},
-			{
-				title: 'Artigo 14',
-				scrollTo: '#art-14',
-				indent: 1
-			},
-			{
-				title: 'Artigo 15',
-				scrollTo: '#art-15',
-				indent: 1
-			},
-			{
-				title: 'Artigo 16',
-				scrollTo: '#art-16',
-				indent: 1
-			},
-			{
-				title: 'Artigo 17',
-				scrollTo: '#art-17',
-				indent: 1
-			},
-		]"
-		:router-links="[
-			{
-				to: '/jockey-club-2',
-				title: 'Ver consulta',
-				indent: 1
-			}
-		]"
-		:height="'100vh'"
+		<indice
+			title="PIU Jockey: Proposta de Regulação Urbanística"
+			:menuItems="[
+				{
+					title: 'Artigo 1',
+					scrollTo: '#art-1',
+					indent: 1
+				},
+				{
+					title: 'Artigo 2',
+					scrollTo: '#art-2',
+					indent: 1
+				},
+				{
+					title: 'Artigo 3',
+					scrollTo: '#art-3',
+					indent: 1
+				},
+				{
+					title: 'Artigo 4',
+					scrollTo: '#art-4',
+					indent: 1
+				},
+				{
+					title: 'Artigo 5',
+					scrollTo: '#art-5',
+					indent: 1
+				},
+				{
+					title: 'Artigo 6',
+					scrollTo: '#art-6',
+					indent: 1
+				},
+				{
+					title: 'Artigo 7',
+					scrollTo: '#art-7',
+					indent: 1
+				},
+				{
+					title: 'Artigo 8',
+					scrollTo: '#art-8',
+					indent: 1
+				},
+				{
+					title: 'Artigo 9',
+					scrollTo: '#art-9',
+					indent: 1
+				},
+				{
+					title: 'Artigo 10',
+					scrollTo: '#art-10',
+					indent: 1
+				},
+				{
+					title: 'Artigo 11',
+					scrollTo: '#art-11',
+					indent: 1
+				},
+				{
+					title: 'Artigo 12',
+					scrollTo: '#art-12',
+					indent: 1
+				},
+				{
+					title: 'Artigo 13',
+					scrollTo: '#art-13',
+					indent: 1
+				},
+				{
+					title: 'Artigo 14',
+					scrollTo: '#art-14',
+					indent: 1
+				},
+				{
+					title: 'Artigo 15',
+					scrollTo: '#art-15',
+					indent: 1
+				},
+				{
+					title: 'Artigo 16',
+					scrollTo: '#art-16',
+					indent: 1
+				},
+				{
+					title: 'Artigo 17',
+					scrollTo: '#art-17',
+					indent: 1
+				},
+			]"
+			:router-links="[
+				{
+					to: '/jockey-club-2',
+					title: 'Ver projeto de intervenção urbana',
+					indent: 1
+				}
+			]"
+			:height="'100vh'"
 		/>
 		<router-view />
-		<btn-fixed-url class="jockey-club2-minuta__btn-consulta" url="/jockey-club-2" text="CONSULTA" target="_self" :isRouteLink="true" />
+		<btn-fixed-url
+			class="jockey-club2-minuta__btn-consulta"
+			url="/jockey-club-2"
+			text="Projeto de Intervenção Urbana"
+			target="_self"
+			:isRouteLink="true"
+		/>
 			<section id="jockey-club2-minuta__0">
 					<h2>Minuta de Decreto</h2>
 					<h6 class="intro-lei">Aprova o Projeto de Intervenção Urbana para a Zona de Ocupação Especial do Jockey Club – PIU-Jockey Club, e dá outras providências.</h6>
@@ -124,6 +132,7 @@
 					<p><strong>Art. 2º.</strong>	O Perímetro de Regulação Urbanística da ZOE Jockey Club – PRU Jockey Club, demarcado no Mapa 01 deste Decreto, compreende o Lote 0001, Quadra 058 do Setor 200 e subdivide-se em Setor de Preservação e Setor de Transformação, abrangendo os seguintes Subsetores:</p>
 					<ol class="romanos">
 							<li>Subsetor Pistas de Corrida;</li>
+							<li>Subsetor Pião do Prado;</li>
 							<li>Subsetor Tribunas;</li>
 							<li>Subsetor Vila Hípica;</li>
 							<li>Subsetor Lineu de Paula Machado;</li>
@@ -166,7 +175,6 @@
 			<comments-context :id="6" context="Artigo 6">
 				<p><strong>Art. 6º.</strong>A implantação de novas edificações no Perímetro de Regulação Urbanística da ZOE Jockey Club – PRU Jockey Club, anteriormente ao parcelamento da gleba, está dispensada do atendimento das dimensões máximas de lote, nos termos da autorização conferida pelo art. 42 da Lei nº 16.402 de 2016 e da regulamentação conferida neste Decreto.</p>
 				<ul class="no-bullets">
-					<li><strong>§ 1º</strong> Em caso de desmembramento da gleba abrangida pelo PRU Jockey Club, deverá ser mantida a subdivisão entre os Subsetores compreendidos nos Setores de Preservação e de Transformação e respeitados os parâmetros constantes nos Quadros anexos ao presente Decreto, com a finalidade de resguardar as parcelas de relevante interesse histórico e paisagístico, promover a transformação urbanística de subsetores específicos e manter a unicidade funcional do Hipódromo de Cidade Jardim.</li>
 					<li><strong>§ 1º</strong> Em caso de desmembramento da gleba abrangida pelo PRU Jockey Club, deverá ser mantida a subdivisão entre os Subsetores compreendidos nos Setores de Preservação e de Transformação e respeitados os parâmetros constantes nos Quadros anexos ao presente Decreto, com a finalidade de resguardar as parcelas de relevante interesse histórico e paisagístico, promover a transformação urbanística de subsetores específicos e manter a unicidade funcional do Hipódromo de Cidade Jardim.</li>
 					<li><strong>§ 2º</strong> A aprovação do parcelamento para a gleba compreendida no PRU Jockey Club está condicionada ao cumprimento dos percentuais mínimos de destinação de área pública e das dimensões máximas de lote para cada Setor, fixados no Quadro 1 deste Decreto.</li>
 					<li><strong>§ 3º</strong> Desde que mantida a subdivisão entre os Subsetores de Preservação e de Transformação, cada Subsetor do PRU Jockey Club poderá ser individualmente loteado, adotando-se o regramento deste Decreto e aquele constante na Lei nº 16.402 de 2016.</li>
@@ -216,10 +224,10 @@
 					<li>vedação de instalação de fachada ativa.</li>
 				</ol>
 
-				<p><b>§ 2º</b> os Subsetores Pistas de Corrida e Vila Hípica, qualquer alteração relativa à vedação por muros deverá ser aprovada pela Companhia de Engenharia de Tráfego – CET, a fim de evitar a intervisibilidade entre o Hipódromo e a Av. Magalhães de Castro.</p>
+				<p><b>§ 2º</b> Nos Subsetores Pistas de Corrida e Vila Hípica, qualquer alteração relativa à vedação por muros deverá ser aprovada pela Companhia de Engenharia de Tráfego – CET, a fim de evitar a intervisibilidade entre o Hipódromo e a Av. Magalhães de Castro.</p>
 
 				<p><b>§ 3º</b> A execução de qualquer intervenção nos Setores de Preservação e de Transformação, independentemente dos parâmetros estabelecidos para as zonas mencionadas no “caput”, ficará condicionada à aprovação pelos órgãos de preservação do patrimônio histórico nas esferas municipal e estadual, conforme determinação constante nas resoluções de tombamento da ZOE Jockey Club.</p>
-				<p><b>§ 4º</b> No caso de implantação de vedações internas entre os subsetores do PRU Jockey Club, é vedada a construção de elementos construtivos opacos.</p>
+				<p><b>§ 4º</b> No caso de implantação de vedações internas entre os subsetores do PRU Jockey Club, será vedada a construção de elementos construtivos opacos.</p>
 			</comments-context>
 		</section>
 		<section id="art-12">
@@ -239,7 +247,7 @@
 			<comments-context :id="14" context="Artigo 14">
 				<p><b>Art. 14.</b>A implantação de novas edificações no Setor de Transformação do PRU Jockey Club anteriormente ao parcelamento da gleba ficará sujeita ao atendimento das condições de instalação aplicáveis ao conjunto da ZOE Jockey Club, cabendo à Companhia de Engenharia de Transportes - CET definir tais parâmetros mediante solicitação do empreendedor.</p>
 				<p><b>§ 1º</b>Em caso de parcelamento dos Subsetores do Setor de Transformação do PRU Jockey Club, a implantação de novas edificações neste Subsetores ficará sujeita aos parâmetros de condições de instalação por subcategoria de uso constante no Quadro 4A da Lei nº 16.402 de 2016.</p>
-				<p><b>§ 2º</b>No Setor de Preservação, mesmo em caso de parcelamento da gleba, fica admitida a adoção de soluções para a instalação dos usos que atendam ao conjunto dos Subsetores deste Setor, sendo também neste caso, necessária a análise da CET para definição dos respectivos parâmetros.</p>
+				<p><b>§ 2º</b>§ 2º No Setor de Preservação, mesmo em caso de parcelamento da gleba, fica admitida a adoção de soluções para a instalação dos usos que atendam ao conjunto dos Subsetores deste Setor, sendo necessária a análise da CET para definição dos respectivos parâmetros.</p>
 			</comments-context>
 		</section>
 		<section id="art-15">
@@ -264,12 +272,42 @@
 			<comments-context :id="16" context="Artigo 16">
 				<p><b>Art. 16.</b> Integram o presente Decreto os seguintes mapas e quadros abaixo relacionados:</p>
 				<ol class="romanos">
-					<li><b>Mapa 01</b> – Perímetro de Regulação Urbanística e Perímetro dos Setores e Subsetores de Preservação e de Transformação;</li>
-					<li><b>Quadro 01</b> – Percentuais de destinação de área pública e de dimensões máximas de lote por Subsetores;</li>
-					<li><b>Quadro 02</b> - Parâmetros de Ocupação e Fatores de Planejamento por Subsetores;</li>
-					<li><b>Quadro 2A</b> – Parâmetros de Quota Ambiental: Pontuação mínima e Taxa de Permeabilidade Mínima;</li>
-					<li><b>Quadro 3</b> – Uso permitidos nos Subsetores;</li>
-					<li><b>Quadro 3A</b> – Parâmetros de Incomodidade.</li>
+					<li>
+						<b>Mapa 01</b> – Perímetro de Regulação Urbanística e Perímetro dos Setores e Subsetores de Preservação e de Transformação;
+						<a :href="`${base}Anexo1_Mapa1.pdf`" download>
+							<i class="icon-pdf icon"><span>pdf</span></i>
+						</a>
+					</li>
+					<li>
+						<b>Quadro 01</b> – Percentuais de destinação de área pública e de dimensões máximas de lote por Subsetores;
+						<a :href="`${base}Anexo2_Quadro1.pdf`" download>
+							<i class="icon-pdf icon"><span>pdf</span></i>
+						</a>
+					</li>
+					<li>
+						<b>Quadro 02</b> - Parâmetros de Ocupação e Fatores de Planejamento por Subsetores;
+						<a :href="`${base}Anexo3_Quadro2.pdf`" download>
+							<i class="icon-pdf icon"><span>pdf</span></i>
+						</a>
+					</li>
+					<li>
+						<b>Quadro 2A</b> – Parâmetros de Quota Ambiental: Pontuação mínima e Taxa de Permeabilidade Mínima;
+						<a :href="`${base}Anexo4_Quadro2A.pdf`" download>
+							<i class="icon-pdf icon"><span>pdf</span></i>
+						</a>
+					</li>
+					<li>
+						<b>Quadro 3</b> – Uso permitidos nos Subsetores;
+						<a :href="`${base}Anexo5_Quadro3.pdf`" download>
+							<i class="icon-pdf icon"><span>pdf</span></i>
+						</a>
+					</li>
+					<li>
+						<b>Quadro 3A</b> – Parâmetros de Incomodidade.
+						<a :href="`${base}Anexo6_Quadro3A.pdf`" download>
+							<i class="icon-pdf icon"><span>pdf</span></i>
+						</a>
+					</li>
 				</ol>
 				<p><b>Parágrafo único.</b>Os mapas e quadros integrantes deste Decreto correspondem aos arquivos digitais da Secretaria Municipal de Desenvolvimento Urbano - SMDU, assinados eletronicamente, disponibilizados no Portal da Prefeitura do Município de São Paulo na Internet e publicados no Diário Oficial da Cidade.</p>
 			</comments-context>
@@ -287,6 +325,7 @@ import BtnFixedUrl from '@/components/BtnFixedUrl'
 import Indice from '@/components/Indice.0.0.1'
 import { consultasCommons } from '@/mixins/consultasCommons'
 import CommentsContext from '@/components/CommentsContext'
+import { mapGetters } from 'vuex'
 
 export default {
 	name: 'JockeyClub2Minuta',
@@ -305,6 +344,12 @@ export default {
 		Indice,
 		CommentsContext
 	},
+	computed: {
+		...mapGetters(['basePath']),
+		base () {
+			return `${this.basePath}arquivos/jockey-club-2/anexos/`
+		}
+	},
 	mounted () {
 		this.$scrollTo('#app', 500)
 	}
@@ -319,7 +364,10 @@ export default {
 	&__btn-consulta {
 		z-index: 3;
 	}
-
+	a {
+		cursor: pointer;
+		i {	cursor: pointer; }
+	}
 	.form_title {
 		padding: 0
 	}

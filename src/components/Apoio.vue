@@ -185,7 +185,8 @@ div.Apoio {
 		position: fixed;
 		padding: 0;
 		top: unset;
-		bottom: 9rem;
+		bottom: 12rem;
+		z-index: 3 !important;
 		right: 2rem;
 		width: 42px;
 		max-height: 42px;

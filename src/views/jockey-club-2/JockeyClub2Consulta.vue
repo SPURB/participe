@@ -4,164 +4,171 @@
 			<template slot="titulo"><div>PIU Jockey: Proposta de Regulação Urbanística</div></template>
 			<template slot="subtitulo"><div>Segunda consulta pública</div></template>
 		</PageTop>
-		<indice :menuItems="[
-			{
-				title: 'Apresentação',
-				scrollTo: '#consulta-0',
-				indent: 1
-			},
-			{
-				title: '1. Etapas do PIU Jockey Club',
-				scrollTo: '#consulta-1',
-				indent: 1
-			},
-			{
-				title: '2. Informações básicas do PIU Jockey',
-				scrollTo: '#consulta-2',
-				indent: 1
-			},
-			{
-				title: '2.1 Definição do perímetro de intervenção',
-				scrollTo: '#consulta-2-1',
-				indent: 2
-			},
-			{
-				title: '2.2 Características básicas da proposta',
-				scrollTo: '#consulta-2-2',
-				indent: 2
-			},
-			{
-				title: '2.3 Fases de elaboração do projeto',
-				scrollTo: '#consulta-2-3',
-				indent: 2
-			},
-			{
-				title: '2.4 Revisões após a publicação',
-				scrollTo: '#consulta-2-4',
-				indent: 2
-			},
-			{
-				title: '3. Síntese das contribuições da etapa prévia',
-				scrollTo: '#consulta-3',
-				indent: 1
-			},
-			{
-				title: '4. Proposta de ordenamento urbanístico',
-				scrollTo: '#consulta-4',
-				indent: 1
-			},
-			{
-				title: '4.1	Situação fundiária',
-				scrollTo: '#consulta-4-1',
-				indent: 2
-			},
-			{
-				title: '4.2	Tombamento',
-				scrollTo: '#consulta-4-2',
-				indent: 2
-			},
-			{
-				title: '4.3	Transferência do direito de construir',
-				scrollTo: '#consulta-4-3',
-				indent: 2
-			},
-			{
-				title: '4.4	Plano Diretor do Jockey Club de São Paulo 2014-2023',
-				scrollTo: '#consulta-4-4',
-				indent: 2
-			},
-			{
-				title: '4.5	Partido urbanístico',
-				scrollTo: '#consulta-4-5',
-				indent: 2
-			},
-			{
-				title: '4.6	Setorização',
-				scrollTo: '#consulta-4-6',
-				indent: 2
-			},
-			{
-				title: '4.7	Síntese das contribuições do grupo técnico',
-				scrollTo: '#consulta-4-7',
-				indent: 2
-			},
-			{
-				title: '4.8	Cenários',
-				scrollTo: '#consulta-4-8',
-				indent: 2
-			},
-			{
-				title: '4.9 Parcelamento',
-				scrollTo: '#consulta-4-9',
-				indent: 2
-			},
-			{
-				title: '4.10 Ocupação',
-				scrollTo: '#consulta-4-10',
-				indent: 2
-			},
-			{
-				title: '4.11 Uso',
-				scrollTo: '#consulta-4-11',
-				indent: 2
-			},
-			{
-				title: '5. Modelagem Econômica',
-				scrollTo: '#consulta-5',
-				indent: 1
-			},
-			{
-				title: '5.1. Potencial construtivo adicional no PIU',
-				scrollTo: '#consulta-5-1',
-				indent: 2
-			},
-			{
-				title: '5.2. Oferta e demanda de áreas transformáveis',
-				scrollTo: '#consulta-5-2',
-				indent: 2
-			},
-			{
-				title: '5.3 Estudo vocacional dos setores de transformação',
-				scrollTo: '#consulta-5-3',
-				indent: 2
-			},
-			{
-				title: '5.4 Estudo de viabilidade',
-				scrollTo: '#consulta-5-4',
-				indent: 2
-			},
-			{
-				title: '5.5. Potencial Construtivo Passível de Transferência',
-				scrollTo: '#consulta-5-5',
-				indent: 2
-			},
-			{
-				title: '5.6. Fluxo de lançamentos e Outorga Onerosa no tempo',
-				scrollTo: '#consulta-5-6',
-				indent: 2
-			},
-			{
-				title: '6. Modelo de Gestão democrática',
-				scrollTo: '#consulta-6',
-				indent: 1
-			},
-		]"
-		:router-links="[
-			{
-				to: '/jockey-club-2/minuta',
-				title: 'Ver minuta',
-				indent: 1
-			}
-		]"
+		<indice
+			:menuItems="[
+				{
+					title: 'Apresentação',
+					scrollTo: '#consulta-0',
+					indent: 1
+				},
+				{
+					title: '1. Etapas do PIU Jockey Club',
+					scrollTo: '#consulta-1',
+					indent: 1
+				},
+				{
+					title: '2. Informações básicas do PIU Jockey',
+					scrollTo: '#consulta-2',
+					indent: 1
+				},
+				{
+					title: '2.1 Definição do perímetro de intervenção',
+					scrollTo: '#consulta-2-1',
+					indent: 2
+				},
+				{
+					title: '2.2 Características básicas da proposta',
+					scrollTo: '#consulta-2-2',
+					indent: 2
+				},
+				{
+					title: '2.3 Fases de elaboração do projeto',
+					scrollTo: '#consulta-2-3',
+					indent: 2
+				},
+				{
+					title: '2.4 Revisões após a publicação',
+					scrollTo: '#consulta-2-4',
+					indent: 2
+				},
+				{
+					title: '3. Síntese das contribuições da etapa prévia',
+					scrollTo: '#consulta-3',
+					indent: 1
+				},
+				{
+					title: '4. Proposta de ordenamento urbanístico',
+					scrollTo: '#consulta-4',
+					indent: 1
+				},
+				{
+					title: '4.1	Situação fundiária',
+					scrollTo: '#consulta-4-1',
+					indent: 2
+				},
+				{
+					title: '4.2	Tombamento',
+					scrollTo: '#consulta-4-2',
+					indent: 2
+				},
+				{
+					title: '4.3	Transferência do direito de construir',
+					scrollTo: '#consulta-4-3',
+					indent: 2
+				},
+				{
+					title: '4.4	Plano Diretor do Jockey Club de São Paulo 2014-2023',
+					scrollTo: '#consulta-4-4',
+					indent: 2
+				},
+				{
+					title: '4.5	Partido urbanístico',
+					scrollTo: '#consulta-4-5',
+					indent: 2
+				},
+				{
+					title: '4.6	Setorização',
+					scrollTo: '#consulta-4-6',
+					indent: 2
+				},
+				{
+					title: '4.7	Síntese das contribuições do grupo técnico',
+					scrollTo: '#consulta-4-7',
+					indent: 2
+				},
+				{
+					title: '4.8	Cenários',
+					scrollTo: '#consulta-4-8',
+					indent: 2
+				},
+				{
+					title: '4.9 Parcelamento',
+					scrollTo: '#consulta-4-9',
+					indent: 2
+				},
+				{
+					title: '4.10 Ocupação',
+					scrollTo: '#consulta-4-10',
+					indent: 2
+				},
+				{
+					title: '4.11 Uso',
+					scrollTo: '#consulta-4-11',
+					indent: 2
+				},
+				{
+					title: '5. Modelagem Econômica',
+					scrollTo: '#consulta-5',
+					indent: 1
+				},
+				{
+					title: '5.1. Potencial construtivo adicional no PIU',
+					scrollTo: '#consulta-5-1',
+					indent: 2
+				},
+				{
+					title: '5.2. Oferta e demanda de áreas transformáveis',
+					scrollTo: '#consulta-5-2',
+					indent: 2
+				},
+				{
+					title: '5.3 Estudo vocacional dos setores de transformação',
+					scrollTo: '#consulta-5-3',
+					indent: 2
+				},
+				{
+					title: '5.4 Estudo de viabilidade',
+					scrollTo: '#consulta-5-4',
+					indent: 2
+				},
+				{
+					title: '5.5. Potencial Construtivo Passível de Transferência',
+					scrollTo: '#consulta-5-5',
+					indent: 2
+				},
+				{
+					title: '5.6. Fluxo de lançamentos e Outorga Onerosa no tempo',
+					scrollTo: '#consulta-5-6',
+					indent: 2
+				},
+				{
+					title: '6. Modelo de Gestão democrática',
+					scrollTo: '#consulta-6',
+					indent: 1
+				},
+			]"
+			:router-links="[
+				{
+					to: '/jockey-club-2/minuta',
+					title: 'Ver minuta de decreto',
+					indent: 1
+				}
+			]"
+			:show-contrib="true"
 		/>
 		<btn-fixed-url
 			class="jockey-club2-consulta__btn-fixed"
 			url="/jockey-club-2/minuta"
-			text="MINUTA"
+			text="Minuta de Decreto"
 			target="_self"
 			:isRouteLink="true"
 		/>
 		<section id="consulta-0">
+			<p>A Prefeitura do Município de São Paulo, por intermédio da Secretaria Municipal de Desenvolvimento Urbano (SMDU) e da São Paulo Urbanismo (SP Urbanismo) apresenta nesta Consulta Pública a proposta do Projeto de Intervenção Urbana do Hipódromo de Cidade Jardim (PIU Jockey Club), o qual define os parâmetros urbanísticos aplicáveis à Zona de Ocupação Especial onde se localiza este equipamento.</p>
+			<p>Na Primeira Consulta Pública, foram apresentados os elementos prévios ao desenvolvimento do projeto, os Diagnósticos Socio-territorial e Ambiental e o Programa de Interesse Público, para que o público pudesse contribuir e subsidiar as propostas que estão sendo agora apresentadas.</p>
+			<p>Esta Segunda Consulta Pública, que se inicia em 28 de setembro, com término previsto para o dia 27 de outubro de 2020, apresenta a <b>Proposta de Ordenamento Urbanístico</b>, a <b>Modelagem Econômica</b>, o <b>Modelo de Gestão Democrática</b> e a <b>Minuta do Decreto Regulamentador do PIU Jockey Club</b>.</p>
+			<p>O Processo de elaboração do PIU Jockey Club segue os passos definidos no Decreto Municipal n° 56.901/2016, que regulamenta os projetos de intervenção urbana e que prevê a participação da população em todas as etapas de seu desenvolvimento. Desta forma, as contribuições a serem colhidas nesta Consulta Pública irão colaborar para o seu aperfeiçoamento, assim como aquelas advindas de Audiência Pública e dos debates nos conselhos municipais cujas competências estejam associadas à política urbana do município.</p>
+
 			<h2>Apresentação</h2>
 			<comments v-if="consultaAtiva" :attr="{ id: 1000, context:'Consulta | Apresentação' }" />
 
@@ -3950,6 +3957,7 @@ export default {
 	padding: 0
 }
 .jockey-club2-consulta {
+	p a {	word-break: break-all; }
 	&__table {
 		margin: 1rem auto;
 		max-width: 700px;

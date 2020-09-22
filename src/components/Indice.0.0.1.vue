@@ -9,7 +9,7 @@
 			active: menuActive,
 			visible
 			}"
-			:style="mobileMenu"
+			:style="endPageCss"
 			v-if='menuItems.length'
 		>
 			<ul class='menu' v-show="menuActive">
@@ -47,7 +47,7 @@
 		<button class="menu__btn-go-top" v-scroll-to="'#app'">
 			<i class="icon-seta_cima icon"><span>arrow_upward</span></i>
 		</button>
-		<button class="menu__btn-go-contrib" v-scroll-to="'#commentsLoader'">
+		<button v-if="showContrib" class="menu__btn-go-contrib" v-scroll-to="'#commentsLoader'">
 			<i class="icon-dialogo icon"><span>dialogo</span></i>
 		</button>
 	</nav>
@@ -58,6 +58,7 @@ export default {
 	data () {
 		return {
 			menuActive: true,
+			endPageCss: '',
 			visible: false
 		}
 	},
@@ -83,24 +84,31 @@ export default {
 			type: String,
 			default: 'auto'
 		},
+		showContrib: {
+			type: Boolean,
+			default: false
+		},
 		title: {
 			type: String,
 			default: ''
 		}
 	},
 	computed: {
-		mobileMenu () {
-			if (window.screen.width < 1200 && this.menuActive) {
-				return 'left: 15px; overflow: auto; height: 50%; background: #FFFFFF;'
-			} else {
-				return ''
-			}
+		isMobile () {
+			return window.screen.width < 1200
 		}
 	},
 	watch: {
 		menuItems (items) {
 			if (items.length) {
 				this.setupMenuItems(items)
+			}
+		},
+		menuActive () {
+			if (this.isMobile && this.menuActive) {
+				this.endPageCss = 'left: 15px; overflow: auto; height: 50%; background: #FFFFFF;'
+			} else {
+				this.endPageCss = ''
 			}
 		}
 	},
@@ -122,13 +130,18 @@ export default {
 
 			new IntersectionObserver((entries) => {
 				entries.forEach(({ isIntersecting }) => {
-					console.log(!isIntersecting)
 					this.visible = !isIntersecting
 				})
 			}).observe(cabecalho)
 		} catch {
 			this.visible = true
 		}
+	},
+	created () {
+		if (!this.isMobile) window.addEventListener('scroll', this.handleScroll)
+	},
+	destroyed () {
+		if (!this.isMobile) window.removeEventListener('scroll', this.handleScroll)
 	},
 	methods: {
 		setObsever (scrollTo) {
@@ -175,6 +188,14 @@ export default {
 
 		menuToggle () {
 			this.menuActive = !this.menuActive
+		},
+
+		handleScroll (event) {
+			if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+				this.endPageCss = 'top: 0; height: calc(100% - 90px);'
+			} else {
+				this.endPageCss = 'height: 100%'
+			}
 		}
 	}
 }
@@ -208,7 +229,7 @@ export default {
 	display: flex;
 	position: fixed;
 	right: 32px;
-  bottom: 200px;
+  bottom: 15rem;
 	// background: white;
 	border: 1px solid $cinza-3;
 	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12);
@@ -251,14 +272,14 @@ export default {
 		}
 
 		&::-webkit-scrollbar {
-			width: 7px;
+			width: 4px;
 			background-color: #F5F5F5;
 		}
 
 		&::-webkit-scrollbar-thumb {
 			border-radius: 10px;
 			-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-			background-color: #555;
+			background-color: rgba(85, 85, 85, 0.775);
 		}
 	}
 
@@ -331,6 +352,9 @@ export default {
 		z-index: 1;
 		width: 42px;
 		height: 42px;
+
+		i { cursor: pointer }
+
 		&:active {
 			background: $vermelho;
 			color: #FFF;
@@ -355,7 +379,7 @@ export default {
 	}
 
 	&__btn-go-top {
-		bottom: 5rem;
+		bottom: 9rem;
 		&::before {
 			content: 'Voltar ao topo';
 			position: absolute;
@@ -370,7 +394,7 @@ export default {
 		}
 	}
 	&__btn-go-contrib {
-		bottom: 1.5rem;
+		bottom: 6rem;
 		&::before {
 			content: 'Ver contribuições';
 			position: absolute;

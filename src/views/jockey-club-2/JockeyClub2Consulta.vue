@@ -1,7 +1,7 @@
 <template>
 	<div class="jockey-club2-consulta" ref="conteudoConsulta">
 		<PageTop background_image_src="arquivos/capas/jockey2_244w.jpg" :esta_consulta="estaConsulta">
-			<template slot="titulo"><div>PIU Jockey Club 2</div></template>
+			<template slot="titulo"><div>PIU Jockey: Proposta de Regulação Urbanística</div></template>
 			<template slot="subtitulo"><div>Segunda consulta pública</div></template>
 		</PageTop>
 		<indice

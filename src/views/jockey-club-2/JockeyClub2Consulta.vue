@@ -1,7 +1,7 @@
 <template>
 	<div class="jockey-club2-consulta" ref="conteudoConsulta">
 		<PageTop background_image_src="arquivos/capas/jockey2_244w.jpg" :esta_consulta="estaConsulta">
-			<template slot="titulo"><div>PIU Jockey: Proposta de Regulação Urbanística</div></template>
+			<template slot="titulo"><div>PIU Jockey Club 2</div></template>
 			<template slot="subtitulo"><div>Segunda consulta pública</div></template>
 		</PageTop>
 		<indice
@@ -174,7 +174,7 @@
 
 			<p>O lote onde est&aacute; situado o Hip&oacute;dromo de Cidade Jardim foi classificado como uma Zona de Ocupa&ccedil;&atilde;o Especial &ndash; ZOE pela Lei de Zoneamento (Lei de Parcelamento, Uso e Ocupa&ccedil;&atilde;o do Solo &ndash; LPUOS - n&ordm; 16.402/2016). As Zonas de Ocupa&ccedil;&atilde;o Especial s&atilde;o por&ccedil;&otilde;es do territ&oacute;rio destinadas a abrigar predominantemente atividades que, por suas caracter&iacute;sticas &uacute;nicas, necessitem de par&acirc;metros especiais de parcelamento, uso e ocupa&ccedil;&atilde;o do solo, como aeroportos, centros de conven&ccedil;&atilde;o, grandes &aacute;reas de lazer, recrea&ccedil;&atilde;o e esportes.</p>
 
-			<p>O artigo 15 da Lei de Zoneamento determina que os par&acirc;metros urban&iacute;sticos especiais das ZOEs sejam definidos atrav&eacute;s de&nbsp;<a href="https://gestaourbana.prefeitura.sp.gov.br/projetos-de-intervencao-urbana-piu/" target="_blank">Projetos de Interven&ccedil;&atilde;o Urbana (PIUs)</a>. Os PIUs s&atilde;o estudos t&eacute;cnicos que embasam a proposi&ccedil;&atilde;o de par&acirc;metros urban&iacute;sticos em per&iacute;metros espec&iacute;ficos do territ&oacute;rio do munic&iacute;pio e, em determinados casos, de interven&ccedil;&otilde;es destinadas a desenvolver e melhorar as condi&ccedil;&otilde;es urbanas, ambientais e sociais no contexto urbano desses projetos.</p>
+			<p>O artigo 15 da Lei de Zoneamento determina que os par&acirc;metros urban&iacute;sticos especiais das ZOEs sejam definidos atrav&eacute;s de&nbsp;Projetos de Interven&ccedil;&atilde;o Urbana (PIUs). Os PIUs s&atilde;o estudos t&eacute;cnicos que embasam a proposi&ccedil;&atilde;o de par&acirc;metros urban&iacute;sticos em per&iacute;metros espec&iacute;ficos do territ&oacute;rio do munic&iacute;pio e, em determinados casos, de interven&ccedil;&otilde;es destinadas a desenvolver e melhorar as condi&ccedil;&otilde;es urbanas, ambientais e sociais no contexto urbano desses projetos.</p>
 			<p>O artigo 4&ordm; do Decreto Municipal n&ordm; 56.901/2016, que regulamenta os PIUs, traz a composi&ccedil;&atilde;o referencial do conte&uacute;do desses projetos, englobando a Proposta de Ordenamento Urban&iacute;stico, a Modelagem Econ&ocirc;mica, o Modelo de Gest&atilde;o Democr&aacute;tica e demais itens que se fa&ccedil;am necess&aacute;rios em cada caso. A partir desta composi&ccedil;&atilde;o b&aacute;sica, o processo espec&iacute;fico de desenvolvimento de cada PIU revelar&aacute; o conte&uacute;do mais apropriado a suas caracter&iacute;sticas, apresentando os crit&eacute;rios adotados para a composi&ccedil;&atilde;o definitiva.</p>
 			<p>O Projeto de Interven&ccedil;&atilde;o Urbana do Hip&oacute;dromo de Cidade Jardim &ndash; PIU Jockey Club, a ser apresentado neste volume, tem como objetivo a regula&ccedil;&atilde;o dos par&acirc;metros urban&iacute;sticos especiais aplic&aacute;veis na ZOE correspondente ao lote onde se situa este importante equipamento, possibilitando que seu ordenamento e desenvolvimento ocorra em conson&acirc;ncia com a pol&iacute;tica urbana do munic&iacute;pio. Assim, o PIU Jockey Club n&atilde;o deve ser confundido com o licenciamento de um empreendimento concreto a ser implantado no Hip&oacute;dromo de Cidade Jardim, mas sim como um processo t&eacute;cnico e participativo que definir&aacute; as regras para o desenvolvimento deste equipamento nos pr&oacute;ximos anos.</p>
 			<p>O PIU Jockey Club &eacute; uma iniciativa da Prefeitura de S&atilde;o Paulo que incidir&aacute; sobre um dos maiores equipamentos privados da cidade, cujas caracter&iacute;sticas funcionais, arquitet&ocirc;nicas, hist&oacute;ricas e paisag&iacute;sticas excepcionais s&atilde;o de interesse p&uacute;blico, constituindo-se como um patrim&ocirc;nio paulistano e uma importante refer&ecirc;ncia para a regi&atilde;o onde se situa.</p>
@@ -3957,7 +3957,7 @@ export default {
 	padding: 0
 }
 .jockey-club2-consulta {
-	p a {	word-break: break-all; }
+	// p a {	word-break: break-all; }
 	&__table {
 		margin: 1rem auto;
 		max-width: 700px;

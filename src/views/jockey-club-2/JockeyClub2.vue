@@ -30,14 +30,14 @@
 							<li>
 								<a :href="`${base}Anexo3_Quadro2.pdf`" download>
 									<i class="icon-pdf icon"><span>pdf</span></i>
-									<div>QUADRO 2<br>Percentuais mínimos de destinação de área pública e dimensão máxima de lotes por subsetor</div>
+									<div>QUADRO 2<br>Parâmetros de Ocupação e Fatores de Planejamento por Subsetores</div>
 									<span>498 kb</span>
 								</a>
 							</li>
 							<li>
 								<a :href="`${base}Anexo4_Quadro2A.pdf`" download>
 									<i class="icon-pdf icon"><span>pdf</span></i>
-									<div>QUADRO 2A<br>Parâmetros de ocupação e fatores de planejamento por subsetores</div>
+									<div>QUADRO 2A<br>Parâmetros de Quota Ambiental: Pontuação mínima e Taxa de Permeabilidade Mínima.</div>
 									<span>495 kb</span>
 								</a>
 							</li>

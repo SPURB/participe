@@ -18,6 +18,38 @@
 							</li>
 						</ul>
 
+						<h4 class="jockey-club2__section-title">Cadernos do PIU:</h4>
+						<h5 class="jockey-club2__section-item">Cadernos</h5>
+						<ul class="links">
+							<li>
+								<a :href="`${base}PIUJC_Caderno_I-Introducao.pdf`" download>
+									<i class="icon-pdf icon"><span>pdf</span></i>
+									<div>Apresentação</div>
+									<span>218 kb</span>
+								</a>
+							</li>
+							<li>
+								<a :href="`${base}PIUJC_Caderno_II-PropostaOrdenamentoUrbanistico.pdf`" download>
+									<i class="icon-pdf icon"><span>pdf</span></i>
+									<div>Proposta de ordenamento urbanístico</div>
+									<span>26.3 mb kb</span>
+								</a>
+							<li>
+								<a :href="`${base}PIUJC_Caderno_III-ModelagemEconomica.pdf`" download>
+									<i class="icon-pdf icon"><span>pdf</span></i>
+									<div>Modelagem econômica</div>
+									<span>26.3 mb kb</span>
+								</a>
+							</li>
+							<li>
+								<a :href="`${base}PIUJC_Caderno_IV-ModeloGestaoDemocratica.pdf`" download>
+									<i class="icon-pdf icon"><span>pdf</span></i>
+									<div>Modelo de gestão democrática</div>
+									<span>26.3 mb kb</span>
+								</a>
+							</li>
+						</ul>
+
 						<h5 class="jockey-club2__section-item">Quadros</h5>
 						<ul class="links">
 							<li>
@@ -53,38 +85,6 @@
 									<i class="icon-pdf icon"><span>pdf</span></i>
 									<div>QUADRO 3A<br>Parâmetros de Incomodidade da ZOE Jockey Club</div>
 									<span>79kb</span>
-								</a>
-							</li>
-						</ul>
-
-						<h4 class="jockey-club2__section-title">Cadernos do PIU:</h4>
-						<h5 class="jockey-club2__section-item">Cadernos</h5>
-						<ul class="links">
-							<li>
-								<a :href="`${base}PIUJC_Caderno_I-Introducao.pdf`" download>
-									<i class="icon-pdf icon"><span>pdf</span></i>
-									<div>Apresentação</div>
-									<span>218 kb</span>
-								</a>
-							</li>
-							<li>
-								<a :href="`${base}PIUJC_Caderno_II-PropostaOrdenamentoUrbanistico.pdf`" download>
-									<i class="icon-pdf icon"><span>pdf</span></i>
-									<div>Proposta de ordenamento urbanístico</div>
-									<span>26.3 mb kb</span>
-								</a>
-							<li>
-								<a :href="`${base}PIUJC_Caderno_III-ModelagemEconomica.pdf`" download>
-									<i class="icon-pdf icon"><span>pdf</span></i>
-									<div>Modelagem econômica</div>
-									<span>26.3 mb kb</span>
-								</a>
-							</li>
-							<li>
-								<a :href="`${base}PIUJC_Caderno_IV-ModeloGestaoDemocratica.pdf`" download>
-									<i class="icon-pdf icon"><span>pdf</span></i>
-									<div>Modelo de gestão democrática</div>
-									<span>26.3 mb kb</span>
 								</a>
 							</li>
 						</ul>

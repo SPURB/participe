@@ -257,7 +257,7 @@ export default {
 	flex-direction: column;
 	padding: 0.5rem 0;
 	margin: 0;
-	width: 85%;
+	width: 80%;
 	margin-right: 6px;
 	list-style-type: none;
 	line-height: 1.7;

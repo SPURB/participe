@@ -43,7 +43,9 @@ module.exports = {
 				'/tr-contact-center',
 				'/pmadrss',
 				'/arco-tiete-2',
-				'/ginasio-ibirapuera'
+				'/ginasio-ibirapuera',
+				'/jockey-club-2',
+				'/jockey-club-2/minuta'
 			],
 			useRenderEvent: true,
 			headless: false,

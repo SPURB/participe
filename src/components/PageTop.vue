@@ -3,7 +3,7 @@
 		<div class="bg"><img :src="bgImg" :alt="backgroundAlt"></div>
 		<aside>
 			<template v-if="esta_consulta">
-				<div class="statusConsulta" :class="consultaState(esta_consulta.ativo)">
+				<div class="statusConsulta" :class="consultaState(parseInt(esta_consulta.ativo))">
 					<span></span>
 				</div>
 				<div class="contribuicoes">
@@ -31,20 +31,27 @@
 				<i class="icon-imprimir icon"><span>imprimir</span></i>
 			</li>
 			<template v-if="esta_consulta.ativo">
-				<li>
-					<a :href="socialMediaRedirect('whatsapp')" data-action="share/whatsapp/share"><img :src="imgsrc('share_whatsapp.svg')" alt=""></a>
+				<li class="share__icon" @click="socialMediaRedirect('whatsapp')">
+					<a :href="socialMediaRedirect('whatsapp')">
+						<i class="icon-whatsapp icon"></i>
+					</a>
 				</li>
 				<li>
-					<a :href="socialMediaRedirect('twitter')"><img :src="imgsrc('share_twitter.svg')" alt=""></a>
+					<a :href="socialMediaRedirect('twitter')">
+						<i class="icon-twitter icon"></i>
+					</a>
 				</li>
 				<li>
-					<a :href="socialMediaRedirect('facebook')"><img :src="imgsrc('share_facebook.svg')" alt=""></a>
+					<a :href="socialMediaRedirect('facebook')">
+						<i class="icon-facebook icon"></i>
+					</a>
 				</li>
 			</template>
 		</ul>
 	</div>
 </template>
 <script>
+
 export default {
 	name: 'PageTop',
 	props: {
@@ -101,7 +108,7 @@ export default {
 	color: #FFF;
 }
 
-div.PageTop {
+.PageTop {
 	position: relative;
 	padding: 12rem 2rem 4rem 2rem;
 	margin-bottom: 4rem;
@@ -220,10 +227,18 @@ div.PageTop {
 		box-shadow: 0px 0px 8px $sombra-3;
 		&, * { transition: all ease-in .2s; }
 		li {
+			a { text-decoration: none; }
+			&.print {
+				background-color:#fff;
+				.icon {
+					color: $preto;
+				}
+			}
 			user-select: none;
 			-moz-user-select: none;
+			background-color: $preto;
 			i, img {
-				color: $preto;
+				color: #FFF;
 				cursor: pointer;
 			}
 			display: inline-block;
@@ -235,10 +250,16 @@ div.PageTop {
 		}
 		&:hover {
 			box-shadow: 0px 0px 16px $sombra-2;
-			li {
-				i, img { opacity: .4; }
+			li:not(.print) {
+				background-color: $cinza-1;
 				&:hover {
-					i, img { opacity: 1; }
+					background-color: $preto;
+				}
+			}
+			.print {
+				i { color: $cinza-1 }
+				&:hover {
+					i { color: $preto; }
 				}
 			}
 		}
@@ -289,7 +310,6 @@ div.PageTop {
 			left: 1rem;
 			li:first-child { display: none; }
 			li {
-				background-color: #FFF;
 				padding: 12px;
 				border-radius: 100%;
 				box-shadow: 0px 0px 8px $sombra-3;

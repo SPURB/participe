@@ -20,7 +20,7 @@
 						<td
 							:data-label="colunas[indexLinha]"
 							:key="`td-`+indexLinha"
-							:colspan="countColspan(linhasValues[index].length, totalColunas)"
+							:colspan="colspanEnabled ? countColspan(linhasValues[index].length, totalColunas) : 0"
 							v-for="(linha, indexLinha) in linhasValues[index]"
 						>
 							{{ linha }}
@@ -55,6 +55,10 @@ export default {
 			default: ''
 		},
 		tabelaListrada: {
+			type: Boolean,
+			default: false
+		},
+		colspanEnabled: {
 			type: Boolean,
 			default: false
 		}

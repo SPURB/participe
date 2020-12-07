@@ -1,6 +1,6 @@
 <template>
 	<div class="comentavel" :class="{ aberto: abreComentario }">
-		<div @click="abreComentario = !abreComentario" :class="{ sucesso: sucesso }">
+		<div @click="abreComentario = !abreComentario" :class="{ sucesso: sucesso }" data-cy="comments_context">
 			<div class="icon-counter">
 				<i class="icon-comentario icon"><span>chat</span></i>
 				<!-- filtrar numero (será refatorar CommentsLoader e vuex)-->
@@ -12,7 +12,7 @@
 		</div>
 		<transition name="form_display">
 			<form v-if="toggleFormOrMessage">
-				<h3 class="form_title">Comente aqui</h3>
+				<h3 class="form_title">Comente este trecho</h3>
 				<fieldset>
 					<label for="nome">Nome</label>
 					<input
@@ -54,7 +54,7 @@
 					>
 				</fieldset>
 				<fieldset>
-					<label for="comentario">Comente aqui</label>
+					<label for="comentario">Comente este trecho</label>
 					<textarea
 						value=""
 						id="comentario"
@@ -76,6 +76,12 @@
 			</form>
 			<p class="consulta-encerrada" v-if="!consultaAtiva">Desculpe, mas o período de participação já foi encerrado.</p>
 		</transition>
+		<share-buttons
+			v-show="abreComentario"
+			:id="id"
+			:titulo="context"
+			:conteudo="valueSlot"
+		/>
 	</div>
 </template>
 
@@ -83,9 +89,14 @@
 import api from '@/utils/api'
 import fechadura from '@spurb/fechadura'
 import { commentsCommons } from '@/mixins/commentsCommons'
+import ShareButtons from './ShareButtons'
+import { mapActions } from 'vuex'
 
 export default {
 	name: 'CommentsContext',
+	components: {
+		ShareButtons
+	},
 	props: {
 		id: {
 			required: true,
@@ -105,10 +116,10 @@ export default {
 	mixins: [ commentsCommons ],
 	data () {
 		return {
-			form_context: null
+			form_context: null,
+			valueSlot: ''
 		}
 	},
-
 	computed: {
 		consultaAtiva () {
 			if (this.$store.getters.consultasClicada !== undefined) {
@@ -122,8 +133,24 @@ export default {
 			return (this.abreComentario && this.consultaAtiva)
 		}
 	},
-
+	mounted () {
+		this.valorSlot()
+	},
 	methods: {
+		...mapActions('threadComments', ['setThread']),
+		valorSlot () {
+			if (this.$props.id === +this.$route.params.idc) {
+				const contentM = {
+					id: this.id,
+					context: this.context,
+					conteudo: this.$slots.default[0].elm.innerText
+				}
+				this.setThread(contentM)
+				this.valueSlot = this.$slots.default[0].elm.innerText
+			} else {
+				this.valueSlot = this.$slots.default[0].elm.innerText
+			}
+		},
 		send () {
 			let app = this
 			app.erro = false
@@ -172,8 +199,9 @@ export default {
 	transition: all ease-in-out .2s;
 	position: relative;
 	z-index: 0;
+	padding-bottom: 1rem;
 
-	.consulta-encerrada{
+	.consulta-encerrada {
 		display: none;
 		background-color:$vermelho;
 		padding: 1em;
@@ -182,6 +210,7 @@ export default {
 
 	&:hover,
 	&.aberto {
+		padding-top: 1rem;
 		background: $cinza-3;
 	}
 	&.aberto {
@@ -208,6 +237,7 @@ export default {
 			}
 			.icon-comentario{
 				margin-top: .5rem;
+				font-size: 1.3rem;
 			}
 		}
 		&:hover {

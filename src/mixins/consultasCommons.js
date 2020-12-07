@@ -5,14 +5,16 @@ export const consultasCommons = {
 	},
 	created () {
 		this.$store.dispatch('fetchConsultas', { self: this })
-		this.consultas = this.$store.state.consultas
+		if (!this.novoIndice) this.consultas = this.$store.state.consultas
 	},
 	mounted () {
-		this.titulosLimpo = this.listaTitulos()
+		if (!this.novoIndice) this.titulosLimpo = this.listaTitulos()
 		this.$store.commit('SET_ROUTE_ID', this.$route.meta.id)
 		this.listaErros()
 	},
-	updated () { this.alteraIndice() },
+	updated () {
+		if (!this.novoIndice) this.alteraIndice()
+	},
 	methods: {
 		scrollToRef (element) {
 			let documentEl = this.$refs[element]

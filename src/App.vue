@@ -1,5 +1,5 @@
 <template>
-<div id="app">
+<div id="app" :class="showThread ? 'thread-open' : ''">
 	<div :class="{ desligado: interruptor }" id="interruptor" ref="interruptor" @click="fechaTudo"></div>
 	<Alert v-if="showAlert"></Alert>
 	<Preloader v-if='isHome'></Preloader>
@@ -17,6 +17,7 @@ import MenuLateral from '@/components/MenuLateral'
 import Rodape from '@/components/Rodape'
 import Preloader from '@/components/Preloader'
 import Alert from '@/components/Alert'
+import { mapGetters } from 'vuex'
 
 export default {
 	name: 'Participe',
@@ -31,7 +32,8 @@ export default {
 		footerMail () { return this.$route.meta.email ? this.$route.meta.email : 'imprensadu@prefeitura.sp.gov.br' },
 		interruptor () { return this.$store.state.luzApaga },
 		isHome () { return this.$route.name === 'Home' },
-		showAlert () { return this.$store.state.alert.show }
+		showAlert () { return this.$store.state.alert.show },
+		...mapGetters('threadComments', ['showThread'])
 	},
 	created () {
 		let app = this
@@ -40,9 +42,15 @@ export default {
 				app.$store.dispatch('imprime')
 			}
 		})
+		this.toggleBody()
 	},
-	mounted () { document.getElementById('carregando').classList.add('some') },
-	updated () { this.$refs.interruptor.style.height = this.$el.clientHeight + 'px' },
+	mounted () {
+		document.getElementById('carregando').classList.add('some')
+	},
+	updated () {
+		this.$refs.interruptor.style.height = this.$el.clientHeight + 'px'
+		this.toggleBody()
+	},
 	methods: {
 		fechaTudo () {
 			if (this.$store.state.menuToggle || this.$store.state.apoioToggle) {
@@ -51,6 +59,14 @@ export default {
 				this.$store.state.luzApaga = false
 			}
 			document.body.style.overflow = document.body.style.overflow === '' ? 'hidden' : ''
+		},
+		toggleBody () {
+			let body = document.body
+			if (this.showThread) {
+				body.classList.add('thread-open')
+			} else {
+				body.classList.remove('thread-open')
+			}
 		}
 	}
 }
@@ -123,6 +139,10 @@ div#interruptor {
 		cursor: pointer;
 		background-color: #EB5757
 	}
+}
+
+.thread-open {
+	overflow: hidden;
 }
 
 @media print {

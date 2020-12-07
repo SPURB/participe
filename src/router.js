@@ -77,10 +77,20 @@ export default new Router({
 		{
 			path: '/governo-aberto',
 			name: 'GovernoAberto',
-			component: () => import(/* webpackChunkName: "governoaberto" */ '@/views/GovernoAberto'),
 			meta: {
 				id: 39
-			}
+			},
+			component: () => import(/* webpackChunkName: "governoaberto" */ '@/views/GovernoAberto'),
+			children: [
+				{
+					path: '/governo-aberto/comentarios/:idc',
+					meta: {
+						id: 39,
+						pathPai: '/governo-aberto'
+					},
+					component: () => import(/* webpackChunkName: "threadcomments" */ '@/views/ThreadComments')
+				}
+			]
 		},
 		{
 			path: '/concessao-martinelli',
@@ -267,6 +277,34 @@ export default new Router({
 			meta: {
 				id: 66
 			}
+		},
+		{
+			path: '/jockey-club-2',
+			component: () => import(/* webpackChunkName: "JockeyClub2" */ '@/views/jockey-club-2/JockeyClub2'),
+			children: [
+				{
+					path: 'minuta',
+					name: 'JockeyClub2Minuta',
+					component: () => import(/* webpackChunkName: "JockeyClub2Minuta" */ '@/views/jockey-club-2/JockeyClub2Minuta'),
+					meta: { id: 16 },
+					children: [
+						{
+							path: '/jockey-club-2/minuta/comentarios/:idc',
+							meta: {
+								id: 16,
+								pathPai: '/jockey-club-2/minuta'
+							},
+							component: () => import(/* webpackChunkName: "threadcomments" */ '@/views/ThreadComments')
+						}
+					]
+				},
+				{
+					path: '',
+					name: 'JockeyClub2',
+					component: () => import(/* webpackChunkName: "JockeyClub2Consulta" */ '@/views/jockey-club-2/JockeyClub2Consulta'),
+					meta: { id: 16 }
+				}
+			]
 		},
 		{
 			path: '/consulta/:nome',

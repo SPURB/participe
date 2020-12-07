@@ -1,6 +1,7 @@
 # Participe
 [![Netlify Status](https://api.netlify.com/api/v1/badges/fb06bdad-d959-414d-b42d-1891b7862c9f/deploy-status)](https://app.netlify.com/sites/participe-gestaourbana/deploys)
 [![Build Status](https://travis-ci.org/SPURB/participe.svg?branch=master)](https://travis-ci.org/SPURB/participe)
+[![CodeFactor](https://www.codefactor.io/repository/github/spurb/participe/badge)](https://www.codefactor.io/repository/github/spurb/participe)
 
 Frontend do [https://participe.gestaourbana.prefeitura.sp.gov.br](https://participe.gestaourbana.prefeitura.sp.gov.br), site de participação social da Secretaria Municipal de Urbanismo e Licenciamento – SMUL - e São Paulo Urbanismo.
 
@@ -52,6 +53,16 @@ Crie os arquivos no diretório dist.
 ```
 npm run build
 ```
+___
+
+### Pdfs de consulta
+Pode-se gerar pdf de consulta (com comentários e formatação em A4)
+```
+npm run content:pdf /rota-da-consulta
+
+npm run content:pdf /rota-da-consulta http:localhost:8080
+```
+> para gerar o pdf de uma rota diferente de participe.gestaourbana passe a base da url no segundo argumento
 
 ___
 

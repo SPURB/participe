@@ -1,0 +1,36 @@
+.tabela-container {
+	max-width: 700px;
+	overflow-x: auto;
+	margin: 2rem auto;
+	padding: 0 2rem 2rem;
+	background-color: #F5F5F5;
+	border-radius: 2px;
+
+	table {
+		width: 100%;
+	}
+	caption  {
+		border-top: unset
+	}
+	th, tfoot td, td.escuro, tr.escuro td {
+		background-color: rgba(0, 0, 0, 0.12);
+	}
+	tr.negrito td, td.negrito {
+		font-weight: 700;
+	}
+	tfoot td {
+		font-weight: 700;
+	}
+	td {
+		background-color: #fff;
+		&.align-rigth {
+			text-align: right;
+		}
+	}
+	.fonte {
+		margin: 0;
+		margin-top: 1rem;
+		font-size: x-small;
+		color: #777;
+	}
+}

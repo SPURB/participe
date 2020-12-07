@@ -1,0 +1,129 @@
+u {
+	text-decoration: none;
+	border-bottom: 1px solid $cinza-2;
+	padding-bottom: 1px;
+}
+
+ul { list-style-type: square; }
+
+ol.decimais { list-style-type: decimal; }
+
+ol.romanos { list-style-type: upper-roman; }
+
+ol.maiusculas { list-style-type: upper-alpha; }
+
+ol.minusculas { list-style-type: lower-alpha; }
+
+ul.links,
+ol.links,
+ul.pdfBox {
+	display: block;
+	list-style-type: none;
+	margin: 2rem auto;
+	padding: 2rem;
+	background: $cinza-3;
+	border-radius: 2px;
+
+	& > * { font-family: $grotesca; }
+
+	li {
+		margin: 2rem 0;
+		padding: 0;
+		border-radius: 2px;
+		background: #FFF;
+		box-shadow: 0 2px 2px rgba(0, 0, 0, .12);
+		transition: all .1s;
+
+		a {
+			display: flex;
+			flex-flow: row-nowrap;
+			align-items: center;
+			padding: 1rem;
+			color: $preto;
+
+			i {
+				margin-right: 1rem;
+				align-self: center;
+			}
+
+			div { width: 100%; }
+
+			span {
+				display: block;
+				font-size: small;
+				margin-left: 1rem;
+				white-space: nowrap;
+				color: $sombra-3;
+			}
+
+		}
+
+		&:hover {
+			background-color: #EB5757;
+
+			a {
+				border-bottom-color: transparent;
+				color: #FFF;
+			}
+
+		}
+
+		&:first-child { margin-top: 0; }
+
+		&:last-child { margin-bottom: 0; }
+	}
+
+}
+
+ol.notas,
+ul.notas {
+	background-color: $cinza-3;
+	border-radius: 2px;
+	padding: 1.6rem 2rem;
+	caption {
+		color: $cinza-1;
+		margin: 0 0 0.5rem;
+	}
+	li {
+		margin: 0.5rem 0.8rem 0;
+		font-size: smaller;
+		ol {
+			margin: 0;
+			li {
+				font-size: inherit;
+				margin: 0 0 0 2rem;
+			}
+		}
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+}
+
+ul li,
+ol li {
+	margin: 0 0 1rem 2rem;
+	padding-left: 8px;
+	font-family: $serifada;
+	font-size: $sizedesk;
+}
+
+li ol,
+li ul,
+p ol,
+p ul {
+	margin: 1rem 0;
+	padding: 0;
+}
+
+li p {
+	padding: 0;
+}
+
+li h2,
+li h3,
+li h4,
+li h5,
+li h6 {
+	padding: 0;
+}

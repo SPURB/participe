@@ -3,7 +3,7 @@
 		<div class="bg"><img :src="bgImg" :alt="backgroundAlt"></div>
 		<aside>
 			<template v-if="esta_consulta">
-				<div class="statusConsulta" :class="consultaState(esta_consulta.ativo)">
+				<div class="statusConsulta" :class="consultaState(parseInt(esta_consulta.ativo))">
 					<span></span>
 				</div>
 				<div class="contribuicoes">
@@ -310,7 +310,6 @@ export default {
 			left: 1rem;
 			li:first-child { display: none; }
 			li {
-				background-color: #FFF;
 				padding: 12px;
 				border-radius: 100%;
 				box-shadow: 0px 0px 8px $sombra-3;

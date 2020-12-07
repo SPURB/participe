@@ -52,7 +52,7 @@ export default {
 			return this.conteudo.substring(0, 130) + '... '
 		},
 		whatsappSend () {
-			let msg = this.conteudo + `Veja mais: ${this.url}`
+			let msg = this.conteudo + ` Veja mais: ${this.url}`
 			msg = `https://api.whatsapp.com/send?text=${msg}`
 			return msg
 		},
@@ -89,21 +89,25 @@ export default {
 .share-buttons {
 	display: flex;
 	flex-direction: row;
-}
-.share-buttons__sharer {
-	width: 22px ;
-	height: 22px;
-	color: #FFF;
-	text-decoration: none;
-	margin-right: 3px;
-	background-color: $cinza-2;
-	border-radius: 3px;
-	.icon {
-		cursor: pointer;
-	};
-	transition: background-color 0.14s ease-in-out;
-	&:hover {
-		background-color: $preto;
+	&__sharer {
+		display: flex;
+		width: 22px ;
+		height: 22px;
+		color: #FFF;
+		text-decoration: none;
+		margin-right: 3px;
+		background-color: $cinza-2;
+		border-radius: 3px;
+		.icon-whatsapp {
+			align-self: center;
+		}
+		.icon {
+			cursor: pointer;
+		};
+		transition: background-color 0.14s ease-in-out;
+		&:hover {
+			background-color: $preto;
+		}
 	}
 }
 

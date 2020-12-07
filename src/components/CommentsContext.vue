@@ -12,7 +12,7 @@
 		</div>
 		<transition name="form_display">
 			<form v-if="toggleFormOrMessage">
-				<h3 class="form_title">Comente aqui</h3>
+				<h3 class="form_title">Comente este trecho</h3>
 				<fieldset>
 					<label for="nome">Nome</label>
 					<input
@@ -54,7 +54,7 @@
 					>
 				</fieldset>
 				<fieldset>
-					<label for="comentario">Comente aqui</label>
+					<label for="comentario">Comente este trecho</label>
 					<textarea
 						value=""
 						id="comentario"
@@ -201,7 +201,7 @@ export default {
 	z-index: 0;
 	padding-bottom: 1rem;
 
-	.consulta-encerrada{
+	.consulta-encerrada {
 		display: none;
 		background-color:$vermelho;
 		padding: 1em;
@@ -210,6 +210,7 @@ export default {
 
 	&:hover,
 	&.aberto {
+		padding-top: 1rem;
 		background: $cinza-3;
 	}
 	&.aberto {
@@ -236,6 +237,7 @@ export default {
 			}
 			.icon-comentario{
 				margin-top: .5rem;
+				font-size: 1.3rem;
 			}
 		}
 		&:hover {

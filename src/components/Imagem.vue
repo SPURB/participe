@@ -24,14 +24,25 @@
 			</div>
 			<figcaption v-if="dados.caption">
 				{{ dados.caption }}
-				<span class="captionFonte" v-if="dados.fonte"> (Fonte: {{ dados.fonte }})</span>
+				<span class="captionFonte" v-if="dados.fonte"> (<span v-if="!elaboracaoOnly">Fonte: </span>{{ dados.fonte }})</span>
 			</figcaption>
 			<div class="legenda">
 				<h1 v-if="dados.titulo">{{ dados.titulo }}</h1>
 				<ul>
 					<template v-for="(item, index) in dados.legenda">
-						<li :class="{ errata: item.errata }" :key=index :id-erro="item.id">
-							<div :style="{ backgroundColor: item.fundo, outlineColor: item.borda, outlineWidth: item.espessura + 'px' }" :class="{ linha: item.linha, pontilhado: item.pontilhado }"><img v-if="item.simbolo" :src="item.simbolo"><span v-if="item.char">{{ item.char }}</span></div> {{ item.descricao }}
+						<li :class="{
+								errata: item.errata,
+								legenda__titulo: item.legenda__titulo
+							}" :key="index" :id-erro="item.id">
+							<div :style="{
+								backgroundColor: item.fundo,
+								outlineColor: item.borda,
+								outlineWidth: item.espessura + 'px'
+							}" :class="{
+								linha: item.linha,
+								pontilhado: item.pontilhado
+							}"><img v-if="item.simbolo" :src="item.simbolo"><span v-if="item.char">{{ item.char }}</span>
+							</div> {{ item.descricao }}
 						</li>
 					</template>
 				</ul>
@@ -39,7 +50,7 @@
 			<div class="extra">
 				<slot name="extra"></slot>
 			</div>
-			<div class="fonte" v-if="dados.fonte">Fonte: <span>{{ dados.fonte }}</span></div>
+			<div class="fonte" v-if="dados.fonte"><span v-if="!elaboracaoOnly">Fonte: </span><span>{{ dados.fonte }}</span></div>
 		</figure>
 	</div>
 </template>
@@ -74,7 +85,8 @@ export default {
 					char: String,
 					linha: Boolean,
 					fundo: String,
-					descricao: String
+					descricao: String,
+					legenda__titulo: Boolean
 				}
 			},
 			fonte: String,
@@ -82,6 +94,10 @@ export default {
 		},
 		maxWidth: {
 			type: String
+		},
+		elaboracaoOnly: {
+			type: Boolean,
+			default: false
 		}
 	},
 	methods: {
@@ -125,6 +141,8 @@ export default {
 		transition: opacity 0.5s ease;
 	}
 }
+
+.legenda__titulo { min-width: 100%; }
 
 .Imagem {
 	.errata {

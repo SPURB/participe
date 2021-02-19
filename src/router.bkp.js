@@ -286,12 +286,12 @@ export default new Router({
 					path: 'minuta',
 					name: 'JockeyClub2Minuta',
 					component: () => import(/* webpackChunkName: "JockeyClub2Minuta" */ '@/views/jockey-club-2/JockeyClub2Minuta'),
-					meta: { id: 104 },
+					meta: { id: 16 },
 					children: [
 						{
 							path: '/jockey-club-2/minuta/comentarios/:idc',
 							meta: {
-								id: 104,
+								id: 16,
 								pathPai: '/jockey-club-2/minuta'
 							},
 							component: () => import(/* webpackChunkName: "threadcomments" */ '@/views/ThreadComments')
@@ -302,7 +302,7 @@ export default new Router({
 					path: '',
 					name: 'JockeyClub2',
 					component: () => import(/* webpackChunkName: "JockeyClub2Consulta" */ '@/views/jockey-club-2/JockeyClub2Consulta'),
-					meta: { id: 104 }
+					meta: { id: 16 }
 				}
 			]
 		},

@@ -39,6 +39,17 @@
 						</ul>
 
 						<h4 class="jockey-club2__section-title">Anexos do Decreto:</h4>
+						<h5 class="jockey-club2__section-item">Minuta</h5>
+						<ul class="links">
+							<li>
+								<a :href="`${base}Minuta_Decreto_PIU_Jockey_20201209.pdf`" download>
+									<i class="icon-pdf icon"><span>pdf</span></i>
+									<div>Minuta do decreto em pdf<br></div>
+									<span>166kb</span>
+								</a>
+							</li>
+						</ul>
+
 						<h5 class="jockey-club2__section-item">Mapas</h5>
 						<ul class="links">
 							<li>

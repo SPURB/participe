@@ -167,7 +167,7 @@
 		<section id="consulta-0">
 			<p>A Prefeitura do Município de São Paulo, por intermédio da Secretaria Municipal de Desenvolvimento Urbano (SMDU) e da São Paulo Urbanismo (SP Urbanismo) apresenta nesta Consulta Pública a proposta do Projeto de Intervenção Urbana do Hipódromo de Cidade Jardim (PIU Jockey Club), o qual define os parâmetros urbanísticos aplicáveis à Zona de Ocupação Especial onde se localiza este equipamento.</p>
 			<p>Na Primeira Consulta Pública, foram apresentados os elementos prévios ao desenvolvimento do projeto, os Diagnósticos Socio-territorial e Ambiental e o Programa de Interesse Público, para que o público pudesse contribuir e subsidiar as propostas que estão sendo agora apresentadas.</p>
-			<p>Esta Segunda Consulta Pública, que se inicia em 28 de setembro, com término previsto para o dia 27 de outubro de 2020, apresenta a <b>Proposta de Ordenamento Urbanístico</b>, a <b>Modelagem Econômica</b>, o <b>Modelo de Gestão Democrática</b> e a <b>Minuta do Decreto Regulamentador do PIU Jockey Club</b>.</p>
+			<p>Esta Segunda Consulta Pública, que se inicia em 10 de dezembro de 2020, com término previsto para o dia 26 de fevereiro de 2021, apresenta a <b>Proposta de Ordenamento Urbanístico</b>, a <b>Modelagem Econômica</b>, o <b>Modelo de Gestão Democrática</b> e a <b>Minuta do Decreto Regulamentador do PIU Jockey Club</b>.</p>
 			<p>O Processo de elaboração do PIU Jockey Club segue os passos definidos no Decreto Municipal n° 56.901/2016, que regulamenta os projetos de intervenção urbana e que prevê a participação da população em todas as etapas de seu desenvolvimento. Desta forma, as contribuições a serem colhidas nesta Consulta Pública irão colaborar para o seu aperfeiçoamento, assim como aquelas advindas de Audiência Pública e dos debates nos conselhos municipais cujas competências estejam associadas à política urbana do município.</p>
 
 			<h2>Apresentação</h2>
@@ -216,7 +216,7 @@
 							{ simbolo: src('arquivos/legendas/icones/metro.png'), descricao: 'Metrô estações existentes' },
 
 							{ descricao: 'PIU Jockey Club', 'legenda__titulo': true },
-							{ fundo: 'white', borda: 'black', descricao: 'Projetos de Regulação Urbanística Excepcional' },
+							{ fundo: 'white', borda: 'black', descricao: 'PRU - Perímetro de Regulação Urbanística' },
 							{ fundo: 'white', borda: '#ff4c00', descricao: 'Perímetro de Intervenção' },
 
 							{ descricao: 'Lei 16.402/2016 - Zoneamento', 'legenda__titulo': true },
@@ -361,8 +361,9 @@
 							{ fundo: '#E9E5B4', descricao: 'Paddock' },
 							{ fundo: '#6D153B', descricao: 'Edifícios c/ alto-relevos de Brecheret' },
 							{ fundo: '#B8BBE7', descricao: 'Área envoltória' },
-							{ fundo: '#FEF235', descricao: 'Edificações não mecionados pelo decreto de tombamento' },
 							{ fundo: '#FC1029', descricao: 'Bens tombados' },
+							{ fundo: '#EC9426', descricao: 'Edificações registradas', 'legenda__titulo': true },
+							{ fundo: '#FEF235', descricao: 'Edificações não mencionadas na Resolução de tombamento' },
 							{ char: '1', descricao: 'Portaria' },
 							{ char: '2', descricao: 'Arquibancada social' },
 							{ char: '3', descricao: 'Arquibancada especial 1' },
@@ -386,7 +387,6 @@
 							{ char: '21', descricao: 'Prédio da veterinária e Praça' },
 							{ char: '22', descricao: 'Ferraria' },
 							{ char: '23', descricao: 'Chaminé do forno crematório' },
-							{ fundo: '#EC9426', descricao: 'Edificações registradas', 'legenda__titulo': true },
 							{ char: '24', descricao: 'Remanescentes do biotério' },
 							{ char: '25', descricao: 'Conjunto de tratamento de águas' },
 							{ char: '26', descricao: 'Antiga casa do engenheiro' },

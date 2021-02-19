@@ -245,7 +245,7 @@
 		</section>
 		<section id="art-14">
 			<comments-context :id="14" context="Artigo 14">
-				<p><b>Art. 14.</b>A implantação de novas edificações no Setor de Transformação do PRU Jockey Club anteriormente ao parcelamento da gleba ficará sujeita ao atendimento das condições de instalação aplicáveis ao conjunto da ZOE Jockey Club, cabendo à Companhia de Engenharia de Transportes - CET definir tais parâmetros mediante solicitação do empreendedor.</p>
+				<p><b>Art. 14.</b>A implantação de novas edificações no Setor de Transformação do PRU Jockey Club anteriormente ao parcelamento da gleba ficará sujeita ao atendimento das condições de instalação aplicáveis ao conjunto da ZOE Jockey Club, cabendo à Companhia de Engenharia de Tráfego - CET definir tais parâmetros mediante solicitação do empreendedor.</p>
 				<p><b>§ 1º</b>Em caso de parcelamento dos Subsetores do Setor de Transformação do PRU Jockey Club, a implantação de novas edificações neste Subsetores ficará sujeita aos parâmetros de condições de instalação por subcategoria de uso constante no Quadro 4A da Lei nº 16.402 de 2016.</p>
 				<p><b>§ 2º</b>§ 2º No Setor de Preservação, mesmo em caso de parcelamento da gleba, fica admitida a adoção de soluções para a instalação dos usos que atendam ao conjunto dos Subsetores deste Setor, sendo necessária a análise da CET para definição dos respectivos parâmetros.</p>
 			</comments-context>

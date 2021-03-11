@@ -3904,7 +3904,7 @@
 		<section id="commentsLoader" ref="allComments">
 			<h2 v-show="commentsLoaded" class="titulo" indent="1">Contribuições</h2>
 			<CommentsLoader :attr="estaConsulta"></CommentsLoader>
-			<Comments v-if="commentsLoaded && consultaAtiva" :attr="{ id:commentId(),context:'Comentarios' }"></Comments>
+			<Comments v-if="commentsLoaded && consultaAtiva" :attr="{ id:8000, context:'Comentarios' }"></Comments>
 		</section>
 	</div>
 </template>

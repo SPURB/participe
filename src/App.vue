@@ -29,7 +29,7 @@ export default {
 		Alert
 	},
 	computed: {
-		footerMail () { return this.$route.meta.email ? this.$route.meta.email : 'imprensadu@prefeitura.sp.gov.br' },
+		footerMail () { return this.$route.meta.email ? this.$route.meta.email : 'imprensasmul@prefeitura.sp.gov.br' },
 		interruptor () { return this.$store.state.luzApaga },
 		isHome () { return this.$route.name === 'Home' },
 		showAlert () { return this.$store.state.alert.show },

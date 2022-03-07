@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@spurb/fechadura": "1.0.2",
-    "axios": "0.19.2",
+    "axios": "0.20.0",
     "cypress": "4.9.0",
     "echarts": "4.7.0",
     "es6-promise": "4.2.8",

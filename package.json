@@ -51,7 +51,7 @@
     "prerender-spa-plugin": "3.4.0",
     "puppeteer": "3.3.0",
     "sass-loader": "8.0.2",
-    "start-server-and-test": "1.11.0",
+    "start-server-and-test": "1.15.4",
     "vue-cli-plugin-prerender-spa": "1.1.6",
     "vue-template-compiler": "2.6.11"
   },
